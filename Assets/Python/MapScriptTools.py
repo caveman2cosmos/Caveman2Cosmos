@@ -1061,35 +1061,34 @@ def getContinentCoastXY( continentPlots, bLakes=False ):
 # get the shortest distance between continents
 # if 2nd continent is not given, then the distance to
 # the nearest other continent is returned
-def getContinentDistance( areaID, otherAreaID=None ):
+def getContinentDistance(areaID, otherAreaID=None):
 	if areaID == otherAreaID: return 0
 	# get 1st area
-	area = MAP.getArea( areaID )
+	area = MAP.getArea(areaID)
 	if area.isWater(): return -1
-	aPlotList = getAreaPlots( areaID )
-	if len(aPlotList) == 0: return -1
-	aCoastList = getContinentCoastXY( aPlotList )
-	if len(aCoastList) == 0:
-		aCoastList = getContinentCoastXY( aPlotList, True )
+	aPlotList = getAreaPlots(areaID)
+	if not aPlotList: return -1
+	aCoastList = getContinentCoastXY(aPlotList)
+	if not aCoastList:
+		aCoastList = getContinentCoastXY(aPlotList, True)
 	# get 2nd area
 	if otherAreaID == None:
 		# get coast of all other continents
 		otherCoastList = []
-		for inx in range( MAP.numPlots() ):
-			pl = MAP.plotByIndex( inx )
-			if pl.isCoastalLand():
-				if pl.getArea() != areaID:
-					x,y = coordByPlot( pl )
-					otherCoastList.append( (x,y) )
+		for inx in range(MAP.numPlots()):
+			pl = MAP.plotByIndex(inx)
+			if pl.getArea() != areaID and not pl.isWater() and pl.isCoastal():
+				x,y = coordByPlot(pl)
+				otherCoastList.append((x, y))
 	else:
 		# get coast of given continent
-		otherArea = MAP.getArea( otherAreaID )
+		otherArea = MAP.getArea(otherAreaID)
 		if otherArea.isWater(): return -1
-		otherPlotList = getAreaPlots( otherAreaID )
-		if len(otherPlotList) == 0: return -1
-		otherCoastList = getContinentCoastXY( otherPlotList )
-		if len(otherCoastList) == 0:
-			aCoastList = getContinentCoastXY( otherPlotList, True )
+		otherPlotList = getAreaPlots(otherAreaID)
+		if not otherPlotList: return -1
+		otherCoastList = getContinentCoastXY(otherPlotList)
+		if not otherCoastList:
+			aCoastList = getContinentCoastXY(otherPlotList, True)
 	# get minimum distance
 	minDist = 99999
 	for x,y in aCoastList:
@@ -1458,9 +1457,9 @@ class MapPrettifier:
 		for x in range( x0, x1 ):
 			for y in range( y0, y1 ):
 				pl = MAP.plot(x, y)
-				if pl.isPeak() and pl.isCoastalLand():
+				if pl.isPeak() and pl.isCoastal():
 					if pl.getFeatureType() < 0:					# don't transform volcanos
-						if choose( chHills, True, False ):
+						if choose(chHills, True, False):
 							# If a peak is along the coast, change to hills and recalc.
 							pl.setPlotType(PlotTypes.PLOT_HILLS, True, True)
 							iCnt += 1
@@ -1901,28 +1900,28 @@ class MarshMaker:
 	###############
 
 	# assign chances for conversion to plot and choose
-	def convertTerrainPlot( self, plot ):
-#		print "[MST] ======== MarshMaker:convertTerrainPlot()"
+	def convertTerrainPlot(self, plot):
 		if plot.isFlatlands():
-			iLat = abs( plot.getLatitude() )
+			iLat = plot.getLatitude()
+			if iLat < 0: iLat = -iLat
 			eTerrain = plot.getTerrainType()
 			if self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop:
 				# tundra near equator is always converted
-				if eTerrain==etTundra:
-					self.buildMarshlands( plot, eTerrain )
+				if eTerrain == etTundra:
+					self.buildMarshlands(plot, eTerrain)
 					return
-			if (self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop) or (self.iMarshColdBottom<=iLat and iLat<=self.iMarshColdTop):
+			if self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop or self.iMarshColdBottom<=iLat and iLat<=self.iMarshColdTop:
 				iWet = 0.3
 				if plot.isFreshWater(): iWet += 1.2
-				if plot.isCoastalLand(): iWet += 0.3
-				if eTerrain==etTundra:
-					if choose( int(iWet*self.chTundra), True, False ):
-						self.buildMarshlands( plot, eTerrain )
-				elif eTerrain==etGrass:
-					if choose( int(iWet*self.chGrass), True, False ):
-						self.buildMarshlands( plot, eTerrain )
-				elif eTerrain==etMarsh:
-					self.buildMarshlands( plot, eTerrain )		# give extra chance to convert neighbor
+				if plot.isCoastal(): iWet += 0.3
+				if eTerrain == etTundra:
+					if choose(int(iWet*self.chTundra), True, False):
+						self.buildMarshlands(plot, eTerrain)
+				elif eTerrain == etGrass:
+					if choose(int(iWet*self.chGrass), True, False):
+						self.buildMarshlands(plot, eTerrain)
+				elif eTerrain == etMarsh:
+					self.buildMarshlands(plot, eTerrain) # give extra chance to convert neighbor
 
 	# put marsh on map and try for a neighbor
 	def buildMarshlands( self, plot, eTerrain ):
@@ -2885,12 +2884,16 @@ class MapRegions:
 		lostIsleNames_Pfall = [ "Alien HQ", "Command Center", "City of Light", "Atlantis Command" ]
 
 		sprint = ""
-		for x0,y0,pList,bAliens in self.lostIsleList:
+		for x0, y0, pList, bAliens in self.lostIsleList:
 			plDone = []
 
 			# city ruins
 			printList(pList, "Lost Isle Tiles:", prefix="[MST] ")
-			pListCoast = [GetPlot(x,y) for x,y in pList if (not GetPlot(x,y).isPeak()) and GetPlot(x,y).isCoastalLand()]
+			pListCoast = []
+			for x, y in pList:
+				plotX = GetPlot(x, y)
+				if not plotX.isPeak() and not plotX.isWater() and plotX.isCoastal():
+					pListCoast.append(plotX)
 			plot = chooseListElement(pListCoast)
 			if plot == None:
 				print "[MST] Unable to place City Ruins"
@@ -2904,33 +2907,32 @@ class MapRegions:
 
 			# river
 			rList = []
-			riverDirs = riverMaker.checkRiverEnd( plot, bDownFlow=True )
-			rDir = chooseListElement( riverDirs )
+			riverDirs = riverMaker.checkRiverEnd(plot, bDownFlow=True)
+			rDir = chooseListElement(riverDirs)
 			if rDir != None:
-				riverMaker.buildRiver( plot, False, rDir, riverList=rList )		# upFlow
-				print riverMaker.outRiverList( rList, "[MST] " )
-			else:
-				print "[MST] Unable to build river"
+				riverMaker.buildRiver(plot, False, rDir, riverList=rList) # upFlow
+				print riverMaker.outRiverList(rList, "[MST] ")
+			else: print "[MST] Unable to build river"
 
 			# improve terrain
-			pListTer = [ GetPlot(x,y) for x,y in pList if not GetPlot(x,y).isPeak() ]
+			pListTer = [GetPlot(x,y) for x,y in pList if not GetPlot(x,y).isPeak()]
 			for pl in pListTer:
 				if pl.getTerrainType() == etSnow:
-					newTerrain = chooseMore( (20,etGrass), (85,etTundra), (100,etSnow) )
+					newTerrain = chooseMore((20, etGrass), (85, etTundra), (100, etSnow))
 					if pl.isFreshWater():
-						newTerrain = chooseMore( (25,etMarsh), (75,newTerrain), (100,etGrass) )
-					pl.setTerrainType( newTerrain, True, True )
+						newTerrain = chooseMore((25,etMarsh), (75,newTerrain), (100,etGrass))
+					pl.setTerrainType(newTerrain, True, True)
 				elif pl.getTerrainType() == etTundra:
 					if pl.isFreshWater():
-						newTerrain = chooseMore( (30,etGrass), (60,etMarsh), (100,etTundra) )
+						newTerrain = chooseMore((30,etGrass), (60,etMarsh), (100,etTundra))
 					else:
-						newTerrain = chooseMore( (30,etGrass), (100,etTundra) )
-					pl.setTerrainType( newTerrain, True, True )
+						newTerrain = chooseMore((30,etGrass), (100,etTundra))
+					pl.setTerrainType(newTerrain, True, True)
 				elif pl.getTerrainType() == etDesert:
-					newTerrain = choose( 20, etGrass, etPlains )
-					if not pl.isFreshWater() and not plot.isCoastalLand():
-						newTerrain = choose( 25, etDesert ,newTerrain )
-					pl.setTerrainType( newTerrain, True, True )
+					newTerrain = choose(20, etGrass, etPlains)
+					if not pl.isFreshWater() and not pl.isCoastal():
+						newTerrain = choose(25, etDesert ,newTerrain)
+					pl.setTerrainType(newTerrain, True, True)
 
 			# place boni and work them
 			pListBoni = [GetPlot(x,y) for x,y in pList if (x,y) != (cx,cy) and not GetPlot(x,y).isPeak()]
@@ -3138,43 +3140,38 @@ class MapRegions:
 
 	# delete plots which can't be bog centers
 	def deleteNonBogPlots( self, plotList ):
-#		print "[MST] ======== MapRegions:deleteNonBogPlots()"
 		for inx in range( len(plotList)-1,-1,-1 ):
 			pl = plotList[inx]
-			if pl.isCoastalLand():
+			if not p1.isWater() and pl.isCoastal():
 				del plotList[inx]
-			else:
-				iLat = evalLatitude( pl )		# 0..90
-				bZone = marshMaker.iMarshHotBottom<=iLat and iLat<=marshMaker.iMarshHotTop or marshMaker.iMarshColdBottom<=iLat and iLat<=marshMaker.iMarshColdTop
-				if bZone:
-					if not MAP.isWrapX():
-						if (pl.getX()<3) or (pl.getX()>(iNumPlotsX-4)):
-							del plotList[inx]
-							continue
-					if not MAP.isWrapY():
-						if (pl.getY()<3) or (pl.getY()>(iNumPlotsY-4)):
-							del plotList[inx]
-				else:
+				continue
+
+			iLat = evalLatitude(pl) # 0..90
+			bZone = marshMaker.iMarshHotBottom<=iLat and iLat<=marshMaker.iMarshHotTop or marshMaker.iMarshColdBottom<=iLat and iLat<=marshMaker.iMarshColdTop
+			if bZone:
+				if not MAP.isWrapX() and (pl.getX() < 3 or pl.getX() > iNumPlotsX-4):
 					del plotList[inx]
+
+				elif not MAP.isWrapY() and (pl.getY() < 3 or pl.getY() > iNumPlotsY-4):
+					del plotList[inx]
+			else:
+				del plotList[inx]
 
 	# delete plots which can't be dent centers
 	def deleteNonDentPlots( self, plotList ):
-#		print "[MST] ======== MapRegions:deleteNonDentPlots()"
-		for inx in range( len(plotList)-1,-1,-1 ):
+		for inx in range(len(plotList)-1, -1, -1):
 			pl = plotList[inx]
-			if pl.isCoastalLand():
+			if not pl.isWater() and pl.isCoastal():
 				del plotList[inx]
-			else:
-				if not MAP.isWrapX():
-					if (pl.getX()<3) or (pl.getX()>(iNumPlotsX-4)):
-						del plotList[inx]
-				elif not MAP.isWrapY():
-					if (pl.getY()<3) or (pl.getY()>(iNumPlotsY-4)):
-						del plotList[inx]
+				continue
+
+			if not MAP.isWrapX() and (pl.getX() < 3 or pl.getX() > iNumPlotsX-4):
+				del plotList[inx]
+			elif not MAP.isWrapY() and (pl.getY() < 3 or pl.getY() > iNumPlotsY-4):
+				del plotList[inx]
 
 	# change to bog-terrain
 	def changeBogTerrain( self, plot, temp ):
-#		print "[MST] ======== MapRegions:changeBogTerrain()"
 		sprint = ""
 		if temp==0: return sprint
 

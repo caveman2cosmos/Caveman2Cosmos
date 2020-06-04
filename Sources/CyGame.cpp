@@ -3,6 +3,12 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvInitCore.h"
+#include "CyCity.h"
+#include "CyDeal.h"
+#include "CyGame.h"
+#include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
 
@@ -11,6 +17,11 @@ CyGame::CyGame() : m_pGame(NULL) { m_pGame = &GC.getGame(); }
 CyGame::CyGame(CvGame* pGame) : m_pGame(pGame) {}
 
 CyGame::CyGame(CvGameAI* pGame) : m_pGame(pGame) {}
+
+int CyGame::getCurrentMap() const
+{
+	return m_pGame->getCurrentMap();
+}
 
 bool CyGame::isMultiplayer()
 {

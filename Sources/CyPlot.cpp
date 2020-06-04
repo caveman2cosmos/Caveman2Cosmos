@@ -3,6 +3,10 @@
 // 
 //
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlot.h"
+#include "CyUnit.h"
 
 CyPlot::CyPlot(CvPlot* pPlot, bool bInViewportSpace) : m_pPlot(pPlot), m_bIsInViewportSpace(bInViewportSpace)
 {
@@ -83,14 +87,9 @@ bool CyPlot::shareAdjacentArea(CyPlot* pPlot)
 	return m_pPlot ? m_pPlot->shareAdjacentArea(pPlot->getPlot()) : false;
 }
 
-bool CyPlot::isAdjacentToLand()
+bool CyPlot::isCoastal()
 {
-	return m_pPlot ? m_pPlot->isAdjacentToLand() : false;
-}
-
-bool CyPlot::isCoastalLand()
-{
-	return m_pPlot ? m_pPlot->isCoastalLand() : false;
+	return m_pPlot ? m_pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) : false;
 }
 
 bool CyPlot::isWithinTeamCityRadius(int /*TeamTypes*/ eTeam, int /*PlayerTypes*/ eIgnorePlayer)

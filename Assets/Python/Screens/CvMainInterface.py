@@ -45,6 +45,7 @@ class CvMainInterface:
 		self.InputData = InputData.instance
 
 		self.bInitialize = True
+		self.bSetStartZoom = True
 		self.xRes = 0
 		self.yRes = 0
 
@@ -65,6 +66,7 @@ class CvMainInterface:
 		self.bCityChange = False
 		self.bCityEnter = False
 		self.bCityExit = False
+		self.bInverseShiftQueue = False
 		self.bGlobeview = False
 		self.bUpdateCityTab = False
 		self.bBuildWorkQueue = False
@@ -90,7 +92,6 @@ class CvMainInterface:
 
 
 	def interfaceScreen(self):
-		print "interfaceScreen"
 		if GAME.isPitbossHost(): return
 		# Cache Game Status
 		self.bNetworkMP		= GAME.isNetworkMultiPlayer()
@@ -1308,10 +1309,12 @@ class CvMainInterface:
 				else:
 					screen.setHelpTextArea(self.xMidL, FontTypes.GAME_FONT, 4, self.yRes - 8, 0, False, "", True, False, 1<<0, 0)
 					self.bHelpTextFullY = True
+
 				if self.bSetStartZoom:
 					# CAMERA_START_DISTANCE also defines camera zoom where music is turned on/off, we want that to be quite low and the start zoom to be higher.
 					# Max zoom change from game to game, so the percentage zoom is relative to the initial zoom from CAMERA_START_DISTANCE
-					CyCamera().SetZoom(CyCamera().GetZoom() * 1.9)
+					CAM = CyCamera()
+					CAM.SetZoom(CAM.GetZoom() * 1.8)
 					self.bSetStartZoom = False
 
 			# This will update the flag widget for SP hotseat and debugging
@@ -1414,6 +1417,7 @@ class CvMainInterface:
 				if InCity:
 					bFirst = False
 				else:
+					self.bInverseShiftQueue = MainOpt.isInverseShiftForQueueing()
 					if AtUnit:
 						screen.hide("UnitButtons")
 					bFirst = True
@@ -2540,7 +2544,7 @@ class CvMainInterface:
 			if CyCity.isOccupation():
 				szTxt += " " + self.iconOccupation + ":" + str(CyCity.getOccupationTimer())
 
-			screen.setText("CityNameText", "", szTxt, 1<<2, halfX, 32, 0, eFontGame, WidgetTypes.WIDGET_CITY_NAME, -1, -1)
+			screen.setText("CityNameText", "", szTxt, 1<<2, halfX, 32, 0, eFontGame, WidgetTypes.WIDGET_CITY_NAME, 0, 1)
 
 			iHealthGood = CyCity.goodHealth()
 			iHealthBad = CyCity.badHealth(False)
@@ -3260,7 +3264,7 @@ class CvMainInterface:
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_COMBAT
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_DOMAIN
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_HERO
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
 
@@ -5036,17 +5040,16 @@ class CvMainInterface:
 		# Maintenance
 		iMaintenance = CyPlayer.getTotalMaintenance()
 		if iMaintenance:
-			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) + " " + str(iMaintenance) + iconCommerceGold
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iMaintenance) + iconCommerceGold
 		# Unit upkeep
 		iUnitUpkeep = CyPlayer.calculateUnitCost()
 		iUnitSupply = CyPlayer.calculateUnitSupply()
 		if iUnitUpkeep or iUnitSupply:
 			szTxt += "\n"
 			if iUnitUpkeep:
+				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()) + " " + str(iUnitUpkeep) + iconCommerceGold
 				if iUnitSupply:
-					szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()) +" " + str(iUnitUpkeep) + iconCommerceGold + "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
-				else:
-					szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()) + " " + str(iUnitUpkeep) + iconCommerceGold
+					szTxt += "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
 		# Trade
@@ -5416,10 +5419,17 @@ class CvMainInterface:
 						if not InCity: return
 						CyPlayer = InCity.CyPlayer
 						CyCity = InCity.CyCity
-						if CyCity.getProduction():
-							bCtrl = not bShift
-						elif TYPE == "UNIT" and CyCity.getProductionUnit() == iType:
-							bShift = not bCtrl
+
+						# Some modifier key logic
+						if bCtrl:
+							bShift = False
+						else:
+							if self.bInverseShiftQueue:
+								bShift = not bShift
+
+							if not bShift and CyCity.getProduction():
+								bCtrl = True
+
 						# Determine order type
 						iGaMsgType = GameMessageTypes.GAMEMESSAGE_PUSH_ORDER
 						szTxt = ""
@@ -5482,15 +5492,15 @@ class CvMainInterface:
 						self.InCity.QueueIndex += 1
 						szName = BASE + "|" + TYPE + "|"
 						ROW = "QueueRow"
-						if bShift:	# Last
-							iNode = CyIF.getNumOrdersQueued()
-							self.InCity.WorkQueue.append([szName, iType, szRow])
-						elif bCtrl: # First
+						if bCtrl: # First
 							y = dy
 							for i, entry in enumerate(InCity.WorkQueue):
 								screen.moveItem(ROW + entry[2], -2, y-2, 0)
 								y += dy
 							self.InCity.WorkQueue = [[szName, iType, szRow]] + InCity.WorkQueue
+						elif bShift: # Last
+							iNode = CyIF.getNumOrdersQueued()
+							self.InCity.WorkQueue.append([szName, iType, szRow])
 						else: # Replace current
 							if InCity.WorkQueue:
 								screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))

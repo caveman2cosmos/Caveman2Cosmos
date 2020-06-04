@@ -12,10 +12,7 @@ void CyInfoPythonInterface2()
 	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
 
 		.def("getModelFile", &CvRouteModelInfo::getModelFile, "string ()")
-		.def("setModelFile", &CvRouteModelInfo::setModelFile, "void (string)")
 		.def("getModelFileKey", &CvRouteModelInfo::getModelFileKey, "string ()")
-		.def("setModelFileKey", &CvRouteModelInfo::setModelFileKey, "void (string)")
-
 		.def("getConnectString", &CvRouteModelInfo::getConnectString, "string ()")
 		.def("getModelConnectString", &CvRouteModelInfo::getModelConnectString, "string ()")
 		.def("getRotateString", &CvRouteModelInfo::getRotateString, "string ()")
@@ -345,6 +342,7 @@ void CyInfoPythonInterface2()
 		.def("isHills", &CvBonusInfo::isHills, "bool ()")
 		.def("isPeaks", &CvBonusInfo::isPeaks, "bool ()")
 		.def("isFlatlands", &CvBonusInfo::isFlatlands, "bool ()")
+		.def("isBonusCoastalOnly", &CvBonusInfo::isBonusCoastalOnly, "bool ()")
 		.def("isNoRiverSide", &CvBonusInfo::isNoRiverSide, "bool ()")
 		.def("isNormalize", &CvBonusInfo::isNormalize, "bool ()")
 

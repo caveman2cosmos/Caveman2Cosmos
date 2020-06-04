@@ -6,7 +6,7 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
@@ -228,13 +228,14 @@ public:
 	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
 	bool isAdjacentToLand() const; // Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
 
 	bool isVisibleWorked() const;
 	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater(bool bIgnoreJungle = false) const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python ?
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python

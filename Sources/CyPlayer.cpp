@@ -1,8 +1,16 @@
+#include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
+
 //
 // Python wrapper class for CvPlayer 
 //
-
-#include "CvGameCoreDLL.h"
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL)
 {
@@ -1057,9 +1065,9 @@ int CyPlayer::getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd)
 	return m_pPlayer ? m_pPlayer->getAdvancedStartTechCost((TechTypes) eTech, bAdd) : -1;
 }
 
-int CyPlayer::getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot)
+int CyPlayer::getAdvancedStartVisibilityCost(CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getEspionageSpending(int /*TeamTypes*/ eIndex)

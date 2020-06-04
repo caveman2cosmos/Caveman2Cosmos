@@ -11,9 +11,6 @@
 #ifndef CV_PROPERTY_INTERACTION_H
 #define CV_PROPERTY_INTERACTION_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-
 class CvGameObject;
 
 // Base class of which the actual property interaction classes are derived

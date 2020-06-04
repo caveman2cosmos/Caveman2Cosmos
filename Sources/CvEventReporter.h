@@ -13,7 +13,6 @@
 
 struct CvStatBase;
 struct TradeData;
-class CyDiplomacyTrade;
 class CvUnit;
 class CvCity;
 class CvPlot;
@@ -39,6 +38,7 @@ public:
 	DllExport void unInit();
 	DllExport void gameStart();
 	DllExport void windowActivation(bool bActive);
+	void mapRegen();
 
 	void gameEnd();
 	void beginGameTurn(int iGameTurn);

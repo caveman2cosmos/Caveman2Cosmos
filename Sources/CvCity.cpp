@@ -1,9 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvReachablePlotSet.h"
-
-#include "CyCity.h"
-
-#include <boost155/bind.hpp>
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
@@ -18500,7 +18499,7 @@ void CvCity::doMeltdown()
 		{
 			const int iOdds = GC.getBuildingInfo((BuildingTypes)iI).getNukeExplosionRand();
 
-			if (iOdds > 0 && GC.getGame().getSorenRandNum(1000, "Meltdown!!!") < iOdds)
+			if (iOdds > 0 && GC.getGame().getSorenRandNum(10000, "Meltdown!!!") < iOdds)
 			{
 				if (getNumRealBuilding((BuildingTypes)iI) > 0)
 				{

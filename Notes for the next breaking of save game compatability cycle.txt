@@ -42,7 +42,6 @@ Mark up sections of code with the @SAVEBREAK tag to indicate changes that should
 
 When it comes times to break the save we need to apply all the changes that are marked like this.
 
-
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 Toffer - Rewrite CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
 Reduce amount of excess colour definitions, many duplicates and unused ones currently.

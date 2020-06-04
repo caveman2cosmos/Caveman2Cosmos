@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvDLLWidgetData.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
 
@@ -30,7 +33,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_PLOT_LIST_SHIFT:
-		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CTRL_SHIFT", (GC.getDefineINT("MAX_PLOT_LIST_SIZE") - 1)));
+		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CTRL_SHIFT", (GC.getMAX_PLOT_LIST_SIZE() - 1)));
 		break;
 
 	case WIDGET_CITY_SCROLL:
@@ -682,7 +685,7 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		break;
 
 	case WIDGET_PLOT_LIST_SHIFT:
-		gDLL->getInterfaceIFace()->changePlotListColumn(widgetDataStruct.m_iData1 * ((gDLL->ctrlKey()) ? (GC.getDefineINT("MAX_PLOT_LIST_SIZE") - 1) : 1));
+		gDLL->getInterfaceIFace()->changePlotListColumn(widgetDataStruct.m_iData1 * (gDLL->ctrlKey() ? (GC.getMAX_PLOT_LIST_SIZE() - 1) : 1));
 		break;
 
 	case WIDGET_CITY_SCROLL:
@@ -2177,7 +2180,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 		if (iHurryAngerLength > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getDefineINT("HURRY_POP_ANGER"), (iHurryAngerLength + pHeadSelectedCity->getHurryAngerTimer())));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getHURRY_POP_ANGER(), (iHurryAngerLength + pHeadSelectedCity->getHurryAngerTimer())));
 		}
 
 		if (!(pHeadSelectedCity->isProductionUnit()) && !(pHeadSelectedCity->isProductionBuilding()))
@@ -2251,10 +2254,10 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 			if (iConscriptAngerLength > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getDefineINT("CONSCRIPT_POP_ANGER"), (iConscriptAngerLength + pHeadSelectedCity->getConscriptAngerTimer())));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getCONSCRIPT_POP_ANGER(), (iConscriptAngerLength + pHeadSelectedCity->getConscriptAngerTimer())));
 			}
 
-			int iMinCityPopulation = pHeadSelectedCity->conscriptMinCityPopulation();
+			const int iMinCityPopulation = pHeadSelectedCity->conscriptMinCityPopulation();
 
 			if (pHeadSelectedCity->getPopulation() < iMinCityPopulation)
 			{
@@ -2262,7 +2265,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CITY_POP", iMinCityPopulation));
 			}
 
-			int iMinCulturePercent = GC.getDefineINT("CONSCRIPT_MIN_CULTURE_PERCENT");
+			const int iMinCulturePercent = GC.getCONSCRIPT_MIN_CULTURE_PERCENT();
 
 			if (pHeadSelectedCity->plot()->calculateTeamCulturePercent(pHeadSelectedCity->getTeam()) < iMinCulturePercent)
 			{
@@ -3682,7 +3685,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
 					{
 						int iGold = 0;
-						int iTrainPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+						const int iTrainPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 
 						for (;
 							pSelectedUnitNode != NULL;
@@ -3692,7 +3695,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							iGold += pSelectedUnit->getUnitInfo().getProductionCost();
 						}
 					
-						iGold = (iGold * iTrainPercent) / std::max(1, (GC.getDefineINT("UNIT_GOLD_DISBAND_DIVISOR") * 100));
+						iGold = (iGold * iTrainPercent) / std::max(1, (GC.getUNIT_GOLD_DISBAND_DIVISOR() * 100));
 
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOLD_FOR_DISBANDING", iGold));
@@ -3869,7 +3872,7 @@ void CvDLLWidgetData::parseChangeSpecialistHelp(CvWidgetDataStruct &widgetDataSt
 			GAMETEXT.parseSpecialistHelpActual(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity, false, widgetDataStruct.m_iData2);
 // BUG - Specialist Actual Effects - end
 
-			if (widgetDataStruct.m_iData1 != GC.getDefineINT("DEFAULT_SPECIALIST"))
+			if (widgetDataStruct.m_iData1 != GC.getDEFAULT_SPECIALIST())
 			{
 				if (!(GET_PLAYER(pHeadSelectedCity->getOwner()).isSpecialistValid((SpecialistTypes)(widgetDataStruct.m_iData1))))
 				{

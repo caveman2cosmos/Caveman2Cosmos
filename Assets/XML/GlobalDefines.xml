@@ -869,20 +869,6 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Research rate boost for knowing first OR tech prereq. -->
-		<DefineName>TECH_COST_FIRST_KNOWN_PREREQ_MODIFIER</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Research rate boost for knowing additional OR tech prereqs. -->
-		<DefineName>TECH_COST_KNOWN_PREREQ_MODIFIER</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>PEACE_TREATY_LENGTH</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>

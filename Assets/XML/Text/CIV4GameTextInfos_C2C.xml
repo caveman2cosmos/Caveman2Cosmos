@@ -66,8 +66,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUKE_EXPLOSION_CHANCE</Tag>
-		<English>[ICON_BULLET]Chance of Nuclear Meltdown: .%d1_chance%% each round</English>
-		<French>[ICON_BULLET]Risque de fusion nucléaire : .%d1_chance%% à chaque tour</French>
+		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH</Tag>

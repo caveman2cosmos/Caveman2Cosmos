@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Improvement -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
 		<!-- Prehistoric -->
@@ -5786,10 +5779,6 @@
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-				<FeatureMakesValid>
-					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<bMakesValid>1</bMakesValid>
-				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
@@ -6189,6 +6178,10 @@
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
@@ -6218,6 +6211,28 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
+		<!-- Terraform Taiga -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_TERRAFORM_TAIGA</Type>
+			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iAirBombDefense>-1</iAirBombDefense>
+			<!--bOutsideBorders>1</bOutsideBorders-->
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>				
+			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
 		<!-- Terraform Tundra -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_TUNDRA</Type>
@@ -6234,7 +6249,7 @@
 			<!--bOutsideBorders>1</bOutsideBorders-->
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -6279,6 +6294,10 @@
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -13315,6 +13334,153 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
+		</ImprovementInfo>
+		<!-- Fishing Camp -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_FISHING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iUpgradeTime>2</iUpgradeTime>
+			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
+			<AlternativeImprovementUpgradeTypes>
+				<ImprovementUpgrade>IMPROVEMENT_WHALING_BOATS</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_HARVEST_KELP</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
+			</AlternativeImprovementUpgradeTypes>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CLAM</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CRAB</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FISH</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LOBSTER</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUREX</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SHRIMP</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_WHALE</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_METHANE_ICE</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_NATURAL_GAS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OIL</BonusType>
 					<iDiscoverRand>1000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>

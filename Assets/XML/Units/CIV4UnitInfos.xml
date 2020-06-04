@@ -41,6 +41,10 @@ Base XP gained when defending
 					<PromotionType>PROMOTION_SENTRY</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
 			</FreePromotions>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
@@ -3174,6 +3178,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3559,6 +3567,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3957,6 +3969,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4350,6 +4366,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -27551,6 +27571,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -27674,6 +27698,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27827,6 +27855,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27983,6 +28015,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -28112,6 +28148,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -57462,6 +57502,10 @@ Base XP gained when defending
 			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>

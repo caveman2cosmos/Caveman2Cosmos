@@ -774,6 +774,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>

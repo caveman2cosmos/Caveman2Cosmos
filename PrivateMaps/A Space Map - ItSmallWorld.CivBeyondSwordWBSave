@@ -1,4 +1,4 @@
-Version=12
+Version=14
 BeginGame
 	Speed=GAMESPEED_NORMAL
 	StartYear=-200000
@@ -6087,7 +6087,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=27
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot

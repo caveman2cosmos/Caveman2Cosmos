@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 bool UnitSortBase::isLesserUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2)
 {
@@ -26,7 +24,7 @@ bool UnitSortBase::isInverse()
 
 bool UnitSortBase::setInverse(bool bInvert)
 {
-	bool bChanged = bInvert != m_bInvert;
+	const bool bChanged = bInvert != m_bInvert;
 	m_bInvert = bInvert;
 	return bChanged;
 }

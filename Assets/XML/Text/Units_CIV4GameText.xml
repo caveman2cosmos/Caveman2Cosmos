@@ -1982,27 +1982,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Modyfikator Ataku: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_ONLY_CITIES</Tag>
-		<English>[ICON_BULLET]Can Only Attack Cities</English>
-		<French>[ICON_BULLET]Attaque uniquement les villes</French>
-		<Italian>[ICON_BULLET]Attacca solo città</Italian>
-		<Polish>[ICON_BULLET]Atakuje tylko miasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_ONLY_CITIES_LONG</Tag>
-		<English>[ICON_BULLET]Can Only Attack Cities</English>
-		<French>[ICON_BULLET]L'Unité peut attaquer uniquement les villes.</French>
-		<Italian>[ICON_BULLET]L'unità può attaccare solo quando attacca una città.</Italian>
-		<Polish>[ICON_BULLET]Jednostka może tylko atakować jeśli atakuje miasto.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_ONLY_CITIES_SHORT</Tag>
-		<English>[ICON_BULLET]Can Only Attack Cities</English>
-		<French>[ICON_BULLET]Attaque uniquement les villes</French>
-		<Italian>[ICON_BULLET]Attacca solo città</Italian>
-		<Polish>[ICON_BULLET]Atakuje tylko miasta</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACK_SUBMARINE</Tag>
 		<English>Attack Submarine</English>
 		<French>
@@ -2632,7 +2611,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
 		<English>Ancestral Band</English>
 		<German>
-			<Text>Urzeithorde:Urzeithorde:Urzeithorde:Urzeithorde:Urzeithorden:Urzeithorden:Urzeithorden:Urzeithorden</Text>
+			<Text>Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden</Text>
 			<Gender>female:female:female:female:female:female:female:female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -10471,15 +10450,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Walka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPING_DOMAIN</Tag>
-		<English>Domain</English>
-		<French>Domaine</French>
-		<German>Domäne</German>
-		<Italian>Dominio</Italian>
-		<Spanish>Dominio</Spanish>
-		<Polish>Domena</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUPING_HERO</Tag>
 		<English>Hero</English>
 		<French>Héros</French>
@@ -12059,28 +12029,22 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURON_MANLET</Tag>
-		<English>Huron Manlet</English>
-		<French>Manlet Huron</French>
+		<English>Huron Mantlet</English>
+		<French>Mantlet Huron</French>
 		<Spanish>
-			<Text>Manlet hurón</Text>
+			<Text>Mantlet hurón</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Huroński Manlet</Polish>
+		<Polish>Huroński Mantlet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURON_MANLET_PEDIA</Tag>
 		<English>Like other Native peoples, the Huron needed siege weapons when they battled rival villages. One technique they developed was the mantlet, similar in function to those used in Roman and medieval armies. Two warriors would carry the mantlet (essentially a moveable wooden wall) to protect themselves from enemy arrow or musket fire until they reached their enemy's town walls, where the mantlet was used as a ladder to scale the walls and breach the town.</English>
-		<French>Manlet Huron</French>
-		<Spanish>El Manlet hurón.</Spanish>
-		<Polish>Huroński Manlet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURON_MANLET_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Huron Mantlets[COLOR_REVERT] are Huron culture unit. Its weaker then normal [COLOR_UNIT_TEXT]Javelineer[COLOR_REVERT] but with better characteristics against archers and other throwing units.</English>
-		<French>Manlet Huron</French>
-		<Spanish>El Manlet hurón.</Spanish>
-		<Polish>Huroński Manlet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURRY_FOOD</Tag>
@@ -12279,27 +12243,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_UNIT_TEXT]Idris Alooma[COLOR_REVERT] was a "Hero".</English>
 		<French>texte ici</French>
 		<Polish>[COLOR_UNIT_TEXT]Idris Alooma[COLOR_REVERT] był "Bohaterem"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_NO_ENTRY_LEVEL</Tag>
-		<English>[ICON_BULLET]Can Always Attack Cities</English>
-		<French>[ICON_BULLET]Ignore le Minimum de Défense lors de l'attaque des Villes</French>
-		<Italian>[ICON_BULLET]Ignora i requisiti di difesa minima quando attacca una città</Italian>
-		<Polish>[ICON_BULLET]Ignoruje Minimalną Obronę wymaganą do szturmowania miasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_NO_ENTRY_LEVEL_LONG</Tag>
-		<English>[ICON_BULLET]Can Always Attack Cities</English>
-		<French>[ICON_BULLET]L'Unité peut attaque une ville, en ignorant la défense minimum.</French>
-		<Italian>[ICON_BULLET]L'unità può attaccare una città senza tener conto dei requisiti di difesa minima della città.</Italian>
-		<Polish>[ICON_BULLET]Jednostka może szturmować miasto niezależnie od poziomy obrony miasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_NO_ENTRY_LEVEL_SHORT</Tag>
-		<English>[ICON_BULLET]Can Always Attack Cities</English>
-		<French>[ICON_BULLET]Ignore la Défense Minimum d'une Ville</French>
-		<Italian>[ICON_BULLET]Ignora il livello minimo di difesa necessario per attaccare</Italian>
-		<Polish>[ICON_BULLET]Ignoruje Minimalną Obronę wymaganą do ataku</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL</Tag>

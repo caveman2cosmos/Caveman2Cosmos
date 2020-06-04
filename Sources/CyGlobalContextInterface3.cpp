@@ -1,14 +1,17 @@
+#include "CvGameCoreDLL.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+
 //
 // published python interface for CyGlobalContext
 //
-
-#include "CvGameCoreDLL.h"
 
 void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 {
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface3\n");
 
 	x
+		.def("enableMultiMaps", &CyGlobalContext::enableMultiMaps)
 		.def("multiMapsEnabled", &CyGlobalContext::multiMapsEnabled, "bool ()")
 		.def("getNumMapInfos", &CyGlobalContext::getNumMapInfos, "int ()")
 		.def("getMapInfo", &CyGlobalContext::getMapInfo, python::return_value_policy<python::reference_existing_object>(), "void (int)")

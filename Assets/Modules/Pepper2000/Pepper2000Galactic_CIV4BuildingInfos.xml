@@ -1372,12 +1372,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACEPUNK_EMBASSY</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqBonuses>
+				<BonusType>BONUS_SPACEPUNK</BonusType>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1416,12 +1413,9 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACEPUNK_EMBASSY</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqBonuses>
+				<BonusType>BONUS_SPACEPUNK</BonusType>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CIRCULAR_WASTE_MANAGEMENT</BuildingType>
 			</PrereqInCityBuildings>

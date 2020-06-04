@@ -1893,7 +1893,7 @@
 		<Tag>TXT_KEY_CAN_FOUND_ON_PEAKS</Tag>
 		<English>[ICON_BULLET]Players can found cities on Peaks</English>
 		<French>[ICON_BULLET]Les Joueurs peuvent fonder des Villes sur les sommets</French>
-		<German>[ICON_BULLET]Spieler können Städte auf Gipfeln gründen</German>
+		<German>[ICON_BULLET]Spieler können Städte im Gebirge gründen</German>
 		<Italian>[ICON_BULLET]I giocatori possono fondare città sulle montagne</Italian>
 		<Spanish>[ICON_BULLET]Se pueden fundar ciudades en Picos</Spanish>
 		<Polish>[ICON_BULLET]Gracze mogą zakładać miasta na wzgórzach</Polish>
@@ -3082,12 +3082,6 @@
 		<Polish>[ICON_BULLET]Leczenie: Może usunąć lub złagodzić %s1_PromotionName.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DAMAGE_BY_UNITCOMBAT</Tag>
-		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
-		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
-		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT</Tag>
 		<English>The sun rises on the year %s1_year. Since time immemorial, the %s2_civ people have lived a nomadic life. After years of wandering, they are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>Le soleil se lève sur l'an %s1_year. Depuis des temps immémoriaux, les peuplades %s2:3_civ vivent en nomades. Après des années d'errance, ils sont prêts à s'installer et à fonder votre première ville. [NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confié le pouvoir absolu et s'en remet à vous pour bâtir une civilisation qui résistera à l'épreuve du temps!</French>
@@ -3188,6 +3182,14 @@
 		<Italian>[COLOR_SELECTED_TEXT]La grande moschea di Djenné incrementa il commercio nel deserto![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]¡La Gran Mezquita de Djenné aumenta el comercio en el Desierto![COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Wielki Meczet w Dżenne [COLOR_SELECTED_TEXT]zwiększa handel na polach pustyni[COLOR_REVERT]!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN</Tag>
+		<English>Domain</English>
+		<French>Domain</French>
+		<German>Domain</German>
+		<Italian>Domain</Italian>
+		<Spanish>Domain</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DURATION</Tag>
@@ -8779,24 +8781,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%s1_PlyrName stworzył %s2_UnitName!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_SPED_UP_BY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Sped up by[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélérée par[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt durch[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelerato da[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelerado por[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie przez[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SPEEDS_UP</Tag>
-		<English>[NEWLINE][ICON_BULLET]Speeds up[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélère[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelera[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelera[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!!!</English>
 		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté!</French>
@@ -10780,7 +10764,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOVE_FAST_PEAKS</Tag>
 		<English>[ICON_BULLET]Units suffer no movement penalty when passing through peaks</English>
 		<French>[ICON_BULLET]Les Unités ne subissent aucune pénalité en passant par les sommets</French>
-		<German>[ICON_BULLET]Einheiten erhalten keine Bewegungseinbuße, wenn sie Gipfel überqueren.</German>
+		<German>[ICON_BULLET]Einheiten erhalten keine Bewegungseinbuße, wenn sie Gebirge überqueren.</German>
 		<Italian>[ICON_BULLET]Le unità non hanno penalità di movimento quando attraversano le montagne</Italian>
 		<Spanish>[ICON_BULLET]Las unidades no sufren penalización al movimiento cuando atraviesan Picos</Spanish>
 		<Polish>[ICON_BULLET]Jednostki nie otrzymują kary za przechodzenie przez góry</Polish>
@@ -15332,12 +15316,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] ze Świętym Miastem obniża buntowniczość</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STEALTH_DEFENSE_TEXT</Tag>
-		<English>[ICON_BULLET]This Unit will Stealth Defend</English>
-		<French>[ICON_BULLET]Cette unité se défendra furtivement</French>
-		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STRATOVERLAY_ADDSIGN</Tag>
 		<English>Add Sign</English>
 		<French>Ajouter un panneau</French>
@@ -19443,82 +19421,28 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>Apertura delle frontiere</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_EMANCIPATION</Tag>
-		<English>U.N. Resolution #743 (Global Civic - Liberal)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #743 (Doctrine Globale - Libéral)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 743 [BOLD]"Weltweite Gleichberechtigung"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #743 (Forma di governo globale - Liberale)</Italian>
-		<Spanish>Resolución #743 de la ONU (Principio global - Liberalismo)</Spanish>
-		<Polish>Rezolucja ONZ #743 (Światowa Doktryna - Społeczność: Liberalizm)</Polish>
+		<Tag>TXT_KEY_VOTE_EGALITARIAN</Tag>
+		<English>U.N. Resolution #743 (Global Civic - Egalitarian)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_ENVIRONMENTALISM</Tag>
+		<Tag>TXT_KEY_VOTE_GREEN</Tag>
 		<English>U.N. Resolution #1190 (Global Civic - Green)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #1190 (Doctrine Globale - Vert)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 1190 [BOLD]"Weltweiter Umweltschutz"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #1190 (Forma di governo globale - Verde)</Italian>
-		<Spanish>Resolución #1190 de la ONU (Principio global - Ecologismo)</Spanish>
-		<Polish>Rezolucja ONZ #1190 (Światowa Doktryna - Ekonomia: Ekologiczna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_FREE_RELIGION</Tag>
-		<English>U.N. Resolution #427 (Global Civic - Secular)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #427 (Doctrine Globale - Séculier)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 427 [BOLD]"Weltweite Religionsfreiheit"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #427 (Forma di governo globale - Secolare)</Italian>
-		<Spanish>Resolución #427 de la ONU (Principio global - Secularismo)</Spanish>
-		<Polish>Rezolucja ONZ #427 (Światowa Doktryna - Religia: Sekularyzm)</Polish>
+		<Tag>TXT_KEY_VOTE_SECULARISM</Tag>
+		<English>U.N. Resolution #427 (Global Civic - Secularism)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_FREE_SPEECH</Tag>
-		<English>U.N. Resolution #3445 (Global Civic - Parliament)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #3445 (Doctrine Globale - Parlement)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 3445 [BOLD]"Weltweite Meinungsfreiheit"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #3345 (Forma di governo globale - Parlamento)</Italian>
-		<Spanish>Resolución #3445 de la ONU (Principio global - Parlamento)</Spanish>
-		<Polish>Rezolucja ONZ #3445 (Światowa Doktryna - Władza: Parlament)</Polish>
+		<Tag>TXT_KEY_VOTE_LEGISLATURE</Tag>
+		<English>U.N. Resolution #3445 (Global Civic - Legislature)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_SOCIALIZED_WELFARE</Tag>
+		<Tag>TXT_KEY_VOTE_SOCIALIZED</Tag>
 		<English>U.N. Resolution #4172 (Global Civic - Socialized)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #4172 (Global Civic - Socialisé)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 4172 [BOLD]"Weltweites Sozialsystem"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #4172 (Forma di governo globale - Socializzato)</Italian>
-		<Spanish>Resolución #4172 de la ONU (Principio global - Seguridad Social)</Spanish>
-		<Polish>Rezolucja ONZ #4172 (Światowa Doktryna - Opieka Zdrowotna: Socjalna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_UNIVERSAL_SUFFRAGE</Tag>
+		<Tag>TXT_KEY_VOTE_DEMOCRACY</Tag>
 		<English>U.N. Resolution #3312 (Global Civic - Democracy)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #3312 (Doctrine Globale - Démocratie)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 3312 [BOLD]"Weltweit freie Wahlen"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #3312 (Forma di governo globale - Democrazia)</Italian>
-		<Spanish>Resolución #3312 de la ONU (Principio global - Democracia)</Spanish>
-		<Polish>Rezolucja ONZ #3312 (Światowa Doktryna - Rząd: Demokracja)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WARPLAN_LIMITED_TARGET_IS</Tag>

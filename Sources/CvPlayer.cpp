@@ -1,10 +1,14 @@
 // player.cpp
 
 #include "CvGameCoreDLL.h"
-#include "CvDLLFlagEntityIFaceBase.h"
+#include "CvGameTextMgr.h"
+#include "CvDiploParameters.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyCity.h"
 
-//	Koshling - save flag indicating this player has no data in the save as they have never
-//	been alive
+//	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
 
 //#define VALIDATION_FOR_PLOT_GROUPS
@@ -401,14 +405,14 @@ void CvPlayer::init(PlayerTypes eID)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
-		changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
-		changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
-		changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
-		changeGoldPerUnit(GC.getDefineINT("INITIAL_GOLD_PER_UNIT"));
-		changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
-		changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
-		changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
+		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
+		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
+		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
+		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
+		changeGoldPerUnit(GC.getINITIAL_GOLD_PER_UNIT());
+		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
+		changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
+		changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -565,14 +569,14 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
-		changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
-		changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
-		changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
-		changeGoldPerUnit(GC.getDefineINT("INITIAL_GOLD_PER_UNIT"));
-		changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
-		changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
-		changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
+		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
+		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
+		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
+		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
+		changeGoldPerUnit(GC.getINITIAL_GOLD_PER_UNIT());
+		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
+		changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
+		changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -2103,14 +2107,14 @@ void CvPlayer::initFreeUnits()
 		setAdvancedStartPoints(iPoints);
 
 		// Starting visibility
-		CvPlot* pStartingPlot = getStartingPlot();
+		const CvPlot* pStartingPlot = getStartingPlot();
 		if (NULL != pStartingPlot)
 		{
 			for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
 			{
 				CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
-				if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
+				if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getADVANCED_START_SIGHT_RANGE())
 				{
 					pPlot->setRevealed(getTeam(), true, false, NO_TEAM, false);
 				}
@@ -2249,11 +2253,9 @@ int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
 
 int CvPlayer::startingPlotRange() const
 {
-	int iRange;
+	int iRange = (GC.getMap().maxStepDistance() + 10);
 
-	iRange = (GC.getMap().maxStepDistance() + 10);
-
-	iRange *= GC.getDefineINT("STARTING_DISTANCE_PERCENT");
+	iRange *= GC.getSTARTING_DISTANCE_PERCENT();
 	iRange /= 100;
 
 	iRange *= (GC.getMap().getLandPlots() / (GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive()));
@@ -3830,36 +3832,15 @@ bool CvPlayer::isInvasionCapablePlayer() const
 
 const wchar* CvPlayer::getName(uint uiForm) const
 {
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* dynamic civ names                                                                            */
-/************************************************************************************************/
-/* original code
-	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
-	{
-		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
-	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-*/
-	if( !(m_szName.empty()) )
+	if (!m_szName.empty())
 	{
 		return m_szName;
 	}
-	else if( GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
+	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON)
 	{
 		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
 	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	return GC.getInitCore().getLeaderName(getID(), uiForm);
 }
 
 /************************************************************************************************/
@@ -9771,35 +9752,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
-	//else
-	//{
-	//	// Default BTS code
-	//	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	//	{
-	//		if (GET_TEAM((TeamTypes)iI).isAlive())
-	//		{
-	//			if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
-	//			{
-	//				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-	//				{
-	//					iKnownCount++;
-	//				}
-	//			}
-
-	//			iPossibleKnownCount++;
-	//		}
-	//	}
-
-	//	if (iPossibleKnownCount > 0)
-	//	{
-	//		iModifier += (GC.getDefineINT("TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER") * iKnownCount) / iPossibleKnownCount;
-	//	}
-	//}
-	//players were getting confused by the original bts form of TD.
 	return std::max(1,iModifier);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
@@ -13688,19 +13641,21 @@ namespace {
 
 void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
-	FAssertMsg(iExperience > 0, "iExperience must be greater than 0");
+	if (iExperience < 0)
+	{
+		FAssertMsg(false, "iExperience < 0");
+		iExperience = 0;
+	}
 
-	iExperience = std::max(0, iExperience);
-
-	if (iExperience == getCombatExperience())
+	if (iExperience == m_iCombatExperience)
 	{
 		return;
 	}
 
-	const int iExperienceDiff = std::max(0, iExperience - m_iCombatExperience);
-
-	changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
-
+	if (iExperience > m_iCombatExperience)
+	{
+		changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperience - m_iCombatExperience);
+	}
 	m_iCombatExperience = iExperience;
 
 	if (!isNPC() || isHominid())
@@ -14140,20 +14095,7 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 	{
 		m_bTurnActive = bActive;
 		GC.getGame().changeNumGameTurnActive(isTurnActive() ? 1 : -1);
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-		// Plot danger cache
-		//if( GC.getGame().getNumGameTurnActive() != 1 )
-		{
-			GC.getMap().invalidateIsActivePlayerNoDangerCache();
-		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+		GC.getMap().invalidateIsActivePlayerNoDangerCache();
 	}
 }
 
@@ -14163,8 +14105,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 	PROFILE_FUNC();
 
 	MEMORY_TRACE_FUNCTION();
-
-	int iI;
 
 	if (isTurnActive() != bNewValue)
 	{
@@ -14179,27 +14119,20 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				stopProfilingDLL(true);
 			}
 
-			if (GC.getLogging())
+			if (GC.getLogging() && gDLL->getChtLvl() > 0)
 			{
-				if (gDLL->getChtLvl() > 0)
-				{
-					TCHAR szOut[1024];
-					sprintf(szOut, "Player %d Turn ON\n", getID());
-					gDLL->messageControlLog(szOut);
-				}
+				TCHAR szOut[1024];
+				sprintf(szOut, "Player %d Turn ON\n", getID());
+				gDLL->messageControlLog(szOut);
 			}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/26/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-			if( gPlayerLogLevel > 0 )
+
+			if (gPlayerLogLevel > 0)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.Log0");
 
 				logBBAI("Player %d (%S) setTurnActive for turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn() );
 
-				if( GC.getGame().getGameTurn() > 0 && (GC.getGame().getGameTurn() % 25) == 0 && !isNPC() )
+				if (GC.getGame().getGameTurn() > 0 && (GC.getGame().getGameTurn() % 25) == 0 && !isNPC())
 				{
 					CvWStringBuffer szBuffer;
 					GAMETEXT.setScoreHelp(szBuffer, getID());
@@ -14212,9 +14145,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					int iProduction = 0;
 					int iAgri = 0;
 					int iCount = 0;
-					for( int iI = 1; iI <= 5; iI++ )
+					for (int iI = 1; iI <= 5; iI++)
 					{
-						if( iGameTurn - iI >= 0 )
+						if (iGameTurn - iI >= 0)
 						{
 							iEconomy += getEconomyHistory(iGameTurn - iI);
 							iProduction += getIndustryHistory(iGameTurn - iI);
@@ -14230,7 +14163,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				}
 			}
 
-			if( gPlayerLogLevel >= 2 )
+			if (gPlayerLogLevel >= 2)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
 
@@ -14242,77 +14175,63 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				{
 					logBBAI("    Financial trouble!");
 				}
-
 				szBuffer.append(CvWString::format(L"    Team %d has met: ", getTeam()));
 
-				for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+				for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 				{
-					if( iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) )
+					if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
 					{
-						if( GET_TEAM((TeamTypes)iI).isAlive() )
+						szBuffer.append(CvWString::format(L"%d,", iI));
+					}
+				}
+
+				if (GET_TEAM(getTeam()).getVassalCount() > 0)
+				{
+					szBuffer.append(CvWString::format(L";  vassals: "));
+
+					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+					{
+						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
 						{
 							szBuffer.append(CvWString::format(L"%d,", iI));
 						}
 					}
 				}
 
-				if( GET_TEAM(getTeam()).getVassalCount() > 0 )
-				{
-					szBuffer.append(CvWString::format(L";  vassals: "));
-
-					for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
-					{
-						if( iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
-						{
-							if( GET_TEAM((TeamTypes)iI).isAlive() )
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
-						}
-					}
-				}
-
-				if( GET_TEAM(getTeam()).getAtWarCount(false) > 0 )
+				if (GET_TEAM(getTeam()).getAtWarCount(false) > 0)
 				{
 					szBuffer.append(CvWString::format(L";  at war with: "));
 
-					for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 					{
-						if( iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) )
+						if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
 						{
-							if( GET_TEAM((TeamTypes)iI).isAlive() )
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
+							szBuffer.append(CvWString::format(L"%d,", iI));
 						}
 					}
 				}
 
-				if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 )
+				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
 				{
 					szBuffer.append(CvWString::format(L";  planning war with: "));
 
-					for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 					{
-						if( iI != getTeam() && !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN )
+						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
+						&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
 						{
-							if( GET_TEAM((TeamTypes)iI).isAlive() )
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
+							szBuffer.append(CvWString::format(L"%d,", iI));
 						}
 					}
 				}
-
 				logBBAI("%S", szBuffer.getCString());
-
 				szBuffer.clear();
 
-				if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 ) logBBAI("    Enemy power perc: %d (%d with others reduction)", GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+				{
+					logBBAI("    Enemy power perc: %d (%d with others reduction)", GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+				}
 			}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
@@ -14325,7 +14244,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				//	Calculate plot danger values for this player
 				CvPlot* pLoopPlot;
 
-				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
 					pLoopPlot = GC.getMap().plotByIndex(iI);
 
@@ -14333,12 +14252,12 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					pLoopPlot->setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3);
 				}
 
-				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
 					pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Add in known dangers from visible enemy units
-					if ( pLoopPlot->isVisible(getTeam(),false) )
+					if (pLoopPlot->isVisible(getTeam(), false))
 					{
 						//	Enemies are unconditionally dangerous, but any non-ally
 						//	might become an enemy so non-ally troop build ups are also
@@ -14346,24 +14265,19 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 						//	presence implies a treaty)
 						int	iDangerCount = pLoopPlot->getVisibleEnemyStrength(m_eID)*2;
 
-						if ( getTeam() != pLoopPlot->getTeam() )
+						if (getTeam() != pLoopPlot->getTeam())
 						{
 							iDangerCount += pLoopPlot->getVisibleNonAllyStrength(m_eID);
 						}
-						addPlotDangerSource(pLoopPlot,
-											iDangerCount/3);
+						addPlotDangerSource(pLoopPlot, iDangerCount/3);
 					}
 				}
 			}
 
-			// If we are the Pitboss, send this player an email
-			if ( gDLL->IsPitbossHost() )
+			// Send email to disconnected human players if this is the pitboss.
+			if (gDLL->IsPitbossHost() && isHuman() && !isConnected())
 			{
-				// If this guy is not currently connected, try sending him an email
-				if ( isHuman() && !isConnected() )
-				{
-					sendReminder();
-				}
+				sendReminder();
 			}
 
 			if ((GC.getGame().isHotSeat() || GC.getGame().isPbem()) && isHuman() && bDoTurn)
@@ -14378,7 +14292,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			GC.getGame().changeNumGameTurnActive(1);
 
 			//	Update the Great Wall at the start of the active player's turn
-			if ( GC.getGame().getActivePlayer() == getID() )
+			if (GC.getGame().getActivePlayer() == getID())
 			{
 				PROFILE("CvPlayer::setTurnActive.ProcessGW");
 
@@ -14399,22 +14313,18 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					AI_doAdvancedStart();
 				}
 
-				if (GC.getGame().getElapsedGameTurns() > 0)
+				if (GC.getGame().getElapsedGameTurns() > 0 && isAlive())
 				{
-					if (isAlive())
+					//	Koshling - moved AI turn processing to the START of the turn (ie - before unit movement)
+					//	so as to allow units to answer city unit requests
+					if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || !isHuman())
 					{
-						//	Koshling - moved AI turn processing to the START of the turn (ie - before unit movement)
-						//	so as to allow units to answer city unit requests
-						if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || !isHuman() )
-						{
-							doTurn();
-						}
-
-						doTurnUnits();
+						doTurn();
 					}
+					doTurnUnits();
 				}
 
-				if ((getID() == GC.getGame().getActivePlayer()) && (GC.getGame().getElapsedGameTurns() > 0))
+				if (getID() == GC.getGame().getActivePlayer() && GC.getGame().getElapsedGameTurns() > 0)
 				{
 					MEMORY_TRACK_EXEMPT();
 
@@ -14427,7 +14337,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 						gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NEWTURN");
 					}
 				}
-
 				doWarnings();
 			}
 
@@ -14437,7 +14346,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				{
 					gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 				}
-
 				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 			}
 		}
@@ -14453,14 +14361,11 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				startProfilingDLL(true);
 			}
 
-			if (GC.getLogging())
+			if (GC.getLogging() && gDLL->getChtLvl() > 0)
 			{
-				if (gDLL->getChtLvl() > 0)
-				{
-					TCHAR szOut[1024];
-					sprintf(szOut, "Player %d Turn OFF\n", getID());
-					gDLL->messageControlLog(szOut);
-				}
+				TCHAR szOut[1024];
+				sprintf(szOut, "Player %d Turn OFF\n", getID());
+				gDLL->messageControlLog(szOut);
 			}
 
 			if (getID() == GC.getGame().getActivePlayer())
@@ -14480,18 +14385,18 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				{
 					if (isAlive())
 					{
-						if ( isHuman())
+						if (isHuman())
 						{
 							PROFILE("CvPlayer::setTurnActive.SetInactive.doTurn.Human");
 
 							doTurn();
 						}
+#ifdef USE_UNIT_TENDERING
 						else
 						{
-#ifdef USE_UNIT_TENDERING
 							getContractBroker().finalizeTenderContracts();
-#endif
 						}
+#endif
 					}
 
 					if ((GC.getGame().isPbem() || GC.getGame().isHotSeat()) && isHuman() && GC.getGame().countHumanPlayersAlive() > 1)
@@ -14503,7 +14408,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					{
 						if (!GET_TEAM(getTeam()).isTurnActive())
 						{
-							for (iI = (getTeam() + 1); iI < MAX_TEAMS; iI++)
+							for (int iI = (getTeam() + 1); iI < MAX_TEAMS; iI++)
 							{
 								if (GET_TEAM((TeamTypes)iI).isAlive())
 								{
@@ -14515,7 +14420,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					}
 					else
 					{
-						for (iI = (getID() + 1); iI < MAX_PLAYERS; iI++)
+						for (int iI = (getID() + 1); iI < MAX_PLAYERS; iI++)
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive())
 							{
@@ -14535,35 +14440,21 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 						}
 					}
 				}
-				else if ( isAlive() && !isHuman())
-				{
 #ifdef USE_UNIT_TENDERING
+				else if (isAlive() && !isHuman())
+				{
 					getContractBroker().finalizeTenderContracts();
-#endif
 				}
+#endif
 			}
 		}
-
 		gDLL->getInterfaceIFace()->updateCursorType();
-
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-		// Plot danger cache
-		//if( GC.getGame().getNumGameTurnActive() != 1 )
-		{
-			GC.getMap().invalidateIsActivePlayerNoDangerCache();
-		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
+		GC.getMap().invalidateIsActivePlayerNoDangerCache();
 	}
 }
+
 
 void CvPlayer::addPlotDangerSource(CvPlot* pPlot, int iStrength)
 {
@@ -19665,7 +19556,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_UNIT:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			UnitTypes eUnit = (UnitTypes) iData;
@@ -19732,7 +19623,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_CITY:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			int iCost = getAdvancedStartCityCost(bAdd, pPlot);
@@ -19745,27 +19636,21 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 			// Add City to the map
 			if (bAdd)
 			{
-				if (0 == getNumCities())
+				if (getNumCities() == 0)
 				{
 					PlayerTypes eClosestPlayer = NO_PLAYER;
 					int iMinDistance = MAX_INT;
 					for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 					{
-						CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-						if (kPlayer.isAlive())
+						const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+						if (kPlayer.isAlive() && kPlayer.getTeam() == getTeam() && kPlayer.getNumCities() == 0)
 						{
-							if (kPlayer.getTeam() == getTeam())
+							FAssert(kPlayer.getStartingPlot() != NULL);
+							int iDistance = plotDistance(iX, iY, kPlayer.getStartingPlot()->getX(), kPlayer.getStartingPlot()->getY());
+							if (iDistance < iMinDistance)
 							{
-								if (0 == kPlayer.getNumCities())
-								{
-									FAssert(kPlayer.getStartingPlot() != NULL);
-									int iDistance = plotDistance(iX, iY, kPlayer.getStartingPlot()->getX(), kPlayer.getStartingPlot()->getY());
-									if (iDistance < iMinDistance)
-									{
-										eClosestPlayer = kPlayer.getID();
-										iMinDistance = iDistance;
-									}
-								}
+								eClosestPlayer = kPlayer.getID();
+								iMinDistance = iDistance;
 							}
 						}
 					}
@@ -19783,25 +19668,19 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					changeAdvancedStartPoints(-std::min(iCost, getAdvancedStartPoints()));
 					GC.getGame().updateColoredPlots();
 					CvCity* pCity = pPlot->getPlotCity();
-					if (pCity != NULL)
+					if (pCity != NULL && pCity->getPopulation() > 1)
 					{
-						if (pCity->getPopulation() > 1)
-						{
-							pCity->setFood(pCity->growthThreshold() / 2);
-						}
+						pCity->setFood(pCity->growthThreshold() / 2);
 					}
 				}
 			}
-
-			// Remove City from the map
-			else
+			else // Remove City from the map
 			{
 				pPlot->setRouteType(NO_ROUTE, true);
 				pPlot->getPlotCity()->kill(true);
 				pPlot->setImprovementType(NO_IMPROVEMENT);
 				changeAdvancedStartPoints(iCost);
 			}
-
 			if (getID() == GC.getGame().getActivePlayer())
 			{
 				gDLL->getInterfaceIFace()->setDirty(Advanced_Start_DIRTY_BIT, true);
@@ -19810,7 +19689,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_POP:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			CvCity* pCity = pPlot->getPlotCity();
@@ -19860,7 +19739,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_CULTURE:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			CvCity* pCity = pPlot->getPlotCity();
@@ -19896,7 +19775,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_BUILDING:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			CvCity* pCity = pPlot->getPlotCity();
@@ -19945,7 +19824,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_ROUTE:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			RouteTypes eRoute = (RouteTypes) iData;
@@ -19992,7 +19871,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_IMPROVEMENT:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
 			ImprovementTypes eImprovement = (ImprovementTypes) iData;
@@ -20090,31 +19969,24 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_VISIBILITY:
 		{
-			if(pPlot == NULL)
+			if (pPlot == NULL)
 				return;
 
-			int iCost = getAdvancedStartVisibilityCost(bAdd, pPlot);
-
+			int iCost = getAdvancedStartVisibilityCost(pPlot);
 			if (iCost < 0)
 			{
 				return;
 			}
-
-			// Add Visibility to the plot
-			if (bAdd)
+			if (getAdvancedStartPoints() >= iCost)
 			{
-				if (getAdvancedStartPoints() >= iCost)
+				pPlot->setRevealed(getTeam(), true, true, NO_TEAM, true);
+				changeAdvancedStartPoints(-iCost);
+				if (getAdvancedStartCityCost(true, pPlot) >= 0)
 				{
-					pPlot->setRevealed(getTeam(), true, true, NO_TEAM, true);
-					changeAdvancedStartPoints(-iCost);
+					NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+					color.a = 0.4f;
+					gDLL->getEngineIFace()->fillAreaBorderPlot(pPlot->getViewportX(), pPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
-			}
-
-			// Remove Visibility from the Plot
-			else
-			{
-				pPlot->setRevealed(getTeam(), false, true, NO_TEAM, true);
-				changeAdvancedStartPoints(iCost);
 			}
 		}
 		break;
@@ -20269,15 +20141,12 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 
 int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 {
-	int iNumCities = getNumCities();
-
 	int iCost = getNewCityProductionValue();
 
 	if (iCost < 0)
 	{
 		return -1;
 	}
-
 	// Valid plot?
 	if (pPlot != NULL)
 	{
@@ -20290,19 +20159,9 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 			}
 		}
 		// Need your own city present to remove
-		else
+		else if (!pPlot->isCity() || pPlot->getPlotCity()->getOwner() != getID())
 		{
-			if (pPlot->isCity())
-			{
-				if (pPlot->getPlotCity()->getOwner() != getID())
-				{
-					return -1;
-				}
-			}
-			else
-			{
-				return -1;
-			}
+			return -1;
 		}
 
 		// Is there a distance limit on how far a city can be placed from a player's start/another city?
@@ -20310,6 +20169,7 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 		{
 			PlayerTypes eClosestPlayer = NO_PLAYER;
 			int iClosestDistance = MAX_INT;
+			const int iMax = GC.getDefineINT("ADVANCED_START_CITY_PLACEMENT_MAX_RANGE");
 
 			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 			{
@@ -20322,13 +20182,10 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 					if (NULL != pStartingPlot)
 					{
 						int iDistance = ::plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY());
-						if (iDistance <= GC.getDefineINT("ADVANCED_START_CITY_PLACEMENT_MAX_RANGE"))
+						if (iDistance <= iMax && (iDistance < iClosestDistance || iDistance == iClosestDistance && getTeam() != kPlayer.getTeam()))
 						{
-							if (iDistance < iClosestDistance || (iDistance == iClosestDistance && getTeam() != kPlayer.getTeam()))
-							{
-								iClosestDistance = iDistance;
-								eClosestPlayer = kPlayer.getID();
-							}
+							iClosestDistance = iDistance;
+							eClosestPlayer = kPlayer.getID();
 						}
 					}
 				}
@@ -20338,9 +20195,8 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 			{
 				return -1;
 			}
-			//Only allow founding a city at someone elses start point if
-			//We have no cities and they have no cities.
-			if ((getID() != eClosestPlayer) && ((getNumCities() > 0) || (GET_PLAYER(eClosestPlayer).getNumCities() > 0)))
+			//Only allow founding at someone elses start point if we have no cities and they have no cities.
+			if (getID() != eClosestPlayer && (getNumCities() > 0 || GET_PLAYER(eClosestPlayer).getNumCities() > 0))
 			{
 				return -1;
 			}
@@ -20348,20 +20204,15 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 	}
 
 	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getDefineINT("ADVANCED_START_CITY_COST_INCREASE"))
+	if (GC.getDefineINT("ADVANCED_START_CITY_COST_INCREASE") > 0)
 	{
-		if (!bAdd)
-		{
-			--iNumCities;
-		}
-
+		const int iNumCities = (bAdd ? getNumCities() : getNumCities() - 1);
 		if (iNumCities > 0)
 		{
 			iCost *= 100 + GC.getDefineINT("ADVANCED_START_CITY_COST_INCREASE") * iNumCities;
 			iCost /= 100;
 		}
 	}
-
 	return iCost;
 }
 
@@ -20963,14 +20814,13 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 // Adding or removing Visibility
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartVisibilityCost(const CvPlot* pPlot) const
 {
 	if (0 == getNumCities())
 	{
 		return -1;
 	}
 
-	int iNumVisiblePlots = 0;
 	int iCost = GC.getDefineINT("ADVANCED_START_VISIBILITY_COST");
 
 	// This denotes Visibility may not be purchased through Advanced Start
@@ -20978,33 +20828,16 @@ int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot) con
 	{
 		return -1;
 	}
-
 	// Valid Plot?
-	if (pPlot != NULL)
+	if (pPlot != NULL && (pPlot->isRevealed(getTeam(), false) || !pPlot->isAdjacentRevealed(getTeam())))
 	{
-		if (bAdd)
-		{
-			if (pPlot->isRevealed(getTeam(), false))
-			{
-				return -1;
-			}
-			if (!pPlot->isAdjacentRevealed(getTeam()))
-			{
-				return -1;
-			}
-		}
-		else
-		{
-			if (!pPlot->isRevealed(getTeam(), false))
-			{
-				return -1;
-			}
-		}
+		return -1;
 	}
 
 	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getDefineINT("ADVANCED_START_VISIBILITY_COST_INCREASE"))
+	if (GC.getDefineINT("ADVANCED_START_VISIBILITY_COST_INCREASE") > 0)
 	{
+		int iNumVisiblePlots = 0;
 		int iPlotLoop = 0;
 		CvPlot* pPlot;
 
@@ -21017,19 +20850,12 @@ int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot) con
 				++iNumVisiblePlots;
 			}
 		}
-
-		if (!bAdd)
-		{
-			--iNumVisiblePlots;
-		}
-
 		if (iNumVisiblePlots > 0)
 		{
 			iCost *= 100 + GC.getDefineINT("ADVANCED_START_VISIBILITY_COST_INCREASE") * iNumVisiblePlots;
 			iCost /= 100;
 		}
 	}
-
 	return iCost;
 }
 

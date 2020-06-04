@@ -5310,10 +5310,10 @@ class Revolution:
 						if( pRevTeam.isMapTrading() ) :
 							# Give motherlands map
 							bGaveMap = True
-							gameMap = GC.getMap()
+							MAP = GC.getMap()
 							for ix in xrange(CyMap().getGridWidth()) :
 								for iy in xrange(CyMap().getGridHeight()) :
-									pPlot = gameMap.plot(ix,iy)
+									pPlot = MAP.plot(ix,iy)
 									if( pPlot.isRevealed(pTeam.getID(),False) ) :
 										pPlot.setRevealed(pRevTeam.getID(),True,False,pTeam.getID())
 
@@ -5838,7 +5838,7 @@ class Revolution:
 
 		if pPlayer.isHuman():
 			GAME.setForcedAIAutoPlay(iPlayer, iNumTurns, True)
-			SdToolKit.sdObjectSetVal("AIAutoPlay", game, "bCanCancelAuto", False)
+			SdToolKit.sdObjectSetVal("AIAutoPlay", GAME, "bCanCancelAuto", False)
 		RevInstances.AIAutoPlayInst.abdicateMultiCheckNoMessage(iPlayer, iNumTurns)
 
 
@@ -6257,10 +6257,10 @@ class Revolution:
 			if pRevTeam.isMapTrading():
 				# Give motherlands map
 				bGaveMap = True
-				gameMap = GC.getMap()
+				MAP = GC.getMap()
 				for ix in xrange(CyMap().getGridWidth()):
 					for iy in xrange(CyMap().getGridHeight()):
-						pPlot = gameMap.plot(ix,iy)
+						pPlot = MAP.plot(ix,iy)
 						if pPlot.isRevealed(pTeam.getID(),False):
 							pPlot.setRevealed(pRevTeam.getID(),True,False,pTeam.getID())
 

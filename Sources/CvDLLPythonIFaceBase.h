@@ -9,7 +9,6 @@
 // Copyright 2005 Firaxis Games
 //
 
-//#include "CvEnums.h"
 #ifndef __INTELLISENSE__
 #include <boost/python/object.hpp>
 namespace python = boost::python;

@@ -1,4 +1,4 @@
-Version=12
+Version=14
 BeginGame
 	StartYear=-200000
 	Description= C2C Large Earth Map with no preset Civs. By Harrier.
@@ -8591,7 +8591,6 @@ EndPlot
 BeginPlot
 	x=22,y=50
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -23158,7 +23157,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_SQUASH
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -33752,7 +33750,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_MELONS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -35658,7 +35655,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=26
-	TerrainType=TERRAIN_SEA_TROPICAL
+	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35975,7 +35972,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_COTTON
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -36044,7 +36040,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=25
-	TerrainType=TERRAIN_SEA_TROPICAL
+	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot

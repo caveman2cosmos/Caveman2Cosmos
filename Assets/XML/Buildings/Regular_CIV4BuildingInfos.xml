@@ -33251,7 +33251,6 @@
 			<Strategy>TXT_KEY_BUILDING_FIRE_DOCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DOCK</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_FIRE_DOCK</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -75901,7 +75900,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_TOWNWATCH</BuildingType>

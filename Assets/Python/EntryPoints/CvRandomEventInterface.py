@@ -7202,30 +7202,23 @@ def getHelpSuperVirus4(argsList):
 
 
 def canDoNewWorldTrigger(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  #Room on the Map for 3 new cities
-  iNeededCities = 3
-  pBestPlots = []
-  while (iNeededCities > 0):
-    map = GC.getMap()
-    iBestValue = 0
-    pBestPlot = None
-    for i in xrange(map.numPlots()):
-      pLoopPlot = map.plotByIndex(i)
-      if (pBestPlots.count(pLoopPlot) == 0):
-        if (pLoopPlot.isCoastalLand()):
-          if (player.canFound(pLoopPlot.getX(), pLoopPlot.getY())):
-            if (pLoopPlot.getFoundValue(kTriggeredData.ePlayer) > iBestValue):
-              pBestPlot = pLoopPlot
-              iBestValue = pLoopPlot.getFoundValue(kTriggeredData.ePlayer)
-    if (pBestPlot == None):
-      return False
-    pBestPlots.append(pBestPlot)
-    iNeededCities -= 1
-
-  return True
+	kTriggeredData = argsList[0]
+	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	#Room on the Map for 3 new cities
+	MAP = GC.getMap()
+	iNumPlots = MAP.numPlots()
+	iNeededCities = 3
+	plotIndexes = []
+	while iNeededCities > 0:
+		for i in xrange(iNumPlots):
+			if i not in plotIndexes:
+				CyPlot = MAP.plotByIndex(i)
+				if not CyPlot.isWater() and CyPlot.isCoastal() and CyPlayer.canFound(CyPlot.getX(), CyPlot.getY()):
+					plotIndexes.append(i)
+					break
+		else: return False
+		iNeededCities -= 1
+	return True
 
 
 def triggerNewWorldCities(argsList):
@@ -7258,12 +7251,15 @@ def triggerNewWorldCities(argsList):
 		iBestValue = 0
 		pBestPlot = None
 		for i in xrange(iNumPlots):
-			pLoopPlot = MAP.plotByIndex(i)
-			if pLoopPlot.isCoastalLand():
-				if CyPlayer.canFound(pLoopPlot.getX(), pLoopPlot.getY()):
-					if pLoopPlot.getFoundValue(iPlayer) > iBestValue:
-						pBestPlot = pLoopPlot
-						iBestValue = pLoopPlot.getFoundValue(iPlayer)
+			CyPlot = MAP.plotByIndex(i)
+			if not CyPlot.isWater() and CyPlot.isCoastal() and CyPlayer.canFound(CyPlot.getX(), CyPlot.getY()):
+				iValue = CyPlot.getFoundValue(iPlayer)
+				if iValue > iBestValue:
+					pBestPlot = CyPlot
+					iBestValue = iValue
+		if pBestPlot is None:
+			raise "Error in TriggerNewWorldCities - No City Created!"
+			return
 
 		CyPlayer.found(pBestPlot.getX(), pBestPlot.getY())
 
@@ -7313,10 +7309,9 @@ def triggerNewWorldCities(argsList):
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
-			if CyCity.plot().isCoastalLand():
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
 		iNeededCities -= 1
 
 
@@ -7687,7 +7682,7 @@ def doVolcanoExtinction(argsList):
   if GAME.getSorenRandNum(100, 'Volcanic minerals chance') < 50:
     iBonus = GC.getInfoTypeForString('BONUS_OBSIDIAN')
     pPlot.setBonusType(iBonus)
-    itechresource = GC.getInfoTypeForString("TECH_STONE_TOOLS")
+    itechresource = GC.getInfoTypeForString("TECH_TOOL_MAKING")
   else:
     iBonus = GC.getInfoTypeForString('BONUS_SULPHUR')
     pPlot.setBonusType(iBonus)

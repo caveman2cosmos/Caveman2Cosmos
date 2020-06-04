@@ -40,48 +40,18 @@
 				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ABORIGINE_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIJIAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HAWAIIAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAORI_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NEWZEALAND_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POLYNESIAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_RAPANUI_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SAMOAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TAHITIAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TONGAN_EMBASSY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings>
+			<PrereqBonuses>
+				<BonusType>BONUS_ABORIGINE</BonusType>
+				<BonusType>BONUS_FIJIAN</BonusType>
+				<BonusType>BONUS_HAWAIIAN</BonusType>
+				<BonusType>BONUS_MAORI</BonusType>
+				<BonusType>BONUS_NEW_ZEALANDER</BonusType>
+				<BonusType>BONUS_POLYNESIAN</BonusType>
+				<BonusType>BONUS_RAPA_NUI</BonusType>
+				<BonusType>BONUS_SAMOAN</BonusType>
+				<BonusType>BONUS_TAHITIAN</BonusType>
+				<BonusType>BONUS_TONGAN</BonusType>				
+			</PrereqBonuses>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -1,4 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CyCity.h"
+#include "CyPlayer.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
@@ -19,7 +23,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getAdvancedStartImprovementCost", &CyPlayer::getAdvancedStartImprovementCost, "int (int (ImprovementTypes) eImprovement, bool bAdd, CyPlot* pPlot)")
 		.def("getAdvancedStartRouteCost", &CyPlayer::getAdvancedStartRouteCost, "int (int (RouteTypes) eUnit, bool bAdd, CyPlot* pPlot)")
 		.def("getAdvancedStartTechCost", &CyPlayer::getAdvancedStartTechCost, "int (int (TechTypes) eUnit, bool bAdd)")
-		.def("getAdvancedStartVisibilityCost", &CyPlayer::getAdvancedStartVisibilityCost, "int (bool bAdd, CyPlot* pPlot)")
+		.def("getAdvancedStartVisibilityCost", &CyPlayer::getAdvancedStartVisibilityCost, "int (CyPlot* pPlot)")
 
 		.def("getEspionageSpending", &CyPlayer::getEspionageSpending, "int (PlayerTypes eIndex)")
 		.def("canDoEspionageMission", &CyPlayer::canDoEspionageMission, "bool (EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CyPlot* pPlot, int iExtraData)")
@@ -52,6 +56,8 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getGreatGeneralRateModifier", &CyPlayer::getGreatGeneralRateModifier, "int ()")
 		.def("getDomesticGreatGeneralRateModifier", &CyPlayer::getDomesticGreatGeneralRateModifier, "int ()")
 		.def("getStateReligionGreatPeopleRateModifier", &CyPlayer::getStateReligionGreatPeopleRateModifier, "int ()")
+		.def("greatPeopleThresholdMilitary", &CyPlayer::greatPeopleThresholdMilitary, "int ()")
+		.def("greatPeopleThresholdNonMilitary", &CyPlayer::greatPeopleThresholdNonMilitary, "int ()")
 
 		.def("getMaxGlobalBuildingProductionModifier", &CyPlayer::getMaxGlobalBuildingProductionModifier, "int ()")
 		.def("getMaxTeamBuildingProductionModifier", &CyPlayer::getMaxTeamBuildingProductionModifier, "int ()")
@@ -63,18 +69,12 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getMilitaryProductionModifier", &CyPlayer::getMilitaryProductionModifier, "int ()")
 		.def("getSpaceProductionModifier", &CyPlayer::getSpaceProductionModifier, "int ()")
 		.def("getCityDefenseModifier", &CyPlayer::getCityDefenseModifier, "int ()")
-		/************************************************************************************************/
-		/* REVDCM                                 04/29/10                                phungus420    */
-		/*                                                                                              */
-		/* Player Functions                                                                             */
-		/************************************************************************************************/
+
 		.def("getUnitUpgradePriceModifier", &CyPlayer::getUnitUpgradePriceModifier, "int ()")
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("isInquisitionConditions", &CyPlayer::isInquisitionConditions, "bool ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
-		/************************************************************************************************/
-		/* REVDCM                                  END                                                  */
-		/************************************************************************************************/
+
 		.def("getNumNukeUnits", &CyPlayer::getNumNukeUnits, "int ()")
 		.def("getNumOutsideUnits", &CyPlayer::getNumOutsideUnits, "int ()")
 		.def("getBaseFreeUnits", &CyPlayer::getBaseFreeUnits, "int ()")
@@ -108,9 +108,8 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getLevelExperienceModifier", &CyPlayer::getLevelExperienceModifier, "int ()")
 
 		.def("getExtraHealth", &CyPlayer::getExtraHealth, "int ()")
-		// BUG - start
 		.def("changeExtraHealth", &CyPlayer::changeExtraHealth, "void (int iChange)")
-		// BUG - end
+
 		.def("getBuildingGoodHealth", &CyPlayer::getBuildingGoodHealth, "int ()")
 		.def("getBuildingBadHealth", &CyPlayer::getBuildingBadHealth, "int ()")
 
@@ -130,16 +129,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getTradeRoutes", &CyPlayer::getTradeRoutes, "int ()")
 		.def("getConversionTimer", &CyPlayer::getConversionTimer, "int ()")
 		.def("getRevolutionTimer", &CyPlayer::getRevolutionTimer, "int ()")
-		/************************************************************************************************/
-		/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
+
 		.def("setRevolutionTimer", &CyPlayer::setRevolutionTimer, "void (int newTime)")
 		.def("changeRevolutionTimer", &CyPlayer::changeRevolutionTimer, "void (int addTime)")
-		/************************************************************************************************/
-		/* REVOLUTION_MOD                          END                                                  */
-		/************************************************************************************************/
 
 		.def("isStateReligion", &CyPlayer::isStateReligion, "bool ()")
 		.def("isNoNonStateReligionSpread", &CyPlayer::isNoNonStateReligionSpread, "bool ()")
@@ -161,9 +153,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getUnitPower", &CyPlayer::getUnitPower, "int ()")
 		.def("getPopScore", &CyPlayer::getPopScore, "int ()")
 		.def("getLandScore", &CyPlayer::getLandScore, "int ()")
-		//Sevo Begin--VCM
+
 		.def("getSevoWondersScore", &CyPlayer::getSevoWondersScore, "int ()")
-		//Sevo End VCM
+
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
 		.def("getTotalTimePlayed", &CyPlayer::getTotalTimePlayed, "int ()")
@@ -172,10 +164,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("isEverAlive", &CyPlayer::isEverAlive, "bool ()")
 		.def("isExtendedGame", &CyPlayer::isExtendedGame, "bool ()")
 		.def("isFoundedFirstCity", &CyPlayer::isFoundedFirstCity, "bool ()")
-		// < M.A.D. Nukes Start >
+
 		.def("isMADNukesEnabled", &CyPlayer::isMADNukesEnabled, "bool ()")
 		.def("setMADNukesEnabled", &CyPlayer::setMADNukesEnabled, "void (bool)")
-		// < M.A.D. Nukes End   >
 
 		.def("isStrike", &CyPlayer::isStrike, "bool ()")
 
@@ -305,5 +296,5 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("initTriggeredData", &CyPlayer::initTriggeredData, python::return_value_policy<python::reference_existing_object>(), "EventTriggeredData* (int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)")
 		.def("getEventTriggerWeight", &CyPlayer::getEventTriggerWeight, "int getEventTriggerWeight(int eEventTrigger)")
 		.def("doGoldenAgebyPercentage", &CyPlayer::doGoldenAgebyPercentage, "void doGoldenAgebyPercentage(int iPercent)")
-		;
+	;
 }

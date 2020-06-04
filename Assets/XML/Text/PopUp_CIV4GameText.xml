@@ -177,21 +177,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ELECTION_DEFEAT</Tag>
-		<English>In the heated election, your opponent, %s1, managed to snatch victory from you with %d1&#37; of the vote!</English>
-		<French>Lors de cette élection brûlante, votre adversaire, %s1 a réussi à vous arracher la victoire avec %d1&#37; des voix!</French>
-		<German>Nach einem hitzigen Wahlkampf hat Dein Gegner, %s1, es geschafft, Dir den Sieg mit %d1&#37; der Stimmen zu entreißen!</German>
-		<Italian>Dopo un'accesa votazione, il tuo rivale %s1 è riuscito a soffiarti la vittoria con il %d1&#37; dei voti!</Italian>
-		<Polish>W zaciętych wyborach Twój przeciwnik %s1 zdołał zwyciężyć w wyborach z ilością głosów %d1&#37;!</Polish>
-		<Spanish>¡Tu oponente %s1 ha logrado arrebatarte la victoria en las últimas elecciones, con el %d1&#37; de los votos!</Spanish>
+		<English>In the heated election, your opponent, %s1, managed to snatch victory from you with %d1% of the vote!</English>
+		<French>Lors de cette élection brûlante, votre adversaire, %s1 a réussi à vous arracher la victoire avec %d1% des voix!</French>
+		<German>Nach einem hitzigen Wahlkampf hat Dein Gegner, %s1, es geschafft, Dir den Sieg mit %d1% der Stimmen zu entreißen!</German>
+		<Italian>Dopo un'accesa votazione, il tuo rivale %s1 è riuscito a soffiarti la vittoria con il %d1% dei voti!</Italian>
+		<Polish>W zaciętych wyborach Twój przeciwnik %s1 zdołał zwyciężyć w wyborach z ilością głosów %d1%!</Polish>
+		<Spanish>¡Tu oponente %s1 ha logrado arrebatarte la victoria en las últimas elecciones, con el %d1% de los votos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ELECTION_VICTORY</Tag>
-		<English>In what most critics called a "run of the mill" election last night, you won with %d1&#37; of the vote! Congratulations!</English>
-		<French>Dans une élection des plus serrées la nuit dernière, vous avez remporté la Victoire avec %d1&#37; des voix! Félicitations!</French>
-		<German>Die meisten Kritker nennen sie eine mittelmäßige Wahlnacht; Du hast mit %d1&#37; gewonnen! Glückwunsch!</German>
-		<Italian>Durante quella che i critici hanno chiamato "un'elezione ordinaria" la scorsa notte, hai vinto con il %d1&#37; dei voti! Congratulazioni!</Italian>
-		<Polish>Większość krytyków ocenia ostatnie wybory "przeciętnie" ale i tak zwyciężyłeś z ilością głosów: %d1&#37;! Gratulacje!</Polish>
-		<Spanish>¡Has obtenido la victoria en las disputadísimas elecciones de anoche con un %d1&#37; de los votos! ¡Felicidades!</Spanish>
+		<English>In what most critics called a "run of the mill" election last night, you won with %d1% of the vote! Congratulations!</English>
+		<French>Dans une élection des plus serrées la nuit dernière, vous avez remporté la Victoire avec %d1% des voix! Félicitations!</French>
+		<German>Die meisten Kritker nennen sie eine mittelmäßige Wahlnacht; Du hast mit %d1% gewonnen! Glückwunsch!</German>
+		<Italian>Durante quella che i critici hanno chiamato "un'elezione ordinaria" la scorsa notte, hai vinto con il %d1% dei voti! Congratulazioni!</Italian>
+		<Polish>Większość krytyków ocenia ostatnie wybory "przeciętnie" ale i tak zwyciężyłeś z ilością głosów: %d1%! Gratulacje!</Polish>
+		<Spanish>¡Has obtenido la victoria en las disputadísimas elecciones de anoche con un %d1% de los votos! ¡Felicidades!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ELECTION_VICTORY_FAKE</Tag>

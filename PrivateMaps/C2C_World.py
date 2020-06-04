@@ -38,7 +38,7 @@ class MapConstants:
 		self.HillPercent = 0.26
 
 		# Percentage of land squares to be Peaks.
-		self.PeakPercent = 0.08
+		self.PeakPercent = 0.07
 
 		#Hotter than this temperature will be considered deciduous forest, colder will
 		#be evergreen forest.Temperatures range from coldest 0.0 to hottest 1.0.
@@ -169,7 +169,7 @@ class MapConstants:
 		##############################################################################
 		''' These are values that affect the elevation map,
 		higher numbers give greater chaos and smaller features.'''
-		self.fBaseFreq = 0.4444
+		self.fBaseFreq = 0.45
 		self.fLacunarity = 1.48
 		# Roughness boundaries; range: 0-1.
 		self.fMinPersi = 0.6
@@ -228,18 +228,17 @@ class MapConstants:
 		#How many land squares will be below desert rainfall threshold. In this case,
 		#rain levels close to zero are very likely to be desert, while rain levels close
 		#to the desert threshold will more likely be plains.
-		self.SaltFlatsPercent	= 0.02
-		self.DunesPercent		= 0.05
-		self.DesertPercent		= 0.10
-		self.ScrubPercent		= 0.15
+		self.SaltFlatsPercent	= 0.03
+		self.DunesPercent		= 0.09
+		self.DesertPercent		= 0.18
+		self.ScrubPercent		= 0.25
 		#Affects the amount of rocky terrain. Proportional, Range 0-1.
 		self.fRockyPercent = 0.05
 
 		#How many land squares will be below plains rainfall threshold. Rain levels close
 		#to the desert threshold are likely to be plains, while those close to the plains
 		#threshold are likely to be grassland.
-		self.BarrenPercent		= 0.20
-		self.PlainsPercent		= 0.36
+		self.PlainsPercent		= 0.44
 		self.GrasslandPercent	= 0.68
 		self.LushPercent		= 0.84
 		self.MuddyPercent		= 0.92
@@ -419,11 +418,11 @@ class MapConstants:
 			self.upLiftExponent  = 5
 
 		elif iClimate == 2: # Arid, more desert, less wet plots.
-			self.SaltFlatsPercent	= 0.06
-			self.DunesPercent		= 0.14
-			self.DesertPercent		= 0.20
-			self.ScrubPercent		= 0.28
-			self.PlainsPercent		= 0.7
+			self.SaltFlatsPercent	= 0.10
+			self.DunesPercent		= 0.20
+			self.DesertPercent		= 0.35
+			self.ScrubPercent		= 0.50
+			self.PlainsPercent		= 0.8
 			self.GrasslandPercent	= 0.9
 			self.LushPercent		= 0.95
 			self.MuddyPercent		= 0.98
@@ -1662,15 +1661,16 @@ class TerrainMap:
 			if self.plotData[i]:
 				if Rainfall[i] < minRain:
 					minRain = Rainfall[i]
-		#Normalize terrain rainfall thresholds
+		# Normalize terrain rainfall thresholds
 		self.desertThreshold	= desertThreshoLoc = FindValueFromPercent(Rainfall, mc.DesertPercent)
 		self.saltflatsThreshold = saltFlatThresLoc = FindValueFromPercent(Rainfall, mc.SaltFlatsPercent)
-		self.dunesThreshold		= dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
 		self.scrubThreshold		= scrubThresholLoc = FindValueFromPercent(Rainfall, mc.ScrubPercent)
 		self.plainsThreshold	= plainThresholLoc = FindValueFromPercent(Rainfall, mc.PlainsPercent)
-		self.grasslandThreshold	= grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
 		self.lushThreshold		= lushThresholdLoc = FindValueFromPercent(Rainfall, mc.LushPercent)
-		self.muddyThreshold		= muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
+
+		dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
+		grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
+		muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
 		#################################################
 		## Terrain Picker
 		#################################################
@@ -3316,8 +3316,11 @@ class BonusPlacer:
 				if iFeature == ICE and not bonusInfo.isFeature(ICE):
 					# Special case, ice block bonuses, mostly because it looks graphically glitchy.
 					return False
-			elif not (iFeature > -1 and bonusInfo.isFeature(iFeature) and bonusInfo.isFeatureTerrain(iTerrain)):
+			elif iFeature == -1 or not bonusInfo.isFeature(iFeature) or not bonusInfo.isFeatureTerrain(iTerrain):
 				return False
+
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
 
 		if bonusInfo.isNoRiverSide() and plot.isRiverSide():
 			return False
@@ -3851,7 +3854,7 @@ class StartingArea:
 				sPlot = MAP.plot(self.plotList[m].x, self.plotList[m].y)
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
-				sPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
+				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)

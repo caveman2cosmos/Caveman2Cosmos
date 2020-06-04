@@ -1,4 +1,4 @@
-Version=12
+Version=14
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -62940,7 +62940,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=11
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -75885,7 +75884,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=41
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -101161,7 +101159,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=41
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot

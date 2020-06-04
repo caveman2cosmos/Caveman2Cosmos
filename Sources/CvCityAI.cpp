@@ -2,6 +2,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 //	KOSHLING MOD - calculate all possible building focuses at once
 //	to avoid multiple looping - need to know how many options there
@@ -10950,7 +10952,7 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 			if (eIgnoreSpecialist != GC.getDEFAULT_SPECIALIST())
 			{
 				// do we have at least one more generic citizen than we are forcing?
-				if (getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > getForceSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))))
+				if (getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > getForceSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()))
 				{
 					// remove the extra generic citzen
 					changeSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST(), -1);

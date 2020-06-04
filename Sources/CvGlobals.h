@@ -24,20 +24,16 @@ class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
 class CvDLLInterfaceIFaceBase;
-class CvPlayerAI;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
 class CMainMenu;
-class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
 class CvMapExternal;
 class CvViewport;
-class CvPlayerAI;
-class CvTeamAI;
 class CvInterfaceModeInfo;
 class CvWorldInfo;
 class CvClimateInfo;
@@ -203,6 +199,7 @@ public:
 	CvMapExternal& getMapExternal();
 
 	bool bugInitCalled() const;
+	void enableMultiMaps() { m_bMultimapsEnabled = true; }
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
@@ -962,8 +959,6 @@ protected:
 	CvPortal* m_portal;
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
-
-//	CvArtFileMgr* m_pArtFileMgr; (unused)
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
