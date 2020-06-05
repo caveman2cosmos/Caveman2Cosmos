@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 int BuildingGroupingBase::getGroup(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
@@ -18,7 +16,6 @@ int BuildingGroupingBase::getGroup(const CvPlayer *pPlayer, CvCity *pCity, Build
 
 BuildingGroupingBase::~BuildingGroupingBase()
 {
-
 }
 
 int BuildingGroupingSingle::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const

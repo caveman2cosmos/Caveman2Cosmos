@@ -9,7 +9,6 @@ class CyCity;
 class CvUnit;
 class CySelectionGroup;
 class CvArtInfoUnit;
-//class CyUnitEntity;
 
 //
 // Python wrapper class for CvUnit

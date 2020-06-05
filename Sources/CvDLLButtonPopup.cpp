@@ -1,8 +1,13 @@
 // buttonPopup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGameTextMgr.h"
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // Public Functions...
 

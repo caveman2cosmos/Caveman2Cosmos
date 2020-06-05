@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CyGameCoreUtils.h"
+#include "CyCity.h"
+#include "CyPlot.h"
+#include "CyUnit.h"
 
 //
 // Python interface for CvgameCoreUtils.h.

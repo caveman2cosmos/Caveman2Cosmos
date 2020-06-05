@@ -28,7 +28,6 @@ class CvPlayer;
 class CvCity;
 class CvUnit;
 class CvPlot;
-class CvProperties;
 
 class CvGameObject
 {

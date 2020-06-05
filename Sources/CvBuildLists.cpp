@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include <iostream>
 
 CvBuildLists::~CvBuildLists()

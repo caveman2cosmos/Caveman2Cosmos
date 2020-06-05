@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 int UnitGroupingBase::getGroup(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {

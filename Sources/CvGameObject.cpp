@@ -8,6 +8,14 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyCity.h"
+#include "CyGame.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CyTeam.h"
+#include "CyUnit.h"
 
 CvGameObjectGame::CvGameObjectGame()
 {

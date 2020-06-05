@@ -13,13 +13,10 @@
 //
 
 
-#include "CvArea.h"
-#include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
 
 
-class FAStar;
 class CvPlotGroup;
 
 

@@ -1,6 +1,8 @@
 // playerAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
@@ -28,7 +30,6 @@
 // statics
 
 CvPlayerAI* CvPlayerAI::m_aPlayers = NULL;
-static CRITICAL_SECTION g_cAveragesCalculationSection;
 
 void CvPlayerAI::initStatics()
 {

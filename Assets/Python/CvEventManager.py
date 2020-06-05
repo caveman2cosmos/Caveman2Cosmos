@@ -16,7 +16,6 @@ import DebugUtils
 import SdToolKit as SDTK
 
 import CvWorldBuilderScreen
-import WBCityEditScreen
 import WBUnitScreen
 import WBPlayerScreen
 import WBGameDataScreen
@@ -59,6 +58,7 @@ class CvEventManager:
 			'OnLoad'					: self.onLoadGame,
 			'GameStart'					: self.onGameStart,
 #			'GameEnd'					: self.onGameEnd,
+			'MapRegen'					: self.onMapRegen,
 #			'plotRevealed'				: self.onPlotRevealed,
 #			'plotFeatureRemoved'		: self.onPlotFeatureRemoved,
 #			'plotPicked'				: self.onPlotPicked,
@@ -540,9 +540,6 @@ class CvEventManager:
 		else:
 			self.bNetworkMP = False
 
-		# This is too early to actually set the initial camera zoom level, so raise a flag so it will happen later.
-		CvScreensInterface.mainInterface.bSetStartZoom = True
-
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
 
@@ -629,12 +626,10 @@ class CvEventManager:
 		[20] Topkapi Palace
 		'''
 
-
 	def onGameStart(self, argsList):
 		# Called when a game is created the moment you can see the map.
 		self.gameStart(True)
 		G = GAME
-		bPrehistoricStart = GC.getDefineINT("START_YEAR") == G.getGameTurnYear()
 
 		if G.getGameTurn() == G.getStartTurn():
 			if G.isHotSeat() or G.isPbem():
@@ -659,7 +654,7 @@ class CvEventManager:
 					popup.setText('showDawnOfMan')
 					popup.addPopup(iPlayer)
 				szText = ""
-				if not bPrehistoricStart:
+				if GC.getDefineINT("START_YEAR") != G.getGameTurnYear():
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
 				if G.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
@@ -669,27 +664,35 @@ class CvEventManager:
 					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_TEXT)
 					popup.setText(szText)
 					popup.addPopup(iPlayer)
+			if not CyInterface().isInAdvancedStart():
+				self.freePromotions()
 		else:
-			CyInterface().setSoundSelectionReady(true)
+			CyInterface().setSoundSelectionReady(True)
 
-		if bPrehistoricStart:
-			for iPlayer in xrange(self.MAX_PC_PLAYERS):
-				CyPlayer = GC.getPlayer(iPlayer)
-				if not CyPlayer.isAlive(): continue
 
-				iCulture = -1
-				civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
-				for iPromo, _, native in self.aCultureList:
-					if civInfo.isCivilizationBuilding(native):
-						iCulture = iPromo
-						break
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
-					if CyUnit.isFound():
-						CyUnit.setHasPromotion(self.PROMO_GUARDIAN_TRIBAL, True)
-						if iCulture > -1:
-							CyUnit.setHasPromotion(iCulture, True)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
+	def freePromotions(self):
+		for iPlayer in xrange(self.MAX_PC_PLAYERS):
+			CyPlayer = GC.getPlayer(iPlayer)
+			if not CyPlayer.isAlive(): continue
+
+			civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
+			aList = []
+			for iPromo, _, native in self.aCultureList:
+				if -1 in (iPromo, native): continue
+				if civInfo.isCivilizationBuilding(native):
+					aList.append(iPromo)
+			if not aList: continue
+
+			CyUnit, i = CyPlayer.firstUnit(False)
+			while CyUnit:
+				if CyUnit.isFound():
+					for iPromo in aList:
+						CyUnit.setHasPromotion(iPromo, True)
+				CyUnit, i = CyPlayer.nextUnit(i, False)
+
+	def onMapRegen(self, argsList):
+		if not CyInterface().isInAdvancedStart():
+			self.freePromotions()
 
 
 	def onLoadGame(self, argsList):
@@ -1071,6 +1074,20 @@ class CvEventManager:
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
+			# Wonder effects
+			aWonderTuple = self.aWonderTuple
+			if iPlayerW in aWonderTuple[4]:
+				for i, iPlayer in enumerate(aWonderTuple[4]):
+					if iPlayer != iPlayerW: continue
+					KEY = aWonderTuple[0][i]
+					if KEY == "PERGAMON":
+						iGGP = int(CyUnitL.getExperience() ** 0.5)
+						if iGGP:
+							CyPlayerW.changeCombatExperience(iGGP)
+					elif KEY == "GREAT_JAGUAR_TEMPLE":
+						iChance = GAME.getSorenRandNum(5, "Jaguar")
+						if not iChance:
+							CyUnitW.setDamage(0, -1)
 
 		iUnitW = CyUnitW.getUnitType()
 		mapUnitType = self.mapUnitType
@@ -1121,23 +1138,6 @@ class CvEventManager:
 								CyTeamW = GC.getTeam(iTeamW)
 							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
 								CyCity.setHasReligion(iReligion, True, True, True)
-
-		aWonderTuple = self.aWonderTuple
-		if iPlayerW in aWonderTuple[4]:
-			for i, iPlayer in enumerate(aWonderTuple[4]):
-				if iPlayer != iPlayerW: continue
-				KEY = aWonderTuple[0][i]
-				if KEY == "PERGAMON":
-					if CyUnitL.isNPC(): continue
-					iGGP = int(CyUnitL.getExperience() ** 0.5)
-					if iGGP:
-						CyPlayerW.changeCombatExperience(iGGP)
-						CyPlayerL.changeCombatExperience(-iGGP)
-				elif KEY == "GREAT_JAGUAR_TEMPLE":
-					if CyUnitL.isNPC(): continue
-					iChance = GAME.getSorenRandNum(5, "Jaguar")
-					if not iChance:
-						CyUnitW.setDamage(0, -1)
 
 
 	def onCombatLogCalc(self, argsList):
@@ -2593,7 +2593,7 @@ class CvEventManager:
 		# Human player city naming
 		iActivePlayer = GAME.getActivePlayer()
 		if iPlayer == iActivePlayer and not GAME.getAIAutoPlay(iActivePlayer):
-			self.__eventEditCityNameBegin(CyCity, False)
+			self.__eventEditCityNameBegin((CyCity, False))
 
 
 	def onCityRazed(self, argsList):
@@ -2857,7 +2857,7 @@ class CvEventManager:
 	def onCityRename(self, argsList):
 		CyCity, = argsList
 		if CyCity.getOwner() == GAME.getActivePlayer():
-			self.__eventEditCityNameBegin(CyCity, True)
+			self.__eventEditCityNameBegin((CyCity, True))
 
 
 	'''
@@ -2902,7 +2902,8 @@ class CvEventManager:
 
 #################### TRIGGERED EVENTS ##################
 
-	def __eventEditCityNameBegin(self, CyCity, bRename):
+	def __eventEditCityNameBegin(self, argsList):
+		CyCity, bRename = argsList
 		import ScreenResolution as SR
 		xRes = SR.x
 		if xRes > 2500:
@@ -2944,7 +2945,9 @@ class CvEventManager:
 			GC.getPlayer(iPlayer).getCity(userData[1]).setName(newName, not userData[2])
 
 			if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
-				WBCityEditScreen.WBCityEditScreen().placeStats()
+				import CvScreenEnums
+				screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
+				screen.setText("CityName", "", CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + newName, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
@@ -2971,7 +2974,10 @@ class CvEventManager:
 
 	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBCityEditScreen.WBCityEditScreen().placeScript()
+
+		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
+			import WBCityEditScreen
+			WBCityEditScreen.WBCityEditScreen().placeScript()
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))

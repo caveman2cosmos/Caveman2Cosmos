@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 
 CvUnitList::CvUnitList(CvPlayer* pPlayer, CvCity* pCity) :
 m_bFilteringValid(false),

@@ -11,10 +11,6 @@
 #ifndef CV_PROPERTY_PROPAGATOR_H
 #define CV_PROPERTY_PROPAGATOR_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-#include <vector>
-
 class CvGameObject;
 
 // Base class of which the actual property propagator classes are derived

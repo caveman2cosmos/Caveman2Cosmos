@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 bool UnitSortBase::isLesserUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit1, UnitTypes eUnit2) const
 {

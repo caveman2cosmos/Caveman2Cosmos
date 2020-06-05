@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 
 CvPropertyInteraction::CvPropertyInteraction() : 
 									m_eSourceProperty(NO_PROPERTY),

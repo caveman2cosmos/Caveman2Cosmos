@@ -1,4 +1,7 @@
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlot.h"
 
 //
 // published python interface for CyCity

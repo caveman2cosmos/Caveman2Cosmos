@@ -4,22 +4,9 @@
 //	PURPOSE: Game map externals class
 //
 
-
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
-#include "CvMapGenerator.h"
-#include "CvFractal.h"
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-#include <direct.h>			// for getcwd()
-#include <stdlib.h>			// for MAX_PATH
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
-// Public Functions...
 
 CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
 								 m_bMapCoordinates(false)

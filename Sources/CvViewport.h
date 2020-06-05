@@ -9,9 +9,7 @@
 //	PURPOSE: Viewport presented as a map to the game engine
 
 
-#include "CvMapInterfaceBase.h"
 #include "CvMap.h"
-//class	CvMap;
 
 enum ViewportMode
 {

@@ -1,7 +1,9 @@
 #include "CvGameCoreDLL.h"
-
-//# include <boost/python/manage_new_object.hpp>
-//# include <boost/python/return_value_policy.hpp>
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 //
 // published python interface for CyUnit

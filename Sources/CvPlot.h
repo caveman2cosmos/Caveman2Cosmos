@@ -6,7 +6,7 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"

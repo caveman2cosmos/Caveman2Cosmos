@@ -3,8 +3,6 @@
 #ifndef _CVSTATISTICS_H_
 #define _CVSTATISTICS_H_
 
-//#include "CvEnums.h"
-
 class CvCity;
 class CvUnit;
 

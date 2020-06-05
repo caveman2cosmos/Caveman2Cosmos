@@ -11,9 +11,7 @@
 #ifndef CV_PROPERTIES_H
 #define CV_PROPERTIES_H
 
-#include "CvXMLLoadUtilityModTools.h"
-//#include "CvGameObject.h"
-
+class CvXMLLoadUtility;
 class CvGame;
 class CvTeam;
 class CvPlayer;

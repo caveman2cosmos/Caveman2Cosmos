@@ -7,12 +7,13 @@
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
-#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
 class CvPlot;
 class CvArea;
+#ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
+#endif
 
 struct CachedEdgeCosts
 {
