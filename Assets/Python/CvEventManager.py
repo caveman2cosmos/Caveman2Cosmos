@@ -16,7 +16,6 @@ import DebugUtils
 import SdToolKit as SDTK
 
 import CvWorldBuilderScreen
-import WBCityEditScreen
 import WBUnitScreen
 import WBPlayerScreen
 import WBGameDataScreen
@@ -386,10 +385,9 @@ class CvEventManager:
 
 		# Screen specific input handlers
 		iCode = eventType + 10
-		if iCode in (16, 17):
-			iCode = CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
-			if iCode:
-				return 1
+		if iCode in (16, 17) \
+		and CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0]):
+			return 1
 
 		iModifiers = bAlt + bCtrl + bShift
 
@@ -2594,7 +2592,7 @@ class CvEventManager:
 		# Human player city naming
 		iActivePlayer = GAME.getActivePlayer()
 		if iPlayer == iActivePlayer and not GAME.getAIAutoPlay(iActivePlayer):
-			self.__eventEditCityNameBegin(CyCity, False)
+			self.__eventEditCityNameBegin((CyCity, False))
 
 
 	def onCityRazed(self, argsList):
@@ -2858,7 +2856,7 @@ class CvEventManager:
 	def onCityRename(self, argsList):
 		CyCity, = argsList
 		if CyCity.getOwner() == GAME.getActivePlayer():
-			self.__eventEditCityNameBegin(CyCity, True)
+			self.__eventEditCityNameBegin((CyCity, True))
 
 
 	'''
@@ -2903,7 +2901,8 @@ class CvEventManager:
 
 #################### TRIGGERED EVENTS ##################
 
-	def __eventEditCityNameBegin(self, CyCity, bRename):
+	def __eventEditCityNameBegin(self, argsList):
+		CyCity, bRename = argsList
 		import ScreenResolution as SR
 		xRes = SR.x
 		if xRes > 2500:
@@ -2945,7 +2944,9 @@ class CvEventManager:
 			GC.getPlayer(iPlayer).getCity(userData[1]).setName(newName, not userData[2])
 
 			if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
-				WBCityEditScreen.WBCityEditScreen().placeStats()
+				import CvScreenEnums
+				screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
+				screen.setText("CityName", "", CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + newName, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
@@ -2972,7 +2973,10 @@ class CvEventManager:
 
 	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBCityEditScreen.WBCityEditScreen().placeScript()
+
+		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
+			import WBCityEditScreen
+			WBCityEditScreen.WBCityEditScreen().placeScript()
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))

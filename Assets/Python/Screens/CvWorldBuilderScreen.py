@@ -1,4 +1,6 @@
 from CvPythonExtensions import *
+import HandleInputUtil
+import PythonToolTip as pyTT
 import WBPlotScreen
 import WBEventScreen
 import WBCityEditScreen
@@ -12,7 +14,6 @@ import WBCorporationScreen
 import WBDiplomacyScreen
 import WBPlayerScreen
 import WBTeamScreen
-import WBTechScreen
 import WBProjectScreen
 import WBPlayerUnits
 import WBInfoScreen
@@ -57,6 +58,18 @@ class CvWorldBuilderScreen:
 
 		# Initialize WB
 		if self.bNotWB:
+			import InputData
+			self.InputData = InputData.instance
+			# Tool Tip
+			self.szTextTT = ""
+			self.iOffsetTT = []
+			self.bLockedTT = False
+			# init sub-screens
+			self.inSubScreen = None
+			import WBTechScreen
+			self.subScreens = {
+				"TechScreen" : WBTechScreen.WBTechScreen(self)
+			}
 			self.iPlayerAddMode = "Units"
 			self.iSelection = -1
 			self.iSelectClass = -2
@@ -69,7 +82,8 @@ class CvWorldBuilderScreen:
 			import ScreenResolution as SR
 			self.xRes = SR.x
 			self.yRes = SR.y
-			screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+			self.aFontList = SR.aFontList
+			screen = self.getScreen()
 			screen.setCloseOnEscape(False)
 			screen.setAlwaysShown(True)
 			# Make base menu
@@ -167,7 +181,7 @@ class CvWorldBuilderScreen:
 
 
 	def mouseOverPlot(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		self.m_pCurrentPlot = CyInterface().getMouseOverPlot()
 		self.m_iCurrentX = self.m_pCurrentPlot.getX()
 		self.m_iCurrentY = self.m_pCurrentPlot.getY()
@@ -609,7 +623,7 @@ class CvWorldBuilderScreen:
 
 
 	def refreshSideMenu(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
@@ -822,7 +836,7 @@ class CvWorldBuilderScreen:
 		self.setSelectionTable()
 
 	def setCurrentModeCheckbox(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		screen.setState("EditUnitData", self.iPlayerAddMode == "EditUnit")
 		screen.setState("EditPromotions", self.iPlayerAddMode == "Promotions")
 		screen.setState("WorldBuilderNormalPlayerModeButton", self.iPlayerAddMode in self.PlayerMode)
@@ -851,7 +865,7 @@ class CvWorldBuilderScreen:
 		screen.setState("SensibilityCheck", self.bSensibility)
 
 	def setSelectionTable(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		iWidth = 256
 		if self.iPlayerAddMode == "Units":
 			iY = 25
@@ -1053,7 +1067,7 @@ class CvWorldBuilderScreen:
 
 	def refreshSelection(self):
 		if self.iSelection == -1: return
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		iWidth = 200
 		screen.addTableControlGFC("WBCurrentItem", 1, 0, 0, iWidth, 25, False, True, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
 		screen.setTableColumnHeader("WBCurrentItem", 0, "", iWidth)
@@ -1344,179 +1358,234 @@ class CvWorldBuilderScreen:
 			sEnd = sTemp[-3:] + "," + sEnd
 		return (sStart + sEnd)
 
+	def goToSubScreen(self, goTo):
+		if goTo:
+			self.inSubScreen = self.subScreens[goTo]
+			self.inSubScreen.interfaceScreen()
+		else:
+			self.inSubScreen = None
 
+	def getScreen(self):
+		return CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+
+	# Tooltip
+	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
+		if not szText:
+			return
+		if szText != self.szTextTT:
+			self.szTextTT = szText
+			if not uFont:
+				uFont = self.aFontList[5]
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = Win32.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
+		else:
+			if xPos == yPos == -1:
+				POINT = Win32.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
+			screen.moveToFront("Tooltip")
+			screen.show("Tooltip")
+		if xPos == yPos == -1:
+			self.bLockedTT = True
+
+	#--------------------------#
+	# Base operation functions #
+	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		return
+		if self.bLockedTT:
+			POINT = Win32.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			self.getScreen().moveItem("Tooltip", iX, iY, 0)
 
 	def handleInput(self, inputClass):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 
-		if inputClass.getFunctionName() == "WorldBuilderEraseAll":
+		screen.hide("Tooltip") # Remove potential Help Text
+
+		if self.inSubScreen:
+			return self.inSubScreen.handleInput(inputClass, screen)
+
+		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
+		iCode	= inputClass.eNotifyCode
+		iData	= inputClass.iData
+		ID		= inputClass.iItemID
+		NAME	= inputClass.szFunctionName
+		iBtn	= inputClass.iButtonType
+		iData1	= inputClass.iData1
+		#iData2	= inputClass.iData2
+		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
+
+		if NAME == "WorldBuilderEraseAll":
 			for i in xrange(MAP.numPlots()):
 				self.m_pCurrentPlot = MAP.plotByIndex(i)
 				self.placeObject()
 
-		elif inputClass.getFunctionName() == "TradeScreen":
+		elif NAME == "TradeScreen":
 			WBTradeScreen.WBTradeScreen().interfaceScreen()
 
-		elif inputClass.getFunctionName() == "InfoScreen":
+		elif NAME == "InfoScreen":
 			WBInfoScreen.WBInfoScreen().interfaceScreen(self.iCurrentPlayer)
 
-		elif inputClass.getFunctionName() == "EditGameOptions":
+		elif NAME == "EditGameOptions":
 			WBGameDataScreen.WBGameDataScreen(self).interfaceScreen()
 
-		elif inputClass.getFunctionName() == "EditReligions":
+		elif NAME == "EditReligions":
 			WBReligionScreen.WBReligionScreen().interfaceScreen(self.iCurrentPlayer)
 
-		elif inputClass.getFunctionName() == "EditCorporations":
+		elif NAME == "EditCorporations":
 			WBCorporationScreen.WBCorporationScreen().interfaceScreen(self.iCurrentPlayer)
 
-		elif inputClass.getFunctionName() == "EditEspionage":
+		elif NAME == "EditEspionage":
 			WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(self.iCurrentPlayer, True)
 
-		elif inputClass.getFunctionName() == "EditPlayerData":
+		elif NAME == "EditPlayerData":
 			WBPlayerScreen.WBPlayerScreen().interfaceScreen(self.iCurrentPlayer)
 
-		elif inputClass.getFunctionName() == "EditTeamData":
+		elif NAME == "EditTeamData":
 			WBTeamScreen.WBTeamScreen().interfaceScreen(self.m_iCurrentTeam)
 
-		elif inputClass.getFunctionName() == "EditTechnologies":
-			WBTechScreen.WBTechScreen().interfaceScreen(self.m_iCurrentTeam)
+		elif NAME == "EditTechnologies":
+			self.goToSubScreen("TechScreen")
 
-		elif inputClass.getFunctionName() == "EditProjects":
+		elif NAME == "EditProjects":
 			WBProjectScreen.WBProjectScreen().interfaceScreen(self.m_iCurrentTeam)
 
-		elif inputClass.getFunctionName() == "EditUnitsCities":
+		elif NAME == "EditUnitsCities":
 			WBPlayerUnits.WBPlayerUnits().interfaceScreen(self.iCurrentPlayer)
 
-		elif inputClass.getFunctionName() == "WorldBuilderPlayerChoice":
+		elif NAME == "WorldBuilderPlayerChoice":
 			self.iCurrentPlayer = screen.getPullDownData("WorldBuilderPlayerChoice", screen.getSelectedPullDownID("WorldBuilderPlayerChoice"))
 			self.m_iCurrentTeam = GC.getPlayer(self.iCurrentPlayer).getTeam()
 			self.refreshSideMenu()
 			if self.iPlayerAddMode in self.RevealMode:
 				self.refreshReveal()
 
-		elif inputClass.getFunctionName() == "ChangeBy":
+		elif NAME == "ChangeBy":
 			self.iChange = screen.getPullDownData("ChangeBy", screen.getSelectedPullDownID("ChangeBy"))
 
-		elif inputClass.getFunctionName() == "AddOwnershipButton":
+		elif NAME == "AddOwnershipButton":
 			self.iPlayerAddMode = "Ownership"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddUnitsButton":
+		elif NAME == "AddUnitsButton":
 			self.iPlayerAddMode = "Units"
 			self.iSelectClass = -2
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddBuildingsButton":
+		elif NAME == "AddBuildingsButton":
 			self.iPlayerAddMode = "Buildings"
 			self.iSelectClass = 0
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "EditStartingPlot":
+		elif NAME == "EditStartingPlot":
 			self.iPlayerAddMode = "StartingPlot"
 			self.refreshSideMenu()
 			self.refreshStartingPlots()
 
-		elif inputClass.getFunctionName() == "EditPromotions":
+		elif NAME == "EditPromotions":
 			self.iPlayerAddMode = "Promotions"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddCityButton":
+		elif NAME == "AddCityButton":
 			self.iPlayerAddMode = "City"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "EditCityDataII":
+		elif NAME == "EditCityDataII":
 			self.iPlayerAddMode = "CityDataII"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "EditCityBuildings":
+		elif NAME == "EditCityBuildings":
 			self.iPlayerAddMode = "CityBuildings"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "EditPlotData":
+		elif NAME == "EditPlotData":
 			self.iPlayerAddMode = "PlotData"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "EditEvents":
+		elif NAME == "EditEvents":
 			self.iPlayerAddMode = "Events"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddImprovementButton":
+		elif NAME == "AddImprovementButton":
 			self.iPlayerAddMode = "Improvements"
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddBonusButton":
+		elif NAME == "AddBonusButton":
 			self.iPlayerAddMode = "Bonus"
 			self.iSelectClass = -1
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddPlotTypeButton":
+		elif NAME == "AddPlotTypeButton":
 			self.iPlayerAddMode = "PlotType"
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddTerrainButton":
+		elif NAME == "AddTerrainButton":
 			self.iPlayerAddMode = "Terrain"
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddRouteButton":
+		elif NAME == "AddRouteButton":
 			self.iPlayerAddMode = "Routes"
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddFeatureButton":
+		elif NAME == "AddFeatureButton":
 			self.iPlayerAddMode = "Features"
 			self.iSelectClass = 0
 			self.iSelection = -1
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "AddRiverButton":
+		elif NAME == "AddRiverButton":
 			self.iPlayerAddMode = "River"
 			self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "WBSelectClass":
+		elif NAME == "WBSelectClass":
 			self.iSelectClass = screen.getPullDownData("WBSelectClass", screen.getSelectedPullDownID("WBSelectClass"))
 			if self.iPlayerAddMode != "Features":
 				self.iSelection = -1
 				self.refreshSideMenu()
 
-		elif inputClass.getFunctionName() == "WBSelectItem":
-			self.iSelection = inputClass.getData2()
+		elif NAME == "WBSelectItem":
+			self.iSelection = inputClass.iData2
 			self.refreshSelection()
 
-		elif inputClass.getFunctionName() == "RevealMode":
+		elif NAME == "RevealMode":
 			self.iPlayerAddMode = self.RevealMode[screen.getPullDownData("RevealMode", screen.getSelectedPullDownID("RevealMode"))]
 			self.refreshReveal()
 
-		elif inputClass.getFunctionName() == "BrushWidth":
+		elif NAME == "BrushWidth":
 			self.iBrushWidth = screen.getPullDownData("BrushWidth", screen.getSelectedPullDownID("BrushWidth"))
 
-		elif inputClass.getFunctionName() == "BrushHeight":
+		elif NAME == "BrushHeight":
 			self.iBrushHeight = screen.getPullDownData("BrushHeight", screen.getSelectedPullDownID("BrushHeight"))
 
-		elif inputClass.getFunctionName() == "PythonEffectButton":
+		elif NAME == "PythonEffectButton":
 			global bPython
 			bPython = not bPython
 			self.setCurrentModeCheckbox()
 
-		elif inputClass.getFunctionName() == "SensibilityCheck":
+		elif NAME == "SensibilityCheck":
 			self.bSensibility = not self.bSensibility
 			self.setCurrentModeCheckbox()
 		return 1
 
 	def killScreen(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen = self.getScreen()
 		screen.hideScreen()
 		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
 		del self.xRes, self.yRes, self.iCurrentPlayer, self.iPlayerAddMode, \
-			self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange
+			self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange, \
+			self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
+			self.subScreens, self.inSubScreen
 		self.bNotWB = True
