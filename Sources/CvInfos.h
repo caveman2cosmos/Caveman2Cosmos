@@ -8798,23 +8798,23 @@ public:
 
 	void copyNonDefaults(CvColorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 
-	static ColorTypes green() const    { return m_Green; }
-	static ColorTypes red() const      { return m_Red; }
-	static ColorTypes yellow() const   { return m_Yellow; }
-	static ColorTypes white() const    { return m_White; }
+	static ColorTypes green()    { return m_eGreen; }
+	static ColorTypes red()      { return m_eRed; }
+	static ColorTypes yellow()   { return m_eYellow; }
+	static ColorTypes white()    { return m_eWhite; }
 
-	static void setGreen(eIndex)  { m_Green = eIndex; }
-	static void setRed(eIndex)    { m_Red = eIndex; }
-	static void setYellow(eIndex) { m_Yellow = eIndex; }
-	static void setWhite(eIndex)  { m_White = eIndex; }
+	static void setGreen(ColorTypes eIndex)  { m_eGreen = eIndex; }
+	static void setRed(ColorTypes eIndex)    { m_eRed = eIndex; }
+	static void setYellow(ColorTypes eIndex) { m_eYellow = eIndex; }
+	static void setWhite(ColorTypes eIndex)  { m_eWhite = eIndex; }
 
 protected:
 	NiColorA m_Color;
 
-	static ColorTypes m_Green;
-	static ColorTypes m_Red;
-	static ColorTypes m_Yellow;
-	static ColorTypes m_White;
+	static ColorTypes m_eGreen;
+	static ColorTypes m_eRed;
+	static ColorTypes m_eYellow;
+	static ColorTypes m_eWhite;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

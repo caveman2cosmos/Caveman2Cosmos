@@ -29015,7 +29015,6 @@ int CvThroneRoomInfo::getAnimation()
 
 bool CvThroneRoomInfo::read(CvXMLLoadUtility* pXML)
 {
-	int iVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -31964,10 +31963,10 @@ void CvEraInfo::getCheckSum(unsigned int& iSum)
 //					CvColorInfo
 //======================================================================================================
 
-ColorTypes CvColorInfo::m_Green = NO_COLOR;
-ColorTypes CvColorInfo::m_Red = NO_COLOR;
-ColorTypes CvColorInfo::m_Yellow = NO_COLOR;
-ColorTypes CvColorInfo::m_White = NO_COLOR;
+ColorTypes CvColorInfo::m_eGreen = NO_COLOR;
+ColorTypes CvColorInfo::m_eRed = NO_COLOR;
+ColorTypes CvColorInfo::m_eYellow = NO_COLOR;
+ColorTypes CvColorInfo::m_eWhite = NO_COLOR;
 
 //------------------------------------------------------------------------------------------------------
 //
