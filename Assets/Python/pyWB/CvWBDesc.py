@@ -227,25 +227,6 @@ class CvGameDesc:
 ############
 class CvTeamDesc:
 
-		self.bMapCentering = 0
-		self.bMapTrading = 0
-		self.bTechTrading = 0
-		self.bGoldTrading = 0
-		self.bOpenBordersTrading = 0
-		self.bDefensivePactTrading = 0
-		self.bPermanentAllianceTrading = 0
-		self.bVassalStateTrading = 0
-		self.bBridgeBuilding = 0
-		self.bIrrigation = 0
-		self.bIgnoreIrrigation = 0
-		self.bWaterWork = 0
-		self.bExtraWaterSeeFrom = 0
-		self.iNukeInterception = 0
-		self.iEnemyWarWeariness = 0
-		self.lDomainMoves = []
-		self.lRouteMoves = []
-		self.lImprovementYield = []
-
 	def write(self, f, idx):
 		"write out team data"
 		f.write("BeginTeam\n")
