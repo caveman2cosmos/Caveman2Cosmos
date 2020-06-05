@@ -88,6 +88,22 @@ CvGame::~CvGame()
 	SAFE_DELETE_ARRAY(m_aiFlexibleDifficultyTimer);
 }
 
+namespace {
+	void cacheInfoTypeEnums()
+	{
+		CvColorInfo::setGreen((ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
+		CvColorInfo::setRed((ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
+		CvColorInfo::setYellow((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"));
+		CvColorInfo::setWhite((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"));
+		CvImprovementInfo::setImprovementCity((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY"));
+		CvImprovementInfo::setImprovementRuins((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS"));
+		CvTerrainInfo::setTerrainPeak((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK"));
+		CvTerrainInfo::setTerrainHill((TerrainTypes)GC.getInfoTypeForString("TERRAIN_HILL"));
+		CvUnitCombatInfo::setUnitCombatAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"));
+		CvUnitCombatInfo::setUnitCombatWildAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD"));
+	}
+}
+
 void CvGame::init(HandicapTypes eHandicap)
 {
 	//--------------------------------
@@ -230,16 +246,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	GC.updateReplacements();
 
 	// Alberts2: cache higly used Types
-	CvColorInfo::setGreen((ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
-	CvColorInfo::setRed((ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
-	CvColorInfo::setYellow((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"));
-	CvColorInfo::setWhite((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"));
-	CvImprovementInfo::setImprovementCity((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY"));
-	CvImprovementInfo::setImprovementRuins((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS"));
-	CvTerrainInfo::setTerrainPeak((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK"));
-	CvTerrainInfo::setTerrainHill((TerrainTypes)GC.getInfoTypeForString("TERRAIN_HILL"));
-	CvUnitCombatInfo::setUnitCombatAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"));
-	CvUnitCombatInfo::setUnitCombatWildAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD"));
+	cacheInfoTypeEnums();
 
 	//TB: Set Statuses
 	setStatusPromotions();
@@ -2487,6 +2494,9 @@ void CvGame::update()
 				}
 			}
 		}
+
+		// Alberts2: cache higly used Types
+		cacheInfoTypeEnums();
 
 		//TB: Set Statuses
 		setStatusPromotions();
