@@ -5599,26 +5599,28 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
 
-	if (isHasTech(eIndex) != bNewValue)
+	if (isHasTech(eIndex) != bNewValue || GC.getTechInfo(eIndex).isRepeat() && m_paiTechCount[eIndex] > 0)
 	{
 		if (GC.getTechInfo(eIndex).isRepeat())
 		{
-			m_paiTechCount[eIndex]++;
-
-			setResearchProgress(eIndex, 0, ePlayer);
-
-			// report event to Python
-			CvEventReporter::getInstance().techAcquired(eIndex, getID(), ePlayer, bAnnounce && 1 == m_paiTechCount[eIndex]);
-
-			if (1 == m_paiTechCount[eIndex])
+			if (bNewValue)
 			{
-				if (bAnnounce)
+				m_paiTechCount[eIndex]++;
+
+				setResearchProgress(eIndex, 0, ePlayer);
+
+				// report event to Python
+				CvEventReporter::getInstance().techAcquired(eIndex, getID(), ePlayer, bAnnounce && 1 == m_paiTechCount[eIndex]);
+
+				if (1 == m_paiTechCount[eIndex] && bAnnounce && GC.getGame().isFinalInitialized())
 				{
-					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
-					{
-						announceTechToPlayers(eIndex);
-					}
+					announceTechToPlayers(eIndex);
 				}
+			}
+			else
+			{
+				m_paiTechCount[eIndex]--;
+				setResearchProgress(eIndex, 0, ePlayer);
 			}
 		}
 		else

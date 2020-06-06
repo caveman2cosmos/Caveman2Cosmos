@@ -728,7 +728,6 @@ def lateInit():
 	import WBBuildingScreen
 	import WBCityDataScreen
 	import WBCityEditScreen
-	import WBTechScreen
 	import WBProjectScreen
 	import WBTeamScreen
 	import WBPlayerScreen
@@ -746,7 +745,6 @@ def lateInit():
 	screenMap[WB_BUILDING]		= WBBuildingScreen.WBBuildingScreen()
 	screenMap[WB_CITYDATA]		= WBCityDataScreen.WBCityDataScreen()
 	screenMap[WB_CITYEDIT]		= WBCityEditScreen.WBCityEditScreen(worldBuilderScreen)
-	screenMap[WB_TECH]			= WBTechScreen.WBTechScreen()
 	screenMap[WB_PROJECT]		= WBProjectScreen.WBProjectScreen()
 	screenMap[WB_TEAM]			= WBTeamScreen.WBTeamScreen()
 	screenMap[WB_PLAYER]		= WBPlayerScreen.WBPlayerScreen()

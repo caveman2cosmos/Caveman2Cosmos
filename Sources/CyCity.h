@@ -24,6 +24,7 @@ class CyCity
 public:
 	CyCity();
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
+
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
 	bool isNone() const { return m_pCity == NULL; }
 
