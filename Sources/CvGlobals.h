@@ -29,7 +29,6 @@ class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
-class CMainMenu;
 class FVariableSystem;
 class CvMap;
 class CvMapExternal;
@@ -235,12 +234,9 @@ public:
 	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
 	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
 	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
-	NiPoint3& getPt3Origin()	 				{ return m_pt3Origin; }
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e);
-
-	NiPoint3& getPt3CameraDir()		 			{ return m_pt3CameraDir; }
 
 	bool& getLogging() 							{ return m_bLogging; }
 	bool& getRandLogging() 						{ return m_bRandLogging; }
@@ -492,9 +488,6 @@ public:
 
 	int iStuckUnitID;
 	int iStuckUnitCount;
-
-	bool isLoadedPlayerOptions() const;
-	void setLoadedPlayerOptions(bool bNewVal);
 
 	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
@@ -932,16 +925,8 @@ protected:
 	bool m_bRandLogging;
 	bool m_bSynchLogging;
 	bool m_bOverwriteLogs;
-	NiPoint3  m_pt3CameraDir;
-	int m_iNewPlayers;
 
-	CMainMenu* m_pkMainMenu;
-
-	bool m_bZoomOut;
-	bool m_bZoomIn;
-	bool m_bLoadGameFromFile;
-
-	FMPIManager * m_pFMPMgr;
+	FMPIManager* m_pFMPMgr;
 
 	CvRandom* m_asyncRand;
 
@@ -980,8 +965,6 @@ protected:
 	FAStar* m_areaFinder;
 	FAStar* m_plotGroupFinder;
 
-	NiPoint3 m_pt3Origin;
-
 	int* m_aiPlotDirectionX;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotDirectionY;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotCardinalDirectionX;	// [NUM_CARDINALDIRECTION_TYPES];
@@ -995,7 +978,6 @@ protected:
 	DirectionTypes* m_aeTurnRightDirection;	// [NUM_DIRECTION_TYPES];
 	DirectionTypes m_aaeXYDirection[DIRECTION_DIAMETER][DIRECTION_DIAMETER];
 
-	//InterfaceModeInfo m_aInterfaceModeInfo[NUM_INTERFACEMODE_TYPES] =
 	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
 
 	/***********************************************************************************************************************
@@ -1221,7 +1203,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes2;
 	CvString *m_paszEntityEventTypes;
 	int m_iNumEntityEventTypes;
 
@@ -1265,7 +1246,6 @@ protected:
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
-	bool m_bLoadedPlayerOptions;
 
 	float m_fPLOT_SIZE;
 
