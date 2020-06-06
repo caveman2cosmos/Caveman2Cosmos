@@ -90,8 +90,8 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FAssertMsg(false, "Override this"); return false; }
 	virtual bool readPass3() { FAssertMsg(false, "Override this"); return false; }
-	virtual void copyNonDefaults(CvInfoBase* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
-	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false)
+	virtual void copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
+	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(unsigned int& iSum) { };
 	virtual const wchar* getExtraHoverText() const { return L""; };
@@ -158,7 +158,7 @@ public:
 	virtual ~CvHotkeyInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHotkeyInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvHotkeyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -495,8 +495,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTechInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -1170,8 +1170,8 @@ public:
 /************************************************************************************************/
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvPromotionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -2416,8 +2416,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
-	void copyNonDefaults(CvUnitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	std::vector<int>& getSubCombatTypes();
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -2802,7 +2802,7 @@ public:
 	virtual void write(FDataStreamBase* pStream) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpawnInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpawnInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int	getNumBonuses() const;
 	int	getNumTerrains() const;
@@ -3024,12 +3024,7 @@ public:
 	bool isPolicy() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY								 10/22/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	void copyNonDefaults(CvCivicOptionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCivicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -3225,7 +3220,7 @@ public:
 	void write(FDataStreamBase* stream) {}
 	bool readPass3();
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivicInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 	CvPropertyManipulators* getPropertyManipulators();
 
@@ -4052,8 +4047,8 @@ private:
 
 public:
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const; // Exposed to Python
 	BonusTypes getPrereqOrBonuses(int i) const; // Exposed to Python
@@ -4378,16 +4373,14 @@ public:
 	int getTechPrereqAnyone( void ) const; // Exposed to Python
 	int getMaxPlayerInstances() const;
 
-	bool isValid( void ) const; // Exposed to Python
-
-	// Arrays
+	bool isValid() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -4427,7 +4420,7 @@ public:
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRiverModelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRiverModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4471,7 +4464,7 @@ public:
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteModelInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRouteModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4565,8 +4558,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivilizationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -4648,7 +4641,7 @@ public:
 	const char* getMovie() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVictoryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -4700,7 +4693,7 @@ class CvHurryInfo :
 		void write(FDataStreamBase* stream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvHurryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 		void getCheckSum(unsigned int& iSum);
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
@@ -4806,7 +4799,7 @@ public:
 	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHandicapInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -4947,7 +4940,7 @@ public:
 	//TB GameSpeed end
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvGameSpeedInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -5095,7 +5088,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
-	void copyNonDefaults(CvBuildInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -5191,7 +5184,7 @@ public:
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvGoodyInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -5267,7 +5260,7 @@ public:
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -5492,8 +5485,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvImprovementInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -5613,15 +5606,12 @@ public:
 	int getUniqueRange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBonusClassInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iUniqueRange;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5704,7 +5694,7 @@ public:
 	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBonusInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
@@ -5958,7 +5948,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvCommerceInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6012,7 +6002,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvYieldInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6091,7 +6081,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTerrainInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6215,7 +6205,7 @@ public:
 	int getDisableCode(uint uiCode) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAdvisorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvAdvisorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -6382,7 +6372,7 @@ public:
 	void read(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6541,7 +6531,7 @@ public:
 
 	int getPercent(int iID) const;
 
-	void copyNonDefaults(CvWorldInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6691,7 +6681,7 @@ public:
 	int getSeaLevelChange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSeaLevelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSeaLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -6722,7 +6712,7 @@ public:
 	int getProductionToCommerceModifier(int i) const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvProcessInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -6772,7 +6762,7 @@ public:
 	bool isVoteSourceType(int i) const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVoteInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 protected:
@@ -6858,7 +6848,7 @@ public:
 	bool isMapCategoryType(int i);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvProjectInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	int getWorldHappiness() const;
@@ -6984,7 +6974,7 @@ public:
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvReligionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -7098,7 +7088,7 @@ public:
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvCorporationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -7417,8 +7407,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTraitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
-	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(unsigned int& iSum);
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
@@ -7667,7 +7657,7 @@ public:
 	DllExport const TCHAR* getFileName();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomCamera* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomCamera* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7697,7 +7687,7 @@ public:
 	DllExport int getAnimation();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7731,7 +7721,7 @@ public:
 	DllExport const TCHAR* getFileName();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7766,7 +7756,7 @@ public:
 	void setStartTime(float fVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSlideShowInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSlideShowInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7796,7 +7786,7 @@ public:
 	void setPath(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSlideShowRandomInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSlideShowRandomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7832,7 +7822,7 @@ public:
 	DllExport const TCHAR* getWaterLevelGlossPath(int index);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvWorldPickerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvWorldPickerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7871,7 +7861,7 @@ public:
 	DllExport int getEventCode();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpaceShipInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpaceShipInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7911,7 +7901,7 @@ class CvAnimationPathInfo : public CvInfoBase
 		DllExport bool isMissionPath() const;
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationPathInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvAnimationPathInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 	private:
@@ -7939,7 +7929,7 @@ class CvAnimationCategoryInfo : public CvInfoBase
 		DllExport int getCategoryDefaultTo( );
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 	private:
@@ -7968,7 +7958,7 @@ class CvEntityEventInfo : public CvInfoBase
 		void write(FDataStreamBase* pStream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvEntityEventInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvEntityEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 		DllExport AnimationPathTypes getAnimationPathType(int iIndex = 0) const;
 		DllExport EffectTypes getEffectType(int iIndex = 0) const;
@@ -8010,7 +8000,7 @@ public:
 	void setPath(const TCHAR* szDesc); // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAssetInfoBase* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 
 	// serialization
 	void read(FDataStreamBase* pStream) {}
@@ -8038,7 +8028,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvArtInfoAsset* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
 	// serialization
 	void read(FDataStreamBase* pStream) {}
@@ -8067,7 +8057,7 @@ public:
 	void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
 };
 
@@ -8104,7 +8094,7 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvArtInfoMovie* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoMovie* pClassInfo, CvXMLLoadUtility* pXML);
 };
 
 class CvArtInfoUnit : public CvArtInfoScalableAsset
@@ -8614,7 +8604,7 @@ public:
 	int getCityPercent() const;				//	Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvUpkeepInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -8655,7 +8645,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvCultureLevelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -8728,7 +8718,7 @@ public:
 	int getCitySoundscapeSciptId(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvEraInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 protected:
@@ -8796,7 +8786,7 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvColorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -8829,7 +8819,7 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvPlayerColorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvPlayerColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -8891,7 +8881,7 @@ class CvLandscapeInfo :
 		void write(FDataStreamBase* stream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvLandscapeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvLandscapeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	protected:
 
@@ -9518,7 +9508,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvEventTriggerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -9749,7 +9739,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 //	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvEventInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -10265,7 +10255,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -11133,7 +11123,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -11167,7 +11157,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
