@@ -8788,10 +8788,23 @@ public:
 
 	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-protected:
+	static ColorTypes green()    { return m_eGreen; }
+	static ColorTypes red()      { return m_eRed; }
+	static ColorTypes yellow()   { return m_eYellow; }
+	static ColorTypes white()    { return m_eWhite; }
 
+	static void setGreen(ColorTypes eIndex)  { m_eGreen = eIndex; }
+	static void setRed(ColorTypes eIndex)    { m_eRed = eIndex; }
+	static void setYellow(ColorTypes eIndex) { m_eYellow = eIndex; }
+	static void setWhite(ColorTypes eIndex)  { m_eWhite = eIndex; }
+
+protected:
 	NiColorA m_Color;
 
+	static ColorTypes m_eGreen;
+	static ColorTypes m_eRed;
+	static ColorTypes m_eYellow;
+	static ColorTypes m_eWhite;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
