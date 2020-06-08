@@ -2214,7 +2214,7 @@ class CvEventManager:
 		iLeaderUnit = CyUnit.getLeaderUnitType()
 		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER, self.UNIT_FEMALE_BEASTMASTER):
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
-			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("NO_UNIT"))
+			CyUnit.setLeaderUnitType(-1)
 
 
 	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_LOST_CALLBACK = False)
