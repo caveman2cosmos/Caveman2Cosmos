@@ -1335,23 +1335,6 @@ class CvEventManager:
 					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_PLAGUED_SMOG"), 1)
 		else:
 			print "CvEventManager.onNukeExplosion\n\tNuke with no special effects: " + CyUnit.getName()
-		'''
-		# Nuclear Non-Proliferation Treaty (NPT)
-		if GAME.getProjectCreatedCount(GC.getInfoTypeForString("PROJECT_NPT")):
-			iPlayer = CyUnit.getOwner()
-			iTeam = GC.getPlayer(iPlayer).getTeam()
-			iAttitude = GC.getInfoTypeForString("ATTITUDE_FURIOUS")
-			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-				if iPlayerX == iPlayer: continue
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isHuman() or not CyPlayerX.isAlive(): continue
-				CyPlayerX.AI_changeAttitudeExtra(iTeam, -1)
-				if CyPlayerX.AI_getAttitude(iPlayer) == iAttitude:
-					CyTeamX = GC.getTeam(CyPlayerX.getTeam())
-					if CyTeamX.canDeclareWar(iTeam):
-						CyTeamX.declareWar(iTeam, True, -1)
-		'''
-
 
 	'''
 	def onGotoPlotSet(self, argsList):
