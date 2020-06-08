@@ -2912,7 +2912,7 @@ class CvEventManager:
 		szTxt = header + TRNSLTR.getText("TXT_KEY_NAME_CITY", ()) + body + name
 
 		popup = CyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL, True)
-		popup.setUserData((name, CyCity.getID(), bRename, GAME.getActivePlayer()))
+		popup.setUserData((name, CyCity.getOwner(), CyCity.getID(), bRename))
 		popup.setSize(w, h)
 		popup.setPosition(xRes/2 - w/2, SR.y/2 - h/2)
 		popup.setBodyString(szTxt, 1<<0)
@@ -2924,7 +2924,7 @@ class CvEventManager:
 		oldName = userData[0]
 		newName = popupReturn.getEditBoxString(0)
 		if oldName != newName:
-			GC.getPlayer(iPlayer).getCity(userData[1]).setName(newName, not userData[2])
+			GC.getPlayer(userData[1]).getCity(userData[2]).setName(newName, not userData[3])
 
 			if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
 				import CvScreenEnums
@@ -2934,14 +2934,14 @@ class CvEventManager:
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
 		popup = PyPopup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setUserData((pUnit.getID(), GAME.getActivePlayer()))
+		popup.setUserData((pUnit.getOwner(), pUnit.getID()))
 		popup.setBodyString(TRNSLTR.getText("TXT_KEY_RENAME_UNIT", ()))
 		popup.createEditBox(pUnit.getNameNoDesc())
 		popup.setEditBoxMaxCharCount(24, 0, 0)
 		popup.launch()
 
 	def __eventEditUnitNameApply(self, iPlayer, userData, popupReturn):
-		unit = GC.getPlayer(userData[1]).getUnit(userData[0])
+		unit = GC.getPlayer(userData[0]).getUnit(userData[1])
 		newName = popupReturn.getEditBoxString(0)
 		unit.setName(newName)
 		if GAME.GetWorldBuilderMode():
