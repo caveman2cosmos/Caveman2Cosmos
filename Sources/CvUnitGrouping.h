@@ -33,32 +33,32 @@ public:
 	UnitGroupingBase(bool bInvert = false): m_bInvert(bInvert) {};
 	virtual ~UnitGroupingBase();
 	// Returns the number of the group of the unit
-	int getGroup(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	int getGroup(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const;
 
 protected:
-	virtual int getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit) = 0;
-	bool m_bInvert;
+	virtual int getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const = 0;
+	const bool m_bInvert;
 };
 
 class UnitGroupingSingle : public UnitGroupingBase
 {
 public:
 	UnitGroupingSingle(bool bInvert = false) : UnitGroupingBase(bInvert) {};
-	int getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	int getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const;
 };
 
 class UnitGroupingCombat : public UnitGroupingBase
 {
 public:
 	UnitGroupingCombat(bool bInvert = false) : UnitGroupingBase(bInvert) {};
-	int getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	int getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const;
 };
 
 class UnitGroupingDomain : public UnitGroupingBase
 {
 public:
 	UnitGroupingDomain(bool bInvert = false) : UnitGroupingBase(bInvert) {};
-	int getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	int getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const;
 };
 
 class UnitGroupingFilters : public UnitGroupingBase
@@ -67,7 +67,7 @@ public:
 	UnitGroupingFilters(bool bInvert = false) : UnitGroupingBase(bInvert) {};
 	~UnitGroupingFilters();
 	void addGroupingFilter(UnitFilterBase* pFilter);
-	int getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	int getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const;
 protected:
 	std::vector<UnitFilterBase*> m_apFilters;
 };
@@ -75,20 +75,19 @@ protected:
 class UnitGroupingList
 {
 public:
-	UnitGroupingList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+	UnitGroupingList(const CvPlayer *pPlayer = NULL, const CvCity *pCity = NULL);
 	~UnitGroupingList();
 	void init();
-	UnitGroupingTypes getActiveGrouping();
+	UnitGroupingTypes getActiveGrouping() const;
 	bool setActiveGrouping(UnitGroupingTypes eActiveGrouping);
-	int getNumGrouping();
-	void setPlayer(CvPlayer* pPlayer);
-	void setCity(CvCity* pCity);
-	int getGroup(UnitTypes eUnit);
+	void setPlayer(const CvPlayer* pPlayer);
+	void setCity(const CvCity* pCity);
+	int getGroup(UnitTypes eUnit) const;
 
 protected:
 	UnitGroupingBase* m_apUnitGrouping[NUM_UNIT_GROUPING];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	const CvCity* m_pCity;
+	const CvPlayer* m_pPlayer;
 	UnitGroupingTypes m_eActiveGrouping;
 	bool m_bInit;
 };

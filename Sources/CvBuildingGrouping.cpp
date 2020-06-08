@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 
-int BuildingGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingBase::getGroup(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	const int iInverse = m_bInvert ? -1 : 1;
 	return iInverse * getGroupBuilding(pPlayer, pCity, eBuilding);
@@ -18,12 +18,12 @@ BuildingGroupingBase::~BuildingGroupingBase()
 {
 }
 
-int BuildingGroupingSingle::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingSingle::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	return 1;
 }
 
-int BuildingGroupingWonderType::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingWonderType::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (!isLimitedWonder(eBuilding))
 		return 0;
@@ -34,9 +34,9 @@ int BuildingGroupingWonderType::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCit
 	return 2;
 }
 
-int BuildingGroupingFilters::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingFilters::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	int iSize = m_apFilters.size();
+	const int iSize = m_apFilters.size();
 	for (int i = 0; i < iSize; i++)
 		if (m_apFilters[i]->isFiltered(pPlayer, pCity, eBuilding))
 			return i;
@@ -54,11 +54,8 @@ BuildingGroupingFilters::~BuildingGroupingFilters()
 		delete m_apFilters[i];
 }
 
-BuildingGroupingList::BuildingGroupingList(CvPlayer *pPlayer, CvCity *pCity)
+BuildingGroupingList::BuildingGroupingList(CvPlayer *pPlayer, CvCity *pCity) : m_pPlayer(pPlayer), m_pCity(pCity)
 {
-	m_pPlayer = pPlayer;
-	m_pCity = pCity;
-	
 	m_apBuildingGrouping[BUILDING_GROUPING_SINGLE] = new BuildingGroupingSingle();
 	m_apBuildingGrouping[BUILDING_GROUPING_WONDER_TYPE] = new BuildingGroupingWonderType();
 	BuildingGroupingFilters* pGrouping = new BuildingGroupingFilters();
@@ -77,12 +74,7 @@ BuildingGroupingList::~BuildingGroupingList()
 	}
 }
 
-int BuildingGroupingList::getNumGrouping()
-{
-	return NUM_BUILDING_GROUPING;
-}
-
-BuildingGroupingTypes BuildingGroupingList::getActiveGrouping()
+BuildingGroupingTypes BuildingGroupingList::getActiveGrouping() const
 {
 	return m_eActiveGrouping;
 }
@@ -101,12 +93,12 @@ bool BuildingGroupingList::setActiveGrouping(BuildingGroupingTypes eActiveGroupi
 {
 	FAssertMsg(eActiveGrouping < NUM_BUILDING_GROUPING, "Index out of bounds");
 	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
-	bool bChanged = m_eActiveGrouping != eActiveGrouping;
+	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;
 }
 
-int BuildingGroupingList::getGroup(BuildingTypes eBuilding)
+int BuildingGroupingList::getGroup(BuildingTypes eBuilding) const
 {
 	return m_apBuildingGrouping[m_eActiveGrouping]->getGroup(m_pPlayer, m_pCity, eBuilding);
 }

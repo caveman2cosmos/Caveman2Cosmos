@@ -17375,9 +17375,9 @@ bool CvUnitAI::AI_outcomeMission()
 	if (!pClosestCity)
 		pClosestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, true, false);
 
-	std::vector<std::pair<MissionTypes, CvOutcomeList*> > aMissions;
+	std::vector<std::pair<MissionTypes, const CvOutcomeList*> > aMissions;
 
-	CvUnitInfo& kInfo = getUnitInfo();
+	const CvUnitInfo& kInfo = getUnitInfo();
 
 	for (int iI = 0; iI < kInfo.getNumActionOutcomes(); iI++)
 	{
@@ -17389,7 +17389,7 @@ bool CvUnitAI::AI_outcomeMission()
 	{
 		if(it->second.m_bHasUnitCombat)
 		{
-			CvUnitCombatInfo& kCombatInfo = GC.getUnitCombatInfo(it->first);
+			const CvUnitCombatInfo& kCombatInfo = GC.getUnitCombatInfo(it->first);
 			for (int iI = 0; iI < kCombatInfo.getNumActionOutcomes(); iI++)
 			{
 				aMissions.push_back(std::make_pair(kCombatInfo.getActionOutcomeMission(iI), kCombatInfo.getActionOutcomeList(iI)));
@@ -17399,10 +17399,10 @@ bool CvUnitAI::AI_outcomeMission()
 
 	CvReachablePlotSet	plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
-	for (std::vector<std::pair<MissionTypes, CvOutcomeList*> >::iterator it = aMissions.begin(); it != aMissions.end(); ++it)
+	for (std::vector<std::pair<MissionTypes, const CvOutcomeList*> >::iterator it = aMissions.begin(); it != aMissions.end(); ++it)
 	{
-		MissionTypes eMission = it->first;
-		CvOutcomeList* pOutcomeList = it->second;
+		const MissionTypes eMission = it->first;
+		const CvOutcomeList* pOutcomeList = it->second;
 
 		if (eMission != NO_MISSION)
 		{
@@ -17418,7 +17418,7 @@ bool CvUnitAI::AI_outcomeMission()
 						{
 							if (pOutcomeList->isPossibleInPlot(*this, *(pLoopCity->plot())))
 							{
-								int iValue = pOutcomeList->AI_getValueInPlot(*this, *(pLoopCity->plot()));
+								const int iValue = pOutcomeList->AI_getValueInPlot(*this, *(pLoopCity->plot()));
 								if (iValue > iBestValue)
 								{
 									if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true))
@@ -17438,7 +17438,7 @@ bool CvUnitAI::AI_outcomeMission()
 					// There is no city in this area, so try to execute an outcome mission at the current location
 					if (pOutcomeList->isPossibleInPlot(*this, *(plot())))
 					{
-						int iValue = pOutcomeList->AI_getValueInPlot(*this, *(plot()));
+						const int iValue = pOutcomeList->AI_getValueInPlot(*this, *(plot()));
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;
@@ -20309,11 +20309,11 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, CvCity* pTargetC
 			{
 				//	TODO - add some sort of sanity check that we can reasonably expect
 				//	to get through them!
-				CvPath& kPath = getGroup()->getPath();
+				const CvPath& kPath = getGroup()->getPath();
 
 				for(CvPath::const_iterator itr = kPath.begin(); itr != kPath.end() && itr.plot() != pTargetCity->plot(); ++itr)
 				{
-					CvPlot* pPathPlot = itr.plot();
+					const CvPlot* pPathPlot = itr.plot();
 
 					if ( pPathPlot->isVisibleEnemyUnit(getOwner()) )
 					{
@@ -20329,7 +20329,7 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, CvCity* pTargetC
 							}
 							else
 							{
-								int iStackRatio = getGroup()->AI_compareStacks(pPathPlot, StackCompare::PotentialEnemy);
+								const int iStackRatio = getGroup()->AI_compareStacks(pPathPlot, StackCompare::PotentialEnemy);
 
 								//	If we won, but with low expected gain odds it might still be worthwhile
 								//	to break the bottleneck - renormalize by the ratio of starting stack
@@ -21772,13 +21772,12 @@ bool CvUnitAI::AI_pirateBlockade()
 				{
 					CvPlot*	pPlot = itr.plot();
 
-					bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(pPlot->getX(), pPlot->getY())] > 0;
-					bool bHasTerrainDamage = (pPlot->getTotalTurnDamage(getGroup()) > 0 || pPlot->getFeatureTurnDamage() > 0);
-
 					//	If an intermediary plot is one that the heal decsion logic (near the start of this method)
 					//	would choose to heal in, then just stop there on our way
 					if ((!pPlot->isOwned() && !pPlot->isAdjacentOwned()) || getDamagePercent() > 25)
 					{
+						const bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(pPlot->getX(), pPlot->getY())] > 0;
+						const bool bHasTerrainDamage = (pPlot->getTotalTurnDamage(getGroup()) > 0 || pPlot->getFeatureTurnDamage() > 0);
 						if ( !bIsInDanger && ! bHasTerrainDamage )
 						{
 							pBestStopAndHealPlot = pPlot;
@@ -31168,16 +31167,12 @@ bool CvUnitAI::AI_FEngage()
 						if (iPotentialAttackers > 0 || pLoopPlot->isAdjacentTeam(getTeam()))
 						{
 							pDefender = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-							iDamage = std::max(1, ((GC.getDefineINT("COMBAT_DAMAGE") * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
+							iDamage = std::max(1, ((GC.getCOMBAT_DAMAGE() * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
 							iValue += (iDamage * pLoopPlot->getNumVisiblePotentialEnemyDefenders(this));
 						}
 						iValue *= GC.getGame().getSorenRandNum(5, "AI FEngage");
 						if (iValue > iBestValue)
 						{
-//							for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
-//							{
-//								AddDLLMessage((PlayerTypes)iPlayer, true, GC.getDefineINT("EVENT_MESSAGE_TIME"), "Got here!", "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, GC.getUnitInfo(getUnitType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
-//							}
 							iBestValue = iValue;
 							pBestPlot = pLoopPlot;
 							FAssert(!atPlot(pBestPlot));
@@ -33789,7 +33784,7 @@ bool CvUnitAI::AI_foundReligion()
 			}
 		}
 	}
-return false;
+	return false;
 }
 
 bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
@@ -33828,9 +33823,9 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 				if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
 					(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
 				{
-					PropertyTypes eProperty = pSource->getProperty();
+					const PropertyTypes eProperty = pSource->getProperty();
 					int iCurrentSourceSize = pCity->getTotalBuildingSourcedProperty(eProperty) + pCity->getTotalUnitSourcedProperty(eProperty) + pCity->getPropertyNonBuildingSource(eProperty);
-					int iNewSourceSize = iCurrentSourceSize + ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(pCity->getGameObject());
+					int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
 					int iDecayPercent = pCity->getPropertyDecay(eProperty);
 
 					//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -34195,7 +34190,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
-				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
+				score += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			}
 		}
 
@@ -35051,7 +35046,7 @@ bool CvUnitAI::isWaitingOnUnitAI(int iIndex)
 	return true;
 }
 
-bool CvUnitAI::isWaitingOnUnitAIAny()
+bool CvUnitAI::isWaitingOnUnitAIAny() const
 {
 	return m_bWaitingOnUnitAIAny;
 }
@@ -35073,36 +35068,28 @@ void CvUnitAI::setWaitingOnUnitAIAny()
 	}
 }
 
-bool CvUnitAI::AI_isNegativePropertyUnit()
+bool CvUnitAI::AI_isNegativePropertyUnit() const
 {
-	UnitTypes eUnit = (UnitTypes)getUnitType();
-	bool bAnswer = false;
-	bool bPropertyNegative = false;
-	CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
+	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{
-		for(int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
+		for (int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
 		{
-			CvPropertySource* pSource = propertyManipulators->getSource(iI);
+			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
 			//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
-			PropertyTypes eProperty = pSource->getProperty();
-
-			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT)
+			if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
-				bPropertyNegative = (GC.getPropertyInfo(eProperty).getAIWeight() < 0);
-				if (bPropertyNegative)
+				if (GC.getPropertyInfo(pSource->getProperty()).getAIWeight() < 0)
 				{
-					int iAmount = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
-					if ( iAmount > 0 )
+					if (static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject()) > 0)
 					{
-						bAnswer = true;
-						break;
+						return true;
 					}
 				}
 			}
 		}
 	}
-	return bAnswer;
+	return false;
 }
 
 int CvUnitAI::getMyAggression(int iAttackProb) const

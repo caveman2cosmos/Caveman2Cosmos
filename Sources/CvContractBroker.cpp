@@ -32,14 +32,14 @@ void	CvContractBroker::init(PlayerTypes eOwner)
 }
 
 //	Note a unit looking for work
-void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
+void	CvContractBroker::lookingForWork(const CvUnit* pUnit, int iMinPriority)
 {
 	PROFILE_FUNC();
 
 	advertisingUnit	unitDetails;
 	unitDetails.eUnitType = pUnit->getUnitType();
 
-	int	iUnitStr = GC.getGame().AI_combatValue(pUnit->getUnitType());
+	const int iUnitStr = GC.getGame().AI_combatValue(pUnit->getUnitType());
 
 	unitDetails.bIsWorker = (pUnit->AI_getUnitAIType() == UNITAI_WORKER);
 	unitDetails.bIsHealer = (pUnit->AI_getUnitAIType() == UNITAI_HEALER);
@@ -83,11 +83,9 @@ void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
 }
 
 //	Unit fulfilled its work and is no longer advertising as available
-void	CvContractBroker::removeUnit(CvUnit* pUnit)
+void CvContractBroker::removeUnit(const CvUnit* pUnit)
 {
-	int iI;
-
-	for(iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
+	for (int iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
 	{
 		if ( m_advertisingUnits[iI].iUnitId == pUnit->getID() )
 		{
@@ -102,7 +100,7 @@ void	CvContractBroker::removeUnit(CvUnit* pUnit)
 //		eUnitFlags indicate the type(s) of unit sought
 //		(iAtX,iAtY) is (roughly) where the work will be
 //		pJoinUnit may be NULL but if not it is a request to join that unit's group
-void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType, int iUnitStrength, CvUnitSelectionCriteria* criteria, int iMaxPath)
+void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, const CvUnit* pJoinUnit, UnitAITypes eAIType, int iUnitStrength, const CvUnitSelectionCriteria* criteria, int iMaxPath)
 {
 	PROFILE_FUNC();
 
@@ -125,7 +123,7 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 
 			std::map<int,bool>::const_iterator itr = m_contractedUnits.find(pLoopSelectionGroup->getID());
 
-			bool bNew = (itr == m_contractedUnits.end());
+			const bool bNew = (itr == m_contractedUnits.end());
 			if ( bNew )
 			{
 				m_contractedUnits[pLoopSelectionGroup->getID()] = true;
@@ -143,7 +141,7 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 				}
 				else
 				{
-					int iMissionGroupStrengthTimes100 = pLoopSelectionGroup->AI_getGenericValueTimes100(unitCapabilities2UnitValueFlags(eUnitFlags));
+					const int iMissionGroupStrengthTimes100 = pLoopSelectionGroup->AI_getGenericValueTimes100(unitCapabilities2UnitValueFlags(eUnitFlags));
 					if ( iMissionGroupStrengthTimes100 >= iUnitStrengthTimes100 )
 					{
 						//	Request is entirely fulfilled by existing mission
@@ -200,12 +198,11 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 
 		m_workRequests.insert(insertAt, newRequest);
 	}
-
 }
 
 //	Advertise a tender to build units
 //		iMinPriority indicates the lowest priority request this tender is appropriate for
-void	CvContractBroker::advertiseTender(CvCity* pCity, int iMinPriority)
+void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 {
 	PROFILE_FUNC();
 
@@ -229,18 +226,18 @@ void	CvContractBroker::advertiseTender(CvCity* pCity, int iMinPriority)
 //	Find out how many requests have already been made for units of a specified AI type
 //	This is used by cities requesting globally needed units like settlers to avoid multiple
 //	tenders all occurring at once
-int		CvContractBroker::numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly, CvPlot* pPlot) const
+int CvContractBroker::numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly, const CvPlot* pPlot) const
 {
 	int iCount = 0;
 
 	for(int iI = 0; iI < (int)m_workRequests.size(); iI++)
 	{
-		CvPlot* pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
 		if ( !m_workRequests[iI].bFulfilled )
 		{
 			if ( m_workRequests[iI].eAIType == eUnitAI )
 			{
-				CvCity* targetCity = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY)->getPlotCity();
+				const CvPlot* pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
+				const CvCity* targetCity = pDestPlot->getPlotCity();
 
 				if ( !bAtCityOnly || (targetCity != NULL && targetCity->getOwner() == m_eOwner) )
 				{
@@ -291,8 +288,7 @@ void CvContractBroker::finalizeTenderContracts()
 				}
 				else
 				{
-					CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
-					unitAIType = AIType.getType();
+					unitAIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType).getType();
 				}
 
 				CvString szCriteriaDescription = m_workRequests[iI].criteria.getDescription();
@@ -588,7 +584,7 @@ bool	CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 			//	(ie - it has not joined someone else!)
 			if ( m_workRequests[iI].iUnitId != -1 )
 			{
-				CvUnit*	pTargetUnit = findUnit(m_workRequests[iI].iUnitId);
+				const CvUnit* pTargetUnit = findUnit(m_workRequests[iI].iUnitId);
 
 				if ( pTargetUnit == NULL || pTargetUnit->getGroup()->getHeadUnit() != pTargetUnit )
 				{
@@ -612,7 +608,7 @@ bool	CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 
 						suitableUnit->iContractedWorkRequest = m_workRequests[iI].iWorkRequestId;
 
-						int iUnitStrengthTimes100 = std::max(1,pUnit->AI_genericUnitValueTimes100(unitCapabilities2UnitValueFlags(m_workRequests[iI].eUnitFlags)));
+						const int iUnitStrengthTimes100 = std::max(1,pUnit->AI_genericUnitValueTimes100(unitCapabilities2UnitValueFlags(m_workRequests[iI].eUnitFlags)));
 						if ( m_workRequests[iI].iRequiredStrengthTimes100 == -1 || iUnitStrengthTimes100 >= m_workRequests[iI].iRequiredStrengthTimes100 )
 						{
 							//	Request is entirely fulfilled by this unit
@@ -663,7 +659,7 @@ bool	CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 	{
 		if ( m_advertisingUnits[iI].iUnitId == pUnit->getID() )
 		{
-			int	iWorkRequest = m_advertisingUnits[iI].iContractedWorkRequest;
+			const int iWorkRequest = m_advertisingUnits[iI].iContractedWorkRequest;
 
 			if ( -1 != iWorkRequest )
 			{
@@ -687,7 +683,7 @@ bool	CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 	return false;
 }
 
-const workRequest*	CvContractBroker::findWorkRequest(int iWorkRequestId) const
+const workRequest* CvContractBroker::findWorkRequest(int iWorkRequestId) const
 {
 	PROFILE_FUNC();
 
@@ -702,7 +698,7 @@ const workRequest*	CvContractBroker::findWorkRequest(int iWorkRequestId) const
 	return NULL;
 }
 
-advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThisPlotOnly)
+advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool bThisPlotOnly)
 {
 	PROFILE_FUNC();
 
@@ -711,7 +707,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 
 	for(int iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
 	{
-		advertisingUnit&	unitInfo = m_advertisingUnits[iI];
+		advertisingUnit& unitInfo = m_advertisingUnits[iI];
 
 		//OutputDebugString(CvString::format("Assess unit %d suitability for work request %d\n", unitInfo.iUnitId, request.iWorkRequestId).c_str());
 		//	Don't bother recalculating this advertiser/requestor pair if they have already been
@@ -719,7 +715,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 		if ( (bThisPlotOnly ? unitInfo.iMatchedToRequestSeqThisPlot : unitInfo.iMatchedToRequestSeqAnyPlot) < request.iWorkRequestId &&
 			 unitInfo.iContractedWorkRequest == -1 )
 		{
-			CvUnit* pLoopUnit = findUnit(unitInfo.iUnitId);
+			const CvUnit* pLoopUnit = findUnit(unitInfo.iUnitId);
 
 			if ( pLoopUnit != NULL && pLoopUnit->meetsUnitSelectionCriteria(&request.criteria) && unitInfo.iMinPriority <= request.iPriority)
 			{
@@ -751,7 +747,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 
 				if ( iValue*1000 > iBestValue )
 				{
-					CvPlot*	pTargetPlot = GC.getMap().plot(request.iAtX, request.iAtY);
+					const CvPlot* pTargetPlot = GC.getMap().plot(request.iAtX, request.iAtY);
 					int		iPathTurns = 0;
 					int		iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue == 0 ? MAX_INT : (1000*iValue)/iBestValue));
 
@@ -809,12 +805,12 @@ CvUnit* CvContractBroker::findUnit(int iUnitId) const
 	}
 }
 
-int	CvContractBroker::lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided)
+int	CvContractBroker::lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided) const
 {
 	return (iPreviousPriority*(iPreviousRequestStrength-iStrengthProvided))/iPreviousRequestStrength;
 }
 
-UnitValueFlags	CvContractBroker::unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities)
+UnitValueFlags	CvContractBroker::unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities) const
 {
 	UnitValueFlags	valueFlags = (UnitValueFlags)0;
 
