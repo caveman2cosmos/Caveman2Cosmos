@@ -3243,7 +3243,7 @@ int CyPlayer::getBLListLength(int index)
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getListLength(index) : 0;
 }
 
-OrderData* CyPlayer::getBLOrder(int index, int iQIndex)
+const OrderData* CyPlayer::getBLOrder(int index, int iQIndex) const
 {
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getOrder(index, iQIndex) : NULL;
 }

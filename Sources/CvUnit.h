@@ -477,10 +477,10 @@ public:
 	CvPlot* getMADTargetPlot() const;
 	int getMADTargetPlotX() const;
 	int getMADTargetPlotY() const;
-	void setMADTargetPlot(CvPlot* pPlot);
+	void setMADTargetPlot(const CvPlot* pPlot);
 	bool setMADTargetPlot(int iX, int iY);
 	bool clearMADTargetPlot();
-	PlayerTypes getMADTargetPlotOwner();
+	PlayerTypes getMADTargetPlotOwner() const;
 	void setMADTargetPlotOwner(PlayerTypes pPlayer);
 	void doMADNukes(bool bForceRetarget);
 protected:
@@ -510,11 +510,11 @@ public:
 	void updateAirCombat(bool bQuick = false);
 	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
 
-	bool isActionRecommended(int iAction);
+	bool isActionRecommended(int iAction) const;
 
 	bool isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const; // Exposed to Python
 
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true); // Exposed to Python
+	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const; // Exposed to Python
 	void doCommand(CommandTypes eCommand, int iData1, int iData2); // Exposed to Python
 
 #ifdef USE_OLD_PATH_GENERATOR
@@ -656,7 +656,7 @@ public:
 	bool canShadow() const;
 	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
 	
-	void setShadowUnit(CvUnit* pUnit);
+	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
 	TechTypes getDesiredDiscoveryTech() const;
@@ -666,7 +666,7 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-	bool canGift(bool bTestVisible = false, bool bTestTransport = true); // Exposed to Python
+	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const; // Exposed to Python
 	void gift(bool bTestTransport = true);
 
 	bool canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const; // Exposed to Python
@@ -780,7 +780,7 @@ public:
 
 	bool canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorporation, bool bTestVisible = false) const; // Exposed to Python
 	bool spreadCorporation(CorporationTypes eCorporation);
-	int spreadCorporationCost(CorporationTypes eCorporation, CvCity* pCity) const;
+	int spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const;
 
 	bool canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const; // Exposed to Python
 	bool join(SpecialistTypes eSpecialist);
@@ -793,7 +793,7 @@ public:
 	bool canDiscover() const; // Exposed to Python
 	bool discover();
 
-	int getMaxHurryProduction(CvCity* pCity) const; // Exposed to Python
+	int getMaxHurryProduction(const CvCity* pCity) const; // Exposed to Python
 	int getHurryProduction(const CvPlot* pPlot) const; // Exposed to Python
 	bool canHurry(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool hurry();
@@ -1621,10 +1621,10 @@ public:
 	void setCapturingPlayer(PlayerTypes eNewValue);
 
 	CvUnit* getCapturingUnit() const;
-	void setCapturingUnit(CvUnit* pCapturingUnit);
+	void setCapturingUnit(const CvUnit* pCapturingUnit);
 
 	DllExport const UnitTypes getUnitType() const; // Exposed to Python
-	CvUnitInfo &getUnitInfo() const;
+	const CvUnitInfo& getUnitInfo() const;
 
 	DllExport const UnitTypes getLeaderUnitType() const;
 	void setLeaderUnitType(UnitTypes leaderUnitType);
@@ -1866,7 +1866,7 @@ public:
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) = 0;
-	virtual bool isWaitingOnUnitAIAny() = 0;
+	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 

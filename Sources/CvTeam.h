@@ -422,8 +422,8 @@ public:
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange); // Exposed to Python
 
-	void addPropertiesAllCities(CvProperties* pProp);
-	void subtractPropertiesAllCities(CvProperties* pProp);
+	void addPropertiesAllCities(const CvProperties* pProp);
+	void subtractPropertiesAllCities(const CvProperties* pProp);
 
 	bool isFriendlyTerritory(TeamTypes eTeam) const;
 

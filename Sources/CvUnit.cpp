@@ -3851,11 +3851,10 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			//getUnitInfo().getKillOutcomeList()->execute(*pDefender, getOwner(), getUnitType());
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				if (isHasUnitCombat((UnitCombatTypes)iI))
+				const UnitCombatTypes eCombat = (UnitCombatTypes)iI;
+				if (isHasUnitCombat(eCombat))
 				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					CvOutcomeList* pOutcomeList = GC.getUnitCombatInfo(eCombat).getKillOutcomeList();
-					list.addOutcomeList(pOutcomeList);
+					list.addOutcomeList(GC.getUnitCombatInfo(eCombat).getKillOutcomeList());
 					//pOutcomeList->execute(*pDefender, getOwner(), getUnitType());
 				}
 			}
@@ -4932,7 +4931,7 @@ void CvUnit::checkRemoveSelectionAfterAttack()
 }
 
 
-bool CvUnit::isActionRecommended(int iAction)
+bool CvUnit::isActionRecommended(int iAction) const
 {
 	CvCity* pWorkingCity;
 	CvPlot* pPlot;
@@ -4953,10 +4952,10 @@ bool CvUnit::isActionRecommended(int iAction)
 		return false;
 	}
 
-	if (Cy::call<bool>(PYGameModule, "isActionRecommended", Cy::Args() << this << iAction))
-	{
-		return true;
-	}
+	//if (Cy::call<bool>(PYGameModule, "isActionRecommended", Cy::Args() << this << iAction))
+	//{
+	//	return true;
+	//}
 
 	pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
 
@@ -5457,7 +5456,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 /************************************************************************************************/
 
 
-bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bTestBusy)
+bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bTestBusy) const
 {
 	CvUnit* pUnit;
 
@@ -6832,10 +6831,10 @@ void CvUnit::move(CvPlot* pPlot, bool bShow, bool bFree)
 	}
 	//TBFIXHERE it's very possible for the unit to be dead from this point and there are further move aspects taking place such as the python reporting which may include more than python
 	//change feature
-	FeatureTypes featureType = pPlot->getFeatureType();
+	const FeatureTypes featureType = pPlot->getFeatureType();
 	if(featureType != NO_FEATURE)
 	{
-		CvString featureString(GC.getFeatureInfo(featureType).getOnUnitChangeTo());
+		const CvString featureString(GC.getFeatureInfo(featureType).getOnUnitChangeTo());
 		if(!featureString.IsEmpty())
 		{
 			FeatureTypes newFeatureType = (FeatureTypes) GC.getInfoTypeForString(featureString);
@@ -7381,9 +7380,9 @@ void CvUnit::scrap()
 }
 
 
-bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
+bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 {
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 
 	if (!(pPlot->isOwned()))
 	{
@@ -7404,7 +7403,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 	{
 		return false;
 	}
-	CvUnit* pTransport = getTransportUnit();
+	const CvUnit* pTransport = getTransportUnit();
 
 	if (!pPlot->isValidDomainForLocation(*this) && NULL == pTransport)
 	{
@@ -11612,7 +11611,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 	return true;
 }
 
-int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, CvCity* pCity) const
+int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const
 {
 	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
 	iCost /= 100;
@@ -11901,9 +11900,7 @@ int CvUnit::getDiscoverResearch(TechTypes eTech) const
 
 bool CvUnit::canDiscover() const
 {
-	TechTypes eTech;
-
-	eTech = getDiscoveryTech();
+	const TechTypes eTech = getDiscoveryTech();
 
 	if (eTech == NO_TECH)
 	{
@@ -11931,7 +11928,7 @@ bool CvUnit::discover()
 		return false;
 	}
 
-	TechTypes eDiscoveryTech = getDiscoveryTech();
+	const TechTypes eDiscoveryTech = getDiscoveryTech();
 	FAssertMsg(eDiscoveryTech != NO_TECH, "DiscoveryTech is not assigned a valid value");
 
 	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwner());
@@ -11947,11 +11944,9 @@ bool CvUnit::discover()
 }
 
 
-int CvUnit::getMaxHurryProduction(CvCity* pCity) const
+int CvUnit::getMaxHurryProduction(const CvCity* pCity) const
 {
-	int iProduction;
-
-	iProduction = (m_pUnitInfo->getBaseHurry() + (m_pUnitInfo->getHurryMultiplier() * pCity->getPopulation()));
+	int iProduction = (m_pUnitInfo->getBaseHurry() + (m_pUnitInfo->getHurryMultiplier() * pCity->getPopulation()));
 
 	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitHurryPercent();
 	iProduction /= 100;
@@ -11962,19 +11957,14 @@ int CvUnit::getMaxHurryProduction(CvCity* pCity) const
 
 int CvUnit::getHurryProduction(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-	int iProduction;
-
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
 		return 0;
 	}
 
-	iProduction = getMaxHurryProduction(pCity);
-
-	iProduction = std::min(pCity->productionLeft(), iProduction);
+	int iProduction = std::min(pCity->productionLeft(), getMaxHurryProduction(pCity));
 
 	return std::max(0, iProduction);
 }
@@ -11987,14 +11977,12 @@ bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	CvCity* pCity;
-
 	if (getHurryProduction(pPlot) == 0)
 	{
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -12121,7 +12109,7 @@ bool CvUnit::canTrade(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	CvCity* pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -12224,7 +12212,7 @@ bool CvUnit::canGreatWork(const CvPlot* pPlot) const
 		return false;
 	}
 
-	CvCity* pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -12294,8 +12282,7 @@ bool CvUnit::doOutcomeMission(MissionTypes eMission)
 		{
 			if (isHasUnitCombat((UnitCombatTypes)iI))
 			{
-				UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-				pOutcomeMission = GC.getUnitCombatInfo(eCombat).getOutcomeMissionByMission(eMission);
+				pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission(eMission);
 				if (pOutcomeMission)
 				{
 					break;
@@ -12365,7 +12352,7 @@ bool CvUnit::canInfiltrate(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	CvCity* pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 	if (pCity == NULL || pCity->isNPC())
 	{
 		return false;
@@ -12406,8 +12393,6 @@ bool CvUnit::infiltrate()
 		NotifyEntity(MISSION_INFILTRATE);
 	}
 
-	CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
-
 	if (!isSpy())
 	{
 		if (criminalSuccessCheck())
@@ -12415,6 +12400,8 @@ bool CvUnit::infiltrate()
 			changeExperience100(100);
 			GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(plot()->getOwner()).getTeam(), iPoints);
 			GET_TEAM(getTeam()).changeEspionagePointsEver(iPoints);
+
+			const CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 			if (pCapital != NULL)
 			{
 				finishMoves();
@@ -12459,13 +12446,13 @@ bool CvUnit::canEspionage(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	PlayerTypes ePlotOwner = pPlot->getOwner();
+	const PlayerTypes ePlotOwner = pPlot->getOwner();
 	if (NO_PLAYER == ePlotOwner)
 	{
 		return false;
 	}
 
-	CvPlayer& kTarget = GET_PLAYER(ePlotOwner);
+	const CvPlayer& kTarget = GET_PLAYER(ePlotOwner);
 
 	if (kTarget.isNPC())
 	{
@@ -12544,19 +12531,19 @@ bool CvUnit::canAssassin(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	CvCity* pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 	if (NULL == pCity)
 	{
 		return false;
 	}
 
-	int numGreatPeople = pCity->getNumGreatPeople();
+	const int numGreatPeople = pCity->getNumGreatPeople();
 	if (numGreatPeople <= 0)
 	{
 		return false;
 	}
 
-	CvPlayer& kTarget = GET_PLAYER(pCity->getOwner());
+	const CvPlayer& kTarget = GET_PLAYER(pCity->getOwner());
 
 	if (kTarget.getTeam() == getTeam())
 	{
@@ -12616,9 +12603,8 @@ bool CvUnit::canBribe(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	CvUnit* pTargetUnit;
-	pTargetUnit = pPlot->plotCheck(PUF_isOtherTeam, getOwner(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
-	CvPlayer& kTarget = GET_PLAYER(pTargetUnit->getOwner());
+	const CvUnit* pTargetUnit = pPlot->plotCheck(PUF_isOtherTeam, getOwner(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
+	const CvPlayer& kTarget = GET_PLAYER(pTargetUnit->getOwner());
 
 	if (kTarget.getTeam() == getTeam())
 	{
@@ -13331,7 +13317,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	}
 
 	int iNumUnits = 0;
-	CvUnitInfo& kUnitInfo = getUnitInfo();
+	const CvUnitInfo& kUnitInfo = getUnitInfo();
 
 	if (-1 == iUnitId)
 	{
@@ -13926,7 +13912,7 @@ DomainTypes CvUnit::getDomainType() const
 
 InvisibleTypes CvUnit::getInvisibleType() const
 {
-	InvisibleTypes eInvisible = (InvisibleTypes)m_pUnitInfo->getInvisibleType();
+	const InvisibleTypes eInvisible = (InvisibleTypes)m_pUnitInfo->getInvisibleType();
 	if (eInvisible != NO_INVISIBLE && isNegatesInvisible(eInvisible))
 	{
 		return NO_INVISIBLE;
@@ -16374,9 +16360,8 @@ int CvUnit::maxFirstStrikes() const
 
 bool CvUnit::isRanged() const
 {
-	int i;
-	CvUnitInfo * pkUnitInfo = &getUnitInfo();
-	for ( i = 0; i < pkUnitInfo->getGroupDefinitions(); i++ )
+	const int groupDefinitions = getUnitInfo().getGroupDefinitions();
+	for (int  i = 0; i < groupDefinitions; i++)
 	{
 		if ( !getArtInfo(i, GET_PLAYER(getOwner()).getCurrentEra())->getActAsRanged() )
 		{
@@ -21907,7 +21892,7 @@ CvUnit* CvUnit::getCapturingUnit() const
 	return getUnit(m_eCapturingUnit);
 }
 
-void CvUnit::setCapturingUnit(CvUnit* pCapturingUnit)
+void CvUnit::setCapturingUnit(const CvUnit* pCapturingUnit)
 {
 	m_eCapturingUnit = pCapturingUnit->getIDInfo();
 }
@@ -21917,7 +21902,7 @@ const UnitTypes CvUnit::getUnitType() const
 	return m_eUnitType;
 }
 
-CvUnitInfo &CvUnit::getUnitInfo() const
+const CvUnitInfo& CvUnit::getUnitInfo() const
 {
 	return *m_pUnitInfo;
 }
@@ -34382,7 +34367,7 @@ int CvUnit::getMADTargetPlotY() const
 }
 
 // Dale - MAD: set MAD plot
-void CvUnit::setMADTargetPlot(CvPlot* pPlot)
+void CvUnit::setMADTargetPlot(const CvPlot* pPlot)
 {
 	if(pPlot)
 	{
@@ -34398,7 +34383,7 @@ void CvUnit::setMADTargetPlot(CvPlot* pPlot)
 	}
 }
 
-PlayerTypes CvUnit::getMADTargetPlotOwner()
+PlayerTypes CvUnit::getMADTargetPlotOwner() const
 {
 	return m_pMADTargetPlotOwner;
 }
@@ -34577,7 +34562,7 @@ CvUnit* CvUnit::getShadowUnit() const
 }
 
 
-void CvUnit::setShadowUnit(CvUnit* pUnit)
+void CvUnit::setShadowUnit(const CvUnit* pUnit)
 {
 	if (pUnit != NULL)
 	{

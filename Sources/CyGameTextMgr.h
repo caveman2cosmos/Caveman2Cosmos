@@ -17,7 +17,7 @@ class CyGameTextMgr
 public:
 	CyGameTextMgr();
 	CyGameTextMgr(CvGameTextMgr* m_pGameTextMgr);			// Call from C++
-	bool isNone() { return (m_pGameTextMgr==NULL); }
+	bool isNone() const { return m_pGameTextMgr == NULL; }
 
 	void Reset();
 

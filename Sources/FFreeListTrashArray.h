@@ -82,10 +82,10 @@ public:
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
 
 	// Returns the number of elements in the array (NOTE: this is a non-packed array, so this value is NOT the last iIndex in the array...)
-	int getCount()	const { return m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment; }
+	int getCount() const { return m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment; }
 
 	T* add();
-	bool remove(T* pData);
+	bool remove(const T* pData);
 	bool removeAt(int iID);
 	void removeAll();
 
@@ -105,7 +105,7 @@ public:
 	int getCorruptedAdjustment() const { return m_iCorruptedAdjustment; }
 	void setCorruptedAdjustment(int iNewValue) { m_iCorruptedAdjustment = iNewValue; }
 
-	int getCurrentID() { return m_iCurrentID; }
+	int getCurrentID() const { return m_iCurrentID; }
 
 	void setCurrentID(int iNewValue)
 	{
@@ -114,7 +114,7 @@ public:
 		m_iCurrentID = iNewValue;
 	}
 
-	int getNextFreeIndex(int iIndex)
+	int getNextFreeIndex(int iIndex) const
 	{
 		if ((iIndex >= getNumSlots()) || (m_pArray == NULL))
 		{
@@ -385,14 +385,12 @@ T* FFreeListTrashArray<T>::add()
 template <class T>
 T* FFreeListTrashArray<T>::getAt(int iID) const
 {
-	int iIndex;
-
 	if ((iID == FFreeList::INVALID_INDEX) || (m_pArray == NULL))
 	{
 		return NULL;
 	}
 
-	iIndex = (iID & FLTA_INDEX_MASK);
+	int iIndex = (iID & FLTA_INDEX_MASK);
 
 	assert(iIndex >= 0);
 
@@ -410,7 +408,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 
 template <class T>
-bool FFreeListTrashArray<T>::remove(T* pData)
+bool FFreeListTrashArray<T>::remove(const T* pData)
 {
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::remove - not initialized");
 

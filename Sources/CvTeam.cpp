@@ -8450,7 +8450,7 @@ void CvTeam::AI_updateBonusValue(BonusTypes eBonus)
 	}
 }
 
-void CvTeam::addPropertiesAllCities(CvProperties *pProp)
+void CvTeam::addPropertiesAllCities(const CvProperties *pProp)
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -8464,7 +8464,7 @@ void CvTeam::addPropertiesAllCities(CvProperties *pProp)
 	}
 }
 
-void CvTeam::subtractPropertiesAllCities(CvProperties *pProp)
+void CvTeam::subtractPropertiesAllCities(const CvProperties *pProp)
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{

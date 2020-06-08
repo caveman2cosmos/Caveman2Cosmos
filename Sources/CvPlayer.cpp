@@ -7261,11 +7261,11 @@ void CvPlayer::disband(CvCity* pCity)
 }
 
 
-bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const
+bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const
 {
 	CvCity* pCity;
-	EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
-	EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
+	const EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
+	const EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
 
 	if (eEra != NO_ERA && eEra != getCurrentEra())
 	{
@@ -10983,11 +10983,9 @@ CvPlot* CvPlayer::getStartingPlot() const
 }
 
 
-void CvPlayer::setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist)
+void CvPlayer::setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist)
 {
-	CvPlot* pOldStartingPlot;
-
-	pOldStartingPlot = getStartingPlot();
+	const CvPlot* pOldStartingPlot = getStartingPlot();
 
 	if (pOldStartingPlot != pNewValue)
 	{
@@ -24981,7 +24979,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		changeBaseFreeUnits(kEvent.getFreeUnitSupport());
 	}
 
-	CvProperties* pProp = kEvent.getPropertiesAllCities();
+	const CvProperties* pProp = kEvent.getPropertiesAllCities();
 	if (!pProp->isEmpty())
 	{
 		addPropertiesAllCities(pProp);
@@ -32199,26 +32197,20 @@ const CvProperties* CvPlayer::getPropertiesConst() const
 	return &m_Properties;
 }
 
-void CvPlayer::addPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::addPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->addProperties(pProp);
+		city->getProperties()->addProperties(pProp);
 		//getProperties()->addProperties(pProp);
 	}
 }
 
-void CvPlayer::subtractPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::subtractPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->subtractProperties(pProp);
+		city->getProperties()->subtractProperties(pProp);
 		//getProperties()->subtractProperties(pProp);
 	}
 }

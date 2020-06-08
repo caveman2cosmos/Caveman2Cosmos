@@ -5367,16 +5367,16 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				//	Property manipukators must be serialized since the propagation can mean we're
 				//	updating properties on many entities (and granular locking produces too much
 				//	overhead)
-				CvProperties* pProp = kBuilding.getProperties();
+				const CvProperties* pProp = kBuilding.getProperties();
 				if (!pProp->isEmpty())
 				{
 					getProperties()->addProperties(pProp);
 				}
 				//GET_PLAYER(getOwner()).getProperties()->addProperties(kBuilding.getProperties());
-				pProp = kBuilding.getPropertiesAllCities();
-				if (!pProp->isEmpty())
+				const CvProperties* pPropAllCities = kBuilding.getPropertiesAllCities();
+				if (!pPropAllCities->isEmpty())
 				{
-					GET_TEAM(getTeam()).addPropertiesAllCities(pProp);
+					GET_TEAM(getTeam()).addPropertiesAllCities(pPropAllCities);
 				}
 			}
 			else
@@ -5401,16 +5401,16 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				//	Property manipukators must be serialized since the propagation can mean we're
 				//	updating properties on many entities (and granular locking produces too much
 				//	overhead)
-				CvProperties* pProp = kBuilding.getProperties();
+				const CvProperties* pProp = kBuilding.getProperties();
 				if (!pProp->isEmpty())
 				{
 					getProperties()->subtractProperties(kBuilding.getProperties());
 				}
 				//GET_PLAYER(getOwner()).getProperties()->subtractProperties(kBuilding.getProperties());
-				pProp = kBuilding.getPropertiesAllCities();
-				if (!pProp->isEmpty())
+				const CvProperties* pPropAllCities = kBuilding.getPropertiesAllCities();
+				if (!pPropAllCities->isEmpty())
 				{
-					GET_TEAM(getTeam()).subtractPropertiesAllCities(pProp);
+					GET_TEAM(getTeam()).subtractPropertiesAllCities(pPropAllCities);
 				}
 			}
 		}
@@ -17127,7 +17127,7 @@ bool CvCity::pushFirstValidBuildListOrder(int iListID)
 	const int iNum = kPlayer.m_pBuildLists->getListLength(index);
 	for (int i = 0; i < iNum; i++)
 	{
-		OrderData* pOrder = kPlayer.m_pBuildLists->getOrder(index, i);
+		const OrderData* pOrder = kPlayer.m_pBuildLists->getOrder(index, i);
 
 		if (canContinueProduction(*pOrder))
 		{
@@ -24570,7 +24570,7 @@ void CvCity::setBuildingListInvalid()
 	m_BuildingList.setInvalid();
 }
 
-bool CvCity::getBuildingListFilterActive(BuildingFilterTypes eFilter)
+bool CvCity::getBuildingListFilterActive(BuildingFilterTypes eFilter) const
 {
 	return m_BuildingList.getFilterActive(eFilter);
 }
@@ -24650,7 +24650,7 @@ void CvCity::setUnitListInvalid()
 	m_UnitList.setInvalid();
 }
 
-bool CvCity::getUnitListFilterActive(UnitFilterTypes eFilter)
+bool CvCity::getUnitListFilterActive(UnitFilterTypes eFilter) const
 {
 	return m_UnitList.getFilterActive(eFilter);
 }
@@ -24731,18 +24731,18 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 				//Team Project (5)
 				if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
 				{
-					CvPropertyManipulators* pBuildingPropertyManipulators = GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators();
+					const CvPropertyManipulators* pBuildingPropertyManipulators = GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators();
 
-					int num = pBuildingPropertyManipulators->getNumSources();
+					const int num = pBuildingPropertyManipulators->getNumSources();
 					for (int iJ = 0; iJ < num; iJ++)
 					{
-						CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iJ);
+						const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iJ);
 
 						//	For now we're only interested in constant sources
 						//	TODO - expand this as buildings add other types
 						if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 						{
-							iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+							iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 						}
 					}
 				}
@@ -24755,13 +24755,13 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	}
 }
 
-void unitSources(CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
+void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
 {
-	int iNum = pMani->getNumSources();
+	const int iNum = pMani->getNumSources();
 
 	for (int i = 0; i < iNum; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
@@ -24769,7 +24769,7 @@ void unitSources(CvPropertyManipulators* pMani, PropertyTypes eProperty, const C
 			(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
 			pSource->getType() == PROPERTYSOURCE_CONSTANT)
 		{
-			*iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
+			*iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
 		}
 	}
 }
@@ -24787,8 +24787,7 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 		MEMORY_TRACK_EXEMPT();
 		int	iValue = 0;
 
-		CvPlot* pPlot = plot();
-		foreach_ (const CvUnit* unit, pPlot->units())
+		foreach_ (const CvUnit* unit, plot()->units())
 		{
 			unit->getGameObject()->foreachManipulator(bst::bind(unitSources, _1, eProperty, this, &iValue));
 		}
@@ -24799,13 +24798,13 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 	}
 }
 
-void unitHasSources(CvPropertyManipulators* pMani, bool* bHasSources)
+void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)
 {
-	int iNum = pMani->getNumSources();
+	const int iNum = pMani->getNumSources();
 
 	for (int i = 0; i < iNum; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
@@ -24818,8 +24817,8 @@ void unitHasSources(CvPropertyManipulators* pMani, bool* bHasSources)
 	}
 }
 
-//	Helper function to determine of a unit has any city/plot property sources
-static bool unitHasCityOrPlotPropertySources(CvUnit* pUnit)
+//	Helper function to determine if a unit has any city/plot property sources
+static bool unitHasCityOrPlotPropertySources(const CvUnit* pUnit)
 {
 	bool bHasSources;
 
@@ -24828,7 +24827,7 @@ static bool unitHasCityOrPlotPropertySources(CvUnit* pUnit)
 	return bHasSources;
 }
 
-void CvCity::noteUnitMoved(CvUnit* pUnit) const
+void CvCity::noteUnitMoved(const CvUnit* pUnit) const
 {
 	if (unitHasCityOrPlotPropertySources(pUnit))
 	{
@@ -24836,12 +24835,12 @@ void CvCity::noteUnitMoved(CvUnit* pUnit) const
 	}
 }
 
-void sumCitySources(CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
+void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
 {
-	int iNum = pMani->getNumSources();
+	const int iNum = pMani->getNumSources();
 	for (int i = 0; i < iNum; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == eProperty)
 		{
 			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObject())))
@@ -24855,11 +24854,11 @@ void sumCitySources(CvPropertyManipulators* pMani, const CvCity* pCity, int* iSu
 int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 {
 	int iSum = 0;
-	CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
+	const CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
 	const int iNum = pMani->getNumSources();
 	for (int i = 0; i < iNum; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
@@ -24886,14 +24885,13 @@ int CvCity::getCityAidTotal(PromotionLineTypes ePromotionLineType) const
 {
 	if (ePromotionLineType != NO_PROMOTIONLINE)
 	{
-		PropertyTypes ePropertyType = GC.getPromotionLineInfo(ePromotionLineType).getPropertyType();
+		const PropertyTypes ePropertyType = GC.getPromotionLineInfo(ePromotionLineType).getPropertyType();
 		if (ePropertyType != NO_PROPERTY)
 		{
 			int iBonusTotal = 0;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 			{
-				BonusTypes eBonus = ((BonusTypes)iI);
-				iBonusTotal += getExtraBonusAidModifier(eBonus, ePropertyType);
+				iBonusTotal += getExtraBonusAidModifier((BonusTypes)iI, ePropertyType);
 			}
 			return (getAidRate(ePropertyType) + getUnitAidPresent(ePropertyType) + iBonusTotal);
 		}

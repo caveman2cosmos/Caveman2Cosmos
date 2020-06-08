@@ -191,12 +191,12 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	inline CvMap& getMap() const;
-	CvViewport* getCurrentViewport();
+	CvViewport* getCurrentViewport() const;
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
 	int getViewportSelectionBorder() const;
 	int getViewportCenteringBorder() const;
-	CvMapExternal& getMapExternal();
+	CvMapExternal& getMapExternal() const;
 
 	bool bugInitCalled() const;
 	void enableMultiMaps() { m_bMultimapsEnabled = true; }
@@ -205,11 +205,11 @@ public:
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	int getNumMapSwitchInfos() const;
-	CvMapInfo& getMapInfo(const MapTypes eMap) const;
-	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
+	CvMapInfo& getMapInfo(MapTypes eMap) const;
+	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch) const;
 
 	void switchMap(MapTypes eMap);
-	CvMap& getMapByIndex(MapTypes eIndex);
+	CvMap& getMapByIndex(MapTypes eIndex) const;
 	void updateMaps();
 	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
@@ -235,12 +235,11 @@ public:
 	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
 	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
 	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
-	NiPoint3& getPt3Origin()	 				{ return m_pt3Origin; }
+	NiPoint3& getPt3Origin()		 			{ return m_pt3Origin; }
+	NiPoint3& getPt3CameraDir()			 		{ return m_pt3CameraDir; }
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
-	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e);
-
-	NiPoint3& getPt3CameraDir()		 			{ return m_pt3CameraDir; }
+	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;
 
 	bool& getLogging() 							{ return m_bLogging; }
 	bool& getRandLogging() 						{ return m_bRandLogging; }
@@ -257,12 +256,12 @@ public:
 	int* getCityPlotX() const;
 	int* getCityPlotY() const;
 	int* getCityPlotPriority() const;
-	int getXYCityPlot(const int i, const int j) const;
+	int getXYCityPlot(int i, int j) const;
 	DirectionTypes* getTurnLeftDirection() const;
-	DirectionTypes getTurnLeftDirection(const int i) const;
+	DirectionTypes getTurnLeftDirection(int i) const;
 	DirectionTypes* getTurnRightDirection() const;
 	DirectionTypes getTurnRightDirection(int i) const;
-	DirectionTypes getXYDirection(const int i, const int j) const;
+	DirectionTypes getXYDirection(int i, int j) const;
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
@@ -428,7 +427,7 @@ public:
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
 
 	int getNumBonusInfos() const;
-	std::vector<CvBonusInfo*>& getBonusInfos();
+	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 
 	int getNumFeatureInfos() const;
@@ -749,12 +748,12 @@ public:
 	int& getNumFootstepAudioTypes();
 	CvString*& getFootstepAudioTypes();
 	CvString& getFootstepAudioTypes(int i);
-	int getFootstepAudioTypeByTag(CvString strTag);
+	int getFootstepAudioTypeByTag(const CvString strTag) const;
 
 	CvString*& getFootstepAudioTags();
-	CvString& getFootstepAudioTags(int i);
+	CvString& getFootstepAudioTags(int i) const;
 
-	CvString& getCurrentXMLFile();
+	const CvString& getCurrentXMLFile() const;
 	void setCurrentXMLFile(const TCHAR* szFileName);
 
 	//
@@ -779,7 +778,7 @@ public:
 
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
 	bool getGraphicalDetailPagingEnabled() const;
-	int getGraphicalDetailPageInRange();
+	int getGraphicalDetailPageInRange() const;
 
 	int getDefineINT( const char * szName ) const;
 	float getDefineFLOAT( const char * szName ) const;
@@ -830,7 +829,7 @@ public:
 	////////////// END DEFINES //////////////////
 
 #ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
+	CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 #endif
 	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
 	void setDLLProfiler(FProfiler* prof);

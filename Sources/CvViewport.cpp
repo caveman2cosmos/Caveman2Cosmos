@@ -549,7 +549,7 @@ void CvViewport::updateWorkingCity()
 	m_pMap->updateWorkingCity();
 }
 
-void CvViewport::updateMinOriginalStartDist(CvArea* pArea)
+void CvViewport::updateMinOriginalStartDist(const CvArea* pArea)
 {
 	m_pMap->updateMinOriginalStartDist(pArea);
 }
