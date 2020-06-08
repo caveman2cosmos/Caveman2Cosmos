@@ -499,7 +499,7 @@ public:
 	int cultureGarrison(PlayerTypes ePlayer) const; // Exposed to Python
 
 	//	Note arrival or leaving of a unit
-	void noteUnitMoved(CvUnit* pUnit) const;
+	void noteUnitMoved(const CvUnit* pUnit) const;
 	int getGlobalSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalBuildingSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalUnitSourcedProperty(PropertyTypes eProperty) const;
@@ -1637,8 +1637,8 @@ public:
 	virtual void AI_preUnitTurn() = 0;
 	virtual void AI_noteUnitEscortNeeded() = 0;
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType) = 0;
-	virtual UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, CvUnitSelectionCriteria* criteria = NULL) = 0;
-	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL) = 0;
+	virtual UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
+	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
 
 	virtual void AI_FlushBuildingValueCache(bool bRetainValues = false) = 0;
 
@@ -1750,7 +1750,7 @@ public:
 	void recalculateModifiers();
 
 	void setBuildingListInvalid();
-	bool getBuildingListFilterActive(BuildingFilterTypes eFilter);
+	bool getBuildingListFilterActive(BuildingFilterTypes eFilter) const;
 	void setBuildingListFilterActive(BuildingFilterTypes eFilter, bool bActive);
 	BuildingGroupingTypes getBuildingListGrouping();
 	void setBuildingListGrouping(BuildingGroupingTypes eGrouping);
@@ -1767,7 +1767,7 @@ public:
 	BuildingTypes getBuildingListSelectedWonder();
 
 	void setUnitListInvalid();
-	bool getUnitListFilterActive(UnitFilterTypes eFilter);
+	bool getUnitListFilterActive(UnitFilterTypes eFilter) const;
 	void setUnitListFilterActive(UnitFilterTypes eFilter, bool bActive);
 	UnitGroupingTypes getUnitListGrouping();
 	void setUnitListGrouping(UnitGroupingTypes eGrouping);

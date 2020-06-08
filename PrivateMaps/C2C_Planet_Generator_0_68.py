@@ -2693,7 +2693,7 @@ def addFeatures():
 	terrainLush = cgc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = cgc.getInfoTypeForString("TERRAIN_MUDDY")
 
-	featNone = cgc.getInfoTypeForString("NO_FEATURE")
+	featNone = -1
 	featIce = cgc.getInfoTypeForString("FEATURE_ICE")
 	featJungle = cgc.getInfoTypeForString("FEATURE_JUNGLE")
 	featOasis = cgc.getInfoTypeForString("FEATURE_OASIS")

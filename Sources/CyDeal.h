@@ -14,8 +14,7 @@ public:
 	CyDeal(CvDeal* pDeal = NULL);
 	virtual ~CyDeal();
 	CvDeal* getDeal() const { return m_pDeal; }
-
-	bool isNone();
+	bool isNone() const { return m_pDeal == NULL; }
 
 	int getID() const;
 	int getInitialGameTurn() const;

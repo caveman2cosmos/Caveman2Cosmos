@@ -31,11 +31,11 @@ public:
 	public:
 		const_iterator& operator++();
 
-		bool operator==(const_iterator& other);
+		bool operator==(const const_iterator& other) const;
 
-		bool operator!=(const_iterator& other);
+		bool operator!=(const const_iterator& other) const;
 
-		const_iterator& operator=(const_iterator& other);
+		const_iterator& operator=(const const_iterator& other);
 
 		CvPlot*	plot() const;
 

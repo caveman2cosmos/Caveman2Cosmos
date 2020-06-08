@@ -18,9 +18,9 @@ class CySelectionGroup
 public:
 	CySelectionGroup();
 	explicit CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
-	CvSelectionGroup* getSelectionGroup() { return m_pSelectionGroup;	}	// Call from C++
+	const CvSelectionGroup* getSelectionGroup() const { return m_pSelectionGroup;	}	// Call from C++
+	bool isNone() const { return m_pSelectionGroup == NULL; }
 
-	bool isNone() { return (m_pSelectionGroup==NULL); }
 	void pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, CyPlot* pMissionAIPlot, CyUnit* pMissionAIUnit);
 	void pushMoveToMission(int iX, int iY);
 	void popMission();

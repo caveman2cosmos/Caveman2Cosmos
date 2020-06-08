@@ -84,7 +84,7 @@ public:
 	virtual void updateIrrigated() = 0;
 	virtual void updateCenterUnit() = 0;
 	virtual void updateWorkingCity() = 0;
-	virtual void updateMinOriginalStartDist(CvArea* pArea) = 0;										// Exposed to Python
+	virtual void updateMinOriginalStartDist(const CvArea* pArea) = 0;										// Exposed to Python
 	virtual void updateYield() = 0;
 
 	virtual void verifyUnitValidPlot() = 0;
