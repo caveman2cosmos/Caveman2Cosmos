@@ -5003,7 +5003,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTurnTimerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -5853,7 +5853,7 @@ public:
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-	void copyNonDefaults(CvFeatureInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6157,7 +6157,7 @@ public:
 	bool getSelectAll() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -6638,7 +6638,7 @@ public:
 	float getRandIceLatitude() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvClimateInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvClimateInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -10428,7 +10428,7 @@ public:
 	void getCheckSum(unsigned int& iSum);
 
 	//bool readPass2(CvXMLLoadUtility* pXML);
-	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}

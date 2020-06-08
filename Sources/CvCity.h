@@ -499,7 +499,7 @@ public:
 	int cultureGarrison(PlayerTypes ePlayer) const; // Exposed to Python
 
 	//	Note arrival or leaving of a unit
-	void noteUnitMoved(const CvUnit* pUnit);
+	void noteUnitMoved(const CvUnit* pUnit) const;
 	int getGlobalSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalBuildingSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalUnitSourcedProperty(PropertyTypes eProperty) const;

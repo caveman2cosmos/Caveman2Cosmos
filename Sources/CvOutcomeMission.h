@@ -29,7 +29,7 @@ public:
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
+	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 

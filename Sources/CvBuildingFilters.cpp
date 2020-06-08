@@ -244,6 +244,8 @@ bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 	for (int i=0; i<iNum; i++)
 	{
 		if (pMani->getSource(i)->getProperty() == m_eProperty)
+			return true;
+	}
 
 	iNum = pMani->getNumInteractions();
 	for (int i=0; i<iNum; i++)
@@ -258,8 +260,6 @@ bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 	for (int i=0; i<iNum; i++)
 	{
 		if (pMani->getPropagator(i)->getProperty() == m_eProperty)
-			return true;
-	}
 			return true;
 	}
 

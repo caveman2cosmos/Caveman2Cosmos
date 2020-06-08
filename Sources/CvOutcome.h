@@ -53,7 +53,7 @@ public:
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcome* pOutcome);
+	void copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 protected:

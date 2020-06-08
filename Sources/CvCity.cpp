@@ -24827,7 +24827,7 @@ static bool unitHasCityOrPlotPropertySources(const CvUnit* pUnit)
 	return bHasSources;
 }
 
-void CvCity::noteUnitMoved(const CvUnit* pUnit)
+void CvCity::noteUnitMoved(const CvUnit* pUnit) const
 {
 	if (unitHasCityOrPlotPropertySources(pUnit))
 	{

@@ -233,7 +233,7 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
+void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML)
 {
 	if (isEmpty())
 	{

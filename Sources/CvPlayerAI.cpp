@@ -30255,7 +30255,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 					const CvOutcomeList* pOutcomeList = kUnit.getActionOutcomeList(iI);
 					if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 					{
-						iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
+						const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;

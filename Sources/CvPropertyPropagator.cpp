@@ -326,7 +326,7 @@ bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	const CvPropertyPropagatorSpread* pOther = static_cast<CvPropertyPropagatorSpread*>(pProp);
+	const CvPropertyPropagatorSpread* pOther = static_cast<const CvPropertyPropagatorSpread*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }
@@ -427,7 +427,7 @@ bool CvPropertyPropagatorGather::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	const CvPropertyPropagatorGather* pOther = static_cast<CvPropertyPropagatorGather*>(pProp);
+	const CvPropertyPropagatorGather* pOther = static_cast<const CvPropertyPropagatorGather*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
@@ -572,7 +572,7 @@ bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	const CvPropertyPropagatorDiffuse* pOther = static_cast<CvPropertyPropagatorDiffuse*>(pProp);
+	const CvPropertyPropagatorDiffuse* pOther = static_cast<const CvPropertyPropagatorDiffuse*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }

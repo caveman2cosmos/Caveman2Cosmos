@@ -431,7 +431,7 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvProperties::copyNonDefaults(const CvProperties* pProp)
+void CvProperties::copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* pXML)
 {
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)

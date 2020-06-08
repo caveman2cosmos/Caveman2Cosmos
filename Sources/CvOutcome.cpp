@@ -1592,7 +1592,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvOutcome::copyNonDefaults(CvOutcome* pOutcome)
+void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eType, (int*)&(pOutcome->m_eType));
 	//if (m_eType == NO_OUTCOME)
@@ -1675,7 +1675,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome)
 		}
 	}
 
-	m_Properties.copyNonDefaults(pOutcome->getProperties());
+	m_Properties.copyNonDefaults(pOutcome->getProperties(), pXML);
 
 	if (!m_pPlotCondition)
 	{

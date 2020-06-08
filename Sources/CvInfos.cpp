@@ -34713,10 +34713,10 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	if (isProbabilityBuildingMultiply() == bDefault) m_bProbabilityBuildingMultiply = pClassInfo->isProbabilityBuildingMultiply();
 	if (isPrereqEventCity() == bDefault) m_bPrereqEventCity = pClassInfo->isPrereqEventCity();
 
-	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties());
-	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties());
-	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties());
-	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties());
+	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties(), pXML);
+	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties(), pXML);
+	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties(), pXML);
+	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties(), pXML);
 
 	if (getPythonCallback() == cDefault) m_szPythonCallback = pClassInfo->getPythonCallback();
 	if (getPythonCanDo() == cDefault) m_szPythonCanDo = pClassInfo->getPythonCanDo();
@@ -36043,8 +36043,8 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getQuestFailTextKey() == wDefault) m_szQuestFailText = pClassInfo->getQuestFailTextKey();
 	if (getLocalInfoTextKey() == wDefault) m_szLocalInfoText = pClassInfo->getLocalInfoTextKey();
 
-	m_Properties.copyNonDefaults(pClassInfo->getProperties());
-	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities());
+	m_Properties.copyNonDefaults(pClassInfo->getProperties(), pXML);
+	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities(), pXML);
 
 	if (getPythonCallback() == cDefault) m_szPythonCallback = pClassInfo->getPythonCallback();
 	if (getPythonExpireCheck() == cDefault) m_szPythonExpireCheck = pClassInfo->getPythonExpireCheck();
@@ -42164,7 +42164,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList);
+	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList, pXML);
 
 	if (m_aOutcomeMissions.empty())
 	{

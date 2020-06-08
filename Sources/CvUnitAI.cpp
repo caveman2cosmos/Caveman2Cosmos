@@ -33788,7 +33788,7 @@ bool CvUnitAI::AI_foundReligion()
 			}
 		}
 	}
-return false;
+	return false;
 }
 
 bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
@@ -33827,9 +33827,9 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 				if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
 					(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
 				{
-					PropertyTypes eProperty = pSource->getProperty();
+					const PropertyTypes eProperty = pSource->getProperty();
 					int iCurrentSourceSize = pCity->getTotalBuildingSourcedProperty(eProperty) + pCity->getTotalUnitSourcedProperty(eProperty) + pCity->getPropertyNonBuildingSource(eProperty);
-					int iNewSourceSize = iCurrentSourceSize + ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(pCity->getGameObject());
+					int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
 					int iDecayPercent = pCity->getPropertyDecay(eProperty);
 
 					//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -34194,7 +34194,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
-				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
+				score += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			}
 		}
 
@@ -35085,7 +35085,7 @@ bool CvUnitAI::AI_isNegativePropertyUnit() const
 			{
 				if (GC.getPropertyInfo(pSource->getProperty()).getAIWeight() < 0)
 				{
-					if (((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject()) > 0)
+					if (static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject()) > 0)
 					{
 						return true;
 					}

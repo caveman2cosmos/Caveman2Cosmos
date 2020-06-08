@@ -1180,7 +1180,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
-			return m_pTeam->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
+			return m_pTeam->getBuildingCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1304,7 +1304,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
-			return m_pPlayer->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
+			return m_pPlayer->getBuildingCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1708,7 +1708,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// return true if the building is present in the city on this plot and active
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			return pCity ? pCity->getNumActiveBuilding(static_cast<BuildingTypes>(iID)) > 0 : false;
+			return pCity && pCity->getNumActiveBuilding((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1723,7 +1723,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owner has the trait
 			const PlayerTypes ePlayer = m_pPlot->getOwner();
-			return ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).hasTrait(static_cast<TraitTypes>(iID)) : false;
+			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).hasTrait((TraitTypes)iID);
 		}
 
 		case GOM_FEATURE:

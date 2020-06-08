@@ -6475,12 +6475,12 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		m_aszPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsNamesVectorElement(i));
 	}
 
-	m_Properties.copyNonDefaults(pClassInfo->getProperties());
-	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities());
-	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties());
-	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties());
-	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties());
-	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties());
+	m_Properties.copyNonDefaults(pClassInfo->getProperties(), pXML);
+	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities(), pXML);
+	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties(), pXML);
+	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties(), pXML);
+	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties(), pXML);
+	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties(), pXML);
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 

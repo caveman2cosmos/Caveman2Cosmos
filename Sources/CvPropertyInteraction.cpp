@@ -227,7 +227,7 @@ bool CvPropertyInteractionConvertConstant::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	const CvPropertyInteractionConvertConstant* pOther = static_cast<CvPropertyInteractionConvertConstant*>(pProp);
+	const CvPropertyInteractionConvertConstant* pOther = static_cast<const CvPropertyInteractionConvertConstant*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
@@ -302,7 +302,7 @@ bool CvPropertyInteractionInhibitedGrowth::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	const CvPropertyInteractionInhibitedGrowth* pOther = static_cast<CvPropertyInteractionInhibitedGrowth*>(pProp);
+	const CvPropertyInteractionInhibitedGrowth* pOther = static_cast<const CvPropertyInteractionInhibitedGrowth*>(pProp);
 	if (m_iGrowthPercent == 0)
 		m_iGrowthPercent = pOther->getGrowthPercent();
 	if (m_iInhibitionPercent == 0)
@@ -379,7 +379,7 @@ bool CvPropertyInteractionConvertPercent::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	const CvPropertyInteractionConvertPercent* pOther = static_cast<CvPropertyInteractionConvertPercent*>(pProp);
+	const CvPropertyInteractionConvertPercent* pOther = static_cast<const CvPropertyInteractionConvertPercent*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 	if (m_iNoConvertAmount == 0)
