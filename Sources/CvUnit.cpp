@@ -13339,7 +13339,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	}
 	else
 	{
-		CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
+		const CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
 		if (pUnit && pUnit != this &&
 			!pUnit->isTrap() &&
 			pUnit->canPromote((PromotionTypes)kUnitInfo.getLeaderPromotion(), getID()))
@@ -13360,7 +13360,7 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 		while(pUnitNode != NULL)
 		{
-			CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
+			const CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
 			if (pUnit && pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
@@ -13516,12 +13516,13 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible && GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
+	const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+	if (!bTestVisible && kPlayer.getEffectiveGold() < upgradePrice(eUnit))
 	{
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
+	if (kPlayer.getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
 	{
 		return false;
 	}
@@ -13538,12 +13539,7 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 		return false;
 	}
 
-	if (hasUpgrade(eUnit))
-	{
-		return true;
-	}
-
-	return false;
+	return !kPlayer.isUnitMaxedOut(eUnit) && hasUpgrade(eUnit);
 }
 
 bool CvUnit::isReadyForUpgrade() const
@@ -13642,7 +13638,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		return NULL;
 	}
-	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
 	//The following checks to make sure that the upgrade won't make it impossible for a ship to hold
 	//the cargo it already does.
