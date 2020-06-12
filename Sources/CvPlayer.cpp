@@ -2799,8 +2799,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		CyArgsList argsList;
 		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyOldCity));	// pass in plot class
+		argsList.add(getID());
 
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(),&lCaptureGold);
+		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(), &lCaptureGold);
 
 		delete pyOldCity;	// python fxn must not hold on to this pointer
 
@@ -3151,7 +3152,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY", iCaptureGold, pNewCity->getNameKey());
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, pNewCity->getNameKey());
 				AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::green(), pNewCity->getX(), pNewCity->getY(), true, true);
 			}
 
