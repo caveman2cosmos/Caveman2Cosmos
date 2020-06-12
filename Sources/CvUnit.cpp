@@ -11254,35 +11254,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       08/19/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-/* orginal bts code
-	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK())
-	{
-		CyArgsList argsList;
-		argsList.add(getOwner());
-		argsList.add(getID());
-		argsList.add((int) eReligion);
-		argsList.add(pPlot->getX());
-		argsList.add(pPlot->getY());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION(__FUNCTION__, PYGameModule, "cannotSpreadReligion", argsList.makeFunctionArgs(), &lResult);
-		if (lResult > 0)
-		{
-			return false;
-		}
-	}
-*/
-				// UP efficiency: Moved below faster calls
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 	if (eReligion == NO_RELIGION)
 	{
 		return false;
@@ -11293,7 +11264,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -11310,95 +11281,50 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 		return false;
 	}
 
-	if (!bTestVisible)
-	{
-		if (pCity->getTeam() != getTeam())
-		{
-			if (GET_PLAYER(pCity->getOwner()).isNoNonStateReligionSpread())
-			{
-				if (eReligion != GET_PLAYER(pCity->getOwner()).getStateReligion())
-				{
-					return false;
-				}
-			}
-		}
-	}
-
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       08/19/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< (int)eReligion
-			<< pPlot->getX()
-			<< pPlot->getY()))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-//TB Prophet Mod start
-	if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && (AI_getUnitAIType() != UNITAI_MISSIONARY))
+	if (!bTestVisible && pCity->getTeam() != getTeam()
+	&& GET_PLAYER(pCity->getOwner()).isNoNonStateReligionSpread()
+	&& eReligion != GET_PLAYER(pCity->getOwner()).getStateReligion())
 	{
 		return false;
 	}
-	else if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && (AI_getUnitAIType() != UNITAI_MISSIONARY))
+
+	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK()
+
+	&& Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
+		<< getOwner() 
+		<< getID()
+		<< (int)eReligion
+		<< pPlot->getX()
+		<< pPlot->getY())
+
+	) return false;
+
+	// TB Prophet Mod
+	if (AI_getUnitAIType() != UNITAI_MISSIONARY)
 	{
-		bool istechqual;
-
-		if(!GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
+		if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 		{
-			istechqual = false;
-			TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
+			bool istechqual = GC.getGame().isOption(GAMEOPTION_PICK_RELIGION);
 
-			if (GC.getGame().isTechDiscovered(ePreqTech))
+			if (!istechqual)
 			{
-				int iCurrentTurn = GC.getGame().getGameTurn();
-				int iOriginTurn = GC.getGame().getTechGameTurnDiscovered(ePreqTech);
-				if ((iCurrentTurn == iOriginTurn) || (iCurrentTurn == (iOriginTurn+1)))
-				{
-					if (GET_TEAM(getTeam()).isHasTech(ePreqTech))
-					{
-						istechqual = true;
-					}
-				}
-				else
+				const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
+
+				if (GC.getGame().isTechDiscovered(ePreqTech)
+				&& (GET_TEAM(getTeam()).isHasTech(ePreqTech) || GC.getGame().getGameTurn() > GC.getGame().getTechGameTurnDiscovered(ePreqTech) + 1))
 				{
 					istechqual = true;
 				}
 			}
-		}
-		else
-		{
-			istechqual = true;
-		}
 
-		bool isable = true;
-
-		if(GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
-		{
-			if(GET_PLAYER(getOwner()).hasHolyCity())
+			if (!istechqual || GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
 			{
-				isable = false;
+				return false;
 			}
 		}
-
-		if (!isable || !istechqual)
-		{
-			return false;
-		}
-		return true;
+		else return false;
 	}
-
-
-//TB Prophet Mod end
+	// ! TB Prophet Mod
 
 	return true;
 }
