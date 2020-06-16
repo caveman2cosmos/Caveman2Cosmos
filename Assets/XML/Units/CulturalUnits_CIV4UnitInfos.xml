@@ -23080,7 +23080,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -26981,7 +26981,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -27403,7 +27403,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -29561,7 +29561,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -30069,7 +30069,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>130</Constant>
 									</Adapt>
 								</iYield>
@@ -37510,7 +37510,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>48</Constant>
 									</Adapt>
 								</iYield>
@@ -38607,7 +38607,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>48</Constant>
 									</Adapt>
 								</iYield>
@@ -41428,7 +41428,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -44310,7 +44310,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -45385,7 +45385,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>80</Constant>
 									</Adapt>
 								</iYield>
@@ -49580,7 +49580,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -49944,7 +49944,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
