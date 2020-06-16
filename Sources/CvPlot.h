@@ -6,7 +6,7 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
@@ -140,7 +140,8 @@ public:
 	CvPlot();
 	virtual ~CvPlot();
 
-	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+	CvGameObjectPlot* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlot* getGameObject() const { return &m_GameObject; };
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -846,7 +847,7 @@ public:
 	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
 	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
 	bool shouldUsePlotBuilder();
-	CvPlotBuilder* getPlotBuilder() { return m_pPlotBuilder; }
+	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
 	void updateRouteSymbol(bool bForce = false, bool bAdjacent = false);

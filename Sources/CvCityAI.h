@@ -112,8 +112,8 @@ public:
 
 	void AI_chooseProduction();
 
-	UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, CvUnitSelectionCriteria* criteria = NULL);
-	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL);
+	UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL);
+	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL);
 
 	BuildingTypes AI_bestBuildingThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
 	std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
@@ -128,7 +128,7 @@ public:
 	int AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
 	int AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
 	int getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate);
-	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield);
+	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield);
 
 	ProjectTypes AI_bestProject();
 	int AI_projectValue(ProjectTypes eProject);
@@ -342,7 +342,7 @@ protected:
 	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
 	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );
 
-	int tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
+	int tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
 
 
 	void AI_buildGovernorChooseProduction();
@@ -378,12 +378,12 @@ private:
 	int worstWorkedPlotValue();
 	//	Evaluate a building we are considering building here in terms of its
 	//	effect on properties
-	int buildingPropertiesValue(CvBuildingInfo& kBuilding) const;
+	int buildingPropertiesValue(const CvBuildingInfo& kBuilding) const;
 
 	bool AI_establishSeeInvisibleCoverage();
 	bool AI_establishInvestigatorCoverage();
-	bool AI_isNegativePropertyUnit(UnitTypes eUnit);
-	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_isNegativePropertyUnit(UnitTypes eUnit) const;
+	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria = NULL);
 
 	//	The cache itself
 	BuildingValueCache* cachedBuildingValues;

@@ -8,6 +8,14 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyCity.h"
+#include "CyGame.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CyTeam.h"
+#include "CyUnit.h"
 
 CvGameObjectGame::CvGameObjectGame()
 {
@@ -370,98 +378,98 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	}
 }
 
-CvGameObjectPlayer* CvGameObjectGame::getOwner()
+CvGameObjectPlayer* CvGameObjectGame::getOwner() const
 {
 	return NULL;
 }
 
-CvGameObjectPlayer* CvGameObjectTeam::getOwner() 
+CvGameObjectPlayer* CvGameObjectTeam::getOwner() const
 {
 	return NULL;
 }
 
-CvGameObjectPlayer* CvGameObjectPlayer::getOwner() 
+CvGameObjectPlayer* CvGameObjectPlayer::getOwner() const
 {
-	return this;
+	return const_cast<CvGameObjectPlayer*>(this);
 }
 
-CvGameObjectPlayer* CvGameObjectCity::getOwner() 
+CvGameObjectPlayer* CvGameObjectCity::getOwner() const
 {
 	return GET_PLAYER(m_pCity->getOwner()).getGameObject();
 }
 
-CvGameObjectPlayer* CvGameObjectUnit::getOwner() 
+CvGameObjectPlayer* CvGameObjectUnit::getOwner() const
 {
 	return GET_PLAYER(m_pUnit->getOwner()).getGameObject();
 }
 
-CvGameObjectPlayer* CvGameObjectPlot::getOwner() 
+CvGameObjectPlayer* CvGameObjectPlot::getOwner() const
 {
 	if (m_pPlot->getOwner() != NO_PLAYER)
 		return GET_PLAYER(m_pPlot->getOwner()).getGameObject();
 	return NULL;
 }
 
-CvGameObjectTeam* CvGameObjectGame::getTeam() 
+CvGameObjectTeam* CvGameObjectGame::getTeam() const
 {
 	return NULL;
 }
 
-CvGameObjectTeam* CvGameObjectTeam::getTeam() 
+CvGameObjectTeam* CvGameObjectTeam::getTeam() const
 {
-	return this;
+	return const_cast<CvGameObjectTeam*>(this);
 }
 
-CvGameObjectTeam* CvGameObjectPlayer::getTeam() 
+CvGameObjectTeam* CvGameObjectPlayer::getTeam() const
 {
 	return GET_TEAM(m_pPlayer->getTeam()).getGameObject();
 }
 
-CvGameObjectTeam* CvGameObjectCity::getTeam() 
+CvGameObjectTeam* CvGameObjectCity::getTeam() const
 {
 	return GET_TEAM(m_pCity->getTeam()).getGameObject();
 }
 
-CvGameObjectTeam* CvGameObjectUnit::getTeam() 
+CvGameObjectTeam* CvGameObjectUnit::getTeam() const
 {
 	return GET_TEAM(m_pUnit->getTeam()).getGameObject();
 }
 
-CvGameObjectTeam* CvGameObjectPlot::getTeam() 
+CvGameObjectTeam* CvGameObjectPlot::getTeam() const
 {
 	if (m_pPlot->getTeam() != NO_TEAM)
 		return GET_TEAM(m_pPlot->getTeam()).getGameObject();
 	return NULL;
 }
 
-CvGameObjectPlot* CvGameObjectGame::getPlot() 
+CvGameObjectPlot* CvGameObjectGame::getPlot() const
 {
 	return NULL;
 }
 
-CvGameObjectPlot* CvGameObjectTeam::getPlot() 
+CvGameObjectPlot* CvGameObjectTeam::getPlot() const
 {
 	return NULL;
 }
 
-CvGameObjectPlot* CvGameObjectPlayer::getPlot() 
+CvGameObjectPlot* CvGameObjectPlayer::getPlot() const
 {
 	return NULL;
 }
 
-CvGameObjectPlot* CvGameObjectCity::getPlot() 
+CvGameObjectPlot* CvGameObjectCity::getPlot() const
 {
 	return m_pCity->plot()->getGameObject();
 }
 
-CvGameObjectPlot* CvGameObjectUnit::getPlot() 
+CvGameObjectPlot* CvGameObjectUnit::getPlot() const
 {
 	return m_pUnit->plot()->getGameObject();
 }
 
-CvGameObjectPlot* CvGameObjectPlot::getPlot() 
+CvGameObjectPlot* CvGameObjectPlot::getPlot() const
 {
-	return this;
+	return const_cast<CvGameObjectPlot*>(this);
 }
 
 void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(CvGameObject *)> func)
@@ -1172,7 +1180,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
-			return m_pTeam->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
+			return m_pTeam->getBuildingCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1296,7 +1304,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
-			return m_pPlayer->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
+			return m_pPlayer->getBuildingCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1700,16 +1708,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// return true if the building is present in the city on this plot and active
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			if (pCity)
-			{
-				const BuildingTypes eBuilding = (BuildingTypes) iID;
-				return pCity->getNumActiveBuilding(eBuilding) > 0;
-			}
-			else
-			{
-				return false;
-			}
-			//break;
+			return pCity && pCity->getNumActiveBuilding((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1718,23 +1717,13 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 			bool bHasGOM = false;
 			foreach(GAMEOBJECT_UNIT, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
-			//break;
 		}
 	
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
 			const PlayerTypes ePlayer = m_pPlot->getOwner();
-			if (ePlayer != NO_PLAYER)
-			{
-				const TraitTypes eTrait = (TraitTypes) iID;
-				return GET_PLAYER(ePlayer).hasTrait(eTrait);
-			}
-			else
-			{
-				return false;
-			}
-			//break;
+			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).hasTrait((TraitTypes)iID);
 		}
 
 		case GOM_FEATURE:
@@ -1742,7 +1731,6 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 			// Check feature type
 			const FeatureTypes eFeature = (FeatureTypes) iID;
 			return m_pPlot->getFeatureType() == eFeature;
-			//break;
 		}
 
 		case GOM_OPTION:

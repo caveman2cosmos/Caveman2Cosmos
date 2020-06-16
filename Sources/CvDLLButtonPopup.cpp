@@ -1,8 +1,13 @@
 // buttonPopup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGameTextMgr.h"
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // Public Functions...
 
@@ -193,13 +198,13 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_LOADUNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
-			CvSelectionGroup* pSelectionGroup = gDLL->getInterfaceIFace()->getSelectionList();
+			const CvSelectionGroup* pSelectionGroup = gDLL->getInterfaceIFace()->getSelectionList();
 			if (pSelectionGroup != NULL)
 			{
 				int iCount = pPopupReturn->getButtonClicked();
 
-				CvPlot* pPlot = pSelectionGroup->plot();
-				foreach_ (CvUnit* unit, pPlot->units())
+				const CvPlot* pPlot = pSelectionGroup->plot();
+				foreach_ (const CvUnit* unit, pPlot->units())
 				{
 					if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, unit->getOwner(), unit->getID()))
 					{
@@ -218,14 +223,14 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_LEADUNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
-			CvSelectionGroup* pSelectionGroup = gDLL->getInterfaceIFace()->getSelectionList();
+			const CvSelectionGroup* pSelectionGroup = gDLL->getInterfaceIFace()->getSelectionList();
 
 			if (pSelectionGroup != NULL)
 			{
 				int iCount = pPopupReturn->getButtonClicked();
 
-				CvPlot* pPlot = pSelectionGroup->plot();
-				foreach_ (CvUnit* unit, pPlot->units() | filtered(bst::bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
+				const CvPlot* pPlot = pSelectionGroup->plot();
+				foreach_ (const CvUnit* unit, pPlot->units() | filtered(bst::bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
 				{
 					if (--iCount == 0)
 					{

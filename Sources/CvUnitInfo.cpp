@@ -9,6 +9,8 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvXMLLoadUtility.h"
 
 //======================================================================================================
 //					CvUnitInfo
@@ -1234,7 +1236,7 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
-BoolExpr* CvUnitInfo::getTrainCondition()
+BoolExpr* CvUnitInfo::getTrainCondition() const
 {
 	return m_pExprTrainCondition;
 }
@@ -1618,7 +1620,7 @@ int CvUnitInfo::getLeaderExperience() const
 	return m_iLeaderExperience;
 }
 
-CvOutcomeList* CvUnitInfo::getKillOutcomeList()
+const CvOutcomeList* CvUnitInfo::getKillOutcomeList() const
 {
 	return &m_KillOutcomeList;
 }
@@ -1628,17 +1630,17 @@ int CvUnitInfo::getNumActionOutcomes() const
 	return m_aOutcomeMissions.size();
 }
 
-MissionTypes CvUnitInfo::getActionOutcomeMission(const int index) const
+MissionTypes CvUnitInfo::getActionOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index]->getMission();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeList(const int index) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
 {
 	return m_aOutcomeMissions[index]->getOutcomeList();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMission) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1650,12 +1652,12 @@ CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMis
 	return NULL;
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMission(const int index) const
+const CvOutcomeMission* CvUnitInfo::getOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index];
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(const MissionTypes eMission) const
+CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1927,11 +1929,6 @@ void CvUnitInfo::setPowerValue(int iNewValue)
 	m_iPowerValue = iNewValue;
 }
 
-CvPropertyManipulators* CvUnitInfo::getPropertyManipulators()
-{
-	return &m_PropertyManipulators;
-}
-
 int CvUnitInfo::getPrereqVicinityBonus() const
 {
 	return m_iPrereqVicinityBonus;
@@ -2004,8 +2001,8 @@ CvWString CvUnitInfo::getCivilizationName(int i) const
 }
 
 int CvUnitInfo::getCivilizationNamesVectorSize() const					{return m_aszCivilizationNamesforPass3.size();}
-CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(const int i) const	{return m_aszCivilizationNamesforPass3[i];}
-CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(const int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(int i) const	{return m_aszCivilizationNamesforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
 
 
 //TB Combat Mods Start  TB SubCombat Mod begin
@@ -4040,7 +4037,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
-	getKillOutcomeList()->getCheckSum(iSum);
+	m_KillOutcomeList.getCheckSum(iSum);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
 	{
@@ -5351,7 +5348,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	//TB Combat Mods End  TB SubCombat Mod end
 
-	getKillOutcomeList()->read(pXML, L"KillOutcomes");
+	m_KillOutcomeList.read(pXML, L"KillOutcomes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"Actions"))
 	{
@@ -5914,7 +5911,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(),pXML);
+	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 
 	if (!m_pExprTrainCondition)
 	{
@@ -6396,7 +6393,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	//TB Combat Mods End  TB SubCombat Mod end
 	//setTotalModifiedCombatStrengthDetails();
 
-	getKillOutcomeList()->copyNonDefaults(pClassInfo->getKillOutcomeList(), pXML);
+	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList, pXML);
 
 	if (m_aOutcomeMissions.empty())
 	{

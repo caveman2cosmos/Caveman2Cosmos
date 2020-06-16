@@ -1,10 +1,14 @@
 // player.cpp
 
 #include "CvGameCoreDLL.h"
-#include "CvDLLFlagEntityIFaceBase.h"
+#include "CvGameTextMgr.h"
+#include "CvDiploParameters.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyCity.h"
 
-//	Koshling - save flag indicating this player has no data in the save as they have never
-//	been alive
+//	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
 
 //#define VALIDATION_FOR_PLOT_GROUPS
@@ -2756,7 +2760,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", pOldCity->getNameKey()).GetCString();
-			AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pOldCity->getX(), pOldCity->getY(), true, true);
+			AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::green(), pOldCity->getX(), pOldCity->getY(), true, true);
 		}
 		szName.Format(L"%s (%s)", pOldCity->getName().GetCString(), GET_PLAYER(pOldCity->getOwner()).getName());
 
@@ -2769,12 +2773,12 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				if (pOldCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", szName.GetCString(), getCivilizationDescriptionKey());
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pOldCity->getX(), pOldCity->getY(), true, true);
+					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::red(), pOldCity->getX(), pOldCity->getY(), true, true);
 				}
 				else if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasEmbassy(getTeam()))
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", szName.GetCString(), getCivilizationDescriptionKey());
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
+					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, NULL, CvColorInfo::red());
 				}
 			}
 		}
@@ -2795,8 +2799,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		CyArgsList argsList;
 		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyOldCity));	// pass in plot class
+		argsList.add(getID());
 
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(),&lCaptureGold);
+		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(), &lCaptureGold);
 
 		delete pyOldCity;	// python fxn must not hold on to this pointer
 
@@ -3147,8 +3152,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY", iCaptureGold, pNewCity->getNameKey());
-				AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewCity->getX(), pNewCity->getY(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, pNewCity->getNameKey());
+				AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::green(), pNewCity->getX(), pNewCity->getY(), true, true);
 			}
 
 			pNewCity->doTask(TASK_RAZE);
@@ -3573,7 +3578,7 @@ void CvPlayer::disbandUnit(bool bAnnounce)
 		MEMORY_TRACK_EXEMPT();
 
 		swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_UNIT_DISBANDED_NO_MONEY", pBestUnit->getNameKey()).GetCString());
-		AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITDISBANDED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBestUnit->getX(), pBestUnit->getY(), true, true);
+		AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITDISBANDED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), CvColorInfo::red(), pBestUnit->getX(), pBestUnit->getY(), true, true);
 
 		FAssert(!(pBestUnit->isGoldenAge()));
 
@@ -3828,36 +3833,15 @@ bool CvPlayer::isInvasionCapablePlayer() const
 
 const wchar* CvPlayer::getName(uint uiForm) const
 {
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* dynamic civ names                                                                            */
-/************************************************************************************************/
-/* original code
-	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
-	{
-		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
-	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-*/
-	if( !(m_szName.empty()) )
+	if (!m_szName.empty())
 	{
 		return m_szName;
 	}
-	else if( GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
+	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON)
 	{
 		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
 	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	return GC.getInitCore().getLeaderName(getID(), uiForm);
 }
 
 /************************************************************************************************/
@@ -7235,7 +7219,7 @@ void CvPlayer::raze(CvCity* pCity)
 		MEMORY_TRACK_EXEMPT();
 
 		swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_DESTROYED_CITY", pCity->getNameKey()).GetCString());
-		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::green(), pCity->getX(), pCity->getY(), true, true);
 	}
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -7249,7 +7233,7 @@ void CvPlayer::raze(CvCity* pCity)
 					MEMORY_TRACK_EXEMPT();
 
 					swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_CITY_HAS_BEEN_RAZED_BY", pCity->getNameKey(), getCivilizationDescriptionKey()).GetCString());
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZED", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZED", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), CvColorInfo::red(), pCity->getX(), pCity->getY(), true, true);
 				}
 			}
 		}
@@ -7278,11 +7262,11 @@ void CvPlayer::disband(CvCity* pCity)
 }
 
 
-bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const
+bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const
 {
 	CvCity* pCity;
-	EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
-	EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
+	const EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
+	const EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
 
 	if (eEra != NO_ERA && eEra != getCurrentEra())
 	{
@@ -9097,9 +9081,9 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	return iCost;
 }
 
-bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, CvPlot* pPlot, CvUnit* pBuilder) const
+bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const
 {
-	bool	bResult = false;
+	bool bResult = false;
 
 	//	Only check whether the build is obsolete if we need it!  The route is anyway valid if it already exists
 	if ((pPlot != NULL) ?
@@ -9118,7 +9102,7 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, CvPlot* p
 /*                                                                                              */
 /*  Do not blindly rely on XML value, check movement info and route cost                        */
 /************************************************************************************************/
-RouteTypes CvPlayer::getBestRoute(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder) const
+RouteTypes CvPlayer::getBestRoute(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder) const
 {
 	PROFILE_FUNC();
 
@@ -9142,31 +9126,25 @@ RouteTypes CvPlayer::getBestRoute(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder
 	return getBestRouteInternal(pPlot, bConnect, pBuilder);
 }
 
-RouteTypes CvPlayer::getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder, BuildTypes* eBestRouteBuild) const
+RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild) const
 {
-	RouteTypes eBestRoute;
-	int iValue;
-	int iBestValue;
-	int iI;
-
-	iBestValue = 0;
-	eBestRoute = NO_ROUTE;
+	int iBestValue = 0;
+	RouteTypes eBestRoute = NO_ROUTE;
 
 	const int numBuildInfos = GC.getNumBuildInfos();
-
 	const int baseMoves = GC.getMOVE_DENOMINATOR();
 
-	for (iI = 0; iI < numBuildInfos; iI++)
+	for (int iI = 0; iI < numBuildInfos; iI++)
 	{
-		const RouteTypes eRoute = ((RouteTypes)(GC.getBuildInfo((BuildTypes)iI).getRoute()));
+		const RouteTypes eRoute = (RouteTypes)GC.getBuildInfo((BuildTypes)iI).getRoute();
 
 		if (eRoute != NO_ROUTE)
 		{
 			if (isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
 			{
-				iValue = GC.getRouteInfo(eRoute).getValue();
+				int iValue = GC.getRouteInfo(eRoute).getValue();
 				//Assuming roads never hinder movement
-				int iExtraMoves = std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1); //subtract 1 because we care about extra moves, all movement is 1 move by default
+				const int iExtraMoves = std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1); //subtract 1 because we care about extra moves, all movement is 1 move by default
 				if (!bConnect) {
 					iValue -= GC.getBuildInfo((BuildTypes)iI).getTime() / 100; //number of turns
 					iValue -= GC.getBuildInfo((BuildTypes)iI).getCost() / (AI_isFinancialTrouble() ? 1 : 2);
@@ -11006,11 +10984,9 @@ CvPlot* CvPlayer::getStartingPlot() const
 }
 
 
-void CvPlayer::setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist)
+void CvPlayer::setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist)
 {
-	CvPlot* pOldStartingPlot;
-
-	pOldStartingPlot = getStartingPlot();
+	const CvPlot* pOldStartingPlot = getStartingPlot();
 
 	if (pOldStartingPlot != pNewValue)
 	{
@@ -13658,19 +13634,21 @@ namespace {
 
 void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
-	FAssertMsg(iExperience > 0, "iExperience must be greater than 0");
+	if (iExperience < 0)
+	{
+		FAssertMsg(false, "iExperience < 0");
+		iExperience = 0;
+	}
 
-	iExperience = std::max(0, iExperience);
-
-	if (iExperience == getCombatExperience())
+	if (iExperience == m_iCombatExperience)
 	{
 		return;
 	}
 
-	const int iExperienceDiff = std::max(0, iExperience - m_iCombatExperience);
-
-	changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
-
+	if (iExperience > m_iCombatExperience)
+	{
+		changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperience - m_iCombatExperience);
+	}
 	m_iCombatExperience = iExperience;
 
 	if (!isNPC() || isHominid())
@@ -19427,7 +19405,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			iX = pPlot->getX();
 			iY = pPlot->getY();
 		}
-		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_PERFORMED"), "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), iX, iY, true, true);
+		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_PERFORMED"), "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), CvColorInfo::green(), iX, iY, true, true);
 	}
 	else if (getID() == GC.getGame().getActivePlayer() && !bNuked)
 	{
@@ -19456,7 +19434,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		if (NO_PLAYER != eTargetPlayer)
 		{
 			MEMORY_TRACK_EXEMPT();
-			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), iX, iY, true, true);
+			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), CvColorInfo::red(), iX, iY, true, true);
 		}
 	}
 	return bSomethingHappened || bNuked;
@@ -20950,7 +20928,7 @@ void CvPlayer::doWarnings()
 								setTurnHadUIInteraction(true);
 
 								swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED", pNearestCity->getNameKey()).GetCString());
-								AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ENEMY_TROOPS", MESSAGE_TYPE_INFO, pUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+								AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ENEMY_TROOPS", MESSAGE_TYPE_INFO, pUnit->getButton(), CvColorInfo::red(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 
 								iMaxCount--;
 							}
@@ -25002,7 +24980,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		changeBaseFreeUnits(kEvent.getFreeUnitSupport());
 	}
 
-	CvProperties* pProp = kEvent.getPropertiesAllCities();
+	const CvProperties* pProp = kEvent.getPropertiesAllCities();
 	if (!pProp->isEmpty())
 	{
 		addPropertiesAllCities(pProp);
@@ -25112,7 +25090,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 							MEMORY_TRACK_EXEMPT();
 
 							CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), CvColorInfo::red(), pPlot->getX(), pPlot->getY(), true, true);
 							pPlot->setImprovementType(NO_IMPROVEMENT);
 							++iNumPillaged;
 							break;
@@ -25529,7 +25507,7 @@ void CvPlayer::expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(GC.getEventInfo(eEvent).getQuestFailTextKey()), "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
+			AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(GC.getEventInfo(eEvent).getQuestFailTextKey()), "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::red());
 		}
 	}
 
@@ -25790,7 +25768,7 @@ CvCity* CvPlayer::pickTriggerCity(EventTriggerTypes eTrigger) const
 	return pCity;
 }
 
-CvUnit* CvPlayer::pickTriggerUnit(EventTriggerTypes eTrigger, CvPlot* pPlot, bool bPickPlot) const
+CvUnit* CvPlayer::pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bPickPlot) const
 {
 	CvUnit* pUnit = NULL;
 	std::vector<CvUnit*> apUnits;
@@ -25798,7 +25776,7 @@ CvUnit* CvPlayer::pickTriggerUnit(EventTriggerTypes eTrigger, CvPlot* pPlot, boo
 	int iBestValue = MIN_INT;
 	for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 	{
-		int iValue = pLoopUnit->getTriggerValue(eTrigger, pPlot, bPickPlot);
+		const int iValue = pLoopUnit->getTriggerValue(eTrigger, pPlot, bPickPlot);
 
 		if (iValue >= iBestValue && iValue != MIN_INT)
 		{
@@ -26498,7 +26476,7 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 }
 
 
-bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity* pCity, ReligionTypes eReligion) const
+bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, ReligionTypes eReligion) const
 {
 	if (kTrigger.getNumReligionsRequired() > 0)
 	{
@@ -26526,12 +26504,9 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 			return false;
 		}
 
-		if (kTrigger.isHolyCity())
+		if (kTrigger.isHolyCity() && !pCity->isHolyCity(eReligion))
 		{
-			if (!pCity->isHolyCity(eReligion))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 	else
@@ -26543,7 +26518,7 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 
 		if (kTrigger.isHolyCity())
 		{
-			CvCity* pHolyCity = GC.getGame().getHolyCity(eReligion);
+			const CvCity* pHolyCity = GC.getGame().getHolyCity(eReligion);
 			if (NULL == pHolyCity || pHolyCity->getOwner() != getID())
 			{
 				return false;
@@ -26553,7 +26528,7 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 	return true;
 }
 
-bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvCity* pCity, CorporationTypes eCorporation) const
+bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, CorporationTypes eCorporation) const
 {
 	if (kTrigger.getNumCorporationsRequired() > 0)
 	{
@@ -26581,12 +26556,9 @@ bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvC
 			return false;
 		}
 
-		if (kTrigger.isHeadquarters())
+		if (kTrigger.isHeadquarters() && !pCity->isHeadquarters(eCorporation))
 		{
-			if (!pCity->isHeadquarters(eCorporation))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 	else
@@ -26598,7 +26570,7 @@ bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvC
 
 		if (kTrigger.isHeadquarters())
 		{
-			CvCity* pHeadquarters = GC.getGame().getHeadquarters(eCorporation);
+			const CvCity* pHeadquarters = GC.getGame().getHeadquarters(eCorporation);
 			if (NULL == pHeadquarters || pHeadquarters->getOwner() != getID())
 			{
 				return false;
@@ -26625,7 +26597,7 @@ void CvPlayer::launch(VictoryTypes eVictory)
 
 	kTeam.setCanLaunch(eVictory, false);
 
-	CvCity *capital = getCapitalCity();
+	const CvCity *capital = getCapitalCity();
 
 	//message
 	CvWString szBuffer;
@@ -32226,26 +32198,20 @@ const CvProperties* CvPlayer::getPropertiesConst() const
 	return &m_Properties;
 }
 
-void CvPlayer::addPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::addPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->addProperties(pProp);
+		city->getProperties()->addProperties(pProp);
 		//getProperties()->addProperties(pProp);
 	}
 }
 
-void CvPlayer::subtractPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::subtractPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->subtractProperties(pProp);
+		city->getProperties()->subtractProperties(pProp);
 		//getProperties()->subtractProperties(pProp);
 	}
 }

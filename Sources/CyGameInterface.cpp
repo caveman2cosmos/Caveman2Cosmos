@@ -1,5 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvRandom.h"
+#include "CyCity.h"
+#include "CyDeal.h"
+#include "CyGame.h"
+#include "CyPlot.h"
 #include "CyReplayInfo.h"
+
 //
 // published python interface for CyGame
 //

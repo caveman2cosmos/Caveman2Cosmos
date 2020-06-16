@@ -37,8 +37,16 @@
 		<English>AI AutoPlay can be stopped with [COLOR_POSITIVE_TEXT]SPACE[COLOR_REVERT] or [COLOR_POSITIVE_TEXT]ESCAPE[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_ALL_PLAYERS</Tag>
+		<English>All players</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLOTS</Tag>
-		<English>All Plots</English>
+		<English>All plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_ALL_TECHS</Tag>
+		<English>All techs</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ANARCHY</Tag>
@@ -319,6 +327,10 @@
 		<English>Move City</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_NOT_NPC</Tag>
+		<English>Not NPC</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WB_NUKES_EXPLODED</Tag>
 		<English>Nukes Exploded: %d1</English>
 	</TEXT>
@@ -386,7 +398,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SENSIBILITY</Tag>
-		<English>Checks Prerequisites for Multiple Tiles Mode</English>
+		<English>Use sensible placement rules.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SHOW_HIDDEN</Tag>

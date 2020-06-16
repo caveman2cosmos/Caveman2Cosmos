@@ -13,7 +13,6 @@
 
 struct CvStatBase;
 struct TradeData;
-class CyDiplomacyTrade;
 class CvUnit;
 class CvCity;
 class CvPlot;

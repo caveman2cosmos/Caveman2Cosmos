@@ -65580,7 +65580,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>33</Constant>
 									</Adapt>
 								</iYield>
@@ -65685,7 +65685,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>92</Constant>
 									</Adapt>
 								</iYield>
@@ -65786,7 +65786,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>192</Constant>
 									</Adapt>
 								</iYield>
@@ -65886,7 +65886,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>396</Constant>
 									</Adapt>
 								</iYield>

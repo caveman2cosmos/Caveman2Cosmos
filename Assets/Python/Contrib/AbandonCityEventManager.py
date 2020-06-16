@@ -171,7 +171,7 @@ class CityDemolish:
 				aNameList.append(szText)
 				y += dy
 				screen.setTextAt(name + "Btn" + str(iType), name, szBtn, 1<<0, x, y, 0, iFontGame, iWidGen, i, 0)
-				screen.setTextAt(name + str(iType), name, uFont + szText, 1<<0, x + iconSize + 2, y, 0, iFontGame, iWidGen, i, 0)
+				screen.setTextAt(name + str(iType), name, uFont + szText, 1<<0, x + iconSize + 2, y+2, 0, iFontGame, iWidGen, i, 0)
 			self.aList = aNameList
 
 
@@ -209,7 +209,6 @@ class CityDemolish:
 			NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 			NUM_UNIT_PREREQ_OR_BONUSES = GC.getNUM_UNIT_PREREQ_OR_BONUSES()
 			aSettlerList = [
-				GC.getInfoTypeForString("UNIT_SPACESETTLER"),
 				GC.getInfoTypeForString("UNIT_AIRSETTLER"),
 				GC.getInfoTypeForString("UNIT_PIONEER"),
 				GC.getInfoTypeForString("UNIT_COLONIST"),
@@ -376,8 +375,6 @@ class CityDemolish:
 					screen.setButtonGFC("CityDemolish|Btn0", self.szAbandon, "", x, y, w, 30, WidgetTypes.WIDGET_GENERAL, 1, 0, ButtonStyles.BUTTON_STYLE_STANDARD)
 					self.iSelected = -1
 				else:
-					screen.hide("CityDemolish|List")
-					self.bListHidden = True
 					screen.setButtonGFC("CityDemolish|Btn0", "****", "", x, y, w, 30, WidgetTypes.WIDGET_GENERAL, 0, 0, ButtonStyles.BUTTON_STYLE_STANDARD)
 					self.iSelected = None
 			elif szSplit[0] in ("List", "ListBtn"):

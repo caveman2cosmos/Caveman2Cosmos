@@ -6,20 +6,15 @@
 #ifndef CY_DEAL_H
 #define CY_DEAL_H
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CvDeal;
 
 class CyDeal
 {
-
 public:
 	CyDeal(CvDeal* pDeal = NULL);
 	virtual ~CyDeal();
 	CvDeal* getDeal() const { return m_pDeal; }
-
-	bool isNone();
+	bool isNone() const { return m_pDeal == NULL; }
 
 	int getID() const;
 	int getInitialGameTurn() const;

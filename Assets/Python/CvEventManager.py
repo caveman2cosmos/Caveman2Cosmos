@@ -16,7 +16,6 @@ import DebugUtils
 import SdToolKit as SDTK
 
 import CvWorldBuilderScreen
-import WBCityEditScreen
 import WBUnitScreen
 import WBPlayerScreen
 import WBGameDataScreen
@@ -386,10 +385,9 @@ class CvEventManager:
 
 		# Screen specific input handlers
 		iCode = eventType + 10
-		if iCode in (16, 17):
-			iCode = CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
-			if iCode:
-				return 1
+		if iCode in (16, 17) \
+		and CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0]):
+			return 1
 
 		iModifiers = bAlt + bCtrl + bShift
 
@@ -1337,23 +1335,6 @@ class CvEventManager:
 					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_PLAGUED_SMOG"), 1)
 		else:
 			print "CvEventManager.onNukeExplosion\n\tNuke with no special effects: " + CyUnit.getName()
-		'''
-		# Nuclear Non-Proliferation Treaty (NPT)
-		if GAME.getProjectCreatedCount(GC.getInfoTypeForString("PROJECT_NPT")):
-			iPlayer = CyUnit.getOwner()
-			iTeam = GC.getPlayer(iPlayer).getTeam()
-			iAttitude = GC.getInfoTypeForString("ATTITUDE_FURIOUS")
-			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-				if iPlayerX == iPlayer: continue
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isHuman() or not CyPlayerX.isAlive(): continue
-				CyPlayerX.AI_changeAttitudeExtra(iTeam, -1)
-				if CyPlayerX.AI_getAttitude(iPlayer) == iAttitude:
-					CyTeamX = GC.getTeam(CyPlayerX.getTeam())
-					if CyTeamX.canDeclareWar(iTeam):
-						CyTeamX.declareWar(iTeam, True, -1)
-		'''
-
 
 	'''
 	def onGotoPlotSet(self, argsList):
@@ -2216,7 +2197,7 @@ class CvEventManager:
 		iLeaderUnit = CyUnit.getLeaderUnitType()
 		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER, self.UNIT_FEMALE_BEASTMASTER):
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
-			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("NO_UNIT"))
+			CyUnit.setLeaderUnitType(-1)
 
 
 	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_LOST_CALLBACK = False)
@@ -2594,7 +2575,7 @@ class CvEventManager:
 		# Human player city naming
 		iActivePlayer = GAME.getActivePlayer()
 		if iPlayer == iActivePlayer and not GAME.getAIAutoPlay(iActivePlayer):
-			self.__eventEditCityNameBegin(CyCity, False)
+			self.__eventEditCityNameBegin((CyCity, False))
 
 
 	def onCityRazed(self, argsList):
@@ -2858,7 +2839,7 @@ class CvEventManager:
 	def onCityRename(self, argsList):
 		CyCity, = argsList
 		if CyCity.getOwner() == GAME.getActivePlayer():
-			self.__eventEditCityNameBegin(CyCity, True)
+			self.__eventEditCityNameBegin((CyCity, True))
 
 
 	'''
@@ -2903,7 +2884,8 @@ class CvEventManager:
 
 #################### TRIGGERED EVENTS ##################
 
-	def __eventEditCityNameBegin(self, CyCity, bRename):
+	def __eventEditCityNameBegin(self, argsList):
+		CyCity, bRename = argsList
 		import ScreenResolution as SR
 		xRes = SR.x
 		if xRes > 2500:
@@ -2930,7 +2912,7 @@ class CvEventManager:
 		szTxt = header + TRNSLTR.getText("TXT_KEY_NAME_CITY", ()) + body + name
 
 		popup = CyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL, True)
-		popup.setUserData((name, CyCity.getID(), bRename, GAME.getActivePlayer()))
+		popup.setUserData((name, CyCity.getOwner(), CyCity.getID(), bRename))
 		popup.setSize(w, h)
 		popup.setPosition(xRes/2 - w/2, SR.y/2 - h/2)
 		popup.setBodyString(szTxt, 1<<0)
@@ -2942,22 +2924,24 @@ class CvEventManager:
 		oldName = userData[0]
 		newName = popupReturn.getEditBoxString(0)
 		if oldName != newName:
-			GC.getPlayer(iPlayer).getCity(userData[1]).setName(newName, not userData[2])
+			GC.getPlayer(userData[1]).getCity(userData[2]).setName(newName, not userData[3])
 
 			if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
-				WBCityEditScreen.WBCityEditScreen().placeStats()
+				import CvScreenEnums
+				screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
+				screen.setText("CityName", "", CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + newName, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
 		popup = PyPopup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setUserData((pUnit.getID(), GAME.getActivePlayer()))
+		popup.setUserData((pUnit.getOwner(), pUnit.getID()))
 		popup.setBodyString(TRNSLTR.getText("TXT_KEY_RENAME_UNIT", ()))
 		popup.createEditBox(pUnit.getNameNoDesc())
 		popup.setEditBoxMaxCharCount(24, 0, 0)
 		popup.launch()
 
 	def __eventEditUnitNameApply(self, iPlayer, userData, popupReturn):
-		unit = GC.getPlayer(userData[1]).getUnit(userData[0])
+		unit = GC.getPlayer(userData[0]).getUnit(userData[1])
 		newName = popupReturn.getEditBoxString(0)
 		unit.setName(newName)
 		if GAME.GetWorldBuilderMode():
@@ -2972,7 +2956,10 @@ class CvEventManager:
 
 	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBCityEditScreen.WBCityEditScreen().placeScript()
+
+		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
+			import WBCityEditScreen
+			WBCityEditScreen.WBCityEditScreen().placeScript()
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))

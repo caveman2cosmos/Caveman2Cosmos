@@ -4,6 +4,14 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyGame.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
 
 CyGlobalContext::CyGlobalContext()
 {
@@ -525,15 +533,15 @@ CvInfoBase* CyGlobalContext::getMemoryInfo(int i) const
 }
 
 
-CvPlayerOptionInfo* CyGlobalContext::getPlayerOptionsInfoByIndex(int i) const
+CvPlayerOptionInfo* CyGlobalContext::getPlayerOptionInfo(int i) const
 {
-	return &GC.getPlayerOptionInfo((PlayerOptionTypes) i);
+	return &GC.getPlayerOptionInfo((PlayerOptionTypes)i);
 }
 
 
-CvGraphicOptionInfo* CyGlobalContext::getGraphicOptionsInfoByIndex(int i) const
+CvGraphicOptionInfo* CyGlobalContext::getGraphicOptionInfo(int i) const
 {
-	return &GC.getGraphicOptionInfo((GraphicOptionTypes) i);
+	return &GC.getGraphicOptionInfo((GraphicOptionTypes)i);
 }
 
 

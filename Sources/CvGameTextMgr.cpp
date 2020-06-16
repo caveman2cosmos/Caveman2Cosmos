@@ -11,10 +11,12 @@
 //---------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvDLLSymbolIFaceBase.h"
-
-#include <boost155/function.hpp>
-#include <boost155/bind.hpp>
+#include "CvGameTextMgr.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CvXMLLoadUtility.h"
 
 int shortenID(int iId)
 {
@@ -12251,7 +12253,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		// Property manipulators
-		CvPropertyManipulators* pMani = GC.getTraitInfo(eTrait).getPropertyManipulators();
+		const CvPropertyManipulators* pMani = GC.getTraitInfo(eTrait).getPropertyManipulators();
 		if (pMani)
 			pMani->buildDisplayString(szHelpString);
 	}

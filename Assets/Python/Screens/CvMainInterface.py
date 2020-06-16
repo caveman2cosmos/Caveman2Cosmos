@@ -107,7 +107,7 @@ class CvMainInterface:
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
-			# FOW
+			# FOV
 			if MainOpt.isRememberFieldOfView():
 				self.iField_View = int(MainOpt.getFieldOfView())
 			# Raw Yields
@@ -2256,8 +2256,12 @@ class CvMainInterface:
 						iCurr = researchProgress + iOverflow
 
 						screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_STORED, iCurr * 1.0 / researchCost)
-						if researchCost > iCurr and iResearchRate > 0:
-							self.researchBarDC.drawTickMarks(screen, iCurr, researchCost, iResearchRate)
+						self.researchBarDC.drawTickMarks(screen, 0, 0, 0) # remove old tick marks
+
+						if iResearchRate > 0 and researchCost > iCurr:
+							# Ticks - only bother with a 100 or less
+							if iResearchRate * 100 / (researchCost - iCurr) >= 1:
+								self.researchBarDC.drawTickMarks(screen, iCurr, researchCost, iResearchRate)
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, iResearchRate * 1.0 / (researchCost - researchProgress - iOverflow))
 						else:
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, 0)
@@ -2544,7 +2548,7 @@ class CvMainInterface:
 			if CyCity.isOccupation():
 				szTxt += " " + self.iconOccupation + ":" + str(CyCity.getOccupationTimer())
 
-			screen.setText("CityNameText", "", szTxt, 1<<2, halfX, 32, 0, eFontGame, WidgetTypes.WIDGET_CITY_NAME, -1, -1)
+			screen.setText("CityNameText", "", szTxt, 1<<2, halfX, 32, 0, eFontGame, WidgetTypes.WIDGET_CITY_NAME, 0, 1)
 
 			iHealthGood = CyCity.goodHealth()
 			iHealthBad = CyCity.badHealth(False)

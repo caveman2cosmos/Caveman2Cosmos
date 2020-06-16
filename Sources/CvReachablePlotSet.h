@@ -3,8 +3,7 @@
 #ifndef CvReachablePlotSet_h__
 #define CvReachablePlotSet_h__
 
-#include <queue>
-#include "FProfiler.h"
+//#include <queue>
 
 //	Activity ids against which enumerated plot info can be stored
 #define	ACTIVITY_ID_ANY_ATTACK	0
@@ -32,11 +31,11 @@ public:
 	public:
 		const_iterator& operator++();
 
-		bool operator==(const_iterator& other);
+		bool operator==(const const_iterator& other) const;
 
-		bool operator!=(const_iterator& other);
+		bool operator!=(const const_iterator& other) const;
 
-		const_iterator& operator=(const_iterator& other);
+		const_iterator& operator=(const const_iterator& other);
 
 		CvPlot*	plot() const;
 

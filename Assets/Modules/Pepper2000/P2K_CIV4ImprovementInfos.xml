@@ -798,19 +798,11 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>

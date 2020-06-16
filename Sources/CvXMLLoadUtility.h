@@ -15,10 +15,21 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-//#include "CvStructs.h"
-#include "CvInfos.h"
 #include "CvGlobals.h"
 #include "FVariableSystem.h"
+
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
 
 class FXmlSchemaCache;
 class FXml;
@@ -623,10 +634,10 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName){return SetOptionalVector<int>(aInfos, szRootTagName);}
+	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
 
 	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, std::vector<int>& source){return CopyNonDefaultsFromVector<int>(target, source);}
+	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
@@ -635,7 +646,7 @@ public:
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
-			int iNumSibs = GetXmlChildrenNumber();
+			const int iNumSibs = GetXmlChildrenNumber();
 
 			if (0 < iNumSibs)
 			{
@@ -669,7 +680,7 @@ public:
 		}
 	}
 	template<class T>
-	static void CopyNonDefaultsFromVector(std::vector<T>& target, std::vector<T>& source)
+	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
 		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{

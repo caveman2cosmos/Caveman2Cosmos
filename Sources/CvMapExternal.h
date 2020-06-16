@@ -9,15 +9,7 @@
 //	PURPOSE: Game map externals class
 //
 
-
-#include "CvArea.h"
-#include "CvPlot.h"
 #include "CvMapInterfaceBase.h"
-
-
-class FAStar;
-class CvPlotGroup;
-
 
 //
 // CvMap
@@ -25,8 +17,6 @@ class CvPlotGroup;
 class CvSelectionGroup;
 class CvMapExternal
 {
-	friend class CyMap;
-
 public:
 	CvMapExternal(CvMapInterfaceBase* proxiedMap);
 
