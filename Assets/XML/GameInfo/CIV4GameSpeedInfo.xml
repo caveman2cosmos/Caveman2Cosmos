@@ -85,6 +85,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>315</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>1000</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -180,6 +184,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>280</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>800</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -277,6 +285,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>245</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>600</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -372,6 +384,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>200</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>400</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -469,6 +485,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>170</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>300</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -565,6 +585,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>140</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>200</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -659,6 +683,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				</Percent>
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
+					<iValue>100</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 					<iValue>100</iValue>
 				</Percent>
 			</Percents>
@@ -757,6 +785,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>70</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>50</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -852,6 +884,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>50</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>25</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -956,6 +992,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>315</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>1400</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -1058,6 +1098,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>280</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>1120</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -1162,6 +1206,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>245</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>840</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -1264,6 +1312,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>200</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>560</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -1368,6 +1420,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>170</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>420</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -1470,6 +1526,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>140</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>280</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
@@ -1574,6 +1634,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>100</iValue>
 				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>140</iValue>
+				</Percent>
 			</Percents>
 			<GameTurnInfos>
 				<GameTurnInfo>
@@ -1675,6 +1739,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				</Percent>
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
+					<iValue>70</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 					<iValue>70</iValue>
 				</Percent>
 			</Percents>
@@ -1779,6 +1847,10 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
 					<iValue>50</iValue>
+				</Percent>
+				<Percent>
+					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+					<iValue>35</iValue>
 				</Percent>
 			</Percents>
 			<GameTurnInfos>
