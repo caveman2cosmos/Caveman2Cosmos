@@ -3748,11 +3748,7 @@ bool CvPlayer::hasTrait(TraitTypes eTrait) const
 	return (m_pabHasTrait == NULL ? false : m_pabHasTrait[eTrait]);
 }
 
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                           07/09/08                            jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void CvPlayer::setHumanDisabled( bool newVal )
 {
 	m_bDisableHuman = newVal;
@@ -3762,9 +3758,7 @@ bool CvPlayer::isHumanDisabled() const
 {
 	return m_bDisableHuman;
 }
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                            END                                              */
-/************************************************************************************************/
+
 
 bool CvPlayer::isHuman() const
 {
@@ -3777,27 +3771,13 @@ void CvPlayer::updateHuman()
 	{
 		m_bHuman = false;
 	}
+	else if (m_bDisableHuman)
+	{
+		m_bHuman = false;
+	}
 	else
 	{
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                            09/01/07                        MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
 		m_bHuman = GC.getInitCore().getHuman(getID());
-*/
-		if( m_bDisableHuman )
-		{
-			m_bHuman = false;
-		}
-		else
-		{
-			m_bHuman = GC.getInitCore().getHuman(getID());
-		}
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                            END                                              */
-/************************************************************************************************/
 	}
 }
 
