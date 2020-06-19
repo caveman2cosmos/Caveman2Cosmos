@@ -29663,44 +29663,30 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetChildXmlValByName( &m_bMissionPath, L"bMissionPath" );
-	if (!pXML->TryMoveToXmlFirstChild())
-	{
-		FErrorMsg("MissionPath invalid");
-		return false;
-	}
+	pXML->GetChildXmlValByName(&m_bMissionPath, L"bMissionPath");
 
-	const wchar_t* tmp = pXML->GetXmlFirstText();
-	TCHAR animPathName[1024];
-	if (tmp)
-	{
-		mbstate_t mbs; 
-		mbrlen(NULL, 0, &mbs);
-		wcsrtombs(animPathName, &tmp, 1023, &mbs);
-		FAssertMsg(tmp == 0, "Failed to convert animation path name");
-	}
-	else
+	CvString animPathName;
+	if (!pXML->GetChildXmlValByName(animPathName, L"Type"))
 	{
 		FErrorMsg("No animation path name found");
 	}
-
-	if(pXML->TryMoveToXmlNextSibling() && pXML->TryMoveToXmlNextSibling())
+	if (pXML->TryMoveToXmlFirstChild(L"PathEntry"))
 	{
 		do
 		{
 			int		iCurrentCategory;	// The current category information we are building
 			float	fParameter;			// Temporary
-			TCHAR	szTempString[1024];
+			std::string	szTempString;
 
 			if (pXML->GetOptionalChildXmlValByName(szTempString, L"Category"))
 			{
-				iCurrentCategory = pXML->GetInfoClass(szTempString);
+				iCurrentCategory = pXML->GetInfoClass(szTempString.c_str());
 				fParameter = 0.0f;
 			}
 			else
 			{
 				pXML->GetChildXmlValByName(szTempString, L"Operator");
-				iCurrentCategory = GC.getTypesEnum(szTempString);
+				iCurrentCategory = GC.getTypesEnum(szTempString.c_str());
 				iCurrentCategory = ((int)ANIMOP_FIRST) + iCurrentCategory;
 				if (!pXML->GetChildXmlValByName(&fParameter, L"Parameter"))
 				{
@@ -29715,7 +29701,6 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 		FErrorMsg(CvString::format("Animation path %s XML structure is invalid", animPathName).c_str());
 		return false;
 	}
-
 	pXML->MoveToXmlParent();
 
 	return true;

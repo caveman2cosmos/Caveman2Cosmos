@@ -406,6 +406,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NEANDERTHAL_PLAYER)
 		{
@@ -417,6 +418,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == BEAST_PLAYER)
 		{
@@ -428,6 +430,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == PREDATOR_PLAYER)
 		{
@@ -439,6 +442,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == PREY_PLAYER)
 		{
@@ -450,6 +454,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == INSECT_PLAYER)
 		{
@@ -461,6 +466,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NPC4_PLAYER)
 		{
@@ -474,6 +480,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NPC3_PLAYER)
 		{
@@ -485,6 +492,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NPC2_PLAYER)
 		{
@@ -496,6 +504,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NPC1_PLAYER)
 		{
@@ -507,6 +516,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 		else if (ePlayer == NPC0_PLAYER)
 		{
@@ -518,6 +528,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 			GET_TEAM(eTeam).init(eTeam);
 			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
 	}
 	AI_init();
