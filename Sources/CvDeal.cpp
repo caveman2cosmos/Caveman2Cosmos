@@ -976,7 +976,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						MEMORY_TRACK_EXEMPT();
 						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_HIRED_WAR_ALLY", GET_PLAYER(eToPlayer).getCivilizationAdjectiveKey(), GET_PLAYER(eFromPlayer).getCivilizationAdjectiveKey());
-						AddDLLMessage(GET_PLAYER((PlayerTypes)iI).getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
+						AddDLLMessage(GET_PLAYER((PlayerTypes)iI).getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_MAJOR_EVENT, NULL, CvColorInfo::red());
 
 						GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(eToPlayer, MEMORY_HIRED_WAR_ALLY, 1);
 					}

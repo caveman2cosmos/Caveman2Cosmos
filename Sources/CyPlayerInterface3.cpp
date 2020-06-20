@@ -44,6 +44,8 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getGreatGeneralRateModifier", &CyPlayer::getGreatGeneralRateModifier, "int ()")
 		.def("greatPeopleThresholdMilitary", &CyPlayer::greatPeopleThresholdMilitary, "int ()")
 		.def("greatPeopleThresholdNonMilitary", &CyPlayer::greatPeopleThresholdNonMilitary, "int ()")
+		.def("getGreatGeneralsThresholdModifier", &CyPlayer::getGreatGeneralsThresholdModifier, "int ()")
+		.def("changeGreatGeneralsThresholdModifier", &CyPlayer::changeGreatGeneralsThresholdModifier, "void (int iChange)")
 
 		.def("getFreeExperience", &CyPlayer::getFreeExperience, "int ()")
 		.def("getFeatureProductionModifier", &CyPlayer::getFeatureProductionModifier, "int ()")

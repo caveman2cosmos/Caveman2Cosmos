@@ -4124,7 +4124,6 @@ void CvTeam::setHasMet( TeamTypes eIndex, bool bNewValue )
 void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 {
 	CvDiploParameters* pDiplo;
-	int iI;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -4136,76 +4135,56 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 		if (!isNPC() && !GET_TEAM(eIndex).isNPC())
 		{
 			updateTechShare();
-		}
-		else if (GET_TEAM(eIndex).isHuman())
-		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+
+			if (GET_TEAM(eIndex).isHuman())
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+					if (GET_PLAYER((PlayerTypes)iI).isAlive()
+					&&	GET_PLAYER((PlayerTypes)iI).getTeam() == getID()
+					&& !GET_PLAYER((PlayerTypes)iI).isHuman())
 					{
-						if (!(GET_PLAYER((PlayerTypes)iI).isHuman()) && !isNPC())
-						{
-							GET_PLAYER((PlayerTypes)iI).clearResearchQueue();
-							GET_PLAYER((PlayerTypes)iI).AI_makeProductionDirty();
-						}
+						GET_PLAYER((PlayerTypes)iI).clearResearchQueue();
+						GET_PLAYER((PlayerTypes)iI).AI_makeProductionDirty();
 					}
 				}
 			}
 		}
 
-		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (GET_TEAM((TeamTypes)iI).isAlive()
+			&& (GET_TEAM((TeamTypes)iI).isVassal(getID()) || isVassal((TeamTypes)iI)))
 			{
-				if (GET_TEAM((TeamTypes)iI).isVassal(getID()) || isVassal((TeamTypes)iI))
-				{
-					GET_TEAM((TeamTypes)iI).meet(eIndex, bNewDiplo);
-				}
+				GET_TEAM((TeamTypes)iI).meet(eIndex, bNewDiplo);
 			}
 		}
 
-		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
+		if (getID() == GC.getGame().getActiveTeam() || eIndex == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
-			// RevolutionDCM start - redraw espionage percent buttons
-			gDLL->getInterfaceIFace()->setDirty(PercentButtons_DIRTY_BIT, true);
-			// RevolutionDCM end
+			// RevolutionDCM - redraw espionage percent buttons
+			// gDLL->getInterfaceIFace()->setDirty(PercentButtons_DIRTY_BIT, true); // Toffer - don't think this is needed.
 		}
 		// Move reporting to Python before diplo popup to all war declarations on first contact
 		// report event to Python, along with some other key state
 		CvEventReporter::getInstance().firstContact(getID(), eIndex);
 
-		if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+		if (bNewDiplo && GC.getGame().isFinalInitialized() && !gDLL->GetWorldBuilderMode()
+		&& !isHuman() && !isAtWar(eIndex))
 		{
-			if (bNewDiplo)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (!isHuman())
+				if(GET_PLAYER((PlayerTypes)iI).isAlive()
+				&& GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex
+				&& GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI)
+				&& GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					if (!isAtWar(eIndex))
-					{
-						for (iI = 0; iI < MAX_PLAYERS; iI++)
-						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex)
-								{
-									if (GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI))
-									{
-										if (GET_PLAYER((PlayerTypes)iI).isHuman())
-										{
-											pDiplo = new CvDiploParameters(getLeaderID());
-											FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
-											pDiplo->setDiploComment((DiploCommentTypes)GC.getInfoTypeForString("AI_DIPLOCOMMENT_FIRST_CONTACT"));
-											pDiplo->setAIContact(true);
-											gDLL->beginDiplomacy(pDiplo, ((PlayerTypes)iI));
-										}
-									}
-								}
-							}
-						}
-					}
+					pDiplo = new CvDiploParameters(getLeaderID());
+					FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
+					pDiplo->setDiploComment((DiploCommentTypes)GC.getInfoTypeForString("AI_DIPLOCOMMENT_FIRST_CONTACT"));
+					pDiplo->setAIContact(true);
+					gDLL->beginDiplomacy(pDiplo, ((PlayerTypes)iI));
 				}
 			}
 		}
@@ -5928,7 +5907,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 							if (eBonus != NO_BONUS && GC.getBonusInfo(eBonus).getTechReveal() == eIndex && !isForceRevealedBonus(eBonus))
 							{
-								CvCity* pCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
+								const CvCity* pCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
 
 								if (pCity != NULL)
 								{
@@ -5936,7 +5915,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
 									AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
-										GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+										GC.getBonusInfo(eBonus).getButton(), CvColorInfo::white(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 								}
 							}
 						}
@@ -5982,7 +5961,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
-
 
 			for (int iI = 0; iI < MAX_TEAMS; iI++)
 			{
@@ -6086,41 +6064,33 @@ void CvTeam::doWarWeariness()
 
 void CvTeam::updateTechShare(TechTypes eTech)
 {
-	int iBestShare;
-	int iCount;
-	int iI;
-
 	if (isHasTech(eTech))
 	{
 		return;
 	}
 
-	iBestShare = MAX_INT;
+	int iBestShare = MAX_INT;
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (isTechShare(iI))
 		{
-			iBestShare = std::min(iBestShare, (iI + 1));
+			iBestShare = std::min(iBestShare, iI + 1);
 		}
 	}
 
 	if (iBestShare != MAX_INT)
 	{
-		iCount = 0;
+		int iCount = 0;
 
-		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if(GET_TEAM((TeamTypes)iI).isAlive()
+			&& GET_TEAM((TeamTypes)iI).isHasTech(eTech)
+			&& isHasMet((TeamTypes)iI))
 			{
-				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-				{
-					if (isHasMet((TeamTypes)iI))
-					{
-						FAssertMsg(iI != getID(), "iI is not expected to be equal with getID()");
-						iCount++;
-					}
-				}
+				FAssertMsg(iI != getID(), "iI is not expected to be equal with getID()");
+				iCount++;
 			}
 		}
 
@@ -6134,9 +6104,7 @@ void CvTeam::updateTechShare(TechTypes eTech)
 
 void CvTeam::updateTechShare()
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		updateTechShare((TechTypes)iI);
 	}
@@ -8451,7 +8419,7 @@ void CvTeam::AI_updateBonusValue(BonusTypes eBonus)
 	}
 }
 
-void CvTeam::addPropertiesAllCities(CvProperties *pProp)
+void CvTeam::addPropertiesAllCities(const CvProperties *pProp)
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -8465,7 +8433,7 @@ void CvTeam::addPropertiesAllCities(CvProperties *pProp)
 	}
 }
 
-void CvTeam::subtractPropertiesAllCities(CvProperties *pProp)
+void CvTeam::subtractPropertiesAllCities(const CvProperties *pProp)
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{

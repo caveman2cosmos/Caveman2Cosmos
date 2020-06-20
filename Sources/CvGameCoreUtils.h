@@ -130,11 +130,8 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // Returns the distance between plots according to the pattern above...
 inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
 {
-	int iDX;
-	int iDY;
-
-	iDX = xDistance(iX1, iX2);
-	iDY = yDistance(iY1, iY2);
+	const int iDX = xDistance(iX1, iX2);
+	const int iDY = yDistance(iY1, iY2);
 
 	return (std::max(iDX, iDY) + (std::min(iDX, iDY) / 2));
 }
@@ -171,7 +168,7 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 	}
 }
 
-inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
+inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 {
 	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
@@ -270,12 +267,12 @@ bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
 bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
 
 __int64 getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender);							// Exposed to Python
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
 /////////////////////////////////////////////////////////////////
-float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D);
+float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // END                                                         //

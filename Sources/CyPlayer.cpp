@@ -1210,6 +1210,11 @@ int CyPlayer::getGreatGeneralsThresholdModifier()
 	return m_pPlayer ? m_pPlayer->getGreatGeneralsThresholdModifier() : -1;
 }
 
+void CyPlayer::changeGreatGeneralsThresholdModifier(int iChange)
+{
+	if (m_pPlayer) m_pPlayer->changeGreatGeneralsThresholdModifier(iChange);
+}
+
 int CyPlayer::getGreatPeopleRateModifier()
 {
 	return m_pPlayer ? m_pPlayer->getGreatPeopleRateModifier() : -1;
@@ -3243,7 +3248,7 @@ int CyPlayer::getBLListLength(int index)
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getListLength(index) : 0;
 }
 
-OrderData* CyPlayer::getBLOrder(int index, int iQIndex)
+const OrderData* CyPlayer::getBLOrder(int index, int iQIndex) const
 {
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getOrder(index, iQIndex) : NULL;
 }

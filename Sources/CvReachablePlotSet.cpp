@@ -18,17 +18,17 @@ CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator
 	return (*this);
 }
 
-bool CvReachablePlotSet::const_iterator::operator==(const_iterator& other)
+bool CvReachablePlotSet::const_iterator::operator==(const const_iterator& other) const
 {
 	return other.m_itr == m_itr;
 }
 
-bool CvReachablePlotSet::const_iterator::operator!=(const_iterator& other)
+bool CvReachablePlotSet::const_iterator::operator!=(const const_iterator& other) const
 {
 	return other.m_itr != m_itr;
 }
 
-CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator=(const_iterator& other)
+CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator=(const const_iterator& other)
 {
 	m_itr = other.m_itr;
 	m_parent = other.m_parent;
