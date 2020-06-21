@@ -616,12 +616,12 @@ void cvInternalGlobals::clearTypesMap()
 	}
 }
 
-std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()		// For Moose - XML Load Util and CvInfos
+std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()
 {
 	return m_paInterfaceModeInfo;
 }
 
-CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e)
+CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e) const
 {
 	FAssertMsg(e >= 0 && e < NUM_INTERFACEMODE_TYPES, "InterfaceModeInfo index out of bounds");
 	return *(m_paInterfaceModeInfo[e]);
@@ -662,7 +662,7 @@ int* cvInternalGlobals::getCityPlotPriority() const
 	return m_aiCityPlotPriority;
 }
 
-int cvInternalGlobals::getXYCityPlot(const int i, const int j) const
+int cvInternalGlobals::getXYCityPlot(int i, int j) const
 {
 	FAssertMsg(i >= 0 && i < CITY_PLOTS_DIAMETER, "XYCityPlot i index out of bounds");
 	FAssertMsg(j >= 0 && j < CITY_PLOTS_DIAMETER, "XYCityPlot j index out of bounds");
@@ -674,7 +674,7 @@ DirectionTypes* cvInternalGlobals::getTurnLeftDirection() const
 	return m_aeTurnLeftDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnLeftDirection(const int i) const
+DirectionTypes cvInternalGlobals::getTurnLeftDirection(int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnLeftDirection index out of bounds");
 	return m_aeTurnLeftDirection[i];
@@ -685,13 +685,13 @@ DirectionTypes* cvInternalGlobals::getTurnRightDirection() const
 	return m_aeTurnRightDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnRightDirection(const int i) const
+DirectionTypes cvInternalGlobals::getTurnRightDirection(int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnRightDirection index out of bounds");
 	return m_aeTurnRightDirection[i];
 }
 
-DirectionTypes cvInternalGlobals::getXYDirection(const int i, const int j) const
+DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "XYDirection i index out of bounds");
 	FAssertMsg(j >= 0 && j < DIRECTION_DIAMETER, "XYDirection j index out of bounds");
@@ -727,13 +727,13 @@ int cvInternalGlobals::getNumMapSwitchInfos() const
 	return m_paMapSwitchInfo.size();
 }
 
-CvMapInfo& cvInternalGlobals::getMapInfo(const MapTypes eMap) const
+CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
 	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
 	return *(m_paMapInfo[eMap]);
 }
 
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const
+CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
 {
 	FAssertMsg(eMapSwitch > NO_MAPSWITCH && eMapSwitch < GC.getNumMapSwitchInfos(), "MapSwitchInfo index out of bounds");
 	return *(m_paMapSwitchInfo[eMapSwitch]);
@@ -1159,7 +1159,7 @@ int cvInternalGlobals::getNumBonusInfos() const
 	return (int)m_paBonusInfo.size();
 }
 
-std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos()	// For Moose - XML Load Util, CvInfos
+const std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos() const
 {
 	return m_paBonusInfo;
 }
@@ -2596,25 +2596,19 @@ CvString& cvInternalGlobals::getFootstepAudioTypes(int i)
 	return m_paszFootstepAudioTypes[i];
 }
 
-int cvInternalGlobals::getFootstepAudioTypeByTag(CvString strTag)
+int cvInternalGlobals::getFootstepAudioTypeByTag(const CvString strTag) const
 {
-	int iIndex = -1;
-
-	if ( strTag.GetLength() <= 0 )
+	if (strTag.GetLength() > 0)
 	{
-		return iIndex;
-	}
-
-	for ( int i = 0; i < m_iNumFootstepAudioTypes; i++ )
-	{
-		if ( strTag.CompareNoCase(m_paszFootstepAudioTypes[i]) == 0 )
+		for (int i = 0; i < m_iNumFootstepAudioTypes; i++)
 		{
-			iIndex = i;
-			break;
+			if (strTag.CompareNoCase(m_paszFootstepAudioTypes[i]) == 0)
+			{
+				return i;
+			}
 		}
 	}
-
-	return iIndex;
+	return -1;
 }
 
 CvString*& cvInternalGlobals::getFootstepAudioTags()
@@ -2622,9 +2616,9 @@ CvString*& cvInternalGlobals::getFootstepAudioTags()
 	return m_paszFootstepAudioTags;
 }
 
-CvString& cvInternalGlobals::getFootstepAudioTags(int i)
+CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 {
-	static CvString*	emptyString = NULL;
+	static CvString* emptyString = NULL;
 
 	if ( emptyString == NULL )
 	{
@@ -2640,7 +2634,7 @@ void cvInternalGlobals::setCurrentXMLFile(const TCHAR* szFileName)
 	m_szCurrentXMLFile = szFileName;
 }
 
-CvString& cvInternalGlobals::getCurrentXMLFile()
+const CvString& cvInternalGlobals::getCurrentXMLFile() const
 {
 	return m_szCurrentXMLFile;
 }
@@ -3438,7 +3432,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 	GC.getMap().afterSwitch();
 }
 
-CvViewport* cvInternalGlobals::getCurrentViewport()
+CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
 	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
 }
@@ -3464,16 +3458,16 @@ int	cvInternalGlobals::getViewportCenteringBorder() const
 }
 
 
-CvMapExternal& cvInternalGlobals::getMapExternal()
+CvMapExternal& cvInternalGlobals::getMapExternal() const
 {
-	CvViewport*	currentViewport = getCurrentViewport();
+	CvViewport* currentViewport = getCurrentViewport();
 
 	FAssert(currentViewport != NULL);
 
 	return *(currentViewport->getProxy());
 }
 
-CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex)
+CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
 	FAssert(eIndex > NO_MAP);
 	FAssert(eIndex < GC.getNumMapInfos());
@@ -3698,7 +3692,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled() const
 	return m_bGraphicalDetailPagingEnabled;
 }
 
-int cvInternalGlobals::getGraphicalDetailPageInRange()
+int cvInternalGlobals::getGraphicalDetailPageInRange() const
 {
 	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }

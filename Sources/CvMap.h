@@ -113,7 +113,7 @@ public:
 	void updateIrrigated();
 	void updateCenterUnit();
 	void updateWorkingCity();
-	void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
+	void updateMinOriginalStartDist(const CvArea* pArea);										// Exposed to Python
 	void updateYield();
 
 	void verifyUnitValidPlot();
@@ -239,7 +239,7 @@ public:
 
 	void resetPathDistance();																		// Exposed to Python
 	// Super Forts begin *canal* *choke*
-	int calculatePathDistance(CvPlot *pSource, CvPlot *pDest, CvPlot *pInvalidPlot = NULL);	// Exposed to Python
+	int calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, const CvPlot* pInvalidPlot = NULL) const;	// Exposed to Python
 	void calculateCanalAndChokePoints();	// Exposed to Python
 	// Super Forts end
 
@@ -301,10 +301,10 @@ protected:
 
 public:
 	// AIAndy: Expose path generation functionality here to expose it to Python via CyMap
-	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns);
-	CvPath&	getLastPath();
-	int getLastPathStepNum();
-	CvPlot* getLastPathPlotByIndex(int index);
+	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns) const;
+	const CvPath& getLastPath() const;
+	int getLastPathStepNum() const;
+	CvPlot* getLastPathPlotByIndex(int index) const;
 };
 
 #endif

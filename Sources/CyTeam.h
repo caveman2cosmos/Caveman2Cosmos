@@ -15,10 +15,8 @@ class CyTeam
 public:
 	CyTeam();
 	explicit CyTeam(CvTeam* pTeam);		// Call from C++
-
-	CvTeam* getTeam() { return m_pTeam;	}	// Call from C++
-
-	bool isNone() { return (m_pTeam==NULL); }
+	const CvTeam* getTeam() const { return m_pTeam;	}	// Call from C++
+	bool isNone() const	{ return m_pTeam == NULL; }
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */

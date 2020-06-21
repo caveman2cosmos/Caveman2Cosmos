@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 
-bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortBase::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {
 	int iVal1;
 	int iVal2;
@@ -38,14 +38,14 @@ bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 		return iVal1 > iVal2;
 }
 
-bool BuildingSortBase::isInverse()
+bool BuildingSortBase::isInverse() const
 {
 	return m_bInvert;
 }
 
 bool BuildingSortBase::setInverse(bool bInvert)
 {
-	bool bChanged = bInvert != m_bInvert;
+	const bool bChanged = bInvert != m_bInvert;
 	m_bInvert = bInvert;
 	return bChanged;
 }
@@ -65,7 +65,7 @@ BuildingSortCommerce::BuildingSortCommerce(CommerceTypes eCommerce, bool bInvert
 	m_eCommerce = eCommerce;
 }
 
-int BuildingSortCommerce::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortCommerce::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -78,8 +78,9 @@ int BuildingSortCommerce::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bui
 	}
 	else
 	{
-		int iYieldCommerce = GC.getBuildingInfo(eBuilding).getYieldChange(YIELD_COMMERCE) + GC.getBuildingInfo(eBuilding).getYieldPerPopChange(YIELD_COMMERCE) + GC.getBuildingInfo(eBuilding).getYieldModifier(YIELD_COMMERCE) / 5;
-		int iCommerce = GC.getBuildingInfo(eBuilding).getCommerceChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommercePerPopChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommerceModifier(m_eCommerce) / 5;
+		const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+		int iYieldCommerce = kInfo.getYieldChange(YIELD_COMMERCE) + kInfo.getYieldPerPopChange(YIELD_COMMERCE) + kInfo.getYieldModifier(YIELD_COMMERCE) / 5;
+		int iCommerce = kInfo.getCommerceChange(m_eCommerce) + kInfo.getCommercePerPopChange(m_eCommerce) + kInfo.getCommerceModifier(m_eCommerce) / 5;
 		iCommerce += iYieldCommerce * pPlayer->getCommercePercent(m_eCommerce);
 		return iCommerce;
 	}
@@ -90,7 +91,7 @@ BuildingSortYield::BuildingSortYield(YieldTypes eYield, bool bInvert) : Building
 	m_eYield = eYield;
 }
 
-int BuildingSortYield::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortYield::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -98,11 +99,12 @@ int BuildingSortYield::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Buildi
 	}
 	else
 	{
-		return GC.getBuildingInfo(eBuilding).getYieldChange(m_eYield) + GC.getBuildingInfo(eBuilding).getYieldPerPopChange(m_eYield) + GC.getBuildingInfo(eBuilding).getYieldModifier(m_eYield) / 5;
+		const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+		return kInfo.getYieldChange(m_eYield) + kInfo.getYieldPerPopChange(m_eYield) + kInfo.getYieldModifier(m_eYield) / 5;
 	}
 }
 
-int BuildingSortHappiness::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortHappiness::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -110,11 +112,12 @@ int BuildingSortHappiness::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bu
 	}
 	else
 	{
-		return GC.getBuildingInfo(eBuilding).getHappiness() + GC.getBuildingInfo(eBuilding).getAreaHappiness() + GC.getBuildingInfo(eBuilding).getGlobalHappiness();
+		const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+		return kInfo.getHappiness() + kInfo.getAreaHappiness() + kInfo.getGlobalHappiness();
 	}
 }
 
-int BuildingSortHealth::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortHealth::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -122,11 +125,12 @@ int BuildingSortHealth::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Build
 	}
 	else
 	{
-		return GC.getBuildingInfo(eBuilding).getHealth() + GC.getBuildingInfo(eBuilding).getAreaHealth() + GC.getBuildingInfo(eBuilding).getGlobalHealth();
+		const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+		return kInfo.getHealth() + kInfo.getAreaHealth() + kInfo.getGlobalHealth();
 	}
 }
 
-int BuildingSortCost::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortCost::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
 	{
@@ -139,13 +143,13 @@ int BuildingSortCost::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Buildin
 }
 
 // dummy
-int BuildingSortName::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortName::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
 	return 0;
 }
 
 // name sorting defaults to A first
-bool BuildingSortName::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortName::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2) const
 {
 	if (m_bInvert)
 		return wcscmp(GC.getBuildingInfo(eBuilding1).getDescription(), GC.getBuildingInfo(eBuilding2).getDescription()) > 0;
@@ -153,16 +157,16 @@ bool BuildingSortName::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 		return wcscmp(GC.getBuildingInfo(eBuilding1).getDescription(), GC.getBuildingInfo(eBuilding2).getDescription()) < 0;
 }
 
-int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortProperty::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
-	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
 	int iSum = kInfo.getProperties()->getValueByProperty(m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty);
 
-	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
-	int iNum = pMani->getNumSources();
+	const CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
+	const int iNum = pMani->getNumSources();
 	for (int i=0; i<iNum; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == m_eProperty)
 		{
 			iSum += pSource->getSourcePredict(pCity->getGameObject(), pCity->getProperties()->getValueByProperty(m_eProperty));
@@ -213,12 +217,7 @@ void BuildingSortList::init()
 	m_apBuildingSort[BUILDING_SORT_FLAMMABILITY] = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"), true);
 }
 
-int BuildingSortList::getNumSort()
-{
-	return NUM_BUILDING_SORT;
-}
-
-BuildingSortTypes BuildingSortList::getActiveSort()
+BuildingSortTypes BuildingSortList::getActiveSort() const
 {
 	return m_eActiveSort;
 }
@@ -227,7 +226,7 @@ bool BuildingSortList::setActiveSort(BuildingSortTypes eActiveSort)
 {
 	FAssertMsg(eActiveSort < NUM_BUILDING_SORT, "Index out of bounds");
 	FAssertMsg(eActiveSort > -1, "Index out of bounds");
-	bool bChanged = m_eActiveSort != eActiveSort;
+	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;
 }

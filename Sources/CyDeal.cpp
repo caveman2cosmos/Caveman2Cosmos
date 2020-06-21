@@ -15,11 +15,6 @@ CyDeal::~CyDeal()
 {
 }
 
-bool CyDeal::isNone()
-{ 
-	return (NULL == m_pDeal); 
-}
-
 int CyDeal::getID() const
 {
 	return (m_pDeal ? m_pDeal->getID() : -1);

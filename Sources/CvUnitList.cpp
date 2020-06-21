@@ -51,7 +51,7 @@ void CvUnitList::setInvalid()
 	m_bSortingValid = false;
 }
 
-bool CvUnitList::getFilterActive(UnitFilterTypes eFilter)
+bool CvUnitList::getFilterActive(UnitFilterTypes eFilter) const
 {
 	return m_UnitFilters.isFilterActive(eFilter);
 }
@@ -66,7 +66,7 @@ void CvUnitList::setFilterActive(UnitFilterTypes eFilter, bool bActive)
 	}
 }
 
-UnitGroupingTypes CvUnitList::getGroupingActive()
+UnitGroupingTypes CvUnitList::getGroupingActive() const
 {
 	return m_UnitGrouping.getActiveGrouping();
 }
@@ -80,7 +80,7 @@ void CvUnitList::setGroupingActive(UnitGroupingTypes eGrouping)
 	}
 }
 
-UnitSortTypes CvUnitList::getSortingActive()
+UnitSortTypes CvUnitList::getSortingActive() const
 {
 	return m_UnitSort.getActiveSort();
 }
@@ -131,7 +131,7 @@ void CvUnitList::doFilter()
 	m_aiUnitList.clear();
 	for (int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
-		UnitTypes eUnit = (UnitTypes) i;
+		const UnitTypes eUnit = (UnitTypes) i;
 		if (m_UnitFilters.isFiltered(eUnit))
 			m_aiUnitList.push_back(eUnit);
 	}
@@ -149,7 +149,7 @@ void CvUnitList::doGroup()
 	}
 	m_aaiGroupedUnitList.clear();
 
-	int iSize = m_aiUnitList.size();
+	const int iSize = m_aiUnitList.size();
 	std::multimap<int, UnitTypes> mmap_Units;
 
 	for (int i=0; i < iSize; i++)
@@ -204,7 +204,7 @@ void CvUnitList::setSelectedUnit(UnitTypes eSelectedUnit)
 	m_eSelectedUnit = eSelectedUnit;
 }
 
-UnitTypes CvUnitList::getSelectedUnit()
+UnitTypes CvUnitList::getSelectedUnit() const
 {
 	return m_eSelectedUnit;
 }

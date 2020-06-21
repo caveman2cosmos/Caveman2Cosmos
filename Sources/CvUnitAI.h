@@ -534,9 +534,9 @@ public:
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
 	bool isWaitingOnUnitAI(int iIndex);
-	bool isWaitingOnUnitAIAny();
+	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
-	bool AI_isNegativePropertyUnit();
+	bool AI_isNegativePropertyUnit() const;
 	int getMyAggression(int iAttackProb) const;
 
 	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
