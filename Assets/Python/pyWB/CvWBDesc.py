@@ -301,7 +301,7 @@ class CvTeamDesc:
 					f.write("\tProjectType=%s\n" %(GC.getProjectInfo(i).getType()))
 
 			if bMapVisible:
-				f.write("\tRevealMap=1\n" %(0))
+				f.write("\tRevealMap=1\n")
 
 			if team.getVassalPower() != 0:
 				f.write("\tVassalPower=%d\n" % team.getVassalPower())
