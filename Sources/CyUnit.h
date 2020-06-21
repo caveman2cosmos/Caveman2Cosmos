@@ -18,8 +18,8 @@ public:
 	CyUnit();
 	DllExport explicit CyUnit(CvUnit* pUnit);		// Call from C++
 
-	CvUnit* getUnit() { return m_pUnit; };	// Call from C++
-	const CvUnit* getUnit() const { return m_pUnit;	};	// Call from C++
+	CvUnit* getUnit() const { return m_pUnit; };	// Call from C++
+	const CvUnit* getUnitConst() const { return m_pUnit; };	// Call from C++
 	bool isNone() const { return m_pUnit == NULL; }
 
 	void convert(const CyUnit& kUnit, bool bKillOriginal);
