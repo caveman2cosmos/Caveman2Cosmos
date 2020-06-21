@@ -493,7 +493,6 @@
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>
-		<!-- Flammability -->
 		<PropertyInfo>
 			<Type>PROPERTY_FLAMMABILITY</Type>
 			<Description>TXT_KEY_PROPERTY_FLAMMABILITY</Description>
@@ -516,7 +515,6 @@
 				</ChangePropagator>
 			</ChangePropagators>
 		</PropertyInfo>
-		<!-- Water Pollution -->
 		<PropertyInfo>
 			<Type>PROPERTY_WATER_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_WATER_POLLUTION</Description>
@@ -672,7 +670,6 @@
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>
-		<!-- Air Pollution -->
 		<PropertyInfo>
 			<Type>PROPERTY_AIR_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_AIR_POLLUTION</Description>
@@ -828,7 +825,6 @@
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>
-		<!-- Disease -->
 		<PropertyInfo>
 			<Type>PROPERTY_DISEASE</Type>
 			<Description>TXT_KEY_PROPERTY_DISEASE</Description>
@@ -997,47 +993,47 @@
 			<TargetLevelbyEraTypes>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
-					<iTargetLevel>15</iTargetLevel>
+					<iTargetLevel>110</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_ANCIENT</EraType>
-					<iTargetLevel>30</iTargetLevel>
+					<iTargetLevel>275</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_CLASSICAL</EraType>
-					<iTargetLevel>60</iTargetLevel>
+					<iTargetLevel>550</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
-					<iTargetLevel>125</iTargetLevel>
-				</TargetLevelbyEraType>
-				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_RENAISSANCE</EraType>
-					<iTargetLevel>300</iTargetLevel>
-				</TargetLevelbyEraType>
-				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_INDUSTRIAL</EraType>
-					<iTargetLevel>600</iTargetLevel>
-				</TargetLevelbyEraType>
-				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_ATOMIC</EraType>
 					<iTargetLevel>1100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<iTargetLevel>2600</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<iTargetLevel>5100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>C2C_ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
+					<iTargetLevel>7600</iTargetLevel>
+				</TargetLevelbyEraType>
+				<TargetLevelbyEraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 					<iTargetLevel>10100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
+					<iTargetLevel>20100</iTargetLevel>
+				</TargetLevelbyEraType>
+				<TargetLevelbyEraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
+					<iTargetLevel>30100</iTargetLevel>
+				</TargetLevelbyEraType>
+				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_GALACTIC</EraType>
-					<iTargetLevel>25100</iTargetLevel>
+					<iTargetLevel>40100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_COSMIC</EraType>
@@ -1045,11 +1041,11 @@
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_TRANSCENDENT</EraType>
-					<iTargetLevel>100100</iTargetLevel>
+					<iTargetLevel>60100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_FUTURE</EraType>
-					<iTargetLevel>200100</iTargetLevel>
+					<iTargetLevel>60100</iTargetLevel>
 				</TargetLevelbyEraType>
 			</TargetLevelbyEraTypes>
 			<AIScaleType>AISCALE_CITY</AIScaleType>
@@ -1067,57 +1063,57 @@
 			<PropertyBuildings>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS1</BuildingType>
-					<iMinValue>10</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
-					<iMinValue>25</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
-					<iMinValue>50</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+					<iMinValue>7500</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+					<iMinValue>20000</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+					<iMinValue>30000</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-					<iMinValue>25000</iMinValue>
+					<iMinValue>40000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1127,63 +1123,63 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
-					<iMinValue>100000</iMinValue>
+					<iMinValue>60000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS1</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-10</iMaxValue>
+					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS2</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-25</iMaxValue>
+					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50</iMaxValue>
+					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-100</iMaxValue>
+					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-250</iMaxValue>
+					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-500</iMaxValue>
+					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-1000</iMaxValue>
+					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-2500</iMaxValue>
+					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-5000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-10000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-25000</iMaxValue>
+					<iMaxValue>-40000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
@@ -1193,61 +1189,61 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-100000</iMaxValue>
+					<iMaxValue>-60000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS1</BuildingType>
-					<iMinValue>10</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
-					<iMinValue>25</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
-					<iMinValue>50</iMinValue>
-					<iMaxValue>2000000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+					<iMinValue>7500</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+					<iMinValue>20000</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
+					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+					<iMinValue>30000</iMinValue>
+					<iMaxValue>2000000</iMaxValue>
+				</PropertyBuilding>
+				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-					<iMinValue>25000</iMinValue>
+					<iMinValue>40000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1257,63 +1253,63 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
-					<iMinValue>100000</iMinValue>
+					<iMinValue>60000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS1</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-10</iMaxValue>
+					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS2</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-25</iMaxValue>
+					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50</iMaxValue>
+					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-100</iMaxValue>
+					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-250</iMaxValue>
+					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-500</iMaxValue>
+					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-1000</iMaxValue>
+					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-2500</iMaxValue>
+					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-5000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-10000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-25000</iMaxValue>
+					<iMaxValue>-40000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
@@ -1323,396 +1319,10 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-100000</iMaxValue>
+					<iMaxValue>-60000</iMaxValue>
 				</PropertyBuilding>
-				<!-- <PropertyBuilding>
-					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
-					<iMinValue>300</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
-					<iMinValue>250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-					<iMinValue>250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ARCHAEOLOGY_LAB</BuildingType>
-					<iMinValue>250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_GEOLOGY_LAB</BuildingType>
-					<iMinValue>400</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
-					<iMinValue>60</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
-					<iMinValue>350</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
-					<iMinValue>25</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_CHEOMSEONGDAE</BuildingType>
-					<iMinValue>25</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ANIMAL_LAB</BuildingType>
-					<iMinValue>650</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_VOLCANOLOGY_LAB</BuildingType>
-					<iMinValue>1250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_METEORITE_LAB</BuildingType>
-					<iMinValue>1800</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
-					<iMinValue>360</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_COPERNICUS_OBSERVATORY</BuildingType>
-					<iMinValue>360</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_LAB</BuildingType>
-					<iMinValue>110</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<iMinValue>1020</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
-					<iMinValue>4050</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ACCELERATOR</BuildingType>
-					<iMinValue>1500</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
-					<iMinValue>890</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
-					<iMinValue>350</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_DEEP_SPACE_RESEARCH</BuildingType>
-					<iMinValue>1900</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_RADIO_TELESCOPE</BuildingType>
-					<iMinValue>1250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SILICON_VALLEY</BuildingType>
-					<iMinValue>1550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
-					<iMinValue>2300</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MATTER_DECOMPILER</BuildingType>
-					<iMinValue>19800</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-					<iMinValue>1250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
-					<iMinValue>400</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_VACCINE_LAB</BuildingType>
-					<iMinValue>650</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
-					<iMinValue>1900</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MARINEBIOLOGY_LAB</BuildingType>
-					<iMinValue>420</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-					<iMinValue>1550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SUBTERRANEAN_LAB</BuildingType>
-					<iMinValue>11000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_DEEPSEA_LAB</BuildingType>
-					<iMinValue>1100</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_INVENTORS_WORKSHOP</BuildingType>
-					<iMinValue>150</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
-					<iMinValue>2150</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SCIENCE_SYMPOSIUM</BuildingType>
-					<iMinValue>2150</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_OPTOMETRIST</BuildingType>
-					<iMinValue>130</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_DENTIST</BuildingType>
-					<iMinValue>450</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
-					<iMinValue>1100</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_REHABILITATION_CENTER</BuildingType>
-					<iMinValue>1350</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_LASIK</BuildingType>
-					<iMinValue>1000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
-					<iMinValue>890</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ACUPUNCTURISTS_SHOP</BuildingType>
-					<iMinValue>40</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_ANCIENT_EMBALMER</BuildingType>
-					<iMinValue>40</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MODERN_EMBALMER</BuildingType>
-					<iMinValue>230</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
-					<iMinValue>40</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
-					<iMinValue>165</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<iMinValue>550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_BODY_EXCHANGE_CLINIC</BuildingType>
-					<iMinValue>12000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_HERBALIST</BuildingType>
-					<iMinValue>120</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_PLAGUE_HOSPITAL</BuildingType>
-					<iMinValue>65</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_FOUNDLING_HOSPITAL</BuildingType>
-					<iMinValue>500</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_RED_CROSS</BuildingType>
-					<iMinValue>600</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-					<iMinValue>1250</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_RESEARCH_HOSPITAL</BuildingType>
-					<iMinValue>1000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MEDICAL_DATABASE</BuildingType>
-					<iMinValue>1000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_COAL_PLANT</BuildingType>
-					<iMinValue>500</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_OIL_PLANT</BuildingType>
-					<iMinValue>680</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_HYDRO_PLANT</BuildingType>
-					<iMinValue>640</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_NUCLEAR_PLANT</BuildingType>
-					<iMinValue>2000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-					<iMinValue>4550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_GREAT_DAM</BuildingType>
-					<iMinValue>700</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
-					<iMinValue>1000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_BIOMASS_PLANT</BuildingType>
-					<iMinValue>1000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
-					<iMinValue>2000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
-					<iMinValue>2000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_TIDAL_FARM</BuildingType>
-					<iMinValue>1550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_WAVE_FARM</BuildingType>
-					<iMinValue>1550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_WIND_FARM</BuildingType>
-					<iMinValue>1550</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_MICROWAVE_PLANT</BuildingType>
-					<iMinValue>3000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_METHANE_PLANT</BuildingType>
-					<iMinValue>6350</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_NATURALGAS_PLANT</BuildingType>
-					<iMinValue>980</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SOLARMIRROR_PLANT</BuildingType>
-					<iMinValue>1100</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SOLARVOLT_PLANT</BuildingType>
-					<iMinValue>2000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SOLARVOLT_ROOF</BuildingType>
-					<iMinValue>2000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_SOLAR_TOWER</BuildingType>
-					<iMinValue>4000</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>
-				<PropertyBuilding>
-					<BuildingType>BUILDING_JAPANESE_SHALE_PLANT</BuildingType>
-					<iMinValue>600</iMinValue>
-					<iMaxValue>100000</iMaxValue>
-				</PropertyBuilding>-->
 			</PropertyBuildings>
 		</PropertyInfo>
-		<!-- Tourism -->
 		<PropertyInfo>
 			<Type>PROPERTY_TOURISM</Type>
 			<Description>TXT_KEY_PROPERTY_TOURISM</Description>
@@ -1797,139 +1407,5 @@
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>
-		<!--<PropertyInfo>
-			<Type>PROPERTY_LUXURY</Type>
-			<Description>TXT_KEY_PROPERTY_LUXURY</Description>
-			<Strategy>TXT_KEY_PROPERTY_LUXURY_STRATEGY</Strategy>
-			<ValueDisplayText>TXT_KEY_PROPERTY_LUXURY_DISPLAY</ValueDisplayText>
-			<ChangeDisplayText>TXT_KEY_PROPERTY_LUXURY_CHANGE</ChangeDisplayText>
-			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_LUXURY_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
-			<PrereqMinDisplayText>TXT_KEY_PROPERTY_LUXURY_PREREQ_MIN</PrereqMinDisplayText>
-			<PrereqMaxDisplayText>TXT_KEY_PROPERTY_LUXURY_PREREQ_MAX</PrereqMaxDisplayText>
-			<bSourceDrain>0</bSourceDrain>
-			<iAIWeight>85</iAIWeight>
-			<AIScaleType>AISCALE_CITY</AIScaleType>
-			<iOperationalRangeMin>0</iOperationalRangeMin>
-			<iOperationalRangeMax>10000</iOperationalRangeMax>
-			<FontButtonIndex>13</FontButtonIndex>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<iPercent>4</iPercent>
-				</PropertySource>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_CITY</TargetObjectType>
-					<TargetRelationType>RELATION_TRADE</TargetRelationType>
-					<iPercent>5</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-					<TargetRelationType>RELATION_NEAR</TargetRelationType>
-					<iTargetDistance>1</iTargetDistance>
-					<iPercent>5</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_CITY</TargetObjectType>
-					<TargetRelationType>RELATION_SAME_PLOT</TargetRelationType>
-					<iPercent>20</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-					<TargetRelationType>RELATION_NEAR</TargetRelationType>
-					<iTargetDistance>1</iTargetDistance>
-					<iPercent>4</iPercent>
-					<Active>
-						<Is>TAG_OWNED</Is>
-					</Active>
-				</PropertyPropagator>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-					<PropertyType>PROPERTY_LUXURY</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<iPercent>4</iPercent>
-				</PropertySource>
-			</PropertyManipulators>
-		</PropertyInfo>
-		<PropertyInfo>
-			<Type>PROPERTY_ENTERTAINMENT</Type>
-			<Description>TXT_KEY_PROPERTY_ENTERTAINMENT</Description>
-			<Strategy>TXT_KEY_PROPERTY_ENTERTAINMENT_STRATEGY</Strategy>
-			<ValueDisplayText>TXT_KEY_PROPERTY_ENTERTAINMENT_DISPLAY</ValueDisplayText>
-			<ChangeDisplayText>TXT_KEY_PROPERTY_ENTERTAINMENT_CHANGE</ChangeDisplayText>
-			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_ENTERTAINMENT_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
-			<PrereqMinDisplayText>TXT_KEY_PROPERTY_ENTERTAINMENT_PREREQ_MIN</PrereqMinDisplayText>
-			<PrereqMaxDisplayText>TXT_KEY_PROPERTY_ENTERTAINMENT_PREREQ_MAX</PrereqMaxDisplayText>
-			<bSourceDrain>0</bSourceDrain>
-			<iAIWeight>90</iAIWeight>
-			<AIScaleType>AISCALE_CITY</AIScaleType>
-			<iOperationalRangeMin>0</iOperationalRangeMin>
-			<iOperationalRangeMax>10000</iOperationalRangeMax>
-			<FontButtonIndex>15</FontButtonIndex>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<iPercent>4</iPercent>
-				</PropertySource>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_CITY</TargetObjectType>
-					<TargetRelationType>RELATION_TRADE</TargetRelationType>
-					<iPercent>5</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-					<TargetRelationType>RELATION_NEAR</TargetRelationType>
-					<iTargetDistance>1</iTargetDistance>
-					<iPercent>5</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_CITY</TargetObjectType>
-					<TargetRelationType>RELATION_SAME_PLOT</TargetRelationType>
-					<iPercent>20</iPercent>
-				</PropertyPropagator>
-				<PropertyPropagator>
-					<PropertyPropagatorType>PROPERTYPROPAGATOR_DIFFUSE</PropertyPropagatorType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-					<TargetRelationType>RELATION_NEAR</TargetRelationType>
-					<iTargetDistance>1</iTargetDistance>
-					<iPercent>4</iPercent>
-					<Active>
-						<Is>TAG_OWNED</Is>
-					</Active>
-				</PropertyPropagator>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-					<PropertyType>PROPERTY_ENTERTAINMENT</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<iPercent>4</iPercent>
-				</PropertySource>
-			</PropertyManipulators>
-		</PropertyInfo> -->
 	</PropertyInfos>
 </Civ4PropertyInfos>

@@ -1,4 +1,4 @@
-Version=14
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
