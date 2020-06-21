@@ -41,12 +41,12 @@ public:
 	public:
 		const_iterator& operator++();
 
-		bool operator==(const_iterator& other);
+		bool operator==(const const_iterator& other) const;
 
-		bool operator!=(const_iterator& other);
+		bool operator!=(const const_iterator& other) const;
 
-		CvPlot*	plot();
-		int		turn();
+		CvPlot*	plot() const;
+		int		turn() const;
 
 	private:
 		CvPathNode*	m_cursorNode;
@@ -58,8 +58,8 @@ protected:
 	void Set(CvPathNode* startNode);
 
 public:
-	const_iterator begin();
-	const_iterator end();
+	const const_iterator begin() const;
+	const const_iterator end() const;
 
 	int	length() const;
 	CvPlot*	lastPlot() const;
@@ -235,7 +235,7 @@ public:
 	
 	virtual const CvPlot* getTerminalPlot() const;
 
-	CvPath&	getLastPath();
+	const CvPath& getLastPath() const;
 	void SelfTest();
 	static void EnableMaxPerformance(bool bEnable) { m_bFastMode = bEnable; }
 	static bool IsMaxPerformance() { return m_bFastMode; }
@@ -250,7 +250,7 @@ private:
 	};
 
 	CvPathNode*	allocatePathNode();
-	bool groupMatches(CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum);
+	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum);
 	void AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool bHasQueued);
 	void OrphanChildTree(CvPathNode* node);
 	void DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot);

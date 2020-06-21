@@ -35,7 +35,7 @@ public:
 	virtual PropertySourceTypes getType() const = 0;
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const = 0;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) const = 0;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
@@ -64,7 +64,7 @@ public:
 	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_CONSTANT; }
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
@@ -90,7 +90,7 @@ public:
 	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_CONSTANT_LIMITED; }
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
@@ -119,7 +119,7 @@ public:
 	virtual bool isActive(CvGameObject* pObject) const;
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
@@ -146,7 +146,7 @@ public:
 	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_ATTRIBUTE_CONSTANT; }
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 

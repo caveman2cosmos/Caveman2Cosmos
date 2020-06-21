@@ -96,7 +96,7 @@ public:
 	void write(FDataStreamBase* pStream);
 	void writeWrapper(FDataStreamBase* pStream);
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Properties");
-	void copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;
 

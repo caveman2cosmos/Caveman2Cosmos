@@ -104,22 +104,22 @@ CvPath::const_iterator& CvPath::const_iterator::operator++()
 	return (*this);
 }
 
-bool CvPath::const_iterator::operator==(const_iterator& other)
+bool CvPath::const_iterator::operator==(const const_iterator& other) const
 {
 	return m_cursorNode == other.m_cursorNode;
 }
 
-bool CvPath::const_iterator::operator!=(const_iterator& other)
+bool CvPath::const_iterator::operator!=(const const_iterator& other) const
 {
 	return m_cursorNode != other.m_cursorNode;
 }
 
-CvPlot*	CvPath::const_iterator::plot()
+CvPlot*	CvPath::const_iterator::plot() const
 {
 	return (m_cursorNode == NULL ? NULL : m_cursorNode->m_plot);
 }
 
-int	CvPath::const_iterator::turn()
+int	CvPath::const_iterator::turn() const
 {
 	return (m_cursorNode == NULL ? NULL : m_cursorNode->m_iPathTurns);
 }
@@ -152,12 +152,12 @@ void CvPath::Set(CvPathNode* startNode)
 	}
 }
 
-CvPath::const_iterator CvPath::begin()
+const CvPath::const_iterator CvPath::begin() const
 {
 	return CvPath::const_iterator(m_startNode);
 }
 
-CvPath::const_iterator CvPath::end()
+const CvPath::const_iterator CvPath::end() const
 {
 	return CvPath::const_iterator(NULL);
 }
@@ -271,7 +271,7 @@ public:
 		m_allocationPool.reset();
 	}
 
-	CvPathGeneratorPlotInfo*	getPlotInfo(const CvPlot* pPlot, bool bCreateIfNotFound = true)
+	CvPathGeneratorPlotInfo* getPlotInfo(const CvPlot* pPlot, bool bCreateIfNotFound = true)
 	{
 		PROFILE_FUNC();
 
@@ -689,7 +689,7 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 	node->m_firstChild = NULL;
 }
 
-bool	CvPathGenerator::groupMatches(CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
+bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
 {
 	iGroupMembershipChecksum = 0;
 	CLLNode<IDInfo>* pUnitNode;
@@ -1803,7 +1803,7 @@ bool CvPathGenerator::CvPathNodeComparer::operator() (const priorityQueueEntry& 
 	return lhs.node->m_iCostFrom + lhs.iQueuedCost > rhs.node->m_iCostFrom + rhs.iQueuedCost;
 }
 
-CvPath&	CvPathGenerator::getLastPath()
+const CvPath& CvPathGenerator::getLastPath() const
 {
 	return m_generatedPath;
 }
@@ -1914,7 +1914,7 @@ void CvPathGenerator::SelfTest()
 #endif
 						iPathsSuccessful++;
 
-						CvPath&	path = getLastPath();
+						const CvPath& path = getLastPath();
 
 						attemptTrace[iI].iPathLen = path.length();
 						attemptTrace[iI].iEndCost = path.cost();

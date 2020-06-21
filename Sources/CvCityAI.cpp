@@ -37,7 +37,7 @@
 #define NUM_ALL_BUILDINGFOCUS_FLAGS				20
 
 //	Helper function to detrmine if a given bonus is provided by a building
-static bool isFreeBonusOfBuilding(CvBuildingInfo& kBuilding, BonusTypes eBonus)
+static bool isFreeBonusOfBuilding(const CvBuildingInfo& kBuilding, BonusTypes eBonus)
 {
 	return kBuilding.isFreeBonusOfBuilding(eBonus);
 }
@@ -735,10 +735,10 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 		if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 		{
-			UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
+			const UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 			if (eGreatPeopleUnit != NO_UNIT)
 			{
-				CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
+				const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
 				if (kUnitInfo.getGreatWorkCulture() > 0)
 				{
 					iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
@@ -873,20 +873,20 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		//	Koshling - evaluate properties
 	int iPropertyValue = 0;
 
-	CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
+	const CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
 
 	for (int i = 0; i < pMani->getNumSources(); i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
 			(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
 		{
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty) + getPropertyNonBuildingSource(eProperty);
-			int iNewSourceSize = iCurrentSourceSize + static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+			int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			int iDecayPercent = getPropertyDecay(eProperty);
 
 			//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -4242,7 +4242,7 @@ void CvCityAI::AI_chooseProduction()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, UnitAITypes* pSelectableTypes, bool bAsync, UnitAITypes* peBestUnitAI, bool bNoRand, bool bNoWeighting, CvUnitSelectionCriteria* criteria)
+UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, UnitAITypes* pSelectableTypes, bool bAsync, UnitAITypes* peBestUnitAI, bool bNoRand, bool bNoWeighting, const CvUnitSelectionCriteria* criteria)
 {
 	iBestUnitValue = 0;
 
@@ -4524,7 +4524,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 }
 
 
-UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync, bool bNoRand, CvUnitSelectionCriteria* criteria)
+UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync, bool bNoRand, const CvUnitSelectionCriteria* criteria)
 {
 	PROFILE_FUNC();
 
@@ -4760,19 +4760,19 @@ std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFoc
 	return scoredBuildings;
 }
 
-bool AI_buildingInfluencesProperty(CvCity* city, CvBuildingInfo& buildingInfo, PropertyTypes eProperty)
+bool AI_buildingInfluencesProperty(const CvCity* city, const CvBuildingInfo& buildingInfo, PropertyTypes eProperty)
 {
 	bool bFoundValidation = false;
-	CvPropertyManipulators* pMani = buildingInfo.getPropertyManipulators();
-	int numSources = pMani->getNumSources();
+	const CvPropertyManipulators* pMani = buildingInfo.getPropertyManipulators();
+	const int numSources = pMani->getNumSources();
 	for (int i = 0; i < numSources; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 		//	For now we're only interested in constant sources
 		//	TODO - expand this as buildings add other types
 		if (pSource->getProperty() == eProperty &&
 			pSource->getType() == PROPERTYSOURCE_CONSTANT &&
-			GC.getPropertyInfo(eProperty).getAIWeight() * static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(city->getGameObject()) > 0)
+			GC.getPropertyInfo(eProperty).getAIWeight() * static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(city->getGameObject()) > 0)
 		{
 			bFoundValidation = true;
 			break;
@@ -5089,11 +5089,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
-	ReligionTypes eStateReligion = kOwner.getStateReligion();
+	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 
 	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
 
@@ -5206,8 +5206,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	bool bSpaceVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
 
 	int iValue = 0;
-
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 
 	{
 		PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.MainBody");
@@ -6927,7 +6925,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	return std::max(0, iValue);
 }
 
-int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
+int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
 {
 	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
 
@@ -15835,8 +15833,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	PROFILE_FUNC()
 
 	//	KOSHLING optimisation - moved what we could outside of the building loop
-	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-	ReligionTypes eStateReligion = kOwner.getStateReligion();
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
 	int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
 
@@ -16017,7 +16015,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				PROFILE("CvCityAI::CalculateAllBuildingValues.building");
 
-				CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 				int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 				bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
@@ -16086,9 +16084,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 				{
-					SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+					const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 					if (eNewSpecialist == NO_SPECIALIST) break;
-					CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
+					const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
 						aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwner()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
@@ -17425,12 +17423,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							if (kBuilding.isProvidesFreshWater() && !plot()->isFreshWater())
 							{
 								int freshWaterModifier = 0;
-								CvPlot* pLoopPlot;
 								for (int iI = 0; iI < NUM_CITY_PLOTS_1; iI++)
 								{
 									if (iI != CITY_HOME_PLOT)
 									{
-										pLoopPlot = plotCity(getX(), getY(), iI);
+										const CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 										if (pLoopPlot != NULL &&
 											!pLoopPlot->isWater() &&
 											!pLoopPlot->isFreshWater() &&
@@ -18116,13 +18113,13 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 }
 
 
-int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const
+int CvCityAI::tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const
 {
 	PROFILE_FUNC();
 
-	int	iExtraTradeRoutes = kBuilding.getTradeRoutes();
-	int iCurrentTradeRoutes = getTradeRoutes();
-	CvPlayerAI&	kOwner = GET_PLAYER(getOwner());
+	const int iExtraTradeRoutes = kBuilding.getTradeRoutes();
+	const int iCurrentTradeRoutes = getTradeRoutes();
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 
 	int	iTradeRouteValue = 0;
 	if ( iCurrentTradeRoutes <= -iExtraTradeRoutes )
@@ -18193,16 +18190,16 @@ int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool
 
 //	Evaluate a building we are considering building here in terms of its
 //	effect on properties
-int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
+int CvCityAI::buildingPropertiesValue(const CvBuildingInfo& kBuilding) const
 {
 	//	Evaluate building properties
 	std::map<int,int> effectivePropertyChanges;
 
-	CvPropertyManipulators* pBuildingPropertyManipulators = kBuilding.getPropertyManipulators();
+	const CvPropertyManipulators* pBuildingPropertyManipulators = kBuilding.getPropertyManipulators();
 	int num = pBuildingPropertyManipulators->getNumSources();
 	for (int iI = 0; iI < num; iI++)
 	{
-		CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iI);
+		const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iI);
 
 		//	For now we're only interested in constant sources
 		//	TODO - expand this as buildings add other types
@@ -18210,10 +18207,10 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 		{
 			//	Convert to an effective absolute amount by looking at the steady state value
 			//	given current
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 			//	Only count half the unit source as we want to encourage building sources over unit ones
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty)/2 + getPropertyNonBuildingSource(eProperty);
-			int iNewSourceSize = iCurrentSourceSize + static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+			int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			int iDecayPercent = getPropertyDecay(eProperty);
 
 			//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -18238,8 +18235,8 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 	num = buildingProperties->getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
-		PropertyTypes eProperty = (PropertyTypes)buildingProperties->getProperty(iI);
-		int	iBuildingValue = buildingProperties->getValue(iI);
+		const PropertyTypes eProperty = (PropertyTypes)buildingProperties->getProperty(iI);
+		const int iBuildingValue = buildingProperties->getValue(iI);
 
 		std::map<int,int>::iterator itr = effectivePropertyChanges.find(eProperty);
 		if ( itr == effectivePropertyChanges.end() )
@@ -18264,7 +18261,7 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) const
 {
 	const CvProperties* cityProperties = getPropertiesConst();
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
 	int	iOperationalLow = kProperty.getOperationalRangeMin();
 	int	iOperationalHigh = kProperty.getOperationalRangeMax();
 	int iCurrentValue = cityProperties->getValueByProperty(eProperty);
@@ -18311,19 +18308,19 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 
 int CvCityAI::getPropertyDecay(PropertyTypes eProperty) const
 {
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
-	CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
 	int	iTotalDecay = 0;
-	int current = getPropertiesConst()->getValueByProperty(eProperty);
+	const int current = getPropertiesConst()->getValueByProperty(eProperty);
 	int iLowestThresholdDecay = 0;
 
 	for(int iI = 0; iI < pManipulators->getNumSources(); iI++)
 	{
-		CvPropertySource* pSource = pManipulators->getSource(iI);
+		const CvPropertySource* pSource = pManipulators->getSource(iI);
 
 		if ( pSource->getType() == PROPERTYSOURCE_DECAY )
 		{
-			CvPropertySourceDecay* pDecaySource = static_cast<CvPropertySourceDecay*>(pSource);
+			const CvPropertySourceDecay* pDecaySource = static_cast<const CvPropertySourceDecay*>(pSource);
 
 			//	For AI evaluation purposes the no-decay threshold is largely
 			//	irrelevant since we are only interested in EVENTUAL equilibrium
@@ -18351,20 +18348,20 @@ int CvCityAI::getPropertyDecay(PropertyTypes eProperty) const
 
 int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 {
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
-	CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
 	int	iTotal = 0;
-	int current = getPropertiesConst()->getValueByProperty(eProperty);
+	const int current = getPropertiesConst()->getValueByProperty(eProperty);
 
 	for(int iI = 0; iI < pManipulators->getNumSources(); iI++)
 	{
-		CvPropertySource* pSource = pManipulators->getSource(iI);
+		const CvPropertySource* pSource = pManipulators->getSource(iI);
 
 		if ( pSource->getType() == PROPERTYSOURCE_ATTRIBUTE_CONSTANT &&
 			 pSource->getObjectType() == GAMEOBJECT_CITY &&
 			 pSource->getProperty() == eProperty )
 		{
-			CvPropertySourceAttributeConstant* pCitySource = static_cast<CvPropertySourceAttributeConstant*>(pSource);
+			const CvPropertySourceAttributeConstant* pCitySource = static_cast<const CvPropertySourceAttributeConstant*>(pSource);
 
 			iTotal += pCitySource->getSourcePredict(getGameObject(), current);
 		}
@@ -18373,16 +18370,16 @@ int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 	//	Add in contribution from specialists
 	for(int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		int iNum = getSpecialistCount((SpecialistTypes)iI) + getFreeSpecialistCount((SpecialistTypes)iI);
+		const int iNum = getSpecialistCount((SpecialistTypes)iI) + getFreeSpecialistCount((SpecialistTypes)iI);
 
 		if ( iNum > 0 )
 		{
-			CvPropertyManipulators* pMani = GC.getSpecialistInfo((SpecialistTypes)iI).getPropertyManipulators();
+			const CvPropertyManipulators* pMani = GC.getSpecialistInfo((SpecialistTypes)iI).getPropertyManipulators();
 			int iContribution = 0;
 
 			for (int i=0; i < pMani->getNumSources(); i++)
 			{
-				CvPropertySource* pSource = pMani->getSource(i);
+				const CvPropertySource* pSource = pMani->getSource(i);
 
 				//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 				//	to the city for most properties anyway
@@ -18390,7 +18387,7 @@ int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 					(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
 					pSource->getProperty() == eProperty)
 				{
-					iContribution += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+					iContribution += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 				}
 			}
 
@@ -18930,41 +18927,38 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 	return false;
 }
 
-bool CvCityAI::AI_isNegativePropertyUnit(UnitTypes eUnit)
+bool CvCityAI::AI_isNegativePropertyUnit(UnitTypes eUnit) const
 {
 	if (eUnit == NO_UNIT)
 	{
 		return false;
 	}
 
-	bool bAnswer = false;
-	CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
+	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{
 		for(int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
 		{
-			CvPropertySource* pSource = propertyManipulators->getSource(iI);
+			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
 			//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 
 			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
 				if (GC.getPropertyInfo(eProperty).getAIWeight() < 0)
 				{
-					int iAmount = static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-					if ( iAmount > 0 )
+					if (static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject()) > 0)
 					{
-						bAnswer = true;
-						break;
+						return true;
 					}
 				}
 			}
 		}
 	}
-	return bAnswer;
+	return false;
 }
 
-bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, CvUnitSelectionCriteria* criteria)
+bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria)
 {
 	//Add more here as needs demand - Some cleanup could be nice too.  Consolidate some of the other checks and possible redundancies into this location?
 	if (eUnit != NO_UNIT && criteria != NULL)

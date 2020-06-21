@@ -112,7 +112,7 @@ void CvPropertyPropagator::setTargetObjectType(GameObjectTypes eObjectType)
 	m_eTargetObjectType = eObjectType;
 }
 
-bool CvPropertyPropagator::isActive(CvGameObject *pObject)
+bool CvPropertyPropagator::isActive(CvGameObject *pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -246,12 +246,12 @@ CvPropertyPropagatorSpread::CvPropertyPropagatorSpread(PropertyTypes eProperty, 
 {
 }
 
-PropertyPropagatorTypes CvPropertyPropagatorSpread::getType()
+PropertyPropagatorTypes CvPropertyPropagatorSpread::getType() const
 {
 	return PROPERTYPROPAGATOR_SPREAD;
 }
 
-int CvPropertyPropagatorSpread::getPercent()
+int CvPropertyPropagatorSpread::getPercent() const
 {
 	return m_iPercent;
 }
@@ -268,20 +268,20 @@ int CvPropertyPropagatorSpread::getPercent()
 //	}
 //}
 
-void CvPropertyPropagatorSpread::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
+void CvPropertyPropagatorSpread::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
-	int iCurrentAmount = aiCurrentAmount[0];
+	const int iCurrentAmount = aiCurrentAmount[0];
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
-		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
+		const int iDiff = iCurrentAmount - aiCurrentAmount[iI];
 		aiPredict[iI] = std::max(0, (iDiff * m_iPercent) / 100);
 	}
 }
 
-void CvPropertyPropagatorSpread::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
+void CvPropertyPropagatorSpread::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
-	int iCurrentAmount = aiCurrentAmount[0];
+	const int iCurrentAmount = aiCurrentAmount[0];
 	aiCorrect[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
@@ -292,8 +292,8 @@ void CvPropertyPropagatorSpread::getCorrect(std::vector<int>& aiCurrentAmount, s
 		}
 		else
 		{
-			int iPredicted = aiCurrentAmount[iI] + (iDiff * m_iPercent) / 100;
-			int iExtra = aiPredictedAmount[iI] - iPredicted;
+			const int iPredicted = aiCurrentAmount[iI] + (iDiff * m_iPercent) / 100;
+			const int iExtra = aiPredictedAmount[iI] - iPredicted;
 			if (iExtra > 0)
 			{
 				//use half of extra to base spreading on
@@ -326,7 +326,7 @@ bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	CvPropertyPropagatorSpread* pOther = static_cast<CvPropertyPropagatorSpread*>(pProp);
+	const CvPropertyPropagatorSpread* pOther = static_cast<const CvPropertyPropagatorSpread*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }
@@ -353,17 +353,17 @@ CvPropertyPropagatorGather::CvPropertyPropagatorGather(PropertyTypes eProperty, 
 {
 }
 
-PropertyPropagatorTypes CvPropertyPropagatorGather::getType()
+PropertyPropagatorTypes CvPropertyPropagatorGather::getType() const
 {
 	return PROPERTYPROPAGATOR_GATHER;
 }
 
-int CvPropertyPropagatorGather::getAmountPerTurn()
+int CvPropertyPropagatorGather::getAmountPerTurn() const
 {
 	return m_iAmountPerTurn;
 }
 
-void CvPropertyPropagatorGather::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
+void CvPropertyPropagatorGather::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
@@ -381,7 +381,7 @@ void CvPropertyPropagatorGather::getPredict(std::vector<int>& aiCurrentAmount, s
 	}
 }
 
-void CvPropertyPropagatorGather::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
+void CvPropertyPropagatorGather::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
 	aiCorrect[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
@@ -401,8 +401,8 @@ void CvPropertyPropagatorGather::getCorrect(std::vector<int>& aiCurrentAmount, s
 		}
 		else
 		{
-			int iPredicted = (aiCurrentAmount[iI] < m_iAmountPerTurn) ? aiCurrentAmount[iI] : m_iAmountPerTurn;
-			int iCorrected = (iPredicted * aiCurrentAmount[iI]) / (aiCurrentAmount[iI] - aiPredictedAmount[iI]);
+			const int iPredicted = (aiCurrentAmount[iI] < m_iAmountPerTurn) ? aiCurrentAmount[iI] : m_iAmountPerTurn;
+			const int iCorrected = (iPredicted * aiCurrentAmount[iI]) / (aiCurrentAmount[iI] - aiPredictedAmount[iI]);
 			aiCorrect[0] += iCorrected;
 			aiCorrect[iI] = -iCorrected;
 		}
@@ -427,7 +427,7 @@ bool CvPropertyPropagatorGather::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	CvPropertyPropagatorGather* pOther = static_cast<CvPropertyPropagatorGather*>(pProp);
+	const CvPropertyPropagatorGather* pOther = static_cast<const CvPropertyPropagatorGather*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
@@ -453,12 +453,12 @@ CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse(PropertyTypes eProperty
 {
 }
 
-PropertyPropagatorTypes CvPropertyPropagatorDiffuse::getType()
+PropertyPropagatorTypes CvPropertyPropagatorDiffuse::getType() const
 {
 	return PROPERTYPROPAGATOR_DIFFUSE;
 }
 
-int CvPropertyPropagatorDiffuse::getPercent()
+int CvPropertyPropagatorDiffuse::getPercent() const
 {
 	return m_iPercent;
 }
@@ -475,25 +475,25 @@ int CvPropertyPropagatorDiffuse::getPercent()
 //	}
 //}
 
-void CvPropertyPropagatorDiffuse::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
+void CvPropertyPropagatorDiffuse::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
-	int iCurrentAmount = aiCurrentAmount[0];
+	const int iCurrentAmount = aiCurrentAmount[0];
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
-		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
-		int iChange = std::max(0, (iDiff * m_iPercent) / 100);
+		const int iDiff = iCurrentAmount - aiCurrentAmount[iI];
+		const int iChange = std::max(0, (iDiff * m_iPercent) / 100);
 		aiPredict[iI] = iChange;
 		aiPredict[0] -= iChange;
 	}
 }
 
-void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
+void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
-	int iCurrentAmount = aiCurrentAmount[0];
-	int iPredictedAmount = aiPredictedAmount[0];
+	const int iCurrentAmount = aiCurrentAmount[0];
+	const int iPredictedAmount = aiPredictedAmount[0];
 	int iPredictedSelf = 0;
-	int iPredictedTotalSelf = iPredictedAmount - iCurrentAmount;
+	const int iPredictedTotalSelf = iPredictedAmount - iCurrentAmount;
 	aiCorrect[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
@@ -505,9 +505,9 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 		else
 		{
 			int iChange = (iDiff * m_iPercent) / 100;
-			int iPredicted = aiCurrentAmount[iI] + iChange;
+			const int iPredicted = aiCurrentAmount[iI] + iChange;
 			iPredictedSelf -= iChange;
-			int iExtra = aiPredictedAmount[iI] - iPredicted;
+			const int iExtra = aiPredictedAmount[iI] - iPredicted;
 			if (iExtra > 0)
 			{
 				//use half of extra to base diffusion on
@@ -522,9 +522,9 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 	
 	if (iPredictedTotalSelf < iPredictedSelf)
 	{
-		int iSelfChangeByOthers = iPredictedTotalSelf - iPredictedSelf;
+		const int iSelfChangeByOthers = iPredictedTotalSelf - iPredictedSelf;
 		// use half of other change to base diffusion on
-		int iAssumedAmount = iCurrentAmount + iSelfChangeByOthers / 2;
+		const int iAssumedAmount = iCurrentAmount + iSelfChangeByOthers / 2;
 
 		aiCorrect[0] = 0;
 
@@ -538,8 +538,8 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 			else
 			{
 				int iChange = (iDiff * m_iPercent) / 100;
-				int iPredicted = aiCurrentAmount[iI] + iChange;
-				int iExtra = aiPredictedAmount[iI] - iPredicted;
+				const int iPredicted = aiCurrentAmount[iI] + iChange;
+				const int iExtra = aiPredictedAmount[iI] - iPredicted;
 				if (iExtra > 0)
 				{
 					//use half of extra to base diffusion on
@@ -572,7 +572,7 @@ bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility *pXML)
 void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
-	CvPropertyPropagatorDiffuse* pOther = static_cast<CvPropertyPropagatorDiffuse*>(pProp);
+	const CvPropertyPropagatorDiffuse* pOther = static_cast<const CvPropertyPropagatorDiffuse*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }
