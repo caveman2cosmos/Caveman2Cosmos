@@ -70,6 +70,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_AGGRESSIVE</Tag>
 		<English>Aggressive Promotion Line</English>
 		<French>Spécialisation Aggressivité</French>
+		<German>Aggressiv</German>
 		<Italian>Aggressivo</Italian>
 		<Polish>Linia Promocji: Agresywny</Polish>
 	</TEXT>
@@ -140,6 +141,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Tag>
 		<English>Armed Guard Promotionline</English>
 		<French>Spécialisation Garde Armé</French>
+		<German>Bewaffneter Wächter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMOR_UPGRADE</Tag>
@@ -178,6 +180,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BACK_DOWN</Tag>
 		<English>Back Down Promotionline</English>
 		<French>Spécialisation Repli</French>
+		<German>Rückzug</German>
 		<Italian>Ritirata</Italian>
 		<Polish>Linia Promocji: Wycofać się</Polish>
 	</TEXT>
@@ -199,6 +202,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BARD</Tag>
 		<English>Bard Promotion Line</English>
 		<French>Spécialisation Barde</French>
+		<German>Barde</German>
 		<Italian>Bardo</Italian>
 		<Polish>Linia Promocji: Bard</Polish>
 	</TEXT>
@@ -249,6 +253,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BOUNTY_HUNTER</Tag>
 		<English>Bounty Hunter Promotion Line</English>
 		<French>Spécialisation Chasseur de primes</French>
+		<German>Kopfgeldjäger</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ANTI_AIR</Tag>
@@ -675,6 +680,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COASTAL_GUARD</Tag>
 		<English>Coastal Guard Promotion Line</English>
 		<French>Spécialisation Garde-côtes</French>
+		<German>Küstenwache</German>
 		<Italian>Guardia costiera</Italian>
 		<Polish>Linia Promocji: Obrona na Wybrzeżu</Polish>
 	</TEXT>
@@ -730,6 +736,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COVERT_OPERATIONS</Tag>
 		<English>Covert Operations Promotion Line</English>
 		<French>Spécialisation Opérations sous couverture</French>
+		<German>Verdeckte Operationen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CRACKDOWN</Tag>
@@ -779,6 +786,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
 		<English>Decoys Promotionline</English>
 		<French>Spécialisation Leurre</French>
+		<German>Lockvogel</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE_PROTOCOLS</Tag>
@@ -856,6 +864,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ENCLOSE</Tag>
 		<English>Enclose Promotionline</English>
 		<French>Spécialisation Enclave</French>
+		<German>Einschließen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENGINEERCORPS</Tag>
@@ -993,12 +1002,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_ANIMALS</Tag>
 		<English>First Aid (Animals) Promotionline</English>
 		<French>Spécialisation Premiers secours (Animaux)</French>
+		<German>Erste Hilfe (Tiere)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (zwierzęta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_PEOPLE</Tag>
 		<English>First Aid (People) Promotionline</English>
 		<French>Spécialisation Premiers secours (Humains)</French>
+		<German>Erste Hilfe (Menschen)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (ludzie)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1205,6 +1216,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_IMPERIAL</Tag>
 		<English>Imperial Promotion Line</English>
 		<French>Spécialisation Imperial</French>
+		<German>Ruhm</German>
 		<Italian>Guardia imperiale</Italian>
 		<Spanish>Imperial</Spanish>
 		<Polish>Linia Promocji: Cesarski</Polish>
@@ -1349,6 +1361,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_MARTIAL_ARTS</Tag>
 		<English>Martial Arts Promotion Line</English>
 		<French>Spécialisation Arts martiaux</French>
+		<German>Kampfsport</German>
 		<Italian>Arti marziali</Italian>
 		<Polish>Linia Promocji: Sztuka Wojskowa</Polish>
 	</TEXT>
@@ -1432,6 +1445,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_NON_LETHAL_FORCE</Tag>
 		<English>Non-Lethal Force Promotionline</English>
 		<French>Spécialisation Armes non-léthales</French>
+		<German>Am Leben lassen</German>
 		<Polish>Linia Promocji: Nie-Śmiercionośny</Polish>
 	</TEXT>
 	<TEXT>
@@ -1626,6 +1640,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_RECOVER_TECH</Tag>
 		<English>Recover (Tech) Promotionline</English>
 		<French>Spécialisation Récupération (Tech)</French>
+		<German>Instandsetzung (Technologie)</German>
 		<Polish>Linia Promocji: Odzyskaj (tech)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1637,6 +1652,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIRS</Tag>
 		<English>Repairs Promotion Line</English>
 		<French>Spécialisation Reparation</French>
+		<German>Reparatur</German>
 		<Italian>Riparazioni automatiche</Italian>
 		<Polish>Linia Promocji: Automatyczne Naprawy</Polish>
 	</TEXT>
@@ -1644,18 +1660,21 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_AIRCRAFT</Tag>
 		<English>Repair (Aircraft) Promotionline</English>
 		<French>Spécialisation Réparation (Avions)</French>
+		<German>Reparatur (Flugzeuge)</German>
 		<Polish>Linia Promocji: Naprawa (samoloty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_MECHANICAL</Tag>
 		<English>Repair (Mechanical) Promotionline</English>
 		<French>Spécialisation Réparation (Véhicules)</French>
+		<German>Reparatur (Maschinen)</German>
 		<Polish>Linia Promocji: Naprawa (mechaniczne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_NAVAL</Tag>
 		<English>Repair (Naval) Promotionline</English>
 		<French>Spécialisation Réparation (Navires)</French>
+		<German>Reparatur (Schiffe)</German>
 		<Polish>Linia Promocji: Naprawa (okręty)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1938,6 +1957,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_STREET_FIGHTER</Tag>
 		<English>Street Fighter Promotionline</English>
 		<French>Spécialisation Combat urbain</French>
+		<German>Straßenkämpfer</German>
 		<Italian>Combattente di strada</Italian>
 		<Polish>Linia Promocji: Uliczny Wojownik</Polish>
 	</TEXT>
@@ -1998,6 +2018,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Tag>
 		<English>To The Death Promotionline</English>
 		<French>Spécialisation A Mort</French>
+		<German>Bis zum Tode</German>
 		<Polish>Linia Promocji: Aż Do Śmierci</Polish>
 	</TEXT>
 	<TEXT>
@@ -2083,6 +2104,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARRIORS_INTUITION</Tag>
 		<English>Warrior's Intuition Promotion Line</English>
 		<French>Spécialisation Intuition du Guerrier</French>
+		<German>Kriegerintuition</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WATERWAYS</Tag>
@@ -2095,6 +2117,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WAYLAY</Tag>
 		<English>Waylay Promotionline</English>
 		<French>Spécialisation Détournement</French>
+		<German>Wegelagerer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WEAPON_UPGRADE</Tag>
@@ -2326,6 +2349,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Aggressiv</German>
 		<Italian>
 			<Text>Aggressivo</Text>
 			<Gender>Male</Gender>
@@ -2580,7 +2604,7 @@
  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
-		<German>Animal Jaeger</German>
+		<German>Großwildjäger</German>
 		<Italian>Cacciatore di animali</Italian>
 		<Polish>Łowca Zwierząt</Polish>
 	</TEXT>
@@ -2588,7 +2612,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
 		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<German>[ICON_BULLET]EP für Kämpfe gegen Tiere über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
@@ -2725,26 +2749,31 @@
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD1</Tag>
 		<English>Armed Guard I</English>
 		<French>Garde armée I</French>
+		<German>Bewaffneter Wächter I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD2</Tag>
 		<English>Armed Guard II</English>
 		<French>Garde armée II</French>
+		<German>Bewaffneter Wächter II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD3</Tag>
 		<English>Armed Guard III</English>
 		<French>Garde armée III</French>
+		<German>Bewaffneter Wächter III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD4</Tag>
 		<English>Armed Guard IV</English>
 		<French>Garde armée IV</French>
+		<German>Bewaffneter Wächter IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD5</Tag>
 		<English>Armed Guard V</English>
 		<French>Garde armée V</French>
+		<German>Bewaffneter Wächter V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMOR_TEXT</Tag>
@@ -3140,6 +3169,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug I</German>
 		<Italian>
 			<Text>Ritirata I</Text>
 			<Gender>Male</Gender>
@@ -3155,6 +3185,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug II</German>
 		<Italian>
 			<Text>Ritirata II</Text>
 			<Gender>Male</Gender>
@@ -3170,6 +3201,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug III</German>
 		<Italian>
 			<Text>Ritirata III</Text>
 			<Gender>Male</Gender>
@@ -3185,6 +3217,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug IV</German>
 		<Italian>
 			<Text>Ritirata IV</Text>
 			<Gender>Male</Gender>
@@ -3200,6 +3233,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug V</German>
 		<Italian>
 			<Text>Ritirata V</Text>
 			<Gender>Male</Gender>
@@ -3211,6 +3245,7 @@
 		<Tag>TXT_KEY_PROMOTION_BAMBOO_ARMOR</Tag>
 		<English>Bamboo Armor</English>
 		<French>Armure de Bambou</French>
+		<German>Bambusrüstung</German>
 		<Italian>Armatura in bambù</Italian>
 		<Polish>Bambusowy Pancerz</Polish>
 	</TEXT>
@@ -3218,7 +3253,7 @@
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
 		<English>Barbarian Hunter</English>
 		<French>Chasseur de Barbares</French>
-		<German>Barbaren-Jaeger</German>
+		<German>Barbarenjäger</German>
 		<Italian>Cacciatore di barbari</Italian>
 		<Polish>Łowca Barbarzyńców</Polish>
 	</TEXT>
@@ -3226,7 +3261,7 @@
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
 		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Barbaren geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<German>[ICON_BULLET]EP für Kämpfe gegen Barbaren über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
@@ -3248,6 +3283,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde I</German>
 		<Italian>
 			<Text>Bardo I</Text>
 			<Gender>Male</Gender>
@@ -3267,6 +3303,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde II</German>
 		<Italian>
 			<Text>Bardo II</Text>
 			<Gender>Male</Gender>
@@ -3286,6 +3323,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde III</German>
 		<Italian>
 			<Text>Bardo III</Text>
 			<Gender>Male</Gender>
@@ -3769,16 +3807,19 @@
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER1</Tag>
 		<English>Bounty Hunter I</English>
 		<French>Chasseur de Primes I</French>
+		<German>Kopfgeldjäger I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER2</Tag>
 		<English>Bounty Hunter II</English>
 		<French>Chasseur de Primes II</French>
+		<German>Kopfgeldjäger II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER3</Tag>
 		<English>Bounty Hunter III</English>
 		<French>Chasseur de Primes III</French>
+		<German>Kopfgeldjäger III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER_HELP</Tag>
@@ -4800,6 +4841,7 @@
 		<Tag>TXT_KEY_PROMOTION_BY_THE_HORNS</Tag>
 		<English>By the Horns</English>
 		<French>Par les cornes</French>
+		<German>Bei den Hörnern packen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAMOUFLAGE</Tag>
@@ -6131,16 +6173,19 @@
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS1</Tag>
 		<English>Covert Operations I</English>
 		<French>Opérations sous couverture I</French>
+		<German>Verdeckte Operationen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS2</Tag>
 		<English>Covert Operations II</English>
 		<French>Opérations sous couverture II</French>
+		<German>Verdeckte Operationen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS3</Tag>
 		<English>Covert Operations III</English>
 		<French>Opérations sous couverture III</French>
+		<German>Verdeckte Operationen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN1</Tag>
@@ -6409,16 +6454,19 @@
 		<Tag>TXT_KEY_PROMOTION_DECOYS1</Tag>
 		<English>Decoys I</English>
 		<French>Leurre I</French>
+		<German>Lockvogel I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS2</Tag>
 		<English>Decoys II</English>
 		<French>Leurre II</French>
+		<German>Lockvogel II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS3</Tag>
 		<English>Decoys III</English>
 		<French>Leurre III</French>
+		<German>Lockvogel III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEDICATION</Tag>
@@ -6428,6 +6476,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Hingabe</German>
 		<Italian>
 			<Text>Dedizione</Text>
 			<Gender>Male</Gender>
@@ -6536,6 +6585,7 @@
 		<Tag>TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Defense only: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense uniquement: %D1_Change</French>
+		<German>[ICON_BULLET]Reine Verteidigung: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS1</Tag>
@@ -6933,6 +6983,7 @@
 		<Tag>TXT_KEY_PROMOTION_DOMAIN_CARGO_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER domains!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<German>[ICON_BULLET]ermöglicht den Transport von %s1_Change</German>
 		<Polish>[ICON_BULLET]Przystosowuje jednostkę do transportu %s1_Change innych jednostek</Polish>
 	</TEXT>
 	<TEXT>
@@ -7240,16 +7291,19 @@
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE1</Tag>
 		<English>Enclose I</English>
 		<French>Enclave I</French>
+		<German>Einschließen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE2</Tag>
 		<English>Enclose II</English>
 		<French>Enclave II</French>
+		<German>Einschließen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE3</Tag>
 		<English>Enclose III</English>
 		<French>Enclave III</French>
+		<German>Einschließen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE_TEXT</Tag>
@@ -7793,96 +7847,112 @@
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS</Tag>
 		<English>First Aid (Animals)</English>
 		<French>Premiers Secours (Animaux)</French>
+		<German>Erste Hilfe (Tiere)</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS1</Tag>
 		<English>First Aid (Animals) I</English>
 		<French>Premiers Secours (Animaux) I</French>
+		<German>Erste Hilfe (Tiere) I</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS2</Tag>
 		<English>First Aid (Animals) II</English>
 		<French>Premiers Secours (Animaux) II</French>
+		<German>Erste Hilfe (Tiere) II</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS3</Tag>
 		<English>First Aid (Animals) III</English>
 		<French>Premiers Secours (Animaux) III</French>
+		<German>Erste Hilfe (Tiere) III</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS4</Tag>
 		<English>First Aid (Animals) IV</English>
 		<French>Premiers Secours (Animaux) IV</French>
+		<German>Erste Hilfe (Tiere) IV</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS5</Tag>
 		<English>First Aid (Animals) V</English>
 		<French>Premiers Secours (Animaux) V</French>
+		<German>Erste Hilfe (Tiere) V</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS6</Tag>
 		<English>First Aid (Animals) VI</English>
 		<French>Premiers Secours (Animaux) VI</French>
+		<German>Erste Hilfe (Tiere) VI</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS7</Tag>
 		<English>First Aid (Animals) VII</English>
 		<French>Premiers Secours (Animaux) VII</French>
+		<German>Erste Hilfe (Tiere) VII</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE</Tag>
 		<English>First Aid (People)</English>
 		<French>Premiers Secours (Humains)</French>
+		<German>Erste Hilfe (Menschen)</German>
 		<Polish>Pierwsza Pomoc (Ludzie)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE1</Tag>
 		<English>First Aid (People) I</English>
 		<French>Premiers Secours (Humains) I</French>
+		<German>Erste Hilfe (Menschen) I</German>
 		<Polish>Pierwsza Pomoc (Ludzie) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE2</Tag>
 		<English>First Aid (People) II</English>
 		<French>Premiers Secours (Humains) II</French>
+		<German>Erste Hilfe (Menschen) II</German>
 		<Polish>Pierwsza Pomoc (Ludzie) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE3</Tag>
 		<English>First Aid (People) III</English>
 		<French>Premiers Secours (Humains) III</French>
+		<German>Erste Hilfe (Menschen) III</German>
 		<Polish>Pierwsza Pomoc (Ludzie) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE4</Tag>
 		<English>First Aid (People) IV</English>
 		<French>Premiers Secours (Humains) IV</French>
+		<German>Erste Hilfe (Menschen) IV</German>
 		<Polish>Pierwsza Pomoc (Ludzie) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE5</Tag>
 		<English>First Aid (People) V</English>
 		<French>Premiers Secours (Humains) V</French>
+		<German>Erste Hilfe (Menschen) V</German>
 		<Polish>Pierwsza Pomoc (Ludzie) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE6</Tag>
 		<English>First Aid (People) VI</English>
 		<French>Premiers Secours (Humains) VI</French>
+		<German>Erste Hilfe (Menschen) VI</German>
 		<Polish>Pierwsza Pomoc (Ludzie) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE7</Tag>
 		<English>First Aid (People) VII</English>
 		<French>Premiers Secours (Humains) VII</French>
+		<German>Erste Hilfe (Menschen) VII</German>
 		<Polish>Pierwsza Pomoc (Ludzie) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -8114,6 +8184,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Waldläufer</German>
 		<Italian>
 			<Text>Guerriero della foresta</Text>
 			<Gender>Male</Gender>
@@ -8662,7 +8733,7 @@
 		<Tag>TXT_KEY_PROMOTION_GREEN_WARDEN</Tag>
 		<English>Green Warden</English>
 		<French>Gardien vert</French>
-		<German>Waldläufer</German>
+		<German>Förster</German>
 		<Italian>Pollice verde</Italian>
 		<Spanish>Guarda forestal</Spanish>
 		<Polish>Zielony Opiekun</Polish>
@@ -9029,18 +9100,21 @@
 		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Adjacent Tiles %D2_Heals%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT des cases adjacentes %D2_Heals%%[SPACE]</French>
+		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf angrenzenden Feldern um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na sąsiednich polach %D2_Heals%%[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Same Tile %D2_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT de la même case %D2_Amount%%[SPACE]</French>
+		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf dem gleichen Feld um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na tym samym polu %D2_Amount%%[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT</Tag>
 		<English>[ICON_BULLET]Can heal %D1_Amount unit(s)/turn</English>
 		<French>[ICON_BULLET]Peut soigner %D1_Amount unité(s)/tour</French>
+		<German>[ICON_BULLET]kann %D1_Amount Einheiten pro Runde heilen</German>
 		<Polish>[ICON_BULLET]Jednostka może pomóc w leczeniu: %D1_Amount jednostek na turę.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9855,7 +9929,7 @@
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
 		<English>Industry Espionage</English>
 		<French>Espionnage Industriel</French>
-		<German>Industrie-Spion</German>
+		<German>Industriespionage</German>
 		<Italian>Spionaggio industriale</Italian>
 		<Polish>Szpiegostwo Przemysłowe</Polish>
 	</TEXT>
@@ -9863,7 +9937,7 @@
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]Plündert 4% der feindlichen [ICON_RESEARCH] nach einem Sieg im Kampf</German>
+		<German>[ICON_BULLET]erbeutet 4% der feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 	</TEXT>
@@ -10388,7 +10462,7 @@
 		<Tag>TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT</Tag>
 		<English>[ICON_BULLET]Level Prerequisite: %d1_Change</English>
 		<French>[ICON_BULLET]Niveau pré-requis: %d1_Change</French>
-		<German>[ICON_BULLET]Erforderliche Stufe: %d1_Change</German>
+		<German>[ICON_BULLET]erforderliche Stufe: %d1_Change</German>
 		<Polish>[ICON_BULLET]Wymagany poziom: %d1_Change</Polish>
 	</TEXT>
 	<TEXT>
@@ -10536,6 +10610,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Freiherr</German>
 		<Italian>
 			<Text>Signorotto locale</Text>
 			<Gender>Male</Gender>
@@ -10754,6 +10829,7 @@
 		<Tag>TXT_KEY_PROMOTION_MARAUDER</Tag>
 		<English>Marauder</English>
 		<French>Maraudeur</French>
+		<German>Marodeur</German>
 		<Italian>Predone</Italian>
 		<Polish>Maruder</Polish>
 	</TEXT>
@@ -10761,6 +10837,7 @@
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
+		<German>[ICON_BULLET]erbeutet 4% des feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
 	</TEXT>
@@ -11611,6 +11688,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen I</German>
 		<Polish>Środki Nie-Śmiercionośne I</Polish>
 	</TEXT>
 	<TEXT>
@@ -11621,6 +11699,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen II</German>
 		<Polish>Środki Nie-Śmiercionośne II</Polish>
 	</TEXT>
 	<TEXT>
@@ -11631,6 +11710,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen III</German>
 		<Polish>Środki Nie-Śmiercionośne III</Polish>
 	</TEXT>
 	<TEXT>
@@ -11641,6 +11721,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen IV</German>
 		<Polish>Środki Nie-Śmiercionośne IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -11651,6 +11732,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen V</German>
 		<Polish>Środki Nie-Śmiercionośne V</Polish>
 	</TEXT>
 	<TEXT>
@@ -11781,6 +11863,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Spezialauftrag</German>
 		<Italian>
 			<Text>Commissione degli ufficiali</Text>
 			<Gender>Male</Gender>
@@ -11896,6 +11979,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Überwältigen</German>
 		<Italian>
 			<Text>Sopraffazione</Text>
 			<Gender>Male</Gender>
@@ -12292,6 +12376,7 @@
 		<Tag>TXT_KEY_PROMOTION_POISON_TIPS</Tag>
 		<English>Poison Tips</English>
 		<French>Pointes empoisonnées</French>
+		<German>Gift</German>
 		<Italian>Punte avvelenate</Italian>
 		<Polish>Zatrute Groty</Polish>
 	</TEXT>
@@ -12554,6 +12639,7 @@
 		<Tag>TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT</Tag>
 		<English>[ICON_BULLET]Requires some invisibility to use</English>
 		<French>[ICON_BULLET]Requiert une capacité d'invisibilité</French>
+		<German>[ICON_BULLET]benötigt Unsichtbarkeit</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PRIME_TIMBER_ARMOR</Tag>
@@ -13054,48 +13140,56 @@
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH</Tag>
 		<English>Recover (Tech)</English>
 		<French>Récupération (Tech)</French>
+		<German>Instandsetzung (Technologie)</German>
 		<Polish>Odzyskać (Tech)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH1</Tag>
 		<English>Recover (Tech) I</English>
 		<French>Récupération (Tech) I</French>
+		<German>Instandsetzung (Technologie) I</German>
 		<Polish>Odzyskać (Tech) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH2</Tag>
 		<English>Recover (Tech) II</English>
 		<French>Récupération (Tech) II</French>
+		<German>Instandsetzung (Technologie) II</German>
 		<Polish>Odzyskać (Tech) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH3</Tag>
 		<English>Recover (Tech) III</English>
 		<French>Récupération (Tech) III</French>
+		<German>Instandsetzung (Technologie) III</German>
 		<Polish>Odzyskać (Tech) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH4</Tag>
 		<English>Recover (Tech) IV</English>
 		<French>Récupération (Tech) IV</French>
+		<German>Instandsetzung (Technologie) IV</German>
 		<Polish>Odzyskać (Tech) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH5</Tag>
 		<English>Recover (Tech) V</English>
 		<French>Récupération (Tech) V</French>
+		<German>Instandsetzung (Technologie) V</German>
 		<Polish>Odzyskać (Tech) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH6</Tag>
 		<English>Recover (Tech) VI</English>
 		<French>Récupération (Tech) VI</French>
+		<German>Instandsetzung (Technologie) VI</German>
 		<Polish>Odzyskać (Tech) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH7</Tag>
 		<English>Recover (Tech) VII</English>
 		<French>Récupération (Tech) VII</French>
+		<German>Instandsetzung (Technologie) VII</German>
 		<Polish>Odzyskać (Tech) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -13185,7 +13279,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR1</Tag>
 		<English>Repair I</English>
 		<French>Réparation I</French>
-		<German>Reparieren I</German>
+		<German>Reparatur I</German>
 		<Italian>Riparazioni I</Italian>
 		<Spanish>Reparación I</Spanish>
 		<Polish>Naprawa I</Polish>
@@ -13194,7 +13288,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR2</Tag>
 		<English>Repair II</English>
 		<French>Réparation II</French>
-		<German>Reparieren II</German>
+		<German>Reparatur II</German>
 		<Italian>Riparazioni II</Italian>
 		<Spanish>Reparación II</Spanish>
 		<Polish>Naprawa II</Polish>
@@ -13203,7 +13297,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR3</Tag>
 		<English>Repair III</English>
 		<French>Réparation III</French>
-		<German>Reparieren III</German>
+		<German>Reparatur III</German>
 		<Italian>Riparazioni III</Italian>
 		<Spanish>Reparación III</Spanish>
 		<Polish>Naprawa III</Polish>
@@ -13212,144 +13306,168 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT</Tag>
 		<English>Repair (Aircraft)</English>
 		<French>Réparation (Avions)</French>
+		<German>Reparatur (Flugzeuge)</German>
 		<Polish>Naprawa (Samoloty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT1</Tag>
 		<English>Repair (Aircraft) I</English>
 		<French>Réparation (Avions) I</French>
+		<German>Reparatur (Flugzeuge) I</German>
 		<Polish>Naprawa (Samoloty) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT2</Tag>
 		<English>Repair (Aircraft) II</English>
 		<French>Réparation (Avions) II</French>
+		<German>Reparatur (Flugzeuge) II</German>
 		<Polish>Naprawa (Samoloty) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT3</Tag>
 		<English>Repair (Aircraft) III</English>
 		<French>Réparation (Avions) III</French>
+		<German>Reparatur (Flugzeuge) III</German>
 		<Polish>Naprawa (Samoloty) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT4</Tag>
 		<English>Repair (Aircraft) IV</English>
 		<French>Réparation (Avions) IV</French>
+		<German>Reparatur (Flugzeuge) IV</German>
 		<Polish>Naprawa (Samoloty) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT5</Tag>
 		<English>Repair (Aircraft) V</English>
 		<French>Réparation (Avions) V</French>
+		<German>Reparatur (Flugzeuge) V</German>
 		<Polish>Naprawa (Samoloty) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT6</Tag>
 		<English>Repair (Aircraft) VI</English>
 		<French>Réparation (Avions) VI</French>
+		<German>Reparatur (Flugzeuge) VI</German>
 		<Polish>Naprawa (Samoloty) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT7</Tag>
 		<English>Repair (Aircraft) VII</English>
 		<French>Réparation (Avions) VII</French>
+		<German>Reparatur (Flugzeuge) VII</German>
 		<Polish>Naprawa (Samoloty) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL</Tag>
 		<English>Repair (Mechanical)</English>
 		<French>Réparation (Véhicule)</French>
+		<German>Reparatur (Maschinen)</German>
 		<Polish>Naprawa (Pojazdy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL1</Tag>
 		<English>Repair (Mechanical) I</English>
 		<French>Réparation (Véhicule) I</French>
+		<German>Reparatur (Maschinen) I</German>
 		<Polish>Naprawa (Pojazdy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL2</Tag>
 		<English>Repair (Mechanical) II</English>
 		<French>Réparation (Véhicule) II</French>
+		<German>Reparatur (Maschinen) II</German>
 		<Polish>Naprawa (Pojazdy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL3</Tag>
 		<English>Repair (Mechanical) III</English>
 		<French>Réparation (Véhicule) III</French>
+		<German>Reparatur (Maschinen) III</German>
 		<Polish>Naprawa (Pojazdy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL4</Tag>
 		<English>Repair (Mechanical) IV</English>
 		<French>Réparation (Véhicule) IV</French>
+		<German>Reparatur (Maschinen) IV</German>
 		<Polish>Naprawa (Pojazdy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL5</Tag>
 		<English>Repair (Mechanical) V</English>
 		<French>Réparation (Véhicule) V</French>
+		<German>Reparatur (Maschinen) V</German>
 		<Polish>Naprawa (Pojazdy) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL6</Tag>
 		<English>Repair (Mechanical) VI</English>
 		<French>Réparation (Véhicule) VI</French>
+		<German>Reparatur (Maschinen) VI</German>
 		<Polish>Naprawa (Pojazdy) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL7</Tag>
 		<English>Repair (Mechanical) VII</English>
 		<French>Réparation (Véhicule) VII</French>
+		<German>Reparatur (Maschinen) VII</German>
 		<Polish>Naprawa (Pojazdy) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL</Tag>
 		<English>Repair (Naval)</English>
 		<French>Réparation (Navire)</French>
+		<German>Reparatur (Schiffe)</German>
 		<Polish>Naprawa (Okręty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL1</Tag>
 		<English>Repair (Naval) I</English>
 		<French>Réparation (Navire) I</French>
+		<German>Reparatur (Schiffe) I</German>
 		<Polish>Naprawa (Okręty) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL2</Tag>
 		<English>Repair (Naval) II</English>
 		<French>Réparation (Navire) II</French>
+		<German>Reparatur (Schiffe) II</German>
 		<Polish>Naprawa (Okręty) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL3</Tag>
 		<English>Repair (Naval) III</English>
 		<French>Réparation (Navire) III</French>
+		<German>Reparatur (Schiffe) III</German>
 		<Polish>Naprawa (Okręty) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL4</Tag>
 		<English>Repair (Naval) IV</English>
 		<French>Réparation (Navire) IV</French>
+		<German>Reparatur (Schiffe) IV</German>
 		<Polish>Naprawa (Okręty) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL5</Tag>
 		<English>Repair (Naval) V</English>
 		<French>Réparation (Navire) V</French>
+		<German>Reparatur (Schiffe) V</German>
 		<Polish>Naprawa (Okręty) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL6</Tag>
 		<English>Repair (Naval) VI</English>
 		<French>Réparation (Navire) VI</French>
+		<German>Reparatur (Schiffe) VI</German>
 		<Polish>Naprawa (Okręty) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL7</Tag>
 		<English>Repair (Naval) VII</English>
 		<French>Réparation (Navire) VII</French>
+		<German>Reparatur (Schiffe) VII</German>
 		<Polish>Naprawa (Okręty) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -14840,6 +14958,7 @@
 		<Tag>TXT_KEY_PROMOTION_SPECIAL_CARGO_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<German>[ICON_BULLET]ermöglicht den Transport von %s1:4_Change</German>
 		<Polish>[ICON_BULLET]Przygotowuje jednostkę do transportu innych jednostek %s1_Change</Polish>
 	</TEXT>
 	<TEXT>
@@ -15502,6 +15621,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer I</German>
 		<Italian>
 			<Text>Combattente di strada I</Text>
 			<Gender>Male</Gender>
@@ -15517,6 +15637,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer II</German>
 		<Italian>
 			<Text>Combattente di strada II</Text>
 			<Gender>Male</Gender>
@@ -15532,6 +15653,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer III</German>
 		<Italian>
 			<Text>Combattente di strada III</Text>
 			<Gender>Male</Gender>
@@ -15547,6 +15669,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer IV</German>
 		<Italian>
 			<Text>Combattente di strada IV</Text>
 			<Gender>Male</Gender>
@@ -15586,7 +15709,7 @@
 		<Tag>TXT_KEY_PROMOTION_SUB_COMBAT_TEXT</Tag>
 		<English>[ICON_BULLET]Adds %s1_SubCombatClass to the list of the unit's combat classes.</English>
 		<French>[ICON_BULLET]Ajoute %s1_SubCombatClass à la liste des Classes de combat de l'unité.</French>
-		<German>[ICON_BULLET]zu Kategorie %s1_SubCombatClass hinzufügen</German>
+		<German>[ICON_BULLET]zu Kategorie "%s1_SubCombatClass" hinzufügen</German>
 		<Italian>[ICON_BULLET]Aggiunge %s1_SubCombatClass alla lista delle classi di combattimento dell'unità.</Italian>
 		<Polish>[ICON_BULLET]Dodaje %s1_SubCombatClass do listy jednostek danej klasy bitewnej.</Polish>
 	</TEXT>
@@ -15750,6 +15873,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Taktiker</German>
 		<Italian>
 			<Text>Tattico</Text>
 			<Gender>Male</Gender>
@@ -15867,6 +15991,7 @@
 		<Tag>TXT_KEY_PROMOTION_TATTOO</Tag>
 		<English>Tattoo</English>
 		<French>Tatouages</French>
+		<German>Tätowierung</German>
 		<Italian>Tatuaggi</Italian>
 		<Polish>Tatuaże</Polish>
 	</TEXT>
@@ -16025,6 +16150,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode I</German>
 		<Polish>Do Śmierci I</Polish>
 	</TEXT>
 	<TEXT>
@@ -16035,6 +16161,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode II</German>
 		<Polish>Do Śmierci II</Polish>
 	</TEXT>
 	<TEXT>
@@ -16045,6 +16172,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode III</German>
 		<Polish>Do Śmierci III</Polish>
 	</TEXT>
 	<TEXT>
@@ -16055,6 +16183,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode IV</German>
 		<Polish>Do Śmierci IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -16851,41 +16980,49 @@
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION1</Tag>
 		<English>Warrior's Intuition I</English>
 		<French>Intuition du Guerrier I</French>
+		<German>Kriegerintuition I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION2</Tag>
 		<English>Warrior's Intuition II</English>
 		<French>Intuition du Guerrier II</French>
+		<German>Kriegerintuition II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION3</Tag>
 		<English>Warrior's Intuition III</English>
 		<French>Intuition du Guerrier III</French>
+		<German>Kriegerintuition III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY1</Tag>
 		<English>Waylay I</English>
 		<French>Détournement I</French>
+		<German>Wegelagerer I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY2</Tag>
 		<English>Waylay II</English>
 		<French>Détournement II</French>
+		<German>Wegelagerer II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY3</Tag>
 		<English>Waylay III</English>
 		<French>Détournement III</French>
+		<German>Wegelagerer III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY4</Tag>
 		<English>Waylay IV</English>
 		<French>Détournement IV</French>
+		<German>Wegelagerer IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY5</Tag>
 		<English>Waylay V</English>
 		<French>Détournement V</French>
+		<German>Wegelagerer V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
@@ -16916,6 +17053,7 @@
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
 		<English>Way of the Warrior</English>
 		<French>Voie du Guerrier</French>
+		<German>Weg des Kriegers</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
