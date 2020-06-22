@@ -6,13 +6,7 @@ from array import *
 GC = CyGlobalContext()
 GAME = GC.getGame()
 version = 15
-fileencoding = "latin_1" # aka "iso-8859-1"
-
-## self.bSpecial True will load the following additional special effects:
-## Team Abilities: MapCentering, MapTrading, OpenBordersTrading, IgnoreIrrigation etc
-## Team Effects: NukeInterception, EnemyWarWearinessModifier, ExtraDomainMoves, ExtraRouteChange, ImprovementYieldChange
-## Player Effects: GoldenAgeTurns, AnarchyTurns, Coastal Trade Routes, State Religion Building/Unit Production, CombatXP
-## City Effects: ExtraHappiness, ExtraHealth, ExtraTradeRoutes, BuildingYieldChange, BuildingCommerceChange, BuildingHappyChange, BuildingHealthChange, FreeBonus, NoBonusCount
+fEncode = 'utf-8'
 
 ############
 # parser functions for WB desc
@@ -231,20 +225,17 @@ class CvTeamDesc:
 		f.write("BeginTeam\n")
 
 		# Team ID (to make things easier to mess with in the text)
-		f.write("\tTeamSlot=%d, (%s)\n" %(idx, team.getName().encode(fileencoding)))
+		f.write("\tTeamSlot=%d, (%s)\n" %(idx, team.getName().encode(fEncode)))
 
 		if team.isAlive():
 			bMinorCiv = team.isMinorCiv()
 			if bMinorCiv:
 				f.write("\tMinorNationCiv=1\n")
-			bMapVisible = False
 			# write techs
 			for i in xrange(GC.getNumTechInfos()):
 				tech = GC.getTechInfo(i)
 				if team.isHasTech(i):
 					f.write("\tTech=%s\n" % tech.getType())
-					if tech.isMapVisible():
-						bMapVisible = True
 				if tech.isRepeat():
 					for j in xrange(team.getTechCount(i)):
 						f.write("\tTech=%s\n" % tech.getType())
@@ -254,7 +245,7 @@ class CvTeamDesc:
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if i == idx: continue
 					if team.isHasMet(i):
-						f.write("\tContactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fileencoding)))
+						f.write("\tContactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
 				# write Espionage Ever against other teams
 				if team.getEspionagePointsEver() > 0:
@@ -264,74 +255,47 @@ class CvTeamDesc:
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.getEspionagePointsAgainstTeam(i) > 0:
 						f.write("\tEspionageTeam=%d, EspionageAmount=%d, (%s)\n"
-							%(i, team.getEspionagePointsAgainstTeam(i), GC.getTeam(i).getName().encode(fileencoding))
+							%(i, team.getEspionagePointsAgainstTeam(i), GC.getTeam(i).getName().encode(fEncode))
 						)
 				if not bMinorCiv:
 					# write warring teams
 					for i in xrange(GC.getMAX_PC_TEAMS()):
 						if team.isHasMet(i) and team.isAtWar(i):
-							f.write("\tAtWar=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fileencoding)))
+							f.write("\tAtWar=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
 				# write permanent war/peace teams
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.isPermanentWarPeace(i):
-						f.write("\tPermanentWarPeace=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fileencoding)))
+						f.write("\tPermanentWarPeace=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
 				# write open borders other teams
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.isOpenBorders(i):
-						f.write("\tOpenBordersWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fileencoding)))
+						f.write("\tOpenBordersWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
 				# write defensive pact other teams
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.isDefensivePact(i):
-						f.write("\tDefensivePactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fileencoding)))
+						f.write("\tDefensivePactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
 				# write vassal state
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.isVassal(i):
 						iType = self.getRelationshipStatus(idx, i)
 						if iType == 1:
-							f.write("\tVassalOfTeam=%d, Type=%s, (%s)\n" %(i, "FREE", GC.getTeam(i).getName().encode(fileencoding)))
+							f.write("\tVassalOfTeam=%d, Type=%s, (%s)\n" %(i, "FREE", GC.getTeam(i).getName().encode(fEncode)))
 						elif iType == 0:
-							f.write("\tVassalOfTeam=%d, Type=%s, (%s)\n" %(i, "CAP", GC.getTeam(i).getName().encode(fileencoding)))
+							f.write("\tVassalOfTeam=%d, Type=%s, (%s)\n" %(i, "CAP", GC.getTeam(i).getName().encode(fEncode)))
 
 			for i in xrange(GC.getNumProjectInfos()):
 				for j in xrange(team.getProjectCount(i)):
 					f.write("\tProjectType=%s\n" %(GC.getProjectInfo(i).getType()))
-
-			if bMapVisible:
-				f.write("\tRevealMap=1\n")
 
 			if team.getVassalPower() != 0:
 				f.write("\tVassalPower=%d\n" % team.getVassalPower())
 			if team.getMasterPower() != 0:
 				f.write("\tMasterPower=%d\n" % team.getMasterPower())
 
-			if team.isMapCentering():
-				f.write("\tMapCentering=1\n")
-			if team.isMapTrading():
-				f.write("\tMapTrading=1\n")
-			if team.isTechTrading():
-				f.write("\tTechTrading=1\n")
-			if team.isGoldTrading():
-				f.write("\tGoldTrading=1\n")
-			if team.isOpenBordersTrading():
-				f.write("\tOpenBordersTrading=1\n")
-			if team.isDefensivePactTrading():
-				f.write("\tDefensivePactTrading=1\n")
-			if team.isPermanentAllianceTrading():
-				f.write("\tPermanentAllianceTrading=1\n")
-			if team.isVassalStateTrading():
-				f.write("\tVassalStateTrading=1\n")
-			if team.isBridgeBuilding():
-				f.write("\tBridgeBuilding=1\n")
-			if team.isIrrigation():
-				f.write("\tIrrigation=1\n")
-			if team.isIgnoreIrrigation():
-				f.write("\tIgnoreIrrigation=1\n")
-			if team.isWaterWork():
-				f.write("\tWaterWork=1\n")
 			if team.isExtraWaterSeeFrom():
 				f.write("\tExtraWaterSeeFrom=1\n")
 			if team.getNukeInterception() != 0:
@@ -385,22 +349,9 @@ class CvTeamDesc:
 		self.bVassalOfTeamList = []
 		self.projectType = []
 		self.isMinorNationCiv = 0
-		self.bRevealMap = 0
 		self.iMasterPower = 0
 		self.iVassalPower = 0
 		self.iEspionageEver = 0
-		self.bMapCentering = 0
-		self.bMapTrading = 0
-		self.bTechTrading = 0
-		self.bGoldTrading = 0
-		self.bOpenBordersTrading = 0
-		self.bDefensivePactTrading = 0
-		self.bPermanentAllianceTrading = 0
-		self.bVassalStateTrading = 0
-		self.bBridgeBuilding = 0
-		self.bIrrigation = 0
-		self.bIgnoreIrrigation = 0
-		self.bWaterWork = 0
 		self.bExtraWaterSeeFrom = 0
 		self.iNukeInterception = 0
 		self.iEnemyWarWeariness = 0
@@ -478,11 +429,6 @@ class CvTeamDesc:
 					self.projectType.append(v)
 					continue
 
-				v = parser.findTokenValue(toks, "RevealMap")
-				if v != -1:
-					self.bRevealMap = int(v)
-					continue
-
 				v = parser.findTokenValue(toks, "VassalPower")
 				if v != -1:
 					self.iVassalPower = int(v)
@@ -491,66 +437,6 @@ class CvTeamDesc:
 				v = parser.findTokenValue(toks, "MasterPower")
 				if v != -1:
 					self.iMasterPower = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "MapCentering")
-				if v!=-1:
-					self.bMapCentering = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "MapTrading")
-				if v!=-1:
-					self.bMapTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "TechTrading")
-				if v!=-1:
-					self.bTechTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "GoldTrading")
-				if v!=-1:
-					self.bGoldTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "OpenBordersTrading")
-				if v!=-1:
-					self.bOpenBordersTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "DefensivePactTrading")
-				if v!=-1:
-					self.bDefensivePactTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "PermanentAllianceTrading")
-				if v!=-1:
-					self.bPermanentAllianceTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "VassalStateTrading")
-				if v!=-1:
-					self.bVassalStateTrading = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "BridgeBuilding")
-				if v!=-1:
-					self.bBridgeBuilding = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "Irrigation")
-				if v!=-1:
-					self.bIrrigation = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "IgnoreIrrigation")
-				if v!=-1:
-					self.bIgnoreIrrigation = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "WaterWork")
-				if v!=-1:
-					self.bWaterWork = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "ExtraWaterSeeFrom")
@@ -602,11 +488,11 @@ class CvPlayerDesc:
 		# write leader and Civ Description info
 		if player.isAlive():
 			f.write("\tLeaderType=%s\n" % GC.getLeaderHeadInfo(player.getLeaderType()).getType())
-			f.write("\tLeaderName=%s\n" % player.getNameKey().encode(fileencoding))
-			f.write("\tCivDesc=%s\n" % player.getCivilizationDescriptionKey().encode(fileencoding))
-			f.write("\tCivShortDesc=%s\n" % player.getCivilizationShortDescriptionKey().encode(fileencoding))
-			f.write("\tCivAdjective=%s\n" % player.getCivilizationAdjectiveKey().encode(fileencoding))
-			f.write("\tFlagDecal=%s\n" % player.getFlagDecal().encode(fileencoding))
+			f.write("\tLeaderName=%s\n" % player.getNameKey().encode(fEncode))
+			f.write("\tCivDesc=%s\n" % player.getCivilizationDescriptionKey().encode(fEncode))
+			f.write("\tCivShortDesc=%s\n" % player.getCivilizationShortDescriptionKey().encode(fEncode))
+			f.write("\tCivAdjective=%s\n" % player.getCivilizationAdjectiveKey().encode(fEncode))
+			f.write("\tFlagDecal=%s\n" % player.getFlagDecal().encode(fEncode))
 			f.write("\tWhiteFlag=%d\n" % player.isWhiteFlag())
 			f.write("\tCivType=%s\n" % GC.getCivilizationInfo(player.getCivilizationType()).getType())
 			f.write("\tColor=%s\n" % GC.getPlayerColorInfo(player.getPlayerColor()).getType())
@@ -632,7 +518,7 @@ class CvPlayerDesc:
 				for i in xrange(GC.getMAX_PC_PLAYERS()):
 					playerX = GC.getPlayer(i)
 					if playerX.isAlive() and player.AI_getAttitudeExtra(i) != 0:
-						f.write("\tAttitudePlayer=%d, (%s), AttitudeExtra=%d\n" %(i, playerX.getName().encode(fileencoding), player.AI_getAttitudeExtra(i)))
+						f.write("\tAttitudePlayer=%d, (%s), AttitudeExtra=%d\n" %(i, playerX.getName().encode(fEncode), player.AI_getAttitudeExtra(i)))
 
 				if player.getGoldenAgeTurns() > 0:
 					f.write("\tGoldenAge=%d\n" % player.getGoldenAgeTurns())
@@ -720,27 +606,27 @@ class CvPlayerDesc:
 
 				v = parser.findTokenValue(toks, "LeaderName")
 				if v != -1:
-					self.szLeaderName = v.decode("latin_1")
+					self.szLeaderName = v.decode(fEncode)
 					continue
 
 				v = parser.findTokenValue(toks, "CivDesc")
 				if v != -1:
-					self.szCivDesc = v.decode("latin_1")
+					self.szCivDesc = v.decode(fEncode)
 					continue
 
 				v = parser.findTokenValue(toks, "CivShortDesc")
 				if v != -1:
-					self.szCivShortDesc = v.decode("latin_1")
+					self.szCivShortDesc = v.decode(fEncode)
 					continue
 
 				v = parser.findTokenValue(toks, "CivAdjective")
 				if v != -1:
-					self.szCivAdjective = v.decode("latin_1")
+					self.szCivAdjective = v.decode(fEncode)
 					continue
 
 				v = parser.findTokenValue(toks, "FlagDecal")
 				if v != -1:
-					self.szFlagDecal = v.decode("latin_1")
+					self.szFlagDecal = v.decode(fEncode)
 					continue
 
 				v = parser.findTokenValue(toks, "WhiteFlag")
@@ -899,21 +785,23 @@ class CvUnitDesc:
 		self.isIntercept = False
 		self.isPatrol = False
 		self.isPlunder = False
+		self.bCommander = False
 		self.szUnitAIType = "NO_UNITAI"
 
 		self.sScriptData = ""
 		self.iImmobile = 0
 		self.iBaseCombatStr = -1
-		self.iExtraCargo = 0
 
 	# save unit desc to a file
 	def write(self, f, unit, plot):
 		info = GC.getUnitInfo(unit.getUnitType())
 		f.write("\tBeginUnit\n\t\tUnitType=%s, UnitOwner=%d, (%s)\n"
-			%(info.getType(), unit.getOwner(), GC.getPlayer(unit.getOwner()).getName().encode(fileencoding))
+			%(info.getType(), unit.getOwner(), GC.getPlayer(unit.getOwner()).getName().encode(fEncode))
 		)
+		if unit.isCommander():
+			f.write("\t\tCommander=1\n")
 		if unit.getNameNoDesc():
-			f.write("\t\tUnitName=%s\n" % unit.getNameNoDesc().encode(fileencoding))
+			f.write("\t\tUnitName=%s\n" % unit.getNameNoDesc().encode(fEncode))
 		if unit.getLeaderUnitType() != -1:
 			f.write("\t\tLeaderUnitType=%s\n" % GC.getUnitInfo(unit.getLeaderUnitType()).getType())
 		if unit.getDamage() > 0:
@@ -945,8 +833,6 @@ class CvUnitDesc:
 			f.write("\t\tImmobile=%d\n" % unit.getImmobileTimer())
 		if unit.baseCombatStr() != info.getCombat():
 			f.write("\t\tCombatStr=%d\n" % unit.baseCombatStr())
-		if unit.cargoSpace() != info.getCargoSpace():
-			f.write("\t\tExtraCargo=%d\n" %(unit.cargoSpace() - info.getCargoSpace()))
 
 		f.write("\tEndUnit\n")
 
@@ -975,7 +861,12 @@ class CvUnitDesc:
 
 			v = parser.findTokenValue(toks, "UnitName")
 			if v != -1:
-				self.szName = v.decode("latin_1")
+				self.szName = v.decode(fEncode)
+				continue
+
+			v = parser.findTokenValue(toks, "Commander")
+			if v != -1:
+				self.bCommander = True
 				continue
 
 			v = parser.findTokenValue(toks, "LeaderUnitType")
@@ -1048,11 +939,6 @@ class CvUnitDesc:
 				self.iBaseCombatStr = int(v)
 				continue
 
-			v = parser.findTokenValue(toks, "ExtraCargo")
-			if v != -1:
-				self.iExtraCargo = int(v)
-				continue
-
 			if parser.findTokenValue(toks, "EndUnit") != -1:
 				break
 
@@ -1073,15 +959,15 @@ class CvUnitDesc:
 		unit = CyPlayer.initUnit(unitTypeNum, self.plotX, self.plotY, UnitAITypes(eUnitAI), self.facingDirection)
 		if not unit: return
 
-		if self.szName != None:
-			unit.setName(self.szName)
-		#leader unit type
+		if self.bCommander:
+			unit.setCommander(True)
 		if self.leaderUnitType != None:
 			leaderUnitTypeNum = GC.getInfoTypeForString(self.leaderUnitType)
 			if leaderUnitTypeNum > -1:
 				unit.setLeaderUnitType(leaderUnitTypeNum)
 
-		#other properties
+		if self.szName != None:
+			unit.setName(self.szName)
 		if self.damage != 0:
 			unit.setDamage(self.damage, -1)
 		if self.level != -1:
@@ -1100,14 +986,13 @@ class CvUnitDesc:
 			unit.getGroup().setActivityType(ActivityTypes.ACTIVITY_PATROL)
 		elif self.isPlunder:
 			unit.getGroup().setActivityType(ActivityTypes.ACTIVITY_PLUNDER)
-
-		if self.sScriptData:
-			unit.setScriptData(self.sScriptData)
-		unit.setImmobileTimer(self.iImmobile)
+		if self.iImmobile:
+			unit.setImmobileTimer(self.iImmobile)
 		if self.iBaseCombatStr > -1:
 			unit.setBaseCombatStr(self.iBaseCombatStr)
-		if self.iExtraCargo != 0:
-			unit.changeCargoSpace(self.iExtraCargo)
+		if self.sScriptData:
+			unit.setScriptData(self.sScriptData)
+
 
 ###########
 # serializes city data
@@ -1141,8 +1026,6 @@ class CvCityDesc:
 		self.lBuildingCommerce = []
 		self.lBuildingHappy = []
 		self.lBuildingHealth = []
-		self.lFreeBonus = []
-		self.lNoBonus = []
 
 	# write out city data
 	def write(self, f, plot):
@@ -1150,7 +1033,7 @@ class CvCityDesc:
 		CvUtil.pyAssert(not city.isNone(), "null city?")
 
 		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n\t\tCityPopulation=%d\n\t\tStoredFood=%d\n"
-			%(city.getOwner(), GC.getPlayer(city.getOwner()).getName().encode(fileencoding), city.getName().encode(fileencoding), city.getPopulation(), city.getFood())
+			%(city.getOwner(), GC.getPlayer(city.getOwner()).getName().encode(fEncode), city.getName().encode(fEncode), city.getPopulation(), city.getFood())
 		)
 		if city.isProductionUnit():
 			f.write("\t\tProductionUnit=%s\n" %(GC.getUnitInfo(city.getProductionUnit()).getType(),))
@@ -1187,7 +1070,7 @@ class CvCityDesc:
 		# Player culture
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if GC.getPlayer(iPlayerX).isAlive():
-				name = GC.getPlayer(iPlayerX).getName().encode(fileencoding)
+				name = GC.getPlayer(iPlayerX).getName().encode(fEncode)
 			else: name = ""
 			iPlayerCulture = city.getCulture(iPlayerX)
 			if iPlayerCulture > 0:
@@ -1216,12 +1099,6 @@ class CvCityDesc:
 			if city.getBuildingHealthChange(i) != 0:
 				f.write("\t\tModifiedBuilding=%s, Health=%s\n" %(szType, city.getBuildingHealthChange(i)))
 
-		for i in xrange(GC.getNumBonusInfos()):
-			if city.getFreeBonus(i) > 0:
-				f.write("\t\tFreeBonus=%s, Amount=%s\n" %(GC.getBonusInfo(i).getType(), city.getFreeBonus(i)))
-			if city.isNoBonus(i):
-				f.write("\t\tNoBonus=%s\n" % GC.getBonusInfo(i).getType())
-
 		f.write("\tEndCity\n")
 
 	# read in city data - at this point the first line 'BeginCity' has already been read
@@ -1245,7 +1122,7 @@ class CvCityDesc:
 			# City - Name
 			vName=parser.findTokenValue(toks, "CityName")
 			if vName != -1:
-				self.name = (vName).decode("latin_1")
+				self.name = (vName).decode(fEncode)
 				continue
 
 			# City - Population
@@ -1390,22 +1267,12 @@ class CvCityDesc:
 					self.lBuildingHealth.append([iBuilding, int(v)])
 					continue
 
-			v = parser.findTokenValue(toks, "FreeBonus")
-			if v != -1:
-				self.lFreeBonus.append([GC.getInfoTypeForString(v), int(parser.findTokenValue(toks, "Amount"))])
-				continue
-
-			v = parser.findTokenValue(toks, "NoBonus")
-			if v != -1:
-				self.lNoBonus.append(GC.getInfoTypeForString(v))
-				continue
-
 			if parser.findTokenValue(toks, "EndCity") != -1:
 				break
 
 	# after reading, this will actually apply the data
-	def apply(self, bSpecial):
-		city = GC.getPlayer(self.owner).initCity(self.plotX, self.plotY)
+	def apply(self):
+		self.city = city = GC.getPlayer(self.owner).initCity(self.plotX, self.plotY)
 
 		if self.name != None:
 			city.setName(self.name, False)
@@ -1476,23 +1343,25 @@ class CvCityDesc:
 			city.changeDefenseDamage(self.iDamage)
 		if self.iOccupation > 0:
 			city.setOccupationTimer(self.iOccupation)
-		if bSpecial:
-			city.changeExtraHappiness(self.iExtraHappiness - city.getExtraHappiness())
-			city.changeExtraHealth(self.iExtraHealth - city.getExtraHealth())
-			city.changeExtraTradeRoutes(self.iExtraTrade - city.getExtraTradeRoutes())
-			for item in self.lBuildingYield:
-				city.setBuildingYieldChange(item[0], item[1], item[2] - city.getBuildingYieldChange(item[0], item[1]))
-			for item in self.lBuildingCommerce:
-				city.setBuildingCommerceChange(item[0], item[1], item[2] - city.getBuildingCommerceChange(item[0], item[1]))
-			for item in self.lBuildingHappy:
-				city.setBuildingHappyChange(item[0], item[1] - city.getBuildingHappyChange(item[0]))
-			for item in self.lBuildingHealth:
-				city.setBuildingHealthChange(item[0], item[1] - city.getBuildingHealthChange(item[0]))
-			for item in self.lFreeBonus:
-				city.changeFreeBonus(item[0], item[1] - city.getFreeBonus(item[0]))
-			for item in self.lNoBonus:
-				if city.isNoBonus(item): continue
-				city.changeNoBonusCount(item, 1)
+
+	def postApply(self):
+		city = self.city
+		city.changeExtraHappiness(self.iExtraHappiness - city.getExtraHappiness())
+		city.changeExtraHealth(self.iExtraHealth - city.getExtraHealth())
+		city.changeExtraTradeRoutes(self.iExtraTrade - city.getExtraTradeRoutes())
+		for item in self.lBuildingYield:
+			city.setBuildingYieldChange(item[0], item[1], -city.getBuildingYieldChange(item[0], item[1]))
+			city.setBuildingYieldChange(item[0], item[1], item[2])
+		for item in self.lBuildingCommerce:
+			city.setBuildingCommerceChange(item[0], item[1], -city.getBuildingCommerceChange(item[0], item[1]))
+			city.setBuildingCommerceChange(item[0], item[1], item[2])
+		for item in self.lBuildingHappy:
+			city.setBuildingHappyChange(item[0], -city.getBuildingHappyChange(item[0]))
+			city.setBuildingHappyChange(item[0], item[1])
+		for item in self.lBuildingHealth:
+			city.setBuildingHealthChange(item[0], -city.getBuildingHealthChange(item[0]))
+			city.setBuildingHealthChange(item[0], item[1])
+
 
 ##########
 # serializes plot data
@@ -1586,7 +1455,7 @@ class CvPlotDesc:
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if GC.getPlayer(iPlayerX).isAlive():
-				name = GC.getPlayer(iPlayerX).getName().encode(fileencoding)
+				name = GC.getPlayer(iPlayerX).getName().encode(fEncode)
 			else: name = ""
 			iPlayerCulture = plot.getCulture(iPlayerX)
 			if iPlayerCulture > 0:
@@ -1755,10 +1624,6 @@ class CvPlotDesc:
 		for u in self.unitDescs:
 			u.apply()
 
-	def applyCity(self, bSpecial):
-		if self.cityDesc:
-			self.cityDesc.apply(bSpecial)
-
 ###############
 # serialize map data
 class CvMapDesc:
@@ -1885,7 +1750,7 @@ class CvSignDesc:
 		f.write("BeginSign\n")
 		f.write("\tplotX=%d\n" % sign.getPlot().getX())
 		f.write("\tplotY=%d\n" % sign.getPlot().getY())
-		f.write("\tplayerType=%d, (%s)\n" %(sign.getPlayerType(), GC.getPlayer(sign.getPlayerType()).getName().encode(fileencoding)))
+		f.write("\tplayerType=%d, (%s)\n" %(sign.getPlayerType(), GC.getPlayer(sign.getPlayerType()).getName().encode(fEncode)))
 		f.write("\tcaption=%s\n" % sign.getCaption())
 		f.write("EndSign\n")
 
@@ -2045,21 +1910,34 @@ class CvWBDesc:
 
 			for item in pWBTeam.bContactWithTeamList:
 				team.meet(item, False)
+
 			for item in pWBTeam.aaiEspionageAgainstTeams:
 				team.setEspionagePointsAgainstTeam(item[0], item[1])
+			if pWBTeam.iEspionageEver > 0:
+				team.setEspionagePointsEver(pWBTeam.iEspionageEver)
+
 			if pWBTeam.isMinorNationCiv:
 				team.setIsMinorCiv(True, False)
 			else:
 				for item in pWBTeam.bWarWithTeamList:
 					team.declareWar(item, False, WarPlanTypes.NO_WARPLAN)
+
 			for item in pWBTeam.bPermanentWarPeaceList:
 				team.setPermanentWarPeace(item, True)
+
 			for item in pWBTeam.bOpenBordersWithTeamList:
 				team.signOpenBorders(item)
+
 			for item in pWBTeam.bDefensivePactWithTeamList:
 				team.signDefensivePact(item)
+
 			for item in pWBTeam.bVassalOfTeamList:
 				GC.getTeam(item[0]).assignVassal(iTeamLoop, item[1])
+			if pWBTeam.iVassalPower > 0:
+				team.setVassalPower(pWBTeam.iVassalPower)
+			if pWBTeam.iMasterPower > 0:
+				team.setMasterPower(pWBTeam.iMasterPower)
+
 			for TYPE in pWBTeam.projectType:
 				iProject = GC.getInfoTypeForString(TYPE)
 				team.changeProjectCount(iProject, 1)
@@ -2072,7 +1950,6 @@ class CvWBDesc:
 
 			if player.isNPC(): continue
 
-			player.setGold(pWBPlayer.iStartingGold)
 			if pWBPlayer.iStartingX != -1 and pWBPlayer.iStartingY != -1:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
@@ -2095,65 +1972,50 @@ class CvWBDesc:
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
 
+		# Apply city data
 		for item in self.plotDesc:
-			item.applyCity(self.bSpecial)
+			if item.cityDesc:
+				item.cityDesc.apply()
+		for item in self.plotDesc:
+			if item.cityDesc:
+				item.cityDesc.postApply()
 
-		for i in xrange(GC.getMAX_PC_TEAMS()):
-			pWBTeam = self.teamsDesc[i]
-			iTeamX = pWBTeam.iTeam
-			team = GC.getTeam(iTeamX)
-			if pWBTeam.bRevealMap:
-				MAP.setRevealedPlots(iTeamX, True, True)
-			if pWBTeam.iVassalPower > 0:
-				team.setVassalPower(pWBTeam.iVassalPower)
-			if pWBTeam.iMasterPower > 0:
-				team.setMasterPower(pWBTeam.iMasterPower)
-			if pWBTeam.iEspionageEver > 0:
-				team.setEspionagePointsEver(pWBTeam.iEspionageEver)
-
-			if self.bSpecial:
-				team.setMapCentering(pWBTeam.bMapCentering)
-				team.changeMapTradingCount(pWBTeam.bMapTrading)
-				team.changeTechTradingCount(pWBTeam.bTechTrading)
-				team.changeGoldTradingCount(pWBTeam.bGoldTrading)
-				team.changeOpenBordersTradingCount(pWBTeam.bOpenBordersTrading)
-				team.changeDefensivePactTradingCount(pWBTeam.bDefensivePactTrading)
-				team.changePermanentAllianceTradingCount(pWBTeam.bPermanentAllianceTrading)
-				team.changeVassalTradingCount(pWBTeam.bVassalStateTrading)
-				team.changeBridgeBuildingCount(pWBTeam.bBridgeBuilding)
-				team.changeIrrigationCount(pWBTeam.bIrrigation)
-				team.changeIgnoreIrrigationCount(pWBTeam.bIgnoreIrrigation)
-				team.changeWaterWorkCount(pWBTeam.bWaterWork)
-				team.changeNukeInterception(pWBTeam.iNukeInterception - team.getNukeInterception())
-				team.changeEnemyWarWearinessModifier(pWBTeam.iEnemyWarWeariness- team.getEnemyWarWearinessModifier())
-				for item in pWBTeam.lDomainMoves:
-					team.changeExtraMoves(item[0], item[1] - team.getExtraMoves(item[0]))
-				for item in pWBTeam.lRouteMoves:
-					team.changeRouteChange(item[0], item[1] - team.getRouteChange(item[0]))
-				for item in pWBTeam.lImprovementYield:
-					team.changeImprovementYieldChange(item[0], item[1], item[2] - team.getImprovementYieldChange(item[0], item[1]))
-
-		if self.bSpecial:
-			for i in xrange(GC.getMAX_PC_PLAYERS()):
-				pWBPlayer = self.playersDesc[i]
-				player = GC.getPlayer(pWBPlayer.iPlayer)
-				player.changeGreatGeneralsThresholdModifier(pWBPlayer.iCombatXP_ThresholdMod)
-				player.setCombatExperience(pWBPlayer.iCombatXP)
-				player.changeGoldenAgeTurns(pWBPlayer.iGoldenAge - player.getGoldenAgeTurns())
-				player.changeAnarchyTurns(pWBPlayer.iAnarchy - player.getAnarchyTurns())
-				player.changeCoastalTradeRoutes(pWBPlayer.iCoastalTradeRoute - player.getCoastalTradeRoutes())
-				player.changeStateReligionUnitProductionModifier(pWBPlayer.iStateReligionUnit - player.getStateReligionUnitProductionModifier())
-				player.changeStateReligionBuildingProductionModifier(pWBPlayer.iStateReligionBuilding - player.getStateReligionBuildingProductionModifier())
-
+		# Apply team reveal and culture to plots
 		for iPlotX in range(self.mapDesc.numPlotsWritten):
 			pWBPlot = self.plotDesc[iPlotX]
 			if pWBPlot.lCulture or pWBPlot.abTeamPlotRevealed:
 				plot = MAP.plot(pWBPlot.iX, pWBPlot.iY)
+				for iTeamX in pWBPlot.abTeamPlotRevealed:
+					plot.setRevealed(iTeamX, True, False, -1)
 				for item in pWBPlot.lCulture:
 					plot.setCulture(item[0], item[1], True)
-				for iTeamX in pWBPlot.abTeamPlotRevealed:
-					plot.setRevealed(iTeamX, True, False, TeamTypes.NO_TEAM)
 
+		# Final team pass
+		for pWBTeam in self.teamsDesc:
+			team = GC.getTeam(pWBTeam.iTeam)
+			team.changeEnemyWarWearinessModifier(pWBTeam.iEnemyWarWeariness - team.getEnemyWarWearinessModifier())
+			team.changeNukeInterception(pWBTeam.iNukeInterception - team.getNukeInterception())
+			for item in pWBTeam.lDomainMoves:
+				team.changeExtraMoves(item[0], item[1] - team.getExtraMoves(item[0]))
+			for item in pWBTeam.lRouteMoves:
+				team.changeRouteChange(item[0], item[1] - team.getRouteChange(item[0]))
+			for item in pWBTeam.lImprovementYield:
+				team.changeImprovementYieldChange(item[0], item[1], item[2] - team.getImprovementYieldChange(item[0], item[1]))
+
+		# Final player pass
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
+			pWBPlayer = self.playersDesc[i]
+			player = GC.getPlayer(pWBPlayer.iPlayer)
+			player.setGold(pWBPlayer.iStartingGold)
+			player.changeGreatGeneralsThresholdModifier(pWBPlayer.iCombatXP_ThresholdMod)
+			player.setCombatExperience(pWBPlayer.iCombatXP)
+			player.changeGoldenAgeTurns(pWBPlayer.iGoldenAge - player.getGoldenAgeTurns())
+			player.changeAnarchyTurns(pWBPlayer.iAnarchy - player.getAnarchyTurns())
+			player.changeCoastalTradeRoutes(pWBPlayer.iCoastalTradeRoute - player.getCoastalTradeRoutes())
+			player.changeStateReligionUnitProductionModifier(pWBPlayer.iStateReligionUnit - player.getStateReligionUnitProductionModifier())
+			player.changeStateReligionBuildingProductionModifier(pWBPlayer.iStateReligionBuilding - player.getStateReligionBuildingProductionModifier())
+
+		# Apply unit data
 		for item in self.plotDesc:
 			item.applyUnits()
 
@@ -2170,8 +2032,6 @@ class CvWBDesc:
 		if not os.path.isfile(fileName+ext):
 			CvUtil.pyPrint("Error: file %s does not exist" %(fileName+ext,))
 			return -1	# failed
-
-		self.bSpecial = 1
 
 		f = file(fileName+ext, "r")		# open text file
 		parser = CvWBParser()
