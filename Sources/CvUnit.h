@@ -610,7 +610,7 @@ public:
 	CvUnit* getCommander() const;
 	void tryUseCommander(); //assigns m_pUsedCommander by call to getCommander() and consumes command points from used commander.
 	bool isCommander() const; //Exposed to python
-	void setCommander(bool bNewVal);
+	void setCommander(bool bNewVal); //Exposed to python
 	void nullUsedCommander(); //delete m_pUsedCommander
 	void clearCommanderCache() ; //	Should be called prior to each turn
 

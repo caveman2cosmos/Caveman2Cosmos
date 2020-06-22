@@ -9,6 +9,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_AGGRESSIVE_PROMOTION</Tag>
 		<English>Aggressive Promotion Line</English>
 		<French>Spécialisation Aggressif</French>
+		<German>Aggressiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ALOOF</Tag>
@@ -254,6 +255,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_PACIFIST</Tag>
 		<English>Pacifist Promotion Line</English>
 		<French>Spécialisation Pacifiste</French>
+		<German>Pazifist</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_PIOUS</Tag>
@@ -384,21 +386,25 @@
 		<Tag>TXT_KEY_PROMOTION_AGGRESSIVE0</Tag>
 		<English>Aggressive</English>
 		<French>Aggressif</French>
+		<German>Aggressiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AGGRESSIVE1</Tag>
 		<English>Aggressive I</English>
 		<French>Aggressif I</French>
+		<German>Aggressiv I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AGGRESSIVE2</Tag>
 		<English>Aggressive II</English>
 		<French>Aggressif II</French>
+		<German>Aggressiv II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AGGRESSIVE3</Tag>
 		<English>Aggressive III</English>
 		<French>Aggressif III</French>
+		<German>Aggressiv III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BARBARIC</Tag>
@@ -734,21 +740,25 @@
 		<Tag>TXT_KEY_PROMOTION_PACIFIST</Tag>
 		<English>Pacifist</English>
 		<French>Pacifiste</French>
+		<German>Pazifist</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PACIFIST1</Tag>
 		<English>Pacifist I</English>
 		<French>Pacifiste I</French>
+		<German>Pazifist I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PACIFIST2</Tag>
 		<English>Pacifist II</English>
 		<French>Pacifiste II</French>
+		<German>Pazifist II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PACIFIST3</Tag>
 		<English>Pacifist III</English>
 		<French>Pacifiste III</French>
+		<German>Pazifist III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PROTECTIVE</Tag>

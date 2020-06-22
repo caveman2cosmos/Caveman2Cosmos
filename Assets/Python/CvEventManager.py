@@ -2449,7 +2449,7 @@ class CvEventManager:
 
 	def onReligionFounded(self, argsList):
 		iReligion, iPlayer = argsList
-		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and not GAME.GetWorldBuilderMode():
+		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and GAME.isFinalInitialized() and not GAME.GetWorldBuilderMode():
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
 			popupInfo.setData1(iReligion)
