@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -35127,7 +35127,6 @@ EndPlot
 BeginPlot
 	x=33,y=47
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -67448,7 +67447,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=34
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -68674,7 +68672,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=58
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -81466,7 +81463,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=23
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=2
 EndPlot
@@ -87949,7 +87945,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=23
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -93498,7 +93493,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=51
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

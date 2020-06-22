@@ -3,7 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ENTERTAIN_CITY</Tag>
 		<English>Entertain the city.</English>
-		<French>Divertir la Ville.</French>
+		<French>Divertir la ville.</French>
 		<Italian>Intrattieni la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
 	</TEXT>
@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ENTERTAIN_CITY</Tag>
 		<English>Entertain the city.</English>
-		<French>Divertir la Ville.</French>
+		<French>Divertir la ville.</French>
 		<Italian>Hai intrattenuto la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
 	</TEXT>
@@ -31,7 +31,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXPERIENCED_ARTIST</Tag>
 		<English>Experienced Artist</English>
-		<French>Artiste Expérimenté</French>
+		<French>Artiste expérimenté</French>
 		<Italian>Artista esperto</Italian>
 		<Polish>Doświadczony Artysta</Polish>
 	</TEXT>
@@ -39,6 +39,7 @@
 		<Tag>TXT_KEY_UNIT_BARD</Tag>
 		<English>Bard</English>
 		<French>Barde</French>
+		<Italian>Bardo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD_PEDIA</Tag>
@@ -56,11 +57,7 @@
 		<Tag>TXT_KEY_UNIT_CELEBRITY</Tag>
 		<English>Celebrity</English>
 		<French>Célébrité</French>
-		<Italian>
-			<Text>Celebrità</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Celebrità</Italian>
 		<Polish>Celebryta</Polish>
 	</TEXT>
 	<TEXT>
@@ -73,11 +70,7 @@
 		<Tag>TXT_KEY_UNIT_STORY_TELLER</Tag>
 		<English>Story Teller</English>
 		<French>Conteur d'histoire</French>
-		<Italian>
-			<Text>Cantastorie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cantastorie</Italian>
 		<Polish>Gawdziarz</Polish>
 	</TEXT>
 	<TEXT>

@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -24736,7 +24736,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=25
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -32195,7 +32194,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=15
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -38716,7 +38714,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=26
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -40863,7 +40860,6 @@ EndPlot
 BeginPlot
 	x=38,y=25
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -41991,7 +41987,6 @@ EndPlot
 BeginPlot
 	x=39,y=36
 	BonusType=BONUS_PAPYRUS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -45034,7 +45029,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=7
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -60361,7 +60355,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=42
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -61444,7 +61437,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=44
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -69943,7 +69935,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=39
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -73142,7 +73133,6 @@ EndPlot
 BeginPlot
 	x=68,y=41
 	BonusType=BONUS_PAPYRUS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -85946,7 +85936,6 @@ EndPlot
 BeginPlot
 	x=80,y=40
 	BonusType=BONUS_PARROTS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -95583,7 +95572,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=25
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -97810,7 +97798,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=38
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -100869,7 +100856,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=14
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -115826,7 +115812,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=12
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot

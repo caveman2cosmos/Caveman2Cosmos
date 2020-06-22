@@ -2,7 +2,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
-#include "BetterBTSAI.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 //	KOSHLING MOD - calculate all possible building focuses at once
 //	to avoid multiple looping - need to know how many options there
@@ -36,7 +37,7 @@
 #define NUM_ALL_BUILDINGFOCUS_FLAGS				20
 
 //	Helper function to detrmine if a given bonus is provided by a building
-static bool isFreeBonusOfBuilding(CvBuildingInfo& kBuilding, BonusTypes eBonus)
+static bool isFreeBonusOfBuilding(const CvBuildingInfo& kBuilding, BonusTypes eBonus)
 {
 	return kBuilding.isFreeBonusOfBuilding(eBonus);
 }
@@ -734,10 +735,10 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 		if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 		{
-			UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
+			const UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 			if (eGreatPeopleUnit != NO_UNIT)
 			{
-				CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
+				const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
 				if (kUnitInfo.getGreatWorkCulture() > 0)
 				{
 					iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
@@ -872,20 +873,20 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		//	Koshling - evaluate properties
 	int iPropertyValue = 0;
 
-	CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
+	const CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
 
 	for (int i = 0; i < pMani->getNumSources(); i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
 			(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT))
 		{
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty) + getPropertyNonBuildingSource(eProperty);
-			int iNewSourceSize = iCurrentSourceSize + static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+			int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			int iDecayPercent = getPropertyDecay(eProperty);
 
 			//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -4241,7 +4242,7 @@ void CvCityAI::AI_chooseProduction()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, UnitAITypes* pSelectableTypes, bool bAsync, UnitAITypes* peBestUnitAI, bool bNoRand, bool bNoWeighting, CvUnitSelectionCriteria* criteria)
+UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, UnitAITypes* pSelectableTypes, bool bAsync, UnitAITypes* peBestUnitAI, bool bNoRand, bool bNoWeighting, const CvUnitSelectionCriteria* criteria)
 {
 	iBestUnitValue = 0;
 
@@ -4523,7 +4524,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 }
 
 
-UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync, bool bNoRand, CvUnitSelectionCriteria* criteria)
+UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync, bool bNoRand, const CvUnitSelectionCriteria* criteria)
 {
 	PROFILE_FUNC();
 
@@ -4759,19 +4760,19 @@ std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFoc
 	return scoredBuildings;
 }
 
-bool AI_buildingInfluencesProperty(CvCity* city, CvBuildingInfo& buildingInfo, PropertyTypes eProperty)
+bool AI_buildingInfluencesProperty(const CvCity* city, const CvBuildingInfo& buildingInfo, PropertyTypes eProperty)
 {
 	bool bFoundValidation = false;
-	CvPropertyManipulators* pMani = buildingInfo.getPropertyManipulators();
-	int numSources = pMani->getNumSources();
+	const CvPropertyManipulators* pMani = buildingInfo.getPropertyManipulators();
+	const int numSources = pMani->getNumSources();
 	for (int i = 0; i < numSources; i++)
 	{
-		CvPropertySource* pSource = pMani->getSource(i);
+		const CvPropertySource* pSource = pMani->getSource(i);
 		//	For now we're only interested in constant sources
 		//	TODO - expand this as buildings add other types
 		if (pSource->getProperty() == eProperty &&
 			pSource->getType() == PROPERTYSOURCE_CONSTANT &&
-			GC.getPropertyInfo(eProperty).getAIWeight() * static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(city->getGameObject()) > 0)
+			GC.getPropertyInfo(eProperty).getAIWeight() * static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(city->getGameObject()) > 0)
 		{
 			bFoundValidation = true;
 			break;
@@ -5088,11 +5089,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
-	ReligionTypes eStateReligion = kOwner.getStateReligion();
+	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 
 	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
 
@@ -5205,8 +5206,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	bool bSpaceVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
 
 	int iValue = 0;
-
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 
 	{
 		PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.MainBody");
@@ -6926,7 +6925,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	return std::max(0, iValue);
 }
 
-int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
+int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
 {
 	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
 
@@ -8471,7 +8470,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	iProductionMultiplier = 100;
 	iDesiredFoodChange = 0;
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	int aiFinalYields[NUM_YIELD_TYPES];
 
@@ -8490,12 +8489,10 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 
 			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
-				int iCount = (kPlayer.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD));
-
 				bool bUseBaseValue = true;
-				//If the tile has a BestBuild or is being improved, then use the BestBuild
-				//determine if the tile is being improved.
-				if (iCount > 0)
+				// If the tile has a BestBuild or is being improved,
+				// then use the BestBuild determine if the tile is being improved.
+				if (kPlayer.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD) > 0)
 				{
 					BuildTypes eBuild = NO_BUILD;
 					if (m_aeBestBuild[iI] != NO_BUILD && m_aiBestBuildValue[iI] > 0)
@@ -8513,29 +8510,20 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 						).get_value_or(NO_BUILD);
 					}
 
-					if( eBuild != NO_BUILD )
+					if (eBuild != NO_BUILD)
 					{
-						ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
-							bool bIgnoreFeature = false;
-							if (pLoopPlot->getFeatureType() != NO_FEATURE)
-							{
-								if (GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType()))
-								{
-									bIgnoreFeature = true;
-								}
-							}
-
+							const bool bIgnoreFeature = pLoopPlot->getFeatureType() != NO_FEATURE && GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType());
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
+								aiFinalYields[iJ] = pLoopPlot->calculateNatureYield((YieldTypes)iJ, getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, (YieldTypes)iJ, getOwner(), false);
 							}
 						}
 					}
 				}
-
 				//Otherwise use the base value.
 				if (bUseBaseValue)
 				{
@@ -8550,7 +8538,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 					}
 				}
 
-				if (pLoopPlot->isBeingWorked() || (((aiFinalYields[YIELD_FOOD]*10) + (aiFinalYields[YIELD_PRODUCTION]*6) + (aiFinalYields[YIELD_COMMERCE]*4)) > 21))
+				if (pLoopPlot->isBeingWorked() || 21 < aiFinalYields[YIELD_FOOD]*10 + aiFinalYields[YIELD_PRODUCTION]*6 + aiFinalYields[YIELD_COMMERCE]*4)
 				{
 					if (pLoopPlot->isBeingWorked())
 					{
@@ -8568,12 +8556,18 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 
 				if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 				{
-					int iNetFood = (aiFinalYields[YIELD_FOOD] - GC.getFOOD_CONSUMPTION_PER_POPULATION());
-					iBonusFoodSurplus += std::max(0, iNetFood);
-					iBonusFoodDeficit += std::max(0, -iNetFood);
+					const int iNetFood = aiFinalYields[YIELD_FOOD] - GC.getFOOD_CONSUMPTION_PER_POPULATION();
+					if (0 < iNetFood)
+					{
+						iBonusFoodSurplus += iNetFood;
+					}
+					else if (iNetFood < 0)
+					{
+						iBonusFoodDeficit -= iNetFood;
+					}
 				}
 
-				if ((pLoopPlot->getFeatureType()) != NO_FEATURE)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE)
 				{
 					iFeatureFoodSurplus += std::max(0, pLoopPlot->calculateNatureYield(YIELD_FOOD, getTeam()) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
 				}
@@ -8587,39 +8581,32 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	}
 
 
-	int iBonusFoodDiff = ((iBonusFoodSurplus + iFeatureFoodSurplus) - (iBonusFoodDeficit + iHillFoodDeficit / 2));
+	const int iBonusFoodDiff = iBonusFoodSurplus + iFeatureFoodSurplus - iBonusFoodDeficit - iHillFoodDeficit / 2;
 	if (iBonusFoodDiff < 2)
 	{
 		iFoodMultiplier += 10 * (2 - iBonusFoodDiff);
 	}
+	const int iTargetSize = AI_getTargetSize();
 
-	int iHealth = goodHealth() - badHealth();
-	int iTargetSize = AI_getTargetSize();
-
-	//int iExtraFoodForGrowth = (std::max(0, iTargetSize - getPopulation()) + 3) / 4;
-	int iExtraFoodForGrowth = (std::max(0, iTargetSize - getPopulation() + 3)) / 4; // K-Mod!!
+	int iExtraFoodForGrowth = std::max(0, iTargetSize - getPopulation() + 3) / 4;
 	if (getPopulation() < iTargetSize)
 	{
-		iExtraFoodForGrowth ++;
+		iExtraFoodForGrowth++;
 	}
 
-	int iFoodDifference = iFoodTotal - ((iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION()) + iExtraFoodForGrowth);
+	const int iFoodDifference = iFoodTotal - iExtraFoodForGrowth - iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION();
 
-	iDesiredFoodChange = -iFoodDifference + std::max(0, -iHealth);
-	if (iTargetSize > getPopulation())
+	iDesiredFoodChange = -iFoodDifference + std::max(0, badHealth() - goodHealth());
+	if (iDesiredFoodChange > 3 && iTargetSize > getPopulation())
 	{
-		if (iDesiredFoodChange > 3)
-		{
-			iDesiredFoodChange = (iDesiredFoodChange + 3) / 2;
-		}
+		iDesiredFoodChange = (iDesiredFoodChange + 3) / 2;
 	}
 
 	if (iFoodDifference > 4)
 	{
 		iFoodMultiplier -= 8 + 4 * iFoodDifference;
 	}
-
-	if (iFoodDifference < 0)
+	else if (iFoodDifference < 0)
 	{
 		iFoodMultiplier +=  -iFoodDifference * 4;
 	}
@@ -8628,34 +8615,30 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	{
 		iProductionMultiplier += (80 - 8 * iProductionTotal);
 	}
-	int iProductionTarget = 1 + (std::min(getPopulation(), (iTargetSize * 3) / 5));
+	const int iProductionTarget = 1 + std::min(getPopulation(), iTargetSize * 3 / 5);
 
 	if (iProductionTotal < iProductionTarget)
 	{
 		iProductionMultiplier += 8 * (iProductionTarget - iProductionTotal);
 	}
 
-	if ((iBonusFoodSurplus + iFeatureFoodSurplus > 5) && ((iBonusFoodDeficit + iHillFoodDeficit) > 5))
+	if (iBonusFoodSurplus + iFeatureFoodSurplus > 5	&& iBonusFoodDeficit + iHillFoodDeficit > 8)
 	{
-		if ((iBonusFoodDeficit + iHillFoodDeficit) > 8)
-		{
-			//probably a good candidate for a wonder pump
-			iProductionMultiplier += 40;
-			iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
-		}
+		//probably a good candidate for a wonder pump
+		iProductionMultiplier += 40;
+		iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
 	}
 
-	int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-	int iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
-	int iRatio = (100 * iNetExpenses) / std::max(1, iNetCommerce);
+	const int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
+	const int iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
+	const int iRatio = 100 * iNetExpenses / std::max(1, iNetCommerce);
 
 	if (iRatio > 40)
 	{
 		iCommerceMultiplier += (33 * (iRatio - 40)) / 60;
 	}
-
 	// AI no longer uses emphasis except for short term boosts.
-	if( isHuman() )
+	if (isHuman())
 	{
 		if (AI_isEmphasizeYield(YIELD_FOOD))
 		{
@@ -8673,39 +8656,38 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 			iCommerceMultiplier /= 100;
 		}
 	}
+	// Now we normalize the effect by # of cities
+	const int iNumCities = kPlayer.getNumCities();
+	// In short, the relative multipliers should *never* make a difference in an OCC
+	// so this indeed equals "100" for the iNumCities == 1 case.
+	if (iNumCities > 1)
+	{
+		int iProductionAdvantage = 100 * AI_yieldMultiplier(YIELD_PRODUCTION) / kPlayer.AI_averageYieldMultiplier(YIELD_PRODUCTION);
 
-	int iProductionAdvantage = 100 * AI_yieldMultiplier(YIELD_PRODUCTION);
-	iProductionAdvantage /= kPlayer.AI_averageYieldMultiplier(YIELD_PRODUCTION);
-	iProductionAdvantage *= kPlayer.AI_averageYieldMultiplier(YIELD_COMMERCE);
-	iProductionAdvantage /= AI_yieldMultiplier(YIELD_COMMERCE);
+		iProductionAdvantage *= kPlayer.AI_averageYieldMultiplier(YIELD_COMMERCE);
+		iProductionAdvantage /= AI_yieldMultiplier(YIELD_COMMERCE);
 
-	//now we normalize the effect by # of cities
+		iProductionAdvantage = (iProductionAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1);
 
-	int iNumCities = kPlayer.getNumCities();
-	FAssert(iNumCities > 0);//superstisious?
+		iProductionMultiplier *= iProductionAdvantage;
+		iProductionMultiplier /= 100;
 
-	//in short in an OCC the relative multipliers should *never* make a difference
-	//so this indeed equals "100" for the iNumCities == 0 case.
-	iProductionAdvantage = ((iProductionAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1));
+		iCommerceMultiplier *= 100;
+		iCommerceMultiplier /= iProductionAdvantage;
 
-	iProductionMultiplier *= iProductionAdvantage;
-	iProductionMultiplier /= 100;
+		int iGreatPeopleAdvantage = 100 * getTotalGreatPeopleRateModifier() / kPlayer.AI_averageGreatPeopleMultiplier();
 
-	iCommerceMultiplier *= 100;
-	iCommerceMultiplier /= iProductionAdvantage;
+		iGreatPeopleAdvantage = (iGreatPeopleAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1);
+		iGreatPeopleAdvantage += 200; //gpp multipliers are larger than others so lets not go overboard
+		iGreatPeopleAdvantage /= 3;
 
-	int iGreatPeopleAdvantage = 100 * getTotalGreatPeopleRateModifier();
-	iGreatPeopleAdvantage /= kPlayer.AI_averageGreatPeopleMultiplier();
-	iGreatPeopleAdvantage = ((iGreatPeopleAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1));
-	iGreatPeopleAdvantage += 200; //gpp multipliers are larger than others so lets not go overboard
-	iGreatPeopleAdvantage /= 3;
-
-	//With great people we want to slightly increase food priority at the expense of commerce
-	//this gracefully handles both wonder and specialist based GPP...
-	iCommerceMultiplier *= 100;
-	iCommerceMultiplier /= iGreatPeopleAdvantage;
-	iFoodMultiplier *= iGreatPeopleAdvantage;
-	iFoodMultiplier /= 100;
+		//With great people we want to slightly increase food priority at the expense of commerce
+		//this gracefully handles both wonder and specialist based GPP...
+		iCommerceMultiplier *= 100;
+		iCommerceMultiplier /= iGreatPeopleAdvantage;
+		iFoodMultiplier *= iGreatPeopleAdvantage;
+		iFoodMultiplier /= 100;
+	}
 
 	// if leader flavor likes production, increase production, reduce commerce
 	if (kPlayer.AI_isDoStrategy(AI_STRATEGY_PRODUCTION))
@@ -8726,12 +8708,12 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	{
 		iCommerceMultiplier = 10000 / (200 - iCommerceMultiplier);
 	}
-
 	if (angryPopulation(1) > 0)
 	{
 		iFoodMultiplier /= 2;
 	}
 }
+
 
 namespace {
 	struct BuildsImprovement
@@ -8755,413 +8737,127 @@ namespace {
 	};
 };
 
-int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal )
+//
+// Only used for improvement upgrading.
+int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange)
 {
-	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
+	FAssert(eImprovement != NO_IMPROVEMENT);
 
-	if (eNonObsoleteBonus != NO_BONUS)
+	const CvImprovementInfo& improvement = GC.getImprovementInfo(eImprovement);
+	const BonusTypes eBonus = pPlot->getBonusType(getTeam());
+	int iValue = 100;
+
+	if (eBonus == NO_BONUS)
 	{
-		if ( ! GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
+		for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 		{
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
+			if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
 			{
-				if (GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus))
-				{
-					return 0; //Always prefer improvements which connect bonuses.
-				}
+				iValue += 10;
 			}
 		}
 	}
-
-	bool bIgnoreFeature = false;
-	bool bValid = false;
-	BuildTypes eBestTempBuild = NO_BUILD;
-
-	if (eImprovement == pPlot->getImprovementType())
+	else if (!GET_TEAM(getTeam()).isBonusObsolete(eBonus))
 	{
-		bValid = true;
-	}
-	else
-	{
-		eBestTempBuild = algo::find_if(
-			pPlot->units() | transformed(CvUnit::fn::getBuildType()),
-			BuildsImprovement(eImprovement)
-		).get_value_or(NO_BUILD);
-
-		if (eBestTempBuild == NO_BUILD)
+		if (improvement.isImprovementBonusTrade(eBonus))
 		{
-			int iBestTempBuildValue = 0;
-			for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
-			{
-				BuildTypes eBuild = ((BuildTypes)iJ);
-
-				if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
-				{
-					if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false))
-					{
-						int iValue = 10000 / (GC.getBuildInfo(eBuild).getTime() + 1);
-
-						// XXX feature production???
-
-						if (iValue > iBestTempBuildValue)
-						{
-							iBestTempBuildValue = iValue;
-							eBestTempBuild = eBuild;
-						}
-					}
-				}
-			}
+			iValue *= 50;
 		}
-
-		if (eBestTempBuild != NO_BUILD)
+		else if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eBonus))
 		{
-			bValid = true;
-
-			if (pPlot->getFeatureType() != NO_FEATURE)
-			{
-				if (GC.getBuildInfo(eBestTempBuild).isFeatureRemove(pPlot->getFeatureType()))
-				{
-					bIgnoreFeature = true;
-
-					if (GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange(YIELD_PRODUCTION) > 0)
-					{
-						if (eNonObsoleteBonus == NO_BONUS)
-						{
-							if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS))
-							{
-								bValid = false;
-							}
-							else if (healthRate() < 0 && GC.getFeatureInfo(pPlot->getFeatureType()).getHealthPercent() > 0)
-							{
-								bValid = false;
-							}
-							else if (GET_PLAYER(getOwner()).getFeatureHappiness(pPlot->getFeatureType()) > 0)
-							{
-								bValid = false;
-							}
-						}
-					}
-				}
-			}
+			return 0; //Always prefer improvements which connect bonuses.
 		}
 	}
+	if (improvement.isCarriesIrrigation()) iValue += 200;
 
-	int iValue = 0;
+	const int iCultureRange = improvement.getCultureRange() + 1;
+	iValue += 4 * improvement.getCulture() * iCultureRange * iCultureRange;
 
-	if (bValid)
+	int iMilitaryValue = 3 * improvement.getAirBombDefense();
+
+	if (improvement.isZOCSource()) iMilitaryValue += 200;
+
+	iMilitaryValue += 2*(5*improvement.getVisibilityChange() + 2*improvement.getSeeFrom());
+
+	const int iDefense = improvement.getDefenseModifier();
+	if (iDefense < 0)
 	{
-		BonusTypes eBonus = pPlot->getBonusType(getTeam());
-		ImprovementTypes eFinalImprovement = finalImprovementUpgrade(eImprovement);
+		iMilitaryValue -= iDefense*iDefense;
+	}
+	else if (iDefense > 0)
+	{
+		iMilitaryValue += iDefense*iDefense;
+	}
+	if (improvement.isActsAsCity())
+	{
+		iMilitaryValue *= (2 + iCultureRange);
+	}
+	else if (improvement.isUpgradeRequiresFortify())
+	{
+		iMilitaryValue *= 5;
+		iMilitaryValue /= 3;
+	}
+	iValue += iMilitaryValue;
 
-		if (eFinalImprovement == NO_IMPROVEMENT)
+	ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
+	FAssert(eFinalUpgrade != NO_IMPROVEMENT);
+
+	int yields[NUM_YIELD_TYPES];
+	iValue *= 2;
+	for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+	{
+		yields[iJ] =
+			( pPlot->calculateImprovementYieldChange(eFinalUpgrade, (YieldTypes)iJ, getOwner(), false, true) * 2
+			+ pPlot->calculateImprovementYieldChange(eImprovement, (YieldTypes)iJ, getOwner(), false, true) * 5
+			) / 2;
+	}
+	iValue += yields[YIELD_FOOD] * iFoodPriority;
+	iValue += yields[YIELD_PRODUCTION] * iProductionPriority;
+	iValue += yields[YIELD_COMMERCE] * iCommercePriority;
+	iValue /= 10;
+
+	if (yields[YIELD_FOOD]*3/5 > (yields[YIELD_PRODUCTION] + yields[YIELD_COMMERCE]) / 2)
+	{
+		//this is a food yielding tile
+		if (iFoodPriority > 100)
 		{
-			eFinalImprovement = eImprovement;
+			iValue *= 100 + iFoodPriority;
+			iValue /= 200;
 		}
-
-		if (eBonus != NO_BONUS)
+		if (iFoodChange > 0)
 		{
-			if (eNonObsoleteBonus != NO_BONUS)
-			{
-				if (GC.getImprovementInfo(eFinalImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
-				{
-					iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
-					iValue += 200;
-				}
-			}
-		}
-		else
-		{
-			for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-			{
-				if (GC.getImprovementInfo(eFinalImprovement).getImprovementBonusDiscoverRand(iJ) > 0)
-				{
-					iValue++;
-				}
-			}
-		}
-
-		if (iValue >= 0)
-		{
-			int aiFinalYields[NUM_YIELD_TYPES];
-			int aiDiffYields[NUM_YIELD_TYPES];
-			iValue *= 2;
-			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-			{
-				if( false && bOriginal )
-				{
-					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
-					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
-					{
-						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
-					}
-					aiDiffYields[iJ] = (aiFinalYields[iJ] - (2 * pPlot->getYield(((YieldTypes)iJ))));
-				}
-				else
-				{
-					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false, true));
-					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
-					{
-						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
-					}
-
-					int iCurYield = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), false));
-
-					ImprovementTypes eCurImprovement = pPlot->getImprovementType();
-					if( eCurImprovement != NO_IMPROVEMENT )
-					{
-						ImprovementTypes eCurFinalImprovement = finalImprovementUpgrade(eCurImprovement);
-						if (eCurFinalImprovement == NO_IMPROVEMENT)
-						{
-							eCurFinalImprovement = eCurImprovement;
-						}
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwner(), false, true));
-					}
-
-					aiDiffYields[iJ] = (aiFinalYields[iJ] - iCurYield);
-				}
-			}
-			iValue += (aiDiffYields[YIELD_FOOD] * ((100 * iFoodPriority) / 100));
-			iValue += (aiDiffYields[YIELD_PRODUCTION] * ((60 * iProductionPriority) / 100));
-			iValue += (aiDiffYields[YIELD_COMMERCE] * ((40 * iCommercePriority) / 100));
-
-			iValue /= 2;
-
-			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-			{
-				aiFinalYields[iJ] /= 2;
-				aiDiffYields[iJ] /= 2;
-			}
-
-			if (iValue > 0)
-			{
-				// this is mainly to make it improve better tiles first
-				//flood plain > grassland > plain > tundra
-				iValue += (aiFinalYields[YIELD_FOOD] * 10);
-				iValue += (aiFinalYields[YIELD_PRODUCTION] * 6);
-				iValue += (aiFinalYields[YIELD_COMMERCE] * 4);
-
-				if (aiFinalYields[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
-				{
-					//this is a food yielding tile
-					if (iFoodPriority > 100)
-					{
-						iValue *= 100 + iFoodPriority;
-						iValue /= 200;
-					}
-					if (iFoodChange > 0)
-					{
-						iValue += (10 * (1 + aiDiffYields[YIELD_FOOD]) * (1 + aiFinalYields[YIELD_FOOD] - GC.getFOOD_CONSUMPTION_PER_POPULATION()) * iFoodChange * iFoodPriority) / 100;
-					}
-					if (iCommercePriority > 100)
-					{
-						iValue *= 100 + (((iCommercePriority - 100) * aiDiffYields[YIELD_COMMERCE]) / 2);
-						iValue /= 100;
-					}
-				}
-				else if (aiFinalYields[YIELD_FOOD] < GC.getFOOD_CONSUMPTION_PER_POPULATION())
-				{
-					if ((aiDiffYields[YIELD_PRODUCTION] > 0) && (aiFinalYields[YIELD_FOOD]+aiFinalYields[YIELD_PRODUCTION] > 3))
-					{
-						if (iFoodPriority < 100 || GET_PLAYER(getOwner()).getCurrentEra() < 2)
-						{
-							//value booster for mines on hills
-							iValue *= (100 + 25 * aiDiffYields[YIELD_PRODUCTION]);
-							iValue /= 100;
-						}
-					}
-					if (iFoodChange < 0)
-					{
-						iValue *= 4 - iFoodChange;
-						iValue /= 3 + aiFinalYields[YIELD_FOOD];
-					}
-				}
-
-				if ((iFoodPriority < 100) && (iProductionPriority > 100))
-				{
-					if( bOriginal )
-					{
-						iValue *= (200 + iProductionPriority);
-					}
-					else
-					{
-						iValue *= (200 + ((iProductionPriority - 100)*aiFinalYields[YIELD_PRODUCTION]));
-					}
-					iValue /= 200;
-				}
-				if (eBonus == NO_BONUS)
-				{
-					if (iFoodChange > 0)
-					{
-						//We want more food.
-						iValue *= 2 + std::max(0, aiDiffYields[YIELD_FOOD]);
-						iValue /= 2 * (1 + std::max(0, -aiDiffYields[YIELD_FOOD]));
-					}/*
-					else if (iFoodChange < 0)
-					{
-						//We want to soak up food.
-						iValue *= 8;
-						iValue /= 8 + std::max(0, aiDiffYields[YIELD_FOOD]);
-					}*/
-				}
-			}/*
-			if (bEmphasizeIrrigation && GC.getImprovementInfo(eFinalImprovement).isCarriesIrrigation())
-			{
-				iValue += 500;
-			}*/
-
-			if (getImprovementFreeSpecialists(eFinalImprovement) > 0)
-			{
-				iValue += 2000;
-			}
-
-			int iHappiness = GC.getImprovementInfo(eFinalImprovement).getHappiness();
-			if ((iHappiness != 0) && !(GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0))
-			{
-				//int iHappyLevel = iHappyAdjust + (happyLevel() - unhappyLevel(0));
-				int iHappyLevel = 0 + (happyLevel() - unhappyLevel(0));
-				if (eImprovement == pPlot->getImprovementType())
-				{
-					iHappyLevel -= iHappiness;
-				}
-				int iHealthLevel = (goodHealth() - badHealth(false, 0));
-
-				int iHappyValue = 0;
-				if (iHappyLevel <= 0)
-				{
-					iHappyValue += 400;
-				}
-				bool bCanGrow = true;// (getYieldRate(YIELD_FOOD) > foodConsumption());
-
-				if (iHappyLevel <= iHealthLevel)
-				{
-					iHappyValue += 200 * std::max(0, (bCanGrow ? std::min(6, 2 + iHealthLevel - iHappyLevel) : 0) - iHappyLevel);
-				}
-				else
-				{
-					iHappyValue += 200 * std::max(0, (bCanGrow ? 1 : 0) - iHappyLevel);
-				}
-				if (!pPlot->isBeingWorked())
-				{
-					iHappyValue *= 4;
-					iHappyValue /= 3;
-				}
-				iHappyValue += std::max(0, (pPlot->getCityRadiusCount() - 1)) * ((iHappyValue > 0) ? iHappyLevel / 2 : 200);
-				iValue += iHappyValue * iHappiness;
-			}
-
-			int iHealthPercent = GC.getImprovementInfo(eFinalImprovement).getHealthPercent();
-			int iBadHealth = abs(getImprovementBadHealth());
-			int iGoodHealth = getImprovementGoodHealth();
-			//Bad Health AND will push over the edge and give more unhealthiness
-			if ((iHealthPercent < 0 && (iBadHealth - iHealthPercent % 100 < iBadHealth % 100)) ||
-			//OR Good Health AND will give us more healthiness
-			(iHealthPercent > 0 && (iGoodHealth + iHealthPercent % 100 > iGoodHealth % 100)))
-			{
-				int iHealth = iHealthPercent > 0 ? std::max(1, iHealthPercent % 100) : std::min(-1, iHealthPercent % 100);
-				int iHealthLevel = iHealth + (goodHealth() - badHealth(false, 0));
-				if (eImprovement == pPlot->getImprovementType())
-				{
-					iHealthLevel -= iHealth;
-				}
-
-				int iHealthValue = 0;
-				bool bCanGrow = (getYieldRate(YIELD_FOOD) > foodConsumption());
-				if (iHealthLevel < 0)
-				{
-					iHealthValue -= 12 * iHealth;
-				}
-				if (!bCanGrow && iHealthLevel < 0)
-				{
-					iHealthValue -= 40 * iHealth;
-				}
-				if (iHealthLevel > 0)
-				{
-					iHealthValue += 10 * iHealth;
-				}
-
-				if (!pPlot->isBeingWorked())
-				{
-					iHealthValue *= 2;
-				}
-				iValue += iHealthValue * 3;
-			}
-
-			if (!isHuman())
-			{
-				iValue *= std::max(0, (GC.getLeaderHeadInfo(getPersonalityType()).getImprovementWeightModifier(eFinalImprovement) + 200));
-				iValue /= 200;
-			}
-
-			if (pPlot->getImprovementType() == NO_IMPROVEMENT)
-			{
-				if (pPlot->isBeingWorked())
-				{
-					iValue *= 5;
-					iValue /= 4;
-				}
-
-				if (eBestTempBuild != NO_BUILD)
-				{
-					if (pPlot->getFeatureType() != NO_FEATURE)
-					{
-						if (GC.getBuildInfo(eBestTempBuild).isFeatureRemove(pPlot->getFeatureType()))
-						{
-							CvCity* pCity = NULL;
-							iValue += pPlot->getFeatureProduction(eBestTempBuild, getTeam(), &pCity) * 2;
-							FAssert(pCity == this);
-
-							//iValue += iClearFeatureValue;
-						}
-					}
-				}
-			}
-			else
-			{
-				// cottage/villages (don't want to chop them up if turns have been invested)
-				ImprovementTypes eImprovementDowngrade = (ImprovementTypes)GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage();
-				while (eImprovementDowngrade != NO_IMPROVEMENT)
-				{
-					CvImprovementInfo& kImprovementDowngrade = GC.getImprovementInfo(eImprovementDowngrade);
-					iValue -= kImprovementDowngrade.getUpgradeTime() * 8;
-					eImprovementDowngrade = (ImprovementTypes)kImprovementDowngrade.getImprovementPillage();
-				}
-
-				if (GET_TEAM(getTeam()).getImprovementUpgrade((ImprovementTypes)pPlot->getImprovementType()) != NO_IMPROVEMENT)
-				{
-					iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGame().getImprovementUpgradeTime(pPlot->getImprovementType()));
-				}
-
-				if (eNonObsoleteBonus == NO_BONUS)
-				{
-					if (isWorkingPlot(pPlot))
-					{
-						if (((iFoodPriority < 100) && (aiFinalYields[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())) || (GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage() != NO_IMPROVEMENT))
-						{
-							iValue -= 70;
-							iValue *= 2;
-							iValue /= 3;
-						}
-					}
-				}
-
-				if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
-				{
-					iValue /= 4;	//Greatly prefer builds which are legal.
-				}
-			}
+			iValue += 5 * yields[YIELD_FOOD] * iFoodChange * iFoodPriority / 100;
 		}
 	}
 
+	if (iFoodPriority < 100 && iProductionPriority > 100)
+	{
+		iValue *= 200 + (iProductionPriority - 100) * yields[YIELD_PRODUCTION];
+		iValue /= 200;
+	}
+
+	iValue += 100 * getImprovementFreeSpecialists(eImprovement);
+
+	if (improvement.getHappiness() != 0)
+	{
+		int iHappyLevel = happyLevel() - unhappyLevel(0);
+		if (iHappyLevel - iHappyLevel/5 < 0)
+		{
+			iValue += 100 * improvement.getHappiness();
+		}
+		else iValue += 20 * improvement.getHappiness();
+	}
+
+	iValue += improvement.getHealthPercent();
+
+	if (!isHuman())
+	{
+		iValue *= std::max(0, GC.getLeaderHeadInfo(getPersonalityType()).getImprovementWeightModifier(eFinalUpgrade) + 200);
+		iValue /= 200;
+	}
 	return iValue;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 BuildTypes CvCityAI::AI_getBestBuild(int iIndex)
 {
@@ -11254,7 +10950,7 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 			if (eIgnoreSpecialist != GC.getDEFAULT_SPECIALIST())
 			{
 				// do we have at least one more generic citizen than we are forcing?
-				if (getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > getForceSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))))
+				if (getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > getForceSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()))
 				{
 					// remove the extra generic citzen
 					changeSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST(), -1);
@@ -12879,62 +12575,18 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				iValue *= 2;
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/06/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-/* original BTS code
-					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
-					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
-					{
-						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
-					}
-					aiDiffYields[iJ] = (aiFinalYields[iJ] - (2 * pPlot->getYield(((YieldTypes)iJ))));
-*/
-					//
 					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
 					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 
-					//	Koshling - removed the following original code because it is double-counting since the
-					//	call to calculateNatureYield() above ALREADY factors out a removed improvement
-					//if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
-					//{
-					//	aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
-					//}
-
 					int iCurYield = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), false));
 
-/********************************************************************************/
-/*	Better Evaluation							19.03.2010		Fuyu		    */
-/********************************************************************************/
-/* Fuyu: moved FinalImprovement code up to before the loop
-					ImprovementTypes eCurImprovement = pPlot->getImprovementType();
-*/
 					if( eCurImprovement != NO_IMPROVEMENT )
 					{
-/* moved
-						ImprovementTypes eCurFinalImprovement = finalImprovementUpgrade(eCurImprovement);
-						if (eCurFinalImprovement == NO_IMPROVEMENT)
-						{
-							eCurFinalImprovement = eCurImprovement;
-						}
-*/
-
 						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 					}
-/********************************************************************************/
-/*	BE	END																		*/
-/********************************************************************************/
-
 					aiDiffYields[iJ] = (aiFinalYields[iJ] - iCurYield);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 				}
 				int iHealth = AI_calculateActualImprovementHealth(eFinalImprovement) - AI_calculateActualImprovementHealth(eCurFinalImprovement);
 				int iBaseHealthLevel = goodHealth() - badHealth() + getEspionageHealthCounter();
@@ -14027,37 +13679,29 @@ void CvCityAI::AI_stealPlots()
 {
 	PROFILE_FUNC();
 
-	int iImportance = AI_getCityImportance(true, false);
+	const int iImportance = AI_getCityImportance(true, false);
 
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if (iImportance > 0 && pLoopPlot->getOwner() == getOwner())
 		{
-			if (iImportance > 0)
+			CvCityAI* pWorkingCity = static_cast<CvCityAI*>(pLoopPlot->getWorkingCity());
+			if ((pWorkingCity != this) && (pWorkingCity != NULL))
 			{
-				if (pLoopPlot->getOwner() == getOwner())
+				FAssert(pWorkingCity->getOwner() == getOwner());
+				const int iOtherImportance = pWorkingCity->AI_getCityImportance(true, false);
+				if (iImportance > iOtherImportance)
 				{
-					CvCityAI* pWorkingCity = static_cast<CvCityAI*>(pLoopPlot->getWorkingCity());
-					if ((pWorkingCity != this) && (pWorkingCity != NULL))
-					{
-						FAssert(pWorkingCity->getOwner() == getOwner());
-						int iOtherImportance = pWorkingCity->AI_getCityImportance(true, false);
-						if (iImportance > iOtherImportance)
-						{
-							pLoopPlot->setWorkingCityOverride(this);
-						}
-					}
+					pLoopPlot->setWorkingCityOverride(this);
 				}
 			}
+		}
 
-			if (pLoopPlot->getWorkingCityOverride() == this)
+		if (pLoopPlot->getWorkingCityOverride() == this)
+		{
+			if (pLoopPlot->getOwner() != getOwner())
 			{
-				if (pLoopPlot->getOwner() != getOwner())
-				{
-					pLoopPlot->setWorkingCityOverride(NULL);
-				}
+				pLoopPlot->setWorkingCityOverride(NULL);
 			}
 		}
 	}
@@ -14296,41 +13940,36 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 int CvCityAI::AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExtraTech, bool bLand, bool bWater )
 {
 	int iCount = 0;
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if ((bLand && pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
 		{
-			if ((bLand && pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
+			const BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
+			if (eLoopBonus != NO_BONUS)
 			{
-				BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
-				if (eLoopBonus != NO_BONUS)
+				if ( ((pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
 				{
-					if ( ((pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
-					{
-						const std::vector<std::pair<ImprovementTypes,BuildTypes> >* improvements = GC.getBonusInfo(eLoopBonus).getTradeProvidingImprovements();
+					const std::vector<std::pair<ImprovementTypes,BuildTypes> >* improvements = GC.getBonusInfo(eLoopBonus).getTradeProvidingImprovements();
 
-						for(std::vector<std::pair<ImprovementTypes,BuildTypes> >::const_iterator itr = improvements->begin(); itr != improvements->end(); ++itr)
+					for(std::vector<std::pair<ImprovementTypes,BuildTypes> >::const_iterator itr = improvements->begin(); itr != improvements->end(); ++itr)
+					{
+						if ( GET_PLAYER(getOwner()).canBuild(pLoopPlot, itr->second) )
 						{
-							if ( GET_PLAYER(getOwner()).canBuild(pLoopPlot, itr->second) )
+							iCount++;
+							break;
+						}
+						else if( (eExtraTech != NO_TECH) )
+						{
+							const CvBuildInfo& kBuild = GC.getBuildInfo(itr->second);
+
+							//	Koshling - not checking if eExtraTech obsoletes the build since we ARE checking is ENABLES it, and it
+							//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
+							//	we do not ALREADY have an obsoleting tech
+							if (kBuild.getTechPrereq() == eExtraTech &&
+								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
 							{
 								iCount++;
 								break;
-							}
-							else if( (eExtraTech != NO_TECH) )
-							{
-								CvBuildInfo& kBuild = GC.getBuildInfo(itr->second);
-
-								//	Koshling - not checking if eExtraTech obsoletes the build since we ARE checking is ENABLES it, and it
-								//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
-								//	we do not ALREADY have an obsoleting tech
-								if (kBuild.getTechPrereq() == eExtraTech &&
-									(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
-								{
-									iCount++;
-									break;
-								}
 							}
 						}
 					}
@@ -16194,8 +15833,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	PROFILE_FUNC()
 
 	//	KOSHLING optimisation - moved what we could outside of the building loop
-	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-	ReligionTypes eStateReligion = kOwner.getStateReligion();
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const ReligionTypes eStateReligion = kOwner.getStateReligion();
 	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
 	int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
 
@@ -16376,7 +16015,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				PROFILE("CvCityAI::CalculateAllBuildingValues.building");
 
-				CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 				int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 				bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
@@ -16445,9 +16084,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 				{
-					SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+					const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 					if (eNewSpecialist == NO_SPECIALIST) break;
-					CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
+					const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
 						aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwner()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
@@ -17784,12 +17423,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							if (kBuilding.isProvidesFreshWater() && !plot()->isFreshWater())
 							{
 								int freshWaterModifier = 0;
-								CvPlot* pLoopPlot;
 								for (int iI = 0; iI < NUM_CITY_PLOTS_1; iI++)
 								{
 									if (iI != CITY_HOME_PLOT)
 									{
-										pLoopPlot = plotCity(getX(), getY(), iI);
+										const CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 										if (pLoopPlot != NULL &&
 											!pLoopPlot->isWater() &&
 											!pLoopPlot->isFreshWater() &&
@@ -18475,13 +18113,13 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 }
 
 
-int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const
+int CvCityAI::tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const
 {
 	PROFILE_FUNC();
 
-	int	iExtraTradeRoutes = kBuilding.getTradeRoutes();
-	int iCurrentTradeRoutes = getTradeRoutes();
-	CvPlayerAI&	kOwner = GET_PLAYER(getOwner());
+	const int iExtraTradeRoutes = kBuilding.getTradeRoutes();
+	const int iCurrentTradeRoutes = getTradeRoutes();
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 
 	int	iTradeRouteValue = 0;
 	if ( iCurrentTradeRoutes <= -iExtraTradeRoutes )
@@ -18552,16 +18190,16 @@ int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool
 
 //	Evaluate a building we are considering building here in terms of its
 //	effect on properties
-int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
+int CvCityAI::buildingPropertiesValue(const CvBuildingInfo& kBuilding) const
 {
 	//	Evaluate building properties
 	std::map<int,int> effectivePropertyChanges;
 
-	CvPropertyManipulators* pBuildingPropertyManipulators = kBuilding.getPropertyManipulators();
+	const CvPropertyManipulators* pBuildingPropertyManipulators = kBuilding.getPropertyManipulators();
 	int num = pBuildingPropertyManipulators->getNumSources();
 	for (int iI = 0; iI < num; iI++)
 	{
-		CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iI);
+		const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iI);
 
 		//	For now we're only interested in constant sources
 		//	TODO - expand this as buildings add other types
@@ -18569,10 +18207,10 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 		{
 			//	Convert to an effective absolute amount by looking at the steady state value
 			//	given current
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 			//	Only count half the unit source as we want to encourage building sources over unit ones
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty)/2 + getPropertyNonBuildingSource(eProperty);
-			int iNewSourceSize = iCurrentSourceSize + static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+			int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 			int iDecayPercent = getPropertyDecay(eProperty);
 
 			//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -18597,8 +18235,8 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 	num = buildingProperties->getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
-		PropertyTypes eProperty = (PropertyTypes)buildingProperties->getProperty(iI);
-		int	iBuildingValue = buildingProperties->getValue(iI);
+		const PropertyTypes eProperty = (PropertyTypes)buildingProperties->getProperty(iI);
+		const int iBuildingValue = buildingProperties->getValue(iI);
 
 		std::map<int,int>::iterator itr = effectivePropertyChanges.find(eProperty);
 		if ( itr == effectivePropertyChanges.end() )
@@ -18623,7 +18261,7 @@ int CvCityAI::buildingPropertiesValue(CvBuildingInfo& kBuilding) const
 int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) const
 {
 	const CvProperties* cityProperties = getPropertiesConst();
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
 	int	iOperationalLow = kProperty.getOperationalRangeMin();
 	int	iOperationalHigh = kProperty.getOperationalRangeMax();
 	int iCurrentValue = cityProperties->getValueByProperty(eProperty);
@@ -18670,19 +18308,19 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 
 int CvCityAI::getPropertyDecay(PropertyTypes eProperty) const
 {
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
-	CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
 	int	iTotalDecay = 0;
-	int current = getPropertiesConst()->getValueByProperty(eProperty);
+	const int current = getPropertiesConst()->getValueByProperty(eProperty);
 	int iLowestThresholdDecay = 0;
 
 	for(int iI = 0; iI < pManipulators->getNumSources(); iI++)
 	{
-		CvPropertySource* pSource = pManipulators->getSource(iI);
+		const CvPropertySource* pSource = pManipulators->getSource(iI);
 
 		if ( pSource->getType() == PROPERTYSOURCE_DECAY )
 		{
-			CvPropertySourceDecay* pDecaySource = static_cast<CvPropertySourceDecay*>(pSource);
+			const CvPropertySourceDecay* pDecaySource = static_cast<const CvPropertySourceDecay*>(pSource);
 
 			//	For AI evaluation purposes the no-decay threshold is largely
 			//	irrelevant since we are only interested in EVENTUAL equilibrium
@@ -18710,20 +18348,20 @@ int CvCityAI::getPropertyDecay(PropertyTypes eProperty) const
 
 int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 {
-	CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
-	CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
+	const CvPropertyInfo& kProperty = GC.getPropertyInfo(eProperty);
+	const CvPropertyManipulators* pManipulators = kProperty.getPropertyManipulators();
 	int	iTotal = 0;
-	int current = getPropertiesConst()->getValueByProperty(eProperty);
+	const int current = getPropertiesConst()->getValueByProperty(eProperty);
 
 	for(int iI = 0; iI < pManipulators->getNumSources(); iI++)
 	{
-		CvPropertySource* pSource = pManipulators->getSource(iI);
+		const CvPropertySource* pSource = pManipulators->getSource(iI);
 
 		if ( pSource->getType() == PROPERTYSOURCE_ATTRIBUTE_CONSTANT &&
 			 pSource->getObjectType() == GAMEOBJECT_CITY &&
 			 pSource->getProperty() == eProperty )
 		{
-			CvPropertySourceAttributeConstant* pCitySource = static_cast<CvPropertySourceAttributeConstant*>(pSource);
+			const CvPropertySourceAttributeConstant* pCitySource = static_cast<const CvPropertySourceAttributeConstant*>(pSource);
 
 			iTotal += pCitySource->getSourcePredict(getGameObject(), current);
 		}
@@ -18732,16 +18370,16 @@ int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 	//	Add in contribution from specialists
 	for(int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		int iNum = getSpecialistCount((SpecialistTypes)iI) + getFreeSpecialistCount((SpecialistTypes)iI);
+		const int iNum = getSpecialistCount((SpecialistTypes)iI) + getFreeSpecialistCount((SpecialistTypes)iI);
 
 		if ( iNum > 0 )
 		{
-			CvPropertyManipulators* pMani = GC.getSpecialistInfo((SpecialistTypes)iI).getPropertyManipulators();
+			const CvPropertyManipulators* pMani = GC.getSpecialistInfo((SpecialistTypes)iI).getPropertyManipulators();
 			int iContribution = 0;
 
 			for (int i=0; i < pMani->getNumSources(); i++)
 			{
-				CvPropertySource* pSource = pMani->getSource(i);
+				const CvPropertySource* pSource = pMani->getSource(i);
 
 				//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 				//	to the city for most properties anyway
@@ -18749,7 +18387,7 @@ int CvCityAI::getPropertyNonBuildingSource(PropertyTypes eProperty) const
 					(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
 					pSource->getProperty() == eProperty)
 				{
-					iContribution += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+					iContribution += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 				}
 			}
 
@@ -19289,41 +18927,38 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 	return false;
 }
 
-bool CvCityAI::AI_isNegativePropertyUnit(UnitTypes eUnit)
+bool CvCityAI::AI_isNegativePropertyUnit(UnitTypes eUnit) const
 {
 	if (eUnit == NO_UNIT)
 	{
 		return false;
 	}
 
-	bool bAnswer = false;
-	CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
+	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{
 		for(int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
 		{
-			CvPropertySource* pSource = propertyManipulators->getSource(iI);
+			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
 			//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
-			PropertyTypes eProperty = pSource->getProperty();
+			const PropertyTypes eProperty = pSource->getProperty();
 
 			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
 				if (GC.getPropertyInfo(eProperty).getAIWeight() < 0)
 				{
-					int iAmount = static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-					if ( iAmount > 0 )
+					if (static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject()) > 0)
 					{
-						bAnswer = true;
-						break;
+						return true;
 					}
 				}
 			}
 		}
 	}
-	return bAnswer;
+	return false;
 }
 
-bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, CvUnitSelectionCriteria* criteria)
+bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria)
 {
 	//Add more here as needs demand - Some cleanup could be nice too.  Consolidate some of the other checks and possible redundancies into this location?
 	if (eUnit != NO_UNIT && criteria != NULL)

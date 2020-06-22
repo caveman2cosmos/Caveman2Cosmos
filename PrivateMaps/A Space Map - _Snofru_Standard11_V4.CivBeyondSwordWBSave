@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -93045,7 +93045,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=31
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot

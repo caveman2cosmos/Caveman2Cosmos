@@ -453,7 +453,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_KELP_PEDIA</Tag>
 		<English>Kelps are large seaweeds (algae) belonging to the brown algae (Phaeophyceae) in the order Laminariales. There are about 30 different genera.[PARAGRAPH:2]Kelps grow in underwater "forests" (kelp forests) in shallow oceans. The organisms require nutrient-rich water with temperatures between 6 to 14 degree celsius. They are known for their high growth rate, the genera Macrocystis and Nereocystis can grow as fast as half a metre a day, ultimately reaching 30 to 80 m.[PARAGRAPH:2]Through the 19th century, the word "kelp" was closely associated with seaweeds that could be burned to obtain soda ash (primarily sodium carbonate). The seaweeds used included species from both the orders Laminariales and Fucales. The word "kelp" was also used directly to refer to these processed ashes. Wikipedia</English>
-		<French>Les Varech sont de grandes algues (algues) appartenant aux algues brunes (Phaeophyceae) de l'ordre des Laminariales. Il existe environ 30 genres différents. [PARAGRAPH:2] Les varechs poussent dans les "forêts" sous-marines (forêts de varech) des océans peu profonds. Les organismes ont besoin d'une eau riche en nutriments avec des températures comprises entre 6 et 14 degrés Celsius. Ils sont connus pour leur taux de croissance élevé, les genres Macrocystis et Nereocystis peuvent croître aussi rapidement qu'un demi-mètre par jour, atteignant finalement 30 à 80 m. [PARAGRAPH: 2] Au cours du 19ème siècle, le mot «varech» était étroitement associé avec des algues qui pourraient être brûlées pour obtenir de la soude (principalement du carbonate de sodium). Les algues utilisées comprenaient des espèces des ordres Laminariales et Fucales. Le mot «varech» a également été utilisé directement pour désigner ces cendres traitées. Wikipedia</French>
+		<French>Les Varech sont de grandes algues (algues) appartenant aux algues brunes (Phaeophyceae) de l'ordre des Laminariales. Il existe environ 30 genres différents. [PARAGRAPH:2] Les varechs poussent dans les "forêts" sous-marines (forêts de varech) des océans peu profonds. Les organismes ont besoin d'une eau riche en nutriments avec des températures comprises entre 6 et 14 degrés Celsius. Ils sont connus pour leur taux de croissance élevé, les genres Macrocystis et Nereocystis peuvent croître aussi rapidement qu'un demi-mètre par jour, atteignant finalement 30 à 80 m. [PARAGRAPH:2] Au cours du 19ème siècle, le mot «varech» était étroitement associé avec des algues qui pourraient être brûlées pour obtenir de la soude (principalement du carbonate de sodium). Les algues utilisées comprenaient des espèces des ordres Laminariales et Fucales. Le mot «varech» a également été utilisé directement pour désigner ces cendres traitées. Wikipedia</French>
 		<Polish>Wodorosty - potoczna nazwa roślin (i wielokomórkowych roślinopodobnych protistów) wodnych o miękkich ciałach. Nazwa bliskoznaczna to trawa morska. Do wodorostów najczęściej zaliczane są duże glony, takie jak brunatnice, krasnorosty, watkowe i ramienice (czasem określane jako makroglony lub makroalgi). Czasem rośliny wodne zanurzone (elodeidy, jak rogatek lub wywłócznik) oraz glony nitkowate (niektóre sinice), uwikłowce, zrostnicowate, jak skrętnica, rzadziej pozostałe makrofity.</Polish>
 	</TEXT>
 	<TEXT>
@@ -613,23 +613,6 @@
 		<Tag>TXT_KEY_FEATURE_RADIATION_CLOUD_PEDIA</Tag>
 		<English>The devastating impact of the explosion does not stop after the initial blast, as with regular explosives. A cloud of nuclear radiation travels from the epicenter of the explosion, causing an impact to life forms even after the heat waves have ceased. The radiation can cause genetic mutation, radiation poisoning, and death.</English>
 		<French>L'impact dévastateur de l'explosion ne s'arrête pas après l'explosion initiale, comme avec les explosifs ordinaires. Un nuage de rayonnement nucléaire se déplace de l'épicentre de l'explosion, provoquant un impact sur les formes de vie même après la fin des vagues de chaleur. Le rayonnement peut provoquer une mutation génétique, un empoisonnement par rayonnement et la mort.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN</Tag>
-		<English>Rainwater Basin</English>
-		<French>Bassin d'eau de pluie</French>
-		<Spanish>
-			<Text>Cuenca de aguas pluviales:Cuencas de aguas pluviales</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Rezerwuar Wody Deszczowej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN_PEDIA</Tag>
-		<English>A Rainwater Basin is a region of shallow lakes, marshes and other wetlands. In the spring and fall months, millions of migratory birds pass through these regions to feed and rest.</English>
-		<French>Un bassin d'eau de pluie est une région de lacs peu profonds, de marais et d'autres zones humides. Au printemps et à l'automne, des millions d'oiseaux migrateurs traversent ces régions pour se nourrir et se reposer.</French>
-		<Polish>Basen - rodzaj zbiornika antropogenicznego, który jest najczęściej niewielkim akwenem o misie betonowej bądź ukształtowanej z innych materiałów sztucznych. Zwykle posiada płaskie lub prawie płaskie dno oraz strome lub pionowe ściany, co przekłada się na wartości wskaźnika głębokościowego zbliżone do jedności. Jest wykorzystywany do celów przemysłowych (np. osadniki wód chłodniczych), sportowo-rekreacyjnych (np. baseny pływackie), komunalnych (np. zbiorniki wody przeznaczonej do spożycia przez ludzi), retencyjnych (np. zbiorniki wód opadowych) i innych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_REEF</Tag>
@@ -842,24 +825,34 @@
 		<English>Volcano - Active</English>
 		<French>Volcan - Actif</French>
 		<German>Vulkan (aktiv)</German>
+		<Italian>
+			<Text>Vulcano attivo:Vulcani attivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Aktywny Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán activo:Volcanes activos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Aktywny Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_DORMANT</Tag>
 		<English>Volcano - Dormant</English>
 		<French>Volcan - Endormi</French>
 		<German>Vulkan (ruhend)</German>
+		<Italian>
+			<Text>Vulcano inattivo:Vulcani inattivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Uśpiony Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán inactivo:Volcanes inactivos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uśpiony Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_PEDIA</Tag>

@@ -156,7 +156,7 @@ class BuildListScreen:
     screen.addDropDownBoxGFC( "UnitGrouping", iMultiListXL + iFilterContainerLength + 10, 8, iGroupButtonWidth, WidgetTypes.WIDGET_UNIT_GROUPING, -1, -1, FontTypes.SMALL_FONT)
     screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_SINGLE", ()), UnitGroupingTypes.UNIT_GROUPING_SINGLE, UnitGroupingTypes.UNIT_GROUPING_SINGLE, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_SINGLE)
     screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), UnitGroupingTypes.UNIT_GROUPING_COMBAT, UnitGroupingTypes.UNIT_GROUPING_COMBAT, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_COMBAT)
-    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_DOMAIN", ()), UnitGroupingTypes.UNIT_GROUPING_DOMAIN, UnitGroupingTypes.UNIT_GROUPING_DOMAIN, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_DOMAIN)
+    screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_DOMAIN", ()), UnitGroupingTypes.UNIT_GROUPING_DOMAIN, UnitGroupingTypes.UNIT_GROUPING_DOMAIN, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_DOMAIN)
     screen.addPullDownString( "UnitGrouping", localText.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), UnitGroupingTypes.UNIT_GROUPING_HERO, UnitGroupingTypes.UNIT_GROUPING_HERO, iSelectedGrouping == UnitGroupingTypes.UNIT_GROUPING_HERO)
     screen.show( "UnitGrouping" )
 
@@ -226,7 +226,7 @@ class BuildListScreen:
     screen.addDropDownBoxGFC( "BuildingGrouping", iMultiListXL + iFilterContainerLength + 10, 38, iGroupButtonWidth, WidgetTypes.WIDGET_BUILDING_GROUPING, -1, -1, FontTypes.SMALL_FONT)
     screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_BUILDING_GROUPING_SINGLE", ()), BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, BuildingGroupingTypes.BUILDING_GROUPING_SINGLE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_SINGLE)
     screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_BUILDING_GROUPING_WONDER_TYPE", ()), BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_WONDER_TYPE)
-    screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_BUILDING_GROUPING_DOMAIN", ()), BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN)
+    screen.addPullDownString( "BuildingGrouping", localText.getText("TXT_KEY_DOMAIN", ()), BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN, iSelectedGrouping == BuildingGroupingTypes.BUILDING_GROUPING_DOMAIN)
     screen.show( "BuildingGrouping" )
 
     iSelectedSorting = pPlayer.getBuildingListSorting()

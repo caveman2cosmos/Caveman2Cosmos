@@ -15,6 +15,12 @@ import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
 
+import CvWorldBuilderScreen
+import WBUnitScreen
+import WBPlayerScreen
+import WBGameDataScreen
+import WBPlotScreen
+
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -52,6 +58,7 @@ class CvEventManager:
 			'OnLoad'					: self.onLoadGame,
 			'GameStart'					: self.onGameStart,
 #			'GameEnd'					: self.onGameEnd,
+			'MapRegen'					: self.onMapRegen,
 #			'plotRevealed'				: self.onPlotRevealed,
 #			'plotFeatureRemoved'		: self.onPlotFeatureRemoved,
 #			'plotPicked'				: self.onPlotPicked,
@@ -135,15 +142,17 @@ class CvEventManager:
 			5	 : ('EffectViewer', debugUtils.applyEffectViewer, debugUtils.initEffectViewer),
 			4999 : ('CityTabOptions', CvMainInterface.applyCityTabOptions, None),
 			5000 : ('EditCityName', self.__eventEditCityNameApply, self.__eventEditCityNameBegin),
-			5001 : ('EditCity', self.__eventEditCityApply, self.__eventEditCityBegin),
 			5002 : ('PlaceObject', debugUtils.applyUnitPicker, debugUtils.initUnitPicker),
 			5003 : ('AwardTechsAndGold', debugUtils.applyTechCheat, debugUtils.initTechsCheat),
 			5006 : ('EditUnitName', self.__eventEditUnitNameApply, self.__eventEditUnitNameBegin),
-			5008 : ('WBAllPlotsPopup', self.__eventWBAllPlotsPopupApply, self.__eventWBAllPlotsPopupBegin),
-			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, self.__eventWBLandmarkPopupBegin),
-			5010 : ('WBScriptPopup', self.__eventWBScriptPopupApply, self.__eventWBScriptPopupBegin),
-			5011 : ('WBStartYearPopup', self.__eventWBStartYearPopupApply, self.__eventWBStartYearPopupBegin),
+			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, self.__eventWBScriptPopupBegin),
 			5012 : ('ShowWonder', debugUtils.applyWonderMovie, debugUtils.initWonderMovie),
+
+			1111 : ('WBPlayerScript', self.__eventWBPlayerScriptPopupApply, self.__eventWBScriptPopupBegin),
+			2222 : ('WBCityScript', self.__eventWBCityScriptPopupApply, self.__eventWBScriptPopupBegin),
+			3333 : ('WBUnitScript', self.__eventWBUnitScriptPopupApply, self.__eventWBScriptPopupBegin),
+			4444 : ('WBGameScript', self.__eventWBGameScriptPopupApply, self.__eventWBScriptPopupBegin),
+			5555 : ('WBPlotScript', self.__eventWBPlotScriptPopupApply, self.__eventWBScriptPopupBegin),
 		}
 	###****************###
 	### EVENT STARTERS ###
@@ -376,10 +385,9 @@ class CvEventManager:
 
 		# Screen specific input handlers
 		iCode = eventType + 10
-		if iCode in (16, 17):
-			iCode = CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
-			if iCode:
-				return 1
+		if iCode in (16, 17) \
+		and CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0]):
+			return 1
 
 		iModifiers = bAlt + bCtrl + bShift
 
@@ -531,9 +539,6 @@ class CvEventManager:
 		else:
 			self.bNetworkMP = False
 
-		# This is too early to actually set the initial camera zoom level, so raise a flag so it will happen later.
-		CvScreensInterface.mainInterface.bSetStartZoom = True
-
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
 
@@ -620,12 +625,10 @@ class CvEventManager:
 		[20] Topkapi Palace
 		'''
 
-
 	def onGameStart(self, argsList):
 		# Called when a game is created the moment you can see the map.
 		self.gameStart(True)
 		G = GAME
-		bPrehistoricStart = GC.getDefineINT("START_YEAR") == G.getGameTurnYear()
 
 		if G.getGameTurn() == G.getStartTurn():
 			if G.isHotSeat() or G.isPbem():
@@ -650,7 +653,7 @@ class CvEventManager:
 					popup.setText('showDawnOfMan')
 					popup.addPopup(iPlayer)
 				szText = ""
-				if not bPrehistoricStart:
+				if GC.getDefineINT("START_YEAR") != G.getGameTurnYear():
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
 				if G.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
@@ -660,27 +663,35 @@ class CvEventManager:
 					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_TEXT)
 					popup.setText(szText)
 					popup.addPopup(iPlayer)
+			if not CyInterface().isInAdvancedStart():
+				self.freePromotions()
 		else:
-			CyInterface().setSoundSelectionReady(true)
+			CyInterface().setSoundSelectionReady(True)
 
-		if bPrehistoricStart:
-			for iPlayer in xrange(self.MAX_PC_PLAYERS):
-				CyPlayer = GC.getPlayer(iPlayer)
-				if not CyPlayer.isAlive(): continue
 
-				iCulture = -1
-				civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
-				for iPromo, _, native in self.aCultureList:
-					if civInfo.isCivilizationFreeBuilding(native):
-						iCulture = iPromo
-						break
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
-					if CyUnit.isFound():
-						CyUnit.setHasPromotion(self.PROMO_GUARDIAN_TRIBAL, True)
-						if iCulture > -1:
-							CyUnit.setHasPromotion(iCulture, True)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
+	def freePromotions(self):
+		for iPlayer in xrange(self.MAX_PC_PLAYERS):
+			CyPlayer = GC.getPlayer(iPlayer)
+			if not CyPlayer.isAlive(): continue
+
+			civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
+			aList = []
+			for iPromo, _, native in self.aCultureList:
+				if -1 in (iPromo, native): continue
+				if civInfo.isCivilizationBuilding(native):
+					aList.append(iPromo)
+			if not aList: continue
+
+			CyUnit, i = CyPlayer.firstUnit(False)
+			while CyUnit:
+				if CyUnit.isFound():
+					for iPromo in aList:
+						CyUnit.setHasPromotion(iPromo, True)
+				CyUnit, i = CyPlayer.nextUnit(i, False)
+
+	def onMapRegen(self, argsList):
+		if not CyInterface().isInAdvancedStart():
+			self.freePromotions()
 
 
 	def onLoadGame(self, argsList):
@@ -1062,6 +1073,20 @@ class CvEventManager:
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
+			# Wonder effects
+			aWonderTuple = self.aWonderTuple
+			if iPlayerW in aWonderTuple[4]:
+				for i, iPlayer in enumerate(aWonderTuple[4]):
+					if iPlayer != iPlayerW: continue
+					KEY = aWonderTuple[0][i]
+					if KEY == "PERGAMON":
+						iGGP = int(CyUnitL.getExperience() ** 0.5)
+						if iGGP:
+							CyPlayerW.changeCombatExperience(iGGP)
+					elif KEY == "GREAT_JAGUAR_TEMPLE":
+						iChance = GAME.getSorenRandNum(5, "Jaguar")
+						if not iChance:
+							CyUnitW.setDamage(0, -1)
 
 		iUnitW = CyUnitW.getUnitType()
 		mapUnitType = self.mapUnitType
@@ -1113,23 +1138,6 @@ class CvEventManager:
 							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
 								CyCity.setHasReligion(iReligion, True, True, True)
 
-		aWonderTuple = self.aWonderTuple
-		if iPlayerW in aWonderTuple[4]:
-			for i, iPlayer in enumerate(aWonderTuple[4]):
-				if iPlayer != iPlayerW: continue
-				KEY = aWonderTuple[0][i]
-				if KEY == "PERGAMON":
-					if CyUnitL.isNPC(): continue
-					iGGP = int(CyUnitL.getExperience() ** 0.5)
-					if iGGP:
-						CyPlayerW.changeCombatExperience(iGGP)
-						CyPlayerL.changeCombatExperience(-iGGP)
-				elif KEY == "GREAT_JAGUAR_TEMPLE":
-					if CyUnitL.isNPC(): continue
-					iChance = GAME.getSorenRandNum(5, "Jaguar")
-					if not iChance:
-						CyUnitW.setDamage(0, -1)
-
 
 	def onCombatLogCalc(self, argsList):
 		genericArgs = argsList[0][0]
@@ -1180,11 +1188,15 @@ class CvEventManager:
 			return
 
 		# Worker placed bonus
-		aList = GC.getImprovementInfo(iImprovement).getType().split("_")
-		if aList[1] == "BONUS":
+		szType = GC.getImprovementInfo(iImprovement).getType()
+		if szType[:18] == "IMPROVEMENT_BONUS_":
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setBonusType(GC.getInfoTypeForString("BONUS_" + aList[2]))
+			if CyPlot.getBonusType(-1) > -1:
+				return # Bonus was discovered while the farmer was working.
+			iBonus = GC.getInfoTypeForString(szType[12:])
+			if iBonus > -1:
+				CyPlot.setImprovementType(-1)
+				CyPlot.setBonusType(iBonus)
 			return
 		# Worker placed feature
 		mapImpType = self.mapImpType
@@ -1323,23 +1335,6 @@ class CvEventManager:
 					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_PLAGUED_SMOG"), 1)
 		else:
 			print "CvEventManager.onNukeExplosion\n\tNuke with no special effects: " + CyUnit.getName()
-		'''
-		# Nuclear Non-Proliferation Treaty (NPT)
-		if GAME.getProjectCreatedCount(GC.getInfoTypeForString("PROJECT_NPT")):
-			iPlayer = CyUnit.getOwner()
-			iTeam = GC.getPlayer(iPlayer).getTeam()
-			iAttitude = GC.getInfoTypeForString("ATTITUDE_FURIOUS")
-			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-				if iPlayerX == iPlayer: continue
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isHuman() or not CyPlayerX.isAlive(): continue
-				CyPlayerX.AI_changeAttitudeExtra(iTeam, -1)
-				if CyPlayerX.AI_getAttitude(iPlayer) == iAttitude:
-					CyTeamX = GC.getTeam(CyPlayerX.getTeam())
-					if CyTeamX.canDeclareWar(iTeam):
-						CyTeamX.declareWar(iTeam, True, -1)
-		'''
-
 
 	'''
 	def onGotoPlotSet(self, argsList):
@@ -2036,14 +2031,12 @@ class CvEventManager:
 			B = GC.getInfoTypeForString('IMPROVEMENT_VERTICAL_FARM')
 			C = GC.getInfoTypeForString('IMPROVEMENT_WINDMILL')
 			D = GC.getInfoTypeForString('IMPROVEMENT_PLANTATION')
-			E = GC.getInfoTypeForString('IMPROVEMENT_OLIVE_FARM')
-			F = GC.getInfoTypeForString('IMPROVEMENT_APPLE_FARM')
-			G = GC.getInfoTypeForString('IMPROVEMENT_WINERY')
-			H = GC.getInfoTypeForString('IMPROVEMENT_COTTAGE')
-			I = GC.getInfoTypeForString('IMPROVEMENT_HAMLET')
-			J = GC.getInfoTypeForString('IMPROVEMENT_VILLAGE')
-			K = GC.getInfoTypeForString('IMPROVEMENT_TOWN')
-			L = GC.getInfoTypeForString('IMPROVEMENT_FOREST_PRESERVE')
+			E = GC.getInfoTypeForString('IMPROVEMENT_WINERY')
+			F = GC.getInfoTypeForString('IMPROVEMENT_COTTAGE')
+			G = GC.getInfoTypeForString('IMPROVEMENT_HAMLET')
+			H = GC.getInfoTypeForString('IMPROVEMENT_VILLAGE')
+			I = GC.getInfoTypeForString('IMPROVEMENT_TOWN')
+			J = GC.getInfoTypeForString('IMPROVEMENT_FOREST_PRESERVE')
 
 			MAP = GC.getMap()
 			for x in xrange(iX - 50, iX + 50, 1):
@@ -2053,7 +2046,7 @@ class CvEventManager:
 						iTerrain = CyPlot.getTerrainType()
 						if iTerrain == GRASS:
 							i = CyPlot.getImprovementType()
-							if i > -1 and i in (A, B, C, D, E, F, G, H, I, J, K, L):
+							if i > -1 and i in (A, B, C, D, E, F, G, H, I, J):
 								continue
 							if CyPlot.getFeatureType() != GC.getInfoTypeForString('FEATURE_JUNGLE'):
 								CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_FOREST"), 1)
@@ -2204,7 +2197,7 @@ class CvEventManager:
 		iLeaderUnit = CyUnit.getLeaderUnitType()
 		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER, self.UNIT_FEMALE_BEASTMASTER):
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
-			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("NO_UNIT"))
+			CyUnit.setLeaderUnitType(-1)
 
 
 	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_LOST_CALLBACK = False)
@@ -2551,9 +2544,8 @@ class CvEventManager:
 		# Give extra population to new cities
 		iPop = 0
 		aWonderTuple = self.aWonderTuple
-		if "GREAT_BATH" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
-				iPop += 1
+		if "GREAT_BATH" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
+			iPop += 1
 		if CyUnit:
 			iUnit = CyUnit.getUnitType()
 			if iUnit in self.mapSettlerPop:
@@ -2583,7 +2575,7 @@ class CvEventManager:
 		# Human player city naming
 		iActivePlayer = GAME.getActivePlayer()
 		if iPlayer == iActivePlayer and not GAME.getAIAutoPlay(iActivePlayer):
-			self.__eventEditCityNameBegin(CyCity, False)
+			self.__eventEditCityNameBegin((CyCity, False))
 
 
 	def onCityRazed(self, argsList):
@@ -2847,7 +2839,7 @@ class CvEventManager:
 	def onCityRename(self, argsList):
 		CyCity, = argsList
 		if CyCity.getOwner() == GAME.getActivePlayer():
-			self.__eventEditCityNameBegin(CyCity, True)
+			self.__eventEditCityNameBegin((CyCity, True))
 
 
 	'''
@@ -2892,7 +2884,8 @@ class CvEventManager:
 
 #################### TRIGGERED EVENTS ##################
 
-	def __eventEditCityNameBegin(self, CyCity, bRename):
+	def __eventEditCityNameBegin(self, argsList):
+		CyCity, bRename = argsList
 		import ScreenResolution as SR
 		xRes = SR.x
 		if xRes > 2500:
@@ -2919,7 +2912,7 @@ class CvEventManager:
 		szTxt = header + TRNSLTR.getText("TXT_KEY_NAME_CITY", ()) + body + name
 
 		popup = CyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL, True)
-		popup.setUserData((name, CyCity.getID(), bRename))
+		popup.setUserData((name, CyCity.getOwner(), CyCity.getID(), bRename))
 		popup.setSize(w, h)
 		popup.setPosition(xRes/2 - w/2, SR.y/2 - h/2)
 		popup.setBodyString(szTxt, 1<<0)
@@ -2931,65 +2924,65 @@ class CvEventManager:
 		oldName = userData[0]
 		newName = popupReturn.getEditBoxString(0)
 		if oldName != newName:
-			GC.getPlayer(iPlayer).getCity(userData[1]).setName(newName, not userData[2])
+			GC.getPlayer(userData[1]).getCity(userData[2]).setName(newName, not userData[3])
 
-	def __eventEditCityBegin(self, argsList):
-		px, py = argsList
-		import CvWBPopups
-		CvWBPopups.CvWBPopups().initEditCity(argsList)
-
-	def __eventEditCityApply(self, iPlayer, userData, popupReturn):
-		import CvWBPopups
-		CvWBPopups.CvWBPopups().applyEditCity((popupReturn, userData))
+			if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
+				import CvScreenEnums
+				screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
+				screen.setText("CityName", "", CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + newName, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
 		popup = PyPopup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setUserData((pUnit.getID(),))
+		popup.setUserData((pUnit.getOwner(), pUnit.getID()))
 		popup.setBodyString(TRNSLTR.getText("TXT_KEY_RENAME_UNIT", ()))
 		popup.createEditBox(pUnit.getNameNoDesc())
+		popup.setEditBoxMaxCharCount(24, 0, 0)
 		popup.launch()
 
 	def __eventEditUnitNameApply(self, iPlayer, userData, popupReturn):
-		iUnitID = userData[0]
-		unit = GC.getPlayer(iPlayer).getUnit(iUnitID)
+		unit = GC.getPlayer(userData[0]).getUnit(userData[1])
 		newName = popupReturn.getEditBoxString(0)
-		if len(newName) > 25:
-			newName = newName[:25]
 		unit.setName(newName)
+		if GAME.GetWorldBuilderMode():
+			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeStats()
+			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeCurrentUnit()
 
-	def __eventWBAllPlotsPopupBegin(self, argsList):
-		CvScreensInterface.getWorldBuilderScreen().allPlotsCB()
+	def __eventWBScriptPopupBegin(self): return
 
-	def __eventWBAllPlotsPopupApply(self, iPlayer, userData, popupReturn):
-		if popupReturn.getButtonClicked() >= 0:
-			CvScreensInterface.getWorldBuilderScreen().handleAllPlotsCB(popupReturn)
+	def __eventWBPlayerScriptPopupApply(self, playerID, userData, popupReturn):
+		GC.getPlayer(userData[0]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		WBPlayerScreen.WBPlayerScreen().placeScript()
 
-	def __eventWBLandmarkPopupBegin(self, argsList):
-		CvScreensInterface.getWorldBuilderScreen().setLandmarkCB("")
+	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
+		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
 
-	def __eventWBLandmarkPopupApply(self, iPlayer, userData, popupReturn):
-		if popupReturn.getEditBoxString(0):
-			szLandmark = popupReturn.getEditBoxString(0)
-			if szLandmark:
-				CvScreensInterface.getWorldBuilderScreen().setLandmarkCB(szLandmark)
+		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
+			import WBCityEditScreen
+			WBCityEditScreen.WBCityEditScreen().placeScript()
 
-	def __eventWBScriptPopupBegin(self, argsList):
-		popup = PyPopup.PyPopup(5010, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setHeaderString(TRNSLTR.getText("TXT_KEY_WB_SCRIPT", ()))
-		popup.createEditBox(CvScreensInterface.getWorldBuilderScreen().getCurrentScript())
-		popup.launch()
+	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
+		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
-	def __eventWBScriptPopupApply(self, iPlayer, userData, popupReturn):
-		if popupReturn.getEditBoxString(0):
-			szScriptName = popupReturn.getEditBoxString(0)
-			CvScreensInterface.getWorldBuilderScreen().setScriptCB(szScriptName)
+	def __eventWBGameScriptPopupApply(self, playerID, userData, popupReturn):
+		GAME.setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		WBGameDataScreen.WBGameDataScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
-	def __eventWBStartYearPopupBegin(self, argsList):
-		popup = PyPopup.PyPopup(5011, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.createSpinBox(0, "", GAME.getStartYear(), 1, 5000, -5000)
-		popup.launch()
+	def __eventWBPlotScriptPopupApply(self, playerID, userData, popupReturn):
+		GC.getMap().plot(userData[0], userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
+		WBPlotScreen.WBPlotScreen().placeScript()
 
-	def __eventWBStartYearPopupApply(self, iPlayer, userData, popupReturn):
-		iStartYear = popupReturn.getSpinnerWidgetValue(int(0))
-		CvScreensInterface.getWorldBuilderScreen().setStartYearCB(iStartYear)
+	def __eventWBLandmarkPopupApply(self, playerID, userData, popupReturn):
+		sScript = popupReturn.getEditBoxString(0)
+		pPlot = GC.getMap().plot(userData[0], userData[1])
+		iPlayer = userData[2]
+		if userData[3] > -1:
+			iPlayer = CyEngine().getSignByIndex(userData[3]).getPlayerType()
+			CyEngine().removeSign(pPlot, iPlayer)
+		if sScript:
+			if iPlayer >= self.MAX_PC_PLAYERS:
+				CyEngine().addLandmark(pPlot, CvUtil.convertToStr(sScript))
+			else:
+				CyEngine().addSign(pPlot, iPlayer, CvUtil.convertToStr(sScript))
+		WBPlotScreen.iCounter = 10

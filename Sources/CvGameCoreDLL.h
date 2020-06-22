@@ -252,22 +252,6 @@ namespace python = boost::python;
 //#include <boost155/range/adaptor/filtered.hpp>
 //#include <boost155/range/adaptor/transformed.hpp>
 
-//
-// xercesc for XML loading
-// 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
 
@@ -300,48 +284,35 @@ namespace python = boost::python;
 #include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
+#include "CvGameCoreDLLUnDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "CvString.h"
+
 #include "CvEnums.h"
 #include "CvStructs.h"
+
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
+#include "CvDLLFlagEntityIFaceBase.h"
 
+#include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvXMLLoadUtility.h"
-#include "CvInitCore.h"
-#include "CvArtFileMgr.h"
-#include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
 #include "CvPopupInfo.h"
 #include "CvEventReporter.h"
 #include "CvMessageControl.h"
-#include "CvDiploParameters.h"
 #include "CvDeal.h"
 #include "CvInfoWater.h"
-#include "CvMap.h"
 #include "CvViewport.h"
-#include "CvGlobals.h"
-#include "CvGameAI.h"
-#include "CvTeamAI.h"
-#include "CvPlayerAI.h"
-#include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
-#include "CvPlot.h"
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPathGenerator.h"
-#include "CvBugOptions.h"
 #include "CvPython.h"
 
 #include "SCvDebug.h"

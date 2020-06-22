@@ -3,6 +3,7 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CyDeal.h"
 
 CyDeal::CyDeal(CvDeal* pDeal) :
 	m_pDeal(pDeal)
@@ -12,11 +13,6 @@ CyDeal::CyDeal(CvDeal* pDeal) :
 
 CyDeal::~CyDeal()
 {
-}
-
-bool CyDeal::isNone()
-{ 
-	return (NULL == m_pDeal); 
 }
 
 int CyDeal::getID() const

@@ -435,7 +435,7 @@
 		<German>Zwangsarbeit - Vegetation abholzen</German>
 		<Italian>Disbosca una Vegetazione (Schiavo)</Italian>
 		<Spanish>Talar una vegetación (Forzado)</Spanish>
-		<Polish>UsuD Ro[linno[ (Prace Przym.)</Polish>
+		<Polish>Usun Rosliny (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROAD_SLAVE</Tag>
@@ -557,6 +557,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Tundra[\LINK] (Forced)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA_SLAVE</Tag>
+		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Taiga[\LINK] (Forced)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_THATCH_CUTTER_SLAVE</Tag>

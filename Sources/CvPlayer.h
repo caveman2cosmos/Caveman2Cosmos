@@ -273,7 +273,7 @@ public:
 	void raze(CvCity* pCity); // Exposed to Python
 	void disband(CvCity* pCity); // Exposed to Python
 
-	bool canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const; // Exposed to Python
+	bool canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const; // Exposed to Python
 	void receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit); // Exposed to Python
 	void doGoody(CvPlot* pPlot, CvUnit* pUnit); // Exposed to Python
 
@@ -303,7 +303,7 @@ public:
 	int getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra = false, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 
-	RouteTypes getBestRoute(CvPlot* pPlot = NULL, bool bConnect = true, CvUnit* pBuilder = NULL) const; // Exposed to Python
+	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const; // Exposed to Python
 
 	int getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const; // Exposed to Python
 
@@ -383,7 +383,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const; // Exposed to Python
 
 	CvPlot* getStartingPlot() const; // Exposed to Python
-	void setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
+	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
 
 	int getTotalPopulation() const; // Exposed to Python
 	int getAveragePopulation() const; // Exposed to Python
@@ -441,7 +441,7 @@ public:
 	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const; // Exposed to Python 
-	int getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
+	int getAdvancedStartVisibilityCost(const CvPlot* pPlot = NULL) const; // Exposed to Python 
 
 	int getGoldenAgeTurns() const;// Exposed to Python  
 	bool isGoldenAge() const; // Exposed to Python
@@ -486,7 +486,7 @@ public:
 	void changeGreatPeopleThresholdModifier(int iChange);
 
 	int getGreatGeneralsThresholdModifier() const; // Exposed to Python
-	void changeGreatGeneralsThresholdModifier(int iChange);
+	void changeGreatGeneralsThresholdModifier(int iChange); // Exposed to Python
 
 	int getGreatPeopleRateModifier() const; // Exposed to Python
 	void changeGreatPeopleRateModifier(int iChange);
@@ -1724,7 +1724,7 @@ public:
 	virtual DenialTypes AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const = 0;
 
-	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
+	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
@@ -2063,15 +2063,15 @@ protected:
 
 	bool checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 	void expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData, bool bFail);
-	bool isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity* pCity, ReligionTypes eReligion) const;
-	bool isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvCity* pCity, CorporationTypes eCorporation) const;
+	bool isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, ReligionTypes eReligion) const;
+	bool isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, CorporationTypes eCorporation) const;
 	CvCity* pickTriggerCity(EventTriggerTypes eTrigger) const;
-	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, CvPlot* pPlot, bool bPickPlot) const;
+	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bPickPlot) const;
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
-	RouteTypes getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const; // Exposed to Python
-	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, CvPlot* pPlot, CvUnit* pBuilder) const;
+	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const; // Exposed to Python
+	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
 
@@ -2350,8 +2350,8 @@ public:
 	void clearModifierTotals();
 	void recalculateModifiers();
 
-	void addPropertiesAllCities(CvProperties* pProp);
-	void subtractPropertiesAllCities(CvProperties* pProp);
+	void addPropertiesAllCities(const CvProperties* pProp);
+	void subtractPropertiesAllCities(const CvProperties* pProp);
 
 	bool canHaveBuilder(BuildTypes eBuild) const;
 	//TB Nukefix

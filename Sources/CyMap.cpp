@@ -3,7 +3,13 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include "CvMapGenerator.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyMap.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
 
 CyMap::CyMap() : m_pMap(NULL)
 {
@@ -349,19 +355,15 @@ void CyMap::resetPathDistance()
 		m_pMap->resetPathDistance();
 }
 
-int CyMap::calculatePathDistance(CyPlot* pSource, CyPlot* pDest)
+int CyMap::calculatePathDistance(const CyPlot* pSource, const CyPlot* pDest) const
 {
-	if (m_pMap)
-		return m_pMap->calculatePathDistance(pSource->getPlot(), pDest->getPlot());
-	return -1;
+	return m_pMap ? m_pMap->calculatePathDistance(pSource->getPlot(), pDest->getPlot()) : -1;
 }
 
 void CyMap::rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions)
 {
 	if (m_pMap)
-	{
 		m_pMap->rebuild(iGridW, iGridH, iTopLatitude, iBottomLatitude, bWrapX, bWrapY, eWorldSize, eClimate, eSeaLevel, iNumCustomMapOptions, aeCustomMapOptions);
-	}
 }
 
 void CyMap::regenerateGameElements()
@@ -393,7 +395,7 @@ void CyMap::updateMinimapColor()
 	}
 }
 
-void CyMap::updateMinOriginalStartDist(CyArea* pArea)
+void CyMap::updateMinOriginalStartDist(const CyArea* pArea)
 {
 	if (m_pMap)
 	{
@@ -402,17 +404,17 @@ void CyMap::updateMinOriginalStartDist(CyArea* pArea)
 }
 
 
-bool CyMap::generatePathForHypotheticalUnit(CyPlot *pFrom, CyPlot *pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns)
+bool CyMap::generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns) const
 {
 	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes) ePlayer, (UnitTypes) eUnit, iFlags, iMaxTurns) : false;
 }
 
-int CyMap::getLastPathStepNum()
+int CyMap::getLastPathStepNum() const
 {
 	return m_pMap ? m_pMap->getLastPathStepNum() : 0;
 }
 
-CyPlot* CyMap::getLastPathPlotByIndex(int index)
+CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 {
 	return m_pMap ? new CyPlot(m_pMap->getLastPathPlotByIndex(index)) : NULL;
 }

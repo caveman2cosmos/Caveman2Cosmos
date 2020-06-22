@@ -49,8 +49,6 @@
 		</section>
 		
 		<section id="Tech">
-			<option id="SpedUpTechs" key="Sped Up Techs" 
-					type="boolean" default="True"/>
 			<option id="TechTradeDenial" key="Trade Denial" 
 					type="boolean" default="True"/>
 		</section>

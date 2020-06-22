@@ -66,14 +66,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -102,10 +94,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_MARTIAN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -115,7 +103,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>2700</iCost>
+			<iCost>5000</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -178,7 +166,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>4850</iCost>
+			<iCost>5000</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -241,6 +229,7 @@
 		<!-- Lunar Rover-->
 		<UnitInfo>
 			<Type>UNIT_LUNAR_ROVER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -287,7 +276,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>1200</iCost>
+			<iCost>5000</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2605,6 +2594,7 @@
 			<Description>TXT_KEY_UNIT_SOLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -4383,6 +4373,7 @@
 		<!-- Satellite -->
 		<UnitInfo>
 			<Type>UNIT_SATELLITE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_SATELLITE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -9811,8 +9802,8 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_BULLDOZER</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<UnitAIs>

@@ -9,6 +9,8 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvXMLLoadUtility.h"
 
 //======================================================================================================
 //					CvUnitInfo
@@ -432,6 +434,41 @@ bool CvUnitInfo::isUnlimitedException() const
 	return m_bUnlimitedException;
 }
 
+
+// When a player is specified as argument, only civ units not specific to said player returns false, else true.
+// Thus regular units will also return true as they are not specific to another civ than this player.
+// When NO_PLAYER - Any units requiring a civ specific building are considered civ units, all others are not.
+bool CvUnitInfo::isCivilizationUnit(const PlayerTypes ePlayer) const
+{
+	// Not the most elegant solution for exluding or including neanderthal units for startin unit selection,
+	// nor the best way to stop barbarians from spawning neanderthal units. But good enough for now.
+	const bool bCivUnit = ePlayer != NO_PLAYER;
+
+	for (int iI = 0; iI < getNumPrereqAndBuildings(); ++iI)
+	{
+		const int iBuilding = getPrereqAndBuilding(iI);
+
+		for (int iCiv = 0; iCiv < GC.getNumCivilizationInfos(); iCiv++)
+		{
+			// Civ specific building prereq?
+			if(GC.getCivilizationInfo((CivilizationTypes)iCiv).isPlayable()
+			&& GC.getCivilizationInfo((CivilizationTypes)iCiv).isCivilizationBuilding(iBuilding))
+			{
+				if (!bCivUnit) // NO_PLAYER
+				{
+					return true; // A civ specific unit.
+				}
+				// Most likely a native or active culture prereq
+				if (!GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).isCivilizationBuilding(iBuilding))
+				{
+					return false; // Not specific to ePlayer civ.
+				}
+				break;
+			}
+		}
+	}
+	return bCivUnit; // Unit is valid for ePlayer civilization.
+}
 
 int CvUnitInfo::getInstanceCostModifier() const
 {
@@ -1199,7 +1236,7 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
-BoolExpr* CvUnitInfo::getTrainCondition()
+BoolExpr* CvUnitInfo::getTrainCondition() const
 {
 	return m_pExprTrainCondition;
 }
@@ -1239,13 +1276,13 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
-int CvUnitInfo::getPrereqAndBuilding(int i) const
-{
-	return m_aiPrereqAndBuildings[i];
-}
 int CvUnitInfo::getNumPrereqAndBuildings() const
 {
 	return (int)m_aiPrereqAndBuildings.size();
+}
+int CvUnitInfo::getPrereqAndBuilding(int i) const
+{
+	return m_aiPrereqAndBuildings[i];
 }
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {
@@ -1583,7 +1620,7 @@ int CvUnitInfo::getLeaderExperience() const
 	return m_iLeaderExperience;
 }
 
-CvOutcomeList* CvUnitInfo::getKillOutcomeList()
+const CvOutcomeList* CvUnitInfo::getKillOutcomeList() const
 {
 	return &m_KillOutcomeList;
 }
@@ -1593,17 +1630,17 @@ int CvUnitInfo::getNumActionOutcomes() const
 	return m_aOutcomeMissions.size();
 }
 
-MissionTypes CvUnitInfo::getActionOutcomeMission(const int index) const
+MissionTypes CvUnitInfo::getActionOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index]->getMission();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeList(const int index) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
 {
 	return m_aOutcomeMissions[index]->getOutcomeList();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMission) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1615,12 +1652,12 @@ CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMis
 	return NULL;
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMission(const int index) const
+const CvOutcomeMission* CvUnitInfo::getOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index];
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(const MissionTypes eMission) const
+CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1892,11 +1929,6 @@ void CvUnitInfo::setPowerValue(int iNewValue)
 	m_iPowerValue = iNewValue;
 }
 
-CvPropertyManipulators* CvUnitInfo::getPropertyManipulators()
-{
-	return &m_PropertyManipulators;
-}
-
 int CvUnitInfo::getPrereqVicinityBonus() const
 {
 	return m_iPrereqVicinityBonus;
@@ -1969,8 +2001,8 @@ CvWString CvUnitInfo::getCivilizationName(int i) const
 }
 
 int CvUnitInfo::getCivilizationNamesVectorSize() const					{return m_aszCivilizationNamesforPass3.size();}
-CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(const int i) const	{return m_aszCivilizationNamesforPass3[i];}
-CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(const int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(int i) const	{return m_aszCivilizationNamesforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
 
 
 //TB Combat Mods Start  TB SubCombat Mod begin
@@ -4005,7 +4037,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
-	getKillOutcomeList()->getCheckSum(iSum);
+	m_KillOutcomeList.getCheckSum(iSum);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
 	{
@@ -5316,7 +5348,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	//TB Combat Mods End  TB SubCombat Mod end
 
-	getKillOutcomeList()->read(pXML, L"KillOutcomes");
+	m_KillOutcomeList.read(pXML, L"KillOutcomes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"Actions"))
 	{
@@ -5879,7 +5911,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(),pXML);
+	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 
 	if (!m_pExprTrainCondition)
 	{
@@ -6361,7 +6393,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	//TB Combat Mods End  TB SubCombat Mod end
 	//setTotalModifiedCombatStrengthDetails();
 
-	getKillOutcomeList()->copyNonDefaults(pClassInfo->getKillOutcomeList(), pXML);
+	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList, pXML);
 
 	if (m_aOutcomeMissions.empty())
 	{
@@ -6460,31 +6492,67 @@ bool CvUnitInfo::readPass2(CvXMLLoadUtility* pXML)
 
 void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
-	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
+	if (pClassInfo->m_piFlankingStrikeUnit != NULL)
 	{
-		if (bOver || getFlankingStrikeUnit(i) == -1 && pClassInfo->getFlankingStrikeUnit(i) != -1)
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
 		{
-			if (m_piFlankingStrikeUnit == NULL)
+			if (bOver || getFlankingStrikeUnit(i) == -1 && pClassInfo->getFlankingStrikeUnit(i) != -1)
 			{
-				CvXMLLoadUtility::InitList(&m_piFlankingStrikeUnit, GC.getNumUnitInfos(), -1);
+				if (m_piFlankingStrikeUnit == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piFlankingStrikeUnit, GC.getNumUnitInfos(), -1);
+				}
+				m_piFlankingStrikeUnit[i] = pClassInfo->getFlankingStrikeUnit(i);
 			}
-			m_piFlankingStrikeUnit[i] = pClassInfo->getFlankingStrikeUnit(i);
 		}
-		if (bOver || getUnitAttackModifier(i) == -1 && pClassInfo->getUnitAttackModifier(i) != -1)
+	}
+	else
+	{
+		if (bOver && m_piFlankingStrikeUnit != NULL)
 		{
-			if (m_piUnitAttackModifier == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitAttackModifier, GC.getNumUnitInfos(), -1);
-			}
-			m_piUnitAttackModifier[i] = pClassInfo->getUnitAttackModifier(i);
+			SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
 		}
-		if (bOver || getUnitDefenseModifier(i) == -1 && pClassInfo->getUnitDefenseModifier(i) != -1)
+	}
+	if (pClassInfo->m_piUnitAttackModifier != NULL)
+	{
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
 		{
-			if (m_piUnitDefenseModifier == NULL)
+			if (bOver || getUnitAttackModifier(i) == -1 && pClassInfo->getUnitAttackModifier(i) != -1)
 			{
-				CvXMLLoadUtility::InitList(&m_piUnitDefenseModifier, GC.getNumUnitInfos(), -1);
+				if (m_piUnitAttackModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piUnitAttackModifier, GC.getNumUnitInfos(), -1);
+				}
+				m_piUnitAttackModifier[i] = pClassInfo->getUnitAttackModifier(i);
 			}
-			m_piUnitDefenseModifier[i] = pClassInfo->getUnitDefenseModifier(i);
+		}
+	}
+	else
+	{
+		if (bOver && m_piUnitAttackModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piUnitAttackModifier);
+		}
+	}
+	if (pClassInfo->m_piUnitDefenseModifier != NULL)
+	{
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
+		{
+			if (bOver || getUnitDefenseModifier(i) == -1 && pClassInfo->getUnitDefenseModifier(i) != -1)
+			{
+				if (m_piUnitDefenseModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piUnitDefenseModifier, GC.getNumUnitInfos(), -1);
+				}
+				m_piUnitDefenseModifier[i] = pClassInfo->getUnitDefenseModifier(i);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piUnitDefenseModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piUnitDefenseModifier);
 		}
 	}
 	if (bOver || m_iUnitCaptureType == -1 && pClassInfo->getUnitCaptureType() != -1)

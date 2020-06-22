@@ -1271,7 +1271,7 @@ class CvForeignAdvisor:
 			self.getScreen().moveItem("Tooltip", iX, iY, 0)
 
 	# Handles the input for this screen...
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		screen = self.getScreen()
 		if not screen.isActive():
 			return
@@ -1296,9 +1296,8 @@ class CvForeignAdvisor:
 			CASE = szSplit[2:]
 		else:
 			CASE = [0]
-		# Remove potential Help Text
-		self.bTooltip = False
-		screen.hide("Tooltip")
+
+		screen.hide("Tooltip") # Remove potential Help Text
 
 		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 

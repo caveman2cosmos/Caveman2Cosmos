@@ -1,5 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvRandom.h"
+#include "CyCity.h"
+#include "CyDeal.h"
+#include "CyGame.h"
+#include "CyPlot.h"
 #include "CyReplayInfo.h"
+
 //
 // published python interface for CyGame
 //
@@ -11,6 +17,8 @@ void CyGamePythonInterface()
 	python::class_<CyGame>("CyGame")
 
 		.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
+
+		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
 

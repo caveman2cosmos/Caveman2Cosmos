@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_NORMAL
 	StartYear=-200000
@@ -14037,7 +14037,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=52
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -26611,7 +26610,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=49
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -39223,7 +39221,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=18
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -73681,7 +73678,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=42
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -77849,7 +77845,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=19
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -94030,7 +94025,6 @@ BeginPlot
 	x=89,y=52
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -106660,7 +106654,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=48
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -111895,7 +111888,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_ELEPHANTS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -122419,7 +122411,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=13
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -124760,7 +124751,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=49
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot

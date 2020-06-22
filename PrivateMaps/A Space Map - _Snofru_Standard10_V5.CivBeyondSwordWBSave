@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -31892,7 +31892,6 @@ EndPlot
 BeginPlot
 	x=30,y=21
 	BonusType=BONUS_WHEAT
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -84957,7 +84956,6 @@ EndPlot
 BeginPlot
 	x=81,y=42
 	BonusType=BONUS_SALT
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -126779,7 +126777,6 @@ EndPlot
 BeginPlot
 	x=121,y=11
 	BonusType=BONUS_HORSE
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

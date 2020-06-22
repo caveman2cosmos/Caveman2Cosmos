@@ -14,6 +14,7 @@
 #define CV_INFO_H
 
 #include "CvXMLLoadUtilityModTools.h"
+#include "CvArtFileMgr.h"
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
@@ -81,7 +82,7 @@ public:
 	const wchar* getStrategy() const;
 /*	const wchar* getGenericCategory() const;*/
 
-	bool isMatchForLink(std::wstring szLink, bool bKeysOnly) const;
+	bool isMatchForLink(const std::wstring szLink, bool bKeysOnly) const;
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -89,8 +90,8 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FAssertMsg(false, "Override this"); return false; }
 	virtual bool readPass3() { FAssertMsg(false, "Override this"); return false; }
-	virtual void copyNonDefaults(CvInfoBase* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
-	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false)
+	virtual void copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
+	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(unsigned int& iSum) { };
 	virtual const wchar* getExtraHoverText() const { return L""; };
@@ -129,10 +130,7 @@ public:
 	CvScalableInfo() : m_fScale(1.0f), m_fInterfaceScale(1.0f) { }
 
 	DllExport float getScale() const;
-	void setScale(float fScale);
-
 	DllExport float getInterfaceScale() const;
-	void setInterfaceScale(float fInterfaceScale);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -160,7 +158,7 @@ public:
 	virtual ~CvHotkeyInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHotkeyInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvHotkeyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -169,30 +167,18 @@ public:
 	void setActionInfoIndex(int i);
 
 	int getHotKeyVal() const;
-	void setHotKeyVal(int i);
 	int getHotKeyPriority() const;
-	void setHotKeyPriority(int i);
 	int getHotKeyValAlt() const;
-	void setHotKeyValAlt(int i);
 	int getHotKeyPriorityAlt() const;
-	void setHotKeyPriorityAlt(int i);
 	int getOrderPriority() const;
-	void setOrderPriority(int i);
 
 	bool isAltDown() const;
-	void setAltDown(bool b);
 	bool isShiftDown() const;
-	void setShiftDown(bool b);
 	bool isCtrlDown() const;
-	void setCtrlDown(bool b);
 	bool isAltDownAlt() const;
-	void setAltDownAlt(bool b);
 	bool isShiftDownAlt() const;
-	void setShiftDownAlt(bool b);
 	bool isCtrlDownAlt() const;
-	void setCtrlDownAlt(bool b);
 	const TCHAR* getHotKey() const; // Exposed to Python
-	void setHotKey(const TCHAR* szVal);
 	const WCHAR* getHotKeyDescriptionKey() const;
 	const WCHAR* getHotKeyAltDescriptionKey() const;
 	const WCHAR* getHotKeyString() const;
@@ -233,27 +219,21 @@ public:
 	virtual ~CvDiplomacyResponse();
 
 	int getNumDiplomacyText() const;
-	void setNumDiplomacyText(int i);
 
 	bool getCivilizationTypes(const int i) const;
 	bool* getCivilizationTypes() const;
-	void setCivilizationTypes(int i, bool bVal);
 
 	bool getLeaderHeadTypes(const int i) const;
 	bool* getLeaderHeadTypes() const;
-	void setLeaderHeadTypes(int i, bool bVal);
 
 	bool getAttitudeTypes(int i) const;
 	bool* getAttitudeTypes() const;
-	void setAttitudeTypes(int i, bool bVal);
 
 	bool getDiplomacyPowerTypes(const int i) const;
 	bool* getDiplomacyPowerTypes() const;
-	void setDiplomacyPowerTypes(int i, bool bVal);
 
 	const TCHAR* getDiplomacyText(int i) const;
 	const CvString* getDiplomacyText() const;
-	void setDiplomacyText(int i, CvString szText);
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -295,7 +275,7 @@ public:
 
 	int getExperience() const; // Exposed to Python
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	bool isVisible() const; // Exposed to Python
 
@@ -307,7 +287,6 @@ public:
 	int getFlavorValue(int i) const; // Exposed to Python
 
 	const TCHAR* getTexture() const; // Exposed to Python
-	void setTexture(const TCHAR* szVal);
 
 	//Team Project (1)
 	//TB Specialist Tags
@@ -335,8 +314,11 @@ public:
 	bool readPass3();
 
 	void getCheckSum(unsigned int& iSum);
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
+	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
 	int m_iGreatPeopleUnitType;
@@ -369,9 +351,7 @@ protected:
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypesNull;
 
-	CvPropertyManipulators m_PropertyManipulators;
 	CvString m_szTexture;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -493,12 +473,9 @@ public:
 	// Dale - AB: Bombing END
 
 	std::wstring getQuote() const; // Exposed to Python
-	void setQuoteKey(const TCHAR* szVal);
 	const TCHAR* getQuoteKey() const;
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 	const TCHAR* getSoundMP() const; // Exposed to Python
-	void setSoundMP(const TCHAR* szVal);
 
 	// Arrays
 
@@ -519,8 +496,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTechInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -637,11 +614,8 @@ public:
 
 	int getLayerAnimationPath() const;
 	int getPrereqPromotion() const; // Exposed to Python
-	void setPrereqPromotion(int i); // Exposed to Python
 	int getPrereqOrPromotion1() const; // Exposed to Python
-	void setPrereqOrPromotion1(int i); // Exposed to Python
 	int getPrereqOrPromotion2() const; // Exposed to Python
-	void setPrereqOrPromotion2(int i); // Exposed to Python
 
 	int getTechPrereq() const; // Exposed to Python
 	int getMinEraType() const;
@@ -731,7 +705,6 @@ public:
 	bool isImmuneToFirstStrikes() const; // Exposed to Python
 
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	bool changesMoveThroughPlots() const;
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -760,7 +733,6 @@ public:
 	bool getFeatureDoubleMove(int i) const; // Exposed to Python
 	bool getUnitCombat(int i) const; // Exposed to Python
 
-
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -785,7 +757,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	//Text Strings
@@ -1199,13 +1171,15 @@ public:
 /************************************************************************************************/
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvPromotionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-
 	int m_iLayerAnimationPath;
 	int m_iPrereqPromotion;
 	int m_iPrereqOrPromotion1;
@@ -1317,8 +1291,6 @@ protected:
 	bool* m_pbTerrainDoubleMove;
 	bool* m_pbFeatureDoubleMove;
 	bool* m_pbUnitCombat;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	//TB Combat Mods Begin TB SubCombat Mod begin
 	//Text Strings
@@ -1629,7 +1601,6 @@ public:
 	virtual ~CvCommandInfo();
 
 	int getAutomate() const;
-	void setAutomate(int i);
 
 	bool getConfirmCommand() const;
 	bool getVisible() const;
@@ -1664,14 +1635,10 @@ public:
 	virtual ~CvAutomateInfo();
 
 	int getCommand() const;
-	void setCommand(int i);
 	int getAutomate() const;
-	void setAutomate(int i);
 
 	bool getConfirmCommand() const;
-	void setConfirmCommand(bool bVal);
 	bool getVisible() const;
-	void setVisible(bool bVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvAutomateInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -1710,12 +1677,12 @@ public:
 	int getCommandType() const; // Exposed to Python
 	int getControlType() const; // Exposed to Python
 	int getOriginalIndex() const;
-	void setOriginalIndex(int i);
+	void setOriginalIndex(int i) { m_iOriginalIndex = i; }
 
 	bool isConfirmCommand() const; // Exposed to Python
 	DllExport bool isVisible() const; // Exposed to Python
 	DllExport ActionSubTypes getSubType() const;
-	void setSubType(ActionSubTypes eSubType);
+	void setSubType(ActionSubTypes eSubType) { m_eSubType = eSubType; }
 
 	// functions to replace the CvInfoBase calls
 	const TCHAR* getType() const;
@@ -1776,6 +1743,8 @@ public:
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
 	bool isUnlimitedException() const; // Exposed to Python
+	bool isCivilizationUnit(const PlayerTypes ePlayer=NO_PLAYER) const;
+
 	int getInstanceCostModifier() const; // Exposed to Python
 	int getAIWeight() const; // Exposed to Python
 	int getProductionCost() const; // Exposed to Python
@@ -1939,8 +1908,8 @@ public:
 
 	CvWString getCivilizationName(int i) const;
 	int getCivilizationNamesVectorSize() const;
-	CvWString getCivilizationNamesNamesVectorElement(const int i) const;
-	CvWString getCivilizationNamesValuesVectorElement(const int i) const;
+	CvWString getCivilizationNamesNamesVectorElement(int i) const;
+	CvWString getCivilizationNamesValuesVectorElement(int i) const;
 
 	//TB Combat Mod Begin  TB SubCombat Mod begin
 	//Functions
@@ -2266,9 +2235,9 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	BoolExpr* getTrainCondition();
+	BoolExpr* getTrainCondition() const;
 
 protected:
 	int m_iMaxGlobalInstances;
@@ -2420,13 +2389,13 @@ public:
 	int getLeaderPromotion() const; // Exposed to Python
 	int getLeaderExperience() const; // Exposed to Python
 
-	CvOutcomeList* getKillOutcomeList();
+	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
-	CvOutcomeList* getActionOutcomeList(const int index) const;
-	MissionTypes getActionOutcomeMission(const int index) const;
-	CvOutcomeList* getActionOutcomeListByMission(const MissionTypes eMission) const;
-	CvOutcomeMission* getOutcomeMission(const int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(const MissionTypes eMission) const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
@@ -2448,14 +2417,15 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
-	void copyNonDefaults(CvUnitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	std::vector<int>& getSubCombatTypes();
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iAIWeight;
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
@@ -2650,8 +2620,6 @@ protected:
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
 	int m_iAttackCombatModifier;
@@ -2834,7 +2802,7 @@ public:
 	virtual void write(FDataStreamBase* pStream) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpawnInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpawnInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int	getNumBonuses() const;
 	int	getNumTerrains() const;
@@ -2842,11 +2810,11 @@ public:
 	int	getNumFeatureTerrains() const;
 	int	getNumSpawnGroup() const;
 	PlayerTypes getPlayer() const;
-	BonusTypes getBonus(const int index) const;
-	TerrainTypes getTerrain(const int index) const;
-	FeatureTypes getFeature(const int index) const;
-	TerrainTypes getFeatureTerrain(const int index) const;
-	UnitTypes getSpawnGroup(const int index) const;
+	BonusTypes getBonus(int index) const;
+	TerrainTypes getTerrain(int index) const;
+	FeatureTypes getFeature(int index) const;
+	TerrainTypes getFeatureTerrain(int index) const;
+	UnitTypes getSpawnGroup(int index) const;
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;
@@ -3056,12 +3024,7 @@ public:
 	bool isPolicy() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY								 10/22/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	void copyNonDefaults(CvCivicOptionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCivicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -3089,7 +3052,6 @@ public:
 
 	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
 	const wchar* getWeLoveTheKing() const;
-	void setWeLoveTheKingKey(const TCHAR* szVal);
 	const wchar* getWeLoveTheKingKey() const;
 
 	int getCivicOptionType() const; // Exposed to Python
@@ -3246,23 +3208,26 @@ public:
 	bool isAnySpecialistCommerceChanges() const;
 	bool isAnySpecialistYieldChanges() const;
 
-	CvString getCivicAttitudeReason(const int i) const;
+	CvString getCivicAttitudeReason(int i) const;
 	int getCivicAttitudeVectorSize() const;
-	CvString getCivicAttitudeNamesVectorElement(const int i) const;
-	int getCivicAttitudeValuesVectorElement(const int i) const;
+	CvString getCivicAttitudeNamesVectorElement(int i) const;
+	int getCivicAttitudeValuesVectorElement(int i) const;
 	int getCivicAttitudeReasonVectorSize() const;
-	CvString getCivicAttitudeReasonNamesVectorElement(const int i) const;
-	CvString getCivicAttitudeReasonValuesVectorElement(const int i) const;
+	CvString getCivicAttitudeReasonNamesVectorElement(int i) const;
+	CvString getCivicAttitudeReasonValuesVectorElement(int i) const;
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 	bool readPass3();
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivicInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
-	CvPropertyManipulators* getPropertyManipulators();
 
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
 	CvString m_szGlobalDefine;
 	CvString* m_pszCivicAttitudeReason;
@@ -3411,9 +3376,6 @@ protected:
 	std::vector<int> m_aiCivicAttitudeforPass3;
 	std::vector<CvString> m_aszCivicAttitudeReasonforPass3;
 	std::vector<CvString> m_aszCivicAttitudeReasonValueforPass3;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3632,11 +3594,8 @@ public:
 	bool isAllowsNukes() const; // Exposed to Python
 
 	const TCHAR* getConstructSound() const; // Exposed to Python
-	void setConstructSound(const TCHAR* szVal);
 	const TCHAR* getArtDefineTag() const; // Exposed to Python
-	void setArtDefineTag(const TCHAR* szVal);
 	const TCHAR* getMovieDefineTag() const; // Exposed to Python
-	void setMovieDefineTag(const TCHAR* szVal);
 
 	// Arrays
 
@@ -3843,12 +3802,12 @@ public:
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
 
-	CvProperties* getProperties();
-	CvProperties* getPropertiesAllCities();
-	CvProperties* getPrereqMinProperties();
-	CvProperties* getPrereqMaxProperties();
-	CvProperties* getPrereqPlayerMinProperties();
-	CvProperties* getPrereqPlayerMaxProperties();
+	const CvProperties* getProperties() const;
+	const CvProperties* getPropertiesAllCities() const;
+	const CvProperties* getPrereqMinProperties() const;
+	const CvProperties* getPrereqMaxProperties() const;
+	const CvProperties* getPrereqPlayerMinProperties() const;
+	const CvProperties* getPrereqPlayerMaxProperties() const;
 
 	//TB Combat Mods (Buildings) begin
 	UnitTypes getPropertySpawnUnit() const;
@@ -3985,8 +3944,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	const CvPropertyManipulators* getPropertyManipulators() const;
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	bool isNewCityFree(CvGameObject* pObject);
 
@@ -4058,18 +4016,12 @@ protected:
 
 	int* m_piCommerceAttacks;
 
-	bool* m_pbPrereqOrBuilding;
 	bool* m_pbPrereqOrGameSpeed;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
 	bool* m_pbPrereqOrImprovement;
 	bool* m_pbPrereqOrFeature;
-	int* m_piBuildingProductionModifier;
-	int* m_piGlobalBuildingProductionModifier;
-	int* m_piGlobalBuildingCostModifier;
 	int* m_piBonusDefenseChanges;
-	bool* m_pbPrereqNotBuilding;
-	bool* m_pbReplaceBuilding;
 	int** m_ppaiBonusCommerceModifier;
 	int* m_piUnitCombatExtraStrength;
 	int** m_ppaiTechCommerceChange;
@@ -4081,11 +4033,23 @@ protected:
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
 	int** m_ppaiVicinityBonusYieldChanges;
-public:
 
+private:
+	int* m_piBuildingProductionModifier;
+	int* m_piGlobalBuildingProductionModifier;
+	int* m_piGlobalBuildingCostModifier;
+	int* m_piBuildingHappinessChanges;
+	int* m_piPrereqNumOfBuilding;
+	bool* m_pbPrereqNotBuilding;
+	bool* m_pbReplaceBuilding;
+	bool* m_pbPrereqOrBuilding;
+
+	CvPropertyManipulators m_PropertyManipulators;
+
+public:
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const; // Exposed to Python
 	BonusTypes getPrereqOrBonuses(int i) const; // Exposed to Python
@@ -4271,9 +4235,7 @@ protected:
 	bool m_bAnyUnitCombatFreeExperience;
 	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
-	int* m_piBuildingHappinessChanges;
 	std::vector<int> m_aiPrereqInCityBuildings;
-	int* m_piPrereqNumOfBuilding;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
@@ -4291,8 +4253,6 @@ protected:
 	CvProperties m_PrereqMaxProperties;
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	BoolExpr* m_pExprNewCityFree;
 	BoolExpr* m_pExprConstructCondition;
@@ -4407,21 +4367,19 @@ public:
 	CvSpecialBuildingInfo();
 	virtual ~CvSpecialBuildingInfo();
 
-	int getObsoleteTech( void ) const; // Exposed to Python
-	int getTechPrereq( void ) const; // Exposed to Python
-	int getTechPrereqAnyone( void ) const; // Exposed to Python
+	int getObsoleteTech() const; // Exposed to Python
+	int getTechPrereq() const; // Exposed to Python
+	int getTechPrereqAnyone() const; // Exposed to Python
 	int getMaxPlayerInstances() const;
 
-	bool isValid( void ) const; // Exposed to Python
-
-	// Arrays
+	bool isValid() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -4453,9 +4411,7 @@ public:
 	virtual ~CvRiverModelInfo();
 
 	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	void setModelFile(const TCHAR* szVal);				// The model filename
 	DllExport const TCHAR* getBorderFile() const; // Exposed to Python
-	void setBorderFile(const TCHAR* szVal);				// The model filename
 
 	DllExport int getTextureIndex() const;
 	DllExport const TCHAR* getDeltaString() const;		//Exposed to Python
@@ -4463,7 +4419,7 @@ public:
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRiverModelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRiverModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4497,11 +4453,8 @@ public:
 	DllExport RouteTypes getRouteType() const;			// The route type
 
 	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	void setModelFile(const TCHAR* szVal);				// The model filename
 	DllExport const TCHAR* getLateModelFile() const; // Exposed to Python
-	void setLateModelFile(const TCHAR* szVal);			// The model filename
 	const TCHAR* getModelFileKey() const; // Exposed to Python
-	void setModelFileKey(const TCHAR* szVal);			// The model filename Key
 
 	DllExport bool isAnimated() const;
 
@@ -4510,7 +4463,7 @@ public:
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteModelInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRouteModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4561,16 +4514,16 @@ public:
 	std::wstring pyGetShortDescription(uint uiForm) { return getShortDescription(uiForm); } // Exposed to Python
 	DllExport const wchar* getShortDescription(uint uiForm = 0);
 	const wchar* getShortDescriptionKey() const; // Exposed to Python
-	std::wstring pyGetShortDescriptionKey() { return getShortDescriptionKey(); } // Exposed to Python
+	const std::wstring pyGetShortDescriptionKey() const { return getShortDescriptionKey(); } // Exposed to Python
 
 	std::wstring pyGetAdjective(uint uiForm) { return getAdjective(uiForm); } // Exposed to Python
 	DllExport const wchar* getAdjective(uint uiForm = 0);
 	const wchar* getAdjectiveKey() const; // Exposed to Python
-	std::wstring pyGetAdjectiveKey() { return getAdjectiveKey(); } // Exposed to Python
+	const std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
 
 	DllExport const TCHAR* getFlagTexture() const;
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
+
 	// Arrays
 
 	int getCivilizationFreeUnits(int i) const; // Exposed to Python
@@ -4579,9 +4532,13 @@ public:
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
 	DllExport bool isLeaders(int i) const; // Exposed to Python
-	bool isCivilizationFreeBuilding(int i) const; // Exposed to Python
+
 	bool isCivilizationFreeTechs(int i) const; // Exposed to Python
 	bool isCivilizationDisableTechs(int i) const; // Exposed to Python
+
+	int getNumCivilizationBuildings() const;
+	int getCivilizationBuilding(int i) const;
+	bool isCivilizationBuilding(int i) const; // Exposed to Python
 
 	std::string getCityNames(int i) const; // Exposed to Python
 
@@ -4589,7 +4546,6 @@ public:
 	const TCHAR* getButton() const;
 
 	int getDerivativeCiv() const; // Exposed to Python
-	void setDerivativeCiv(int iCiv);
 
 	//TB Tags
 	//int
@@ -4601,8 +4557,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivilizationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -4614,42 +4570,38 @@ protected:
 
 	int m_iDefaultPlayerColor;
 	int m_iArtStyleType;
-	// FlavorUnits by Impaler[WrG]
-	int m_iUnitArtStyleType;
-
+	int m_iUnitArtStyleType; // FlavorUnits by Impaler[WrG]
 	int m_iNumCityNames;
 	int m_iNumLeaders;
 	int m_iSelectionSoundScriptId;
 	int m_iActionSoundScriptId;
 	int m_iDerivativeCiv;
+	// TB Tags
+	int m_iSpawnRateModifier;
+	int m_iSpawnRateNPCPeaceModifier;
 
+	bool m_bStronglyRestricted;
+	// ! TB Tags
 	bool m_bAIPlayable;
 	bool m_bPlayable;
 
 	CvString m_szArtDefineTag;
 	CvWString m_szShortDescriptionKey;
 	CvWString m_szAdjectiveKey;
-	// Arrays
 
 	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
-	bool* m_pbCivilizationFreeBuilding;
 	bool* m_pbCivilizationFreeTechs;
 	bool* m_pbCivilizationDisableTechs;
 
 	CvString* m_paszCityNames;
 
+	std::vector<int> m_aiCivilizationBuildings;
+
 	mutable std::vector<CvWString> m_aszShortDescription;
 	mutable std::vector<CvWString> m_aszAdjective;
-
-	//TB Tags
-	//int
-	int m_iSpawnRateModifier;
-	int m_iSpawnRateNPCPeaceModifier;
-	//bool
-	bool m_bStronglyRestricted;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4688,7 +4640,7 @@ public:
 	const char* getMovie() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVictoryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -4713,7 +4665,6 @@ protected:
 	bool m_bTotalVictory;
 
 	CvString m_szMovie;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4741,7 +4692,7 @@ class CvHurryInfo :
 		void write(FDataStreamBase* stream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvHurryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 		void getCheckSum(unsigned int& iSum);
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
@@ -4751,7 +4702,6 @@ class CvHurryInfo :
 		int m_iProductionPerPopulation;
 
 		bool m_bAnger;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4834,7 +4784,7 @@ public:
 	int getAIAdvancedStartPercent() const; // Exposed to Python
 	int getNumGoodies() const; // Exposed to Python
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	// Arrays
 
@@ -4848,12 +4798,13 @@ public:
 	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHandicapInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iFreeWinsVsBarbs;
 	int m_iAnimalAttackProb;
 	int m_iStartingLocationPercent;
@@ -4918,8 +4869,6 @@ protected:
 	int m_iAIAdvancedStartPercent;
 	int m_iNumGoodies;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	CvString m_szHandicapName;
 
 	IDValueMapPercent m_Percent;
@@ -4930,7 +4879,6 @@ protected:
 
 	bool* m_pbFreeTechs;
 	bool* m_pbAIFreeTechs;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4974,13 +4922,13 @@ public:
 	int getNumTurnIncrements() const; // Exposed to Python
 	int getUnitMovementPercent() const;
 
-	GameTurnInfo& getGameTurnInfo(int iIndex) const; // Exposed to Python
-	CvDateIncrement& getDateIncrement(int iIndex);
+	const GameTurnInfo& getGameTurnInfo(int iIndex) const; // Exposed to Python
+	const CvDateIncrement& getDateIncrement(int iIndex) const;
 	std::vector<CvDateIncrement>& getIncrements();
 	bool getEndDatesCalculated() const;
 	void setEndDatesCalculated(bool bCalculated);
 
-	void allocateGameTurnInfos(const int iSize);
+	void allocateGameTurnInfos(int iSize);
 
 	int getPercent(int iID) const;
 
@@ -4989,7 +4937,7 @@ public:
 	//TB GameSpeed end
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvGameSpeedInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -5055,7 +5003,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTurnTimerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -5129,15 +5077,15 @@ public:
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
-	TerrainStructs& getTerrainStruct(int iIndex);
+	const TerrainStructs& getTerrainStruct(int iIndex) const;
 
 	int getNumPlaceBonusTypes() const;
-	PlaceBonusTypes& getPlaceBonusType(int iIndex);
+	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
-	void copyNonDefaults(CvBuildInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -5228,13 +5176,12 @@ public:
 	bool isMapCategoryType(int i);
 
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvGoodyInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -5302,7 +5249,7 @@ public:
 	int getPrereqOrBonus(int i) const; // Exposed to Python
 	bool isAnyPrereqOrBonus() const;
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
@@ -5310,12 +5257,13 @@ public:
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
 
@@ -5335,8 +5283,6 @@ protected:
 	int* m_piYieldChange;
 	int* m_piTechMovementChange;
 	int* m_piPrereqOrBonuses;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5416,9 +5362,7 @@ public:
 	int getHappiness() const; // Exposed to Python
 	int getPillageGold() const; // Exposed to Python
 	int getImprovementPillage() const; // Exposed to Python
-	void setImprovementPillage(int i);
 	int getImprovementUpgrade() const; // Exposed to Python
-	void setImprovementUpgrade(int i);
 	// Super Forts begin *XML*
 	int getCulture() const;
 	int getCultureRange() const;
@@ -5450,7 +5394,6 @@ public:
 	bool isOutsideBorders() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -5538,12 +5481,12 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvImprovementInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	static ImprovementTypes getImprovementCity();
 	static void setImprovementCity(ImprovementTypes eIndex);
@@ -5551,10 +5494,10 @@ public:
 	static ImprovementTypes getImprovementRuins();
 	static void setImprovementRuins(ImprovementTypes eIndex);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
 
@@ -5618,8 +5561,6 @@ protected:
 
 	CvImprovementBonusInfo* m_paImprovementBonus;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	//TB Improvements
 	//Object Indexes
 	int m_iBonusChange;
@@ -5659,15 +5600,12 @@ public:
 	int getUniqueRange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBonusClassInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iUniqueRange;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5715,17 +5653,13 @@ public:
 
 	bool isOneArea() const; // Exposed to Python
 	bool isHills() const; // Exposed to Python
-
-	// Afforess	Mountains 08/03/09
 	bool isPeaks() const; // Exposed to Python
-	bool isCurrency() const;
-
 	bool isFlatlands() const; // Exposed to Python
+	bool isBonusCoastalOnly() const; // Exposed to Python
 	bool isNoRiverSide() const; // Exposed to Python
 	bool isNormalize() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
 
 	// Arrays
 	int getYieldChange(int i) const; // Exposed to Python
@@ -5748,21 +5682,22 @@ public:
 	// Other
 	const TCHAR* getButton() const; // Exposed to Python
 	DllExport const CvArtInfoBonus* getArtInfo() const; // Exposed to Python
-	CvPropertyManipulators* getPropertyManipulators();
+
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBonusInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
-	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iBonusClassType;
 	int m_iChar;
 	int m_iTechReveal;
@@ -5790,17 +5725,9 @@ protected:
 
 	bool m_bOneArea;
 	bool m_bHills;
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09										   		 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool m_bPeaks;
-	bool m_bCurrency;
-/************************************************************************************************/
-/* Afforess	Mountains End	   END															 */
-/************************************************************************************************/
 	bool m_bFlatlands;
+	bool m_bBonusCoastalOnly;
 	bool m_bNoRiverSide;
 	bool m_bNormalize;
 
@@ -5818,8 +5745,6 @@ protected:
 	std::vector<int> m_aiMapCategoryTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
 };
@@ -5871,7 +5796,6 @@ public:
 	const TCHAR* getOnUnitChangeTo() const;
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szTag);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -5912,7 +5836,6 @@ public:
 /*																							  */
 /************************************************************************************************/
 	const TCHAR* getGrowthSound() const;
-	void setGrowthSound(const TCHAR* szVal);
 	int getSpreadProbability() const;
 	int getCultureDistance() const;
 	bool isIgnoreTerrainCulture() const;
@@ -5930,20 +5853,21 @@ public:
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-	void copyNonDefaults(CvFeatureInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iMovementCost;
 	int m_iSeeThroughChange;
 	int m_iHealthPercent;
@@ -5984,10 +5908,7 @@ protected:
 
 	bool* m_pbTerrain;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 private:
-
 	CvString m_szArtDefineTag;
 	int m_zobristValue;
 };
@@ -6018,7 +5939,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvCommerceInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6072,7 +5993,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvYieldInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6128,7 +6049,6 @@ public:
 	bool isFoundFreshWater() const; // Exposed to Python
 
 	DllExport const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szTag);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -6152,11 +6072,11 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTerrainInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	static TerrainTypes getTerrainPeak()	{ return m_TerrainPeak; }
 	static void setTerrainPeak(TerrainTypes eIndex)	{ m_TerrainPeak = eIndex; }
@@ -6174,9 +6094,13 @@ public:
 	bool isColdDamage() const;
 	//TB Combat Mod end
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+	CvString m_szArtDefineTag;
+	int	m_zobristValue;
+
+protected:
 	bool m_bWaterTerrain;
 	bool m_bImpassable;
 	bool m_bFound;
@@ -6203,14 +6127,8 @@ protected:
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	static TerrainTypes m_TerrainPeak;
 	static TerrainTypes m_TerrainHill;
-private:
-
-	CvString m_szArtDefineTag;
-	int	m_zobristValue;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6239,7 +6157,7 @@ public:
 	bool getSelectAll() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -6271,13 +6189,12 @@ public:
 	virtual ~CvAdvisorInfo();
 
 	const TCHAR* getTexture() const; // Exposed to Python
-	void setTexture(const TCHAR* szVal);
 	int getNumCodes() const;
 	int getEnableCode(uint uiCode) const;
 	int getDisableCode(uint uiCode) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAdvisorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvAdvisorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -6391,7 +6308,6 @@ public:
 	int getFreedomAppreciation() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const; // Exposed to Python
-	void setArtDefineTag(const TCHAR* szVal);
 
 	// Arrays
 
@@ -6445,7 +6361,7 @@ public:
 	void read(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6604,7 +6520,7 @@ public:
 
 	int getPercent(int iID) const;
 
-	void copyNonDefaults(CvWorldInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -6722,7 +6638,7 @@ public:
 	float getRandIceLatitude() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvClimateInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvClimateInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -6754,7 +6670,7 @@ public:
 	int getSeaLevelChange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSeaLevelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSeaLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -6785,7 +6701,7 @@ public:
 	int getProductionToCommerceModifier(int i) const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvProcessInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -6835,7 +6751,7 @@ public:
 	bool isVoteSourceType(int i) const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVoteInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 protected:
@@ -6921,7 +6837,7 @@ public:
 	bool isMapCategoryType(int i);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvProjectInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	int getWorldHappiness() const;
@@ -6949,10 +6865,6 @@ protected:
 	int* m_piCommerceModifier;
 	std::vector<CvString> m_aszProjectsNeededforPass3;
 	std::vector<int> m_aiProjectsNeededforPass3;
-
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
 
 	int m_iVictoryPrereq;
 	int m_iTechPrereq;
@@ -7008,7 +6920,7 @@ public:
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
-	void setTGAIndex(int i);
+	//void setTGAIndex(int i);
 
 	void setChar(int i);
 	int getHolyCityChar() const; // Exposed to Python
@@ -7021,16 +6933,10 @@ public:
 	void setMissionType(int iNewType);
 
 	const TCHAR* getTechButton() const; // Exposed to Python
-	void setTechButton(const TCHAR* szVal);
 	const TCHAR* getGenericTechButton() const; // Exposed to Python
-	void setGenericTechButton(const TCHAR* szVal);
 	const TCHAR* getMovieFile() const; // Exposed to Python
-	void setMovieFile(const TCHAR* szVal);
 	const TCHAR* getMovieSound() const; // Exposed to Python
-	void setMovieSound(const TCHAR* szVal);
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
-
 	const TCHAR* getButtonDisabled() const;		//	Exposed to Python
 
 	void setAdjectiveKey(const TCHAR* szVal);
@@ -7053,15 +6959,16 @@ public:
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvReligionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
-
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -7086,9 +6993,6 @@ protected:
 	int* m_paiHolyCityCommerce;
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7109,7 +7013,7 @@ public:
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
-	void setTGAIndex(int i);
+	//void setTGAIndex(int i);
 
 	void setChar(int i);
 	int getHeadquarterChar() const; // Exposed to Python
@@ -7125,11 +7029,8 @@ public:
 	int getBonusProduced() const; // Exposed to Python
 
 	const TCHAR* getMovieFile() const; // Exposed to Python
-	void setMovieFile(const TCHAR* szVal);
 	const TCHAR* getMovieSound() const; // Exposed to Python
-	void setMovieSound(const TCHAR* szVal);
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	// Arrays
 
@@ -7170,15 +7071,16 @@ public:
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
-	void copyNonDefaults(CvCorporationInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
-
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -7228,9 +7130,6 @@ protected:
 	int* m_paiHeadquarterCommerce;
 	int* m_paiCommerceProduced;
 	int* m_paiYieldProduced;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7484,17 +7383,20 @@ public:
 	int getNumBonusHappinessChanges() const;
 	BonusModifier getBonusHappinessChange(int iBonus);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvTraitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
-	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(unsigned int& iSum);
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
 	bool** m_ppbFreePromotionUnitCombats;
 
@@ -7541,7 +7443,6 @@ protected:
 //	bool* m_pabFreePromotion;
 //	bool* m_pabFreePromotionUnitCombat;
 
-	CvPropertyManipulators m_PropertyManipulators;
 	CvPropertyManipulators m_PropertyManipulatorsNull;
 
 	//TB Traits Mods begin
@@ -7709,7 +7610,6 @@ public:
 	virtual ~CvCursorInfo();
 
 	DllExport const TCHAR* getPath(); // Exposed to Python
-	void setPath(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCursorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -7737,10 +7637,9 @@ public:
 	virtual ~CvThroneRoomCamera();
 
 	DllExport const TCHAR* getFileName();
-	void setFileName(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomCamera* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomCamera* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7764,18 +7663,13 @@ public:
 	virtual ~CvThroneRoomInfo();
 
 	DllExport const TCHAR* getEvent();
-	void setEvent(const TCHAR* szVal);
 	DllExport const TCHAR* getNodeName();
-	void setNodeName(const TCHAR* szVal);
 	DllExport int getFromState();
-	void setFromState(int iVal);
 	DllExport int getToState();
-	void setToState(int iVal);
 	DllExport int getAnimation();
-	void setAnimation(int iVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7806,12 +7700,10 @@ public:
 	DllExport const TCHAR* getArtStyleType();
 	void setArtStyleType(const TCHAR* szVal);
 	DllExport const TCHAR* getEraType();
-	void setEraType(const TCHAR* szVal);
 	DllExport const TCHAR* getFileName();
-	void setFileName(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7846,7 +7738,7 @@ public:
 	void setStartTime(float fVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSlideShowInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSlideShowInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7876,7 +7768,7 @@ public:
 	void setPath(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSlideShowRandomInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSlideShowRandomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7902,7 +7794,6 @@ public:
 	DllExport const TCHAR* getMapName();
 	void setMapName(const TCHAR* szVal);
 	DllExport const TCHAR* getModelFile();
-	void setModelFile(const TCHAR* szVal);
 	DllExport int getNumSizes();
 	DllExport float getSize(int index);
 	DllExport int getNumClimates();
@@ -7913,7 +7804,7 @@ public:
 	DllExport const TCHAR* getWaterLevelGlossPath(int index);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvWorldPickerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvWorldPickerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7942,7 +7833,6 @@ public:
 	virtual ~CvSpaceShipInfo();
 
 	DllExport const TCHAR* getNodeName();
-	void setNodeName(const TCHAR* szVal);
 	DllExport const TCHAR* getProjectName();
 	void setProjectName(const TCHAR* szVal);
 	DllExport ProjectTypes getProjectType();
@@ -7953,7 +7843,7 @@ public:
 	DllExport int getEventCode();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpaceShipInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvSpaceShipInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7993,7 +7883,7 @@ class CvAnimationPathInfo : public CvInfoBase
 		DllExport bool isMissionPath() const;
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationPathInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvAnimationPathInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 	private:
@@ -8021,7 +7911,7 @@ class CvAnimationCategoryInfo : public CvInfoBase
 		DllExport int getCategoryDefaultTo( );
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 	private:
@@ -8050,7 +7940,7 @@ class CvEntityEventInfo : public CvInfoBase
 		void write(FDataStreamBase* pStream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvEntityEventInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvEntityEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 		DllExport AnimationPathTypes getAnimationPathType(int iIndex = 0) const;
 		DllExport EffectTypes getEffectType(int iIndex = 0) const;
@@ -8092,7 +7982,7 @@ public:
 	void setPath(const TCHAR* szDesc); // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAssetInfoBase* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 
 	// serialization
 	void read(FDataStreamBase* pStream) {}
@@ -8120,7 +8010,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvArtInfoAsset* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
 	// serialization
 	void read(FDataStreamBase* pStream) {}
@@ -8149,7 +8039,7 @@ public:
 	void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
 };
 
@@ -8186,7 +8076,7 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvArtInfoMovie* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvArtInfoMovie* pClassInfo, CvXMLLoadUtility* pXML);
 };
 
 class CvArtInfoUnit : public CvArtInfoScalableAsset
@@ -8618,12 +8508,12 @@ public:
 
 	DllExport const FeatureVariety &getVariety(int index) const;
 	DllExport int getNumVarieties() const;
-	std::string getFeatureDummyNodeName(int variety, std::string tagName);
+	const std::string getFeatureDummyNodeName(int variety, const std::string tagName) const;
 
 protected:
 
-	int getConnectionMaskFromString(const CvString &connectionString);
-	int getRotatedConnectionMask(int connectionMask, RotationTypes rotation);
+	int getConnectionMaskFromString(const CvString& connectionString) const;
+	int getRotatedConnectionMask(int connectionMask, RotationTypes rotation) const;
 
 	bool m_bAnimated;
 	bool m_bRiverArt;
@@ -8696,7 +8586,7 @@ public:
 	int getCityPercent() const;				//	Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvUpkeepInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -8737,7 +8627,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvCultureLevelInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -8810,7 +8700,7 @@ public:
 	int getCitySoundscapeSciptId(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvEraInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum);
 
 protected:
@@ -8878,12 +8768,25 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvColorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
+	static ColorTypes green()    { return m_eGreen; }
+	static ColorTypes red()      { return m_eRed; }
+	static ColorTypes yellow()   { return m_eYellow; }
+	static ColorTypes white()    { return m_eWhite; }
+
+	static void setGreen(ColorTypes eIndex)  { m_eGreen = eIndex; }
+	static void setRed(ColorTypes eIndex)    { m_eRed = eIndex; }
+	static void setYellow(ColorTypes eIndex) { m_eYellow = eIndex; }
+	static void setWhite(ColorTypes eIndex)  { m_eWhite = eIndex; }
 
 protected:
-
 	NiColorA m_Color;
 
+	static ColorTypes m_eGreen;
+	static ColorTypes m_eRed;
+	static ColorTypes m_eYellow;
+	static ColorTypes m_eWhite;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8911,7 +8814,7 @@ public:
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvPlayerColorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvPlayerColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -8973,7 +8876,7 @@ class CvLandscapeInfo :
 		void write(FDataStreamBase* stream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvLandscapeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+		void copyNonDefaults(CvLandscapeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	protected:
 
@@ -9289,7 +9192,6 @@ public:
 
 	void setText(const TCHAR* szText);
 	void setImage(const TCHAR* szText);
-	void setSound(const TCHAR* szText);
 	void setScript(int iIndex, const TCHAR* szText);
 
 	int getNumTutorialScripts() const;
@@ -9349,10 +9251,10 @@ public:
 	//TB Tags
 	// int vector utilizing struct with delayed resolution
 	int getNumEnforcesGameOptionOnTypes() const;
-	GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption);
+	const GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption) const;
 
 	int getNumEnforcesGameOptionOffTypes() const;
-	GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption);
+	const GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -9544,10 +9446,10 @@ public:
 	int getNumCorporationsRequired() const; // Exposed to Python
 
 	//Property prereqs
-	CvProperties* getPrereqMinProperties();
-	CvProperties* getPrereqMaxProperties();
-	CvProperties* getPrereqPlayerMinProperties();
-	CvProperties* getPrereqPlayerMaxProperties();
+	const CvProperties* getPrereqMinProperties() const;
+	const CvProperties* getPrereqMaxProperties() const;
+	const CvProperties* getPrereqPlayerMinProperties() const;
+	const CvProperties* getPrereqPlayerMaxProperties() const;
 
 	const CvWString& getText(int i) const;
 	int getTextEra(int i) const;
@@ -9590,18 +9492,18 @@ public:
 	// bool vector without delayed resolution
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	void read(FDataStreamBase* ) {}
 	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvEventTriggerInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -9832,7 +9734,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 //	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvEventInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -10207,8 +10109,8 @@ public:
 
 	bool isLoad(int i) const;
 	void setLoad(int i, bool bLoad = true);
-	std::string getModuleFolder(int i) const;
-	std::string getParentFolder() const;
+	const std::string getModuleFolder(int i) const;
+	const std::string getParentFolder() const;
 	int getNumModules() const;
 	int getDirDepth() const;
 	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
@@ -10276,10 +10178,12 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iChar;
 	int m_iFontButtonIndex;
 
@@ -10302,8 +10206,6 @@ protected:
 	std::vector<PropertyBuilding> m_aPropertyBuildings;
 	std::vector<PropertyPromotion> m_aPropertyPromotions;
 	EraArray m_aTargetLevelbyEraTypes;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10348,7 +10250,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -10539,7 +10441,7 @@ public:
 	void getCheckSum(unsigned int& iSum);
 
 	//bool readPass2(CvXMLLoadUtility* pXML);
-	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
+	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -10549,12 +10451,12 @@ public:
 	static UnitCombatTypes getUnitCombatWildAnimal()	{ return m_UnitCombatWildAnimal; }
 	static void setUnitCombatWildAnimal(UnitCombatTypes eIndex) { m_UnitCombatWildAnimal = eIndex; }
 
-	CvOutcomeList* getKillOutcomeList();
+	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
-	CvOutcomeList* getActionOutcomeList(int index) const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
 	MissionTypes getActionOutcomeMission(int index) const;
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
-	CvOutcomeMission* getOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
 	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
@@ -10917,8 +10819,10 @@ public:
 	int getNumDistanceAttackCommunicabilityTypeChanges() const;
 	const AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex) const;
 
-	//Propery Manipulators
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
 	// Textual References
@@ -11157,8 +11061,6 @@ protected:
 	std::vector<InvisibleImprovementChanges> m_aVisibleImprovementRangeChanges;
 	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
 	std::vector<InvisibleTerrainChanges> m_aVisibleTerrainRangeChanges;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -11216,7 +11118,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -11250,7 +11152,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum);
 

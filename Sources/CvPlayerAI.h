@@ -262,7 +262,7 @@ public:
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const;
 /********************************************************************************/
 /* 	City Defenders												END 			*/
 /********************************************************************************/
@@ -489,8 +489,8 @@ public:
 	int AI_getNumCitySites() const;
 	CvPlot* AI_getCitySite(int iIndex) const;
 	
-	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
-	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
 	
 	int AI_calculateTotalBombard(DomainTypes eDomain) const;
 	
@@ -570,7 +570,7 @@ public:
 	int AI_getNavalMilitaryProductionCityCount() const;
 
 	CvCity* findBestCoastalCity() const;
-	UnitTypes bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, CvUnitSelectionCriteria* criteria = NULL) const;
+	UnitTypes bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, const CvUnitSelectionCriteria* criteria = NULL) const;
 	int strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAIType) const;
 	
 	mutable int m_iMilitaryProductionCityCount;

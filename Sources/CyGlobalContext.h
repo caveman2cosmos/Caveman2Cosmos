@@ -9,17 +9,12 @@
 //
 
 #include "CvGlobals.h"
-#include "CvArtFileMgr.h"
 
 class CyGame;
 class CyMap;
 class CyPlayer;
 class CvRandom;
-class CyEngine;
 class CyTeam;
-class CyArtFileMgr;
-class CyUserProfile;
-class CyVariableSystem;
 
 class CyGlobalContext
 {
@@ -36,6 +31,7 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	void enableMultiMaps() { GC.enableMultiMaps(); }
 	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
@@ -55,7 +51,6 @@ public:
 	CyPlayer* getCyActivePlayer();
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(int i);
-	CyArtFileMgr* getCyArtFileMgr() const;
 
 	CvEffectInfo* getEffectInfo(int i) const;
 	CvTerrainInfo* getTerrainInfo(int i) const;
@@ -290,7 +285,6 @@ public:
 	// Globals Defines
 	//////////////////////
 
-	CyVariableSystem* getCyDefinesVarSystem();
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
 /*                                                                                              */

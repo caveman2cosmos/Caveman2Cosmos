@@ -26,7 +26,7 @@ def isAdvancedMap():
 
 def getNumCustomMapOptions():
 	return 4
-	
+
 def getNumHiddenCustomMapOptions():
 	return 2
 
@@ -40,7 +40,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -50,7 +50,7 @@ def getNumCustomMapOptionValues(argsList):
 		3:  2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -77,7 +77,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -101,11 +101,11 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(2) == 1 or map.getCustomMapOption(2) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(2) == 2)
-	
+
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(3) == 1):
 		balancer.normalizeAddExtras()
@@ -119,7 +119,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(3) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def beforeGeneration():
@@ -165,7 +165,7 @@ def beforeGeneration():
 		else:
 			extras_range = dice.get((extras_max - extras_min + 1), "Extra Islands - Islands PYTHON")
 			iExtras = extras_min + extras_range
-		
+
 	# Choose a "Large Islands" template.
 	iNumRegions = configs[iPlayers]
 	# Some regions may go unused. We need to track the ones that have been used.
@@ -270,14 +270,14 @@ def beforeGeneration():
 	# List region_coords: [WestLon, EastLon, SouthLat, NorthLat]
 	global region_coords
 	region_coords = templates[iNumRegions]
-		
+
 class IslandsMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
 		# You -MUST- customize this function for each use of the class.
 		iPlayers = self.gc.getGame().countCivPlayersEverAlive()
 		userInputTinyIslands = self.map.getCustomMapOption(1)
-		
+
 		# Sea Level adjustment (from user input), limited to value of 5%.
 		sea = self.gc.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
 		sea = min(sea, 5)
@@ -446,7 +446,7 @@ def assignStartingPlots():
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
 	iPlayers = gc.getGame().countCivPlayersEverAlive()
-	
+
 	# Error catching.
 	if iPlayers < 1 or iPlayers > 18:
 		CyPythonMgr().allowDefaultImpl()
@@ -464,9 +464,9 @@ def assignStartingPlots():
 	minX = max(3, int(minLon * iW))
 	minY = max(3, int(minLat * iH))
 
-	# region_data: [WestX, EastX, SouthY, NorthY, 
+	# region_data: [WestX, EastX, SouthY, NorthY,
 	# numLandPlotsinRegion, numCoastalPlotsinRegion,
-	# numOceanPlotsinRegion, iRegionNetYield, 
+	# numOceanPlotsinRegion, iRegionNetYield,
 	# iNumLandAreas, iNumPlotsinRegion]
 	region_data = {}
 	region_best_areas = {}
@@ -502,7 +502,7 @@ def assignStartingPlots():
 					iFertileCheck = pPlot.calculateBestNatureYield(YieldTypes.YIELD_FOOD, TeamTypes.NO_TEAM)
 					if iFertileCheck > 1: # If the plot has extra food, count it.
 						iRegionNetYield += (2 * (iFertileCheck - 1))
-					if pPlot.isAdjacentToLand(): # Coastal plot
+					if pPlot.isCoastal(): # Coastal plot
 						if pPlot.isFreshWater:
 							iNumCoastalPlots += 1
 							iRegionNetYield += 2
@@ -540,14 +540,14 @@ def assignStartingPlots():
 					del land_areas[landLoop]
 					break
 		# Store infos to regional lists.
-		region_data[thisRegion] = [iWestX, iEastX, iSouthY, iNorthY, 
+		region_data[thisRegion] = [iWestX, iEastX, iSouthY, iNorthY,
 		                           iNumLandPlots, iNumCoastalPlots,
 		                           iNumOceanPlots, iRegionNetYield,
 		                           iNumLandAreas, iNumPlotsinRegion]
 		region_best_areas[thisRegion] = best_areas
 		region_yields.append(iRegionNetYield)
 		sorting_regions.append(iRegionNetYield)
-		
+
 	# Now sort the regions
 	best_regions = []
 	region_numbers = regions_in_use
@@ -560,7 +560,7 @@ def assignStartingPlots():
 				del region_numbers[yieldLoop]
 				del region_yields[yieldLoop]
 				break
-		
+
 	# Need to discard the worst regions and then reverse the region order.
 	# Of the regions that will be used, the worst will be assigned first.
 	if iExtras:
@@ -587,7 +587,7 @@ def assignStartingPlots():
 		if not area.isNone():
 			if area.isWater() and not area.isLake():
 				oceans.append(area)
-	
+
 	# Now assign the start plots!
 	plot_assignments = {}
 	min_dist = []
@@ -616,7 +616,7 @@ def assignStartingPlots():
 					for iY in range(southY, northY + 1):
 						pPlot = map.plot(iX, iY)
 						if pPlot.isWater(): continue
-						if not pPlot.isCoastalLand(): continue
+						if not pPlot.isCoastal(): continue
 						if areaID != pPlot.getArea(): continue
 						if validFn != None and not validFn(playerID, iX, iY): continue
 						val = pPlot.getFoundValue(playerID)
@@ -646,7 +646,7 @@ def assignStartingPlots():
 					plrID.setStartingPlot(sPlot, true)
 					break # Valid start found, stop checking areas and plots.
 				else: pass # This area too close to somebody, try the next area.
-			
+
 			# Check to see if a valid start was found in ANY areaID.
 			if pBestPlot == None:
 				print "player", playerID, "pass", iPass, "failed"
@@ -662,10 +662,10 @@ def assignStartingPlots():
 					CyPythonMgr().allowDefaultImpl()
 					return
 			else: break # This player has been assigned a start plot.
-			
+
 	# Successfully assigned start plots, continue back to C++
 	return None
-	
+
 def normalizeRemovePeaks():
 	return None
 

@@ -259,18 +259,6 @@
 		<Italian>Angolano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTIMATTER</Tag>
-		<English>Antimatter</English>
-		<French>Antimatière</French>
-		<Italian>Antimateria</Italian>
-		<Polish>Antymateria</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Tag>
-		<English>Antimatter is defined by physics as matter composed of antiparticles of the corresponding particles of ordinary matter (in other words, a particle and its anti-particle have the same mass, but opposite electric charge and other differences in quantum numbers). Antimatter particles bind with each other to form antimatter, just as ordinary particles bind to form normal matter, and can be used as fuel, as trigger mechanism for weapons or in medical field for cancer therapy or radiation research.</English>
-		<Italian>L'antimateria è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente anti-particella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anti-cancro o nell'ambito di ricerca sulle radiazioni.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
 		<English>Anti-Gravity Field Generators</English>
 		<French>Générateurs de champ anti-gravité</French>
@@ -281,6 +269,18 @@
 		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
 		<English>An anti-gravity field generator is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
 		<Italian>Un generatore di campo anti-gravità è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIMATTER</Tag>
+		<English>Antimatter</English>
+		<French>Antimatière</French>
+		<Italian>Antimateria</Italian>
+		<Polish>Antymateria</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Tag>
+		<English>Antimatter is defined by physics as matter composed of antiparticles of the corresponding particles of ordinary matter (in other words, a particle and its anti-particle have the same mass, but opposite electric charge and other differences in quantum numbers). Antimatter particles bind with each other to form antimatter, just as ordinary particles bind to form normal matter, and can be used as fuel, as trigger mechanism for weapons or in medical field for cancer therapy or radiation research.</English>
+		<Italian>L'antimateria è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente anti-particella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anti-cancro o nell'ambito di ricerca sulle radiazioni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
@@ -1081,14 +1081,14 @@
 		<Tag>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Tag>
 		<English>Carved emu eggs are an art form made by carving a kalthi-parti, or emu egg. The practice began in the mid to late 19th century and, while it has been practiced by people in Australia from many backgrounds, it is often strongly associated with Aboriginal art. Some of the earliest carvers were not strictly Aboriginal and these carvers created very decorative and complicated designs that were popular at the time.</English>
 		<Italian>Le uova di emu intagliate sono una forma d'arte creata scolpendo un kalthi-parti, o uovo di emu. La pratica è iniziata tra la metà e la fine del XIX secolo e, sebbene sia stata praticata da australiani di diversa estrazione etnico-sociale, è spesso fortemente associata all'arte aborigena. Alcuni dei primi intagliatori non erano aborigeni e questi intagliatori crearono disegni molto decorativi e complicati, molto popolari all'epoca.</Italian>
-	</TEXT>
+	</TEXT><!-- [check]
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CASTILIAN</Tag>
 		<English>Castilian</English>
 		<French>Castillan</French>
 		<Italian>Castigliano</Italian>
 		<Polish>Kastylijska</Polish>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAT</Tag>
 		<English>Cat</English>
@@ -1097,15 +1097,15 @@
 		<Polish>Koty</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
+		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
+		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CATALONIAN</Tag>
 		<English>Catalonian</English>
 		<French>Catalane</French>
 		<Italian>Catalano</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
-		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
-		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELLPHONES</Tag>
@@ -1370,6 +1370,11 @@
 		<Polish>Glina</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
+		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
+		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
 		<French>Atomes claytroniques</French>
@@ -1381,11 +1386,6 @@
 		<Italian>Gli atomi claytronici (o "catomi") sono singoli computer di scala nanometrica che interagiscono fra loro per produrre oggetti tangibili, che un essere umano può a sua volta utilizzare. Questi atomi hanno il potenziale di influenzare notevolmente molte aree della vita quotidiana, come le telecomunicazioni, le interfacce uomo-computer e l'industria dell'intrattenimento.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
-		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
-		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTH</Tag>
 		<English>Cloth</English>
 		<French>Tissu</French>
@@ -1393,6 +1393,11 @@
 		<Italian>Tessuti</Italian>
 		<Spanish>Paño</Spanish>
 		<Polish>Tkanina</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
+		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
+		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTHING</Tag>
@@ -1405,11 +1410,6 @@
 		<Tag>TXT_KEY_BONUS_CLOTHING_PEDIA</Tag>
 		<English>A dress is a specifically weaved fabric to be worn by a human being, covering it wholly or partially, and defining its external appearance. Depending on the culture, some clothes can have a very particular cultural and social significance, such as marking the belonging to a given community or of a particular (civil, social, religious) status within the community.</English>
 		<Italian>Un vestito è un tessuto realizzato appositamente per essere indossato da un essere umano, coprendolo in tutto o in parte e definendone l'aspetto esteriore. Alcuni vestiti, in base alla cultura, possono rivestire un significato culturale e sociale molto particolare, come l'appartenenza a una data comunità o la segnalazione di un particolare status (civile, sociale, religioso...) all'interno della comunità.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
-		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
-		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COAL</Tag>
@@ -1603,6 +1603,11 @@
 		<Polish>Bawełna</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
+		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
+		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS</Tag>
 		<English>Cotton Fibers</English>
 		<French>Fibres de coton</French>
@@ -1613,11 +1618,6 @@
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS_PEDIA</Tag>
 		<English>Cotton fiber is a fiber made of almost pure cellulose. It is most often spun into yarn or thread and used to make a soft, breathable textile. Cotton fibers occur naturally in colors of white, brown, pink and green, even though fears of contaminating the genetics of white cotton have led many cotton-growing locations to ban the growing of colored cotton varieties.</English>
 		<Italian>La fibra di cotone è una fibra di cellulosa quasi pura. Viene spesso filata e utilizzata per creare un tessuto morbido e traspirante. Le fibre di cotone si presentano naturalmente nei colori bianco, marrone, rosa e verde, anche se i timori di contaminare i campi di cotone bianco hanno portato molte zone di coltivazione del cotone a vietare la coltivazione di varietà colorate.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
-		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
-		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COW</Tag>
@@ -1795,6 +1795,11 @@
 		<Polish>Diamenty</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
+		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
+		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
 		<French>Diamant nanothreads</French>
@@ -1804,11 +1809,6 @@
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS_PEDIA</Tag>
 		<English>A diamond nanothread, also called carbon nanothread, is a one-dimensional carbon crystalline nanomaterial. Nanothreads consist of a stiff, strong carbon core surrounded by hydrogen atoms, and are more than 20,000 times thinner than a human hair. They are synthesized by compressing liquid benzene to extreme pressure of 20 GPa (around 200,000 times the air pressure at the surface of the Earth), and then slowly relieving that pressure. Their extremely high specific strength is used for space elevators and in other applications related to transportation, aerospace, and sports equipment.</English>
 		<Italian>Un nanofilamento in diamante, chiamato anche nanofilamento di carbonio, è un nanomateriale di carbonio cristallino unidimensionale. I nanofilamenti sono costituiti da un nucleo di carbonio rigido circondato da atomi di idrogeno e sono oltre 20.000 volte più sottili di un capello umano. Sono sintetizzati comprimendo il benzene liquido a una pressione estrema di 20 GPa (circa 200.000 volte la pressione dell'aria sulla Terra) e quindi alleviando lentamente quella pressione. La loro resistenza estremamente elevata viene utilizzata per gli elevatori spaziali e in altre applicazioni relative al trasporto, al settore aerospaziale e alle attrezzature sportive.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
-		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
-		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIGITIZED_MEMBRANES</Tag>
@@ -2302,6 +2302,11 @@
 		<Polish>Ryba</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
+		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
+		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_FISH_OIL</Tag>
 		<English>Fish Oil</English>
 		<French>Huile de poisson</French>
@@ -2312,11 +2317,6 @@
 		<Tag>TXT_KEY_BONUS_FISH_OIL_PEDIA</Tag>
 		<English>Fish oil is an oil derived from the tissues of oily fish. Fish oils contain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), precursors of certain eicosanoids that are known to reduce inflammation in human body and improve hypertriglyceridemia. Use of fish oil and omega-3 fatty acids have also been studied in a wide variety of other conditions, such as cardiovascular diseases, clinical depression, anxiety, cancer, and macular degeneration, yet their benefit in these conditions has also not been verified. Fish oil is also used as a component in aquaculture feed.</English>
 		<Italian>L'olio di pesce è un olio derivato dai tessuti dei pesci grassi. Gli oli di pesce contengono acidi grassi omega-3 come l'acido eicosapentaenoico (EPA) e l'acido docosaesaenoico (DHA), precursori di alcuni eicosanoidi che sono noti per ridurre le infiammazioni nel corpo umano e migliorare l'ipertrigliceridemia. L'uso di olio di pesce e acidi grassi omega-3 è stato studiato anche per un'ampia varietà di altre malattie, come malattie cardiovascolari, depressione clinica, ansia, cancro e degenerazione maculare, ma i loro benefici in queste condizioni non sono stati verificati. L'olio di pesce è anche usato come componente nei mangimi per l'acquacoltura.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
-		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
-		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLASH_MEMORY_DEVICES</Tag>
@@ -2340,6 +2340,11 @@
 		<Polish>Len</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
+		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
+		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS</Tag>
 		<English>Flax Fibers</English>
 		<French>Fibres de lin</French>
@@ -2350,11 +2355,6 @@
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS_PEDIA</Tag>
 		<English>Flax fiber is a soft, lustrous, and flexible fiber extracted from the bast beneath the surface of the stem of the flax plant. It is stronger than cotton fiber, but less elastic. The best grades are used for fabrics such as damasks, lace, and sheeting. Coarser grades are used for the manufacturing of twine and rope, and historically, for canvas and webbing equipment. Flax fiber is a raw material used in the high-quality paper industry for the use of printed banknotes, laboratory paper (blotting and filter), rolling paper for cigarettes, and tea bags.</English>
 		<Italian>La fibra di lino è una fibra morbida, lucente e flessibile estratta dalla rafia sotto la superficie dello stelo della pianta di lino. È più forte della fibra di cotone, ma meno elastica. La qualità migliori sono usate per tessuti come damaschi, pizzi e teli. Le qualità più grossolane sono invece utilizzate per la produzione di spago e corda e, storicamente, per le tele e le attrezzature tessili. La fibra di lino è una materia prima utilizzata nell'industria della carta di alta qualità per l'uso di banconote stampate, carta da laboratorio (carta assorbente e filtro), carta in rotoli per sigarette e bustine di tè.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
-		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
-		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLEMISH</Tag>
@@ -2400,18 +2400,6 @@
 		<Italian>Un fiore è la struttura riproduttiva che si trova nelle piante da fiore. La funzione biologica di un fiore è di influenzare la riproduzione, di solito fornendo un meccanismo per l'unione dello sperma con le uova. Molti fiori si sono evoluti per essere più attraenti per gli animali, in modo da renderli vettori per il trasferimento di polline. Dopo la fecondazione, l'ovaio del fiore si sviluppa in frutti contenenti semi. Oltre a facilitare la riproduzione delle piante, i fiori sono stati a lungo utilizzati dagli esseri umani per abbellire ambienti, come oggetti di gesti romantici, rituali o religiosi, come mezzo per produrre medicinali e come fonte di cibo.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSILS</Tag>
-		<English>Fossils</English>
-		<French>Fossiles</French>
-		<Italian>Fossili</Italian>
-		<Polish>Skamieliny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSILS_PEDIA</Tag>
-		<English>A fossil is any preserved remains, impression, or trace of any once-living thing from a past geological age. Examples include bones, shells, exoskeletons, stone imprints of animals or microbes, objects preserved in amber, hair, petrified wood, oil, coal, and DNA remnants. The totality of fossils is known as the fossil record.</English>
-		<Italian>Il termine "fossile" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
 		<English>Fossil Beds</English>
 		<French>Lagerstätte</French>
@@ -2422,6 +2410,18 @@
 		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
 		<English>A fossil bed ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
 		<Italian>Una Lagerstätte è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSILS</Tag>
+		<English>Fossils</English>
+		<French>Fossiles</French>
+		<Italian>Fossili</Italian>
+		<Polish>Skamieliny</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSILS_PEDIA</Tag>
+		<English>A fossil is any preserved remains, impression, or trace of any once-living thing from a past geological age. Examples include bones, shells, exoskeletons, stone imprints of animals or microbes, objects preserved in amber, hair, petrified wood, oil, coal, and DNA remnants. The totality of fossils is known as the fossil record.</English>
+		<Italian>Il termine "fossile" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FRANKISH</Tag>
@@ -2481,6 +2481,11 @@
 		<Polish>Futro</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
+		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
+		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
 	</TEXT>
@@ -2495,11 +2500,6 @@
 		<Tag>TXT_KEY_BONUS_FURNITURE_PEDIA</Tag>
 		<English>Furniture refers to movable objects intended to support various human activities such as seating (e.g. chairs, stools, and sofas), eating (tables), and sleeping (beds). Furniture is also used to hold objects at a convenient height for work (as horizontal surfaces above the ground, such as tables and desks), or to store things (cupboards and shelves). Furniture can be a product of design and is considered a form of decorative art. In addition to furniture's functional role, it can serve a symbolic or religious purpose. It can be made from many materials, including metal, plastic, and wood. Furniture can be made using a variety of woodworking joints which often reflect the local culture.</English>
 		<Italian>I mobili sono oggetti destinati a supportare varie attività umane, come sedersi (sedie, sgabelli, divani), mangiare (tavoli) o dormire (letti). I mobili vengono anche utilizzati per tenere oggetti ad un'altezza conveniente per il lavoro (tavoli, scrivanie) o per riporre oggetti (armadi, scaffali). L'arredamento può essere un prodotto di design ed è considerato una forma di arte decorativa. Oltre al suo ruolo funzionale, l'arredamento può servire per uno scopo simbolico o religioso. Può essere realizzato con molti materiali, tra cui metallo, plastica e legno. I mobili possono essere realizzati utilizzando una varietà di giunti in legno che, spesso, riflettono la cultura locale.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
-		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
-		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
@@ -2903,6 +2903,11 @@
 		<Polish>Konopie</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
+		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
+		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS</Tag>
 		<English>Hemp Fibers</English>
 		<French>Fibres de chanvre</French>
@@ -2913,11 +2918,6 @@
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS_PEDIA</Tag>
 		<English>Hemp fiber has been extensively used throughout history for items ranging from rope to fabrics. Pure hemp has a texture similar to linen and, because of its versatility, today it is used in a number of consumer goods, including clothing, shoes, accessories, dog collars, and home wares.</English>
 		<Italian>La fibra di canapa è stata ampiamente utilizzata nel corso della storia per oggetti che vanno dalla corda ai tessuti. La canapa pura ha una consistenza simile al lino e, per la sua versatilità d'uso, viene utilizzata in numerosi beni di consumo, tra cui abbigliamento, scarpe, accessori, collari per cani e articoli per la casa.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
-		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
-		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
@@ -2959,14 +2959,14 @@
 		<Italian>Ieracosfinge</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
-		<English>Himyarite</English>
+		<Tag>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Tag>
+		<English>The hieracosphinx is a mythical beast found in Egyptian sculpture and European heraldry, with the head of a hawk and the body of a lion. Sometimes it is depicted with a headdress. The combination of the two animals makes the hieracosphinx a symbol of royalty.</English>
+		<Italian>La ieracosfinge è una bestia mitica, spesso presente nella scultura egizia e nell'araldica europea, con la testa di un falco e il corpo di un leone. A volte è raffigurata con un copricapo. La combinazione dei due animali rende la ieracosfinge un simbolo di regalità.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
-		<English>Hittite</English>
-		<Italian>Ittita</Italian>
-		<Polish>Hetycka</Polish>
+		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
+		<English>Himyarite</English>
+		<Italian>Himyarita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
@@ -3009,6 +3009,12 @@
 		<Tag>TXT_KEY_BONUS_HIT_SINGLES_PEDIA</Tag>
 		<English>A hit single, also known as hit song, hit record, or simply hit, is a recorded song or instrumental that becomes broadly popular or well-known. Although hit song means any widely played or big-selling song, the specific term usually refers to a single that has appeared in an official music chart, through repeated radio airplay or significant commercial sales.</English>
 		<Italian>Una canzone di successo è un brano registrato o strumentale che diventa ampiamente popolare o noto. Sebbene il termine "canzone di successo" sia comunemente usato per indicare qualsiasi canzone ampiamente suonata o conosciuta, il termine specifico di solito si riferisce a un singolo che è apparso in una classifica musicale ufficiale, attraverso ripetute trasmissioni radiofoniche o vendite commerciali significative.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
+		<English>Hittite</English>
+		<Italian>Ittita</Italian>
+		<Polish>Hetycka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLOGRAPHIC_PROJECTORS</Tag>
@@ -3096,20 +3102,10 @@
 		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
 		<French>Modif. Humain(Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT_PEDIA</Tag>
-		<English>Archailect is an ascended, post-singularity intelligence, that has grown vastly beyond even the Transapient level. It represents the highest level of known living beings, in terms of both thinking power and aggregate energy/mass. The term is a mesh of the phrase "archetypal AI intellect."</English>
-		<Italian>IArchetipica è un tipo di intelligenza ascesa post-singolarità, che è cresciuta ben al di là del livello transapiente. Rappresenta il livello più alto mai raggiunto dagli esseri viventi in termini di potere di pensiero e di massa/energia aggregata. Il termine è una fusione della frase "Intelligenza artificiale archetipica".</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Tag>
@@ -3118,20 +3114,10 @@
 		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Tag>
 		<English>Human Mod (Cognitive Enhancement)</English>
 		<French>Modif. Humain (Amélioration cognitive)</French>
 		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Tag>
@@ -3140,20 +3126,10 @@
 		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Tag>
 		<English>Human Mod (Collective Consciousness)</English>
 		<French>Modif. Humain (Conscience collective)</French>
 		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Tag>
@@ -3162,20 +3138,10 @@
 		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Tag>
 		<English>Human Mod (Digital Identity)</English>
 		<French>Modif. Humain (Identité numérique)</French>
 		<Italian>Umano augmentato (Identità digitale)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Tag>
@@ -3184,20 +3150,10 @@
 		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Tag>
 		<English>Human Mod (Enlightened)</English>
 		<French>Modif. Humain (Illumination)</French>
 		<Italian>Umano augmentato (Illuminazione)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Tag>
@@ -3206,20 +3162,10 @@
 		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Tag>
 		<English>Human Mod (Gills)</English>
 		<French>Modif. Humain (Branchies)</French>
 		<Italian>Umano augmentato (Branchie)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Tag>
@@ -3228,20 +3174,10 @@
 		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente della psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Tag>
 		<English>Human Mod (High-Dimensional)</English>
 		<French>Modif. Humain (Haute dimension)</French>
 		<Italian>Umano augmentato (Dimensione superiore)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Tag>
@@ -3250,20 +3186,10 @@
 		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Tag>
 		<English>Human Mod (Indefinite Lifespan)</English>
 		<French>Modif. Humain (Durée de vie indéfinie)</French>
 		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Tag>
@@ -3272,20 +3198,10 @@
 		<Italian>Umano augmentato (Basato su informazione)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Tag>
 		<English>Human Mod (Lunaris)</English>
 		<French>Modif. Humain (Lunaris)</French>
 		<Italian>Umano augmentato (Selenita)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Tag>
@@ -3294,20 +3210,10 @@
 		<Italian>Umano augmentato (Marziano)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Tag>
 		<English>Human Mod (Metaphysical)</English>
 		<French>Modif. Humain (Métaphysique)</French>
 		<Italian>Umano augmentato (Metafisico)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Tag>
@@ -3316,20 +3222,10 @@
 		<Italian>Umano augmentato (Nanomorfismo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Tag>
 		<English>Human Mod (Nonspatial)</English>
 		<French>Modif. Humain (Nonspatial)</French>
 		<Italian>Umano augmentato (Nonspaziale)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Tag>
@@ -3338,20 +3234,10 @@
 		<Italian>Umano augmentato (Nuovi sensi)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
 		<English>Human Mod (Pure Energy)</English>
 		<French>Modif. Humain (Energie pure)</French>
 		<Italian>Umano augmentato (Pura energia)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Tag>
@@ -3360,20 +3246,10 @@
 		<Italian>Umano augmentato (Tolleranza alle radiazioni)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Tag>
 		<English>Human Mod (Robotic Body)</English>
 		<French>Modif. Humain (Corps Robotique)</French>
 		<Italian>Umano augmentato (Corpo robotico)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Tag>
@@ -3382,31 +3258,16 @@
 		<Italian>Umano augmentato (Transapiente)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Tag>
 		<English>Human Mod (Wings)</English>
 		<French>Modif. Humain (Ailes)</French>
 		<Italian>Umano augmentato (Ali)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Tag>
 		<English>Human Mod (Zero G Adaptation)</English>
 		<French>Modif. Humain (Adaptation Zero G)</French>
 		<Italian>Umano augmentato (Adattamento a zero G)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
@@ -3474,13 +3335,6 @@
 		<Italian>Un ipospray è un iniettore a getto che eroga farmaci per via intramuscolare, se applicato nella parte superiore del braccio, oppure per via endovenosa o intra-arteriosa, se applicato sul collo. Può anche essere applicato attraverso l'abbigliamento. L'ipospray è estremamente versatile, poiché le fiale del medicinale possono essere rapidamente sostituite dal fondo. Poiché privo di un ago, non viene contaminato dall'uso. Ciò consente di utilizzarlo su molte persone fino all'esaurimento della fornitura di medicinali.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
-		<English>Icelandic</English>
-		<French>Icelandais</French>
-		<Italian>Islandese</Italian>
-		<Polish>Islandzka</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICE_CREAM</Tag>
 		<English>Ice Cream</English>
 		<French>Glaces</French>
@@ -3491,6 +3345,13 @@
 		<Tag>TXT_KEY_BONUS_ICE_CREAM_PEDIA</Tag>
 		<English>Ice cream is a sweetened, smooth, semi-solid food, typically eaten as a snack or dessert. It may be made from dairy milk or cream and is flavoured with a sweetener (either sugar or an alternative) and any spice, such as cocoa or vanilla. Colourings are usually added, in addition to stabilizers. The mixture is stirred to incorporate air spaces and cooled below the freezing point of water to prevent detectable ice crystals from forming. Ice cream may be served in dishes, for eating with a spoon, or licked from edible cones. Ice cream may be served with other desserts, such as apple pie, or as an ingredient in ice cream floats, sundaes, milkshakes, ice cream cakes and even baked items.</English>
 		<Italian>Un gelato è un alimento zuccherato semi-solido, tipicamente consumato come spuntino o dessert. Può essere fatto con latte o crema di latte ed è aromatizzato con un dolcificante (come lo zucchero o simili) e qualsiasi spezia, come il cacao o la vaniglia. Di solito vengono aggiunti coloranti, oltre agli stabilizzanti. La miscela viene agitata per incorporare aria e raffreddata sotto la temperatura di congelamento dell'acqua per impedire la formazione di cristalli di ghiaccio rilevabili. Il gelato può essere servito in un piatto, mangiato con un cucchiaio o leccato su un cono commestibile. Il gelato può essere servito con altri dessert, come la torta di mele, o come ingrediente in gelati, sunda, frappè, torte gelato e persino prodotti da forno.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
+		<English>Icelandic</English>
+		<French>Icelandais</French>
+		<Italian>Islandese</Italian>
+		<Polish>Islandzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
@@ -3669,10 +3530,20 @@
 		<Italian>Jackalope</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_JACKALOPE_PEDIA</Tag>
+		<English>A jackalope is a mythical animal from North American folklore, described as a jackrabbit with antelope horns. The jackalope has appeared in published stories, poems, television shows, video games, and a low-budget mockumentary film. Researchers suggest that at least some of the tales of horned hares were inspired by sightings of rabbits infected with the Shope papilloma virus, that causes horn- and antler-like tumors to grow in various places on a rabbit's head and body.</English>
+		<Italian>Un jackalope è un animale mitico del folklore nordamericano, descritto come un coniglio selvatico con corna di antilope. Il jackalope è apparso in numerose storie, poesie, spettacoli televisivi, videogiochi e un finto documentario a basso budget. I ricercatori suggeriscono che alcuni degli avvistamenti di lepri cornute siano dovuti ad avvistamenti di conigli infetti dal papillomavirus di Shope, che causa la crescita di tumori a forma di corna (anche ramificate) in varie parti della testa o del corpo di un coniglio.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<Italian>Giada</Italian>
 		<Polish>Jadeity</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
+		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
+		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS</Tag>
@@ -3685,11 +3556,6 @@
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Tag>
 		<English>A jade death mask is an impression of a person's face after their death, usually made by putting together several pieces of jade. Death masks may be mementos of the dead, or be used for creation of portraits. It is sometimes possible to identify portraits that have been painted from death masks, because of the characteristic slight distortions of the face features.</English>
 		<Italian>Una maschera mortuaria di giada è un'impressione del volto di una persona dopo la sua morte, di solito realizzata mettendo insieme diversi pezzi di giada. Le maschere mortuarie possono essere ricordi dei morti o essere utilizzate per la creazione di ritratti. A volte è possibile identificare i ritratti che sono stati dipinti dalle maschere, a causa delle lievi distorsioni caratteristiche dei lineamenti del viso.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
-		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
-		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -4012,13 +3878,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEMONS_PEDIA</Tag>
 		<English>The lemon is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C.</English>
-	</TEXT>
+	</TEXT><!-- [check]
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
 		<English>Leonese</English>
 		<French>Léonais</French>
 		<Polish>Leońska</Polish>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS</Tag>
 		<English>Levitation Generators</English>
@@ -4490,7 +4356,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MERINA</Tag>
 		<English>Merina</English>
-		<Polish>Metina</Polish>
+		<Italian>Merina</Italian>
+		<Polish>Merina</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
@@ -5057,18 +4924,6 @@
 		<Italian>Il petrolio è un liquido naturale di colore giallo-nero che si trova nelle formazioni geologiche sotto la superficie terrestre. Il petrolio si forma quando grandi quantità di organismi morti, principalmente zooplancton e alghe, vengono sepolte sotto la roccia sedimentaria e sottoposte a calore e pressione intensi. È costituito da idrocarburi naturali di vario peso molecolare e può contenere composti organici vari. È comunemente raffinato in numerosi prodotti di consumo, dalla benzina al cherosene, dall'asfalto ai reagenti chimici utilizzati per la fabbricazione di materie plastiche, pesticidi e prodotti farmaceutici. Il suo uso come combustibile, tuttavia, è una delle principali cause del riscaldamento globale e dell'acidificazione degli oceani.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
-		<English>Olives</English>
-		<German>Oliven</German>
-		<Italian>Olive</Italian>
-		<Spanish>Aceitunas</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
-		<English>Olives are the fruits of the olive tree, a short and squat tree found in the Mediterranean Basin, the Arabian Peninsula, and southern Asia, that rarely exceeds 8-15 m (26-49 ft) in height. Olives are small drupes, 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
-		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
 		<English>Olive Oil</English>
 		<French>Huile d'olive</French>
@@ -5079,6 +4934,18 @@
 		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
 		<English>Olive oil is a liquid fat obtained by pressing whole olives. It is commonly used in cooking, for frying foods or as a salad dressing. It is also used in cosmetics, pharmaceuticals, and soaps, and as a fuel for traditional oil lamps, and has additional uses in some religions. There is limited evidence of its possible health benefits. The composition of olive oil varies with the cultivar, altitude, time of harvest and extraction process. It consists mainly of oleic acid (up to 83%), with smaller amounts of other fatty acids including linoleic acid (up to 21%) and palmitic acid (up to 20%). Extra virgin olive oil is required to have no more than 0.8% free acidity and is considered to have favorable flavor characteristics.</English>
 		<Italian>L'olio d'oliva è un grasso liquido ottenuto dalla spremitura di olive intere. È comunemente usato in cucina, per friggere cibi o come condimento per insalate. È anche usato per cosmetici, prodotti farmaceutici e saponi e come combustibile per le tradizionali lampade a olio e ha usi aggiuntivi in alcune religioni. Vi sono prove limitate dei suoi possibili benefici per la salute. La composizione dell'olio d'oliva varia a seconda della cultivar, dell'altitudine, del tempo di raccolta e del processo di estrazione. È costituito principalmente da acido oleico (fino all'83%), con quantità minori di altri acidi grassi tra cui acido linoleico (fino al 21%) e acido palmitico (fino al 20%). L'olio extra vergine di oliva deve avere un'acidità libera non superiore allo 0,8% ed è considerato avere caratteristiche aromatiche favorevoli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
+		<English>Olives</English>
+		<German>Oliven</German>
+		<Italian>Olive</Italian>
+		<Spanish>Aceitunas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
+		<English>Olives are the fruits of the olive tree, a short and squat tree found in the Mediterranean Basin, the Arabian Peninsula, and southern Asia, that rarely exceeds 8-15 m (26-49 ft) in height. Olives are small drupes, 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
+		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
@@ -5633,7 +5500,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POCKET_UNIVERSE_PEDIA</Tag>
-		<English>In narrative, pocket universes are fictional naturally or artificially-created universes that exist within the bounds of another universe. The term pocket universe is derived from its illustration in the actual universe where it is usually portrayed as an orb which would fit in a pocket.</English>
+		<English>A pocket universe is a naturally or artificially-created universe, that exist within the bounds of another universe. The term is derived from its illustration in the actual universe, where it is usually portrayed as an orb which would fit in a pocket. In the inflationary theory, the concept defines a realm, like the one that contains the observable universe, as only one of many inflationary zones.</English>
+		<Italian>Un universo tascabile è un universo creato naturalmente o artificialmente, che esiste all'interno dei limiti di un altro universo. Il termine deriva dalla sua illustrazione nell'universo reale, dove di solito è rappresentato come un globo di grandezza tascabile. Nella teoria inflazionistica, il concetto definisce la realtà, come quella che contiene l'universo osservabile, come una di numerose zone inflazionistiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POISON</Tag>
@@ -6212,13 +6080,13 @@
 		<French>Russe</French>
 		<Italian>Russo</Italian>
 		<Polish>Rosyjski</Polish>
-	</TEXT>
+	</TEXT><!-- [check]
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
 		<English>Sabbatean</English>
 		<French>Sabbatéenne</French>
 		<Italian>Sabbateo</Italian>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SADDLES</Tag>
 		<English>Saddles</English>
@@ -6383,17 +6251,6 @@
 		<Polish>Scytyjska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
-		<English>Seasoning</English>
-		<French>Condiments</French>
-		<Italian>Condimenti</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
-		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
-		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Sea Lion and Seal</English>
 		<French>Lion de mer et phoque</French>
@@ -6406,6 +6263,17 @@
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_PEDIA</Tag>
 		<English>Sea lions and fur seals constitute the Otariidae family, collectively known as eared seals. The major distinction between them is the presence of a thick underfur layer in the latter. Otariids have proportionately largeforeflippers and pectoral muscles, and have the ability to turn their hind limbs forward and walk on all fours, making them far more maneuverable on land. They are generally considered to be less adapted to an aquatic lifestyle than true seals; however, they can attain higher bursts of speed and have greater maneuverability in the water. They were, and still are, hunted for their skins, their meat and also their blubber, used to make seal oil.</English>
 		<Italian>I leoni marini e le foche costituiscono la famiglia delle Otariidae. La principale distinzione tra loro è la presenza di uno spesso strato di lanugine sotto la pelliccia nelle foche. Gli otariidi hanno proporzionalmente grandi pinne e muscoli pettorali e hanno la capacità di girare in avanti gli arti posteriori e camminare a quattro zampe, caratteristica che gli permette di camminare meglio sulla terraferma. Sono generalmente considerati meno adattati a uno stile di vita acquatico; tuttavia, possono raggiungere picchi di velocità più elevati e avere una maggiore manovrabilità in acqua. Erano, e sono tuttora, cacciati per le loro pelli, la loro carne e anche il loro grasso, usati per produrre olio di foca.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
+		<English>Seasoning</English>
+		<French>Condiments</French>
+		<Italian>Condimenti</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
+		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
+		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
@@ -6565,6 +6433,11 @@
 		<Polish>Jedwab</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
+		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
+		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
 		<English>Silk Fibers</English>
 		<French>Fibres de soie</French>
@@ -6574,11 +6447,6 @@
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS_PEDIA</Tag>
 		<English>A single thread filament is too thin to use on its own so women combine many threads to produce a thicker, usable fiber. They do this by hand-reeling the threads onto a wooden spindle to produce a uniform strand of raw silk. The process takes around 40 hours to produce a half kilogram of silk.</English>
 		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
-		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
-		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_INGOTS</Tag>
@@ -7150,6 +7018,7 @@
 		<Tag>TXT_KEY_BONUS_TERRACOTTA</Tag>
 		<English>Terracotta</English>
 		<French>Terre cuite</French>
+		<Italian>Terracotta</Italian>
 		<Polish>Terakota</Polish>
 	</TEXT>
 	<TEXT>
@@ -7804,6 +7673,11 @@
 		<Polish>Wieloryby</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
+		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
+		<Italian>Le balene sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL</Tag>
 		<English>Whale Oil</English>
 		<French>Huile de baleine</French>
@@ -7814,11 +7688,6 @@
 		<Tag>TXT_KEY_BONUS_WHALE_OIL_PEDIA</Tag>
 		<English>In much later times whale oil was favoured for its cleaner burning flame.</English>
 		<Italian>In tempi recenti l'olio di balena era molto usato per la sua fiamma più pulita.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
-		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
-		<Italian>Le balene sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHEAT</Tag>
@@ -7867,6 +7736,11 @@
 		<Polish>Drewno</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
+		<English>Wood is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
+		<Italian>Il legno è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS</Tag>
 		<English>Woodwind Instruments</English>
 		<French>Instruments à vent</French>
@@ -7878,11 +7752,6 @@
 		<English>A woodwind instrument is a musical instrument which produces sound when the player blows air against a sharp edge or through a reed, causing the air within its resonator (usually a column of air) to vibrate. Most of these instruments are made of wood but can be made of other materials, such as metals or plastics.</English>
 		<Italian>Uno strumento a fuato è uno strumento musicale che produce suoni quando il musicista soffia attraverso un'apertura dello strumento, facendo vibrare l'aria all'interno della cassa di risonanza. La maggior parte di questi strumenti sono fatti in legno, ma possono essere costruiti anche in metallo o in plastica.</Italian>
 		<Polish>Instrument dęty drewniany - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
-		<English>Wood is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
-		<Italian>Il legno è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL</Tag>
@@ -7990,5 +7859,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
+		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
 	</TEXT>
 </Civ4GameText>

@@ -1,4 +1,4 @@
-Version=12
+Version=15
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -39188,7 +39188,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=8
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -43562,7 +43561,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=15
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -58557,7 +58555,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=8
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -101501,7 +101498,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=44
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -103486,7 +103482,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=18
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -107813,7 +107808,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=29
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot

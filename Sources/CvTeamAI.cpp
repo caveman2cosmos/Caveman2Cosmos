@@ -1,16 +1,8 @@
 // teamAI.cpp
 
 #include "CvGameCoreDLL.h"
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-#include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // statics
 
@@ -2921,20 +2913,15 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 				else
 				{
 					// Valuable terrain bonuses
-					for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+					foreach_(const CvPlot* loopPlot, pLoopCity->plots())
 					{
-						const CvPlot* pLoopPlot = plotCity(pLoopCity->getX(), pLoopCity->getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						const BonusTypes eBonus = loopPlot->getNonObsoleteBonusType(getID());
+						if ( eBonus != NO_BONUS)
 						{
-							const BonusTypes eBonus = pLoopPlot->getNonObsoleteBonusType(getID());
-							if ( eBonus != NO_BONUS)
+							if(GET_PLAYER(getLeaderID()).AI_bonusVal(eBonus) > 15)
 							{
-								if(GET_PLAYER(getLeaderID()).AI_bonusVal(eBonus) > 15)
-								{
-									bValuable = true;
-									break;
-								}
+								bValuable = true;
+								break;
 							}
 						}
 					}

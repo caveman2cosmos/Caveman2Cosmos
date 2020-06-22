@@ -11,9 +11,6 @@
 #ifndef INTEXPR_H
 #define INTEXPR_H
 
-#include "CvXMLLoadUtility.h"
-#include "CvGameObject.h"
-
 class CvGameObject;
 class BoolExpr;
 
