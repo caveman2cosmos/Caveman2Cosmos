@@ -1253,6 +1253,7 @@ public:
 
 	int getBuildingOriginalOwner(BuildingTypes eIndex) const; // Exposed to Python
 	int getBuildingOriginalTime(BuildingTypes eIndex) const; // Exposed to Python
+	void setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue); // Exposed to Python
 
 	int getUnitProduction(UnitTypes eIndex) const; // Exposed to Python
 	void setUnitProduction(UnitTypes eIndex, int iNewValue); // Exposed to Python
