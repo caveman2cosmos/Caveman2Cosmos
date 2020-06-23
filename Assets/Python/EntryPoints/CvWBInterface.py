@@ -69,6 +69,7 @@ def getModPath():
 	''' Called from exe
 	Returns the path for the Mod that this scenario should load (if applicable)
 	'''
+	print "IF getModPath"
 	return WBDesc.gameDesc.szModPath
 
 def getGameData():
@@ -76,6 +77,7 @@ def getGameData():
 	After reading a scenario file,
 	return game/player data as a tuple
 	'''
+	print "IF getGameData"
 	gameWB = WBDesc.gameDesc
 	t = ()
 	t += (
@@ -106,7 +108,7 @@ def getGameData():
 	for i in xrange(iLength):
 		t += (GC.getInfoTypeForString(types[i]),)
 
-	t += (gameWB.gameTurn, gameWB.maxTurns, gameWB.maxCityElimination, gameWB.numAdvancedStartPoints, gameWB.targetScore)
+	t += (gameWB.iGameTurn, gameWB.maxTurns, gameWB.maxCityElimination, gameWB.numAdvancedStartPoints, gameWB.targetScore)
 	return t
 
 def getPlayerDesc():

@@ -15284,6 +15284,13 @@ int CvCity::getBuildingOriginalTime(BuildingTypes eIndex) const
 	return m_paiBuildingOriginalTime[eIndex];
 }
 
+void CvCity::setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue)
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	m_paiBuildingOriginalTime[eIndex] = iNewValue;
+}
+
 
 int CvCity::getUnitProduction(UnitTypes eIndex)	const
 {
