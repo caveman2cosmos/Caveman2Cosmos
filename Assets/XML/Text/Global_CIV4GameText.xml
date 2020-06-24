@@ -8059,6 +8059,10 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Wartość Odepchnięcia dla Obrońców: %D1%%</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_ADJ_DMG_HOVER</Tag>
+		<English>Adjacent Damage to Attacking Units: %D1%%</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_LOST_PROD_CONVERTED</Tag>
 		<English>%s1_CityName can't carry over [ICON_PRODUCTION] overflow any more. The lost %d2_NumProduction[ICON_PRODUCTION] is converted into %d3_NumGold[ICON_GOLD]!</English>
 		<French>%s1_CityName ne peut pas gérer l'excédent de [ICON_PRODUCTION]. La perte de %d2_NumProduction[ICON_PRODUCTION] est convertie en %d3_NumGold[ICON_GOLD]!</French>
