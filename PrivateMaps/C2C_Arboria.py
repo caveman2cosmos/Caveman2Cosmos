@@ -48,8 +48,8 @@ def getNumCustomMapOptionValues(argsList):
 def getCustomMapOptionDescAt(argsList):
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_WRAP_FLAT",
-	                   "TXT_KEY_MAP_WRAP_CYLINDER",
-	                   "TXT_KEY_MAP_WRAP_TOROID"]
+					   "TXT_KEY_MAP_WRAP_CYLINDER",
+					   "TXT_KEY_MAP_WRAP_TOROID"]
 	translated_text = unicode(CyTranslator().getText(selection_names[iSelection], ()))
 	return translated_text
 	

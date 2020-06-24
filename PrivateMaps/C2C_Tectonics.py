@@ -16,44 +16,44 @@
 # the Clash of Civilizations (http://clash.apolyton.net)
 # VERSION 1.0 Initial version
 # VERSION 1.1 Changed the moveplates and blur routines to avoid having
-#                           big lumps of peaks propagating everywhere.
-#             Added subduction
-#             Hinted continents seeds to avoid the poles
+#						   big lumps of peaks propagating everywhere.
+#			 Added subduction
+#			 Hinted continents seeds to avoid the poles
 # VERSION 2.0 Added climate management.
 # VERSION 2.1 Made desert edges rougher.
-#             Added first try at rivers.
-#             Increased subduction
+#			 Added first try at rivers.
+#			 Increased subduction
 # VERSION 3.0 Added various landmasses (Pangaeas, Lakes, Islands).
-#             Modified rivers
+#			 Modified rivers
 # VERSION 3.1 Lost when reinstalling windows and not backing it up.
-#             It was great, though.
+#			 It was great, though.
 # VERSION 3.2 Provided new option for Earthlike, and grouped land masses
-#             so 2/3rds are on the same hemisphere. Less ice.
+#			 so 2/3rds are on the same hemisphere. Less ice.
 # VERSION 3.3 Systematic use of climate map because I had bugged it away for
-#             the main map type instead of pangaea. Tried to prevent players
-#             from starting in the ice. Added hotspots.
+#			 the main map type instead of pangaea. Tried to prevent players
+#			 from starting in the ice. Added hotspots.
 # VERSION 3.4 Minor rewritings.
-#             Added fault lines: Some hills and lakes will pop up inside
-#             vast flat areas, forming a ridge line, but with lots of flat
-#             lands inside. Not always noticeable but has a definite effect.
-#             Corrected climate generation which didn't blow enough moisture.
+#			 Added fault lines: Some hills and lakes will pop up inside
+#			 vast flat areas, forming a ridge line, but with lots of flat
+#			 lands inside. Not always noticeable but has a definite effect.
+#			 Corrected climate generation which didn't blow enough moisture.
 # VERSION 3.5 Added several climate options. Tuned the starting locations.
 # VERSION 3.6 Roughed the edges of the various climate zones to avoid excess
-#             of straight limits.
-#             Added Mediterranean land type (inner sea).
-#             Added No Ice option that replaces ice with tundra and tundra
-#             with grass, otherwise behaves as normal humidity level.
+#			 of straight limits.
+#			 Added Mediterranean land type (inner sea).
+#			 Added No Ice option that replaces ice with tundra and tundra
+#			 with grass, otherwise behaves as normal humidity level.
 # VERSION 3.7 Mediterranean map rewrite: East is always land, more and bigger
-#             islands, correct latitude used for feature generation.
+#			 islands, correct latitude used for feature generation.
 # VERSION 3.8 Fixed WrapY error.
 # VERSION 3.9 Fixed subduction error.
 # VERSION 3.10 Shapes of plates are somewhat less square, and rivers in desert
-#             are always floodplains even after the default algorithm adds
-#             them near players' starting location
+#			 are always floodplains even after the default algorithm adds
+#			 them near players' starting location
 # VERSION 3.11 Climate generation rewritten, rivers less likely to start
-#             in desert and more often from hills.
+#			 in desert and more often from hills.
 # VERSION 3.12 Broke east-west climate lines, smoothed desert-grass
-#             transitions always through plains.
+#			 transitions always through plains.
 # VERSION 3.13 More mountains (second pass of movePlates). Terra option.
 # VERSION 3.14 Fixed starting plot generation errors.
 # VERSION 3.15 Added an option not to group civs on Terra option,
@@ -61,12 +61,12 @@
 #							 Antarctic landmass (too many barbs spawning there).
 # VERSION 3.16 Included Firaxis code for translating the options.
 #							Kept my copyrights.
-#             Added more rivers. (Also aborted try at heghtmap for rivers.)
+#			 Added more rivers. (Also aborted try at heghtmap for rivers.)
 #						  Updated the Terra option to have much better looking Arabia.
 # TODO The shape of the plates should be less polygonal and more random
-#      (more round than rectangular)
-#      The number of plates could be more tunable.
-#      I could also rewrite the whole rivers thing...
+#	  (more round than rectangular)
+#	  The number of plates could be more tunable.
+#	  I could also rewrite the whole rivers thing...
 
 # Modified by Temudjin
 # VERSION 3.16_mst - 15.July.2010
@@ -111,7 +111,7 @@ def beforeGeneration():
 	# will not be visible at evaluation-time, only x and y can be seen.
 	# The result should be between 0 .. 90, but a negative value will be converted.
 	# i.e.: compGetLat = "((y/%5.1f) - %3.1f) * 90" % ( CyMap().getGridHeight()-1, 1 )
-	#     - which would give you half a world from equator to south pole.
+	#	 - which would give you half a world from equator to south pole.
 	# Omitting compGetLat or setting it to None, will result in using the default function,
 	# which will give equally distributed latitudes between both poles.
 
@@ -378,18 +378,18 @@ def getCustomMapOptionDescAt(argsList):
 	iOption = argsList[0]
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_SCRIPT_EARTH_70",
-	                   "TXT_KEY_MAP_SCRIPT_EARTH_60",
-	                   "TXT_KEY_MAP_SCRIPT_PANGAEA",
-	                   "TXT_KEY_MAP_SCRIPT_LAKES",
-	                   "TXT_KEY_MAP_SCRIPT_ISLANDS",
-	                   "TXT_KEY_MAP_SCRIPT_MEDITERRANEAN",
-	                   "TXT_KEY_MAP_SCRIPT_TERRA",
-	                   "TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START"]
+					   "TXT_KEY_MAP_SCRIPT_EARTH_60",
+					   "TXT_KEY_MAP_SCRIPT_PANGAEA",
+					   "TXT_KEY_MAP_SCRIPT_LAKES",
+					   "TXT_KEY_MAP_SCRIPT_ISLANDS",
+					   "TXT_KEY_MAP_SCRIPT_MEDITERRANEAN",
+					   "TXT_KEY_MAP_SCRIPT_TERRA",
+					   "TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START"]
 
 	aridity_names = ["TXT_KEY_CLIMATE_ARID",
-	                 "TXT_KEY_GAMESPEED_NORMAL",
-	                 "TXT_KEY_MAP_SCRIPT_WET",
-	                 "TXT_KEY_MAP_SCRIPT_NO_ICE"]
+					 "TXT_KEY_GAMESPEED_NORMAL",
+					 "TXT_KEY_MAP_SCRIPT_WET",
+					 "TXT_KEY_MAP_SCRIPT_NO_ICE"]
 
 	team_names = [ "Team Neighbors",
 						"Team Separated",
@@ -1076,12 +1076,12 @@ class voronoiTerraMap(voronoiMap):
 	def movePlates(self,dontMoveSeaPlates):
 		plates = self.numContinents + self.numSeaPlates
 		if dontMoveSeaPlates:
-			xMoves =     [0, 1, 0, 0, 0, 0, 0, 0,  -1,-1, 0,-1, 0, 0,-1, 0,-1, 1, 1, 0, 0]
-			yMoves =     [0, 0, 0, 0,-1, 1, 1, 0,   0, 1,-1,-1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+			xMoves =	 [0, 1, 0, 0, 0, 0, 0, 0,  -1,-1, 0,-1, 0, 0,-1, 0,-1, 1, 1, 0, 0]
+			yMoves =	 [0, 0, 0, 0,-1, 1, 1, 0,   0, 1,-1,-1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
 			subduction = [0, 9, 9, 0, 9, 0, 0, 0,   9, 9, 9, 0, 0, 9, 9, 9, 0, 9, 9, 0, 0]
 		else:
-			xMoves =     [0, 1, 0, 0, 0, 1,-1, 0,  -1,-1, 0, 1, 1,-1, 1, 0, 0,-1,-1, 1,-1]
-			yMoves =     [0, 0, 0, 0, 1,-1, 0, 0,  -1, 1,-1,-1, 1,-1,-1,-1,-1,-1, 0, 1, 1]
+			xMoves =	 [0, 1, 0, 0, 0, 1,-1, 0,  -1,-1, 0, 1, 1,-1, 1, 0, 0,-1,-1, 1,-1]
+			yMoves =	 [0, 0, 0, 0, 1,-1, 0, 0,  -1, 1,-1,-1, 1,-1,-1,-1,-1,-1, 0, 1, 1]
 			subduction = [0, 9, 9, 0, 9, 9, 9, 0,   9, 9, 9, 9, 0, 9, 9, 9, 0, 0, 9, 0, 0]
 		self.doMovePlates(xMoves,yMoves,subduction)
 
@@ -1138,13 +1138,13 @@ class ClimateGenerator:
 		gc = CyGlobalContext()
 		self.map = gc.getMap()
 		self.mapWidth = self.map.getGridWidth()
-		if (self.climate == 0):                          # Arid
+		if (self.climate == 0):						  # Arid
 			self.maxWindForce = self.mapWidth / 12
-		elif (self.climate == 1):                        # Normal
+		elif (self.climate == 1):						# Normal
 			self.maxWindForce = self.mapWidth / 8
-		elif (self.climate == 2):                        # Wet
+		elif (self.climate == 2):						# Wet
 			self.maxWindForce = self.mapWidth / 6
-		elif (self.climate == 3):                        # No ice
+		elif (self.climate == 3):						# No ice
 			self.maxWindForce = self.mapWidth / 8
 		self.mapHeight = self.map.getGridHeight()
 
@@ -1179,7 +1179,7 @@ class ClimateGenerator:
 		self.terrains[self.Muddy] = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		self.terrains[self.Marsh] = gc.getInfoTypeForString("TERRAIN_MARSH")
 
-#		if (self.climate == 3):                        # No ice
+#		if (self.climate == 3):						# No ice
 #			self.terrainIce = gc.getInfoTypeForString("TERRAIN_TAIGA")
 #			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrain = [0] * (self.mapWidth*self.mapHeight)
@@ -1188,7 +1188,7 @@ class ClimateGenerator:
 
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns a value in the range of 0-90 degrees"
-		if (CyMap().getCustomMapOption(0) == 5):         #  "Mediterranean"
+		if (CyMap().getCustomMapOption(0) == 5):		 #  "Mediterranean"
 			return 65 - (40 * (self.mapHeight - iY) / self.mapHeight)
 		return self.map.plot(iX,iY).getLatitude()
 
@@ -1413,24 +1413,24 @@ def generatePlotTypes():
 	numContinents = 1
 	numSeaPlates = 1
 	hotspotsFrequency = 900
-	if (userInputLandmass == 0):       #                 "Earthlike (70% water)"
+	if (userInputLandmass == 0):	   #				 "Earthlike (70% water)"
 		numContinents = 1 + numPlayers
 		numSeaPlates = numPlayers*3
-	elif (userInputLandmass == 1):       #               "Earthlike (60% water)"
+	elif (userInputLandmass == 1):	   #			   "Earthlike (60% water)"
 		numContinents = 1 + numPlayers*2
 		numSeaPlates = numPlayers*3 - 1
-	elif (userInputLandmass == 2):     #                 "Pangaea"
+	elif (userInputLandmass == 2):	 #				 "Pangaea"
 		generator = voronoiPangaeaMap(numPlayers)
 		return generator.generate()
-	elif (userInputLandmass == 3):     #                 "Lakes (30% water")
+	elif (userInputLandmass == 3):	 #				 "Lakes (30% water")
 		numContinents = 1 + numPlayers*3
 		numSeaPlates = numPlayers - 1
 		hotspotsFrequency = 1600
-	elif (userInputLandmass == 4):     #                 "Islands"
+	elif (userInputLandmass == 4):	 #				 "Islands"
 		numContinents = numPlayers
 		numSeaPlates = numPlayers*6 - 1
 		hotspotsFrequency = 300
-	elif (userInputLandmass == 5):     #                 "Mediterranean"
+	elif (userInputLandmass == 5):	 #				 "Mediterranean"
 		generator = voronoiMediterraneanMap(numPlayers)
 		return generator.generate()
 	elif (userInputLandmass == 6 or userInputLandmass == 7): # "Terra"
@@ -1523,13 +1523,13 @@ class riversMap:
 
 	def seedRivers(self):
 		climate = CyMap().getCustomMapOption(1)
-		if (climate == 0):                 # Arid
+		if (climate == 0):				 # Arid
 			divider = 6
-		elif (climate == 1):               # Normal
+		elif (climate == 1):			   # Normal
 			divider = 3
-		elif (climate == 2):               # Wet
+		elif (climate == 2):			   # Wet
 			divider = 2
-		elif (climate == 3):               # No ice
+		elif (climate == 3):			   # No ice
 			divider = 3
 		probability = 30/divider
 		seeds = []
@@ -1697,18 +1697,18 @@ class riversFromSea:
 
 	def seedRivers(self):
 		climate = CyMap().getCustomMapOption(1)
-		if (climate == 0):                 # Arid
+		if (climate == 0):				 # Arid
 			divider = 4
-		elif (climate == 1):               # Normal
+		elif (climate == 1):			   # Normal
 			divider = 2
-		elif (climate == 2):               # Wet
+		elif (climate == 2):			   # Wet
 			divider = 1
-		elif (climate == 3):               # No ice
+		elif (climate == 3):			   # No ice
 			divider = 2
 		maxNumber = (self.width + self.height) / divider
 		userInputLandmass = self.map.getCustomMapOption(0)
 		riversNumber = 1 + maxNumber
-		if (userInputLandmass == 1):       # Pangaea
+		if (userInputLandmass == 1):	   # Pangaea
 			riversNumber = maxNumber/2
 		self.coasts = self.collateCoasts()
 		coastsNumber = len(self.coasts)
@@ -2062,9 +2062,9 @@ def findStartingPlot(argsList):
 	allOnBest = false
 	isolatedStarts = false
 	userInputLandmass = CyMap().getCustomMapOption(0)
-	if (userInputLandmass == 4):     #                 "Islands"
+	if (userInputLandmass == 4):	 #				 "Islands"
 		isolatedStarts = true
-	if (userInputLandmass == 7):     #                 "Terra"
+	if (userInputLandmass == 7):	 #				 "Terra"
 		allOnBest = true
 
 	for area in areas:

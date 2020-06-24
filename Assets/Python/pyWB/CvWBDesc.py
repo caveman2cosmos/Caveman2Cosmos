@@ -5,7 +5,7 @@ from array import *
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
-version = 15
+version = 16
 fEncode = 'utf-8'
 
 ############
@@ -86,14 +86,15 @@ class CvGameDesc:
 		f.write("\tTargetScore=%d\n" % GAME.getTargetScore())
 
 		f.write("\tStartYear=%d\n" % GAME.getStartYear())
-		f.write("\tDescription=\n")
+		f.write("\tDescription=undescribed\n")
 		f.write("\tModPath=Mods\Caveman2Cosmos\nEndGame\n")
 
 	def read(self, f):
 		"read in game data"
-		self.eraType = "NONE"
-		self.speedType = "NONE"
-		self.calendarType = "CALENDAR_DEFAULT"
+		self.iStartYear = GC.getDefineINT("START_YEAR")
+		self.iStartEra = GC.getDefineINT("STANDARD_ERA")
+		self.iCalendarType = GC.getDefineINT("STANDARD_CALENDAR")
+		self.speedType = None
 		self.options = ()
 		self.mpOptions = ()
 		self.forceControls = ()
@@ -103,11 +104,11 @@ class CvGameDesc:
 		self.maxCityElimination = 0
 		self.numAdvancedStartPoints = 0
 		self.targetScore = 0
-		self.iStartYear = 0
 		self.szDescription = ""
 		self.szModPath = ""
 		self.iRandom = 0
 
+		filePos = f.tell()
 		parser = CvWBParser()
 		if parser.findNextTokenValue(f, "BeginGame") != -1:
 			while True:
@@ -117,7 +118,7 @@ class CvGameDesc:
 
 				v = parser.findTokenValue(toks, "Era")
 				if v != -1:
-					self.eraType = v
+					self.iStartEra = GC.getInfoTypeForString(v)
 					continue
 
 				v = parser.findTokenValue(toks, "Speed")
@@ -127,7 +128,7 @@ class CvGameDesc:
 
 				v = parser.findTokenValue(toks, "Calendar")
 				if v != -1:
-					self.calendarType = v
+					self.iCalendarType = GC.getInfoTypeForString(v)
 					continue
 
 				v = parser.findTokenValue(toks, "Option")
@@ -196,7 +197,9 @@ class CvGameDesc:
 					continue
 
 				if parser.findTokenValue(toks, "EndGame") != -1:
-					break
+					return
+		f.seek(filePos)
+
 
 	def apply(self):
 		GAME.setStartYear(self.iStartYear)
@@ -207,12 +210,11 @@ class CvTeamDesc:
 
 	def write(self, f, idx):
 		team = GC.getTeam(idx)
-		f.write("BeginTeam\n")
-
-		# Team ID (to make things easier to mess with in the text)
-		f.write("\tTeamSlot=%d, (%s)\n" %(idx, team.getName().encode(fEncode)))
-
 		if team.isAlive():
+			f.write("BeginTeam\n")
+
+			# Team ID (to make things easier to mess with in the text)
+			f.write("\tTeamSlot=%d, (%s)\n" %(idx, team.getName().encode(fEncode)))
 			bMinorCiv = team.isMinorCiv()
 			if bMinorCiv:
 				f.write("\tMinorNationCiv=1\n")
@@ -298,7 +300,8 @@ class CvTeamDesc:
 					if team.getImprovementYieldChange(item, k) != 0:
 						f.write("\tImprovementType=%s, YieldType=%s, ExtraYield=%d\n" %(GC.getImprovementInfo(item).getType(), GC.getYieldInfo(k).getType(), team.getImprovementYieldChange(item, k)))
 
-		f.write("EndTeam\n")
+			f.write("EndTeam\n")
+
 
 	def getRelationshipStatus(self, iTeam1, iTeam2):
 		for i in xrange(GAME.getIndexAfterLastDeal()):
@@ -323,7 +326,7 @@ class CvTeamDesc:
 
 
 	def read(self, f, iTeam):
-		self.iTeam = iTeam
+		self.iTeam = -1
 		self.techTypes = ()
 		self.aaiEspionageAgainstTeams = []
 		self.bContactWithTeamList = ()
@@ -456,6 +459,7 @@ class CvTeamDesc:
 					continue
 
 				if parser.findTokenValue(toks, "EndTeam") != -1:
+					self.iTeam = iTeam
 					return True # completed successfully
 
 
@@ -464,13 +468,13 @@ class CvPlayerDesc:
 
 	def write(self, f, idx):
 		player = GC.getPlayer(idx)
-		f.write("BeginPlayer\n\tPlayerSlot=%d\n\tTeam=%d\n" %(idx, player.getTeam()))
-
-		if player.getHandicapType() > -1:
-			f.write("\tHandicap=%s\n" % GC.getHandicapInfo(player.getHandicapType()).getType())
-
-		# write leader and Civ Description info
 		if player.isAlive():
+			f.write("BeginPlayer\n\tPlayerSlot=%d\n\tTeam=%d\n" %(idx, player.getTeam()))
+
+			if player.getHandicapType() > -1:
+				f.write("\tHandicap=%s\n" % GC.getHandicapInfo(player.getHandicapType()).getType())
+
+			# write leader and Civ Description info
 			f.write("\tLeaderType=%s\n" % GC.getLeaderHeadInfo(player.getLeaderType()).getType())
 			f.write("\tLeaderName=%s\n" % player.getNameKey().encode(fEncode))
 			f.write("\tCivDesc=%s\n" % player.getCivilizationDescriptionKey().encode(fEncode))
@@ -483,7 +487,7 @@ class CvPlayerDesc:
 			f.write("\tArtStyle=%s\n" % GC.getArtStyleTypes(player.getArtStyleType()))
 			f.write("\tPlayableCiv=%d\n" % int(player.isPlayable()))
 
-			f.write("\tRandomStartLocation=false\n")
+			f.write("\tRandomStartLocation=0\n")
 			if not player.isNPC():
 
 				pPlot = player.getStartingPlot()
@@ -528,7 +532,7 @@ class CvPlayerDesc:
 			if player.getScriptData():
 				f.write("\tScriptData=%s\n\t!ScriptData\n" % player.getScriptData())
 
-		f.write("EndPlayer\n")
+			f.write("EndPlayer\n")
 
 	def read(self, f, iPlayer):
 		self.iPlayer = iPlayer
@@ -544,15 +548,15 @@ class CvPlayerDesc:
 		self.leaderType = None
 		self.color = None
 		self.artStyle = None
+		self.iHandicap = GC.getDefineINT("STANDARD_HANDICAP")
 		self.isWhiteFlag = 0
 		self.isPlayableCiv = 1
-		self.handicap = GC.getHandicapInfo(GC.getDefineINT("STANDARD_HANDICAP")).getType()
 		self.iTeam = iPlayer
 
 		# Applied through dll
 		self.iStartingX = -1
 		self.iStartingY = -1
-		self.bRandomStartLocation = "false"
+		self.bRandomStartLocation = False
 		self.stateReligion = ""
 		self.szStartingEra = ""
 		self.sScriptData = ""
@@ -579,6 +583,7 @@ class CvPlayerDesc:
 				if v != -1:
 					if iPlayer != int(v):
 						# Player missing in scenario file
+						self.civType = None
 						return False
 					continue
 
@@ -629,7 +634,7 @@ class CvPlayerDesc:
 
 				v = parser.findTokenValue(toks, "Handicap")
 				if v != -1:
-					self.handicap = v
+					self.iHandicap = GC.getInfoTypeForString(v)
 					continue
 
 				v = parser.findTokenValue(toks, "Color")
@@ -671,7 +676,7 @@ class CvPlayerDesc:
 
 				v = parser.findTokenValue(toks, "RandomStartLocation")
 				if v != -1:
-					self.bRandomStartLocation = v
+					self.bRandomStartLocation = int(v) > 0
 					continue
 
 				v = parser.findTokenValue(toks, "CivicOption")
@@ -1616,35 +1621,18 @@ class CvPlotDesc:
 # serialize map data
 class CvMapDesc:
 
-	# write map data
-	def write(self, f):
-		MAP = GC.getMap()
-		f.write("BeginMap\n\t\
-grid width=%d\n\tgrid height=%d\n\ttop latitude=%d\n\tbottom latitude=%d\n\t\
-wrap X=%d\n\twrap Y=%d\n\tworld size=%s\n\tclimate=%s\n\tsealevel=%s\n\t\
-Randomize Resources=false\nEndMap\n"
-			%(
-				MAP.getGridWidth(), MAP.getGridHeight(),
-				MAP.getTopLatitude(), MAP.getBottomLatitude(),
-				MAP.isWrapX(), MAP.isWrapY(),
-				GC.getWorldInfo(MAP.getWorldSize()).getType(),
-				GC.getClimateInfo(MAP.getClimate()).getType(),
-				GC.getSeaLevelInfo(MAP.getSeaLevel()).getType()
-			)
-		)
-
 	def read(self, f):
 		print "Read Map Data"
 		self.iGridW = 0
 		self.iGridH = 0
-		self.iTopLatitude = 0
-		self.iBottomLatitude = 0
+		self.iTopLatitude = 90
+		self.iBottomLatitude = -90
 		self.bWrapX = 0
 		self.bWrapY = 0
 		self.worldSize = None
 		self.climate = None
 		self.seaLevel = None
-		self.bRandomizeResources = "false"
+		self.bRandomizeResources = False
 		parser = CvWBParser()
 		if parser.findNextTokenValue(f, "BeginMap") == -1:
 			print "can't find map"
@@ -1701,7 +1689,7 @@ Randomize Resources=false\nEndMap\n"
 
 			v = parser.findTokenValue(toks, "Randomize Resources")
 			if v != -1:
-				self.bRandomizeResources = v.lower() != "false"
+				self.bRandomizeResources = int(v) > 0
 				continue
 
 			if parser.findTokenValue(toks, "EndMap") != -1:
@@ -1776,24 +1764,38 @@ class CvWBDesc:
 		f = file(fileName + getWBSaveExtension(), "w") # open text file
 
 		f.write("Version=%d\n" % version)
-		CvGameDesc().write(f) # write game info
+		CvGameDesc().write(f)
 
-		for i in xrange(GC.getMAX_TEAMS()):
-			CvTeamDesc().write(f, i) # write team info
-
-		for i in xrange(GC.getMAX_PLAYERS()):
-			CvPlayerDesc().write(f, i) # write player info
-
-		CvMapDesc().write(f) # write map info
-
+		# write map info
 		MAP = GC.getMap()
 		iGridW = MAP.getGridWidth()
 		iGridH = MAP.getGridHeight()
+		f.write("BeginMap\n\t\
+grid width=%d\n\tgrid height=%d\n\ttop latitude=%d\n\tbottom latitude=%d\n\t\
+wrap X=%d\n\twrap Y=%d\n\tworld size=%s\n\tclimate=%s\n\tsealevel=%s\n\t\
+Randomize Resources=0\nEndMap\n"
+			%(
+				iGridW, iGridH,
+				MAP.getTopLatitude(), MAP.getBottomLatitude(),
+				MAP.isWrapX(), MAP.isWrapY(),
+				GC.getWorldInfo(MAP.getWorldSize()).getType(),
+				GC.getClimateInfo(MAP.getClimate()).getType(),
+				GC.getSeaLevelInfo(MAP.getSeaLevel()).getType()
+			)
+		)
+		# write team and player info
+		for i in xrange(GC.getMAX_TEAMS()):
+			CvTeamDesc().write(f, i)
+		for i in xrange(GC.getMAX_PLAYERS()):
+			CvPlayerDesc().write(f, i)
+
+		# write plot info
 		for iX in xrange(iGridW):
 			for iY in xrange(iGridH):
 				pDesc = CvPlotDesc()
 				pDesc.write(f, MAP.plot(iX, iY))
 
+		# write sign info
 		iNumSigns = CyEngine().getNumSigns()
 		for i in xrange(iNumSigns):
 			sign = CyEngine().getSignByIndex(i)
@@ -1833,6 +1835,9 @@ class CvWBDesc:
 		print "Reading game desc"
 		self.gameDesc.read(f)	# read game info
 
+		print "Reading map desc"
+		self.mapDesc.read(f)	# read map info
+
 		print "Reading teams desc"
 		self.teamsDesc = []
 		for i in xrange(GC.getMAX_TEAMS()):
@@ -1852,9 +1857,6 @@ class CvWBDesc:
 				# Player not found in scenario file, backtrack file position
 				f.seek(filePos)
 			self.playersDesc.append(pDesc)
-
-		print "Reading map desc"
-		self.mapDesc.read(f)	# read map info
 
 		print "Reading plot descs"
 		self.plotDesc = []
@@ -1924,24 +1926,25 @@ class CvWBDesc:
 	# add player starting plots if using random civs
 	def getAssignedStartingPlots(self):
 		MAP = GC.getMap()
-		for pWBPlayer in self.playersDesc:
-			pPlayer = GC.getPlayer(pWBPlayer.iPlayer)
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
+			pPlayer = GC.getPlayer(i)
+			if pPlayer.isAlive():
+				print "player %d is alive" % i
+				pWBPlayer = self.playersDesc[i]
 
-			# Random Start Location
-			if pPlayer.getLeaderType() != -1 and str(pWBPlayer.bRandomStartLocation).lower() != "false":
-				pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
-
-			# Player's starting plot
-			elif pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
-				pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
-
+				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
+					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
+					print "Specific SP"
+				else: pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
 		return 0 # ok
+
 
 	# add player objects in a last pass
 	def applyInitialItems(self):
 		print "Team applyInitialItems"
 		MAP = GC.getMap()
 		for pWBTeam in self.teamsDesc:
+			if pWBTeam.iTeam < 0: continue
 			team = GC.getTeam(pWBTeam.iTeam)
 
 			for TYPE in pWBTeam.techTypes:
@@ -1985,14 +1988,12 @@ class CvWBDesc:
 				team.setProjectArtType(iProject, team.getProjectCount(iProject) - 1, 0)
 
 		for pWBPlayer in self.playersDesc:
+			if pWBPlayer.civType is None: continue
 
 			player = GC.getPlayer(pWBPlayer.iPlayer)
 			player.setScriptData(pWBPlayer.sScriptData)
 
 			if player.isNPC(): continue
-
-			if pWBPlayer.iStartingX != -1 and pWBPlayer.iStartingY != -1:
-				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
 			if pWBPlayer.stateReligion:
 				iStateReligionID = GC.getInfoTypeForString(pWBPlayer.stateReligion)
@@ -2002,9 +2003,6 @@ class CvWBDesc:
 				iStartingEra = GC.getInfoTypeForString(pWBPlayer.szStartingEra)
 				player.setCurrentEra(iStartingEra)
 
-			if str(pWBPlayer.bRandomStartLocation).lower() != "false":
-				player.setStartingPlot(player.findStartingPlot(True), True)
-				print("Setting player %d starting location to (%d,%d)", player.getID(), player.getStartingPlot().getX(), player.getStartingPlot().getY())
 
 			for item in pWBPlayer.aaiCivics:
 				player.setCivics(item[0],item[1])
@@ -2012,6 +2010,12 @@ class CvWBDesc:
 				player.AI_setAttitudeExtra(item[0],item[1])
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
+			if pWBPlayer.bRandomStartLocation:
+				plot = player.findStartingPlot(True)
+				player.setStartingPlot(plot, True)
+				print "Setting player %d starting location to (%d,%d)" %(player.getID(), plot.getX(), plot.getY())
+			elif pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
+				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
 		# Apply city data
 		for item in self.plotDesc:
@@ -2032,6 +2036,7 @@ class CvWBDesc:
 
 		# Final team pass
 		for pWBTeam in self.teamsDesc:
+			if pWBTeam.iTeam < 0: continue
 			team = GC.getTeam(pWBTeam.iTeam)
 			team.changeEnemyWarWearinessModifier(pWBTeam.iEnemyWarWeariness - team.getEnemyWarWearinessModifier())
 			team.changeNukeInterception(pWBTeam.iNukeInterception - team.getNukeInterception())
@@ -2045,6 +2050,7 @@ class CvWBDesc:
 		# Final player pass
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			pWBPlayer = self.playersDesc[i]
+			if pWBPlayer.civType is None: continue
 			player = GC.getPlayer(pWBPlayer.iPlayer)
 			player.setGold(pWBPlayer.iStartingGold)
 			player.changeGreatGeneralsThresholdModifier(pWBPlayer.iCombatXP_ThresholdMod)
