@@ -1421,7 +1421,7 @@ class ClimateMap:
 		W	= mc.W
 		geoIndex = 0
 		for zone in xrange(6):
-			topY    = em.GetYFromZone(zone, True)
+			topY	= em.GetYFromZone(zone, True)
 			bottomY = em.GetYFromZone(zone, False)
 			if not (topY == -1 and bottomY == -1):
 				if topY == -1:
@@ -1952,7 +1952,7 @@ class PangaeaBreaker:
 
 
 	def createContinentList(self, ID):
-		C        = []
+		C		= []
 		indexMap = []
 		gap = int(round(2 + mc.iWorldSize / (1.5 + mc.bArchipelago)))
 		n = 0
@@ -3385,7 +3385,7 @@ class BonusPlacer:
 
 	def CalculateAreaSuitability(self, area, indeXML):
 		MAP = CyGlobalContext().getMap()
-		uniqueTypesInArea    = self.GetUniqueBonusTypeCountInArea(area)
+		uniqueTypesInArea	= self.GetUniqueBonusTypeCountInArea(area)
 		sameClassTypesInArea = self.GetSameClassTypeCountInArea(area, indeXML)
 		#Get the raw number of suitable tiles
 		areaID = area.getID()
@@ -4792,7 +4792,7 @@ def FindValueFromPercent(map, percent):
 			if maxV < map[i]:
 				maxV = map[i]
 	mid = (maxV - minV) / 2.0 + minV
-	threshold       = mid
+	threshold	   = mid
 	thresholdChange = mid
 	lastAdded	= False
 	inTolerance = False

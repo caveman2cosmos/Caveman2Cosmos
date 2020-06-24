@@ -62,15 +62,14 @@ def readDesc(argsList):
 	return ret
 
 # Make changes to the scenario file if needed.
-def _adjustMap(fileName):
-	return True # success
+def _adjustMap(fileName): return True # success
 
 def getModPath():
 	''' Called from exe
 	Returns the path for the Mod that this scenario should load (if applicable)
 	'''
-	print "IF getModPath"
 	return WBDesc.gameDesc.szModPath
+
 
 def getGameData():
 	''' Called from exe
@@ -81,8 +80,8 @@ def getGameData():
 	gameWB = WBDesc.gameDesc
 	t = ()
 	t += (
-		GC.getInfoTypeForString(WBDesc.mapDesc.worldSize), GC.getInfoTypeForString(WBDesc.mapDesc.climate), GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel),
-		GC.getInfoTypeForString(gameWB.eraType), GC.getInfoTypeForString(gameWB.speedType), GC.getInfoTypeForString(gameWB.calendarType)
+		GC.getInfoTypeForString(WBDesc.mapDesc.worldSize), GC.getInfoTypeForString(WBDesc.mapDesc.climate),
+		GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel), gameWB.iStartEra, getInfoType(gameWB.speedType), gameWB.iCalendarType
 	)
 	types = gameWB.options
 	iLength = len(types)
@@ -133,9 +132,8 @@ def getPlayerData():
 	for i in xrange(GC.getMAX_PLAYERS()):
 		playerWB = playerTuple[i]
 		t += (
-			getInfoType(playerWB.civType), playerWB.isPlayableCiv, getInfoType(playerWB.leaderType),
-			GC.getInfoTypeForString(playerWB.handicap), playerWB.iTeam, getInfoType(playerWB.color),
-			getInfoType(playerWB.artStyle), 0, playerWB.isWhiteFlag
+			getInfoType(playerWB.civType), playerWB.isPlayableCiv, getInfoType(playerWB.leaderType), playerWB.iHandicap,
+			playerWB.iTeam, getInfoType(playerWB.color), getInfoType(playerWB.artStyle), 0, playerWB.isWhiteFlag
 		)
 	return t
 
@@ -166,6 +164,9 @@ def applyInitialItems(): # Called from exe
 	print "IF applyInitialItems"
 	return WBDesc.applyInitialItems()
 
+#---------------#
+# Miscellaneous #
+#---------------#
 # Returns the TXT_KEY Description of the map to be displayed in the map/mod selection screen
 def getMapDescriptionKey():
 	print "IF getMapDescriptionKey"

@@ -109,15 +109,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				tinyHeight = int(self.iH * 0.15)
 
 				self.generatePlotsInRegion(80,
-				                           tinyWidth, tinyHeight,
-				                           tinyWestX, tinySouthY,
-				                           4, 3,
-				                           0, self.iTerrainFlags,
-				                           6, 5,
-				                           True, 3,
-				                           -1, False,
-				                           False
-				                           )
+										   tinyWidth, tinyHeight,
+										   tinyWestX, tinySouthY,
+										   4, 3,
+										   0, self.iTerrainFlags,
+										   6, 5,
+										   True, 3,
+										   -1, False,
+										   False
+										   )
 
 		# North and South dimensions always fill the entire vertical span for this script.
 		iSouthY = 0
@@ -154,15 +154,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		print("Cont West: ", iWestX, "Cont East: ", iEastX, "Cont Width: ", iWidth)
 
 		self.generatePlotsInRegion(iWater,
-		                           iWidth, iHeight,
-		                           iWestX, iSouthY,
-		                           iContinentsGrain, 4,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           xExp, 6,
-		                           True, 15,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   iWestX, iSouthY,
+								   iContinentsGrain, 4,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   xExp, 6,
+								   True, 15,
+								   -1, False,
+								   False
+								   )
 
 		# Add the Islands.
 		iWestX = 0
@@ -195,15 +195,15 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 
 
 		self.generatePlotsInRegion(iWater,
-		                           iWidth, iHeight,
-		                           iWestX, iSouthY,
-		                           iIslandsGrain, 5,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           xExp, 6,
-		                           True, 15,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   iWestX, iSouthY,
+								   iIslandsGrain, 5,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   xExp, 6,
+								   True, 15,
+								   -1, False,
+								   False
+								   )
 
 		# All regions have been processed. Plot Type generation completed.
 		print "Done"
