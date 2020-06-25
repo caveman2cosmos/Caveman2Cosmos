@@ -23207,7 +23207,6 @@ BeginPlot
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
-### Sign Info ###
 BeginSign
 	plotX=10
 	plotY=38
