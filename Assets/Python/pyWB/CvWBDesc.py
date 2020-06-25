@@ -234,10 +234,6 @@ class CvTeamDesc:
 					if team.isHasMet(i):
 						f.write("\tContactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
 
-				# write Espionage Ever against other teams
-				if team.getEspionagePointsEver() > 0:
-					f.write("\tEspionageEverAmount=%d\n" % team.getEspionagePointsEver())
-
 				# write Espionage against other teams
 				for i in xrange(GC.getMAX_PC_TEAMS()):
 					if team.getEspionagePointsAgainstTeam(i) > 0:
@@ -336,10 +332,9 @@ class CvTeamDesc:
 		self.bDefensivePactWithTeamList = ()
 		self.bVassalOfTeamList = []
 		self.projectType = []
-		self.isMinorNationCiv = 0
+		self.isMinorNationCiv = False
 		self.iMasterPower = 0
 		self.iVassalPower = 0
-		self.iEspionageEver = 0
 		self.bExtraWaterSeeFrom = 0
 		self.iNukeInterception = 0
 		self.iEnemyWarWeariness = 0
@@ -367,17 +362,12 @@ class CvTeamDesc:
 
 				v = parser.findTokenValue(toks, "MinorNationCiv")
 				if v != -1:
-					self.isMinorNationCiv = int(v)
+					self.isMinorNationCiv = int(v) > 0
 					continue
 
 				v = parser.findTokenValue(toks, "ContactWithTeam")
 				if v != -1:
 					self.bContactWithTeamList += (int(v),)
-					continue
-
-				v = parser.findTokenValue(toks, "EspionageEverAmount")
-				if v != -1:
-					self.iEspionageEver = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "EspionageTeam")
@@ -1627,8 +1617,8 @@ class CvMapDesc:
 		self.iGridH = 0
 		self.iTopLatitude = 90
 		self.iBottomLatitude = -90
-		self.bWrapX = 0
-		self.bWrapY = 0
+		self.bWrapX = False
+		self.bWrapY = False
 		self.worldSize = None
 		self.climate = None
 		self.seaLevel = None
@@ -1664,12 +1654,12 @@ class CvMapDesc:
 
 			v = parser.findTokenValue(toks, "wrap X")
 			if v != -1:
-				self.bWrapX = int(v)
+				self.bWrapX = int(v) > 0
 				continue
 
 			v = parser.findTokenValue(toks, "wrap Y")
 			if v != -1:
-				self.bWrapY = int(v)
+				self.bWrapY = int(v) > 0
 				continue
 
 			v = parser.findTokenValue(toks, "world size")
@@ -1955,10 +1945,12 @@ Randomize Resources=0\nEndMap\n"
 			for item in pWBTeam.bContactWithTeamList:
 				team.meet(item, False)
 
+			iSum = 0
 			for item in pWBTeam.aaiEspionageAgainstTeams:
 				team.setEspionagePointsAgainstTeam(item[0], item[1])
-			if pWBTeam.iEspionageEver > 0:
-				team.setEspionagePointsEver(pWBTeam.iEspionageEver)
+				iSum += item[1]
+			if iSum:
+				team.setEspionagePointsEver(iSum)
 
 			if pWBTeam.isMinorNationCiv:
 				team.setIsMinorCiv(True, False)
