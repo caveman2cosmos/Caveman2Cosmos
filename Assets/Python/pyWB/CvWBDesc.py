@@ -133,22 +133,22 @@ class CvGameDesc:
 
 				v = parser.findTokenValue(toks, "Option")
 				if v != -1:
-					self.options = self.options + (v,)
+					self.options += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "MPOption")
 				if v != -1:
-					self.mpOptions = self.mpOptions + (v,)
+					self.mpOptions += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "ForceControl")
 				if v != -1:
-					self.forceControls = self.forceControls + (v,)
+					self.forceControls += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "Victory")
 				if v != -1:
-					self.victories = self.victories + (v,)
+					self.victories += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "GameTurn")
@@ -362,7 +362,7 @@ class CvTeamDesc:
 
 				v = parser.findTokenValue(toks, "Tech")
 				if v != -1:
-					self.techTypes = self.techTypes + (v,)
+					self.techTypes += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "MinorNationCiv")
