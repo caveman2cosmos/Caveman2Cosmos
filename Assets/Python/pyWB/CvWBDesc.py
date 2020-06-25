@@ -11,44 +11,60 @@ fEncode = 'utf-8'
 ############
 # parser functions for WB desc
 class CvWBParser:
+
+	def __init__(self):
+		self.iMaxFilePos = None
+
+	def seek(self, f, iFilePos):
+		f.seek(iFilePos)
+		self.iMaxFilePos = None
+
+	# Don't call this twice without a readline() in-between as it will interpret that as being at the end of the file regardless of where it is.
+	def isEndOfFile(self, iFilePos):
+		if iFilePos == self.iMaxFilePos:
+			return True
+		self.iMaxFilePos = iFilePos
+
 	# return a list of (comma separated) tokens from the line.  Strip whitespace on each token
 	def getTokens(self, line):
-		if line == None:
-			return []
-		toks = line.split(",")
-		toksOut = []
-		for tok in toks:
-			toksOut.append(tok.strip())
-		return toksOut
-
-	# return true if item exists in list of tokens
-	def findToken(self, toks, item):
-		for tok in toks:
-			if tok == item:
-				return True
-		return False
+		toks = []
+		for item in line.split(","):
+			toks.append(item.strip())
+		return toks
 
 	# Search for a token of the form item=value in the list of toks, and return value, or -1 if not found
-	def findTokenValue(self, toks, item):
+	def findTokenValue(self, toks, token):
 		for tok in toks:
 			l = tok.split("=")
-			if item == l[0]:
+			if token == l[0]:
 				if len(l) == 1:
-					return item
+					return token
 				return l[1]
 		return -1 # failed
 
-	# Find the next line that contains item=value, return value or -1 if not found
-	def findNextTokenValue(self, f, item):
-		while True:
-			line = f.readline()
-			if not line:
-				return -1 # EOF
-			toks = self.getTokens(line)
-			val = self.findTokenValue(toks, item)
-			if val != -1:
-				return val
-		return -1
+	def getTokenValue(self, token):
+		l = token.split("=")
+		if len(l) > 1:
+			return l[1]
+
+	# Find the next line that contains token, breakpoints should be a token without value.
+	# returns token with value if 
+	def findToken(self, f, token, breakPoint=None):
+		if token:
+			while True:
+				line = f.readline()
+				if not line:
+					if self.isEndOfFile(f.tell()):
+						print ("CvWBParser.findToken\n\tEnd of file reached looking for " + token)
+						return
+					continue
+				toks = self.getTokens(line)
+				if breakPoint and breakPoint in toks:
+					return # end of search area
+				for tok in toks:
+					if token in tok:
+						return tok
+
 
 ############
 # class for serializing game data
@@ -108,13 +124,18 @@ class CvGameDesc:
 		self.szModPath = ""
 		self.iRandom = 0
 
-		filePos = f.tell()
+		iFilePos = f.tell()
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginGame") != -1:
+		if parser.findToken(f, "BeginGame", "BeginMap"):
+			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						print ("CvGameDesc.read - end of file reached")
+						break
+					continue
 				toks = parser.getTokens(nextLine)
-				if not toks: break
 
 				v = parser.findTokenValue(toks, "Era")
 				if v != -1:
@@ -133,22 +154,22 @@ class CvGameDesc:
 
 				v = parser.findTokenValue(toks, "Option")
 				if v != -1:
-					self.options = self.options + (v,)
+					self.options += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "MPOption")
 				if v != -1:
-					self.mpOptions = self.mpOptions + (v,)
+					self.mpOptions += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "ForceControl")
 				if v != -1:
-					self.forceControls = self.forceControls + (v,)
+					self.forceControls += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "Victory")
 				if v != -1:
-					self.victories = self.victories + (v,)
+					self.victories += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "GameTurn")
@@ -198,7 +219,7 @@ class CvGameDesc:
 
 				if parser.findTokenValue(toks, "EndGame") != -1:
 					return
-		f.seek(filePos)
+		parser.seek(f, iFilePos)
 
 
 	def apply(self):
@@ -233,10 +254,6 @@ class CvTeamDesc:
 					if i == idx: continue
 					if team.isHasMet(i):
 						f.write("\tContactWithTeam=%d, (%s)\n" %(i, GC.getTeam(i).getName().encode(fEncode)))
-
-				# write Espionage Ever against other teams
-				if team.getEspionagePointsEver() > 0:
-					f.write("\tEspionageEverAmount=%d\n" % team.getEspionagePointsEver())
 
 				# write Espionage against other teams
 				for i in xrange(GC.getMAX_PC_TEAMS()):
@@ -336,10 +353,9 @@ class CvTeamDesc:
 		self.bDefensivePactWithTeamList = ()
 		self.bVassalOfTeamList = []
 		self.projectType = []
-		self.isMinorNationCiv = 0
+		self.isMinorNationCiv = False
 		self.iMasterPower = 0
 		self.iVassalPower = 0
-		self.iEspionageEver = 0
 		self.bExtraWaterSeeFrom = 0
 		self.iNukeInterception = 0
 		self.iEnemyWarWeariness = 0
@@ -348,11 +364,16 @@ class CvTeamDesc:
 		self.lImprovementYield = []
 
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginTeam") != -1:
+		if parser.findToken(f, "BeginTeam", "BeginPlot"):
+			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						print ("CvTeamDesc.read - end of file reached")
+						return
+					continue
 				toks = parser.getTokens(nextLine)
-				if not toks: break
 
 				v = parser.findTokenValue(toks, "TeamSlot")
 				if v != -1:
@@ -362,22 +383,17 @@ class CvTeamDesc:
 
 				v = parser.findTokenValue(toks, "Tech")
 				if v != -1:
-					self.techTypes = self.techTypes + (v,)
+					self.techTypes += (v,)
 					continue
 
 				v = parser.findTokenValue(toks, "MinorNationCiv")
 				if v != -1:
-					self.isMinorNationCiv = int(v)
+					self.isMinorNationCiv = int(v) > 0
 					continue
 
 				v = parser.findTokenValue(toks, "ContactWithTeam")
 				if v != -1:
 					self.bContactWithTeamList += (int(v),)
-					continue
-
-				v = parser.findTokenValue(toks, "EspionageEverAmount")
-				if v != -1:
-					self.iEspionageEver = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "EspionageTeam")
@@ -387,22 +403,22 @@ class CvTeamDesc:
 
 				v = parser.findTokenValue(toks, "AtWar")
 				if v != -1:
-					self.bWarWithTeamList = self.bWarWithTeamList + (int(v),)
+					self.bWarWithTeamList += (int(v),)
 					continue
 
 				v = parser.findTokenValue(toks, "PermanentWarPeace")
 				if v != -1:
-					self.bPermanentWarPeaceList = self.bPermanentWarPeaceList + (int(v),)
+					self.bPermanentWarPeaceList += (int(v),)
 					continue
 
 				v = parser.findTokenValue(toks, "OpenBordersWithTeam")
 				if v != -1:
-					self.bOpenBordersWithTeamList = self.bOpenBordersWithTeamList + (int(v),)
+					self.bOpenBordersWithTeamList += (int(v),)
 					continue
 
 				v = parser.findTokenValue(toks, "DefensivePactWithTeam")
 				if v != -1:
-					self.bDefensivePactWithTeamList = self.bDefensivePactWithTeamList + (int(v),)
+					self.bDefensivePactWithTeamList += (int(v),)
 					continue
 
 				v = parser.findTokenValue(toks, "VassalOfTeam")
@@ -573,11 +589,16 @@ class CvPlayerDesc:
 		self.aszCityList = []
 
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginPlayer") != -1:
+		if parser.findToken(f, "BeginPlayer", "BeginPlot"):
+			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						print ("CvPlayerDesc.read - end of file reached")
+						return
+					continue
 				toks = parser.getTokens(nextLine)
-				if not toks: break
 
 				v = parser.findTokenValue(toks, "PlayerSlot")
 				if v != -1:
@@ -824,10 +845,15 @@ class CvUnitDesc:
 		self.sScriptData = ""
 
 		parser = CvWBParser()
+		iLastFilePos = None
 		while True:
 			nextLine = f.readline()
+			if not nextLine:
+				if parser.isEndOfFile(f.tell()):
+					print ("CvUnitDesc.read - end of file reached")
+					return
+				continue
 			toks = parser.getTokens(nextLine)
-			if not toks: break
 
 			v = parser.findTokenValue(toks, "UnitType")
 			vOwner = parser.findTokenValue(toks, "UnitOwner")
@@ -1078,11 +1104,17 @@ class CvCityDesc:
 		self.lBuildingHappy = []
 		self.lBuildingHealth = []
 		self.sScriptData = ""
+
 		parser = CvWBParser()
+		iLastFilePos = None
 		while True:
 			nextLine = f.readline()
+			if not nextLine:
+				if parser.isEndOfFile(f.tell()):
+					print ("CvCityDesc.read - end of file reached")
+					return
+				continue
 			toks = parser.getTokens(nextLine)
-			if not toks: break
 
 			# City - Owner
 			vOwner=parser.findTokenValue(toks, "CityOwner")
@@ -1432,7 +1464,7 @@ class CvPlotDesc:
 	def read(self, f):
 		"read in a plot desc"
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginPlot") != -1:
+		if parser.findToken(f, "BeginPlot", "BeginSign"):
 
 			self.iX = -1
 			self.iY = -1
@@ -1455,10 +1487,15 @@ class CvPlotDesc:
 			self.lCulture = []
 			self.sScriptData = ""
 
+			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						print ("CvPlotDesc.read - end of file reached")
+						return
+					continue
 				toks = parser.getTokens(nextLine)
-				if not toks: break
 
 				x = parser.findTokenValue(toks, "x")
 				y = parser.findTokenValue(toks, "y")
@@ -1627,20 +1664,26 @@ class CvMapDesc:
 		self.iGridH = 0
 		self.iTopLatitude = 90
 		self.iBottomLatitude = -90
-		self.bWrapX = 0
-		self.bWrapY = 0
+		self.bWrapX = False
+		self.bWrapY = False
 		self.worldSize = None
 		self.climate = None
 		self.seaLevel = None
 		self.bRandomizeResources = False
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginMap") == -1:
+		if not parser.findToken(f, "BeginMap", "BeginPlot"):
 			print "can't find map"
 			return
+
+		iLastFilePos = None
 		while True:
 			nextLine = f.readline()
+			if not nextLine:
+				if parser.isEndOfFile(f.tell()):
+					print ("CvMapDesc.read - end of file reached")
+					return
+				continue
 			toks = parser.getTokens(nextLine)
-			if not toks: break
 
 			v = parser.findTokenValue(toks, "grid width")
 			if v != -1:
@@ -1664,12 +1707,12 @@ class CvMapDesc:
 
 			v = parser.findTokenValue(toks, "wrap X")
 			if v != -1:
-				self.bWrapX = int(v)
+				self.bWrapX = int(v) > 0
 				continue
 
 			v = parser.findTokenValue(toks, "wrap Y")
 			if v != -1:
-				self.bWrapY = int(v)
+				self.bWrapY = int(v) > 0
 				continue
 
 			v = parser.findTokenValue(toks, "world size")
@@ -1693,7 +1736,7 @@ class CvMapDesc:
 				continue
 
 			if parser.findTokenValue(toks, "EndMap") != -1:
-				break
+				return
 
 ###############
 # serialize map data
@@ -1718,11 +1761,16 @@ class CvSignDesc:
 		self.szCaption = ""
 
 		parser = CvWBParser()
-		if parser.findNextTokenValue(f, "BeginSign") != -1:
+		if parser.findToken(f, "BeginSign"):
+			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						print ("CvSignDesc.read - end of file reached")
+						return
+					continue
 				toks = parser.getTokens(nextLine)
-				if not toks: break
 
 				v = parser.findTokenValue(toks, "plotX")
 				if v != -1:
@@ -1746,7 +1794,7 @@ class CvSignDesc:
 
 				if parser.findTokenValue(toks, "EndSign") != -1:
 					return True
-		print "can't find sign"
+
 
 	def apply(self):
 		CyEngine().addSign(GC.getMap().plot(self.iX, self.iY), self.playerType, self.szCaption)
@@ -1814,22 +1862,23 @@ Randomize Resources=0\nEndMap\n"
 		self.playersDesc = None
 		self.plotDesc = None # list
 		self.signDesc = None # list
-		fileName = os.path.normpath(fileName)
-		fileName, ext = os.path.splitext(fileName)
+		fileName, ext = os.path.splitext(os.path.normpath(fileName))
 		if not ext:
 			ext = getWBSaveExtension()
-		CvUtil.pyPrint('loadDesc:%s, curDir:%s' %(fileName, os.getcwd()))
+		fileName += ext
+		print 'loadDesc:%s, curDir:%s' %(fileName, os.getcwd())
 
-		if not os.path.isfile(fileName+ext):
-			CvUtil.pyPrint("Error: file %s does not exist" %(fileName+ext,))
+		if not os.path.isfile(fileName):
+			print "[ERROR] file %s does not exist" %(fileName)
 			return -1	# failed
 
-		f = file(fileName+ext, "r")		# open text file
+		f = file(fileName, "r")		# open text file
 		parser = CvWBParser()
 
-		v = int(parser.findNextTokenValue(f, "Version"))
-		if v != version:
-			CvUtil.pyPrint("Error: wrong WorldBuilder save version.  Expected %d, got %d" %(version, v))
+		v = parser.findToken(f, "Version", "BeginMap")
+		if v: v = parser.getTokenValue(v)
+		if v is None or int(v) != version:
+			print "[ERROR] Wrong WorldBuilder save version. Expected %d, got " %(version) + str(v)
 			return -1	# failed
 
 		print "Reading game desc"
@@ -1841,31 +1890,31 @@ Randomize Resources=0\nEndMap\n"
 		print "Reading teams desc"
 		self.teamsDesc = []
 		for i in xrange(GC.getMAX_TEAMS()):
-			filePos = f.tell()
+			iFilePos = f.tell()
 			pDesc = CvTeamDesc()
 			if not pDesc.read(f, i):
 				# Player not found in scenario file, backtrack file position
-				f.seek(filePos)
+				parser.seek(f, iFilePos)
 			self.teamsDesc.append(pDesc)
 
 		print "Reading players desc"
 		self.playersDesc = []
 		for i in xrange(GC.getMAX_PLAYERS()):
-			filePos = f.tell()
+			iFilePos = f.tell()
 			pDesc = CvPlayerDesc()
 			if not pDesc.read(f, i):
 				# Player not found in scenario file, backtrack file position
-				f.seek(filePos)
+				parser.seek(f, iFilePos)
 			self.playersDesc.append(pDesc)
 
 		print "Reading plot descs"
 		self.plotDesc = []
 		while True:
-			filePos = f.tell()
+			iFilePos = f.tell()
 			pDesc = CvPlotDesc()
 			if not pDesc.read(f):
 				# No more plots to read
-				f.seek(filePos)
+				parser.seek(f, iFilePos)
 				break
 			if pDesc.iX != -1 and pDesc.iY != -1:
 				self.plotDesc.append(pDesc)
@@ -1929,12 +1978,10 @@ Randomize Resources=0\nEndMap\n"
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			pPlayer = GC.getPlayer(i)
 			if pPlayer.isAlive():
-				print "player %d is alive" % i
 				pWBPlayer = self.playersDesc[i]
 
 				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
-					print "Specific SP"
 				else: pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
 		return 0 # ok
 
@@ -1955,10 +2002,12 @@ Randomize Resources=0\nEndMap\n"
 			for item in pWBTeam.bContactWithTeamList:
 				team.meet(item, False)
 
+			iSum = 0
 			for item in pWBTeam.aaiEspionageAgainstTeams:
 				team.setEspionagePointsAgainstTeam(item[0], item[1])
-			if pWBTeam.iEspionageEver > 0:
-				team.setEspionagePointsEver(pWBTeam.iEspionageEver)
+				iSum += item[1]
+			if iSum:
+				team.setEspionagePointsEver(iSum)
 
 			if pWBTeam.isMinorNationCiv:
 				team.setIsMinorCiv(True, False)
@@ -2011,9 +2060,7 @@ Randomize Resources=0\nEndMap\n"
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
 			if pWBPlayer.bRandomStartLocation:
-				plot = player.findStartingPlot(True)
-				player.setStartingPlot(plot, True)
-				print "Setting player %d starting location to (%d,%d)" %(player.getID(), plot.getX(), plot.getY())
+				player.setStartingPlot(player.findStartingPlot(True), True)
 			elif pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
