@@ -26,8 +26,6 @@ public:
 
 	int getCurrentMap() const;
 
-	int getCurrentMap() const;
-
 	bool isMultiplayer();
 
 	void updateScore(bool bForce);

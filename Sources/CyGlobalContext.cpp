@@ -52,11 +52,6 @@ CyMap* CyGlobalContext::getCyMap() const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-void CyGlobalContext::enableMultiMaps(bool enable)
-{
-	GC.enableMultiMaps(enable);
-}
-
 bool CyGlobalContext::multiMapsEnabled() const
 {
 	return GC.multiMapsEnabled();

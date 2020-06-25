@@ -710,11 +710,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-void cvInternalGlobals::enableMultiMaps(bool enable)
-{
-	m_bMultimapsEnabled = enable;
-}
-
 bool cvInternalGlobals::multiMapsEnabled() const
 {
 	return m_bMultimapsEnabled;
