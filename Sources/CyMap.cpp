@@ -5,6 +5,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInitCore.h"
 #include "CvMapGenerator.h"
+#include "CvSelectionGroup.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyMap.h"
@@ -406,17 +407,29 @@ void CyMap::updateMinOriginalStartDist(const CyArea* pArea)
 
 bool CyMap::generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns) const
 {
-	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes) ePlayer, (UnitTypes) eUnit, iFlags, iMaxTurns) : false;
+	return CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes)ePlayer, (UnitTypes)eUnit, iFlags, iMaxTurns);
 }
 
 int CyMap::getLastPathStepNum() const
 {
-	return m_pMap ? m_pMap->getLastPathStepNum() : 0;
+	// length of the path is not the number of steps so we have to count
+	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
+	int i = 0;
+	while (it.plot())
+	{
+		i++;
+		++it;
+	}
+	return i;
 }
 
 CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 {
-	return m_pMap ? new CyPlot(m_pMap->getLastPathPlotByIndex(index)) : NULL;
+	// we can only start from the beginning if we don't want to expose the iterator to Python
+	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
+	for (int i = 0; i < index; i++)
+		++it;
+	return new CyPlot(it.plot());
 }
 
 /************************************************************************************************/

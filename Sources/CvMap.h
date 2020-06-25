@@ -298,13 +298,6 @@ protected:
 	FFreeListTrashArray<CvArea> m_areas;
 
 	void calculateAreas();
-
-public:
-	// AIAndy: Expose path generation functionality here to expose it to Python via CyMap
-	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns) const;
-	const CvPath& getLastPath() const;
-	int getLastPathStepNum() const;
-	CvPlot* getLastPathPlotByIndex(int index) const;
 };
 
 #endif
