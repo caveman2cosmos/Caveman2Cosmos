@@ -1,4 +1,4 @@
-Version=12
+Version=14
 BeginGame
 	StartYear=-200000
 	Description= C2C 10% larger Standard Earth Map - no preset Civs. By Harrier.
@@ -7081,7 +7081,6 @@ EndPlot
 BeginPlot
 	x=22,y=39
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -8481,7 +8480,6 @@ EndPlot
 BeginPlot
 	x=27,y=11
 	BonusType=BONUS_POTATOES
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -17087,7 +17085,6 @@ EndPlot
 BeginPlot
 	x=55,y=11
 	BonusType=BONUS_SQUASH
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25711,7 +25708,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_MELONS
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -26258,7 +26254,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=13
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -27519,7 +27514,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot

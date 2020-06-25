@@ -21,9 +21,10 @@ public:
 	CyGame();
 	explicit CyGame(CvGame* pGame);			// Call from C++
 	explicit CyGame(CvGameAI* pGame);		// Call from C++;
+	const CvGame* getGame() const { return m_pGame; }	// Call from C++
+	bool isNone() const { return m_pGame == NULL; }
 
-	CvGame* getGame() { return m_pGame;	}	// Call from C++
-	bool isNone() { return (m_pGame==NULL); }
+	int getCurrentMap() const;
 
 	int getCurrentMap() const;
 

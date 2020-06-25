@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_COMPUTERS_PEDIA</Tag>
-		<English>A supercomputer is a computer that is at the frontline of current processing capacity, particularly speed of calculation. Supercomputers were introduced in the 1960s and were designed primarily by Seymour Cray at Control Data Corporation (CDC), which led the market into the 1970s until Cray left to form his own company, Cray Research. He then took over the supercomputer market with his new designs, holding the top spot in supercomputing for five years (1985 - 1990). In the 1980s many smaller competitors entered the market, in parallel to the creation of the minicomputer market a decade earlier, but many of these disappeared in the mid-1990s "supercomputer market crash". [PARAGRAPH:]Today, supercomputers are typically one-of-a-kind custom designs produced by traditional companies such as Cray, IBM and Hewlett-Packard, who had purchased many of the 1980s companies to gain their experience. Since October 2010, the Tianhe-1A supercomputer has been the fastest in the world; it is located in China. [PARAGRAPH:2]The term supercomputer itself is rather fluid, and the speed of today's supercomputers tends to become typical of tomorrow's ordinary computers. CDC's early machines were simply very fast scalar processors, some ten times the speed of the fastest machines offered by other companies. In the 1970s most supercomputers were dedicated to running a vector processor, and many of the newer players developed their own such processors at a lower price to enter the market. The early and mid-1980s saw machines with a modest number of vector processors working in parallel to become the standard. Typical numbers of processors were in the range of four to sixteen. In the later 1980s and 1990s, attention turned from vector processors to massive parallel processing systems with thousands of "ordinary" CPUs, some being off the shelf units and others being custom designs. Today, parallel designs are based on "off the shelf" server-class microprocessors, such as the PowerPC, Opteron, or Xeon, and coprocessors like NVIDIA Tesla GPGPUs, AMD GPUs, IBM Cell, FPGAs. Most[which?] modern supercomputers are now highly-tuned computer clusters using commodity processors combined with custom interconnects. [PARAGRAPH:3]Supercomputers are used for highly calculation-intensive tasks such as problems involving quantum physics, weather forecasting, climate research, molecular modeling (computing the structures and properties of chemical compounds, biological macromolecules, polymers, and crystals), physical simulations (such as simulation of airplanes in wind tunnels, simulation of the detonation of nuclear weapons, and research into nuclear fusion). [PARAGRAPH:4]Relevant here is the distinction between capability computing and capacity computing, as defined by Graham et al. Capability computing is typically thought of as using the maximum computing power to solve a large problem in the shortest amount of time. Often a capability system is able to solve a problem of a size or complexity that no other computer can. Capacity computing in contrast is typically thought of as using efficient cost-effective computing power to solve somewhat large problems or many small problems or to prepare for a run on a capability system.</English>
+		<English>A supercomputer is a computer that is at the frontline of current processing capacity, particularly speed of calculation. Supercomputers were introduced in the 1960s and were designed primarily by Seymour Cray at Control Data Corporation (CDC), which led the market into the 1970s until Cray left to form his own company, Cray Research. He then took over the supercomputer market with his new designs, holding the top spot in supercomputing for five years (1985 - 1990). In the 1980s many smaller competitors entered the market, in parallel to the creation of the minicomputer market a decade earlier, but many of these disappeared in the mid-1990s "supercomputer market crash". [PARAGRAPH:2]Today, supercomputers are typically one-of-a-kind custom designs produced by traditional companies such as Cray, IBM and Hewlett-Packard, who had purchased many of the 1980s companies to gain their experience. Since October 2010, the Tianhe-1A supercomputer has been the fastest in the world; it is located in China. [PARAGRAPH:2]The term supercomputer itself is rather fluid, and the speed of today's supercomputers tends to become typical of tomorrow's ordinary computers. CDC's early machines were simply very fast scalar processors, some ten times the speed of the fastest machines offered by other companies. In the 1970s most supercomputers were dedicated to running a vector processor, and many of the newer players developed their own such processors at a lower price to enter the market. The early and mid-1980s saw machines with a modest number of vector processors working in parallel to become the standard. Typical numbers of processors were in the range of four to sixteen. In the later 1980s and 1990s, attention turned from vector processors to massive parallel processing systems with thousands of "ordinary" CPUs, some being off the shelf units and others being custom designs. Today, parallel designs are based on "off the shelf" server-class microprocessors, such as the PowerPC, Opteron, or Xeon, and coprocessors like NVIDIA Tesla GPGPUs, AMD GPUs, IBM Cell, FPGAs. Most[which?] modern supercomputers are now highly-tuned computer clusters using commodity processors combined with custom interconnects. [PARAGRAPH:3]Supercomputers are used for highly calculation-intensive tasks such as problems involving quantum physics, weather forecasting, climate research, molecular modeling (computing the structures and properties of chemical compounds, biological macromolecules, polymers, and crystals), physical simulations (such as simulation of airplanes in wind tunnels, simulation of the detonation of nuclear weapons, and research into nuclear fusion). [PARAGRAPH:4]Relevant here is the distinction between capability computing and capacity computing, as defined by Graham et al. Capability computing is typically thought of as using the maximum computing power to solve a large problem in the shortest amount of time. Often a capability system is able to solve a problem of a size or complexity that no other computer can. Capacity computing in contrast is typically thought of as using efficient cost-effective computing power to solve somewhat large problems or many small problems or to prepare for a run on a capability system.</English>
 		<Polish>Superkomputer - komputer znacznie przewyższający możliwościami powszechnie używane komputery, w szczególności dysponujący wielokrotnie większą mocą obliczeniową. Określenie to pojawiło się w latach 60. w odniesieniu do komputerów produkowanych przez CDC i później przez firmę Cray. Były one produkowane w dziesiątkach egzemplarzy i kosztowały po kilka milionów dolarów. Współcześnie większość superkomputerów to pojedyncze egzemplarze, zaprojektowane i wyprodukowane na zamówienie, zazwyczaj z seryjnie produkowanych procesorów i innych podzespołów. Koszty ich produkcji sięgają miliarda dolarów. Od czerwca 2013 najszybszym superkomputerem na świecie jest Tianhe-2, zbudowany w Chinach.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3273,7 +3273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Omega Child Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Child Labor Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Vannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Hutte du Vannier[COLOR_REVERT] qui procure des [COLOR_CYAN]Paniers[COLOR_REVERT], l'une des ressources qui permet d'accéder à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], un bâtiment important permettant d'augmenter la production globale de [ICON_PRODUCTION].</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Gaj Rotangowy[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Chatkę Wikliniarza[COLOR_REVERT]. Udostępnia [COLOR_HIGHLIGHT_TEXT]Kosze[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -5381,7 +5381,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COILGUN_STRATEGY</Tag>
 		<English>Coilgun weaponry is represented in the game as an extremely accurate, armor piercing handheld weapon that is extremely effective in sniping roles and capable of firing off rounds much faster than a standard fully automatic. No combustion is necessary to make this operate so it's much easier to equip for use in the depth of space.[PARAGRAPH:2]Although the Coilgun invention has been with us for a while now, the amount of energy required to make these viable was only available for a soldier once microgenerators were unlocked. On large vehicles, they're already trumped by the more powerful rapid and heavy railguns. With the invention of handheld railguns nearing, the span of time of coilgun supremacy is rather short. In fact, the tech can be nearly surpassed along the tech tree until absolutely necessary unless you want that military edge right away.</English>
-		<French>Le Canon magnétique est représenté dans le jeu comme une arme de poche extrêmement précise et perforante qui est extrêmement efficace dans les rôles de tireur d'élite et capable de tirer des balles beaucoup plus rapidement qu'une arme automatique standard. Aucune combustion n'est nécessaire pour le faire fonctionner, il est donc beaucoup plus facile de s'en équiper pour une utilisation dans les profondeurs de l'espace. [PARAGRAPHE: 2] Bien que l'invention du Canon magnétique soit connue depuis un certain temps maintenant, la quantité d'énergie requise pour les rendre viables n'est accessible qu'une fois les microgénérateurs déverrouillés. Sur les gros véhicules, ils sont déjà dépassés par les canons à Rails, plus puissants et rapides. Avec l'invention des canons à Rails portatifs qui approche, la durée de la suprématie des bobines est plutôt courte. En fait, la technologie peut être presque dépassée le long de l'arbre technologique jusqu'à ce qu'elle soit absolument nécessaire, sauf si vous voulez tout de suite cet avantage militaire.</French>
+		<French>Le Canon magnétique est représenté dans le jeu comme une arme de poche extrêmement précise et perforante qui est extrêmement efficace dans les rôles de tireur d'élite et capable de tirer des balles beaucoup plus rapidement qu'une arme automatique standard. Aucune combustion n'est nécessaire pour le faire fonctionner, il est donc beaucoup plus facile de s'en équiper pour une utilisation dans les profondeurs de l'espace. [PARAGRAPH:2] Bien que l'invention du Canon magnétique soit connue depuis un certain temps maintenant, la quantité d'énergie requise pour les rendre viables n'est accessible qu'une fois les microgénérateurs déverrouillés. Sur les gros véhicules, ils sont déjà dépassés par les canons à Rails, plus puissants et rapides. Avec l'invention des canons à Rails portatifs qui approche, la durée de la suprématie des bobines est plutôt courte. En fait, la technologie peut être presque dépassée le long de l'arbre technologique jusqu'à ce qu'elle soit absolument nécessaire, sauf si vous voulez tout de suite cet avantage militaire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COLONIALISM</Tag>
@@ -7783,7 +7783,7 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DRUG_TRADE_PEDIA</Tag>
 		<English>Drug Trade, The earliest drug stores date back to the Middle Ages. The first known drug store was opened by Arabian pharmacists in Baghdad in 754, and many more soon began operating throughout the medieval Islamic world and eventually medieval Europe. By the 19th century, many of the drug stores in Europe and North America had eventually developed into larger pharmaceutical companies. Most of today's major pharmaceutical companies were founded in the late 19th and early 20th centuries. Key discoveries of the 1920s and 1930s, such as insulin and penicillin, became mass-manufactured and distributed. Switzerland, Germany and Italy had particularly strong industries, with the UK, US, Belgium and the Netherlands following suit. Legislation was enacted to test and approve drugs and to require appropriate labelling. Prescription and non-prescription drugs became legally distinguished from one another as the pharmaceutical industry matured. The industry got under way in earnest from the 1950s, due to the development of systematic scientific approaches, understanding of human biology (including DNA) and sophisticated manufacturing techniques.</English>
-		<Polish>[TAG]Najwcześniejsze sklepy z lekami datują się od średniowiecza Pierwsza znana "apteka" została otwarta przez arabskiego farmaceutę w Bagdadzie w 754 r.n.e. i wkrótce wiele podobnych zaczeło działać w średniowiecznym islamskim świecie, a w końcu również w średniowiecznej Europie. W XIX wieku, wiele sklepów z lekami w Europie i Ameryce Pn. przekształciło się w większe kampanie farmaceutyczne. Większość z dzisiejszych kompanii farmaceutycznych powstała pod koniec XIX w. i na początku XX w. Kluczowe odkrycia lat 20-tych i 30-tych, takie jak penicylina czy insulina zaczęto produkować na masową skalę i dystrybuować. Wprowadzenie nowego leku do obrotu na rynku farmaceutycznym podlega ścisłym regulacjom prawnym i jest związane z długim i kosztownym procesem prowadzenia badań klinicznych. Zakończeniem procesu rejestracji jest pozwolenie na dopuszczenie do obrotu przygotowywane przez Urząd Rejestracji Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych, a podpisywany przez Ministra Zdrowia. Organem dopuszczającym lek na rynek jest, zatem Minister Zdrowia</Polish>
+		<Polish>Najwcześniejsze sklepy z lekami datują się od średniowiecza Pierwsza znana "apteka" została otwarta przez arabskiego farmaceutę w Bagdadzie w 754 r.n.e. i wkrótce wiele podobnych zaczeło działać w średniowiecznym islamskim świecie, a w końcu również w średniowiecznej Europie. W XIX wieku, wiele sklepów z lekami w Europie i Ameryce Pn. przekształciło się w większe kampanie farmaceutyczne. Większość z dzisiejszych kompanii farmaceutycznych powstała pod koniec XIX w. i na początku XX w. Kluczowe odkrycia lat 20-tych i 30-tych, takie jak penicylina czy insulina zaczęto produkować na masową skalę i dystrybuować. Wprowadzenie nowego leku do obrotu na rynku farmaceutycznym podlega ścisłym regulacjom prawnym i jest związane z długim i kosztownym procesem prowadzenia badań klinicznych. Zakończeniem procesu rejestracji jest pozwolenie na dopuszczenie do obrotu przygotowywane przez Urząd Rejestracji Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych, a podpisywany przez Ministra Zdrowia. Organem dopuszczającym lek na rynek jest, zatem Minister Zdrowia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DRUG_TRADE_QUOTE</Tag>
@@ -10167,8 +10167,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_PEDIA</Tag>
-		<English>Now we know this is simulation. Let's try to break out of it.</English>
-		<Polish>Teoria strun (TS) - teoria przewidująca, że podstawowym budulcem materii nie są cząstki w postaci punktu, lecz struny wielkości 10-31 metra. Pierwotna teoria strun, zwana teorią strun bozonowych, powstała w 1970 roku. Jednak nie jest ona teorią odzwierciedlającą stan naszego fizycznego świata, ponieważ nie zakłada istnienia fermionów. Z upływem czasu pojawiały się nowe odmiany teorii strun. Obecnie uważa się, że wszystkie te teorie są odmianami jednej teorii wyższego rzędu, M-teorii. TS przewiduje, że przestrzeń, w której żyjemy, ma co najmniej 10 wymiarów, przy czym trzy wymiary przestrzenne oraz czas są wymiarami otwartymi, natomiast pozostałe wymiary są skompaktyfikowane do rozmiarów niedostępnych naszemu codziennemu doświadczeniu, dlatego ich nie obserwujemy.</Polish>
+		<English>Now we know this is simulation. Let's try to break out of it.
+		It appears we found too primitive and barbaric civilization to fully manifest in their reality. 
+		It also explains severe anomalies, that we had for eternity.
+		They judged our society before space colonization as barbaric.
+		We send message: Improve simulation. Do you want to restart universe or edit its source code?</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_QUOTE</Tag>
@@ -10178,10 +10181,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_STRATEGY</Tag>
-		<English>"Wait, when did three months pass? One more turn please!"</English>
-		<French>"Attendez, Trois mois se sont-ils déjà écoulés? Encore un tour s'il vous plait!"</French>
-		<Spanish>Mi cerebro está dañado. ¡Analiza más cuerdas!</Spanish>
-		<Polish>Mój mózg boli. Analizuj więcej!</Polish>
+		<English>"Wait, when did three months pass? One more turn please! Or maybe I'll try some modding instead"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GAIA_ECOLOGY</Tag>
@@ -17209,7 +17209,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>Novus Chemistry</English>
 		<French>Chimie Novus</French>
 		<German>Neue Chemie</German>
-		<Italian>Chimica Novus</Italian>
+		<Italian>Nova chimica</Italian>
 		<Spanish>
 			<Text>Química novus</Text>
 			<Gender>Female</Gender>
@@ -17219,7 +17219,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_PEDIA</Tag>
-		<English>Novus Chemistry, (new in Latin), is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
+		<English>Novus Chemistry ("novus" stands for "new" in Latin) is a branch of chemistry that is associated with new forms of metamaterials and their interactions with humans and cyberbiology. It is the grandchild of biomathematics, biochemistry and mechatronics, and this branch of science is about how to use metamaterials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of God, and it will open a Pandora's box of heresy if artificial life is to be created.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_QUOTE</Tag>
@@ -21890,7 +21890,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_PEDIA</Tag>
-		<English>After centuries of suspicion, it has finally been definitively proven that the universe is nothing more than an instance of a computer game. This knowledge has little practical benefit.</English>
+		<English>After millennia of suspicion, it has finally been definitively proven that the universe is nothing more than an instance of a computer game. This knowledge has little practical benefit.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_QUOTE</Tag>
@@ -22538,7 +22538,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPEARFISHING_PEDIA</Tag>
 		<English>[TAB]Spearfishing is a method of fishing that has been used throughout the world for millennia. Early civilizations were familiar with the custom of spearing fish from rivers and streams using sharpened sticks.[PARAGRAPH:2]Spearfishing with a hand held spear from land, shallow water or boat has been practised for thousands of years. The fisher must account for optical refraction at the water's surface, which makes fish appear higher in their line of sight than they are.[PARAGRAPH:2]Shore diving is perhaps the most common form of spearfishing and simply involves entering and exiting the sea from beaches or headlands and hunting around ocean structures, usually reef, but also rocks, kelp or sand. Boats, ships, kayaks, or even jetski can be used to access offshore reefs or ocean structure.[PARAGRAPH:2]- Wikipedia (Wikidata item Q765706)</English>
-		<French>Chasse sous-marine est une méthode antique de pêche qui a été employée dans le monde entier pendant des milléniums. Les civilisations tôt étaient au courant de la coutume de transpercer des poissons des fleuves et des jets utilisant les bâtons affilés.[PARAGRAPH: 1] Spearfishing avec les poteaux barbelés (harpons) était répandu dans des périodes paléolithiques. La caverne de Cosquer en France méridionale contient l'art de caverne plus de 16.000 années, y compris des schémas des joints qui semblent avoir été harponnés.</French>
+		<French>Chasse sous-marine est une méthode antique de pêche qui a été employée dans le monde entier pendant des milléniums. Les civilisations tôt étaient au courant de la coutume de transpercer des poissons des fleuves et des jets utilisant les bâtons affilés.[PARAGRAPH:1] Spearfishing avec les poteaux barbelés (harpons) était répandu dans des périodes paléolithiques. La caverne de Cosquer en France méridionale contient l'art de caverne plus de 16.000 années, y compris des schémas des joints qui semblent avoir été harponnés.</French>
 		<German>Das Speerfischen ist eine uralte Jagdmethode, die weltweit jahrtausendelang angewendet wurde. Höhlenzeichnungen belegen, dass frühe Kulturen schon vor 16.000 Jahren gelernt hatten, Fische mit angespitzten Stöcken zu durchbohren, man geht heutzutage durch archäologische Funde aber davon aus, dass die Urmenschen diese Technik bereits vor 90.000 Jahren das erste Mal anwandten. Der steinzeitliche Fischer musste über Geduld, gute Augen und schnelle Reflexe verfügen, wenn er am Flussufer der vorbeischwimmenden Beute auflauerte. Bei den ersten einfachen Holzspeeren passierte es noch ziemlich häufig, dass bereits aufgespießte Fische vom Stock rutschten und sich so wieder befreien konnten. Dieses Problem konnte erst durch den Einsatz von Widerhaken beseitigt werden.</German>
 		<Italian>Pesca con arpioni è un metodo antico di pesca che è stato usato nel mondo intero per millenni. Le civiltà più antiche conoscevano le tecniche per arpionare i pesci dai fiumi e dai corsi d'acqua per mezzo di bastoni affilati. [PARAGRAPH:1] La pesca con arpioni era ampiamente diffusa nel periodo paleolitico. La caverna di Cosquer nella Francia del sud contiene pitture rupestri di oltre 16.000 anni fa, comprese le illustrazioni di foche che sembrano essere state arpionate.</Italian>
 		<Spanish>La Pesca con arpón es un método antiguo de pesca que se ha utilizado en el mundo entero por milenios. Las culturas ancestrales estaban familiarizadas con la costumbre de capturar los peces de los ríos y corrientes usando estacas afiladas. [PARAGRAPH:1] La pesca con palos puntiagudos (arpones) estaba extendida en los tiempos del Paleolítico. La cueva de Cosquer en la Francia meridional conserva arte rupestre de hace 16.000 años, incluyendo dibujos de focas que parecen haber sido cazadas con arpón.</Spanish>
@@ -24298,7 +24298,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOOL_MAKING_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Omega Child Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Child Labor Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Fabrication d'Outils[COLOR_REVERT] est une technologie de l'ère préhistorique qui augmente la [COLOR_HIGHLIGHT_TEXT]vitesse de construction des aménagements[COLOR_REVERT] par les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT]. Elle donne accès à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], qui, avec les ressources appropriées([COLOR_CYAN]Sel[COLOR_REVERT], par exemple) peut augmenter la [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] de la Ville.</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Kopiec Termitów[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Skałę do Łupania Orzechów[COLOR_REVERT]. Pozwala wyszkolić [COLOR_UNIT_TEXT]Neandertalczyka[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -25957,6 +25957,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<Tag>TXT_KEY_TECH_WORMHOLE_COMMUNICATIONS_QUOTE</Tag>
 		<English>"Absence of evidence is not evidence of absence!" - Carl Sagan</English>
 		<French>"L'Absence de preuve n'est pas preuve d'absence!" - Carl Sagan</French>
+		<Italian>"L'assenza di una prova non è una prova di assenza!" - Carl Sagan</Italian>
 		<Polish>"Nieobecność dowodu nie jest dowodem na nieobecność!" - Carl Sagan</Polish>
 	</TEXT>
 	<TEXT>
@@ -25989,11 +25990,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<English>Wormhole Traversal</English>
 		<French>Traversée des Wormholes</French>
 		<Italian>Attraversamento dei Wormholes</Italian>
-		<Spanish>
-			<Text>Travesía por agujeros de gusano</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Travesía por agujeros de gusano</Spanish>
 		<Polish>Podróże Czasoprzestrzenne</Polish>
 	</TEXT>
 	<TEXT>
@@ -26179,11 +26176,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<French>Zoologie</French>
 		<German>Zoologie</German>
 		<Italian>Zoologia</Italian>
-		<Spanish>
-			<Text>Zoología</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Zoología</Spanish>
 		<Polish>Zoologia</Polish>
 	</TEXT>
 	<TEXT>

@@ -1732,61 +1732,59 @@ class riversFromSea:
 		for x in range(self.width):
 			for y in range(self.height):
 				plot = self.map.plot(x,y)
-				if (plot.isCoastalLand()):
+				if not plot.isWater() and plot.isCoastal():
 					result.append(plot)
 		return result
 
 	def generateRiver(self,i,coastShare):
-		choiceCoast = coastShare * i + self.dice.get(coastShare,"Pick a coast for the river")
-		plot = self.coasts[choiceCoast]
+
+		plot = self.coasts[coastShare * i + self.dice.get(coastShare,"Pick a coast for the river")]
+
 		FlowDirection = CardinalDirectionTypes.NO_CARDINALDIRECTION
 		x = plot.getX()
 		y = plot.getY()
-		if ((y < 1 or y >= self.height - 1) or plot.isNOfRiver() or plot.isWOfRiver()):
-			return (x,y,FlowDirection)
+		if y < 1 or y >= self.height - 1 or plot.isNOfRiver() or plot.isWOfRiver():
+			return (x, y, FlowDirection)
 		eastX = self.eastX(x)
 		westX = self.westX(x)
 		otherPlot = True
 		eastPlot = self.map.plot(eastX,y)
-		if (eastPlot.isCoastalLand()):
-			seaPlot = self.map.plot(x,y+1)
-			if ((self.map.plot(x,y+1).isWater()) or (self.map.plot(eastX,y+1).isWater())):
-				landPlot1 = self.map.plot(x,y-1)
-				landPlot2 = self.map.plot(eastX,y-1)
-				if (landPlot1.isWater() or landPlot2.isWater()):
+		if not eastPlot.isWater() and eastPlot.isCoastal():
+
+			if self.map.plot(x, y+1).isWater() or self.map.plot(eastX, y+1).isWater():
+
+				if self.map.plot(x, y-1).isWater() or self.map.plot(eastX, y-1).isWater():
 					otherPlot = True
 				else:
 					FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_NORTH
 					otherPlot = False
-			if (otherPlot == True):
-				if ((self.map.plot(x,y-1).isWater()) or (self.map.plot(eastX,y-1).isWater())):
-					landPlot1 = self.map.plot(x,y+1)
-					landPlot2 = self.map.plot(eastX,y+1)
-					if (landPlot1.isWater() or landPlot2.isWater()):
+			if otherPlot:
+				if self.map.plot(x, y-1).isWater() or self.map.plot(eastX, y-1).isWater():
+
+					if self.map.plot(x, y+1).isWater() or self.map.plot(eastX, y+1).isWater():
 						otherPlot = True
 					else:
 						FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_SOUTH
 						otherPlot = False
-		if (otherPlot == True):
-			southPlot = self.map.plot(x,y-1)
-			if (southPlot.isCoastalLand()):
-				if ((self.map.plot(eastX,y).isWater()) or (self.map.plot(eastX,y-1).isWater())):
-					landPlot1 = self.map.plot(westX,y)
-					landPlot2 = self.map.plot(westX,y-1)
-					if (landPlot1.isWater() or landPlot2.isWater()):
+		if otherPlot:
+			southPlot = self.map.plot(x, y-1)
+			if not southPlot.isWater() and southPlot.isCoastal():
+
+				if self.map.plot(eastX, y).isWater() or self.map.plot(eastX, y-1).isWater():
+
+					if self.map.plot(westX, y).isWater() or self.map.plot(westX, y-1).isWater():
 						otherPlot = True
 					else:
 						FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_EAST
 						otherPlot = False
-				if (otherPlot == True):
-					if ((self.map.plot(westX,y).isWater()) or (self.map.plot(westX,y-1).isWater())):
-						landPlot1 = self.map.plot(eastX,y)
-						landPlot2 = self.map.plot(eastX,y-1)
-						if (landPlot1.isWater() or landPlot2.isWater()):
+				if otherPlot:
+					if self.map.plot(westX, y).isWater() or self.map.plot(westX, y-1).isWater():
+
+						if self.map.plot(eastX, y).isWater() or self.map.plot(eastX, y-1).isWater():
 							otherPlot = True
 						else:
 							FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_WEST
-		return (x,y,FlowDirection)
+		return (x, y, FlowDirection)
 
 	# prevent rivers from crossing each other
 	def preventRiversFromCrossing(self,x,y,flow,riverID):

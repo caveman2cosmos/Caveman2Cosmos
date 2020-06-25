@@ -347,10 +347,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Fruit Picking Camp[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]pépinière d'Arbres[\LINK]</French>
+		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]pépinière d'Arbres[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Früchte pflücken[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Vivaio di alberi[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Zona de reforestación[\LINK]</Spanish>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Vivaio di alberi[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zona de reforestación[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zbieracz owocow[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
@@ -1027,6 +1027,10 @@
 		<Polish>Przekształć w Zarośla</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA</Tag>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Toward Taiga[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Tag>
 		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Toward Tundra[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraformer en Toundra[\LINK]</French>
@@ -1230,5 +1234,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
 	</TEXT>
 </Civ4GameText>

@@ -2340,4 +2340,13 @@
 		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals.
 Eventually they move away and let citizens work here.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
+		<English>Fishing Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
+		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals.
+Eventually they move away and let citizens work here.</English>
+	</TEXT>
 </Civ4GameText>

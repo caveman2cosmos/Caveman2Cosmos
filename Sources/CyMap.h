@@ -12,15 +12,14 @@ class CyPlot;
 class CvMap;
 class CyCity;
 class CySelectionGroup;
-class CyUnit;
 class CyArea;
 class CyMap
 {
 public:
 	CyMap();
 	explicit CyMap(CvMap* pMap);		// Call from C++
-	//CvMapInterfaceBase* getMap() { return m_pMap;	}	// Call from C++
-	bool isNone() { return (m_pMap==NULL); }
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; }	// Call from C++
+	bool isNone() const { return m_pMap == NULL; }
 	
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -108,17 +107,17 @@ public:
 	void recalculateAreas();
 	void resetPathDistance();
 
-	int calculatePathDistance(CyPlot* pSource, CyPlot* pDest);
+	int calculatePathDistance(const CyPlot* pSource, const CyPlot* pDest) const;
 	void rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions);
 	void regenerateGameElements();
 	void updateFog();
 	void updateMinimapColor();
-	void updateMinOriginalStartDist(CyArea* pArea);
+	void updateMinOriginalStartDist(const CyArea* pArea);
 
 	// AIAndy: Expose path generation functionality to Python
-	bool generatePathForHypotheticalUnit(CyPlot* pFrom, CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns);
-	int getLastPathStepNum();
-	CyPlot* getLastPathPlotByIndex(int index);
+	bool generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;
+	int getLastPathStepNum() const;
+	CyPlot* getLastPathPlotByIndex(int index) const;
 
 	// Super Forts begin *canal* *choke*
 	void calculateCanalAndChokePoints();

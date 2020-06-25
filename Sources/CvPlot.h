@@ -6,7 +6,7 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
@@ -140,7 +140,8 @@ public:
 	CvPlot();
 	virtual ~CvPlot();
 
-	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+	CvGameObjectPlot* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlot* getGameObject() const { return &m_GameObject; };
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -228,13 +229,14 @@ public:
 	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
 	bool isAdjacentToLand() const; // Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
 
 	bool isVisibleWorked() const;
 	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater(bool bIgnoreJungle = false) const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python ?
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -262,7 +264,7 @@ public:
 	bool canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude = false) const;
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
-	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true, bool bUpgradeCheck = false) const; // Exposed to Python
+	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const; // Exposed to Python
 
 	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);
@@ -845,7 +847,7 @@ public:
 	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
 	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
 	bool shouldUsePlotBuilder();
-	CvPlotBuilder* getPlotBuilder() { return m_pPlotBuilder; }
+	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
 	void updateRouteSymbol(bool bForce = false, bool bAdjacent = false);
@@ -1188,6 +1190,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);

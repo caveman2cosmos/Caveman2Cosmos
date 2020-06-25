@@ -1348,7 +1348,7 @@
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_HOVER</Tag>
 		<English>Select when to show the instructions for pressing [SHIFT] to see the alternate view.</English>
 		<French>Sélectionner dans quelle condition afficher le conseil concernant la touche [SHIFT] qui permet d'afficher la vue alternative.</French>
-		<German>Bestimmt, wann der Hinweis zum Drücken der [UMSCHALT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
+		<German>Bestimmt, wann der Hinweis zum Drücken der [SHIFT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
 		<Italian>Quando è selezionato, mostra la vista alternativa delle istruzioni premendo [SHIFT].</Italian>
 		<Spanish>Indica cuándo mostrar las instrucciones para presionar [SHIFT] para ver la vista alternativa.</Spanish>
 	</TEXT>
@@ -1356,7 +1356,7 @@
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_TEXT</Tag>
 		<English>[SHIFT] Instructions</English>
 		<French>Conseil [SHIFT]</French>
-		<German>[UMSCHALT]-Hinweis</German>
+		<German>[SHIFT]-Hinweis</German>
 		<Italian>[SHIFT] Istruzioni</Italian>
 		<Spanish>[SHIFT] Instrucciones</Spanish>
 	</TEXT>
@@ -5120,22 +5120,6 @@
 		<German>"Spezialist entfernen"-Schaltfläche</German>
 		<Italian>Bottone rimozione Specialisti</Italian>
 		<Spanish>Botón 'Quitar especialista'</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__SPEDUPTECHS_HOVER</Tag>
-		<English>When checked, displays the technologies that will be sped up by acquiring the technology you are hovering over (e.g. Animal Husbandry would be shown for Agriculture once you have acquired Hunting).</English>
-		<French>Lorsque activé, Affiche les technologies dont la recherche va être accélérée par la technologie sélectionnée (e.g. Elevage d'animaux sera affiché pour l'agriculture, une fois que la Chasse sera découverte).</French>
-		<German>Zeigt Technologien an, die durch das Vorhandensein der Technologie beschleunigt würden, über der sich der Mauszeiger befindet (beispielsweise würde "Tierzucht" bei "Landwirtschaft" erscheinen, wenn bereits "Jagd" erforscht wäre)</German>
-		<Italian>Quando è selezionato, nel testo a comparsa di una Tecnologia vengono mostrate le Tecnologie che risultano accelerate dall'acquisizione della Tecnologia in questione (p. es. una volta acquisita la tecnologia 'Caccia', se posizionerete il cursore sulla tecnologia 'Agricoltura' vi verrà ricordato che questa accelererà la tecnologia 'Allevamento di animali').</Italian>
-		<Spanish>Cuando se activa, muestra las tecnologías que se desbloquearán adquiriendo la tecnología sobre la que sitúes el ratón (por ejemplo, Ganadería se mostrará para Agricultura una vez ya tengas Caza).</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__SPEDUPTECHS_TEXT</Tag>
-		<English>Speeds Up...</English>
-		<French>Accélération...</French>
-		<German>Beschleunigt...</German>
-		<Italian>Accelera...</Italian>
-		<Spanish>Acelerará...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_HOVER</Tag>

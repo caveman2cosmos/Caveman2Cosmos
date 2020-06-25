@@ -275,7 +275,7 @@ class Revolution:
 					if self.showRevIndexInPopup or bDebug:
 						danger += "  \t(%d)" % revIdx
 					danger += "\n"
-				elif revIdx >= int(math.floor(self.revReadyFrac*self.revInstigatorThreshold + .5)):
+				elif revIdx >= int(self.revReadyFrac*self.revInstigatorThreshold + .5):
 					if deltaTrend > self.showTrend:
 						warning += "<color=255,120,0,255>  %s<color=255,255,255,255>" % CyCityX.getName()
 					else:
@@ -798,7 +798,7 @@ class Revolution:
 			# Odds are too steep, some doubt potential for success
 			revStrength *= 0.8
 
-		iNumUnits = int(math.floor( revStrength + .5 ))
+		iNumUnits = int(revStrength + .5)
 		if( GAME.getGameTurn() - RevData.getCityVal(pCity, 'RevolutionTurn') < 3 ) :
 			iNumUnits = min([iNumUnits,(pCity.getPopulation())/4,localRevIdx/2])
 		elif( pRevPlayer.getNumCities() > 0 and iRebelsIn3 > 2 ) :
@@ -876,7 +876,7 @@ class Revolution:
 
 		if( pRevPlayer.isRebel() ) :
 			# Set reinforcement timer again
-			iReinforceTurns = int(math.floor( self.baseReinforcementTurns*(2.0/(revStrength)) + .5 ))
+			iReinforceTurns = int(self.baseReinforcementTurns*2.0/revStrength + .5)
 
 			minReinfTurns = max([self.minReinforcementTurns, 4 - owner.getCurrentEra(), 9 - pCity.getPopulation()])
 
@@ -1120,14 +1120,14 @@ class Revolution:
 				elif( recentlyAcquired ) :
 					numUnhappy = min([numUnhappy/2.0,0.75])
 
-				happyIdx = int(math.floor( (15 + 15*(min([numUnhappy,pCity.getPopulation()])/min([pCity.getPopulation(),12])))*pow(numUnhappy, .8) + .5 ))
+				happyIdx = int((15 + 15*(min([numUnhappy,pCity.getPopulation()])/min([pCity.getPopulation(),12])))*pow(numUnhappy, .8) + .5)
 
 				if( pCity.getEspionageHappinessCounter() > 0 ) :
 					# Reduce effect if unhappiness is from spy mission
 					happyIdx = happyIdx/3.0
 
 				if( numUnhappy > 0 ) :
-					happyIdx = int(math.floor( self.happinessModifier*happyIdx + .5 ))
+					happyIdx = int(self.happinessModifier*happyIdx + .5)
 					if( bIsRevWatch ) : negList.append( (happyIdx, localText.getText("TXT_KEY_REV_WATCH_HAPPINESS",())) )
 
 
@@ -1136,7 +1136,7 @@ class Revolution:
 				happyIdx = -int( (1.2 + numHappy/pCity.getPopulation())*pow(numHappy, .6) + 0.5 )
 				if( bWarWithMaxCult and not pPlayer.isRebel() ) :
 					happyIdx /= 2
-				happyIdx = int(math.floor( (self.happinessModifier / 3)*happyIdx + .5 ))
+				happyIdx = int((self.happinessModifier / 3)*happyIdx + .5 )
 				if( bIsRevWatch ) : posList.append( (happyIdx, localText.getText("TXT_KEY_REV_WATCH_HAPPINESS",())) )
 
 			localRevIdx += happyIdx
@@ -1237,35 +1237,35 @@ class Revolution:
 			locationRevIdx = 0
 
 			if( civSizeRawVal > 2.0 ) :
-				locationRevIdx += int(math.floor(2.0*cityDistModifier*distMod + .5))
+				locationRevIdx += int(2.0*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 1.5 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			elif( civSizeRawVal > 1.6 ) :
-				locationRevIdx += int(math.floor(1.65*cityDistModifier*distMod + .5))
+				locationRevIdx += int(1.65*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 1.6 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			elif( civSizeRawVal > 1.4 ) :
-				locationRevIdx += int(math.floor(1.45*cityDistModifier*distMod + .5))
+				locationRevIdx += int(1.45*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 1.7 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			elif( civSizeRawVal > 1.2 ) :
-				locationRevIdx += int(math.floor(1.25*cityDistModifier*distMod + .5))
+				locationRevIdx += int(1.25*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 1.8 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			elif( civSizeRawVal > 1.0 ) :
-				locationRevIdx += int(math.floor(cityDistModifier*distMod + .5))
+				locationRevIdx += int(cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 1.9 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			elif( civSizeRawVal > .7 ) :
-				locationRevIdx += int(math.floor(.75*cityDistModifier*distMod + .5))
+				locationRevIdx += int(.75*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 2.2 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 			else :
-				locationRevIdx += int(math.floor(.5*cityDistModifier*distMod + .5))
+				locationRevIdx += int(.5*cityDistModifier*distMod + .5)
 				if( bIsRevWatch and cityDistModifier > 3.0 ) :
 					negList.append( (locationRevIdx, localText.getText("TXT_KEY_REV_WATCH_DISTANT",())) )
 
-			locationRevIdx = int(math.floor( locationRevIdx + .5 ))
+			locationRevIdx = int(locationRevIdx + .5 )
 			localRevIdx += locationRevIdx
 			revIdxHist['Location'] = [locationRevIdx] + revIdxHist['Location'][0:RevDefs.revIdxHistLen-1]
 			# phungus -end
@@ -1277,15 +1277,15 @@ class Revolution:
 				if( hasNationalism ) :
 					if( pCity.getCultureLevel() > 2 ) :
 						if( pCity.plot().calculateCulturePercent(iPlayer) > 90 ) :
-							colonyIdx = int(math.floor( self.colonyModifier*distMod*0.5*colBase + .5 ))
+							colonyIdx = int(self.colonyModifier*distMod*0.5*colBase + .5)
 						elif( pCity.plot().calculateCulturePercent(iPlayer) > 70 ) :
-							colonyIdx = int(math.floor( self.colonyModifier*distMod*1.0*colBase + .5 ))
+							colonyIdx = int(self.colonyModifier*distMod*1.0*colBase + .5)
 						else :
-							colonyIdx = int(math.floor( self.colonyModifier*distMod*1.2*colBase + .5 ))
+							colonyIdx = int(self.colonyModifier*distMod*1.2*colBase + .5)
 					else :
-						colonyIdx = int(math.floor( self.colonyModifier*distMod*1.5*colBase + .5 ))
+						colonyIdx = int(self.colonyModifier*distMod*1.5*colBase + .5)
 				else :
-					colonyIdx = int(math.floor( self.colonyModifier*distMod*1*colBase + .5 ))
+					colonyIdx = int(self.colonyModifier*distMod*1*colBase + .5)
 
 				if( pCity.area().getNumCities() == 1 ) :
 					if( culturePercent > 90 ) :
@@ -1367,17 +1367,17 @@ class Revolution:
 					#phungus Rev Trait Effects
 					[traitRelGoodMod,traitRelBadMod] = RevUtils.getTraitsReligionMods(iPlayer)
 
-					relBadIdx = int(math.floor(relBadIdx*(1.0 + relBadMod + traitRelBadMod) + .5))
-					relGoodIdx = int(math.floor(relGoodIdx*(1.0 + relGoodMod + traitRelGoodMod) + .5))
+					relBadIdx = int(relBadIdx*(1.0 + relBadMod + traitRelBadMod) + .5)
+					relGoodIdx = int(relGoodIdx*(1.0 + relGoodMod + traitRelGoodMod) + .5)
 					#Rev Trait End
 
 					if( pTeam.getAtWarCount(True) > 1 ) :
 						# God is on your side =P
-						relGoodIdx = int(math.floor(relGoodIdx*1.5 + .5))
+						relGoodIdx = int(relGoodIdx*1.5 + .5)
 
-					relIdx = int(math.floor( self.religionModifier*(relBadIdx - relGoodIdx) + .5 ))
-					relGoodIdx = int(math.floor( self.religionModifier*(relGoodIdx) + .5 ))
-					relBadIdx = int(math.floor( self.religionModifier*(relBadIdx) + .5 ))
+					relIdx = int(self.religionModifier*(relBadIdx - relGoodIdx) + .5)
+					relGoodIdx = int(self.religionModifier*(relGoodIdx) + .5)
+					relBadIdx = int(self.religionModifier*(relBadIdx) + .5)
 
 					if( hasSciMethod ) :
 						relIdx = relIdx/3
@@ -1401,7 +1401,7 @@ class Revolution:
 			# Culture
 			adjCultRate = max([pCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) - pPlayer.getCurrentEra(), 0])
 			cultIdx = -min([int( pow(abs(adjCultRate/(1.5+pPlayer.getCurrentEra()/3.0)), .7) + 0.5 ), 10])
-			cultIdx = int(math.floor( self.cultureRateModifier*cultIdx + .5 ))
+			cultIdx = int(self.cultureRateModifier*cultIdx + .5)
 			if( bWarWithMaxCult and not pPlayer.isRebel() ) :
 				cultIdx /= 2
 			if( bIsRevWatch and cultIdx < -1 ) : posList.append( (cultIdx, localText.getText("TXT_KEY_REV_WATCH_CULTURE_RATE",())) )
@@ -1432,7 +1432,7 @@ class Revolution:
 				natIdx = max([natIdx,0])
 
 			if( recentlyAcquired ) :
-				natIdx = int(math.floor((3*natIdx)/5.0 + .5))
+				natIdx = int(3*natIdx/5.0 + .5)
 				natIdx = min([natIdx,12])
 
 			if( bWarWithMaxCult and not pPlayer.isRebel() and natIdx > 0 ) :
@@ -1441,17 +1441,17 @@ class Revolution:
 				natIdx = min([(2*natIdx)/3,10])
 
 			if( not hasNationalism ) :
-				natIdx = int(math.floor((1*natIdx)/2.0 + .5))
+				natIdx = int(natIdx/2.0 + .5)
 
 			if( natIdx > 0 ) :
 				natMod = RevUtils.getCivicsNationalityMod( iPlayer )
-				natIdx = int(math.floor( natIdx*(1.0 + natMod) + .5 ))
+				natIdx = int(natIdx*(1.0 + natMod) + .5)
 
-			natIdx = int(math.floor( self.nationalityModifier*natIdx + .5 ))
-			if( bIsRevWatch ) :
-				if( natIdx > 0 ) :
+			natIdx = int(self.nationalityModifier*natIdx + .5)
+			if bIsRevWatch:
+				if natIdx > 0:
 					negList.append( (natIdx, localText.getText("TXT_KEY_REV_WATCH_NATIONALITY",())) )
-				elif( natIdx < 0 ) :
+				elif natIdx < 0:
 					posList.append( (natIdx, localText.getText("TXT_KEY_REV_WATCH_NATIONALITY",())) )
 
 			localRevIdx += natIdx
@@ -1460,37 +1460,35 @@ class Revolution:
 			# Health
 			healthIdx = 0
 			numUnhealthy = (pCity.badHealth(False) - pCity.goodHealth())
-			if( numUnhealthy > 0 ) :
-				healthIdx = int((math.floor( 2*pow(numUnhealthy, .6) + .5 )) * self.happinessModifier)
-				if( pCity.getEspionageHealthCounter() > 0 or pPlayer.isRebel() ) :
+			if numUnhealthy > 0:
+				healthIdx = int(math.floor(2*pow(numUnhealthy, .6) + .5) * self.happinessModifier)
+				if pCity.getEspionageHealthCounter() > 0 or pPlayer.isRebel():
 					healthIdx = healthIdx/3
-				if( bIsRevWatch ) : negList.append( (healthIdx, localText.getText("TXT_KEY_REV_WATCH_UNHEALTHY",())) )
+				if bIsRevWatch:
+					negList.append( (healthIdx, localText.getText("TXT_KEY_REV_WATCH_UNHEALTHY",())) )
 				localRevIdx += healthIdx
 			revIdxHist['Health'] = [healthIdx] + revIdxHist['Health'][0:RevDefs.revIdxHistLen-1]
 
 			# Garrison
 			garIdx = 0
-			if( hasLiberalism ) :
+			if hasLiberalism:
 				garIdx = -int( 2*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .5) - .5 )
-			else :
-				if( pCity.getBuildingDefense() > 75 ) :
-					garIdx = -int( 3*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) + .5 )
-				elif( pCity.getBuildingDefense() > 25 ) :
-					garIdx = -int( 2.5*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) )
-				else :
-					garIdx = -int( 2*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) - .5 )
-			#Afforess Revolt Protection
-			garIdx *= int((100 + (pCity.plot().getRevoltProtection())) / 100)
-			#Afforess End
+			elif pCity.getBuildingDefense() > 75:
+				garIdx = -int( 3*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) + .5 )
+			elif pCity.getBuildingDefense() > 25:
+				garIdx = -int( 2.5*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) )
+			else:
+				garIdx = -int( 2*pow(pCity.plot().getNumDefenders(iPlayer)/2.0, .6) - .5 )
 
-			garIdx = int(math.floor( self.garrisonModifier*garIdx + .5 ))
+			garIdx *= int((100 + (pCity.plot().getRevoltProtection())) / 100) # Afforess: Revolt Protection
 
-			if( natIdx > 0 ) :
-				garIdx = max([garIdx,-10])
-			else :
-				garIdx = max([garIdx,-15])
+			garIdx = int(self.garrisonModifier*garIdx + .5)
 
-			if( bIsRevWatch and garIdx <= -2 ) :
+			if natIdx > 0:
+				if garIdx < -10: garIdx = -10
+			elif garIdx < -15: garIdx = -15
+
+			if bIsRevWatch and garIdx <= -2:
 				posList.append( (garIdx, localText.getText("TXT_KEY_REV_WATCH_GARRISON",())) )
 
 			localRevIdx += garIdx
@@ -1534,57 +1532,56 @@ class Revolution:
 
 			# Disorder
 			disorderIdx = 0
-			if( pCity.getOccupationTimer() > 0 ) :
-				#if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - City %s is in Disorder!"%(pCity.getName()))
-				if( recentlyAcquired or pPlayer.isRebel() ) :
+			if pCity.getOccupationTimer() > 0:
+				if recentlyAcquired or pPlayer.isRebel():
 					# Give recently acquired cities a break
 					disorderIdx = 10
-				elif( pCity.getRevolutionCounter() > 0 ) :
+				elif pCity.getRevolutionCounter() > 0:
 					disorderIdx = 15
-				else :
+				else:
 					disorderIdx = 75
 				localRevIdx += disorderIdx
-				if( bIsRevWatch ) : negList.append( (disorderIdx, localText.getText("TXT_KEY_REV_WATCH_DISORDER",())) )
+				if bIsRevWatch:
+					negList.append((disorderIdx, localText.getText("TXT_KEY_REV_WATCH_DISORDER",())))
 			revIdxHist['Disorder'] = [disorderIdx] + revIdxHist['Disorder'][0:RevDefs.revIdxHistLen-1]
 
 			# Civics
-			[civicIdx,civicPosList,civicNegList] = RevUtils.getCivicsRevIdxLocal( iPlayer )
+			[civicIdx, civicPosList, civicNegList] = RevUtils.getCivicsRevIdxLocal(iPlayer)
 			localRevIdx += civicIdx
 
-			posList.extend( civicPosList )
-			negList.extend( civicNegList )
+			posList.extend(civicPosList)
+			negList.extend(civicNegList)
 
 			# Traits
-			[traitIdx,traitPosList,traitNegList] = RevUtils.getTraitsRevIdxLocal( iPlayer )
+			[traitIdx, traitPosList, traitNegList] = RevUtils.getTraitsRevIdxLocal(iPlayer)
 			localRevIdx += traitIdx
 
-			posList.extend( traitPosList )
-			negList.extend( traitNegList )
+			posList.extend(traitPosList)
+			negList.extend(traitNegList)
 
 			# Buildings
-			[buildingIdx,buildingPosList,buildingNegList] = RevUtils.getBuildingsRevIdxLocal( pCity )
+			[buildingIdx, buildingPosList, buildingNegList] = RevUtils.getBuildingsRevIdxLocal(pCity)
 			localRevIdx += buildingIdx
 
-			posList.extend( buildingPosList )
-			negList.extend( buildingNegList )
+			posList.extend(buildingPosList)
+			negList.extend(buildingNegList)
 
 			#Afforess Revolution Difficulty Scaling
-			iRevolutionHandicap = GC.getHandicapInfo(pPlayer.getHandicapType()).getRevolutionIndexPercent() / 10
-			iRevolutionHandicap -= 10
-			localRevIdx += int(iRevolutionHandicap)
+			iRevolutionHandicap = (GC.getHandicapInfo(pPlayer.getHandicapType()).getRevolutionIndexPercent() - 100) / 10
+			localRevIdx += iRevolutionHandicap
 			szText = GC.getHandicapInfo(pPlayer.getHandicapType()).getDescription() + localText.getText("TXT_KEY_DIFFICULTY_LEVEL",())
-			if (iRevolutionHandicap > 0):
-				negList.append( (int(iRevolutionHandicap), (szText) ))
-			elif (iRevolutionHandicap < 0):
-				posList.append( (int(iRevolutionHandicap), (szText)) )
+			if iRevolutionHandicap > 0:
+				negList.append((iRevolutionHandicap, szText))
+			elif iRevolutionHandicap < 0:
+				posList.append((iRevolutionHandicap, szText))
 			#Afforess Revolution Difficulty Scaling
 
 			# Adjust index accumulation for varying game speeds
 			gameSpeedMod = RevUtils.getGameSpeedMod()
-			localRevIdx = int(math.floor( gameSpeedMod*self.revIdxModifier*localRevIdx + self.revIdxOffset + .5 ))
+			localRevIdx = int(gameSpeedMod * self.revIdxModifier * localRevIdx + self.revIdxOffset + .5)
 
-			if( pPlayer.isHuman() ) :
-				localRevIdx = int(math.floor( self.humanIdxModifier*localRevIdx + self.humanIdxOffset + .5 ))
+			if pPlayer.isHuman():
+				localRevIdx = int(self.humanIdxModifier*localRevIdx + self.humanIdxOffset + .5)
 
 			revIdx = pCity.getRevolutionIndex()
 
@@ -1902,11 +1899,11 @@ class Revolution:
 			revIdxHistEvents -= 30
 		BugUtil.debug("Empire Stability Marker 8, %d", civStabilityIdx)
 
-		civRevIdx = int(math.floor( gameSpeedMod*self.revIdxModifier*civRevIdx + .5 ))
-		civStabilityIdx = int(math.floor( gameSpeedMod*self.revIdxModifier*civStabilityIdx + .5 ))
+		civRevIdx = int(gameSpeedMod*self.revIdxModifier*civRevIdx + .5)
+		civStabilityIdx = int(gameSpeedMod*self.revIdxModifier*civStabilityIdx + .5)
 		if( pPlayer.isHuman() ) :
-			civRevIdx = int(math.floor( self.humanIdxModifier*civRevIdx + .5 ))
-			civStabilityIdx = int(math.floor( self.humanIdxModifier*civStabilityIdx + .5 ))
+			civRevIdx = int(self.humanIdxModifier*civRevIdx + .5)
+			civStabilityIdx = int(self.humanIdxModifier*civStabilityIdx + .5)
 		BugUtil.debug("Empire Stability Marker 10, %d", civStabilityIdx)
 		if( self.LOG_DEBUG and iGameTurn%25 == 0 ) : CvUtil.pyPrint("  Revolt - %s stability effects: %d, size: %d, civics: %d, cult: %d, taxes: %d, finances: %d\n"%(pPlayer.getCivilizationDescription(0),civStabilityIdx,civSizeIdx2,civicIdx,cultIdx,taxesIdx,finIdx))
 
@@ -2396,15 +2393,15 @@ class Revolution:
 			if( bPeaceful and len(revCities) == 1 ) :
 				bPeaceful = True
 			elif( bPeaceful ) :
-				lowerThresh = int( .8*self.alwaysViolentThreshold )
+				lowerThresh = int(.8*self.alwaysViolentThreshold)
 
-				civicsMod = RevUtils.getCivicsViolentRevMod( iPlayer )
-				lowerThresh += int(math.floor( civicsMod*self.alwaysViolentThreshold  + .5 ))
+				civicsMod = RevUtils.getCivicsViolentRevMod(iPlayer)
+				lowerThresh += int(civicsMod*self.alwaysViolentThreshold  + .5)
 
-				if( instLocalIdx > self.badLocalThreshold ) :
-					lowerThresh -= int(math.floor( .05*self.alwaysViolentThreshold + .5 ))
-				elif( instLocalIdx < 0 ) :
-					lowerThresh += int(math.floor( .10*self.alwaysViolentThreshold + .5 ))
+				if instLocalIdx > self.badLocalThreshold:
+					lowerThresh -= int(.05*self.alwaysViolentThreshold + .5)
+				elif instLocalIdx < 0:
+					lowerThresh += int(.10*self.alwaysViolentThreshold + .5)
 
 				if( instRevIdx > lowerThresh ) :
 					odds = (100*(instRevIdx - lowerThresh))/(self.alwaysViolentThreshold-lowerThresh)
@@ -5069,15 +5066,15 @@ class Revolution:
 
 					gameSpeedMod = RevUtils.getGameSpeedMod()
 
-					if( revData.dict.get('bIsElection', False) ) :
-						iNumTurns = int(math.floor( 15/gameSpeedMod + .5 ))
+					if revData.dict.get('bIsElection', False):
+						iNumTurns = int(15/gameSpeedMod + .5)
 						bodStr = localText.getText("TXT_KEY_REV_HUMAN_ELEC_LOSS",())
-					else :
-						iNumTurns = int(math.floor( 24/gameSpeedMod + .5 ))
+					else:
+						iNumTurns = int(24/gameSpeedMod + .5)
 						bodStr = localText.getText("TXT_KEY_REV_HUMAN_CEDE",())
 
 					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_HUMAN_CONTROL_RETURNED",()) + ' %d '%(iNumTurns) + localText.getText("TXT_KEY_REV_TURNS",()) + '.'
-					popup.setBodyString( bodStr )
+					popup.setBodyString(bodStr)
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
@@ -5310,10 +5307,10 @@ class Revolution:
 						if( pRevTeam.isMapTrading() ) :
 							# Give motherlands map
 							bGaveMap = True
-							gameMap = GC.getMap()
+							MAP = GC.getMap()
 							for ix in xrange(CyMap().getGridWidth()) :
 								for iy in xrange(CyMap().getGridHeight()) :
-									pPlot = gameMap.plot(ix,iy)
+									pPlot = MAP.plot(ix,iy)
 									if( pPlot.isRevealed(pTeam.getID(),False) ) :
 										pPlot.setRevealed(pRevTeam.getID(),True,False,pTeam.getID())
 
@@ -5838,7 +5835,7 @@ class Revolution:
 
 		if pPlayer.isHuman():
 			GAME.setForcedAIAutoPlay(iPlayer, iNumTurns, True)
-			SdToolKit.sdObjectSetVal("AIAutoPlay", game, "bCanCancelAuto", False)
+			SdToolKit.sdObjectSetVal("AIAutoPlay", GAME, "bCanCancelAuto", False)
 		RevInstances.AIAutoPlayInst.abdicateMultiCheckNoMessage(iPlayer, iNumTurns)
 
 
@@ -6257,10 +6254,10 @@ class Revolution:
 			if pRevTeam.isMapTrading():
 				# Give motherlands map
 				bGaveMap = True
-				gameMap = GC.getMap()
+				MAP = GC.getMap()
 				for ix in xrange(CyMap().getGridWidth()):
 					for iy in xrange(CyMap().getGridHeight()):
-						pPlot = gameMap.plot(ix,iy)
+						pPlot = MAP.plot(ix,iy)
 						if pPlot.isRevealed(pTeam.getID(),False):
 							pPlot.setRevealed(pRevTeam.getID(),True,False,pTeam.getID())
 
@@ -6366,7 +6363,7 @@ class Revolution:
 				iNumUnits2b = (localFactor/(1.0*self.badLocalThreshold))*pow(RevUtils.getNumDefendersNearPlot(ix,iy,pPlayer.getID()),.5)/2.0
 			if iNumUnits2b < 0:
 				iNumUnits2b = max([iNumUnits2b,-iNumUnits2a/2.0,-2.0])
-			iNumUnits2 = int(math.floor( self.strengthModifier*(iNumUnits2a + iNumUnits2b) + .5 ))
+			iNumUnits2 = int(self.strengthModifier*(iNumUnits2a + iNumUnits2b) + .5)
 
 			if self.LOG_DEBUG:
 				CvUtil.pyPrint("  Revolt - New method from pop: %.2f, from troops: %.2f, total: %d"%(iNumUnits2a,iNumUnits2b,iNumUnits2))

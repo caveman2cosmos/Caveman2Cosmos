@@ -1,4 +1,4 @@
-Version=12
+Version=14
 BeginGame
 	Speed=GAMESPEED_MARATHON
 	StartYear=-200000
@@ -108271,7 +108271,6 @@ EndPlot
 BeginPlot
 	x=103,y=19
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -111395,7 +111394,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=16
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot

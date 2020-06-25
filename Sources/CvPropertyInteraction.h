@@ -11,9 +11,6 @@
 #ifndef CV_PROPERTY_INTERACTION_H
 #define CV_PROPERTY_INTERACTION_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-
 class CvGameObject;
 
 // Base class of which the actual property interaction classes are derived
@@ -34,12 +31,12 @@ public:
 	int getRelationData() const;
 	void setRelationData(int iRelationData);
 
-	bool isActive(CvGameObject* pObject);
+	bool isActive(CvGameObject* pObject) const;
 
-	virtual PropertyInteractionTypes getType() = 0;
+	virtual PropertyInteractionTypes getType() const = 0;
 
-	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) = 0;
-	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) = 0;
+	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const = 0;
+	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
@@ -64,12 +61,12 @@ public:
 	CvPropertyInteractionConvertConstant(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty);
 	CvPropertyInteractionConvertConstant(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty, int iAmountPerTurn);
 
-	virtual PropertyInteractionTypes getType();
+	virtual PropertyInteractionTypes getType() const;
 
-	int getAmountPerTurn();
+	int getAmountPerTurn() const;
 
-	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget);
-	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget);
+	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const;
+	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
@@ -90,13 +87,13 @@ public:
 	CvPropertyInteractionInhibitedGrowth(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty);
 	CvPropertyInteractionInhibitedGrowth(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty, int iGrowthPercent, int iInhibitionPercent);
 
-	virtual PropertyInteractionTypes getType();
+	virtual PropertyInteractionTypes getType() const;
 
-	int getGrowthPercent();
-	int getInhibitionPercent();
+	int getGrowthPercent() const;
+	int getInhibitionPercent() const;
 
-	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget);
-	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget);
+	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const;
+	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
@@ -118,13 +115,13 @@ public:
 	CvPropertyInteractionConvertPercent(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty);
 	CvPropertyInteractionConvertPercent(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty, int iPercent, int iNoConvertAmount);
 
-	virtual PropertyInteractionTypes getType();
+	virtual PropertyInteractionTypes getType() const;
 
-	int getPercent();
-	int getNoConvertAmount();
+	int getPercent() const;
+	int getNoConvertAmount() const;
 
-	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget);
-	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget);
+	virtual std::pair<int,int> getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const;
+	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 

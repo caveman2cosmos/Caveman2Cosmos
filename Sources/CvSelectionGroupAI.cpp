@@ -1,7 +1,8 @@
 // selectionGroupAI.cpp
 
 #include "CvGameCoreDLL.h"
-#include "BetterBTSAI.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // Public Functions...
 
@@ -1041,7 +1042,7 @@ void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 	}
 }
 
-void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit)
+void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit)
 {
 	PROFILE_FUNC();
 
