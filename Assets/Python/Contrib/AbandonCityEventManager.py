@@ -209,7 +209,6 @@ class CityDemolish:
 			NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 			NUM_UNIT_PREREQ_OR_BONUSES = GC.getNUM_UNIT_PREREQ_OR_BONUSES()
 			aSettlerList = [
-				#GC.getInfoTypeForString("UNIT_SPACESETTLER"),
 				GC.getInfoTypeForString("UNIT_AIRSETTLER"),
 				GC.getInfoTypeForString("UNIT_PIONEER"),
 				GC.getInfoTypeForString("UNIT_COLONIST"),

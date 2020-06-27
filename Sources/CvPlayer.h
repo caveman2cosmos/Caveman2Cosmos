@@ -486,7 +486,7 @@ public:
 	void changeGreatPeopleThresholdModifier(int iChange);
 
 	int getGreatGeneralsThresholdModifier() const; // Exposed to Python
-	void changeGreatGeneralsThresholdModifier(int iChange);
+	void changeGreatGeneralsThresholdModifier(int iChange); // Exposed to Python
 
 	int getGreatPeopleRateModifier() const; // Exposed to Python
 	void changeGreatPeopleRateModifier(int iChange);

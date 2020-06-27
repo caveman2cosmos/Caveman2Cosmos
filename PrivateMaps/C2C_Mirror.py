@@ -153,7 +153,7 @@ def getGridSize(argsList):
 # Rise of Mankind 2.53 - giant and gigantic mapsize fix
 	global sizeSelected
 	sizeSelected = eWorldSize
-	print "    sizeSelected",sizeSelected
+	print "	sizeSelected",sizeSelected
 	# Giant size
 	if ( sizeSelected == 6 ):
 		return (26, 16)
@@ -172,12 +172,12 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Pangaea.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      3,
-			WorldSizeTypes.WORLDSIZE_TINY:      3,
-			WorldSizeTypes.WORLDSIZE_SMALL:     4,
+			WorldSizeTypes.WORLDSIZE_DUEL:	  3,
+			WorldSizeTypes.WORLDSIZE_TINY:	  3,
+			WorldSizeTypes.WORLDSIZE_SMALL:	 4,
 			WorldSizeTypes.WORLDSIZE_STANDARD:  4,
-			WorldSizeTypes.WORLDSIZE_LARGE:     4,
-			WorldSizeTypes.WORLDSIZE_HUGE:      5
+			WorldSizeTypes.WORLDSIZE_LARGE:	 4,
+			WorldSizeTypes.WORLDSIZE_HUGE:	  5
 			}
 		if ( not sizekey in sizevalues ):
 			grain = 5
@@ -203,15 +203,15 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 
 		# Generate the main land mass.
 		self.generatePlotsInRegion(water,
-		                           iWidth, iHeight,
-		                           westX, southY,
-		                           cont_grain, grain,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           6, 6,
-		                           True, 7,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   westX, southY,
+								   cont_grain, grain,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   6, 6,
+								   True, 7,
+								   -1, False,
+								   False
+								   )
 
 		# Second pass (to ensure cohesion), but only for Continents choices.
 		if terrain_type < 3:
@@ -223,15 +223,15 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			second_layerSouthY = southY + int(iHeight/5)
 
 			self.generatePlotsInRegion(60,
-			                           second_layerWidth, second_layerHeight,
-			                           second_layerWestX, second_layerSouthY,
-			                           1, grain,
-			                           self.iHorzFlags, self.iTerrainFlags,
-			                           6, 5,
-			                           True, 5,
-			                           -1, False,
-			                           False
-			                           )
+									   second_layerWidth, second_layerHeight,
+									   second_layerWestX, second_layerSouthY,
+									   1, grain,
+									   self.iHorzFlags, self.iTerrainFlags,
+									   6, 5,
+									   True, 5,
+									   -1, False,
+									   False
+									   )
 
 		# All regions have been processed. Plot Type generation completed.
 		return self.wholeworldPlotTypes

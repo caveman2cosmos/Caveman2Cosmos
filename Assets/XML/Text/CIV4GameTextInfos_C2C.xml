@@ -300,6 +300,22 @@
 		<French>Les efforts d'enquête dans la ville de %s1_city ont abouti à l'identification d'un suspect recherché en lien avec des actes criminels odieux!</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_PILLAGED_CITY_CAPTURED</Tag>
+		<English>You have pillaged %d1_Num [ICON_GOLD] from the capture of %s2_CityName!!!</English>
+		<French>Vous avez pillé %d1_Num [ICON_GOLD] en capturant %s2_CityName !</French>
+		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista di %s2_CityName!!!</Italian>
+		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PILLAGED_CITY_RAZED</Tag>
+		<English>You have pillaged %d1_Num [ICON_GOLD] from the destruction of %s2_CityName!!!</English>
+		<French>Vous avez pillé %d1_Num [ICON_GOLD] pendant la destruction de %s2_CityName !</French>
+		<German>Ihr habt durch die Plünderung und Zerstörung der Stadt %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla distruzione di %s2_CityName!</Italian>
+		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la destrucción de %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
 		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
 		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>

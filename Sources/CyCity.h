@@ -561,6 +561,7 @@ public:
 // BUG - Production Decay - end
 	int getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex);
 	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex);
+	void setBuildingOriginalTime(int iBuildingType, int i);
 	int getUnitProduction(int iIndex);
 	void setUnitProduction(int iIndex, int iNewValue);
 	void changeUnitProduction(int /*UnitTypes*/ iIndex, int iChange);

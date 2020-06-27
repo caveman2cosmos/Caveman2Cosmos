@@ -581,7 +581,7 @@
 			<Type>ART_DEF_TERRAIN_SEA_DEEP</Type>
 			<Path>Art/Terrain/Textures/Water/SeaDeepBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Water/SeaDeepGrid.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/GreyDetail.dds</Detail>
+			<Detail>Art/Shared/GreyDetail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Coast.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,1</Button>
 			<LayerOrder>53</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -605,7 +605,7 @@
 			<Type>ART_DEF_TERRAIN_SEA_DEEP_POLAR</Type>
 			<Path>Art/Terrain/Textures/Water/SeaDeepBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Water/SeaDeepGrid.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/Grey2Detail.dds</Detail>
+			<Detail>Art/Shared/Grey2Detail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Coast.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,1</Button>
 			<LayerOrder>54</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -629,7 +629,7 @@
 			<Type>ART_DEF_TERRAIN_SEA_DEEP_TROPICAL</Type>
 			<Path>Art/Terrain/Textures/Water/SeaDeepBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Water/SeaDeepGrid.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/Grey1Detail.dds</Detail>
+			<Detail>Art/Shared/Grey1Detail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Coast.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,1</Button>
 			<LayerOrder>54</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -725,7 +725,7 @@
 			<Type>ART_DEF_TERRAIN_OCEAN</Type>
 			<Path>Art/Terrain/Textures/OceanBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/OceanGrids.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/GreyDetail.dds</Detail>
+			<Detail>Art/Shared/GreyDetail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Ocean.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,1</Button>
 			<LayerOrder>60</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -749,7 +749,7 @@
 			<Type>ART_DEF_TERRAIN_OCEAN_POLAR</Type>
 			<Path>Art/Terrain/Textures/OceanBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/OceanGrids.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/Grey2Detail.dds</Detail>
+			<Detail>Art/Shared/Grey2Detail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Ocean.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,1</Button>
 			<LayerOrder>61</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -773,7 +773,7 @@
 			<Type>ART_DEF_TERRAIN_OCEAN_TROPICAL</Type>
 			<Path>Art/Terrain/Textures/OceanBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/OceanGrids.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/Grey1Detail.dds</Detail>
+			<Detail>Art/Shared/Grey1Detail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Ocean.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,1</Button>
 			<LayerOrder>61</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -797,7 +797,7 @@
 			<Type>ART_DEF_TERRAIN_TRENCH</Type>
 			<Path>Art/Terrain/Textures/Water/TrenchBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Water/TrenchGrid.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/BlackDetail.dds</Detail>
+			<Detail>Art/Shared/BlackDetail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Ocean.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,1</Button>
 			<LayerOrder>65</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -845,7 +845,7 @@
 			<Type>ART_DEF_TERRAIN_LAKE</Type>
 			<Path>Art/Terrain/Textures/Water/LakeBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Water/LakeGrid.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/GreyDetail.dds</Detail>
+			<Detail>Art/Shared/GreyDetail.dds</Detail>
 			<Button>,Art/Interface/Buttons/BaseTerrain/Ocean.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,1</Button>
 			<LayerOrder>71</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -939,9 +939,9 @@
 		</TerrainArtInfo>
 		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_CISLUNAR_SPACE</Type>
-			<Path>Art/Terrain/Textures/SpaceBLEND.dds</Path>
-			<Grid>Art/Terrain/Textures/SpaceBLEND.dds</Grid>
-			<Detail>Art/Terrain/Textures/SpaceDetail.dds</Detail>
+			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
+			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
+			<Detail>Art/Shared/BlackDetail.dds</Detail>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<LayerOrder>160</LayerOrder>
 			<AlphaShader>0</AlphaShader>
@@ -963,9 +963,9 @@
 		</TerrainArtInfo>
 		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_NONE</Type>
-			<Path>Art/Terrain/Textures/SpaceBLEND.dds</Path>
-			<Grid>Art/Terrain/Textures/SpaceBLEND.dds</Grid>
-			<Detail>Art/Terrain/Textures/SpaceDetail.dds</Detail>
+			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
+			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
+			<Detail>Art/Shared/BlackDetail.dds</Detail>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<LayerOrder>160</LayerOrder>
 			<AlphaShader>0</AlphaShader>

@@ -49,20 +49,6 @@ def AI_unitUpdate(argsList):
 	pUnit = argsList[0]
 	pUnitType = pUnit.getUnitType()
 
-	#~ if pUnitType == gc.getInfoTypeForString("UNIT_SLAVE"):
-		#~ iUnitOwner = pUnit.getOwner()
-		#~ AIpPlayer = gc.getPlayer(iUnitOwner)
-		#~ if AIpPlayer.isAlive() and not AIpPlayer.isHuman():
-
-			#~ iX = pUnit.getX( )
-			#~ iY = pUnit.getY( )
-			#~ pPlot = CyMap( ).plot(iX, iY)
-			#~ iPlotOwner = pPlot.getOwner ()
-
-			#~ if iPlotOwner == iUnitOwner:
-				#~ if pPlot.isCity():
-					#join city as specalist
-
 	if pUnitType in gai_DefeatedToCaptured:
 		iUnitOwner = pUnit.getOwner()
 		AIpPlayer = gc.getPlayer(iUnitOwner)

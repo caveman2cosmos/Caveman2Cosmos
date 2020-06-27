@@ -2205,11 +2205,16 @@ std::string CyUnit::getButton() const
 {
 	return m_pUnit ? m_pUnit->getButton() : "";
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
+
+void CyUnit::setCommander(bool bNewValue)
+{
+	if(m_pUnit != NULL)
+	{
+		m_pUnit->setCommander(bNewValue);
+	}
+}
+
 bool CyUnit::isCommander() const
 {
 	return m_pUnit ? m_pUnit->isCommander(): false;
@@ -2229,6 +2234,7 @@ int CyUnit::commandRange() const
 {
 	return m_pUnit ? m_pUnit->commandRange() : -1;
 }
+
 
 int CyUnit::getExperience100()
 {
@@ -2251,11 +2257,8 @@ void CyUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 	if (m_pUnit)
 		m_pUnit->changeExperience100(iChange, iMax, bFromCombat, bInBorders, bUpdateGlobal);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-// < M.A.D. Nukes Start >
+
 bool CyUnit::isMADEnabled()
 {
 	if(m_pUnit)
@@ -2288,7 +2291,7 @@ PlayerTypes CyUnit::getMADTargetPlotOwner()
 	}
 	return NO_PLAYER;
 }
-// < M.A.D. Nukes End   >
+
 
 bool CyUnit::isHiddenNationality()
 {

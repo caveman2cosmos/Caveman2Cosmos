@@ -95,16 +95,9 @@ def resetNoLiberateCities():
 	iCombat = GC.getInfoTypeForString("UNITCOMBAT_GUN")
 	if iCombat > -1:
 		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_GUN, "TXT_KEY_FEAT_UNITCOMBAT_GUN"]
-#	iCombat = GC.getInfoTypeForString("UNITCOMBAT_ARMOR")
-#	if iCombat > -1:
-#		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_ARMOR, "TXT_KEY_FEAT_UNITCOMBAT_ARMOR"]
 	iCombat = GC.getInfoTypeForString("UNITCOMBAT_HELICOPTER")
 	if iCombat > -1:
 		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_HELICOPTER, "TXT_KEY_FEAT_UNITCOMBAT_HELICOPTER"]
-#	iCombat = GC.getInfoTypeForString("UNITCOMBAT_NAVAL")
-#	if iCombat > -1:
-#		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_NAVAL, "TXT_KEY_FEAT_UNITCOMBAT_NAVAL"]
-
 
 def unitBuiltFeats(CyCity, CyUnit):
 	iCombat = CyUnit.getUnitCombatType()

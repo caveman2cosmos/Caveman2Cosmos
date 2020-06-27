@@ -202,12 +202,12 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Pangaea.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      3,
-			WorldSizeTypes.WORLDSIZE_TINY:      3,
-			WorldSizeTypes.WORLDSIZE_SMALL:     4,
+			WorldSizeTypes.WORLDSIZE_DUEL:	  3,
+			WorldSizeTypes.WORLDSIZE_TINY:	  3,
+			WorldSizeTypes.WORLDSIZE_SMALL:	 4,
 			WorldSizeTypes.WORLDSIZE_STANDARD:  4,
-			WorldSizeTypes.WORLDSIZE_LARGE:     4,
-			WorldSizeTypes.WORLDSIZE_HUGE:      5,
+			WorldSizeTypes.WORLDSIZE_LARGE:	 4,
+			WorldSizeTypes.WORLDSIZE_HUGE:	  5,
 			6: 5,
 			7: 5
 			}
@@ -238,19 +238,19 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				# Define potential subcontinent slots (regional definitions).
 				# List values: [westLon, southLat, vertRange, horzRange, southShift]
 				scValues = [[0.05, 0.375, 0.2, 0.0, 0],
-				            [0.55, 0.375, 0.2, 0.0, 0],
-				            [0.1, 0.225, 0.0, 0.15, 0],
-				            [0.3, 0.225, 0.0, 0.15, 0]
-				            ]
+							[0.55, 0.375, 0.2, 0.0, 0],
+							[0.1, 0.225, 0.0, 0.15, 0],
+							[0.3, 0.225, 0.0, 0.15, 0]
+							]
 			else:
 				mainNorthLat -= 0.175
 				mainSouthLat -= 0.175
 				# List values: [westLon, southLat, vertRange, horzRange, southShift]
 				scValues = [[0.05, 0.025, 0.2, 0.0, 0],
-				            [0.55, 0.025, 0.2, 0.0, 0],
-				            [0.1, 0.375, 0.0, 0.15, 0],
-				            [0.3, 0.375, 0.0, 0.15, 0]
-				            ]
+							[0.55, 0.025, 0.2, 0.0, 0],
+							[0.1, 0.375, 0.0, 0.15, 0],
+							[0.3, 0.375, 0.0, 0.15, 0]
+							]
 		elif pangaea_type == 1: # Pressed Equatorial
 			# Define potential subcontinent slots (regional definitions).
 			equRoll = self.dice.get(4, "Subcontinents - Pangaea PYTHON")
@@ -258,10 +258,10 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			numSubcontinents = 2 + equRoll
 			# List values: [westLon, southLat, vertRange, horzRange, southShift]
 			scValues = [[0.05, 0.2, 0.2, 0.0, 0.0],
-			            [0.55, 0.2, 0.2, 0.0, 0.0],
-			            [0.2, 0.05, 0.0, 0.2, 0.0],
-			            [0.2, 0.55, 0.0, 0.2, 0.0]
-			            ]
+						[0.55, 0.2, 0.2, 0.0, 0.0],
+						[0.2, 0.05, 0.0, 0.2, 0.0],
+						[0.2, 0.55, 0.0, 0.2, 0.0]
+						]
 		else: # Natural
 			subcontinentDimension = 0.3
 			# Shift mainland north or south?
@@ -278,14 +278,14 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			numSubcontinents = 4 + self.dice.get(3, "Subcontinents - Pangaea PYTHON")
 			# List values: [westLon, southLat, vertRange, horzRange, southShift]
 			scValues = [[0.05, 0.575, 0.0, 0.0, 0.15],
-			            [0.05, 0.275, 0.0, 0.0, 0.15],
-			            [0.2, 0.175, 0.0, 0.0, 0.15],
-			            [0.5, 0.175, 0.0, 0.0, 0.15],
-			            [0.65, 0.575, 0.0, 0.0, 0.15],
-			            [0.65, 0.275, 0.0, 0.0, 0.15],
-			            [0.2, 0.675, 0.0, 0.0, 0.15],
-			            [0.5, 0.675, 0.0, 0.0, 0.15]
-			            ]
+						[0.05, 0.275, 0.0, 0.0, 0.15],
+						[0.2, 0.175, 0.0, 0.0, 0.15],
+						[0.5, 0.175, 0.0, 0.0, 0.15],
+						[0.65, 0.575, 0.0, 0.0, 0.15],
+						[0.65, 0.275, 0.0, 0.0, 0.15],
+						[0.2, 0.675, 0.0, 0.0, 0.15],
+						[0.5, 0.675, 0.0, 0.0, 0.15]
+						]
 
 		# Generate the main land mass, first pass (to vary shape).
 		mainWestX = int(self.iW * mainWestLon)
@@ -298,15 +298,15 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		mainWater = 55+sea
 
 		self.generatePlotsInRegion(mainWater,
-		                           mainWidth, mainHeight,
-		                           mainWestX, mainSouthY,
-		                           2, grain,
-		                           self.iHorzFlags, self.iTerrainFlags,
-		                           -1, -1,
-		                           True, 15,
-		                           2, False,
-		                           False
-		                           )
+								   mainWidth, mainHeight,
+								   mainWestX, mainSouthY,
+								   2, grain,
+								   self.iHorzFlags, self.iTerrainFlags,
+								   -1, -1,
+								   True, 15,
+								   2, False,
+								   False
+								   )
 
 		# Second pass (to ensure cohesion).
 		second_layerHeight = mainHeight/2
@@ -317,17 +317,17 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		second_layerSouthY = mainSouthY + mainHeight/4
 
 		second_layerWater = 60+sea
-                
+				
 		self.generatePlotsInRegion(second_layerWater,
-		                           second_layerWidth, second_layerHeight,
-		                           second_layerWestX, second_layerSouthY,
-		                           1, grain,
-		                           self.iHorzFlags, self.iTerrainFlags,
-		                           -1, -1,
-		                           True, 15,
-		                           2, False,
-		                           False
-		                           )
+								   second_layerWidth, second_layerHeight,
+								   second_layerWestX, second_layerSouthY,
+								   1, grain,
+								   self.iHorzFlags, self.iTerrainFlags,
+								   -1, -1,
+								   True, 15,
+								   2, False,
+								   False
+								   )
 
 		# Add subcontinents.
 		# Subcontinents can be akin to India/Alaska, Europe, or the East Indies.
@@ -368,17 +368,17 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				scWater = 66+sea; scGrain = 2; scRift = 2
 			else: # scShape == 0, Archipelago subcontinent.
 				scWater = 77+sea; scGrain = grain; scRift = -1
-                
+				
 			self.generatePlotsInRegion(scWater,
-			                           scWidth, scHeight,
-			                           scWestX, scSouthY,
-			                           scGrain, grain,
-			                           self.iRoundFlags, self.iTerrainFlags,
-			                           6, 6,
-			                           True, 7,
-			                           scRift, False,
-			                           False
-			                           )
+									   scWidth, scHeight,
+									   scWestX, scSouthY,
+									   scGrain, grain,
+									   self.iRoundFlags, self.iTerrainFlags,
+									   6, 6,
+									   True, 7,
+									   scRift, False,
+									   False
+									   )
 
 			del scValues[scIndex]
 			numSubcontinents -= 1
