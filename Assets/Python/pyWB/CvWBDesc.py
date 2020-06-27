@@ -136,7 +136,7 @@ class CvGameDesc:
 		if GAME.getCircumnavigatedTeam() > -1:
 			f.write("\tCircumnavigatedTeam=%d\n" % GAME.getCircumnavigatedTeam())
 
-		f.write("EndGame\n" % GAME.getStartYear())
+		f.write("EndGame\n")
 
 	def read(self, f):
 		"read in game data"
@@ -553,7 +553,6 @@ class CvPlayerDesc:
 			f.write("\tArtStyle=%s\n" % GC.getArtStyleTypes(player.getArtStyleType()))
 			f.write("\tPlayableCiv=%d\n" % int(player.isPlayable()))
 
-			f.write("\tRandomStartLocation=0\n")
 			if not player.isNPC():
 
 				pPlot = player.getStartingPlot()
@@ -622,7 +621,7 @@ class CvPlayerDesc:
 		# Applied through dll
 		self.iStartingX = -1
 		self.iStartingY = -1
-		self.bRandomStartLocation = False
+		self.bRandomStartLocation = True
 		self.stateReligion = ""
 		self.szStartingEra = ""
 		self.sScriptData = ""
@@ -733,6 +732,8 @@ class CvPlayerDesc:
 				if vX != -1 and vY != -1:
 					self.iStartingX = int(vX)
 					self.iStartingY = int(vY)
+					if self.iStartingX > -1 and self.iStartingY > -1:
+						self.bRandomStartLocation = False
 					continue
 
 				v = parser.findTokenValue(toks, "StateReligion")
@@ -743,11 +744,6 @@ class CvPlayerDesc:
 				v = parser.findTokenValue(toks, "StartingEra")
 				if v != -1:
 					self.szStartingEra = v
-					continue
-
-				v = parser.findTokenValue(toks, "RandomStartLocation")
-				if v != -1:
-					self.bRandomStartLocation = int(v) > 0
 					continue
 
 				v = parser.findTokenValue(toks, "CivicOption")
@@ -2014,9 +2010,10 @@ Randomize Resources=0\nEndMap\n"
 				player.AI_setAttitudeExtra(item[0],item[1])
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
+
 			if pWBPlayer.bRandomStartLocation:
 				player.setStartingPlot(player.findStartingPlot(True), True)
-			elif pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
+			else:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
 		# Apply city data

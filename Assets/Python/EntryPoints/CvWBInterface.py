@@ -97,6 +97,7 @@ def getPlayerDesc():
 	''' Called from exe
 	Returns player description data (wide strings) as a tuple
 	'''
+	print "CvWBInterface.getPlayerDesc"
 	playerTuple = WBDesc.playersDesc
 	t = ()
 	for i in xrange(GC.getMAX_PLAYERS()):
@@ -109,6 +110,7 @@ def getPlayerData():
 	Returns player data as a tuple, terminated by -1
 	Last thing called before you can select your game options for a scenario.
 	'''
+	print "CvWBInterface.getPlayerData"
 	iNPC = GC.getMAX_PC_PLAYERS()
 	playerTuple = WBDesc.playersDesc
 	t = ()
