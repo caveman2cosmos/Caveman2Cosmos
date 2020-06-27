@@ -1,8 +1,8 @@
-Version=16
-BeginGame
+BeginMeta
+	Version=C2C_1
 	Description= C2C Large Earth Map with no preset Civs. By Harrier.
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=104
 	grid height=64

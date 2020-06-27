@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_MARATHON
+BeginMeta
+	Version=C2C_1
 	Description=Never use more than 8 civs or some civs will start in weird places!! This is a combination of KaTiON_PT's Large Solar System Space map with a random map (Standard size (124x56); Waterworld; +3 rivers; 8 random nations). Have fun!
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=124
 	grid height=200

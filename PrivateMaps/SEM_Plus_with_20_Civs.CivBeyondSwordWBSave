@@ -1,8 +1,8 @@
-Version=16
-BeginGame
+BeginMeta
+	Version=C2C_1
 	Description= C2C 10% larger Standard Earth Map with 20 Civs. By Harrier.
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=92
 	grid height=52

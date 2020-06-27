@@ -1,11 +1,9 @@
 from CvPythonExtensions import *
 import os
-import CvUtil
-from array import *
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
-version = 16
+VERSION = "C2C_1"
 fEncode = 'utf-8'
 
 ############
@@ -13,10 +11,6 @@ fEncode = 'utf-8'
 class CvWBParser:
 
 	def __init__(self):
-		self.iMaxFilePos = None
-
-	def seek(self, f, iFilePos):
-		f.seek(iFilePos)
 		self.iMaxFilePos = None
 
 	# Don't call this twice without a readline() in-between as it will interpret that as being at the end of the file regardless of where it is.
@@ -66,11 +60,47 @@ class CvWBParser:
 						return tok
 
 
-############
-# class for serializing game data
+class MetaDesc:
+
+	def read(self, f):
+		self.szDescription = ""
+		self.szModPath = ""
+		scenarioVersion = None
+
+		parser = CvWBParser()
+		if parser.findToken(f, "BeginMeta", "BeginMap"):
+			while True:
+				nextLine = f.readline()
+				if not nextLine:
+					if parser.isEndOfFile(f.tell()):
+						raise "MetaDesc.read - BeginMeta found, but EndMeta is missing!"
+					continue
+				toks = parser.getTokens(nextLine)
+
+				v = parser.findTokenValue(toks, "Version")
+				if v != -1:
+					scenarioVersion = v
+					continue
+
+				v = parser.findTokenValue(toks, "Description")
+				if v != -1:
+					self.szDescription = v
+					continue
+
+				v = parser.findTokenValue(toks, "ModPath")
+				if v != -1:
+					self.szModPath = v
+					continue
+
+				if parser.findTokenValue(toks, "EndMeta") != -1:
+					break
+
+		if scenarioVersion != VERSION:
+			raise "[ERROR] Wrong WorldBuilder save version. Expected %s, got %s" %(VERSION, scenarioVersion)
+
+
 class CvGameDesc:
 
-	# write out game data
 	def write(self, f):
 		f.write("BeginGame\n\tEra=%s\n\tSpeed=%s\n\tCalendar=%s\n" %(GC.getEraInfo(GAME.getStartEra()).getType(), GC.getGameSpeedInfo(GAME.getGameSpeedType()).getType(), GC.getCalendarInfo(GAME.getCalendar()).getType()))
 
@@ -106,8 +136,7 @@ class CvGameDesc:
 		if GAME.getCircumnavigatedTeam() > -1:
 			f.write("\tCircumnavigatedTeam=%d\n" % GAME.getCircumnavigatedTeam())
 
-		f.write("\tDescription=undescribed\n")
-		f.write("\tModPath=Mods\Caveman2Cosmos\nEndGame\n")
+		f.write("EndGame\n" % GAME.getStartYear())
 
 	def read(self, f):
 		"read in game data"
@@ -125,18 +154,16 @@ class CvGameDesc:
 		self.numAdvancedStartPoints = 0
 		self.targetScore = 0
 		self.iCircumnavigatedTeam = -1
-		self.szDescription = ""
-		self.szModPath = ""
 
-		iFilePos = f.tell()
+		iStartpoint = f.tell()
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginGame", "BeginMap"):
-			iLastFilePos = None
+
 			while True:
 				nextLine = f.readline()
 				if not nextLine:
 					if parser.isEndOfFile(f.tell()):
-						print ("CvGameDesc.read - end of file reached")
+						print "CvGameDesc.read - end of file reached"
 						break
 					continue
 				toks = parser.getTokens(nextLine)
@@ -211,19 +238,9 @@ class CvGameDesc:
 					self.iCircumnavigatedTeam = int(v)
 					continue
 
-				v = parser.findTokenValue(toks, "Description")
-				if v != -1:
-					self.szDescription = v
-					continue
-
-				v = parser.findTokenValue(toks, "ModPath")
-				if v != -1:
-					self.szModPath = v
-					continue
-
 				if parser.findTokenValue(toks, "EndGame") != -1:
 					return
-		parser.seek(f, iFilePos)
+		f.seek(iStartpoint)
 
 
 	def apply(self):
@@ -232,7 +249,89 @@ class CvGameDesc:
 		if self.iCircumnavigatedTeam > -1:
 			GAME.setCircumnavigatedTeam(self.iCircumnavigatedTeam)
 
-############
+
+class CvMapDesc:
+
+	def read(self, f):
+		print "Read Map Data"
+		self.iGridW = 0
+		self.iGridH = 0
+		self.iTopLatitude = 90
+		self.iBottomLatitude = -90
+		self.bWrapX = False
+		self.bWrapY = False
+		self.worldSize = None
+		self.climate = None
+		self.seaLevel = None
+		self.bRandomizeResources = False
+		parser = CvWBParser()
+		if not parser.findToken(f, "BeginMap", "BeginPlot"):
+			print "can't find map"
+			return
+
+		while True:
+			nextLine = f.readline()
+			if not nextLine:
+				if parser.isEndOfFile(f.tell()):
+					print "CvMapDesc.read - end of file reached"
+					return
+				continue
+			toks = parser.getTokens(nextLine)
+
+			v = parser.findTokenValue(toks, "grid width")
+			if v != -1:
+				self.iGridW = int(v)
+				continue
+
+			v = parser.findTokenValue(toks, "grid height")
+			if v != -1:
+				self.iGridH = int(v)
+				continue
+
+			v = parser.findTokenValue(toks, "top latitude")
+			if v != -1:
+				self.iTopLatitude = int(v)
+				continue
+
+			v = parser.findTokenValue(toks, "bottom latitude")
+			if v != -1:
+				self.iBottomLatitude = int(v)
+				continue
+
+			v = parser.findTokenValue(toks, "wrap X")
+			if v != -1:
+				self.bWrapX = int(v) > 0
+				continue
+
+			v = parser.findTokenValue(toks, "wrap Y")
+			if v != -1:
+				self.bWrapY = int(v) > 0
+				continue
+
+			v = parser.findTokenValue(toks, "world size")
+			if v != -1:
+				self.worldSize = v
+				continue
+
+			v = parser.findTokenValue(toks, "climate")
+			if v != -1:
+				self.climate = v
+				continue
+
+			v = parser.findTokenValue(toks, "sealevel")
+			if v != -1:
+				self.seaLevel = v
+				continue
+
+			v = parser.findTokenValue(toks, "Randomize Resources")
+			if v != -1:
+				self.bRandomizeResources = int(v) > 0
+				continue
+
+			if parser.findTokenValue(toks, "EndMap") != -1:
+				return True
+
+
 class CvTeamDesc:
 
 	def write(self, f, idx):
@@ -348,12 +447,12 @@ class CvTeamDesc:
 
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginTeam", "BeginPlot"):
-			iLastFilePos = None
+
 			while True:
 				nextLine = f.readline()
 				if not nextLine:
 					if parser.isEndOfFile(f.tell()):
-						print ("CvTeamDesc.read - end of file reached")
+						print "CvTeamDesc.read - end of file reached"
 						return
 					continue
 				toks = parser.getTokens(nextLine)
@@ -541,12 +640,12 @@ class CvPlayerDesc:
 
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginPlayer", "BeginPlot"):
-			iLastFilePos = None
+
 			while True:
 				nextLine = f.readline()
 				if not nextLine:
 					if parser.isEndOfFile(f.tell()):
-						print ("CvPlayerDesc.read - end of file reached")
+						print "CvPlayerDesc.read - end of file reached"
 						return
 					continue
 				toks = parser.getTokens(nextLine)
@@ -796,12 +895,11 @@ class CvUnitDesc:
 		self.sScriptData = ""
 
 		parser = CvWBParser()
-		iLastFilePos = None
 		while True:
 			nextLine = f.readline()
 			if not nextLine:
 				if parser.isEndOfFile(f.tell()):
-					print ("CvUnitDesc.read - end of file reached")
+					print "CvUnitDesc.read - end of file reached"
 					return
 				continue
 			toks = parser.getTokens(nextLine)
@@ -909,7 +1007,6 @@ class CvUnitDesc:
 			eUnitAI = GC.getInfoTypeForString(self.szUnitAIType)
 		else: eUnitAI = -1
 
-		CvUtil.pyAssert(self.plotX >= 0 and self.plotY >= 0, "invalid plot coords")
 		unit = CyPlayer.initUnit(unitTypeNum, self.plotX, self.plotY, UnitAITypes(eUnitAI), self.facingDirection)
 		if not unit: return
 
@@ -955,7 +1052,8 @@ class CvCityDesc:
 	# write out city data
 	def write(self, f, plot):
 		city = plot.getPlotCity()
-		CvUtil.pyAssert(not city.isNone(), "null city?")
+		if city.isNone():
+			print "CvCityDesc.write - null city?"
 
 		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n\t\tCityPopulation=%d\n\t\tStoredFood=%d\n"
 			%(city.getOwner(), GC.getPlayer(city.getOwner()).getName().encode(fEncode), city.getName().encode(fEncode), city.getPopulation(), city.getFood())
@@ -1057,12 +1155,11 @@ class CvCityDesc:
 		self.sScriptData = ""
 
 		parser = CvWBParser()
-		iLastFilePos = None
 		while True:
 			nextLine = f.readline()
 			if not nextLine:
 				if parser.isEndOfFile(f.tell()):
-					print ("CvCityDesc.read - end of file reached")
+					print "CvCityDesc.read - end of file reached"
 					return
 				continue
 			toks = parser.getTokens(nextLine)
@@ -1438,12 +1535,11 @@ class CvPlotDesc:
 			self.lCulture = []
 			self.sScriptData = ""
 
-			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
 				if not nextLine:
 					if parser.isEndOfFile(f.tell()):
-						print ("CvPlotDesc.read - end of file reached")
+						print "CvPlotDesc.read - end of file reached"
 						return
 					continue
 				toks = parser.getTokens(nextLine)
@@ -1605,89 +1701,6 @@ class CvPlotDesc:
 		for u in self.unitDescs:
 			u.apply()
 
-###############
-# serialize map data
-class CvMapDesc:
-
-	def read(self, f):
-		print "Read Map Data"
-		self.iGridW = 0
-		self.iGridH = 0
-		self.iTopLatitude = 90
-		self.iBottomLatitude = -90
-		self.bWrapX = False
-		self.bWrapY = False
-		self.worldSize = None
-		self.climate = None
-		self.seaLevel = None
-		self.bRandomizeResources = False
-		parser = CvWBParser()
-		if not parser.findToken(f, "BeginMap", "BeginPlot"):
-			print "can't find map"
-			return
-
-		iLastFilePos = None
-		while True:
-			nextLine = f.readline()
-			if not nextLine:
-				if parser.isEndOfFile(f.tell()):
-					print ("CvMapDesc.read - end of file reached")
-					return
-				continue
-			toks = parser.getTokens(nextLine)
-
-			v = parser.findTokenValue(toks, "grid width")
-			if v != -1:
-				self.iGridW = int(v)
-				continue
-
-			v = parser.findTokenValue(toks, "grid height")
-			if v != -1:
-				self.iGridH = int(v)
-				continue
-
-			v = parser.findTokenValue(toks, "top latitude")
-			if v != -1:
-				self.iTopLatitude = int(v)
-				continue
-
-			v = parser.findTokenValue(toks, "bottom latitude")
-			if v != -1:
-				self.iBottomLatitude = int(v)
-				continue
-
-			v = parser.findTokenValue(toks, "wrap X")
-			if v != -1:
-				self.bWrapX = int(v) > 0
-				continue
-
-			v = parser.findTokenValue(toks, "wrap Y")
-			if v != -1:
-				self.bWrapY = int(v) > 0
-				continue
-
-			v = parser.findTokenValue(toks, "world size")
-			if v != -1:
-				self.worldSize = v
-				continue
-
-			v = parser.findTokenValue(toks, "climate")
-			if v != -1:
-				self.climate = v
-				continue
-
-			v = parser.findTokenValue(toks, "sealevel")
-			if v != -1:
-				self.seaLevel = v
-				continue
-
-			v = parser.findTokenValue(toks, "Randomize Resources")
-			if v != -1:
-				self.bRandomizeResources = int(v) > 0
-				continue
-
-			if parser.findTokenValue(toks, "EndMap") != -1:
-				return
 
 ###############
 # serialize map data
@@ -1713,12 +1726,11 @@ class CvSignDesc:
 
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginSign"):
-			iLastFilePos = None
 			while True:
 				nextLine = f.readline()
 				if not nextLine:
 					if parser.isEndOfFile(f.tell()):
-						print ("CvSignDesc.read - end of file reached")
+						print "CvSignDesc.read - end of file reached"
 						return
 					continue
 				toks = parser.getTokens(nextLine)
@@ -1758,14 +1770,14 @@ class CvWBDesc:
 	def write(self, fileName):
 		fileName = os.path.normpath(fileName)
 		fileName,ext = os.path.splitext(fileName)
-		CvUtil.pyPrint('saveDesc:%s, curDir:%s' %(fileName, os.getcwd()))
+		print 'saveDesc:%s, curDir:%s' %(fileName, os.getcwd())
 
 		f = file(fileName + getWBSaveExtension(), "w") # open text file
 
-		f.write("Version=%d\n" % version)
+		f.write("BeginMeta\n\tVersion=%s\n\tDescription=undescribed\n\tModPath=Mods\Caveman2Cosmos\nEndMeta\n" % VERSION)
 		CvGameDesc().write(f)
 
-		# write map info
+		# Write map info
 		MAP = GC.getMap()
 		iGridW = MAP.getGridWidth()
 		iGridH = MAP.getGridHeight()
@@ -1810,6 +1822,7 @@ Randomize Resources=0\nEndMap\n"
 	def read(self, fileName):
 		self.gameDesc = CvGameDesc()
 		self.mapDesc = CvMapDesc()
+		self.metaDesc = MetaDesc()
 		self.playersDesc = None
 		self.plotDesc = None # list
 		self.signDesc = None # list
@@ -1817,20 +1830,10 @@ Randomize Resources=0\nEndMap\n"
 		if not ext:
 			ext = getWBSaveExtension()
 		fileName += ext
-		print 'loadDesc:%s, curDir:%s' %(fileName, os.getcwd())
-
-		if not os.path.isfile(fileName):
-			print "[ERROR] file %s does not exist" %(fileName)
-			return -1	# failed
 
 		f = file(fileName, "r")		# open text file
-		parser = CvWBParser()
 
-		v = parser.findToken(f, "Version", "BeginMap")
-		if v: v = parser.getTokenValue(v)
-		if v is None or int(v) != version:
-			print "[ERROR] Wrong WorldBuilder save version. Expected %d, got " %(version) + str(v)
-			return -1	# failed
+		self.metaDesc.read(f)
 
 		print "Reading game desc"
 		self.gameDesc.read(f)	# read game info
@@ -1845,7 +1848,7 @@ Randomize Resources=0\nEndMap\n"
 			pDesc = CvTeamDesc()
 			if not pDesc.read(f, i):
 				# Player not found in scenario file, backtrack file position
-				parser.seek(f, iFilePos)
+				f.seek(iFilePos)
 			self.teamsDesc.append(pDesc)
 
 		print "Reading players desc"
@@ -1855,7 +1858,7 @@ Randomize Resources=0\nEndMap\n"
 			pDesc = CvPlayerDesc()
 			if not pDesc.read(f, i):
 				# Player not found in scenario file, backtrack file position
-				parser.seek(f, iFilePos)
+				f.seek(iFilePos)
 			self.playersDesc.append(pDesc)
 
 		print "Reading plot descs"
@@ -1865,7 +1868,7 @@ Randomize Resources=0\nEndMap\n"
 			pDesc = CvPlotDesc()
 			if not pDesc.read(f):
 				# No more plots to read
-				parser.seek(f, iFilePos)
+				f.seek(iFilePos)
 				break
 			if pDesc.iX != -1 and pDesc.iY != -1:
 				self.plotDesc.append(pDesc)
@@ -1934,6 +1937,7 @@ Randomize Resources=0\nEndMap\n"
 				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 				else: pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
+		self.clearCache()
 		return 0 # ok
 
 
@@ -2050,7 +2054,9 @@ Randomize Resources=0\nEndMap\n"
 		for item in self.plotDesc:
 			item.applyUnits()
 
-		# Clear cache
-		del self.teamsDesc, self.playersDesc, self.plotDesc, self.signDesc, self.mapDesc
-
+		self.clearCache()
 		return 0
+
+	def clearCache(self):
+		del self.teamsDesc, self.playersDesc, self.plotDesc, self.signDesc, self.mapDesc, self.metaDesc
+
