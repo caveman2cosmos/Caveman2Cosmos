@@ -4099,7 +4099,7 @@ void CvTeam::changeExtraMoves(DomainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiExtraMoves[eIndex] = (m_aiExtraMoves[eIndex] + iChange);
+	m_aiExtraMoves[eIndex] += iChange;
 	FAssert(getExtraMoves(eIndex) >= 0);
 }
 
@@ -6113,30 +6113,19 @@ void CvTeam::updateTechShare()
 
 void CvTeam::testCircumnavigated()
 {
-	CvPlot* pPlot;
-	CvWString szBuffer;
-	bool bFoundVisible;
-	int iX, iY;
-
-	if (isNPC())
+	if (isNPC() || !GC.getGame().circumnavigationAvailable())
 	{
 		return;
 	}
-
-	if (!GC.getGame().circumnavigationAvailable())
-	{
-		return;
-	}
-
 	if (GC.getMap().isWrapX())
 	{
-		for (iX = 0; iX < GC.getMap().getGridWidth(); iX++)
+		for (int iX = 0; iX < GC.getMap().getGridWidth(); iX++)
 		{
-			bFoundVisible = false;
+			bool bFoundVisible = false;
 
-			for (iY = 0; iY < GC.getMap().getGridHeight(); iY++)
+			for (int iY = 0; iY < GC.getMap().getGridHeight(); iY++)
 			{
-				pPlot = GC.getMap().plotSorenINLINE(iX, iY);
+				const CvPlot* pPlot = GC.getMap().plotSorenINLINE(iX, iY);
 
 				if (pPlot->isRevealed(getID(), false))
 				{
@@ -6144,23 +6133,21 @@ void CvTeam::testCircumnavigated()
 					break;
 				}
 			}
-
 			if (!bFoundVisible)
 			{
 				return;
 			}
 		}
 	}
-
 	if (GC.getMap().isWrapY())
 	{
-		for (iY = 0; iY < GC.getMap().getGridHeight(); iY++)
+		for (int iY = 0; iY < GC.getMap().getGridHeight(); iY++)
 		{
-			bFoundVisible = false;
+			bool bFoundVisible = false;
 
-			for (iX = 0; iX < GC.getMap().getGridWidth(); iX++)
+			for (int iX = 0; iX < GC.getMap().getGridWidth(); iX++)
 			{
-				pPlot = GC.getMap().plotSorenINLINE(iX, iY);
+				const CvPlot* pPlot = GC.getMap().plotSorenINLINE(iX, iY);
 
 				if (pPlot->isRevealed(getID(), false))
 				{
@@ -6168,49 +6155,51 @@ void CvTeam::testCircumnavigated()
 					break;
 				}
 			}
-
 			if (!bFoundVisible)
 			{
 				return;
 			}
 		}
 	}
+	GC.getGame().setCircumnavigatedTeam(getID());
 
-	GC.getGame().makeCircumnavigated(getID());
-
-	if (GC.getGame().getElapsedGameTurns() > 0)
+	// Announce and record history
+	CvWString szBuffer;
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+			MEMORY_TRACK_EXEMPT();
 
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
-				{
-					MEMORY_TRACK_EXEMPT();
-
-					if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
-					}
-					else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-					}
-					else
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
-					}
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
-				}
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
 			}
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+			}
+			else
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
+			}
+			AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED",
+				MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 		}
 	}
+	szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 }
+
+void CvTeam::setCircumnavigated(bool bNewValue)
+{
+	if (bNewValue)
+	{
+		changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+	}
+	else changeExtraMoves(DOMAIN_SEA, -GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+}
+
 
 void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 {
@@ -8554,9 +8543,9 @@ void CvTeam::recalculateModifiers()
 		}
 	}
 	//	Reapply circumnavigation bonus
-	if (GC.getGame().isCircumnavigated(getID()) && GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
+	if (GC.getGame().getCircumnavigatedTeam() == getID())
 	{
-		changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+		setCircumnavigated(true);
 	}
 	//	Reapply projects
 	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)

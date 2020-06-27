@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_EPIC
+BeginMeta
+	Version=C2C_1
 	Description= - StrategyOnly by StrategyOnly
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=100
 	grid height=80

@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_NORMAL
+BeginMeta
+	Version=C2C_1
 	Description=The map is divided into three sections: a realistic and proportional Earth where you start, our Solar System, and the space beyond it.
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=124
 	grid height=200
