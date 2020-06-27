@@ -102,6 +102,10 @@ class CvGameDesc:
 		f.write("\tTargetScore=%d\n" % GAME.getTargetScore())
 
 		f.write("\tStartYear=%d\n" % GAME.getStartYear())
+
+		if GAME.getCircumnavigatedTeam() > -1:
+			f.write("\tCircumnavigatedTeam=%d\n" % GAME.getCircumnavigatedTeam())
+
 		f.write("\tDescription=undescribed\n")
 		f.write("\tModPath=Mods\Caveman2Cosmos\nEndGame\n")
 
@@ -120,9 +124,9 @@ class CvGameDesc:
 		self.maxCityElimination = 0
 		self.numAdvancedStartPoints = 0
 		self.targetScore = 0
+		self.iCircumnavigatedTeam = -1
 		self.szDescription = ""
 		self.szModPath = ""
-		self.iRandom = 0
 
 		iFilePos = f.tell()
 		parser = CvWBParser()
@@ -202,6 +206,11 @@ class CvGameDesc:
 					self.iStartYear = int(v)
 					continue
 
+				v = parser.findTokenValue(toks, "CircumnavigatedTeam")
+				if v != -1:
+					self.iCircumnavigatedTeam = int(v)
+					continue
+
 				v = parser.findTokenValue(toks, "Description")
 				if v != -1:
 					self.szDescription = v
@@ -212,11 +221,6 @@ class CvGameDesc:
 					self.szModPath = v
 					continue
 
-				v = parser.findTokenValue(toks, "Random")
-				if v != -1:
-					self.iRandom = int(v)
-					continue
-
 				if parser.findTokenValue(toks, "EndGame") != -1:
 					return
 		parser.seek(f, iFilePos)
@@ -225,6 +229,8 @@ class CvGameDesc:
 	def apply(self):
 		GAME.setStartYear(self.iStartYear)
 		GAME.setGameTurn(self.iGameTurn)
+		if self.iCircumnavigatedTeam > -1:
+			GAME.setCircumnavigatedTeam(self.iCircumnavigatedTeam)
 
 ############
 class CvTeamDesc:
@@ -300,23 +306,6 @@ class CvTeamDesc:
 			if team.getMasterPower() != 0:
 				f.write("\tMasterPower=%d\n" % team.getMasterPower())
 
-			if team.isExtraWaterSeeFrom():
-				f.write("\tExtraWaterSeeFrom=1\n")
-			if team.getNukeInterception() != 0:
-				f.write("\tNukeInterception=%d\n" %(team.getNukeInterception()))
-			if team.getEnemyWarWearinessModifier() != 0:
-				f.write("\tEnemyWarWeariness=%d\n" %(team.getEnemyWarWearinessModifier()))
-			for item in xrange(DomainTypes.NUM_DOMAIN_TYPES):
-				if team.getExtraMoves(item) != 0:
-					f.write("\tDomainType=%s, ExtraMoves=%d\n" %(GC.getDomainInfo(item).getType(), team.getExtraMoves(item)))
-			for item in xrange(GC.getNumRouteInfos()):
-				if team.getRouteChange(item) != 0:
-					f.write("\tRouteType=%s, ExtraMoves=%d\n" %(GC.getRouteInfo(item).getType(), team.getRouteChange(item)))
-			for item in xrange(GC.getNumImprovementInfos()):
-				for k in xrange(YieldTypes.NUM_YIELD_TYPES):
-					if team.getImprovementYieldChange(item, k) != 0:
-						f.write("\tImprovementType=%s, YieldType=%s, ExtraYield=%d\n" %(GC.getImprovementInfo(item).getType(), GC.getYieldInfo(k).getType(), team.getImprovementYieldChange(item, k)))
-
 			f.write("EndTeam\n")
 
 
@@ -356,12 +345,6 @@ class CvTeamDesc:
 		self.isMinorNationCiv = False
 		self.iMasterPower = 0
 		self.iVassalPower = 0
-		self.bExtraWaterSeeFrom = 0
-		self.iNukeInterception = 0
-		self.iEnemyWarWeariness = 0
-		self.lDomainMoves = []
-		self.lRouteMoves = []
-		self.lImprovementYield = []
 
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginTeam", "BeginPlot"):
@@ -440,38 +423,6 @@ class CvTeamDesc:
 				v = parser.findTokenValue(toks, "MasterPower")
 				if v != -1:
 					self.iMasterPower = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "ExtraWaterSeeFrom")
-				if v!=-1:
-					self.bExtraWaterSeeFrom = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "NukeInterception")
-				if v!=-1:
-					self.iNukeInterception = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "EnemyWarWeariness")
-				if v!=-1:
-					self.iEnemyWarWeariness = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "DomainType")
-				if v!=-1:
-					self.lDomainMoves.append([GC.getInfoTypeForString(v), int(parser.findTokenValue(toks, "ExtraMoves"))])
-					continue
-
-				v = parser.findTokenValue(toks, "RouteType")
-				if v!=-1:
-					self.lRouteMoves.append([GC.getInfoTypeForString(v), int(parser.findTokenValue(toks, "ExtraMoves"))])
-					continue
-
-				v = parser.findTokenValue(toks, "ImprovementType")
-				if v!=-1:
-					iYield = GC.getInfoTypeForString(parser.findTokenValue(toks, "YieldType"))
-					iExtra = int(parser.findTokenValue(toks, "ExtraYield"))
-					self.lImprovementYield.append([GC.getInfoTypeForString(v), iYield, iExtra])
 					continue
 
 				if parser.findTokenValue(toks, "EndTeam") != -1:
@@ -2080,19 +2031,6 @@ Randomize Resources=0\nEndMap\n"
 					plot.setRevealed(iTeamX, True, False, -1)
 				for item in pWBPlot.lCulture:
 					plot.setCulture(item[0], item[1], True)
-
-		# Final team pass
-		for pWBTeam in self.teamsDesc:
-			if pWBTeam.iTeam < 0: continue
-			team = GC.getTeam(pWBTeam.iTeam)
-			team.changeEnemyWarWearinessModifier(pWBTeam.iEnemyWarWeariness - team.getEnemyWarWearinessModifier())
-			team.changeNukeInterception(pWBTeam.iNukeInterception - team.getNukeInterception())
-			for item in pWBTeam.lDomainMoves:
-				team.changeExtraMoves(item[0], item[1] - team.getExtraMoves(item[0]))
-			for item in pWBTeam.lRouteMoves:
-				team.changeRouteChange(item[0], item[1] - team.getRouteChange(item[0]))
-			for item in pWBTeam.lImprovementYield:
-				team.changeImprovementYieldChange(item[0], item[1], item[2] - team.getImprovementYieldChange(item[0], item[1]))
 
 		# Final player pass
 		for i in xrange(GC.getMAX_PC_PLAYERS()):

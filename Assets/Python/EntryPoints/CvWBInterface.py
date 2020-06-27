@@ -175,7 +175,7 @@ def getMapDescriptionKey():
 # If True, this is really a mod, not a scenario
 def isRandomMap():
 	print "IF isRandomMap"
-	return WBDesc.gameDesc.iRandom
+	return 0
 
 # Called from the Worldbuilder app - sends to CvWBPopups for handling
 def initWBEditor(argsList):
