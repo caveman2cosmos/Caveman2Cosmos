@@ -1857,35 +1857,3 @@ void CvMap::toggleUnitsDisplay()
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }
-
-bool CvMap::generatePathForHypotheticalUnit(const CvPlot *pFrom, const CvPlot *pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns) const
-{
-	return CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pFrom, pTo, ePlayer, eUnit, iFlags, iMaxTurns);
-}
-
-const CvPath& CvMap::getLastPath() const
-{
-	return CvSelectionGroup::getPathGenerator()->getLastPath();
-}
-
-int CvMap::getLastPathStepNum() const
-{
-	// length of the path is not the number of steps so we have to count
-	CvPath::const_iterator it = getLastPath().begin();
-	int i = 0;
-	while (it.plot())
-	{
-		i++;
-		++it;
-	}
-	return i;
-}
-
-CvPlot* CvMap::getLastPathPlotByIndex(int index) const
-{
-	// we can only start from the beginning if we don't want to expose the iterator to Python
-	CvPath::const_iterator it = getLastPath().begin();
-	for (int i = 0; i<index; i++)
-		++it;
-	return it.plot();
-}
