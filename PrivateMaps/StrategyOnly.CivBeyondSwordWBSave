@@ -1,397 +1,51 @@
-Version=14
-BeginGame
-	Speed=GAMESPEED_EPIC
-	StartYear=-200000
+BeginMeta
+	Version=C2C_1
 	Description= - StrategyOnly by StrategyOnly
-	ModPath=
-EndGame
-BeginTeam
-	TeamID=0
-	ContactWithTeam=0
-EndTeam
-BeginTeam
-	TeamID=1
-	ContactWithTeam=1
-EndTeam
-BeginTeam
-	TeamID=2
-	ContactWithTeam=2
-EndTeam
-BeginTeam
-	TeamID=3
-	ContactWithTeam=3
-EndTeam
-BeginTeam
-	TeamID=4
-	ContactWithTeam=4
-EndTeam
-BeginTeam
-	TeamID=5
-	ContactWithTeam=5
-EndTeam
-BeginTeam
-	TeamID=6
-	ContactWithTeam=6
-EndTeam
-BeginTeam
-	TeamID=7
-	ContactWithTeam=7
-EndTeam
-BeginTeam
-	TeamID=8
-	ContactWithTeam=8
-EndTeam
-BeginTeam
-	TeamID=9
-	ContactWithTeam=9
-EndTeam
-BeginTeam
-	TeamID=10
-	ContactWithTeam=10
-EndTeam
-BeginTeam
-	TeamID=11
-	ContactWithTeam=11
-EndTeam
-BeginTeam
-	TeamID=12
-	ContactWithTeam=12
-EndTeam
-BeginTeam
-	TeamID=13
-	ContactWithTeam=13
-EndTeam
-BeginTeam
-	TeamID=14
-	ContactWithTeam=14
-EndTeam
-BeginTeam
-	TeamID=15
-	ContactWithTeam=15
-EndTeam
-BeginTeam
-	TeamID=16
-	ContactWithTeam=16
-EndTeam
-BeginTeam
-	TeamID=17
-	ContactWithTeam=17
-EndTeam
-BeginTeam
-	TeamID=18
-	ContactWithTeam=18
-EndTeam
-BeginTeam
-	TeamID=19
-	ContactWithTeam=19
-EndTeam
-BeginTeam
-	TeamID=20
-	ContactWithTeam=20
-EndTeam
-BeginTeam
-	TeamID=21
-	ContactWithTeam=21
-EndTeam
-BeginTeam
-	TeamID=22
-	ContactWithTeam=22
-EndTeam
-BeginTeam
-	TeamID=23
-	ContactWithTeam=23
-EndTeam
-BeginTeam
-	TeamID=24
-	ContactWithTeam=24
-EndTeam
-BeginTeam
-	TeamID=25
-	ContactWithTeam=25
-EndTeam
-BeginTeam
-	TeamID=26
-	ContactWithTeam=26
-EndTeam
-BeginTeam
-	TeamID=27
-	ContactWithTeam=27
-EndTeam
-BeginTeam
-	TeamID=28
-	ContactWithTeam=28
-EndTeam
-BeginTeam
-	TeamID=29
-	ContactWithTeam=29
-EndTeam
-BeginTeam
-	TeamID=30
-	ContactWithTeam=30
-EndTeam
-BeginTeam
-	TeamID=31
-	ContactWithTeam=31
-EndTeam
-BeginTeam
-	TeamID=32
-	ContactWithTeam=32
-EndTeam
-BeginTeam
-	TeamID=33
-	ContactWithTeam=33
-EndTeam
-BeginTeam
-	TeamID=34
-	ContactWithTeam=34
-EndTeam
-BeginTeam
-	TeamID=35
-	ContactWithTeam=35
-EndTeam
-BeginTeam
-	TeamID=36
-	ContactWithTeam=36
-EndTeam
-BeginTeam
-	TeamID=37
-	ContactWithTeam=37
-EndTeam
-BeginTeam
-	TeamID=38
-	ContactWithTeam=38
-EndTeam
-BeginTeam
-	TeamID=39
-	ContactWithTeam=39
-EndTeam
-BeginPlayer
-	Team=0
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=66, StartingY=12
-EndPlayer
-BeginPlayer
-	Team=1
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=3, StartingY=74
-EndPlayer
-BeginPlayer
-	Team=2
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=97, StartingY=74
-EndPlayer
-BeginPlayer
-	Team=3
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=2, StartingY=2
-EndPlayer
-BeginPlayer
-	Team=4
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=2, StartingY=46
-EndPlayer
-BeginPlayer
-	Team=5
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=92, StartingY=47
-EndPlayer
-BeginPlayer
-	Team=6
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=39, StartingY=75
-EndPlayer
-BeginPlayer
-	Team=7
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=70, StartingY=73
-EndPlayer
-BeginPlayer
-	Team=8
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=56, StartingY=45
-EndPlayer
-BeginPlayer
-	Team=9
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=19, StartingY=26
-EndPlayer
-BeginPlayer
-	Team=10
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=99, StartingY=12
-EndPlayer
-BeginPlayer
-	Team=11
-	LeaderType=NONE
-	CivType=NONE
-	StartingX=97, StartingY=14
-EndPlayer
-BeginPlayer
-	Team=12
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=13
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=14
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=15
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=16
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=17
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=18
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=19
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=20
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=21
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=22
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=23
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=24
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=25
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=26
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=27
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=28
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=29
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=30
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=31
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=32
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=33
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=34
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=35
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=36
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=37
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=38
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
+	ModPath=Mods\Caveman2Cosmos
+EndMeta
 BeginMap
 	grid width=100
 	grid height=80
-	top latitude=90
-	bottom latitude=-90
-	wrap X=0
-	wrap Y=0
 	world size=WORLDSIZE_LARGE
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
-	num plots written=8000
-	num signs written=0
-	Randomize Resources=false
 EndMap
-### Plot Info ###
+BeginPlayer
+	StartingX=66, StartingY=12
+EndPlayer
+BeginPlayer
+	StartingX=3, StartingY=74
+EndPlayer
+BeginPlayer
+	StartingX=97, StartingY=74
+EndPlayer
+BeginPlayer
+	StartingX=2, StartingY=2
+EndPlayer
+BeginPlayer
+	StartingX=2, StartingY=46
+EndPlayer
+BeginPlayer
+	StartingX=92, StartingY=47
+EndPlayer
+BeginPlayer
+	StartingX=39, StartingY=75
+EndPlayer
+BeginPlayer
+	StartingX=70, StartingY=73
+EndPlayer
+BeginPlayer
+	StartingX=56, StartingY=45
+EndPlayer
+BeginPlayer
+	StartingX=19, StartingY=26
+EndPlayer
+BeginPlayer
+	StartingX=99, StartingY=12
+EndPlayer
+BeginPlayer
+	StartingX=97, StartingY=14
+EndPlayer
 BeginPlot
 	x=0,y=0
 	isNOfRiver
@@ -44543,4 +44197,3 @@ BeginPlot
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
-### Sign Info ###

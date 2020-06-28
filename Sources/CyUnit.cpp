@@ -682,6 +682,14 @@ std::string CyUnit::getButton() const
 	return m_pUnit ? m_pUnit->getButton() : "";
 }
 
+void CyUnit::setCommander(bool bNewValue)
+{
+	if(m_pUnit != NULL)
+	{
+		m_pUnit->setCommander(bNewValue);
+	}
+}
+
 bool CyUnit::isCommander() const
 {
 	return m_pUnit ? m_pUnit->isCommander() : false;
@@ -695,6 +703,16 @@ int CyUnit::controlPointsLeft() const
 int CyUnit::controlPoints() const
 {
 	return m_pUnit ? m_pUnit->controlPoints() : -1;
+}
+
+int CyUnit::commandRange() const
+{
+	return m_pUnit ? m_pUnit->commandRange() : -1;
+}
+
+int CyUnit::getExperience100() const
+{
+	return m_pUnit ? m_pUnit->getExperience100() : -1;
 }
 
 float CyUnit::getRealExperience() const

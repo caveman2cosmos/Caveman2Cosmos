@@ -4,9 +4,10 @@
 ## Implementaion of miscellaneous game functions
 
 from CvPythonExtensions import *
+import CvUtil
 
 GC = CyGlobalContext()
-G = GC.getGame()
+GAME = GC.getGame()
 
 class CvGameUtils:
 
@@ -38,7 +39,7 @@ class CvGameUtils:
 		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
 
 	def isVictoryTest(self):
-		return G.getElapsedGameTurns() > 10
+		return GAME.getElapsedGameTurns() > 10
 
 	def isVictory(self, argsList):
 		eVictory = argsList[0]
@@ -280,11 +281,11 @@ class CvGameUtils:
 		return False
 
 	def calculateScore(self, argsList):
-		iEndTurn = G.getEstimateEndTurn()
+		iEndTurn = GAME.getEstimateEndTurn()
 		if not iEndTurn: return 0
 		iPlayer, bFinal, bVictory, = argsList
 		if bFinal and bVictory:
-			fTurnRatio = G.getGameTurn() / float(iEndTurn)
+			fTurnRatio = GAME.getGameTurn() / float(iEndTurn)
 		else: fTurnRatio = 0
 
 		if bVictory:
@@ -292,15 +293,15 @@ class CvGameUtils:
 		else: fVictory = 1
 
 		if bFinal:
-			fFinal = (100 + GC.getDefineINT("SCORE_HANDICAP_PERCENT_OFFSET") + G.getHandicapType() * GC.getDefineINT("SCORE_HANDICAP_PERCENT_PER")) / 100.0
+			fFinal = (100 + GC.getDefineINT("SCORE_HANDICAP_PERCENT_OFFSET") + GAME.getHandicapType() * GC.getDefineINT("SCORE_HANDICAP_PERCENT_PER")) / 100.0
 		else: fFinal = 1
 
 		CyPlayer = GC.getPlayer(iPlayer)
 		score = 0
 		fFreePercent = self.fScoreFreeMod
 		# Population
-		iInitial = G.getInitPopulation()
-		iMax = G.getMaxPopulation()
+		iInitial = GAME.getInitPopulation()
+		iMax = GAME.getMaxPopulation()
 		if fTurnRatio:
 			if iInitial:
 				iMax = iInitial * (iMax / iInitial)**fTurnRatio
@@ -314,8 +315,8 @@ class CvGameUtils:
 			temp *= (CyPlayer.getPopScore() + fFree) / fDiv
 		score += temp
 		# Land
-		iInitial = G.getInitLand()
-		iMax = G.getMaxLand()
+		iInitial = GAME.getInitLand()
+		iMax = GAME.getMaxLand()
 		if fTurnRatio:
 			if iInitial:
 				iMax = iInitial * (iMax / iInitial)**fTurnRatio
@@ -329,8 +330,8 @@ class CvGameUtils:
 			temp *= (CyPlayer.getLandScore() + fFree) / fDiv
 		score += temp
 		# Tech
-		iInitial = G.getInitTech()
-		iMax = G.getMaxTech()
+		iInitial = GAME.getInitTech()
+		iMax = GAME.getMaxTech()
 		if fTurnRatio:
 			if iInitial:
 				iMax = iInitial * (iMax / iInitial)**fTurnRatio
@@ -344,8 +345,8 @@ class CvGameUtils:
 			temp *= (CyPlayer.getTechScore() + fFree) / fDiv
 		score += temp
 		# Wonder
-		iInitial = G.getInitWonders()
-		iMax = G.getMaxWonders()
+		iInitial = GAME.getInitWonders()
+		iMax = GAME.getMaxWonders()
 		if fTurnRatio:
 			iMax = iInitial + fTurnRatio * (iMax - iInitial)
 
@@ -421,8 +422,8 @@ class CvGameUtils:
 				return 0
 
 		iTemp = GC.getImprovementInfo(CyPlot.getImprovementType()).getPillageGold()
-		gold = G.getSorenRandNum(iTemp, "Pillage Gold 1")
-		gold += G.getSorenRandNum(iTemp, "Pillage Gold 2")
+		gold = GAME.getSorenRandNum(iTemp, "Pillage Gold 1")
+		gold += GAME.getSorenRandNum(iTemp, "Pillage Gold 2")
 
 		gold += CyUnit.getPillageChange() * gold / 100.0
 
@@ -434,29 +435,33 @@ class CvGameUtils:
 
 
 	def doCityCaptureGold(self, argsList):
-		CyCity, = argsList
+		CyCity, iOwnerNew, = argsList
 
-		CyPlayer = GC.getPlayer(CyCity.getOwner())
+		ownerOld = GC.getPlayer(CyCity.getOwner())
 		obsoleteTech = self.iHimejiCastleObsoleteTech
-		if obsoleteTech == -1 or not GC.getTeam(CyPlayer.getTeam()).isHasTech(obsoleteTech) and CyPlayer.countNumBuildings(self.iHimejiCastle):
+		if obsoleteTech == -1 or not GC.getTeam(ownerOld.getTeam()).isHasTech(obsoleteTech) and ownerOld.countNumBuildings(self.iHimejiCastle):
 			return 0
 
 		gold = self.BASE_CAPTURE_GOLD
 
 		gold += CyCity.getPopulation() * self.CAPTURE_GOLD_PER_POP
-		gold += G.getSorenRandNum(self.CAPTURE_GOLD_RAND1, "One")
-		gold += G.getSorenRandNum(self.CAPTURE_GOLD_RAND2, "Two")
+		gold += GAME.getSorenRandNum(self.CAPTURE_GOLD_RAND1, "One")
+		gold += GAME.getSorenRandNum(self.CAPTURE_GOLD_RAND2, "Two")
 
 		iMaxTurns = self.CAPTURE_GOLD_MAX_TURNS
 		if iMaxTurns > 0:
-			iTurns = G.getGameTurn() - CyCity.getGameTurnAcquired()
+			iTurns = GAME.getGameTurn() - CyCity.getGameTurnAcquired()
 			if iTurns > 0 and iTurns < iMaxTurns:
 				gold *= 1.0 * iTurns / iMaxTurns
 
 		if CyCity.getNumActiveBuilding(self.iNationalMint):
 			gold *= 10
 
+		if (iOwnerNew == GAME.getActivePlayer()):
+			CvUtil.sendMessage(CyTranslator().getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", (int(gold), CyCity.getName())), iOwnerNew, 10, '', ColorTypes(10))
+
 		return int(gold)
+
 
 	def citiesDestroyFeatures(self, argsList):
 		#iX, iY = argsList
@@ -628,7 +633,7 @@ class CvGameUtils:
 				iPlayer = iData1 - 7200
 				pPlayer = GC.getPlayer(iPlayer)
 				pCity = pPlayer.getCity(iData2)
-				if G.GetWorldBuilderMode():
+				if GAME.GetWorldBuilderMode():
 					sText = "<font=3>"
 					if pCity.isCapital():
 						sText += CyTranslator().getText("[ICON_STAR]", ())
@@ -790,7 +795,7 @@ class CvGameUtils:
 				iPlayer = iData1 - 8300
 				pUnit = GC.getPlayer(iPlayer).getUnit(iData2)
 				sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
-				if G.GetWorldBuilderMode():
+				if GAME.GetWorldBuilderMode():
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(iData2)
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 					sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())

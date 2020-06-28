@@ -815,11 +815,13 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
 		<English>Aggressive</English>
 		<French>Agressif:Agressive:Agressifs:Agressives</French>
+		<German>Aggressiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1</Tag>
 		<English>Aggressive I</English>
 		<French>Agressif:Agressive:Agressifs:Agressives I</French>
+		<German>Aggressiv I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1_PEDIA</Tag>
@@ -860,6 +862,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2</Tag>
 		<English>Aggressive II</English>
 		<French>Agressif:Agressive:Agressifs:Agressives II</French>
+		<German>Aggressiv II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2_PEDIA</Tag>
@@ -900,6 +903,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3</Tag>
 		<English>Aggressive III</English>
 		<French>Agressif:Agressive:Agressifs:Agressives III</French>
+		<German>Aggressiv III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3_PEDIA</Tag>
@@ -9624,11 +9628,13 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_PACIFIST</Tag>
 		<English>Pacifist</English>
 		<French>Pacifiste</French>
+		<German>Pazifist</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1</Tag>
 		<English>Pacifist I</English>
 		<French>Pacifiste I</French>
+		<German>Pazifist I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1_PEDIA</Tag>
@@ -9648,16 +9654,38 @@ Primary Penalties:
 Unique Penalties:
 	[ICON_BULLET]Applies Pacifist I Promotion to all Combatant units.  Pacifist I is a fairly basic promotion with a relatively minor -10% combat modifier.
 
-Penalties:
+Benefits:
 	[ICON_BULLET]Improved relations with opponent leaders.  They like pushovers they need not fear.
 	[ICON_BULLET]Moderate Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Happiness Penalty.  People are more cooperative and engaging with one another and are more content with life as a result.
+	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
 		</English>
+		<German>
+Negative Charaktereigenschaft
+
+"Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
+
+Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
+
+Primäre Nachteile:
+	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]gewaltiger Anstieg der Kriegsmüdigkeit (Dein Volk fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
+	[ICON_BULLET]deutlich verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]starker Preisanstieg für die Modernisierung von Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist I
+
+Vorteile:
+	[ICON_BULLET]verbesserte Beziehungen zu anderen Staatsoberhäuptern (Sie mögen Schwächlinge, die sie nicht fürchten müssen.)
+	[ICON_BULLET]leicht erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)
+	[ICON_BULLET]geringfügig erhöhte Zufriedenheit (Deine Leute arbeiten eher mit- als gegeneinander und sind deshalb zufriedener mit ihrem Leben.)
+	</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2</Tag>
 		<English>Pacifist II</English>
 		<French>Pacifiste II</French>
+		<German>Pazifist II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2_PEDIA</Tag>
@@ -9681,17 +9709,44 @@ Side Penalties:
 	[ICON_BULLET]Reduced rate of earning Great Military People.
 	[ICON_BULLET]Small reduction to the maximum number of population you convert to units during a Conscription action in a city.
 
+Benefits:
+	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
+	[ICON_BULLET]Moderate Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+		</English>
+		<German>
+Negative Charaktereigenschaft
+
+"Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
+
+Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
+
+Primäre Nachteile:
+	[ICON_BULLET]gewaltiger Anstieg der Kriegsmüdigkeit (Dein Volk fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
+	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]stark verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]gewaltiger Preisanstieg für die Modernisierung von Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist II
+
+Side Penalties:
+	[ICON_BULLET]Reduced rate of earning Great Military People.
+	[ICON_BULLET]Small reduction to the maximum number of population you convert to units during a Conscription action in a city.
+
 Penalties:
 	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
 	[ICON_BULLET]Moderate Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
 	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness Penalty.  People are more cooperative and engaging with one another and are more content with life as a result.
-		</English>
+	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3</Tag>
 		<English>Pacifist III</English>
 		<French>Pacifiste III</French>
+		<German>Pazifist III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3_PEDIA</Tag>
@@ -9715,11 +9770,36 @@ Side Penalties:
 	[ICON_BULLET]Reduced rate of earning Great Military People.
 	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
 
-Penalties:
+Benefits:
 	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
 	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
 	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
 		</English>
+		<German>
+Negative Charaktereigenschaft
+
+"Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
+
+Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
+
+Primary Penalties:
+	[ICON_BULLET]Large increase in War Weariness you suffer.  Your people are not merely fearful of war, but object to it as a solution.
+	[ICON_BULLET]Reduction of any available Free Military units from a penalty based on the total amount of your overall population.
+	[ICON_BULLET]Huge reduction in the speed of training all Military units.  Your people object to becoming soldiers in any capacity.
+	[ICON_BULLET]Huge Increase in the price to upgrade your units.
+
+Unique Penalties:
+	[ICON_BULLET]Applies Pacifist III Promotion to all Combatant units.  Pacifist III is a fairly basic promotion with a relatively minor -10% combat modifier.
+
+Side Penalties:
+	[ICON_BULLET]Reduced rate of earning Great Military People.
+	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
+
+Penalties:
+	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
+	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_PEDIA</Tag>
@@ -9749,6 +9829,32 @@ Benefits:
 	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
 	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
 		</English>
+		<German>
+Negative Charaktereigenschaft
+
+"Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
+
+Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
+
+Primary Penalties:
+	[ICON_BULLET]Large increase in War Weariness you suffer.  Your people are not merely fearful of war, but object to it as a solution.
+	[ICON_BULLET]Strong reduction of any available Free Military units from a penalty based on the total amount of your overall population.
+	[ICON_BULLET]Strong reduction in the speed of training all Military units.  Your people object to becoming soldiers in any capacity.
+	[ICON_BULLET]Strong increase in the price to upgrade your units.
+
+Unique Penalties:
+	[ICON_BULLET]Applies Pacifist Promotion to all Combatant units.  Pacifist is a fairly basic promotion with a relatively minor -10% combat modifier.
+
+Side Penalties:
+	[ICON_BULLET]Reduced rate of earning Great Military People.
+	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
+
+Benefits:
+	[ICON_BULLET]Improved relations with opponent leaders.  They like pushovers they need not fear.
+	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Tag>

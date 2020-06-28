@@ -38592,6 +38592,14 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ZOC_HOVER"));
 	}
 
+	int iAdjDmg = city.getAdjacentDamagePercent();
+	if (city.getAdjacentDamagePercent())
+	{// ==========================
+		szBuffer.append(DOUBLE_SEPARATOR);
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ADJ_DMG_HOVER", iAdjDmg));
+	}
+
 	bFirst = true;
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{

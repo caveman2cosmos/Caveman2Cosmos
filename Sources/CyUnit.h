@@ -192,6 +192,7 @@ public:
 
 	std::string getButton() const;
 
+	void setCommander(bool bNewValue);
 	bool isCommander() const;
 	int controlPointsLeft() const;
 	int controlPoints() const;

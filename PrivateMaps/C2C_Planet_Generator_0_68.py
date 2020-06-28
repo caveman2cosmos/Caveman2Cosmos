@@ -544,7 +544,7 @@ def getGridSize(argsList):
 # b[5] = "data2"
 # - retrieving data:
 # if a[2] != None:
-#    print a[2]
+#	print a[2]
 # - length:
 # print len(a)
 # - removing item:
@@ -557,7 +557,7 @@ def getGridSize(argsList):
 # print a.randomItem(dice)
 # - reading array data:
 # for data in a:
-#    print data
+#	print data
 class bArray:
 	def __init__(self):
 		self._data = []
@@ -698,11 +698,11 @@ class probabilityArray:
 # multi dimensional array wrapper
 # usage:
 # - creating array:
-# a = mdArray([5,9],0) #creates 5×9 array with data:0 in every cell
-# b = mdArray([4,2,6],"nodata") #creates 4×2×6 array with data:"nodata" in every cell
+# a = mdArray([5,9],0) #creates 5ï¿½9 array with data:0 in every cell
+# b = mdArray([4,2,6],"nodata") #creates 4ï¿½2ï¿½6 array with data:"nodata" in every cell
 # - changing data:
-# a[0,1] = 5 #change 0×1 cell to 5
-# b[3,1,5] = "some data" #change 3×1×5 cell to "some data"
+# a[0,1] = 5 #change 0ï¿½1 cell to 5
+# b[3,1,5] = "some data" #change 3ï¿½1ï¿½5 cell to "some data"
 # - also:
 # print a[0,1]
 # print len(a)
@@ -2232,7 +2232,7 @@ def generatePlotTypes():
 			offset = world.getOffset([x,y])
 			if peakStartProbability > 0:
 				#collect peaks
-				#check if land area is 9×9 empty
+				#check if land area is 9ï¿½9 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and world[x-1,y] == PlotTypes.PLOT_LAND and world[x+1,y] == PlotTypes.PLOT_LAND and world[x,y-1] == PlotTypes.PLOT_LAND and world[x,y+1] == PlotTypes.PLOT_LAND and (not world[x+1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y-1] == PlotTypes.PLOT_PEAK) and (not world[x+1,y-1] == PlotTypes.PLOT_PEAK):
 					if getRand(dice) < peakStartProbability:
 						world._data[offset] = PlotTypes.PLOT_PEAK
@@ -2240,7 +2240,7 @@ def generatePlotTypes():
 							peakArray[offset] = [x,y,1]
 			if hillStartProbability > 0:
 				#collect hills
-				#check if land area is 11×11 empty
+				#check if land area is 11ï¿½11 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and not hillIntersect(world,x,y,x,y,1):
 					if getRand(dice) < hillStartProbability:
 						world._data[offset] = PlotTypes.PLOT_HILLS
@@ -2693,7 +2693,7 @@ def addFeatures():
 	terrainLush = cgc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = cgc.getInfoTypeForString("TERRAIN_MUDDY")
 
-	featNone = cgc.getInfoTypeForString("NO_FEATURE")
+	featNone = -1
 	featIce = cgc.getInfoTypeForString("FEATURE_ICE")
 	featJungle = cgc.getInfoTypeForString("FEATURE_JUNGLE")
 	featOasis = cgc.getInfoTypeForString("FEATURE_OASIS")
@@ -3753,11 +3753,11 @@ else:
 	def civFilePath():
 		try:
 			userFolder = regRead(_winreg.HKEY_CURRENT_USER,"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders","Personal")
-			#print "    userFolder",userFolder
+			#print "	userFolder",userFolder
 			civFolder = os.path.basename(regRead(_winreg.HKEY_LOCAL_MACHINE,"Software\\Firaxis Games\\Sid Meier's Civilization 4","INSTALLDIR"))
-			#print "    civFolder",civFolder
+			#print "	civFolder",civFolder
 			finalFolder = os.path.join(os.path.join(userFolder, "My Games"), civFolder)
-			#print "    finalFolder",finalFolder
+			#print "	finalFolder",finalFolder
 			return finalFolder
 		except:
 			return ""
@@ -3835,20 +3835,20 @@ def saveMapOptionDefaults():
 			valueName = selection_names_and_values[index][selectionIndex][0]
 			smoptions.append((smoption,valueName))
 
-		#print "    try to store settings to",fileName
+		#print "	try to store settings to",fileName
 		print smoptions
 		try:
 			pickle.dump(smoptions, settings)
 		except Exception, inst:
-			print "    Pickling Error",inst,"trying to save map settings to",fileName
+			print "	Pickling Error",inst,"trying to save map settings to",fileName
 		settings.close()
-		print "    store successful"
+		print "	store successful"
 	except IOError:
-		print "    Couldn't create ",fileName
+		print "	Couldn't create ",fileName
 	except EOFError:
-		print "    EOF writing ",fileName
+		print "	EOF writing ",fileName
 	except:
-		print "    unexpected problem writing ",fileName
+		print "	unexpected problem writing ",fileName
 
 def loadMapOptionDefaults():
 	global selection_defaults
@@ -3866,14 +3866,14 @@ def loadMapOptionDefaults():
 						selectionName, selectionValue, allowedRandomPick = selection_names_and_values[selOptionIndex][selectionIndex]
 						if selectionName == valueName:
 							selection_defaults[selOptionIndex] = selectionIndex
-		#print "    loaded option from cfg:",option,value
+		#print "	loaded option from cfg:",option,value
 		settings.close()
 	except IOError:
-		print "    Couldn't find ",fileName
+		print "	Couldn't find ",fileName
 	except EOFError:
-		print "    Bad contents in ",fileName
+		print "	Bad contents in ",fileName
 	except:
-		print "    unexpected problem reading",fileName
+		print "	unexpected problem reading",fileName
 
 def isRandomCustomMapOption(argsList):
 	return False # we use our own defaults

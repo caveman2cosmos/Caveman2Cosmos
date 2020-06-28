@@ -1395,6 +1395,12 @@ int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const
 	return m_pCity ? m_pCity->getBuildingOriginalTime((BuildingTypes) iIndex) : -1;
 }
 
+void CyCity::setBuildingOriginalTime(int iIndex, int iNewValue)
+{
+	if (m_pCity)
+		m_pCity->setBuildingOriginalTime((BuildingTypes) iIndex, iNewValue);
+}
+
 int CyCity::getUnitProduction(int iIndex) const
 {
 	return m_pCity ? m_pCity->getUnitProduction((UnitTypes) iIndex) : -1;

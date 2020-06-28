@@ -1,10 +1,6 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-
-# Enum for screens...
-
-from CvPythonExtensions import CivilopediaPageTypes
-
+#
+# CvScreenEnums
+#
 DOMESTIC_ADVISOR = 0
 REWARD_SCREEN = 1
 DAWN_OF_MAN = 2
@@ -74,6 +70,3 @@ STRATEGY_OVERLAY_SCREEN = 102
 PEDIA = 200
 
 MAD_NUKES_MANAGER = 4203
-
-C2C_INITIAL_OPTIONS_SCREEN = 4300
-C2C_NATIONAL_ADVISOR_SCREEN = 4301
