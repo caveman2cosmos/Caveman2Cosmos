@@ -356,34 +356,19 @@ public:
 	void changeFreeBonus(int /*BonusTypes*/ eIndex, int iChange);
 	int getNumBonuses(int /*BonusTypes*/ iBonus) const;
 	bool hasBonus(int /*BonusTypes */ iBonus) const;
+
 	int getBuildingProduction(int /*BuildingTypes*/ iIndex) const;
 	void setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue);
-//<<<<<<< HEAD
 	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const;
-
 	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const;
 	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const;
 
 	int getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const;
 	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const;
-	int getUnitProduction(int iIndex) const;
-//=======
-//	void changeBuildingProduction(int /*BuildingTypes*/ iIndex, int iChange);
-//	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex);
-//	void setBuildingProductionTime(int /*BuildingTypes*/ eIndex, int iNewValue);
-//	void changeBuildingProductionTime(int /*BuildingTypes*/ eIndex, int iChange);
-// BUG - Production Decay - start
-//	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex);
-//	int getBuildingProductionDecay(int /*BuildingTypes*/ eIndex);
-//	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex);
-// BUG - Production Decay - end
-//	int getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex);
-//	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex);
-//	void setBuildingOriginalTime(int iBuildingType, int i);
-//	int getUnitProduction(int iIndex);
-//>>>>>>> master
-	void setUnitProduction(int iIndex, int iNewValue);
+	void setBuildingOriginalTime(int iBuildingType, int i);
 
+	int getUnitProduction(int iIndex) const;
+	void setUnitProduction(int iIndex, int iNewValue);
 	int getUnitProductionTime(int /*UnitTypes*/ eIndex) const;
 	bool isUnitProductionDecay(int /*UnitTypes*/ eIndex) const;
 	int getUnitProductionDecayTurns(int /*UnitTypes*/ eIndex) const;

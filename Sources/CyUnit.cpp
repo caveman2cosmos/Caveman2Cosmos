@@ -705,15 +705,6 @@ int CyUnit::controlPoints() const
 	return m_pUnit ? m_pUnit->controlPoints() : -1;
 }
 
-int CyUnit::commandRange() const
-{
-	return m_pUnit ? m_pUnit->commandRange() : -1;
-}
-
-int CyUnit::getExperience100() const
-{
-	return m_pUnit ? m_pUnit->getExperience100() : -1;
-}
 
 float CyUnit::getRealExperience() const
 {
