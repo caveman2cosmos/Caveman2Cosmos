@@ -8515,7 +8515,7 @@ void CvPlot::changeRiverCrossingCount(int iChange)
 }
 
 
-short* CvPlot::getYield()
+short* CvPlot::getYield() const
 {
 	return m_aiYield;
 }

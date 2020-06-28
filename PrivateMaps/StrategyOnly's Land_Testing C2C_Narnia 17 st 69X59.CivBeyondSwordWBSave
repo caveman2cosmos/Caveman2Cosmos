@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_MARATHON
+BeginMeta
+	Version=C2C_1
 	Description=NARNIA - by strategyonly
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginPlayer
 	StartingX=61, StartingY=56
 EndPlayer

@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_MARATHON
+BeginMeta
+	Version=C2C_1
 	Description=Never use more than 20 civs or some civs will start in weird places!! This Space map includes a random earth map (Large size 108x72); Earthlike; Tropical; high sealevel; 150% Hills and Peaks; +4 rivers; 175% resources; 20 random nations). Have fun!
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=108
 	grid height=200

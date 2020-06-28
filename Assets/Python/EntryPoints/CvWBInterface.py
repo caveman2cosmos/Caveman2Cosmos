@@ -7,7 +7,6 @@ import CvWBPopups
 import CvWBDesc
 
 WBDesc = CvWBDesc.CvWBDesc()
-lastFileRead = None
 GC = CyGlobalContext()
 
 #---------------------#
@@ -18,8 +17,6 @@ def writeDesc(argsList):
 	Save out a high-level desc of the world, for WorldBuilder
 	'''
 	fileName = argsList[0]
-	global lastFileRead
-	lastFileRead=None
 	return WBDesc.write(fileName)
 
 #--------------------#
@@ -46,29 +43,15 @@ def readDesc(argsList):
 	Called once before game options can be selected for scenario,
 	and called once more when all game options are confirmed.
 	'''
-	print "--- CvWBInterface.readDesc(argsList) ---"
-	print argsList
-	fileName = argsList[0]
-	if not _adjustMap(fileName):
-		return -1
+	print "--- CvWBInterface.readDesc(argsList) ---", argsList
+	return WBDesc.read(argsList[0])
 
-	global lastFileRead
-	if fileName != lastFileRead:
-		ret = WBDesc.read(fileName)
-		if ret == 0:
-			lastFileRead = fileName
-	else:
-		ret = 0
-	return ret
-
-# Make changes to the scenario file if needed.
-def _adjustMap(fileName): return True # success
 
 def getModPath():
 	''' Called from exe
 	Returns the path for the Mod that this scenario should load (if applicable)
 	'''
-	return WBDesc.gameDesc.szModPath
+	return WBDesc.metaDesc.szModPath
 
 
 def getGameData():
@@ -114,6 +97,7 @@ def getPlayerDesc():
 	''' Called from exe
 	Returns player description data (wide strings) as a tuple
 	'''
+	print "CvWBInterface.getPlayerDesc"
 	playerTuple = WBDesc.playersDesc
 	t = ()
 	for i in xrange(GC.getMAX_PLAYERS()):
@@ -126,6 +110,7 @@ def getPlayerData():
 	Returns player data as a tuple, terminated by -1
 	Last thing called before you can select your game options for a scenario.
 	'''
+	print "CvWBInterface.getPlayerData"
 	iNPC = GC.getMAX_PC_PLAYERS()
 	playerTuple = WBDesc.playersDesc
 	t = ()
@@ -167,15 +152,14 @@ def applyInitialItems(): # Called from exe
 #---------------#
 # Miscellaneous #
 #---------------#
-# Returns the TXT_KEY Description of the map to be displayed in the map/mod selection screen
 def getMapDescriptionKey():
 	print "IF getMapDescriptionKey"
-	return WBDesc.gameDesc.szDescription
+	return WBDesc.metaDesc.szDescription
 
 # If True, this is really a mod, not a scenario
 def isRandomMap():
 	print "IF isRandomMap"
-	return WBDesc.gameDesc.iRandom
+	return 0
 
 # Called from the Worldbuilder app - sends to CvWBPopups for handling
 def initWBEditor(argsList):

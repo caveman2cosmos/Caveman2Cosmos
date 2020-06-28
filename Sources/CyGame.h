@@ -168,7 +168,10 @@ public:
 
 	bool isScoreDirty() const;
 	void setScoreDirty(bool bNewValue);
-	bool isCircumnavigated() const;
+
+	int getCircumnavigatedTeam() const;
+	void setCircumnavigatedTeam(int iTeamType);
+
 	bool isDiploVote(int /*VoteSourceTypes*/ eVoteSource) const;
 	void changeDiploVote(int /*VoteSourceTypes*/ eVoteSource, int iChange);
 	bool isDebugMode() const;
