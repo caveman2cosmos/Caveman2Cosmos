@@ -1,4 +1,7 @@
-Version=16
+BeginMeta
+	Version=C2C_1
+	ModPath=Mods\Caveman2Cosmos
+EndMeta
 BeginMap
 	grid width=64
 	grid height=64

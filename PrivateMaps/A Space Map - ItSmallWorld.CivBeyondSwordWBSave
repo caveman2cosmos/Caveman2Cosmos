@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_NORMAL
+BeginMeta
+	Version=C2C_1
 	Description=This space map contains no AIs and has 11 space zones.
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=280
 	grid height=40

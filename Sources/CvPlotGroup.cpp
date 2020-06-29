@@ -508,9 +508,8 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 
 		m_paiNumBonuses[eBonus] = (m_paiNumBonuses[eBonus] + iChange);
 
-		for (CvPlayer::city_iterator cityItr = GET_PLAYER(getOwner()).beginCities(); cityItr != GET_PLAYER(getOwner()).endCities(); ++cityItr)
+		foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
-			CvCity* pLoopCity = *cityItr;
 			if (pLoopCity->plotGroup(getOwner()) == this)
 			{
 				pLoopCity->changeNumBonuses(eBonus, iChange);

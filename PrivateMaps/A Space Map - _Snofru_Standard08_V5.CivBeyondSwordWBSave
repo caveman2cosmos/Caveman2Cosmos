@@ -1,9 +1,8 @@
-Version=16
-BeginGame
-	Speed=GAMESPEED_MARATHON
+BeginMeta
+	Version=C2C_1
 	Description=Never use more than 20 civs or some civs will start in weird places!! Standard size starting map (124x56); Earthlike; Sealevel medium; 150% hills; 150% Mountains; +4 rivers; 20 random nations. Have fun!
 	ModPath=Mods\Caveman2Cosmos
-EndGame
+EndMeta
 BeginMap
 	grid width=124
 	grid height=200

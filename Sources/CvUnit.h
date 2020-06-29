@@ -3315,6 +3315,7 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
+		DECLARE_MAP_FUNCTOR(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getFortifyTurns);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
@@ -3326,6 +3327,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
+		DECLARE_MAP_FUNCTOR(CvUnit, DomainTypes, getDomainType);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
@@ -3344,7 +3346,6 @@ public:
 
 		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
 		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
-
 	};
 };
 

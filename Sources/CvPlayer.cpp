@@ -5401,7 +5401,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 	int iI, iJ;
     int iLoop;
 
-	if ( eBonus < 0 && eBonus >= GC.getNumBonusInfos() )
+	if ( eBonus < 0 || eBonus >= GC.getNumBonusInfos() )
 	{
 		FErrorMsg("Bonus value must be valid for countOwnedBonuses");
 		return 0;

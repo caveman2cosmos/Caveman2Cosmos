@@ -2413,7 +2413,6 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	CLLNode<IDInfo>* pUnitNode;
 //	CvCity* pHolyCity;
 	CvUnit* pLoopUnit;
-	int iLoop;
 	int iI;
 
 	CvCity* pCity = getPlotCity();
@@ -2518,7 +2517,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		int iRange = GC.getDefineINT("RECON_VISIBILITY_RANGE");
 		for (iI = 0; iI < MAX_PLAYERS; ++iI)
 		{
-			for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 			{
 				if (pLoopUnit->getReconPlot() == this)
 				{
@@ -8515,7 +8514,7 @@ void CvPlot::changeRiverCrossingCount(int iChange)
 }
 
 
-short* CvPlot::getYield()
+short* CvPlot::getYield() const
 {
 	return m_aiYield;
 }
