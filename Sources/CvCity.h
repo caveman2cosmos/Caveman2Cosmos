@@ -2385,6 +2385,8 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
 
 		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
 		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
