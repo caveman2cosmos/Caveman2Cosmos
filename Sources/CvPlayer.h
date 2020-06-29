@@ -2195,7 +2195,7 @@ public:
 	void setNationalTechResearchModifier(TechTypes eIndex, int iNewValue);
 	void changeNationalTechResearchModifier(TechTypes eIndex, int iChange);
 
-	int getCoastalAIInfluence();
+	int getCoastalAIInfluence() const;
 
 	int getEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iValue);
