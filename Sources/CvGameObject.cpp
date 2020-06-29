@@ -237,7 +237,6 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 
 void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
-	int iLoop;
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
@@ -249,14 +248,14 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_CITY:
-			for (CvCity* pCity = m_pPlayer->firstCity(&iLoop); pCity != NULL; pCity = m_pPlayer->nextCity(&iLoop))
+			foreach_(CvCity* pCity, m_pPlayer->cities())
 			{
 				func(pCity->getGameObject());
 			}
 			break;
 
 		case GAMEOBJECT_UNIT:
-			for (CvUnit* pUnit = m_pPlayer->firstUnit(&iLoop); pUnit != NULL; pUnit = m_pPlayer->nextUnit(&iLoop))
+			foreach_(CvUnit* pUnit, m_pPlayer->units())
 			{
 				func(pUnit->getGameObject());
 			}

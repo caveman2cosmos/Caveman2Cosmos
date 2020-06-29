@@ -6048,8 +6048,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
 					{
-						int iLoop;
-						for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+						foreach_(const CvCity* pLoopCity, kOwner.cities())
 						{
 							if (pLoopCity->area() == area())
 							{
@@ -6355,10 +6354,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					if (kBuilding.getGlobalPopulationgrowthratepercentage() != 0)
 					{
-						int iLoop;
 						int iCityCount = 0;
 						int globalGrowthValue = 0;
-						for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+						foreach_(const CvCity* pLoopCity, kOwner.cities())
 						{
 							int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 							int iCurrentFoodToGrow = pLoopCity->growthThreshold();
@@ -6427,10 +6425,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 									if (iModifier > -100)
 									{
-										int iLoop;
 										int iCount = 0;
 
-										for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+										foreach_(const CvCity* pLoopCity, kOwner.cities())
 										{
 											if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 											{
@@ -6486,9 +6483,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 										iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 									}
 
-									int iLoop;
 									int iCount = 0;
-									for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+									foreach_(const CvCity* pLoopCity, kOwner.cities())
 									{
 										if (pLoopCity->getNumBuilding(eLoopBuilding) == 0)
 										{
@@ -6677,8 +6673,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						if ( iGlobalModifier > 0 || iAreaModifier > 0 )
 						{
-							int iLoop = 0;
-							for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+							foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 							{
 								int iCityValue = pLoopCity->getBaseYieldRate((YieldTypes)iI);
 								globalYieldModifierValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == area() ? iAreaModifier : 0));
@@ -7928,8 +7923,7 @@ void CvCityAI::AI_updateRouteToCity() const
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
 			{
-				int iLoop = 0;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if (pLoopCity != this)
 					{
@@ -10641,10 +10635,9 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 							if (kUnitInfo.getCorporationSpreads(eCorporation) > 0 && canTrain((UnitTypes) iI))
 							{
 								int iValue = iCorporationValue / kUnitInfo.getProductionCost();
-								int iLoop;
 								int iTotalCount = 0;
 								int iPlotCount = 0;
-								for (CvUnit* pLoopUnit = kPlayer.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kPlayer.nextUnit(&iLoop))
+								foreach_(const CvUnit* pLoopUnit, kPlayer.units())
 								{
 									if ((pLoopUnit->AI_getUnitAIType() == UNITAI_MISSIONARY) && (pLoopUnit->getUnitInfo().getCorporationSpreads(eCorporation) > 0))
 									{
@@ -14010,8 +14003,7 @@ void CvCityAI::AI_cachePlayerCloseness(int iMaxDistance)
 		{
 			int iValue = 0;
 			int iBestValue = 0;
-			int iLoop = 0;
-			for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				if (pLoopCity == this)
 				{
@@ -14820,8 +14812,7 @@ bool CvCityAI::AI_buildCaravan()
 	FAssert(false);
 
 	int iAveProduction = 0;
-	int iLoop = 0;
-	for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		iAveProduction += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 	}
@@ -14999,9 +14990,7 @@ int CvCityAI::AI_getMilitaryProductionRateRank() const
 
 	int iRank = 1;
 
-	int iLoop;
-	CvCity* pLoopCity;
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
 		if ((iLoopRate > iRate) ||
@@ -15062,9 +15051,7 @@ int CvCityAI::AI_getNavalMilitaryProductionRateRank() const
 
 	int iRank = 1;
 
-	int iLoop;
-	CvCity* pLoopCity;
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
 		if ((iLoopRate > iRate) ||
@@ -16950,8 +16937,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
 							{
-								int iLoop;
-								for( CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop) )
+								foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 								{
 									if( pLoopCity->area() == area() )
 									{
@@ -17267,10 +17253,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							}
 							if (kBuilding.getGlobalPopulationgrowthratepercentage() != 0)
 							{
-								int iLoop;
 								int iCityCount = 0;
 								int popGrowthRateGlobalValue = 0;
-								for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+								foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 								{
 									int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 									int iCurrentFoodToGrow = pLoopCity->growthThreshold();
@@ -17335,10 +17320,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 											if (iModifier > -100)
 											{
-												int iLoop;
 												int iCount = 0;
 
-												for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+												foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 												{
 													if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 													{
@@ -17394,9 +17378,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 												iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 											}
 
-											int iLoop;
 											int iCount = 0;
-											for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+											foreach_(const CvCity* pLoopCity, kOwner.cities())
 											{
 												if (pLoopCity->getNumBuilding(eLoopBuilding) == 0)
 												{
@@ -17582,8 +17565,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 								if ( iGlobalModifier > 0 || iAreaModifier > 0 )
 								{
-									int iLoop = 0;
-									for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+									foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 									{
 										int iCityValue = pLoopCity->getBaseYieldRate((YieldTypes)iI);
 										iYieldModiferValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == area() ? iAreaModifier : 0));

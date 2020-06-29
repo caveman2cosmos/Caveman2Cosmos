@@ -4042,8 +4042,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 							if( gDLL->shiftKey() )
 							{
-								CvCity* pLoopCity;
-								int iLoop = 0;
 								//int iBestTargetValue = (pTargetCity != NULL ? GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pTargetCity,false,true) : 0);
 								int iTargetValue = 0;
 								szString.append(CvWString::format(L"\n\nTarget City values:\n"));
@@ -4053,7 +4051,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 									{
 										if( pPlot->area()->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0 )
 										{
-											for (pLoopCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop))
+											foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iPlayer).cities())
 											{
 												if( pLoopCity->area() == pPlot->area() )
 												{
@@ -15743,9 +15741,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		if (bPlayerContext)
 		{
 			CvWString szTempBuffer;
-			int iLoop;
 			int iSaved = 0;
-			for (CvCity *pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER(GC.getGame().getActivePlayer()).cities())
 			{
 				iSaved += pLoopCity->getDistanceMaintenanceSavedTimes100ByCivic(eCivic);
 			}
@@ -15774,9 +15771,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		if (bPlayerContext)
 		{
 			CvWString szTempBuffer;
-			int iLoop;
 			int iSaved = 0;
-			for (CvCity *pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER(GC.getGame().getActivePlayer()).cities())
 			{
 				iSaved += pLoopCity->getNumCitiesMaintenanceSavedTimes100ByCivic(eCivic);
 			}
@@ -15831,9 +15827,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		if (bPlayerContext)
 		{
 			CvWString szTempBuffer;
-			int iLoop;
 			int iSaved = 0;
-			for (CvCity *pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER(GC.getGame().getActivePlayer()).cities())
 			{
 				iSaved += pLoopCity->getHomeAreaMaintenanceSavedTimes100ByCivic(eCivic);
 			}
@@ -15859,9 +15854,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		if (bPlayerContext)
 		{
 			CvWString szTempBuffer;
-			int iLoop;
 			int iSaved = 0;
-			for (CvCity *pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(GC.getGame().getActivePlayer()).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER(GC.getGame().getActivePlayer()).cities())
 			{
 				iSaved += pLoopCity->getOtherAreaMaintenanceSavedTimes100ByCivic(eCivic);
 			}
@@ -26820,8 +26814,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 					{
 						if (eBonus == GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonus(i))
 						{
-							int iLoop;
-							for (CvCity* pCity = kActivePlayer.firstCity(&iLoop); NULL != pCity; pCity = kActivePlayer.nextCity(&iLoop))
+							foreach_(const CvCity* pCity, kActivePlayer.cities())
 							{
 								if (pCity->isHasCorporation((CorporationTypes)iCorp))
 								{
@@ -26831,8 +26824,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 							}
 							if (bTradingPlayer)
 							{
-								int iLoop2;
-								for (CvCity* pCity = GET_PLAYER(eTradingPlayer).firstCity(&iLoop2); NULL != pCity; pCity = GET_PLAYER(eTradingPlayer).nextCity(&iLoop2))
+								foreach_(const CvCity* pCity, GET_PLAYER(eTradingPlayer).cities())
 								{
 									if (pCity->isHasCorporation((CorporationTypes)iCorp))
 									{
@@ -32976,9 +32968,8 @@ void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, 
 	{
 		iCounts[iI] = 0;
 	}
-	int iIter;
 	int iTotalSpecialists = 0;
-	for (CvCity* pCity = player.firstCity(&iIter); NULL != pCity; pCity = player.nextCity(&iIter))
+	foreach_(const CvCity* pCity, player.cities())
 	{
 		int iCityGold = 0;
 		if (!pCity->isDisorder())
@@ -33137,7 +33128,6 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 	{
 		return;
 	}
-	int iLoop;
 	int iBaseMaint = 0;
 	int iDistanceMaint = 0;
 	int iNumCityMaint = 0;
@@ -33151,7 +33141,7 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 
 	const bool bRebel = player.isRebel();
 
-	for (CvCity* pLoopCity = player.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = player.nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, player.cities())
 	{
 		iBaseMaint += iBase;
 
@@ -34709,8 +34699,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		{
 			if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == owner.getTeam())
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iJ).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iJ).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 				{
 					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 					{
@@ -35027,8 +35016,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			{
 				if (GET_PLAYER((PlayerTypes)j).getTeam() == owner.getTeam())
 				{
-					int iLoop;
-					for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)j).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)j).nextCity(&iLoop))
+					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)j).cities())
 					{
 						if (pLoopCity->getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)i))
 						{
