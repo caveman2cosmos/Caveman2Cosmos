@@ -2388,6 +2388,8 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
 
+		DECLARE_MAP_FUNCTOR(CvCity, int, getID);
+		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);
 		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
 		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
@@ -2404,10 +2406,12 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
 
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
 
 		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 	};

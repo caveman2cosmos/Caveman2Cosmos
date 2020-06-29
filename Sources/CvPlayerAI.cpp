@@ -1758,10 +1758,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 void CvPlayerAI::AI_makeAssignWorkDirty()
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->AI_setAssignWorkDirty(true);
 	}
@@ -1770,9 +1767,6 @@ void CvPlayerAI::AI_makeAssignWorkDirty()
 
 void CvPlayerAI::AI_assignWorkingPlots()
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
 /************************************************************************************************/
 /* Afforess					  Start		 6/22/11												*/
 /*																							  */
@@ -1788,8 +1782,7 @@ void CvPlayerAI::AI_assignWorkingPlots()
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->AI_assignWorkingPlots();
 	}
@@ -5309,8 +5302,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-	CvTechInfo& kTech = GC.getTechInfo(eTech);
-	int iLoop;
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
@@ -5381,7 +5373,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		{
 			if (GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() == eTech)
 			{
-				for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+				foreach_(const CvUnit* pLoopUnit, units())
 				{
 					if (pLoopUnit->isHasPromotion((PromotionTypes)iI))
 					{
@@ -13444,21 +13436,9 @@ int CvPlayerAI::AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitA
 
 int CvPlayerAI::AI_countCargoSpace(UnitAITypes eUnitAI) const
 {
-	CvUnit* pLoopUnit;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
-	{
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
-		{
-			iCount += pLoopUnit->cargoSpace();
-		}
-	}
-
-	return iCount;
+	return algo::accumulate(units()
+		| filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI)
+		| transformed(CvUnit::fn::cargoSpace()), 0);
 }
 
 
@@ -29535,9 +29515,8 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(const CvUnit *pUnit, const bool bN
 			&& pUnitPlot->isHasPathToPlayerCity(getTeam(), PlayerTypes(iI))
 			)
 		{
-			for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
+			foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 			{
-				CvCity* pLoopCity = *cityItr;
 				CvPlot* pLoopPlot = pLoopCity->plot();
 				if (pLoopCity->isInquisitionConditions()
 					&& (bNoUnit || pUnit->generatePath(pLoopPlot, 0, false))

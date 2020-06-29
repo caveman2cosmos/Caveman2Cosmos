@@ -1754,9 +1754,9 @@ bool CvDLLButtonPopup::launchDisbandCityPopup(CvPopup* pPopup, CvPopupInfo &info
 //ls612: City Goto in Viewports
 bool CvDLLButtonPopup::launchGoToCityPopup(CvPopup *pPopup, CvPopupInfo &info)
 {
-	CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
+	const CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_GOTO_CITY");
-	CvUnit* pUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 	if ( pUnit != NULL )
 	{
 		switch (pUnit->getDomainType())
@@ -1765,9 +1765,8 @@ bool CvDLLButtonPopup::launchGoToCityPopup(CvPopup *pPopup, CvPopupInfo &info)
 
 			gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, szBuffer);
 
-			int cityLoopIdx = 0;
 			int buttonId = 0;
-			for (CvCity* pCity = kPlayer.firstCity(&cityLoopIdx); pCity != NULL; pCity = kPlayer.nextCity(&cityLoopIdx))
+			foreach_(const CvCity* pCity, kPlayer.cities())
 			{
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText(pCity->getName()).c_str(), NULL, buttonId, WIDGET_CITY_GOTO, pCity->getID());
 				buttonId++;
@@ -1782,9 +1781,8 @@ bool CvDLLButtonPopup::launchGoToCityPopup(CvPopup *pPopup, CvPopupInfo &info)
 		case DOMAIN_SEA: {
 
 			gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, szBuffer);
-			int cityLoopIdx = 0;
 			int buttonId = 0;
-			for (CvCity* pCity = kPlayer.firstCity(&cityLoopIdx); pCity != NULL; pCity = kPlayer.nextCity(&cityLoopIdx))
+			foreach_(const CvCity* pCity, kPlayer.cities())
 			{
 				if (pCity->isCoastal(10))
 				{
@@ -2817,9 +2815,8 @@ bool CvDLLButtonPopup::launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info)
 			if (GET_PLAYER(ePlayer).canSplitArea(pLoopArea->getID()))
 			{
 				CvWString szCityList;
-				int iCityLoop;
 				int iNumCities = 0;
-				for (CvCity* pLoopCity = GET_PLAYER(ePlayer).firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(ePlayer).nextCity(&iCityLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER(ePlayer).cities())
 				{
 					if (pLoopCity->area()->getID() == pLoopArea->getID())
 					{

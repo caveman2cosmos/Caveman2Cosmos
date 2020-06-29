@@ -3589,10 +3589,9 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(PlayerTypes ePlayer, int iFlags
 
 	CvReachablePlotSet plotSet(this, iFlags, MAX_INT, false);
 
-	for (CvPlayer::city_iterator cityItr = GET_PLAYER(ePlayer).beginCities(); cityItr != GET_PLAYER(ePlayer).endCities(); ++cityItr)
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(ePlayer).cities())
 	{
-		const CvCity* pLoopCity = *cityItr;
-		if (pLoopCity && pLoopCity->area() == area() && plotSet.find(pLoopCity->plot()) != plotSet.end())
+		if (pLoopCity->area() == area() && plotSet.find(pLoopCity->plot()) != plotSet.end())
 		{
 			if ((iFlags & MOVE_IGNORE_DANGER) != 0 || getHeadUnit()->canAttack() || getHeadUnit()->isBlendIntoCity())
 			{

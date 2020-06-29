@@ -13172,19 +13172,15 @@ bool CvUnitAI::AI_shadow(UnitAITypes eUnitAI, int iMax, int iMaxRatio, bool bWit
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 
-	iBestValue = 0;
-	pBestUnit = NULL;
+	int iBestValue = 0;
+	CvUnit* pBestUnit = NULL;
 
-	DomainTypes domain = getDomainType();
+	const DomainTypes domain = getDomainType();
 
-	for(pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
+	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 	{
 		if (pLoopUnit != this)
 		{
@@ -16560,13 +16556,12 @@ bool CvUnitAI::AI_leadLegend()
 	FAssertMsg(!isHuman(), "AI_leadLegend shouldn't be called for human players");
 	FAssert(NO_PLAYER != getOwner());
 
-	CvPlayer& kOwner = GET_PLAYER(getOwner());
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
 	CvUnit* pBestUnit = NULL;
 	CvPlot* pBestPlot = NULL;
 	int iBestStrength = 0;
-	for (CvPlayer::unit_iterator itr = kOwner.beginUnits(); itr != kOwner.endUnits(); ++itr)
+	foreach_(CvUnit* pLoopUnit, kOwner.units())
 	{
-		CvUnit* pLoopUnit = *itr;
 		if (isLegendary(pLoopUnit)
 
 			&& canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0
@@ -16636,7 +16631,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 	FAssertMsg(AI_getUnitAIType() != NO_UNITAI, "AI_getUnitAIType() is not expected to be equal with NO_UNITAI");
 	FAssert(NO_PLAYER != getOwner());
 
-	CvPlayer& kOwner = GET_PLAYER(getOwner());
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
 
 	bool bNeedLeader = false;
 /************************************************************************************************/
@@ -16644,9 +16639,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 /*																				phungus420	*/
 /* Great People AI, Unit AI																	 */
 /************************************************************************************************/
-	int iLoop;
 	bool bBestUnitLegend = false;
-	CvUnit* pLoopUnit = NULL;
 
 	CvUnit* pBestUnit = NULL;
 	CvPlot* pBestPlot = NULL;
@@ -16658,13 +16651,11 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 	CvUnit* pBestHealUnit = NULL;
 	CvPlot* pBestHealPlot = NULL;
 
-
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		CvTeamAI& kLoopTeam = GET_TEAM((TeamTypes)iI);
 		if (isEnemy((TeamTypes)iI))
 		{
-			if (kLoopTeam.countNumUnitsByArea(area()) > 0)
+			if (GET_TEAM((TeamTypes)iI).countNumUnitsByArea(area()) > 0)
 			{
 				bNeedLeader = true;
 				break;
@@ -16677,85 +16668,80 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 		int iBestStrength = 0;
 		int iBestHealing = 0;
 		int iCombatStrength;
-		bool bValid;
-		bool bLegend;
 
-		for (pLoopUnit = kOwner.firstUnit(&iLoop); pLoopUnit; pLoopUnit = kOwner.nextUnit(&iLoop))
+		foreach_(CvUnit* pLoopUnit, kOwner.units())
 		{
-			if(pLoopUnit != NULL)
+			bool bValid = false;
+			bool bLegend = false;
+
+			if (GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() > 0
+			&& GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() < 7)
 			{
-				bValid = false;
-				bLegend = false;
-
-				if (GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() > 0
-				&& GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() < 7)
+				if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
 				{
-					if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
-					{
-						bValid = true;
-						bLegend = true;
-					}
+					bValid = true;
+					bLegend = true;
 				}
+			}
 
-				if( !bValid )
+			if( !bValid )
+			{
+				for (uint iI = 0; iI < aeUnitAITypes.size(); iI++)
 				{
-					for (uint iI = 0; iI < aeUnitAITypes.size(); iI++)
+					if (pLoopUnit->AI_getUnitAIType() == aeUnitAITypes[iI] || NO_UNITAI == aeUnitAITypes[iI])
 					{
-						if (pLoopUnit->AI_getUnitAIType() == aeUnitAITypes[iI] || NO_UNITAI == aeUnitAITypes[iI])
+						if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
 						{
-							if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
-							{
-								bValid = true;
-								break;
-							}
+							bValid = true;
+							break;
 						}
 					}
 				}
+			}
 
-				if( bValid )
+			if( bValid )
+			{
+				if (AI_plotValid(pLoopUnit->plot()))
 				{
-					if (AI_plotValid(pLoopUnit->plot()))
+					if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
 					{
-						if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
+						if( pLoopUnit->combatLimit() >= 100 )
 						{
-							if( pLoopUnit->combatLimit() >= 100 )
+							if (generatePath(pLoopUnit->plot(), MOVE_AVOID_ENEMY_WEIGHT_3, true))
 							{
-								if (generatePath(pLoopUnit->plot(), MOVE_AVOID_ENEMY_WEIGHT_3, true))
-								{
-									// pick the unit with the highest current strength
-									iCombatStrength = pLoopUnit->currCombatStr(NULL, NULL);
-									iCombatStrength *= 10 + (pLoopUnit->getExperience() * 2);
-									iCombatStrength /= 15;
+								// pick the unit with the highest current strength
+								iCombatStrength = pLoopUnit->currCombatStr(NULL, NULL);
+								iCombatStrength *= 10 + (pLoopUnit->getExperience() * 2);
+								iCombatStrength /= 15;
 
+								if(bLegend)
+								{
+									iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
+									iCombatStrength /= 3;
+								}
+
+								if (iCombatStrength > iBestStrength)
+								{
+									iBestStrength = iCombatStrength;
+									pBestStrUnit = pLoopUnit;
+									pBestStrPlot = getPathEndTurnPlot();
 									if(bLegend)
 									{
-										iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
-										iCombatStrength /= 3;
+										bBestUnitLegend = true;
 									}
-
-									if (iCombatStrength > iBestStrength)
+									else
 									{
-										iBestStrength = iCombatStrength;
-										pBestStrUnit = pLoopUnit;
-										pBestStrPlot = getPathEndTurnPlot();
-										if(bLegend)
-										{
-											bBestUnitLegend = true;
-										}
-										else
-										{
-											bBestUnitLegend = false;
-										}
+										bBestUnitLegend = false;
 									}
+								}
 
-									// or the unit with the best healing ability
-									int iHealing = pLoopUnit->getSameTileHeal() + (pLoopUnit->getHealUnitCombatCount()/2) + pLoopUnit->getAdjacentTileHeal();
-									if (iHealing > iBestHealing)
-									{
-										iBestHealing = iHealing;
-										pBestHealUnit = pLoopUnit;
-										pBestHealPlot = getPathEndTurnPlot();
-									}
+								// or the unit with the best healing ability
+								int iHealing = pLoopUnit->getSameTileHeal() + (pLoopUnit->getHealUnitCombatCount()/2) + pLoopUnit->getAdjacentTileHeal();
+								if (iHealing > iBestHealing)
+								{
+									iBestHealing = iHealing;
+									pBestHealUnit = pLoopUnit;
+									pBestHealPlot = getPathEndTurnPlot();
 								}
 							}
 						}
@@ -16957,12 +16943,11 @@ bool CvUnitAI::AI_scrapSubdued()
 
 	//	Count how many units of this type we have that couldn't find construction missions (by
 	//	implication of getting here no further units of this type could)
-	int iLoop;
 	int	iSurplass = 0;
 	//	Hold a suplasss of each type of up to 2 (inside our borders) or 1 (outside), boosted by 1 if we have less then 4 cities
 	int	iExtra = (plot()->getOwner() == getOwner() ? 2 : 1) + (GET_PLAYER(getOwner()).getNumCities() < 4 ? 1 : 0);
 
-	for (CvUnit* pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
+	foreach_(const CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 	{
 		if ( pLoopUnit->getUnitType() == getUnitType() && pLoopUnit->getGroup()->AI_getMissionAIType() != MISSIONAI_CONSTRUCT )
 		{
@@ -27600,9 +27585,8 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 
 	CvUnit* pBestUnit = NULL;
 	int iBestValue = 0;
-	int iLoop;
-	CvUnit* pLoopUnit;
-	for(pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
+
+	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 	{
 		if (!bStealthOnly || pLoopUnit->getInvisibleType() != NO_INVISIBLE)
 		{
