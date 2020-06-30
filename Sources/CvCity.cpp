@@ -24431,16 +24431,38 @@ void CvCity::recalculateModifiers()
 		}
 	}
 
+	bool bProcessValid = false;
+	bool bObsolete = false;
 	for (m_recalcBuilding = 0; m_recalcBuilding < GC.getNumBuildingInfos(); m_recalcBuilding++)
 	{
+		bProcessValid = false;
 		if (getNumRealBuilding((BuildingTypes)m_recalcBuilding) > 0)
 		{
-			// Process back the buildings we physically have. This will generate free buildings as it goes.
-			// Tech reprocessing will be called later which will re-obsolete those that need it.
-			processBuilding((BuildingTypes)m_recalcBuilding, 1);
+			bProcessValid = true;
+			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo((BuildingTypes)m_recalcBuilding).getObsoleteTech()))
+			{
+				bObsolete = true;
+			}
+			//Need to speed this up
+			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			{
+				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)m_recalcBuilding))
+				{
+					//If building is replaced
+					if (getNumBuilding((BuildingTypes)iJ) > 0)
+					{
+						bProcessValid = false;
+					}
+				}
+			}
+			if (bProcessValid)
+			{
+				// Process back the buildings we physically have. This will generate free buildings as it goes.
+				// Tech reprocessing will be called later which will re-obsolete those that need it.<TBNOTE: Not anymore - see above
+				processBuilding((BuildingTypes)m_recalcBuilding, 1, bObsolete);
+			}
 		}
 	}
-
 	//	After processing all buildings set the indicator that reprocessing is not in progress any more
 	m_recalcBuilding = MAX_INT;
 
