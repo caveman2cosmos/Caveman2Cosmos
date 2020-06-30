@@ -596,12 +596,11 @@ void CvGame::updateColoredPlots()
 
 			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 			{
-				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+				const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 
 				if (kPlayer.getTeam() == getActiveTeam())
 				{
-					int iLoop;
-					for (CvUnit* pLoopUnit = kPlayer.firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = kPlayer.nextUnit(&iLoop))
+					foreach_(const CvUnit* pLoopUnit, kPlayer.units())
 					{
 						if (pLoopUnit->isBlockading())
 						{
@@ -609,7 +608,7 @@ void CvGame::updateColoredPlots()
 							{
 								for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
 								{
-									CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX(), pLoopUnit->getY(), i, j);
+									const CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX(), pLoopUnit->getY(), i, j);
 									if (NULL != pLoopPlot && pLoopPlot->isRevealed(getActiveTeam(), false))
 									{
 										if (GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange)
@@ -1139,16 +1138,14 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 
 	if (bAlt)
 	{
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(pSelectCity->getOwner()).cities())
 		{
 			gDLL->getInterfaceIFace()->addSelectedCity(pLoopCity);
 		}
 	}
 	else if (bCtrl)
 	{
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(pSelectCity->getOwner()).cities())
 		{
 			if (pLoopCity->getArea() == pSelectCity->getArea())
 			{
@@ -1291,13 +1288,11 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 // BUG - All Units Actions - start
 				if ((iData2 == COMMAND_DELETE) && bAlt)
 				{
-					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
-					int iLoop;
 					pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 					pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-					UnitTypes kType = pSelectedUnit->getUnitType();
+					const UnitTypes kType = pSelectedUnit->getUnitType();
 
-					for (CvUnit* pLoopUnit = kPlayer.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kPlayer.nextUnit(&iLoop))
+					foreach_(const CvUnit* pLoopUnit, GET_PLAYER(pHeadSelectedUnit->getOwner()).units())
 					{
 						if (pLoopUnit->getUnitType() == kType)
 						{
@@ -2966,8 +2961,7 @@ void CvGame::initSelection() const
 	bool bSelected = false;
 	CvUnit* pSelectionUnit = NULL;
 
-	int iLoop;
-	for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
+	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getActivePlayer()).units())
 	{
 		if (pLoopUnit->getGroup()->readyToSelect())
 		{
@@ -2983,7 +2977,7 @@ void CvGame::initSelection() const
 
 	if (!bSelected)
 	{
-		for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
+		foreach_(CvUnit* pLoopUnit, GET_PLAYER(getActivePlayer()).units())
 		{
 			if (pLoopUnit->getGroup()->readyToSelect())
 			{
@@ -2998,6 +2992,7 @@ void CvGame::initSelection() const
 	if (!bSelected)
 	{
 		// Last resort
+		int iLoop;
 		pSelectionUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop);
 	}
 

@@ -2197,18 +2197,10 @@ int CvCity::findPopulationRank() const
 {
 	if (!m_bPopulationRankValid)
 	{
-		int iRank = 1;
-
-		int iLoop;
-		CvCity* pLoopCity;
-		for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
-		{
-			if ((pLoopCity->getPopulation() > getPopulation()) ||
-				((pLoopCity->getPopulation() == getPopulation()) && (pLoopCity->getID() < getID())))
-			{
-				iRank++;
-			}
-		}
+		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
+			CvCity::fn::getPopulation() > getPopulation()
+			|| (CvCity::fn::getPopulation() == getPopulation() && CvCity::fn::getID() < getID())
+		);
 
 		// shenanigans are to get around the const check
 		m_bPopulationRankValid = true;
@@ -2224,22 +2216,13 @@ int CvCity::findBaseYieldRateRank(YieldTypes eYield) const
 	if (!m_abBaseYieldRankValid[eYield])
 	{
 		//TB Traits begin
-		int iRate = getModifiedBaseYieldRate(eYield);
+		const int iRate = getModifiedBaseYieldRate(eYield);
 		//TB Traits end
 
-		int iRank = 1;
-
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
-		{
-			//TB Traits begin
-			if ((pLoopCity->getModifiedBaseYieldRate(eYield) > iRate) ||
-				((pLoopCity->getModifiedBaseYieldRate(eYield) == iRate) && (pLoopCity->getID() < getID())))
-				//TB Traits end
-			{
-				iRank++;
-			}
-		}
+		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
+			CvCity::fn::getModifiedBaseYieldRate(eYield) > iRate
+			|| (CvCity::fn::getModifiedBaseYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
+		);
 
 		m_abBaseYieldRankValid[eYield] = true;
 		m_aiBaseYieldRank[eYield] = iRank;
@@ -2253,25 +2236,18 @@ int CvCity::findYieldRateRank(YieldTypes eYield) const
 {
 	PROFILE_FUNC()
 
-		if (!m_abYieldRankValid[eYield])
-		{
-			int iRate = getYieldRate(eYield);
+	if (!m_abYieldRankValid[eYield])
+	{
+		const int iRate = getYieldRate(eYield);
 
-			int iRank = 1;
+		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
+			CvCity::fn::getYieldRate(eYield) > iRate
+			|| (CvCity::fn::getYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
+		);
 
-			int iLoop;
-			for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
-			{
-				if ((pLoopCity->getYieldRate(eYield) > iRate) ||
-					((pLoopCity->getYieldRate(eYield) == iRate) && (pLoopCity->getID() < getID())))
-				{
-					iRank++;
-				}
-			}
-
-			m_abYieldRankValid[eYield] = true;
-			m_aiYieldRank[eYield] = iRank;
-		}
+		m_abYieldRankValid[eYield] = true;
+		m_aiYieldRank[eYield] = iRank;
+	}
 
 	return m_aiYieldRank[eYield];
 }
@@ -2283,17 +2259,10 @@ int CvCity::findCommerceRateRank(CommerceTypes eCommerce) const
 	{
 		int iRate = getCommerceRateTimes100(eCommerce);
 
-		int iRank = 1;
-
-		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
-		{
-			if ((pLoopCity->getCommerceRateTimes100(eCommerce) > iRate) ||
-				((pLoopCity->getCommerceRateTimes100(eCommerce) == iRate) && (pLoopCity->getID() < getID())))
-			{
-				iRank++;
-			}
-		}
+		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
+			CvCity::fn::getCommerceRateTimes100(eCommerce) > iRate
+			|| (CvCity::fn::getCommerceRateTimes100(eCommerce) == iRate && CvCity::fn::getID() < getID())
+		);
 
 		m_abCommerceRankValid[eCommerce] = true;
 		m_aiCommerceRank[eCommerce] = iRank;
@@ -2307,11 +2276,11 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 {
 	PROFILE_FUNC();
 
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	CvPlayer& pPlayer = GET_PLAYER(getOwner());
-
 	if (!bTestVisible)
 	{
+		const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+		const CvPlayer& pPlayer = GET_PLAYER(getOwner());
+
 		if (kUnit.isStateReligion())
 		{
 			if (pPlayer.getStateReligion() != NO_RELIGION)
@@ -8814,8 +8783,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 
 	int iDistMaint = MAX_INT;
 	bool bFound = false;
-	int iLoop = 0;
-	for (CvCity* pLoopCity = kOwner.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kOwner.nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, kOwner.cities())
 	{
 		if (pLoopCity != this && pLoopCity->isGovernmentCenter())
 		{
@@ -16109,8 +16077,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam()
 							&& (GC.getBuildingInfo(eIndex).isTeamShare() || iI == getOwner()))
 							{
-								int iLoop = 0;
-								for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+								foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 								{
 									pLoopCity->setPopulation(std::max(1, (pLoopCity->getPopulation() + iChangeNumRealBuilding * GC.getBuildingInfo(eIndex).getGlobalPopulationChange())));
 									pLoopCity->AI_updateAssignWork();  // so subsequent cities don't starve with the extra citizen working nothing
@@ -17037,8 +17004,7 @@ void CvCity::updateTradeRoutes()
 		{
 			if (GET_PLAYER(getOwner()).canHaveTradeRoutesWith((PlayerTypes)iI))
 			{
-				int iLoop = 0;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if (pLoopCity != this)
 					{
@@ -18333,8 +18299,7 @@ void CvCity::doReligion()
 					{
 						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
 						{
-							int iLoop = 0;
-							for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iJ).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iJ).nextCity(&iLoop))
+							foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 							{
 								if (pLoopCity->isConnectedTo(this))
 								{
@@ -18387,8 +18352,7 @@ void CvCity::doReligion()
 							//more decay for each religion above 3
 							iDecay += 10 * (getReligionCount() - 3);
 
-							int iLoop = 0;
-							for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+							foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 							{
 								if (pLoopCity->isConnectedTo(this))
 								{
@@ -23458,8 +23422,7 @@ void CvCity::doCorporation()
 						CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iJ);
 						if (kPlayer.isAlive())
 						{
-							int iLoop = 0;
-							for (CvCity* pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+							foreach_(const CvCity* pLoopCity, kPlayer.cities())
 							{
 								if (pLoopCity->isConnectedTo(this))
 								{
@@ -23809,8 +23772,7 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int*& aiTradeYields) con
 		{
 			if (GET_PLAYER(getOwner()).canHaveTradeRoutesWith((PlayerTypes)iI))
 			{
-				int iLoop = 0;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if (pLoopCity != this)
 					{
@@ -24469,16 +24431,38 @@ void CvCity::recalculateModifiers()
 		}
 	}
 
+	bool bProcessValid = false;
+	bool bObsolete = false;
 	for (m_recalcBuilding = 0; m_recalcBuilding < GC.getNumBuildingInfos(); m_recalcBuilding++)
 	{
+		bProcessValid = false;
 		if (getNumRealBuilding((BuildingTypes)m_recalcBuilding) > 0)
 		{
-			// Process back the buildings we physically have. This will generate free buildings as it goes.
-			// Tech reprocessing will be called later which will re-obsolete those that need it.
-			processBuilding((BuildingTypes)m_recalcBuilding, 1);
+			bProcessValid = true;
+			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo((BuildingTypes)m_recalcBuilding).getObsoleteTech()))
+			{
+				bObsolete = true;
+			}
+			//Need to speed this up
+			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			{
+				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)m_recalcBuilding))
+				{
+					//If building is replaced
+					if (getNumBuilding((BuildingTypes)iJ) > 0)
+					{
+						bProcessValid = false;
+					}
+				}
+			}
+			if (bProcessValid)
+			{
+				// Process back the buildings we physically have. This will generate free buildings as it goes.
+				// Tech reprocessing will be called later which will re-obsolete those that need it.<TBNOTE: Not anymore - see above
+				processBuilding((BuildingTypes)m_recalcBuilding, 1, bObsolete);
+			}
 		}
 	}
-
 	//	After processing all buildings set the indicator that reprocessing is not in progress any more
 	m_recalcBuilding = MAX_INT;
 
