@@ -3637,13 +3637,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						{
 							if (pLoopPlot->area() == pPlot->area())
 							{
-								CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-								while (pUnitNode != NULL)
+								foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 								{
-									CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 									if (pLoopUnit->getTeam() == pDefender->getTeam())
 									{
 										if (pLoopUnit->isHurt())
@@ -3665,13 +3660,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= pDefender->getVictoryStackHeal())
 				{
 					bDefenderHealed = true;
-					CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(CvUnit* pLoopUnit, pPlot->units())
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 						if (pLoopUnit->getTeam() == pDefender->getTeam())
 						{
 							if (pLoopUnit->isHurt())
@@ -4057,13 +4048,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						{
 							if (pLoopPlot->area() == pPlot->area())
 							{
-								CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-								while (pUnitNode != NULL)
+								foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 								{
-									CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 									if (pLoopUnit->getTeam() == getTeam())
 									{
 										if (pLoopUnit->isHurt())
@@ -4085,13 +4071,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= getVictoryStackHeal())
 				{
 					bIsHealed = true;
-					CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(CvUnit* pLoopUnit, pPlot->units())
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 						if (pLoopUnit->getTeam() == getTeam())
 						{
 							if (pLoopUnit->isHurt())
@@ -6511,16 +6493,10 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				if (getDomainType() == DOMAIN_LAND && !pPlot->isWater() || getDomainType() == DOMAIN_SEA && pPlot->isWater() || getDomainType() == DOMAIN_AIR)
 				{
 					int iCount = 0;
-					CLLNode<IDInfo>* pUnitNode;
-					CvUnit* pLoopUnit;
 
 					//Check our current tile
-					pUnitNode = pPlot->headUnitNode();
-
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
 						if (pLoopUnit->getTeam() == getTeam())
 						{
 							//Ignore workers, Missionaries, etc...
@@ -7290,15 +7266,10 @@ void CvUnit::automate(AutomateTypes eAutomate)
 /*                                                                                              */
 /* Advanced Automations                                                                         */
 /************************************************************************************************/
-	CvUnit* pLoopUnit = NULL;
-	CLLNode<IDInfo>* pUnitNode = NULL;
 	if (eAutomate == AUTOMATE_UPGRADING || eAutomate == AUTOMATE_CANCEL_UPGRADING)
 	{
-		pUnitNode = getGroup()->headUnitNode();
-		while (pUnitNode != NULL)
+		foreach_(CvUnit* pLoopUnit, getGroup()->units())
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = getGroup()->nextUnitNode(pUnitNode);
 			pLoopUnit->setAutoUpgrading((eAutomate == AUTOMATE_UPGRADING));
 		}
 		if (IsSelected())
@@ -7309,11 +7280,8 @@ void CvUnit::automate(AutomateTypes eAutomate)
 	}
 	if (eAutomate == AUTOMATE_PROMOTIONS || eAutomate == AUTOMATE_CANCEL_PROMOTIONS)
 	{
-		pUnitNode = getGroup()->headUnitNode();
-		while (pUnitNode != NULL)
+		foreach_(CvUnit* pLoopUnit, getGroup()->units())
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = getGroup()->nextUnitNode(pUnitNode);
 			pLoopUnit->setAutoPromoting((eAutomate == AUTOMATE_PROMOTIONS));
 		}
 		if (IsSelected())
@@ -7702,12 +7670,8 @@ bool CvUnit::canLoad(const CvPlot* pPlot) const
 
 	FAssert(pPlot != NULL);
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (canLoadOntoUnit(pLoopUnit, pPlot))
 		{
 			return true;
@@ -7720,27 +7684,17 @@ bool CvUnit::canLoad(const CvPlot* pPlot) const
 
 void CvUnit::load()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pPlot;
-	int iPass;
-
 	if (!canLoad(plot()))
 	{
 		return;
 	}
 
-	pPlot = plot();
+	const CvPlot* pPlot = plot();
 
-	for (iPass = 0; iPass < 2; iPass++)
+	for (int iPass = 0; iPass < 2; iPass++)
 	{
-		pUnitNode = pPlot->headUnitNode();
-
-		while (pUnitNode != NULL)
+		foreach_(CvUnit* pLoopUnit, pPlot->units())
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 			if (canLoadOntoUnit(pLoopUnit, pPlot))
 			{
 				if ((iPass == 0) ? (pLoopUnit->getOwner() == getOwner()) : (pLoopUnit->getTeam() == getTeam()))
@@ -8121,9 +8075,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
 	CvCity* pCity;
-	CvUnit* pLoopUnit;
 	CvUnit* pHealUnit = NULL;
 	CvPlot* pLoopPlot;
 	int iTotalHeal;
@@ -8230,13 +8182,8 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 	// XXX optimize this (save it?)
 	iBestHeal = 0;
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 		{
 			iHeal = pLoopUnit->getSameTileHeal();
@@ -8261,13 +8208,8 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		{
 			if (pLoopPlot->area() == pPlot->area())
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
-
-				while (pUnitNode != NULL)
+				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 					{
 						iHeal = pLoopUnit->getAdjacentTileHeal();
@@ -8311,9 +8253,7 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
 	CvCity* pCity;
-	CvUnit* pLoopUnit;
 	CvUnit* pHealUnit = NULL;
 	CvPlot* pLoopPlot;
 	int iTotalHeal;
@@ -8381,13 +8321,8 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 	// XXX optimize this (save it?)
 	iBestHeal = 0;
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 		{
 			iHeal = pLoopUnit->getSameTileHeal();
@@ -8413,13 +8348,8 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 		{
 			if (pLoopPlot->area() == pPlot->area())
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
-
-				while (pUnitNode != NULL)
+				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 					{
 						iHeal = pLoopUnit->getAdjacentTileHeal();
@@ -9493,13 +9423,8 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 			if (m_pUnitInfo->getDCMAirBomb4())
 			{
 				int iCount = 0;
-				CvUnit* pUnit = NULL;
-				CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-				CvUnit* pLoopUnit;
-				while (pUnitNode != NULL)
+				foreach_(const CvUnit* pLoopUnit, pPlot->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pPlot->nextUnitNode(pUnitNode);
 					if (pLoopUnit->getDomainType() == DOMAIN_SEA && atWar(pLoopUnit->getTeam(), getTeam()))
 					{
 						iCount++;
@@ -9577,8 +9502,6 @@ bool CvUnit::airBomb(int iX, int iY)
 	iMis0 = iMis1 = iMis2 = iMis3 = iMis4 = iMis5 = 0;
 	int iI, iCount = 0;
 	CvUnit* pUnit = NULL;
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	// ! Dale
 
@@ -9657,19 +9580,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				if (m_pUnitInfo->getDCMAirBomb4())
 				{
 					iMis4 = 10;
-					iCount = 0;
-					pUnit = NULL;
-					pUnitNode = pPlot->headUnitNode();
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-						if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-						{
-							iCount++;
-						}
-					}
-					if (iCount > 0)
+					if (algo::any_of(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA))
 					{
 						airBomb4(iX, iY);
 					}
@@ -9709,17 +9620,7 @@ bool CvUnit::airBomb(int iX, int iY)
 							pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
 							if (pLoopPlot != NULL)
 							{
-								pUnit = NULL;
-								pUnitNode = pPlot->headUnitNode();
-								while (pUnitNode != NULL)
-								{
-									pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pPlot->nextUnitNode(pUnitNode);
-									if (pLoopUnit->getOwner() == getOwner())
-									{
-										iCount++;
-									}
-								}
+								iCount += algo::count_if(pLoopPlot->units(), CvUnit::fn::getOwner() == getOwner());
 							}
 						}
 					}
@@ -9759,20 +9660,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				}
 				if (m_pUnitInfo->getDCMAirBomb4())
 				{
-					iMis4 = 10;
-					iCount = 0;
-					pUnit = NULL;
-					pUnitNode = pPlot->headUnitNode();
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-						if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-						{
-							iCount++;
-						}
-					}
-					iMis4 *= (iCount * 4);
+					iMis4 = 10 * (algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA) * 4);
 				}
 				if (m_pUnitInfo->getDCMAirBomb5())
 				{
@@ -13240,13 +13128,9 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 
 	if (-1 == iUnitId)
 	{
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-		while(pUnitNode != NULL)
+		foreach_(const CvUnit* pUnit, pPlot->units())
 		{
-			CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-			if (pUnit && pUnit != this &&
+			if (pUnit != this &&
 				pUnit->getOwner() == getOwner() &&
 				!pUnit->isTrap() &&
 				!pUnit->isCommander() &&
@@ -13258,7 +13142,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	}
 	else
 	{
-		CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
+		const CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
 		if (pUnit && pUnit != this &&
 			!pUnit->isTrap() &&
 			pUnit->canPromote((PromotionTypes)kUnitInfo.getLeaderPromotion(), getID()))
@@ -13276,13 +13160,9 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 
 	if (NO_UNIT != getUnitType() && m_pUnitInfo->getLeaderExperience() > 0)
 	{
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-		while(pUnitNode != NULL)
+		foreach_(const CvUnit* pUnit, pPlot->units())
 		{
-			CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-			if (pUnit && pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
+			if (pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
 			{
 /************************************************************************************************/
 /* Afforess	                  Start		 03/30/10                                               */
@@ -13306,7 +13186,7 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 
 bool CvUnit::giveExperience()
 {
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 
 	if (pPlot)
 	{
@@ -13318,14 +13198,10 @@ bool CvUnit::giveExperience()
 			int iMinExperiencePerUnit = iTotalExperience / iNumUnits;
 			int iRemainder = iTotalExperience % iNumUnits;
 
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 			int i = 0;
-			while(pUnitNode != NULL)
+			foreach_(CvUnit* pUnit, pPlot->units())
 			{
-				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-				if (pUnit && pUnit != this &&
+				if (pUnit != this &&
 					pUnit->getOwner() == getOwner() &&
 					!pUnit->isTrap() &&
 					!pUnit->isCommander() &&
@@ -13561,7 +13437,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		return NULL;
 	}
-	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
 	//The following checks to make sure that the upgrade won't make it impossible for a ship to hold
 	//the cargo it already does.
@@ -13577,12 +13453,8 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 
-	CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode();
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, plot()->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = plot()->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTransportUnit() == this)
 		{
 			if (isHuman() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -16033,36 +15905,23 @@ CvUnit* CvUnit::bestSeaPillageInterceptor(CvUnit* pPillager, int iMinOdds) const
 
 			if (NULL != pLoopPlot)
 			{
-				CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-				while (NULL != pUnitNode)
+				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-					if (NULL != pLoopUnit)
+					if (pLoopUnit->area() == pPillager->plot()->area())
 					{
-						if (pLoopUnit->area() == pPillager->plot()->area())
+						if (!pLoopUnit->isInvisible(getTeam(), false))
 						{
-							if (!pLoopUnit->isInvisible(getTeam(), false))
+							if (isEnemy(pLoopUnit->getTeam()))
 							{
-								if (isEnemy(pLoopUnit->getTeam()))
+								if (DOMAIN_SEA == pLoopUnit->getDomainType())
 								{
-									if (DOMAIN_SEA == pLoopUnit->getDomainType())
+									if (ACTIVITY_PATROL == pLoopUnit->getGroup()->getActivityType())
 									{
-										if (ACTIVITY_PATROL == pLoopUnit->getGroup()->getActivityType())
+										if (NULL == pBestUnit || pLoopUnit->isBetterDefenderThan(pBestUnit, this, &pBestUnitRank))
 										{
-											// UncutDragon
-/* original code
-											if (NULL == pBestUnit || pLoopUnit->isBetterDefenderThan(pBestUnit, this))
-*/											// modified (added extra parameter)
-											if (NULL == pBestUnit || pLoopUnit->isBetterDefenderThan(pBestUnit, this, &pBestUnitRank))
-											// /UncutDragon
+											if (getCombatOdds(pPillager, pLoopUnit) < iMinOdds)
 											{
-												if (getCombatOdds(pPillager, pLoopUnit) < iMinOdds)
-												{
-													pBestUnit = pLoopUnit;
-												}
+												pBestUnit = pLoopUnit;
 											}
 										}
 									}
@@ -17282,55 +17141,19 @@ bool CvUnit::hasCargo() const
 
 bool CvUnit::canCargoAllMove() const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pPlot;
-
-	pPlot = plot();
-
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-		if (pLoopUnit->getTransportUnit() == this)
-		{
-			if (pLoopUnit->getDomainType() == DOMAIN_LAND)
-			{
-				if (!(pLoopUnit->canMove()))
-				{
-					return false;
-				}
-			}
-		}
-	}
-
-	return true;
+	return algo::none_of(plot()->units(),
+		CvUnit::fn::getTransportUnit() == this &&
+		CvUnit::fn::getDomainType() == DOMAIN_LAND &&
+		!CvUnit::fn::canMove()
+	);
 }
 
 bool CvUnit::canCargoEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const
 {
-	CvPlot* pPlot = plot();
-
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-		if (pLoopUnit->getTransportUnit() == this)
-		{
-			if (!pLoopUnit->canEnterArea(eTeam, pArea, bIgnoreRightOfPassage))
-			{
-				return false;
-			}
-		}
-	}
-
-	return true;
+	return algo::none_of(plot()->units(),
+		CvUnit::fn::getTransportUnit() == this &&
+		!CvUnit::fn::canEnterArea(eTeam, pArea, bIgnoreRightOfPassage)
+	);
 }
 
 int CvUnit::getUnitAICargo(UnitAITypes eUnitAI) const
@@ -18995,12 +18818,8 @@ void CvUnit::getCargoUnits(std::vector<CvUnit*>& aUnits) const
 
 	if (hasCargo())
 	{
-		CvPlot* pPlot = plot();
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-		while (pUnitNode != NULL)
+		foreach_(CvUnit* pLoopUnit, plot()->units())
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 			if (pLoopUnit->getTransportUnit() == this)
 			{
 				aUnits.push_back(pLoopUnit);
@@ -19025,15 +18844,12 @@ void CvUnit::validateCargoUnits()
 #if FASSERT_ENABLE
 	int iCheck = 0;
 	int iCount = 0;
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 
 	if (hasCargo())
 	{
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-		while (pUnitNode != NULL)
+		foreach_(const CvUnit* pLoopUnit, pPlot->units())
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 			if (pLoopUnit->getTransportUnit() == this)
 			{
 				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -19057,24 +18873,18 @@ void CvUnit::validateCargoUnits()
 		{
 			FErrorMsg("Load Volume is incorrect");
 			m_iSMCargo = 0;
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pPlot->units())
 			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
 				if (pLoopUnit->getTransportUnit() == this)
 				{
 					SMchangeCargo(pLoopUnit->SMCargoVolume());
 				}
 			}
 			//rerun check
-			pUnitNode = pPlot->headUnitNode();
 			iCheck = 0;
 			iCount = 0;
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pPlot->units())
 			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
 				if (pLoopUnit->getTransportUnit() == this)
 				{
 					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -28264,8 +28074,6 @@ bool CvUnit::canAdvance(const CvPlot* pPlot, int iThreshold) const
 
 void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvWString szBuffer;
 	int iTheirStrength;
@@ -28291,13 +28099,8 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 
 	iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(this) - 1), collateralDamageMaxUnits());
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit != pSkipUnit)
 		{
 			if (isEnemy(pLoopUnit->getTeam(), pPlot, pLoopUnit))
@@ -28433,8 +28236,6 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 
 void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit = NULL;
 	CvCity* pCity = pPlot->getPlotCity();
 	CvWString szBuffer;
@@ -28486,13 +28287,8 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 		}
 	}
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->isEnemy(getTeam(), pPlot, this))
 		{
 			if (!(pLoopUnit->isInvisible(getTeam(), false)))
@@ -28684,14 +28480,9 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 		return;
 	}
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
 	std::vector< std::pair<CvUnit*, int> > listFlankedUnits;
-	while (NULL != pUnitNode)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit != pSkipUnit)
 		{
 			if (!pLoopUnit->isDead() && isEnemy(pLoopUnit->getTeam(), pPlot, pLoopUnit))
@@ -30187,8 +29978,6 @@ bool CvUnit::airBomb1(int iX, int iY)
 
 				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
 
-				CvUnit* pLoopUnit;
-				CLLNode<IDInfo>* pUnitNode;
 				//Afflict
 				int iDistanceAttackCommunicability = 0;
 				bool bAffliction = false;
@@ -30206,11 +29995,8 @@ bool CvUnit::airBomb1(int iX, int iY)
 							if (bDistAttComm || bAffonAtt)
 							{
 								bAffliction = true;
-								pUnitNode = pPlot->headUnitNode();
-								while (pUnitNode != NULL)
+								foreach_(CvUnit* pLoopUnit, pPlot->units())
 								{
-									pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pPlot->nextUnitNode(pUnitNode);
 									if (bDistAttComm && pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
 									{
 										pLoopUnit->afflict(eAfflictionLine);
@@ -30403,8 +30189,6 @@ bool CvUnit::airBomb2(int iX, int iY)
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, CvColorInfo::green(), pCity->getX(), pCity->getY(), true, true);
 				}
 
-				CvUnit* pLoopUnit;
-				CLLNode<IDInfo>* pUnitNode;
 				//Afflict
 				int iDistanceAttackCommunicability = 0;
 				bool bAffliction = false;
@@ -30422,11 +30206,8 @@ bool CvUnit::airBomb2(int iX, int iY)
 							if (bDistAttComm || bAffonAtt)
 							{
 								bAffliction = true;
-								pUnitNode = pPlot->headUnitNode();
-								while (pUnitNode != NULL)
+								foreach_(CvUnit* pLoopUnit, pPlot->units())
 								{
-									pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pPlot->nextUnitNode(pUnitNode);
 									if (bDistAttComm)
 									{
 										if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
@@ -30693,8 +30474,6 @@ bool CvUnit::airBomb3(int iX, int iY)
 
 	if (bSuccess)
 	{
-		CvUnit* pLoopUnit;
-		CLLNode<IDInfo>* pUnitNode;
 		//Afflict
 		int iDistanceAttackCommunicability = 0;
 		bool bAffliction = false;
@@ -30712,11 +30491,8 @@ bool CvUnit::airBomb3(int iX, int iY)
 					if (bDistAttComm || bAffonAtt)
 					{
 						bAffliction = true;
-						pUnitNode = pPlot->headUnitNode();
-						while (pUnitNode != NULL)
+						foreach_(CvUnit* pLoopUnit, pPlot->units())
 						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pPlot->nextUnitNode(pUnitNode);
 							if (bDistAttComm)
 							{
 								if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
@@ -30839,8 +30615,6 @@ bool CvUnit::airBomb4(int iX, int iY)
 	CvUnit* pUnit;
 	CvPlot* pPlot;
 	CvWString szBuffer;
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	bool bSuccess = false;
 	int iDamage, iCount;
 	int iUnitDamage;
@@ -30866,23 +30640,12 @@ bool CvUnit::airBomb4(int iX, int iY)
 /* RevolutionDCM	             Battle Effects END                                             */
 /************************************************************************************************/
 	pCity = pPlot->getPlotCity();
-	iCount = 0;
-	pUnit = NULL;
-	pUnitNode = pPlot->headUnitNode();
-	while (pUnitNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-		if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-		{
-			iCount++;
-		}
-	}
+	iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
 	iCount = (GC.getGame().getSorenRandNum(iCount, "Choose ship") + 1);
-	pUnitNode = pPlot->headUnitNode();
+	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 	while (iCount > 0)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->getDomainType() == DOMAIN_SEA)
 		{
@@ -30968,8 +30731,6 @@ bool CvUnit::airBomb4(int iX, int iY)
 	changeMoves(GC.getMOVE_DENOMINATOR());
 	if (bSuccess)
 	{
-		CvUnit* pLoopUnit;
-		CLLNode<IDInfo>* pUnitNode;
 		//Afflict
 		int iDistanceAttackCommunicability = 0;
 		bool bAffliction = false;
@@ -30987,11 +30748,8 @@ bool CvUnit::airBomb4(int iX, int iY)
 					if (bDistAttComm || bAffonAtt)
 					{
 						bAffliction = true;
-						pUnitNode = pPlot->headUnitNode();
-						while (pUnitNode != NULL)
+						foreach_(CvUnit* pLoopUnit, pPlot->units())
 						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pPlot->nextUnitNode(pUnitNode);
 							if (bDistAttComm)
 							{
 								if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
@@ -31158,8 +30916,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 	changeMoves(GC.getMOVE_DENOMINATOR());
 	if (bSuccess)
 	{
-		CvUnit* pLoopUnit;
-		CLLNode<IDInfo>* pUnitNode;
 		//Afflict
 		int iDistanceAttackCommunicability = 0;
 		bool bAffliction = false;
@@ -31177,11 +30933,8 @@ bool CvUnit::airBomb5(int iX, int iY)
 					if (bDistAttComm || bAffonAtt)
 					{
 						bAffliction = true;
-						pUnitNode = pPlot->headUnitNode();
-						while (pUnitNode != NULL)
+						foreach_(CvUnit* pLoopUnit, pPlot->units())
 						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pPlot->nextUnitNode(pUnitNode);
 							if (bDistAttComm)
 							{
 								if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
@@ -31800,8 +31553,6 @@ void CvUnit::doActiveDefense()
 				}
 				if (bSuccess)
 				{
-					CvUnit* pLoopUnit;
-					CLLNode<IDInfo>* pUnitNode;
 					//Afflict
 					int iDistanceAttackCommunicability = 0;
 					bool bAffliction = false;
@@ -31819,11 +31570,8 @@ void CvUnit::doActiveDefense()
 								if (bDistAttComm || bAffonAtt)
 								{
 									bAffliction = true;
-									pUnitNode = pLoopPlot->headUnitNode();
-									while (pUnitNode != NULL)
+									foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 									{
-										pLoopUnit = ::getUnit(pUnitNode->m_data);
-										pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
 										if (bDistAttComm)
 										{
 											if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
@@ -33101,21 +32849,15 @@ int CvUnit::surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefend
 
 		if ((pLoopPlot != NULL) && (pLoopPlot->isWater() == pPlot->isWater()) && (iI != dtDirectionAttacker))
 		{
-			CLLNode<IDInfo>* pUnitNode;
-			CvUnit* pLoopUnit;
 			CvUnit* pBestUnit;
 			int iBestCurrCombatStr, iLowestCurrCombatStr;
 
 			pBestUnit = NULL;
 			iBestCurrCombatStr = 0;
 			iLowestCurrCombatStr = INT_MAX;
-			pUnitNode = pLoopPlot->headUnitNode();
 
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->getTeam() == getTeam())
 				{
 					//TB Combat Mods (Enclose) Begin
@@ -34551,7 +34293,7 @@ bool CvUnit::isPromotionOverriden(PromotionTypes ePromotionType) const
 	return false;
 }
 
-bool CvUnit::canCure(CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const
+bool CvUnit::canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
@@ -34560,16 +34302,9 @@ bool CvUnit::canCure(CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const
 
 	if (hasCureAfflictionType(eAfflictionLine))
 	{
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
-
 		//Check our current tile
-		pUnitNode = pPlot->headUnitNode();
-
-		while (pUnitNode != NULL)
+		foreach_(const CvUnit* pLoopUnit, pPlot->units())
 		{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 			if (pLoopUnit->getTeam() == getTeam())
 			{
 				if (pLoopUnit->hasAfflictionLine(eAfflictionLine))
@@ -34584,28 +34319,16 @@ bool CvUnit::canCure(CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const
 
 bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 {
-	CvPlot* pPlot;
-	CLLNode<IDInfo>* pUnitNode;
-	CvWString szBuffer;
-	pPlot = plot();
-
-	//Check our current tile
-	pUnitNode = pPlot->headUnitNode();
+	const CvPlot* pPlot = plot();
 
 	if (!canCure(pPlot, eAfflictionLine))
 	{
 		return false;
 	}
 
-	CvUnit* pLoopUnit;
-
 	//Check our current tile
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->getTeam() == getTeam())
 		{
 			if (pLoopUnit->hasAfflictionLine(eAfflictionLine))
@@ -34673,23 +34396,18 @@ int CvUnit::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 {
 	int iWorstCommunicability = 0;
 	int iCommunicability = 0;
-	CvUnit* pLoopUnit = NULL;
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
 		return 0;
 	}
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-	int iBaseCommunicability = GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
 	if (!GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadUnitProximity())
 	{
-		while (pUnitNode != NULL)
+		const int iBaseCommunicability = GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
+		foreach_(const CvUnit* pLoopUnit, pPlot->units())
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-			if (pLoopUnit != NULL && pLoopUnit != this && pLoopUnit->hasAfflictionLine(eAfflictionLine))
+			if (pLoopUnit != this && pLoopUnit->hasAfflictionLine(eAfflictionLine))
 			{
 				iCommunicability = iBaseCommunicability;
 				iCommunicability += pLoopUnit->worsenedProbabilitytoAfflict(eAfflictionLine);
@@ -34788,16 +34506,9 @@ int CvUnit::aidVolume(const CvPlot* pPlot, PropertyTypes eProperty) const
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvCity* pCity;
-	CvUnit* pLoopUnit;
-	int iTotalAid;
-	int iAid;
-	int iBestAid;
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	pCity = pPlot->getPlotCity();
-
-	iTotalAid = 0;
+	int iTotalAid = 0;
 
 	if (pPlot->isCity(true, getTeam()))
 	{
@@ -34807,18 +34518,13 @@ int CvUnit::aidVolume(const CvPlot* pPlot, PropertyTypes eProperty) const
 		}
 	}
 
-	iBestAid = 0;
+	int iBestAid = 0;
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTeam() == getTeam())
 		{
-			iAid = pLoopUnit->aidTotal(eProperty);
+			const int iAid = pLoopUnit->aidTotal(eProperty);
 
 			if (iAid > iBestAid)
 			{
@@ -35408,8 +35114,6 @@ int CvUnit::getAttackerFirstFrontSupportValue(const CvPlot* aPlot, const CvPlot*
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35419,12 +35123,8 @@ int CvUnit::getAttackerFirstFrontSupportValue(const CvPlot* aPlot, const CvPlot*
 
 	int iFrontSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35474,8 +35174,6 @@ int CvUnit::getAttackerSecondFrontSupportValue(const CvPlot* aPlot, const CvPlot
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35485,12 +35183,8 @@ int CvUnit::getAttackerSecondFrontSupportValue(const CvPlot* aPlot, const CvPlot
 
 	int iFrontSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35541,8 +35235,6 @@ int CvUnit::getAttackerFirstShortRangeSupportValue(const CvPlot* aPlot, const Cv
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35552,12 +35244,8 @@ int CvUnit::getAttackerFirstShortRangeSupportValue(const CvPlot* aPlot, const Cv
 
 	int iShortRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35608,8 +35296,6 @@ int CvUnit::getAttackerSecondShortRangeSupportValue(const CvPlot* aPlot, const C
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35619,12 +35305,8 @@ int CvUnit::getAttackerSecondShortRangeSupportValue(const CvPlot* aPlot, const C
 
 	int iShortRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35675,8 +35357,6 @@ int CvUnit::getAttackerFirstMediumRangeSupportValue(const CvPlot* aPlot, const C
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35686,12 +35366,8 @@ int CvUnit::getAttackerFirstMediumRangeSupportValue(const CvPlot* aPlot, const C
 
 	int iMediumRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35742,8 +35418,6 @@ int CvUnit::getAttackerSecondMediumRangeSupportValue(const CvPlot* aPlot, const 
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35753,12 +35427,8 @@ int CvUnit::getAttackerSecondMediumRangeSupportValue(const CvPlot* aPlot, const 
 
 	int iMediumRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35809,8 +35479,6 @@ int CvUnit::getAttackerFirstLongRangeSupportValue(const CvPlot* aPlot, const CvP
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35820,12 +35488,8 @@ int CvUnit::getAttackerFirstLongRangeSupportValue(const CvPlot* aPlot, const CvP
 
 	int iLongRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35876,8 +35540,6 @@ int CvUnit::getAttackerSecondLongRangeSupportValue(const CvPlot* aPlot, const Cv
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35887,12 +35549,8 @@ int CvUnit::getAttackerSecondLongRangeSupportValue(const CvPlot* aPlot, const Cv
 
 	int iLongRangeSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -35943,8 +35601,6 @@ int CvUnit::getAttackerFirstFlankSupportValue(const CvPlot* aPlot, const CvPlot*
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -35954,12 +35610,8 @@ int CvUnit::getAttackerFirstFlankSupportValue(const CvPlot* aPlot, const CvPlot*
 
 	int iFlankSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -36010,8 +35662,6 @@ int CvUnit::getAttackerSecondFlankSupportValue(const CvPlot* aPlot, const CvPlot
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	CvUnit* pAttacker;
 
@@ -36021,12 +35671,8 @@ int CvUnit::getAttackerSecondFlankSupportValue(const CvPlot* aPlot, const CvPlot
 
 	int iFlankSupportPercent = 0;
 
-	pUnitNode = aPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, aPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = aPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isAttacking())
 		{
 			pAttacker = pLoopUnit;
@@ -36202,7 +35848,6 @@ int CvUnit::getDefenderFirstFrontSupportValue(const CvUnit* pAttacker, const CvP
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36211,12 +35856,8 @@ int CvUnit::getDefenderFirstFrontSupportValue(const CvUnit* pAttacker, const CvP
 
 	int iFrontSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36248,7 +35889,6 @@ int CvUnit::getDefenderSecondFrontSupportValue(const CvUnit* pAttacker, const Cv
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36257,12 +35897,8 @@ int CvUnit::getDefenderSecondFrontSupportValue(const CvUnit* pAttacker, const Cv
 
 	int iFrontSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36295,7 +35931,6 @@ int CvUnit::getDefenderFirstShortRangeSupportValue(const CvUnit* pAttacker, cons
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36304,12 +35939,8 @@ int CvUnit::getDefenderFirstShortRangeSupportValue(const CvUnit* pAttacker, cons
 
 	int iShortRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36342,7 +35973,6 @@ int CvUnit::getDefenderSecondShortRangeSupportValue(const CvUnit* pAttacker, con
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36351,12 +35981,8 @@ int CvUnit::getDefenderSecondShortRangeSupportValue(const CvUnit* pAttacker, con
 
 	int iShortRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36389,7 +36015,6 @@ int CvUnit::getDefenderFirstMediumRangeSupportValue(const CvUnit* pAttacker, con
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36398,12 +36023,8 @@ int CvUnit::getDefenderFirstMediumRangeSupportValue(const CvUnit* pAttacker, con
 
 	int iMediumRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36436,7 +36057,6 @@ int CvUnit::getDefenderSecondMediumRangeSupportValue(const CvUnit* pAttacker, co
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36445,12 +36065,8 @@ int CvUnit::getDefenderSecondMediumRangeSupportValue(const CvUnit* pAttacker, co
 
 	int iMediumRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36483,7 +36099,6 @@ int CvUnit::getDefenderFirstLongRangeSupportValue(const CvUnit* pAttacker, const
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36492,12 +36107,8 @@ int CvUnit::getDefenderFirstLongRangeSupportValue(const CvUnit* pAttacker, const
 
 	int iLongRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36530,7 +36141,6 @@ int CvUnit::getDefenderSecondLongRangeSupportValue(const CvUnit* pAttacker, cons
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36539,12 +36149,8 @@ int CvUnit::getDefenderSecondLongRangeSupportValue(const CvUnit* pAttacker, cons
 
 	int iLongRangeSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36577,7 +36183,6 @@ int CvUnit::getDefenderFirstFlankSupportValue(const CvUnit* pAttacker, const CvP
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36586,12 +36191,8 @@ int CvUnit::getDefenderFirstFlankSupportValue(const CvUnit* pAttacker, const CvP
 
 	int iFlankSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -36624,7 +36225,6 @@ int CvUnit::getDefenderSecondFlankSupportValue(const CvUnit* pAttacker, const Cv
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit = NULL;
 	CvUnit* pBestUnit = NULL;
 	CvUnit* pDefender = NULL;
 
@@ -36633,12 +36233,8 @@ int CvUnit::getDefenderSecondFlankSupportValue(const CvUnit* pAttacker, const Cv
 
 	int iFlankSupportPercent = 0;
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();;
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		if (pLoopUnit->isDefending())
 		{
 			pDefender = pLoopUnit;
@@ -44360,17 +43956,12 @@ void CvUnit::doArrest()
 	else
 	{
 		const CvPlot* pPlot = plot();
-		CvUnit* pLoopUnit;
-		int iBestOdds = 0;
-		CvUnit* pBestUnit = NULL;
 		if (pPlot != NULL)
 		{
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-			while (pUnitNode != NULL)
+			int iBestOdds = 0;
+			CvUnit* pBestUnit = NULL;
+			foreach_(CvUnit* pLoopUnit, pPlot->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->isWanted())
 				{
 					if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
@@ -44387,20 +43978,18 @@ void CvUnit::doArrest()
 					}
 				}
 			}
-		}
-		if (pBestUnit != NULL)
-		{
-			attackSamePlotSpecifiedUnit(pBestUnit);
+			if (pBestUnit != NULL)
+			{
+				attackSamePlotSpecifiedUnit(pBestUnit);
+			}
 		}
 
 		GET_PLAYER(getOwner()).setArrestingUnit(FFreeList::INVALID_INDEX);
 	}
 }
 
-bool CvUnit::canAmbush(CvPlot* pPlot, bool bAssassinate) const
+bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 {
-	/*CvUnit* pLoopUnit;*/
-
 	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return false;
@@ -44415,8 +44004,6 @@ bool CvUnit::canAmbush(CvPlot* pPlot, bool bAssassinate) const
 	{
 		return false;
 	}
-
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
 	if (isCargo())
 	{
@@ -44440,18 +44027,15 @@ bool CvUnit::canAmbush(CvPlot* pPlot, bool bAssassinate) const
 
 	if (isBlitz() || !isMadeAttack())
 	{
-		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
+		const CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 		if (pDefender != NULL)
 		{
 			return true;
 		}
 		//if (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this))
 		//{
-		//	while (pUnitNode != NULL)
+		//	foreach_(CvUnit* pLoopUnit, pPlot->units())
 		//	{
-		//		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		//		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		//		if (bAssassinate && !pLoopUnit->isTargetOf(*this))
 		//		{
 		//			continue;
