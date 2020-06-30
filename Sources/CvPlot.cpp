@@ -1714,11 +1714,9 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 		return false;
 	}
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+		if (pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
 		{
 			return true;
 		}
@@ -1740,11 +1738,9 @@ bool CvPlot::isCoastal(int iMinWaterSize) const
 		return isAdjacentToLand();
 	}
 	// Coastal Land
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+		if (pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
 		{
 			return true;
 		}
@@ -4045,50 +4041,19 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 	{
 		bool bPlotIsWater = isWater();
 		// This loop is for water
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		foreach_(const CvPlot* pAdjacentPlot, adjacent())
 		{
-			pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-			if(pAdjacentPlot != NULL)
+			if(pAdjacentPlot->isWater())
 			{
-				if(pAdjacentPlot->isWater())
+				// Don't count diagonal hops across land isthmus
+				if (bPlotIsWater && !isCardinalDirection((DirectionTypes)iI))
 				{
-					// Don't count diagonal hops across land isthmus
-					if (bPlotIsWater && !isCardinalDirection((DirectionTypes)iI))
+					if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
 					{
-						if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
-						{
-							continue;
-						}
-					}
-					if(pAdjacentPlot->isImpassable())
-					{
-						if(isCardinalDirection((DirectionTypes)iI))
-						{
-							bInPassableSection = false;
-						}
-					}
-					else if(!bInPassableSection)
-					{
-						bInPassableSection = true;
-						++iPassableSections;
+						continue;
 					}
 				}
-				else
-				{
-					bInPassableSection = false;
-				}
-			}
-		}
-	}
-	else
-	{
-		// This loop is for land
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-			if(pAdjacentPlot != NULL)
-			{
-				if(pAdjacentPlot->isWater() || pAdjacentPlot->isImpassable())
+				if(pAdjacentPlot->isImpassable())
 				{
 					if(isCardinalDirection((DirectionTypes)iI))
 					{
@@ -4100,6 +4065,29 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 					bInPassableSection = true;
 					++iPassableSections;
 				}
+			}
+			else
+			{
+				bInPassableSection = false;
+			}
+		}
+	}
+	else
+	{
+		// This loop is for land
+		foreach_(const CvPlot* pAdjacentPlot, adjacent())
+		{
+			if(pAdjacentPlot->isWater() || pAdjacentPlot->isImpassable())
+			{
+				if(isCardinalDirection((DirectionTypes)iI))
+				{
+					bInPassableSection = false;
+				}
+			}
+			else if(!bInPassableSection)
+			{
+				bInPassableSection = true;
+				++iPassableSections;
 			}
 		}
 	}
@@ -14679,22 +14667,18 @@ bool CvPlot::isInUnitZoneOfControl(PlayerTypes ePlayer) const
 
 bool CvPlot::isBorder(bool bIgnoreWater) const
 {
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot->isWater() && !bIgnoreWater)
 		{
-			if (pAdjacentPlot->isWater() && !bIgnoreWater)
-			{
-				if (!isWater())
-				{
-					return true;
-				}
-			}
-			if (pAdjacentPlot->getOwner() != getOwner())
+			if (!isWater())
 			{
 				return true;
 			}
+		}
+		if (pAdjacentPlot->getOwner() != getOwner())
+		{
+			return true;
 		}
 	}
 
@@ -14704,13 +14688,9 @@ bool CvPlot::isBorder(bool bIgnoreWater) const
 int CvPlot::getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			iCount += pAdjacentPlot->plotCount(PUF_canDefendEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
-		}
+		iCount += pAdjacentPlot->plotCount(PUF_canDefendEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 	}
 	return iCount;
 }
@@ -14751,35 +14731,19 @@ void CvPlot::ToggleInPlotGroupsZobristContributors()
 
 int CvPlot::getBorderPlotCount() const
 {
-	int iCount = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (pAdjacentPlot->getOwner() != getOwner())
-			{
-				iCount++;
-			}
-		}
-	}
-	return iCount;
+	return algo::count_if(adjacent(), CvPlot::fn::getOwner() != getOwner());
 }
 
 int CvPlot::getEnemyBorderPlotCount(PlayerTypes ePlayer) const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot->getOwner() != NO_PLAYER)
 		{
-			if (pAdjacentPlot->getOwner() != NO_PLAYER)
+			if (GET_PLAYER(pAdjacentPlot->getOwner()).AI_getAttitude(ePlayer) >= ATTITUDE_ANNOYED)
 			{
-				if (GET_PLAYER(pAdjacentPlot->getOwner()).AI_getAttitude(ePlayer) >= ATTITUDE_ANNOYED)
-				{
-					iCount++;
-				}
+				iCount++;
 			}
 		}
 	}
