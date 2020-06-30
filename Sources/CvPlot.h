@@ -365,9 +365,9 @@ public:
 	bool isCanUseRouteLandUnits() const;
 	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
-	int getRevoltProtection();
-	int getAverageEnemyStrength(TeamTypes eTeam);
-	int getAverageEnemyDamage(TeamTypes eTeam);
+	int getRevoltProtection() const;
+	int getAverageEnemyStrength(TeamTypes eTeam) const;
+	int getAverageEnemyDamage(TeamTypes eTeam) const;
 	LandmarkTypes getLandmarkType() const;
 	void setLandmarkType(LandmarkTypes eLandmark);
 	CvWString getLandmarkName() const;

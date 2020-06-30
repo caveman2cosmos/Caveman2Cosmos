@@ -5232,8 +5232,7 @@ UnitTypes CvGame::getBestLandUnit() const
 		{
 			if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
 			{
-				int iLoop;
-				for(CvUnit* pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+				foreach_(const CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 				{
 					if (pLoopUnit->baseCombatStr() > 0)
 					{
