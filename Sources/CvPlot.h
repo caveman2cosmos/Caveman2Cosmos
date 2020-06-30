@@ -1181,6 +1181,7 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, BonusTypes, getBonusType);
 		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);

@@ -29802,7 +29802,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 
 	if(isPushReligiousVictory() || isConsiderReligiousVictory())
 	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			const CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
 			if(kLoopPlayer.isAlive())
