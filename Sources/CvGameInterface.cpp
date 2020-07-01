@@ -253,7 +253,7 @@ void CvGame::updateColoredPlots()
 
 									if (eBestBuild != NO_BUILD)
 									{
-										CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
+										const CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
 										eBestImprovement = (ImprovementTypes)kBestBuild.getImprovement();
 										eBestRoute = (RouteTypes)kBestBuild.getRoute();
 
@@ -284,7 +284,7 @@ void CvGame::updateColoredPlots()
 										{
 											if (eBestBuild != NO_BUILD)
 											{
-												CvImprovementInfo& kPlotImprovement = GC.getImprovementInfo(ePlotImprovement);
+												const CvImprovementInfo& kPlotImprovement = GC.getImprovementInfo(ePlotImprovement);
 
 												if (eBestRoute != NO_ROUTE)
 												{
@@ -2764,8 +2764,8 @@ void CvGame::cheatSpaceship() const
 	CvTeam& kTeam = GET_TEAM(getActiveTeam());
 	for (int i = 0; i < GC.getNumProjectInfos(); i++)
 	{
-		ProjectTypes eProject = (ProjectTypes) i;
-		CvProjectInfo& kProject = GC.getProjectInfo(eProject);
+		const ProjectTypes eProject = (ProjectTypes) i;
+		const CvProjectInfo& kProject = GC.getProjectInfo(eProject);
 		if (kProject.isSpaceship())
 		{
 			//cheat required projects

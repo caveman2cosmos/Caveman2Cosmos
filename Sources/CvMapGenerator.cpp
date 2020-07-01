@@ -72,9 +72,9 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 		}
 	}
 
-	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
+	const CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
 	int iBonusClassType = pInfo.getBonusClassType();
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
+	const CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
 	if (pPlot->isWater()
 	&& GC.getMap().getNumBonusesOnLand(eBonus) * 100 / (GC.getMap().getNumBonuses(eBonus) + 1) < pInfo.getMinLandPercent())
@@ -1079,7 +1079,7 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot)
 
 int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 {
-	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	// Calculate iBonusCount, the amount of this bonus to be placed:
 	int iBaseCount =
@@ -1102,8 +1102,7 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 		int iNumPossible = 0;
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
-			if (pPlot->canHaveBonus(eBonusType, bIgnoreLatitude))
+			if (GC.getMap().plotByIndex(iI)->canHaveBonus(eBonusType, bIgnoreLatitude))
 			{
 				iNumPossible++;
 			}
