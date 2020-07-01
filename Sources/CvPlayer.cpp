@@ -26019,9 +26019,19 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	{
 		if (pLoopCity->area() == pArea)
 		{
+			const int iCulture = pLoopCity->getCultureTimes100(getID());
+			const CvPlot* pPlot = pLoopCity->plot();
+
 			GET_PLAYER(eNewPlayer).acquireCity(pLoopCity, false, true, false);
 
-			pLoopCity->setCultureTimes100(eNewPlayer, pLoopCity->getCultureTimes100(getID()), false, false);
+			if (NULL != pPlot)
+			{
+				CvCity* pCity = pPlot->getPlotCity();
+				if (NULL != pCity)
+				{
+					pCity->setCultureTimes100(eNewPlayer, iCulture, false, false);
+				}
+			}
 		}
 	}
 
