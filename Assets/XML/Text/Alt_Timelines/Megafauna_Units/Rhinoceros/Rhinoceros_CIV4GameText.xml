@@ -76,7 +76,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Rhinoceros Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Rhinos[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT]. Its slower then rest of the Riders but stronger. They have bonuses in siege cities and cause collateral damage.</English>
+		<English>[COLOR_UNIT_TEXT]Rhinoceros Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Rhinos[COLOR_REVERT] instead than [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT]. It is slower than the rest of the Riders, but stronger. They have bonuses while sieging cities and cause collateral damage.</English>
 		<French>[COLOR_UNIT_TEXT]Monteur de Rhinocéros[COLOR_REVERT] are</French>
 		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di rinoceronti[COLOR_REVERT] sono</Italian>
 	</TEXT>
@@ -98,7 +98,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_RHINO_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Asiatic War Rhinoceros[COLOR_REVERT] is a one use shock weapon doing colateral damage to a stack of units.</English>
+		<English>The [COLOR_UNIT_TEXT]Asiatic War Rhinoceros[COLOR_REVERT] is a one-use shock weapon doing collateral damage to a stack of units.</English>
 		<French>Le [COLOR_UNIT_TEXT]Rhinocéros de Guerre[COLOR_REVERT] peut lancer une seule attaque dévastatrice faisant des dégâts collatéraux à tout le tas d'unités.</French>
 		<Italian>Il [COLOR_UNIT_TEXT]Rinoceronte asiatico da guerra[COLOR_REVERT] è un arma ad uso singolo, che causa danni collaterali alle pile di unità.</Italian>
 	</TEXT>
