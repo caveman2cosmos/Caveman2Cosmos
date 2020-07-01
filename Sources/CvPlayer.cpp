@@ -1880,7 +1880,10 @@ void CvPlayer::changeCiv( CivilizationTypes eNewCiv )
 		// dirty all of this player's cities...
 		foreach_(CvCity* pLoopCity, cities())
 		{
-			pLoopCity->setLayoutDirty(true);
+			if (pLoopCity->getOwner() == getID())
+			{
+				pLoopCity->setLayoutDirty(true);
+			}
 		}
 
 		//update unit eras
