@@ -7,7 +7,6 @@ import CvWBPopups
 import CvWBDesc
 
 WBDesc = CvWBDesc.CvWBDesc()
-lastFileRead = None
 GC = CyGlobalContext()
 
 #---------------------#
@@ -18,8 +17,6 @@ def writeDesc(argsList):
 	Save out a high-level desc of the world, for WorldBuilder
 	'''
 	fileName = argsList[0]
-	global lastFileRead
-	lastFileRead=None
 	return WBDesc.write(fileName)
 
 #--------------------#
@@ -46,41 +43,28 @@ def readDesc(argsList):
 	Called once before game options can be selected for scenario,
 	and called once more when all game options are confirmed.
 	'''
-	print "--- CvWBInterface.readDesc(argsList) ---"
-	print argsList
-	fileName = argsList[0]
-	if not _adjustMap(fileName):
-		return -1
+	print "--- CvWBInterface.readDesc(argsList) ---", argsList
+	return WBDesc.read(argsList[0])
 
-	global lastFileRead
-	if fileName != lastFileRead:
-		ret = WBDesc.read(fileName)
-		if ret == 0:
-			lastFileRead = fileName
-	else:
-		ret = 0
-	return ret
-
-# Make changes to the scenario file if needed.
-def _adjustMap(fileName):
-	return True # success
 
 def getModPath():
 	''' Called from exe
 	Returns the path for the Mod that this scenario should load (if applicable)
 	'''
-	return WBDesc.gameDesc.szModPath
+	return WBDesc.metaDesc.szModPath
+
 
 def getGameData():
 	''' Called from exe
 	After reading a scenario file,
 	return game/player data as a tuple
 	'''
+	print "IF getGameData"
 	gameWB = WBDesc.gameDesc
 	t = ()
 	t += (
-		GC.getInfoTypeForString(WBDesc.mapDesc.worldSize), GC.getInfoTypeForString(WBDesc.mapDesc.climate), GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel),
-		GC.getInfoTypeForString(gameWB.eraType), GC.getInfoTypeForString(gameWB.speedType), GC.getInfoTypeForString(gameWB.calendarType)
+		GC.getInfoTypeForString(WBDesc.mapDesc.worldSize), GC.getInfoTypeForString(WBDesc.mapDesc.climate),
+		GC.getInfoTypeForString(WBDesc.mapDesc.seaLevel), gameWB.iStartEra, getInfoType(gameWB.speedType), gameWB.iCalendarType
 	)
 	types = gameWB.options
 	iLength = len(types)
@@ -106,13 +90,14 @@ def getGameData():
 	for i in xrange(iLength):
 		t += (GC.getInfoTypeForString(types[i]),)
 
-	t += (gameWB.gameTurn, gameWB.maxTurns, gameWB.maxCityElimination, gameWB.numAdvancedStartPoints, gameWB.targetScore)
+	t += (gameWB.iGameTurn, gameWB.maxTurns, gameWB.maxCityElimination, gameWB.numAdvancedStartPoints, gameWB.targetScore)
 	return t
 
 def getPlayerDesc():
 	''' Called from exe
 	Returns player description data (wide strings) as a tuple
 	'''
+	print "CvWBInterface.getPlayerDesc"
 	playerTuple = WBDesc.playersDesc
 	t = ()
 	for i in xrange(GC.getMAX_PLAYERS()):
@@ -125,15 +110,15 @@ def getPlayerData():
 	Returns player data as a tuple, terminated by -1
 	Last thing called before you can select your game options for a scenario.
 	'''
+	print "CvWBInterface.getPlayerData"
 	iNPC = GC.getMAX_PC_PLAYERS()
 	playerTuple = WBDesc.playersDesc
 	t = ()
 	for i in xrange(GC.getMAX_PLAYERS()):
 		playerWB = playerTuple[i]
 		t += (
-			getInfoType(playerWB.civType), playerWB.isPlayableCiv, getInfoType(playerWB.leaderType),
-			GC.getInfoTypeForString(playerWB.handicap), playerWB.iTeam, getInfoType(playerWB.color),
-			getInfoType(playerWB.artStyle), 0, playerWB.isWhiteFlag
+			getInfoType(playerWB.civType), playerWB.isPlayableCiv, getInfoType(playerWB.leaderType), playerWB.iHandicap,
+			playerWB.iTeam, getInfoType(playerWB.color), getInfoType(playerWB.artStyle), 0, playerWB.isWhiteFlag
 		)
 	return t
 
@@ -164,15 +149,17 @@ def applyInitialItems(): # Called from exe
 	print "IF applyInitialItems"
 	return WBDesc.applyInitialItems()
 
-# Returns the TXT_KEY Description of the map to be displayed in the map/mod selection screen
+#---------------#
+# Miscellaneous #
+#---------------#
 def getMapDescriptionKey():
 	print "IF getMapDescriptionKey"
-	return WBDesc.gameDesc.szDescription
+	return WBDesc.metaDesc.szDescription
 
 # If True, this is really a mod, not a scenario
 def isRandomMap():
 	print "IF isRandomMap"
-	return WBDesc.gameDesc.iRandom
+	return 0
 
 # Called from the Worldbuilder app - sends to CvWBPopups for handling
 def initWBEditor(argsList):

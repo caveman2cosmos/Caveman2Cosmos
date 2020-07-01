@@ -406,8 +406,8 @@ public:
 	bool isScoreDirty() const; // Exposed to Python
 	void setScoreDirty(bool bNewValue); // Exposed to Python
 
-	bool isCircumnavigated(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	void makeCircumnavigated(TeamTypes eTeam);
+	TeamTypes getCircumnavigatedTeam() const; // Exposed to Python
+	void setCircumnavigatedTeam(TeamTypes eTeam); // Exposed to Python
 	bool circumnavigationAvailable() const;
 
 	bool isDiploVote(VoteSourceTypes eVoteSource) const; // Exposed to Python

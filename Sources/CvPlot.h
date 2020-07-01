@@ -752,7 +752,7 @@ public:
 	int getRiverCrossingCount() const; // Exposed to Python
 	void changeRiverCrossingCount(int iChange);
 
-	short* getYield();
+	short* getYield() const;
 	DllExport int getYield(YieldTypes eIndex) const; // Exposed to Python
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const; // Exposed to Python
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const; // Exposed to Python

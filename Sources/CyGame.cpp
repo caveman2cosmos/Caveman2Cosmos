@@ -591,10 +591,18 @@ void CyGame::setScoreDirty(bool bNewValue)
 		m_pGame->setScoreDirty(bNewValue);
 }
 
-bool CyGame::isCircumnavigated() const
+
+int CyGame::getCircumnavigatedTeam() const
 {
-	return m_pGame ? m_pGame->isCircumnavigated() : false;
+	return m_pGame ? (int)m_pGame->getCircumnavigatedTeam() : -1;
 }
+
+void CyGame::setCircumnavigatedTeam(int iTeamType)
+{
+	if (m_pGame)
+		m_pGame->setCircumnavigatedTeam((TeamTypes) iTeamType);
+}
+
 
 bool CyGame::isDiploVote(int /*VoteSourceTypes*/ eVoteSource) const
 {

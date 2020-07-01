@@ -531,6 +531,7 @@ public:
 	void attackForDamage(CyUnit *defender, int attakerDamageChange, int defenderDamageChange);
 	void rangeStrike(int iX, int iY);
 
+	void setCommander(bool bNewValue);
 	bool isCommander() const;
 	int controlPointsLeft() const;
 	int controlPoints() const;

@@ -569,7 +569,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes)i);
+			const CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -580,7 +580,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUnitInfo& info = GC.getUnitInfo((UnitTypes)i);
+			const CvUnitInfo& info = GC.getUnitInfo((UnitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -591,7 +591,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvProjectInfo& info = GC.getProjectInfo((ProjectTypes)i);
+			const CvProjectInfo& info = GC.getProjectInfo((ProjectTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -602,7 +602,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBonusInfo& info = GC.getBonusInfo((BonusTypes)i);
+			const CvBonusInfo& info = GC.getBonusInfo((BonusTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -613,7 +613,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialistInfo& info = GC.getSpecialistInfo((SpecialistTypes)i);
+			const CvSpecialistInfo& info = GC.getSpecialistInfo((SpecialistTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -624,7 +624,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvImprovementInfo& info = GC.getImprovementInfo((ImprovementTypes)i);
+			const CvImprovementInfo& info = GC.getImprovementInfo((ImprovementTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -635,7 +635,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvReligionInfo& info = GC.getReligionInfo((ReligionTypes)i);
+			const CvReligionInfo& info = GC.getReligionInfo((ReligionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -646,7 +646,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUnitCombatInfo& info = GC.getUnitCombatInfo((UnitCombatTypes)i);
+			const CvUnitCombatInfo& info = GC.getUnitCombatInfo((UnitCombatTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -658,7 +658,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPromotionLineInfo& info = GC.getPromotionLineInfo((PromotionLineTypes)i);
+			const CvPromotionLineInfo& info = GC.getPromotionLineInfo((PromotionLineTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -670,7 +670,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
+			const CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -681,7 +681,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvIdeaClassInfo& info = GC.getIdeaClassInfo((IdeaClassTypes)i);
+			const CvIdeaClassInfo& info = GC.getIdeaClassInfo((IdeaClassTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -692,7 +692,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvIdeaInfo& info = GC.getIdeaInfo((IdeaTypes)i);
+			const CvIdeaInfo& info = GC.getIdeaInfo((IdeaTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -714,7 +714,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPromotionInfo& info = GC.getPromotionInfo((PromotionTypes)i);
+			const CvPromotionInfo& info = GC.getPromotionInfo((PromotionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -725,7 +725,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCorporationInfo& info = GC.getCorporationInfo((CorporationTypes)i);
+			const CvCorporationInfo& info = GC.getCorporationInfo((CorporationTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -736,7 +736,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTechInfo& info = GC.getTechInfo((TechTypes)i);
+			const CvTechInfo& info = GC.getTechInfo((TechTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -747,7 +747,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivicInfo& info = GC.getCivicInfo((CivicTypes)i);
+			const CvCivicInfo& info = GC.getCivicInfo((CivicTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -758,7 +758,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVoteInfo& info = GC.getVoteInfo((VoteTypes)i);
+			const CvVoteInfo& info = GC.getVoteInfo((VoteTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -769,7 +769,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVoteSourceInfo& info = GC.getVoteSourceInfo((VoteSourceTypes)i);
+			const CvVoteSourceInfo& info = GC.getVoteSourceInfo((VoteSourceTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -780,7 +780,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialUnitInfo& info = GC.getSpecialUnitInfo((SpecialUnitTypes)i);
+			const CvSpecialUnitInfo& info = GC.getSpecialUnitInfo((SpecialUnitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -791,7 +791,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialBuildingInfo& info = GC.getSpecialBuildingInfo((SpecialBuildingTypes)i);
+			const CvSpecialBuildingInfo& info = GC.getSpecialBuildingInfo((SpecialBuildingTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -802,7 +802,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUpkeepInfo& info = GC.getUpkeepInfo((UpkeepTypes)i);
+			const CvUpkeepInfo& info = GC.getUpkeepInfo((UpkeepTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -813,7 +813,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvHurryInfo& info = GC.getHurryInfo((HurryTypes)i);
+			const CvHurryInfo& info = GC.getHurryInfo((HurryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -824,7 +824,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvFeatureInfo& info = GC.getFeatureInfo((FeatureTypes)i);
+			const CvFeatureInfo& info = GC.getFeatureInfo((FeatureTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -835,7 +835,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivicOptionInfo& info = GC.getCivicOptionInfo((CivicOptionTypes)i);
+			const CvCivicOptionInfo& info = GC.getCivicOptionInfo((CivicOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -846,7 +846,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBuildInfo& info = GC.getBuildInfo((BuildTypes)i);
+			const CvBuildInfo& info = GC.getBuildInfo((BuildTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -857,7 +857,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTerrainInfo& info = GC.getTerrainInfo((TerrainTypes)i);
+			const CvTerrainInfo& info = GC.getTerrainInfo((TerrainTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -868,7 +868,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvRouteInfo& info = GC.getRouteInfo((RouteTypes)i);
+			const CvRouteInfo& info = GC.getRouteInfo((RouteTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -879,7 +879,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVictoryInfo& info = GC.getVictoryInfo((VictoryTypes)i);
+			const CvVictoryInfo& info = GC.getVictoryInfo((VictoryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -890,7 +890,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvLeaderHeadInfo& info = GC.getLeaderHeadInfo((LeaderHeadTypes)i);
+			const CvLeaderHeadInfo& info = GC.getLeaderHeadInfo((LeaderHeadTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -901,7 +901,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivilizationInfo& info = GC.getCivilizationInfo((CivilizationTypes)i);
+			const CvCivilizationInfo& info = GC.getCivilizationInfo((CivilizationTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -912,7 +912,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvGameOptionInfo& info = GC.getGameOptionInfo((GameOptionTypes)i);
+			const CvGameOptionInfo& info = GC.getGameOptionInfo((GameOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -923,7 +923,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvMPOptionInfo& info = GC.getMPOptionInfo((MultiplayerOptionTypes)i);
+			const CvMPOptionInfo& info = GC.getMPOptionInfo((MultiplayerOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -934,7 +934,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvInfoBase& info = GC.getUnitAIInfo((UnitAITypes)i);
+			const CvInfoBase& info = GC.getUnitAIInfo((UnitAITypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -945,7 +945,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvEventInfo& info = GC.getEventInfo((EventTypes)i);
+			const CvEventInfo& info = GC.getEventInfo((EventTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -956,7 +956,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvEventTriggerInfo& info = GC.getEventTriggerInfo((EventTriggerTypes)i);
+			const CvEventTriggerInfo& info = GC.getEventTriggerInfo((EventTriggerTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -967,7 +967,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvGameSpeedInfo& info = GC.getGameSpeedInfo((GameSpeedTypes)i);
+			const CvGameSpeedInfo& info = GC.getGameSpeedInfo((GameSpeedTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -978,7 +978,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPropertyInfo& info = GC.getPropertyInfo((PropertyTypes)i);
+			const CvPropertyInfo& info = GC.getPropertyInfo((PropertyTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -989,7 +989,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTraitInfo& info = GC.getTraitInfo((TraitTypes)i);
+			const CvTraitInfo& info = GC.getTraitInfo((TraitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1000,7 +1000,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvInvisibleInfo& info = GC.getInvisibleInfo((InvisibleTypes)i);
+			const CvInvisibleInfo& info = GC.getInvisibleInfo((InvisibleTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1011,7 +1011,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvMissionInfo& info = GC.getMissionInfo((MissionTypes)i);
+			const CvMissionInfo& info = GC.getMissionInfo((MissionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1022,7 +1022,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
+			const CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1033,7 +1033,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
+			const CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1044,7 +1044,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
+			const CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());

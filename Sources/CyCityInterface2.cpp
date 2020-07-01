@@ -170,7 +170,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getBuildingProductionDecayTurns", &CyCity::getBuildingProductionDecayTurns, "int (int /*BuildingTypes*/ eIndex)")
 // BUG - Production Decay - end
 		.def("getBuildingOriginalOwner", &CyCity::getBuildingOriginalOwner, "int (BuildingType) - index of original building owner")
-		.def("getBuildingOriginalTime", &CyCity::getBuildingOriginalTime, "int (BuildingType) - original build date")
+		.def("getBuildingOriginalTime", &CyCity::getBuildingOriginalTime, "int (int BuildingType) - original build date")
+		.def("setBuildingOriginalTime", &CyCity::setBuildingOriginalTime, "void (int iBuildingType, int iNewValue) - original build date")
 		.def("getUnitProduction", &CyCity::getUnitProduction, "int (UnitID) - gets current production towards UnitID")
 		.def("setUnitProduction", &CyCity::setUnitProduction, "void (UnitID, iNewValue) - sets production towards UnitID as iNewValue")
 // BUG - Production Decay - start

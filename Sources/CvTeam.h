@@ -456,6 +456,8 @@ public:
 
 	void verifySpyUnitsValidPlot();
 
+	void setCircumnavigated(bool bNewValue);
+
 	void setForceRevealedBonus(BonusTypes eBonus, bool bRevealed);
 	bool isForceRevealedBonus(BonusTypes eBonus) const;
 

@@ -9465,6 +9465,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>(Beförderung) Bewaffneter Wächter</German>
 		<Spanish>
 			<Text>Ascendida para evasión:Unidades ascendidas para ARMED_GUARD</Text>
 			<Gender>Female</Gender>
@@ -9511,6 +9512,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Beförderung) Gefangene transportieren</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</Tag>
