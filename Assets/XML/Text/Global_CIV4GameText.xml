@@ -9074,7 +9074,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_UNITS_DAMAGED</Tag>
-		<English>Defenses from the City of %s1 has damaged your units!</English>
+		<English>Defenses from the City of %s1 have damaged your units!</English>
 		<French>Les défenses de la ville de %s1 ont endommagés nos unités!</French>
 		<German>Die Verteidigungsanlagen von %s1 haben Euren Einheiten Schaden zugefügt!</German>
 		<Italian>Le difese della città di %s1 hanno danneggiato le tue unità!</Italian>

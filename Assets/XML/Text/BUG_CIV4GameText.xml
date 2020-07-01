@@ -817,7 +817,7 @@
 		<English>Siege Options:</English>
 		<French>Options de Siège:</French>
 		<German>Seige Options:</German>
-		<Italian>Seige Options:</Italian>
+		<Italian>Opzioni per assedi:</Italian>
 		<Spanish>Opciones de asedio:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5743,7 +5743,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_RANGE_BOMBARD_HOVER</Tag>
-		<English>Enables a ranged attack for most seige units (excluding catapults)</English>
+		<English>Enables a ranged attack for most siege units (excluding catapults)</English>
 		<French>Permet à la plupart des unités de Siège (à l'exception des Catapultes) de disposer du Bombardement à Distance</French>
 		<German>Ermöglicht die Fernbombardierung für die meisten Belagerungswaffen (ausgenommen Katapulte)</German>
 		<Spanish>Habilita el ataque a distancia para la mayoría de las unidades de asedio (excluyendo las catapultas).</Spanish>
