@@ -5246,9 +5246,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 		for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 		{
-			SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+			const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 			if (eNewSpecialist == NO_SPECIALIST) break;
-			CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
+			const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
 				aiFreeSpecialistYield[iJ] += kOwner.specialistYield(eNewSpecialist, (YieldTypes)iJ);
@@ -12836,7 +12836,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					ImprovementTypes eImprovementDowngrade = (ImprovementTypes)GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage();
 					while (eImprovementDowngrade != NO_IMPROVEMENT)
 					{
-						CvImprovementInfo& kImprovementDowngrade = GC.getImprovementInfo(eImprovementDowngrade);
+						const CvImprovementInfo& kImprovementDowngrade = GC.getImprovementInfo(eImprovementDowngrade);
 /********************************************************************************/
 /*	Better Evaluation							19.03.2010		Fuyu		    */
 /********************************************************************************/
@@ -15772,8 +15772,8 @@ retry:
 			{
 				if (iResult > 0)
 				{
-					CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-					CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+					const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+					const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 					for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
 					{
@@ -17796,8 +17796,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate)
 {
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bCulturalVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
 	// unused: bool bCulturalVictory2 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);

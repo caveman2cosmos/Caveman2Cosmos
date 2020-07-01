@@ -2134,7 +2134,7 @@ void CvPlayer::initFreeUnits()
 /*	Toffer: Currently not needed for anything...
 Consider removing freeUnit from civilization info as this is the only place that would have used it.
 
-		CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
+		const CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			int iFreeCount = kCivilizationInfo.getCivilizationFreeUnits(iI) * iMult;
@@ -6425,7 +6425,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 				{
 					if (GC.getGame().getSecretaryGeneral(pVoteTriggered->eVoteSource) != getTeam())
 					{
-						CvVoteInfo& kVote = GC.getVoteInfo(pVoteTriggered->kVoteOption.eVote);
+						const CvVoteInfo& kVote = GC.getVoteInfo(pVoteTriggered->kVoteOption.eVote);
 						if (!GC.getGame().isTeamVote(pVoteTriggered->kVoteOption.eVote))
 						{
 							if (isVotingMember(pVoteTriggered->eVoteSource) && GET_PLAYER(eWhoTo).isVotingMember(pVoteTriggered->eVoteSource))
@@ -7840,7 +7840,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		return false;
 	}
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (!bIgnoreCost && kUnit.getProductionCost() == -1)
 	{
@@ -8010,8 +8010,8 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 {
 	PROFILE_FUNC();
 
-	CvTeamAI& currentTeam = GET_TEAM(getTeam());
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvTeamAI& currentTeam = GET_TEAM(getTeam());
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if ( probabilityEverConstructable != NULL )
 	{
@@ -8253,13 +8253,12 @@ bool CvPlayer::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisibl
 /*                                                                                              */
 /* CanCreate Performance                                                                        */
 /************************************************************************************************/
-	CvProjectInfo& kProject = GC.getProjectInfo(eProject);
-
 	if (isNPC())
 	{
 		return false;
 	}
 
+	const CvProjectInfo& kProject = GC.getProjectInfo(eProject);
 	if (kProject.getProductionCost() == -1)
 	{
 		return false;
@@ -8757,7 +8756,7 @@ int CvPlayer::getProductionModifier(ProjectTypes eProject) const
 
 int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra) const
 {
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	int iPrereqs = kBuilding.getPrereqNumOfBuilding(ePrereqBuilding);
 
@@ -8957,7 +8956,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		return false;
 	}
 
-	CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
+	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
 	if (kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech()))
 	{
@@ -17037,9 +17036,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 
 				for(std::vector<TechTypes>::const_iterator itrTechs = (*itr)->begin(); itrTechs != (*itr)->end(); ++itrTechs)
 				{
-					CvTechInfo& techInfo = GC.getTechInfo(*itrTechs);
-
-					iValue += techInfo.getResearchCost();
+					iValue += GC.getTechInfo(*itrTechs).getResearchCost();
 				}
 			}
 			else
@@ -20544,14 +20541,14 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 
 			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 			{
-				CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
-				ImprovementTypes eLoopImprovement = ((ImprovementTypes)(kBuild.getImprovement()));
+				const CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
+				const ImprovementTypes eLoopImprovement = (ImprovementTypes)kBuild.getImprovement();
 
 				if (eImprovement == eLoopImprovement && canBuild(pPlot, (BuildTypes)iI))
 				{
 					bValid = true;
 
-					FeatureTypes eFeature = pPlot->getFeatureType();
+					const FeatureTypes eFeature = pPlot->getFeatureType();
 					if (NO_FEATURE != eFeature && kBuild.isFeatureRemove(eFeature))
 					{
 						iCost += GC.getFeatureInfo(eFeature).getAdvancedStartRemoveCost();
@@ -24122,7 +24119,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		bool bValid = false;
 		for (int iProject = 0; iProject < GC.getNumProjectInfos(); ++iProject)
 		{
-			CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
+			const CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
 			if (kProject.isSpaceship())
 			{
 				if (kProject.getVictoryPrereq() != NO_VICTORY)
@@ -27305,7 +27302,7 @@ bool CvPlayer::canSpyDestroyBuilding(PlayerTypes eTarget, BuildingTypes eBuildin
 
 bool CvPlayer::canSpyDestroyProject(PlayerTypes eTarget, ProjectTypes eProject) const
 {
-	CvProjectInfo& kProject = GC.getProjectInfo(eProject);
+	const CvProjectInfo& kProject = GC.getProjectInfo(eProject);
 	if (kProject.getProductionCost() <= 0)
 	{
 		return false;
@@ -28274,9 +28271,9 @@ void CvPlayer::updateTradeList(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 
 int CvPlayer::getIntroMusicScriptId(PlayerTypes eForPlayer) const
 {
-	CvPlayer& kForPlayer = GET_PLAYER(eForPlayer);
-	EraTypes eEra = kForPlayer.getCurrentEra();
-	CvLeaderHeadInfo& kLeader = GC.getLeaderHeadInfo(getLeaderType());
+	const CvPlayer& kForPlayer = GET_PLAYER(eForPlayer);
+	const EraTypes eEra = kForPlayer.getCurrentEra();
+	const CvLeaderHeadInfo& kLeader = GC.getLeaderHeadInfo(getLeaderType());
 	if (GET_TEAM(kForPlayer.getTeam()).isAtWar(getTeam()))
 	{
 		return kLeader.getDiploWarIntroMusicScriptIds(eEra);
@@ -28289,9 +28286,9 @@ int CvPlayer::getIntroMusicScriptId(PlayerTypes eForPlayer) const
 
 int CvPlayer::getMusicScriptId(PlayerTypes eForPlayer) const
 {
-	CvPlayer& kForPlayer = GET_PLAYER(eForPlayer);
-	EraTypes eEra = kForPlayer.getCurrentEra();
-	CvLeaderHeadInfo& kLeader = GC.getLeaderHeadInfo(getLeaderType());
+	const CvPlayer& kForPlayer = GET_PLAYER(eForPlayer);
+	const EraTypes eEra = kForPlayer.getCurrentEra();
+	const CvLeaderHeadInfo& kLeader = GC.getLeaderHeadInfo(getLeaderType());
 	if (GET_TEAM(kForPlayer.getTeam()).isAtWar(getTeam()))
 	{
 		return kLeader.getDiploWarMusicScriptIds(eEra);
@@ -28633,15 +28630,15 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	CvWStringBuffer szBuffer;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		const PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
 
 		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
 		{
-			BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
+			const BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
 			if (eCurType != NO_BONUS)
 			{
-				CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
+				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
 
 				bool bOfInterest = false;
 				switch (eOption)
@@ -30206,7 +30203,7 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		}
 		else if (pLoopCity->getProductionUnit() != NO_UNIT)
 		{
-			CvUnitInfo& kUnit = GC.getUnitInfo(pLoopCity->getProductionUnit());
+			const CvUnitInfo& kUnit = GC.getUnitInfo(pLoopCity->getProductionUnit());
 
 			if (kUnit.getPrereqAndBonus() == eBonus || kUnit.getPrereqVicinityBonus() == eBonus)
 			{
@@ -30592,7 +30589,7 @@ int CvPlayer::getBuildingCountWithUpgrades(BuildingTypes eBuilding) const
 	int iCount = getBuildingCount(eBuilding);
 	if (eBuilding != NO_BUILDING)
 	{
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 		if (kBuilding.isReplaceBuilding(NO_BUILDING))
 		{
 			const int numNumBuildingInfos = GC.getNumBuildingInfos();
@@ -31281,9 +31278,7 @@ void CvPlayer::clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuild
 
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
-			CvBuildingInfo&	kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-
-			eLoopSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
+			eLoopSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)iI).getSpecialBuildingType();
 		}
 
 		if (eSpecialBuilding == eLoopSpecialBuilding)
@@ -32455,7 +32450,7 @@ void CvPlayer::validateCommerce() const
 
 	for(int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		CvBuildingInfo&	kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 		buildingCommerceStruct	commerceStruct;
 
 		commerceStruct.iMultiplier = kBuilding.getCommerceModifier(COMMERCE_GOLD);
@@ -32494,7 +32489,7 @@ void CvPlayer::validateCommerce() const
 					int	iBuildingGold = pLoopCity->getBuildingCommerceByBuilding(COMMERCE_GOLD, (BuildingTypes)iI);
 					if ( iBuildingGold != 0)
 					{
-						CvBuildingInfo&	kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+						const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 						if ( kBuilding.getFoundsCorporation() != NO_CORPORATION )
 						{
 							fCityHeadquarters += (float)iBuildingGold;

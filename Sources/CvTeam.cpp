@@ -4972,7 +4972,7 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 		{
 			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 			{
-				CvProjectInfo& kProject = GC.getProjectInfo(eIndex);
+				const CvProjectInfo& kProject = GC.getProjectInfo(eIndex);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_PROJECT", getName().GetCString(), kProject.getTextKeyWide());
 				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
@@ -4993,7 +4993,7 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 
 void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProjectCount)
 {
-	CvProjectInfo& kProject = GC.getProjectInfo(eIndex);
+	const CvProjectInfo& kProject = GC.getProjectInfo(eIndex);
 
 	changeNukeInterception(kProject.getNukeInterception() * iChange);
 
@@ -5409,8 +5409,8 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 	int iExtraDelayPercent = 0;
 	for (int iProject = 0; iProject < GC.getNumProjectInfos(); ++iProject)
 	{
-		CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
-		int iCount = getProjectCount((ProjectTypes)iProject);
+		const CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
+		const int iCount = getProjectCount((ProjectTypes)iProject);
 
 		if (iCount < kProject.getVictoryMinThreshold(eVictory))
 		{
@@ -5418,7 +5418,7 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 			return -1;
 		}
 
-		int victoryThreshold = kProject.getVictoryThreshold(eVictory);
+		const int victoryThreshold = kProject.getVictoryThreshold(eVictory);
 		if (iCount < victoryThreshold && victoryThreshold > 0)
 		{
 			iExtraDelayPercent += ((victoryThreshold - iCount) * kProject.getVictoryDelayPercent()) / victoryThreshold;
@@ -5442,7 +5442,7 @@ int CvTeam::getLaunchSuccessRate(VictoryTypes eVictory) const
 	int iSuccessRate = 100;
 	for (int iProject = 0; iProject < GC.getNumProjectInfos(); ++iProject)
 	{
-		CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
+		const CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iProject);
 		const int iCount = getProjectCount((ProjectTypes)iProject);
 
 		if (iCount < kProject.getVictoryMinThreshold(eVictory))

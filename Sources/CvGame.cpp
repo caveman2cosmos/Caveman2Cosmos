@@ -3268,7 +3268,7 @@ void CvGame::clearSecretaryGeneral(VoteSourceTypes eVoteSource)
 {
 	for (int j = 0; j < GC.getNumVoteInfos(); ++j)
 	{
-		CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
+		const CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
 
 		if (kVote.isVoteSourceType(eVoteSource) && kVote.isSecretaryGeneral())
 		{
@@ -8555,7 +8555,7 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 {
 	PROFILE_FUNC();
 
-	CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
+	const CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
 
 	changeTradeRoutes(kVote.getTradeRoutes() * iChange);
 	changeFreeTradeCount(kVote.isFreeTrade() ? iChange : 0);
@@ -9288,8 +9288,8 @@ void CvGame::read(FDataStreamBase* pStream)
 
 			if (bReligionIsNew)
 			{
-				CvReligionInfo&	newReligion = GC.getReligionInfo((ReligionTypes)iI);
-				TechTypes eFoundingTech = (TechTypes)newReligion.getTechPrereq();
+				const CvReligionInfo&	newReligion = GC.getReligionInfo((ReligionTypes)iI);
+				const TechTypes eFoundingTech = (TechTypes)newReligion.getTechPrereq();
 
 				setTechCanFoundReligion(eFoundingTech, false);
 			}
@@ -10310,7 +10310,7 @@ void CvGame::doUpdateCacheOnTurn()
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		CvBuildingInfo&	kBuildingInfo = GC.getBuildingInfo((BuildingTypes) iI);
+		const CvBuildingInfo& kBuildingInfo = GC.getBuildingInfo((BuildingTypes) iI);
 
 		// if it is for holy city, then its a shrine-thing, add it
 		if (kBuildingInfo.getHolyCity() != NO_RELIGION)
@@ -12602,7 +12602,7 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 	{
 		return false;
 	}
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if (kBuilding.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kBuilding.getPrereqGameOption()))
 	{
@@ -12659,7 +12659,7 @@ bool CvGame::canEverTrain(UnitTypes eUnit) const
 	{
 		return false;
 	}
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (kUnit.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kUnit.getPrereqGameOption()))
 	{

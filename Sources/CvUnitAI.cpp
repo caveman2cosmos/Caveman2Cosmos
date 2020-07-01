@@ -15247,7 +15247,7 @@ bool CvUnitAI::AI_chokeDefend()
 
 	// XXX what about amphib invasions?
 
-	const CvCity* pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -25764,9 +25764,9 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 	bool bBuildRoute = false;
 	bool bClearFeature = false;
 
-	FeatureTypes eFeature = pPlot->getFeatureType();
+	const FeatureTypes eFeature = pPlot->getFeatureType();
 
-	CvBuildInfo& kOriginalBuildInfo = GC.getBuildInfo(eBuild);
+	const CvBuildInfo& kOriginalBuildInfo = GC.getBuildInfo(eBuild);
 
 	if (kOriginalBuildInfo.getRoute() != NO_ROUTE)
 	{
@@ -25782,7 +25782,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 
 	if (eFeature != NO_FEATURE)
 	{
-		CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
+		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		if (kOriginalBuildInfo.isFeatureRemove(eFeature))
 		{
 			if ((kOriginalBuildInfo.getImprovement() == NO_IMPROVEMENT) || (!pPlot->isBeingWorked() || (kFeatureInfo.getYieldChange(YIELD_FOOD) + kFeatureInfo.getYieldChange(YIELD_PRODUCTION)) <= 0))
@@ -25825,11 +25825,10 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 	int iBestValue = 0;
 	for (int iBuild = 0; iBuild < GC.getNumBuildInfos(); iBuild++)
 	{
-		BuildTypes eBuild = ((BuildTypes)iBuild);
-		CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
+		const BuildTypes eBuild = ((BuildTypes)iBuild);
+		const CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
 
-
-		RouteTypes eRoute = (RouteTypes)kBuildInfo.getRoute();
+		const RouteTypes eRoute = (RouteTypes)kBuildInfo.getRoute();
 		if ((bBuildRoute && (eRoute != NO_ROUTE)) || (bClearFeature && kBuildInfo.isFeatureRemove(eFeature)))
 		{
 			if (canBuild(pPlot, eBuild))
@@ -25864,12 +25863,12 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 					int iPlotGroupId = -1;
 					for (int iDirection = 0; iDirection < NUM_DIRECTION_TYPES; iDirection++)
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iDirection);
+						const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iDirection);
 						if (pLoopPlot != NULL)
 						{
 							if (pPlot->isRiver() || (pLoopPlot->getRouteType() != NO_ROUTE))
 							{
-								CvPlotGroup* pLoopGroup = pLoopPlot->getPlotGroup(getOwner());
+								const CvPlotGroup* pLoopGroup = pLoopPlot->getPlotGroup(getOwner());
 								if (pLoopGroup != NULL)
 								{
 									if (pLoopGroup->getID() != -1)
@@ -26625,7 +26624,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 					{
 						if( pCity->getProductionTurnsLeft() < 4 )
 						{
-							CvUnitInfo& kUnitInfo = GC.getUnitInfo(pCity->getProductionUnit());
+							const CvUnitInfo& kUnitInfo = GC.getUnitInfo(pCity->getProductionUnit());
 							if ((kUnitInfo.getDomainType() != DOMAIN_AIR) || kUnitInfo.getAirRange() > 0)
 							{
 								iCount++;
@@ -26715,7 +26714,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 
 					if (bCountProduction && (pLoopCity->getProductionUnitAI() == eUnitAI))
 					{
-						CvUnitInfo& kUnitInfo = GC.getUnitInfo(pLoopCity->getProductionUnit());
+						const CvUnitInfo& kUnitInfo = GC.getUnitInfo(pLoopCity->getProductionUnit());
 						if ((kUnitInfo.getDomainType() != DOMAIN_AIR) || kUnitInfo.getAirRange() > 0)
 						{
 							iValue++;
@@ -33096,8 +33095,8 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 		{
 			if ( isHasPromotion((PromotionTypes)iI) )
 			{
-				CvPromotionInfo&	kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
-				bool				bPromotionHasAccountedValue = false;
+				const CvPromotionInfo& kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
+				bool bPromotionHasAccountedValue = false;
 
 				//	Generic strength multiplier
 				if ( kPromotion.getCombatPercent() != 0 )

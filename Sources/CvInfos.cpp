@@ -1396,7 +1396,7 @@ void CvTechInfo::validate()
 #ifdef _DEBUG
 	for(int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		CvTechInfo&	info = GC.getTechInfo((TechTypes)iI);
+		const CvTechInfo& info = GC.getTechInfo((TechTypes)iI);
 
 		//	Arbitrary tests - add cases as suspected bugs crop up to pre-detect
 		FAssert(info.getEra() >= 0);
@@ -12842,11 +12842,11 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 				{
 					for (j=0;j<iNumSibs;j++)
 					{
-						CivicTypes eCivic = (CivicTypes)pXML->GetInfoClass(szTextVal);//, true);
+						const CivicTypes eCivic = (CivicTypes)pXML->GetInfoClass(szTextVal);//, true);
 						if ( eCivic != NO_CIVIC )
 						{
-							CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-							CivicOptionTypes eCivicOption = (CivicOptionTypes)kCivic.getCivicOptionType();
+							const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+							const CivicOptionTypes eCivicOption = (CivicOptionTypes)kCivic.getCivicOptionType();
 
 							if ( eCivicOption != NO_CIVICOPTION )
 							{
@@ -14866,7 +14866,7 @@ int CvBuildInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvBuildInfo::isMapCategoryType(int i)
+bool CvBuildInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -15281,7 +15281,7 @@ int CvGoodyInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvGoodyInfo::isMapCategoryType(int i)
+bool CvGoodyInfo::isMapCategoryType(int i) const
 {
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
 	{
@@ -16261,7 +16261,7 @@ int CvImprovementInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvImprovementInfo::isMapCategoryType(int i)
+bool CvImprovementInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -17477,7 +17477,7 @@ int CvBonusInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvBonusInfo::isMapCategoryType(int i)
+bool CvBonusInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -18088,7 +18088,7 @@ int CvFeatureInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvFeatureInfo::isMapCategoryType(int i)
+bool CvFeatureInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -18991,7 +18991,7 @@ int CvTerrainInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvTerrainInfo::isMapCategoryType(int i)
+bool CvTerrainInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -22159,7 +22159,7 @@ int CvProjectInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvProjectInfo::isMapCategoryType(int i)
+bool CvProjectInfo::isMapCategoryType(int i) const
 {
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
 	{

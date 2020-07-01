@@ -2418,13 +2418,14 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 		/*                                                                                              */
 		/* CanTrain Performance                                                                         */
 		/************************************************************************************************/
-		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 		const int iNumUnitInfos = GC.getNumUnitInfos();
 
 		FAssertMsg(eUnit != NO_UNIT, "eUnit is expected to be assigned (not NO_UNIT)");
 
 		if (iUpgradeCount <= iNumUnitInfos)
 		{
+			const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
 			UnitTypes eUpgradeUnit = NO_UNIT;
 
 			bool bUpgradeFound = false;
@@ -2979,8 +2980,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		return false;
 	}
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	bool bQual = false;
 	if (GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted() && isNPC())
@@ -3790,7 +3790,6 @@ bool CvCity::canContinueProduction(const OrderData& order) const
 int CvCity::getProductionExperience(UnitTypes eUnit) const
 {
 	const CvPlayer& kPlayer = GET_PLAYER(getOwner());
-	const CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 
 	int iExperience = getFreeExperience() + kPlayer.getFreeExperience();
 
@@ -3879,8 +3878,8 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	const int numNumBuildingInfos = GC.getNumBuildingInfos();
 	for (int iJ = 0; iJ < numNumBuildingInfos; iJ++)
 	{
-		BuildingTypes eBuilding = ((BuildingTypes)iJ);
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		const BuildingTypes eBuilding = ((BuildingTypes)iJ);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 		if (kBuilding.getNumFreePromoTypes() > 0)
 		{
@@ -5310,7 +5309,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 {
 	PROFILE_FUNC();
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	FAssert(iChange == 1 || iChange == -1);
 	//Team Project (5)
 	if (!bReligiouslyDisabling && kBuilding.isOrbitalInfrastructure())
@@ -8433,9 +8432,8 @@ int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 	{
 		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
-		CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 
-		iSpecialistGreatPeopleRate += kSpecialist.getGreatPeopleRateChange();
+		iSpecialistGreatPeopleRate += GC.getSpecialistInfo(eNewSpecialist).getGreatPeopleRateChange();
 
 	}
 	iExtraRate += iSpecialistGreatPeopleRate;
@@ -8678,8 +8676,8 @@ int CvCity::getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
 	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	int iModifier = kCivic.getNumCitiesMaintenanceModifier();
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const int iModifier = kCivic.getNumCitiesMaintenanceModifier();
 
 	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
 	{
@@ -9412,7 +9410,6 @@ int CvCity::getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange, int
 	FAssertMsg(eFeature >= 0, "eFeature expected to be >= 0");
 	FAssertMsg(eFeature < GC.getNumFeatureInfos(), "eFeature expected to be < GC.getNumFeatureInfos()");
 
-	//CvFeatureInfo& kFeature = GC.getFeatureInfo(eFeature);
 	int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
 
 	if (iHealth > 0)
@@ -9856,8 +9853,8 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 		return 0;
 	}
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	CvPlayer& kOwner = GET_PLAYER(getOwner());
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
 	if (eStateReligion == NO_RELIGION)
 	{
 		eStateReligion = kOwner.getStateReligion();
@@ -10040,7 +10037,7 @@ int CvCity::getAdditionalHealthByCivic(CivicTypes eCivic, int& iGood, int& iBad,
 		return 0;
 	}
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	CvPlayer& kOwner = GET_PLAYER(getOwner());
 	int iHealth = 0;
 
@@ -10192,7 +10189,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	int iStarting = iGood - iBad;
 	int iStartingBad = iBad;
@@ -10336,10 +10333,10 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 
 	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 	{
-		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
-		CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
-		iSpecialistExtraHappy += kSpecialist.getHappinessPercent();
+
+		iSpecialistExtraHappy += GC.getSpecialistInfo(eNewSpecialist).getHappinessPercent();
 	}
 	iSpecialistExtraHappy /= 100;
 	addGoodOrBad(iSpecialistExtraHappy, iGood, iBad);
@@ -10389,7 +10386,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	int iStarting = iGood - iBad;
 	int iStartingBad = iBad;
@@ -10521,10 +10518,10 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 
 	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 	{
-		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
-		CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
-		iSpecialistExtraHealth += kSpecialist.getHealthPercent();
+
+		iSpecialistExtraHealth += GC.getSpecialistInfo(eNewSpecialist).getHealthPercent();
 	}
 	iSpecialistExtraHealth /= 100;
 	addGoodOrBad(iSpecialistExtraHealth, iGood, iBad);
@@ -11332,11 +11329,10 @@ int CvCity::getAdditionalBombardDefenseByBuilding(BuildingTypes eBuilding) const
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	int iBaseDefense = getBuildingBombardDefense();
+	const int iBaseDefense = getBuildingBombardDefense();
 
 	// cap total bombard defense at 100
-	return std::min(kBuilding.getBombardDefenseModifier() + iBaseDefense, 100) - iBaseDefense;
+	return std::min(GC.getBuildingInfo(eBuilding).getBombardDefenseModifier() + iBaseDefense, 100) - iBaseDefense;
 }
 // BUG - Building Additional Bombard Defense - end
 
@@ -12305,7 +12301,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 	}
 	int iExtraRate = 0;
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if (kBuilding.getSeaPlotYieldChange(eIndex) != 0)
 	{
@@ -12451,7 +12447,7 @@ int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, Building
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraModifier = 0;
 
@@ -12531,7 +12527,7 @@ int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, Specialist
 	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
 	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
 
-	CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
+	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
 
 	return iChange * (kSpecialist.getYieldChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, eIndex) / 100));
 }
@@ -13427,7 +13423,7 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 
 	if (getNumBuilding(eBuilding) > 0)
 	{
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 		if (!(kBuilding.isCommerceChangeOriginalOwner(eIndex)) || (getBuildingOriginalOwner(eBuilding) == getOwner()))
 		{
 			int iCommerce = kBuilding.getObsoleteSafeCommerceChange(eIndex) * getNumBuilding(eBuilding);
@@ -13492,13 +13488,12 @@ int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingT
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "GC.getNumBuildingInfos expected to be >= 0");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	if (getNumActiveBuilding(eBuilding) > 0)
 	{
 		int iCommerce = 0;
-		int iNumOrbital = GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure();
+		const int iNumOrbital = GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure();
 
-		//CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);	
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);	
 		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
 
 		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
@@ -13635,7 +13630,7 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 {
 	int iExtraRateTimes100 = 100 * getAdditionalBaseCommerceRateByBuilding(eIndex, eBuilding);
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (hasBonus((BonusTypes)iI))
@@ -13660,12 +13655,9 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, Bu
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
-	int iExtraRate = 0;
-
-	iExtraRate += kBuilding.getObsoleteSafeCommerceChange(eIndex);
-	if (!bObsolete)
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	int iExtraRate = kBuilding.getObsoleteSafeCommerceChange(eIndex);
+	if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding))
 	{
 		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
 		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
@@ -13790,7 +13782,7 @@ int CvCity::getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraModifier = 0;
 
@@ -13971,7 +13963,7 @@ int CvCity::getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, 
 	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
 	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
 
-	CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
+	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
 
 	return iChange * (kSpecialist.getCommerceChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex) + getLocalSpecialistExtraCommerce(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex));
 }
@@ -20983,8 +20975,8 @@ int CvCity::getMusicScriptId() const
 		}
 	}
 
-	CvLeaderHeadInfo& kLeaderInfo = GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType());
-	EraTypes eCurEra = GET_PLAYER(getOwner()).getCurrentEra();
+	const CvLeaderHeadInfo& kLeaderInfo = GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType());
+	const EraTypes eCurEra = GET_PLAYER(getOwner()).getCurrentEra();
 	if (bIsHappy)
 	{
 		return (kLeaderInfo.getDiploPeaceMusicScriptIds(eCurEra));
@@ -21967,7 +21959,7 @@ void CvCity::doPromotion()
 	for (int iI = 0; iI < numNumBuildingInfos; iI++)
 	{
 		const BuildingTypes eBuilding = ((BuildingTypes)iI);
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 		if (kBuilding.isApplyFreePromotionOnMove())
 		{
@@ -22024,7 +22016,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 	bool bRequiresOrFeature = false;
 	bool bHasValidFeature = false;
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
@@ -22227,13 +22219,13 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraRate = 0;
 	int iExtraBuildingRate = 0;
 
-	if (!bObsolete)
+	if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding))
 	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
 		if (kBuilding.getDefenseModifier() != 0)
 		{
 			//int iCultureDefense = getNaturalDefense() - getBuildingDefense();
@@ -22299,7 +22291,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			bool bRequiresPopulation = false;
 			bool bCultureTooHigh = false;
 
-			CvBuildingInfo& kBuilding = GC.getBuildingInfo(eLoopBuilding);
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eLoopBuilding);
 
 			/* Check for Appropriate Resources */
 			if (bBonus)
@@ -22682,11 +22674,11 @@ void CvCity::setExtraYieldTurns(int iNewVal)
 	}
 }
 
-BuildTypes CvCity::findChopBuild(FeatureTypes eFeature)
+BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 {
 	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
-		CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
+		const CvBuildInfo& kBuild = GC.getBuildInfo((BuildTypes)iI);
 		if (kBuild.getImprovement() == NO_IMPROVEMENT)
 		{
 			if (kBuild.isFeatureRemove(eFeature) &&
@@ -22939,7 +22931,7 @@ bool CvCity::hasVicinityBonus(BonusTypes eBonus) const
 			{
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
 					if (kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
 					{
@@ -23030,7 +23022,7 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 		{
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
 				if (kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
 				{
@@ -25101,7 +25093,7 @@ bool CvCity::canAcquireAffliction(BuildingTypes eDisease, PromotionLineTypes eAf
 
 int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const
 {
-	CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
+	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 
 	int iTradeCommunicability = 0;
 	for (int iI = 0; iI < kAffliction.getNumBuildings(); iI++)
@@ -25136,9 +25128,9 @@ int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 
 void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 {
-	PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
-	CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
+	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
+	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	BuildingTypes eBuilding;
 	CvWString szBuffer;
 	int iLowestLinePriority = MAX_INT;
@@ -25173,8 +25165,6 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 		}
 	}
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
 	if (iLowestLinePriority == MAX_INT)
 	{
 		//can't acquire
@@ -25206,6 +25196,8 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 		return;
 	}
 
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
 	//Design the check portion.
 	int iOutbreakBase = kBuilding.getOutbreakBase();
 	int iOutbreakTotal = iOutbreakBase - iTotalCommunicableExposure + getOutbreakChangesTotal(eBuilding, eAfflictionLine);
@@ -25231,9 +25223,9 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 
 void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 {
-	PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
-	CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
+	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
+	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	int iHighestLinePriority = 0;
 	BuildingTypes eBuilding;
 	CvWString szBuffer;
