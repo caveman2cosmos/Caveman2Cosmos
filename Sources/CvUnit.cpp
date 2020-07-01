@@ -9516,21 +9516,14 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 	{
 		if (GC.isDCM_AIR_BOMBING())
 		{
-			int iI, iLoop;
-			CvUnit* pLoopUnit;
-			for (iI = 0; iI < MAX_PLAYERS; ++iI)
+			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 			{
 				if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 				{
-					for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+					if (algo::any_of(GET_PLAYER((PlayerTypes)iI).units(),
+						CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_SEA))
 					{
-						if (pLoopUnit->plot() == pTargetPlot)
-						{
-							if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-							{
-								return true;
-							}
-						}
+						return true;
 					}
 				}
 			}
@@ -13568,7 +13561,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		return NULL;
 	}
-	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
 	//The following checks to make sure that the upgrade won't make it impossible for a ship to hold
 	//the cargo it already does.
@@ -15976,23 +15969,16 @@ int CvUnit::rangeCombatDamage(const CvUnit* pDefender) const
 
 CvUnit* CvUnit::bestInterceptor(const CvPlot* pPlot) const
 {
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI;
+	int iBestValue = 0;
+	CvUnit* pBestUnit = NULL;
 
-	iBestValue = 0;
-	pBestUnit = NULL;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			if (!isInvisible(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false))
 			{
-				for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+				foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 				{
 					if (pLoopUnit->canAirDefend())
 					{
@@ -16006,7 +15992,7 @@ CvUnit* CvUnit::bestInterceptor(const CvPlot* pPlot) const
 									{
 										if (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pPlot->getX(), pPlot->getY()) <= pLoopUnit->airRange())
 										{
-											iValue = pLoopUnit->currInterceptionProbability();
+											const int iValue = pLoopUnit->currInterceptionProbability();
 
 											if (iValue > iBestValue)
 											{
@@ -17660,16 +17646,13 @@ int CvUnit::getHotKeyNumber()
 
 void CvUnit::setHotKeyNumber(int iNewValue)
 {
-	CvUnit* pLoopUnit;
-	int iLoop;
-
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getHotKeyNumber() != iNewValue)
 	{
 		if (iNewValue != -1)
 		{
-			for(pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 			{
 				if (pLoopUnit->getHotKeyNumber() == iNewValue)
 				{
@@ -22736,8 +22719,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-	PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	const PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
 
 	if (kPromotion.isStatus() && !bForStatus)
 	{
@@ -22989,7 +22972,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).getNumNotOnUnitCombatTypes() > 0)
 	{
-		CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 		for (int iI = 0; iI < kPromotionLine.getNumNotOnUnitCombatTypes(); iI++)
 		{
 			if (isHasUnitCombat((UnitCombatTypes)kPromotionLine.getNotOnUnitCombatType(iI)))
@@ -23062,11 +23045,11 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//Must have the next less promotionline priority unless this is an affliction, equipment, or BuildUp or Status.
 	if (ePromotionLine != NO_PROMOTIONLINE && !bAfflict && !bEquip && !kPromotion.isCritical() && !bForBuildUp && !bForStatus && kPromotion.getLinePriority() > 1)
 	{
-		CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 		const int numPromotions = kPromotionLine.getNumPromotions();
 		for (int iJ = 0; iJ < numPromotions; iJ++)
 		{
-			PromotionTypes ePrereq = (PromotionTypes)kPromotionLine.getPromotion(iJ);
+			const PromotionTypes ePrereq = (PromotionTypes)kPromotionLine.getPromotion(iJ);
 			if (GC.getPromotionInfo(ePrereq).getLinePriority() == kPromotion.getLinePriority() - 1)
 			{
 				if (!isHasPromotion(ePrereq))
@@ -23092,7 +23075,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 			ePrereq = ((PromotionTypes)iI);
 			if (isHasPromotion(ePrereq))
 			{
-				CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
+				const CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
 				if (kPrereqPromotion.getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					if (kPrereqPromotion.getPromotionLine() == ePromotionLine)
@@ -23342,7 +23325,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		}
 	}
 
-	CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
+	const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
 
 //Disable S&D modifying promos if option is not on:
 
@@ -23957,7 +23940,7 @@ bool CvUnit::isHasUnitCombat(UnitCombatTypes eIndex) const
 
 void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo)
 {
-	CvUnitCombatInfo& kUnitCombat = GC.getUnitCombatInfo(eIndex);
+	const CvUnitCombatInfo& kUnitCombat = GC.getUnitCombatInfo(eIndex);
 	int iChange = (bAdding ? 1 : -1);
 	int	iI;
 
@@ -24504,7 +24487,7 @@ bool CvUnit::isHasPromotion(PromotionTypes eIndex) const
 
 void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial)
 {
-	CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
 	int iChange = (bAdding ? 1 : -1);
 	int	iI;
 	bool bSM = (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS));
@@ -30798,15 +30781,11 @@ bool CvUnit::canAirBomb4(const CvPlot* pPlot) const
 
 bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 {
-	CvCity* pCity;
-	CvPlot* pTargetPlot;
-	CvUnit* pLoopUnit;
-	int iI, iLoop;
 	if (!canAirBomb4(pPlot))
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
@@ -30818,22 +30797,17 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 			return false;
 		}
 	}
-	pCity = pTargetPlot->getPlotCity();
+	const CvCity* pCity = pTargetPlot->getPlotCity();
 	if (pCity != NULL)
 	{
-		for (iI = 0; iI < MAX_PLAYERS; ++iI)
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 		{
 			if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 			{
-				for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+				if (algo::any_of(GET_PLAYER((PlayerTypes)iI).units(),
+					CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_SEA))
 				{
-					if (pLoopUnit->plot() == pTargetPlot)
-					{
-						if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-						{
-							return true;
-						}
-					}
+					return true;
 				}
 			}
 		}
@@ -30842,19 +30816,14 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 	{
 		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isActsAsCity() && pCity == NULL)
 		{
-			for (iI = 0; iI < MAX_PLAYERS; ++iI)
+			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 			{
 				if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 				{
-					for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+					if (algo::any_of(GET_PLAYER((PlayerTypes)iI).units(),
+						CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_SEA))
 					{
-						if (pLoopUnit->plot() == pTargetPlot)
-						{
-							if (pLoopUnit->getDomainType() == DOMAIN_SEA)
-							{
-								return true;
-							}
-						}
+						return true;
 					}
 				}
 			}
@@ -31917,8 +31886,6 @@ bool CvUnit::canFEngage() const
 bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 {
 	CvPlot* pTargetPlot;
-	int iI, iLoop;
-	CvUnit* pLoopUnit;
 	if (!canFEngage())
 	{
 		return false;
@@ -31944,19 +31911,14 @@ bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 			}
 		}
 	}
-	for (iI = 0; iI < MAX_PLAYERS; ++iI)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
 		if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 		{
-			for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+			if (algo::any_of(GET_PLAYER((PlayerTypes)iI).units(),
+				CvUnit::fn::plot() == pTargetPlot && CvUnit::fn::getDomainType() == DOMAIN_AIR))
 			{
-				if (pLoopUnit->plot() == pTargetPlot)
-				{
-					if (pLoopUnit->getDomainType() == DOMAIN_AIR)
-					{
-						return true;
-					}
-				}
+				return true;
 			}
 		}
 	}
@@ -32569,7 +32531,7 @@ bool CvUnit::performInquisition()
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
-					CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+					const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
 						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ)
@@ -33636,19 +33598,15 @@ int CvUnit::commandRange() const
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
 {
-	int iValue;
-	int iLoop;
-	int iI;
 	int iNoInterceptionChanceTimes100 = 10000;
-	CvUnit* pLoopUnit;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			if (!isInvisible(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false))
 			{
-				for(pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+				foreach_(const CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 				{
 					if (pLoopUnit->canAirDefend())
 					{
@@ -33662,7 +33620,7 @@ int CvUnit::interceptionChance(const CvPlot* pPlot) const
 									{
 										if (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pPlot->getX(), pPlot->getY()) <= pLoopUnit->airRange())
 										{
-											iValue = pLoopUnit->currInterceptionProbability();
+											const int iValue = pLoopUnit->currInterceptionProbability();
 											if (iValue > 0 && iValue < 100)
 											{
 												iNoInterceptionChanceTimes100 *= (100 - iValue);
@@ -34669,8 +34627,8 @@ bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 
 int CvUnit::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const
 {
-	CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
-	CvPlot* pPlot = plot();
+	//const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
+	const CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
 		return 0;
@@ -37328,7 +37286,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 	PromotionTypes eQualifyPromo;
 	bool bbypass = true;
-	CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 	PromotionTypes ePromotionPrerequisite = (PromotionTypes)kPromotion.getPrereqPromotion();
 	PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
 	PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
@@ -37341,7 +37299,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (ePromotionPrerequisite != NO_PROMOTION)
 			{
-				CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
+				const CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
 				bbypass = false;
 				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
 				{
@@ -37360,7 +37318,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 						{
 							eQualifyPromo = ((PromotionTypes)iI);
-							CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
+							const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
 							if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
 							{
 								if (kQualifier.getPromotionLine() == kPrereq.getPromotionLine())
@@ -37401,7 +37359,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			}
 			if (ePromotionPrerequisite1 != NO_PROMOTION)
 			{
-				CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
+				const CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
 				bbypass = false;
 				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
 				{
@@ -37418,7 +37376,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 						{
 							eQualifyPromo = ((PromotionTypes)iI);
-							CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
+							const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
 							if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
 							{
 								if (kQualifier.getPromotionLine() == kPrereq1.getPromotionLine())
@@ -37433,7 +37391,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					}
 					if (!bbypass && ePromotionPrerequisite2 != NO_PROMOTION)
 					{
-						CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
+						const CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
 						if (isHasPromotion(ePromotionPrerequisite2))
 						{
 							bbypass = true;
@@ -38206,7 +38164,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	if (ePromotionPrerequisite != NO_PROMOTION)
 	{
-		CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
+		//const CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
 		bbypass = false;
 		if (isHasPromotion(ePromotionPrerequisite))
 		{
@@ -38219,7 +38177,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 	}
 	if (ePromotionPrerequisite1 != NO_PROMOTION)
 	{
-		CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
+		//const CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
 		bbypass = false;
 		if (isHasPromotion(ePromotionPrerequisite1))
 		{
@@ -38228,7 +38186,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 		if (!bbypass && ePromotionPrerequisite2 != NO_PROMOTION)
 		{
-			CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
+			//const CvPromotionInfo& kPrereq2 = GC.getPromotionInfo(ePromotionPrerequisite2);
 			if (isHasPromotion(ePromotionPrerequisite2))
 			{
 				bbypass = true;
@@ -42850,7 +42808,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					for (int iI = 0; iI < kPotentialPromotionLine.getNumPromotions(); iI++)
 					{
 						const PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
-						CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+						const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 						if (kPromotion.getLinePriority() == 1
 							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{

@@ -17113,6 +17113,7 @@
 			</ExtraFreeBonuses>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
+		<!-- Review Point - Toffer 21.06.20 -->
 		<BuildingInfo>
 			<Type>BUILDING_SNAKE_CHARMER</Type>
 			<EnabledCivilizationTypes>

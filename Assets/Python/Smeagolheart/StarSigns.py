@@ -37,7 +37,7 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 	iPromotion = GC.getInfoTypeForString(aStarSignList[iChance])
 	CyUnit.setHasPromotion(iPromotion, True)
 
-	if iPlayer == GAME.getActivePlayer():
+	if iPlayer == GAME.getActivePlayer() and GAME.isFinalInitialized():
 		CyCity = CyUnit.plot().getPlotCity()
 		if CyCity and not CyCity.isNone():
 			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_BUILD", (CyCity.getName(),))

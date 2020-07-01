@@ -2044,7 +2044,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
@@ -3864,7 +3864,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	//integer vectors with pairing method without delayed resolution
 	int getNumUnitCombatRepelModifiers() const;
@@ -5073,7 +5073,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
@@ -5173,7 +5173,7 @@ public:
 	//Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	const TCHAR* getSound() const; // Exposed to Python
 
@@ -5427,7 +5427,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	const TCHAR* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
@@ -5673,7 +5673,7 @@ public:
 	//Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 
 	int getNumAfflictionCommunicabilityTypes() const;
@@ -5817,7 +5817,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -6062,7 +6062,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -6834,7 +6834,7 @@ public:
 	// Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);

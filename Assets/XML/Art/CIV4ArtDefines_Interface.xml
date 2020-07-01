@@ -98,44 +98,8 @@
 			<Path>Art/Interface/MainScreen/CityScreen/Angry_Citizen.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_AUTOMATION_FRAME</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/auto_button_frame.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BACK</Type>
-			<Path>Art/Interface/MainScreen/BottomLeft.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_CENTER</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Center.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_LEFT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Left.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_RIGHT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Right.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_CIVICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_CivicsAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DEMOGRAPHICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Demographics.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DOMESTIC</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_DomesticAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_EVENT_LOG</Type>
 			<Path>Art/Interface/MainScreen/Turn_Log.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_FINANCE</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_FinanceAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_FOREIGN</Type>
@@ -146,32 +110,8 @@
 			<Path>Art/Interface/MainScreen/AD_BTN_MilitaryAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_RELIGIOUS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_ReligiousAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_TECH</Type>
 			<Path>Art/Interface/MainScreen/AD_BTN_TECHAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_VICTORY</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Victory.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_16</Type>
-			<Path>Art/Interface/Buttons/Button_16.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_24</Type>
-			<Path>Art/Interface/Buttons/Button_24.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_32</Type>
-			<Path>Art/Interface/Buttons/Button_32.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_46</Type>
-			<Path>Art/Interface/Buttons/Button_46.kfm</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CANCEL</Type>
@@ -182,28 +122,8 @@
 			<Path>Art/Interface/Buttons/Builds/BuildVillage.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CONSCRIPT</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/hurry_draft.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CREATEGROUP</Type>
 			<Path>Art/Interface/Buttons/Actions/CreateUnitGroup.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTY</Type>
-			<Path>Art/Interface/Buttons/Empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTYBROWN</Type>
-			<Path>Art/Interface/Buttons/Brown_empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_citizens.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR_PRODUCTION</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_production.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_LEFT</Type>
@@ -224,10 +144,6 @@
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RED_X</Type>
 			<Path>Art/Interface/Screens/TechTree/X.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CHECK</Type>
-			<Path>Art/Interface/Buttons/General/CheckMark.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RIGHT</Type>
@@ -266,17 +182,10 @@
 			<Path>Art/Interface/CityBar/CityBar_Circle.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_PANEL</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/PanelBG.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_STRATEGY_BAR_MODEL</Type>
 			<Path>Art/Interface/CityBar/Strategy_Billboard.nif</Path>
 		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_EMPTY</Type>
-			<Path>Art/Interface/Empty.kfm</Path>
-		</InterfaceArtInfo>
+		<!-- Review point - Toffer 21.06.20-->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_GAMEDATABACK</Type>
 			<Path>Art/Interface/GameDataBack.nif</Path>
