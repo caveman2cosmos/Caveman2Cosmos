@@ -934,9 +934,9 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 {
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 		if (iTeam != getID())
 		{
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 			if (iTeam == eTeam || kLoopTeam.isVassal(eTeam) || GET_TEAM(eTeam).isVassal((TeamTypes)iTeam) || kLoopTeam.isDefensivePact(eTeam))
 			{
 				if (AI_isLandTarget((TeamTypes)iTeam))

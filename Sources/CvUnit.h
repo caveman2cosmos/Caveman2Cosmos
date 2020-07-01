@@ -1839,8 +1839,8 @@ public:
 	virtual bool AI_follow() = 0;
 	virtual bool AI_upgrade() = 0;
 	virtual bool AI_promote() = 0;
-	virtual int AI_groupFirstVal() = 0;
-	virtual int AI_groupSecondVal() = 0;
+	virtual int AI_groupFirstVal() const = 0;
+	virtual int AI_groupSecondVal() const = 0;
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false) = 0;
 	//	Variant to test a specific defender AS IF it was in the specified plot
 	virtual int AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults = false) = 0;
@@ -2336,7 +2336,7 @@ public:
 	virtual void AI_setLeaderPriority(int iPriority) = 0; //	 -1 means reset to default
 	virtual int AI_getPredictedHitPoints() const = 0;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints) = 0;
-	virtual bool AI_getHasAttacked() = 0;
+	virtual bool AI_getHasAttacked() const = 0;
 	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const = 0;
 
 	bool isUsingDummyEntities() const;

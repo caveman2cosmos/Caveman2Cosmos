@@ -851,7 +851,7 @@ bool CvUnitAI::AI_promote()
 	return false;
 }
 
-int CvUnitAI::AI_groupFirstVal()
+int CvUnitAI::AI_groupFirstVal() const
 {
 	if ( m_iGroupLeadOverride != -1 )
 	{
@@ -1031,7 +1031,7 @@ int CvUnitAI::AI_groupFirstVal()
 }
 
 
-int CvUnitAI::AI_groupSecondVal()
+int CvUnitAI::AI_groupSecondVal() const
 {
 	return ((getDomainType() == DOMAIN_AIR) ? airBaseCombatStr() : baseCombatStr());
 }
@@ -1051,7 +1051,7 @@ void CvUnitAI::AI_setPredictedHitPoints(int iPredictedHitPoints)
 	}
 }
 
-bool CvUnitAI::AI_getHasAttacked()
+bool CvUnitAI::AI_getHasAttacked() const
 {
 	return m_bHasAttacked;
 }
@@ -2140,9 +2140,8 @@ void CvUnitAI::AI_settleMove()
 	return;
 }
 
-int CvUnitAI::AI_minSettlerDefense()
+int CvUnitAI::AI_minSettlerDefense() const
 {
-
 	int defenders = 2;
 
 	if(getGameTurnCreated() > 0)
@@ -14501,17 +14500,17 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 	return false;
 }
 
-int CvUnitAI::AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra)
+int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 {
 	int iNeeded = iExtra;
-	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
+	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
 	{
 		iNeeded += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) + 10) / 19;
 	}
 
 	//	Super forts - PARTIAL merge here to encourage defense of choke points
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	if (kPlayer.AI_getPlotDanger(pPlot) > 0)
 	{
 		++iNeeded;
@@ -14548,7 +14547,7 @@ int CvUnitAI::AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra)
 	{
 		for (int iY = -iRange; iY <= iRange; iY++)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
+			const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
 			if (pLoopPlot != NULL)
 			{
 				iNumHostiles += pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
@@ -15244,14 +15243,11 @@ bool CvUnitAI::AI_pickupTargetSpy()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_chokeDefend()
 {
-	CvCity* pCity;
-	int iPlotDanger;
-
 	FAssert(AI_isCityAIType());
 
 	// XXX what about amphib invasions?
 
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -15261,7 +15257,7 @@ bool CvUnitAI::AI_chokeDefend()
 			{
 				if (pCity->AI_isDefended(pCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType)))
 				{
-					iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
+					const int iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
 
 					if (iPlotDanger <= 4)
 					{
@@ -16988,7 +16984,7 @@ bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 	{
 		for (int iDY = -iSearchRange; iDY <= iSearchRange; ++iDY)
 		{
-			CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 			if (pLoopPlot != NULL && pLoopPlot->area() == plot()->area())
 			{
