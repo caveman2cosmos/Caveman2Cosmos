@@ -994,26 +994,11 @@ void CvNetDoCommand::Execute()
 		{
 			if (m_bAlt && GC.getCommandInfo(m_eCommand).getAll())
 			{
-				int iLoop;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       07/08/09                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* orginal bts code
-				
-				for (CvUnit* pLoopUnit = GET_PLAYER(m_ePlayer).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(m_ePlayer).nextUnit(&iLoop))
-				{
-					if (pLoopUnit->getUnitType() == pUnit->getUnitType())
-*/
 				// Have to save type ahead of time, pointer can change
-				UnitTypes eUpgradeType = pUnit->getUnitType();
-				for (CvUnit* pLoopUnit = GET_PLAYER(m_ePlayer).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(m_ePlayer).nextUnit(&iLoop))
+				const UnitTypes eUpgradeType = pUnit->getUnitType();
+				foreach_(CvUnit* pLoopUnit, GET_PLAYER(m_ePlayer).units())
 				{
 					if (pLoopUnit->getUnitType() == eUpgradeType)
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 					{
 						GC.getGame().logDebugMsg("Executing CvNetDoCommand message (all of same unit type) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 						pLoopUnit->doCommand(m_eCommand, m_iData1, m_iData2);

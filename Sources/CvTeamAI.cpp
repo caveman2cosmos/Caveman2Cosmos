@@ -2879,14 +2879,11 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 	int iValuableCitiesThreatenedByUs = 0;
 	int iCitiesThreatenedByOthers = 0;
 
-	CvCity* pLoopCity;
-	int iLoop;
-
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if( GET_PLAYER((PlayerTypes)iI).getTeam() == eSurrenderTeam && GET_PLAYER((PlayerTypes)iI).isAlive() )
 		{
-			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				bool bValuable = false;
 
@@ -6169,10 +6166,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 
 		if ((iTeamCities < 2 && (kPlayer.getTeam() == getID())) || (iOtherTeamCities < 2 && (kPlayer.getTeam() != getID())))
 		{
-			int iLoop;
-			CvCity* pLoopCity;
-
-			for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, kPlayer.cities())
 			{
 				if (pLoopCity->plot()->isAdjacentToArea(pArea->getID()))
 				{
