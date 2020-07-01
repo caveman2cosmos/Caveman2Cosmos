@@ -2027,7 +2027,7 @@ CvPlot* CvCity::getCityIndexPlot(int iIndex) const
 }
 
 
-bool CvCity::canWork(CvPlot* pPlot) const
+bool CvCity::canWork(const CvPlot* pPlot) const
 {
 	if (pPlot->getWorkingCity() != this)
 	{
@@ -7762,7 +7762,7 @@ void CvCity::setID(int iID)
 
 int CvCity::getViewportX() const
 {
-	CvViewport* pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 	FAssert(isInViewport());
 
@@ -7772,7 +7772,7 @@ int CvCity::getViewportX() const
 
 int CvCity::getViewportY() const
 {
-	CvViewport* pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 	FAssert(isInViewport());
 
@@ -7917,7 +7917,7 @@ CvPlot* CvCity::getRallyPlot() const
 }
 
 
-void CvCity::setRallyPlot(CvPlot* pPlot)
+void CvCity::setRallyPlot(const CvPlot* pPlot)
 {
 	if (getRallyPlot() != pPlot)
 	{
@@ -12737,7 +12737,7 @@ int CvCity::getTradeYield(YieldTypes eIndex) const
 }
 
 
-int CvCity::totalTradeModifier(CvCity* pOtherCity) const
+int CvCity::totalTradeModifier(const CvCity* pOtherCity) const
 {
 	int iModifier = 100;
 
@@ -12806,7 +12806,7 @@ int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const
 	return ((GC.getFOREIGN_TRADE_MODIFIER() * iPeaceTurns) / std::max(1, GC.getFOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS()));
 }
 
-int CvCity::getBaseTradeProfit(CvCity* pCity) const
+int CvCity::getBaseTradeProfit(const CvCity* pCity) const
 {
 	int iProfit = std::min(pCity->getPopulation() * GC.getTHEIR_POPULATION_TRADE_PERCENT(), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMap().getWorldSize()).getTradeProfitPercent());
 
@@ -12826,7 +12826,7 @@ int CvCity::getBaseTradeProfit(CvCity* pCity) const
 /*
  * Returns the fractional (times 100) trade profit for the route to the given city.
  */
-int CvCity::calculateTradeProfitTimes100(CvCity* pCity) const
+int CvCity::calculateTradeProfitTimes100(const CvCity* pCity) const
 {
 	int iProfit = getBaseTradeProfit(pCity);
 
@@ -12841,7 +12841,7 @@ int CvCity::calculateTradeProfitTimes100(CvCity* pCity) const
  *
  * This function is kept only for old Python code.
  */
-int CvCity::calculateTradeProfit(CvCity* pCity) const
+int CvCity::calculateTradeProfit(const CvCity* pCity) const
 {
 	return calculateTradeProfitTimes100(pCity) / 100;
 }
@@ -12850,7 +12850,7 @@ int CvCity::calculateTradeProfit(CvCity* pCity) const
 
 // unchanged
 
-int CvCity::calculateTradeProfit(CvCity* pCity) const
+int CvCity::calculateTradeProfit(const CvCity* pCity) const
 {
 	int iProfit = getBaseTradeProfit(pCity);
 
@@ -25458,17 +25458,17 @@ void CvCity::setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, i
 
 void CvCity::updateOngoingTraining(UnitCombatTypes eCombat)
 {
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 	changeUnitCombatOngoingTrainingTimeCount(eCombat, 1);
 	if (getUnitCombatOngoingTrainingTimeCount(eCombat) == getUnitCombatOngoingTrainingTimeIncrement(eCombat))
 	{
-		int iChange = -(getUnitCombatOngoingTrainingTimeCount(eCombat));
+		const int iChange = -(getUnitCombatOngoingTrainingTimeCount(eCombat));
 		changeUnitCombatOngoingTrainingTimeCount(eCombat, iChange);
 		assignOngoingTraining(eCombat, pPlot);
 	}
 }
 
-void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot)
+void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
 {
 	PROFILE_FUNC();
 
@@ -25529,7 +25529,7 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 	}
 }
 
-bool CvCity::canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const
+bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 {
 	//Some of this could be a bit misleading if its not understood that the result should be true if its NOT an equipment at all.
 	if (GC.getPromotionInfo(eEquipment).isEquipment())
@@ -25538,7 +25538,7 @@ bool CvCity::canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const
 		{
 			if (pUnit->isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
 			{
-				PromotionTypes eMayDeny = ((PromotionTypes)iI);
+				const PromotionTypes eMayDeny = ((PromotionTypes)iI);
 				if (GC.getPromotionInfo(eEquipment).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionInfo(eMayDeny).getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					if (GC.getPromotionInfo(eEquipment).getPromotionLine() == GC.getPromotionInfo(eMayDeny).getPromotionLine())
@@ -25554,7 +25554,7 @@ bool CvCity::canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const
 
 		for (int iJ = 0; iJ < GC.getPromotionInfo(eEquipment).getNumNoAutoEquiptoCombatClassTypes(); iJ++)
 		{
-			UnitCombatTypes eNoAuto = (UnitCombatTypes)GC.getPromotionInfo(eEquipment).getNoAutoEquiptoCombatClassType(iJ);
+			const UnitCombatTypes eNoAuto = (UnitCombatTypes)GC.getPromotionInfo(eEquipment).getNoAutoEquiptoCombatClassType(iJ);
 			if (pUnit->isHasUnitCombat(eNoAuto))
 			{
 				return false;
