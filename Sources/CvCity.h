@@ -1489,7 +1489,7 @@ public:
 	int getExtraYieldTurns() const;
 	void changeExtraYieldTurns (int iChange);
 	void setExtraYieldTurns(int iNewVal);
-	BuildTypes findChopBuild(FeatureTypes eFeature);
+	BuildTypes findChopBuild(FeatureTypes eFeature) const;
 	CultureLevelTypes getOccupationCultureLevel() const;
 	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
 	CultureLevelTypes getMaxCultureLevelAmongPlayers() const;

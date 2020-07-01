@@ -934,9 +934,9 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 {
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 		if (iTeam != getID())
 		{
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 			if (iTeam == eTeam || kLoopTeam.isVassal(eTeam) || GET_TEAM(eTeam).isVassal((TeamTypes)iTeam) || kLoopTeam.isDefensivePact(eTeam))
 			{
 				if (AI_isLandTarget((TeamTypes)iTeam))
@@ -1137,8 +1137,8 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 	for (int iI = 0; iI < (int)kVoteSelectionData.aVoteOptions.size(); iI++)
 	{
-		VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
-		CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
+		const VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
+		const CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
 
 		FAssert(kVoteInfo.isVoteSourceType(eVoteSource));
 

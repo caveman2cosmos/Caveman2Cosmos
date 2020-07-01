@@ -2662,7 +2662,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CORPORATION_NO_RESOURCES", pMissionCity->getNameKey(), szBonusList.getCString()));
 						}
 						
-						CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
+						const CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
 						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 						{
 							if (kCorporation.getPrereqBuilding(iI) > 0)
