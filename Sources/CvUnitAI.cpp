@@ -27495,11 +27495,9 @@ bool CvUnitAI::AI_airCarrier()
 {
 	//PROFILE_FUNC();
 
-	CvUnit* pLoopUnit;
 	CvUnit* pBestUnit;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 
 	if (hasCargo())
 	{
@@ -27523,7 +27521,7 @@ bool CvUnitAI::AI_airCarrier()
 	iBestValue = 0;
 	pBestUnit = NULL;
 
-	for(pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
+	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 	{
 		if (canLoadOntoUnit(pLoopUnit, pLoopUnit->plot()))
 		{

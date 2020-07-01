@@ -3306,10 +3306,13 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBlockading);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isMADEnabled);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasBuild, BuildTypes);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);

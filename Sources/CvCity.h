@@ -2396,6 +2396,8 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
 		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
 
+		DECLARE_MAP_FUNCTOR(CvCity, const CvWString, getName);
+
 		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
 
