@@ -9,6 +9,7 @@
 
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
 #include "CvPlayerAI.h"

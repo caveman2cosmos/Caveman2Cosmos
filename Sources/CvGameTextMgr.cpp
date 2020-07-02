@@ -11,6 +11,7 @@
 //---------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"

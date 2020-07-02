@@ -1,6 +1,7 @@
 // team.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvDiploParameters.h"
 #include "CvInitCore.h"

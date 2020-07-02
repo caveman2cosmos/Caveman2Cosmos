@@ -1,6 +1,7 @@
 // CvTaggedSaveFormatWrapper.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 
 #ifdef _DEBUG
 //#define	DETAILED_TRACE	1

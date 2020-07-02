@@ -1,6 +1,7 @@
 // CvDeal.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"

@@ -1,6 +1,7 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
