@@ -75,8 +75,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
-		<English>C.Ac. = Culture Active[NEWLINE] This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
-		<French>Cult. Act. = Culture active[NEWLINE] Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
+		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
+		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
@@ -126,7 +126,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
 		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
-		<French>Cult. Adopt. = Culture adoptée : [NEWLINE] En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
+		<French>Cult. Adopt. = Culture adoptée :[NEWLINE]En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
@@ -176,7 +176,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
 		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
-		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE] Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
+		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE]Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>

@@ -29,7 +29,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_STRATEGY</Tag>
 		<English>The Buffalo Trainer is required to build Buffalo units.</English>
@@ -157,7 +157,7 @@
 	</TEXT><!--
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Master Hunter[COLOR_REVERT] is required to train [LINK=UNIT_TRACKER]Trackers[\LINK], [LINK=UNIT_HUNTER]Hunters[\LINK] and [LINK=UNIT_RANGER]Rangers[\LINK]. They are better at capturing wild animals than recon units.</English>
@@ -178,7 +178,7 @@
 	</TEXT><!-- 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Naval totem[COLOR_REVERT] provides a small amount of experience to naval units. In later times this is the flag that troops rally round.</English>
@@ -193,7 +193,7 @@
 	</TEXT><!-- 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD_STRATEGY</Tag>
 		<English>Ratite Flocks provide carcass, eggs and feathers as well as happiness, food and production.</English>
@@ -207,7 +207,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Snake Charmer[COLOR_REVERT] provides a small commerce bonus plus a science boost until Literature.</English>
@@ -252,7 +252,7 @@
 	</TEXT><!-- 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_STRATEGY</Tag>
 		<English>Wild and exotic animals are a big draw card at carnivals and circus events, providing happiness and culture.</English>
@@ -267,7 +267,7 @@
 	</TEXT><!-- 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Tag>
-	</TEXT> -->
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hunter units[COLOR_REVERT] specialise in capturing animal units. They are not as good as [COLOR_UNIT_TEXT]recon units[COLOR_REVERT] when it comes to scouting.</English>

@@ -608,11 +608,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AESTHETICS_QUOTE</Tag>
-		<English>"Art for art's sake is an empty phrase. Art for the sake of truth, art for the sake of the good and the beautiful, that is the faith I am searching for." [PARAGRAPH:1]- George Sand</English>
-		<French>"L'art pour l'art est un mot creux. L'art pour la vérité, l'art pour le Bien et le beau, voilà la foi que je recherche." [PARAGRAPH:1]- George Sand</French>
-		<German>"Kunst um der Kunst Willen ist eine leere Floskel. Kunst um der Wahrheit Willen, Kunst um des Guten und des Schönen Willen, das ist der Glaube, nach dem ich suche." [PARAGRAPH:1]- George Sand</German>
-		<Italian>"Arte per amore dell'arte è una frase senza senso. Arte per amore della verità, arte per amore del buono e del bello, questa è la fede che vado cercando". [PARAGRAPH:1]- George Sand</Italian>
-		<Spanish>"Hablar del arte por el arte es no decir nada. El arte existe por la verdad, por el bien y por la belleza, y ésa es la fe que yo busco". [PARAGRAPH:1] - George Sand</Spanish>
+		<English>"Art for art's sake is an empty phrase. Art for the sake of truth, art for the sake of the good and the beautiful, that is the faith I am searching for."[PARAGRAPH:1]- George Sand</English>
+		<French>"L'art pour l'art est un mot creux. L'art pour la vérité, l'art pour le Bien et le beau, voilà la foi que je recherche."[PARAGRAPH:1]- George Sand</French>
+		<German>"Kunst um der Kunst Willen ist eine leere Floskel. Kunst um der Wahrheit Willen, Kunst um des Guten und des Schönen Willen, das ist der Glaube, nach dem ich suche."[PARAGRAPH:1]- George Sand</German>
+		<Italian>"Arte per amore dell'arte è una frase senza senso. Arte per amore della verità, arte per amore del buono e del bello, questa è la fede che vado cercando".[PARAGRAPH:1]- George Sand</Italian>
+		<Spanish>"Hablar del arte por el arte es no decir nada. El arte existe por la verdad, por el bien y por la belleza, y ésa es la fe que yo busco".[PARAGRAPH:1]- George Sand</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AESTHETICS_STRATEGY</Tag>
@@ -1192,7 +1192,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_HUSBANDRY_QUOTE</Tag>
-		<English>Blessed shall be the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.[PARAGRAPH:2]- Moses, [PARAGRAPH:1][SPACE][SPACE]"The Bible, Deuteronomy 28:4"</English>
+		<English>Blessed shall be the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.[PARAGRAPH:2]- Moses,[PARAGRAPH:1][SPACE][SPACE]"The Bible, Deuteronomy 28:4"</English>
 		<French>"Bénis seront le fruit de ton bétail, le fruit de tes entrailles et la laine de tes brebis." - La Bible, Deutéronome 28:4</French>
 		<German>"Gesegnet wird sein die Frucht deines Leibes und die Frucht deines Landes, die Frucht deines Viehs, der Wurf deiner Rinder und die Zucht deiner Schafe." - Die Bibel</German>
 		<Italian>"Sia benedetto il frutto delle mandrie di bovini e delle greggi di pecore." - La Bibbia, Deut. 28:4</Italian>
@@ -1308,7 +1308,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMISM_QUOTE</Tag>
-		<English>It is a well known fact that even among highly cultured peoples the belief in animism prevails generally. Even the scholar may kick the chair against which he accidentally stumbles, and derive great satisfaction from thus "getting even" with the perverse chair.[PARAGRAPH:2]- Holly E. Cunningham, [PARAGRAPH:1][SPACE][SPACE]"An Introduction to Philosophy"</English>
+		<English>It is a well known fact that even among highly cultured peoples the belief in animism prevails generally. Even the scholar may kick the chair against which he accidentally stumbles, and derive great satisfaction from thus "getting even" with the perverse chair.[PARAGRAPH:2]- Holly E. Cunningham,[PARAGRAPH:1][SPACE][SPACE]"An Introduction to Philosophy"</English>
 		<French>"Il est un fait bien connu que même parmi les peuples hautement cultivés, la croyance en un animisme prévaut généralement. Même le savant peut lancer la chaise contre laquelle il bute accidentellement, et en tirer une grande satisfaction de «rendre la pareille» à cette chaise perverse." - Holly Estil Cunningham, une Introduction à la Philosophie</French>
 		<Spanish>"Es bien sabido el hecho que, incluso en pueblos muy cultos, generalmente predomina la creencia en el animismo. Hasta un estudiante puede golpear la silla con la que accidentalmente choca, y obtener gran satisfacción por haberse "desquitado" con la perversa silla." - Holly Estil Cunningham, An Introduction to Philosophy</Spanish>
 	</TEXT>
@@ -1475,8 +1475,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APICULTURE_QUOTE</Tag>
-		<English>"To make a prairie it takes a clover and one bee, [NEWLINE]One clover, and a bee, [NEWLINE]And revery.[NEWLINE]The revery alone will do, [NEWLINE]If bees are few."[NEWLINE][SPACE] -Emily Dickinson</English>
-		<French>"Pour faire une prairie il faut un trèfle et une abeille, [NEWLINE] Un trèfle et une abeille, [NEWLINE] Et la rêverie. [NEWLINE] La rêverie seule fera l'affaire, [NEWLINE] Si les abeilles sont quelques-unes."[NEWLINE][SPACE] -Emily Dickinson</French>
+		<English>"To make a prairie it takes a clover and one bee,[NEWLINE]One clover, and a bee,[NEWLINE]And revery.[NEWLINE]The revery alone will do,[NEWLINE]If bees are few."[NEWLINE][SPACE] -Emily Dickinson</English>
+		<French>"Pour faire une prairie il faut un trèfle et une abeille,[NEWLINE]Un trèfle et une abeille,[NEWLINE]Et la rêverie.[NEWLINE]La rêverie seule fera l'affaire,[NEWLINE]Si les abeilles sont quelques-unes."[NEWLINE][SPACE] -Emily Dickinson</French>
 		<Polish>"By stworzyć prerię, starczy jeden zgoła[NEWLINE]Kwiat koniczyny,[NEWLINE]Marzenie i pszczoła.[NEWLINE]Jeśli pszczół nie ma ani na lekarstwo,[NEWLINE]Same rojenia wystarczą."[NEWLINE][SPACE] - Emily Dickinson</Polish>
 	</TEXT>
 	<TEXT>
@@ -1785,7 +1785,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARITHMETIC_QUOTE</Tag>
-		<English>Two plus two equals five... for extremely large values of two.[PARAGRAPH:2]- Lawrence Krauss, [PARAGRAPH:1][SPACE][SPACE]"In a speech at North Carolina State University"</English>
+		<English>Two plus two equals five... for extremely large values of two.[PARAGRAPH:2]- Lawrence Krauss,[PARAGRAPH:1][SPACE][SPACE]"In a speech at North Carolina State University"</English>
 		<French>"Deux plus Deux font Cinq... pour des valeurs extrêmement grandes de Deux."</French>
 		<German>"Zwei plus Zwei ergibt Fünf... für extrem große Werte von Zwei."</German>
 		<Italian>"Due pi§ due uguale cinque... per valori estremamente grandi di due"</Italian>
@@ -2234,8 +2234,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTEROID_EXTRACTION_QUOTE</Tag>
-		<English>"Most asteroids, like most politicians, give off more heat than light."[PARAGRAPH:2]- John S. Lewis, [PARAGRAPH:1][SPACE][SPACE]"Asteroid Mining 101: Wealth for the New Space Economy"</English>
-		<French>"La plupart des astéroïdes, comme la plupart des politiciens, dégagent plus de chaleur que de lumière."[PARAGRAPH:2]- John S. Lewis, [PARAGRAPH:1][SPACE][SPACE]"Asteroid Mining 101: richesse pour la nouvelle économie spatiale"</French>
+		<English>"Most asteroids, like most politicians, give off more heat than light."[PARAGRAPH:2]- John S. Lewis,[PARAGRAPH:1][SPACE][SPACE]"Asteroid Mining 101: Wealth for the New Space Economy"</English>
+		<French>"La plupart des astéroïdes, comme la plupart des politiciens, dégagent plus de chaleur que de lumière."[PARAGRAPH:2]- John S. Lewis,[PARAGRAPH:1][SPACE][SPACE]"Asteroid Mining 101: richesse pour la nouvelle économie spatiale"</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTEROID_EXTRACTION_STRATEGY</Tag>
@@ -2655,7 +2655,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATEMPORAL_BEINGS_QUOTE</Tag>
 		<English>I know[NEWLINE]We'll join this cosmic Saturn[NEWLINE]Intergalactic matter[NEWLINE]Where we will meet tonight[NEWLINE]Spiraling out of sight[NEWLINE]Outside of space and time[NEWLINE][SPACE] -David Byrne and St. Vincent</English>
-		<French>Je sais [NEWLINE] Nous rejoindrons ce Saturne cosmique [NEWLINE] Matière intergalactique [NEWLINE] Où nous nous rencontrerons ce soir [NEWLINE] En spirale à l'abri des regards [NEWLINE] En dehors de l'espace et du temps [NEWLINE][SPACE] -David Byrne and St. Vincent</French>
+		<French>Je sais[NEWLINE]Nous rejoindrons ce Saturne cosmique[NEWLINE]Matière intergalactique[NEWLINE]Où nous nous rencontrerons ce soir[NEWLINE]En spirale à l'abri des regards[NEWLINE]En dehors de l'espace et du temps[NEWLINE][SPACE] -David Byrne and St. Vincent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATEMPORAL_BEINGS_STRATEGY</Tag>
@@ -2710,7 +2710,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATLATL_MAKING_QUOTE</Tag>
-		<English>As used by these Tarairiu (...) this spear thrower was a tapering piece of carved hard-wood (...) shaped with a semi-circular outer half with a deep groove to receive the end of the javelin.[PARAGRAPH:2]- Harald Prins, [PARAGRAPH:1][SPACE][SPACE]"The Atlatl as Combat Weapon in 17th-Century Amazonia: Tapuya Indian Warriors in Dutch Colonial Brazil"</English>
+		<English>As used by these Tarairiu (...) this spear thrower was a tapering piece of carved hard-wood (...) shaped with a semi-circular outer half with a deep groove to receive the end of the javelin.[PARAGRAPH:2]- Harald Prins,[PARAGRAPH:1][SPACE][SPACE]"The Atlatl as Combat Weapon in 17th-Century Amazonia: Tapuya Indian Warriors in Dutch Colonial Brazil"</English>
 		<French>"Tel qu'il est utilisé par ces Tarairiu... ce propulseur était constitué d'une pièce conique sculptée dans du bois dur... de forme semi-circulaire et avec une gorge profonde pour recevoir l'extrémité du javelot." - Harald Prins</French>
 		<Polish>"Najstarsze odnalezione atlatle maja ok. 20 tys. lat. Bron ta nigdy nie byla specjalnie rozpowszechniona, gdyz ustepowala pod wieloma wzgledami praktyczniejszemu lukowi, który stopniowo wypieral miotacz oszczepów." - Encyklopedia Broni Bialej</Polish>
 	</TEXT>
@@ -2756,8 +2756,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATOMIC_SCALE_ENGINEERING_QUOTE</Tag>
-		<English>"Atto - (symbol a) is a prefix in the metric system denoting a factor of 10-18 or 0.000000000000000001." -</English>
-		<French>"Atto - (symbol a) est le préfixe dans le système métrique pour le facteur 10-18 or 0.000000000000000001." - Wikipédia</French>
+		<English>"Atto - (symbol a) is a prefix in the metric system denoting a factor of 10-18 or 0.000000000000000001."</English>
+		<French>"Atto - (symbol a) est le préfixe dans le système métrique pour le facteur 10-18 or 0.000000000000000001."</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATOMIC_SCALE_ENGINEERING_STRATEGY</Tag>
@@ -3048,7 +3048,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AXE_MAKING_QUOTE</Tag>
-		<English>Last of all Hurin stood alone. Then he cast aside his shield, and wielded an axe two-handed; and it is sung that the axe smoked in the black blood of the troll-guard of Gothmog until it withered, and each time that he slew Hurin cried "Aure entuluva!".[PARAGRAPH:2]- J.R.R. Tolkien, [PARAGRAPH:1][SPACE][SPACE]"The Silmarillion"</English>
+		<English>Last of all Hurin stood alone. Then he cast aside his shield, and wielded an axe two-handed; and it is sung that the axe smoked in the black blood of the troll-guard of Gothmog until it withered, and each time that he slew Hurin cried "Aure entuluva!".[PARAGRAPH:2]- J.R.R. Tolkien,[PARAGRAPH:1][SPACE][SPACE]"The Silmarillion"</English>
 		<French>"Le dernier de tous les Hurins se tenait seul. Alors il rangea son bouclier, et pris sa hache à deux mains; et on entendit le chant de la hache fumante lorsqu'elle rencontrait le sang noir du troll - le gardien de Gothmog - jusqu'à se qu'il tombe. A chaque fois qu'il frappait, le Hruin criait 'Aure entuluva!" - J.R.R. Tolkien</French>
 		<Polish>"W końcu Hurin został sam; odrzucił wówczas tarczę i oburącz chwycił topór. Pieśń mówi, że ostrze topora dymiło później od czarnej krwi trollów, gwardzistów Gothmoga, póki nie skruszało, a za każdym razem zadając cios Hurin wołał: Aure entuluva! - Przyjdzie znów dzień!" - J.R.R. Tolkien: Silmarillion</Polish>
 	</TEXT>
@@ -3212,8 +3212,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BARK_WORKING_QUOTE</Tag>
-		<English>"Twas on the inner bark, stripped from the pine, our father pencilled this epistle rare;[NEWLINE]Two blazing pine knots did his torches shine, two braided pallets formed his desk and chair."[PARAGRAPH:2]- Thomas d'Urfee, [PARAGRAPH:1][SPACE][SPACE]"What-Cheer, Canto II"</English>
-		<French>"Deux fois sur l'écorce intérieure, dépouillée du pin, notre père a dessiné cette épître rare; [NEWLINE] Deux noeuds de pin flamboyants ont fait briller ses torches, deux palettes tressées ont formé son bureau et sa chaise."[PARAGRAPH:2]- Thomas d'Urfee, [PARAGRAPH:1][SPACE][SPACE]"What-Cheer, Chant II"</French>
+		<English>"Twas on the inner bark, stripped from the pine, our father pencilled this epistle rare;[NEWLINE]Two blazing pine knots did his torches shine, two braided pallets formed his desk and chair."[PARAGRAPH:2]- Thomas d'Urfee,[PARAGRAPH:1][SPACE][SPACE]"What-Cheer, Canto II"</English>
+		<French>"Deux fois sur l'écorce intérieure, dépouillée du pin, notre père a dessiné cette épître rare;[NEWLINE]Deux noeuds de pin flamboyants ont fait briller ses torches, deux palettes tressées ont formé son bureau et sa chaise."[PARAGRAPH:2]- Thomas d'Urfee,[PARAGRAPH:1][SPACE][SPACE]"What-Cheer, Chant II"</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BARK_WORKING_STRATEGY</Tag>
@@ -3239,7 +3239,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BARTER_QUOTE</Tag>
-		<English>Almost all of our relationships begin and most of them continue as forms of mutual exploitation, a mental or physical barter, to be terminated when one or both parties run out of goods.[PARAGRAPH:2]- W. H. Auden, [PARAGRAPH:1][SPACE][SPACE]"The Dyer's Hand"</English>
+		<English>Almost all of our relationships begin and most of them continue as forms of mutual exploitation, a mental or physical barter, to be terminated when one or both parties run out of goods.[PARAGRAPH:2]- W. H. Auden,[PARAGRAPH:1][SPACE][SPACE]"The Dyer's Hand"</English>
 		<French>"La quasi-totalité de nos relations commencent par de l'exploitation mutuelle, et la plupart de ces relations continuent ainsi: un troc mental ou physique, qui se termine lorsque l'un ou les deux parties sont à court de marchandises." - H. Auden</French>
 		<Polish>"Barter jest najstarszą formą wymiany handlowej." - Ewa Kosińska</Polish>
 	</TEXT>
@@ -3267,7 +3267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_QUOTE</Tag>
-		<English>The way to become rich is to put all your eggs in one basket and then watch that basket.[PARAGRAPH:2]- Andrew Carnegie, [PARAGRAPH:1][SPACE][SPACE]"Autobiography of Andrew Carnegie"</English>
+		<English>The way to become rich is to put all your eggs in one basket and then watch that basket.[PARAGRAPH:2]- Andrew Carnegie,[PARAGRAPH:1][SPACE][SPACE]"Autobiography of Andrew Carnegie"</English>
 		<French>"Pour devenir riche, il faut mettre tous ses oeufs dans un panier et ensuite contempler ce panier." - Andrew Carnegie</French>
 		<Polish>"Mam nadzieję, że nie dojdziemy do miejsca gdzie będziemy musieli zakazać kotu polowania na myszy, by nauczyć go dmuchania szkła i wyplatanie koszy." - Joseph Barbera</Polish>
 	</TEXT>
@@ -3352,7 +3352,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BEAD_MAKING_QUOTE</Tag>
-		<English>On the motionless branches of some trees, autumn berries hung like clusters of coral beads, as in those fabled orchards where the fruits were jewels.[PARAGRAPH:2]- Charles Dickens, [PARAGRAPH:1][SPACE][SPACE]"Life And Adventures Of Martin Chuzzlewit"</English>
+		<English>On the motionless branches of some trees, autumn berries hung like clusters of coral beads, as in those fabled orchards where the fruits were jewels.[PARAGRAPH:2]- Charles Dickens,[PARAGRAPH:1][SPACE][SPACE]"Life And Adventures Of Martin Chuzzlewit"</English>
 		<French>"Sur les branches de certains arbres immobiles, les baies d'automne accrochées comme des grappes de perles de corail, comme dans ces vergers légendaires où les fruits étaient bijoux." - Charles Dickens</French>
 		<Polish>"Na nieruchomych gałęziach niektórych drzew, owoce jarzębiny wisiały niczym gromady korali, tak jak w tych bajecznych ogrodach gdzie owoce były klejnotami." - Karol Dickens</Polish>
 	</TEXT>
@@ -3514,7 +3514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINDING_QUOTE</Tag>
-		<English>Having discovered this skill, I vow to make it work for the tribe. You can consider this promise binding...[PARAGRAPH:2]- Grod the Wiser (Yudishtira), [PARAGRAPH:1][SPACE][SPACE]"CivFanatics Forum: Caveman 2 Cosmos, TBD Texts, post #16"</English>
+		<English>Having discovered this skill, I vow to make it work for the tribe. You can consider this promise binding...[PARAGRAPH:2]- Grod the Wiser (Yudishtira),[PARAGRAPH:1][SPACE][SPACE]"CivFanatics Forum: Caveman 2 Cosmos, TBD Texts, post #16"</English>
 		<French>"L'élément de liaison ultime dans l'ordre médiéval était la subordination à la volonté divine et de ses représentants terrestres, notamment le pape." - Irving Babbitt</French>
 		<Polish>"Ostatecznym, wiążącym elementem średniowiecznego porządku było podporządkowanie się woli boskiej i i jej ziemskim reprezentantom, szczególnie papieżowi." - Irving Babbitt</Polish>
 	</TEXT>
@@ -3896,7 +3896,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BOAT_BUILDING_QUOTE</Tag>
-		<English>My mother told me that she learned to swim when someone took her out in a boat to the middle of a lake and threw her overboard. I said: Mom, they weren't trying to teach you to swim.[PARAGRAPH:2]- Paula Poundstone, [PARAGRAPH:1][SPACE][SPACE]"There's Nothing in This Book That I Meant to Say"</English>
+		<English>My mother told me that she learned to swim when someone took her out in a boat to the middle of a lake and threw her overboard. I said: Mom, they weren't trying to teach you to swim.[PARAGRAPH:2]- Paula Poundstone,[PARAGRAPH:1][SPACE][SPACE]"There's Nothing in This Book That I Meant to Say"</English>
 		<French>"Ma mère me raconta qu'elle a appris à nager lorsque quelqu'un l'emmena en bâteau dans le lac, et la jeta hors de l'embarcation. Je lui dis: 'Maman, ils n'essayaient pas de t'apprendre à nager.'" - Paula Poundstone</French>
 		<Polish>"Moja mama powiedziała, że nauczyła się pływać kiedy ktoś zabrał ją na jezioro i wyrzucił z łodzi. Powiedziałam, 'Mamo, oni nie próbowali nauczyć Cię pływać.'" - Paula Poundstone</Polish>
 	</TEXT>
@@ -3926,7 +3926,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BONE_WORKING_QUOTE</Tag>
-		<English>Why I work bone? To make bone work for me.[PARAGRAPH:2]- Grod the Wiser (Yudishtira), [PARAGRAPH:1][SPACE][SPACE]"CivFanatics Forum: Caveman 2 Cosmos, TBD Texts, post #16"</English>
+		<English>Why I work bone? To make bone work for me.[PARAGRAPH:2]- Grod the Wiser (Yudishtira),[PARAGRAPH:1][SPACE][SPACE]"CivFanatics Forum: Caveman 2 Cosmos, TBD Texts, post #16"</English>
 		<French>"Il faut seulement deux ou trois pincées de poudre d'os pour trouver des preuves moléculaires. Nous avons des séquences de protéines à partir de matériaux que l'on estime vieux d'un demi-million d'années. Nous étudions attentivement sur le chemin du retour dans le temps." - Peggy Ostrom</French>
 		<Polish>"Ta kość przypadła ci w udziale, gryź ją, czy zła, czy dobra." - Talmud</Polish>
 	</TEXT>
@@ -4279,7 +4279,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAMELID_DOMESTICATION_QUOTE</Tag>
-		<English>Do not free a camel of the burden of his hump: you may be freeing him from being a camel.[PARAGRAPH:2]- Gilbert K. Chesterton, [PARAGRAPH:1][SPACE][SPACE]"Orthodoxy, Chapter 3: The Suicide of Thought"</English>
+		<English>Do not free a camel of the burden of his hump: you may be freeing him from being a camel.[PARAGRAPH:2]- Gilbert K. Chesterton,[PARAGRAPH:1][SPACE][SPACE]"Orthodoxy, Chapter 3: The Suicide of Thought"</English>
 		<French>"Ne pas libérer un chameau de la charge de sa bosse; vous le libéreriez de sa condition de chameau." - Gilbert K. Chesterton</French>
 		<Polish>"Nie zdejmuj z wielbłąda jego jarzma, przez to może przestać być wielbłądem." - Gilbert K. Chesterton</Polish>
 	</TEXT>
@@ -4368,7 +4368,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CANINE_DOMESTICATION_QUOTE</Tag>
-		<English>The dog is the most faithful of animals and would be much esteemed were it not so common. Our Lord God has made His greatest gifts the commonest.[PARAGRAPH:2]- Martin Luther, [PARAGRAPH:1][SPACE][SPACE]"Luther's Works, Volume 54"</English>
+		<English>The dog is the most faithful of animals and would be much esteemed were it not so common. Our Lord God has made His greatest gifts the commonest.[PARAGRAPH:2]- Martin Luther,[PARAGRAPH:1][SPACE][SPACE]"Luther's Works, Volume 54"</English>
 		<French>"Le Chien est le plus fidèle des animaux et serait très estimé si elle n'était pas si commun. Notre Seigneur Dieu nous a donné son plus beau cadeau dans le plus commun." - Martin Luther</French>
 	</TEXT>
 	<TEXT>
@@ -4400,7 +4400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CARPENTRY_QUOTE</Tag>
-		<English>The carpenter stretcheth out his rule; he marketh it out with a line; he fitteth it with planes, and he marketh it out with the compass, and maketh it after the figure of a man, according to the beauty of a man; that it may remain in the house.[PARAGRAPH:2]- Isaiah, [PARAGRAPH:1][SPACE][SPACE]"The Tanakh, Isaiah 44:13"</English>
+		<English>The carpenter stretcheth out his rule; he marketh it out with a line; he fitteth it with planes, and he marketh it out with the compass, and maketh it after the figure of a man, according to the beauty of a man; that it may remain in the house.[PARAGRAPH:2]- Isaiah,[PARAGRAPH:1][SPACE][SPACE]"The Tanakh, Isaiah 44:13"</English>
 		<French>"Le charpentier étend son rôle; il dessine avec une ligne; il imagine des plans, et il utilise le compas, et construit d'après la figure d'un homme, selon la beauté d'un homme; ce qu 'il peut rester dans la maison." - Isaiah 44:13</French>
 		<Polish>"Stolarz na drzewie rozciąga miarę, rylcem znaczy zarys, obrabia dłutami, cyrklem zaznacza, rzeźbi postać niby ludzką, jak piekną figurę człowieka, by pozostała w domu." - Biblia</Polish>
 	</TEXT>
@@ -4549,7 +4549,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAVE_DWELLING_QUOTE</Tag>
-		<English>One just principle from the depths of a cave is more powerful than an army.[PARAGRAPH:2]- José Martí, [PARAGRAPH:1][SPACE][SPACE]"In a speech about the power of diplomacy over war before the Spanish-American War"</English>
+		<English>One just principle from the depths of a cave is more powerful than an army.[PARAGRAPH:2]- José Martí,[PARAGRAPH:1][SPACE][SPACE]"In a speech about the power of diplomacy over war before the Spanish-American War"</English>
 		<French>"Un plan élaboré dans les profondeurs d'une grotte est plus puissant qu'une armée." -Jose Marti</French>
 		<Polish>"Kiedy zaglądasz do jaskini, z początku widzisz bardzo niewiele. Ale kiedy przyzwyczajasz się do ciemności, widzisz coraz więcej. A jeśli odważysz się zostać tam wystarczająco długo, w końcu zobaczysz wszystko." - Nicola Morgan</Polish>
 	</TEXT>
@@ -4578,7 +4578,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CELEBRATION_QUOTE</Tag>
-		<English>The celebration... you cannot practice it or anything. It's a moment when the excitement of your goal make you react to the moment.[PARAGRAPH:2]- Peter Bondra, [PARAGRAPH:1][SPACE][SPACE]"In an interview after a hockey match"</English>
+		<English>The celebration... you cannot practice it or anything. It's a moment when the excitement of your goal make you react to the moment.[PARAGRAPH:2]- Peter Bondra,[PARAGRAPH:1][SPACE][SPACE]"In an interview after a hockey match"</English>
 		<French>"La célébration... Vous ne pouvez pas vous y entraîner ou quoi que ce soit. C'est l'instant où l'excitation d'avoir atteint votre objectif vous fait enfin réagir." - Peter Bondra</French>
 		<Polish>"Świętowanie... nie możesz tego ćwiczyć. To jest moment kiedy twoja ekscytacja z powodu osiągnięcia celu bierze górę." - Peter Bondra</Polish>
 	</TEXT>
@@ -4633,7 +4633,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CEREMONIAL_BURIAL_QUOTE</Tag>
-		<English>It is death that goes down to the center of the earth, the great burial church the earth is, and then to the curved ends of the universe, as light is said to do.[PARAGRAPH:2]- Harold Brodkey, [PARAGRAPH:1][SPACE][SPACE]"This Wild Darkness: The Story of My Death"</English>
+		<English>It is death that goes down to the center of the earth, the great burial church the earth is, and then to the curved ends of the universe, as light is said to do.[PARAGRAPH:2]- Harold Brodkey,[PARAGRAPH:1][SPACE][SPACE]"This Wild Darkness: The Story of My Death"</English>
 		<French>"C'est la mort qui descend vers le centre de la terre, la terre est le grand cimetière, et puis, aux extrémités incurvées de l'univers, en suivant la lumière." - Harold Brodkey</French>
 		<Polish>"Pogrzeb na ziemi oznacza być może przyjęcie weselne wśród aniołów." - Khalil Gibran</Polish>
 	</TEXT>
@@ -4682,8 +4682,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHAOS_THEORY_QUOTE</Tag>
-		<English>"Mathematicians believed that prediction was just a function of keeping track of things. If you knew enough, you could predict anything... Chaos theory throws it right out the window because in fact there are great categories of phenomena that are inherently unpredictable." [NEWLINE][SPACE] - Michael Crichton</English>
-		<French>"Les mathématiciens croyaient que la prédiction était simplement une fonction dépendant des informations sur les choses. Si vous en saviez assez, vous pourriez tout prédire ... La théorie du chaos jette tout ça par la fenêtre car en fait il existe de grandes catégories de phénomènes qui sont intrinsèquement imprévisibles." [NEWLINE][SPACE] - Michael Crichton</French>
+		<English>"Mathematicians believed that prediction was just a function of keeping track of things. If you knew enough, you could predict anything... Chaos theory throws it right out the window because in fact there are great categories of phenomena that are inherently unpredictable."[NEWLINE][SPACE] - Michael Crichton</English>
+		<French>"Les mathématiciens croyaient que la prédiction était simplement une fonction dépendant des informations sur les choses. Si vous en saviez assez, vous pourriez tout prédire ... La théorie du chaos jette tout ça par la fenêtre car en fait il existe de grandes catégories de phénomènes qui sont intrinsèquement imprévisibles."[NEWLINE][SPACE] - Michael Crichton</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHAOS_THEORY_STRATEGY</Tag>
@@ -4824,7 +4824,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHIEFDOM_QUOTE</Tag>
-		<English>If the white man wants to live in peace with the Indian he can live in peace. There need be no trouble. Treat all men alike. Give them the same laws. Give them all an even chance to live and grow. All men were made by the same Great Spirit Chief. They are all brothers. The earth is the mother of all people, and all people should have equal rights upon it.[PARAGRAPH:2]- Chief Joseph, [PARAGRAPH:1][SPACE][SPACE]"In a speech at Lincoln Hall"</English>
+		<English>If the white man wants to live in peace with the Indian he can live in peace. There need be no trouble. Treat all men alike. Give them the same laws. Give them all an even chance to live and grow. All men were made by the same Great Spirit Chief. They are all brothers. The earth is the mother of all people, and all people should have equal rights upon it.[PARAGRAPH:2]- Chief Joseph,[PARAGRAPH:1][SPACE][SPACE]"In a speech at Lincoln Hall"</English>
 		<French>"Si l'homme blanc veut vivre en paix avec les indiens, il peut vivre en paix. Il n'y aura pas de problèmes. Traitez tous les hommes de la même façon, selon la même loi. Donnez-leur la chance de vivre et de grandir. Tous les hommes ont été faits par le même grand chef spirituel. Ils sont tous frères. La terre est la mère de tous les peuples, et tous les peuples doivent avoir les mêmes droits sur elle." - Chef Joseph</French>
 		<Polish>"Jestem biedny i nagi, ale jestem przywódcą mego narodu. Nie potrzebujemy bogactwa, ale chcemy uczyć nasze dzieci prawości. Bogactwa nie przyniosą nam dobra. Nie zabierzemy ich ze sobą do innego świata, po naszej śmierci. Nie chcemy bogactwa. Pragniemy pokoju i miłości." - Czerwona Chmura</Polish>
 	</TEXT>
@@ -4885,7 +4885,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHOPPING_QUOTE</Tag>
-		<English>Give me six hours to chop down a tree and I will spend the first four sharpening the axe.[PARAGRAPH:2]- Anonymous woodsman, [PARAGRAPH:1][SPACE][SPACE]"Sermons for the Times: The Dull Axe"</English>
+		<English>Give me six hours to chop down a tree and I will spend the first four sharpening the axe.[PARAGRAPH:2]- Anonymous woodsman,[PARAGRAPH:1][SPACE][SPACE]"Sermons for the Times: The Dull Axe"</English>
 		<French>"Donne-moi six heures pour abbattre un arbre. Je passerai la première heure à affuter ma hache." - Abraham Lincoln</French>
 		<Polish>"Nigdy nie kładź głowy na stole czy na barze. To tak jakbyś ją dobrowolnie położył na katowski pieniek." - Frank Kelly Rich</Polish>
 	</TEXT>
@@ -10266,17 +10266,17 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>"Quark: These Humans, they're nothing like the ones from the Federation. They're crude, gullible and greedy.
 		[NEWLINE]Odo: You mean, like you?
 		[NEWLINE]Quark: Yeah! These are Humans I can understand - and manipulate."
-		[NEWLINE] - Star Trek: Deep Space Nine(1993)
+		[NEWLINE]- Star Trek: Deep Space Nine(1993)
 		</English>
 		<French>"Quark: Ces humains, ils ne sont en rien comme ceux de la Fédération. Ce sont des brutes, crédules et avides.
 		[NEWLINE]Odo: Vous voulez dire, comme vous?
 		[NEWLINE]Quark: Ouais! Ce sont des êtres humains que je peux comprendre - et manipuler."
-		[NEWLINE] - Star Trek: Deep Space Nine(1993)
+		[NEWLINE]- Star Trek: Deep Space Nine(1993)
 		</French>
 		<Polish>"Quark: Ci ludzie, nie są tacy sami jak Ci z Federacji. Są chciwi i naiwni.
 		[NEWLINE]Odo: Czyli tacy jak Ty?
 		[NEWLINE]Quark: Taa! Tych ludzi jestem w stanie zrozumieć - i zmanipulować."
-		[NEWLINE] - Star Trek: Deep Space Nine(1993)
+		[NEWLINE]- Star Trek: Deep Space Nine(1993)
 		</Polish>
 	</TEXT>
 	<TEXT>
@@ -10390,10 +10390,10 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GARDENING_QUOTE</Tag>
 		<English>"One is nearer God's heart in a garden[NEWLINE]Than anywhere else on earth." - Dorothy Frances Gurney</English>
-		<French>"On est plus près du coeur de Dieu dans un jardin [NEWLINE] que partout ailleurs sur la terre." - Dorothy Frances Gurney</French>
+		<French>"On est plus près du coeur de Dieu dans un jardin[NEWLINE]que partout ailleurs sur la terre." - Dorothy Frances Gurney</French>
 		<German>"In einem Garten ist man Gottes Herzen näher[NEWLINE]als irgendwo anders auf der Erde." - Dorothy Frances Gurney</German>
-		<Italian>"Una persona è più vicina al cuore di Dio in un giardino [NEWLINE]che in ogni altro posto sulla Terra." - Dorothy Frances Gurney</Italian>
-		<Polish>"W ogrodzie jest się bliżej bożego serca [NEWLINE] niż w jakimkolwiek innym miejscu na ziemi."- Dorothy Frances Gurney</Polish>
+		<Italian>"Una persona è più vicina al cuore di Dio in un giardino[NEWLINE]che in ogni altro posto sulla Terra." - Dorothy Frances Gurney</Italian>
+		<Polish>"W ogrodzie jest się bliżej bożego serca[NEWLINE]niż w jakimkolwiek innym miejscu na ziemi."- Dorothy Frances Gurney</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GARDENING_STRATEGY</Tag>
@@ -10843,7 +10843,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GERONTOCRACY_QUOTE</Tag>
 		<English>"A thousand years scarce serve to form a state;[NEWLINE]An hour may lay it in the dust."[NEWLINE][SPACE] -Lord Byron</English>
-		<French>"Mille ans à peine servent à former un état; [NEWLINE]Une heure peut le jeter dans la poussière."[NEWLINE][SPACE] -Lord Byron</French>
+		<French>"Mille ans à peine servent à former un état;[NEWLINE]Une heure peut le jeter dans la poussière."[NEWLINE][SPACE] -Lord Byron</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GERONTOCRACY_STRATEGY</Tag>
@@ -12037,7 +12037,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMPRESSIONISM_PEDIA</Tag>
 		<English>[BOLD]Impressionism[\BOLD]was a 19th-century art movement that originated with a group of Paris-based artists whose independent exhibitions brought them to prominence during the 1870s and 1880s.</English>
-		<Polish>Impresjonizm (fr. impressionisme z łac. impressio 'odbicie', 'wrażenie') - nurt w sztuce europejskiej, a później także amerykańskiej, który został zapoczątkowany przez grupę paryskich artystów studiujących w Atelier Gleyere oraz w Acadźmie Suisse w drugiej połowie XIX wieku. Osiem paryskich wystaw w latach 1874-1886 zaowocowało zerwaniem nowej sztuki z akademizmem obowiązującym w II połowie tego stulecia. Za początek impresjonizmu uznaje się I wystawę grupy artystów zorganizowaną w atelier fotograficznym Nadara w 1874 roku. Najbardziej charakterystyczną cechą malarstwa i rzeźby impresjonistycznej było dążenie do oddania zmysłowych, ulotnych momentów - "złapania uciekających chwil". Nazwa kierunku została ironicznie nadana przez krytyka sztuki oraz dziennikarza Louisa Leroy i pochodzi od tytułu obrazu Claude'a Moneta Impresja, wschód słońca. [PARAGRAPH:1]Uczelnia artystyczna założona za panowania Ludwika XIV, Królewska Akademia Malarstwa i Rzeźby (Acadźmie Royale de Peinture et de Sculpture), od samego początku kładła nacisk na szkolenie umiejętności rysunku według ściśle określonych zasad. Były one klarowne: uczono się uprawiania sztuki według akademickiej doktryny wyidealizowanego piękna, a nieskazitelnymi przykładami były gipsowe odlewy rzeźb starożytnych, które kopiowali uczniowie. Kolor był traktowany od czasów Arystotelesa jako swoisty rodzaj światła i o wiele mniej nadawał się do pracy nad kształtowaniem przyszłego artysty według ścisłych zasad. W latach 70. XIX w. skostnienie sztuki i tzw. "brązowe sosy" (złamane, brunatne barwy) zamiast żywego koloru doprowadziły do buntu dużej grupy artystów. Jednym z czynników wpływających na rewolucyjną zmianę w stosunku przyszłych impresjonistów do malarstwa był rozwój techniczny i naukowy. W XIX wieku pojawiły się nowe pędzle: twardsze, płaskie, wzmocnione stalową oprawą (wcześniej stosowano tylko okrągłe pędzle z miękkiego włosia), pozwalało to stosować mocniejsze pociągnięcia. W sprzedaży pojawiły się też pierwsze, znacznie tańsze od naturalnych, farby syntetyczne - zaczęto stosować więcej koloru niebieskiego, który do tej pory był bardzo drogi (wytwarzany z lapis lazuli). Zaczęto używać sztalug plenerowych oraz przenośnych pudełek na farby i pędzle - ułatwiło to wyjście w plener. Postępy w optyce przyniosły większą wiedzę na temat fizycznej natury światła. Już w XVIII w. Isaac Newton dowiódł za pomocą pryzmatu, że światło jest w istocie mieszaniną wszystkich barw tęczy, co było przełomem w fizycznej teorii barwy, do której później znaczny wkład wniósł m.in Georges-Louis Leclerc, Comte de Buffon. We Francji, dzięki pracom chemika z królewskiej manufaktury gobelinów, Michela Chevreula (1786-1889), zostało sformułowane prawo równoczesnego kontrastu (w roku 1839): oko widząc jakąś barwę zawsze wytwarza barwę dopełniającą, a konsekwencją tego prawa jest stwierdzenie, że położone obok siebie na obrazie dwie dowolne barwy dopełniające oko widzi jako wzajemnie maksymalnie zróżnicowane. Inna konsekwencja jest wskazówką praktyczną: jeśli na obrazie znajdują się obok siebie dwie barwy dopełniające, to będą one się wyróżniać spośród wszelkich innych zestawień dwu barw. Impresjoniści korzystali jedynie z siedmiu podstawowych barw tęczy (czerwony, pomarańczowy, żółty, zielony, niebieski, indygo i fioletowy) i jako pierwsi mieszali je dopiero na płótnie, a nie jak ich poprzednicy na palecie. Wielki wpływ na impresjonistyczne dzieła miało wynalezienie i upowszechnienie się fotografii. Z jednej strony spowodowało to odejście od panującej od renesansu do akademizmu zasady możliwie jak najbardziej wiernego odwzorowywania detali, gdyż w tym zakresie malarstwo nie mogło wygrać z fotografią, a z drugiej zauważono, że często przypadkowa, pozornie niechlujna struktura kadrów oraz prześwietlenia i aberracje chromatyczne występujące w fotografii amatorskiej oddają lepiej nastrój chwili niż wystudiowane reguły kompozycji i kolorystyki tradycyjnych obrazów. Wzorując się na zdjęciach zaczęli oni w podobny sposób komponować swoje obrazy: ich kompozycje były otwarte, często stwarzały wrażenie przypadkowych wycinków całości. Postaci, czy drzewa ucięte w połowie, wywołały prawdziwą rewolucję na salonach. Ten nowatorski zabieg można też przypisać inspiracji artystów sztuką Japonii, która jako pierwsza zdecydowała się na tak "odważny" zabieg. Impresjonizm położył trwałe fundamenty pod znakomitą większość sztuki, która po nim nastąpiła. Odcisnął też swe piętno na muzyce (Claude Debussy), literaturze (Marcel Proust) i filozofii (Henri Bergson).</Polish>
+		<Polish>Impresjonizm (fr. impressionisme z łac. impressio 'odbicie', 'wrażenie') - nurt w sztuce europejskiej, a później także amerykańskiej, który został zapoczątkowany przez grupę paryskich artystów studiujących w Atelier Gleyere oraz w Acadźmie Suisse w drugiej połowie XIX wieku. Osiem paryskich wystaw w latach 1874-1886 zaowocowało zerwaniem nowej sztuki z akademizmem obowiązującym w II połowie tego stulecia. Za początek impresjonizmu uznaje się I wystawę grupy artystów zorganizowaną w atelier fotograficznym Nadara w 1874 roku. Najbardziej charakterystyczną cechą malarstwa i rzeźby impresjonistycznej było dążenie do oddania zmysłowych, ulotnych momentów - "złapania uciekających chwil". Nazwa kierunku została ironicznie nadana przez krytyka sztuki oraz dziennikarza Louisa Leroy i pochodzi od tytułu obrazu Claude'a Moneta Impresja, wschód słońca.[PARAGRAPH:1]Uczelnia artystyczna założona za panowania Ludwika XIV, Królewska Akademia Malarstwa i Rzeźby (Acadźmie Royale de Peinture et de Sculpture), od samego początku kładła nacisk na szkolenie umiejętności rysunku według ściśle określonych zasad. Były one klarowne: uczono się uprawiania sztuki według akademickiej doktryny wyidealizowanego piękna, a nieskazitelnymi przykładami były gipsowe odlewy rzeźb starożytnych, które kopiowali uczniowie. Kolor był traktowany od czasów Arystotelesa jako swoisty rodzaj światła i o wiele mniej nadawał się do pracy nad kształtowaniem przyszłego artysty według ścisłych zasad. W latach 70. XIX w. skostnienie sztuki i tzw. "brązowe sosy" (złamane, brunatne barwy) zamiast żywego koloru doprowadziły do buntu dużej grupy artystów. Jednym z czynników wpływających na rewolucyjną zmianę w stosunku przyszłych impresjonistów do malarstwa był rozwój techniczny i naukowy. W XIX wieku pojawiły się nowe pędzle: twardsze, płaskie, wzmocnione stalową oprawą (wcześniej stosowano tylko okrągłe pędzle z miękkiego włosia), pozwalało to stosować mocniejsze pociągnięcia. W sprzedaży pojawiły się też pierwsze, znacznie tańsze od naturalnych, farby syntetyczne - zaczęto stosować więcej koloru niebieskiego, który do tej pory był bardzo drogi (wytwarzany z lapis lazuli). Zaczęto używać sztalug plenerowych oraz przenośnych pudełek na farby i pędzle - ułatwiło to wyjście w plener. Postępy w optyce przyniosły większą wiedzę na temat fizycznej natury światła. Już w XVIII w. Isaac Newton dowiódł za pomocą pryzmatu, że światło jest w istocie mieszaniną wszystkich barw tęczy, co było przełomem w fizycznej teorii barwy, do której później znaczny wkład wniósł m.in Georges-Louis Leclerc, Comte de Buffon. We Francji, dzięki pracom chemika z królewskiej manufaktury gobelinów, Michela Chevreula (1786-1889), zostało sformułowane prawo równoczesnego kontrastu (w roku 1839): oko widząc jakąś barwę zawsze wytwarza barwę dopełniającą, a konsekwencją tego prawa jest stwierdzenie, że położone obok siebie na obrazie dwie dowolne barwy dopełniające oko widzi jako wzajemnie maksymalnie zróżnicowane. Inna konsekwencja jest wskazówką praktyczną: jeśli na obrazie znajdują się obok siebie dwie barwy dopełniające, to będą one się wyróżniać spośród wszelkich innych zestawień dwu barw. Impresjoniści korzystali jedynie z siedmiu podstawowych barw tęczy (czerwony, pomarańczowy, żółty, zielony, niebieski, indygo i fioletowy) i jako pierwsi mieszali je dopiero na płótnie, a nie jak ich poprzednicy na palecie. Wielki wpływ na impresjonistyczne dzieła miało wynalezienie i upowszechnienie się fotografii. Z jednej strony spowodowało to odejście od panującej od renesansu do akademizmu zasady możliwie jak najbardziej wiernego odwzorowywania detali, gdyż w tym zakresie malarstwo nie mogło wygrać z fotografią, a z drugiej zauważono, że często przypadkowa, pozornie niechlujna struktura kadrów oraz prześwietlenia i aberracje chromatyczne występujące w fotografii amatorskiej oddają lepiej nastrój chwili niż wystudiowane reguły kompozycji i kolorystyki tradycyjnych obrazów. Wzorując się na zdjęciach zaczęli oni w podobny sposób komponować swoje obrazy: ich kompozycje były otwarte, często stwarzały wrażenie przypadkowych wycinków całości. Postaci, czy drzewa ucięte w połowie, wywołały prawdziwą rewolucję na salonach. Ten nowatorski zabieg można też przypisać inspiracji artystów sztuką Japonii, która jako pierwsza zdecydowała się na tak "odważny" zabieg. Impresjonizm położył trwałe fundamenty pod znakomitą większość sztuki, która po nim nastąpiła. Odcisnął też swe piętno na muzyce (Claude Debussy), literaturze (Marcel Proust) i filozofii (Henri Bergson).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMPRESSIONISM_QUOTE</Tag>
@@ -13826,7 +13826,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACROSCOPIC_SUPERPOSITION_QUOTE</Tag>
 		<English>"Erwin with his psi can do[NEWLINE]Calculations quite a few.[NEWLINE]But one thing has not been seen:[NEWLINE]Just what does psi really mean?"[NEWLINE][SPACE] -Erich Huckel</English>
-		<French>"Erwin avec son psi[NEWLINE]peut faire plusieurs calculs[NEWLINE] Mais une chose n'a pas été vue: [NEWLINE] Que signifie vraiment le psi?"[NEWLINE][SPACE] -Erich Huckel</French>
+		<French>"Erwin avec son psi[NEWLINE]peut faire plusieurs calculs[NEWLINE]Mais une chose n'a pas été vue:[NEWLINE]Que signifie vraiment le psi?"[NEWLINE][SPACE] -Erich Huckel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACROSCOPIC_SUPERPOSITION_STRATEGY</Tag>
@@ -14869,7 +14869,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_QUOTE</Tag>
 		<English>Thief: I have come to a realization. Dragons are not real in a general sense, but they may exist in certain specific cases.[NEWLINE]Fighter: Like how quantum mechanics describes how subatomic particles can spontaneously pop into existence at random![NEWLINE]Thief: No, that's stupid and stop making up words.[NEWLINE][SPACE] -8-bit Theater</English>
-		<French>Voleur: Je suis venu à une réalisation. Les dragons ne sont pas réels dans un sens général, mais ils peuvent exister dans certains cas spécifiques. [NEWLINE] Combattant: Comme la mécanique quantique décrit comment les particules subatomiques peuvent apparaître spontanément au hasard! [NEWLINE] Voleur: Non, c'est stupide et arrêtez inventer des mots.[NEWLINE][SPACE] -8-bit Theater</French>
+		<French>Voleur: Je suis venu à une réalisation. Les dragons ne sont pas réels dans un sens général, mais ils peuvent exister dans certains cas spécifiques.[NEWLINE]Combattant: Comme la mécanique quantique décrit comment les particules subatomiques peuvent apparaître spontanément au hasard![NEWLINE]Voleur: Non, c'est stupide et arrêtez inventer des mots.[NEWLINE][SPACE] -8-bit Theater</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_STRATEGY</Tag>
@@ -15371,11 +15371,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MILITARY_SCIENCE_QUOTE</Tag>
-		<English>"I must study politics and war that my sons may have liberty to study mathematics and philosophy." [PARAGRAPH:1]- John Adams</English>
+		<English>"I must study politics and war that my sons may have liberty to study mathematics and philosophy."[PARAGRAPH:1]- John Adams</English>
 		<French>"Je dois étudier la politique et me battre pour que mes fils puissent être libres d'étudier les mathématiques et la philosophie."[PARAGRAPH:1]- John Adams</French>
-		<German>"Ich muss Politik und Krieg studieren, damit meine Söhne die Freiheit haben, Mathematik und Philosophie zu studieren." [PARAGRAPH:1]- John Adams</German>
-		<Italian>"Devo studiare politica e arte della guerra in modo che i miei figli possano avere la libertà di studiare matematica e filosofia". [PARAGRAPH:1]- John Adams</Italian>
-		<Spanish>"Debo estudiar las artes de la política y la guerra para que mis hijos puedan estudiar las de las matemáticas y la filosofía". [PARAGRAPH:1] - John Adams</Spanish>
+		<German>"Ich muss Politik und Krieg studieren, damit meine Söhne die Freiheit haben, Mathematik und Philosophie zu studieren."[PARAGRAPH:1]- John Adams</German>
+		<Italian>"Devo studiare politica e arte della guerra in modo che i miei figli possano avere la libertà di studiare matematica e filosofia".[PARAGRAPH:1]- John Adams</Italian>
+		<Spanish>"Debo estudiar las artes de la política y la guerra para que mis hijos puedan estudiar las de las matemáticas y la filosofía".[PARAGRAPH:1]- John Adams</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MILITARY_SCIENCE_STRATEGY</Tag>
@@ -16965,7 +16965,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEURAL_NETWORKS_PEDIA</Tag>
-		<English>Traditionally, the term neural network had been used to refer to a network or circuit of biological neurons. The modern usage of the term often refers to artificial neural networks, which are composed of artificial neurons or nodes. Thus, the term has two distinct usages:[PARAGRAPH:2]1. Biological neural networks are made up of real biological neurons that are connected or functionally related in the peripheral nervous system or the central nervous system. In the field of neuroscience, they are often identified as groups of neurons that perform a specific physiological function in laboratory analysis.[PARAGRAPH:2]2. Artificial neural networks are made up of interconnecting artificial neurons (programming constructs that mimic the properties of biological neurons). Artificial neural networks may either be used to gain an understanding of biological neural networks, or for solving artificial intelligence problems without necessarily creating a model of a real biological system. The real, biological nervous system is highly complex and includes some features that may seem superfluous based on an understanding of artificial networks.[PARAGRAPH:2]In general a biological neural network is composed of a group or groups of chemically connected or functionally associated neurons. A single neuron may be connected to many other neurons and the total number of neurons and connections in a network may be extensive. Connections, called synapses, are usually formed from axons to dendrites, though dendrodendritic microcircuits and other connections are possible. Apart from the electrical signaling, there are other forms of signaling that arise from neurotransmitter diffusion, which have an effect on electrical signaling. As such, neural networks are extremely complex.[PARAGRAPH:2]Artificial intelligence and cognitive modeling try to simulate some properties of neural networks. While similar in their techniques, the former has the aim of solving particular tasks, while the latter aims to build mathematical models of biological neural systems.[PARAGRAPH:2]In the artificial intelligence field, artificial neural networks have been applied successfully to speech recognition, image analysis and adaptive control, in order to construct software agents (in computer and video games) or autonomous robots. Most of the currently employed artificial neural networks for artificial intelligence are based on statistical estimation, optimization and control theory.[PARAGRAPH:2]The cognitive modelling field involves the physical or mathematical modeling of the behaviour of neural systems; ranging from the individual neural level (e.g. modelling the spike response curves of neurons to a stimulus), through the neural cluster level (e.g. modelling the release and effects of dopamine in the basal ganglia) to the complete organism (e.g. behavioural modelling of the organism's response to stimuli).[PARAGRAPH:2]Neural networks, as used in artificial intelligence, have traditionally been viewed as simplified models of neural processing in the brain, even though the relation between this model and brain biological architecture is debated. A subject of current research in theoretical neuroscience is the question surrounding the degree of complexity and the properties that individual neural elements should have to reproduce something resembling animal intelligence. Historically, computers evolved from the von Neumann architecture, which is based on sequential processing and execution of explicit instructions. On the other hand, the origins of neural networks are based on efforts to model information processing in biological systems, which may rely largely on parallel processing as well as implicit instructions based on recognition of patterns of 'sensory' input from external sources. In other words, at its very heart a neural network is a complex statistical processor (as opposed to being tasked to sequentially process and execute).[PARAGRAPH:2]In modern software implementations of artificial neural networks the approach inspired by biology has more or less been abandoned for a more practical approach based on statistics and signal processing. In some of these systems neural networks, or parts of neural networks (such as artificial neurons) are used as components in larger systems that combine both adaptive and non-adaptive elements.[PARAGRAPH:2]The utility of artificial neural network models lies in the fact that they can be used to infer a function from observations and also to use it. This is particularly useful in applications where the complexity of the data or task makes the design of such a function by hand impractical. [PARAGRAPH:1]The tasks to which artificial neural networks are applied to tend to fall within the following broad categories:[NEWLINE][ICON_BULLET]Function approximation, or regression analysis, including time series prediction and modelling.[NEWLINE][ICON_BULLET]Classification, including pattern and sequence recognition, novelty detection and sequential decision-making.[NEWLINE][ICON_BULLET]Data processing, including filtering, clustering, blind signal separation and compression.[PARAGRAPH:2]Application areas include system identification and control (vehicle control, process control), game-playing and decision-making (backgammon, chess, racing), pattern recognition (radar systems, face identification, object recognition, etc.), sequence recognition (gesture, speech, handwritten text recognition), medical diagnosis, financial applications, data mining (or knowledge discovery in databases, "KDD"), visualization and e-mail spam filtering.</English>
+		<English>Traditionally, the term neural network had been used to refer to a network or circuit of biological neurons. The modern usage of the term often refers to artificial neural networks, which are composed of artificial neurons or nodes. Thus, the term has two distinct usages:[PARAGRAPH:2]1. Biological neural networks are made up of real biological neurons that are connected or functionally related in the peripheral nervous system or the central nervous system. In the field of neuroscience, they are often identified as groups of neurons that perform a specific physiological function in laboratory analysis.[PARAGRAPH:2]2. Artificial neural networks are made up of interconnecting artificial neurons (programming constructs that mimic the properties of biological neurons). Artificial neural networks may either be used to gain an understanding of biological neural networks, or for solving artificial intelligence problems without necessarily creating a model of a real biological system. The real, biological nervous system is highly complex and includes some features that may seem superfluous based on an understanding of artificial networks.[PARAGRAPH:2]In general a biological neural network is composed of a group or groups of chemically connected or functionally associated neurons. A single neuron may be connected to many other neurons and the total number of neurons and connections in a network may be extensive. Connections, called synapses, are usually formed from axons to dendrites, though dendrodendritic microcircuits and other connections are possible. Apart from the electrical signaling, there are other forms of signaling that arise from neurotransmitter diffusion, which have an effect on electrical signaling. As such, neural networks are extremely complex.[PARAGRAPH:2]Artificial intelligence and cognitive modeling try to simulate some properties of neural networks. While similar in their techniques, the former has the aim of solving particular tasks, while the latter aims to build mathematical models of biological neural systems.[PARAGRAPH:2]In the artificial intelligence field, artificial neural networks have been applied successfully to speech recognition, image analysis and adaptive control, in order to construct software agents (in computer and video games) or autonomous robots. Most of the currently employed artificial neural networks for artificial intelligence are based on statistical estimation, optimization and control theory.[PARAGRAPH:2]The cognitive modelling field involves the physical or mathematical modeling of the behaviour of neural systems; ranging from the individual neural level (e.g. modelling the spike response curves of neurons to a stimulus), through the neural cluster level (e.g. modelling the release and effects of dopamine in the basal ganglia) to the complete organism (e.g. behavioural modelling of the organism's response to stimuli).[PARAGRAPH:2]Neural networks, as used in artificial intelligence, have traditionally been viewed as simplified models of neural processing in the brain, even though the relation between this model and brain biological architecture is debated. A subject of current research in theoretical neuroscience is the question surrounding the degree of complexity and the properties that individual neural elements should have to reproduce something resembling animal intelligence. Historically, computers evolved from the von Neumann architecture, which is based on sequential processing and execution of explicit instructions. On the other hand, the origins of neural networks are based on efforts to model information processing in biological systems, which may rely largely on parallel processing as well as implicit instructions based on recognition of patterns of 'sensory' input from external sources. In other words, at its very heart a neural network is a complex statistical processor (as opposed to being tasked to sequentially process and execute).[PARAGRAPH:2]In modern software implementations of artificial neural networks the approach inspired by biology has more or less been abandoned for a more practical approach based on statistics and signal processing. In some of these systems neural networks, or parts of neural networks (such as artificial neurons) are used as components in larger systems that combine both adaptive and non-adaptive elements.[PARAGRAPH:2]The utility of artificial neural network models lies in the fact that they can be used to infer a function from observations and also to use it. This is particularly useful in applications where the complexity of the data or task makes the design of such a function by hand impractical.[PARAGRAPH:1]The tasks to which artificial neural networks are applied to tend to fall within the following broad categories:[NEWLINE][ICON_BULLET]Function approximation, or regression analysis, including time series prediction and modelling.[NEWLINE][ICON_BULLET]Classification, including pattern and sequence recognition, novelty detection and sequential decision-making.[NEWLINE][ICON_BULLET]Data processing, including filtering, clustering, blind signal separation and compression.[PARAGRAPH:2]Application areas include system identification and control (vehicle control, process control), game-playing and decision-making (backgammon, chess, racing), pattern recognition (radar systems, face identification, object recognition, etc.), sequence recognition (gesture, speech, handwritten text recognition), medical diagnosis, financial applications, data mining (or knowledge discovery in databases, "KDD"), visualization and e-mail spam filtering.</English>
 		<Polish>Sieć neuronowa (sztuczna sieć neuronowa) - ogólna nazwa struktur matematycznych i ich programowych lub sprzętowych modeli, realizujących obliczenia lub przetwarzanie sygnałów poprzez rzędy elementów, zwanych sztucznymi neuronami, wykonujących pewną podstawową operację na swoim wejściu. Oryginalną inspiracją takiej struktury była budowa naturalnych neuronów oraz układów nerwowych, w szczególności mózgu.Czasem nazwą sztuczne sieci neuronowe określa się interdyscyplinarną dziedzinę wiedzy zajmującą się konstrukcją, trenowaniem i badaniem możliwości tego rodzaju sieci.Współcześnie nie ma wątpliwości, że sztuczne sieci neuronowe nie stanowią dobrego modelu mózgu, choć różne ich postaci wykazują cechy charakterystyczne dla biologicznych układów neuronowych: zdolność do uogólniania wiedzy, uaktualniania kosztem wcześniej poznanych wzorców, dawanie mylnych odpowiedzi po przepełnieniu. Mimo uproszczonej budowy sztuczne sieci neuronowe stosuje się czasem do modelowania schorzeń mózgu.Sztuczne sieci neuronowe znajdują zastosowanie w rozpoznawaniu i klasyfikacji wzorców (przydzielaniu wzorcom kategorii), predykcji szeregów czasowych, analizie danych statystycznych, odszumianiu i kompresji obrazu i dźwięku oraz w zagadnieniach sterowania i automatyzacji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -17130,7 +17130,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>A nomad I will remain for life, in love with distant and uncharted places.[PARAGRAPH:2]- Isabelle Eberhardt,[PARAGRAPH:1][SPACE][SPACE]"Nomad Thought: Isabelle Eberhardt and the Colonial Project by Laura Rice"</English>
 		<French>"Je resterai toute ma vie nomade, amoureuse de ces endroits distants et inexplorés." - Isabelle Eberhardt</French>
 		<German>"Ich werde mein Leben lang Nomade bleiben, verliebt in den wechselnden Horizont, in die unerforschten, fernen Orte, denn jede Reise, selbst zu den überfülltesten und viel besuchten Ländern, ist eine Entdeckung." - Isabelle Eberhardt (1877-1904)</German>
-		<Polish>"Muszę znów płynąć na morze, na wędrowne, cygańskie życie[NEWLINE]Na szlak mewy i płetwala, gdzie wiatr jest jak ostry nóż.[NEWLINE]Nic nie chcę, tylko dobrego druha, co baja i śmieje się tęgo,[NEWLINE]I błogich snów, i lubych marzeń, kiedy skończy się długa włóczęga."[NEWLINE] - John Masefield: Sea-Fever</Polish>
+		<Polish>"Muszę znów płynąć na morze, na wędrowne, cygańskie życie[NEWLINE]Na szlak mewy i płetwala, gdzie wiatr jest jak ostry nóż.[NEWLINE]Nic nie chcę, tylko dobrego druha, co baja i śmieje się tęgo,[NEWLINE]I błogich snów, i lubych marzeń, kiedy skończy się długa włóczęga."[NEWLINE]- John Masefield: Sea-Fever</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOMADISM_STRATEGY</Tag>
@@ -18361,7 +18361,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PETROGLYPHS_QUOTE</Tag>
 		<English>The venerable woods - rivers that move in majesty, and the complaining brooks that make the meadows green, and, poured round all, Old Ocean's gray and melancholy waste, are but the solemn decorations all of the great tomb of man.[PARAGRAPH:2]- William Cullen Bryant,[PARAGRAPH:1][SPACE][SPACE]"Thanatopsis"</English>
-		<French>"Les bois vénérables; Des Rivières qui se déplacent [NEWLINE] En majesté, et les plaignants ruisseaux [NEWLINE] qui rendent les prairies vertes; et ces pauvres alentours, [NEWLINE] Ce Vieux Gris océan et cet ennui mélancolique, [NEWLINE] sont toutes les décorations solennelles [NEWLINE] du majestueux tombeau de l'Homme." - William Cullen Bryant, Thanatopsis</French>
+		<French>"Les bois vénérables; Des Rivières qui se déplacent[NEWLINE]En majesté, et les plaignants ruisseaux[NEWLINE]qui rendent les prairies vertes; et ces pauvres alentours,[NEWLINE]Ce Vieux Gris océan et cet ennui mélancolique,[NEWLINE]sont toutes les décorations solennelles[NEWLINE]du majestueux tombeau de l'Homme." - William Cullen Bryant, Thanatopsis</French>
 		<Polish>"Malowidła nie powinny być zbyt malownicze." - Ralph Waldo Emerson</Polish>
 	</TEXT>
 	<TEXT>
@@ -19218,7 +19218,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POETRY_QUOTE</Tag>
 		<English>"One Ring to rule them all, One Ring to find them,[NEWLINE][SPACE] One Ring to bring them all and in the darkness bind them." - Gandalf, reciting the inscription of the One Ring</English>
-		<French>"Un Anneau pour les gouverner tous, Un Anneau pour les trouver, [NEWLINE][SPACE] Un Anneau pour les amener tous et dans les ténèbres les lier." - Gandalf, récitant les inscriptions de l'Anneau Unique</French>
+		<French>"Un Anneau pour les gouverner tous, Un Anneau pour les trouver,[NEWLINE][SPACE] Un Anneau pour les amener tous et dans les ténèbres les lier." - Gandalf, récitant les inscriptions de l'Anneau Unique</French>
 		<Polish>"Wspólne życie to wspólny dom, wspólne zakupy, wspólne marzenia, ale przecież także i to... mój domowy pantofel pod jego tapczanem. Niby prozaiczna rzecz, a przecież zamyka się tu cała poezja." - Krystyna Siesicka</Polish>
 	</TEXT>
 	<TEXT>
@@ -21411,7 +21411,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEDENTARY_LIFESTYLE_QUOTE</Tag>
 		<English>"Woman: Would you rather have beer or complete and utter contentment?[NEWLINE]Homer: What kind of beer?"-The Simpsons</English>
-		<French>"Femme: Préfères-tu une bière ou la plénitude complète et totale [NEWLINE] Homer: Quel genre de bière?"[NEWLINE] - The Simpsons</French>
+		<French>"Femme: Préfères-tu une bière ou la plénitude complète et totale[NEWLINE]Homer: Quel genre de bière?"[NEWLINE]- The Simpsons</French>
 		<Polish>"Każdy ma swoje miejsce i robi to, co może. I nie naszą rzeczą jest pytać, jak on do tego doszedł, dlaczego tam zostaje..." - Patrick Suskind</Polish>
 	</TEXT>
 	<TEXT>
@@ -21592,8 +21592,8 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEWING_QUOTE</Tag>
 		<English>With fingers weary and worn, with eyelids heavy and red, A woman sat in unwomanly rags, plying her needle and thread. Stitch! Stitch! Stitch![PARAGRAPH:2]- Thomas Wood,[PARAGRAPH:1][SPACE][SPACE]"The Song of the Shirt (1843)"</English>
-		<French>"Avec les doigts fatigués et usés, [NEWLINE] Avec les paupières lourdes et rouges, [NEWLINE] Une femme était assise, vêtue de chiffons, [NEWLINE] Pliant son aiguille et son fil -[NEWLINE] Stitch! Stitch! Stitch!"[NEWLINE] - Thomas Hood</French>
-		<Polish>"W szyciu nic nie ma, oprócz szycia,[NEWLINE] Więc szyjmy, póki starczy siły![NEWLINE] W życiu nic nie ma, oprócz życia,[NEWLINE] Więc żyjmy aż po kres mogiły!"[NEWLINE] - Bolesław Leśmian</Polish>
+		<French>"Avec les doigts fatigués et usés,[NEWLINE]Avec les paupières lourdes et rouges,[NEWLINE]Une femme était assise, vêtue de chiffons,[NEWLINE]Pliant son aiguille et son fil -[NEWLINE]Stitch! Stitch! Stitch!"[NEWLINE]- Thomas Hood</French>
+		<Polish>"W szyciu nic nie ma, oprócz szycia,[NEWLINE]Więc szyjmy, póki starczy siły![NEWLINE]W życiu nic nie ma, oprócz życia,[NEWLINE]Więc żyjmy aż po kres mogiły!"[NEWLINE]- Bolesław Leśmian</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEWING_STRATEGY</Tag>
@@ -21894,7 +21894,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_QUOTE</Tag>
 		<English>"If his was more than just a vague ambition, if he [Truman] was absolutely determined to discover the truth, there's no way we could prevent him."[NEWLINE][SPACE] -Christof, The Truman Show</English>
-		<French>"S'il ne s'agissait pas seulement d'une vague ambition, s'il [Truman] était absolument déterminé à découvrir la vérité, il n'y a aucun moyen de l'empêcher. "[NEWLINE] [SPACE] -Christof, The Truman Show</French>
+		<French>"S'il ne s'agissait pas seulement d'une vague ambition, s'il [Truman] était absolument déterminé à découvrir la vérité, il n'y a aucun moyen de l'empêcher. "[NEWLINE][SPACE] -Christof, The Truman Show</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_STRATEGY</Tag>
@@ -22004,10 +22004,10 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SLASH_AND_BURN_PEDIA</Tag>
 		<English>Slash-and-burn agriculture, or fire-fallow cultivation, is a farming method that involves the cutting and burning of plants in a forest or woodland to create a field called a swidden. Historically, slash-and-burn cultivation has been practiced throughout much of the world, in grasslands as well as woodlands.[PARAGRAPH:2]During the Neolithic Revolution, which included agricultural advancements, groups of hunter-gatherers domesticated various plants and animals, permitting them to settle down and practice agriculture, which provides more nutrition per hectare than hunting and gathering. This happened in the river valleys of Egypt and Mesopotamia. Due to this decrease in food from hunting, as human populations increased, agriculture became more important. Some groups could easily plant their crops in open fields along river valleys, but others had forests blocking their farming land.[PARAGRAPH:2]In this context, humans used slash-and-burn agriculture to clear more land to make it suitable for plants and animals. Thus, since Neolithic times, slash-and-burn techniques have been widely used for converting forests into crop fields and pasture. Fire was used before the Neolithic as well, and by hunter-gatherers up to present times. Clearings created by the fire were made for many reasons, such as to draw game animals and to promote certain kinds of edible plants such as berries.</English>
-		<French>La technique du brûlis permet de défricher les forêts en utilisant le feu. cela permet de libérer une zone pour les champs pour l'agriculture ou le pâturage pour le bétail, ou pour une série d'autres buts. C'est parfois une partie d'agriculture de culture de décalage, et de rassemblement de bétail de transhumance. [PARAGRAPH:1] Historiquement, la pratique de la barre oblique et la brûlure a été largement pratiquée dans toute la majeure partie du monde, dans les prairies aussi bien que des régfions boisées, et connue par beaucoup de noms. Dans des régions tempérées, telles que l'Europe et l'Amérique du Nord, la pratique a été la plupart du temps abandonnée au cours des derniers siècles. Aujourd'hui la limite est principalement associée aux forêts tropicales tropicales.</French>
-		<German>Brandrodung besteht, von den Wäldern oder vom Waldland zu schneiden und zu brennen, um Felder für die Landwirtschaft oder Weide für Viehbestand oder für eine Vielzahl anderer Zwecke herzustellen. Es ist manchmal Teil Verschiebungsbearbeitunglandwirtschaft und des Transhumanceviehbestandin herden lebens. [PARAGRAPH:1] Historisch ist die Praxis des Schrägstriches und der Brand weit während die meisten der Welt, in den Wiesen sowie Waldland geübt worden und bekannt durch viele Namen. In den mäßigen Regionen wie Europa und Nordamerika, ist die Praxis meistens in den letzten Jahrhunderten verlassen worden. Heute ist der Ausdruck hauptsächlich mit Wäldern des tropischen Regens verbunden.</German>
-		<Italian>Il taglio e l'ustione consiste di tagliare e bruciare delle foreste o dei terreni boscosi per generare i campi per l'agricoltura o il pascolo per bestiame, o per vari altri scopi. Fa parte a volte dell'agricoltura di coltura di spostamento e di branco del bestiame di trasumanza. [PARAGRAPH:1] Storicamente, la pratica del taglio e l'ustione ampiamente si è esercitata in durante la maggior parte del mondo, in pascoli così come i terreni boscosi ed è stata conosciuta da molti nomi. Nelle regioni temperate, quali Europa e l'America del Nord, la pratica principalmente è stata abbandonata durante i secoli ultimi. Oggi il termine pricipalmente è associato con le foreste pluviali tropicali.</Italian>
-		<Spanish>La raya vertical y la quemadura consiste en el cortar y el quemar de bosques o de arbolados para crear los campos para la agricultura o el pasto para el ganado, o para una variedad de otros propósitos. Es a veces parte de agricultura de la cultivación de desplazamiento, y de reunión del ganado de la trashumancia. [PARAGRAPH:1] Históricamente, la práctica de la raya vertical y la quemadura se ha practicado extensamente a través la mayor parte de del mundo, en prados así como arbolados, y ha sido sabida por muchos nombres. En regiones templadas, tales como Europa y Norteamérica, la práctica se ha abandonado sobre todo sobre el último pocos siglos. El término se asocia hoy principalmente a las selvas tropicales tropicales.</Spanish>
+		<French>La technique du brûlis permet de défricher les forêts en utilisant le feu. cela permet de libérer une zone pour les champs pour l'agriculture ou le pâturage pour le bétail, ou pour une série d'autres buts. C'est parfois une partie d'agriculture de culture de décalage, et de rassemblement de bétail de transhumance.[PARAGRAPH:1]Historiquement, la pratique de la barre oblique et la brûlure a été largement pratiquée dans toute la majeure partie du monde, dans les prairies aussi bien que des régfions boisées, et connue par beaucoup de noms. Dans des régions tempérées, telles que l'Europe et l'Amérique du Nord, la pratique a été la plupart du temps abandonnée au cours des derniers siècles. Aujourd'hui la limite est principalement associée aux forêts tropicales tropicales.</French>
+		<German>Brandrodung besteht, von den Wäldern oder vom Waldland zu schneiden und zu brennen, um Felder für die Landwirtschaft oder Weide für Viehbestand oder für eine Vielzahl anderer Zwecke herzustellen. Es ist manchmal Teil Verschiebungsbearbeitunglandwirtschaft und des Transhumanceviehbestandin herden lebens.[PARAGRAPH:1]Historisch ist die Praxis des Schrägstriches und der Brand weit während die meisten der Welt, in den Wiesen sowie Waldland geübt worden und bekannt durch viele Namen. In den mäßigen Regionen wie Europa und Nordamerika, ist die Praxis meistens in den letzten Jahrhunderten verlassen worden. Heute ist der Ausdruck hauptsächlich mit Wäldern des tropischen Regens verbunden.</German>
+		<Italian>Il taglio e l'ustione consiste di tagliare e bruciare delle foreste o dei terreni boscosi per generare i campi per l'agricoltura o il pascolo per bestiame, o per vari altri scopi. Fa parte a volte dell'agricoltura di coltura di spostamento e di branco del bestiame di trasumanza.[PARAGRAPH:1]Storicamente, la pratica del taglio e l'ustione ampiamente si è esercitata in durante la maggior parte del mondo, in pascoli così come i terreni boscosi ed è stata conosciuta da molti nomi. Nelle regioni temperate, quali Europa e l'America del Nord, la pratica principalmente è stata abbandonata durante i secoli ultimi. Oggi il termine pricipalmente è associato con le foreste pluviali tropicali.</Italian>
+		<Spanish>La raya vertical y la quemadura consiste en el cortar y el quemar de bosques o de arbolados para crear los campos para la agricultura o el pasto para el ganado, o para una variedad de otros propósitos. Es a veces parte de agricultura de la cultivación de desplazamiento, y de reunión del ganado de la trashumancia.[PARAGRAPH:1]Históricamente, la práctica de la raya vertical y la quemadura se ha practicado extensamente a través la mayor parte de del mundo, en prados así como arbolados, y ha sido sabida por muchos nombres. En regiones templadas, tales como Europa y Norteamérica, la práctica se ha abandonado sobre todo sobre el último pocos siglos. El término se asocia hoy principalmente a las selvas tropicales tropicales.</Spanish>
 		<Polish>Tnij i Pal polegało na karczowaniu i wypalaniu lasów pod tereny rolnicze czy pasterskie. Pola powstałe w wyniku karczowania i wypalania lasów opuszczano po krótkim użytkowaniu, gdy wyeksploatowana gleba dawała zbyt małe plony. W ten sposób dokonywano następnych zniszczeń terenów leśnych. Zmiany te miały jednak mały zasięg i dotyczyły części obszaru Azji i Europy</Polish>
 	</TEXT>
 	<TEXT>
@@ -22537,10 +22537,10 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPEARFISHING_PEDIA</Tag>
 		<English>Spearfishing is a method of fishing that has been used throughout the world for millennia. Early civilizations were familiar with the custom of spearing fish from rivers and streams using sharpened sticks.[PARAGRAPH:2]Spearfishing with a hand held spear from land, shallow water or boat has been practised for thousands of years. The fisher must account for optical refraction at the water's surface, which makes fish appear higher in their line of sight than they are.[PARAGRAPH:2]Shore diving is perhaps the most common form of spearfishing and simply involves entering and exiting the sea from beaches or headlands and hunting around ocean structures, usually reef, but also rocks, kelp or sand. Boats, ships, kayaks, or even jetski can be used to access offshore reefs or ocean structure.</English>
-		<French>Chasse sous-marine est une méthode antique de pêche qui a été employée dans le monde entier pendant des milléniums. Les civilisations tôt étaient au courant de la coutume de transpercer des poissons des fleuves et des jets utilisant les bâtons affilés.[PARAGRAPH:1] Spearfishing avec les poteaux barbelés (harpons) était répandu dans des périodes paléolithiques. La caverne de Cosquer en France méridionale contient l'art de caverne plus de 16.000 années, y compris des schémas des joints qui semblent avoir été harponnés.</French>
+		<French>Chasse sous-marine est une méthode antique de pêche qui a été employée dans le monde entier pendant des milléniums. Les civilisations tôt étaient au courant de la coutume de transpercer des poissons des fleuves et des jets utilisant les bâtons affilés.[PARAGRAPH:1]Spearfishing avec les poteaux barbelés (harpons) était répandu dans des périodes paléolithiques. La caverne de Cosquer en France méridionale contient l'art de caverne plus de 16.000 années, y compris des schémas des joints qui semblent avoir été harponnés.</French>
 		<German>Das Speerfischen ist eine uralte Jagdmethode, die weltweit jahrtausendelang angewendet wurde. Höhlenzeichnungen belegen, dass frühe Kulturen schon vor 16.000 Jahren gelernt hatten, Fische mit angespitzten Stöcken zu durchbohren, man geht heutzutage durch archäologische Funde aber davon aus, dass die Urmenschen diese Technik bereits vor 90.000 Jahren das erste Mal anwandten. Der steinzeitliche Fischer musste über Geduld, gute Augen und schnelle Reflexe verfügen, wenn er am Flussufer der vorbeischwimmenden Beute auflauerte. Bei den ersten einfachen Holzspeeren passierte es noch ziemlich häufig, dass bereits aufgespießte Fische vom Stock rutschten und sich so wieder befreien konnten. Dieses Problem konnte erst durch den Einsatz von Widerhaken beseitigt werden.</German>
-		<Italian>Pesca con arpioni è un metodo antico di pesca che è stato usato nel mondo intero per millenni. Le civiltà più antiche conoscevano le tecniche per arpionare i pesci dai fiumi e dai corsi d'acqua per mezzo di bastoni affilati. [PARAGRAPH:1] La pesca con arpioni era ampiamente diffusa nel periodo paleolitico. La caverna di Cosquer nella Francia del sud contiene pitture rupestri di oltre 16.000 anni fa, comprese le illustrazioni di foche che sembrano essere state arpionate.</Italian>
-		<Spanish>La Pesca con arpón es un método antiguo de pesca que se ha utilizado en el mundo entero por milenios. Las culturas ancestrales estaban familiarizadas con la costumbre de capturar los peces de los ríos y corrientes usando estacas afiladas. [PARAGRAPH:1] La pesca con palos puntiagudos (arpones) estaba extendida en los tiempos del Paleolítico. La cueva de Cosquer en la Francia meridional conserva arte rupestre de hace 16.000 años, incluyendo dibujos de focas que parecen haber sido cazadas con arpón.</Spanish>
+		<Italian>Pesca con arpioni è un metodo antico di pesca che è stato usato nel mondo intero per millenni. Le civiltà più antiche conoscevano le tecniche per arpionare i pesci dai fiumi e dai corsi d'acqua per mezzo di bastoni affilati.[PARAGRAPH:1]La pesca con arpioni era ampiamente diffusa nel periodo paleolitico. La caverna di Cosquer nella Francia del sud contiene pitture rupestri di oltre 16.000 anni fa, comprese le illustrazioni di foche che sembrano essere state arpionate.</Italian>
+		<Spanish>La Pesca con arpón es un método antiguo de pesca que se ha utilizado en el mundo entero por milenios. Las culturas ancestrales estaban familiarizadas con la costumbre de capturar los peces de los ríos y corrientes usando estacas afiladas.[PARAGRAPH:1]La pesca con palos puntiagudos (arpones) estaba extendida en los tiempos del Paleolítico. La cueva de Cosquer en la Francia meridional conserva arte rupestre de hace 16.000 años, incluyendo dibujos de focas que parecen haber sido cazadas con arpón.</Spanish>
 		<Polish>Najstarsze metody połowu ryb to połów za pomocą specjalnego oszczepu lub harpuna.</Polish>
 	</TEXT>
 	<TEXT>
@@ -22704,7 +22704,7 @@ The stages of production are as follows:
 		<Tag>TXT_KEY_TECH_SPICE_TRADE_PEDIA</Tag>
 		<English>Spice Trade is a commercial activity of ancient origin which involves the merchandising of spices, incense, hemp, drugs and opium. Civilizations of Asia were involved in spice trade from the ancient times, and the Graeco-Roman world soon followed by trading along the Incense route and the Roman-India routes. The Roman-Indian routes were dependent upon techniques developed by the maritime trading power, Kingdom of Axum (ca 5th century BC, AD 11th century) which had pioneered the Red Sea route before the 1st century. By mid-7th century the rise of Islam closed off the overland caravan routes through Egypt and the Suez, and sundered the European trade community from Axum and India.</English>
 		<French>Le [COLOR_UNIT_TEXT]Commerce des Epices[COLOR_REVERT]. Moteur de l'économie mondiale à partir de la fin du Moyen Age ainsi dans les temps modernes - a marqué le début l'ère de la domination européenne dans l'Est. Des voies, telles que la baie du Bengale, ont servi de ponts d'échanges culturels et commerciaux entre les diverses cultures. Beaucoup de nations ont tenté de prendre le contrôle du commerce le long des nombreuses routes des épices.</French>
-		<Polish>Przez całe tysiąclecia handel przyprawami, szczególnie tymi korzennymi pochodzącymi z odległych krajów Azji, przynosił znaczne zyski i był rozwijany. Przypuszczalnie olbrzymie bogactwa króla Salomona pochodziły w znacznej mierze z tego handlu. Aleksandria za czasów Ptolemeuszów była centrum handlującym przyprawami indyjskimi. Celem wypraw morskich Krzysztofa Kolumba i Johna Cabota były zasobne w przyprawy Indie. Wyspy Moluki były wcześniej nazywane Wyspami Korzennymi i to one były głównym celem wyprawy Ferdynanda Magellana, która w rezultacie skończyła się pierwszym opłynięciem kuli ziemskiej. W XVII wieku powstawały europejskie kompanie handlowe mające za jeden z celów opanowanie jak największej części handlu przyprawami i korzeniami. Były to kompanie angielskie, francuskie i holenderskie. [NEWLINE]Handel przyprawami kierował gospodarką światową od czasów późnego średniowiecza aż po czasy nowożytne, zapoczątkowując epokę dominacji europejskiej na Wschodzie. Kanały, takiej jak Zatoka Bengalska służyły jako mosty wymiany handlowej i kulturowej między różnorodnymi nacjami uwikłanymi w zdobycie kontroli nad handlem przyprawami Europejska dominacja rozwijała się powoli. Szlaki handlowe Portugalczyków ograniczały się głównie do korzystania ze starożytnych dróg, portów, gdzie ludność tubylcza była trudna do zdominowania. W późniejszym czasie Holendrzy potrafili pokonać wiele z tych przeszkód poprzez przetarcie bezpośredniej drogi przez ocean Indyjski od Przylądka Dobrej Nadziei do indonezyjskiej Cieśniny Sundu.</Polish>
+		<Polish>Przez całe tysiąclecia handel przyprawami, szczególnie tymi korzennymi pochodzącymi z odległych krajów Azji, przynosił znaczne zyski i był rozwijany. Przypuszczalnie olbrzymie bogactwa króla Salomona pochodziły w znacznej mierze z tego handlu. Aleksandria za czasów Ptolemeuszów była centrum handlującym przyprawami indyjskimi. Celem wypraw morskich Krzysztofa Kolumba i Johna Cabota były zasobne w przyprawy Indie. Wyspy Moluki były wcześniej nazywane Wyspami Korzennymi i to one były głównym celem wyprawy Ferdynanda Magellana, która w rezultacie skończyła się pierwszym opłynięciem kuli ziemskiej. W XVII wieku powstawały europejskie kompanie handlowe mające za jeden z celów opanowanie jak największej części handlu przyprawami i korzeniami. Były to kompanie angielskie, francuskie i holenderskie.[NEWLINE]Handel przyprawami kierował gospodarką światową od czasów późnego średniowiecza aż po czasy nowożytne, zapoczątkowując epokę dominacji europejskiej na Wschodzie. Kanały, takiej jak Zatoka Bengalska służyły jako mosty wymiany handlowej i kulturowej między różnorodnymi nacjami uwikłanymi w zdobycie kontroli nad handlem przyprawami Europejska dominacja rozwijała się powoli. Szlaki handlowe Portugalczyków ograniczały się głównie do korzystania ze starożytnych dróg, portów, gdzie ludność tubylcza była trudna do zdominowania. W późniejszym czasie Holendrzy potrafili pokonać wiele z tych przeszkód poprzez przetarcie bezpośredniej drogi przez ocean Indyjski od Przylądka Dobrej Nadziei do indonezyjskiej Cieśniny Sundu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPICE_TRADE_QUOTE</Tag>
@@ -22746,7 +22746,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STABLE_TIME_LOOPS_QUOTE</Tag>
 		<English>Phil: What would you do if you were stuck in one place, and every day was exactly the same, and nothing that you did mattered?[NEWLINE]Ralph: That about sums it up for me.[NEWLINE][SPACE] -Groundhog Day</English>
-		<French>Phil: Que feriez-vous si vous étiez coincé au même endroit, et que chaque jour était exactement la même chose, et que plus rien n'avait d'importance? [NEWLINE] Ralph: Cela résume tout pour moi.[NEWLINE][SPACE] -Groundhog Day</French>
+		<French>Phil: Que feriez-vous si vous étiez coincé au même endroit, et que chaque jour était exactement la même chose, et que plus rien n'avait d'importance?[NEWLINE]Ralph: Cela résume tout pour moi.[NEWLINE][SPACE] -Groundhog Day</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STABLE_TIME_LOOPS_STRATEGY</Tag>
@@ -22875,7 +22875,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STAR_LIFTING_QUOTE</Tag>
 		<English>"Simon: My God! The sun.[NEWLINE]Elaine Dickinson: What is it, Simon?[NEWLINE]Simon: A large, fiery ball at the center of our solar system, but that's not important now. We're heading right for it."[NEWLINE][SPACE] -Airplane II: The Sequel</English>
-		<French>"Simon: Mon Dieu! Le soleil. [NEWLINE] Elaine Dickinson: Qu'est-ce que c'est, Simon? [NEWLINE] Simon: Une grosse boule ardente au centre de notre système solaire, mais ce n'est plus important maintenant. Nous allons droit vers ça."[NEWLINE][SPACE] -Airplane II: The Sequel</French>
+		<French>"Simon: Mon Dieu! Le soleil.[NEWLINE]Elaine Dickinson: Qu'est-ce que c'est, Simon?[NEWLINE]Simon: Une grosse boule ardente au centre de notre système solaire, mais ce n'est plus important maintenant. Nous allons droit vers ça."[NEWLINE][SPACE] -Airplane II: The Sequel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STAR_LIFTING_STRATEGY</Tag>
@@ -23341,11 +23341,11 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUPERCONDUCTORS_QUOTE</Tag>
-		<English>"What is happiness? The feeling that power is growing, that resistance is overcome." [PARAGRAPH:1]- Friedrich Nietzsche</English>
+		<English>"What is happiness? The feeling that power is growing, that resistance is overcome."[PARAGRAPH:1]- Friedrich Nietzsche</English>
 		<French>"Qu'est-ce que le bonheur? Le sentiment que la puissance croît, qu'une résistance est surmontée."[PARAGRAPH:1]- Friedrich Nietzsche</French>
-		<German>"Was ist Glück? Das Gefühl davon, dass die Macht wächst, dass ein Widerstand überwunden wird." [PARAGRAPH:1]- Friedrich Nietzsche</German>
-		<Italian>"Cos'è la felicità? La sensazione che la potenza cresce e che si sta superando una resistenza." [PARAGRAPH:1]- Friedrich Nietzsche</Italian>
-		<Spanish>"¿Qué es la felicidad? La sensación de que el poder está creciendo y se superan las dificultades". [PARAGRAPH:1] - Friedrich Nietzsche</Spanish>
+		<German>"Was ist Glück? Das Gefühl davon, dass die Macht wächst, dass ein Widerstand überwunden wird."[PARAGRAPH:1]- Friedrich Nietzsche</German>
+		<Italian>"Cos'è la felicità? La sensazione che la potenza cresce e che si sta superando una resistenza."[PARAGRAPH:1]- Friedrich Nietzsche</Italian>
+		<Spanish>"¿Qué es la felicidad? La sensación de que el poder está creciendo y se superan las dificultades".[PARAGRAPH:1]- Friedrich Nietzsche</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUPERCONDUCTORS_STRATEGY</Tag>
@@ -24112,7 +24112,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_THERMODYNAMICS_PEDIA</Tag>
-		<English>Thermodynamics is the branch of physics dealing with the transformation of heat into and from other forms of energy. It is the basis for the study of the efficient working of engines.[PARAGRAPH:2]There are three laws of thermodynamics:[PARAGRAPH:2]1. Energy can be neither created nor destroyed. Heat and mechanical work is mutually convertible. [PARAGRAPH:1]2. It is impossible for an unaided machine to convey heat to another machine at a higher temperature. [PARAGRAPH:1]3. It is impossible to reduce any system to absolute zero of temperature.</English>
+		<English>Thermodynamics is the branch of physics dealing with the transformation of heat into and from other forms of energy. It is the basis for the study of the efficient working of engines.[PARAGRAPH:2]There are three laws of thermodynamics:[PARAGRAPH:2]1. Energy can be neither created nor destroyed. Heat and mechanical work is mutually convertible.[PARAGRAPH:1]2. It is impossible for an unaided machine to convey heat to another machine at a higher temperature.[PARAGRAPH:1]3. It is impossible to reduce any system to absolute zero of temperature.</English>
 		<Polish>Termodynamika to nauka o energii, dział fizyki zajmujący się badaniem energetycznych efektów wszelkich przemian fizycznych i chemicznych, które wpływają na zmiany energii wewnętrznej analizowanych układów. Wbrew rozpowszechnionym sądom termodynamika nie zajmuje się wyłącznie przemianami cieplnymi, lecz także efektami energetycznymi reakcji chemicznych, przemian z udziałem jonów, przemianami fazowymi, a nawet przemianami jądrowym i energią elektryczną.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24321,7 +24321,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TORTURE_STRATEGY</Tag>
 		<English>The benefits of constructing the many buildings this tech unlocks are great but also come at a terrible cost. Before attempting to collect them all, one should pause and consider how much pain your city can handle. If you have rivals you are concerned may be plotting against you or perhaps ones you wish to plot against, they can be tremendously useful. Many players feel that dedicating yourself to the use of the benefits this technology unlocks is akin to playing an 'evil' ruler, while choosing to disavow these implements reflects the choice of a benevolent lord.</English>
-		<French>Les avantages de la construction des nombreux bâtiments que cette technologie déverrouille sont grands, mais ont également un coût terrible. Avant d'essayer de les collecter tous, il faut faire une pause et considérer la douleur que votre ville peut supporter. Si vous avez des rivaux que vous craignez de comploter contre vous ou peut-être ceux contre lesquels vous souhaitez comploter, ils peuvent être extrêmement utiles. De nombreux joueurs estiment que se consacrer à l'utilisation des avantages que cette technologie débloque s'apparente à jouer une règle `` diabolique '', tout en choisissant de désavouer ces outils reflète le choix d'un seigneur bienveillant.</French>
+		<French>Les avantages de la construction des nombreux bâtiments que cette technologie déverrouille sont grands, mais ont également un coût terrible. Avant d'essayer de les collecter tous, il faut faire une pause et considérer la douleur que votre ville peut supporter. Si vous avez des rivaux que vous craignez de comploter contre vous ou peut-être ceux contre lesquels vous souhaitez comploter, ils peuvent être extrêmement utiles. De nombreux joueurs estiment que se consacrer à l'utilisation des avantages que cette technologie débloque s'apparente à jouer une règle '' diabolique '', tout en choisissant de désavouer ces outils reflète le choix d'un seigneur bienveillant.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOURISM</Tag>
@@ -25328,8 +25328,8 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 
 	Dialogue from the 1982 film "Conan the Barbarian".
 		</English>
-		<French>Mongol: "Conan! Qu'y a-t-il de mieux dans la Vie?"[NEWLINE]Conan: "Ecrasez vos ennemis, les voir couchés devant vous, et entendre les lamentations de leurs femmes."[NEWLINE] - Conan le Barbare</French>
-		<Polish>Mongoł: "Conanie, co jest najważniejsze w życiu?"[NEWLINE]Conan: "Rozgromić wroga, oglądać jego hańbę i słyszeć lamenty jego kobiet."[NEWLINE] - Roberta E. Howard: Conan Barbarzyńca</Polish>
+		<French>Mongol: "Conan! Qu'y a-t-il de mieux dans la Vie?"[NEWLINE]Conan: "Ecrasez vos ennemis, les voir couchés devant vous, et entendre les lamentations de leurs femmes."[NEWLINE]- Conan le Barbare</French>
+		<Polish>Mongoł: "Conanie, co jest najważniejsze w życiu?"[NEWLINE]Conan: "Rozgromić wroga, oglądać jego hańbę i słyszeć lamenty jego kobiet."[NEWLINE]- Roberta E. Howard: Conan Barbarzyńca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARFARE_STRATEGY</Tag>
@@ -25703,9 +25703,9 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WEATHER_LORE_QUOTE</Tag>
-		<English>"Dirty days hath September, [NEWLINE] April, June and November. [NEWLINE] From January up to May [NEWLINE] The rain it raineth every day. [NEWLINE] February hath twenty-eight alone, [NEWLINE] And all the rest have thirty-one. [NEWLINE] If any of them had two and thirty [NEWLINE] They'd be just as wet and dirty." - Thomas Hood</English>
-		<French>"Mauvais temps en Septembre, [NEWLINE] Avril, Juin et Novembre. [NEWLINE] de Janvier à Mai [NEWLINE] La pluie tombe tous les Jours. [NEWLINE] Février a 28 jours, [NEWLINE] et tous les autres 31. [NEWLINE] Si certains en avaient 32 [NEWLINE] Ils seraient soit sec ou humide." - Thomas Hood</French>
-		<Spanish>"Mal tiempo en septiembre, [NEWLINE] abril, junio y noviembre. [NEWLINE] Desde enero hasta mayo [NEWLINE] la lluvia riega todos los días. [NEWLINE] Febrero sólo tiene veintiocho, [NEWLINE] y el resto tienen treinta y uno. [NEWLINE] Si alguno tiene treinta y dos [NEWLINE] serían tan húmedos como malos." - Thomas Hood</Spanish>
+		<English>"Dirty days hath September,[NEWLINE]April, June and November.[NEWLINE]From January up to May[NEWLINE]The rain it raineth every day.[NEWLINE]February hath twenty-eight alone,[NEWLINE]And all the rest have thirty-one.[NEWLINE]If any of them had two and thirty[NEWLINE]They'd be just as wet and dirty." - Thomas Hood</English>
+		<French>"Mauvais temps en Septembre,[NEWLINE]Avril, Juin et Novembre.[NEWLINE]de Janvier à Mai[NEWLINE]La pluie tombe tous les Jours.[NEWLINE]Février a 28 jours,[NEWLINE]et tous les autres 31.[NEWLINE]Si certains en avaient 32[NEWLINE]Ils seraient soit sec ou humide." - Thomas Hood</French>
+		<Spanish>"Mal tiempo en septiembre,[NEWLINE]abril, junio y noviembre.[NEWLINE]Desde enero hasta mayo[NEWLINE]la lluvia riega todos los días.[NEWLINE]Febrero sólo tiene veintiocho,[NEWLINE]y el resto tienen treinta y uno.[NEWLINE]Si alguno tiene treinta y dos[NEWLINE]serían tan húmedos como malos." - Thomas Hood</Spanish>
 		<Polish>"Brudnie dnie miał wrzesień, kwiecień, czerwiec i listopad. Od stycznia do maja deszcza padał co dzień, Luty mial samych dwadzieścia osiem, a pozostałe trzydzieści jeden. Jeśli tylko któryś z nich miałby trzydzieści i dwa - to i tak byłyby brudne i deszczowe." - Thomas Hood</Polish>
 	</TEXT>
 	<TEXT>

@@ -48,9 +48,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD_STRATEGY</Tag>
-		<English>A Bard can [NEWLINE][ICON_BULLET] boost culture in a city [NEWLINE][ICON_BULLET] remove anarchy due to conquest [NEWLINE][ICON_BULLET] end a slave revolt.</English>
-		<French>Un Barde peut [NEWLINE][ICON_BULLET] augmenter la culture d'une ville [NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête [NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves.</French>
-		<Italian>Una bard può [NEWLINE][ICON_BULLET]Aumentare la cultura in una città [NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista [NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi</Italian>
+		<English>A Bard can[NEWLINE][ICON_BULLET] boost culture in a city[NEWLINE][ICON_BULLET] remove anarchy due to conquest[NEWLINE][ICON_BULLET] end a slave revolt.</English>
+		<French>Un Barde peut[NEWLINE][ICON_BULLET] augmenter la culture d'une ville[NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête[NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves.</French>
+		<Italian>Una bard può[NEWLINE][ICON_BULLET]Aumentare la cultura in una città[NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CELEBRITY</Tag>
@@ -80,8 +80,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Tag>
-		<English>The Entertainer units can [NEWLINE][ICON_BULLET] boost culture in a city [NEWLINE][ICON_BULLET] remove anarchy due to conquest [NEWLINE][ICON_BULLET] end a slave revolt[NEWLINE][ICON_BULLET]spread dances and tell stories.</English>
-		<French>Le Conteur d'histoire peut [NEWLINE][ICON_BULLET] augmenter la culture d'une ville [NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête [NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves[NEWLINE][ICON_BULLET]diffuser des danses et raconter des histoires.</French>
-		<Italian>Il cantastorie può [NEWLINE][ICON_BULLET]Aumentare la cultura in una città [NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista [NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi[NEWLINE][ICON_BULLET]spread dances and tell stories</Italian>
+		<English>The Entertainer units can[NEWLINE][ICON_BULLET] boost culture in a city[NEWLINE][ICON_BULLET] remove anarchy due to conquest[NEWLINE][ICON_BULLET] end a slave revolt[NEWLINE][ICON_BULLET]spread dances and tell stories.</English>
+		<French>Le Conteur d'histoire peut[NEWLINE][ICON_BULLET] augmenter la culture d'une ville[NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête[NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves[NEWLINE][ICON_BULLET]diffuser des danses et raconter des histoires.</French>
+		<Italian>Il cantastorie può[NEWLINE][ICON_BULLET]Aumentare la cultura in una città[NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi[NEWLINE][ICON_BULLET]spread dances and tell stories</Italian>
 	</TEXT>
 </Civ4GameText>

@@ -10578,11 +10578,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE1_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
@@ -10595,11 +10595,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE2_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
