@@ -119,7 +119,7 @@ void CvGameTextMgr::Reset()
 
 
 // Returns the current language
-int CvGameTextMgr::getCurrentLanguage()
+int CvGameTextMgr::getCurrentLanguage() const
 {
 	return gDLL->getCurrentLanguage();
 }
