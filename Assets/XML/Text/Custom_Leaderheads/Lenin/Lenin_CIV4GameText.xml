@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LENIN_1</Tag>
-		<English>There are no morals in politics, [CT_NAME], there is only expedience. I bid you welcome and look forward to our relationship. A scoundrel may be of use to us just because he is a scoundrel. </English>
+		<English>There are no morals in politics, [CT_NAME], there is only expedience. I bid you welcome and look forward to our relationship. A scoundrel may be of use to us just because he is a scoundrel.</English>
 		<French>Il n'y a pas de morale en politique, [CT_NAME], uniquement des convenances. J'accepte votre accueil et suis partant pour notre relation. and look forward to our relationship. Une canaille pourrait nous être utile parce que c'est une canaille.</French>
 		<German>Es gibt keine Moral in der Politik, [CT_NAME], der Zweck heiligt die Mittel. Ich heiße Dich willkommen und freue mich auf unsere Zusammenarbeit. Eine Schurke kann uns von Nutzen sein, gerade weil er ein Schurke ist.</German>
 		<Italian>There are no morals in politics, [CT_NAME], there is only expedience. I bid you welcome and look forward to our relationship. A scoundrel may be of use to us just because he is a scoundrel.</Italian>

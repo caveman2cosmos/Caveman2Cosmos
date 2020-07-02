@@ -29,7 +29,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODNOVERY_MONASTERY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Idols[COLOR_REVERT] provide culture, +1 health and a slight boost to research. </English>
+		<English>[COLOR_BUILDING_TEXT]Idols[COLOR_REVERT] provide culture, +1 health and a slight boost to research.</English>
 		<French>Monastère Rodnovère</French>
 		<German>Rodnovery Monastery</German>
 		<Italian>I [COLOR_BUILDING_TEXT]monasteri rodnovery[COLOR_REVERT] forniscono cultura, +1 salute e un piccolo bonus alla ricerca.</Italian>
@@ -88,8 +88,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RODNOVERA_QUOTE</Tag>
-		<English>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam!.. Zracy Hrysta nas asukal?..." - Prayer to Perun (Slavic god of thunder)</English>
-		<French>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam!.. Zracy Hrysta nas asukal?..." - Prière à Perun (Dieu slave du Tonnerre)</French>
+		<English>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam! Zracy Hrysta nas asukal?" - Prayer to Perun (Slavic god of thunder)</English>
+		<French>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam! Zracy Hrysta nas asukal?" - Prière à Perun (Dieu slave du Tonnerre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RODNOVERY_MISSIONARY</Tag>

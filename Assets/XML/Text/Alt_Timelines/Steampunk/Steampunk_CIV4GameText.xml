@@ -136,7 +136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO_STRATEGY</Tag>
 		<English>Build a Peat Fired Dynamo to increase your city's electricity.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à tourbe[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville..</French>
+		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à tourbe[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville.</French>
 		<Italian>Costruisci un Generatore a torba per incrementare la produzione elettrica della tua città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -257,7 +257,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAUTILUS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Nautilus[COLOR_REVERT] is a Steampunk Submarine. Coming at an earlier tech than the normal subs, it can give you a crippling advantage in naval warfare.</English>
-		<Italian>Il [COLOR_UNIT_TEXT]Nautilo[COLOR_REVERT] è un sottomarino in stile Steampunk. Poichè è disponibile molto prima dei normali sottomarini, può darti un grande vantaggio nella guerra navale.</Italian>
+		<Italian>Il [COLOR_UNIT_TEXT]Nautilo[COLOR_REVERT] è un sottomarino in stile Steampunk. Poiché è disponibile molto prima dei normali sottomarini, può darti un grande vantaggio nella guerra navale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER</Tag>
@@ -267,7 +267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER_PEDIA</Tag>
-		<English>In the bowels of some hellish Victorian workhouse, a distinctly above-average mad scientist has discovered how to animate a humanoid minion using steam, to do his bidding (without the usual groans and snide comments). He was (alas for him!) unable to keep his creation a secret for long...but his loss is your gain!</English>
+		<English>In the bowels of some hellish Victorian workhouse, a distinctly above-average mad scientist has discovered how to animate a humanoid minion using steam, to do his bidding (without the usual groans and snide comments). He was (alas for him!) unable to keep his creation a secret for long... but his loss is your gain!</English>
 		<Polish>Prymitywny android napędzany silnikiem parowym.</Polish>
 	</TEXT>
 	<TEXT>

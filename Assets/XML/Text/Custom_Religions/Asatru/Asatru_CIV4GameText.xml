@@ -89,12 +89,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREYA_SANCTUARY_PEDIA</Tag>
-		<English>Freya is portrayed as a goddess of love, beauty, and fertility. Blonde, blue-eyed, and beautiful, Freyja is described as the fairest of all goddesses, and people prayed to her for happiness in love. She was also called on to assist childbirths and prayed to for good seasons. </English>
+		<English>Freya is portrayed as a goddess of love, beauty, and fertility. Blonde, blue-eyed, and beautiful, Freyja is described as the fairest of all goddesses, and people prayed to her for happiness in love. She was also called on to assist childbirths and prayed to for good seasons.</English>
 		<Polish>Freja - bogini nordycka należąca do wanów asgardskich, bliźniacza siostra Frejra. Była bóstwem wegetacji, miłości, płodności i magii. Ponadto patronowała wojnie, 1/2 poległych wojowników podlegała jej władzy. Jej mężem był Od (letnie słońce), córkami Hnoss ("skarb") i Gersimi ("klejnot"). Według mitów uważana za najpiękniejszą z bogiń, jej obecność na Asgardzie gwarantowała innym bóstwom szczęśliwe życie. Jej atrybutem był złoty naszyjnik Brisingamen. Freja posiadała też drugi naszyjnik, Hildiswin, wykuty przez dwóch braci - Daina i Nabbiego, krasnoludzkich złotników. Często towarzyszyły jej małe białe koty, które powoziły jej rydwanem. Wyobrażano ją często jako postać otoczoną okrągłym pierścieniem, który przedstawiał jej naszyjnik i symbolizował płodność.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREYA_SANCTUARY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Freya Sanctuary[COLOR_REVERT] </English>
+		<English>[COLOR_BUILDING_TEXT]Freya Sanctuary[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY</Tag>
@@ -109,7 +109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Heimdall Sanctuary[COLOR_REVERT] </English>
+		<English>[COLOR_BUILDING_TEXT]Heimdall Sanctuary[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOKI_SANCTUARY</Tag>
@@ -124,7 +124,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOKI_SANCTUARY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Loki Sanctuary[COLOR_REVERT] </English>
+		<English>[COLOR_BUILDING_TEXT]Loki Sanctuary[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_ALTAR</Tag>
@@ -134,13 +134,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_ALTAR_PEDIA</Tag>
-		<English>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia. </English>
-		<German>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia. </German>
+		<English>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
+		<German>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</German>
 		<Polish>Thor - jeden z głównych bogów nordyckich z dynastii Asów, odpowiednik południowogermańskiego Donara. Bóg burzy i piorunów, bóg sił witalnych, bóg rolnictwa, jako sprowadzający deszcz odpowiedzialny za urodzaje, patronował także ognisku domowemu i małżeństwu. Syn Odyna i Jörd, małżonek Sif. Thor był uznawany za boga bardziej przychylnego ludziom niż Odyn - jest równie gwałtowny, ale mniej tajemniczy. Przedstawiano go zwykle z długą, rudą brodą i młotem Mjöllnirem w ręku - symbolem jego siły. Drzewem poświęconym Thorowi był dąb. Podróżował rydwanem zaprzężonym w kozły. Nie był tak przebiegły jak Odyn i zdarzało mu się wpaść w pułapkę (przykładem tego jest słynna przygoda Thora w gościnie u króla Utgardu, olbrzyma zwanego Skirnirem), ostatecznie jednak zawsze zwyciężał. W czasie zmierzchu bogów Thor zabije Węża Midgardu, wielkiego Jormunganda, lecz zginie zatruty jego jadem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_ALTAR_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Thor Altar[COLOR_REVERT] </English>
+		<English>[COLOR_BUILDING_TEXT]Thor Altar[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_SANCTUARY</Tag>
@@ -150,12 +150,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_SANCTUARY_PEDIA</Tag>
-		<English>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia. </English>
+		<English>Thor is the god of thunder in Norse paganism,. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
 		<Polish>Thor - jeden z głównych bogów nordyckich z dynastii Asów, odpowiednik południowogermańskiego Donara. Bóg burzy i piorunów, bóg sił witalnych, bóg rolnictwa, jako sprowadzający deszcz odpowiedzialny za urodzaje, patronował także ognisku domowemu i małżeństwu. Syn Odyna i Jörd, małżonek Sif. Thor był uznawany za boga bardziej przychylnego ludziom niż Odyn - jest równie gwałtowny, ale mniej tajemniczy. Przedstawiano go zwykle z długą, rudą brodą i młotem Mjöllnirem w ręku - symbolem jego siły. Drzewem poświęconym Thorowi był dąb. Podróżował rydwanem zaprzężonym w kozły. Nie był tak przebiegły jak Odyn i zdarzało mu się wpaść w pułapkę (przykładem tego jest słynna przygoda Thora w gościnie u króla Utgardu, olbrzyma zwanego Skirnirem), ostatecznie jednak zawsze zwyciężał. W czasie zmierzchu bogów Thor zabije Węża Midgardu, wielkiego Jormunganda, lecz zginie zatruty jego jadem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_SANCTUARY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Thor Sanctuary[COLOR_REVERT] </English>
+		<English>[COLOR_BUILDING_TEXT]Thor Sanctuary[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MJOLNIR</Tag>

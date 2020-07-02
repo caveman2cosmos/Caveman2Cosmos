@@ -7,12 +7,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ADDITIONAL_NAVAL_MOVES</Tag>
-		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] for Naval Units with[NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</English>
-		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] pour les unités navales avec [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</French>
-		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] für Marineeinheiten mit [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</German>
-		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] per le unità navali con la tecnologia[NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</Italian>
-		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] para las unidades acuáticas con [NUM2:el:la:los:las] [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</Spanish>
-		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] dla jednostek morskich z [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s2</Polish>
+		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] for Naval Units with[NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</English>
+		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] pour les unités navales avec [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] für Marineeinheiten mit [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</German>
+		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] per le unità navali con la tecnologia[NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</Italian>
+		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] para las unidades acuáticas con [NUM2:el:la:los:las] [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</Spanish>
+		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%d1[ICON_MOVES] dla jednostek morskich z [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s2</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE</Tag>
@@ -57,8 +57,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</Tag>
@@ -119,7 +117,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
-		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical </English>
+		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
@@ -363,7 +361,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Tag>
-		<English>A barbarian is an uncivilized person. The word is often used pejoratively, either in a general reference to a member of a nation or ethnos, typically a tribal society as seen by an urban civilization either viewed as inferior, or admired as a noble savage. In idiomatic or figurative usage, a "barbarian" may also be an individual reference to a brutal, cruel, warlike, insensitive person. The term originates in the ancient Greek civilization, meaning "anyone who is not Greek". Comparable notions are found in non-European civilizations. - Wikipedia.</English>
+		<English>A barbarian is an uncivilized person. The word is often used pejoratively, either in a general reference to a member of a nation or ethnos, typically a tribal society as seen by an urban civilization either viewed as inferior, or admired as a noble savage. In idiomatic or figurative usage, a "barbarian" may also be an individual reference to a brutal, cruel, warlike, insensitive person. The term originates in the ancient Greek civilization, meaning "anyone who is not Greek". Comparable notions are found in non-European civilizations.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN_SHORT</Tag>
@@ -459,8 +457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_END</Tag>
-		<English> Resources</English>
-		<French>.</French>
+		<English>Resources</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
@@ -646,8 +643,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
 		<English>TBD</English>
-		<German>.</German>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_SHORT</Tag>
@@ -1073,8 +1068,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
 		<English>TBD</English>
-		<German>.</German>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
@@ -1296,12 +1289,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MAKES_OCEAN_PASSABLE_WITH_TECH</Tag>
-		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ocean becomes passable with[NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1</English>
-		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Peut traverser les océans avec [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1</French>
-		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ozeanfelder können nach der Erforschung von [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1 überquert werden</German>
-		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Può attraversare l'oceano dopo aver ricercato[NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1</Italian>
-		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Se puede atravesar el Océano con [NUM1:el:la:los:las] [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1</Spanish>
-		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ocean staje się dostępny z [NEWLINE][TAB][ICON_BULLET][ICON_RESEARCH]%s1</Polish>
+		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ocean becomes passable with[NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1</English>
+		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Peut traverser les océans avec [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ozeanfelder können nach der Erforschung von [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1 überquert werden</German>
+		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Può attraversare l'oceano dopo aver ricercato[NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1</Italian>
+		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Se puede atravesar el Océano con [NUM1:el:la:los:las] [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1</Spanish>
+		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ocean staje się dostępny z [NEWLINE][ICON_BULLET][ICON_RESEARCH]%s1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MAX_ANARCHY_C2C</Tag>
@@ -1431,8 +1424,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
 		<English>TBD</English>
-		<German>.</German>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_SHORT</Tag>
@@ -1947,8 +1938,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
 		<English>TBD</English>
-		<German>.</German>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
@@ -1974,8 +1963,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
 		<English>TBD</English>
-		<German>.</German>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_SHORT</Tag>
@@ -2112,7 +2099,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_END</Tag>
-		<English> Technologies</English>
+		<English>Technologies</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_FIRST</Tag>
@@ -2272,8 +2259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
-		<English> Unit Types</English>
-		<French>.</French>
+		<English>Unit Types</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
@@ -2294,8 +2280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_END</Tag>
-		<English> Unit Types</English>
-		<French>.</French>
+		<English>Unit Types</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>

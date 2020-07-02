@@ -245,7 +245,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Nuclear Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The nuclear naval mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every ship on the plot. Once armed, the nuclear naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper. </English>
+		<English>The [COLOR_UNIT_TEXT]Nuclear Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The nuclear naval mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every ship on the plot. Once armed, the nuclear naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_NUCLEAR_MINE</Tag>

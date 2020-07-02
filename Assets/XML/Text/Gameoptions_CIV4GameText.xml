@@ -137,7 +137,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT_HELP</Tag>
 		<English>Maintains the original game rule that wild animals can never enter a Civilizations national borders.[NEWLINE]This option will be disabled if Dangerous Wildlife option is selected.</English>
-		<French>Maintient la règle de jeu d'origine selon laquelle les animaux sauvages ne peuvent jamais entrer dans les frontières nationales d'une civilisation. [NEWLINE] Cette option sera désactivée si l'option 'Faune dangereuse' est sélectionnée..</French>
+		<French>Maintient la règle de jeu d'origine selon laquelle les animaux sauvages ne peuvent jamais entrer dans les frontières nationales d'une civilisation.[NEWLINE]Cette option sera désactivée si l'option 'Faune dangereuse' est sélectionnée.</French>
 		<German>Wilde Tiere können niemals die kulturellen Grenzen einer Nation überschreiten.</German>
 	</TEXT>
 	<TEXT>
@@ -382,11 +382,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Tag>
-		<English>Enables greater depth of strategy and unit abilities regarding pursuit functions.(Early Withdraw/Pursuit/Speed CCs)</English>
-		<French>Permet une Stratégie plus avancée, avec des capacités supplémentaires des unités.(Repli/Poursuite/Vitesse,...)</French>
+		<English>Enables greater depth of strategy and unit abilities regarding pursuit functions (Early Withdraw/Pursuit/Speed CCs).</English>
+		<French>Permet une Stratégie plus avancée, avec des capacités supplémentaires des unités (Repli/Poursuite/Vitesse...).</French>
 		<German>Einheiten haben bessere Rückzugsmöglichkeiten, aber auch die Chance, fliehende Gegner zu verfolgen.</German>
-		<Italian>Abilita un nuovo grado di strategia e abilità delle unità legate alle possibilità di fuga da un combattimento (Ritirata rapida/Inseguimento/Velocità...)</Italian>
-		<Polish>Zwiększa głębię strategiczną i możliwości jednostek do pościgu (Wczesna Ucieczka/Pościg/Szybkość w Walce Wręcz)</Polish>
+		<Italian>Abilita un nuovo grado di strategia e abilità delle unità legate alle possibilità di fuga da un combattimento (Ritirata rapida/Inseguimento/Velocità...).</Italian>
+		<Polish>Zwiększa głębię strategiczną i możliwości jednostek do pościgu (Wczesna Ucieczka/Pościg/Szybkość w Walce Wręcz).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
@@ -998,12 +998,12 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PERSONALIZED_MAP_HELP</Tag>
-		<English>Names key map locations, mountain ranges, deserts, forests, jungles, etc... on the game loadup.</English>
-		<French>Attribue des noms aux emplacements-clés de la carte, Chaînes de montage, déserts, forêts, jungles, au chargement du Jeu.</French>
+		<English>Names key map locations (mountain ranges, deserts, forests, jungles, etc.) on the game loadup.</English>
+		<French>Attribue des noms aux emplacements-clés de la carte (chaînes de montage, déserts, forêts, jungles...) au chargement du Jeu.</French>
 		<German>Vergibt beim Laden des Spiels Namen für Schlüsselorte auf der Landkarte wie Gebirgszüge, Wüsten, Wälder, Dschungel usw.</German>
-		<Italian>Da un nome a località chiave, catene montuose, deserti, foreste, giungle.... mentre il gioco viene caricato.</Italian>
-		<Spanish>Se nombran puntos importantes del mapa como cordilleras, desiertos, bosques, junglas, etc... durante la carga de la partida.</Spanish>
-		<Polish>Nazwy kluczowych miejsc mapy, pasm górskich, pustyń, lasów, dżungli, itp. zostaną załadowane w grze.</Polish>
+		<Italian>Da un nome a località chiave (catene montuose, deserti, foreste, giungle...) mentre il gioco viene caricato.</Italian>
+		<Spanish>Se nombran puntos importantes del mapa (cordilleras, desiertos, bosques, junglas, etc.) durante la carga de la partida.</Spanish>
+		<Polish>Nazwy kluczowych miejsc mapy (pasm górskich, pustyń, lasów, dżungli, itp.) zostaną załadowane w grze.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PICK_RELIGION</Tag>

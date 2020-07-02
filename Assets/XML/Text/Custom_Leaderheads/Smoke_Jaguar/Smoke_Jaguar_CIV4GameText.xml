@@ -17,8 +17,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_1</Tag>
-		<English>Welcome [CT_NAME]. I am [OUR_NAME], ruler of and master of the [OUR_EMPIRE].  Will you accept peace, or shall I spill your blood on the streets and wear your head as a trinket?</English>
-		<Polish>Witam [CT_NAME]. Jestem [OUR_NAME], władca i pan Imperium [OUR_EMPIRE].  Zaakceptujesz pokój, czy może Twoja krew poleje się po ulicach, a ja będę nosił Twoją głowę jako ozdobę?</Polish>
+		<English>Welcome [CT_NAME]. I am [OUR_NAME], ruler of and master of the [OUR_EMPIRE]. Will you accept peace, or shall I spill your blood on the streets and wear your head as a trinket?</English>
+		<Polish>Witam [CT_NAME]. Jestem [OUR_NAME], władca i pan Imperium [OUR_EMPIRE]. Zaakceptujesz pokój, czy może Twoja krew poleje się po ulicach, a ja będę nosił Twoją głowę jako ozdobę?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_2</Tag>
@@ -33,7 +33,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>I'd like to sacrifice you to the gods, [CT_NAME], but they probably wouldn't stand that revolting stench of yours... what do you want?</English>
-		<Polish>Chciałbym złożyć Cię w ofierze bogom, [CT_NAME], ale podejrzewam, że bogowie nie wytrzymali by Twojego obrzydliwego zapachu.... czego chcesz?</Polish>
+		<Polish>Chciałbym złożyć Cię w ofierze bogom, [CT_NAME], ale podejrzewam, że bogowie nie wytrzymali by Twojego obrzydliwego zapachu... czego chcesz?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_SMOKE_JAGUAR_1</Tag>

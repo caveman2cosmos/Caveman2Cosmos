@@ -9229,9 +9229,9 @@ Side Penalties:
 
 Benefits:
 	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Moderate Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+	[ICON_BULLET]Moderate Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
 		</English>
 		<German>
 Negative Charaktereigenschaft
@@ -9255,9 +9255,9 @@ Side Penalties:
 
 Penalties:
 	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Moderate Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+	[ICON_BULLET]Moderate Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
 		</German>
 	</TEXT>
 	<TEXT>
@@ -9289,8 +9289,8 @@ Side Penalties:
 
 Benefits:
 	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
 		</English>
 		<German>
 Negative Charaktereigenschaft
@@ -9300,13 +9300,13 @@ Negative Charaktereigenschaft
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primary Penalties:
-	[ICON_BULLET]Large increase in War Weariness you suffer.  Your people are not merely fearful of war, but object to it as a solution.
+	[ICON_BULLET]Large increase in War Weariness you suffer. Your people are not merely fearful of war, but object to it as a solution.
 	[ICON_BULLET]Reduction of any available Free Military units from a penalty based on the total amount of your overall population.
-	[ICON_BULLET]Huge reduction in the speed of training all Military units.  Your people object to becoming soldiers in any capacity.
+	[ICON_BULLET]Huge reduction in the speed of training all Military units. Your people object to becoming soldiers in any capacity.
 	[ICON_BULLET]Huge Increase in the price to upgrade your units.
 
 Unique Penalties:
-	[ICON_BULLET]Applies Pacifist III Promotion to all Combatant units.  Pacifist III is a fairly basic promotion with a relatively minor -10% combat modifier.
+	[ICON_BULLET]Applies Pacifist III Promotion to all Combatant units. Pacifist III is a fairly basic promotion with a relatively minor -10% combat modifier.
 
 Side Penalties:
 	[ICON_BULLET]Reduced rate of earning Great Military People.
@@ -9314,8 +9314,8 @@ Side Penalties:
 
 Penalties:
 	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
 		</German>
 	</TEXT>
 	<TEXT>
@@ -9340,10 +9340,10 @@ Side Penalties:
 	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
 
 Benefits:
-	[ICON_BULLET]Improved relations with opponent leaders.  They like pushovers they need not fear.
-	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+	[ICON_BULLET]Improved relations with opponent leaders. They like pushovers they need not fear.
+	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
 		</English>
 		<German>
 Negative Charaktereigenschaft
@@ -9353,23 +9353,23 @@ Negative Charaktereigenschaft
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primary Penalties:
-	[ICON_BULLET]Large increase in War Weariness you suffer.  Your people are not merely fearful of war, but object to it as a solution.
+	[ICON_BULLET]Large increase in War Weariness you suffer. Your people are not merely fearful of war, but object to it as a solution.
 	[ICON_BULLET]Strong reduction of any available Free Military units from a penalty based on the total amount of your overall population.
-	[ICON_BULLET]Strong reduction in the speed of training all Military units.  Your people object to becoming soldiers in any capacity.
+	[ICON_BULLET]Strong reduction in the speed of training all Military units. Your people object to becoming soldiers in any capacity.
 	[ICON_BULLET]Strong increase in the price to upgrade your units.
 
 Unique Penalties:
-	[ICON_BULLET]Applies Pacifist Promotion to all Combatant units.  Pacifist is a fairly basic promotion with a relatively minor -10% combat modifier.
+	[ICON_BULLET]Applies Pacifist Promotion to all Combatant units. Pacifist is a fairly basic promotion with a relatively minor -10% combat modifier.
 
 Side Penalties:
 	[ICON_BULLET]Reduced rate of earning Great Military People.
 	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
 
 Benefits:
-	[ICON_BULLET]Improved relations with opponent leaders.  They like pushovers they need not fear.
-	[ICON_BULLET]Strong Education bonus.  The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus.  People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus.  People are more cooperative and engaging with one another and are more content with life as a result.
+	[ICON_BULLET]Improved relations with opponent leaders. They like pushovers they need not fear.
+	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
 		</German>
 	</TEXT>
 	<TEXT>

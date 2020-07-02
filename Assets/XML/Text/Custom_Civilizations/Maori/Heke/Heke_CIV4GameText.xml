@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HEKE_1</Tag>
-		<English>KA MATE! KA ORA, KA MATE! KA ORA....</English>
+		<English>KA MATE! KA ORA, KA MATE! KA ORA...</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HEKE</Tag>

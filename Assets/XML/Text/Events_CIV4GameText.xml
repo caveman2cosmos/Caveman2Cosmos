@@ -670,7 +670,7 @@
 		<English>Religious leaders in the %s1_civ_adjective empire have lobbied against the newest bestselling 'Harry Potter' novel.</English>
 		<French>Les chefs religieux de %s1_civ_adjective empire font pression contre le dernier BestSeller 'Harry Potter'.</French>
 		<Spanish>Los líderes religiosos del imperio %s1_civ_adjective han formado un grupo de presión contra la última novela superventas de 'Harry Potter'.</Spanish>
-		<Polish>Przywódcy religijni w imperium %s1_civ_adjective lobbują rząd do sabotowania wydania serii książek 'Harry Potter'..</Polish>
+		<Polish>Przywódcy religijni w imperium %s1_civ_adjective lobbują rząd do sabotowania wydania serii książek 'Harry Potter'.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HEALING_PLANT</Tag>
@@ -762,7 +762,7 @@
 		<English>%s1_civ_adjective merchants are now selling jade carvings in small quantities.</English>
 		<French>Des marchands %s1_civ_adjective vendent des petites quantité d'objets en jade.</French>
 		<German>Von %[s1_civ_adjective]en Händlern werden neuerdings Jadeskulpturen in kleinen Mengen verkauft.</German>
-		<Polish>Kupcy z Imperium %s1_civ_adjective sprzedają od niedawna posążki z jadeitu w małych ilościach. </Polish>
+		<Polish>Kupcy z Imperium %s1_civ_adjective sprzedają od niedawna posążki z jadeitu w małych ilościach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_JAIL</Tag>
@@ -837,7 +837,7 @@
 		<German>Das %s1_civ_adjective Imperium hat damit begonnen, seine Regierung von möglichen Verrätern zu reinigen. Andere Herrscher sind besorgt.</German>
 		<Italian>L'impero %s1_civ_adjective ha iniziato a purgare il prorpio governo dai sospetti traditori. Gli altri leader mondiali sono molto attenti a riguardo.</Italian>
 		<Spanish>El imperio %s1_civ_adjective ha empezado a limpiar el gobierno de posibles traidores. Los otros líderes mundiales están preocupados.</Spanish>
-		<Polish>Imperium %s1_civ_adjective rozpoczęło czystki w swych kręgach władzy. Inni światowi przywódcy są zaniepokojeni. </Polish>
+		<Polish>Imperium %s1_civ_adjective rozpoczęło czystki w swych kręgach władzy. Inni światowi przywódcy są zaniepokojeni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MAGNA_CARTA_1</Tag>
@@ -1929,7 +1929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_FLETCHER_ASSAULT_HELP_1</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarians might get upset with us.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous..[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous.[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I Barbari potrebbero arrabbiarsi con noi.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los bárbaros podrían disgustarse con nosotros.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarzyńcy mogą się na nas zdenerwować.[COLOR_REVERT]</Polish>
@@ -2060,7 +2060,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_STONE_SPEARMAN_ASSAULT_HELP_1</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarians might get upset with us.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous..[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous.[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I barbari potrebbero arrabbiarsi con noi.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los bárbaros podrían disgustarse con nosotros.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarzyńcy mogą się na nas zdenerwować.[COLOR_REVERT]</Polish>
@@ -2109,7 +2109,7 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_WOMAN_1</Tag>
 		<English>Let's take her back to the Barbarian leader. By the way... have you heard of any reward?</English>
 		<French>Ramenons-la au chef barbare. Au fait ... avez-vous entendu parler d'une récompense?</French>
-		<Italian>Riportiamola dal leader barbarico. In ogni caso...hai sentito di qualche ricompensa?</Italian>
+		<Italian>Riportiamola dal leader barbarico. A proposito... hai sentito di qualche ricompensa?</Italian>
 		<Spanish>Llevémosla de regreso con su Líder bárbaro. A propósito... ¿has oído hablar de alguna recompensa?</Spanish>
 		<Polish>Zabierz ją z powrotem na ziemie barbarzyńców. A tak na marginesie... słyszałeś o jakiejś nagrodzie?</Polish>
 	</TEXT>
@@ -4431,7 +4431,7 @@
 		<English>Times change, and so do we. They will get over it eventually.</English>
 		<French>Les Temps Changent, et nous avec. Cela va leur passer.</French>
 		<German>Die Zeiten ändern sich, so wie wir selbst. Sie werden eines Tages darüber hinwegkommen.</German>
-		<Italian>I tempi cambiano, e così facciamo anche noi. Se ne accorgeranno prima o poi..</Italian>
+		<Italian>I tempi cambiano, e così facciamo anche noi. Se ne accorgeranno prima o poi.</Italian>
 		<Spanish>Los tiempos cambian, y nosotros también. Lo superarán con el tiempo.</Spanish>
 		<Polish>Czasy się zmieniają, my także. Ludzie to w końcu zaakceptują.</Polish>
 	</TEXT>
@@ -4463,7 +4463,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HOLY_MOUNTAIN_PART_1_HELP</Tag>
-		<English>[PARAGRAPH:1]To complete this quest, you must extend your cultural influence and control over the Peak plot that is the Holy Mountain. You may achieve this by divine providence by settling near any Peaks you find. Eventually you may find the right one.[PARAGRAPH:1]Or you may seek further guidance from studying the holy scriptures. If you build %d1 religious buildings (Temples and Monasteries), your religious leaders will solve the puzzle and identify the correct location of the Holy Mountain, which you must then still go and settle near to complete the quest. </English>
+		<English>[PARAGRAPH:1]To complete this quest, you must extend your cultural influence and control over the Peak plot that is the Holy Mountain. You may achieve this by divine providence by settling near any Peaks you find. Eventually you may find the right one.[PARAGRAPH:1]Or you may seek further guidance from studying the holy scriptures. If you build %d1 religious buildings (Temples and Monasteries), your religious leaders will solve the puzzle and identify the correct location of the Holy Mountain, which you must then still go and settle near to complete the quest.</English>
 		<French>[PARAGRAPH:1]Pour achever cette quête, vous devez étendre votre influence culturelle et votre contrôle à la case montagneuse sur laquelle se trouve la montagne sacrée. Vous pouvez réussir cette mission en comptant sur la providence divine, c'est-à-dire en vous installant près de toutes les montagnes que vous trouverez. Au bout du compte, vous finirez bien par trouver la bonne.[PARAGRAPH:1]Ou vous pouvez tenter d'en savoir plus en étudiant les écritures sacrées. Si vous construisez %d1 bâtiments religieux (temples et monastères), vos chefs religieux résoudront l'énigme et localiseront précisément la montagne sacrée, qu'il vous faudra encore coloniser pour achever la quête.</French>
 		<German>[PARAGRAPH:1]Um diese Quest zu erfüllen, müssen Sie Ihren kulturellen Einfluss ausdehnen und die Kontrolle über das erhöhte Geländefeld erringen, auf dem sich der Heilige Berg befindet. Dies erreichen Sie nach göttlicher Vorsehung, indem Sie sich an allen erhöhten Standorten ansiedeln, bis Sie schließlich den richtigen Standort gefunden haben.[PARAGRAPH:1]Oder Sie durchsuchen die Heilige Schrift weiter nach Hinweisen. Wenn Sie %d1 religiöse Gebäude errichtet haben (Tempel und Klöster), werden Ihre religiösen Führer das Rätsel lösen und den korrekten Standort des Heiligen Berges identifizieren. Anschließend müssen Sie dorthin aufbrechen und sich in der Nähe des Berges niederlassen, um die Quest erfolgreich abzuschließen.</German>
 		<Italian>[PARAGRAPH:1]Per completare l'impresa dovrai espandere la tua influenza culturale e il tuo controllo sulla casella che ospita il picco della Montagna Sacra. Puoi riuscirci affidandoti alla divina provvidenza e accampandoti a fianco di ogni picco che incontri: prima o poi troverai quello giusto.[PARAGRAPH:1]Oppure puoi cercare aiuto nello studio delle sacre scritture. Se costruisci %d1 edifici religiosi (templi e monasteri) i tuoi capi religiosi riusciranno a risolvere l'enigma e a identificare l'esatta posizione della Montagna Sacra; dovrai comunque andarci e accampartici, per portare e termine l'impresa.</Italian>
@@ -4748,7 +4748,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LARGE_RECESSION_1</Tag>
-		<English>Stick to our guns...the government should not interfere in the markets.</English>
+		<English>Stick to our guns... the government should not interfere in the markets.</English>
 		<French>"Ranges vos armes..." Le gouvernement ne doit pas interférer dans les marchés.</French>
 		<German>Schuster bleib bei deinen Leisten...die Regierung sollte sich nicht in die Marktangelegenheiten einmischen.</German>
 		<Italian>Limitiamoci ai nostri affari... il governo non deve interferire con il mercato.</Italian>
@@ -4811,7 +4811,7 @@
 		<German>Bürger in der Nähe von %s2_city haben viele Mühlen gebaut, die es ihnen ermöglichen eine Vielzahl von Produkten herzustellen.</German>
 		<Italian>I cittadini nelle vicinanze di %s2_city hanno costruito molti mulini, permettendo loro di produrre una grande varietà di beni.</Italian>
 		<Spanish>Los ciudadanos residentes a las afueras de la ciudad de %s2_city han construido montones de fábricas, permitiédoles producir una amplia variedad de bienes de consumo.</Spanish>
-		<Polish>Obywatele mieszkający nieopodal %s2_city pobudowali wiele wiatraków, pozwalającym im na produkcję nowych dóbr konsumpcyjnych. </Polish>
+		<Polish>Obywatele mieszkający nieopodal %s2_city pobudowali wiele wiatraków, pozwalającym im na produkcję nowych dóbr konsumpcyjnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LOCAL_MILLS_1</Tag>
@@ -6264,14 +6264,14 @@
 		<Tag>TXT_KEY_EVENT_STUCK_IN_SWAMP_1</Tag>
 		<English>Eventually they will find their way out...</English>
 		<French>Espérons qu'ils trouvent leur chemin...</French>
-		<Italian>Prima o poi riusciranno ad uscire....</Italian>
+		<Italian>Prima o poi riusciranno ad uscire...</Italian>
 		<Spanish>Algún día encontrará la forma de salir...</Spanish>
 		<Polish>Mam nadzieję, że znajdą drogę powrotną...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SUPER_VIRUS_1</Tag>
 		<English>I'm sure the doctors will work something out... eventually. I hope.</English>
-		<French>Je suis sûr que les docteurs pourront mettre au point quelque chose...éventuellement. J'espère.</French>
+		<French>Je suis sûr que les docteurs pourront mettre au point quelque chose... éventuellement. J'espère.</French>
 		<Spanish>Estoy seguro de que los doctores harán algo al respecto... en algún momento. Espero.</Spanish>
 		<Polish>Jestem pewien, że lekarze znajdą na to sposób... Mam nadzieję.</Polish>
 	</TEXT>

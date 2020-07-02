@@ -808,13 +808,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
-		<English> from game speed)</English>
-		<French> de la vitesse du jeu)</French>
+		<English>from game speed)</English>
+		<French>de la vitesse du jeu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
-		<English> from staring era)</English>
-		<French> de l'ère)</French>
+		<English>from staring era)</English>
+		<French>de l'ère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
@@ -1056,8 +1056,8 @@
 	</TEXT>
 <TEXT>
 		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
-		<English> turns + feature build time)</English>
-		<French> tours + temps de constr. de l'aménagement)</French>
+		<English>turns + feature build time)</English>
+		<French>tours + temps de constr. de l'aménagement)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>

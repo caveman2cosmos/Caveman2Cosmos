@@ -795,7 +795,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_TECH_ACQUIRED</Tag>
 		<English>Tech acquired (trade, lightbulb, hut, espionage): %s1</English>
-		<French>Tech. obtenu (commerce, village, espionnage,...): %s1</French>
+		<French>Tech. obtenu (commerce, village, espionnage...): %s1</French>
 		<German>Technologie erhalten (durch Handel, Große Persönlichkeit, Stammesdorf, Spionage): %s1</German>
 		<Italian>È stata acquisita la tecnologia %s1</Italian>
 		<Spanish>Tecnología obtenida (por comercio, Gran personaje, Aldea tribal o espionaje): %s1</Spanish>

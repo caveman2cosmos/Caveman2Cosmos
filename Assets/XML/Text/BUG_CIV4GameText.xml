@@ -1299,9 +1299,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEFENSEMODIFIERS_HOVER</Tag>
 		<English>Select when to show the defense modifiers.</English>
-		<French>Sélectionner dans quelle condition afficher les modificateurs de défense (terrain,...).</French>
+		<French>Sélectionner dans quelle condition afficher les modificateurs de défense (terrain...).</French>
 		<German>Bestimmt, wann die Verteidigungsmodifikatoren angezeigt werden</German>
-		<Italian>Quando è selezionato, mostra i Modificatori Difensivi.</Italian>
+		<Italian>Quando è selezionato, mostra i modificatori difensivi.</Italian>
 		<Spanish>Indica cuándo mostrar los modificadores defensivos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1825,8 +1825,8 @@
 		<English>Select which turn number 200 000 BC should be.</English>
 		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
 		<German>Bestimmt die Runde, der das Jahr 200 000 n. Chr. entsprechen soll</German>
-		<Italian>Indica che numero di turno deve corrispondere all'anno 200 000 a.C.</Italian>
-		<Spanish>Elige qué número de turno será el año 200 000 a.C..</Spanish>
+		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
+		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__4000BC_TEXT</Tag>
@@ -3264,8 +3264,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__NOTWORKINGIMPROVABLEBONUSPLOT_HOVER</Tag>
 		<English>When checked, highlights tiles not being worked that can be improved to provide a bonus.</English>
-		<French>Lorsque activé, met en évidence les cases non utilisées,améliorables, et procurant un Bonus..</French>
-		<German>Hebt Geländefelder hervor, die nicht bearbeitet werden und modernisiert werden können, um einen Bonus zu erhalten</German>
+		<French>Lorsque activé, met en évidence les cases non utilisées, améliorables, et procurant un Bonus.</French>
+		<German>Hebt Geländefelder hervor, die nicht bearbeitet werden und modernisiert werden können, um einen Bonus zu erhalten.</German>
 		<Spanish>Cuando se activa, resalta las casillas no trabajadas que pueden ser mejoradas para dar un recurso.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4104,7 +4104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_DIPLOMACYSETTINGS__ADVANCEDDIPLOMACY_HOVER</Tag>
 		<English>Enables or Disables the Advanced Diplomacy Gameoption, which allows embassies, right of passages, worker and military unit trading, and a more diplomacy options.</English>
-		<French>Active ou désactive l'option Diplomatie avancée, qui permet les ambassades, droits de passage, l'échange d'unité militaire et ouvrières, ...</French>
+		<French>Active ou désactive l'option Diplomatie avancée, qui permet les ambassades, droits de passage, l'échange d'unité militaire et ouvrières...</French>
 		<German>Aktiviert oder deaktiviert die Verbesserte Diplomatie, über die der Bau von Botschaften, das Vergeben einer Durchreiseerlaubnis, der Handel mit Bautrupps und Militäreinheiten und weitere diplomatische Möglichkeiten gegeben werden.</German>
 		<Italian>Attiva o disattiva l'opzione Diplomazia avanzata, che permette ambasciate, diritti di passaggio,commercio di lavoratori e unità militari, e altre opzioni diplomatiche.</Italian>
 		<Spanish>Activa o desactiva la opción de Diplomacia avanzada, que permite establecer embajadas y derechos de paso e intercambiar trabajadores y unidades militares, entre otras opciones diplomáticas.</Spanish>
@@ -5674,7 +5674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_AIR_BOMBING_HOVER</Tag>
 		<English>Enables bombers to bomb city buildings and other missions</English>
-		<French>Permet aux unités de type Bombardier d'effectuer des missions supplémentaires de bombardement (bâtiments,..)</French>
+		<French>Permet aux unités de type Bombardier d'effectuer des missions supplémentaires de bombardement (bâtiments...)</French>
 		<German>Ermöglicht Bombern Gebäude zu bombardieren und weitere Missionen</German>
 		<Spanish>Permite a los bombarderos atacar edificios de las ciudades, entre otras misiones.</Spanish>
 	</TEXT>
@@ -7376,7 +7376,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESOURCEBAR_TYPES_HOVER</Tag>
 		<English>Settings: [COLOR_HIGHLIGHT_TEXT]All[COLOR_REVERT] shows all resources, [COLOR_HIGHLIGHT_TEXT]Rush[COLOR_REVERT] shows early military resources like copper and iron, [COLOR_HIGHLIGHT_TEXT]Strategic[COLOR_REVERT] shows industrial and modern era strategic resources, [COLOR_HIGHLIGHT_TEXT]Manufactured[COLOR_REVERT] shows resources made with buildings, [COLOR_HIGHLIGHT_TEXT]Food[COLOR_REVERT] shows all food resources and [COLOR_HIGHLIGHT_TEXT]Luxury[COLOR_REVERT] shows resources that affect happiness.</English>
-		<French>Paramètres: [COLOR_HIGHLIGHT_TEXT]Toutes[COLOR_REVERT] affiche toutes les ressources, [COLOR_HIGHLIGHT_TEXT]Militaires[COLOR_REVERT] affiche les ressources militaires de base (cuivre, fer,...), [COLOR_HIGHLIGHT_TEXT]Stratégiques[COLOR_REVERT] affiche les ressources stratégiques des ères industrielle et moderne, [COLOR_HIGHLIGHT_TEXT]Manufacturés[COLOR_REVERT] affiche les ressources produites par les bâtiments, [COLOR_HIGHLIGHT_TEXT]Nourriture[COLOR_REVERT] affiche les ressources de type nourriture et [COLOR_HIGHLIGHT_TEXT]Luxe[COLOR_REVERT] affiche les produits de luxe et ayant une influence sur le moral des Villes.</French>
+		<French>Paramètres: [COLOR_HIGHLIGHT_TEXT]Toutes[COLOR_REVERT] affiche toutes les ressources, [COLOR_HIGHLIGHT_TEXT]Militaires[COLOR_REVERT] affiche les ressources militaires de base (cuivre, fer...), [COLOR_HIGHLIGHT_TEXT]Stratégiques[COLOR_REVERT] affiche les ressources stratégiques des ères industrielle et moderne, [COLOR_HIGHLIGHT_TEXT]Manufacturés[COLOR_REVERT] affiche les ressources produites par les bâtiments, [COLOR_HIGHLIGHT_TEXT]Nourriture[COLOR_REVERT] affiche les ressources de type nourriture et [COLOR_HIGHLIGHT_TEXT]Luxe[COLOR_REVERT] affiche les produits de luxe et ayant une influence sur le moral des Villes.</French>
 		<German>Einstellungen: [COLOR_HIGHLIGHT_TEXT]Alle[COLOR_REVERT] zeigt alle Ressourcen, [COLOR_HIGHLIGHT_TEXT]Kampf[COLOR_REVERT] zeigt frühe militärische Ressourcen wie Kupfer oder Eisen, [COLOR_HIGHLIGHT_TEXT]Strategisch[COLOR_REVERT] zeigt strategische Ressourcen aus der industriellen und modernen Ära, [COLOR_HIGHLIGHT_TEXT]Produziert[COLOR_REVERT] zeigt Ressourcen, die durch Gebäude erzeugt wurden, [COLOR_HIGHLIGHT_TEXT]Nahrung[COLOR_REVERT] zeigt alle Nahrungsressourcen und [COLOR_HIGHLIGHT_TEXT]Luxus[COLOR_REVERT] zeigt Ressourcen, die die Zufriedenheit beeinflussen.</German>
 		<Spanish>Parámetros: [COLOR_HIGHLIGHT_TEXT]Todos[COLOR_REVERT] muestra todos los recursos, [COLOR_HIGHLIGHT_TEXT]Militares[COLOR_REVERT] muestra antiguos recursos militares como el cobre o el hierro, [COLOR_HIGHLIGHT_TEXT]Estratégicos[COLOR_REVERT] muestra recursos estratégicos de las Edades Industrial y Moderna, [COLOR_HIGHLIGHT_TEXT]Manufacturados[COLOR_REVERT] muestra recursos fabricados con edificios, [COLOR_HIGHLIGHT_TEXT]Alimenticios[COLOR_REVERT] muestra todos los recursos alimentarios y [COLOR_HIGHLIGHT_TEXT]Lujos[COLOR_REVERT] muestra recursos que afecten a la felicidad.</Spanish>
 	</TEXT>

@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HTN_1</Tag>
-		<English>I am  [OUR_NAME] of the [OUR_EMPIRE], and I come to the [CT_EMPIRE] in search of what is new and undiscovered!</English>
+		<English>I am [OUR_NAME] of the [OUR_EMPIRE], and I come to the [CT_EMPIRE] in search of what is new and undiscovered!</English>
 		<French>Je suis [OUR_NAME] de [OUR_EMPIRE], et je viens vers l'[CT_EMPIRE] à la recherche de ce qui est nouveau et inconnu!</French>
 		<Polish>Jestem [OUR_NAME] z [OUR_EMPIRE], i przybywam do [CT_EMPIRE] w poszukiwaniu nieodrytego i niepoznanego!</Polish>
 	</TEXT>

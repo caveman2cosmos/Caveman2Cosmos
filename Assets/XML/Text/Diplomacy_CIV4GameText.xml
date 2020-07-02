@@ -1050,7 +1050,7 @@
 		<French>Je suppose que vous savez ce que vous faites...</French>
 		<German>Ich nehme an, Ihr wisst es besser.</German>
 		<Italian>Immagino che tu sappia ciò che è meglio.</Italian>
-		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre....</Polish>
+		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre...</Polish>
 		<Spanish>Suponemos que sabéis lo que hacéis.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3154,9 +3154,9 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TOKUGAWA_1</Tag>
 		<English>Welcome, [CT_NAME]! May your empire flourish and grow for as long as it remains useful to us! I mean that sincerely.</English>
-		<French>Bienvenue, [CT_NAME]! Puisse votre empire prospérer et grandir tant qu'il nous sera utile! Je suis sincère...</French>
+		<French>Bienvenue, [CT_NAME]! Puisse votre empire prospérer et grandir tant qu'il nous sera utile! Je suis sincère.</French>
 		<German>Willkommen, [CT_NAME]! Möge Euer Imperium wachsen und gedeihen, solange auch wir einen Nutzen davon haben! Glaubt mir, das meine ich ganz aufrichtig!</German>
-		<Italian>Ti do il benvenuto, [CT_NAME]! Possa il tuo impero fiorire finché ci tornerà utile... Lo dico sinceramente!</Italian>
+		<Italian>Ti do il benvenuto, [CT_NAME]! Possa il tuo impero fiorire finché ci tornerà utile! Lo dico sinceramente.</Italian>
 		<Polish>Witaj, [CT_NAME]! Niech Twoje imperium rośnie i kwitnie, tak długo jak jest to nam na rękę. Szczerze Ci tego życzę.</Polish>
 		<Spanish>¡Os doy la bienvenida, [CT_NAME]! Que vuestro imperio florezca y prospere siempre que nos sea útil. Os lo decimos con total sinceridad.</Spanish>
 	</TEXT>
@@ -3184,11 +3184,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TRUDEAU_1</Tag>
-		<English>Hello, I am [OUR_NAME] of [OUR_CIV_SHORT]. Be ready when opportunity comes...luck is the time when preparation and opportunity meet.</English>
-		<French>Bonjour, je suis [OUR_NAME] de [OUR_CIV_SHORT]. Soyez prêt quand l'occasion vient...La chance est le moment où la préparation et l'occasion se réunissent.</French>
-		<German>Hallo, ich bin [OUR_NAME] vom [OUR_CIV_SHORT]. Ergreifen Sie die Gelegenheit, wenn sie kommt...Glück ist die Zeit, wenn Vorbereitung und Gelegenheit aufeinandertreffen.</German>
-		<Italian>Ciao, sono [OUR_NAME] di [OUR_CIV_SHORT]. Sia aspettano quando l'occasione viene...fortuna è il tempo in cui la preparazione e l'occasione vengono a contatto di.</Italian>
-		<Polish>Witaj, Jestem [OUR_NAME] z [OUR_CIV_SHORT]. Bądź gotowy kiedy możliwość przyjdzie...szczęście jest czasem kiedy przygotowanie i możliwość spotykają się.</Polish>
+		<English>Hello, I am [OUR_NAME] of [OUR_CIV_SHORT]. Be ready when opportunity comes... luck is the time when preparation and opportunity meet.</English>
+		<French>Bonjour, je suis [OUR_NAME] de [OUR_CIV_SHORT]. Soyez prêt quand l'occasion vient... La chance est le moment où la préparation et l'occasion se réunissent.</French>
+		<German>Hallo, ich bin [OUR_NAME] vom [OUR_CIV_SHORT]. Ergreifen Sie die Gelegenheit, wenn sie kommt... Glück ist die Zeit, wenn Vorbereitung und Gelegenheit aufeinandertreffen.</German>
+		<Italian>Ciao, sono [OUR_NAME] di [OUR_CIV_SHORT]. Sii pronto quando l'occasione viene... la fortuna è il momento in cui la preparazione e l'occasione vengono a contatto.</Italian>
+		<Polish>Witaj, Jestem [OUR_NAME] z [OUR_CIV_SHORT]. Bądź gotowy kiedy możliwość przyjdzie... szczęście jest czasem kiedy przygotowanie i możliwość spotykają się.</Polish>
 		<Spanish>Hola, soy [OUR_NAME] del [OUR_CIV_SHORT]. Estate atento cuando venga la oportunidad... la suerte es el momento en el que coinciden la preparación y la oportunidad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4660,7 +4660,7 @@
 		<French>Mes hommages, [CT_NAME]. Avez-vous fait bon voyage depuis le pays des [CT_CIV_SHORT]? J'y ai séjourné une fois, vous savez...</French>
 		<German>Ich grüße Euch, [CT_NAME]. Wie war die Reise? Wusstet Ihr, dass ich einst in Eurem Reich genächtigt habe?</German>
 		<Italian>Salve, [CT_NAME]. Come è stato il tuo viaggio dalle terre [CT_CIV_SHORT:4]? Una volta ho dormito là.</Italian>
-		<Polish>Witaj, [CT_NAME]. Jak Ci minęła podróż? Kiedyś nocowałem u [CT_CIV_ADJ]....</Polish>
+		<Polish>Witaj, [CT_NAME]. Jak Ci minęła podróż? Kiedyś nocowałem u [CT_CIV_ADJ]...</Polish>
 		<Spanish>Saludos, [CT_NAME]. ¿Qué tal vuestro viaje desde [CT_CIV_SHORT]? Una vez dormí allí, como ya sabéis.</Spanish>
 	</TEXT>
 	<TEXT>

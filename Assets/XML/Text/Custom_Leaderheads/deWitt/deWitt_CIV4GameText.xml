@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DE_WITT_1</Tag>
-		<English>I am [OUR_NAME] of the [OUR_EMPIRE]. Know that I shall be a fair and forthright adversary, if not a....calculating....one.</English>
+		<English>I am [OUR_NAME] of the [OUR_EMPIRE]. Know that I shall be a fair and forthright adversary, if not a... calculating... one.</English>
 		<Polish>Jestem [OUR_NAME] z [OUR_EMPIRE]. Wiedz, źe będę wymagającym, ale uczciwym przeciwnikiem.</Polish>
 	</TEXT>
 	<TEXT>
