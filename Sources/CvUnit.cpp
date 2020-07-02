@@ -17399,7 +17399,7 @@ CvSelectionGroup* CvUnit::getGroup() const
 	return GET_PLAYER(getOwner()).getSelectionGroup(getGroupID());
 }
 
-bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup) const
+bool CvUnit::canJoinGroup(const CvPlot* pPlot, const CvSelectionGroup* pSelectionGroup) const
 {
 	CvUnit* pHeadUnit;
 
@@ -31569,7 +31569,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 
 // RevolutionDCM - ranged bombard
 // Estimate if a unit stack is worth range bombarding
-bool CvUnit::isRbombardable(int iMinStack)
+bool CvUnit::isRbombardable(int iMinStack) const
 {
 	int collateralCount = 0;
 	int averageDamage = 0;
@@ -31615,7 +31615,7 @@ bool CvUnit::isRbombardable(int iMinStack)
 	return false;
 }
 
-int CvUnit::getRbombardSeigeCount(CvPlot* pPlot)
+int CvUnit::getRbombardSeigeCount(const CvPlot* pPlot) const
 {
 	CvUnit* nextUnit = NULL;
 	int seigeCount = 0;
