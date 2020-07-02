@@ -112,7 +112,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
 		<English>The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs. Both the terms coast and coastal are often used to describe a geographic location or region; for example, New Zealand's West Coast, or the East and West Coasts of the United States.</English>
-		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis. Wikipédia</French>
+		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis.</French>
 		<German>Mit [COLOR_HIGHLIGHT_TEXT]Küste[COLOR_REVERT] bezeichnet man das Gebiet, in dem sich Landmasse und Ozean treffen. Eine genaue Küstenlinie ist meist durch den dynamischen Gezeitenwechsel schlecht festzulegen, man richtet sich hier nach dem Stand des mittleren Hochwassers. Küsten sind durch Gezeiten-, Brandungs- und Windeinwirkungen einem ständigen Wandel unterworfen.</German>
 	</TEXT>
 	<TEXT>
@@ -173,7 +173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
 		<English>A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are defined as areas with an average annual precipitation of less than 250 millimetres (10 in) per year, or as areas where more water is lost by evapotranspiration than falls as precipitation. In the K0ppen climate classification system, deserts are classed as BWh (hot desert) or BWk (temperate desert). In the Thornthwaite climate classification system, deserts would be classified as arid megathermal climates.</English>
-		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides. Wikipédia</French>
+		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides.</French>
 		<German>Unter [COLOR_HIGHLIGHT_TEXT]Wüsten[COLOR_REVERT] versteht man vegetationslose oder -arme Landschaften, die größtenteils durch Wassermangel entstehen. Trotz ihrer vermeintlichen Lebensfeindlichkeit sind in vielen Wüsten zahlreiche angepasste Tierarten anzutreffen. Typisch für Hitzewüsten sind starke Temperaturschwankungen zwischen Tag und Nacht. Insbesondere durch Überweidung, Übernutzung, Abholzung und falsche Bewässerungsmethoden wird die natürliche Wüstenbildung (Desertifikation) durch den Menschen zusätzlich verstärkt und beschleunigt.</German>
 	</TEXT>
 	<TEXT>
@@ -766,7 +766,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
 		<English>Peak may refer to:A mountain peak, In topography, a summit is a point on a surface that is higher in elevation than all points immediately adjacent to it. Mathematically, a summit is a local maximum in elevation. The topographic terms "acme", "apex", "peak", and "zenith" are synonyms.</English>
-		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes. Wikipédia</French>
+		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes.</French>
 		<German>Berge sind Erhebungen in der Landschaft, die höher und steiler als Hügel sind und in der Regel über einen oder mehrere Gipfel verfügen. Sie entstehen größtenteils durch Plattentektonik und Vulkanismus. Viele zusammengehörige Berge bilden ein [COLOR_HIGHLIGHT_TEXT]Gebirge[COLOR_REVERT] oder einen Gebirgszug. Hierbei unterscheidet man zwischen Mittelgebirgen und Hochgebirgen.</German>
 	</TEXT>
 	<TEXT>
@@ -829,7 +829,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
 		<English>Plains is the plural of plain, a geographical feature. It is a big flat area of a land.</English>
-		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat. Wikipédia</French>
+		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat.</French>
 		<German>Eine [COLOR_HIGHLIGHT_TEXT]Ebene[COLOR_REVERT] ist eine weitgehend flache Landschaft ohne größere Erhebungen (Hügel, Berge). Sie kann aber durchaus sichtbare Höhenunterschiede aufweisen.</German>
 	</TEXT>
 	<TEXT>
