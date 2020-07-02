@@ -3,21 +3,21 @@
 	<!--TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_DYNAMIC_CIV_NAMES</Tag>
 		<English>
-			<Text>[NEWLINE][TAB]Dynamic Civ Names</Text>
+			<Text>[NEWLINE]Dynamic Civ Names</Text>
 		</English>
 		<French>
-			<Text>[NEWLINE][TAB]Nom des Civs dynamique</Text>
+			<Text>[NEWLINE]Nom des Civs dynamique</Text>
 		</French>
 		<German>
-			<Text>[NEWLINE][TAB]Dynamische Civ-Namen</Text>
+			<Text>[NEWLINE]Dynamische Civ-Namen</Text>
 		</German>
 		<Italian>
-			<Text>[NEWLINE][TAB]"Dynamic Civ Names"</Text>
+			<Text>[NEWLINE]"Dynamic Civ Names"</Text>
 		</Italian>
 		<Spanish>
-			<Text>[NEWLINE][TAB]Nombres de civilización dinámicos</Text>
+			<Text>[NEWLINE]Nombres de civilización dinámicos</Text>
 		</Spanish>
-		<Polish>[NEWLINE][TAB]Dynamiczne Nazwy Cywilizacji</Polish>
+		<Polish>[NEWLINE]Dynamiczne Nazwy Cywilizacji</Polish>
 	</TEXT-->
 	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS</Tag>
@@ -1667,21 +1667,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ACTIVE_DEFENSE</Tag>
-		<English>[NEWLINE][TAB]Active Defense</English>
-		<French>[NEWLINE][TAB]Défense Active</French>
-		<German>[NEWLINE][TAB]Aktive Verteidigung</German>
-		<Italian>[NEWLINE][TAB]"Difesa Attiva"</Italian>
-		<Spanish>[NEWLINE][TAB]Defensa activa</Spanish>
-		<Polish>[NEWLINE][TAB]Aktywna Obrona</Polish>
+		<English>[NEWLINE]Active Defense</English>
+		<French>[NEWLINE]Défense Active</French>
+		<German>[NEWLINE]Aktive Verteidigung</German>
+		<Italian>[NEWLINE]"Difesa Attiva"</Italian>
+		<Spanish>[NEWLINE]Defensa activa</Spanish>
+		<Polish>[NEWLINE]Aktywna Obrona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AIR_BOMBING</Tag>
-		<English>[NEWLINE][TAB]Air Bombing</English>
-		<French>[NEWLINE][TAB]Bombardement Aérien</French>
-		<German>[NEWLINE][TAB]Luftbombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento aereo"</Italian>
-		<Spanish>[NEWLINE][TAB]Bombardeo aéreo</Spanish>
-		<Polish>[NEWLINE][TAB]Bombardowanie z Powietrza</Polish>
+		<English>[NEWLINE]Air Bombing</English>
+		<French>[NEWLINE]Bombardement Aérien</French>
+		<German>[NEWLINE]Luftbombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento aereo"</Italian>
+		<Spanish>[NEWLINE]Bombardeo aéreo</Spanish>
+		<Polish>[NEWLINE]Bombardowanie z Powietrza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
@@ -1772,36 +1772,36 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT</Tag>
-		<English>[NEWLINE][TAB]Attack Support</English>
-		<French>[NEWLINE][TAB]Support d'Attaque</French>
-		<German>[NEWLINE][TAB]Angriffsunterstützung</German>
-		<Italian>[NEWLINE][TAB]"Attack Support"</Italian>
-		<Spanish>[NEWLINE][TAB]Soporte al ataque</Spanish>
-		<Polish>[NEWLINE][TAB]Wspomaganie Ataku</Polish>
+		<English>[NEWLINE]Attack Support</English>
+		<French>[NEWLINE]Support d'Attaque</French>
+		<German>[NEWLINE]Angriffsunterstützung</German>
+		<Italian>[NEWLINE]"Attack Support"</Italian>
+		<Spanish>[NEWLINE]Soporte al ataque</Spanish>
+		<Polish>[NEWLINE]Wspomaganie Ataku</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BARBARIAN_CIV</Tag>
-		<English>[NEWLINE][TAB]BarbarianCiv</English>
-		<German>[NEWLINE][TAB]Barbarenzivilisation</German>
-		<Italian>[NEWLINE][TAB]"BarbarianCiv"</Italian>
-		<Spanish>[NEWLINE][TAB]Civilizaciones bárbaras</Spanish>
+		<English>[NEWLINE]BarbarianCiv</English>
+		<German>[NEWLINE]Barbarenzivilisation</German>
+		<Italian>[NEWLINE]"BarbarianCiv"</Italian>
+		<Spanish>[NEWLINE]Civilizaciones bárbaras</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BARBARIAN_WORLD</Tag>
-		<English>[NEWLINE][TAB]Barbarian World</English>
-		<German>[NEWLINE][TAB]Barbarenwelt</German>
-		<Italian>[NEWLINE][TAB]"Barbarian World"</Italian>
-		<Spanish>[NEWLINE][TAB]Mundo bárbaro</Spanish>
-		<Polish>[NEWLINE][TAB]Barbarzyński Swiat</Polish>
+		<English>[NEWLINE]Barbarian World</English>
+		<German>[NEWLINE]Barbarenwelt</German>
+		<Italian>[NEWLINE]"Barbarian World"</Italian>
+		<Spanish>[NEWLINE]Mundo bárbaro</Spanish>
+		<Polish>[NEWLINE]Barbarzyński Swiat</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS</Tag>
-		<English>[NEWLINE][TAB]Battle Effects</English>
-		<French>[NEWLINE][TAB]Effets de Combats</French>
-		<German>[NEWLINE][TAB]Kampfeffekte</German>
-		<Italian>[NEWLINE][TAB]"Effetti della battaglia"</Italian>
-		<Spanish>[NEWLINE][TAB]Efectos de batalla</Spanish>
-		<Polish>[NEWLINE][TAB]Efekty Bitwy</Polish>
+		<English>[NEWLINE]Battle Effects</English>
+		<French>[NEWLINE]Effets de Combats</French>
+		<German>[NEWLINE]Kampfeffekte</German>
+		<Italian>[NEWLINE]"Effetti della battaglia"</Italian>
+		<Spanish>[NEWLINE]Efectos de batalla</Spanish>
+		<Polish>[NEWLINE]Efekty Bitwy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
@@ -1814,12 +1814,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CHOOSE_RELIGION</Tag>
-		<English>[NEWLINE][TAB]Choose Religion</English>
-		<French>[NEWLINE][TAB]Choix des Religions</French>
-		<German>[NEWLINE][TAB]Religion auswählen</German>
-		<Italian>[NEWLINE][TAB]Scegli Religione</Italian>
-		<Spanish>[NEWLINE][TAB]Elegir religión</Spanish>
-		<Polish>[NEWLINE][TAB]Wybór Religii</Polish>
+		<English>[NEWLINE]Choose Religion</English>
+		<French>[NEWLINE]Choix des Religions</French>
+		<German>[NEWLINE]Religion auswählen</German>
+		<Italian>[NEWLINE]Scegli Religione</Italian>
+		<Spanish>[NEWLINE]Elegir religión</Spanish>
+		<Polish>[NEWLINE]Wybór Religii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>
@@ -1888,21 +1888,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
-		<English>[NEWLINE][TAB]Spawn Emergency Defenders</English>
-		<French>[NEWLINE][TAB]Défenseurs d'urgence</French>
-		<German>[NEWLINE][TAB]Erzeuge Notfallverteidiger</German>
-		<Italian>[NEWLINE][TAB]Crea Difensori di Emergenza</Italian>
-		<Spanish>[NEWLINE][TAB]Llamada a defensores de emergencia</Spanish>
-		<Polish>[NEWLINE][TAB]Pobór Podczas Zagrożenia</Polish>
+		<English>[NEWLINE]Spawn Emergency Defenders</English>
+		<French>[NEWLINE]Défenseurs d'urgence</French>
+		<German>[NEWLINE]Erzeuge Notfallverteidiger</German>
+		<Italian>[NEWLINE]Crea Difensori di Emergenza</Italian>
+		<Spanish>[NEWLINE]Llamada a defensores de emergencia</Spanish>
+		<Polish>[NEWLINE]Pobór Podczas Zagrożenia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_FIGHTER_ENGAGE</Tag>
-		<English>[NEWLINE][TAB]Fighter Engage</English>
-		<French>[NEWLINE][TAB]Engagement auto. des Chasseurs</French>
-		<German>[NEWLINE][TAB]Jägerangriff</German>
-		<Italian>[NEWLINE][TAB]"Ingaggio"</Italian>
-		<Spanish>[NEWLINE][TAB]Superioridad aérea</Spanish>
-		<Polish>[NEWLINE][TAB]Angażowanie Myśliwców</Polish>
+		<English>[NEWLINE]Fighter Engage</English>
+		<French>[NEWLINE]Engagement auto. des Chasseurs</French>
+		<German>[NEWLINE]Jägerangriff</German>
+		<Italian>[NEWLINE]"Ingaggio"</Italian>
+		<Spanish>[NEWLINE]Superioridad aérea</Spanish>
+		<Polish>[NEWLINE]Angażowanie Myśliwców</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS</Tag>
@@ -1915,12 +1915,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_ENABLED</Tag>
-		<English>[NEWLINE][TAB]IDW Influence</English>
-		<French>[NEWLINE][TAB]Influence 'IDW'</French>
-		<German>[NEWLINE][TAB]EbK-Beeinflussung</German>
-		<Italian>[NEWLINE][TAB]Influenza "IDW"</Italian>
-		<Spanish>[NEWLINE][TAB]Influencia de IDW</Spanish>
-		<Polish>[NEWLINE][TAB]Wpływ IDW</Polish>
+		<English>[NEWLINE]IDW Influence</English>
+		<French>[NEWLINE]Influence 'IDW'</French>
+		<German>[NEWLINE]EbK-Beeinflussung</German>
+		<Italian>[NEWLINE]Influenza "IDW"</Italian>
+		<Spanish>[NEWLINE]Influencia de IDW</Spanish>
+		<Polish>[NEWLINE]Wpływ IDW</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_OPTIONS</Tag>
@@ -1949,12 +1949,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED</Tag>
-		<English>[NEWLINE][TAB]Inquisitions Enabled</English>
-		<French>[NEWLINE][TAB]Inquisition activée</French>
-		<German>[NEWLINE][TAB]Inquisitionen Aktiviert</German>
-		<Italian>[NEWLINE][TAB]"Inquisizioni" attivato</Italian>
-		<Spanish>[NEWLINE][TAB]Inquisición activada</Spanish>
-		<Polish>[NEWLINE][TAB]Włączona Inkwizycja</Polish>
+		<English>[NEWLINE]Inquisitions Enabled</English>
+		<French>[NEWLINE]Inquisition activée</French>
+		<German>[NEWLINE]Inquisitionen Aktiviert</German>
+		<Italian>[NEWLINE]"Inquisizioni" attivato</Italian>
+		<Spanish>[NEWLINE]Inquisición activada</Spanish>
+		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS</Tag>
@@ -1967,75 +1967,75 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_LIMITED_RELIGIONS</Tag>
-		<English>[NEWLINE][TAB]Limited Religions</English>
-		<French>[NEWLINE][TAB]Religions Limitées</French>
-		<German>[NEWLINE][TAB]Begrenzte Religionen</German>
-		<Italian>[NEWLINE][TAB]Religioni Limitate</Italian>
-		<Spanish>[NEWLINE][TAB]Religiones limitadas</Spanish>
-		<Polish>[NEWLINE][TAB]Limit Religii</Polish>
+		<English>[NEWLINE]Limited Religions</English>
+		<French>[NEWLINE]Religions Limitées</French>
+		<German>[NEWLINE]Begrenzte Religionen</German>
+		<Italian>[NEWLINE]Religioni Limitate</Italian>
+		<Spanish>[NEWLINE]Religiones limitadas</Spanish>
+		<Polish>[NEWLINE]Limit Religii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NAVAL_BOMBARD</Tag>
-		<English>[NEWLINE][TAB]Naval Bombard</English>
-		<French>[NEWLINE][TAB]Bombardement Naval</French>
-		<German>[NEWLINE][TAB]Seebombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento Navale"</Italian>
-		<Spanish>[NEWLINE][TAB]Bombardeo naval</Spanish>
-		<Polish>[NEWLINE][TAB]Bombardowanie Marynarki</Polish>
+		<English>[NEWLINE]Naval Bombard</English>
+		<French>[NEWLINE]Bombardement Naval</French>
+		<German>[NEWLINE]Seebombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento Navale"</Italian>
+		<Spanish>[NEWLINE]Bombardeo naval</Spanish>
+		<Polish>[NEWLINE]Bombardowanie Marynarki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NONE</Tag>
-		<English>[NEWLINE][TAB]None</English>
-		<French>[NEWLINE][TAB]Aucun</French>
-		<German>[NEWLINE][TAB]Keine</German>
-		<Italian>[NEWLINE][TAB]"None"</Italian>
-		<Spanish>[NEWLINE][TAB]Ninguna</Spanish>
-		<Polish>[NEWLINE][TAB]Brak</Polish>
+		<English>[NEWLINE]None</English>
+		<French>[NEWLINE]Aucun</French>
+		<German>[NEWLINE]Keine</German>
+		<Italian>[NEWLINE]"None"</Italian>
+		<Spanish>[NEWLINE]Ninguna</Spanish>
+		<Polish>[NEWLINE]Brak</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_BARBARIAN_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]No Barbarian Influence</English>
-		<French>[NEWLINE][TAB]Pas d'Influence Barbare</French>
-		<German>[NEWLINE][TAB]Keine Beeinflussung bei Kampf mit Barbaren</German>
-		<Italian>[NEWLINE][TAB]Nessuna Influenza Barbarica</Italian>
-		<Spanish>[NEWLINE][TAB]Sin influencia bárbara</Spanish>
-		<Polish>[NEWLINE][TAB]Brak Wpływu Barbarzyńców</Polish>
+		<English>[NEWLINE]No Barbarian Influence</English>
+		<French>[NEWLINE]Pas d'Influence Barbare</French>
+		<German>[NEWLINE]Keine Beeinflussung bei Kampf mit Barbaren</German>
+		<Italian>[NEWLINE]Nessuna Influenza Barbarica</Italian>
+		<Spanish>[NEWLINE]Sin influencia bárbara</Spanish>
+		<Polish>[NEWLINE]Brak Wpływu Barbarzyńców</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_NAVAL_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]No Naval Influence</English>
-		<French>[NEWLINE][TAB]Pas d'Influence Navale</French>
-		<German>[NEWLINE][TAB]Keine Beeinflussung auf Meeresfeldern</German>
-		<Italian>[NEWLINE][TAB]Nessuna Influenza Navale</Italian>
-		<Spanish>[NEWLINE][TAB]Sin influencia naval</Spanish>
-		<Polish>[NEWLINE][TAB]Brak Wpływu Marynarki</Polish>
+		<English>[NEWLINE]No Naval Influence</English>
+		<French>[NEWLINE]Pas d'Influence Navale</French>
+		<German>[NEWLINE]Keine Beeinflussung auf Meeresfeldern</German>
+		<Italian>[NEWLINE]Nessuna Influenza Navale</Italian>
+		<Spanish>[NEWLINE]Sin influencia naval</Spanish>
+		<Polish>[NEWLINE]Brak Wpływu Marynarki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_OPP_FIRE</Tag>
-		<English>[NEWLINE][TAB]Opportunity Fire</English>
-		<French>[NEWLINE][TAB]Opportunité de Feu</French>
-		<German>[NEWLINE][TAB]Gelegenheitstreffer</German>
-		<Italian>[NEWLINE][TAB]"Fuoco di Opportunità"</Italian>
-		<Spanish>[NEWLINE][TAB]Fuego de oportunidad</Spanish>
-		<Polish>[NEWLINE][TAB]Ogień Zaporowy</Polish>
+		<English>[NEWLINE]Opportunity Fire</English>
+		<French>[NEWLINE]Opportunité de Feu</French>
+		<German>[NEWLINE]Gelegenheitstreffer</German>
+		<Italian>[NEWLINE]"Fuoco di Opportunità"</Italian>
+		<Spanish>[NEWLINE]Fuego de oportunidad</Spanish>
+		<Polish>[NEWLINE]Ogień Zaporowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]Pillage Influence</English>
-		<French>[NEWLINE][TAB]Influence du Pillage</French>
-		<German>[NEWLINE][TAB]Beeinflussung durch Plünderung</German>
-		<Italian>[NEWLINE][TAB]Influenza da Saccheggio</Italian>
-		<Spanish>[NEWLINE][TAB]Influencia por saqueos</Spanish>
-		<Polish>[NEWLINE][TAB]Wpływ Plądrowania</Polish>
+		<English>[NEWLINE]Pillage Influence</English>
+		<French>[NEWLINE]Influence du Pillage</French>
+		<German>[NEWLINE]Beeinflussung durch Plünderung</German>
+		<Italian>[NEWLINE]Influenza da Saccheggio</Italian>
+		<Spanish>[NEWLINE]Influencia por saqueos</Spanish>
+		<Polish>[NEWLINE]Wpływ Plądrowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RANGE_BOMBARD</Tag>
-		<English>[NEWLINE][TAB]Ranged Bombard</English>
-		<French>[NEWLINE][TAB]Bombardements à distance</French>
-		<German>[NEWLINE][TAB]Fernbombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento ad Area"</Italian>
-		<Spanish>[NEWLINE][TAB]Cañoneo de alcance</Spanish>
-		<Polish>[NEWLINE][TAB]Zasięg Bombardowania</Polish>
+		<English>[NEWLINE]Ranged Bombard</English>
+		<French>[NEWLINE]Bombardements à distance</French>
+		<German>[NEWLINE]Fernbombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento ad Area"</Italian>
+		<Spanish>[NEWLINE]Cañoneo de alcance</Spanish>
+		<Polish>[NEWLINE]Zasięg Bombardowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RELIGION_OPTIONS</Tag>
@@ -2048,19 +2048,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES</Tag>
-		<English>[NEWLINE][TAB]Holy City Relocation</English>
-		<French>[NEWLINE][TAB]Relocalisation des Villes Saintes</French>
-		<German>[NEWLINE][TAB]Heilige Stadt versetzen</German>
-		<Italian>[NEWLINE][TAB]Riposizionamento Città Santa</Italian>
-		<Spanish>[NEWLINE][TAB]Reubicación de Ciudad Santa</Spanish>
-		<Polish>[NEWLINE][TAB]Obradzanie Swiętego Miasta</Polish>
+		<English>[NEWLINE]Holy City Relocation</English>
+		<French>[NEWLINE]Relocalisation des Villes Saintes</French>
+		<German>[NEWLINE]Heilige Stadt versetzen</German>
+		<Italian>[NEWLINE]Riposizionamento Città Santa</Italian>
+		<Spanish>[NEWLINE]Reubicación de Ciudad Santa</Spanish>
+		<Polish>[NEWLINE]Obradzanie Swiętego Miasta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_REVOLUTION</Tag>
-		<English>[NEWLINE][TAB]Revolutions</English>
-		<Italian>[NEWLINE][TAB]"Revolutions"</Italian>
-		<Spanish>[NEWLINE][TAB]Revoluciones</Spanish>
-		<Polish>[NEWLINE][TAB]Rewolucje</Polish>
+		<English>[NEWLINE]Revolutions</English>
+		<Italian>[NEWLINE]"Revolutions"</Italian>
+		<Spanish>[NEWLINE]Revoluciones</Spanish>
+		<Polish>[NEWLINE]Rewolucje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT</Tag>
@@ -2078,30 +2078,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ASSASSINATE</Tag>
-		<English>[NEWLINE][TAB]Assassinate Mission</English>
-		<French>[NEWLINE][TAB]Missions d'Assassinat</French>
-		<German>[NEWLINE][TAB]Attentätermission</German>
-		<Italian>[NEWLINE][TAB]Missione "Assassinio"</Italian>
-		<Spanish>[NEWLINE][TAB]Misión de asesinato</Spanish>
-		<Polish>[NEWLINE][TAB]Misja Zabójstwa</Polish>
+		<English>[NEWLINE]Assassinate Mission</English>
+		<French>[NEWLINE]Missions d'Assassinat</French>
+		<German>[NEWLINE]Attentätermission</German>
+		<Italian>[NEWLINE]Missione "Assassinio"</Italian>
+		<Spanish>[NEWLINE]Misión de asesinato</Spanish>
+		<Polish>[NEWLINE]Misja Zabójstwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_BRIBE</Tag>
-		<English>[NEWLINE][TAB]Bribe Mission</English>
-		<French>[NEWLINE][TAB]Missions de Corruption</French>
-		<German>[NEWLINE][TAB]Bestechungsmission</German>
-		<Italian>[NEWLINE][TAB]Missione "Corruzione"</Italian>
-		<Spanish>[NEWLINE][TAB]Misión de soborno</Spanish>
-		<Polish>[NEWLINE][TAB]Misja Przekupstwa</Polish>
+		<English>[NEWLINE]Bribe Mission</English>
+		<French>[NEWLINE]Missions de Corruption</French>
+		<German>[NEWLINE]Bestechungsmission</German>
+		<Italian>[NEWLINE]Missione "Corruzione"</Italian>
+		<Spanish>[NEWLINE]Misión de soborno</Spanish>
+		<Polish>[NEWLINE]Misja Przekupstwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ENABLED</Tag>
-		<English>[NEWLINE][TAB]Super Spies Enabled</English>
-		<French>[NEWLINE][TAB]'Super Spies' activé</French>
-		<German>[NEWLINE][TAB]Superspione Aktiviert</German>
-		<Italian>[NEWLINE][TAB]"Super Spie" attivato</Italian>
-		<Spanish>[NEWLINE][TAB]Activar Superespías</Spanish>
-		<Polish>[NEWLINE][TAB]Włączeni Super Szpiedzy</Polish>
+		<English>[NEWLINE]Super Spies Enabled</English>
+		<French>[NEWLINE]'Super Spies' activé</French>
+		<German>[NEWLINE]Superspione Aktiviert</German>
+		<Italian>[NEWLINE]"Super Spie" attivato</Italian>
+		<Spanish>[NEWLINE]Activar Superespías</Spanish>
+		<Polish>[NEWLINE]Włączeni Super Szpiedzy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_OPTIONS</Tag>
@@ -2114,21 +2114,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_START_AS_MINORS</Tag>
-		<English>[NEWLINE][TAB]Start As Minors</English>
-		<French>[NEWLINE][TAB]Démarrage Barbare</French>
-		<German>[NEWLINE][TAB]Als kleine Civ beginnen</German>
-		<Italian>[NEWLINE][TAB]"Start As Minors"</Italian>
-		<Spanish>[NEWLINE][TAB]Empezar como menores</Spanish>
-		<Polish>[NEWLINE][TAB]Podrzędne Cywilizacje</Polish>
+		<English>[NEWLINE]Start As Minors</English>
+		<French>[NEWLINE]Démarrage Barbare</French>
+		<German>[NEWLINE]Als kleine Civ beginnen</German>
+		<Italian>[NEWLINE]"Start As Minors"</Italian>
+		<Spanish>[NEWLINE]Empezar como menores</Spanish>
+		<Polish>[NEWLINE]Podrzędne Cywilizacje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_TECH_DIFFUSION</Tag>
-		<English>[NEWLINE][TAB]Tech Diffusion</English>
-		<French>[NEWLINE][TAB]Diffusion des Tech</French>
-		<German>[NEWLINE][TAB]Technologiediffusion</German>
-		<Italian>[NEWLINE][TAB]"Tech Diffusion"</Italian>
-		<Spanish>[NEWLINE][TAB]Difusión tecnológica</Spanish>
-		<Polish>[NEWLINE][TAB]Dyfuzja Technologii</Polish>
+		<English>[NEWLINE]Tech Diffusion</English>
+		<French>[NEWLINE]Diffusion des Tech</French>
+		<German>[NEWLINE]Technologiediffusion</German>
+		<Italian>[NEWLINE]"Tech Diffusion"</Italian>
+		<Spanish>[NEWLINE]Difusión tecnológica</Spanish>
+		<Polish>[NEWLINE]Dyfuzja Technologii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>
