@@ -19,10 +19,9 @@ class CyGame
 {
 public:
 	CyGame();
-	explicit CyGame(CvGame* pGame);			// Call from C++
-	explicit CyGame(CvGameAI* pGame);		// Call from C++;
-	const CvGame* getGame() const { return m_pGame; }	// Call from C++
-	bool isNone() const { return m_pGame == NULL; }
+	explicit CyGame(CvGame& pGame);			// Call from C++
+	explicit CyGame(CvGameAI& pGame);		// Call from C++;
+	//bool isNone() const { return m_pGame == NULL; }
 
 	int getCurrentMap() const;
 
@@ -336,7 +335,7 @@ public:
 
 	const char* getC2CVersion() const;
 protected:
-	CvGame* m_pGame;
+	CvGame& m_pGame;
 };
 
 #endif	// #ifndef CyGame
