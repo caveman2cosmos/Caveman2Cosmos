@@ -20,165 +20,163 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
-	int getMaxGlobalInstances() const   { return m_iMaxGlobalInstances; } // Exposed to Python
-	int getMaxTeamInstances() const     { return m_iMaxTeamInstances; } // Exposed to Python
-	int getMaxPlayerInstances() const   { return m_iMaxPlayerInstances; } // Exposed to Python
-	int getExtraPlayerInstances() const { return m_iExtraPlayerInstances; } // Exposed to Python
-	bool isNoLimit() const; // Exposed to Python
+	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; } // Exposed to Python
+	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; } // Exposed to Python
+	int getMaxPlayerInstances() const				{ return m_iMaxPlayerInstances; } // Exposed to Python
+	int getExtraPlayerInstances() const				{ return m_iExtraPlayerInstances; } // Exposed to Python
+	bool isNoLimit() const							{ return m_bNoLimit; } // Exposed to Python
 
-	int getVictoryPrereq() const; // Exposed to Python
-	int getFreeStartEra() const; // Exposed to Python
-	int getMaxStartEra() const; // Exposed to Python
-	int getObsoleteTech() const; // Exposed to Python
-	int getPrereqAndTech() const; // Exposed to Python
-	int getNoBonus() const; // Exposed to Python
-	int getPowerBonus() const; // Exposed to Python
-	int getFreeBonus() const; // Exposed to Python
-	int getNumFreeBonuses() const; // Exposed to Python
-	int getNumExtraFreeBonuses() const;
+	int getVictoryPrereq() const					{ return m_iVictoryPrereq; } // Exposed to Python
+	int getFreeStartEra() const						{ return m_iFreeStartEra; } // Exposed to Python
+	int getMaxStartEra() const						{ return m_iMaxStartEra; } // Exposed to Python
+	int getObsoleteTech() const						{ return m_iObsoleteTech; } // Exposed to Python
+	int getPrereqAndTech() const					{ return m_iPrereqAndTech; } // Exposed to Python
+	int getNoBonus() const							{ return m_iNoBonus; } // Exposed to Python
+	int getPowerBonus() const						{ return m_iPowerBonus; } // Exposed to Python
+	int getFreeBonus() const						{ return m_iFreeBonus; } // Exposed to Python
+	int getNumFreeBonuses() const					{ return m_iNumFreeBonuses; } // Exposed to Python
+	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
-	int getFreeBuilding() const; // Exposed to Python
-	int getFreeAreaBuilding() const;
-	int getFreePromotion() const; // Exposed to Python
-	int getCivicOption() const; // Exposed to Python
-	int getAIWeight() const; // Exposed to Python
-	int getProductionCost() const; // Exposed to Python
-	int getHurryCostModifier() const; // Exposed to Python
-	int getHurryAngerModifier() const; // Exposed to Python
-	int getAdvancedStartCost() const; // Exposed to Python
-	int getAdvancedStartCostIncrease() const; // Exposed to Python
-	int getMinAreaSize() const; // Exposed to Python
-	int getNumCitiesPrereq() const; // Exposed to Python
-	int getNumTeamsPrereq() const; // Exposed to Python
-	int getUnitLevelPrereq() const; // Exposed to Python
-	int getMinLatitude() const; // Exposed to Python
-	int getMaxLatitude() const; // Exposed to Python
-	int getGreatPeopleRateModifier() const; // Exposed to Python
-	int getGreatGeneralRateModifier() const; // Exposed to Python
-	int getDomesticGreatGeneralRateModifier() const; // Exposed to Python
-	int getGlobalGreatPeopleRateModifier() const; // Exposed to Python
-	int getAnarchyModifier() const; // Exposed to Python
-	int getGoldenAgeModifier() const; // Exposed to Python
-	int getGlobalHurryModifier() const; // Exposed to Python
-	int getFreeExperience() const; // Exposed to Python
-	int getGlobalFreeExperience() const; // Exposed to Python
-	int getFoodKept() const; // Exposed to Python
-	int getAirlift() const; // Exposed to Python
-	int getAirModifier() const; // Exposed to Python
-	int getAirUnitCapacity() const; // Exposed to Python
-	int getNukeModifier() const; // Exposed to Python
-	int getNukeExplosionRand() const; // Exposed to Python
-	int getFreeSpecialist() const; // Exposed to Python
-	int getAreaFreeSpecialist() const; // Exposed to Python
-	int getGlobalFreeSpecialist() const; // Exposed to Python
-	int getHappiness() const; // Exposed to Python
-	int getAreaHappiness() const; // Exposed to Python
-	int getGlobalHappiness() const; // Exposed to Python
-	int getStateReligionHappiness() const; // Exposed to Python
-	int getWorkerSpeedModifier() const; // Exposed to Python
-	int getMilitaryProductionModifier() const; // Exposed to Python
-	int getSpaceProductionModifier() const; // Exposed to Python
-	int getGlobalSpaceProductionModifier() const; // Exposed to Python
-	int getTradeRoutes() const; // Exposed to Python
-	int getCoastalTradeRoutes() const; // Exposed to Python
-	int getGlobalTradeRoutes() const; // Exposed to Python
-	int getTradeRouteModifier() const; // Exposed to Python
-	int getForeignTradeRouteModifier() const; // Exposed to Python
+	int getFreeBuilding() const						{ return m_iFreeBuilding; } // Exposed to Python
+	int getFreeAreaBuilding() const					{ return m_iFreeAreaBuilding; }
+	int getFreePromotion() const					{ return m_iFreePromotion; } // Exposed to Python
+	int getCivicOption() const						{ return m_iCivicOption; } // Exposed to Python
+	int getAIWeight() const							{ return m_iAIWeight; } // Exposed to Python
+	int getProductionCost() const					{ return m_iProductionCost; } // Exposed to Python
+	int getHurryCostModifier() const				{ return m_iHurryCostModifier; } // Exposed to Python
+	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; } // Exposed to Python
+	int getAdvancedStartCost() const				{ return m_iAdvancedStartCost; } // Exposed to Python
+	int getAdvancedStartCostIncrease() const		{ return m_iAdvancedStartCostIncrease; } // Exposed to Python
+	int getMinAreaSize() const						{ return m_iMinAreaSize; } // Exposed to Python
+	int getNumCitiesPrereq() const					{ return m_iNumCitiesPrereq; } // Exposed to Python
+	int getNumTeamsPrereq() const					{ return m_iNumTeamsPrereq; } // Exposed to Python
+	int getUnitLevelPrereq() const					{ return m_iUnitLevelPrereq; } // Exposed to Python
+	int getMinLatitude() const						{ return m_iMinLatitude; } // Exposed to Python
+	int getMaxLatitude() const						{ return m_iMaxLatitude; } // Exposed to Python
+	int getGreatPeopleRateModifier() const			{ return m_iGreatPeopleRateModifier; } // Exposed to Python
+	int getGreatGeneralRateModifier() const			{ return m_iGreatGeneralRateModifier; } // Exposed to Python
+	int getDomesticGreatGeneralRateModifier() const	{ return m_iDomesticGreatGeneralRateModifier; } // Exposed to Python
+	int getGlobalGreatPeopleRateModifier() const	{ return m_iGlobalGreatPeopleRateModifier; } // Exposed to Python
+	int getAnarchyModifier() const					{ return m_iAnarchyModifier; } // Exposed to Python
+	int getGoldenAgeModifier() const				{ return m_iGoldenAgeModifier; } // Exposed to Python
+	int getGlobalHurryModifier() const				{ return m_iGlobalHurryModifier; } // Exposed to Python
+	int getFreeExperience() const					{ return m_iFreeExperience; } // Exposed to Python
+	int getGlobalFreeExperience() const				{ return m_iGlobalFreeExperience; } // Exposed to Python
+	int getFoodKept() const							{ return m_iFoodKept; } // Exposed to Python
+	int getAirlift() const							{ return m_iAirlift; } // Exposed to Python
+	int getAirModifier() const						{ return m_iAirModifier; } // Exposed to Python
+	int getAirUnitCapacity() const					{ return m_iAirUnitCapacity; } // Exposed to Python
+	int getNukeModifier() const						{ return m_iNukeModifier; } // Exposed to Python
+	int getNukeExplosionRand() const				{ return m_iNukeExplosionRand; } // Exposed to Python
+	int getFreeSpecialist() const					{ return m_iFreeSpecialist; } // Exposed to Python
+	int getAreaFreeSpecialist() const				{ return m_iAreaFreeSpecialist; } // Exposed to Python
+	int getGlobalFreeSpecialist() const				{ return m_iGlobalFreeSpecialist; } // Exposed to Python
+	int getHappiness() const						{ return m_iHappiness; } // Exposed to Python
+	int getAreaHappiness() const					{ return m_iAreaHappiness; } // Exposed to Python
+	int getGlobalHappiness() const					{ return m_iGlobalHappiness; } // Exposed to Python
+	int getStateReligionHappiness() const			{ return m_iStateReligionHappiness; } // Exposed to Python
+	int getWorkerSpeedModifier() const				{ return m_iWorkerSpeedModifier; } // Exposed to Python
+	int getMilitaryProductionModifier() const		{ return m_iMilitaryProductionModifier; } // Exposed to Python
+	int getSpaceProductionModifier() const			{ return m_iSpaceProductionModifier; } // Exposed to Python
+	int getGlobalSpaceProductionModifier() const	{ return m_iGlobalSpaceProductionModifier; } // Exposed to Python
+	int getTradeRoutes() const						{ return m_iTradeRoutes; } // Exposed to Python
+	int getCoastalTradeRoutes() const				{ return m_iCoastalTradeRoutes; } // Exposed to Python
+	int getGlobalTradeRoutes() const				{ return m_iGlobalTradeRoutes; } // Exposed to Python
+	int getTradeRouteModifier() const				{ return m_iTradeRouteModifier; } // Exposed to Python
+	int getForeignTradeRouteModifier() const		{ return m_iForeignTradeRouteModifier; } // Exposed to Python
 	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
 	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
-	int getSpecialBuildingType() const; // Exposed to Python
-	int getAdvisorType() const; // Exposed to Python
+	int getSpecialBuildingType() const				{ return m_iSpecialBuildingType; } // Exposed to Python
+	int getAdvisorType() const						{ return m_iAdvisorType; } // Exposed to Python
 
 	// REVDCM CanConstruct 2/16/10 by phungus420
-	int getPrereqGameOption() const; // Exposed to Python
-	int getNotGameOption() const; // Exposed to Python
+	int getPrereqGameOption() const					{ return m_iPrereqGameOption; } // Exposed to Python
+	int getNotGameOption() const					{ return m_iNotGameOption; } // Exposed to Python
 
-	int getHolyCity() const; // Exposed to Python
-	int getReligionType() const; // Exposed to Python
-	int getStateReligion() const; // Exposed to Python
-	int getPrereqReligion() const; // Exposed to Python
-	int getPrereqCorporation() const; // Exposed to Python
-	int getFoundsCorporation() const; // Exposed to Python
-	int getGlobalReligionCommerce() const; // Exposed to Python
-	int getGlobalCorporationCommerce() const; // Exposed to Python
-	int getPrereqAndBonus() const; // Exposed to Python
-	int getGreatPeopleUnitType() const; // Exposed to Python
-	int getGreatPeopleRateChange() const; // Exposed to Python
-	int getConquestProbability() const; // Exposed to Python
-	int getMaintenanceModifier() const; // Exposed to Python
+	int getHolyCity() const							{ return m_iHolyCity; } // Exposed to Python
+	int getReligionType() const						{ return m_iReligionType; } // Exposed to Python
+	int getStateReligion() const					{ return m_iStateReligion; } // Exposed to Python
+	int getPrereqReligion() const					{ return m_iPrereqReligion; } // Exposed to Python
+	int getPrereqCorporation() const				{ return m_iPrereqCorporation; } // Exposed to Python
+	int getFoundsCorporation() const				{ return m_iFoundsCorporation; } // Exposed to Python
+	int getGlobalReligionCommerce() const			{ return m_iGlobalReligionCommerce; } // Exposed to Python
+	int getGlobalCorporationCommerce() const		{ return m_iGlobalCorporationCommerce; } // Exposed to Python
+	int getPrereqAndBonus() const					{ return m_iPrereqAndBonus; } // Exposed to Python
+	int getGreatPeopleUnitType() const				{ return m_iGreatPeopleUnitType; } // Exposed to Python
+	int getGreatPeopleRateChange() const			{ return m_iGreatPeopleRateChange; } // Exposed to Python
+	int getConquestProbability() const				{ return m_iConquestProbability; } // Exposed to Python
+	int getMaintenanceModifier() const				{ return m_iMaintenanceModifier; } // Exposed to Python
 	//DPII < Maintenance Modifiers >
-	int getGlobalMaintenanceModifier() const;
-	int getAreaMaintenanceModifier() const;
-	int getOtherAreaMaintenanceModifier() const;
-	int getDistanceMaintenanceModifier() const;
-	int getNumCitiesMaintenanceModifier() const;
-	int getCoastalDistanceMaintenanceModifier() const;
-	int getConnectedCityMaintenanceModifier() const;
+	int getGlobalMaintenanceModifier() const		{ return m_iGlobalMaintenanceModifier; }
+	int getAreaMaintenanceModifier() const			{ return m_iAreaMaintenanceModifier; }
+	int getOtherAreaMaintenanceModifier() const		{ return m_iOtherAreaMaintenanceModifier; }
+	int getDistanceMaintenanceModifier() const		{ return m_iDistanceMaintenanceModifier; }
+	int getNumCitiesMaintenanceModifier() const		{ return m_iNumCitiesMaintenanceModifier; }
+	int getCoastalDistanceMaintenanceModifier() const { return m_iCoastalDistanceMaintenanceModifier; }
+	int getConnectedCityMaintenanceModifier() const	{ return m_iConnectedCityMaintenanceModifier; }
 	//DPII < Maintenance Modifiers >
-	int getWarWearinessModifier() const; // Exposed to Python
-	int getGlobalWarWearinessModifier() const; // Exposed to Python
-	int getEnemyWarWearinessModifier() const; // Exposed to Python
-	int getHealRateChange() const; // Exposed to Python
-	int getHealth() const; // Exposed to Python
-	int getAreaHealth() const; // Exposed to Python
-	int getGlobalHealth() const; // Exposed to Python
-	int getGlobalPopulationChange() const; // Exposed to Python
-	int getFreeTechs() const; // Exposed to Python
-	TechTypes getFreeSpecialTech() const;
-	int getDefenseModifier() const; // Exposed to Python
-	int getBombardDefenseModifier() const; // Exposed to Python
-	int getAllCityDefenseModifier() const; // Exposed to Python
-	int getEspionageDefenseModifier() const; // Exposed to Python
+	int getWarWearinessModifier() const				{ return m_iWarWearinessModifier; } // Exposed to Python
+	int getGlobalWarWearinessModifier() const		{ return m_iGlobalWarWearinessModifier; } // Exposed to Python
+	int getEnemyWarWearinessModifier() const		{ return m_iEnemyWarWearinessModifier; } // Exposed to Python
+	int getHealRateChange() const					{ return m_iHealRateChange; } // Exposed to Python
+	int getHealth() const							{ return m_iHealth; } // Exposed to Python
+	int getAreaHealth() const						{ return m_iAreaHealth; } // Exposed to Python
+	int getGlobalHealth() const						{ return m_iGlobalHealth; } // Exposed to Python
+	int getGlobalPopulationChange() const			{ return m_iGlobalPopulationChange; } // Exposed to Python
+	int getFreeTechs() const						{ return m_iFreeTechs; } // Exposed to Python
+	TechTypes getFreeSpecialTech() const			{ return m_eFreeSpecialTech; }
+	int getDefenseModifier() const					{ return m_iDefenseModifier; } // Exposed to Python
+	int getBombardDefenseModifier() const			{ return m_iBombardDefenseModifier; } // Exposed to Python
+	int getAllCityDefenseModifier() const			{ return m_iAllCityDefenseModifier; } // Exposed to Python
+	int getEspionageDefenseModifier() const			{ return m_iEspionageDefenseModifier; } // Exposed to Python
 
 	// REVDCM Building Effects 4/09/10 by phungus420
-	int getUnitUpgradePriceModifier() const; // Exposed to Python
-	int getRevIdxLocal() const; // Exposed to Python
-	int getRevIdxNational() const; // Exposed to Python
-	int getRevIdxDistanceModifier() const; // Exposed to Python
+	int getUnitUpgradePriceModifier() const			{ return m_iUnitUpgradePriceModifier; } // Exposed to Python
+	int getRevIdxLocal() const						{ return m_iRevIdxLocal; } // Exposed to Python
+	int getRevIdxNational() const					{ return m_iRevIdxNational; } // Exposed to Python
+	int getRevIdxDistanceModifier() const			{ return m_iRevIdxDistanceModifier; } // Exposed to Python
 
-	int getMissionType() const; // Exposed to Python
-	void setMissionType(int iNewType);
-	int getVoteSourceType() const; // Exposed to Python
+	int getMissionType() const						{ return m_iMissionType; } // Exposed to Python
+	void setMissionType(int iNewType)				{ m_iMissionType = iNewType; }
+	int getVoteSourceType() const					{ return m_iVoteSourceType; } // Exposed to Python
 
-	float getVisibilityPriority() const;
+	float getVisibilityPriority() const				{ return m_fVisibilityPriority; }
 
-	bool isTeamShare() const; // Exposed to Python
-	bool isAutoBuild() const;
-	bool isWater() const; // Exposed to Python
-	bool isRiver() const; // Exposed to Python
-	bool isFreshWater() const; // Exposed to Python
-	bool isPower() const; // Exposed to Python
-	bool isDirtyPower() const; // Exposed to Python
-	bool isAreaCleanPower() const; // Exposed to Python
-	bool isOrbital() const;
-	bool isOrbitalInfrastructure() const;
-	bool isNoHolyCity() const;
-	bool isAreaBorderObstacle() const; // Exposed to Python
-	bool isForceTeamVoteEligible() const; // Exposed to Python
-	bool isCapital() const; // Exposed to Python
+	bool isTeamShare() const						{ return m_bTeamShare; } // Exposed to Python
+	bool isAutoBuild() const						{ return m_bAutoBuild; }
+	bool isWater() const							{ return m_bWater; } // Exposed to Python
+	bool isRiver() const							{ return m_bRiver; } // Exposed to Python
+	bool isFreshWater() const						{ return m_bFreshWater; } // Exposed to Python
+	bool isPower() const							{ return m_bPower; } // Exposed to Python
+	bool isDirtyPower() const						{ return m_bDirtyPower; } // Exposed to Python
+	bool isAreaCleanPower() const					{ return m_bAreaCleanPower; } // Exposed to Python
+	bool isOrbital() const							{ return m_bOrbital; }
+	bool isOrbitalInfrastructure() const			{ return m_bOrbitalInfrastructure; }
+	bool isNoHolyCity() const						{ return m_bNoHolyCity; }
+	bool isAreaBorderObstacle() const				{ return m_bAreaBorderObstacle; } // Exposed to Python
+	bool isForceTeamVoteEligible() const			{ return m_bForceTeamVoteEligible; } // Exposed to Python
+	bool isCapital() const							{ return m_bCapital; } // Exposed to Python
 	// DCM 04/19/09 Johny Smith
 	// Dale - AB: Bombing START
-	int getDCMAirbombMission() const;
-protected:
-public:
+	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
 	// Dale - AB: Bombing END
-	bool isGovernmentCenter() const; // Exposed to Python
-	bool isGoldenAge() const; // Exposed to Python
-	bool isMapCentering() const; // Exposed to Python
-	bool isNoUnhappiness() const; // Exposed to Python
-	bool isNoUnhealthyPopulation() const; // Exposed to Python
-	bool isBuildingOnlyHealthy() const; // Exposed to Python
-	bool isNeverCapture() const; // Exposed to Python
-	bool isNukeImmune() const; // Exposed to Python
-	bool isCenterInCity() const; // Exposed to Python
-	bool isStateReligion() const; // Exposed to Python
-	bool isAllowsNukes() const; // Exposed to Python
+	bool isGovernmentCenter() const					{ return m_bGovernmentCenter; } // Exposed to Python
+	bool isGoldenAge() const						{ return m_bGoldenAge; } // Exposed to Python
+	bool isMapCentering() const						{ return m_bMapCentering; } // Exposed to Python
+	bool isNoUnhappiness() const					{ return m_bNoUnhappiness; } // Exposed to Python
+	bool isNoUnhealthyPopulation() const			{ return m_bNoUnhealthyPopulation; } // Exposed to Python
+	bool isBuildingOnlyHealthy() const				{ return m_bBuildingOnlyHealthy; } // Exposed to Python
+	bool isNeverCapture() const						{ return m_bNeverCapture; } // Exposed to Python
+	bool isNukeImmune() const						{ return m_bNukeImmune; } // Exposed to Python
+	bool isCenterInCity() const						{ return m_bCenterInCity; } // Exposed to Python
+	bool isStateReligion() const					{ return m_bStateReligion; } // Exposed to Python
+	bool isAllowsNukes() const						{ return m_bAllowsNukes; } // Exposed to Python
 
-	const TCHAR* getConstructSound() const; // Exposed to Python
-	const TCHAR* getArtDefineTag() const; // Exposed to Python
-	const TCHAR* getMovieDefineTag() const; // Exposed to Python
+	const TCHAR* getConstructSound() const			{ return m_szConstructSound; } // Exposed to Python
+	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; } // Exposed to Python
+	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; } // Exposed to Python
 
 	// Arrays
 
@@ -268,41 +266,41 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 
 	// Afforess 12/9/09
-	int getFreePromotion_2() const;
-	int getFreePromotion_3() const;
-	int getPrereqVicinityBonus() const;
-	int getPrereqRawVicinityBonus() const;
-	int getGlobalPopulationgrowthratepercentage() const;
-	int getPopulationgrowthratepercentage() const;
-	bool isBuildOnlyOnPeaks() const;
-	bool isPrereqPower() const;
-	bool isApplyFreePromotionOnMove() const;
-	bool isNoEnemyPillagingIncome() const;
-	bool isProvidesFreshWater() const;
-	bool isForceAllTradeRoutes() const;
-	bool isForceNoPrereqScaling() const;
-	bool isPrereqWar() const;
-	bool isRequiresActiveCivics() const;
-	bool isZoneOfControl() const;
-	bool isProtectedCulture() const;
-	int getPillageGoldModifier() const;
-	int getWorldTradeRoutes() const;
-	int getLineOfSight() const;
-	int getInflationModifier() const;
-	int getInvasionChance() const;
-	int getAdjacentDamagePercent() const;
-	int getPrereqPopulation() const;
-	int getProductionContinueBuilding() const;
-	int getPrereqCultureLevel() const;
-	int getWorkableRadius() const;
-	int getPrereqAnyoneBuilding() const;
-	int getExtendsBuilding() const;
-	int getOccupationTimeModifier() const;
+	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
+	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
+	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
+	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
+	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
+	int getPopulationgrowthratepercentage() const	{ return m_iPopulationgrowthratepercentage; }
+	bool isBuildOnlyOnPeaks() const					{ return m_bBuildOnlyOnPeaks; }
+	bool isPrereqPower() const						{ return m_bPrereqPower; }
+	bool isApplyFreePromotionOnMove() const			{ return m_bApplyFreePromotionOnMove; }
+	bool isNoEnemyPillagingIncome() const			{ return m_bNoEnemyPillagingIncome; }
+	bool isProvidesFreshWater() const				{ return m_bProvidesFreshWater; }
+	bool isForceAllTradeRoutes() const				{ return m_bForceAllTradeRoutes; }
+	bool isForceNoPrereqScaling() const				{ return m_bForceNoPrereqScaling; }
+	bool isPrereqWar() const						{ return m_bPrereqWar; }
+	bool isRequiresActiveCivics() const				{ return m_bRequiresActiveCivics; }
+	bool isZoneOfControl() const					{ return m_bZoneOfControl; }
+	bool isProtectedCulture() const					{ return m_bProtectedCulture; }
+	int getPillageGoldModifier() const				{ return m_iPillageGoldModifier; }
+	int getWorldTradeRoutes() const					{ return m_iWorldTradeRoutes; }
+	int getLineOfSight() const						{ return m_iLineOfSight; }
+	int getInflationModifier() const				{ return m_iInflationModifier; }
+	int getInvasionChance() const					{ return m_iInvasionChance; }
+	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
+	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
+	int getProductionContinueBuilding() const		{ return m_iProductionContinueBuilding; }
+	int getPrereqCultureLevel() const				{ return m_iPrereqCultureLevel; }
+	int getWorkableRadius() const					{ return m_iWorkableRadius; }
+	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
+	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
+	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
 	int getNoEntryDefenseLevel(bool bForLoad = false) const;
-	int getNumUnitFullHeal() const;
-	int getNumPopulationEmployed() const;
-	int getHappinessPercentPerPopulation() const;
-	int getHealthPercentPerPopulation() const;
+	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
+	int getNumPopulationEmployed() const			{ return m_iNumPopulationEmployed; }
+	int getHappinessPercentPerPopulation() const	{ return m_iHappinessPercentPerPopulation; }
+	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 
 	int getUnitProductionModifier(int i) const;
 	int getPrereqOrVicinityBonuses(int i) const;
@@ -330,12 +328,12 @@ public:
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
 
 	int isPrereqOrCivicsVectorSize() const;
-	CvString isPrereqOrCivicsNamesVectorElement(const int i) const;
-	int isPrereqOrCivicsValuesVectorElement(const int i) const;
+	CvString isPrereqOrCivicsNamesVectorElement(int i) const;
+	int isPrereqOrCivicsValuesVectorElement(int i) const;
 
 	int isPrereqAndCivicsVectorSize() const;
-	CvString isPrereqAndCivicsNamesVectorElement(const int i) const;
-	int isPrereqAndCivicsValuesVectorElement(const int i) const;
+	CvString isPrereqAndCivicsNamesVectorElement(int i) const;
+	int isPrereqAndCivicsValuesVectorElement(int i) const;
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
@@ -385,12 +383,12 @@ public:
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
 
-	const CvProperties* getProperties() const;
-	const CvProperties* getPropertiesAllCities() const;
-	const CvProperties* getPrereqMinProperties() const;
-	const CvProperties* getPrereqMaxProperties() const;
-	const CvProperties* getPrereqPlayerMinProperties() const;
-	const CvProperties* getPrereqPlayerMaxProperties() const;
+	const CvProperties* getProperties() const { return &m_Properties; }
+	const CvProperties* getPropertiesAllCities() const { return &m_PropertiesAllCities; }
+	const CvProperties* getPrereqMinProperties() const { return &m_PrereqMinProperties; }
+	const CvProperties* getPrereqMaxProperties() const { return &m_PrereqMaxProperties; }
+	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
+	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
 
 	//TB Combat Mods (Buildings) begin
 	UnitTypes getPropertySpawnUnit() const;
