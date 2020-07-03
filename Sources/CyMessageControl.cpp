@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CyMessageControl.h"
 
+
 void CyMessageControl::sendPushOrder(int iCityID, int eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)
 {
 	CvMessageControl::getInstance().sendPushOrder(iCityID, (OrderTypes) eOrder, iData, bAlt, bShift, bCtrl);
@@ -9,11 +10,6 @@ void CyMessageControl::sendPushOrder(int iCityID, int eOrder, int iData, bool bA
 void CyMessageControl::sendDoTask(int iCity, int eTask, int iData1, int iData2, bool bOption, bool bAlt, bool bShift, bool bCtrl)
 {
 	CvMessageControl::getInstance().sendDoTask(iCity, (TaskTypes) eTask, iData1, iData2, bOption, bAlt, bShift, bCtrl);
-}
-
-void CyMessageControl::sendTurnComplete()
-{
-	CvMessageControl::getInstance().sendTurnComplete();
 }
 
 void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
@@ -29,17 +25,12 @@ void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
 	delete[] PYiCivics;
 }
 
-void CyMessageControl::sendConvert(int  iReligion)
-{
-	CvMessageControl::getInstance().sendConvert( (ReligionTypes) iReligion);
-}
-
 void CyMessageControl::sendEmpireSplit(int /*PlayerTypes*/ ePlayer, int iAreaId)
 {
 	CvMessageControl::getInstance().sendEmpireSplit((PlayerTypes) ePlayer, iAreaId);
 }
 
-void CyMessageControl::sendResearch( int eTech, bool bShift)
+void CyMessageControl::sendResearch(int eTech, bool bShift)
 {
 	CvMessageControl::getInstance().sendResearch((TechTypes)eTech, -1, bShift);
 }
@@ -67,32 +58,12 @@ void CyMessageControl::sendModNetMessage(int iData1, int iData2, int iData3, int
 //
 // return true if succeeded
 //
-int CyMessageControl::GetFirstBadConnection()
+int CyMessageControl::GetFirstBadConnection() const
 {
 	return gDLL->getFirstBadConnection();
 }
 
-int CyMessageControl::GetConnState(int iPlayer)
+int CyMessageControl::GetConnState(int iPlayer) const
 {
 	return gDLL->getConnState((PlayerTypes)iPlayer);
-}
-
-void CyMessageControl::sendChooseTrait(int  iTrait, bool bNewValue)
-{
-	CvMessageControl::getInstance().sendChooseTrait((TraitTypes)iTrait, bNewValue);
-}
-
-void CyMessageControl::sendMergeUnit(int  iUnitID)
-{
-	CvMessageControl::getInstance().sendMergeUnit(iUnitID);
-}
-
-void CyMessageControl::sendSplitUnit(bool bConfirm)
-{
-	CvMessageControl::getInstance().sendSplitUnit(bConfirm);
-}
-
-void CyMessageControl::sendImprovementUpgrade(int iImprovement, int iX, int iY, bool bConfirm)
-{
-	CvMessageControl::getInstance().sendImprovementUpgrade((ImprovementTypes)iImprovement, iX, iY, bConfirm);
 }
