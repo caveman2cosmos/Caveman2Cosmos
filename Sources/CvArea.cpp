@@ -920,7 +920,7 @@ CvCity* CvArea::getTargetCity(PlayerTypes eIndex) const
 }
 
 
-void CvArea::setTargetCity(PlayerTypes eIndex, CvCity* pNewValue)
+void CvArea::setTargetCity(PlayerTypes eIndex, const CvCity* pNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
