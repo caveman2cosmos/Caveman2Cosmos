@@ -21,7 +21,7 @@
 		<English>My town folks are in need, can the [CT_EMPIRE] help?</English>
 		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider?</French>
 		<German>Mein Stamm ist in Not, kann uns das [CT_EMPIRE:2] helfen?</German>
-		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
+		<Italian>I miei concittadini hanno bisogno di aiuto, potete aiutarci?</Italian>
 		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -70,6 +70,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KOSHLING_PEDIA</Tag>
-		<English>[H1]Koshling[\H1][NEWLINE][BOLD]Town Marshal[NEWLINE]Lived: [\BOLD]c.March 19, 1848 – January 13, 1929[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]was a gambler, Pima County Deputy Sheriff,[PARAGRAPH:1]Koshling was a[PARAGRAPH:1]Koshling moved</English>
+		<English>[H1]Koshling[\H1][NEWLINE][BOLD]Town Marshal[NEWLINE]Lived:[\BOLD] c. March 19, 1848 – January 13, 1929</English>
 	</TEXT>
 </Civ4GameText>
