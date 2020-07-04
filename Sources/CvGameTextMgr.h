@@ -39,7 +39,7 @@ public:
 	DllExport void DeInitialize();
 	DllExport void Reset();
 
-	int getCurrentLanguage();
+	int getCurrentLanguage() const;
 
 	DllExport void setTimeStr(CvWString& szString, int iGameTurn, bool bSave);
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);

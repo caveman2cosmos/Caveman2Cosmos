@@ -259,7 +259,7 @@ public:
 	// Prefer to use plots() range instead of this for loops, searching etc.
 	CvPlot* getCityIndexPlot(int iIndex) const; // Exposed to Python
 
-	bool canWork(CvPlot* pPlot) const; // Exposed to Python
+	bool canWork(const CvPlot* pPlot) const; // Exposed to Python
 	void verifyWorkingPlot(int iIndex);
 	void verifyWorkingPlots();
 	void clearWorkingOverride(int iIndex); // Exposed to Python
@@ -586,8 +586,8 @@ public:
 	int getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const;
 	void setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange);
 	void updateOngoingTraining(UnitCombatTypes eCombat);
-	void assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot);
-	bool canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const;
+	void assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot);
+	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
 	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
 	void assignPromotionsFromBuildingChecked(const CvBuildingInfo& kBuilding, CvUnit* pLoopUnit) const;
@@ -639,7 +639,7 @@ public:
 /************************************************************************************************/
 
 	CvPlot* getRallyPlot() const; // Exposed to Python
-	void setRallyPlot(CvPlot* pPlot);
+	void setRallyPlot(const CvPlot* pPlot);
 
 	int getGameTurnFounded() const; // Exposed to Python
 	void setGameTurnFounded(int iNewValue);
@@ -1088,16 +1088,16 @@ public:
 	void changeBonusYieldRateModifier(YieldTypes eIndex, int iChange);
 
 	int getTradeYield(YieldTypes eIndex) const; // Exposed to Python
-	int totalTradeModifier(CvCity* pOtherCity = NULL) const; // Exposed to Python
+	int totalTradeModifier(const CvCity* pOtherCity = NULL) const; // Exposed to Python
 	int getPopulationTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
-	int getBaseTradeProfit(CvCity* pCity) const;
+	int getBaseTradeProfit(const CvCity* pCity) const;
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
-	int calculateTradeProfitTimes100(CvCity* pCity) const; // Exposed to Python
+	int calculateTradeProfitTimes100(const CvCity* pCity) const; // Exposed to Python
 #endif
 // BUG - Fractional Trade Routes - end
-	int calculateTradeProfit(CvCity* pCity) const; // Exposed to Python
+	int calculateTradeProfit(const CvCity* pCity) const; // Exposed to Python
 	int calculateTradeYield(YieldTypes eIndex, int iTradeProfit) const; // Exposed to Python
 // BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
@@ -1489,7 +1489,7 @@ public:
 	int getExtraYieldTurns() const;
 	void changeExtraYieldTurns (int iChange);
 	void setExtraYieldTurns(int iNewVal);
-	BuildTypes findChopBuild(FeatureTypes eFeature);
+	BuildTypes findChopBuild(FeatureTypes eFeature) const;
 	CultureLevelTypes getOccupationCultureLevel() const;
 	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
 	CultureLevelTypes getMaxCultureLevelAmongPlayers() const;
@@ -2395,6 +2395,8 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
 		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+
+		DECLARE_MAP_FUNCTOR(CvCity, const CvWString, getName);
 
 		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
