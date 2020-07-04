@@ -27,7 +27,7 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_PRODUCTION</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
