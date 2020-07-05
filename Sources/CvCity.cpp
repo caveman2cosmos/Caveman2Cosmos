@@ -26263,7 +26263,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 	int iFivePercentAssistance = 0;
 
 	const CvPlot* pPlot = plot();
-	if (plot() != NULL)
+	if (pPlot != NULL)
 	{
 		CvUnit* pBestUnit = NULL;
 		foreach_(CvUnit* pLoopUnit, pPlot->units())
