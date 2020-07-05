@@ -3723,11 +3723,9 @@ bool CvPlayerAI::AI_isCommercePlot(const CvPlot* pPlot) const
 
 bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group, int acceptableOdds) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iDX, iDY;
-	CvArea *pPlotArea = pPlot->area();
+	const CvArea* pPlotArea = pPlot->area();
 
 	for (iDX = -(iRange); iDX <= iRange; iDX++)
 	{
@@ -3739,13 +3737,8 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 			{
 				if (pLoopPlot->area() == pPlotArea)
 				{
-					pUnitNode = pLoopPlot->headUnitNode();
-
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 						// No need to loop over tiles full of our own units
 						if( pLoopUnit->getTeam() == getTeam() )
 						{
@@ -3847,12 +3840,10 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 
 	if ( !bResult )
 	{
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
 		CvPlot* pLoopPlot;
 		int iDistance;
 		int iDX, iDY;
-		CvArea *pPlotArea = pPlot->area();
+		const CvArea* pPlotArea = pPlot->area();
 		int iDangerRange;
 
 		for (iDX = -(iRange); iDX <= iRange && !bResult; iDX++)
@@ -3892,46 +3883,38 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 							}
 						}
 
-						pUnitNode = pLoopPlot->headUnitNode();
-
-						while (pUnitNode != NULL)
+						foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-							if (pLoopUnit != NULL)
+							// No need to loop over tiles full of our own units
+							if( pLoopUnit->getTeam() == eTeam )
 							{
-
-								// No need to loop over tiles full of our own units
-								if( pLoopUnit->getTeam() == eTeam )
+								if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
 								{
-									if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
-									{
-										break;
-									}
+									break;
 								}
+							}
 
-								if (pLoopUnit->isEnemy(eTeam))
+							if (pLoopUnit->isEnemy(eTeam))
+							{
+								if (pLoopUnit->canAttack())
 								{
-									if (pLoopUnit->canAttack())
+									if (!(pLoopUnit->isInvisible(eTeam, false)))
 									{
-										if (!(pLoopUnit->isInvisible(eTeam, false)))
+										if (pLoopUnit->canMoveOrAttackInto(pPlot))
 										{
-											if (pLoopUnit->canMoveOrAttackInto(pPlot))
+											if (!bTestMoves)
 											{
-												if (!bTestMoves)
+												bResult = true;
+												break;
+											}
+											else
+											{
+												iDangerRange = pLoopUnit->baseMoves();
+												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+												if (iDangerRange >= iDistance)
 												{
 													bResult = true;
 													break;
-												}
-												else
-												{
-													iDangerRange = pLoopUnit->baseMoves();
-													iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-													if (iDangerRange >= iDistance)
-													{
-														bResult = true;
-														break;
-													}
 												}
 											}
 										}
@@ -3944,7 +3927,6 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 			}
 		}
 	}
-
 
 	// The test moves case is a strict subset of the more general case,
 	// either is appropriate for setting the cache.  However, since the test moves
@@ -4061,14 +4043,12 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iCount;
 	int iDistance;
 	int iBorderDanger;
 	int iDX, iDY;
-	CvArea *pPlotArea = pPlot->area();
+	const CvArea* pPlotArea = pPlot->area();
 	int iDangerRange;
 	TeamTypes eTeam = getTeam();
 
@@ -4103,45 +4083,36 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 						}
 					}
 
-
-					pUnitNode = pLoopPlot->headUnitNode();
-
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-						if (pLoopUnit != NULL)
+						// No need to loop over tiles full of our own units
+						if( pLoopUnit->getTeam() == eTeam )
 						{
-							// No need to loop over tiles full of our own units
-							if( pLoopUnit->getTeam() == eTeam )
+							if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
 							{
-								if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
-								{
-									break;
-								}
+								break;
 							}
+						}
 
-							if (pLoopUnit->isEnemy(eTeam))
+						if (pLoopUnit->isEnemy(eTeam))
+						{
+							if (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
 							{
-								if (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
+								if (!(pLoopUnit->isInvisible(eTeam, false)))
 								{
-									if (!(pLoopUnit->isInvisible(eTeam, false)))
+									if (pLoopUnit->canMoveOrAttackInto(pPlot) || pLoopUnit->plot() == pPlot)
 									{
-										if (pLoopUnit->canMoveOrAttackInto(pPlot) || pLoopUnit->plot() == pPlot)
+										if (!bTestMoves)
 										{
-											if (!bTestMoves)
+											iCount++;
+										}
+										else
+										{
+											iDangerRange = pLoopUnit->baseMoves();
+											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+											if (iDangerRange >= iDistance)
 											{
 												iCount++;
-											}
-											else
-											{
-												iDangerRange = pLoopUnit->baseMoves();
-												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-												if (iDangerRange >= iDistance)
-												{
-													iCount++;
-												}
 											}
 										}
 									}
@@ -4171,8 +4142,6 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iCount;
 	int iDistance;
@@ -4211,14 +4180,8 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 						}
 					}
 
-
-					pUnitNode = pLoopPlot->headUnitNode();
-
-					while (pUnitNode != NULL)
+					foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 						if (atWar(pLoopUnit->getTeam(), getTeam()))
 						{
 							if (pLoopUnit->canAttack())
@@ -4269,8 +4232,6 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iCount;
 	int iDX, iDY;
@@ -4294,14 +4255,9 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 				{
 					if (pPlot->area() == pLoopPlot->area() || pPlot->isAdjacentToArea(pLoopPlot->getArea()))
 					{
-						pUnitNode = pLoopPlot->headUnitNode();
-
-						while (pUnitNode != NULL)
+						foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-							UnitAITypes aiType = pLoopUnit->AI_getUnitAIType();
+							const UnitAITypes aiType = pLoopUnit->AI_getUnitAIType();
 
 							if ( aiType == UNITAI_ATTACK_SEA || aiType == UNITAI_PIRATE_SEA || aiType == UNITAI_RESERVE_SEA )
 							{
@@ -4351,24 +4307,10 @@ int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMov
 				{
 					if (pPlot->isAdjacentToArea(pLoopPlot->getArea()))
 					{
-						pUnitNode = pLoopPlot->headUnitNode();
-
-						while (pUnitNode != NULL)
-						{
-							pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-							if (pLoopUnit->isEnemy(getTeam()))
-							{
-								if (pLoopUnit->canAttack())
-								{
-									if (!(pLoopUnit->isInvisible(getTeam(), false)))
-									{
-										iCount++;
-									}
-								}
-							}
-						}
+						iCount += algo::count_if(pLoopPlot->units(),
+							CvUnit::fn::isEnemy(getTeam()) &&
+							CvUnit::fn::canAttack() &&
+							!CvUnit::fn::isInvisible(getTeam(), false));
 					}
 				}
 			}
@@ -13659,13 +13601,8 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 
 		if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
 		{
-			CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 			{
-				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 				{
 					if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
@@ -13683,20 +13620,10 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 //TB tooling around - this may at some point be useful...
 //int CvPlayerAI::AI_PotentialEnemyAttackers(CvPlot* pPlot, bool bTestCanMove, bool bTestVisible) const
 //{
-//	CLLNode<IDInfo>* pUnitNode;
-//	CvUnit* pLoopUnit;
-//	int iCount;
-//	int iI;
+//	int iCount = 0;
 //
-//	iCount = 0;
-//
-//	pUnitNode = pPlot->headUnitNode();
-//
-//	while (pUnitNode != NULL)
+//	foreach_(CvUnit* pLoopUnit, pPlot->units())
 //	{
-//		pLoopUnit = ::getUnit(pUnitNode->m_data);
-//		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-//
 //		if (GET_TEAM(getTeam()).isAtWar(pLoopUnit->getTeam()))
 //		{
 //			if (pLoopUnit->getDomainType() == ((pPlot->isWater()) ? DOMAIN_SEA : DOMAIN_LAND) || pLoopUnit->canMoveAllTerrain())
@@ -13723,20 +13650,10 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 //
 //int CvPlayerAI::AI_PotentialDefenders(CvPlot* pPlot, bool bTestVisible) const
 //{
-//	CLLNode<IDInfo>* pUnitNode;
-//	CvUnit* pLoopUnit;
-//	int iCount;
-//	int iI;
+//	int iCount = 0;
 //
-//	iCount = 0;
-//
-//	pUnitNode = pPlot->headUnitNode();
-//
-//	while (pUnitNode != NULL)
+//	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 //	{
-//		pLoopUnit = ::getUnit(pUnitNode->m_data);
-//		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-//
 //		if (GET_TEAM(getTeam()).isAtWar(pLoopUnit->getTeam()))
 //		{
 //			if (!bTestVisible || (bTestVisible && !(pLoopUnit->isInvisible(getTeam(), false));
@@ -26315,8 +26232,6 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iValue;
 	int iDistance;
@@ -26335,13 +26250,9 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 				if (pLoopPlot->area() == pPlot->area())
 				{
 					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					pUnitNode = pLoopPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 						if (pLoopUnit->getOwner() == getID())
 						{
 							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
@@ -26371,7 +26282,6 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 		}
 	}
 
-
 	return iValue;
 }
 
@@ -26379,8 +26289,6 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iValue;
 	int iDistance;
@@ -26399,13 +26307,9 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 				if (pLoopPlot->area() == pPlot->area())
 				{
 					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					pUnitNode = pLoopPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 						if (atWar(pLoopUnit->getTeam(), getTeam()))
 						{
 							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
@@ -28439,8 +28343,6 @@ void CvPlayerAI::AI_doEnemyUnitData()
 
 	std::vector<int> aiDomainSums(NUM_DOMAIN_TYPES, 0);
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	int iI;
 
 	int iOldTotal = 0;
@@ -28453,13 +28355,8 @@ void CvPlayerAI::AI_doEnemyUnitData()
 		int iAdjacentAttackers = -1;
 		if (pLoopPlot->isVisible(getTeam(), false))
 		{
-			pUnitNode = pLoopPlot->headUnitNode();
-
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->canFight())
 				{
 					int iUnitValue = 1;
