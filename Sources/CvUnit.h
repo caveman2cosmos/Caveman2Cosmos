@@ -2355,7 +2355,7 @@ private:
 public:
 	bool isArcher() const;
 	bool isPromotionOverriden(PromotionTypes ePromotionType) const;
-	bool canCure(CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const;
+	bool canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const;
 	bool CureAffliction(PromotionLineTypes eAfflictionLine);
 	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
 	int getUnitCommunicability(PromotionLineTypes eAfflictionLine) const;
@@ -3078,7 +3078,7 @@ public:
 	bool canArrest() const;
 	void doArrest();
 
-	bool canAmbush(CvPlot* pPlot, bool bAssassinate = false) const;
+	bool canAmbush(const CvPlot* pPlot, bool bAssassinate = false) const;
 	bool doAmbush(bool bAssassinate = false);
 	void enactAmbush(bool bAssassinate = false);
 
@@ -3287,6 +3287,8 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBuildUp);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canAttack);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
@@ -3294,6 +3296,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isZoneOfControl);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
@@ -3335,17 +3338,21 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnit*, getTransportUnit);
 		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
 		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, revoltProtectionTotal);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, isEnemy, TeamTypes);
 
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, isInvisible, TeamTypes, bool);
 
+		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
 		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
 		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 	};

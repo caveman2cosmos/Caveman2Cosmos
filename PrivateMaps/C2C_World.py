@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.BonusBonus = 1.0
+		self.fBonusMult = 1.0
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
@@ -347,17 +347,17 @@ class MapConstants:
 		# Bonuses
 		selectionID = MAP.getCustomMapOption(6)
 		if not selectionID:
-			self.BonusBonus = 0.0
+			self.fBonusMult = 0.0
 		elif selectionID == 1:
-			self.BonusBonus *= 0.50
+			self.fBonusMult *= 0.50
 		elif selectionID == 2:
-			self.BonusBonus *= 0.75
+			self.fBonusMult *= 0.75
 		elif selectionID == 4:
-			self.BonusBonus *= 1.25
+			self.fBonusMult *= 1.25
 		elif selectionID == 5:
-			self.BonusBonus *= 1.50
+			self.fBonusMult *= 1.50
 		elif selectionID == 6:
-			self.BonusBonus *= 1.75
+			self.fBonusMult *= 1.75
 		# Pangea Breaker
 		selectionID = MAP.getCustomMapOption(7)
 		if selectionID or self.bDryland or self.bPangea:
@@ -3017,7 +3017,7 @@ class BonusPlacer:
 		MAP = GC.getMap()
 		MAP.recalculateAreas()
 		iWorldSize = mc.iWorldSize
-		BonusBonus = mc.BonusBonus
+		fBonusMult = mc.fBonusMult
 		self.aBonusList = bonusList = []
 		# Create and shuffle the bonus list.
 		n = 0
@@ -3029,7 +3029,7 @@ class BonusPlacer:
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			iPlaceOrder = CvBonusInfo.getPlacementOrder()
 			# Filter out bonuses with iPlacementOrder at -1 or below.
-			if iPlaceOrder < 0:
+			if iPlaceOrder < 1:
 				n += 1
 				continue
 			bonus = BonusArea()
@@ -3037,12 +3037,13 @@ class BonusPlacer:
 			# Calculate desired amount
 			fBaseCount = (
 				(
-					randint(0, CvBonusInfo.getRandAppearance1()) + randint(0, CvBonusInfo.getRandAppearance2()) +
-					randint(0, CvBonusInfo.getRandAppearance3()) + randint(0, CvBonusInfo.getRandAppearance4()) + CvBonusInfo.getConstAppearance()
+					CvBonusInfo.getConstAppearance() +
+					randint(0, CvBonusInfo.getRandAppearance1()) +
+					randint(0, CvBonusInfo.getRandAppearance2()) +
+					randint(0, CvBonusInfo.getRandAppearance3()) +
+					randint(0, CvBonusInfo.getRandAppearance4())
 				) / 100.0
 			)
-			if iWorldSize:
-				fBaseCount += fBaseCount * iWorldSize / 4.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
@@ -3052,10 +3053,10 @@ class BonusPlacer:
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
-			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
-			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
+			iBonusCount = int(fBonusMult * (fBaseCount + fDensityCount))
 			if iBonusCount < 1:
 				iBonusCount = 1
+			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tDesired amount = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, fBonusMult, iBonusCount)
 			bonus.desiredBonusCount = iBonusCount
 
 			bonusList.append(bonus)
@@ -3121,38 +3122,45 @@ class BonusPlacer:
 			lastI = i
 			if i >= plotListLength:
 				index = plotIndexList[i - plotListLength]
-			else:
-				index = plotIndexList[i]
+			else: index = plotIndexList[i]
+
 			CyPlot = MAP.plotByIndex(index)
-			if not self.CanPlaceBonus(CyPlot, indeXML, False): continue
-			# Place bonus.
+			if not self.CanPlaceBonus(CyPlot, indeXML, False):
+				continue
+			# Place bonus
 			CyPlot.setBonusType(indeXML)
 			bonus.currentBonusCount += 1
 			# Clustering
-			groupRange = bonusInfo.getGroupRange()
-			if 1 > groupRange: break
+			iGroupRange = bonusInfo.getGroupRange()
+			if iGroupRange < 1: break
 			iRand = bonusInfo.getGroupRand()
-			if 1 > iRand: break
-			groupRange += iWorldSize / 3
-			maxAdd = groupRange + (iWorldSize + 1) / 2
+			if iRand < 1: break
+			# Scale by worldsize
+			if iWorldSize / 3 > 0:
+				iGroupRange += iWorldSize / 3 # increase range
+				iRand -= iRand * iGroupRange / (iGroupRange + 4) # decrease chance
+
+			if iRand < 1: iRand = 1
+			iMaxCluster = iGroupRange + (iWorldSize + 1) / 2
 			iDeficit = iDesired - bonus.currentBonusCount
-			if maxAdd > iDeficit:
-				maxAdd = iDeficit
-			added = 0
-			szType = bonusInfo.getType()
+			if iMaxCluster > iDeficit:
+				iMaxCluster = iDeficit
+			iCluster = 0
 			x = CyPlot.getX()
 			y = CyPlot.getY()
-			for dx in xrange(-groupRange, groupRange + 1):
-				for dy in xrange(-groupRange, groupRange + 1):
+			for dx in xrange(-iGroupRange, iGroupRange + 1):
+				for dy in xrange(-iGroupRange, iGroupRange + 1):
 					CyPlotX = self.plotXY(x, y, dx, dy)
-					if CyPlotX and self.PlotCanHaveBonus(CyPlotX, indeXML, False) and GAME.getSorenRandNum(100, "0-99") < iRand:
+					if CyPlotX and GAME.getSorenRandNum(100, "0-99") < iRand and self.PlotCanHaveBonus(CyPlotX, indeXML, False):
 						#place bonus
 						CyPlotX.setBonusType(indeXML)
-						print "Group Placed: " + szType
 						bonus.currentBonusCount += 1
-						added += 1
-						if added == maxAdd:
+						iCluster += 1
+						if iCluster == iMaxCluster:
+							print ("Group Placed %d " % iCluster) + bonusInfo.getType()
 							return (lastI + 1) % plotListLength
+			if iCluster:
+				print ("Group Placed %d " % iCluster) + bonusInfo.getType()
 			break
 		return (lastI + 1) % plotListLength
 
@@ -3629,7 +3637,7 @@ class StartingPlotFinder:
 			if not self.plotList[i].vacant:
 				currentTotalValue = self.plotList[i].fTotalValue
 				percentLacking = 1.0 - currentTotalValue / bestTotalValue
-				if percentLacking > .0 and mc.BonusBonus:
+				if percentLacking > .0 and mc.fBonusMult:
 					value1 = int(percentLacking / 0.2)
 					if 5 > value1:
 						bonuses = value1
@@ -4641,7 +4649,7 @@ def addFeatures():
 
 
 def addBonuses():
-	if mc.BonusBonus:
+	if mc.fBonusMult:
 		print "Bonus generation"
 		timer = BugUtil.Timer('Bonus generation')
 		bp.AddBonuses()
