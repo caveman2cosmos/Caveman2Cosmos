@@ -1187,7 +1187,9 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isFreshWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
