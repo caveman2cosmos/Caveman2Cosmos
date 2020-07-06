@@ -215,7 +215,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AGAMEMNON</Tag>
 		<English>Agamemnon</English>
-		<English>Agamennone</English>
+		<Italian>Agamennone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AGAMEMNON_PEDIA</Tag>
@@ -12462,6 +12462,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YULGOK</Tag>
 		<English>Yulgok</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YULGOK_PEDIA</Tag>
 		<English>[BOLD][H1]Yulgok[\H1][\BOLD][NEWLINE][BOLD](December 26, 1536 - 1584)[\BOLD][NEWLINE]Was one of the two most prominent Korean Confucian scholars of the Joseon Dynasty, the other being his older contemporary. He is not only known as a scholar but also as a revered politician and reformer. He was academical successor of Jo Gwang-jo.</English>
