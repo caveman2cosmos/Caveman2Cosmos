@@ -32301,7 +32301,7 @@ bool CvUnit::performInquisition()
 								int iLoop;
 								for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
 								{
-									if (pCity->isHasReligion((ReligionTypes)iI))
+									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
 										GC.getGame().setHolyCity((ReligionTypes)iI, pLoopCity, true);
 										//TODO: Create a text entry: "A Holy City Religion has been Respawned"
