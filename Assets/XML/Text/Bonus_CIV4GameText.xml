@@ -1081,14 +1081,7 @@
 		<Tag>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Tag>
 		<English>Carved emu eggs are an art form made by carving a kalthi-parti, or emu egg. The practice began in the mid to late 19th century and, while it has been practiced by people in Australia from many backgrounds, it is often strongly associated with Aboriginal art. Some of the earliest carvers were not strictly Aboriginal and these carvers created very decorative and complicated designs that were popular at the time.</English>
 		<Italian>Le uova di emu intagliate sono una forma d'arte creata scolpendo un kalthi-parti, o uovo di emu. La pratica è iniziata tra la metà e la fine del XIX secolo e, sebbene sia stata praticata da australiani di diversa estrazione etnico-sociale, è spesso fortemente associata all'arte aborigena. Alcuni dei primi intagliatori non erano aborigeni e questi intagliatori crearono disegni molto decorativi e complicati, molto popolari all'epoca.</Italian>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CASTILIAN</Tag>
-		<English>Castilian</English>
-		<French>Castillan</French>
-		<Italian>Castigliano</Italian>
-		<Polish>Kastylijska</Polish>
-	</TEXT>-->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAT</Tag>
 		<English>Cat</English>
@@ -3883,13 +3876,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEMONS_PEDIA</Tag>
 		<English>The lemon is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C.</English>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
-		<English>Leonese</English>
-		<French>Léonais</French>
-		<Polish>Leońska</Polish>
-	</TEXT>-->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS</Tag>
 		<English>Levitation Generators</English>
@@ -6096,13 +6083,7 @@
 		<French>Russe</French>
 		<Italian>Russo</Italian>
 		<Polish>Rosyjski</Polish>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
-		<English>Sabbatean</English>
-		<French>Sabbatéenne</French>
-		<Italian>Sabbateo</Italian>
-	</TEXT>-->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SADDLES</Tag>
 		<English>Saddles</English>
