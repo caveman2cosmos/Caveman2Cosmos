@@ -4005,19 +4005,50 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 	{
 		bool bPlotIsWater = isWater();
 		// This loop is for water
-		foreach_(const CvPlot* pAdjacentPlot, adjacent())
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 		{
-			if(pAdjacentPlot->isWater())
+			pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+			if(pAdjacentPlot != NULL)
 			{
-				// Don't count diagonal hops across land isthmus
-				if (bPlotIsWater && !isCardinalDirection((DirectionTypes)iI))
+				if(pAdjacentPlot->isWater())
 				{
-					if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
+					// Don't count diagonal hops across land isthmus
+					if (bPlotIsWater && !isCardinalDirection((DirectionTypes)iI))
 					{
-						continue;
+						if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
+						{
+							continue;
+						}
+					}
+					if(pAdjacentPlot->isImpassable())
+					{
+						if(isCardinalDirection((DirectionTypes)iI))
+						{
+							bInPassableSection = false;
+						}
+					}
+					else if(!bInPassableSection)
+					{
+						bInPassableSection = true;
+						++iPassableSections;
 					}
 				}
-				if(pAdjacentPlot->isImpassable())
+				else
+				{
+					bInPassableSection = false;
+				}
+			}
+		}
+	}
+	else
+	{
+		// This loop is for land
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		{
+			pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+			if(pAdjacentPlot != NULL)
+			{
+				if(pAdjacentPlot->isWater() || pAdjacentPlot->isImpassable())
 				{
 					if(isCardinalDirection((DirectionTypes)iI))
 					{
@@ -4029,29 +4060,6 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 					bInPassableSection = true;
 					++iPassableSections;
 				}
-			}
-			else
-			{
-				bInPassableSection = false;
-			}
-		}
-	}
-	else
-	{
-		// This loop is for land
-		foreach_(const CvPlot* pAdjacentPlot, adjacent())
-		{
-			if(pAdjacentPlot->isWater() || pAdjacentPlot->isImpassable())
-			{
-				if(isCardinalDirection((DirectionTypes)iI))
-				{
-					bInPassableSection = false;
-				}
-			}
-			else if(!bInPassableSection)
-			{
-				bInPassableSection = true;
-				++iPassableSections;
 			}
 		}
 	}
