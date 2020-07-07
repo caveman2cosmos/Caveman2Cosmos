@@ -39,9 +39,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_BATTLE_STATS_WRITTEN</Tag>
 		<English>Battle stats written to log and reset</English>
-		<French>Stats de Bataille inscritent dans le Log, et remises à zéro</French>
+		<French>Statistiques de bataille écrites dans le registre et remise à zéro</French>
 		<German>Kampfstatistiken im Protokoll verzeichnet und zurückgesetzt</German>
-		<Italian>Statistiche di combattimento inserite nel log e resettate</Italian>
+		<Italian>Statistiche di combattimento inserite nel registro e resettate</Italian>
 		<Spanish>Estadísticas de batalla inscritas en el registro</Spanish>
 		<Polish>Statystyki bitwy zostały zapisane do rejestru i zresetowane</Polish>
 	</TEXT>
