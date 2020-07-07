@@ -186,6 +186,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_STRATEGY</Tag>
 		<English>TBD</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Naval totem[COLOR_REVERT] provides a small amount of experience to naval units. In later times this is the flag that troops rally round.</English>
@@ -197,7 +198,7 @@
 		<English>Only subdued pigs can build the pig herd. It provides a pig resource.</English>
 		<French>Le troupeau de cochons peut être construit directement par des sangliers apprivoisés.</French>
 		<Italian>Solo i maiali addomesticati possono costruire un Branco - Maiali; quest'edificio fornisce una fonte di maiali. Basato su un'idea di Sarkyn.</Italian>
-	</TEXT> 
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_STRATEGY</Tag>
 		<English>TBD</English>
@@ -206,7 +207,7 @@
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD_STRATEGY</Tag>
 		<English>Ratite Flocks provide carcass, eggs and feathers as well as happiness, food and production.</English>
 		<French>Les troupeaux de ratites fournissent des carcasse, des oeufs et des plumes, ainsi que bonheur, nourriture et production.</French>
-	</TEXT> 
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD_STRATEGY</Tag>
 		<English>TBD</English>

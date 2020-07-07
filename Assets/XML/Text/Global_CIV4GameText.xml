@@ -2999,7 +2999,7 @@
 		<Tag>TXT_KEY_CONTINENTAL_CITY_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Continent</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes du Continent</French>
-		<German>[ICON_BULLET]keine laufenden Kosten für Kontinentalstädte</German>		
+		<German>[ICON_BULLET]keine laufenden Kosten für Kontinentalstädte</German>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città su questo continente</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en todas las ciudades de este continente</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania wszystkich miast na kontynencie</Polish>
@@ -3008,7 +3008,7 @@
 		<Tag>TXT_KEY_CONTINENTAL_CITY_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Continent</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien pour toutes les Villes du Continent</French>
-		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Kontinentalstädte</German>				
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Kontinentalstädte</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città su questo continente</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades de este continente</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
@@ -11310,7 +11310,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OVERSEAS_CITY_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for Overseas Cities</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour les Villes d'outre-mer</French>
-		<German>[ICON_BULLET]keine laufenden Kosten für Überseestädte</German>		
+		<German>[ICON_BULLET]keine laufenden Kosten für Überseestädte</German>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per le città oltremare</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en las ciudades de ultramar</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania za miasta zaoceaniczne</Polish>
@@ -11319,7 +11319,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OVERSEAS_CITY_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for Overseas Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien pour les Villes d'outre-mer</French>
-		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Überseestädte</German>	
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Überseestädte</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per le città oltremare</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en las ciudades de ultramar</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast zaoceanicznych</Polish>
