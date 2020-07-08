@@ -584,7 +584,7 @@ void CvPlot::erase()
 
 float CvPlot::getPointX() const
 {
-	CvViewport* pCurrentViewport = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	FAssert(pCurrentViewport != NULL);
 
@@ -594,7 +594,7 @@ float CvPlot::getPointX() const
 
 float CvPlot::getPointY() const
 {
-	CvViewport* pCurrentViewport = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	FAssert(pCurrentViewport != NULL);
 
@@ -1306,9 +1306,9 @@ void CvPlot::verifyUnitValidPlot()
 	bool bAnyMoved = false;
 	std::vector<CvUnit*> aUnits;
 
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+	foreach_(CvUnit* pLoopUnit, units())
 	{
-		aUnits.push_back(*unitItr);
+		aUnits.push_back(pLoopUnit);
 	}
 
 	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
@@ -3756,10 +3756,8 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 			if (pLoopPlot == NULL)
 				continue;
 
-			for(unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
+			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 			{
-				CvUnit* pLoopUnit = *unitItr;
-
 				if ((eOwner == NO_PLAYER || pLoopUnit->getOwner() == eOwner)
 					&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
 					&& (!bTestAtWar || eAttackingPlayer == NO_PLAYER || atWar(GET_PLAYER(eAttackingPlayer).getTeam(), pLoopUnit->getTeam()))

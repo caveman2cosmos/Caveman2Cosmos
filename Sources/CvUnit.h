@@ -3311,6 +3311,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBlockading);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isMADEnabled);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isSpy);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
