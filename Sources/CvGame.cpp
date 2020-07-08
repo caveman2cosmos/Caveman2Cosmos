@@ -1199,9 +1199,18 @@ void CvGame::initFreeUnits()
 void CvGame::assignStartingPlots()
 {
 	PROFILE_FUNC();
-
-	std::vector<int> playerOrder;
-	std::vector<int>::iterator playerOrderIter;
+	{
+		// Python override - Most mapscripts overide
+		bool bAssignStartingPlots = false;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+		&& bAssignStartingPlots)
+		{
+			return;
+		}
+	}
+	// Toffer - N.B.
+// Scenarios with random players also use this code, and the scenario may define the starting plot for some arbitrary player slots; i.e. not all of them.
+// P.S. I have no insight into why the code below is as convoluted as it is, so don't ask me.
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -1212,7 +1221,7 @@ void CvGame::assignStartingPlots()
 
 			for (int iJ = 0; iJ < GC.getMap().numPlots(); iJ++)
 			{
-				gDLL->callUpdater();	// allow window updates during launch
+				gDLL->callUpdater(); // allow window updates during launch
 
 				CvPlot* pPlot = GC.getMap().plotByIndex(iJ);
 
@@ -1228,10 +1237,9 @@ void CvGame::assignStartingPlots()
 							break;
 						}
 					}
-
 					if (bValid)
 					{
-						const int iValue = (1 + getSorenRandNum(1000, "Starting Plot"));
+						const int iValue = 1 + getSorenRandNum(1000, "Starting Plot");
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;
@@ -1240,30 +1248,19 @@ void CvGame::assignStartingPlots()
 					}
 				}
 			}
-
 			if (pBestPlot != NULL)
 			{
 				GET_PLAYER((PlayerTypes)iI).setStartingPlot(pBestPlot, true);
 			}
 		}
 	}
-
-	{
-		// Python override
-		bool bAssignStartingPlots = false;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
-			&& bAssignStartingPlots)
-		{
-			return;
-		}
-	}
+	std::vector<int> playerOrder;
 
 	if (isTeamGame())
 	{
 		for (int iPass = 0; iPass < 2 * MAX_PLAYERS; ++iPass)
 		{
 			bool bStartFound = false;
-
 			const int iRandOffset = getSorenRandNum(countCivTeamsAlive(), "Team Starting Plot");
 
 			for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
@@ -1274,32 +1271,29 @@ void CvGame::assignStartingPlots()
 				{
 					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == iLoopTeam)
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).getStartingPlot() == NULL)
-							{
-								CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iJ).findStartingPlot();
+						CvPlayer& playerX = GET_PLAYER((PlayerTypes)iJ);
 
-								if (NULL != pStartingPlot)
-								{
-									GET_PLAYER((PlayerTypes)iJ).setStartingPlot(pStartingPlot, true);
-									playerOrder.push_back(iJ);
-								}
-								bStartFound = true;
-								break;
+						if (playerX.isAlive() && playerX.getTeam() == iLoopTeam && playerX.getStartingPlot() == NULL)
+						{
+							CvPlot* pStartingPlot = playerX.findStartingPlot();
+
+							if (NULL != pStartingPlot)
+							{
+								playerX.setStartingPlot(pStartingPlot, true);
+								playerOrder.push_back(iJ);
 							}
+							bStartFound = true;
+							break;
 						}
 					}
 				}
 			}
-
 			if (!bStartFound)
 			{
 				break;
 			}
 		}
-
-		//check all players have starting plots
+		// Check that all players have starting plots
 		for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 		{
 			FAssertMsg(!GET_PLAYER((PlayerTypes)iJ).isAlive() || GET_PLAYER((PlayerTypes)iJ).getStartingPlot() != NULL, "Player has no starting plot");
@@ -1311,78 +1305,72 @@ void CvGame::assignStartingPlots()
 
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			const int iLoopPlayer = ((iI + iRandOffset) % MAX_PC_PLAYERS);
+			const int iPlayerX = (iI + iRandOffset) % MAX_PC_PLAYERS;
+			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iPlayerX);
 
-			if (GET_PLAYER((PlayerTypes)iLoopPlayer).isAlive() && GET_PLAYER((PlayerTypes)iLoopPlayer).isHuman())
+			if (playerX.isAlive() && playerX.isHuman() && playerX.getStartingPlot() == NULL)
 			{
-				if (GET_PLAYER((PlayerTypes)iLoopPlayer).getStartingPlot() == NULL)
-				{
-					GET_PLAYER((PlayerTypes)iLoopPlayer).setStartingPlot(GET_PLAYER((PlayerTypes)iLoopPlayer).findStartingPlot(), true);
-					playerOrder.push_back(iLoopPlayer);
-				}
+				playerX.setStartingPlot(playerX.findStartingPlot(), true);
+				playerOrder.push_back(iPlayerX);
 			}
 		}
-
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isHuman())
+			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+
+			if (playerX.isAlive() && !playerX.isHuman() && playerX.getStartingPlot() == NULL)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getStartingPlot() == NULL)
-				{
-					GET_PLAYER((PlayerTypes)iI).setStartingPlot(GET_PLAYER((PlayerTypes)iI).findStartingPlot(), true);
-					playerOrder.push_back(iI);
-				}
+				playerX.setStartingPlot(playerX.findStartingPlot(), true);
+				playerOrder.push_back(iI);
 			}
 		}
 	}
 	else
 	{
-		const int iHumanSlot = range((((countCivPlayersAlive() - 1) * GC.getHandicapInfo(getHandicapType()).getStartingLocationPercent()) / 100), 0, (countCivPlayersAlive() - 1));
+		const int iHumanSlot = range((countCivPlayersAlive() - 1) * GC.getHandicapInfo(getHandicapType()).getStartingLocationPercent() / 100, 0, countCivPlayersAlive() - 1);
 
 		for (int iI = 0; iI < iHumanSlot; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isHuman())
+			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+
+			if (playerX.isAlive() && !playerX.isHuman() && playerX.getStartingPlot() == NULL)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getStartingPlot() == NULL)
-				{
-					GET_PLAYER((PlayerTypes)iI).setStartingPlot(GET_PLAYER((PlayerTypes)iI).findStartingPlot(), true);
-					playerOrder.push_back(iI);
-				}
+				playerX.setStartingPlot(playerX.findStartingPlot(), true);
+				playerOrder.push_back(iI);
 			}
 		}
-
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+
+			if (playerX.isAlive() && playerX.isHuman() && playerX.getStartingPlot() == NULL)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getStartingPlot() == NULL)
-				{
-					GET_PLAYER((PlayerTypes)iI).setStartingPlot(GET_PLAYER((PlayerTypes)iI).findStartingPlot(), true);
-					playerOrder.push_back(iI);
-				}
+				playerX.setStartingPlot(playerX.findStartingPlot(), true);
+				playerOrder.push_back(iI);
 			}
 		}
-
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStartingPlot() == NULL)
+			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+
+			if (playerX.isAlive() && playerX.getStartingPlot() == NULL)
 			{
-				GET_PLAYER((PlayerTypes)iI).setStartingPlot(GET_PLAYER((PlayerTypes)iI).findStartingPlot(), true);
+				playerX.setStartingPlot(playerX.findStartingPlot(), true);
 				playerOrder.push_back(iI);
 			}
 		}
 	}
+	// Now iterate over the player starts in the original order and re-place them.
+	std::vector<int>::iterator iter;
 
-	//Now iterate over the player starts in the original order and re-place them.
-	for (playerOrderIter = playerOrder.begin(); playerOrderIter != playerOrder.end(); ++playerOrderIter)
+	for (iter = playerOrder.begin(); iter != playerOrder.end(); ++iter)
 	{
-		GET_PLAYER((PlayerTypes)(*playerOrderIter)).setStartingPlot(GET_PLAYER((PlayerTypes)(*playerOrderIter)).findStartingPlot(), true);
+		GET_PLAYER((PlayerTypes)(*iter)).setStartingPlot(GET_PLAYER((PlayerTypes)(*iter)).findStartingPlot(), true);
 	}
 }
 
 // Swaps starting locations until we have reached the optimal closeness between teams
 // (caveat: this isn't quite "optimal" because we could get stuck in local minima, but it's pretty good)
-
 void CvGame::normalizeStartingPlotLocations()
 {
 	CvPlot* apNewStartPlots[MAX_PC_PLAYERS];
@@ -2776,7 +2764,7 @@ void CvGame::testExtendedGame()
 }
 
 
-void CvGame::cityPushOrder(CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl) const
+void CvGame::cityPushOrder(const CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl) const
 {
 	CvMessageControl::getInstance().sendPushOrder(pCity->getID(), eOrder, iData, bAlt, bShift, bCtrl);
 }
@@ -3268,7 +3256,7 @@ void CvGame::clearSecretaryGeneral(VoteSourceTypes eVoteSource)
 {
 	for (int j = 0; j < GC.getNumVoteInfos(); ++j)
 	{
-		CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
+		const CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
 
 		if (kVote.isVoteSourceType(eVoteSource) && kVote.isSecretaryGeneral())
 		{
@@ -8547,7 +8535,7 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 {
 	PROFILE_FUNC();
 
-	CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
+	const CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
 
 	changeTradeRoutes(kVote.getTradeRoutes() * iChange);
 	changeFreeTradeCount(kVote.isFreeTrade() ? iChange : 0);
@@ -9275,8 +9263,8 @@ void CvGame::read(FDataStreamBase* pStream)
 
 			if (bReligionIsNew)
 			{
-				CvReligionInfo&	newReligion = GC.getReligionInfo((ReligionTypes)iI);
-				TechTypes eFoundingTech = (TechTypes)newReligion.getTechPrereq();
+				const CvReligionInfo&	newReligion = GC.getReligionInfo((ReligionTypes)iI);
+				const TechTypes eFoundingTech = (TechTypes)newReligion.getTechPrereq();
 
 				setTechCanFoundReligion(eFoundingTech, false);
 			}
@@ -10297,7 +10285,7 @@ void CvGame::doUpdateCacheOnTurn()
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		CvBuildingInfo&	kBuildingInfo = GC.getBuildingInfo((BuildingTypes) iI);
+		const CvBuildingInfo& kBuildingInfo = GC.getBuildingInfo((BuildingTypes) iI);
 
 		// if it is for holy city, then its a shrine-thing, add it
 		if (kBuildingInfo.getHolyCity() != NO_RELIGION)
@@ -12557,7 +12545,7 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 	{
 		return false;
 	}
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if (kBuilding.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kBuilding.getPrereqGameOption()))
 	{
@@ -12614,7 +12602,7 @@ bool CvGame::canEverTrain(UnitTypes eUnit) const
 	{
 		return false;
 	}
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (kUnit.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kUnit.getPrereqGameOption()))
 	{

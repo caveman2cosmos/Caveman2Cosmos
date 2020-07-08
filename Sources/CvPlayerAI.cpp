@@ -768,9 +768,8 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	CvPlot* pLastUpgradePlot = NULL;
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+		foreach_(CvUnit* pLoopUnit, units())
 		{
-			CvUnit* pLoopUnit = *itr;
 			if ( pLoopUnit->isDead() || pLoopUnit->isDelayedDeath() )
 			{
 				continue;
@@ -2878,7 +2877,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			{
 				for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); ++iImprovement)
 				{
-					CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iImprovement);
+					const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iImprovement);
 
 					if (kImprovement.isImprovementBonusMakesValid(eBonus))
 					{
@@ -4280,8 +4279,6 @@ int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMov
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iCount;
 	int iDX, iDY;
@@ -4989,8 +4986,6 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 	logBBAI("  Evaluate tech path value:" );
 	for(std::vector<TechTypes>::const_iterator itr = path->begin(); itr != path->end(); ++itr)
 	{
-		CvTechInfo& techInfo = GC.getTechInfo(*itr);
-
 		int iTempCost = std::max(1,GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
 		int iTempValue = AI_TechValueCached(*itr, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
@@ -5482,7 +5477,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 			if (eImprovement != NO_IMPROVEMENT)
 			{
-				CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
+				const CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
 
 				int iImprovementValue = 300;
 
@@ -6274,7 +6269,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 		if (GC.getGame().canEverConstruct(eLoopBuilding))
 		{
-			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
+			const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 			if (isTechRequiredForBuilding(eTech, eLoopBuilding))
 			{
 				if (isWorldWonder(eLoopBuilding))
@@ -10262,7 +10257,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 					PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate Unit Value");
 					for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 					{
-						CvUnitInfo& kLoopUnit = GC.getUnitInfo((UnitTypes)iI);
+						const CvUnitInfo& kLoopUnit = GC.getUnitInfo((UnitTypes)iI);
 
 						iTempValue = 0;
 						iTempTradeValue = 0;
@@ -10270,7 +10265,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						//	Don't consider units more than one era ahead of us
 						if ( kLoopUnit.getPrereqAndTech() != NO_TECH )
 						{
-							CvTechInfo& prereqTech = GC.getTechInfo((TechTypes)kLoopUnit.getPrereqAndTech());
+							const CvTechInfo& prereqTech = GC.getTechInfo((TechTypes)kLoopUnit.getPrereqAndTech());
 
 							if ( prereqTech.getEra() > (int)getCurrentEra() + 1 )
 							{
@@ -10369,14 +10364,14 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								//	the religion
 								if ( kLoopUnit.getPrereqReligion() != NO_RELIGION )
 								{
-									CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
+									const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
 
 									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
 								}
 								//	Similarly corporations
 								if ( kLoopUnit.getPrereqCorporation() != NO_RELIGION )
 								{
-									CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
+									const CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
 
 									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
 								}
@@ -10400,7 +10395,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 				if (!GET_TEAM(getTeam()).isObsoleteBuilding(eLoopBuilding))
 				{
-					CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
+					const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 					int iBuildingTechDistance;
 					bool bCanConstruct;
 
@@ -10598,10 +10593,10 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 									//	Without some more checks we are over-assessing religious buildings a lot
 									//	so if there is a religion pre-req make some basic checks on the availability of
 									//	the religion
-									ReligionTypes eReligion = (ReligionTypes)kLoopBuilding.getPrereqReligion();
+									const ReligionTypes eReligion = (ReligionTypes)kLoopBuilding.getPrereqReligion();
 									if ( eReligion != NO_RELIGION )
 									{
-										CvReligionInfo& kReligion = GC.getReligionInfo(eReligion);
+										const CvReligionInfo& kReligion = GC.getReligionInfo(eReligion);
 
 										//	Trade is short term - don't assume useful religion spread - just weight by
 										//	the cities that have the religion already
@@ -10611,10 +10606,10 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 									}
 
 									//	Similarly corporations
-									CorporationTypes eCorporation = (CorporationTypes)kLoopBuilding.getPrereqCorporation();
+									const CorporationTypes eCorporation = (CorporationTypes)kLoopBuilding.getPrereqCorporation();
 									if ( iTempValue > 0 && eCorporation != NO_CORPORATION )
 									{
-										CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
+										const CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
 
 										//	Trade is short term - don't assume useful corporation spread - just weight by
 										//	the cities that have the religion already
@@ -10664,8 +10659,8 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 				PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate Project Value");
 				for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
 				{
-					ProjectTypes eProject = (ProjectTypes) iI;
-					CvProjectInfo& kLoopProject = GC.getProjectInfo(eProject);
+					const ProjectTypes eProject = (ProjectTypes) iI;
+					const CvProjectInfo& kLoopProject = GC.getProjectInfo(eProject);
 					iTempValue = 0;
 					iTempTradeValue = 0;
 					iTempNonTradeValue = 0;
@@ -10819,7 +10814,7 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 		{
 			int iNumCorpBonuses = 0;
 			iCorpCount += getNumCities() / 6 + 1;
-			CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
+			const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
 			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 			{
 				if (eBonus == kCorp.getPrereqBonus(i))
@@ -13901,9 +13896,9 @@ int CvPlayerAI::AI_missionaryValue(const CvArea* pArea, ReligionTypes eReligion,
 
 int CvPlayerAI::AI_executiveValue(const CvArea* pArea, CorporationTypes eCorporation, PlayerTypes* peBestPlayer) const
 {
-	CvTeam& kTeam = GET_TEAM(getTeam());
-	CvGame& kGame = GC.getGame();
-	CvCorporationInfo& kCorp = GC.getCorporationInfo(eCorporation);
+	const CvTeam& kTeam = GET_TEAM(getTeam());
+	const CvGame& kGame = GC.getGame();
+	const CvCorporationInfo& kCorp = GC.getCorporationInfo(eCorporation);
 
 	int iSpreadInternalValue = 100;
 	int iSpreadExternalValue = 0;
@@ -14091,13 +14086,13 @@ int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity*
 	{
 		return 0;
 	}
-	CvCorporationInfo& kCorp = GC.getCorporationInfo(eCorporation);
+	const CvCorporationInfo& kCorp = GC.getCorporationInfo(eCorporation);
 	int iBonusValue = 0;
 
 	for (int iBonus = 0; iBonus < GC.getNumBonusInfos(); iBonus++)
 	{
-		BonusTypes eBonus = (BonusTypes)iBonus;
-		int iBonusCount = pCity->getNumBonuses(eBonus);
+		const BonusTypes eBonus = (BonusTypes)iBonus;
+		const int iBonusCount = pCity->getNumBonuses(eBonus);
 		if (iBonusCount > 0)
 		{
 			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
@@ -16388,10 +16383,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
-			CivicTypes eTempCivic = ((paeSelectedCivics == NULL)? getCivics((CivicOptionTypes)iI) : paeSelectedCivics[iI]);
+			const CivicTypes eTempCivic = ((paeSelectedCivics == NULL)? getCivics((CivicOptionTypes)iI) : paeSelectedCivics[iI]);
 			if ( eTempCivic != NO_CIVIC )
 			{
-				CvCivicInfo& kTempCivic = GC.getCivicInfo(eTempCivic);
+				const CvCivicInfo& kTempCivic = GC.getCivicInfo(eTempCivic);
 				if (kTempCivic.getCivicOptionType() == iI)
 				{
 					if (bCivicOptionVacuum)
@@ -17966,7 +17961,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	{
 		if (canSpyDestroyProject(eTargetPlayer, (ProjectTypes)iData))
 		{
-			CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iData);
+			const CvProjectInfo& kProject = GC.getProjectInfo((ProjectTypes)iData);
 
 			iValue += getProductionNeeded((ProjectTypes)iData) * ((kProject.getMaxTeamInstances() == 1) ? 3 : 2);
 		}
@@ -17983,7 +17978,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			{
 				if (pCity->getProductionProject() != NO_PROJECT)
 				{
-					CvProjectInfo& kProject = GC.getProjectInfo(pCity->getProductionProject());
+					const CvProjectInfo& kProject = GC.getProjectInfo(pCity->getProductionProject());
 					iValue += iTempValue * ((kProject.getMaxTeamInstances() == 1) ? 4 : 2);
 				}
 				else if (pCity->getProductionBuilding() != NO_BUILDING)
@@ -24435,7 +24430,6 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 	}
 	iValue += std::max(0, iBestUnitValue - 15);
 
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 	//cultural things
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -24443,7 +24437,7 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 
 		if (isTechRequiredForBuilding(eTech, eLoopBuilding))
 		{
-			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
+			const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 
 			iValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) / 20;
 			iValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 2;
@@ -28823,7 +28817,7 @@ bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, Relig
 		return false;
 	}
 
-	CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
+	const CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
 
 	//happiness
 	if (kCivicSelected.getCivicPercentAnger() != 0 || kCivicSelected.getHappyPerMilitaryUnit() != 0
@@ -28896,8 +28890,8 @@ bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTy
 		return false;
 	}
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
 
 	//happiness
 	if (kCivic.getCivicPercentAnger() != 0 || kCivic.getHappyPerMilitaryUnit() != 0
@@ -30222,11 +30216,11 @@ int CvPlayerAI::AI_getCivicAttitudeChange(PlayerTypes ePlayer) const
 	{
 		if ( getCivics((CivicOptionTypes)iI) != NO_CIVIC )
 		{
-			CvCivicInfo& kCivicOption = GC.getCivicInfo(getCivics((CivicOptionTypes)iI));
+			const CvCivicInfo& kCivicOption = GC.getCivicInfo(getCivics((CivicOptionTypes)iI));
 
 			for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
 			{
-				int eCivic = GET_PLAYER(ePlayer).getCivics((CivicOptionTypes)iJ);
+				const int eCivic = GET_PLAYER(ePlayer).getCivics((CivicOptionTypes)iJ);
 
 				if ( eCivic != NO_CIVIC )
 				{

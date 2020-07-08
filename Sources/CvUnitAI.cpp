@@ -851,7 +851,7 @@ bool CvUnitAI::AI_promote()
 	return false;
 }
 
-int CvUnitAI::AI_groupFirstVal()
+int CvUnitAI::AI_groupFirstVal() const
 {
 	if ( m_iGroupLeadOverride != -1 )
 	{
@@ -1031,7 +1031,7 @@ int CvUnitAI::AI_groupFirstVal()
 }
 
 
-int CvUnitAI::AI_groupSecondVal()
+int CvUnitAI::AI_groupSecondVal() const
 {
 	return ((getDomainType() == DOMAIN_AIR) ? airBaseCombatStr() : baseCombatStr());
 }
@@ -1051,7 +1051,7 @@ void CvUnitAI::AI_setPredictedHitPoints(int iPredictedHitPoints)
 	}
 }
 
-bool CvUnitAI::AI_getHasAttacked()
+bool CvUnitAI::AI_getHasAttacked() const
 {
 	return m_bHasAttacked;
 }
@@ -1411,7 +1411,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 
 // Returns true if the unit found a build for this city...
-bool CvUnitAI::AI_bestCityBuild(CvCity* pCity, CvPlot** ppBestPlot, BuildTypes* peBestBuild, CvPlot* pIgnorePlot, CvUnit* pUnit)
+bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildTypes* peBestBuild, const CvPlot* pIgnorePlot, const CvUnit* pUnit)
 {
 	PROFILE_FUNC();
 
@@ -2140,9 +2140,8 @@ void CvUnitAI::AI_settleMove()
 	return;
 }
 
-int CvUnitAI::AI_minSettlerDefense()
+int CvUnitAI::AI_minSettlerDefense() const
 {
-
 	int defenders = 2;
 
 	if(getGameTurnCreated() > 0)
@@ -14497,17 +14496,17 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 	return false;
 }
 
-int CvUnitAI::AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra)
+int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 {
 	int iNeeded = iExtra;
-	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
+	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
 	{
 		iNeeded += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) + 10) / 19;
 	}
 
 	//	Super forts - PARTIAL merge here to encourage defense of choke points
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	if (kPlayer.AI_getPlotDanger(pPlot) > 0)
 	{
 		++iNeeded;
@@ -14544,7 +14543,7 @@ int CvUnitAI::AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra)
 	{
 		for (int iY = -iRange; iY <= iRange; iY++)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
+			const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
 			if (pLoopPlot != NULL)
 			{
 				iNumHostiles += pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
@@ -15240,14 +15239,11 @@ bool CvUnitAI::AI_pickupTargetSpy()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_chokeDefend()
 {
-	CvCity* pCity;
-	int iPlotDanger;
-
 	FAssert(AI_isCityAIType());
 
 	// XXX what about amphib invasions?
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -15257,7 +15253,7 @@ bool CvUnitAI::AI_chokeDefend()
 			{
 				if (pCity->AI_isDefended(pCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType)))
 				{
-					iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
+					const int iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
 
 					if (iPlotDanger <= 4)
 					{
@@ -16973,7 +16969,7 @@ bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 	{
 		for (int iDY = -iSearchRange; iDY <= iSearchRange; ++iDY)
 		{
-			CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 			if (pLoopPlot != NULL && pLoopPlot->area() == plot()->area())
 			{
@@ -18573,9 +18569,8 @@ bool CvUnitAI::AI_safety(int iRange)
 				{
 					int iCount = 0;
 
-					for(CvPlot::unit_iterator itr = pLoopPlot->beginUnits(); itr != pLoopPlot->endUnits(); ++itr)
+					foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 					{
-						CvUnit* pLoopUnit = *itr;
 						if (pLoopUnit->getOwner() == getOwner() && pLoopUnit->canDefend())
 						{
 							CvUnit* pHeadUnit = pLoopUnit->getGroup()->getHeadUnit();
@@ -18675,9 +18670,8 @@ bool CvUnitAI::AI_safety(int iRange)
 						//GC.getGame().logOOSSpecial(28, iPass, iPathTurns, iRange);
 						int iCount = 0;
 
-						for (CvPlot::unit_iterator itr = pLoopPlot->beginUnits(); itr != pLoopPlot->endUnits(); ++itr)
+						foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							CvUnit* pLoopUnit = *itr;
 							if (pLoopUnit->getOwner() == getOwner() && pLoopUnit->canDefend())
 							{
 								CvUnit* pHeadUnit = pLoopUnit->getGroup()->getHeadUnit();
@@ -25753,9 +25747,9 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 	bool bBuildRoute = false;
 	bool bClearFeature = false;
 
-	FeatureTypes eFeature = pPlot->getFeatureType();
+	const FeatureTypes eFeature = pPlot->getFeatureType();
 
-	CvBuildInfo& kOriginalBuildInfo = GC.getBuildInfo(eBuild);
+	const CvBuildInfo& kOriginalBuildInfo = GC.getBuildInfo(eBuild);
 
 	if (kOriginalBuildInfo.getRoute() != NO_ROUTE)
 	{
@@ -25771,7 +25765,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 
 	if (eFeature != NO_FEATURE)
 	{
-		CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
+		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		if (kOriginalBuildInfo.isFeatureRemove(eFeature))
 		{
 			if ((kOriginalBuildInfo.getImprovement() == NO_IMPROVEMENT) || (!pPlot->isBeingWorked() || (kFeatureInfo.getYieldChange(YIELD_FOOD) + kFeatureInfo.getYieldChange(YIELD_PRODUCTION)) <= 0))
@@ -25814,11 +25808,10 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 	int iBestValue = 0;
 	for (int iBuild = 0; iBuild < GC.getNumBuildInfos(); iBuild++)
 	{
-		BuildTypes eBuild = ((BuildTypes)iBuild);
-		CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
+		const BuildTypes eBuild = ((BuildTypes)iBuild);
+		const CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
 
-
-		RouteTypes eRoute = (RouteTypes)kBuildInfo.getRoute();
+		const RouteTypes eRoute = (RouteTypes)kBuildInfo.getRoute();
 		if ((bBuildRoute && (eRoute != NO_ROUTE)) || (bClearFeature && kBuildInfo.isFeatureRemove(eFeature)))
 		{
 			if (canBuild(pPlot, eBuild))
@@ -25853,12 +25846,12 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 					int iPlotGroupId = -1;
 					for (int iDirection = 0; iDirection < NUM_DIRECTION_TYPES; iDirection++)
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iDirection);
+						const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iDirection);
 						if (pLoopPlot != NULL)
 						{
 							if (pPlot->isRiver() || (pLoopPlot->getRouteType() != NO_ROUTE))
 							{
-								CvPlotGroup* pLoopGroup = pLoopPlot->getPlotGroup(getOwner());
+								const CvPlotGroup* pLoopGroup = pLoopPlot->getPlotGroup(getOwner());
 								if (pLoopGroup != NULL)
 								{
 									if (pLoopGroup->getID() != -1)
@@ -26614,7 +26607,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 					{
 						if( pCity->getProductionTurnsLeft() < 4 )
 						{
-							CvUnitInfo& kUnitInfo = GC.getUnitInfo(pCity->getProductionUnit());
+							const CvUnitInfo& kUnitInfo = GC.getUnitInfo(pCity->getProductionUnit());
 							if ((kUnitInfo.getDomainType() != DOMAIN_AIR) || kUnitInfo.getAirRange() > 0)
 							{
 								iCount++;
@@ -26704,7 +26697,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 
 					if (bCountProduction && (pLoopCity->getProductionUnitAI() == eUnitAI))
 					{
-						CvUnitInfo& kUnitInfo = GC.getUnitInfo(pLoopCity->getProductionUnit());
+						const CvUnitInfo& kUnitInfo = GC.getUnitInfo(pLoopCity->getProductionUnit());
 						if ((kUnitInfo.getDomainType() != DOMAIN_AIR) || kUnitInfo.getAirRange() > 0)
 						{
 							iValue++;
@@ -33082,8 +33075,8 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 		{
 			if ( isHasPromotion((PromotionTypes)iI) )
 			{
-				CvPromotionInfo&	kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
-				bool				bPromotionHasAccountedValue = false;
+				const CvPromotionInfo& kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
+				bool bPromotionHasAccountedValue = false;
 
 				//	Generic strength multiplier
 				if ( kPromotion.getCombatPercent() != 0 )

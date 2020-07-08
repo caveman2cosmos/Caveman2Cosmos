@@ -2040,7 +2040,7 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_TRANSPORT"));
 
-	CvPlot* pPlot = pSelectionGroup->plot();
+	const CvPlot* pPlot = pSelectionGroup->plot();
 	if (NULL == pPlot)
 	{
 		return (false);
@@ -2048,10 +2048,8 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	int iCount = 1;
 	CvUnit* pFirstUnit = NULL;
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, pLoopUnit->getOwner(), pLoopUnit->getID()))
 		{
 			if (!pFirstUnit)
@@ -2099,7 +2097,7 @@ bool CvDLLButtonPopup::launchLeadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 		return (false);
 	}
 
-	CvPlot* pPlot = pSelectionGroup->plot();
+	const CvPlot* pPlot = pSelectionGroup->plot();
 	if (NULL == pPlot)
 	{
 		return (false);
@@ -2109,10 +2107,8 @@ bool CvDLLButtonPopup::launchLeadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	int iCount = 1;
 	CvUnit* pFirstUnit = NULL;
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pLoopUnit->canPromote((PromotionTypes) info.getData1(), info.getData2()))
 		{
 			if (!pFirstUnit)
@@ -2213,9 +2209,9 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_ESPIONAGE_CHOOSE_TARGET"));
 
-	CvCity* pCity = pPlot->getPlotCity();
-	CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvCity* pCity = pPlot->getPlotCity();
+	const CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 	if (kMission.getDestroyBuildingCostFactor() > 0)
 	{
 		if (NULL != pCity)
@@ -2224,10 +2220,10 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iBuilding, pUnit))
 				{
-					CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iBuilding);
 					if (pCity->getNumRealBuilding((BuildingTypes)iBuilding) > 0)
 					{
-						int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iBuilding, pUnit);
+						const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iBuilding);
+						const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iBuilding, pUnit);
 						CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kBuilding.getDescription(), iCost);
 						gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kBuilding.getButton(), iBuilding, WIDGET_HELP_ESPIONAGE_COST, eMission, iBuilding);
 					}
@@ -2244,11 +2240,11 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iSpecialist, pUnit))
 				{
-					CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iSpecialist);
 					//does this city contain this great specialist type?
 					if (pCity->getFreeSpecialistCount((SpecialistTypes)iSpecialist) > 0)
 					{
-						int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iSpecialist, pUnit);
+						const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iSpecialist);
+						const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iSpecialist, pUnit);
 						CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kSpecialist.getDescription(), iCost);
 						gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kSpecialist.getButton(), iSpecialist, WIDGET_HELP_ESPIONAGE_COST, eMission, iSpecialist);
 					}
@@ -2278,8 +2274,8 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		{
 			if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iTech, pUnit))
 			{
-				int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iTech, pUnit);
-				CvTechInfo& kTech = GC.getTechInfo((TechTypes)iTech);
+				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iTech, pUnit);
+				const CvTechInfo& kTech = GC.getTechInfo((TechTypes)iTech);
 				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kTech.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kTech.getButton(), iTech, WIDGET_HELP_ESPIONAGE_COST, eMission, iTech);
 			}
@@ -2291,8 +2287,8 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		{
 			if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iCivic, pUnit))
 			{
-				int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCivic, pUnit);
-				CvCivicInfo& kCivic = GC.getCivicInfo((CivicTypes)iCivic);
+				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCivic, pUnit);
+				const CvCivicInfo& kCivic = GC.getCivicInfo((CivicTypes)iCivic);
 				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kCivic.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kCivic.getButton(), iCivic, WIDGET_HELP_ESPIONAGE_COST, eMission, iCivic);
 			}
@@ -2304,8 +2300,8 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		{
 			if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iReligion, pUnit))
 			{
-				int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
-				CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
+				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
+				const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
 				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kReligion.getButton(), iReligion, WIDGET_HELP_ESPIONAGE_COST, eMission, iReligion);
 			}
@@ -2322,8 +2318,8 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		{
 			if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iReligion, pUnit))
 			{
-				int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
-				CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
+				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
+				const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
 				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kReligion.getButton(), iReligion, WIDGET_HELP_ESPIONAGE_COST, eMission, iReligion);
 			}
@@ -2335,8 +2331,8 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		{
 			if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iCorp, pUnit))
 			{
-				int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCorp, pUnit);
-				CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorp);
+				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCorp, pUnit);
+				const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorp);
 				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kCorp.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kCorp.getButton(), iCorp, WIDGET_HELP_ESPIONAGE_COST, eMission, iCorp);
 			}
@@ -2671,7 +2667,7 @@ bool CvDLLButtonPopup::launchVassalDemandTributePopup(CvPopup* pPopup, CvPopupIn
 		{
 			if (kVassal.getNumTradeableBonuses((BonusTypes)iBonus) > 0 && GET_PLAYER(GC.getGame().getActivePlayer()).getNumAvailableBonuses((BonusTypes)iBonus) == 0)
 			{
-				CvBonusInfo& info = GC.getBonusInfo((BonusTypes)iBonus);
+				const CvBonusInfo& info = GC.getBonusInfo((BonusTypes)iBonus);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, info.getDescription(), info.getButton(), iBonus, WIDGET_GENERAL, iBonus, -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 				++iNumResources;
 			}
@@ -2988,9 +2984,9 @@ bool CvDLLButtonPopup::launchFoundReligionPopup(CvPopup* pPopup, CvPopupInfo &in
 	bool bFound = false;
 	for (int iReligion = 0; iReligion < GC.getNumReligionInfos(); ++iReligion)
 	{
-		CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
 		if (!GC.getGame().isReligionFounded((ReligionTypes)iReligion))
 		{
+			const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kReligion.getDescription(), kReligion.getButton(), iReligion, WIDGET_GENERAL);
 			bFound = true;
 		}
@@ -3064,7 +3060,7 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3072,10 +3068,8 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_UNIT_TO_SHADOW"));
 
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pUnit->canShadowAt(pPlot, pLoopUnit) && pLoopUnit->getID() != 0)
 		{
 			CvWStringBuffer szBuffer;
@@ -3188,7 +3182,7 @@ bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &in
 		if (it->second.m_bValidBuildUp)
 		{
 			const PromotionLineTypes ePromotionLine = it->first;
-			CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+			const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kPromotionLine.getDescription(), kPromotionLine.getButton(), ePromotionLine, WIDGET_HELP_BUILDUP, ePromotionLine);
 			bSelected = true;
 		}
@@ -3202,7 +3196,7 @@ bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &in
 			if (it->second.m_bValidBuildUp)
 			{
 				const PromotionLineTypes ePromotionLine = it->first;
-				CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+				const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kPromotionLine.getDescription(), kPromotionLine.getButton(), ePromotionLine, WIDGET_HELP_BUILDUP, ePromotionLine);
 				bSelected = true;
 			}
@@ -3324,7 +3318,7 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3332,10 +3326,8 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_UNIT_TO_MERGE"));
 
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pLoopUnit->getOwner() == pUnit->getOwner())
 		{
 			if (GET_PLAYER(pLoopUnit->getOwner()).getBaseMergeSelectionUnit() != pLoopUnit->getID() && GET_PLAYER(pLoopUnit->getOwner()).getFirstMergeSelectionUnit() != pLoopUnit->getID())
@@ -3469,7 +3461,7 @@ bool CvDLLButtonPopup::launchSelectArrestUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3477,11 +3469,8 @@ bool CvDLLButtonPopup::launchSelectArrestUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_UNIT_TO_ARREST"));
 
-
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pLoopUnit->isWanted())
 		{
 			if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
