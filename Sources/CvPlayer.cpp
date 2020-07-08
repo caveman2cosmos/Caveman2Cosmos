@@ -9633,12 +9633,12 @@ bool CvPlayer::isResearch() const
 			return false;
 		}
 	}
-
+#ifndef NOMADIC_START
 	if (!isFoundedFirstCity())
 	{
 		return false;
 	}
-
+#endif
 	return true;
 }
 

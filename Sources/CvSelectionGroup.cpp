@@ -743,7 +743,9 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	{
 		pPlot = plot();
 	}
-
+#ifdef NOMADIC_START
+	static TechTypes sedentaryLifestyle = static_cast<TechTypes>(GC.getInfoTypeForString("TECH_SEDENTARY_LIFESTYLE"));
+#endif
 	CvUnit* pTargetUnit;
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
@@ -1000,6 +1002,12 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_FOUND:
+#ifdef NOMADIC_START
+			if (!GET_TEAM(pLoopUnit->getTeam()).isHasTech(sedentaryLifestyle))
+			{
+				return false;
+			}
+#endif
 			if (pLoopUnit->canFound(pPlot, bTestVisible))
 			{
 				return true;
