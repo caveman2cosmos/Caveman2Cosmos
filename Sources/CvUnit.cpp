@@ -13408,11 +13408,10 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			// is this player on our team?
-			CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+			const CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == eTeam)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 				{
 					// if coastal only, then make sure we are coast
 					CvArea* pWaterArea = NULL;
@@ -32183,9 +32182,7 @@ bool CvUnit::performInquisition()
 							if (eBestPlayer != NO_PLAYER)
 							{
 								const CvPlayerAI& kPlayer = GET_PLAYER(eBestPlayer);
-								CvCity* pLoopCity;
-								int iLoop;
-								for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+								foreach_(const CvCity* pLoopCity, kPlayer.cities())
 								{
 									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
@@ -32309,15 +32306,11 @@ bool CvUnit::isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const
 /*                                                                                              */
 /************************************************************************************************/
 
-bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer)
+bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer) const
 {
 	CvArea* pWaterArea = NULL;
-	CvCity* pCapitalCity;
-	int iLoop;
 	bool bShip = false;
 	bool bCoast = false;
-
-	pCapitalCity = GET_PLAYER(eReceivingPlayer).getCapitalCity();
 
 	if (eReceivingPlayer == NO_PLAYER || eReceivingPlayer > MAX_PLAYERS)
 	{
@@ -32332,9 +32325,9 @@ bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer)
 	if (getDomainType() == DOMAIN_SEA)
 	{
 		bShip = true;
-		for (CvCity* pLoopCity = GET_PLAYER(eReceivingPlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(eReceivingPlayer).nextCity(&iLoop))
+		foreach_(const CvCity* pLoopCity, GET_PLAYER(eReceivingPlayer).cities())
 		{
-			if (((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
+			if ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake())
 			{
 				bCoast = true;
 			}
@@ -33865,18 +33858,14 @@ void CvUnit::setMADTargetPlotOwner(PlayerTypes pPlayer)
 
 void CvUnit::doMADNukes(bool bForceRetarget)
 {
-	CvCity* pCity;
 	CvWString szBuffer;
-
-	CvCity* pBestCity;					// Dale - MAD: city required for AI stuff
-	int iLoop, iValue, iBestValue;		// Dale - MAD: ints required for AI stuff
 
 	// Dale - MAD: check validity of Human nuke targets
 	if(isMADEnabled())
 	{
 		FAssertMsg(GET_PLAYER(getOwner()).isEnabledMAD(), "Nukes Should Not Be Targeted!");
 
-		pCity = getMADTargetPlot()->getPlotCity();
+		const CvCity* pCity = getMADTargetPlot()->getPlotCity();
 		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
 		{
 			setMADEnabled(false);
@@ -33903,21 +33892,21 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 				pOldTarget = getMADTargetPlot()->getPlotCity();
 				setMADEnabled(false);
 			}
-			pBestCity = NULL;
-			iBestValue = 0;
+			const CvCity* pBestCity = NULL;
+			int iBestValue = 0;
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != GET_PLAYER(getOwner()).getID())
 				{
 					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwner()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
 					{
-						for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 						{
 							if (pLoopCity->isRevealed(getTeam(), false))
 							{
 								if (canNukeAt(plot(), pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), false))
 								{
-									iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
+									const int iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
 									if (iValue > iBestValue)
 									{
 										iBestValue = iValue;
@@ -33954,7 +33943,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 	{
 		if(canNuke(getMADTargetPlot()))
 		{
-			pCity = getMADTargetPlot()->getPlotCity();
+			const CvCity* pCity = getMADTargetPlot()->getPlotCity();
 			if(pCity != NULL && (GET_PLAYER(getOwner()).getMADTrigger(pCity->getOwner()) || atWar(getTeam(), pCity->getTeam())))
 			{
 				nuke(getMADTargetPlot()->getX(), getMADTargetPlot()->getY());

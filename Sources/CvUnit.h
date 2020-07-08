@@ -570,7 +570,7 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool canTradeUnit(PlayerTypes eReceivingPlayer);
+	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
 
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
