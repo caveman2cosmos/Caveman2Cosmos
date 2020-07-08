@@ -12,7 +12,7 @@ import WBBuildingScreen
 import WBPromotionScreen
 import WBPlotScreen
 import WBEventScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvScreensInterface
 
 GC = CyGlobalContext()
@@ -81,8 +81,8 @@ class WBPlayerUnits:
 
 		iX += iWidth
 		screen.addDropDownBoxGFC("ActivityType", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		for i in xrange(len(CvWorldBuilderScreen.Activities)):
-			screen.addPullDownString("ActivityType", CvWorldBuilderScreen.Activities[i], i, i, i == iActivityType)
+		for i in xrange(len(WorldBuilder.Activities)):
+			screen.addPullDownString("ActivityType", WorldBuilder.Activities[i], i, i, i == iActivityType)
 		if iCopyType != 5:
 			screen.hide("ActivityType")
 
@@ -394,8 +394,8 @@ class WBPlayerUnits:
 		sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
 		pGroup = pUnit.getGroup()
 		iActivity = pGroup.getActivityType()
-		if iActivity > -1 and iActivity < len(CvWorldBuilderScreen.Activities):
-			sText += "\n" + CvWorldBuilderScreen.Activities[iActivity]
+		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
+			sText += "\n" + WorldBuilder.Activities[iActivity]
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(pUnit.getID())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 		sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())

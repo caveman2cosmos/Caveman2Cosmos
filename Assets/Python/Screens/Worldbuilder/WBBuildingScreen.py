@@ -10,7 +10,7 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvScreensInterface
 import CvEventManager
 
@@ -376,7 +376,7 @@ class WBBuildingScreen:
 
 	def doEffects(self, pCity, item, bAdd):
 		bEffects = False
-		if bAdd and CvWorldBuilderScreen.bPython and pCity.getNumRealBuilding(item) == 0:
+		if bAdd and WorldBuilder.bPython and pCity.getNumRealBuilding(item) == 0:
 			bEffects = True
 		pCity.setNumRealBuilding(item, bAdd)
 		if bEffects:

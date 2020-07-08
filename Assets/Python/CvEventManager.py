@@ -15,7 +15,7 @@ import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
 
-import CvWorldBuilderScreen
+import WorldBuilder
 import WBUnitScreen
 import WBPlayerScreen
 import WBGameDataScreen

@@ -5,7 +5,7 @@ import WBTechScreen
 import WBPlayerScreen
 import WBPlayerUnits
 import WBInfoScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvEventManager
 GC = CyGlobalContext()
 
@@ -229,7 +229,7 @@ class WBProjectScreen:
 			if iMax > -1:
 				iCount = min(iCount, iMax - pTeamX.getProjectCount(item))
 		pTeamX.changeProjectCount(item, iCount)
-		if CvWorldBuilderScreen.bPython and iCount > 0:
+		if WorldBuilder.bPython and iCount > 0:
 			pCapital = GC.getPlayer(pTeamX.getLeaderID()).getCapitalCity()
 			if not pCapital.isNone():
 				for i in xrange(iCount):

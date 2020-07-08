@@ -7,7 +7,7 @@ import WBPromotionScreen
 import WBPlayerScreen
 import WBTechScreen
 import WBProjectScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvScreensInterface
 GC = CyGlobalContext()
 

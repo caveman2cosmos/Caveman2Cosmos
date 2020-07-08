@@ -6,7 +6,7 @@ import WBTeamScreen
 import WBPlotScreen
 import WBEventScreen
 import WBPlayerUnits
-import CvWorldBuilderScreen
+import WorldBuilder
 import WBInfoScreen
 import Popup
 GC = CyGlobalContext()
@@ -359,8 +359,8 @@ class WBUnitScreen:
 		iY += 30
 		sText = ""
 		iActivity = pUnit.getGroup().getActivityType()
-		if iActivity > -1 and iActivity < len(CvWorldBuilderScreen.Activities):
-			sText = "<font=3>" + CvWorldBuilderScreen.Activities[iActivity] + "</font>"
+		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
+			sText = "<font=3>" + WorldBuilder.Activities[iActivity] + "</font>"
 		screen.setLabel("UnitActivity", "Background", sText, 1<<2, screen.getXResolution()/2, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 	def placeScript(self):

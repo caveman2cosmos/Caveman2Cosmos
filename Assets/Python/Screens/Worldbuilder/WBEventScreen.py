@@ -6,7 +6,7 @@ import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvScreensInterface
 GC = CyGlobalContext()
 

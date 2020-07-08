@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlayerScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvEventManager
 import WBTradeScreen
 GC = CyGlobalContext()
@@ -414,7 +414,7 @@ class WBDiplomacyScreen:
 			GC.getTeam(iTeam2).assignVassal(iTeam1, False)
 		elif iNewStatus == 3:
 			GC.getTeam(iTeam1).assignVassal(iTeam2, True)
-		if CvWorldBuilderScreen.bPython:
+		if WorldBuilder.bPython:
 			if iNewStatus == 2:
 				if iOldStatus == 3:
 					self.eventManager.onVassalState([iTeam1, iTeam2, False])

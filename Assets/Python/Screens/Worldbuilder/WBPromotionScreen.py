@@ -7,7 +7,7 @@ import WBPlotScreen
 import WBEventScreen
 import WBPlayerUnits
 import WBInfoScreen
-import CvWorldBuilderScreen
+import WorldBuilder
 import CvScreensInterface
 import CvEventManager
 GC = CyGlobalContext()
@@ -277,7 +277,7 @@ class WBPromotionScreen:
 
 	def doEffects(self, pUnit, item, bAdd):
 		bEffects = False
-		if bAdd and CvWorldBuilderScreen.bPython and not pUnit.isHasPromotion(item):
+		if bAdd and WorldBuilder.bPython and not pUnit.isHasPromotion(item):
 			bEffects = True
 		pUnit.setHasPromotion(item, bAdd)
 		if bEffects:

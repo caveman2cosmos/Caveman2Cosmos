@@ -703,10 +703,10 @@ def lateInit():
 	screenMap[TECH_CHOOSER]			= CvTechChooser.CvTechChooser()
 	screenMap[BUILD_LIST_SCREEN]	= BuildListScreen.BuildListScreen()
 
-	import CvWorldBuilderScreen, CvAdvancedStartScreen
+	import WorldBuilder, CvAdvancedStartScreen
 	global worldBuilderScreen, advancedStartScreen
 	advancedStartScreen = CvAdvancedStartScreen.CvAdvancedStartScreen()
-	worldBuilderScreen = CvWorldBuilderScreen.CvWorldBuilderScreen(WORLDBUILDER_SCREEN)
+	worldBuilderScreen = WorldBuilder.WorldBuilder(WORLDBUILDER_SCREEN)
 	screenMap[WORLDBUILDER_SCREEN] = worldBuilderScreen
 	import WBPlotScreen
 	import WBEventScreen

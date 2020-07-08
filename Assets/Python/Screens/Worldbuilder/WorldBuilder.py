@@ -26,7 +26,7 @@ GAME = GC.getGame()
 bPython = True
 Activities = ["AWAKE", "HOLD", "SLEEP", "HEAL", "SENTRY", "INTERCEPT", "MISSION", "PATROL", "PLUNDER"]
 
-class CvWorldBuilderScreen:
+class WorldBuilder:
 
 	def __init__(self, screenId):
 		self.screenId = screenId
