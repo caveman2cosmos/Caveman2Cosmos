@@ -1,17 +1,13 @@
 <?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the Civ Gold Team -->
-<!-- Assets\Modules\Custom_Religions\Female_Missionaries\FemaleMissionaries_CIV4UnitInfos.xml-->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_JEWISH_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_JEWISH_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_JUDAISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_JEWISH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_JEWISH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -23,9 +19,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_JEWISH_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_JEWISH_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_JEWISH_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -35,8 +34,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_JEWISH_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -52,16 +53,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHRISTIAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_CHRISTIAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CHRISTIAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CHRISTIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -73,9 +72,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_CHRISTIAN_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_CHRISTIAN_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CHRISTIAN_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -85,8 +87,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
-			<PrereqBuilding>BUILDING_CHRISTIAN_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -102,16 +106,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ISLAMIC_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_ISLAMIC_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ISLAM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ISLAMIC_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ISLAMIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -123,9 +125,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_ISLAMIC_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ISLAMIC_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -135,8 +140,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
-			<PrereqBuilding>BUILDING_ISLAMIC_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ISLAMIC_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -152,16 +159,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HINDU_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_HINDU_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_HINDUISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HINDU_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_HINDU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -173,9 +178,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_HINDU_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_HINDU_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HINDU_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -185,8 +193,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_HINDU_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -202,16 +212,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BUDDHIST_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_BUDDHIST_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_BUDDHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BUDDHIST_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_BUDDHIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -223,9 +231,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BUDDHIST_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_BUDDHIST_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BUDDHIST_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -235,8 +246,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_BUDDHIST_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BUDDHIST_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -252,16 +265,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CONFUCIAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_CONFUCIAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CONFUCIAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CONFUCIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -273,9 +284,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_CONFUCIAN_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -285,8 +299,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_CONFUCIAN_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CONFUCIAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -302,16 +318,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAOIST_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_TAOIST_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_TAOISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TAOIST_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_TAOIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -323,9 +337,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_TAOIST_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_TAOIST_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TAOIST_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -335,8 +352,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_TAOIST_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -352,16 +371,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ANDEAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_ANDEAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEAN</DependencyType>
+				<DependencyType>RELIGION_ANDEANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ANDEAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ANDEAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -373,20 +390,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_ANDEAN_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANDEAN_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
-			<PrereqBuilding>BUILDING_ANDEAN_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -402,16 +424,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ASATRU_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_ASATRU_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ASATRU</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ASATRU_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ASATRU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -423,8 +443,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_ASATRU_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_ASATRU_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ASATRU_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -435,8 +458,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_ASATRU_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -452,16 +477,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_DRUID_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUID</DependencyType>
+				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_DRUID_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -473,20 +496,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_DRUID_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_DRUID_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DRUID_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_DRUID</ReligionType>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
-			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -502,16 +530,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HELLENIC_MISSIONARY</Class>
-			<Type>UNIT_FEMALE_HELLENISM_MISSIONARY</Type>
+			<Type>UNIT_FEMALE_HELLENIC_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_HELLENISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HELLENIC_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_HELLENIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -523,10 +549,13 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_HELLENISM_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEW_GREEKWAR_HELLENIC_MISSIONARY_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_HELLENIC_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_HELLENIC_MISSIONARY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HELLENIC_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
@@ -535,8 +564,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_HELLENIC_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -552,16 +583,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EGYPT_MYTH_MISSIONARY</Class>
-			<Type>UNIT_FEMALE_KEMETISM_MISSIONARY</Type>
+			<Type>UNIT_FEMALE_EGYPT_MYTH_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_EGYPT_MYTH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_EGYPT_MYTH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -573,20 +602,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_KEMETISM_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_EGYPT_MYTH_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EGYPT_MYTH_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -602,16 +636,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MESO_MISSIONARY</Class>
-			<Type>UNIT_FEMALE_MESOPOTAMIEN_MISSIONARY</Type>
+			<Type>UNIT_FEMALE_MESO_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_MESO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_MESO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -623,20 +655,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_MESOPOTAMIEN_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_MESO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MESO_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
-			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -652,16 +689,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SHAMAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHAMAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -673,20 +708,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_SHAMAN_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_SHAMAN_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SHAMAN_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -702,16 +742,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SHINTO_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SHINTO_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHINTO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHINTO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -723,8 +761,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_SHINTO_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_SHINTO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SHINTO_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -735,8 +776,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHINTO_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -752,16 +795,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TENGRI_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_TENGRI_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_TENGRIISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TENGRI_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_TENGRI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -773,8 +814,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_TENGRI_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_TENGRI_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TENGRI_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -785,8 +829,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMANS_YURTA</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -802,16 +848,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BAHAI_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_BAHAI_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_BAHAI</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BAHAI_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_BAHAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -823,8 +867,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BAHAI_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_BAHAI_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BAHAI_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -835,8 +882,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
-			<PrereqBuilding>BUILDING_BAHAI_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -852,16 +901,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MORMON_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_MORMON_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MORMON</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_MORMON_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_MORMON_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -873,8 +920,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_MORMON_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_MORMON_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -885,8 +935,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<PrereqBuilding>BUILDING_MORMON_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -902,16 +954,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SCIENTOLOGY_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SCIENTOLOGY_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -923,8 +973,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -935,8 +988,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_SCIENTOLOGY_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -952,16 +1007,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SIKH_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SIKH_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SIKHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SIKH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SIKH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -973,8 +1026,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_SIKH_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_SIKH_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SIKH_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -985,8 +1041,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SIKH_TEMPLE</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -1002,16 +1060,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VOODOO_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_VOODOO_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_VOODOO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_VOODOO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_VOODOO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1023,9 +1079,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_VOODOO_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VOODOO_MISSIONARY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_VOODOO_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -1035,8 +1094,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -1052,16 +1113,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_YORUBA_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_YORUBA_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_YORUBA</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_YORUBA_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_YORUBA_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1073,8 +1132,11 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_YORUBA_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_YORUBA_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_YORUBA_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -1085,8 +1147,10 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<PrereqBuilding>BUILDING_OLOFIN</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -1102,16 +1166,14 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CANAANITE_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_CANAANITE_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CANAANITE_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CANAANITE_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1123,20 +1185,25 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BAAL_MISSIONARY</Description>
+			<Description>TXT_KEY_UNIT_CANAANITE_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CANAANITE_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
-			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
-			<iCost>110</iCost>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>2</iAsset>
@@ -1152,11 +1219,9 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<!-- Executives -->
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_1</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_1</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1170,9 +1235,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_1</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_1</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1198,10 +1266,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_2</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_2</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1215,9 +1281,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_2</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_2</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1243,10 +1312,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_3</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_3</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1260,9 +1327,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_3</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_3</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1288,10 +1358,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_4</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_4</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1305,9 +1373,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_4</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_4</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1333,10 +1404,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_5</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_5</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1350,9 +1419,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_5</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_5</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1378,10 +1450,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_6</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_6</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1395,9 +1465,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_6</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_6</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1423,10 +1496,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EXECUTIVE_7</Class>
 			<Type>UNIT_FEMALE_EXECUTIVE_7</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -1440,9 +1511,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_EXECUTIVE_7</Description>
-			<Civilopedia>TXT_KEY_UNIT_FEMALE_VERSION_OF_UNIT</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_7</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -1468,7 +1542,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

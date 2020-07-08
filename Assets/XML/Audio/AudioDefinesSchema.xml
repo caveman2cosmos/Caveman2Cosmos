@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Audio Defines Schema -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<ElementType name="SoundID" content="textOnly"/>
 	<ElementType name="Filename" content="textOnly"/>

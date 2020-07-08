@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Smart">
+      <UniqueIdentifier>{d8bd2b4f-bde8-4920-8bcd-8b00a65d1d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Smart">
+      <UniqueIdentifier>{786fdd94-8455-45ee-8b56-cbcd36fcc5e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -444,6 +450,30 @@
     <ClCompile Include="CvPlotPaging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPython.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StackWalker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCvDebug.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
+    <ClCompile Include="SCvInternalGlobals.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
+    <ClCompile Include="SCyDebug.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\boost_test\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -515,16 +545,10 @@
     <ClInclude Include="CvDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvDefinesModTools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvDiploParameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvDLLButtonPopup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLDataStreamIFaceBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvDLLEngineIFaceBase.h">
@@ -851,9 +875,6 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="idinfo_iterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stopwatch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -864,6 +885,54 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPlotPaging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPython.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackWalker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="copy_iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="index_iterator_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nullptr_t.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCvInternalGlobals.h">
+      <Filter>Header Files\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="SCvDebug.h">
+      <Filter>Header Files\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="SCyDebug.h">
+      <Filter>Header Files\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scoring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flatten_range.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idinfo_iterator_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -879,7 +948,9 @@
     <None Include="interfaceDirtyBits.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Makefile" />
+    <None Include="fbuild.bff" />
+    <None Include="cpp.hint" />
+    <None Include="CvGameCoreDLL.def" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />

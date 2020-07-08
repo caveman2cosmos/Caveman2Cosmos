@@ -1,18 +1,12 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Michael Curran (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Terrain Infos -->
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
         <TerrainInfo>
-			<Type>TERRAIN_SLIMY_COAST</Type>
-			<Description>TXT_KEY_TERRAIN_SLIMY_COAST</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_COAST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_COAST</ArtDefineTag>
-			<bGraphicalOnly>1</bGraphicalOnly>
-			<bWater>1</bWater>
+			<Type>TERRAIN_INFECTED_WATER</Type>
+			<Description>TXT_KEY_TERRAIN_INFECTED_WATER</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_INFECTED_WATER</ArtDefineTag>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iMovement>6</iMovement>
 			<Yields>
 				<iYield>-5</iYield>
@@ -149,12 +143,11 @@
 			<WorldSoundscapeAudioScript>ASSS_COAST_SELECT_AMB</WorldSoundscapeAudioScript>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_SLIMY_OCEAN</Type>
-			<Description>TXT_KEY_TERRAIN_SLIMY_OCEAN</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_OCEAN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_OCEAN</ArtDefineTag>
-			<bGraphicalOnly>1</bGraphicalOnly>
-			<bWater>1</bWater>
+			<Type>TERRAIN_PLAGUED_WATER</Type>
+			<Description>TXT_KEY_TERRAIN_PLAGUED_WATER</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_PLAGUED_WATER</ArtDefineTag>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iMovement>20</iMovement>
 			<Yields>
 				<iYield>-10</iYield>
@@ -295,9 +288,10 @@
 			<Description>TXT_KEY_TERRAIN_PEAK</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PEAK_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_PEAK</ArtDefineTag>
-			<bWater>1</bWater>
-			<iCultureDistance>2</iCultureDistance>
-			<iMovement>1</iMovement>
+			<bWaterTerrain>1</bWaterTerrain>
+			<iBuildModifier>75</iBuildModifier>
+			<iCultureDistance>3</iCultureDistance>
+			<iMovement>2</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\feature_peak.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -431,7 +425,8 @@
 			<Description>TXT_KEY_TERRAIN_HILL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_HILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
+			<iBuildModifier>25</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>

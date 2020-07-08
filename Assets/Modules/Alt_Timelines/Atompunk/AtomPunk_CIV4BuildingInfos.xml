@@ -8,8 +8,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ATOMPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
@@ -35,77 +36,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FAST_BREEDER_REACTOR</BuildingClass>
-			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
-			<Description>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FAST_BREEDER_REACTOR</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_URANIUM</Bonus>
-			</PrereqBonuses>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEAVY_WATER</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<bRiver>1</bRiver>
-			<bPower>1</bPower>
-			<iCost>1345</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHealth>-1</iHealth>
-			<!-- RevolutionDCM End  -->
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
-			</CommerceChanges>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>20</iYield>
-			</YieldModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_CLEAN_NUCLEAR_REACTOR</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VIDEOPHONE_NETWORK</BuildingClass>
 			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
 			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
@@ -123,7 +53,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COPPERWIRES</ID>
+						<ID>BONUS_COPPER_WIRES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -142,15 +72,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TELEPHONE_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
+					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -167,7 +94,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PUSHBUTTON_AUTOMAT</BuildingClass>
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
 			<Description>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Civilopedia>
@@ -181,7 +107,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_ALUMINUM</Bonus>
+				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -207,7 +133,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -305,7 +231,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -317,7 +243,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -395,7 +321,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -403,7 +329,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -481,7 +407,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -493,18 +419,14 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CANNERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CANNERY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MID_CLASS_SKYPAD_APARTMENTS</BuildingClass>
 			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
@@ -516,7 +438,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-3</iHealth>
@@ -529,41 +450,32 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PUSHBUTTON_AUTOMAT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEWER_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_WATER_PIPES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIDEOPHONE_NETWORK</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PUSHBUTTON_AUTOMAT</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA4_SDMW</BuildingClassType>
+					<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_COLONY_ARCO</BuildingClassType>
+					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_LAUNCH_ARCO</BuildingClassType>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -572,7 +484,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CLEAN_NUCLEAR_REACTOR</BuildingClass>
 			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Civilopedia>
@@ -596,12 +507,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bPower>1</bPower>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -614,15 +519,12 @@
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClassType>
+					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -630,7 +532,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClass>
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Civilopedia>
@@ -649,12 +550,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_URANIUM</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bPower>1</bPower>
 			<iCost>1845</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -667,32 +562,29 @@
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClass>
 			<Type>BUILDING_NUCLEAR_PLANT</Type>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_CLEAN_NUCLEAR_REACTOR</BuildingClassType>
+					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClassType>
+					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NUCLEAR_POWERCOMPLEX</BuildingClass>
 			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
@@ -719,13 +611,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>20</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<FreeBuilding>BUILDINGCLASS_GOOD_ATOM</FreeBuilding>
+			<FreeBuilding>BUILDING_GOOD_ATOM</FreeBuilding>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>
 			<iCost>4010</iCost>
@@ -739,27 +625,23 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_URANIUM_MINE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_URANIUM_MINE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HIGH_ENERGY_LAB</BuildingClass>
 			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
 			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Civilopedia>
@@ -801,7 +683,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MAGLEV</PrereqTech>
+					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -822,33 +704,32 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TESLA_INFANTRY</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TESLA_INFANTRY</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CLEAN_NUCLEAR_REACTOR</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SMALL_REACTOR_FACTORY</BuildingClass>
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_PEDIA</Civilopedia>
@@ -884,12 +765,9 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Properties>
@@ -907,8 +785,9 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VENTURE_INDUSTRIES</BuildingClass>
 			<Type>BUILDING_VENTURE_INDUSTRIES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
@@ -967,20 +846,13 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_INDUSTRIAL_PARK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GOOD_ATOM</BuildingClass>
 			<Type>BUILDING_GOOD_ATOM</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
@@ -997,7 +869,6 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>

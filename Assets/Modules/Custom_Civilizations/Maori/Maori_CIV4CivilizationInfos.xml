@@ -50,54 +50,41 @@
 				<City>TXT_KEY_CITY_NAME_RANGITANE</City>
 				<City>TXT_KEY_CITY_NAME_NGA_RAURU</City>
 				<City>TXT_KEY_CITY_NAME_NGA_RUAHINE</City>
-				<City>Pukaki</City>
-				<City>Ohau</City>
-				<City>Tekapo</City>
-				<City>Rangitata</City>
-				<City>Orari</City>
-				<City>Kakahu</City>
-				<City>Aoraki</City>
-				<City>Kura Tawhiti</City>
-				<City>Rapuwai</City>
-				<City>Korowai</City>
-				<City>Waimakairi</City>
-				<City>Opuha</City>
-				<City>Rakaia</City>
+				<City>TXT_KEY_CITY_NAME_PUKAKI</City>
+				<City>TXT_KEY_CITY_NAME_OHAU</City>
+				<City>TXT_KEY_CITY_NAME_TEKAPO</City>
+				<City>TXT_KEY_CITY_NAME_RANGITATA</City>
+				<City>TXT_KEY_CITY_NAME_ORARI</City>
+				<City>TXT_KEY_CITY_NAME_KAKAHU</City>
+				<City>TXT_KEY_CITY_NAME_AORAKI</City>
+				<City>TXT_KEY_CITY_NAME_KURA_TAWHITI</City>
+				<City>TXT_KEY_CITY_NAME_RAPUWAI</City>
+				<City>TXT_KEY_CITY_NAME_KOROWAI</City>
+				<City>TXT_KEY_CITY_NAME_WAIMAKAIRI</City>
+				<City>TXT_KEY_CITY_NAME_OPUHA</City>
+				<City>TXT_KEY_CITY_NAME_RAKAIA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_OCEANIAN</BuildingType>
-				</Building>
-			</Buildings>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_BAND</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>

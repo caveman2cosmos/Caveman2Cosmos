@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Basic Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>
 		<UnitCombatInfo>
@@ -264,14 +258,14 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>1</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>5</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -285,14 +279,14 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>2</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>5</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -311,14 +305,14 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>4</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>5</Constant>
 									</Adapt>
-                                </iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -327,7 +321,6 @@
 				</Action>
 			</Actions>
 		</UnitCombatInfo>
-
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
 			<Actions>
@@ -386,7 +379,6 @@
 				</Action>
 			</Actions>
 		</UnitCombatInfo>
-
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SEA_SMALL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SEA_SMALL</Description>

@@ -151,10 +151,11 @@ class Pedia:
 		}
 		szCatTechs				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())
 		szCatUnits				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())
+		szCatSpecialUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS", ())
 		szCatWorldUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_HERO", ())
-		szCatAnimals			= "Animals"
-		szCatCulturalUnits		= "Cultural Units"
-		szCatMiscUnits			= "Misc Units"
+		szCatAnimals			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALS", ())
+		szCatCulturalUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS", ())
+		szCatMiscUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_MISC_UNITS", ())
 		szCatUnitTree			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES", ())
 		szCatUnitCombat			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())
 		szCatPromotions			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ())
@@ -167,9 +168,9 @@ class Pedia:
 		szCatNationalWonders	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS", ())
 		szCatGreatWonders		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS", ())
 		szCatC2CCutures			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())
-		szCatSpecialBuildings	= "Special"
-		szCatRelBuildings		= "Religious"
-		szCatAniBuildings		= "Animalistic"
+		szCatSpecialBuildings	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL", ())
+		szCatRelBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS", ())
+		szCatAniBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS", ())
 		szCatBuildingTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE", ())
 		szCatProjects			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		szCatSpecialists		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
@@ -192,26 +193,26 @@ class Pedia:
 		szCatHints				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_HINTS", ())
 		szCatShortcuts			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SHORTCUTS", ())
 		szCatStrategy			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_STRATEGY", ())
-		szCatEras				= "Eras"
-		szCatBuilds				= "Worker Builds"
-		szCatGroupWonders		= "Group Wonders"
+		szCatEras				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ERAS", ())
+		szCatBuilds				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS", ())
+		szCatGroupWonders		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_GROUP_WONDERS", ())
 
-		self.szCatAllEras = szCatAllEras = 'All Eras'
-		self.szChronology = szChronology = 'Chronology'
+		self.szCatAllEras = szCatAllEras = TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ALL_ERAS", ())
+		self.szChronology = szChronology = TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY", ())
 		# Category List.
 		categoryList = [
 			["GOLDENAGE",	szCatConcepts],
 			["BEAKER",		szCatTechs],
 			["STRENGHT",	szCatUnits],
-			["MOVES",		"Special Units"],
+			["MOVES",		szCatSpecialUnits],
 			["SILVERSTAR",	szCatPromotions],
 			["PRODUCTION",	szCatBuildings],
-			["POWER",		"Special Buildings"],
-			["TRADE",		"Resources"],
-			["MAP",			"Landscape"],
-			["OCCUPATION",	"Leadership"],
-			["GREATPEOPLE",	"Special"],
-			["DEF_PACT",	"Upgrade Trees"],
+			["POWER",		TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS", ())],
+			["TRADE",		TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RESOURCES", ())],
+			["MAP",			TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_LANDSCAPE", ())],
+			["OCCUPATION",	TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_LEADERSHIP", ())],
+			["GREATPEOPLE",	TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIAL", ())],
+			["DEF_PACT",	TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UPGRADE_TREES", ())],
 		]
 		# Category enumeration.
 		self.PEDIA_BUILDINGS_0	= PEDIA_BUILDINGS_0	= -3
@@ -371,7 +372,7 @@ class Pedia:
 		eWidMain	= WidgetTypes.WIDGET_PEDIA_MAIN
 		iFontTitle	= FontTypes.TITLE_FONT
 
-		HEAD_TEXT		= szfontEdge + "Wiki"
+		HEAD_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_CIVILOPEDIA", ())
 		TOC_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_CONTENTS", ())
 		INDEX_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_INDEX", ())
 		BACK_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_BACK", ())
@@ -480,7 +481,7 @@ class Pedia:
 			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() == 1: ## World Unit
+			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
 			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
@@ -511,7 +512,7 @@ class Pedia:
 			bFuncByGroupCat = True
 			self.iGroupCategory = iGroupCategory = iCategory
 			CvBuildingInfo = GC.getBuildingInfo(iObjectType)
-			iBuildingType = self.getBuildingType(CvBuildingInfo)
+			iBuildingType = self.getBuildingType(CvBuildingInfo, iObjectType)
 			if iBuildingType != -1:
 				iCategory = self.PEDIA_BUILDINGS_2
 				szSubCat = self.mapSubCat.get(iCategory)[iBuildingType]
@@ -783,7 +784,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() != -1:
 				if bWorld:
 					bValid = True
 				else:
@@ -795,7 +796,7 @@ class Pedia:
 					continue
 			elif bWorld or bAnimals or bCultural or bMisc:
 				continue
-			elif szSubCat == "All Eras":
+			elif szSubCat == self.szCatAllEras:
 				bValid = True
 			else:
 				iEra = self.getItsEra(CvUnitInfo)
@@ -912,10 +913,10 @@ class Pedia:
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
-				if self.getBuildingType(CvBuildingInfo) == iBuildingType:
+				if self.getBuildingType(CvBuildingInfo, i) == iBuildingType:
 					bValid = True
-			elif self.getBuildingType(CvBuildingInfo) == -1:
-				if szSubCat == "All Eras":
+			elif self.getBuildingType(CvBuildingInfo, i) == -1:
+				if szSubCat == self.szCatAllEras:
 					bValid = True
 				else:
 					iEra = self.getItsEra(CvBuildingInfo)
@@ -927,7 +928,7 @@ class Pedia:
 		aList.sort()
 		return aList
 
-	def getBuildingType(self, CvBuildingInfo):
+	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 		if iSpecialBuilding != -1:
@@ -935,15 +936,15 @@ class Pedia:
 				return 4
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
-		if szStrat.find("Myth -", 0, 6) + szStrat.find("Story -", 0, 7) + szStrat.find("Stories -", 0, 9) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -5:
+		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -7:
 			return 6
 		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
 			return 5
 		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
-		elif isWorldWonderClass(CvBuildingInfo.getBuildingClassType()):
+		elif isWorldWonder(iBuilding):
 			return 1
-		elif isNationalWonderClass(CvBuildingInfo.getBuildingClassType()):
+		elif isNationalWonder(iBuilding):
 			return 0
 		else:
 			return -1
@@ -1485,11 +1486,11 @@ class Pedia:
 			if not uFont:
 				uFont = self.aFontList[6]
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
@@ -1501,8 +1502,7 @@ class Pedia:
 			szText = "Created by Kristoffer E.H.-L. \n\t AKA: Toffer90"
 			uFont = self.aFontList[2]
 		else:
-			szText = "Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? "
-			szText += "Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable."
+			szText = TRNSLTR.getText("TXT_KEY_PEDIA_WELCOME_MESSAGE", ())
 			uFont = self.aFontList[4]
 		x = int(0.3 * self.xRes)
 		y = int(0.4 * self.yRes)
@@ -1748,7 +1748,7 @@ class Pedia:
 	def update(self, fDelta):
 		if self.bLockedTT:
 			screen = self.screen()
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0

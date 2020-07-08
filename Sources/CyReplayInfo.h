@@ -9,9 +9,10 @@ class CyReplayInfo
 {
 public:
 	CyReplayInfo();
-	CyReplayInfo(CvReplayInfo* pInfo);
+	explicit CyReplayInfo(CvReplayInfo* pInfo);
+
 	const CvReplayInfo* getReplayInfo() const { return m_pHoF; }
-	bool isNone() { return (NULL == m_pHoF); }
+	bool isNone() const { return m_pHoF == NULL; }
 
 	void createInfo(int iPlayer);
 	int getActivePlayer() const;

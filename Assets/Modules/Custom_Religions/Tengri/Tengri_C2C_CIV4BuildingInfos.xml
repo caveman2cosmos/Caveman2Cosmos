@@ -7,13 +7,15 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TENGRII_HORSE_BREEDER</BuildingClass>
 			<Type>BUILDING_TENGRII_HORSE_BREEDER</Type>
 			<Description>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRII_HORSE_BREEDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
@@ -45,39 +47,37 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HORSE_TRAINER</BuildingClass>
 			<Type>BUILDING_HORSE_TRAINER</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TENGRII_HORSE_BREEDER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_TENGRII_HORSE_BREEDER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HORSE_MYTH</BuildingClass>
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDINGCLASS_HORSE_MYTH</DependencyType>
+             	<DependencyType>BUILDING_HORSE_MYTH</DependencyType>
  			</AndDependencyTypes>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_EJE_SONG</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EJE_SONG</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHAMANS_YURTA</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_KING_GESAR_SONG</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TENGRI_SONG</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

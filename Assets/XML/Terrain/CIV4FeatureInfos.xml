@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Feature -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
-		<!-- Ice -->
 		<FeatureInfo>
 			<Type>FEATURE_ICE</Type>
 			<Description>TXT_KEY_FEATURE_ICE</Description>
@@ -125,7 +119,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-		<!-- Jungle -->
 		<FeatureInfo>
 			<Type>FEATURE_JUNGLE</Type>
 			<Description>TXT_KEY_FEATURE_JUNGLE</Description>
@@ -138,12 +131,12 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-20</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iGrowth>20</iGrowth>
+			<iGrowth>10</iGrowth>
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -234,7 +227,7 @@
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
 			<iAdvancedStartRemoveCost>40</iAdvancedStartRemoveCost>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -254,7 +247,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-		<!-- Oasis -->
 		<FeatureInfo>
 			<Type>FEATURE_OASIS</Type>
 			<Description>TXT_KEY_FEATURE_OASIS</Description>
@@ -273,7 +265,6 @@
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -499,13 +490,11 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>25</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iGrowth>16</iGrowth>
 			<iWarmingDefense>2</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
-			<bCanGrowAnywhere>1</bCanGrowAnywhere>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -522,18 +511,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -625,20 +602,23 @@
 		</FeatureInfo>
 		<!-- New Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_FOREST_NEW</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_NEW</Description>
+			<Type>FEATURE_FOREST_YOUNG</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_YOUNG</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_FOREST_NEW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST_YOUNG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>400</iAppearance>
+			<iDefense>20</iDefense>
+			<iGrowth>15</iGrowth>
 			<iHealthPercent>25</iHealthPercent>
 			<iPopDestroys>3</iPopDestroys>
+			<iSeeThrough>1</iSeeThrough>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -655,18 +635,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -762,11 +730,12 @@
 			<ArtDefineTag>ART_DEF_FEATURE_FOREST_BURNT</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>100</iAppearance>
 			<iDefense>15</iDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -783,18 +752,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -871,10 +828,10 @@
 		</FeatureInfo>
 		<!-- Ancient Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_FOREST_OLD</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_OLD</Description>
+			<Type>FEATURE_FOREST_ANCIENT</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_ANCIENT</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_FOREST_OLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST_ANCIENT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -883,11 +840,11 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>50</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iAppearance>400</iAppearance>
+			<iAppearance>300</iAppearance>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -904,18 +861,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -984,6 +929,7 @@
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1017,7 +963,7 @@
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>6</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?  Quite a few RW cities are founded on swampland.-->
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -1032,7 +978,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1106,7 +1052,7 @@
 					<FootstepAudioScript/>
 				</FootstepSound>
 			</FootstepSounds>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1120,10 +1066,10 @@
 		</FeatureInfo>
 		<!-- Biogas -->
 		<FeatureInfo>
-			<Type>FEATURE_BIOGAS</Type>
-			<Description>TXT_KEY_FEATURE_BIOGAS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_BIOGAS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BIOGAS</ArtDefineTag>
+			<Type>FEATURE_INFECTIOUS_SMOG</Type>
+			<Description>TXT_KEY_FEATURE_INFECTIOUS_SMOG</Description>
+			<Civilopedia>TXT_KEY_FEATURE_INFECTIOUS_SMOG_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_INFECTIOUS_SMOG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-10</iYieldChange>
 				<iYieldChange>-10</iYieldChange>
@@ -1137,55 +1083,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_HILL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1193,19 +1091,19 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1213,7 +1111,67 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1380,10 +1338,10 @@
 		</FeatureInfo>
 		<!-- Plaugegas -->
 		<FeatureInfo>
-			<Type>FEATURE_PLAGUEGAS</Type>
-			<Description>TXT_KEY_FEATURE_PLAGUEGAS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_PLAGUEGAS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_PLAGUEGAS</ArtDefineTag>
+			<Type>FEATURE_PLAGUED_SMOG</Type>
+			<Description>TXT_KEY_FEATURE_PLAGUED_SMOG</Description>
+			<Civilopedia>TXT_KEY_FEATURE_PLAGUED_SMOG_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_PLAGUED_SMOG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-25</iYieldChange>
 				<iYieldChange>-25</iYieldChange>
@@ -1397,55 +1355,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_HILL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1453,19 +1363,19 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1473,7 +1383,67 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1563,10 +1533,10 @@
 			<iDefense>50</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
-			<iPopDestroys>12</iPopDestroys>
+			<iPopDestroys>5</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1653,6 +1623,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1666,16 +1637,16 @@
 		</FeatureInfo>
 		<!-- Cactus -->
 		<FeatureInfo>
-			<Type>FEATURE_KAKTUS</Type>
-			<Description>TXT_KEY_FEATURE_KAKTUS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_KAKTUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_KAKTUS</ArtDefineTag>
+			<Type>FEATURE_CACTUS</Type>
+			<Description>TXT_KEY_FEATURE_CACTUS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CACTUS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CACTUS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>800</iAppearance>
-			<iGrowth>20</iGrowth>
+			<iGrowth>10</iGrowth>
 			<iPopDestroys>10</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<TerrainBooleans>
@@ -1790,8 +1761,8 @@
 			<iHealthPercent>25</iHealthPercent>
 			<iDefense>10</iDefense>
 			<iAppearance>1000</iAppearance>
-			<iGrowth>20</iGrowth>
-			<iPopDestroys>12</iPopDestroys>
+			<iGrowth>15</iGrowth>
+			<iPopDestroys>8</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -1802,7 +1773,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1973,6 +1944,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1994,21 +1966,20 @@
 		</FeatureInfo>
 		<!-- Very Tall Grass -->
 		<FeatureInfo>
-			<Type>FEATURE_SWORD_GRASS</Type>
-			<Description>TXT_KEY_FEATURE_SWORD_GRASS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_SWORD_GRASS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_SWORD_GRASS</ArtDefineTag>
+			<Type>FEATURE_VERY_TALL_GRASS</Type>
+			<Description>TXT_KEY_FEATURE_VERY_TALL_GRASS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_VERY_TALL_GRASS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_VERY_TALL_GRASS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>10</iHealthPercent>
 			<iDefense>15</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2119,10 +2090,10 @@
 		</FeatureInfo>
 		<!-- Active Volcano -->
 		<FeatureInfo>
-			<Type>FEATURE_VOLCANO</Type>
+			<Type>FEATURE_VOLCANO_ACTIVE</Type>
 			<Description>TXT_KEY_FEATURE_VOLCANO_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VOLCANO_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_ACTIVE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2144,11 +2115,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2215,6 +2186,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2228,10 +2200,10 @@
 		</FeatureInfo>
 		<!-- Dormant Volcano -->
 		<FeatureInfo>
-			<Type>FEATURE_VOLCANO2</Type>
+			<Type>FEATURE_VOLCANO_DORMANT</Type>
 			<Description>TXT_KEY_FEATURE_VOLCANO_DORMANT</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VOLCANO_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_DORMANT</ArtDefineTag>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>300</iAppearance>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -2249,11 +2221,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2339,9 +2311,9 @@
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CRATER</ArtDefineTag>
 			<iMovement>1</iMovement>
-			<iDefense>25</iDefense>
+			<iDefense>-15</iDefense>
 			<iAppearance>60</iAppearance>
-			<iPopDestroys>100</iPopDestroys>
+			<iPopDestroys>20</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -2352,11 +2324,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_DUNES</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2365,10 +2333,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2388,11 +2352,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2478,10 +2442,10 @@
 		</FeatureInfo>
 		<!-- Tarpit -->
 		<FeatureInfo>
-			<Type>FEATURE_TARPIT</Type>
-			<Description>TXT_KEY_FEATURE_TARPIT</Description>
-			<Civilopedia>TXT_KEY_FEATURE_TARPIT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_TARPIT</ArtDefineTag>
+			<Type>FEATURE_TAR_PIT</Type>
+			<Description>TXT_KEY_FEATURE_TAR_PIT</Description>
+			<Civilopedia>TXT_KEY_FEATURE_TAR_PIT_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_TAR_PIT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2492,7 +2456,6 @@
 			<iWarmingDefense>1</iWarmingDefense>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iPopDestroys>-1</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -2507,7 +2470,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2523,11 +2486,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2641,7 +2604,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2652,7 +2614,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2738,7 +2700,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2749,7 +2710,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2835,8 +2796,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2847,7 +2807,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2934,7 +2894,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2945,7 +2904,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3031,8 +2990,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -3043,7 +3001,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3129,8 +3087,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>6</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -3141,7 +3098,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3228,7 +3185,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3313,7 +3269,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3398,8 +3353,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3485,7 +3439,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3570,8 +3523,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3656,8 +3608,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>6</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3743,7 +3694,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -3754,7 +3704,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3836,7 +3786,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -3847,7 +3796,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3929,8 +3878,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>2</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -3941,7 +3889,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4023,8 +3971,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4035,7 +3982,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4117,8 +4064,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4129,7 +4075,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4211,8 +4157,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4223,7 +4168,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4297,10 +4242,10 @@
 		</FeatureInfo>
 		<!-- Coral -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL</Type>
-			<Description>TXT_KEY_FEATURE_CORAL</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4345,10 +4290,10 @@
 		</FeatureInfo>
 		<!-- Coral with Beacon -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_WITH_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_WITH_BEACON</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_BEACON</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4391,10 +4336,10 @@
 		</FeatureInfo>
 		<!-- Coral with Lighthouse -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_WITH_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_WITH_LIGHTHOUSE</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_LIGHTHOUSE</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4455,6 +4400,7 @@
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>6</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<!-- GWMod new XML field M.A. -->
 			<bNoCity>1</bNoCity>
 			<TerrainBooleans>
@@ -4467,7 +4413,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -4664,10 +4610,10 @@
 		</FeatureInfo>
 		<!-- Seagrass -->
 		<FeatureInfo>
-			<Type>FEATURE_SEAGRASS</Type>
-			<Description>TXT_KEY_FEATURE_SEAGRASS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_SEAGRASS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_SEAGRASS</ArtDefineTag>
+			<Type>FEATURE_SEA_GRASS</Type>
+			<Description>TXT_KEY_FEATURE_SEA_GRASS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_SEA_GRASS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_SEA_GRASS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4938,8 +4884,8 @@
 		</FeatureInfo>
 		<!-- Reef with Beacon -->
 		<FeatureInfo>
-			<Type>FEATURE_REEF_WITH_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_REEF_WITH_BEACON</Description>
+			<Type>FEATURE_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
 			<YieldChanges>
@@ -5101,8 +5047,8 @@
 		</FeatureInfo>
 		<!-- Reef with Lighthouse -->
 		<FeatureInfo>
-			<Type>FEATURE_REEF_WITH_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_REEF_WITH_LIGHTHOUSE</Description>
+			<Type>FEATURE_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
 			<YieldChanges>
@@ -5299,7 +5245,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5343,7 +5289,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5525,7 +5471,6 @@
 			<Type>FEATURE_TORNADO</Type>
 			<Description>TXT_KEY_FEATURE_TORNADO</Description>
 			<Civilopedia>TXT_KEY_FEATURE_TORNADO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_FEAT_DAMAGE_HELP1</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_TORNADO</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
@@ -5534,9 +5479,8 @@
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDisappearance>20000</iDisappearance> <!-- 10000-80000 means that there's a 100% chance for the feature to disappear every turn on Normal-Eternity GS.-->
+			<iDisappearance>16000</iDisappearance> <!-- 10000-80000 means that there's a 100% chance for the feature to disappear every turn on Normal-Eternity GS.-->
 			<iTurnDamage>50</iTurnDamage>
-			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
@@ -5553,7 +5497,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5585,11 +5529,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5607,7 +5551,7 @@
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
-				</TerrainBoolean>				
+				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
@@ -5673,11 +5617,11 @@
 		</FeatureInfo>
 		<!-- Cave -->
 		<FeatureInfo>
-			<Type>FEATURE_CAVE</Type>
-			<Description>TXT_KEY_FEATURE_CAVE</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CAVE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CAVE</ArtDefineTag>
-			<iDefense>50</iDefense>
+			<Type>FEATURE_CAVES</Type>
+			<Description>TXT_KEY_FEATURE_CAVES</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CAVES_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CAVES</ArtDefineTag>
+			<iDefense>30</iDefense>
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
@@ -5695,7 +5639,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5727,11 +5671,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5814,142 +5758,6 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_PEAK_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Rainwater Basin -->
-		<FeatureInfo>
-			<Type>FEATURE_RAINWATER_BASIN</Type>
-			<Description>TXT_KEY_RAINWATER_BASIN_FEATURE</Description>
-			<Civilopedia>TXT_KEY_RAINWATER_BASIN_FEATURE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_RAINWATER_BASIN</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
-			<iDefense>10</iDefense>
-			<iAppearance>200</iAppearance>
-			<iPopDestroys>10</iPopDestroys>
-			<bNoCoast>1</bNoCoast>
-			<bNoRiver>1</bNoRiver>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<bAddsFreshWater>1</bAddsFreshWater>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<bNukeImmune>1</bNukeImmune>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_DREAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DREAD_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_DREAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DREAD_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
 		<!-- City Ruins -->
 		<FeatureInfo>
@@ -6224,510 +6032,6 @@
 					<FootstepAudioScript>AS3D_UN_TREBUCHET_STOP</FootstepAudioScript>
 				</FootstepSound>
 			</FootstepSounds>
-		</FeatureInfo>
-		<!-- Lunar Crater 1 -->
-		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER1</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER1</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER1</ArtDefineTag>
-			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
-			<iAppearance>300</iAppearance>
-			<iPopDestroys>25</iPopDestroys>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<bNoImprovement>1</bNoImprovement>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Lunar Crater 2 -->
-		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER2</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER2</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER2</ArtDefineTag>
-			<iMovement>1</iMovement>
-			<iSeeThrough>1</iSeeThrough>
-			<iPopDestroys>50</iPopDestroys>
-			<iDefense>50</iDefense>
-			<iAppearance>250</iAppearance>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<bNoImprovement>1</bNoImprovement>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Lunar Crater 3 -->
-		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER3</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER3</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER3</ArtDefineTag>
-			<iMovement>1</iMovement>
-			<iSeeThrough>1</iSeeThrough>
-			<iAppearance>250</iAppearance>
-			<iPopDestroys>100</iPopDestroys>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<bNoImprovement>1</bNoImprovement>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Asteroids -->
-		<FeatureInfo>
-			<Type>FEATURE_ASTEROIDS</Type>
-			<Description>TXT_KEY_FEATURE_ASTEROIDS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_ASTEROIDS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_ASTEROIDS</ArtDefineTag>
-			<iMovement>2</iMovement>
-			<iSeeThrough>1</iSeeThrough>
-			<iDefense>50</iDefense>
-			<iPopDestroys>-1</iPopDestroys>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SPACE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Black Hole -->
-		<FeatureInfo>
-			<Type>FEATURE_BLACK_HOLE</Type>
-			<Description>TXT_KEY_FEATURE_BLACK_HOLE</Description>
-			<Civilopedia>TXT_KEY_FEATURE_BLACK_HOLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BLACK_HOLE</ArtDefineTag>
-			<iMovement>4</iMovement>
-			<iAppearance>500</iAppearance>
-			<iTurnDamage>100</iTurnDamage>
-			<bNoCoast>1</bNoCoast>
-			<bNoRiver>1</bNoRiver>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<bNoCity>1</bNoCity>
-			<bNoImprovement>1</bNoImprovement>
-			<bVisibleAlways>1</bVisibleAlways>
-			<bNukeImmune>1</bNukeImmune>
-			<!-- There was unused Deep Space terrain -->
-			<TerrainBooleans/>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_BLACK_HOLE_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
 		<!-- Radiation Cloud -->
 		<FeatureInfo>

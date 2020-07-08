@@ -8,11 +8,11 @@
 <BonusInfos>
 <!-- Cave Burial -->
 	<BonusInfo>
-		<Type>BONUS_CAVE_BURIAL_GOODS</Type>
-		<Description>TXT_KEY_BONUS_CAVE_BURIAL_GOODS</Description>
+		<Type>BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</Type>
+		<Description>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</Description>
 		<Civilopedia>TXT_KEY_BONUS_BURIAL_GOODS_PEDIA</Civilopedia>
 		<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-		<ArtDefineTag>ART_DEF_BONUS_CAVE_BURIAL_GOODS</ArtDefineTag>
+		<ArtDefineTag>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</ArtDefineTag>
 		<TechReveal>TECH_CEREMONIAL_BURIAL</TechReveal>
 		<TechCityTrade>TECH_ARCHEOLOGY</TechCityTrade>
 		<TechObsolete>NONE</TechObsolete>
@@ -25,11 +25,11 @@
 	</BonusInfo>
 <!-- Earth Burial -->
 	<BonusInfo>
-		<Type>BONUS_EARTH_BURIAL_GOODS</Type>
-		<Description>TXT_KEY_BONUS_EARTH_BURIAL_GOODS</Description>
+		<Type>BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</Type>
+		<Description>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</Description>
 		<Civilopedia>TXT_KEY_BONUS_BURIAL_GOODS_PEDIA</Civilopedia>
 		<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-		<ArtDefineTag>ART_DEF_BONUS_EARTH_BURIAL_GOODS</ArtDefineTag>
+		<ArtDefineTag>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</ArtDefineTag>
 		<TechReveal>TECH_CEREMONIAL_BURIAL</TechReveal>
 		<TechCityTrade>TECH_ARCHEOLOGY</TechCityTrade>
 		<TechObsolete>NONE</TechObsolete>
@@ -42,11 +42,11 @@
 	</BonusInfo>
 <!-- Fire Burial -->
 	<BonusInfo>
-		<Type>BONUS_FIRE_BURIAL_GOODS</Type>
-		<Description>TXT_KEY_BONUS_FIRE_BURIAL_GOODS</Description>
+		<Type>BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</Type>
+		<Description>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</Description>
 		<Civilopedia>TXT_KEY_BONUS_BURIAL_GOODS_PEDIA</Civilopedia>
 		<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-		<ArtDefineTag>ART_DEF_BONUS_FIRE_BURIAL_GOODS</ArtDefineTag>
+		<ArtDefineTag>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</ArtDefineTag>
 		<TechReveal>TECH_CEREMONIAL_BURIAL</TechReveal>
 		<TechCityTrade>TECH_ARCHEOLOGY</TechCityTrade>
 		<TechObsolete>NONE</TechObsolete>
@@ -59,11 +59,11 @@
 	</BonusInfo>
 <!-- Sky Burial -->
 	<BonusInfo>
-		<Type>BONUS_SKY_BURIAL_GOODS</Type>
-		<Description>TXT_KEY_BONUS_SKY_BURIAL_GOODS</Description>
+		<Type>BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</Type>
+		<Description>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</Description>
 		<Civilopedia>TXT_KEY_BONUS_BURIAL_GOODS_PEDIA</Civilopedia>
 		<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-		<ArtDefineTag>ART_DEF_BONUS_SKY_BURIAL_GOODS</ArtDefineTag>
+		<ArtDefineTag>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</ArtDefineTag>
 		<TechReveal>TECH_CEREMONIAL_BURIAL</TechReveal>
 		<TechCityTrade>TECH_ARCHEOLOGY</TechCityTrade>
 		<TechObsolete>NONE</TechObsolete>

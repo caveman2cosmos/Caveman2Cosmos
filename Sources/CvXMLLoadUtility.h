@@ -15,10 +15,21 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-//#include "CvStructs.h"
-#include "CvInfos.h"
 #include "CvGlobals.h"
 #include "FVariableSystem.h"
+
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
 
 class FXmlSchemaCache;
 class FXml;
@@ -533,11 +544,11 @@ public:
 /**								Defines Function for Use in .cpp								**/
 /*************************************************************************************************/
 	// acquire a list of unknown length of String data from a Child setup in a String (typically for Pass 3 Use)
-    void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
+	void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
 	// acquire a list of unknown length of String data from a Child setup in an Array of INTs
-    void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
+	void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
 	// acquire a list of known length of String data from a Child setup true values in an Array of BOOLs
-    void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
+	void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
@@ -555,20 +566,10 @@ public:
 	void InitStringList(CvString **ppszList, int iListLen, CvString szString);
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
-	// allocate and initialize the civilization's default buildings
-	void InitBuildingDefaults(int **ppiDefaults);
-	// allocate and initialize the civilization's default units
-	void InitUnitDefaults(int **ppiDefaults);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of bool pointers
 	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of int pointers
 	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
 	// allocate and initialize a 2 dimensional array of float pointers
@@ -633,10 +634,10 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName){return SetOptionalVector<int>(aInfos, szRootTagName);}
+	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
 
 	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, std::vector<int>& source){return CopyNonDefaultsFromVector<int>(target, source);}
+	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
@@ -645,7 +646,7 @@ public:
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
-			int iNumSibs = GetXmlChildrenNumber();
+			const int iNumSibs = GetXmlChildrenNumber();
 
 			if (0 < iNumSibs)
 			{
@@ -679,7 +680,7 @@ public:
 		}
 	}
 	template<class T>
-	static void CopyNonDefaultsFromVector(std::vector<T>& target, std::vector<T>& source)
+	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
 		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{
@@ -775,6 +776,8 @@ public:
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
+	static void showXMLError(const char* const format, ...);
+
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 private:
 	xercesc::DOMElement*      m_pCurrentXmlElement;
@@ -793,10 +796,6 @@ private:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
-	// Python Modular Loading
-	template <class T>
-	void LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass);
 	//Main control of the MLF feature
 	void ModularLoadingControlXML();
 	// In the next 2 methods we load the MLF classes
@@ -817,9 +816,6 @@ private:
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	// take a character string of hex values and return their unsigned int value
-	void MakeMaskFromString(unsigned int *puiMask, char* szMask);
-
 	// find the tag name in the xml file and set the string parameter and num val parameter based on it's value
 	void SetGlobalStringArray(CvString** ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum=false);
 	void SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals);	// sets diplomacy comments
@@ -879,6 +875,7 @@ private:
 	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
+
 	void logMsg(char* format, ... );
 	void logMsgW(wchar_t* format, ... );
 /************************************************************************************************/

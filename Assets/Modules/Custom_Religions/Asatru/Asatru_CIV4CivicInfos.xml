@@ -20,18 +20,16 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_CHURCH</Type>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDINGCLASS_ASATRU_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_THEOCRACY</Type>
@@ -46,16 +44,15 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_ASATRU_MONASTERY</BuildingClassType>
+			<Type>CIVIC_RELIGIOUS</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 	</CivicInfos>
 </Civ4CivicInfos>

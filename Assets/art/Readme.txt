@@ -1,5 +1,5 @@
 Art files are no longer located here!!
-Insted of Assets/art they must be placed in UnpackedArt/art
+Instead of Assets/art they must be placed in UnpackedArt/art
 
 Movies in the .bik file format is still here as they can't be packed in FPK's.
 

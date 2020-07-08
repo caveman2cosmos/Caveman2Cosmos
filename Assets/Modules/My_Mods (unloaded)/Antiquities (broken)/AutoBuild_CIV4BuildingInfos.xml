@@ -7,72 +7,73 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAVE_NEAR_CITY</BuildingClass>
 			<Type>BUILDING_CAVE_NEAR_CITY</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
-			<iCost>-1</iCost>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<FreeBuilding>BUILDINGCLASS_CAVE_IN_NATION</FreeBuilding>
+			<FreeBuilding>BUILDING_CAVE_IN_NATION</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAVE_IN_NATION</BuildingClass>
 			<Type>BUILDING_CAVE_IN_NATION</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_IN_NATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_IN_NATION</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
-			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ELITE_HOUSING</BuildingClass>
 			<Type>BUILDING_ELITE_HOUSING</Type>
 			<Description>TXT_KEY_BUILDING_ELITE_HOUSING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELITE_HOUSING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELITE_HOUSING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELITE_HOUSING</ArtDefineTag>
-			<iCost>-1</iCost>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA1_LDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA1_MDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA2_LDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA2_MDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-					<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA3_LDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOUSE_ERA3_MDHW</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-		       </PrereqOrBuildingClasses>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+					<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+		       </PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 	</BuildingInfos>

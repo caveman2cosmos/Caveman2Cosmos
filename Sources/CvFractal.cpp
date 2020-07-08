@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvFractal.h"
+#include "CvRandom.h"
 
 #define FLOAT_PRECISION		(1000)
 
@@ -48,8 +49,8 @@ void CvFractal::fracInit(int iNewXs, int iNewYs, int iGrain, CvRandom& random, i
 }
 
 // pbyHints should be a 1d array of bytes representing a 2d array 
-//	with width = 2^(iFracXExp - minExp + iGrain) + (GC.getMapINLINE().isWrapXINLINE() ? 0 : 1)
-//	and height = 2^(iFracYExp - minExp + iGrain) + (GC.getMapINLINE().isWrapYINLINE() ? 0 : 1)
+//	with width = 2^(iFracXExp - minExp + iGrain) + (GC.getMap().isWrapX() ? 0 : 1)
+//	and height = 2^(iFracYExp - minExp + iGrain) + (GC.getMap().isWrapY() ? 0 : 1)
 // where minExp = std::min(iFracXExp, iFracYExp)
 // Note above that an extra value is required in a dimension in which the map does not wrap.
 

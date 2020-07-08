@@ -1,8 +1,11 @@
 #include "CvGameCoreDLL.h"
-# include <boost/python/overloads.hpp>
-using namespace boost::python;
+#include "CvRandom.h"
 
+#ifndef __INTELLISENSE__
+#include <boost/python/overloads.hpp>
+using namespace boost::python;
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(CvRandom_get_overloads, CvRandom::get, 2, 2)
+#endif
 
 //
 // published python interface for CvRandom

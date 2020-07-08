@@ -21,7 +21,7 @@ m_iTick(iTick)
 
 int CvDate::getYear() const
 {
-	return GC.getGameINLINE().getStartYear() + (m_iTick / 360);
+	return GC.getGame().getStartYear() + (m_iTick / 360);
 }
 
 int CvDate::getDay() const
@@ -46,7 +46,7 @@ int CvDate::getWeek() const
 
 SeasonTypes CvDate::getSeason() const
 {
-	int month = getMonth();
+	const int month = getMonth();
 
 	if (month <= 1 || month >= 11)
 	{
@@ -72,16 +72,16 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
-		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
+		eActualGameSpeed = GC.getGame().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
-	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
 		calculateEndDates(eActualGameSpeed);
 	}
 
-	for (std::vector<CvDateIncrement>::iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
+	for (std::vector<CvDateIncrement>::const_iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
 	{
 		if (*this < it->m_endDate)
 		{
@@ -93,7 +93,7 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 
 void CvDate::increment(GameSpeedTypes eGameSpeed)
 {
-	CvDateIncrement inc = getIncrement(eGameSpeed);
+	const CvDateIncrement inc = getIncrement(eGameSpeed);
 	m_iTick += inc.m_iIncrementDay;
 	m_iTick += (inc.m_iIncrementMonth * 30);
 }
@@ -149,10 +149,10 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
-		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
+		eActualGameSpeed = GC.getGame().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
-	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
 		calculateEndDates(eActualGameSpeed);
@@ -175,7 +175,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 			}
 			break;
 		}
-		else if (i==(int)aIncrements.size())
+		else
 		{
 			iRemainingTurns = iTurn - aIncrements[i].m_iendTurn;
 			date = aIncrements[i].m_endDate;

@@ -9,12 +9,12 @@
 	<BuildingInfo>
 		<!-- Dependency -->
 		<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 </BuildingInfos>
 </Civ4BuildingInfos>

@@ -93,7 +93,7 @@ if errorlevel 1 (
     call :install_failure
     exit /B 1
 )
-call "%~dp0\Tools\_MakeDLL.bat" build %build_config%
+call "%~dp0\Tools\_MakeDLL.bat" %build_config% build deploy
 if errorlevel 1 (
     call :build_failure
     exit /B 1

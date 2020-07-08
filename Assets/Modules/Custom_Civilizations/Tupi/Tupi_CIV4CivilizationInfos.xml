@@ -37,65 +37,52 @@
 				<City>TXT_KEY_CITY_NAME_COCAMA</City>
 				<City>TXT_KEY_CITY_NAME_NHEHGATU</City>
 				<City>TXT_KEY_CITY_NAME_POTIGUARA</City>
-				<City>Araguaia</City>
-				<City>Onca</City>
-				<City>Jenipapo</City>
-				<City>Coco</City>
-				<City>Balsas</City>
-				<City>Jenipapo</City>
-				<City>Muricizal</City>
-				<City>Taboa</City>
-				<City>Itapicuru</City>
-				<City>Urucui</City>
-				<City>Poco</City>
-				<City>Mukungo</City>
-				<City>Oiterio</City>
-				<City>Raposa</City>
-				<City>Itauireria</City>
-				<City>Juramento</City>
-				<City>Tamboril</City>
-				<City>Croata</City>
-				<City>Tocantis</City>
-				<City>Imbirucu</City>
-				<City>Macapa</City>
-				<City>Paui</City>
-				<City>Arraia</City>
-				<City>Andorinhas</City>
+				<City>TXT_KEY_CITY_NAME_ARAGUAIA</City>
+				<City>TXT_KEY_CITY_NAME_ONCA</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_COCO</City>
+				<City>TXT_KEY_CITY_NAME_BALSAS</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_MURICIZAL</City>
+				<City>TXT_KEY_CITY_NAME_TABOA</City>
+				<City>TXT_KEY_CITY_NAME_ITAPICURU</City>
+				<City>TXT_KEY_CITY_NAME_URUCUI</City>
+				<City>TXT_KEY_CITY_NAME_POCO</City>
+				<City>TXT_KEY_CITY_NAME_MUKUNGO</City>
+				<City>TXT_KEY_CITY_NAME_OITERIO</City>
+				<City>TXT_KEY_CITY_NAME_RAPOSA</City>
+				<City>TXT_KEY_CITY_NAME_ITAUIRERIA</City>
+				<City>TXT_KEY_CITY_NAME_JURAMENTO</City>
+				<City>TXT_KEY_CITY_NAME_TAMBORIL</City>
+				<City>TXT_KEY_CITY_NAME_CROATA</City>
+				<City>TXT_KEY_CITY_NAME_TOCANTIS</City>
+				<City>TXT_KEY_CITY_NAME_IMBIRUCU</City>
+				<City>TXT_KEY_CITY_NAME_MACAPA</City>
+				<City>TXT_KEY_CITY_NAME_PAUI</City>
+				<City>TXT_KEY_CITY_NAME_ARRAIA</City>
+				<City>TXT_KEY_CITY_NAME_ANDORINHAS</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_SAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_BAND</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>

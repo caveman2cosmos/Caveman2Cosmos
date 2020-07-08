@@ -136,16 +136,12 @@ def setDefault(name, default):
 def getDispatcher():
 	return g_dispatcher
 
-
 ## Dispatcher
 
 class Dispatcher:
 
 	def __init__(self, log=None):
-		if log is None:
-			self._log = False
-		else:
-			self._log = log
+		self._log = log
 		self._callbacks = {}
 		self._baseUtils = CvGameUtils.CvGameUtils()
 		clazz = CvGameUtils.CvGameUtils
@@ -177,8 +173,6 @@ class Dispatcher:
 		self._setDefault("cannotSelectionListMove", False)
 		self._setDefault("cannotSelectionListGameNetMessage", False)
 		self._setDefault("cannotDoControl", False)
-		self._setDefault("canResearch", False)
-		self._setDefault("cannotResearch", False)
 		self._setDefault("canDoCivic", False)
 		self._setDefault("cannotDoCivic", False)
 		self._setDefault("canTrain", False)
@@ -194,7 +188,6 @@ class Dispatcher:
 		self._setDefault("AI_doWar", False)
 		self._setDefault("AI_doDiplo", False)
 		self._setDefault("doHolyCity", False)
-		self._setDefault("doHolyCityTech", False)
 		self._setDefault("doGold", False)
 		self._setDefault("doResearch", False)
 		self._setDefault("doGoody", False)
@@ -282,6 +275,9 @@ class Dispatcher:
 		bound = lambda *args: func(utils, *args)
 		bound.__module__ = func.__module__
 		return bound
+
+	def getBaseUtils(self):
+		return self._baseUtils
 
 
 ## Callback

@@ -295,7 +295,7 @@ class DotMapLayer(StrategyLayer):
 			self.unhighlightCity()
 			CvScreensInterface.hideOverlayScreen()
 
-	def onSwitchHotSeatPlayer(self, ePlayer):
+	def onSwitchHotSeatPlayer(self):
 		self.hide()
 
 	def hasCities(self, ePlayer):

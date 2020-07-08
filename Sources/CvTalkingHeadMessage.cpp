@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 
 CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
 	m_iTurn(iMessageTurn),
@@ -78,11 +79,6 @@ void CvTalkingHeadMessage::setDescription(CvWString pszDescription)
 const CvString& CvTalkingHeadMessage::getSound() const
 {
 	return (m_szSound);
-}
-
-void CvTalkingHeadMessage::setSound(LPCTSTR pszSound)
-{
-	m_szSound = pszSound;
 }
 
 const CvString& CvTalkingHeadMessage::getIcon() const
@@ -220,11 +216,11 @@ int CvTalkingHeadMessage::getExpireTurn()
 	case MESSAGE_TYPE_QUEST:
 	case MESSAGE_TYPE_MAJOR_EVENT:
 		// never expires
-		iExpireTurn = GC.getGameINLINE().getGameTurn() + 1;
+		iExpireTurn = GC.getGame().getGameTurn() + 1;
 		break;
 	case MESSAGE_TYPE_DISPLAY_ONLY:
 		// never saved
-		iExpireTurn = GC.getGameINLINE().getGameTurn() - 1;
+		iExpireTurn = GC.getGame().getGameTurn() - 1;
 		break;
 	default:
 		FAssert(false);

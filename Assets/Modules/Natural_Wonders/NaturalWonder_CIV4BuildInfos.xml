@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Build Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
 		<BuildInfo>
@@ -26,17 +20,15 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
 		</BuildInfo>
-
-
 		<BuildInfo>
-			<Type>BUILD_BEACON_GREAT_BARRIER</Type>
-			<Description>TXT_KEY_BUILD_BEACON_GREAT_BARRIER</Description>
+			<Type>BUILD_BEACON_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Description>
 			<Help/>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -48,14 +40,14 @@
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_LIGHTHOUSE_GREAT_BARRIER</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Type>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Help/>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>

@@ -7,8 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvXMLLoadUtility.h"
 #include "IntExpr.h"
-#include <boost/bind.hpp>
 
 IntExpr::~IntExpr()
 {
@@ -81,7 +82,10 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 				CvString szTextVal;
 				pXML->GetXmlVal(szTextVal);
 
-				pXML->TryMoveToXmlNextSibling();
+				if (!pXML->TryMoveToXmlNextSibling())
+				{
+					FErrorMsg("Adapt usb expression is not correctly constructed");
+				}
 				// read the subnode
 				IntExpr* pExpr = read(pXML);
 				
@@ -431,7 +435,7 @@ void IntExprAttribute::getCheckSum(unsigned int &iSum)
 
 int IntExprProperty::evaluate(CvGameObject *pObject)
 {
-	return pObject->getProperties()->getValueByProperty((int)m_eProperty);
+	return pObject->getProperties()->getValueByProperty(m_eProperty);
 }
 
 void IntExprProperty::buildDisplayString(CvWStringBuffer &szBuffer) const
@@ -638,7 +642,7 @@ IntExprIntegrateOp::~IntExprIntegrateOp()
 int IntExprIntegrateOp::evaluate(CvGameObject *pObject)
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(getOp(), _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(getOp(), _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
@@ -695,7 +699,7 @@ int IntExprIntegrateAvg::evaluate(CvGameObject *pObject)
 {
 	int iAcc = 0;
 	int iCount = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
+	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
 	return iCount ? iAcc/iCount : 0;
 }
 
@@ -721,7 +725,7 @@ IntExprIntegrateCount::~IntExprIntegrateCount()
 int IntExprIntegrateCount::evaluate(CvGameObject *pObject)
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
@@ -753,7 +757,7 @@ IntExprRandom::~IntExprRandom()
 
 int IntExprRandom::evaluate(CvGameObject *pObject)
 {
-	return GC.getGameINLINE().getSorenRandNum(m_pExpr->evaluate(pObject), "Random integer expression");
+	return GC.getGame().getSorenRandNum(m_pExpr->evaluate(pObject), "Random integer expression");
 }
 
 void IntExprRandom::buildDisplayString(CvWStringBuffer &szBuffer) const
@@ -787,7 +791,7 @@ int IntExprAdapt::evaluate(CvGameObject *pObject)
 void IntExprAdapt::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	CvWString szTextVal;
-	szTextVal.Format(L"%d", GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())));
+	szTextVal.Format(L"%d", GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())));
 	szBuffer.append(szTextVal);
 }
 
@@ -805,29 +809,12 @@ void IntExprAdapt::getCheckSum(unsigned int &iSum)
 
 int IntExprPython::evaluate(CvGameObject *pObject)
 {
-
-	long lResult;
-
-	CyArgsList argsList;
-	void* pArgument = pObject->addPythonArgument(&argsList);
-
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &lResult);
-
-	pObject->disposePythonArgument(pArgument);
-
-	return lResult;
+	return Cy::call<int>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << pObject);
 }
 
 void IntExprPython::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-
-	CvWString szResult;
-
-	CyArgsList argsList;
-	argsList.add(false);
-
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &szResult);
-
+	CvWString szResult = Cy::call<CvWString>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << false);
 	szBuffer.append(szResult);
 }
 

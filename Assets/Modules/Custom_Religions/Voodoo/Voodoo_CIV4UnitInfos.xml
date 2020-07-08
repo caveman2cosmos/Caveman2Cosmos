@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- Assets\Modules\Custom_Religions\Voodoo\Voodoo_CIV4UnitInfos.xml -->
-	<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_HELLSMOUTH_DOG</Class>
 			<Type>UNIT_HELLSMOUTH_DOG</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -36,6 +30,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_HELLSMOUTH_DOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Civilopedia>
@@ -66,16 +63,15 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuilding>BUILDING_HELLSMOUTH_SANCTUARY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_POLICE_DOG</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_POLICE_DOG</UnitType>
+			</UnitUpgrades>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -113,7 +109,7 @@
 			</FreePromotions>
 			<iExtraCost>3</iExtraCost>
 			<iAsset>7</iAsset>
-			<iPower>20</iPower>
+			<iPower>15</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -128,9 +124,8 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_UNDEAD_WORKER</Class>
 			<Type>UNIT_UNDEAD_WORKER</Type>
-			<Capture>UNITCLASS_WORKER</Capture>
+			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -143,18 +138,18 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UNDEAD_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_UNDEAD_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKER_INDUSTRIAL</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -162,6 +157,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
@@ -175,11 +174,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -187,11 +186,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -199,7 +198,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -215,6 +214,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -227,7 +230,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -259,7 +262,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -267,11 +270,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -299,7 +302,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -323,7 +326,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -331,15 +334,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -347,7 +350,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -359,18 +362,20 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>250</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -390,10 +395,9 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VOODOO_MISSIONARY</Class>
 			<Type>UNIT_VOODOO_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_VOODOO_MISSIONARY</Capture>
+			<Capture>UNIT_VOODOO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -405,6 +409,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VOODOO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_VOODOO_MISSIONARY_PEDIA</Civilopedia>
@@ -417,7 +424,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

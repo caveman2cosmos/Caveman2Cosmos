@@ -1,0 +1,406 @@
+// Fastbuild configuration file for Caveman2Cosmos
+// Quickstart guide here: http://www.fastbuild.org/docs/quickstartguide.html
+
+// ### Paths ####
+.BUILD_DIR          = '$_WORKING_DIR_$.\..\Build'
+.SOURCE_DIR         = '$_WORKING_DIR_$'
+.TOOLKIT            = '$BUILD_DIR$\deps\Microsoft Visual C++ Toolkit 2003'
+.PSDK               = '$BUILD_DIR$\deps\Microsoft SDKs\Windows\v6.0'
+.YOURMOD            = '$BUILD_DIR$\..'
+
+// ### Tools ####
+.Compiler           = '$TOOLKIT$\bin\cl.exe'
+.Linker             = '$TOOLKIT$\bin\link.exe'
+.ResourceCompiler   = '$PSDK$\bin\rc.exe'
+
+// ### FastBuild Settings ####
+Settings
+{
+  // Caching
+  .CachePath        = '$BUILD_DIR$\cache'
+}
+
+// ### General defines ###
+.CommonDefines      = ' /DWIN32' 
+                    + ' /D_WINDOWS' 
+                    + ' /D_USRDLL' 
+                    + ' /DXERCES_STATIC_LIBRARY'
+
+// ### C2C defines ###
+.C2CDefines         = ' /D_MOD_SENTRY' 
+                    + ' /D_MOD_FRACTRADE' 
+                    + ' /D_MOD_GOVWORKERS' 
+                    + ' /DLOG_AI' 
+
+#if exists(C2C_VERSION)
+    #import C2C_VERSION
+    .C2CDefines     + ' /DC2C_VERSION=\"$C2C_VERSION$\"'
+#endif
+
+// ### Boost root dir ###
+.BOOST_PATH         = '$BUILD_DIR$/deps'
+
+// ### Include paths ###
+.GLOBAL_INCS        = ' /I"$TOOLKIT$/include"' 
+                    + ' /I"$PSDK$/Include"' 
+                    + ' /I"$PSDK$/Include/mfc"'
+
+.PROJECT_INCS       = ' /I"$BOOST_PATH$/Python24/include"' 
+                    + ' /I"$BOOST_PATH$/Boost-1.55.0/include"' 
+                    + ' /I"$BOOST_PATH$/Boost-1.32.0/include"' 
+                    + ' /I"$SOURCE_DIR$/include"'
+                    + ' /I"$SOURCE_DIR$"'
+
+.INCS               = '$PROJECT_INCS$ $GLOBAL_INCS$'
+
+// ### Libs and Lib paths ###
+
+.PROJECT_LIBS       = ' /LIBPATH:"$BOOST_PATH$/Python24/libs"' 
+                    + ' /LIBPATH:"$BOOST_PATH$/boost-1.55.0/libs/"' 
+                    + ' /LIBPATH:"$BOOST_PATH$/boost-1.32.0/libs/"' 
+                    + ' /LIBPATH:"$SOURCE_DIR$/lib"' 
+                    + ' boost_python-vc71-mt-1_32.lib' 
+                    + ' XercesLib-3.1.1-x86-windows-vc-7.1.lib'
+
+.GLOBAL_LIBS        = ' /LIBPATH:"$TOOLKIT$/lib"' 
+                    + ' /LIBPATH:"$PSDK$/Lib"' 
+                    + ' winmm.lib' 
+                    + ' user32.lib' 
+                    + ' psapi.lib' 
+                    + ' advapi32.lib'
+.LIBS               = '$PROJECT_LIBS$ $GLOBAL_LIBS$'
+
+// ### Base configs ###
+.ConfigCommon = 
+[
+    .CLOptions      = ' /GR'
+                    + ' /MD'
+                    + ' /Gy'
+                    + ' /W3'                        // Most warnings are enabled
+                    + ' /EHsc'
+                    + ' /Gd'
+                    + ' /Gm-'
+                    + ' /arch:SSE2'
+                    + ' /Zm200'
+                    + ' $CommonDefines$'
+                    + ' $C2CDefines$'
+                    + ' $INCS$'
+                    + ' /nologo'
+                    + ' /Fd"CvGameCoreDLL.pdb"'
+                    + ' /Z7'                        // Old style PDB so that parallel compilation will work
+
+    .LDOptions      = ' /OUT:"%2"'                  // Output
+                    + ' "%1"'                       // Input
+                    + ' /LTCG'                      // Link time code generation enabled, only operative on FinalRelease
+                    + ' /DLL'
+                    + ' /NOLOGO'
+                    + ' /SUBSYSTEM:WINDOWS'
+                    + ' /LARGEADDRESSAWARE'
+                    + ' /TLBID:1'
+                    // + ' /PDB:"$Target_PDB$'
+                    + ' /NODEFAULTLIB:msvcprtd.lib'
+                    + ' /DEF:CvGameCoreDLL.def'
+                    + ' /PDBALTPATH:%_PDB%'
+                    + ' /INCREMENTAL:NO'
+                    + ' /DEBUG'
+                    + ' $LIBS$'
+]
+
+// Base for debug like configs (only Debug uses it currently)
+.ConfigDebugCommon = 
+[
+    Using(.ConfigCommon)
+
+    .CLOptions      + ' /Od' // No optimizations
+                    + ' /RTC1' 
+                    + ' /D_DEBUG'
+                    //+ ' /ZI' // Edit and continue PDB, it won't work with parallel compilation
+]
+
+// Base for release like configs (with optimization in general)
+.ConfigNonDebugCommon = 
+[
+    Using(.ConfigCommon)
+
+    .CLOptions      + ' /O2' // Maximize speed
+                    + ' /Oy' 
+                    + ' /Oi' 
+                    + ' /G7' 
+                    + ' /DNDEBUG'
+    .LDOptions      + ' /OPT:REF'
+                    + ' /OPT:ICF'
+]
+
+// ### Configs ###
+.ConfigDebug = 
+[
+    Using(.ConfigDebugCommon)
+    .ConfigName     = 'Debug'
+
+    .CLOptions      + ' /DFASSERT_ENABLE'
+    .LDOptions      + ' msvcprt.lib'
+]
+
+.ConfigRelease = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'Release'
+]
+
+.ConfigAssert = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'Assert'
+
+    .CLOptions      + ' /DFASSERT_ENABLE'
+]
+
+.ConfigProfile = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'Profile'
+
+    .CLOptions      + ' /DFP_PROFILE_ENABLE' 
+                    + ' /DUSE_INTERNAL_PROFILER'
+]
+
+.ConfigTesting = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'Testing'
+
+    .CLOptions      + ' /DFASSERT_ENABLE' 
+                    + ' /DFASSERT_LOGGING'
+]
+
+.ConfigFinalRelease = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'FinalRelease'
+
+    .CLOptions      + ' /GL'
+                    + ' /DFINAL_RELEASE'
+]
+
+.Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
+
+.AllTargets = {}
+
+Unity( 'Sources-Unity' )
+{
+    .UnityInputPath = '$SOURCE_DIR$'
+    .UnityInputExcludePattern = '*/Cy*'
+    // Keep our pch file out of the unity files
+    .UnityInputExcludedFiles = { "CvGameCoreDLL.cpp" }
+    .UnityInputIsolatedFiles = { "CvGameTextMgr.cpp" }
+    .UnityOutputPath        = '$BUILD_DIR$\unity'
+    .UnityInputPathRecurse  = false
+    .UnityNumFiles          = 12
+    .UnityPCH               = 'CvGameCoreDLL.h'
+}
+
+ForEach( .Config in .Configs )
+{
+    Using( .Config )
+
+    .OUT_DIR                = '$BUILD_DIR$\$ConfigName$'
+    .Target_DLL             = '$OUT_DIR$\CvGameCoreDLL.dll'
+    .Target_RES             = '$OUT_DIR$\CvGameCoreDLL.res'
+
+    // Building objs
+    ObjectList( '$ConfigName$-Objs' )
+    {
+        .CompilerInputPath = '$SOURCE_DIR$'
+        .CompilerInputPathRecurse = false
+        .CompilerInputPattern = 'Cy*.cpp'
+        
+        .CompilerInputUnity = 'Sources-Unity'
+
+        .CompilerOutputPath = '$OUT_DIR$'
+
+        .PCHInputFile       = '$SOURCE_DIR$/CvGameCoreDLL.cpp'
+        .PCHOutputFile      = '$OUT_DIR$/CvGameCoreDLL.pch'
+        .PCHOptions         = ' "%1"' // PCH .CPP Input
+                            + ' /Fo"%3"' // .OBJ Output
+                            + ' /Yc"CvGameCoreDLL.h"' // PCH Header
+                            + ' /Fp"%2"' // .PCH File
+                            + ' $CLOptions$'
+                            + ' /DBUILD_TARGET=$ConfigName$'
+                            + ' /c'
+
+        .CompilerOptions    = ' "%1"' // .CPP Input
+                            + ' /Fo"%2"' // .OBJ Output
+                            + ' /Yu"CvGameCoreDLL.h"' // PCH Header
+                            + ' /Fp"$PCHOutputFile$"' // .PCH File
+                            + ' $CLOptions$'
+                            + ' /DBUILD_TARGET=$ConfigName$'
+                            + ' /c'
+    }
+
+    // Resource build
+    Exec( '$ConfigName$-res' )
+    {
+        .ExecExecutable     = '$ResourceCompiler$'
+        .ExecInput          = '$SOURCE_DIR$/CvGameCoreDLL.rc'
+        .ExecOutput         = '$Target_RES$'
+        .ExecArguments      = '/Fo"%2" $INCS$ "%1"'
+    }
+
+    // Linking to DLL
+    DLL( '$ConfigName$-build' )
+    {
+        .PreBuildDependencies = '$ConfigName$-res'
+        .Libraries          = { '$ConfigName$-Objs' }
+        .LinkerOutput       = '$Target_DLL$'
+        .LinkerOptions      = ' $LDOptions$'
+                            + ' $Target_RES$'
+    }
+
+    // This was an attempt at a copy deploy step.
+    // It doesn't work as it results in multiple different targets pointing at the same final file, which is invalid in fbuild.
+    // We have the deploy step in a batch file instead.
+    // Copy( '$ConfigName$-deploy' )
+    // {
+    //     //.PreBuildDependencies = '$ConfigName$-build'
+    //     .Source   = {'$Target_DLL$', '$Target_PDB$'}
+    //     .Dest     = '$YOURMOD$/Assets/'
+    // }
+
+    ^AllTargets + {'$ConfigName$-build'}
+}
+
+// The default target will just build all configs
+Alias( 'all' ) 
+{
+    .Targets = .AllTargets 
+}
+
+// Documentation and notes below ====================================================
+
+// ==================================================================================
+// EXAMPLE COMMAND LINES
+// ==================================================================================
+
+// Precompile command line:
+// "..\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\cl.exe" /nologo /MD /Z7 /Od /RTC1 /DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=Debug /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"..\Build\Debug\CvGameCoreDLL.pdb" /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI /DFASSERT_ENABLE /Yu"CvGameCoreDLL.h" /Fp"..\Build\Debug\CvGameCoreDLL.pch" /I"..\\Build\deps/Boost-1.32.0/include" /I"..\\Build\deps/Python24/include" /I"./include" /I"..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /YcCvGameCoreDLL.h /Fo"..\Build\Debug\_precompile.obj" /c .\_precompile.cpp
+// Fastbuild version:
+// <ROOT>\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\cl.exe "<ROOT>\Sources\CvGameCoreDLL.cpp" /Fo"<ROOT>\Build\Debug\CvGameCoreDLL.pch.obj" /Yc"CvGameCoreDLL.h" /Fp"<ROOT>\Build\Debug\CvGameCoreDLL.pch" /GR /Gy /W3 /EHsc /Gd /Gm- /arch:SSE2 /Zm200 /DWIN32 /D_WINDOWS /D_USRDLL /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI /I".\..\Build/deps/Boost-1.32.0/include" /I".\..\Build/deps/Python24/include" /I"./include" /I".\..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /nologo /MD /Z7 /Od /RTC1 /D_DEBUG /DFASSERT_ENABLE /DBUILD_TARGET=Debug /c  /showIncludes
+
+// CPP command line:
+// "..\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\cl.exe" /nologo /MD /Z7 /Od /RTC1 /DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=Debug /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"..\Build\Debug\CvGameCoreDLL.pdb" /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI /DFASSERT_ENABLE /Yu"CvGameCoreDLL.h" /Fp"..\Build\Debug\CvGameCoreDLL.pch" /I"..\\Build\deps/Boost-1.32.0/include" /I"..\\Build\deps/Python24/include" /I"./include" /I"..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /Fo..\Build\Debug\.\BetterBTSAI.obj /c .\.\BetterBTSAI.cpp
+// Fastbuild version:
+// <ROOT>\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\cl.exe "<ROOT>\Sources\CyReplayInfo.cpp" /Fo"<ROOT>\Build\Debug\CyReplayInfo.obj" /Yu"./CvGameCoreDLL.h" /Fp".\..\Build\Debug/CvGameCoreDLL.pch" /GR /Gy /W3 /EHsc /Gd /Gm- /arch:SSE2 /Zm200 /DWIN32 /D_WINDOWS /D_USRDLL /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI /I".\..\Build/deps/Boost-1.32.0/include" /I".\..\Build/deps/Python24/include" /I"./include" /I".\..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /nologo /MD /Z7 /Od /RTC1 /D_DEBUG /DFASSERT_ENABLE /DBUILD_TARGET=Debug /c  /showIncludes
+
+// RC command line:
+// "..\Build\deps\Microsoft SDKs\Windows\v6.0\bin\rc.exe" /Fo..\Build\Debug\CvGameCoreDLL.res /I"..\\Build\deps/Boost-1.32.0/include" /I"..\\Build\deps/Python24/include" /I"./include" /I"..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I"..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" CvGameCoreDLL.rc
+// Fastbuild version:
+// <ROOT>\Build\deps\Microsoft SDKs\Windows\v6.0\bin\rc.exe /Fo"<ROOT>\Build\Debug\CvGameCoreDLL.res" /I".\..\Build/deps/Boost-1.32.0/include" /I".\..\Build/deps/Python24/include" /I"./include" /I".\..\Build\deps\Microsoft Visual C++ Toolkit 2003/include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include" /I".\..\Build\deps\Microsoft SDKs\Windows\v6.0/Include/mfc" "<ROOT>\Sources\CvGameCoreDLL.rc"
+
+// Link command line:
+// "..\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\link.exe" /out:..\Build\Debug\CvGameCoreDLL.dll /INCREMENTAL:NO /DEBUG /IMPLIB:"..\Build\Debug\CvGameCoreDLL.lib" /LTCG /DLL /NOLOGO /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /PDB:"..\Build\Debug\CvGameCoreDLL.pdb"  /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB% /LIBPATH:"..\\Build\deps/Python24/libs" /LIBPATH:"..\\Build\deps/boost-1.32.0/libs/" /LIBPATH:"./lib"  boost_python-vc71-mt-1_32.lib XercesLib-3.1.1-x86-windows-vc-7.1.lib /LIBPATH:"..\Build\deps\Microsoft Visual C++ Toolkit 2003/lib" /LIBPATH:"..\Build\deps\Microsoft SDKs\Windows\v6.0/Lib" winmm.lib user32.lib psapi.lib advapi32.lib msvcprt.lib <OBJS HERE> ..\Build\Debug\.\_precompile.obj ..\Build\Debug\CvGameCoreDLL.res
+// Fastbuild version:
+// C:\Users\billw\Documents\GitHub\Caveman2Cosmos\Build\deps\Microsoft Visual C++ Toolkit 2003\bin\link.exe /OUT:"C:\Users\billw\Documents\GitHub\Caveman2Cosmos\Build\Debug\CvGameCoreDLL.dll" <OBJS HERE> "C:\Users\billw\Documents\GitHub\Caveman2Cosmos\Build\Debug\CvGameCoreDLL.pch.obj"   /LTCG /DLL /NOLOGO /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB% /INCREMENTAL:NO /DEBUG /LIBPATH:"..\Build\deps\Python24\libs" /LIBPATH:"..\Build\deps\boost-1.32.0\libs" /LIBPATH:"lib" boost_python-vc71-mt-1_32.lib XercesLib-3.1.1-x86-windows-vc-7.1.lib /LIBPATH:"..\Build\deps\Microsoft Visual C++ Toolkit 2003\lib" /LIBPATH:"..\Build\deps\Microsoft SDKs\Windows\v6.0\Lib" winmm.lib user32.lib psapi.lib advapi32.lib msvcprt.lib .\..\Build\Debug\CvGameCoreDLL.res
+
+
+// ==================================================================================
+// COMPILER OPTIONS (output of cl /?)
+// ==================================================================================
+
+// Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 13.10.6030 for 80x86
+// Copyright (C) Microsoft Corporation 1984-2002. All rights reserved.
+
+//                           C/C++ COMPILER OPTIONS
+
+//                               -OPTIMIZATION-
+
+// /O1 minimize space                       /Op[-] improve floating-pt consistency
+// /O2 maximize speed                       /Os favor code space
+// /Oa assume no aliasing                   /Ot favor code speed
+// /Ob<n> inline expansion (default n=0)    /Ow assume cross-function aliasing
+// /Od disable optimizations (default)      /Ox maximum opts. (/Ogityb2 /Gs)
+// /Og enable global optimization           /Oy[-] enable frame pointer omission
+// /Oi enable intrinsic functions
+
+//                              -CODE GENERATION-
+
+// /G3 optimize for 80386                   /Gh enable _penter function call
+// /G4 optimize for 80486                   /GH enable _pexit function call
+// /G5 optimize for Pentium                 /GR[-] enable C++ RTTI
+// /G6 optimize for PPro, P-II, P-III       /GX[-] enable C++ EH (same as /EHsc)
+// /G7 optimize for Pentium 4 or Athlon     /EHs enable C++ EH (no SEH exceptions)
+// /GB optimize for blended model (default) /EHa enable C++ EH (w/ SEH exceptions)
+// /Gd __cdecl calling convention           /EHc extern "C" defaults to nothrow
+// /Gr __fastcall calling convention        /GT generate fiber-safe TLS accesses
+// /Gz __stdcall calling convention         /Gm[-] enable minimal rebuild
+// /GA optimize for Windows Application     /GL[-] enable link-time code generation
+// /Gf enable string pooling                /QIfdiv[-] enable Pentium FDIV fix
+// /GF enable read-only string pooling      /QI0f[-] enable Pentium 0x0f fix
+// /Gy separate functions for linker        /QIfist[-] use FIST instead of ftol()
+// /GZ Enable stack checks (/RTCs)          /RTC1 Enable fast checks (/RTCsu)
+// /Ge force stack checking for all funcs   /RTCc Convert to smaller type checks
+// /Gs[num] control stack checking calls    /RTCs Stack Frame runtime checking
+// /GS enable security checks               /RTCu Uninitialized local usage checks
+// /clr[:noAssembly] compile for the common language runtime
+// (press <return> to continue)
+//     noAssembly - do not produce an assembly
+// /arch:<SSE|SSE2> minimum CPU architecture requirements, one of:
+//     SSE - enable use of instructions available with SSE enabled CPUs
+//     SSE2 - enable use of instructions available with SSE2 enabled CPUs
+// /nox87copy - favor integer moves over x87 loads
+
+//                               -OUTPUT FILES-
+
+// /Fa[file] name assembly listing file     /Fo<file> name object file
+// /FA[sc] configure assembly listing       /Fp<file> name precompiled header file
+// /Fd[file] name .PDB file                 /Fr[file] name source browser file
+// /Fe<file> name executable file           /FR[file] name extended .SBR file
+// /Fm[file] name map file
+
+//                               -PREPROCESSOR-
+
+// /AI<dir> add to assembly search path     /Fx merge injected code to file
+// /FU<file> forced using assembly/module   /FI<file> name forced include file
+// /C don't strip comments                  /U<name> remove predefined macro
+// /D<name>{=|#}<text> define macro         /u remove all predefined macros
+// /E preprocess to stdout                  /I<dir> add to include search path
+// /EP preprocess to stdout, no #line       /X ignore "standard places"
+// /P preprocess to file
+
+//                                 -LANGUAGE-
+
+// /Zi enable debugging information         /Ze enable extensions (default)
+// /ZI enable Edit and Continue debug info  /Zl omit default library name in .OBJ
+// /Z7 enable old-style debug info          /Zg generate function prototypes
+// /Zd line number debugging info only      /Zs syntax check only
+// /Zp[n] pack structs on n-byte boundary   /vd{0|1} disable/enable vtordisp
+// /Za disable extensions (implies /Op)     /vm<x> type of pointers to members
+// (press <return> to continue)
+// /Zc:arg1[,arg2] C++ language conformance, where arguments can be:
+//     forScope - enforce Standard C++ for scoping rules
+//     wchar_t - wchar_t is the native type, not a typedef
+
+//                               -MISCELLANEOUS-
+
+// @<file> options response file            /wo<n> issue warning n once
+// /?, /help print this help message        /w<l><n> set warning level 1-4 for n
+// /c compile only, no link                 /W<n> set warning level (default n=1)
+// /H<num> max external name length         /Wall enable all warnings
+// /J default char type is unsigned         /Wp64 enable 64 bit porting warnings
+// /nologo suppress copyright message       /WX treat warnings as errors
+// /showIncludes show include file names    /WL enable one line diagnostics
+// /Tc<source file> compile file as .c      /Yc[file] create .PCH file
+// /Tp<source file> compile file as .cpp    /Yd put debug info in every .OBJ
+// /TC compile all files as .c              /Yl[sym] inject .PCH ref for debug lib
+// /TP compile all files as .cpp            /Yu[file] use .PCH file
+// /V<string> set version string            /YX[file] automatic .PCH
+// /w disable all warnings                  /Y- disable all PCH options
+// /wd<n> disable warning n                 /Zm<n> max memory alloc (% of default)
+// /we<n> treat warning n as an error
+
+//                                  -LINKING-
+
+// /MD link with MSVCRT.LIB                 /MDd link with MSVCRTD.LIB debug lib
+// /ML link with LIBC.LIB                   /MLd link with LIBCD.LIB debug lib
+// /MT link with LIBCMT.LIB                 /MTd link with LIBCMTD.LIB debug lib
+// /LD Create .DLL                          /F<num> set stack size
+// /LDd Create .DLL debug library           /link [linker options and libraries]

@@ -7,60 +7,30 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_RHINO</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_RHINO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_INDIAN_RHINO</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_RHINO</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_RHINO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_JAVA_RHINO</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_RHINO</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_RHINO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_WHITE_RHINO</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_RHINO</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_RHINO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_ELASMOTHERIUM</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_RHINO</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_RHINO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

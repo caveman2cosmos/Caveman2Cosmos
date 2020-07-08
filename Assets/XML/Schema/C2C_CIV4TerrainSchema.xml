@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Terrain Schema -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
   <!-- Replacements added by AIAndy -->
   <ElementType name="ReplacementCondition"/>
@@ -162,7 +158,7 @@
 	<ElementType name="HillsYieldChange" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bWaterTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bImpassable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFoundCoast" content="textOnly" dt:type="boolean"/>
@@ -207,7 +203,7 @@
 		<element type="RiverYieldChange" minOccurs="0"/>
 		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
-		<element type="bWater" minOccurs="0"/>
+		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bFound" minOccurs="0"/>
 		<element type="bFoundCoast" minOccurs="0"/>
@@ -428,8 +424,8 @@
 	<ElementType name="bArea" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHills" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPeaks" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFlatlands" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bBonusCoastalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoRiverSide" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNormalize" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFeature" content="textOnly" dt:type="boolean"/>
@@ -487,8 +483,8 @@
 		<element type="bArea" minOccurs="0"/>
 		<element type="bHills" minOccurs="0"/>
 		<element type="bPeaks" minOccurs="0"/>
-		<element type="bCurrency" minOccurs="0"/>
 		<element type="bFlatlands" minOccurs="0"/>
+		<element type="bBonusCoastalOnly" minOccurs="0"/>
 		<element type="bNoRiverSide" minOccurs="0"/>
 		<element type="bNormalize" minOccurs="0"/>
 		<element type="TerrainBooleans" minOccurs="0"/>
@@ -636,10 +632,11 @@
 	<ElementType name="bRiverSideMakesValid" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresRiverSide" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bRequiresPeak" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresIrrigation" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCarriesIrrigation" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPeakImprovement" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bWaterImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoody" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPermanent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iGoodyRange" content="textOnly" dt:type="int"/>
@@ -718,19 +715,17 @@
 		<element type="bPeakMakesValid" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="iHealthPercent" minOccurs="0"/>
-		<element type="bDepletedMine" minOccurs="0"/>
-		<element type="iDepletionRand" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="bFreshWaterMakesValid" minOccurs="0"/>
 		<element type="bRiverSideMakesValid" minOccurs="0"/>
 		<element type="bNoFreshWater" minOccurs="0"/>
 		<element type="bRequiresFlatlands" minOccurs="0"/>
 		<element type="bRequiresRiverSide" minOccurs="0"/>
-		<element type="bRequiresPeak" minOccurs="0"/>
 		<element type="bRequiresIrrigation" minOccurs="0"/>
 		<element type="bCarriesIrrigation" minOccurs="0"/>
 		<element type="bRequiresFeature" minOccurs="0"/>
-		<element type="bWater" minOccurs="0"/>
+		<element type="bPeakImprovement" minOccurs="0"/>
+		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
 		<element type="bPermanent" minOccurs="0"/>
 		<element type="bUseLSystem" minOccurs="0"/>

@@ -1,12 +1,10 @@
+#pragma once
+
 #ifndef CvReplayInfo_H
 #define CvReplayInfo_H
 
-#pragma once
-
-#include "CvEnums.h"
 
 class CvReplayMessage;
-
 
 class CvReplayInfo
 {

@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Culture Level Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4CultureLevelInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<CultureLevelInfos>
 		<CultureLevelInfo>
@@ -112,7 +107,6 @@
 				</Has>
 			</ReplacementCondition>
 			<Description>TXT_KEY_CULTURELEVEL_POOR</Description>
-			<Help>TXT_KEY_CULTURELEVEL_POOR_HELP</Help>
 			<iCityDefenseModifier>3</iCityDefenseModifier>
 			<SpeedThresholds>
 				<SpeedThreshold>

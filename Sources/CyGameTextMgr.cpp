@@ -2,7 +2,11 @@
 // Python wrapper class for CyGameTextMgr 
 // 
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
+#include "CyCity.h"
+#include "CyDeal.h"
 #include "CyGameTextMgr.h"
+#include "CyUnit.h"
 
 CyGameTextMgr::CyGameTextMgr() : 
 m_pGameTextMgr(NULL)
@@ -128,6 +132,13 @@ std::wstring CyGameTextMgr::getBonusHelp(int iBonus, bool bCivilopediaText)
 	return szBuffer.getCString();
 }
 
+std::wstring CyGameTextMgr::getProductionHelpCity(CyCity *pCity)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setProductionHelp(szBuffer, *pCity->getCity());
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getReligionHelpCity(int iReligion, CyCity* pCity, bool bCityScreen, bool bForceReligion, bool bForceState, bool bNoStateReligion)
 {
 	CvWStringBuffer szBuffer;
@@ -204,20 +215,21 @@ std::wstring CyGameTextMgr::parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, i
 	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, (CivilizationTypes) iCivilization, bDawnOfMan, bCivilopediaText);
 	return szBuffer.getCString();
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 std::wstring CyGameTextMgr::parseTraits(int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, bool bEffectsOnly)
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.parseTraits(szBuffer, (TraitTypes)eTrait, (CivilizationTypes)eCivilization, bDawnOfMan, bEffectsOnly);
 	return szBuffer.getCString();
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+std::wstring CyGameTextMgr::getHappinessHelp()
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.parseHappinessHelp(szBuffer);
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getTradeString(TradeData* pTradeData, int iPlayer1, int iPlayer2)
 {
 	CvWStringBuffer szBuffer;

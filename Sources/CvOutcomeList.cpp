@@ -7,13 +7,14 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 
 CvOutcomeList::~CvOutcomeList()
 {
 	clear();
 }
 
-CvOutcome* CvOutcomeList::getOutcome(int index)
+CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aOutcome.size());
@@ -95,11 +96,11 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
-	int iNumReplaced = kInfo.getNumReplaceOutcomes();
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
+	const int iNumReplaced = kInfo.getNumReplaceOutcomes();
 	for (int j=0; j<iNumReplaced; j++)
 	{
-		OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
+		const OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
 		aeReplacedOutcomes.insert(eReplOutcome);
 		insertReplaceOutcomesRecursive(aeReplacedOutcomes, eReplOutcome);
 	}
@@ -117,7 +118,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossible(kUnit))
 		{
-			int iChance = pOutcome->getChance(kUnit);
+			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
 			apOutcome.push_back(std::pair<CvOutcome*,int>(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
@@ -145,7 +146,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		iChanceSum = 100;
 	}
 
-	int iRoll = GC.getGameINLINE().getSorenRandNum( iChanceSum, "Outcome roll");
+	const int iRoll = GC.getGame().getSorenRandNum( iChanceSum, "Outcome roll");
 	iChanceSum = 0;
 
 	for (int i=0; i<(int)apOutcome.size(); i++)
@@ -162,7 +163,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 	return false;
 }
 
-int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade)
+int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
 	std::vector<std::pair<CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
@@ -172,7 +173,7 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 		CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossibleInPlot(kUnit, kPlot, bForTrade))
 		{
-			int iChance = pOutcome->getChance(kUnit);
+			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
 			apOutcome.push_back(std::pair<CvOutcome*,int>(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
@@ -187,7 +188,6 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 			apOutcome.erase(apOutcome.begin()+i);
 		}
 	}
-
 
 	if (iChanceSum <= 0)
 	{
@@ -233,11 +233,11 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML )
+void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML)
 {
 	if (isEmpty())
 	{
-		int num = pOutcomeList->getNumOutcomes();
+		const int num = pOutcomeList->getNumOutcomes();
 		for (int index = 0; index < num; index++)
 		{
 			m_aOutcome.push_back(pOutcomeList->getOutcome(index));
@@ -255,20 +255,20 @@ void CvOutcomeList::getCheckSum(unsigned int& iSum)
 	}
 }
 
-void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit)
+void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const
 {
-	std::vector<std::pair<CvOutcome*, int> > apOutcome;
+	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
 
 	for (int i=0; i<getNumOutcomes(); i++)
 	{
-		CvOutcome* pOutcome = getOutcome(i);
+		const CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossible(kUnit))
 		{
-			int iChance = pOutcome->getChance(kUnit);
+			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
-			apOutcome.push_back(std::pair<CvOutcome*,int>(pOutcome, iChance));
+			apOutcome.push_back(std::pair<const CvOutcome*,int>(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
@@ -303,7 +303,7 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 	}
 }
 
-void CvOutcomeListMerged::addOutcomeList(CvOutcomeList* pList)
+void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 {
 	if ((pList == NULL) || (pList->isEmpty()))
 	{

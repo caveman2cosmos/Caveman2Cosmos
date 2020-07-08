@@ -1,6 +1,7 @@
 #pragma once
 
-#include "CvUnit.h"
+#ifndef CvContractBroker_h__
+#define CvContractBroker_h__
 
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING
@@ -9,10 +10,10 @@
 typedef enum	unitCapabilities
 {
 	NO_UNITCAPABILITIES					= 0,
-	DEFENSIVE_UNITCAPABILITIES			= 1,
-	OFFENSIVE_UNITCAPABILITIES			= 2,
-	WORKER_UNITCAPABILITIES				= 4,
-	HEALER_UNITCAPABILITIES				= 5
+	DEFENSIVE_UNITCAPABILITIES			= 1 << 0,
+	OFFENSIVE_UNITCAPABILITIES			= 1 << 1,
+	WORKER_UNITCAPABILITIES				= 1 << 2,
+	HEALER_UNITCAPABILITIES				= 1 << 3
 } unitCapabilities;
 
 
@@ -82,6 +83,8 @@ typedef struct
 //			to do what is asked of it (move to a location, join a group being current options)
 //		4)	If no suitable work is available continue with its own unit AI for low priority actions
 //
+class CvUnit;
+
 class CvContractBroker
 {
 public:
@@ -95,22 +98,22 @@ public:
 	void	reset();
 
 	//	Note a unit looking for work
-	void	lookingForWork(CvUnit* pUnit, int iMinPriority = 0);
+	void	lookingForWork(const CvUnit* pUnit, int iMinPriority = 0);
 	//	Unit fulfilled its work and is no longer advertising as available
-	void	removeUnit(CvUnit* pUnit);
+	void	removeUnit(const CvUnit* pUnit);
 	//	Make a work request
 	//		iPriority should be in the range 0-1000 ideally
 	//		eUnitFlags indicate the type(s) of unit sought
 	//		(iAtX,iAtY) is (roughly) where the work will be
 	//		pJoinUnit may be NULL but if not it is a request to join that unit's group
-	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
+	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, const CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, const CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
 	//	Advertise a tender to build units
 	//		iMinPriority indicates the lowest priority request this tender is appropriate for
-	void	advertiseTender(CvCity* pCity, int iMinPriority);
+	void	advertiseTender(const CvCity* pCity, int iMinPriority);
 	//	Find out how many requests have already been made for units of a specified AI type
 	//	This is used by cities requesting globally needed units like settlers to avoid multiple
 	//	tenders all occurring at once
-	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, CvPlot* pPlot = NULL) const;
+	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, const CvPlot* pPlot = NULL) const;
 	//	Make a contract
 	//	This will attempt to make the best contracts between currently
 	//	advertising units and work, then search the resulting set for the work 
@@ -121,10 +124,10 @@ public:
 
 private:
 	const workRequest*	findWorkRequest(int iWorkRequestId) const;
-	advertisingUnit*	findBestUnit(workRequest& request, bool bThisPlotOnly);
+	advertisingUnit*	findBestUnit(const workRequest& request, bool bThisPlotOnly);
 	CvUnit*				findUnit(int iUnitId) const;
-	int					lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided);
-	UnitValueFlags		unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities);
+	int					lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided) const;
+	UnitValueFlags		unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities) const;
 
 	std::vector<workRequest>		m_workRequests;
 	std::vector<advertisingUnit>	m_advertisingUnits;
@@ -133,3 +136,5 @@ private:
 	int								m_iNextWorkRequestId;
 	PlayerTypes						m_eOwner;
 };
+
+#endif // CvContractBroker_h__

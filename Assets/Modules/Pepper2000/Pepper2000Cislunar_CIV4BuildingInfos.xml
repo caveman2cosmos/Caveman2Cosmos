@@ -2,7 +2,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_STATION</BuildingClass>
 			<Type>BUILDING_CISLUNAR_STATION</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_PEDIA</Civilopedia>
@@ -10,11 +9,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<iCost>-1</iCost>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -33,7 +31,7 @@
 			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -51,7 +49,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_STORM_SHELTER</BuildingClass>
 			<Type>BUILDING_CISLUNAR_STORM_SHELTER</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER_PEDIA</Civilopedia>
@@ -59,11 +56,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STORM_SHELTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -78,7 +75,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_TELESCOPE</BuildingClass>
 			<Type>BUILDING_CISLUNAR_TELESCOPE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE_PEDIA</Civilopedia>
@@ -86,11 +82,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_TELESCOPE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -98,7 +94,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_AGRICULTURAL_LAB</BuildingClass>
 			<Type>BUILDING_CISLUNAR_AGRICULTURAL_LAB</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB_PEDIA</Civilopedia>
@@ -106,11 +101,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_AGRICULTURAL_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -129,7 +124,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_AGERMINATION</PrereqTech>
+					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYield>
 						<iYield>1</iYield>
 					</TechYield>
@@ -141,7 +136,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_APHOTOSYNTHESIS</PrereqTech>
+					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -150,7 +145,6 @@
 			</TechYieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_MATERIALS_LAB</BuildingClass>
 			<Type>BUILDING_CISLUNAR_MATERIALS_LAB</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB_PEDIA</Civilopedia>
@@ -158,11 +152,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MATERIALS_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+			<PrereqTech>TECH_LIQUID_METALS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -182,14 +176,14 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERCHARGED_CRYSTALS</PrereqTech>
+					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_NANOBOTICS</PrereqTech>
+					<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -198,7 +192,6 @@
 			</TechYieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SATELLITE_FACTORY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SATELLITE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY_PEDIA</Civilopedia>
@@ -210,7 +203,7 @@
 			<iCost>612</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -221,7 +214,6 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SUPPLY_BASE</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SUPPLY_BASE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_PEDIA</Civilopedia>
@@ -233,10 +225,10 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -256,18 +248,15 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAGLEV_LAUNCH</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -277,7 +266,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_EMP</BuildingClass>
 			<Type>BUILDING_CISLUNAR_EMP</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EMP_PEDIA</Civilopedia>
@@ -289,23 +277,19 @@
 			<iCost>1421</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_GOV</BuildingClass>
 			<Type>BUILDING_CISLUNAR_GOV</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_GOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_GOV_PEDIA</Civilopedia>
@@ -313,11 +297,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_GOV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_BINARYLEGISLATION</PrereqTech>
+			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
@@ -333,7 +317,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ELDER_COUNCIL</PrereqTech>
+					<PrereqTech>TECH_GERONTOCRACY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -369,12 +353,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -385,7 +366,6 @@
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_VR</BuildingClass>
 			<Type>BUILDING_CISLUNAR_VR</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_VR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_VR_PEDIA</Civilopedia>
@@ -397,7 +377,7 @@
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>-1</iYield>
@@ -406,12 +386,9 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_GOV</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -421,7 +398,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPACE_JUNK</BuildingClass>
 			<Type>BUILDING_SPACE_JUNK</Type>
 			<Description>TXT_KEY_BUILDING_SPACE_JUNK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACE_JUNK_PEDIA</Civilopedia>
@@ -433,20 +409,16 @@
 			<iCost>1279</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingClass>
 			<Type>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM_PEDIA</Civilopedia>
@@ -458,7 +430,7 @@
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -466,16 +438,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingClass>
 			<Type>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM_PEDIA</Civilopedia>
@@ -487,7 +455,7 @@
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iHealth>1</iHealth>
 			<TechYieldChanges>
@@ -498,12 +466,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STORM_SHELTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STORM_SHELTER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -513,14 +478,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORBITAL_DRYDOCK</BuildingClass>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_DRYDOCK</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -554,14 +518,13 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORBITAL_LABS</BuildingClass>
 			<Type>BUILDING_ORBITAL_LABS</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_LABS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -580,14 +543,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClass>
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_FACTORY</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_FACTORY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_FACTORY</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -601,7 +563,7 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_ANIMA_MATERIALS</PrereqTech>
+					<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>10</iYield>
@@ -610,7 +572,7 @@
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERCHARGED_CRYSTALS</PrereqTech>
+					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>10</iCommerce>
 					</TechCommerce>
@@ -619,14 +581,13 @@
 			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZERO_G_SPORTS_ARENA</BuildingClass>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -639,14 +600,13 @@
 			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEROG_MEDICAL_LAB</BuildingClass>
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -659,14 +619,13 @@
 			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MICROSATELLITE_CONSTELLATION</BuildingClass>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -678,15 +637,11 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<bForceOverwrite>1</bForceOverwrite>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DOCKING_BAY</BuildingClass>
 			<Type>BUILDING_DOCKING_BAY</Type>
 			<Description>TXT_KEY_BUILDING_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DOCKING_BAY_PEDIA</Civilopedia>
@@ -694,11 +649,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOCKING_BAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
@@ -717,7 +672,7 @@
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+					<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -726,7 +681,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AEROGEL_SHIELDING</BuildingClass>
 			<Type>BUILDING_AEROGEL_SHIELDING</Type>
 			<Description>TXT_KEY_BUILDING_AEROGEL_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AEROGEL_SHIELDING_PEDIA</Civilopedia>
@@ -734,35 +688,34 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AEROGEL_SHIELDING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AEROGEL</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_AEROGEL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DOCKING_BAY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SUPPLY_BASE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CISLUNAR_SUPPLY_BASE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INFLATABLE_HABITAT</BuildingClass>
 			<Type>BUILDING_INFLATABLE_HABITAT</Type>
 			<Description>TXT_KEY_BUILDING_INFLATABLE_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFLATABLE_HABITAT_PEDIA</Civilopedia>
@@ -770,11 +723,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFLATABLE_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>4</iYield>
@@ -782,7 +735,6 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SOLAR_ARRAY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
@@ -790,11 +742,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -803,7 +755,6 @@
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ION_CANNON</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ION_CANNON</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON_PEDIA</Civilopedia>
@@ -815,7 +766,7 @@
 			<iCost>1279</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iAdjacentDamagePercent>10</iAdjacentDamagePercent>
 			<iDefense>30</iDefense>
@@ -827,7 +778,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TURBOLIFT</BuildingClass>
 			<Type>BUILDING_TURBOLIFT</Type>
 			<Description>TXT_KEY_BUILDING_TURBOLIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURBOLIFT_PEDIA</Civilopedia>
@@ -835,26 +785,22 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TURBOLIFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_REFUELING_STATION</BuildingClass>
 			<Type>BUILDING_CISLUNAR_REFUELING_STATION</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION_PEDIA</Civilopedia>
@@ -862,11 +808,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_REFUELING_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -876,23 +822,19 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DOCKING_BAY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+			</PrereqInCityBuildings>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ASTEROID_MINE</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ASTEROID_MINE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE_PEDIA</Civilopedia>
@@ -900,11 +842,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -921,7 +863,6 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ASTEROID_MINING_COMPLEX_EFFECT</BuildingClass>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
@@ -930,11 +871,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
@@ -943,7 +883,6 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ENHANCED_ALGAE_FARM</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM_PEDIA</Civilopedia>
@@ -955,7 +894,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>40</iCommerce>
@@ -965,21 +904,14 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_AGRICULTURAL_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SHIELDING</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SHIELDING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SHIELDING_PEDIA</Civilopedia>
@@ -991,7 +923,7 @@
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
 			<iBombardDefense>20</iBombardDefense>
@@ -1001,7 +933,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_CLOAKING</BuildingClass>
 			<Type>BUILDING_CISLUNAR_CLOAKING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLOAKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLOAKING_PEDIA</Civilopedia>
@@ -1013,7 +944,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
 			<CommerceChanges>
@@ -1033,19 +964,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_AEROGEL_SHIELDING</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_MATERIALS_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AEROGEL_SHIELDING</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_PHASED_ARRAY_OPTICS</BuildingClass>
 			<Type>BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS_PEDIA</Civilopedia>
@@ -1057,7 +981,7 @@
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1070,15 +994,11 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_MATERIALS_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_HOTEL</BuildingClass>
 			<Type>BUILDING_CISLUNAR_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Civilopedia>
@@ -1090,7 +1010,7 @@
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
@@ -1107,16 +1027,10 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DOCKING_BAY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_AGRICULTURAL_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1126,7 +1040,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BIG_BANG_OBSERVATORY</BuildingClass>
 			<Type>BUILDING_BIG_BANG_OBSERVATORY</Type>
 			<Description>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY_PEDIA</Civilopedia>
@@ -1138,29 +1051,19 @@
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SATELLITE_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_TELESCOPE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SATELLITE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_TELESCOPE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_BIOFACTORY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_BIOFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY_PEDIA</Civilopedia>
@@ -1172,7 +1075,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1190,23 +1093,13 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_MATERIALS_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_AGRICULTURAL_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT_PEDIA</Civilopedia>
@@ -1218,7 +1111,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
@@ -1240,7 +1133,6 @@
 			</TechYieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ADVANCED_COOLING_SYSTEM</BuildingClass>
 			<Type>BUILDING_ADVANCED_COOLING_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM_PEDIA</Civilopedia>
@@ -1252,25 +1144,18 @@
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_MATERIALS_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ORGANIC_COLONY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ORGANIC_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY_PEDIA</Civilopedia>
@@ -1282,23 +1167,17 @@
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ENHANCED_ALGAE_FARM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1318,7 +1197,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORBITAL_ACCELERATOR</BuildingClass>
 			<Type>BUILDING_ORBITAL_ACCELERATOR</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_PEDIA</Civilopedia>
@@ -1330,21 +1208,17 @@
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-8</iCommerce>
 				<iCommerce>1600</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SOCIAL_ENGINEERING</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_PEDIA</Civilopedia>
@@ -1356,7 +1230,7 @@
 			<iCost>2317</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -1368,16 +1242,10 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_GOV</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1393,11 +1261,10 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NANOSATELLITE_CONSTELLATION</BuildingClass>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
@@ -1412,19 +1279,12 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<bForceOverwrite>1</bForceOverwrite>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MICROSATELLITE_CONSTELLATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CRYONIC_BODY_STORAGE</BuildingClass>
 			<Type>BUILDING_CRYONIC_BODY_STORAGE</Type>
 			<Description>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE_PEDIA</Civilopedia>
@@ -1432,26 +1292,20 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYONIC_BODY_STORAGE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_CRYOGENICS</PrereqTech>
+			<PrereqTech>TECH_CRYONICS</PrereqTech>
 			<iCost>2317</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>120</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ADVANCED_COOLING_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ADVANCED_COOLING_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1461,7 +1315,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_BIOLOGICAL_CORE</BuildingClass>
 			<Type>BUILDING_CISLUNAR_BIOLOGICAL_CORE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE_PEDIA</Civilopedia>
@@ -1473,7 +1326,7 @@
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1483,23 +1336,13 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ORGANIC_COLONY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_BIOFACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SOCIAL_ENGINEERING</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ORGANIC_COLONY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ONEILL_CYLINDER</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_PEDIA</Civilopedia>
@@ -1511,7 +1354,7 @@
 			<iCost>2793</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
@@ -1519,27 +1362,14 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ADVANCED_COOLING_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_GOV</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_BIOFACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ADVANCED_COOLING_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_DEFENSES</BuildingClass>
 			<Type>BUILDING_CISLUNAR_DEFENSES</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_DEFENSES_PEDIA</Civilopedia>
@@ -1551,7 +1381,7 @@
 			<iCost>10158</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<iDefense>50</iDefense>
@@ -1561,15 +1391,11 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SECURITY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SECURITY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SECURITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SECURITY_PEDIA</Civilopedia>
@@ -1581,7 +1407,7 @@
 			<iCost>4408</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -1589,16 +1415,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1608,7 +1428,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_QUANTUM_THRUSTERS</BuildingClass>
 			<Type>BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS_PEDIA</Civilopedia>
@@ -1620,7 +1439,7 @@
 			<iCost>25157</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1630,15 +1449,11 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NUCLEAR_DAMPER</BuildingClass>
 			<Type>BUILDING_NUCLEAR_DAMPER</Type>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_DAMPER_PEDIA</Civilopedia>
@@ -1650,25 +1465,18 @@
 			<iCost>4032</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_SHIELDING</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_SHIELDING</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 			<iNukeModifier>-50</iNukeModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DYSON_HARROP_SATELLITE</BuildingClass>
 			<Type>BUILDING_DYSON_HARROP_SATELLITE</Type>
 			<Description>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_PEDIA</Civilopedia>
@@ -1680,26 +1488,19 @@
 			<iCost>3362</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NANOSATELLITE_CONSTELLATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_CLAYTRONIC</BuildingClass>
 			<Type>BUILDING_CISLUNAR_CLAYTRONIC</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_PEDIA</Civilopedia>
@@ -1707,30 +1508,23 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_CLAYTRONIC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ATTOMETER_NANOMORPHISM</PrereqTech>
+			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>9246</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NANOSATELLITE_CONSTELLATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TRASH_ATOMIZER</BuildingClass>
 			<Type>BUILDING_TRASH_ATOMIZER</Type>
 			<Description>TXT_KEY_BUILDING_TRASH_ATOMIZER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRASH_ATOMIZER_PEDIA</Civilopedia>
@@ -1742,7 +1536,7 @@
 			<iCost>9246</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1752,15 +1546,11 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WORMHOLE_TO_EARTH</BuildingClass>
 			<Type>BUILDING_WORMHOLE_TO_EARTH</Type>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH_PEDIA</Civilopedia>
@@ -1768,11 +1558,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_TO_EARTH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_MICROWORMHOLES</PrereqTech>
+			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
 			<iCost>24466</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1782,15 +1572,11 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_CLAYTRONIC</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_CLAYTRONIC</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_BLACK_HOLE</BuildingClass>
 			<Type>BUILDING_CISLUNAR_BLACK_HOLE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_PEDIA</Civilopedia>
@@ -1802,22 +1588,18 @@
 			<iCost>14852</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DILATON_GENERATOR</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DILATON_GENERATOR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DILATON_GENERATOR</BuildingClass>
 			<Type>BUILDING_DILATON_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_DILATON_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DILATON_GENERATOR_PEDIA</Civilopedia>
@@ -1829,7 +1611,7 @@
 			<iCost>14852</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1839,19 +1621,12 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ION_CANNON</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GIGAVERSE</BuildingClass>
 			<Type>BUILDING_GIGAVERSE</Type>
 			<Description>TXT_KEY_BUILDING_GIGAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIGAVERSE_PEDIA</Civilopedia>
@@ -1863,7 +1638,7 @@
 			<iCost>11410</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
@@ -1871,25 +1646,25 @@
 				<iYield>20</iYield>
 				<iYield>6</iYield>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_METAMORPHIC_CISLUNAR_STATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_METAMORPHIC_CISLUNAR_STATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METAMORPHIC_CISLUNAR_STATION</BuildingClass>
 			<Type>BUILDING_METAMORPHIC_CISLUNAR_STATION</Type>
 			<Description>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_PEDIA</Civilopedia>
@@ -1901,7 +1676,7 @@
 			<iCost>25857</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -1911,15 +1686,11 @@
 				<iYield>400</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_CLAYTRONIC</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_CLAYTRONIC</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOOD_REPLICATOR</BuildingClass>
 			<Type>BUILDING_FOOD_REPLICATOR</Type>
 			<Description>TXT_KEY_BUILDING_FOOD_REPLICATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOOD_REPLICATOR_PEDIA</Civilopedia>
@@ -1931,7 +1702,7 @@
 			<iCost>10158</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1941,59 +1712,59 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PLANET_CLOUD</BuildingClass>
 			<Type>BUILDING_PLANET_CLOUD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PLANET_CLOUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_CLOUD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLANET_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PLANET_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</FreeBuilding>
+			<FreeBuilding>BUILDING_CISLUNAR_ONEILL_CYLINDER</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClass>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ECUMENOPOLIS_EARTH</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORBITAL_PRISON</BuildingClass>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<iCost>1056</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_PRISON</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_PRISON_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -2007,23 +1778,25 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDINGCLASS_SAFETY_ORBITAL_PRISON</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
 			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ENERGY_BEAM_NETWORK</BuildingClass>
 			<Type>BUILDING_ENERGY_BEAM_NETWORK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_BEAM_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENERGY_BEAM_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			<iCost>13448</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
@@ -2033,17 +1806,15 @@
 				<iYield>50</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDINGCLASS_DYSON_HARROP_SATELLITE</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DYSON_HARROP_SATELLITE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<FreeBuilding>BUILDING_DYSON_HARROP_SATELLITE</FreeBuilding>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_HARROP_SATELLITE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ANTIMATTER</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ANTIMATTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_STRATEGY</Strategy>
@@ -2054,108 +1825,107 @@
 			<iCost>44556</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>1200</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_SOLAR_SATELLITES</BuildingClass>
 			<Type>BUILDING_CISLUNAR_SOLAR_SATELLITES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_SATELLITES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>2106</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>2000</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDINGCLASS_SOLAR_SATELLITE</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_LAUNCH_SITE</BuildingClassType>
+			<FreeBuilding>BUILDING_SOLAR_SATELLITE</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_LAUNCH_SITE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ASTEROID_MINING_COMPLEX</BuildingClass>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_MINING_COMPLEX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>6311</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>4000</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDINGCLASS_ASTEROID_MINING_COMPLEX_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ASTEROID_MINE</BuildingClassType>
+			<FreeBuilding>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CISLUNAR_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAGLEV_LAUNCH</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_LAUNCH_SITE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_LAUNCH_SITE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SKYHOOK</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SKYHOOK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_L5_COLONY</BuildingClass>
 			<Type>BUILDING_L5_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_L5_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_L5_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_L5_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_L5_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iCost>11175</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -2169,32 +1939,31 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClass>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INTERPLANETARY_TRANSPORT_NETWORK</BuildingClass>
 			<Type>BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_TRANSPORT_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>10179</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -2203,58 +1972,51 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CISLUNAR_SPACEPORT</BuildingClass>
+					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ELYSIUM</BuildingClass>
 			<Type>BUILDING_ELYSIUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ELYSIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELYSIUM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELYSIUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ELYSIUM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>2000</iCommerce>
 			</CommerceChanges>
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DESPOTISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -2265,27 +2027,26 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEUS_CANNON</BuildingClass>
 			<Type>BUILDING_ZEUS_CANNON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEUS_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEUS_CANNON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEUS_CANNON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZEUS_CANNON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>5116</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDINGCLASS_CISLUNAR_ION_CANNON</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ION_CANNON</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<FreeBuilding>BUILDING_CISLUNAR_ION_CANNON</FreeBuilding>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

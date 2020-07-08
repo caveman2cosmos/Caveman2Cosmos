@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Assets\Modules\Custom_Religions\Std_RoM_Religions\RoM_Religions_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_RA_FIST</Class>
 			<Type>UNIT_RA_FIST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -27,6 +23,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RA_FIST</Description>
 			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
@@ -37,12 +36,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -73,12 +69,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>330</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -120,8 +118,9 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RA_KNIGHT</Class>
 			<Type>UNIT_RA_KNIGHT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -146,6 +145,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RA_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
@@ -157,19 +159,16 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bAlwaysHostile>1</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -183,14 +182,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>370</iCost>
 			<iMoves>2</iMoves>

@@ -15,9 +15,6 @@
 #ifndef CIV4_GAME_TEXT_MGR_H
 #define CIV4_GAME_TEXT_MGR_H
 
-#include "CvInfos.h"
-//#include "CvEnums.h"
-
 #pragma warning( disable: 4251 )	// needs to have dll-interface to be used by clients of class
 
 class CvCity;
@@ -42,7 +39,7 @@ public:
 	DllExport void DeInitialize();
 	DllExport void Reset();
 
-	int getCurrentLanguage();
+	int getCurrentLanguage() const;
 
 	DllExport void setTimeStr(CvWString& szString, int iGameTurn, bool bSave);
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
@@ -81,7 +78,6 @@ public:
 	void parsePlayerHasFixedBorders(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer);
 	/*** Dexy - Fixed Borders  END  ****/
 	void parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer);
-	void parseLeaderLineHelp(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer);
 	void parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city);
 // BUG - Building Additional Great People - start
 	bool setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted = false);
@@ -113,6 +109,7 @@ public:
 // BUG - Building Additional Health - start
 	bool setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted = false);
 // BUG - Building Additional Health - end
+	void parseHappinessHelp(CvWStringBuffer& szBuffer);
 	void setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	void setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city);
 // BUG - Building Additional Happiness - start
@@ -234,8 +231,6 @@ public:
 	bool setBuildingAdditionalDefenseHelp(CvWStringBuffer &szBuffer, const CvCity& city, const CvWString& szStart, bool bStarted = false);
 	void setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	void setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city);
-	void buildObsoletePromotionString( CvWStringBuffer& szBuffer, int iItem, bool bList = false, bool bPlayerContext = false );
-	void buildObsoleteCorporationString( CvWStringBuffer& szBuffer, int iItem, bool bList = false, bool bPlayerContext = false );
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -247,9 +242,9 @@ public:
 	bool buildPromotionString( CvWStringBuffer& szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList = false, bool bPlayerContext = false );
 	void buildHintsList(CvWStringBuffer& szBuffer);
 	void buildBuildingRequiresString(CvWStringBuffer& szBuffer, BuildingTypes eBuilding, bool bCivilopediaText, bool bTechChooserText, const CvCity* pCity);
-    //DPII < Maintenance Modifier >
+	//DPII < Maintenance Modifier >
 	void buildMaintenanceModifiersString(CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
-    //DPII < Maintenance Modifier >
+	//DPII < Maintenance Modifier >
 	DllExport void buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvCity* pCity);
 	DllExport void buildCityBillboardCityNameString( CvWStringBuffer& szBuffer, CvCity* pCity);
 	DllExport void buildCityBillboardProductionString( CvWStringBuffer& szBuffer, CvCity* pCity);
@@ -269,7 +264,6 @@ public:
 	void getActiveDealsString(CvWStringBuffer& szString, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer);
 	void getOtherRelationsString(CvWStringBuffer& szString, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer);
 // BUG - Leaderhead Relations - start
-	void parseLeaderHeadRelationsHelp(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer);
 	void getAllRelationsString(CvWStringBuffer& szString, TeamTypes eThisTeam);
 	void getActiveTeamRelationsString(CvWStringBuffer& szString, TeamTypes eThisTeam);
 	void getOtherRelationsString(CvWStringBuffer& szString, TeamTypes eThisTeam, TeamTypes eOtherTeam, TeamTypes eSkipTeam);

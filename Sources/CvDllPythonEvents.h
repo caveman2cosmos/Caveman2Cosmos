@@ -1,5 +1,9 @@
+#pragma once
+
 #ifndef CIV4_DLL_PYTHON_EVENTS_H
 #define CIV4_DLL_PYTHON_EVENTS_H
+
+#include "CvPython.h"
 
 class CyArgsList;
 class CvSelectionGroup;
@@ -9,7 +13,7 @@ class CvDllPythonEvents
 public:
 	void reportGenericEvent(const char* szEventName, void *pyArgs);
 	bool reportKbdEvent(int evt, int key, int iCursorX, int iCursorY);
-	bool reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed=false);												
+	bool reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed=false);
 	void reportModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5);
 
 	void reportInit();
@@ -18,6 +22,7 @@ public:
 	void reportGameStart();
 	void reportGameEnd();
 	void reportWindowActivation(bool bActive);
+	void reportMapRegen();
 
 	void reportBeginGameTurn(int iGameTurn);
 /************************************************************************************************/
@@ -115,7 +120,7 @@ public:
 	void reportGoldenAge(PlayerTypes ePlayer);
 	void reportEndGoldenAge(PlayerTypes ePlayer);
 	void reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam);
-	void reportChat(CvWString szString);				
+	void reportChat(CvWString szString);
 	void reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVictory);
 
 	void reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal);
@@ -123,24 +128,11 @@ public:
 	void reportSetPlayerAlive(PlayerTypes ePlayerID, bool bNewValue);
 	void reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
-	
-// BUG - Revolution Event - start
 	void reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
-// BUG - Revolution Event - end
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void reportAddTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	void preSave();
 
-private:
-	bool preEvent();
-	bool postEvent(CyArgsList& eventData, const char* eventName);
+	void reportChangeTeam(TeamTypes eOld, TeamTypes eNew);
+
+	void preSave();
 };
 
 #endif

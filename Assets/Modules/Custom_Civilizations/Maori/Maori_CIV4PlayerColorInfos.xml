@@ -6,9 +6,9 @@
 	<PlayerColorInfos>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_MAORI</Type>
-			<ColorTypePrimary>COLOR_X_BLACK</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_MISTYROSE</ColorTypeSecondary>
-			<TextColorType>COLOR_X_BLACK</TextColorType>
+			<ColorTypePrimary>COLOR_BLACK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_MISTYROSE</ColorTypeSecondary>
+			<TextColorType>COLOR_BLACK</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>

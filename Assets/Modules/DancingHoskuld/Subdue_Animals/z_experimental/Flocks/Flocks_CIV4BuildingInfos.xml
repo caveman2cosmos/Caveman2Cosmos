@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
-	<!-- Modified by Strategyonly -->
-	<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DUCK_FLOCKS</BuildingClass>
 			<Type>BUILDING_DUCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DUCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_DUCK_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DUCK_FLOCKS_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -29,21 +28,17 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POULTRY_HERD</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_DUCK_FLOCKS_EFFECT</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_DUCK_FLOCKS_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DUCK_FLOCKS_EFFECT</BuildingClass>
 			<Type>BUILDING_DUCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
@@ -57,22 +52,21 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PEACOCK_FLOCKS</BuildingClass>
 			<Type>BUILDING_PEACOCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PEACOCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_PEACOCK_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_PEACOCK_FLOCKS_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -86,21 +80,17 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POULTRY_HERD</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEACOCK_FLOCKS_EFFECT</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEACOCK_FLOCKS_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PEACOCK_FLOCKS_EFFECT</BuildingClass>
 			<Type>BUILDING_PEACOCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
@@ -114,22 +104,21 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TURKEY_FLOCKS</BuildingClass>
 			<Type>BUILDING_TURKEY_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_TURKEY_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_TURKEY_FLOCKS_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -143,21 +132,17 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POULTRY_HERD</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TURKEY_FLOCKS_EFFECT</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TURKEY_FLOCKS_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TURKEY_FLOCKS_EFFECT</BuildingClass>
 			<Type>BUILDING_TURKEY_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
@@ -171,8 +156,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

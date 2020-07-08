@@ -40,7 +40,7 @@
 #  CONSEQUENTIAL DAMAGES RESULTING FROM POSSESSION, USE OR MALFUNCTION OF THE SOFTWARE, INCLUDING
 #  DAMAGES TO PROPERTY, LOSS OF GOODWILL, COMPUTER FAILURE OR MALFUNCTION AND, TO THE EXTENT PERMITTED
 #  BY LAW, DAMAGES FOR PERSONAL INJURIES, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
-#  DAMAGES. THE AUTHOR’S LIABILITY SHALL NOT EXCEED THE ACTUAL PRICE PAID FOR USE OF THE MATERIAL. SOME
+#  DAMAGES. THE AUTHOR'S LIABILITY SHALL NOT EXCEED THE ACTUAL PRICE PAID FOR USE OF THE MATERIAL. SOME
 #  STATES/COUNTRIES DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS AND/OR THE EXCLUSION
 #  OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS AND/OR EXCLUSION OR
 #  LIMITATION OF LIABILITY MAY NOT APPLY TO YOU. THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND
@@ -1155,8 +1155,7 @@ class RevolutionWatchAdvisor:
 		# add National Wonders
 		for i in range(gc.getNumBuildingInfos()):
 			info = gc.getBuildingInfo(i)
-			classInfo = gc.getBuildingClassInfo(info.getBuildingClassType())
-			if classInfo.getMaxGlobalInstances() == -1 and classInfo.getMaxPlayerInstances() == 1 and city.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += self.bulletIcon
 
@@ -1457,7 +1456,7 @@ class RevolutionWatchAdvisor:
 
 		iGreatPersonRate = city.getGreatPeopleRate()
 		if iGreatPersonRate > 0:
-			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(False) - city.getGreatPeopleProgress()
+			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress()
 			return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
 		else:
 			return u"-"
@@ -1712,25 +1711,22 @@ class RevolutionWatchAdvisor:
 		bestData = 0.0
 
 		player = PyPlayer(CyGame().getActivePlayer())
-		civInfo = gc.getCivilizationInfo(city.getCivilizationType())
 
 		# For all cities, start with growth
 		if self.calculateNetHappiness(city) > 2 and self.calculateNetHealth(city) > 2:
-			for i in range(gc.getNumBuildingClassInfos()):
-				bldg = civInfo.getCivilizationBuildings(i)
-				if self.canAdviseToConstruct(city, bldg):
-					info = gc.getBuildingInfo(bldg)
+			for i in range(gc.getNumBuildingInfos()):
+				if self.canAdviseToConstruct(city, i):
+					info = gc.getBuildingInfo(i)
 					value = info.getFoodKept() / float(info.getProductionCost())
 					if(value > bestData):
-						bestOrder = bldg
+						bestOrder = i
 						bestData = value
 
 		# then balancing health and happiness for further growth
 		if bestOrder == -1:
-			for i in range(gc.getNumBuildingClassInfos()):
-				bldg = civInfo.getCivilizationBuildings(i)
-				if self.canAdviseToConstruct(city, bldg):
-					info = gc.getBuildingInfo(bldg)
+			for i in range(gc.getNumBuildingInfos()):
+				if self.canAdviseToConstruct(city, i):
+					info = gc.getBuildingInfo(i)
 					if self.calculateNetHappiness(city) < 3 and self.calculateNetHappiness(city) - self.calculateNetHealth(city) > 2:
 						iHealth = info.getHealth()
 						for j in range(gc.getNumBonusInfos()):
@@ -1738,7 +1734,7 @@ class RevolutionWatchAdvisor:
 								iHealth += info.getBonusHealthChanges(j)
 						value = iHealth / float(info.getProductionCost())
 						if(value > bestData):
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 					elif self.calculateNetHealth(city) < 3 and self.calculateNetHealth(city) - self.calculateNetHappiness(city) > 2:
 						iHappiness = info.getHappiness()
@@ -1747,78 +1743,76 @@ class RevolutionWatchAdvisor:
 								iHappiness += info.getBonusHappinessChanges(j)
 						value = iHappiness  / float(info.getProductionCost())
 						if(value > bestData):
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 
 		# First pass
 		if(bestOrder == -1):
-			for i in range(gc.getNumBuildingClassInfos()):
-				bldg = civInfo.getCivilizationBuildings(i)
-				if self.canAdviseToConstruct(city, bldg):
-					info = gc.getBuildingInfo(bldg)
+			for i in range(gc.getNumBuildingInfos()):
+				if self.canAdviseToConstruct(city, i):
+					info = gc.getBuildingInfo(i)
 
 					if type == "Culture":
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < 6:
 							value = info.getCommerceModifier(CommerceTypes.COMMERCE_CULTURE) / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 						else:
 							value = info.getPowerValue() / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 					elif type == "Military":
 						value = info.getPowerValue() / float(info.getProductionCost())
 						if value > bestData:
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 					elif type == "Nutty":
 						value = math.sin(float(info.getProductionCost()) * city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE)) + 1
 						if value > bestData:
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 					elif type == "Religion":
 						bestOrder = -1
 					elif type == "Research":
 						value = info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 						if value > bestData:
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 					elif type == "Spaceship":
 						if not city.isPower():
 							if info.isPower():
 								value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 								if value > bestData:
-									bestOrder = bldg
+									bestOrder = i
 									bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) < 12:
 							value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < player.getNumCities() / 2:
 							value = city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 						else:
 							bestOrder = -1
 
 		# Second pass
 		if(bestOrder == -1):
-			for i in range(gc.getNumBuildingClassInfos()):
-				bldg = civInfo.getCivilizationBuildings(i)
-				if self.canAdviseToConstruct(city, bldg):
-					info = gc.getBuildingInfo(bldg)
+			for i in range(gc.getNumBuildingInfos()):
+				if self.canAdviseToConstruct(city, i):
+					info = gc.getBuildingInfo(i)
 
 					if type == "Culture":
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < 6:
 							value = info.getPowerValue() / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 						else:
 							bestOrder = -1  # In a cultural game, build units in the culturally weak cities
@@ -1827,12 +1821,12 @@ class RevolutionWatchAdvisor:
 							value = (-1.0 * info.getMilitaryProductionModifier()) / info.getProductionCost()
 							print "%s: %.2f" %(info.getDescription(), value)
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 						else:
 							value = info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
-								bestOrder = bldg
+								bestOrder = i
 								bestData = value
 							if not city.isPower():
 								if info.isPower():
@@ -1848,7 +1842,7 @@ class RevolutionWatchAdvisor:
 					elif type == "Research":
 						value = info.getCommerceModifier(CommerceTypes.COMMERCE_GOLD) / float(info.getProductionCost())
 						if value > bestData:
-							bestOrder = bldg
+							bestOrder = i
 							bestData = value
 					elif type == "Spaceship":
 						bestOrder = -1
@@ -1898,7 +1892,7 @@ class RevolutionWatchAdvisor:
 			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_RED"))
 		elif trend > showTrend:
 			trendText = localText.getText("TXT_ADVISOR_WORSENING", ())
-			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE_TEXT"))
+			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
 		elif trend < -showTrend:
 			trendText = localText.getText("TXT_ADVISOR_IMPROVING", ())
 			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_GREEN"))
@@ -2015,7 +2009,7 @@ class RevolutionWatchAdvisor:
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_RED"))
 		elif( value >= thresholdDanger) :
 			outText = localText.getText("TXT_KEY_REV_WATCH_DANGER", ())
-			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE_TEXT"))
+			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
 		elif( value >= thresholdWarning) :
 			outText = localText.getText("TXT_KEY_REV_WATCH_WARNING", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_YELLOW"))
@@ -2157,7 +2151,6 @@ class RevolutionWatchAdvisor:
 
 			iBuildingButtonX = self.nTableX + 30
 			iBuildingButtonY = self.nTableY
-			civInfo = gc.getCivilizationInfo(gc.getActivePlayer().getCivilizationType())
 
 			# Loop through the columns first. This is unintuitive, but faster.
 			for value, key in columns:
@@ -2165,18 +2158,9 @@ class RevolutionWatchAdvisor:
 				try:
 					columnDef = self.COLUMNS_LIST[self.COLUMNS_INDEX[key]]
 					type = columnDef[2]
-					if (type == "bldg" or type == "bldgclass"):
-						if (type == "bldg"):
-							building = columnDef[7]
-							buildingInfo = self.BUILDING_INFO_LIST[building]
-							buildingClass = buildingInfo.getBuildingClassType()
-							if (building != civInfo.getCivilizationBuildings(buildingClass)):
-								# Skip column if building isn't available for this civ
-								continue
-						else:
-							buildingClass = columnDef[7]
-							building = civInfo.getCivilizationBuildings(buildingClass)
-							buildingInfo = self.BUILDING_INFO_LIST[building]
+					if (type == "bldg"):
+						building = columnDef[7]
+						buildingInfo = self.BUILDING_INFO_LIST[building]
 						screen.setTableColumnHeader (page, value + 1, "", self.columnWidth[key])
 						szName = "BLDG_BTN_%d" % building
 						x = iBuildingButtonX + (self.columnWidth[key] - self.BUILDING_BUTTON_X_SIZE) / 2
@@ -2201,7 +2185,7 @@ class RevolutionWatchAdvisor:
 					elif (type == "bonus"):
 						funcTableWrite = screen.setTableText
 						justify = 1<<2
-					elif (type == "bldg" or type == "bldgclass"):
+					elif (type == "bldg"):
 						funcTableWrite = screen.setTableText
 						justify = 1<<2
 					else:

@@ -14,10 +14,6 @@
 					<Directory>More_Events</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module>
-					<Directory>Better_Handicaps</Directory>
-					<bLoad>1</bLoad>
-				</Module>
 			</Modules>
 		</ConfigurationInfo>
 	</ConfigurationInfos>

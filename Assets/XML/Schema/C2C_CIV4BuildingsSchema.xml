@@ -1,9 +1,4 @@
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Building Schema -->
-<!-- -->
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<!--ls612's Orbital Tags -->
 	<ElementType name="bOrbital" content="textOnly" dt:type="boolean"/>
@@ -11,7 +6,7 @@
 	<!-- ls612's Other Building Tags -->
 	<ElementType name="bNoHolyCity" content="textOnly" dt:type="boolean"/>
 	<!--TB's Tags Begin -->
-	<ElementType name="PropertySpawnUnitClass" content="textOnly"/>
+	<ElementType name="PropertySpawnUnit" content="textOnly"/>
 	<ElementType name="PropertySpawnProperty" content="textOnly"/>
 	<ElementType name="PromotionLineType" content="textOnly"/>
 	<!--Integers -->
@@ -58,11 +53,8 @@
 	<ElementType name="FreePromoTypes" content="eltOnly">
 		<element type="FreePromoType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="FreeTraitType" content="eltOnly">
-		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="FreeTraitTypes" content="eltOnly">
-		<element type="FreeTraitType" minOccurs="0" maxOccurs="*"/>
+		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="HealUnitCombatType" content="eltOnly">
@@ -177,7 +169,6 @@
 	<ElementType name="TechHealthTypes" content="eltOnly">
 		<element type="TechHealthType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!--Arrays -->
 	<ElementType name="LocalSpecialistYieldChange" content="eltOnly">
 		<element type="SpecialistType"/>
@@ -267,7 +258,6 @@
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -281,7 +271,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -296,7 +285,6 @@
 		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -311,13 +299,11 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
     <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
     <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
@@ -332,12 +318,9 @@
 	</ElementType>
 <!-- XMLCOPY				END					MRGENIE		-->
 	<ElementType name="iMaxGlobalInstances" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxTeamInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iExtraPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLimit" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bMonument" content="textOnly" dt:type="boolean"/>
-	<ElementType name="DefaultBuilding" content="textOnly"/>
 	<ElementType name="VictoryType" content="textOnly"/>
 	<ElementType name="iThreshold" content="textOnly" dt:type="int"/>
 	<ElementType name="VictoryThreshold" content="eltOnly">
@@ -347,29 +330,6 @@
 	<ElementType name="VictoryThresholds" content="eltOnly">
 		<element type="VictoryThreshold" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingClassInfo" content="eltOnly">
-		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bForceOverwrite" minOccurs="0"/>
-		<element type="bForceDelete" minOccurs="0"/>
-		<element type="iForceInsertLocation" minOccurs="0"/>
-		<element type="AndDependencyTypes" minOccurs="0"/>
-		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
-		<element type="Description" minOccurs="0"/>
-		<element type="iMaxGlobalInstances" minOccurs="0"/>
-		<element type="iMaxTeamInstances" minOccurs="0"/>
-		<element type="iMaxPlayerInstances" minOccurs="0"/>
-		<element type="iExtraPlayerInstances" minOccurs="0"/>
-		<element type="bNoLimit" minOccurs="0"/>
-		<element type="bMonument" minOccurs="0"/>
-		<element type="DefaultBuilding" minOccurs="0"/>
-		<element type="VictoryThresholds" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="BuildingClassInfos" content="eltOnly">
-		<element type="BuildingClassInfo" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="BuildingClass" content="textOnly"/>
 	<ElementType name="SpecialBuildingType" content="textOnly"/>
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="Civilopedia" content="textOnly"/>
@@ -398,24 +358,6 @@
 	<ElementType name="Bonus" content="textOnly"/>
 	<ElementType name="PrereqBonuses" content="eltOnly">
 		<element type="Bonus" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="ProductionTraitType" content="textOnly"/>
-	<ElementType name="iProductionTrait" content="textOnly" dt:type="int"/>
-	<ElementType name="ProductionTrait" content="eltOnly">
-		<element type="ProductionTraitType"/>
-		<element type="iProductionTrait"/>
-	</ElementType>
-	<ElementType name="ProductionTraits" content="eltOnly">
-		<element type="ProductionTrait" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="HappinessTraitType" content="textOnly"/>
-	<ElementType name="iHappinessTrait" content="textOnly" dt:type="int"/>
-	<ElementType name="HappinessTrait" content="eltOnly">
-		<element type="HappinessTraitType"/>
-		<element type="iHappinessTrait"/>
-	</ElementType>
-	<ElementType name="HappinessTraits" content="eltOnly">
-		<element type="HappinessTrait" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
@@ -450,7 +392,6 @@
 	<ElementType name="bBuildingOnlyHealthy" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNeverCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPrereqReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCenterInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
@@ -521,9 +462,9 @@
 	<ElementType name="iEspionageDefense" content="textOnly" dt:type="int"/>
 	<!-- RevDCM Building Effects -->
 	<ElementType name="iUnitUpgradePriceModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxLocal" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxNational" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxDistanceModifier" content= "textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxLocal" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxNational" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxDistanceModifier" content="textOnly" dt:type="int"/>
 	<!-- RevDCM Building Effects -->
 	<ElementType name="iAsset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPower" content="textOnly" dt:type="int"/>
@@ -546,7 +487,7 @@
 	<ElementType name="iDarkAgePointsObsolete" content="textOnly" dt:type="int"/>
 	<ElementType name="iDarkAgePointsWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iLineOfSight" content="textOnly" dt:type="int"/>
-	<ElementType name="ProductionContinueBuildingClass" content="textOnly"/>
+	<ElementType name="ProductionContinueBuilding" content="textOnly"/>
 	<ElementType name="PrereqCultureLevel" content="textOnly"/>
 	<ElementType name="iPrereqPopulation" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorkableRadius" content="textOnly" dt:type="int"/>
@@ -557,7 +498,7 @@
 	<ElementType name="iNoEntryDefenseLevel" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumUnitFullHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTimeModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="ExtendsBuildingClass" content="textOnly"/>
+	<ElementType name="ExtendsBuilding" content="textOnly"/>
 	<ElementType name="iNumPopulationEmployed" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthPercentPerPopulation" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappinessPercentPerPopulation" content="textOnly" dt:type="int"/>
@@ -565,7 +506,7 @@
 	<ElementType name="fVisibilityPriority" content="textOnly"/>
 	<ElementType name="FreePromotion" content="textOnly"/>
 	<ElementType name="CivicOption" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="iGreatPeopleRateChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBorderObstacle" content="textOnly" dt:type="boolean"/>
@@ -674,7 +615,6 @@
 	<ElementType name="PrereqPlayerMaxProperties" content="eltOnly">
 		<element type="Property" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bCommerce" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CommerceFlexibles" content="eltOnly">
 		<element type="bCommerce" minOccurs="0" maxOccurs="*"/>
@@ -741,22 +681,16 @@
 	<ElementType name="BuildingHappinessChanges" content="eltOnly">
 		<element type="BuildingHappinessChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingClassType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqBuildingClasses" content="eltOnly">
-		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqAmountBuildings" content="eltOnly">
+		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bNeededInCity" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildingClassNeeded" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="bNeededInCity"/>
-	</ElementType>
-	<ElementType name="BuildingClassNeededs" content="eltOnly">
-		<element type="BuildingClassNeeded" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqInCityBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="SpecialistCommerceChange" content="eltOnly">
 		<element type="SpecialistType"/>
@@ -822,8 +756,12 @@
 		<element type="GenericBuildingInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="BuildingInfo" content="eltOnly">
-		<element type="BuildingClass" minOccurs="0"/>
 		<element type="Type"/>
+		<element type="bNoLimit" minOccurs="0"/>
+		<element type="iMaxGlobalInstances" minOccurs="0"/>
+		<element type="iMaxPlayerInstances" minOccurs="0"/>
+		<element type="iExtraPlayerInstances" minOccurs="0"/>
+		<element type="VictoryThresholds" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
@@ -856,8 +794,6 @@
 		<element type="TechTypes" minOccurs="0"/>
 		<element type="Bonus" minOccurs="0"/>
 		<element type="PrereqBonuses" minOccurs="0"/>
-		<element type="ProductionTraits" minOccurs="0"/>
-		<element type="HappinessTraits" minOccurs="0"/>
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
 		<element type="NoBonus" minOccurs="0"/>
 		<element type="PowerBonus" minOccurs="0"/>
@@ -868,12 +804,12 @@
 		<element type="FreeAreaBuilding" minOccurs="0"/>
 		<element type="FreePromotion" minOccurs="0"/>
 		<element type="CivicOption" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="VicinityBonus" minOccurs="0"/>
 		<element type="RawVicinityBonus" minOccurs="0"/>
 		<element type="PrereqVicinityBonuses" minOccurs="0"/>
 		<element type="PrereqRawVicinityBonuses" minOccurs="0"/>
-		<element type="PropertySpawnUnitClass" minOccurs="0"/>
+		<element type="PropertySpawnUnit" minOccurs="0"/>
 		<element type="PropertySpawnProperty" minOccurs="0"/>
 		<element type="PromotionLineType" minOccurs="0"/>
 		<element type="iLinePriority" minOccurs="0"/>
@@ -901,7 +837,6 @@
 		<element type="bBuildingOnlyHealthy" minOccurs="0"/>
 		<element type="bNeverCapture" minOccurs="0"/>
 		<element type="bNukeImmune" minOccurs="0"/>
-		<element type="bPrereqReligion" minOccurs="0"/>
 		<element type="bNoHolyCity" minOccurs="0"/>
 		<element type="bCenterInCity" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
@@ -1002,7 +937,7 @@
 		<element type="iDarkAgePointsObsolete" minOccurs="0"/>
 		<element type="iDarkAgePointsWeight" minOccurs="0"/>
 		<element type="iLineOfSight" minOccurs="0"/>
-		<element type="ProductionContinueBuildingClass" minOccurs="0"/>
+		<element type="ProductionContinueBuilding" minOccurs="0"/>
 		<element type="PrereqCultureLevel" minOccurs="0"/>
 		<element type="iPrereqPopulation" minOccurs="0"/>
 		<element type="iWorkableRadius" minOccurs="0"/>
@@ -1015,7 +950,7 @@
 		<element type="iOccupationTimeModifier" minOccurs="0"/>
 		<element type="CommerceAttacks" minOccurs="0"/>
 		<element type="UnitCombatExtraStrengths" minOccurs="0"/>
-		<element type="ExtendsBuildingClass" minOccurs="0"/>
+		<element type="ExtendsBuilding" minOccurs="0"/>
 		<element type="iNumPopulationEmployed" minOccurs="0"/>
 		<element type="iHealthPercentPerPopulation" minOccurs="0"/>
 		<element type="iHappinessPercentPerPopulation" minOccurs="0"/>
@@ -1053,8 +988,8 @@
 		<element type="DomainFreeExperiences" minOccurs="0"/>
 		<element type="DomainProductionModifiers" minOccurs="0"/>
 		<element type="BuildingHappinessChanges" minOccurs="0"/>
-		<element type="PrereqBuildingClasses" minOccurs="0"/>
-		<element type="BuildingClassNeededs" minOccurs="0"/>
+		<element type="PrereqAmountBuildings" minOccurs="0"/>
+		<element type="PrereqInCityBuildings" minOccurs="0"/>
 		<element type="SpecialistYieldChanges" minOccurs="0"/>
 		<element type="BonusYieldModifiers" minOccurs="0"/>
 		<element type="ImprovementFreeSpecialists" minOccurs="0"/>
@@ -1164,9 +1099,6 @@
 	<ElementType name="SpecialBuildingInfos" content="eltOnly">
 		<element type="SpecialBuildingInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="Civ4BuildingClassInfos" content="eltOnly">
-		<element type="BuildingClassInfos" minOccurs="0"/>
-	</ElementType>
 	<ElementType name="Civ4GenericBuildingInfos" content="eltOnly">
 		<element type="GenericBuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1177,7 +1109,6 @@
 		<element type="SpecialBuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Civ4Buildings" content="eltOnly">
-		<element type="BuildingClassInfos" minOccurs="0"/>
 		<element type="BuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!-- Technology Affected Buildings: BEGIN -->
@@ -1238,7 +1169,6 @@
 		<element type="PrereqTech"/>
 		<element type="iHealth"/>
 	</ElementType>
-
 	<ElementType name="iStrength" content="textOnly" dt:type="int"/>
 	<ElementType name="UnitCombatExtraStrength" content="eltOnly">
 		<element type="UnitCombatType"/>
@@ -1247,7 +1177,6 @@
 	<ElementType name="UnitCombatExtraStrengths" content="eltOnly">
 		<element type="UnitCombatExtraStrength" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrereqCivic" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqCivic" content="eltOnly">
 		<element type="CivicOption"/>
@@ -1259,7 +1188,6 @@
 	<ElementType name="PrereqAndCivics" content="eltOnly">
 		<element type="PrereqCivic" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrereqTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainType" content="textOnly"/>
 	<ElementType name="PrereqTerrain" content="eltOnly">
@@ -1272,7 +1200,6 @@
 	<ElementType name="PrereqAndTerrain" content="eltOnly">
 		<element type="PrereqTerrain" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrereqImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqImprovement" content="eltOnly">
 		<element type="ImprovementType"/>
@@ -1281,7 +1208,6 @@
 	<ElementType name="PrereqOrImprovement" content="eltOnly">
 		<element type="PrereqImprovement" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="FeatureType" content="textOnly"/>
 	<ElementType name="bPrereqFeature" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqFeature" content="eltOnly">
@@ -1291,46 +1217,48 @@
 	<ElementType name="PrereqOrFeature" content="eltOnly">
 		<element type="PrereqFeature" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrereqNot" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildingClassMustNotHave" content="textOnly"/>
-	<ElementType name="PrereqNotBuildingClass" content="eltOnly">
-		<element type="BuildingClassMustNotHave"/>
+	<ElementType name="BuildingMustNotHave" content="textOnly"/>
+	<ElementType name="PrereqNotBuilding" content="eltOnly">
+		<element type="BuildingMustNotHave"/>
 		<element type="bPrereqNot"/>
 	</ElementType>
-	<ElementType name="PrereqNotBuildingClasses" content="eltOnly">
-		<element type="PrereqNotBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqNotBuildings" content="eltOnly">
+		<element type="PrereqNotBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bReplace" content="textOnly" dt:type="boolean"/>
 	<ElementType name="ReplaceBuilding" content="eltOnly">
-		<element type="BuildingClassType"/>
+		<element type="BuildingType"/>
 		<element type="bReplace"/>
 	</ElementType>
 	<ElementType name="ReplaceBuildings" content="eltOnly">
 		<element type="ReplaceBuilding" minOccurs="0"/>
 	</ElementType>
-
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="UnitClassProductionModifier" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitType" content="textOnly"/>
+	<ElementType name="UnitProductionModifier" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassProductionModifiers" content="eltOnly">
-		<element type="UnitClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitProductionModifiers" content="eltOnly">
+		<element type="UnitProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
-	<ElementType name="BuildingClassProductionModifier" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="BuildingProductionModifier" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="BuildingClassProductionModifiers" content="eltOnly">
-		<element type="BuildingClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="BuildingProductionModifiers" content="eltOnly">
+		<element type="BuildingProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="GlobalBuildingClassProductionModifiers" content="eltOnly">
-		<element type="BuildingClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="GlobalBuildingProductionModifiers" content="eltOnly">
+		<element type="BuildingProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
+	<ElementType name="BuildingCostModifier" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="iModifier"/>
+	</ElementType>
+	<ElementType name="GlobalBuildingCostModifiers" content="eltOnly">
+		<element type="BuildingCostModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="BonusCommerceModifier" content="eltOnly">
 		<element type="BonusType"/>
 		<element type="CommerceModifiers"/>
@@ -1338,7 +1266,6 @@
 	<ElementType name="BonusCommerceModifiers" content="eltOnly">
 		<element type="BonusCommerceModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="iCommercePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="CommercePercents" content="eltOnly">
 		<element type="iCommercePercent" minOccurs="0" maxOccurs="*"/>
@@ -1350,7 +1277,6 @@
 	<ElementType name="BonusCommercePercentChanges" content="eltOnly">
 		<element type="BonusCommercePercentChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="BonusYieldChange" content="eltOnly">
 		<element type="BonusType"/>
 		<element type="YieldChanges"/>
@@ -1358,15 +1284,12 @@
 	<ElementType name="BonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="CommerceAttacks" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="VicinityBonusYieldChanges" content="eltOnly">
 		<element type="BonusYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="VicinityBonus" content="textOnly"/>
 	<ElementType name="RawVicinityBonus" content="textOnly"/>
 	<ElementType name="PrereqVicinityBonuses" content="eltOnly">
@@ -1375,7 +1298,6 @@
 	<ElementType name="PrereqRawVicinityBonuses" content="eltOnly">
 		<element type="VicinityBonus" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="iDefenseChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BonusDefenseChange" content="eltOnly">
 		<element type="BonusType"/>
@@ -1384,27 +1306,24 @@
 	<ElementType name="BonusDefenseChanges" content="eltOnly">
 		<element type="BonusDefenseChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="CommerceType" content="textOnly"/>
 	<ElementType name="iExtraCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingExtraCommerce" content="eltOnly">
-		<element type="BuildingClass"/>
+		<element type="BuildingType"/>
 		<element type="CommerceType"/>
 		<element type="iExtraCommerce"/>
 	</ElementType>
 	<ElementType name="GlobalBuildingExtraCommerces" content="eltOnly">
 		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
-	<ElementType name="bPrereqBuildingClass" content="textOnly" dt:type="boolean"/>
-	<ElementType name="PrereqOrBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="bPrereqBuildingClass"/>
+	<ElementType name="bPrereqBuilding" content="textOnly" dt:type="boolean"/>
+	<ElementType name="PrereqOrBuilding" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="bPrereqBuilding"/>
 	</ElementType>
-	<ElementType name="PrereqOrBuildingClasses" content="eltOnly">
-		<element type="PrereqOrBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqOrBuildings" content="eltOnly">
+		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrereqGameSpeed" content="textOnly" dt:type="boolean"/>
 	<ElementType name="GameSpeedType" content="textOnly"/>
 	<ElementType name="PrereqOrGameSpeed" content="eltOnly">
@@ -1414,5 +1333,4 @@
 	<ElementType name="PrereqOrGameSpeeds" content="eltOnly">
 		<element type="PrereqOrGameSpeed" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- Afforess -->
 </Schema>

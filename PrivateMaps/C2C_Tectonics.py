@@ -16,44 +16,44 @@
 # the Clash of Civilizations (http://clash.apolyton.net)
 # VERSION 1.0 Initial version
 # VERSION 1.1 Changed the moveplates and blur routines to avoid having
-#                           big lumps of peaks propagating everywhere.
-#             Added subduction
-#             Hinted continents seeds to avoid the poles
+#						   big lumps of peaks propagating everywhere.
+#			 Added subduction
+#			 Hinted continents seeds to avoid the poles
 # VERSION 2.0 Added climate management.
 # VERSION 2.1 Made desert edges rougher.
-#             Added first try at rivers.
-#             Increased subduction
+#			 Added first try at rivers.
+#			 Increased subduction
 # VERSION 3.0 Added various landmasses (Pangaeas, Lakes, Islands).
-#             Modified rivers
+#			 Modified rivers
 # VERSION 3.1 Lost when reinstalling windows and not backing it up.
-#             It was great, though.
+#			 It was great, though.
 # VERSION 3.2 Provided new option for Earthlike, and grouped land masses
-#             so 2/3rds are on the same hemisphere. Less ice.
+#			 so 2/3rds are on the same hemisphere. Less ice.
 # VERSION 3.3 Systematic use of climate map because I had bugged it away for
-#             the main map type instead of pangaea. Tried to prevent players
-#             from starting in the ice. Added hotspots.
+#			 the main map type instead of pangaea. Tried to prevent players
+#			 from starting in the ice. Added hotspots.
 # VERSION 3.4 Minor rewritings.
-#             Added fault lines: Some hills and lakes will pop up inside
-#             vast flat areas, forming a ridge line, but with lots of flat
-#             lands inside. Not always noticeable but has a definite effect.
-#             Corrected climate generation which didn't blow enough moisture.
+#			 Added fault lines: Some hills and lakes will pop up inside
+#			 vast flat areas, forming a ridge line, but with lots of flat
+#			 lands inside. Not always noticeable but has a definite effect.
+#			 Corrected climate generation which didn't blow enough moisture.
 # VERSION 3.5 Added several climate options. Tuned the starting locations.
 # VERSION 3.6 Roughed the edges of the various climate zones to avoid excess
-#             of straight limits.
-#             Added Mediterranean land type (inner sea).
-#             Added No Ice option that replaces ice with tundra and tundra
-#             with grass, otherwise behaves as normal humidity level.
+#			 of straight limits.
+#			 Added Mediterranean land type (inner sea).
+#			 Added No Ice option that replaces ice with tundra and tundra
+#			 with grass, otherwise behaves as normal humidity level.
 # VERSION 3.7 Mediterranean map rewrite: East is always land, more and bigger
-#             islands, correct latitude used for feature generation.
+#			 islands, correct latitude used for feature generation.
 # VERSION 3.8 Fixed WrapY error.
 # VERSION 3.9 Fixed subduction error.
 # VERSION 3.10 Shapes of plates are somewhat less square, and rivers in desert
-#             are always floodplains even after the default algorithm adds
-#             them near players' starting location
+#			 are always floodplains even after the default algorithm adds
+#			 them near players' starting location
 # VERSION 3.11 Climate generation rewritten, rivers less likely to start
-#             in desert and more often from hills.
+#			 in desert and more often from hills.
 # VERSION 3.12 Broke east-west climate lines, smoothed desert-grass
-#             transitions always through plains.
+#			 transitions always through plains.
 # VERSION 3.13 More mountains (second pass of movePlates). Terra option.
 # VERSION 3.14 Fixed starting plot generation errors.
 # VERSION 3.15 Added an option not to group civs on Terra option,
@@ -61,18 +61,16 @@
 #							 Antarctic landmass (too many barbs spawning there).
 # VERSION 3.16 Included Firaxis code for translating the options.
 #							Kept my copyrights.
-#             Added more rivers. (Also aborted try at heghtmap for rivers.)
+#			 Added more rivers. (Also aborted try at heghtmap for rivers.)
 #						  Updated the Terra option to have much better looking Arabia.
 # TODO The shape of the plates should be less polygonal and more random
-#      (more round than rectangular)
-#      The number of plates could be more tunable.
-#      I could also rewrite the whole rivers thing...
+#	  (more round than rectangular)
+#	  The number of plates could be more tunable.
+#	  I could also rewrite the whole rivers thing...
 
 # Modified by Temudjin
 # VERSION 3.16_mst - 15.July.2010
 #	- use MapScriptTools
-#  - compatibility with 'Planetfall'
-#  - compatibility with 'Mars Now!'
 #  - supports any number of players
 #	- add Map Option: TeamStart
 #  - add Marsh terrain, if supported by mod
@@ -85,14 +83,8 @@
 #  - check for Temudjin's Cool Starting Plots
 #  - print stats of mod and map
 
-
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-#import Popup as PyPopup										# Temudjin
-#from CvMapGeneratorUtil import TerrainGenerator		# Temudjin
-#from CvMapGeneratorUtil import FeatureGenerator		# Temudjin
-
 
 ##################################################################################
 ## MapScriptTools Interface by Temudjin
@@ -119,7 +111,7 @@ def beforeGeneration():
 	# will not be visible at evaluation-time, only x and y can be seen.
 	# The result should be between 0 .. 90, but a negative value will be converted.
 	# i.e.: compGetLat = "((y/%5.1f) - %3.1f) * 90" % ( CyMap().getGridHeight()-1, 1 )
-	#     - which would give you half a world from equator to south pole.
+	#	 - which would give you half a world from equator to south pole.
 	# Omitting compGetLat or setting it to None, will result in using the default function,
 	# which will give equally distributed latitudes between both poles.
 
@@ -143,9 +135,7 @@ def beforeGeneration():
 
 # This function will be called by the system, after generatePlotTypes() and before addRivers()
 # - print the plot-map and hold result to check differences to the next call
-# - build highlands for 'Planetfall'
 # - prettify plots
-# - handle 'Planetfall' mod terrain
 # If the map-script does more than just call the generator in generateTerrainTypes(), you will
 # have to take a closer look.
 # --------------------------------------------------------------------------------------------
@@ -153,31 +143,12 @@ def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
 
 	# print a plotMap; allow for differenceMap with next call
-	mst.mapPrint.buildPlotMap( True, "generateTerrainTypes()" )
-
-	# 'Planetfall' uses ridges and highlands. To utilize them fully, you will
-	# probably want to have a hilly terrain - if you already use
-	# a highland mapscript, you may want to comment-out the following line.
-	mst.planetFallMap.buildPfallHighlands()
+	mst.mapPrint.buildPlotMap(True, "generateTerrainTypes()")
 
 	# Prettify the map - change coastal peaks to hills with 80% chance; default: 66%
-	mst.mapPrettifier.hillifyCoast( 80 )
+	mst.mapPrettifier.hillifyCoast(80)
 
-	# If your active mod is 'Planetfall', you will have to use a different terrainGenerator.
-	if mst.bPfall or mst.bMars:
-
-		# 'Planetfall' uses shelves and trenches to spread and stop the fungus.
-		# The oceans have to be a bit reorganized to accommodate the different realities.
-		mst.planetFallMap.buildPfallOcean()
-
-		# 'Planetfall' and 'Mars Now!' need to use this  TerrainGenerator.
-		terraingen = mst.MST_TerrainGenerator()
-
-	else:
-		# Scripts may already have their own TerrainGenerator.
-		# terraingen = ThisMapTerrainGenerator()
-		# If the script doesn't have it's own, you use this one too (same as 'Planetfall').
-		terraingen = ClimateGenerator()
+	terraingen = ClimateGenerator()
 
 	# Create the terrain and return the result.
 	terrainTypes = terraingen.generateTerrain()
@@ -201,19 +172,15 @@ def addRivers():
 	mst.marshMaker.initialize( 4, 20, (0,25), (50,75) )
 	mst.marshMaker.convertTerrain()
 	# Solidify marsh between 3 [Arid] and 7 [Tropical] percent.
-	if not mst.bPfall:
-		if mst.bMarsh:
-			iAridity =  mst.iif( CyMap().getCustomMapOption(1)==0, 2, 0 )		# Arid
-			iAridity += mst.iif( CyMap().getCustomMapOption(1)==2, -2, 0 )		# Wet
-			marshPer = 5 - iAridity
-			mst.mapPrettifier.percentifyTerrain( (mst.etMarsh,marshPer), (mst.etTundra,1), (mst.etGrass,2) )
+	iAridity =  mst.iif( CyMap().getCustomMapOption(1)==0, 2, 0 )	# Arid
+	iAridity += mst.iif( CyMap().getCustomMapOption(1)==2, -2, 0 )	# Wet
+	marshPer = 5 - iAridity
+	mst.mapPrettifier.percentifyTerrain((mst.etMarsh, marshPer), (mst.etTundra, 1), (mst.etGrass, 2))
 
 	# Build between 0..3 mountain-ranges.
 	mst.mapRegions.buildBigDents()
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-	# build ElementalQuarter (50% chance).
-	mst.mapRegions.buildElementalQuarter( 50 )
 
 	# Some scripts produce more chaotic terrain than others. You can create more connected
 	# (bigger) deserts by converting surrounded plains and grass.
@@ -223,24 +190,20 @@ def addRivers():
 	# Sprout rivers from lakes.
 	mst.riverMaker.buildRiversFromLake()		# 66% chance to get one river, from each lake without river
 
-	# no rivers on Mars
-	if not mst.bMars:
-		# Tectonics has own river-system
-		addRivers2()
-		# Put rivers on small islands.
-		mst.riverMaker.islandRivers()					# islands between 6 and 50 tiles
+	# Tectonics has own river-system
+	addRivers2()
+	# Put rivers on small islands.
+	mst.riverMaker.islandRivers()					# islands between 6 and 50 tiles
 
 # This function will be called by the system, after addRivers() and before addFeatures()
 # - don't add lakes on Mars
 # ------------------------------------------------------------------------------------
 def addLakes():
 	print "-- addLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # This function will be called by the system, after addLakes() and before addBonuses()
 # - prettify lakes
-# - handle 'Planetfall' mod features
 # - prettify volcanos
 # If the map-script does more than just call the generator in addFeatures(), you will
 # have to take a closer look.
@@ -282,30 +245,25 @@ def normalizeStartingPlotLocations():
 # prevent additional rivers on Mars
 def normalizeAddRiver():
 	print "-- normalizeAddRiver()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent additional lakes on Mars
 def normalizeAddLakes():
 	print "-- normalizeAddLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeRemoveBadTerrain():
 	print "-- normalizeRemoveBadTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
-# This function will be called by the system, after the map was generated, after the
-# starting-plots have been choosen, at the end of the normalizing process and
-# before startHumansOnSameTile() which is the last map-function so called.
+# This function will be called by the system after the starting-plots have been choosen
+# at the end of the normalizing process, and is the last map-function called externally.
 # - balance boni (depending on initialization also place missing boni and move minerals)
 # - give names and boni to special regions
 # - print plot-map and the difference-map to the call before
@@ -357,11 +315,8 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 # This function will be called at odd times by the system.
-# 'Planetfall' wants nearer starting-plots
 # If the script already has this function, return that result instead of zero or rename it.
 def minStartingDistanceModifier():
-	if mst.bPfall: return -25
-#	return minStartingDistanceModifier2()		# call renamed script function
 	return 0
 ##################################################################################
 
@@ -378,10 +333,10 @@ def isSeaLevelMap():
 	return 0
 
 def getNumCustomMapOptions():
-	return 2 + mst.iif( mst.bMars, 0, 1 )
+	return 3
 
 def getNumHiddenCustomMapOptions():
-	return mst.iif( mst.bMars, 0, 1 )
+	return 1
 
 def getCustomMapOptionName(argsList):
 	index = argsList[0]
@@ -423,18 +378,18 @@ def getCustomMapOptionDescAt(argsList):
 	iOption = argsList[0]
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_SCRIPT_EARTH_70",
-	                   "TXT_KEY_MAP_SCRIPT_EARTH_60",
-	                   "TXT_KEY_MAP_SCRIPT_PANGAEA",
-	                   "TXT_KEY_MAP_SCRIPT_LAKES",
-	                   "TXT_KEY_MAP_SCRIPT_ISLANDS",
-	                   "TXT_KEY_MAP_SCRIPT_MEDITERRANEAN",
-	                   "TXT_KEY_MAP_SCRIPT_TERRA",
-	                   "TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START"]
+					   "TXT_KEY_MAP_SCRIPT_EARTH_60",
+					   "TXT_KEY_MAP_SCRIPT_PANGAEA",
+					   "TXT_KEY_MAP_SCRIPT_LAKES",
+					   "TXT_KEY_MAP_SCRIPT_ISLANDS",
+					   "TXT_KEY_MAP_SCRIPT_MEDITERRANEAN",
+					   "TXT_KEY_MAP_SCRIPT_TERRA",
+					   "TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START"]
 
 	aridity_names = ["TXT_KEY_CLIMATE_ARID",
-	                 "TXT_KEY_GAMESPEED_NORMAL",
-	                 "TXT_KEY_MAP_SCRIPT_WET",
-	                 "TXT_KEY_MAP_SCRIPT_NO_ICE"]
+					 "TXT_KEY_GAMESPEED_NORMAL",
+					 "TXT_KEY_MAP_SCRIPT_WET",
+					 "TXT_KEY_MAP_SCRIPT_NO_ICE"]
 
 	team_names = [ "Team Neighbors",
 						"Team Separated",
@@ -1121,12 +1076,12 @@ class voronoiTerraMap(voronoiMap):
 	def movePlates(self,dontMoveSeaPlates):
 		plates = self.numContinents + self.numSeaPlates
 		if dontMoveSeaPlates:
-			xMoves =     [0, 1, 0, 0, 0, 0, 0, 0,  -1,-1, 0,-1, 0, 0,-1, 0,-1, 1, 1, 0, 0]
-			yMoves =     [0, 0, 0, 0,-1, 1, 1, 0,   0, 1,-1,-1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+			xMoves =	 [0, 1, 0, 0, 0, 0, 0, 0,  -1,-1, 0,-1, 0, 0,-1, 0,-1, 1, 1, 0, 0]
+			yMoves =	 [0, 0, 0, 0,-1, 1, 1, 0,   0, 1,-1,-1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
 			subduction = [0, 9, 9, 0, 9, 0, 0, 0,   9, 9, 9, 0, 0, 9, 9, 9, 0, 9, 9, 0, 0]
 		else:
-			xMoves =     [0, 1, 0, 0, 0, 1,-1, 0,  -1,-1, 0, 1, 1,-1, 1, 0, 0,-1,-1, 1,-1]
-			yMoves =     [0, 0, 0, 0, 1,-1, 0, 0,  -1, 1,-1,-1, 1,-1,-1,-1,-1,-1, 0, 1, 1]
+			xMoves =	 [0, 1, 0, 0, 0, 1,-1, 0,  -1,-1, 0, 1, 1,-1, 1, 0, 0,-1,-1, 1,-1]
+			yMoves =	 [0, 0, 0, 0, 1,-1, 0, 0,  -1, 1,-1,-1, 1,-1,-1,-1,-1,-1, 0, 1, 1]
 			subduction = [0, 9, 9, 0, 9, 9, 9, 0,   9, 9, 9, 9, 0, 9, 9, 9, 0, 0, 9, 0, 0]
 		self.doMovePlates(xMoves,yMoves,subduction)
 
@@ -1183,13 +1138,13 @@ class ClimateGenerator:
 		gc = CyGlobalContext()
 		self.map = gc.getMap()
 		self.mapWidth = self.map.getGridWidth()
-		if (self.climate == 0):                          # Arid
+		if (self.climate == 0):						  # Arid
 			self.maxWindForce = self.mapWidth / 12
-		elif (self.climate == 1):                        # Normal
+		elif (self.climate == 1):						# Normal
 			self.maxWindForce = self.mapWidth / 8
-		elif (self.climate == 2):                        # Wet
+		elif (self.climate == 2):						# Wet
 			self.maxWindForce = self.mapWidth / 6
-		elif (self.climate == 3):                        # No ice
+		elif (self.climate == 3):						# No ice
 			self.maxWindForce = self.mapWidth / 8
 		self.mapHeight = self.map.getGridHeight()
 
@@ -1219,21 +1174,21 @@ class ClimateGenerator:
 		self.terrains[self.Ice] = gc.getInfoTypeForString("TERRAIN_ICE")
 		self.terrains[self.Tundra] = gc.getInfoTypeForString("TERRAIN_TAIGA")
 		self.terrains[self.Permafrost] = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrains[self.Lush] = gc.getInfoTypeForString("TERRAIN_LUSH")
 		self.terrains[self.Muddy] = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		self.terrains[self.Marsh] = gc.getInfoTypeForString("TERRAIN_MARSH")
 
-#		if (self.climate == 3):                        # No ice
+#		if (self.climate == 3):						# No ice
 #			self.terrainIce = gc.getInfoTypeForString("TERRAIN_TAIGA")
-#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASS")
+#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrain = [0] * (self.mapWidth*self.mapHeight)
 		self.moisture = [0] * (self.mapWidth*self.mapHeight)
 		self.dice = gc.getGame().getMapRand()
 
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns a value in the range of 0-90 degrees"
-		if (CyMap().getCustomMapOption(0) == 5):         #  "Mediterranean"
+		if (CyMap().getCustomMapOption(0) == 5):		 #  "Mediterranean"
 			return 65 - (40 * (self.mapHeight - iY) / self.mapHeight)
 		return self.map.plot(iX,iY).getLatitude()
 
@@ -1458,24 +1413,24 @@ def generatePlotTypes():
 	numContinents = 1
 	numSeaPlates = 1
 	hotspotsFrequency = 900
-	if (userInputLandmass == 0):       #                 "Earthlike (70% water)"
+	if (userInputLandmass == 0):	   #				 "Earthlike (70% water)"
 		numContinents = 1 + numPlayers
 		numSeaPlates = numPlayers*3
-	elif (userInputLandmass == 1):       #               "Earthlike (60% water)"
+	elif (userInputLandmass == 1):	   #			   "Earthlike (60% water)"
 		numContinents = 1 + numPlayers*2
 		numSeaPlates = numPlayers*3 - 1
-	elif (userInputLandmass == 2):     #                 "Pangaea"
+	elif (userInputLandmass == 2):	 #				 "Pangaea"
 		generator = voronoiPangaeaMap(numPlayers)
 		return generator.generate()
-	elif (userInputLandmass == 3):     #                 "Lakes (30% water")
+	elif (userInputLandmass == 3):	 #				 "Lakes (30% water")
 		numContinents = 1 + numPlayers*3
 		numSeaPlates = numPlayers - 1
 		hotspotsFrequency = 1600
-	elif (userInputLandmass == 4):     #                 "Islands"
+	elif (userInputLandmass == 4):	 #				 "Islands"
 		numContinents = numPlayers
 		numSeaPlates = numPlayers*6 - 1
 		hotspotsFrequency = 300
-	elif (userInputLandmass == 5):     #                 "Mediterranean"
+	elif (userInputLandmass == 5):	 #				 "Mediterranean"
 		generator = voronoiMediterraneanMap(numPlayers)
 		return generator.generate()
 	elif (userInputLandmass == 6 or userInputLandmass == 7): # "Terra"
@@ -1568,13 +1523,13 @@ class riversMap:
 
 	def seedRivers(self):
 		climate = CyMap().getCustomMapOption(1)
-		if (climate == 0):                 # Arid
+		if (climate == 0):				 # Arid
 			divider = 6
-		elif (climate == 1):               # Normal
+		elif (climate == 1):			   # Normal
 			divider = 3
-		elif (climate == 2):               # Wet
+		elif (climate == 2):			   # Wet
 			divider = 2
-		elif (climate == 3):               # No ice
+		elif (climate == 3):			   # No ice
 			divider = 3
 		probability = 30/divider
 		seeds = []
@@ -1742,18 +1697,18 @@ class riversFromSea:
 
 	def seedRivers(self):
 		climate = CyMap().getCustomMapOption(1)
-		if (climate == 0):                 # Arid
+		if (climate == 0):				 # Arid
 			divider = 4
-		elif (climate == 1):               # Normal
+		elif (climate == 1):			   # Normal
 			divider = 2
-		elif (climate == 2):               # Wet
+		elif (climate == 2):			   # Wet
 			divider = 1
-		elif (climate == 3):               # No ice
+		elif (climate == 3):			   # No ice
 			divider = 2
 		maxNumber = (self.width + self.height) / divider
 		userInputLandmass = self.map.getCustomMapOption(0)
 		riversNumber = 1 + maxNumber
-		if (userInputLandmass == 1):       # Pangaea
+		if (userInputLandmass == 1):	   # Pangaea
 			riversNumber = maxNumber/2
 		self.coasts = self.collateCoasts()
 		coastsNumber = len(self.coasts)
@@ -1777,61 +1732,59 @@ class riversFromSea:
 		for x in range(self.width):
 			for y in range(self.height):
 				plot = self.map.plot(x,y)
-				if (plot.isCoastalLand()):
+				if not plot.isWater() and plot.isCoastal():
 					result.append(plot)
 		return result
 
 	def generateRiver(self,i,coastShare):
-		choiceCoast = coastShare * i + self.dice.get(coastShare,"Pick a coast for the river")
-		plot = self.coasts[choiceCoast]
+
+		plot = self.coasts[coastShare * i + self.dice.get(coastShare,"Pick a coast for the river")]
+
 		FlowDirection = CardinalDirectionTypes.NO_CARDINALDIRECTION
 		x = plot.getX()
 		y = plot.getY()
-		if ((y < 1 or y >= self.height - 1) or plot.isNOfRiver() or plot.isWOfRiver()):
-			return (x,y,FlowDirection)
+		if y < 1 or y >= self.height - 1 or plot.isNOfRiver() or plot.isWOfRiver():
+			return (x, y, FlowDirection)
 		eastX = self.eastX(x)
 		westX = self.westX(x)
 		otherPlot = True
 		eastPlot = self.map.plot(eastX,y)
-		if (eastPlot.isCoastalLand()):
-			seaPlot = self.map.plot(x,y+1)
-			if ((self.map.plot(x,y+1).isWater()) or (self.map.plot(eastX,y+1).isWater())):
-				landPlot1 = self.map.plot(x,y-1)
-				landPlot2 = self.map.plot(eastX,y-1)
-				if (landPlot1.isWater() or landPlot2.isWater()):
+		if not eastPlot.isWater() and eastPlot.isCoastal():
+
+			if self.map.plot(x, y+1).isWater() or self.map.plot(eastX, y+1).isWater():
+
+				if self.map.plot(x, y-1).isWater() or self.map.plot(eastX, y-1).isWater():
 					otherPlot = True
 				else:
 					FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_NORTH
 					otherPlot = False
-			if (otherPlot == True):
-				if ((self.map.plot(x,y-1).isWater()) or (self.map.plot(eastX,y-1).isWater())):
-					landPlot1 = self.map.plot(x,y+1)
-					landPlot2 = self.map.plot(eastX,y+1)
-					if (landPlot1.isWater() or landPlot2.isWater()):
+			if otherPlot:
+				if self.map.plot(x, y-1).isWater() or self.map.plot(eastX, y-1).isWater():
+
+					if self.map.plot(x, y+1).isWater() or self.map.plot(eastX, y+1).isWater():
 						otherPlot = True
 					else:
 						FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_SOUTH
 						otherPlot = False
-		if (otherPlot == True):
-			southPlot = self.map.plot(x,y-1)
-			if (southPlot.isCoastalLand()):
-				if ((self.map.plot(eastX,y).isWater()) or (self.map.plot(eastX,y-1).isWater())):
-					landPlot1 = self.map.plot(westX,y)
-					landPlot2 = self.map.plot(westX,y-1)
-					if (landPlot1.isWater() or landPlot2.isWater()):
+		if otherPlot:
+			southPlot = self.map.plot(x, y-1)
+			if not southPlot.isWater() and southPlot.isCoastal():
+
+				if self.map.plot(eastX, y).isWater() or self.map.plot(eastX, y-1).isWater():
+
+					if self.map.plot(westX, y).isWater() or self.map.plot(westX, y-1).isWater():
 						otherPlot = True
 					else:
 						FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_EAST
 						otherPlot = False
-				if (otherPlot == True):
-					if ((self.map.plot(westX,y).isWater()) or (self.map.plot(westX,y-1).isWater())):
-						landPlot1 = self.map.plot(eastX,y)
-						landPlot2 = self.map.plot(eastX,y-1)
-						if (landPlot1.isWater() or landPlot2.isWater()):
+				if otherPlot:
+					if self.map.plot(westX, y).isWater() or self.map.plot(westX, y-1).isWater():
+
+						if self.map.plot(eastX, y).isWater() or self.map.plot(eastX, y-1).isWater():
 							otherPlot = True
 						else:
 							FlowDirection = CardinalDirectionTypes.CARDINALDIRECTION_WEST
-		return (x,y,FlowDirection)
+		return (x, y, FlowDirection)
 
 	# prevent rivers from crossing each other
 	def preventRiversFromCrossing(self,x,y,flow,riverID):
@@ -2109,9 +2062,9 @@ def findStartingPlot(argsList):
 	allOnBest = false
 	isolatedStarts = false
 	userInputLandmass = CyMap().getCustomMapOption(0)
-	if (userInputLandmass == 4):     #                 "Islands"
+	if (userInputLandmass == 4):	 #				 "Islands"
 		isolatedStarts = true
-	if (userInputLandmass == 7):     #                 "Terra"
+	if (userInputLandmass == 7):	 #				 "Terra"
 		allOnBest = true
 
 	for area in areas:
@@ -2120,10 +2073,7 @@ def findStartingPlot(argsList):
 
 	# Shuffle players so the same player doesn't always get the first pick.
 	player_list = []
-	########## Temudjin START
-	#for plrCheckLoop in range(18):
-	for plrCheckLoop in range( gc.getMAX_CIV_PLAYERS() ):
-	########## Temudjin END
+	for plrCheckLoop in range(gc.getMAX_PC_PLAYERS()):
 		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
 			player_list.append(plrCheckLoop)
 	shuffledPlayers = []

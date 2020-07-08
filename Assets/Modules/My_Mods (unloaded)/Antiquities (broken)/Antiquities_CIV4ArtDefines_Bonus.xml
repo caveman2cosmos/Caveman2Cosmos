@@ -7,7 +7,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 <BonusArtInfos>
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_CAVE_BURIAL_GOODS</Type>
+		<Type>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -16,7 +16,7 @@
 		<FontButtonIndex>90</FontButtonIndex>
 	</BonusArtInfo>
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_EARTH_BURIAL_GOODS</Type>
+		<Type>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -25,7 +25,7 @@
 		<FontButtonIndex>90</FontButtonIndex>
 	</BonusArtInfo>
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_FIRE_BURIAL_GOODS</Type>
+		<Type>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -34,7 +34,7 @@
 		<FontButtonIndex>90</FontButtonIndex>
 	</BonusArtInfo>
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_SKY_BURIAL_GOODS</Type>
+		<Type>ART_DEF_BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>

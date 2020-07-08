@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Ceramics Factory -->
-			<BuildingClass>BUILDINGCLASS_CERAMICS_FACTORY</BuildingClass>
 			<Type>BUILDING_CERAMICS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CERAMICS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CERAMICS_FACTORY_PEDIA</Civilopedia>
@@ -28,22 +27,16 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -56,13 +49,13 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -89,7 +82,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -114,7 +107,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Porcelain Factory -->
-			<BuildingClass>BUILDINGCLASS_PORCELAIN_FACTORY</BuildingClass>
 			<Type>BUILDING_PORCELAIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_PORCELAIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORCELAIN_FACTORY_PEDIA</Civilopedia>
@@ -133,22 +125,16 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CERAMICS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PORCELAIN_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PORCELAIN_WORKSHOP</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -156,7 +142,7 @@
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_WARES_PORCELAIN</FreeBonus>
+			<!--FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -190,7 +176,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Porcelain Workshop -->
-			<BuildingClass>BUILDINGCLASS_PORCELAIN_WORKSHOP</BuildingClass>
 			<Type>BUILDING_PORCELAIN_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_PORCELAIN_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORCELAIN_WORKSHOP_PEDIA</Civilopedia>
@@ -208,27 +193,24 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!--PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses-->
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
+			<!--PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POTTER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_PORCELAIN_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -239,7 +221,7 @@
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_WARES_PORCELAIN</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -274,7 +256,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Potter's Hut -->
-			<BuildingClass>BUILDINGCLASS_POTTER</BuildingClass>
 			<Type>BUILDING_POTTER</Type>
 			<Description>TXT_KEY_BUILDING_POTTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POTTER_PEDIA</Civilopedia>
@@ -292,29 +273,29 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARTER_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BARTER_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_CERAMICS_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -329,13 +310,13 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -362,7 +343,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -396,7 +377,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Potter's Workshop -->
-			<BuildingClass>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClass>
 			<Type>BUILDING_POTTERS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_POTTERS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POTTERS_WORKSHOP_PEDIA</Civilopedia>
@@ -415,23 +395,20 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_POTTER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_CERAMICS_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -446,13 +423,13 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -479,7 +456,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -504,7 +481,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Terracotta Factory -->
-			<BuildingClass>BUILDINGCLASS_TERRACOTTA_FACTORY</BuildingClass>
 			<Type>BUILDING_TERRACOTTA_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_TERRACOTTA_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_FACTORY_PEDIA</Civilopedia>
@@ -523,22 +499,16 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CERAMICS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TERRACOTTA_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TERRACOTTA_WORKSHOP</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -546,7 +516,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_WARES_TERRACOTTA</FreeBonus>
+			<!--FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -569,7 +539,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Terracotta Workshop -->
-			<BuildingClass>BUILDINGCLASS_TERRACOTTA_WORKSHOP</BuildingClass>
 			<Type>BUILDING_TERRACOTTA_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_TERRACOTTA_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_WORKSHOP_PEDIA</Civilopedia>
@@ -587,27 +556,24 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!--PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses-->
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
+			<!--PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POTTER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_TERRACOTTA_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_TERRACOTTA_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -618,7 +584,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_WARES_TERRACOTTA</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>

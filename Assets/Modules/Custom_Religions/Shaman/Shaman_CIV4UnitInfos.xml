@@ -8,10 +8,9 @@
 	<UnitInfos>
 		<!-- Modular Hip-Hip-Hurra!!! Wer hat die Scheisse bloss gemacht !!! -->
 		<UnitInfo>
-			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_SHAMAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHAMAN_MISSIONARY</Capture>
+			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -23,6 +22,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHAMAN_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHAMAN_PEDIA</Civilopedia>
@@ -30,12 +32,14 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -54,14 +58,13 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PROPHET</Class>
 			<Type>UNIT_PROPHET</Type>
 			<Buildings>
 				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

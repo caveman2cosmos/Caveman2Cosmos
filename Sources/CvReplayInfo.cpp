@@ -1,26 +1,30 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
 
 int CvReplayInfo::REPLAY_VERSION = 4;
 
-CvReplayInfo::CvReplayInfo() :
-	m_iActivePlayer(0),
-	m_eDifficulty(NO_HANDICAP),
-	m_eWorldSize(NO_WORLDSIZE),
-	m_eClimate(NO_CLIMATE),
-	m_eSeaLevel(NO_SEALEVEL),
-	m_eEra(NO_ERA),
-	m_eGameSpeed(NO_GAMESPEED),
-	m_iInitialTurn(0),
-	m_iFinalTurn(0),
-	m_eVictoryType(NO_VICTORY),
-	m_iMapHeight(0),
-	m_iMapWidth(0),
-	m_pcMinimapPixels(NULL),
-	m_iNormalizedScore(0),
-	m_bMultiplayer(false),
-	m_iStartYear(0)
+CvReplayInfo::CvReplayInfo()
+	: m_iActivePlayer(0)
+	, m_eDifficulty(NO_HANDICAP)
+	, m_eWorldSize(NO_WORLDSIZE)
+	, m_eClimate(NO_CLIMATE)
+	, m_eSeaLevel(NO_SEALEVEL)
+	, m_eEra(NO_ERA)
+	, m_eGameSpeed(NO_GAMESPEED)
+	, m_iInitialTurn(0)
+	, m_iFinalTurn(0)
+	, m_eVictoryType(NO_VICTORY)
+	, m_iMapHeight(0)
+	, m_iMapWidth(0)
+	, m_pcMinimapPixels(NULL)
+	, m_iNormalizedScore(0)
+	, m_bMultiplayer(false)
+	, m_iStartYear(0)
+	, m_eCalendar(NO_CALENDAR)
 {
 	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2); 
 }
@@ -37,7 +41,7 @@ CvReplayInfo::~CvReplayInfo()
 
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
-	CvGame& game = GC.getGameINLINE();
+	CvGame& game = GC.getGame();
 /************************************************************************************************/
 /* Afforess	                  Start		 03/18/10                                               */
 /*                                                                                              */
@@ -48,7 +52,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	CvMap& map = GC.getMapINLINE();
+	CvMap& map = GC.getMap();
 	
 	if (ePlayer == NO_PLAYER)
 	{
@@ -98,18 +102,18 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 			m_eVictoryType = NO_VICTORY;
 		}
 
-		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGameINLINE().getWinner());
+		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGame().getWinner());
 	}
 
 	m_bMultiplayer = game.isGameMultiPlayer();
 
 
-	m_iInitialTurn = GC.getGameINLINE().getStartTurn();
-	m_iStartYear = GC.getGameINLINE().getStartYear();
+	m_iInitialTurn = GC.getGame().getStartTurn();
+	m_iStartYear = GC.getGame().getStartYear();
 	m_iFinalTurn = game.getGameTurn();
-	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGameINLINE().getCalendar(), GC.getGameINLINE().getStartYear(), GC.getGameINLINE().getGameSpeedType());
+	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
 
-	m_eCalendar = GC.getGameINLINE().getCalendar();
+	m_eCalendar = GC.getGame().getCalendar();
 
 
 	std::map<PlayerTypes, int> mapPlayers;
@@ -172,8 +176,8 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		}
 	}
 
-	m_iMapWidth = GC.getMapINLINE().getGridWidthINLINE();
-	m_iMapHeight = GC.getMapINLINE().getGridHeightINLINE();
+	m_iMapWidth = GC.getMap().getGridWidth();
+	m_iMapHeight = GC.getMap().getGridHeight();
 	
 	SAFE_DELETE(m_pcMinimapPixels);	
 	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];

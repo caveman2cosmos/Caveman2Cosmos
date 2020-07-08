@@ -1,15 +1,15 @@
 #include "CvGameCoreDLL.h"
+#include "CyCity.h"
+#include "CyGlobalContext.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CyUnit.h"
+#include "Win32.h"
+#include "SCyDebug.h"
+
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
-/************************************************************************************************/
-/* REVOLUTION_MOD                         10/23/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 void CyCityPythonInterface2(python::class_<CyCity>& x);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 void CyPlotPythonInterface1(python::class_<CyPlot>& x);
 void CyPlayerPythonInterface1(python::class_<CyPlayer>& x);
 void CyPlayerPythonInterface2(python::class_<CyPlayer>& x);
@@ -39,9 +39,7 @@ void CyGameCoreUtilsPythonInterface();
 void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 
-//
-//
-//
+
 DllExport void DLLPublishToPython()
 {
 	OutputDebugString("Publishing to Python: Start");
@@ -66,20 +64,14 @@ DllExport void DLLPublishToPython()
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
 
+	SCyDebug::installInPython();
+
 	//
 	// large interfaces which can be split across files if need be
 	//
 	python::class_<CyCity> city ("CyCity");		// define city class
 	CyCityPythonInterface1(city);				// publish it's methods
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	CyCityPythonInterface2(city);				// publish it's methods
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	python::class_<CyPlayer> player ("CyPlayer");	// define player class
 	CyPlayerPythonInterface1(player);				// publish it's methods
@@ -98,5 +90,7 @@ DllExport void DLLPublishToPython()
 	CyGlobalContextPythonInterface3(gc);					// publish it's methods
 	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
 	
+	Win32::pythonPublish();
+
 	OutputDebugString("Publishing to Python: End");
 }

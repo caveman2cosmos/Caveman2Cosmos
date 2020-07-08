@@ -6,22 +6,9 @@
 #define CIV4_GAMECORE_UTILS_H
 
 
-//#include "CvStructs.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 
-#ifndef _USRDLL
-// use non inline functions when not in the dll
-#define getMapINLINE	getMap
-#define getGridHeightINLINE	getGridHeight
-#define getGridWidthINLINE	getGridWidth
-#define isWrapYINLINE	isWrapY
-#define isWrapXINLINE	isWrapX
-#define plotINLINE	plot
-#define getX_INLINE	getX
-#define getY_INLINE	getY
-
-#endif
 
 class CvPlot;
 class CvCity;
@@ -108,22 +95,22 @@ inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap)
 
 inline int xDistance(int iFromX, int iToX)
 {
-	return coordDistance(iFromX, iToX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
+	return coordDistance(iFromX, iToX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
 }
 
 inline int yDistance(int iFromY, int iToY)
 {
-	return coordDistance(iFromY, iToY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
+	return coordDistance(iFromY, iToY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
 
 inline int dxWrap(int iDX)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
+	return wrapCoordDifference(iDX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
 }
 
 inline int dyWrap(int iDY)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
+	return wrapCoordDifference(iDY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
 
 // 4 | 4 | 3 | 3 | 3 | 4 | 4
@@ -143,11 +130,8 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // Returns the distance between plots according to the pattern above...
 inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
 {
-	int iDX;
-	int iDY;
-
-	iDX = xDistance(iX1, iX2);
-	iDY = yDistance(iY1, iY2);
+	const int iDX = xDistance(iX1, iX2);
+	const int iDY = yDistance(iY1, iY2);
 
 	return (std::max(iDX, iDY) + (std::min(iDX, iDY) / 2));
 }
@@ -176,27 +160,27 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 {
 	if(eDirection == NO_DIRECTION)
 	{
-		return GC.getMapINLINE().plotINLINE(iX, iY);
+		return GC.getMap().plot(iX, iY);
 	}
 	else
 	{
-		return GC.getMapINLINE().plotINLINE((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
+		return GC.getMap().plot((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
 	}
 }
 
-inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
+inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 {
-	return plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), eDirection);
+	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
 
 inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
 {
-	return GC.getMapINLINE().plotINLINE((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
+	return GC.getMap().plot((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
 }
 
 inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
 {
-	return GC.getMapINLINE().plotINLINE((iX + iDX), (iY + iDY));
+	return GC.getMap().plot((iX + iDX), (iY + iDY));
 }
 
 inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
@@ -218,7 +202,7 @@ inline DirectionTypes reverseDirection(DirectionTypes iDirection)															
 
 inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)			// Exposed to Python
 {
-	return directionXY(dxWrap(pToPlot->getX_INLINE() - pFromPlot->getX_INLINE()), dyWrap(pToPlot->getY_INLINE() - pFromPlot->getY_INLINE()));
+	return directionXY(dxWrap(pToPlot->getX() - pFromPlot->getX()), dyWrap(pToPlot->getY() - pFromPlot->getY()));
 }
 
 inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bClockwise)
@@ -254,7 +238,7 @@ int getPopulationPower(int iPopulation);								// Exposed to Python
 int getPopulationScore(int iPopulation);								// Exposed to Python
 int getLandPlotsScore(int iLandPlots);									// Exposed to Python
 int getTechScore(TechTypes eTech);											// Exposed to Python
-int getWonderScore(BuildingClassTypes eWonderClass);		// Exposed to Python
+int getWonderScore(BuildingTypes eWonder);		// Exposed to Python
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);		// Exposed to Python
 
@@ -266,30 +250,29 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);							// Exposed t
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);	// Exposed to Python
 bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);		// Exposed to Python
 
-bool isWorldUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isTeamUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isNationalUnitClass(UnitClassTypes eUnitClass);									// Exposed to Python
-bool isLimitedUnitClass(UnitClassTypes eUnitClass);										// Exposed to Python
+bool isWorldUnit(UnitTypes eUnit);											// Exposed to Python
+bool isNationalUnit(UnitTypes eUnit);									// Exposed to Python
+bool isLimitedUnit(UnitTypes eUnit);										// Exposed to Python
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass);				// Exposed to Python
-bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass);
+bool isWorldWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isTeamWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isNationalWonder(BuildingTypes eBuilding);				// Exposed to Python
+bool isNationalWonderGroup(BuildingTypes eBuilding);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass);					// Exposed to Python
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass);
+bool isLimitedWonder(BuildingTypes eBuilding);					// Exposed to Python
+int limitedWonderLimit(BuildingTypes eBuilding);
 
 bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
 bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
 bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
 
 __int64 getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender);							// Exposed to Python
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
 /////////////////////////////////////////////////////////////////
-float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D);
+float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // END                                                         //
@@ -403,15 +386,15 @@ int plotGroupValid(FAStarNode* parent, FAStarNode* node, int data, const void* p
 int countPlotGroup(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 int countRegion(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 
-bool moveToValid(CvSelectionGroup* pSelectionGroup, CvPlot* pToPlot, int iFlags);
+bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pToPlot, int iFlags);
 
 //	Koashling - new pathing generator callback functions
-int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
-int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
-bool ContextFreeNewPathValidFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus);
-bool NewPathValidFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity);
-bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar);
-bool NewPathTurnEndValidityCheckRequired(CvSelectionGroup* pGroup, int iFlags);
+int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
+int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
+bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus);
+bool NewPathValidFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity);
+bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar);
+bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pGroup, int iFlags);
 
 int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack);
 
@@ -459,16 +442,16 @@ void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szSt
 //	hashes are needed
 class CvChecksum {
 public:
-    CvChecksum() { clear(); }
-    void clear() { sum = 0; r = 55665; c1 = 52845; c2 = 22719;}
-    void add(int i);
-    void add(byte b);
-    int get() { return (int)sum; }
+	CvChecksum() { clear(); }
+	void clear() { sum = 0; r = 55665; c1 = 52845; c2 = 22719;}
+	void add(int i);
+	void add(byte b);
+	int get() { return (int)sum; }
 protected:
-    WORD r;
-    WORD c1;
-    WORD c2;
-    DWORD sum;
+	WORD r;
+	WORD c1;
+	WORD c2;
+	DWORD sum;
 }; 
 
 #endif

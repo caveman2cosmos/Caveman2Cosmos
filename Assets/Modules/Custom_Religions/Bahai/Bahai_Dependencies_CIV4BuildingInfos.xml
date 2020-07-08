@@ -8,21 +8,21 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_BAHAI_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BAHAI_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_LOTUS_TEMPLE</BuildingClassType>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LOTUS_TEMPLE</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

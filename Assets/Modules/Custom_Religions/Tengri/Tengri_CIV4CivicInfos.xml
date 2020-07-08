@@ -20,18 +20,16 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_CHURCH</Type>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDINGCLASS_SHAMANS_YURTA</BuildingType>
+					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_THEOCRACY</Type>

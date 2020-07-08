@@ -27,10 +27,11 @@ class StackBarDC:
 
 
 	def drawTickMarks(self, screen, iCurr, iTotal, iRate):
-
-		w = self.w
 		DC = self.DC
 		screen.deleteWidget(DC)
+		if iRate < 1: return
+
+		w = self.w
 		screen.addDrawControl(DC, self.BG, self.x, self.y, w, self.h, WidgetTypes.WIDGET_GENERAL, 1, 2)
 
 		color = self.color
@@ -39,7 +40,7 @@ class StackBarDC:
 		y3 = self.y3
 		y4 = self.y4
 		i = 2
-		while True:
+		while i < 514: # Limit it to maximum 512 tics, no progress-bar needs more than that.
 			iProgress = iCurr + i * iRate
 			if iProgress >= iTotal: break
 			x = w * iProgress / iTotal

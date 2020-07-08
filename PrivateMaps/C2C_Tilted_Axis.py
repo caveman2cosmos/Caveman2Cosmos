@@ -2,7 +2,7 @@
 #	FILE:	 Tilted_Axis.py
 #	AUTHOR:  Bob Thomas (Sirian)
 #	PURPOSE: Global map script - Simulates a world with its rotational axis 
-#	         tipped over on to its side. This is also a square map.
+#			 tipped over on to its side. This is also a square map.
 #-----------------------------------------------------------------------------
 #	Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 #-----------------------------------------------------------------------------
@@ -118,19 +118,19 @@ def getWrapX():
 	return False
 def getWrapY():
 	return True
-    
+	
 # subclass FractalWorld to enable square exponents for use with Tilted Axis.
 class TiltedAxisFractalWorld(CvMapGeneratorUtil.FractalWorld):
 	def initFractal(self, continent_grain = 2, rift_grain = 2, has_center_rift = True):
 		"For no rifts, use rift_grain = -1"
 		iFlags = CyFractal.FracVals.FRAC_WRAP_Y + CyFractal.FracVals.FRAC_POLAR
 		worldsizes = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      (6,6),
-			WorldSizeTypes.WORLDSIZE_TINY:      (6,6),
-			WorldSizeTypes.WORLDSIZE_SMALL:     (6,6),
+			WorldSizeTypes.WORLDSIZE_DUEL:	  (6,6),
+			WorldSizeTypes.WORLDSIZE_TINY:	  (6,6),
+			WorldSizeTypes.WORLDSIZE_SMALL:	 (6,6),
 			WorldSizeTypes.WORLDSIZE_STANDARD:  (7,7),
-			WorldSizeTypes.WORLDSIZE_LARGE:     (7,7),
-			WorldSizeTypes.WORLDSIZE_HUGE:      (7,7)
+			WorldSizeTypes.WORLDSIZE_LARGE:	 (7,7),
+			WorldSizeTypes.WORLDSIZE_HUGE:	  (7,7)
 			}
 # Rise of Mankind 2.53
 		map_size = self.map.getWorldSize()

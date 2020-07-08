@@ -9,17 +9,12 @@
 //
 
 #include "CvGlobals.h"
-#include "CvArtFileMgr.h"
 
 class CyGame;
 class CyMap;
 class CyPlayer;
 class CvRandom;
-class CyEngine;
 class CyTeam;
-class CyArtFileMgr;
-class CyUserProfile;
-class CyVariableSystem;
 
 class CyGlobalContext
 {
@@ -36,13 +31,15 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	void enableMultiMaps() { GC.enableMultiMaps(); }
+	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
-	int getNumMapSwitchInfos() const;
-	CvMapSwitchInfo* getMapSwitchInfo(int iMapSwitch) const;
 	CyMap* getMapByIndex(int iIndex);
+	void updateMaps();
 	void initializeMap(int iMap);
+	bool mapInitialized(int iMap) const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	
@@ -54,7 +51,6 @@ public:
 	CyPlayer* getCyActivePlayer();
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(int i);
-	CyArtFileMgr* getCyArtFileMgr() const;
 
 	CvEffectInfo* getEffectInfo(int i) const;
 	CvTerrainInfo* getTerrainInfo(int i) const;
@@ -75,12 +71,10 @@ public:
 	CvHandicapInfo* getHandicapInfo(int i) const;
 	CvGameSpeedInfo* getGameSpeedInfo(int i) const;
 	CvTurnTimerInfo* getTurnTimerInfo(int i) const;
-	CvBuildingClassInfo* getBuildingClassInfo(int i) const;
 	CvMissionInfo* getMissionInfo(int i) const;
 	CvCommandInfo* getCommandInfo(int i) const;
 	CvAutomateInfo* getAutomateInfo(int i) const;
 	CvActionInfo* getActionInfo(int i) const;
-	CvUnitClassInfo* getUnitClassInfo(int i) const;
 	CvInfoBase* getUnitCombatInfo(int i) const;
 	//TB Promotion Line Mod begin
 	CvPromotionLineInfo* getPromotionLineInfo(int i) const;
@@ -115,7 +109,7 @@ public:
 	CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	CvInfoBase * getUnitAIInfo(int i) const;
 	CvColorInfo* getColorInfo(int i) const;
-    CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
+	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	CvPropertyInfo* getPropertyInfo(int i) const;
 
 	int getInfoTypeForString(const char* szInfoType) const;
@@ -135,38 +129,12 @@ public:
 
 	CvInfoBase* getHints(int i) const;
 	CvMainMenuInfo* getMainMenus(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	CvPythonModulesInfo* getPythonModulesInfo(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	CvInvisibleInfo* getInvisibleInfo(int i) const;
 	CvVoteSourceInfo* getVoteSourceInfo(int i) const;
 	CvInfoBase* getAttitudeInfo(int i) const;
 	CvInfoBase* getMemoryInfo(int i) const;
 	CvInfoBase* getConceptInfo(int i) const;
 	CvInfoBase* getNewConceptInfo(int i) const;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	CvInfoBase* getDCMConceptInfo(int i) const;
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	CvInfoBase* getANDConceptInfo(int i) const;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	CvInfoBase* getCityTabInfo(int i) const;
 	CvInfoBase* getCalendarInfo(int i) const;
 	CvInfoBase* getGameOptionInfo(int i) const;
@@ -232,9 +200,7 @@ public:
 	int getNumHandicapInfos() const { return GC.getNumHandicapInfos(); }
 	int getNumGameSpeedInfos() const { return GC.getNumGameSpeedInfos(); }
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
-	int getNumBuildingClassInfos() const { return GC.getNumBuildingClassInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
-	int getNumUnitClassInfos() const { return GC.getNumUnitClassInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return GC.getNumPromotionLineInfos(); }
@@ -244,8 +210,8 @@ public:
 	int getNumIdeaInfos() const { return GC.getNumIdeaInfos(); }
 	//int getNumTraitOptionEditsInfos() const { return GC.getNumTraitOptionEditsInfos(); }
 	int getNumAutomateInfos() const { return GC.getNumAutomateInfos(); }
-	int getNumCommandInfos() const { return GC.getNumCommandInfos(); }
-	int getNumControlInfos() const { return GC.getNumControlInfos(); }
+	int getNumCommandInfos() const { return NUM_COMMAND_TYPES; }
+	int getNumControlInfos() const { return NUM_CONTROL_TYPES; }
 	int getNumMissionInfos() const { return GC.getNumMissionInfos(); }
 	int getNumActionInfos() const { return GC.getNumActionInfos(); }
 	int getNumPromotionInfos() const { return GC.getNumPromotionInfos(); }
@@ -270,25 +236,9 @@ public:
 	int getNumClimateInfos() const { return GC.getNumClimateInfos(); }
 	int getNumConceptInfos() const { return GC.getNumConceptInfos(); }
 	int getNumNewConceptInfos() const { return GC.getNumNewConceptInfos(); }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	int getNumDCMConceptInfos() const { return GC.getNumDCMConceptInfos(); }
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	int getNumANDConceptInfos() const { return GC.getNumANDConceptInfos(); }
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	int getNumCityTabInfos() const { return GC.getNumCityTabInfos(); }
 	int getNumCalendarInfos() const { return GC.getNumCalendarInfos(); }
-	int getNumPlayerOptionInfos() const { return GC.getNumPlayerOptionInfos(); }
+	int getNumPlayerOptionInfos() const { return NUM_PLAYEROPTION_TYPES; }
 	int getNumGameOptionInfos() const { return GC.getNumGameOptionInfos(); }
 	int getNumMPOptionInfos() const { return GC.getNumMPOptionInfos(); }
 	int getNumForceControlInfos() const { return GC.getNumForceControlInfos(); }
@@ -302,16 +252,6 @@ public:
 	int getNumEspionageMissionInfos() const { return GC.getNumEspionageMissionInfos(); }
 	int getNumHints() const { return GC.getNumHints(); }
 	int getNumMainMenus() const { return GC.getNumMainMenus(); }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	int getNumPythonModulesInfos() const { return GC.getNumPythonModulesInfos(); }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	int getNumInvisibleInfos() const { return GC.getNumInvisibleInfos(); }
 	int getNumVoteSourceInfos() const { return GC.getNumVoteSourceInfos(); }
 
@@ -329,7 +269,7 @@ public:
 	int getNumFeatureArtInfos() const { return ARTFILEMGR.getNumFeatureArtInfos(); }
 	int getNumAnimationPathInfos() const { return GC.getNumAnimationPathInfos(); }
 	int getNumAnimationCategoryInfos() const { return GC.getNumAnimationCategoryInfos(); }
-    int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
+	int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
 
 
 	int getNumEntityEventTypes() const { return GC.getNumEntityEventTypes(); }
@@ -345,7 +285,6 @@ public:
 	// Globals Defines
 	//////////////////////
 
-	CyVariableSystem* getCyDefinesVarSystem();
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
 /*                                                                                              */
@@ -378,10 +317,8 @@ public:
 	int getDCM_RB_CITY_INACCURACY() const { return GC.getDCM_RB_CITY_INACCURACY(); }
 	int getDCM_RB_CITYBOMBARD_CHANCE() const { return GC.getDCM_RB_CITYBOMBARD_CHANCE(); }
 	bool isDCM_ATTACK_SUPPORT() const { return GC.isDCM_ATTACK_SUPPORT(); }
-	bool isDCM_STACK_ATTACK() const { return GC.isDCM_STACK_ATTACK(); }
 	bool isDCM_OPP_FIRE() const { return GC.isDCM_OPP_FIRE(); }
 	bool isDCM_ACTIVE_DEFENSE() const { return GC.isDCM_ACTIVE_DEFENSE(); }
-	bool isDCM_ARCHER_BOMBARD() const { return GC.isDCM_ARCHER_BOMBARD(); }
 	bool isDCM_FIGHTER_ENGAGE() const { return GC.isDCM_FIGHTER_ENGAGE(); }
 
 	bool isDYNAMIC_CIV_NAMES() const { return GC.isDYNAMIC_CIV_NAMES(); }
@@ -463,66 +400,40 @@ public:
 	float getSHADOW_SCALE() const { return GC.getSHADOW_SCALE(); }
 	float getUNIT_MULTISELECT_DISTANCE() const { return GC.getUNIT_MULTISELECT_DISTANCE(); }
 
-	int getMAX_CIV_PLAYERS() const { return GC.getMAX_CIV_PLAYERS(); }
 	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
 	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
-	int getMAX_CIV_TEAMS() const { return GC.getMAX_CIV_TEAMS(); }
 	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
 	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
-	int getLAST_PLAYER() const { return GC.getLAST_PLAYER(); }
 	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
 	int getBARBARIAN_TEAM() const { return GC.getBARBARIAN_TEAM(); }
-	int getAGGRESSIVE_ANIMAL_PLAYER() const { return GC.getAGGRESSIVE_ANIMAL_PLAYER(); }
-	int getAGGRESSIVE_ANIMAL_TEAM() const { return GC.getAGGRESSIVE_ANIMAL_TEAM(); }
-	int getPASSIVE_ANIMAL_PLAYER() const { return GC.getPASSIVE_ANIMAL_PLAYER(); }
-	int getPASSIVE_ANIMAL_TEAM() const { return GC.getPASSIVE_ANIMAL_TEAM(); }
-	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
-	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
-	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
-	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
-	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
-	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
+	int getNEANDERTHAL_PLAYER() const { return GC.getNEANDERTHAL_PLAYER(); }
+	int getNEANDERTHAL_TEAM() const { return GC.getNEANDERTHAL_TEAM(); }
+	int getBEAST_PLAYER() const { return GC.getBEAST_PLAYER(); }
+	int getBEAST_TEAM() const { return GC.getBEAST_TEAM(); }
+	int getPREDATOR_PLAYER() const { return GC.getPREDATOR_PLAYER(); }
+	int getPREDATOR_TEAM() const { return GC.getPREDATOR_TEAM(); }
+	int getPREY_PLAYER() const { return GC.getPREY_PLAYER(); }
+	int getPREY_TEAM() const { return GC.getPREY_TEAM(); }
+	int getINSECT_PLAYER() const { return GC.getINSECT_PLAYER(); }
+	int getINSECT_TEAM() const { return GC.getINSECT_TEAM(); }
 	int getNPC4_PLAYER() const { return GC.getNPC4_PLAYER(); }
 	int getNPC4_TEAM() const { return GC.getNPC4_TEAM(); }
-	int getNPC5_PLAYER() const { return GC.getNPC5_PLAYER(); }
-	int getNPC5_TEAM() const { return GC.getNPC5_TEAM(); }
-	int getNPC6_PLAYER() const { return GC.getNPC6_PLAYER(); }
-	int getNPC6_TEAM() const { return GC.getNPC6_TEAM(); }
-	int getNPC7_PLAYER() const { return GC.getNPC7_PLAYER(); }
-	int getNPC7_TEAM() const { return GC.getNPC7_TEAM(); }
-	int getNPC8_PLAYER() const { return GC.getNPC8_PLAYER(); }
-	int getNPC8_TEAM() const { return GC.getNPC8_TEAM(); }
-	int getINVALID_PLOT_COORD() const { return GC.getINVALID_PLOT_COORD(); }
-	int getNUM_CITY_PLOTS() const { return GC.getNUM_CITY_PLOTS(); }
-	int getCITY_HOME_PLOT() const { return GC.getCITY_HOME_PLOT(); }
-
-// BUG - DLL Info - start
-	bool isBull() const { return GC.isBull(); }
-	int getBullApiVersion() const { return GC.getBullApiVersion(); }
-
-	const wchar* getBullName() const { return GC.getBullName(); }
-	const wchar* getBullVersion() const { return GC.getBullVersion(); }
-	
-	std::wstring pyGetBullName() { return getBullName(); }									// Exposed to Python
-	std::wstring pyGetBullVersion() { return getBullVersion(); }							// Exposed to Python
-// BUG - DLL Info - end
+	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
+	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
+	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
+	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
+	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
+	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
+	int getNPC0_PLAYER() const { return GC.getNPC0_PLAYER(); }
+	int getNPC0_TEAM() const { return GC.getNPC0_TEAM(); }
+	int getINVALID_PLOT_COORD() const { return INVALID_PLOT_COORD; }
+	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
+	int getCITY_HOME_PLOT() const { return CITY_HOME_PLOT; }
 
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug) { GC.setIsBug(bIsBug); }										// Exposed to Python
 // BUG - BUG Info - end
 
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-	bool isBuffy() const { return GC.isBuffy(); }
-	int getBuffyApiVersion() const { return GC.getBuffyApiVersion(); }
-
-	const wchar* getBuffyName() const { return GC.getBuffyName(); }
-	const wchar* getBuffyVersion() const { return GC.getBuffyVersion(); }
-	
-	std::wstring pyGetBuffyName() { return getBuffyName(); }								// Exposed to Python
-	std::wstring pyGetBuffyVersion() { return getBuffyVersion(); }							// Exposed to Python
-#endif
-// BUFFY - DLL Info - end
 /************************************************************************************************/
 /* Afforess	                  Start		 06/13/10                                               */
 /*                                                                                              */
@@ -539,11 +450,6 @@ public:
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-
-	// UI functions
-	POINT getCursorPos() const;
-	POINT screenToClient(POINT screenPos) const;
-	HWND getToplevelWindow() const;
 };
 
 #endif	// CyGlobalContext_h

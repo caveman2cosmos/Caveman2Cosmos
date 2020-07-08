@@ -1,4 +1,9 @@
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyMap.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
 
 //
 // published python interface for CyMap

@@ -1,6 +1,9 @@
 #pragma once
-#include <queue>
-#include "FProfiler.h"
+
+#ifndef CvReachablePlotSet_h__
+#define CvReachablePlotSet_h__
+
+//#include <queue>
 
 //	Activity ids against which enumerated plot info can be stored
 #define	ACTIVITY_ID_ANY_ATTACK	0
@@ -23,58 +26,60 @@ public:
 	{
 	friend CvReachablePlotSet;
 	protected:
-		const_iterator(CvReachablePlotSet& parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr);
+		const_iterator(const CvReachablePlotSet* parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr);
 
 	public:
 		const_iterator& operator++();
 
-		bool operator==(const_iterator& other);
+		bool operator==(const const_iterator& other) const;
 
-		bool operator!=(const_iterator& other);
+		bool operator!=(const const_iterator& other) const;
 
-		const_iterator& operator=(const_iterator& other);
+		const_iterator& operator=(const const_iterator& other);
 
-		CvPlot*	plot();
+		CvPlot*	plot() const;
 
-		int stepDistance();
-		int outsideBorderDistance();
+		int stepDistance() const;
+		int outsideBorderDistance() const;
 		int getOpaqueInfo(int iActivityId) const;
 		void setOpaqueInfo(int iActivityId, int iValue);
 
 	private:
 		stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator m_itr;
-		CvReachablePlotSet& m_parent;
+		const CvReachablePlotSet* m_parent;
 	};
 
-	CvReachablePlotSet(CvSelectionGroup * group, int iFlags, int iRange = -1, bool bCachable = true, int iOutsideOwnedRange = -1);
+	CvReachablePlotSet(const CvSelectionGroup * group, int iFlags, int iRange = -1, bool bCachable = true, int iOutsideOwnedRange = -1);
 
 	~CvReachablePlotSet();
 
-	CvReachablePlotSet::const_iterator begin();
+	const_iterator begin() const;
 
-	CvReachablePlotSet::const_iterator end();
+	const_iterator end() const;
 
-	CvReachablePlotSet::const_iterator find(CvPlot* plot);
+	const_iterator find(CvPlot* plot) const;
 
 	void Populate(int iRange);
 
 	static void ClearCache();
 private:
 	
-	static bool canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot* pFromPlot, CvPlot* pToPlot, int iFlags);
+	static bool canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags);
 
-	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*,int> >& prevRing);
+	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*, int> >& prevRing);
 
 	int getRange() const;
 	void setRange(int iRange);
-	static CvReachablePlotSet* findCachedPlotSet(CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange);
+	static CvReachablePlotSet* findCachedPlotSet(const CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange);
 
 protected:
-	stdext::hash_map<CvPlot*,CvReachablePlotInfo>* m_reachablePlots;
-	CvSelectionGroup*	m_group;
+	stdext::hash_map<CvPlot*, CvReachablePlotInfo>* m_reachablePlots;
+	const CvSelectionGroup*	m_group;
 	int					m_iFlags;
 	int					m_iRange;
 	int					m_iOutsideOwnedRange;
-	CvReachablePlotSet*	m_proxyTo;
+	CvReachablePlotSet* m_proxyTo;
 	bool				m_bCachable;
 };
+
+#endif // CvReachablePlotSet_h__

@@ -73,14 +73,12 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		#screen.setEnabled(control, bCanAdjustSettings)
 		control = self.addCheckbox(screen, center, "RoMSettings__HideUnavailableBuilds")
 		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__HideObsoleteBuilds")
-		#screen.setEnabled(control, bCanAdjustSettings)
 
-		if (not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION)):
+		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 			control = self.addCheckbox(screen, center, "RoMSettings__ShowRevCivics")
 			#screen.setEnabled(control, bCanAdjustSettings)
 
-		if (gc.getGame().isOption(GameOptionTypes.GAMEOPTION_PERSONALIZED_MAP)):
+		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_PERSONALIZED_MAP):
 			control = self.addCheckbox(screen, center, "RoMSettings__UseLandmarkNames")
 			#screen.setEnabled(control, bCanAdjustSettings)
 

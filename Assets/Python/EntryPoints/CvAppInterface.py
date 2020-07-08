@@ -43,27 +43,26 @@ def onSave():
 	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
-	import cPickle
+	import CvScreensInterface
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	import CvEventInterface
-	loadDataStr=argsList[0]
+	loadDataStr = argsList[0]
 	if loadDataStr:
+		import cPickle
 		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
 
 def preGameStart():
-	# BUG - core
-	import CvEventInterface
-	CvEventInterface.getEventManager().fireEvent("PreGameStart")
-	# continue
+	#import CvEventInterface
+	#CvEventInterface.getEventManager().fireEvent("PreGameStart")
 	import CvScreensInterface
-	if not CyGame().isPitbossHost():
-		# Preload the tech chooser..., only do this release builds, in debug build we may not be raising the tech chooser
-		if not CyGlobalContext().isDebugBuild():
-			NiTextOut("Preloading tech chooser")
-			CvScreensInterface.showTechChooser()
-			CvScreensInterface.techChooser.hideScreen()
-
-	NiTextOut("Loading main interface...")
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	CvScreensInterface.showMainInterface()
+
+def recalculateModifiers():
+	import BugGameUtils
+	BugGameUtils.getDispatcher().getBaseUtils().reset()
+	#import CvEventInterface
+	#CvEventInterface.getEventManager().reset()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO

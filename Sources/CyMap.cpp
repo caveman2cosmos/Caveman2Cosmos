@@ -3,11 +3,18 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include "CvMapGenerator.h"
+#include "CvSelectionGroup.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyMap.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
 
 CyMap::CyMap() : m_pMap(NULL)
 {
-	m_pMap = &GC.getMapINLINE();
+	m_pMap = &GC.getMap();
 }
 
 CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
@@ -164,17 +171,17 @@ bool CyMap::findWater(CyPlot* pPlot, int iRange, bool bFreshWater)
 
 bool CyMap::isPlot(int iX, int iY)
 {
-	return m_pMap ? m_pMap->isPlotINLINE(iX, iY) : false;
+	return m_pMap ? m_pMap->isPlot(iX, iY) : false;
 }
 
 int CyMap::numPlots()
 {
-	return m_pMap ? m_pMap->numPlotsINLINE() : -1;
+	return m_pMap ? m_pMap->numPlots() : -1;
 }
 
 int CyMap::plotNum(int iX, int iY)
 {
-	return m_pMap ? m_pMap->plotNumINLINE(iX, iY) : -1;
+	return m_pMap ? m_pMap->plotNum(iX, iY) : -1;
 }
 
 int CyMap::plotX(int iIndex)
@@ -189,12 +196,12 @@ int CyMap::plotY(int iIndex)
 
 int CyMap::getGridWidth() 
 {
-	return m_pMap->getGridWidthINLINE();
+	return m_pMap->getGridWidth();
 }
 
 int CyMap::getGridHeight()
 {
-	return m_pMap->getGridHeightINLINE();
+	return m_pMap->getGridHeight();
 }
 
 int CyMap::getLandPlots()
@@ -230,12 +237,12 @@ void CyMap::incrementNextRiverID()
 
 bool CyMap::isWrapX()
 {
-	return m_pMap ? m_pMap->isWrapXINLINE() : false;
+	return m_pMap ? m_pMap->isWrapX() : false;
 }
 
 bool CyMap::isWrapY()
 {
-	return m_pMap ? m_pMap->isWrapYINLINE() : false;
+	return m_pMap ? m_pMap->isWrapY() : false;
 }
 
 std::wstring CyMap::getMapScriptName()
@@ -280,7 +287,7 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 
 CyPlot* CyMap::plotByIndex(int iIndex)
 {
-	return m_pMap ? new CyPlot(m_pMap->plotByIndexINLINE(iIndex)) : NULL;
+	return m_pMap ? new CyPlot(m_pMap->plotByIndex(iIndex)) : NULL;
 }
 
 //
@@ -291,7 +298,7 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 	static CyPlot plot;
 	if (m_pMap)
 	{
-		plot.setPlot(m_pMap->plotByIndexINLINE(iIndex));
+		plot.setPlot(m_pMap->plotByIndex(iIndex));
 		return &plot;
 	}
 	return NULL;
@@ -299,7 +306,7 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 
 CyPlot* CyMap::plot(int iX, int iY) 
 {
-	return new CyPlot(m_pMap->plotINLINE(iX, iY));
+	return new CyPlot(m_pMap->plot(iX, iY));
 }
 
 //
@@ -308,7 +315,7 @@ CyPlot* CyMap::plot(int iX, int iY)
 CyPlot* CyMap::sPlot(int iX, int iY) 
 {
 	static CyPlot p;
-	p.setPlot(m_pMap->plotINLINE(iX, iY));
+	p.setPlot(m_pMap->plot(iX, iY));
 	return &p;
 }
 
@@ -349,19 +356,15 @@ void CyMap::resetPathDistance()
 		m_pMap->resetPathDistance();
 }
 
-int CyMap::calculatePathDistance(CyPlot* pSource, CyPlot* pDest)
+int CyMap::calculatePathDistance(const CyPlot* pSource, const CyPlot* pDest) const
 {
-	if (m_pMap)
-		return m_pMap->calculatePathDistance(pSource->getPlot(), pDest->getPlot());
-	return -1;
+	return m_pMap ? m_pMap->calculatePathDistance(pSource->getPlot(), pDest->getPlot()) : -1;
 }
 
 void CyMap::rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions)
 {
 	if (m_pMap)
-	{
 		m_pMap->rebuild(iGridW, iGridH, iTopLatitude, iBottomLatitude, bWrapX, bWrapY, eWorldSize, eClimate, eSeaLevel, iNumCustomMapOptions, aeCustomMapOptions);
-	}
 }
 
 void CyMap::regenerateGameElements()
@@ -393,7 +396,7 @@ void CyMap::updateMinimapColor()
 	}
 }
 
-void CyMap::updateMinOriginalStartDist(CyArea* pArea)
+void CyMap::updateMinOriginalStartDist(const CyArea* pArea)
 {
 	if (m_pMap)
 	{
@@ -402,19 +405,31 @@ void CyMap::updateMinOriginalStartDist(CyArea* pArea)
 }
 
 
-bool CyMap::generatePathForHypotheticalUnit(CyPlot *pFrom, CyPlot *pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns)
+bool CyMap::generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns) const
 {
-	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes) ePlayer, (UnitTypes) eUnit, iFlags, iMaxTurns) : false;
+	return CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes)ePlayer, (UnitTypes)eUnit, iFlags, iMaxTurns);
 }
 
-int CyMap::getLastPathStepNum()
+int CyMap::getLastPathStepNum() const
 {
-	return m_pMap ? m_pMap->getLastPathStepNum() : 0;
+	// length of the path is not the number of steps so we have to count
+	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
+	int i = 0;
+	while (it.plot())
+	{
+		i++;
+		++it;
+	}
+	return i;
 }
 
-CyPlot* CyMap::getLastPathPlotByIndex(int index)
+CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 {
-	return m_pMap ? new CyPlot(m_pMap->getLastPathPlotByIndex(index)) : NULL;
+	// we can only start from the beginning if we don't want to expose the iterator to Python
+	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
+	for (int i = 0; i < index; i++)
+		++it;
+	return new CyPlot(it.plot());
 }
 
 /************************************************************************************************/

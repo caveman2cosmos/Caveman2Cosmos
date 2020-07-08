@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef CV_DLL_TRANSLATOR_H
 #define CV_DLL_TRANSLATOR_H
 

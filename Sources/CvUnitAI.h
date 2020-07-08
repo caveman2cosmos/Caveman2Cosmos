@@ -7,11 +7,7 @@
 
 #include "CvUnit.h"
 
-#define	USE_REACHABLE_ENUMERATION
-
-#ifdef USE_REACHABLE_ENUMERATION
 class CvReachablePlotSet;
-#endif
 class CvCity;
 class ConstructionNeeds;
 
@@ -48,22 +44,22 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	void AI_upgrade();
+	bool AI_upgrade(); // override
 
-	void AI_promote();
+	bool AI_promote(); // override
 
 #define	LEADER_PRIORITY_MIN 0
 #define	LEADER_PRIORITY_MAX	100
 
-	int AI_groupFirstVal();
-	int AI_groupSecondVal();
+	int AI_groupFirstVal() const;
+	int AI_groupSecondVal() const;
 
 	int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false);
 	//	Variant to test a specific defender AS IF it was in the specified plot
 	int AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults = false);
 	int AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults);
 
-	bool AI_bestCityBuild(CvCity* pCity, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, CvPlot* pIgnorePlot = NULL, CvUnit* pUnit = NULL);
+	bool AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, const CvPlot* pIgnorePlot = NULL, const CvUnit* pUnit = NULL);
 
 	bool AI_isCityAIType() const;
 
@@ -78,6 +74,8 @@ public:
 	bool AI_isAwaitingContract() const;
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+
+	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -113,7 +111,7 @@ protected:
 
 	void AI_animalMove();
 	void AI_settleMove();
-	int AI_minSettlerDefense();
+	int AI_minSettlerDefense() const;
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
@@ -174,26 +172,69 @@ protected:
 
 	int AI_promotionValue(PromotionTypes ePromotion);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/01/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
-/* original bts code
-	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true);
-*/
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
-	bool AI_group(UnitAITypes eUnitAI, int iMaxGroup = -1, int iMaxOwnUnitAI = -1, int iMinUnitAI = -1, bool bIgnoreFaster = false, bool bIgnoreOwnUnitType = false, bool bStackOfDoom = false, int iMaxPath = MAX_INT, bool bAllowRegrouping = false, bool bWithCargoOnly = false, bool bInCityOnly = false, MissionAITypes eIgnoreMissionAIType = NO_MISSIONAI);
+
+	struct GroupingParams
+	{
+		GroupingParams()
+			: eUnitAI(NO_UNITAI)
+			, iMaxGroup(-1)
+			, iMaxOwnUnitAI(-1)
+			, iMinUnitAI(-1)
+			, bIgnoreFaster(false)
+			, bIgnoreOwnUnitType(false)
+			, bStackOfDoom(false)
+			, bBiggerGroupOnly(false)
+			, bMergeWholeGroup(false)
+			, iMaxPath(MAX_INT)
+			, bAllowRegrouping(false)
+			, bWithCargoOnly(false)
+			, bInCityOnly(false)
+			, eIgnoreMissionAIType(NO_MISSIONAI)
+		{}
+		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
+		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
+		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
+		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
+		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
+		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
+		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
+		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
+		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
+		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
+		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
+		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
+		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
+		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
+
+		UnitAITypes eUnitAI;
+		int iMaxGroup;
+		int iMaxOwnUnitAI;
+		int iMinUnitAI;
+		bool bIgnoreFaster;
+		bool bIgnoreOwnUnitType;
+		bool bStackOfDoom;
+		bool bBiggerGroupOnly;
+		bool bMergeWholeGroup;
+		int iMaxPath;
+		bool bAllowRegrouping;
+		bool bWithCargoOnly;
+		bool bInCityOnly;
+		MissionAITypes eIgnoreMissionAIType;
+	};
+
+
+	// Returns true if a group was joined or a mission was pushed...
+	bool AI_group(const GroupingParams& params);
+
 	//bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_guardCityBestDefender();
 	bool AI_guardCityMinDefender(bool bSearch = true);
 	bool AI_guardCity(bool bLeave = false, bool bSearch = false, int iMaxPath = MAX_INT);
 	bool AI_guardCityAirlift();
 	bool AI_guardBonus(int iMinValue = 0);
-	int AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra);
+	int AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const;
 	bool AI_guardFort(bool bSearch = true);
 	// Super Forts begin *AI_defense*
 	bool AI_guardFortMinDefender(bool bSearch = true);
@@ -207,10 +248,8 @@ protected:
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
 	bool AI_foundReligion();
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
-#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
@@ -218,15 +257,9 @@ protected:
 	bool AI_spreadReligionAirlift();
 	bool AI_spreadCorporationAirlift();
 	bool AI_discover(bool bThisTurnOnly = false, bool bFirstResearchOnly = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD & RevDCM                     09/03/10                        jdog5000      */
-/*                                                                                phungus420    */
-/* Great People AI, Unit AI                                                                     */
-/************************************************************************************************/
+
 	bool AI_leadLegend();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_lead(std::vector<UnitAITypes>& aeAIUnitTypes);
 	bool AI_join(int iMaxCount = MAX_INT);
 	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 15, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
@@ -236,44 +269,31 @@ protected:
 	bool AI_switchHurry();
 	bool AI_hurry(bool bAny = false);
 	bool checkSwitchToConstruct();
-	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding);
+	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
-/************************************************************************************************/
-/* RevDCM                  Start		 5/2/09                                                 */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 	bool AI_doInquisition();
-	bool AI_moveToInquisitionTarget();
-/************************************************************************************************/
-/* Inquisitions	                     END                                                        */
-/************************************************************************************************/
+
 	bool AI_greatWork();
 	bool AI_offensiveAirlift();
 	bool AI_paradrop(int iRange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/01/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool AI_protect(int iOddsThreshold, int iMaxPathTurns = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_seaAreaAttack();
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
 	bool AI_safety(int iRange = 1);
 	bool AI_hide();
 	bool AI_goody(int iRange);
+
+	// Send explorer units to group up with combat groups if we are at war
+	// Return true if it happens
+	bool AI_explorerJoinOffensiveStacks();
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
 	bool AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh = true);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/29/10                                jdog5000      */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
+
 	CvCity* AI_pickTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, bool bHuntBarbs = false);
 	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, CvCity* pTargetCity = NULL);
 	bool AI_goToTargetBarbCity(int iMaxPath = 10);
@@ -282,28 +302,20 @@ protected:
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
 	bool AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - RB: Field Bombard START
+
+// Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
 	bool AI_RbombardCity(CvCity* pCity);
 	bool AI_RbombardNaval();
-// Dale - RB: Field Bombard END
-// Dale - ARB: Archer Bombard START
-	bool AI_Abombard();
-// Dale - ARB: Archer Bombard END
-// Dale - FE: Fighters START
+// Dale - FE: Fighters
 	bool AI_FEngage();
-// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+// ! Dale
+
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
-	int  AI_blockadeValue(CvPlot* pLoopPlot, CvCity* pCity, CvPlot*& endTurnPlot) const;
+	int  AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 	bool AI_pirateBlockade();
 	bool AI_seaBombardRange(int iMaxRange);
 	bool AI_pillage(int iBonusValueThreshold = 0);
@@ -311,15 +323,9 @@ protected:
 	bool AI_found();
 	bool AI_foundRange(int iRange, bool bFollow = false);
 	bool AI_assaultSeaTransport(bool bBarbarian = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/04/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool AI_assaultSeaReinforce(bool bBarbarian = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_settlerSeaTransport();
 	bool AI_settlerSeaFerry();
 	bool AI_specialSeaTransportMissionary();
@@ -399,25 +405,25 @@ protected:
 /************************************************************************************************/
 	bool AI_espionageSpy();
 	bool AI_moveToStagingCity();
-	bool AI_seaRetreatFromCityDanger();
-	bool AI_airRetreatFromCityDanger();
-	bool AI_airAttackDamagedSkip();
+	//bool AI_seaRetreatFromCityDanger();
+	//bool AI_airRetreatFromCityDanger();
+	//bool AI_airAttackDamagedSkip();
 
 	bool AI_followBombard();
 
 	bool AI_potentialEnemy(TeamTypes eTeam, const CvPlot* pPlot = NULL);
 
-	bool AI_defendPlot(CvPlot* pPlot);
-	int AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold = 0);
-	int AI_nukeValue(CvCity* pCity);
-	bool AI_canPillage(CvPlot& kPlot) const;
+	bool AI_defendPlot(const CvPlot* pPlot) const;
+	int AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold = 0) const;
+	int AI_nukeValue(const CvCity* pCity) const;
+	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange);
-	bool AI_plotValid(CvPlot* pPlot) const;
+	int AI_searchRange(int iRange) const;
+	bool AI_plotValid(const CvPlot* pPlot) const;
 
-	int AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold);
+	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;
 
-	int AI_stackOfDoomExtra();
+	int AI_stackOfDoomExtra() const;
 
 	bool AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow = true);
 	bool AI_moveIntoCity(int iRange, bool bOpponentOnly = false);
@@ -465,11 +471,7 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	bool AI_hurryFood();
-#ifdef USE_REACHABLE_ENUMERATION
 	bool AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue = 0, int iMaxPath = -1);
-#else
-	bool AI_claimForts(int iMinValue = 0, int iMaxPath = -1);
-#endif
 	BuildTypes AI_findBestFort(CvPlot* pPlot) const;
 	bool AI_StrategicForts();
 	bool AI_caravan(bool bAnyCity = false);
@@ -496,10 +498,12 @@ public:
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
 
+	int scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, const CvCity* city) const;
+
 public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
-	virtual bool AI_getHasAttacked();
+	virtual bool AI_getHasAttacked() const;
 	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const;
 
 	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts
@@ -526,23 +530,32 @@ public:
 	bool AI_InvestigatorFulfillment();
 	bool AI_establishStackSeeInvisibleCoverage();
 
-	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL, int iMaxTurns = MAX_INT, int iOptimizationLimit = -1, bool bDedicated = false);
+	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
 	bool isWaitingOnUnitAI(int iIndex);
-	bool isWaitingOnUnitAIAny();
+	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
-	bool AI_isNegativePropertyUnit();
+	bool AI_isNegativePropertyUnit() const;
+	int getMyAggression(int iAttackProb) const;
 
 	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
 	//	survival odds
-	bool exposedToDanger(CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
-	bool getThreateningUnit(CvPlot* pPlot, CvUnit*& pThreateningUnit, CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
+	bool exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
+	bool getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
 
 	static void	AI_clearCaches();
 
 	static PlayerTypes			m_cachedPlayer;
 	static CvReachablePlotSet*	m_cachedMissionaryPlotset;
+
+public:
+
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+	}; 
 };
 
 #endif

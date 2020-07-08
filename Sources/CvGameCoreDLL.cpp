@@ -23,7 +23,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
 	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
 	{
-		success = ::WaitForSingleObject(procInfo.hProcess, 1500000) == WAIT_OBJECT_0;
+		success = ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
 	}
 	::CloseHandle(procInfo.hProcess);
 	::CloseHandle(procInfo.hThread);
@@ -75,13 +75,17 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				MessageBox(0, "Creation of FPK packs failed, are you sure you set up the development environment correctly?", "ERROR!", 0);
 				return FALSE;
 			}
-			if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+
+			// Don't attempt rebuild if debugger is connected, its annoying
+			if(!IsDebuggerPresent())
 			{
-				MessageBox(0, "DLL update failed!", "ERROR!", 0);
-				return FALSE;
+				if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+				{
+					MessageBox(0, "DLL update failed!", "ERROR!", 0);
+					return FALSE;
+				}
 			}
 		}
-
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -91,7 +95,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
-
 // BUG - EXE/DLL Paths - start
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end
@@ -546,257 +549,7 @@ void dumpProfileStack()
 #endif
 }
 
-#endif  // USe internal profiler
-
-void IFPLockPythonAccess()
-{
-	//EnterCriticalSection(&g_cPythonSection);
-}
-
-void IFPUnlockPythonAccess()
-{
-	//LeaveCriticalSection(&g_cPythonSection);
-}
-
-static int pythonDepth = 0;
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg)
-{
-	bool result;
-	
-	PROFILE("IFPPythonCall1");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, long* result)
-{
-	PROFILE("IFPPythonCall2");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
-#ifdef USE_INTERNAL_PROFILER
-	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
-
-	if ( g_pythonProfiles == NULL )
-	{
-		g_pythonProfiles = new std::map<int,ProfileSample*>();
-	}
-
-	CvChecksum xSum;
-	const char* ptr;
-	ProfileSample* pSample;
-
-	for(ptr = moduleName; *ptr != '\0'; ptr++)
-	{
-		xSum.add((byte)*ptr);
-	}
-	for(ptr = fxnName; *ptr != '\0'; ptr++)
-	{
-		xSum.add((byte)*ptr);
-	}
-
-	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());
-
-	if ( itr == g_pythonProfiles->end() )
-	{
-		char profileName[256];
-
-		sprintf(profileName, "IFPPythonCall2.%s::%s", moduleName, fxnName);
-		pSample = new ProfileSample(profileName);
-
-		g_pythonProfiles->insert(std::make_pair(xSum.get(), pSample));
-	}
-	else
-	{
-		pSample = itr->second;
-	}
-
-	CProfileScope detailedScope(pSample);		
-#endif
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvString* result)
-{
-	PROFILE("IFPPythonCall3");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvWString* result)
-{
-	PROFILE("IFPPythonCall4");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<byte>* pList)
-{
-	PROFILE("IFPPythonCall5");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pList);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<int> *pIntList)
-{
-	PROFILE("IFPPythonCall6");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pIntList);
-	//LeaveCriticalSection(&g_cPythonSection);
-
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, int* pIntList, int* iListSize)
-{
-	PROFILE("IFPPythonCall7");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pIntList, iListSize);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<float> *pFloatList)
-{
-	PROFILE("IFPPythonCall8");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pFloatList);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
+#endif  // Use internal profiler
 
 //
 // enable dll profiler if necessary, clear history

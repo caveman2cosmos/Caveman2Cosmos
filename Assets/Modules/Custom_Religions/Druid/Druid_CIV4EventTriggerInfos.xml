@@ -12,9 +12,8 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY</BuildingClass>
+				<Building>BUILDING_DRUID_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>
 </Civ4EventTriggerInfos>
-

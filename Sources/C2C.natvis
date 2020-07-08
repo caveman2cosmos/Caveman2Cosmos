@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
   <Type Name="CvUnitInfo" Priority="Low">
-    <DisplayString>{gGlobals->m_paUnitClassInfo[m_iUnitClassType]->m_szType}</DisplayString>
+    <DisplayString>{gGlobals->m_paUnitInfo[m_iUnitType]->m_szType}</DisplayString>
   </Type>
   <!--
   Some useful globals:
@@ -18,7 +18,8 @@
     <Expand>
       <Item Name="[units]" ExcludeView="simple">m_units</Item>
       <Item Name="[cities]" ExcludeView="simple">m_cities</Item>
-     </Expand>
+      <Item Name="[selection groups]" ExcludeView="simple">m_selectionGroups</Item>
+    </Expand>
   </Type>
   <Type Name="CvInfoBase">
     <DisplayString>{{ {m_szType} }}</DisplayString>
@@ -27,17 +28,18 @@
     </Expand>
   </Type>
   <Type Name="CvUnit">
-    <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
+    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
+    <DisplayString>[{gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
     <Expand>
       <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
       <Item Name="[id]" ExcludeView="simple">m_iID</Item>
-      <Item Name="[class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType</Item>
       <Item Name="[type]" ExcludeView="simple">gGlobals->m_paUnitInfo[m_eUnitType]->m_szType</Item>
       <Item Name="[x]" ExcludeView="simple">m_iX</Item>
       <Item Name="[y]" ExcludeView="simple">m_iY</Item>
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
       <Item Name="[is dummy]">m_pEntity != nullptr &amp;&amp; g_dummyEntity == m_pEntity</Item>
-    
+      <Item Name="[group id]">m_iGroupID</Item>
+      <Item Name="[group]">CvPlayerAI::m_aPlayers[m_eOwner].m_selectionGroups.m_pArray[m_iGroupID &amp; ((1 &lt;&lt; 13) - 1)].pData</Item>
     </Expand>
   </Type>
   <Type Name="CvPlot">
@@ -90,15 +92,15 @@
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
     </Expand>
   </Type>
-  
+
   <Type Name="PropertySpawns">
-    <DisplayString>[property = {gGlobals->m_paPropertyInfo[eProperty]->m_szType} ({eProperty}), unit class = {gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType} ({eUnitClass})]</DisplayString>
+    <DisplayString>[property = {gGlobals->m_paPropertyInfo[eProperty]->m_szType} ({eProperty}), unit class = {gGlobals->m_paUnitInfo[eUnit]->m_szType} ({eUnit})]</DisplayString>
     <Expand>
       <Item Name="[property]" ExcludeView="simple">gGlobals->m_paPropertyInfo[eProperty]->m_szType</Item>
-      <Item Name="[unit class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType</Item>
+      <Item Name="[unit class]" ExcludeView="simple">gGlobals->m_paUnitInfo[eUnit]->m_szType</Item>
     </Expand>
   </Type>
-  
+
   <Type Name="CLinkList&lt;*&gt;" Priority="MediumLow">
     <DisplayString>{{ {m_iLength} }}</DisplayString>
     <Expand>
@@ -110,10 +112,11 @@
       </LinkedListItems>
     </Expand>
   </Type>
-  
+
   <Type Name="CvSelectionGroup">
     <DisplayString>{{ id = {m_iID}, units = {m_units} }}</DisplayString>
     <Expand>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
       <Item Name="[units]" ExcludeView="simple">m_units</Item>
       <!--Recreating the CLinkList<IDinfo> iteration with lookup into FFreeListTrashArray<CvUnitAI> by ID-->
       <CustomListItems MaxItemsPerView="50" ExcludeView="Test">
@@ -139,6 +142,59 @@
           </If>
           <Item>pData</Item>
           <Exec>pHead = pHead->m_pNext</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+
+  <Type Name="EventTriggeredData">
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger != -1 &amp;&amp; m_ePlayer != -1">[EXPIRED {gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger != -1 &amp;&amp; m_ePlayer == -1">[EXPIRED {gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger == -1 &amp;&amp; m_ePlayer != -1">[EXPIRED {m_eTrigger} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired">[EXPIRED {m_eTrigger} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger != -1 &amp;&amp; m_ePlayer != -1">[{gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger != -1 &amp;&amp; m_ePlayer == -1">[{gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger == -1 &amp;&amp; m_ePlayer != -1">[{m_eTrigger} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString>[{m_eTrigger} {m_ePlayer} ({m_iId})]</DisplayString>
+    <Expand>
+      <Item Name="[name]" ExcludeView="simple" Condition="m_eTrigger != -1">gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType</Item>
+      <Item Name="[name]" ExcludeView="simple" Condition="m_eTrigger == -1">m_eTrigger</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iId</Item>
+      <Item Name="[player]" ExcludeView="simple" Condition="m_ePlayer != -1">CvPlayerAI::m_aPlayers[m_ePlayer]</Item>
+      <Item Name="[player]" ExcludeView="simple" Condition="m_ePlayer == -1">m_ePlayer</Item>
+    </Expand>
+  </Type>
+  
+  <Type Name="FFreeListTrashArray&lt;EventTriggeredData&gt;" Priority="MediumLow">
+    <DisplayString>{{ {m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment} }}</DisplayString>
+    <Expand>
+      <!--Recreating the FFreeListTrashArray<EventTriggeredData> iteration logic-->
+      <CustomListItems MaxItemsPerView="5000" ExcludeView="Test">
+        <Variable Name="idx" InitialValue="0" />
+        <Variable Name="FLTA_INDEX_MASK" InitialValue="(1 &lt;&lt; 13) - 1"/>
+        <Variable Name="FLTA_ID_MASK" InitialValue="~((1 &lt;&lt; 13) - 1)"/>
+        <Variable Name="iIndex" InitialValue="0" />
+        <Variable Name="pData" InitialValue="(EventTriggeredData*)0" />
+        <Size>m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment</Size>
+        <Loop>
+          <!--FFreeListTrashArray<EventTriggeredData>::nextIter(int* pIterIdx)-->
+          <Loop>
+            <Exec>pData = nullptr</Exec>
+            <If Condition="idx &lt; m_iLastIndex + 1">
+              <!--FFreeListTrashArray<EventTriggeredData>::getAt(int iID)-->
+              <Exec>iIndex = idx &amp; FLTA_INDEX_MASK</Exec>
+              <If Condition="(iIndex &lt;= m_iLastIndex) &amp;&amp; (m_pArray[iIndex].pData != nullptr)">
+                <If Condition="((idx &amp; FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->m_iId == idx)">
+                  <Exec>pData = m_pArray[iIndex].pData</Exec>
+                  <Exec>idx++</Exec>
+                </If>
+              </If>
+              <Break Condition="pData != 0" />
+              <Exec>idx++</Exec>
+            </If>
+          </Loop>
+          <Break Condition="idx &gt; m_iLastIndex" />
+          <Item>pData</Item>
         </Loop>
       </CustomListItems>
     </Expand>
@@ -178,4 +234,5 @@
       </CustomListItems>
     </Expand>
   </Type>
+ 
 </AutoVisualizer>

@@ -8,8 +8,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STEAMPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Civilopedia>
@@ -36,7 +37,6 @@
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MUNICIP_COMP</BuildingClass>
 			<Type>BUILDING_MUNICIP_COMP</Type>
 			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
@@ -50,14 +50,8 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-3</iHealth>
@@ -80,7 +74,6 @@
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TR_WORKSHOP</BuildingClass>
 			<Type>BUILDING_TR_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Civilopedia>
@@ -97,12 +90,6 @@
 				<Bonus>BONUS_TIRES</Bonus>
 				<Bonus>BONUS_RUBBER</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<HealUnitCombatTypes>
@@ -141,25 +128,18 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PANOPTICON_PRISON</BuildingClass>
 			<Type>BUILDING_PANOPTICON_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PANOPTICON_PRISON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PANOPTICON_PRISON</ArtDefineTag>
-			<ObsoleteTech>TECH_CRYOGENICS</ObsoleteTech>
+			<ObsoleteTech>TECH_CRYONICS</ObsoleteTech>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
@@ -194,14 +174,13 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MADSCIENTIST_CASTLE</BuildingClass>
 			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
 			<Description>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</ArtDefineTag>
-			<ObsoleteTech>TECH_BRAIN_SCAN</ObsoleteTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -211,12 +190,6 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>-15</iMaintenanceModifier>
@@ -246,7 +219,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -280,7 +253,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COAL_DYNAMO</BuildingClass>
 			<Type>BUILDING_COAL_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Civilopedia>
@@ -312,12 +284,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -334,7 +303,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WOOD_DYNAMO</BuildingClass>
 			<Type>BUILDING_WOOD_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
@@ -351,7 +319,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<bPower>1</bPower>
 			<iCost>770</iCost>
@@ -366,12 +334,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -388,7 +353,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PEAT_DYNAMO</BuildingClass>
 			<Type>BUILDING_PEAT_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_PEAT_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Civilopedia>
@@ -420,12 +384,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -442,24 +403,19 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NEMO_ACADEMY</BuildingClass>
 			<Type>BUILDING_NEMO_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreePromotion>PROMOTION_NAVIGATION2</FreePromotion>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -486,18 +442,15 @@
 					<iExperience>3</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -507,14 +460,13 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_NEMO_ACADEMY</BuildingClassType>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

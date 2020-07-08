@@ -12,12 +12,12 @@ def GameFontScreen():
 	screen.addPanel("", "", "", True, False, -10, -10, xRes + 20, yRes + 20, PanelStyles.PANEL_STYLE_MAIN)
 
 	TABLE = "GameFontTable"
-	screen.addTableControlGFC(TABLE, 5, (xRes-768)/2, 0, 768, yRes, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+	screen.addTableControlGFC(TABLE, 5, (xRes-772)/2, 0, 772, yRes, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 	screen.setTableColumnHeader(TABLE, 0, "ID", 64)
 	screen.setTableColumnHeader(TABLE, 1, "Small", 64)
 	screen.setTableColumnHeader(TABLE, 2, "Big", 64)
 	screen.setTableColumnHeader(TABLE, 3, "Button", 64)
-	screen.setTableColumnHeader(TABLE, 4, "Type", 512)
+	screen.setTableColumnHeader(TABLE, 4, "Type", 500)
 
 	eWidGen = WidgetTypes.WIDGET_GENERAL
 	iRandom = GAME.getSymbolID(FontSymbols.RANDOM_CHAR)
@@ -66,13 +66,24 @@ def GameFontScreen():
 		info = GC.getCorporationInfo(i)
 		aList1.append((info.getChar(), info))
 
+	szBonusClass = "BONUSCLASS_CULTURE"
+	BONUSCLASS_CULTURE = GC.getInfoTypeForString(szBonusClass)
+	bOnce = True
 	for i in range(GC.getNumBonusInfos()):
 		info = GC.getBonusInfo(i)
-		aList1.append((info.getChar(), info))
+		if info.getBonusClassType() == BONUSCLASS_CULTURE:
+			if bOnce:
+				aList1.append((info.getChar(), szBonusClass))
+				bOnce = False
+		else:
+			aList1.append((info.getChar(), info))
 	iMax = len(aList1)
 
-	for iRow in xrange(650):
-		iID = iRow + 8483
+	iRow = -1
+	iID = 8482
+	for j in xrange(650): # Increase this range when needed, when it no longer displays all icons in GameFont.tga due to a content expansion in that atlas texture.
+		iRow += 1
+		iID += 1
 		screen.appendTableRow(TABLE)
 		screen.setTableText(TABLE, 0, iRow , str(iID), "", eWidGen, 1, 1, 1<<0)
 		screen.setTableText(TABLE, 1, iRow , unichr(iID), "", eWidGen, 1, 1, 1<<0)
@@ -81,16 +92,23 @@ def GameFontScreen():
 		if iID >= iHappy and iID <= iRandom:
 			screen.setTableText(TABLE, 4, iRow , aList0[iID - iHappy], "", eWidGen, 1, 2, 1<<0)
 			continue
+		bFound = False
 		i = 0
 		while i < iMax:
 			if aList1[i][0] == iID:
 				info = aList1.pop(i)[1]
+				if bFound:
+					screen.appendTableRow(TABLE)
+					iRow += 1
+				bFound = True
+				if info == szBonusClass:
+					screen.setTableText(TABLE, 4, iRow, szBonusClass, "", eWidGen, 1, 2, 1<<0)
+				else:
+					screen.setTableText(TABLE, 3, iRow, "", info.getButton(), eWidGen, 1, 2, 1<<0)
+					screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
 				iMax -= 1
-				break
 			i += 1
 		else: continue
 
-		screen.setTableText(TABLE, 3, iRow, "", info.getButton(), eWidGen, 1, 2, 1<<0)
-		screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
 
 	screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)

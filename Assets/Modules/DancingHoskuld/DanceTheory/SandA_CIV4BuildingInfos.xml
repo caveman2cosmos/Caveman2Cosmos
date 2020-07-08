@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-	<!-- Modified by Strategyonly -->
-	<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -12,7 +10,6 @@
 			<FreePromotion>PROMOTION_CACOPHONY</FreePromotion>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HAKA</BuildingClass>
 			<Type>BUILDING_HAKA</Type>
 			<Description>TXT_KEY_BUILDING_HAKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAKA_PEDIA</Civilopedia>
@@ -39,58 +36,22 @@
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_WAR_DANCE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ABORIGINE_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FIJIAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HAWAIIAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAORI_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NEWZEALAND_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLYNESIAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RAPANUI_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SAMOAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TAHITIAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TONGAN_EMBASSY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqBonuses>
+				<BonusType>BONUS_ABORIGINE</BonusType>
+				<BonusType>BONUS_FIJIAN</BonusType>
+				<BonusType>BONUS_HAWAIIAN</BonusType>
+				<BonusType>BONUS_MAORI</BonusType>
+				<BonusType>BONUS_NEW_ZEALANDER</BonusType>
+				<BonusType>BONUS_POLYNESIAN</BonusType>
+				<BonusType>BONUS_RAPA_NUI</BonusType>
+				<BonusType>BONUS_SAMOAN</BonusType>
+				<BonusType>BONUS_TAHITIAN</BonusType>
+				<BonusType>BONUS_TONGAN</BonusType>				
+			</PrereqBonuses>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

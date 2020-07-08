@@ -253,7 +253,7 @@ class CvVictoryScreen:
 		fCulturePercent = iOurCulture * 100 / iWorldCulture
 
 		# Vote
-		aiVoteBuildingClass = []
+		aiVoteBuilding = []
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			for j in xrange(GC.getNumVoteSourceInfos()):
@@ -269,7 +269,7 @@ class CvVictoryScreen:
 								bUnknown = False
 							break
 
-					aiVoteBuildingClass.append((CvBuildingInfo.getBuildingClassType(), iUNTeam, bUnknown))
+					aiVoteBuilding.append((i, iUNTeam, bUnknown))
 
 		# Power History
 		iOurPower = 0;
@@ -677,23 +677,23 @@ class CvVictoryScreen:
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
 						if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
 							teamBuilding = 0
-							for i in xrange(GC.getNumBuildingClassInfos()):
-								if GC.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC) > 0:
-									teamBuilding += CyTeamX.getBuildingClassCount(i)
+							for i in xrange(GC.getNumBuildingInfos()):
+								if GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC) > 0:
+									teamBuilding += CyTeamX.getBuildingCount(i)
 							if teamBuilding > bestBuilding:
 								bestBuilding = teamBuilding
 								iBestBuildingTeam = iTeamX
 
-				for i in xrange(GC.getNumBuildingClassInfos()):
-					if GC.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC) > 0:
+				for i in xrange(GC.getNumBuildingInfos()):
+					if GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC) > 0:
 						iRow = screen.appendTableRow(szTable)
-						szNumber = unicode(GC.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC))
-						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (szNumber, GC.getBuildingClassInfo(i).getTextKey()))
+						szNumber = unicode(GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC))
+						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (szNumber, GC.getBuildingInfo(i).getTextKey()))
 						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-						screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getBuildingClassCount(i)), "", eWidGen, 0, 0, 1<<2)
+						screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getBuildingCount(i)), "", eWidGen, 0, 0, 1<<2)
 						if iBestBuildingTeam != -1:
 							screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestBuildingTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-							screen.setTableText(szTable, 3, iRow, ufont2 + str(GC.getTeam(iBestBuildingTeam).getBuildingClassCount(i)), "", eWidGen, 0, 0, 1<<0)
+							screen.setTableText(szTable, 3, iRow, ufont2 + str(GC.getTeam(iBestBuildingTeam).getBuildingCount(i)), "", eWidGen, 0, 0, 1<<0)
 
 				iBestProjectTeam = -1
 				bestProject = -1
@@ -797,7 +797,7 @@ class CvVictoryScreen:
 									iSSColor = self.COLOR_GREEN
 								elif bOwnProject >= CvProjectInfo.getVictoryMinThreshold(iLoopVC):
 									iSSColor = self.COLOR_YELLOW
-								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech, False)):
+								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech)):
 									iSSColor = GC.getInfoTypeForString("COLOR_PLAYER_ORANGE")
 
 								if iSSColor > 0:
@@ -808,9 +808,9 @@ class CvVictoryScreen:
 								screen.setTableText(szTable, 3, iRow, ufont2 + sSSCount, "", eWidGen, 0, 0, 1<<0)
 
 				if CvVictoryInfo.isDiploVote() and not GAME.isOption(GameOptionTypes.GAMEOPTION_UNITED_NATIONS):
-					for (iVoteBuildingClass, iUNTeam, bUnknown) in aiVoteBuildingClass:
+					for (iVoteBuilding, iUNTeam, bUnknown) in aiVoteBuilding:
 						iRow = screen.appendTableRow(szTable)
-						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (GC.getBuildingClassInfo(iVoteBuildingClass).getTextKey(),))
+						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (GC.getBuildingInfo(iVoteBuilding).getTextKey(),))
 						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
 						if iUNTeam != -1:
 							if bUnknown:
@@ -1022,7 +1022,7 @@ class CvVictoryScreen:
 		iTeamAct = CyPlayer.getTeam()
 		CyTeam = GC.getTeam(iTeamAct)
 
-		aiVoteBuildingClass = []
+		aiVoteBuilding = []
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			for j in xrange(GC.getNumVoteSourceInfos()):
@@ -1038,9 +1038,9 @@ class CvVictoryScreen:
 								bUnknown = False
 							break
 
-					aiVoteBuildingClass.append((CvBuildingInfo.getTextKey(), iUNTeam, bUnknown))
+					aiVoteBuilding.append((CvBuildingInfo.getTextKey(), iUNTeam, bUnknown))
 
-		if not aiVoteBuildingClass:
+		if not aiVoteBuilding:
 			return
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -1053,7 +1053,7 @@ class CvVictoryScreen:
 
 		szUnknown = TRNSLTR.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
 		szTxt = uFont + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ())
-		for TEXT_KEY, iUNTeam, bUnknown in aiVoteBuildingClass:
+		for TEXT_KEY, iUNTeam, bUnknown in aiVoteBuilding:
 			iRow = screen.appendTableRow(szTable)
 			if iUNTeam != -1:
 				if bUnknown:

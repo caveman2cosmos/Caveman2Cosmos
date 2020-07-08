@@ -38,67 +38,55 @@
 				<City>TXT_KEY_CITY_NAME_ALEXANDRIA</City>
 				<City>TXT_KEY_CITY_NAME_SHREVEPORT</City>
 				<City>TXT_KEY_CITY_NAME_AUGUSTA</City>
-				<City>Danville</City>
-				<City>Wheeling</City>
-				<City>Baltimore</City>
-				<City>Wilmington</City>
-				<City>St. Louis</City>
-				<City>Jamestown</City>
-				<City>Dayton</City>
-				<City>Indianapolis</City>
-				<City>Cincinnati</City>
-				<City>Youngstown</City>
-				<City>Cleveland</City>
-				<City>Apalachicola</City>
-				<City>Santa Fe</City>
-				<City>Conyers</City>
-				<City>Mentor</City>
-				<City>Tallahassee</City>
-				<City>Williamsburg</City>
-				<City>St. Augustine</City>
-				<City>Athens</City>
-				<City>Harrisburg</City>
-				<City>Knoxville</City>
-				<City>Miami</City>
-				<City>Kannapolis</City>
-				<City>Charlotte</City>
-				<City>Arlington</City>
-				<City>Murfreesboro</City>
-				<City>Tampa</City>
+				<City>TXT_KEY_CITY_NAME_DANVILLE</City>
+				<City>TXT_KEY_CITY_NAME_WHEELING</City>
+				<City>TXT_KEY_CITY_NAME_BALTIMORE</City>
+				<City>TXT_KEY_CITY_NAME_WILMINGTON</City>
+				<City>TXT_KEY_CITY_NAME_ST_LOUIS</City>
+				<City>TXT_KEY_CITY_NAME_JAMESTOWN</City>
+				<City>TXT_KEY_CITY_NAME_DAYTON</City>
+				<City>TXT_KEY_CITY_NAME_INDIANAPOLIS</City>
+				<City>TXT_KEY_CITY_NAME_CINCINNATI</City>
+				<City>TXT_KEY_CITY_NAME_YOUNGSTOWN</City>
+				<City>TXT_KEY_CITY_NAME_CLEVELAND</City>
+				<City>TXT_KEY_CITY_NAME_APALACHICOLA</City>
+				<City>TXT_KEY_CITY_NAME_SANTA_FE</City>
+				<City>TXT_KEY_CITY_NAME_CONYERS</City>
+				<City>TXT_KEY_CITY_NAME_MENTOR</City>
+				<City>TXT_KEY_CITY_NAME_TALLAHASSEE</City>
+				<City>TXT_KEY_CITY_NAME_WILLIAMSBURG</City>
+				<City>TXT_KEY_CITY_NAME_ST_AUGUSTINE</City>
+				<City>TXT_KEY_CITY_NAME_ATHENS</City>
+				<City>TXT_KEY_CITY_NAME_HARRISBURG</City>
+				<City>TXT_KEY_CITY_NAME_KNOXVILLE</City>
+				<City>TXT_KEY_CITY_NAME_MIAMI</City>
+				<City>TXT_KEY_CITY_NAME_KANNAPOLIS</City>
+				<City>TXT_KEY_CITY_NAME_CHARLOTTE</City>
+				<City>TXT_KEY_CITY_NAME_ARLINGTON</City>
+				<City>TXT_KEY_CITY_NAME_MURFREESBORO</City>
+				<City>TXT_KEY_CITY_NAME_TAMPA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_BAND</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>

@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 
 CvPropertyInteraction::CvPropertyInteraction() : 
 									m_eSourceProperty(NO_PROPERTY),
@@ -86,7 +87,7 @@ void CvPropertyInteraction::setRelationData(int iRelationData)
 	m_iRelationData = iRelationData;
 }
 
-bool CvPropertyInteraction::isActive(CvGameObject *pObject)
+bool CvPropertyInteraction::isActive(CvGameObject *pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -188,22 +189,22 @@ CvPropertyInteractionConvertConstant::CvPropertyInteractionConvertConstant(Prope
 {
 }
 
-PropertyInteractionTypes CvPropertyInteractionConvertConstant::getType()
+PropertyInteractionTypes CvPropertyInteractionConvertConstant::getType() const
 {
 	return PROPERTYINTERACTION_CONVERT_CONSTANT;
 }
 
-int CvPropertyInteractionConvertConstant::getAmountPerTurn()
+int CvPropertyInteractionConvertConstant::getAmountPerTurn() const
 {
 	return m_iAmountPerTurn;
 }
 
-std::pair<int,int> CvPropertyInteractionConvertConstant::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget)
+std::pair<int,int> CvPropertyInteractionConvertConstant::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const
 {
 	return std::pair<int,int>(-m_iAmountPerTurn,m_iAmountPerTurn);
 }
 
-std::pair<int,int> CvPropertyInteractionConvertConstant::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget)
+std::pair<int,int> CvPropertyInteractionConvertConstant::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const
 {
 	return std::pair<int,int>(-m_iAmountPerTurn,m_iAmountPerTurn);
 }
@@ -226,7 +227,7 @@ bool CvPropertyInteractionConvertConstant::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	CvPropertyInteractionConvertConstant* pOther = static_cast<CvPropertyInteractionConvertConstant*>(pProp);
+	const CvPropertyInteractionConvertConstant* pOther = static_cast<const CvPropertyInteractionConvertConstant*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
@@ -257,27 +258,27 @@ CvPropertyInteractionInhibitedGrowth::CvPropertyInteractionInhibitedGrowth(Prope
 {
 }
 
-PropertyInteractionTypes CvPropertyInteractionInhibitedGrowth::getType()
+PropertyInteractionTypes CvPropertyInteractionInhibitedGrowth::getType() const
 {
 	return PROPERTYINTERACTION_INHIBITED_GROWTH;
 }
 
-int CvPropertyInteractionInhibitedGrowth::getGrowthPercent()
+int CvPropertyInteractionInhibitedGrowth::getGrowthPercent() const
 {
 	return m_iGrowthPercent;
 }
 
-int CvPropertyInteractionInhibitedGrowth::getInhibitionPercent()
+int CvPropertyInteractionInhibitedGrowth::getInhibitionPercent() const
 {
 	return m_iInhibitionPercent;
 }
 
-std::pair<int,int> CvPropertyInteractionInhibitedGrowth::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget)
+std::pair<int,int> CvPropertyInteractionInhibitedGrowth::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const
 {
 	return std::pair<int,int>(std::max(0, iCurrentAmountSource * m_iGrowthPercent - iCurrentAmountTarget * m_iInhibitionPercent),0);
 }
 
-std::pair<int,int> CvPropertyInteractionInhibitedGrowth::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget)
+std::pair<int,int> CvPropertyInteractionInhibitedGrowth::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const
 {
 	return std::pair<int,int>(std::max(0, iCurrentAmountSource * m_iGrowthPercent - iCurrentAmountTarget * m_iInhibitionPercent),0);
 }
@@ -301,7 +302,7 @@ bool CvPropertyInteractionInhibitedGrowth::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	CvPropertyInteractionInhibitedGrowth* pOther = static_cast<CvPropertyInteractionInhibitedGrowth*>(pProp);
+	const CvPropertyInteractionInhibitedGrowth* pOther = static_cast<const CvPropertyInteractionInhibitedGrowth*>(pProp);
 	if (m_iGrowthPercent == 0)
 		m_iGrowthPercent = pOther->getGrowthPercent();
 	if (m_iInhibitionPercent == 0)
@@ -331,31 +332,31 @@ CvPropertyInteractionConvertPercent::CvPropertyInteractionConvertPercent(Propert
 {
 }
 
-PropertyInteractionTypes CvPropertyInteractionConvertPercent::getType()
+PropertyInteractionTypes CvPropertyInteractionConvertPercent::getType() const
 {
 	return PROPERTYINTERACTION_CONVERT_PERCENT;
 }
 
-int CvPropertyInteractionConvertPercent::getPercent()
+int CvPropertyInteractionConvertPercent::getPercent() const
 {
 	return m_iPercent;
 }
 
-int CvPropertyInteractionConvertPercent::getNoConvertAmount()
+int CvPropertyInteractionConvertPercent::getNoConvertAmount() const
 {
 	return m_iNoConvertAmount;
 }
 
-std::pair<int,int> CvPropertyInteractionConvertPercent::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget)
+std::pair<int,int> CvPropertyInteractionConvertPercent::getPredict(int iCurrentAmountSource, int iCurrentAmountTarget) const
 {
-	int iAmount = std::max((iCurrentAmountSource - m_iNoConvertAmount) * m_iPercent / 100, 0);
+	const int iAmount = std::max((iCurrentAmountSource - m_iNoConvertAmount) * m_iPercent / 100, 0);
 	return std::pair<int,int>(-iAmount,iAmount);
 }
 
-std::pair<int,int> CvPropertyInteractionConvertPercent::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget)
+std::pair<int,int> CvPropertyInteractionConvertPercent::getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const
 {
-	int iAmount = std::max((iCurrentAmountSource - m_iNoConvertAmount) * m_iPercent / 100, 0);
-	int iExtra = iPredictedAmountSource - iAmount - iCurrentAmountSource;
+	const int iAmount = std::max((iCurrentAmountSource - m_iNoConvertAmount) * m_iPercent / 100, 0);
+	const int iExtra = iPredictedAmountSource - iAmount - iCurrentAmountSource;
 	return getPredict(iCurrentAmountSource + iExtra/2, iCurrentAmountTarget);
 }
 
@@ -378,7 +379,7 @@ bool CvPropertyInteractionConvertPercent::read(CvXMLLoadUtility *pXML)
 void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
 {
 	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
-	CvPropertyInteractionConvertPercent* pOther = static_cast<CvPropertyInteractionConvertPercent*>(pProp);
+	const CvPropertyInteractionConvertPercent* pOther = static_cast<const CvPropertyInteractionConvertPercent*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 	if (m_iNoConvertAmount == 0)

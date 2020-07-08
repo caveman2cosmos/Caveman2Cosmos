@@ -23,30 +23,22 @@ CyPlot* cysPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDir
 CyPlot* cyPlotXY(int iX, int iY, int iDX, int iDY);
 CyPlot* cysPlotXY(int iX, int iY, int iDX, int iDY);
 DirectionTypes cyDirectionXYFromInt(int iDX, int iDY);
-DirectionTypes cyDirectionXYFromPlot(CyPlot* pFromPlot, CyPlot* pToPlot);
+DirectionTypes cyDirectionXYFromPlot(const CyPlot& kFromPlot, const CyPlot& kToPlot);
 CyPlot* cyPlotCity(int iX, int iY, int iIndex);
 int cyPlotCityXYFromInt(int iDX, int iDY);
-int cyPlotCityXYFromCity(CyCity* pCity, CyPlot* pPlot);
-CardinalDirectionTypes cyGetOppositeCardinalDirection(CardinalDirectionTypes eDir);
-DirectionTypes cyCardinalDirectionToDirection(CardinalDirectionTypes eCard);
+int cyPlotCityXYFromCity(const CyCity& kCity, const CyPlot& kPlot);
 
-bool cyIsCardinalDirection(DirectionTypes eDirection);
 DirectionTypes cyEstimateDirection(int iDX, int iDY);
 
 bool cyAtWar(int /*TeamTypes*/ eTeamA, int /*TeamTypes*/ eTeamB);
 bool cyIsPotentialEnemy(int /*TeamTypes*/ eOurPlayer, int /*TeamTypes*/ eTheirPlayer);
 
-CyCity* cyGetCity(IDInfo city);
-CyUnit* cyGetUnit(IDInfo unit);
+CyCity* cyGetCity(const IDInfo city);
+CyUnit* cyGetUnit(const IDInfo unit);
 
 bool cyIsPromotionValid(int /*PromotionTypes*/ ePromotion, int /*UnitTypes*/ eUnit, bool bLeader);
-int cyGetPopulationAsset(int iPopulation);
-int cyGetLandPlotsAsset(int iLandPlots);
-int cyGetPopulationPower(int iPopulation);
-int cyGetPopulationScore(int iPopulation);
-int cyGetLandPlotsScore(int iPopulation);
 int cyGetTechScore(int /*TechTypes*/ eTech);
-int cyGetWonderScore(int /*BuildingClassTypes*/ eWonderClass);
+int cyGetWonderScore(int /*BuildingTypes*/ eWonder);
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount);
 
 int cyGetWorldSizeMaxConscript(int /*CivicTypes*/ eCivic);
@@ -56,23 +48,20 @@ bool cyIsReligionTech(int /*TechTypes*/ eTech);
 bool cyIsTechRequiredForUnit(int /*TechTypes*/ eTech, int /*UnitTypes*/ eUnit);
 bool cyIsTechRequiredForBuilding(int /*TechTypes*/ eTech, int /*BuildingTypes*/ eBuilding);
 bool cyIsTechRequiredForProject(int /*TechTypes*/ eTech, int /*ProjectTypes*/ eProject);
-bool cyIsWorldUnitClass(int /*UnitClassTypes*/ eUnitClass);
-bool cyIsTeamUnitClass(int /*UnitClassTypes*/ eUnitClass);
-bool cyIsNationalUnitClass(int /*UnitClassTypes*/ eUnitClass);
-bool cyIsLimitedUnitClass(int /*UnitClassTypes*/ eUnitClass);
-bool cyIsWorldWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsTeamWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsNationalWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsLimitedWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
+bool cyIsWorldUnit(int /*UnitTypes*/ eUnit);
+bool cyIsNationalUnit(int /*UnitTypes*/ eUnit);
+bool cyIsLimitedUnit(int /*UnitTypes*/ eUnit);
+bool cyIsWorldWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsTeamWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsNationalWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsLimitedWonder(int /*BuildingTypes*/ eBuilding);
 bool cyIsWorldProject(int /*ProjectTypes*/ eProject);
 bool cyIsTeamProject(int /*ProjectTypes*/ eProject);
 bool cyIsLimitedProject(int /*ProjectTypes*/ eProject);
-int cyGetCombatOdds(CyUnit* pAttacker, CyUnit* pDefender);
+int cyGetCombatOdds(const CyUnit& kAttacker, const CyUnit& kDefender);
 int cyGetEspionageModifier(int /*TeamTypes*/ iOurTeam, int /*TeamTypes*/ iTargetTeam);
 
-// BUG - Unit Experience - start
 int cyCalculateExperience(int iLevel, int /*PlayerTypes*/ ePlayer);
 int cyCalculateLevel(int iExperience, int /*PlayerTypes*/ ePlayer);
-// BUG - Unit Experience - end
 
 #endif	// CyGameCoreUtils_h

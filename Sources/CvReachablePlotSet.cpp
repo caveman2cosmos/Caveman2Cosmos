@@ -1,8 +1,9 @@
 //	Class representing a set of plots reachable in a fixed number of tiles with given flags
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
+#include "CvSelectionGroup.h"
 
-CvReachablePlotSet::const_iterator::const_iterator(CvReachablePlotSet& parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr) : m_parent(parent)
+CvReachablePlotSet::const_iterator::const_iterator(const CvReachablePlotSet* parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr) : m_parent(parent)
 {
 	m_itr = itr;
 }
@@ -12,22 +13,22 @@ CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator
 	do
 	{
 		++m_itr;
-	} while( m_itr != m_parent.end().m_itr && m_itr->second.iStepDistance > m_parent.m_iRange );
+	} while( m_itr != m_parent->end().m_itr && m_itr->second.iStepDistance > m_parent->m_iRange );
 
 	return (*this);
 }
 
-bool CvReachablePlotSet::const_iterator::operator==(const_iterator& other)
+bool CvReachablePlotSet::const_iterator::operator==(const const_iterator& other) const
 {
 	return other.m_itr == m_itr;
 }
 
-bool CvReachablePlotSet::const_iterator::operator!=(const_iterator& other)
+bool CvReachablePlotSet::const_iterator::operator!=(const const_iterator& other) const
 {
 	return other.m_itr != m_itr;
 }
 
-CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator=(const_iterator& other)
+CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator=(const const_iterator& other)
 {
 	m_itr = other.m_itr;
 	m_parent = other.m_parent;
@@ -35,9 +36,9 @@ CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator
 	return (*this);
 }
 
-CvPlot*	CvReachablePlotSet::const_iterator::plot()
+CvPlot*	CvReachablePlotSet::const_iterator::plot() const
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if ( m_itr == m_parent->end().m_itr )
 	{
 		return NULL;
 	}
@@ -47,9 +48,9 @@ CvPlot*	CvReachablePlotSet::const_iterator::plot()
 	}
 }
 
-int CvReachablePlotSet::const_iterator::stepDistance()
+int CvReachablePlotSet::const_iterator::stepDistance() const
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if ( m_itr == m_parent->end().m_itr )
 	{
 		return MAX_INT;
 	}
@@ -59,9 +60,9 @@ int CvReachablePlotSet::const_iterator::stepDistance()
 	}
 }
 
-int CvReachablePlotSet::const_iterator::outsideBorderDistance()
+int CvReachablePlotSet::const_iterator::outsideBorderDistance() const
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if ( m_itr == m_parent->end().m_itr )
 	{
 		return MAX_INT;
 	}
@@ -73,7 +74,7 @@ int CvReachablePlotSet::const_iterator::outsideBorderDistance()
 
 int CvReachablePlotSet::const_iterator::getOpaqueInfo(int iActivityId) const
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if ( m_itr == m_parent->end().m_itr )
 	{
 		return 0;
 	}
@@ -85,13 +86,13 @@ int CvReachablePlotSet::const_iterator::getOpaqueInfo(int iActivityId) const
 
 void CvReachablePlotSet::const_iterator::setOpaqueInfo(int iActivityId, int iValue)
 {
-	if ( m_itr != m_parent.end().m_itr )
+	if ( m_itr != m_parent->end().m_itr )
 	{
 		*(int*)&(m_itr->second.iOpaqueInfo[iActivityId]) = iValue;
 	}
 }
 
-CvReachablePlotSet::CvReachablePlotSet(CvSelectionGroup * group, int iFlags, int iRange, bool bCachable, int iOutsideOwnedRange)
+CvReachablePlotSet::CvReachablePlotSet(const CvSelectionGroup * group, int iFlags, int iRange, bool bCachable, int iOutsideOwnedRange)
 {
 	m_group = group;
 	//	Always include move-through-enemy flag when constructing reachable sets
@@ -116,10 +117,10 @@ CvReachablePlotSet::~CvReachablePlotSet()
 	SAFE_DELETE(m_reachablePlots);
 }
 
-CvReachablePlotSet::const_iterator CvReachablePlotSet::begin()
+CvReachablePlotSet::const_iterator CvReachablePlotSet::begin() const
 {
-	CvReachablePlotSet::const_iterator result = CvReachablePlotSet::const_iterator(*this, (m_proxyTo == NULL ? m_reachablePlots->begin() : m_proxyTo->m_reachablePlots->begin()));
-	
+	CvReachablePlotSet::const_iterator result = CvReachablePlotSet::const_iterator(this, (m_proxyTo == NULL ? m_reachablePlots->begin() : m_proxyTo->m_reachablePlots->begin()));
+
 	while( result != end() && result.stepDistance() > m_iRange )
 	{
 		++result;
@@ -128,16 +129,16 @@ CvReachablePlotSet::const_iterator CvReachablePlotSet::begin()
 	return result;
 }
 
-CvReachablePlotSet::const_iterator CvReachablePlotSet::end()
+CvReachablePlotSet::const_iterator CvReachablePlotSet::end() const
 {
-	return CvReachablePlotSet::const_iterator(*this, (m_proxyTo == NULL ? m_reachablePlots->end() : m_proxyTo->m_reachablePlots->end()));
+	return CvReachablePlotSet::const_iterator(this, (m_proxyTo == NULL ? m_reachablePlots->end() : m_proxyTo->m_reachablePlots->end()));
 }
 
-CvReachablePlotSet::const_iterator CvReachablePlotSet::find(CvPlot* plot)
+CvReachablePlotSet::const_iterator CvReachablePlotSet::find(CvPlot* plot) const
 {
 	if ( m_proxyTo == NULL )
 	{
-		return CvReachablePlotSet::const_iterator(*this, m_reachablePlots->find(plot));
+		return CvReachablePlotSet::const_iterator(this, m_reachablePlots->find(plot));
 	}
 	else
 	{
@@ -204,7 +205,7 @@ void CvReachablePlotSet::ClearCache()
 	}
 }
 
-CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange)
+CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(const CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange)
 {
 	if ( CachedPlotSets == NULL )
 	{
@@ -313,14 +314,14 @@ void CvReachablePlotSet::Populate(int iRange)
 	m_iRange = iRange;
 }
 
-bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot* pFromPlot, CvPlot* pToPlot, int iFlags)
+bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags)
 {
 	if (group->getDomainType() == DOMAIN_SEA)
 	{
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
-			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX_INLINE(), pToPlot->getY_INLINE())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX_INLINE(), pFromPlot->getY_INLINE())->isWater()))
+			if (!(GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()))
 			{
 				if( !(group->canMoveAllTerrain()) )
 				{
@@ -344,46 +345,40 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 		}
 	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
-		//	Need to handle ZOCs
-		//	ZOCs don't apply into cities of the unit owner
-		TeamTypes	eTeam = group->getTeam();
-		PlayerTypes eOwner = group->getHeadOwner();
-	
-		if ( pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam )
+		const TeamTypes eTeam = group->getTeam();
+		const PlayerTypes eOwner = group->getHeadOwner();
+
+		// ZoC don't apply into cities of the unit owner
+		if (pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam)
 		{
-			//Fort ZOC
-			PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
+			// Fort ZoC
+			const PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
 			if (eDefender != NO_PLAYER)
 			{
 				const CvPlot* pZoneOfControl = pFromPlot->isInFortControl(true, eDefender, eOwner);
 				const CvPlot* pForwardZoneOfControl = pToPlot->isInFortControl(true, eDefender, eOwner);
-				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
+				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
+				&& pZoneOfControl == pToPlot->isInFortControl(true, eDefender, eOwner, pZoneOfControl)
+				&& !group->canIgnoreZoneofControl())
 				{
-					if (pZoneOfControl == pToPlot->isInFortControl(true, eDefender, eOwner, pZoneOfControl) && !group->canIgnoreZoneofControl())
-					{
-						return false;
-					}
+					return false;
 				}
 			}
-			
-			//City ZoC
+			// City ZoC
 			if (pFromPlot->isInCityZoneOfControl(eOwner) && pToPlot->isInCityZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
 			{
 				return false;
 			}
 		}
-		//Promotion ZoC
-		if (GC.getGameINLINE().isAnyoneHasUnitZoneOfControl())
+		// Promotion ZoC
+		if (GC.getGame().isAnyoneHasUnitZoneOfControl() && !group->canIgnoreZoneofControl()
+		&& pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner))
 		{
-			if (pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-
 	return moveToValid(group, pToPlot, iFlags);
 }
 
@@ -399,18 +394,18 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 		{
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
-				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), ((DirectionTypes)iI));
+				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX(), (*itr).first->getY(), ((DirectionTypes)iI));
 
 				if ( pAdjacentPlot != NULL && reachablePlots->find(pAdjacentPlot) == reachablePlots->end() )
 				{
 					bool bValidAsTerminus = false;
-					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
+					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX(), (*itr).first->getY(), pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
 
 					if ( !bValid )
 					{
 						bool bDummy;
 
-						bValidAsTerminus |= NewPathDestValid(m_group, pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, bDummy);
+						bValidAsTerminus |= NewPathDestValid(m_group, pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, bDummy);
 					}
 
 					//if ( canMoveBetweenWithFlags(m_group, (*itr), pAdjacentPlot, m_iFlags) )

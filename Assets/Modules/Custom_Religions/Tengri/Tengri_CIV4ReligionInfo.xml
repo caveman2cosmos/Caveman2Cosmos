@@ -8,11 +8,11 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_TENGRIISM</Type>
-			<Description>TXT_KEY_RELIGION_TENGRIISM</Description>
-			<Adjective>TXT_KEY_RELIGION_TENGRIISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_TENGRIISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_TENGRIISM</Description>
+			<Adjective>TXT_KEY_TECH_TENGRIISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_TENGRIISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_TENGRIISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_TENGRI_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_TENGRI_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>10</iSpreadFactor>
 			<iTGAIndex>14</iTGAIndex>

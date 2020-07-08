@@ -11,12 +11,6 @@
 #ifndef CV_PROPERTY_MANIPULATORS_H
 #define CV_PROPERTY_MANIPULATORS_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include <vector>
-//#include "CvPropertySource.h"
-//#include "CvPropertyInteraction.h"
-//#include "CvPropertyPropagator.h"
-
 class CvPropertySource;
 class CvPropertyInteraction;
 class CvPropertyPropagator;
@@ -25,19 +19,17 @@ class CvPropertyManipulators
 {
 public:
 	~CvPropertyManipulators();
+
 	int getNumSources() const;
-
-	const CvPropertySource* getSource(int index) const;
-	CvPropertySource* getSource(int index);
-
+	CvPropertySource* getSource(int index) const;
 	int addSource(PropertySourceTypes eType);
 
 	int getNumInteractions() const;
-	CvPropertyInteraction* getInteraction(int index);
+	CvPropertyInteraction* getInteraction(int index) const;
 	int addInteraction(PropertyInteractionTypes eType);
 
 	int getNumPropagators() const;
-	CvPropertyPropagator* getPropagator(int index);
+	CvPropertyPropagator* getPropagator(int index) const;
 	int addPropagator(PropertyPropagatorTypes eType);
 
 	void buildDisplayString(CvWStringBuffer& szBuffer) const;

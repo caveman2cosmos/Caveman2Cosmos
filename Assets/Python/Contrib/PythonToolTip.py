@@ -11,7 +11,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	if xPos == -1: bSetX = True
 	if yPos == -1: bSetY = True
 	if bSetX or bSetY:
-		POINT = GC.getCursorPos()
+		POINT = Win32.getCursorPos()
 		if bSetX:
 			xPos = POINT.x
 		if bSetY:
@@ -130,7 +130,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	dy = len(aList) * 22 + 16
 	# Find best position.
 	if xPos > xRes / 2:
-		x = xPos - 24 - dx
+		x = xPos - 32 - dx
 	else: # Left side of screen.
 		x = xPos + 24
 	'''

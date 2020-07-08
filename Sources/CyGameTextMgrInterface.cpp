@@ -27,6 +27,7 @@ void CyGameTextMgrInterface()
 		.def("getProjectHelp", &CyGameTextMgr::getProjectHelp, "wstring (int iProject, bool bCivilopediaText, CyCity* pCity)")
 		.def("getPromotionHelp", &CyGameTextMgr::getPromotionHelp, "wstring (int iPromotion, bool bCivilopediaText)")
 		.def("getBonusHelp", &CyGameTextMgr::getBonusHelp, "wstring (int iBonus, bool bCivilopediaText)")
+		.def("getProductionHelpCity", &CyGameTextMgr::getProductionHelpCity, "wstring (CyCity* pCity)")
 		.def("getReligionHelpCity", &CyGameTextMgr::getReligionHelpCity, "wstring (int iReligion, CyCity* pCity, bool bCityScreen, bool bForceReligion, bool bForceState)")
 		.def("getCorporationHelpCity", &CyGameTextMgr::getCorporationHelpCity, "wstring (int iCorporation, CyCity* pCity, bool bCityScreen, bool bForceCorporation)")
 		.def("getImprovementHelp", &CyGameTextMgr::getImprovementHelp, "wstring (int iImprovement, bool bCivilopediaText)")
@@ -38,15 +39,8 @@ void CyGameTextMgrInterface()
 		.def("parseCorporationInfo", &CyGameTextMgr::parseCorporationInfo, "wstring (int /*CorporationTypes*/ iCorporationType, bool bCivilopediaText)")
 		.def("parseCivInfos", &CyGameTextMgr::parseCivInfos, "wstring (int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan)")
 		.def("parseLeaderTraits", &CyGameTextMgr::parseLeaderTraits, "wstring (int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText)")
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("parseTraits", &CyGameTextMgr::parseTraits, "wstring (int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, boolbEffectsOnly)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		.def("getHappinessHelp", &CyGameTextMgr::getHappinessHelp, "wstring ()")
 		.def("getSpecialistHelp", &CyGameTextMgr::getSpecialistHelp, "wstring (TradeData* pTradeData, int iPlayer1, int iPlayer2)")
 		.def("getTradeString", &CyGameTextMgr::getTradeString, "wstring (int iSpecialist, bool bCivilopediaText)")
 		.def("buildHintsList", &CyGameTextMgr::buildHintsList, "wstring ()")

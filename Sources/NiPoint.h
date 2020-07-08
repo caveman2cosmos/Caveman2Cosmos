@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef NiPoint_h__
+#define NiPoint_h__
+
 //
 // GameBryo
 //
@@ -100,3 +103,5 @@ namespace NiAnimationKey
 		NUMKEYTYPES
 	};
 };
+
+#endif // NiPoint_h__

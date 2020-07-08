@@ -11,11 +11,6 @@
 #ifndef CV_PROPERTY_SOURCE_H
 #define CV_PROPERTY_SOURCE_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-#include "BoolExpr.h"
-#include "IntExpr.h"
-
 class CvGameObject;
 class PropertySourceContext;
 
@@ -35,19 +30,19 @@ public:
 	int getRelationData() const;
 	void setRelationData(int iRelationData);
 
-	virtual bool isActive(CvGameObject* pObject);
+	virtual bool isActive(CvGameObject* pObject) const;
 
-	virtual PropertySourceTypes getType() = 0;
+	virtual PropertySourceTypes getType() const = 0;
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) = 0;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) = 0;
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const = 0;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(unsigned int& iSum) const;
 protected:
 	PropertyTypes m_eProperty;
 	GameObjectTypes m_eObjectType;
@@ -64,19 +59,19 @@ public:
 	explicit CvPropertySourceConstant(PropertyTypes eProperty);
 	CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn);
 
-	int getAmountPerTurn(const CvGameObject* pObject);
+	int getAmountPerTurn(const CvGameObject* pObject) const;
 
-	virtual PropertySourceTypes getType();
+	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_CONSTANT; }
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL);
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL);
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	IntExpr* m_pAmountPerTurn;
@@ -89,20 +84,20 @@ public:
 	explicit CvPropertySourceConstantLimited(PropertyTypes eProperty);
 	CvPropertySourceConstantLimited(PropertyTypes eProperty, int iAmountPerTurn, int iLimit);
 
-	int getAmountPerTurn();
-	int getLimit();
+	int getAmountPerTurn() const { return m_iAmountPerTurn; }
+	int getLimit() const { return m_iLimit; }
 
-	virtual PropertySourceTypes getType();
+	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_CONSTANT_LIMITED; }
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL);
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL);
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	int m_iAmountPerTurn;
@@ -116,22 +111,22 @@ public:
 	explicit CvPropertySourceDecay(PropertyTypes eProperty);
 	CvPropertySourceDecay(PropertyTypes eProperty, int iPercent, int iNoDecayAmount);
 
-	int getPercent();
-	int getNoDecayAmount();
+	int getPercent() const { return m_iPercent; }
+	int getNoDecayAmount() const { return m_iNoDecayAmount; }
 
-	virtual PropertySourceTypes getType();
+	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_DECAY; }
 
-	virtual bool isActive(CvGameObject* pObject);
+	virtual bool isActive(CvGameObject* pObject) const;
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL);
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL);
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	int m_iPercent;
@@ -145,20 +140,20 @@ public:
 	explicit CvPropertySourceAttributeConstant(PropertyTypes eProperty);
 	CvPropertySourceAttributeConstant(PropertyTypes eProperty, AttributeTypes eAttribute, int iAmountPerTurn);
 
-	AttributeTypes getAttribute();
-	int getAmountPerTurn();
+	AttributeTypes getAttribute() const { return m_eAttribute; }
+	int getAmountPerTurn() const { return m_iAmountPerTurn; }
 
-	virtual PropertySourceTypes getType();
+	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_ATTRIBUTE_CONSTANT; }
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL);
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL);
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
+	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	AttributeTypes m_eAttribute;

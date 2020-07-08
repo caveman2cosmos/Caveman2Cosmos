@@ -4,6 +4,14 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyGame.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
 
 CyGlobalContext::CyGlobalContext()
 {
@@ -30,20 +38,25 @@ bool CyGlobalContext::isDebugBuild() const
 
 CyGame* CyGlobalContext::getCyGame() const
 {
-	static CyGame cyGame(&GC.getGameINLINE());
+	static CyGame cyGame(&GC.getGame());
 	return &cyGame;
 }
 
 
 CyMap* CyGlobalContext::getCyMap() const
 {
-	static CyMap cyMap(&GC.getMapINLINE());
+	static CyMap cyMap(&GC.getMap());
 	return &cyMap;
 }
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+
+bool CyGlobalContext::multiMapsEnabled() const
+{
+	return GC.multiMapsEnabled();
+}
 
 void CyGlobalContext::switchMap(int iMap)
 {
@@ -60,16 +73,6 @@ CvMapInfo* CyGlobalContext::getMapInfo(int iMap) const
 	return &(GC.getMapInfo((MapTypes)iMap));
 }
 
-int CyGlobalContext::getNumMapSwitchInfos() const
-{
-	return GC.getNumMapSwitchInfos();
-}
-
-CvMapSwitchInfo* CyGlobalContext::getMapSwitchInfo(int iMapSwitch) const
-{
-	return &(GC.getMapSwitchInfo((MapSwitchTypes)iMapSwitch));
-}
-
 CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 {
 	static CyMap cyMap;
@@ -77,9 +80,19 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	return &cyMap;
 }
 
+void CyGlobalContext::updateMaps()
+{
+	GC.updateMaps();
+}
+
 void CyGlobalContext::initializeMap(int iMap)
 {
-	return GC.initializeMap((MapTypes)iMap);
+	GC.initializeMap((MapTypes)iMap);
+}
+
+bool CyGlobalContext::mapInitialized(int iMap) const
+{
+	return GC.mapInitialized((MapTypes)iMap);
 }
 
 /*******************************/
@@ -104,15 +117,19 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 		bInit=true;
 	}
 
-	FAssertMsg(idx >= 0 && idx < MAX_PLAYERS, "Player index requested isn't valid");
+	if (idx >= 0 && idx < MAX_PLAYERS)
+	{
+		return &cyPlayers[idx];
+	}
 
-	return idx >= 0 && idx < MAX_PLAYERS ? &cyPlayers[idx] : NULL;
+	FErrorMsg("Player index requested isn't valid");
+	return NULL;
 }
 
 
 CyPlayer* CyGlobalContext::getCyActivePlayer()
 {
-	PlayerTypes pt = GC.getGameINLINE().getActivePlayer();
+	PlayerTypes pt = GC.getGame().getActivePlayer();
 	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
 }
 
@@ -203,7 +220,6 @@ CvYieldInfo* CyGlobalContext::getYieldInfo(int i) const
 
 CvCommerceInfo* CyGlobalContext::getCommerceInfo(int i) const
 {
-	if (GC.getCommerceInfos().size() == 0) return NULL;
 	return (i>=0 && i<NUM_COMMERCE_TYPES) ? &GC.getCommerceInfo((CommerceTypes) i) : NULL;
 }
 
@@ -238,20 +254,9 @@ CvHandicapInfo* CyGlobalContext::getHandicapInfo(int i) const
 }
 
 
-CvBuildingClassInfo* CyGlobalContext::getBuildingClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumBuildingClassInfos()) ? &GC.getBuildingClassInfo((BuildingClassTypes) i) : NULL;
-}
-
-
 CvBuildingInfo* CyGlobalContext::getBuildingInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumBuildingInfos()) ? &GC.getBuildingInfo((BuildingTypes) i) : NULL;
-}
-
-CvUnitClassInfo* CyGlobalContext::getUnitClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumUnitClassInfos()) ? &GC.getUnitClassInfo((UnitClassTypes) i) : NULL;
 }
 
 
@@ -465,7 +470,7 @@ CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 
 int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
 {
-	return GC.getInfoTypeForString(szInfoType, true);
+	return GC.getInfoTypeForString(szInfoType);
 }
 /************************************************************************************************/
 /* Afforess	                  Start		 03/18/10                                               */
@@ -503,19 +508,6 @@ CvMainMenuInfo* CyGlobalContext::getMainMenus(int i) const
 	return ((i >= 0 && i < GC.getNumMainMenus()) ? &GC.getMainMenus(i) : NULL);
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-CvPythonModulesInfo* CyGlobalContext::getPythonModulesInfo(int i) const
-{
-	return ((i >= 0 && i < GC.getNumPythonModulesInfos()) ? &GC.getPythonModulesInfo(i) : NULL);
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 CvVoteSourceInfo* CyGlobalContext::getVoteSourceInfo(int i) const
 {
@@ -541,15 +533,15 @@ CvInfoBase* CyGlobalContext::getMemoryInfo(int i) const
 }
 
 
-CvPlayerOptionInfo* CyGlobalContext::getPlayerOptionsInfoByIndex(int i) const
+CvPlayerOptionInfo* CyGlobalContext::getPlayerOptionInfo(int i) const
 {
-	return &GC.getPlayerOptionInfo((PlayerOptionTypes) i);
+	return &GC.getPlayerOptionInfo((PlayerOptionTypes)i);
 }
 
 
-CvGraphicOptionInfo* CyGlobalContext::getGraphicOptionsInfoByIndex(int i) const
+CvGraphicOptionInfo* CyGlobalContext::getGraphicOptionInfo(int i) const
 {
-	return &GC.getGraphicOptionInfo((GraphicOptionTypes) i);
+	return &GC.getGraphicOptionInfo((GraphicOptionTypes)i);
 }
 
 
@@ -724,28 +716,6 @@ CvTurnTimerInfo* CyGlobalContext::getTurnTimerInfo(int i) const
 {
 	return &(GC.getTurnTimerInfo((TurnTimerTypes) i));
 }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-CvInfoBase* CyGlobalContext::getDCMConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumDCMConceptInfos()) ? &GC.getDCMConceptInfo((DCMConceptTypes)i) : NULL;
-}
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-CvInfoBase* CyGlobalContext::getANDConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumANDConceptInfos()) ? &GC.getANDConceptInfo((ANDConceptTypes)i) : NULL;
-}
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 bool CyGlobalContext::isShiftDown() const {
 	return gDLL->shiftKey();
@@ -755,55 +725,4 @@ bool CyGlobalContext::isAltDown() const {
 }
 bool CyGlobalContext::isCtrlDown() const {
 	return gDLL->ctrlKey();
-}
-
-namespace util {
-	struct EnumWindowsCallbackArgs {
-		EnumWindowsCallbackArgs(DWORD p) : pid(p) { }
-		const DWORD pid;
-		std::vector<HWND> handles;
-	};
-
-	static BOOL CALLBACK EnumWindowsCallback(HWND hnd, LPARAM lParam)
-	{
-		EnumWindowsCallbackArgs* args = (EnumWindowsCallbackArgs*)lParam;
-
-		DWORD windowPID;
-		(void)::GetWindowThreadProcessId(hnd, &windowPID);
-		if (windowPID == args->pid) {
-			args->handles.push_back(hnd);
-		}
-
-		return TRUE;
-	}
-
-	HWND getToplevelWindow()
-	{
-		EnumWindowsCallbackArgs args(::GetCurrentProcessId());
-		if (::EnumWindows(&EnumWindowsCallback, (LPARAM)& args) == FALSE) 
-		{
-			return NULL;
-		}
-		return args.handles[0];
-	}
-}
-
-POINT CyGlobalContext::getCursorPos() const
-{
-	POINT p;
-	// Just assume these work, if they don't then we have bigger problems that mouse pos not being correct
-	::GetCursorPos(&p);
-	::ScreenToClient(getToplevelWindow(), &p);
-	return p;
-}
-
-POINT CyGlobalContext::screenToClient(POINT screenPos) const
-{
-	::ScreenToClient(getToplevelWindow(), &screenPos);
-	return screenPos;
-}
-
-HWND CyGlobalContext::getToplevelWindow() const
-{
-	return util::getToplevelWindow();
 }

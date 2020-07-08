@@ -103,10 +103,6 @@ def onCityAcquired(argsList):
 					if nPartisan  < 0:
 						nPartisan = 0
 
-					# +3 partisans with nationhood civic (only loserPlayer) ###
-					if citysize >= 6 and CyPlayerOld.getCivics(GC.getInfoTypeForString('CIVICOPTION_LEGAL')) == GC.getInfoTypeForString('CIVIC_NATIONHOOD'):
-						nPartisan += 3
-
 					# +1 partisans with protective trait (only loserPlayer) ###
 					if CyPlayerOld.hasTrait(GC.getInfoTypeForString('TRAIT_PROTECTIVE')):
 						nPartisan += 1
@@ -194,7 +190,7 @@ def onCityAcquired(argsList):
 
 							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_FASCISM")):
 								bHasFascism = True
-							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_COMPUTERS")):
+							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_PERSONAL_COMPUTERS")):
 								combatpromotiontech += 1
 							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_ROBOTICS")):
 								combatpromotiontech += 1
