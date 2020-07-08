@@ -504,7 +504,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		const int iCount = algo::count_if(kUnit.plot()->adjacent(), CvPlot::fn::getBonusType() == m_eBonusType);
+		const int iCount = algo::count_if(kUnit.plot()->adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
 		if (!(iCount == 0 || (iCount == 1 && kUnit.plot()->isWater())))
 		{
@@ -836,7 +836,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			}
 		}
 
-		const int iCount = algo::count_if(kPlot.adjacent(), CvPlot::fn::getBonusType() == m_eBonusType);
+		const int iCount = algo::count_if(kPlot.adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
 		if (!(iCount == 0 || (iCount == 1 && kPlot.isWater())))
 		{

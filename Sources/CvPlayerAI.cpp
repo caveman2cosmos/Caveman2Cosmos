@@ -3523,7 +3523,7 @@ int CvPlayerAI::AI_militaryWeight(const CvArea* pArea) const
 }
 
 
-int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
+int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
 {
 	PROFILE_FUNC();
 
@@ -3675,7 +3675,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 /************************************************************************************************/
 
 	//	Prefer less defended
-	int iDefense = 5 + (static_cast<CvCityAI*>(pCity))->getGarrisonStrength();
+	int iDefense = 5 + (static_cast<const CvCityAI*>(pCity))->getGarrisonStrength();
 	iDefense = std::max(1,iDefense);
 	iValue = ((iValue*100)/iDefense);
 
