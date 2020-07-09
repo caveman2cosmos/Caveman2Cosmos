@@ -27873,41 +27873,50 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const
 {
+	CvPlot* pLoopPlot;
+	int iLoopX, iLoopY;
 	int iValue;
 
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iOuterRadius, iOuterRadius))
+	for (iLoopX = -iOuterRadius; iLoopX <= iOuterRadius; iLoopX++)
 	{
-		if (!AI_isPlotCitySite(pLoopPlot))
+		for (iLoopY = -iOuterRadius; iLoopY <= iOuterRadius; iLoopY++)
 		{
-			if (stepDistance(0, 0, iLoopX, iLoopY) <= iInnerRadius)
+			pLoopPlot = plotXY(iX, iY, iLoopX, iLoopY);
+			if ((NULL != pLoopPlot) && !AI_isPlotCitySite(pLoopPlot))
 			{
-				if (!((iLoopX == 0) && (iLoopY == 0)))
+				if (stepDistance(0, 0, iLoopX, iLoopY) <= iInnerRadius)
 				{
-					pLoopPlot->setFoundValue(getID(), 0);
-				}
-			}
-			else if (pLoopPlot->isRevealed(getTeam(), false))
-			{
-				int iResult=-1;
-				if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
-				{
-					iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
-				}
-
-				if (iResult == -1)
-				{
-					iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
+					if (!((iLoopX == 0) && (iLoopY == 0)))
+					{
+						pLoopPlot->setFoundValue(getID(), 0);
+					}
 				}
 				else
 				{
-					iValue = iResult;
-				}
+					if ((pLoopPlot != NULL) && (pLoopPlot->isRevealed(getTeam(), false)))
+					{
+						int iResult = -1;
+						if (GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
+						{
+							iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
+						}
 
-				pLoopPlot->setFoundValue(getID(), iValue);
+						if (iResult == -1)
+						{
+							iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
+						}
+						else
+						{
+							iValue = iResult;
+						}
 
-				if (iValue > pLoopPlot->area()->getBestFoundValue(getID()))
-				{
-					pLoopPlot->area()->setBestFoundValue(getID(), iValue);
+						pLoopPlot->setFoundValue(getID(), iValue);
+
+						if (iValue > pLoopPlot->area()->getBestFoundValue(getID()))
+						{
+							pLoopPlot->area()->setBestFoundValue(getID(), iValue);
+						}
+					}
 				}
 			}
 		}
