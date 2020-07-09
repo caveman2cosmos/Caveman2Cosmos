@@ -381,7 +381,7 @@ protected:
 /*                                                                                              */
 /* Player Interface                                                                             */
 /************************************************************************************************/
-	int AI_exploreAirPlotValue( CvPlot* pPlot );
+	int AI_exploreAirPlotValue(const CvPlot* pPlot) const;
 	bool AI_exploreAir2();
 	void AI_exploreAirMove();
 /************************************************************************************************/

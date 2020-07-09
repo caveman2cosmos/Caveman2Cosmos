@@ -3512,7 +3512,7 @@ int CvPlayerAI::AI_militaryWeight(const CvArea* pArea) const
 }
 
 
-int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
+int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
 {
 	PROFILE_FUNC();
 
@@ -3664,7 +3664,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 /************************************************************************************************/
 
 	//	Prefer less defended
-	int iDefense = 5 + (static_cast<CvCityAI*>(pCity))->getGarrisonStrength();
+	int iDefense = 5 + (static_cast<const CvCityAI*>(pCity))->getGarrisonStrength();
 	iDefense = std::max(1,iDefense);
 	iValue = ((iValue*100)/iDefense);
 
@@ -13569,20 +13569,15 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
+		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+			if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 			{
-				if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
+				if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
 				{
-					if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
-					{
-						iCount++;
-					}
+					iCount++;
 				}
 			}
 		}
@@ -28651,16 +28646,12 @@ int CvPlayerAI::AI_getPlotCanalValue(const CvPlot* pPlot) const
 			}
 		}
 
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 		{
-			CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isCity(true) && (pLoopPlot->getCanalValue() > 0))
 			{
-				if (pLoopPlot->isCity(true) && (pLoopPlot->getCanalValue() > 0))
-				{
-					// Decrease value when adjacent to a city or fort with a canal value
-					iCanalValue -= 10;
-				}
+				// Decrease value when adjacent to a city or fort with a canal value
+				iCanalValue -= 10;
 			}
 		}
 
@@ -28715,16 +28706,12 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 			}
 		}
 
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 		{
-			const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isCity(true) && (pLoopPlot->getChokeValue() > 0))
 			{
-				if (pLoopPlot->isCity(true) && (pLoopPlot->getChokeValue() > 0))
-				{
-					// Decrease value when adjacent to a city or fort with a choke value
-					iChokeValue -= 10;
-				}
+				// Decrease value when adjacent to a city or fort with a choke value
+				iChokeValue -= 10;
 			}
 		}
 
@@ -29598,7 +29585,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 
 	if(isPushReligiousVictory() || isConsiderReligiousVictory())
 	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			const CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
 			if(kLoopPlayer.isAlive())

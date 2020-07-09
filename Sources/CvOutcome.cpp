@@ -504,19 +504,8 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			const CvPlot* pAdjacentPlot = plotDirection(kUnit.plot()->getX(), kUnit.plot()->getY(), ((DirectionTypes)iI));
+		const int iCount = algo::count_if(kUnit.plot()->adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
 		if (!(iCount == 0 || (iCount == 1 && kUnit.plot()->isWater())))
 		{
 			return false;
@@ -847,19 +836,8 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			const CvPlot* pAdjacentPlot = plotDirection(kPlot.getX(), kPlot.getY(), ((DirectionTypes)iI));
+		const int iCount = algo::count_if(kPlot.adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
 		if (!(iCount == 0 || (iCount == 1 && kPlot.isWater())))
 		{
 			return false;

@@ -141,7 +141,7 @@ public:
 
 	int AI_militaryWeight(const CvArea* pArea) const;
 
-	int AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
+	int AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
 	CvCity* AI_findTargetCity(const CvArea* pArea) const;
 
 	bool AI_isCommercePlot(const CvPlot* pPlot) const;
