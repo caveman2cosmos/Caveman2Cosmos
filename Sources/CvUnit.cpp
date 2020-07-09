@@ -32119,28 +32119,20 @@ float CvUnit::doPillageInfluence()
 /* Original Author Moctezuma              End                                                   */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
 bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 {
-
-	CvCity* pCity;
-
-	pCity = pPlot->getPlotCity();
-
 	if (!m_pUnitInfo->isInquisitor())
 	{
 		return false;
 	}
+	const CvCity* pCity = pPlot->getPlotCity();
+
 	if (pCity == NULL)
 	{
 		return false;
 	}
-	if( GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION )
+	if (GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION)
 	{
 		return false;
 	}
@@ -32148,9 +32140,8 @@ bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-
-	//Allow inquisitions in vassals
-	if( (pCity->getTeam() != getTeam())  && !(GET_TEAM(pCity->getTeam()).isVassal(getTeam())) )
+	// Allow inquisitions in vassals
+	if (pCity->getTeam() != getTeam() && !GET_TEAM(pCity->getTeam()).isVassal(getTeam()))
 	{
 		return false;
 	}
@@ -32158,116 +32149,94 @@ bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if(GET_PLAYER(getOwner()).getStateReligion() != GET_PLAYER(pCity->getOwner()).getStateReligion())
+	if (GET_PLAYER(getOwner()).getStateReligion() != GET_PLAYER(pCity->getOwner()).getStateReligion())
 	{
 		return false;
 	}
-
 	return true;
 }
 
 
 bool CvUnit::performInquisition()
 {
-	CvCity* pCity;
-	int iI, iJ;
-	int iReligionCount = 0;
-	int iHolyCityVal = 0;
-	int iCompensationGold = 0;
-	int iCount;
-	int iBestCount = 0;
-	PlayerTypes eBestPlayer = NO_PLAYER;
-	bool bRelocateHolyCity;
-	int iLoop;
-	CvCity* pLoopCity;
-	CvWString szBuffer;
+	const CvPlot* pPlot = plot();
 
-	if (!canPerformInquisition(plot()))
+	if (!canPerformInquisition(pPlot))
 	{
 		return false;
 	}
-
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity != NULL)
 	{
-		for(iI = 0; iI < MAX_PC_PLAYERS; iI++)
+		CvWString szBuffer;
+
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
 			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-			if (kLoopPlayer.isAlive())
+			if (kLoopPlayer.isAlive()
+			&& (pPlot->isVisible(kLoopPlayer.getTeam(), true) || pPlot->isRevealed(kLoopPlayer.getTeam(), true)))
 			{
-				if( plot()->isVisible(kLoopPlayer.getTeam(), true)
-				|| plot()->isRevealed(kLoopPlayer.getTeam(), true) )
-				{
-					gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CHRIST_MISSIONARY_ACTIVATE", plot()->getPoint());
-				}
+				gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CHRIST_MISSIONARY_ACTIVATE", pPlot->getPoint());
 			}
 		}
 
-		for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		int iHolyCityVal = 0;
+		int iReligionCount = 0;
+		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
-			if ((ReligionTypes)iI != GET_PLAYER(getOwner()).getStateReligion())
+			if ((ReligionTypes)iI != GET_PLAYER(getOwner()).getStateReligion() && pCity->isHasReligion((ReligionTypes)iI))
 			{
-				if (pCity->isHasReligion((ReligionTypes)iI))
+				iReligionCount++;
+				if (pCity->isHolyCity((ReligionTypes)iI))
 				{
-					iReligionCount++;
-					if (pCity->isHolyCity((ReligionTypes)iI))
-					{
-						iHolyCityVal = 50;
-					}
+					iHolyCityVal = 50;
 				}
 			}
 		}
+		int iCompensationGold = 0;
+
 		if (GC.getGame().getSorenRandNum(100, "Inquisition Persection Chance") < std::max(25, (95 - iHolyCityVal - (5 * iReligionCount))))
 		{
-			//Change memory if we are removing a religion that is another player's state religion
-			for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			// Change memory if we are removing a religion that is another player's state religion
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
 				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-				if (kLoopPlayer.isAlive())
+				if (kLoopPlayer.isAlive()
+				&& (pPlot->isVisible(kLoopPlayer.getTeam(), false) || pPlot->isRevealed(kLoopPlayer.getTeam(), false))
+				&& GET_TEAM(kLoopPlayer.getTeam()).isHasMet(GET_PLAYER(getOwner()).getTeam()))
 				{
-					if( plot()->isVisible(kLoopPlayer.getTeam(), false)
-					|| plot()->isRevealed(kLoopPlayer.getTeam(), false) )
+					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
-						if (GET_TEAM(kLoopPlayer.getTeam()).isHasMet(GET_PLAYER(getOwner()).getTeam()))
+						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ
+						// if the player has the holy city, or has the religion as a state religion.
+						&& (kLoopPlayer.hasHolyCity((ReligionTypes)iJ) || pCity->isHasReligion((ReligionTypes)iJ) && kLoopPlayer.getStateReligion() == (ReligionTypes)iJ))
 						{
-							for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
-							{
-								if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ)
-								{
-									//if the player has the holy city, or has the religion as a state religion.
-									if (kLoopPlayer.hasHolyCity((ReligionTypes)iJ) || ((pCity->isHasReligion((ReligionTypes)iJ)) && (kLoopPlayer.getStateReligion() == (ReligionTypes)iJ)))
-									{
-										kLoopPlayer.AI_changeMemoryCount(getOwner(), MEMORY_INQUISITION, 1);
-										break;
-									}
-								}
-							}
+							kLoopPlayer.AI_changeMemoryCount(getOwner(), MEMORY_INQUISITION, 1);
+							break;
 						}
 					}
 				}
 			}
 			//Remove temples, monasteries, etc...
-			for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
 					const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
-						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ)
+						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ
+						&& kLoopBuilding.getPrereqReligion() == (ReligionTypes)iJ)
 						{
-							if (kLoopBuilding.getPrereqReligion() == (ReligionTypes)iJ)
-							{
-								pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-								iCompensationGold += kLoopBuilding.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
-							}
+							pCity->setNumRealBuilding((BuildingTypes)iI, 0);
+							iCompensationGold += kLoopBuilding.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
 						}
 					}
 				}
 			}
 			//Remove the Religion & Holy Cities
-			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{
 				if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iI)
 				{
@@ -32281,13 +32250,15 @@ bool CvUnit::performInquisition()
 							pCity->setHasReligion((ReligionTypes)iI, false, false, false);
 
 							//Find the best place to replace the holy city
-							for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+							PlayerTypes eBestPlayer = NO_PLAYER;
+							int iBestCount = 0;
+							for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 							{
-								CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iJ);
+								const CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iJ);
 
 								if (kLoopPlayer.isAlive())
 								{
-									iCount = kLoopPlayer.getHasReligionCount((ReligionTypes)iI);
+									const int iCount = kLoopPlayer.getHasReligionCount((ReligionTypes)iI);
 									if (iCount > iBestCount)
 									{
 										iBestCount = iCount;
@@ -32296,27 +32267,29 @@ bool CvUnit::performInquisition()
 								}
 							}
 							//Relocate the holy city
-							bRelocateHolyCity = false;
 							if (eBestPlayer != NO_PLAYER)
 							{
-								CvPlayerAI& kPlayer = GET_PLAYER(eBestPlayer);
+								const CvPlayerAI& kPlayer = GET_PLAYER(eBestPlayer);
+								CvCity* pLoopCity;
+								int iLoop;
 								for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
 								{
-									if (pCity->isHasReligion((ReligionTypes)iI))
+									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
-										bRelocateHolyCity = true;
-										break;
-									}
-								}
-								if (bRelocateHolyCity)
-								{
-									GC.getGame().setHolyCity((ReligionTypes)iI, pLoopCity, true);
-									//TODO: Create a text entry: "A Holy City Religion has been Respawned"
-									{
-										MEMORY_TRACK_EXEMPT();
+										GC.getGame().setHolyCity((ReligionTypes)iI, pLoopCity, true);
+										//TODO: Create a text entry: "A Holy City Religion has been Respawned"
+										{
+											MEMORY_TRACK_EXEMPT();
 
-										szBuffer = gDLL->getText("TXT_KEY_MSG_HOLY_CITY_RESPAWNED");
-										AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MAJOR_EVENT, "Art/Interface/Buttons/TerrainFeatures/Forest.dds", ColorTypes(8), getX(), getY(), false, false);
+											szBuffer = gDLL->getText("TXT_KEY_MSG_HOLY_CITY_RESPAWNED");
+											AddDLLMessage(
+												GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
+												szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MAJOR_EVENT,
+												"Art/Interface/Buttons/TerrainFeatures/Forest.dds",
+												ColorTypes(8), getX(), getY(), false, false
+											);
+										}
+										break;
 									}
 								}
 							}
@@ -32330,19 +32303,15 @@ bool CvUnit::performInquisition()
 				}
 			}
 
-			for(iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-				if (kLoopPlayer.isAlive())
+				const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+				if (kLoopPlayer.isAlive()
+				&& (pPlot->isVisible(kLoopPlayer.getTeam(), true) || pPlot->isRevealed(kLoopPlayer.getTeam(), true)))
 				{
-					if( plot()->isVisible(kLoopPlayer.getTeam(), true)
-					|| plot()->isRevealed(kLoopPlayer.getTeam(), true) )
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION", pCity->getNameKey());
-						AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PLAGUE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
-					}
+					MEMORY_TRACK_EXEMPT();
+					szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION", pCity->getNameKey());
+					AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PLAGUE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
 				}
 			}
 
@@ -32353,49 +32322,38 @@ bool CvUnit::performInquisition()
 				//Avoid setting the Rev Index below 0...
 				pCity->changeLocalRevIndex(-std::min(pCity->getRevolutionIndex(), iCompensationGold));
 			}
-			else
-			{
-				GET_PLAYER(getOwner()).changeGold(iCompensationGold);
-			}
+			else GET_PLAYER(getOwner()).changeGold(iCompensationGold);
 		}
 		//Inquisition Fails...
 		else
 		{
-			for(iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-				if (kLoopPlayer.isAlive())
+				const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+				if (kLoopPlayer.isAlive()
+				&& (pPlot->isVisible(kLoopPlayer.getTeam(), true) || pPlot->isRevealed(kLoopPlayer.getTeam(), true)))
 				{
-					if( plot()->isVisible(kLoopPlayer.getTeam(), true)
-					|| plot()->isRevealed(kLoopPlayer.getTeam(), true) )
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION_FAIL", pCity->getNameKey());
-						AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
-					}
+					MEMORY_TRACK_EXEMPT();
+					szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION_FAIL", pCity->getNameKey());
+					AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
 				}
 			}
-
 			pCity->changeHurryAngerTimer(pCity->flatHurryAngerLength());
+
 			if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 			{
 				pCity->changeLocalRevIndex(iCompensationGold / 2);
 			}
 		}
-
-		if (plot()->isActiveVisible(false))
+		if (pPlot->isActiveVisible(false))
 		{
 			NotifyEntity(MISSION_INQUISITION);
 		}
 	}
-
 	kill(true, NO_PLAYER, true);
 	return true;
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 
 /************************************************************************************************/
 /* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
