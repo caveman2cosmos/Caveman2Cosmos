@@ -2896,17 +2896,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	if (bTrade)
 	{
-		for (int iDX = -1; iDX <= 1; iDX++)
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pCityPlot->getX(), pCityPlot->getY(), 1, 1))
 		{
-			for (int iDY = -1; iDY <= 1; iDY++)
-			{
-				pLoopPlot	= plotXY(pCityPlot->getX(), pCityPlot->getY(), iDX, iDY);
-
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->setCulture(eOldOwner, 0, false, false);
-				}
-			}
+			pLoopPlot->setCulture(eOldOwner, 0, false, false);
 		}
 	}
 
@@ -7245,7 +7237,6 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getGoodyInfo(eGoody).getSound(), MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getImprovementArtInfo("ART_DEF_IMPROVEMENT_GOODY_HUT")->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pPlot->getX(), pPlot->getY());
 	}
 
-	CvPlot* pLoopPlot;
 	const int iRange = GC.getGoodyInfo(eGoody).getMapRange();
 
 	if (iRange > 0)
@@ -7258,27 +7249,17 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 			int iBestValue = 0;
 			pBestPlot = NULL;
 
-			for (int iDX = -(iOffset); iDX <= iOffset; iDX++)
+			foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iOffset, iOffset)
+			| filtered(!CvPlot::fn::isRevealed(getTeam(), false)))
 			{
-				for (int iDY = -(iOffset); iDY <= iOffset; iDY++)
+				int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Map"));
+
+				iValue *= plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+				if (iValue > iBestValue)
 				{
-					pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL)
-					{
-						if (!(pLoopPlot->isRevealed(getTeam(), false)))
-						{
-							int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Map"));
-
-							iValue *= plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = pLoopPlot;
-							}
-						}
-					}
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
 		}
@@ -7288,21 +7269,13 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 			pBestPlot = pPlot;
 		}
 
-		for (int iDX = -(iRange); iDX <= iRange; iDX++)
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pBestPlot->getX(), pBestPlot->getY(), iRange, iRange))
 		{
-			for (int iDY = -(iRange); iDY <= iRange; iDY++)
+			if (plotDistance(pBestPlot->getX(), pBestPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
 			{
-				pLoopPlot = plotXY(pBestPlot->getX(), pBestPlot->getY(), iDX, iDY);
-
-				if (pLoopPlot != NULL)
+				if (GC.getGame().getSorenRandNum(100, "Goody Map") < GC.getGoodyInfo(eGoody).getMapProb())
 				{
-					if (plotDistance(pBestPlot->getX(), pBestPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
-					{
-						if (GC.getGame().getSorenRandNum(100, "Goody Map") < GC.getGoodyInfo(eGoody).getMapProb())
-						{
-							pLoopPlot->setRevealed(getTeam(), true, false, NO_TEAM, true);
-						}
-					}
+					pLoopPlot->setRevealed(getTeam(), true, false, NO_TEAM, true);
 				}
 			}
 		}
@@ -7362,7 +7335,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 			{
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 				{
-					pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+					CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
 
 					if (pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea()
 					&& !pLoopPlot->isImpassable(getTeam()) && pLoopPlot->getNumUnits() == 0
@@ -7520,17 +7493,9 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	{
 		const int iRange = GC.getMIN_CITY_RANGE();
 
-		for (int iDX = -(iRange); iDX <= iRange; iDX++)
+		if (algo::any_of(CvPlot::rect(iX, iY, iRange, iRange), CvPlot::fn::isCity(false, NO_TEAM) && CvPlot::fn::area() == pPlot->area()))
 		{
-			for (int iDY = -(iRange); iDY <= iRange; iDY++)
-			{
-				CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
-
-				if (pLoopPlot != NULL && pLoopPlot->isCity() && pLoopPlot->area() == pPlot->area())
-				{
-					return false;
-				}
-			}
+			return false;
 		}
 	}
 	return true;
@@ -14211,24 +14176,24 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 }
 
 
-void CvPlayer::addPlotDangerSource(CvPlot* pPlot, int iStrength)
+void CvPlayer::addPlotDangerSource(const CvPlot* pPlot, int iStrength)
 {
-	if ( iStrength != 0 )
+	if (iStrength != 0)
 	{
 		PROFILE_FUNC();
 
 		//	Radiate danger to the immediate vicinity
-		for (int iDX = -2; iDX <= 2; iDX++ )
+		for (int iDX = -2; iDX <= 2; iDX++)
 		{
-			for (int iDY = -2; iDY <= 2; iDY++ )
+			for (int iDY = -2; iDY <= 2; iDY++)
 			{
 				CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
 
-				if ( pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea() )
+				if (pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea())
 				{
-					int	iStepDistance = std::max(abs(iDX),abs(iDY));
+					int	iStepDistance = std::max(abs(iDX), abs(iDY));
 
-					pLoopPlot->setDangerCount(m_eID, pLoopPlot->getDangerCount(m_eID) + iStrength/(1<<iStepDistance));
+					pLoopPlot->setDangerCount(m_eID, pLoopPlot->getDangerCount(m_eID) + iStrength / (1 << iStepDistance));
 				}
 			}
 		}
@@ -30859,7 +30824,7 @@ void CvPlayer::addReminder(int iGameTurn, CvWString szMessage) const
 }
 // BUG - Reminder Mod - end
 
-CvContractBroker&	CvPlayer::getContractBroker()
+CvContractBroker& CvPlayer::getContractBroker()
 {
 	return m_contractBroker;
 }

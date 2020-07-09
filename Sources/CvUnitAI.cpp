@@ -32036,7 +32036,6 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 
 void CvUnitAI::AI_cityDefense()
 {
-
 	int iMinimumOdds = GET_PLAYER(getOwner()).getModderOption(MODDEROPTION_AUTO_DEFENSE_MIN_COMBAT_ODDS);
 	bool bCanLeaveCity = GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_DEFENSE_CAN_LEAVE_CITY);
 
@@ -32864,23 +32863,18 @@ bool CvUnitAI::AI_moveToTarget(CvUnit* pTarget)
 	return false;
 }
 
-bool CvUnitAI::AI_protectTarget(CvUnit* pTarget)
+bool CvUnitAI::AI_protectTarget(const CvUnit* pTarget)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
 	CvPlot* endTurnPlot = NULL;
-	int iSearchRange;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iDX, iDY;
 
-	iSearchRange = baseMoves();
+	int iSearchRange = baseMoves();
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(pTarget->plot(), 1, false);
 
@@ -32904,35 +32898,27 @@ bool CvUnitAI::AI_protectTarget(CvUnit* pTarget)
 	//Only minimal enemy targets, move to kill them if possible
 	else
 	{
-		for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
 		{
-			for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+			if (AI_plotValid(pLoopPlot))
 			{
-				pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-				if (pLoopPlot != NULL)
+				if (pLoopPlot->isVisible(getTeam(),false) && pLoopPlot->isVisibleEnemyUnit(this))
 				{
-					if (AI_plotValid(pLoopPlot))
+					if (!atPlot(pLoopPlot) && canMoveInto(pLoopPlot, MoveCheck::Attack) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
 					{
-						if (pLoopPlot->isVisible(getTeam(),false) && pLoopPlot->isVisibleEnemyUnit(this))
+						if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits())
 						{
-							if (!atPlot(pLoopPlot) && canMoveInto(pLoopPlot, MoveCheck::Attack) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
+							if (pLoopPlot->getNumVisibleAdjacentEnemyDefenders(this) <= ((getGroup()->getNumUnits() * 3) / 2))
 							{
-								if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits())
-								{
-									if (pLoopPlot->getNumVisibleAdjacentEnemyDefenders(this) <= ((getGroup()->getNumUnits() * 3) / 2))
-									{
-										iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
+								iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
 
-										if (iValue >= AI_finalOddsThreshold(pLoopPlot, 65))
-										{
-											if (iValue > iBestValue)
-											{
-												iBestValue = iValue;
-												pBestPlot = getPathEndTurnPlot();
-												FAssert(!atPlot(pBestPlot));
-											}
-										}
+								if (iValue >= AI_finalOddsThreshold(pLoopPlot, 65))
+								{
+									if (iValue > iBestValue)
+									{
+										iBestValue = iValue;
+										pBestPlot = getPathEndTurnPlot();
+										FAssert(!atPlot(pBestPlot));
 									}
 								}
 							}
@@ -33838,13 +33824,11 @@ void CvUnitAI::AI_setLeaderPriority(int iPriority)	//	 -1 means reset to default
 	m_iGroupLeadOverride = iPriority;
 }
 
-bool CvUnitAI::AI_fulfillHealerNeed(CvPlot* pPlot)
+bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 {
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
-	int iDX, iDY;
 	int iPathTurns = 0;
 	PlayerTypes ePlayer = getOwner();
 	UnitCombatTypes eUnitCombat = getBestHealingType();
@@ -33856,43 +33840,35 @@ bool CvUnitAI::AI_fulfillHealerNeed(CvPlot* pPlot)
 	}
 
 	int iValue = 0;
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		const int iCheck = pLoopPlot->getUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
+
+		if (!atPlot(pLoopPlot) && iCheck > 0)
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
 			{
-				int iCheck = pLoopPlot->getUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
-
-				if (!atPlot(pLoopPlot) && iCheck > 0)
-				{
-					if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
-					{
-						iValue = iCheck;
-						iValue -= iPathTurns/4;
-					}
-				}
-				else
-				{
-					if (iCheck > 0)
-					{
-						iValue = iCheck;
-						iValue += getNumHealSupportTotal();
-					}
-					else
-					{
-						int iPlotCount = pLoopPlot->plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
-						iValue = std::min(iPlotCount, getNumHealSupportTotal());
-					}
-				}
+				iValue = iCheck;
+				iValue -= iPathTurns/4;
 			}
-			if (iValue > iBestValue)
+		}
+		else
+		{
+			if (iCheck > 0)
 			{
-				iBestValue = iValue;
-				pBestPlot = pLoopPlot;
+				iValue = iCheck;
+				iValue += getNumHealSupportTotal();
 			}
+			else
+			{
+				const int iPlotCount = pLoopPlot->plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
+				iValue = std::min(iPlotCount, getNumHealSupportTotal());
+			}
+		}
+		if (iValue > iBestValue)
+		{
+			iBestValue = iValue;
+			pBestPlot = pLoopPlot;
 		}
 	}
 
@@ -33920,13 +33896,11 @@ bool CvUnitAI::AI_fulfillHealerNeed(CvPlot* pPlot)
 	return false;
 }
 
-bool CvUnitAI::AI_fulfillImmediateHealerNeed(CvPlot* pPlot)
+bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 {
-	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
-	int iDX, iDY;
 	int iPathTurns = 0;
 	PlayerTypes ePlayer = getOwner();
 	UnitCombatTypes eUnitCombat = getBestHealingType();
@@ -33939,43 +33913,35 @@ bool CvUnitAI::AI_fulfillImmediateHealerNeed(CvPlot* pPlot)
 
 	int iValue = 0;
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		const int iCheck = pLoopPlot->getInjuredUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
+
+		if (!atPlot(pLoopPlot) && iCheck > 0)
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
 			{
-				int iCheck = pLoopPlot->getInjuredUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
-
-				if (!atPlot(pLoopPlot) && iCheck > 0)
-				{
-					if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
-					{
-						iValue = iCheck;
-						iValue -= iPathTurns;
-					}
-				}
-				else
-				{
-					if (iCheck > 0)
-					{
-						iValue = iCheck;
-						iValue += getNumHealSupportTotal();
-					}
-					else
-					{
-						int iPlotCount = pLoopPlot->plotCount(PUF_isInjuredUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
-						iValue = std::min(iPlotCount, getNumHealSupportTotal());
-					}
-				}
+				iValue = iCheck;
+				iValue -= iPathTurns;
 			}
-			if (iValue > iBestValue)
+		}
+		else
+		{
+			if (iCheck > 0)
 			{
-				iBestValue = iValue;
-				pBestPlot = pLoopPlot;
+				iValue = iCheck;
+				iValue += getNumHealSupportTotal();
 			}
+			else
+			{
+				const int iPlotCount = pLoopPlot->plotCount(PUF_isInjuredUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
+				iValue = std::min(iPlotCount, getNumHealSupportTotal());
+			}
+		}
+		if (iValue > iBestValue)
+		{
+			iBestValue = iValue;
+			pBestPlot = pLoopPlot;
 		}
 	}
 
@@ -34033,7 +33999,7 @@ int CvUnitAI::scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const Domai
 	return scoring::applyDistanceScoringFactor(score * 10, plot(), targetPlot, 2);
 }
 
-bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
+bool CvUnitAI::AI_fulfillCityHealerNeed(const CvPlot* pPlot)
 {
 	const UnitCombatTypes eUnitCombat = getBestHealingType();
 	if (eUnitCombat == NO_UNITCOMBAT)

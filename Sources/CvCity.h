@@ -2387,6 +2387,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isCapital);
 
 		DECLARE_MAP_FUNCTOR(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);

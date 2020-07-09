@@ -1544,18 +1544,11 @@ void CvGame::normalizeRemovePeaks()
 
 			if (pStartingPlot != NULL)
 			{
-				const int iRange = 3;
-
-				for (int iDX = -(iRange); iDX <= iRange; iDX++)
+				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), 3, 3))
 				{
-					for (int iDY = -(iRange); iDY <= iRange; iDY++)
+					if (pLoopPlot->isPeak())
 					{
-						CvPlot* pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL && pLoopPlot->isPeak())
-						{
-							pLoopPlot->setPlotType(PLOT_HILLS);
-						}
+						pLoopPlot->setPlotType(PLOT_HILLS);
 					}
 				}
 			}
@@ -1619,10 +1612,7 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 
 void CvGame::normalizeRemoveBadFeatures()
 {
-	CvPlot* pLoopPlot;
-	int iI, iJ;
-
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1630,9 +1620,9 @@ void CvGame::normalizeRemoveBadFeatures()
 
 			if (pStartingPlot != NULL)
 			{
-				for (iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+				for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
 				{
-					pLoopPlot = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), iJ);
+					CvPlot* pLoopPlot = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), iJ);
 
 					if (pLoopPlot != NULL)
 					{
@@ -1647,41 +1637,28 @@ void CvGame::normalizeRemoveBadFeatures()
 					}
 				}
 
-				int iX, iY;
-				const int iCityRange = CITY_PLOTS_RADIUS;
-				const int iExtraRange = 2;
-				const int iMaxRange = iCityRange + iExtraRange;
+				const int iMaxRange = CITY_PLOTS_RADIUS + 2;
 
-				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
+				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
 				{
-					for (iY = -iMaxRange; iY <= iMaxRange; iY++)
+					const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+					if (iDistance <= iMaxRange)
 					{
-						pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
-						if (pLoopPlot != NULL)
+						if (pLoopPlot->getFeatureType() != NO_FEATURE)
 						{
-							const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-							if (iDistance <= iMaxRange)
+							if ((GC.getFeatureInfo(pLoopPlot->getFeatureType()).getYieldChange(YIELD_FOOD) <= 0) &&
+								(GC.getFeatureInfo(pLoopPlot->getFeatureType()).getYieldChange(YIELD_PRODUCTION) <= 0))
 							{
-								if (pLoopPlot->getFeatureType() != NO_FEATURE)
+								if (pLoopPlot->isWater())
 								{
-									if ((GC.getFeatureInfo(pLoopPlot->getFeatureType()).getYieldChange(YIELD_FOOD) <= 0) &&
-										(GC.getFeatureInfo(pLoopPlot->getFeatureType()).getYieldChange(YIELD_PRODUCTION) <= 0))
+									if (pLoopPlot->isAdjacentToLand() || (!(iDistance == iMaxRange) && (getSorenRandNum(2, "Remove Bad Feature") == 0)))
 									{
-										if (pLoopPlot->isWater())
-										{
-											if (pLoopPlot->isAdjacentToLand() || (!(iDistance == iMaxRange) && (getSorenRandNum(2, "Remove Bad Feature") == 0)))
-											{
-												pLoopPlot->setFeatureType(NO_FEATURE);
-											}
-										}
-										else
-										{
-											if (!(iDistance == iMaxRange) && (getSorenRandNum((2 + ((pLoopPlot->getBonusType() == NO_BONUS) ? 0 : 2)), "Remove Bad Feature") == 0))
-											{
-												pLoopPlot->setFeatureType(NO_FEATURE);
-											}
-										}
+										pLoopPlot->setFeatureType(NO_FEATURE);
 									}
+								}
+								else if (!(iDistance == iMaxRange) && (getSorenRandNum((2 + ((pLoopPlot->getBonusType() == NO_BONUS) ? 0 : 2)), "Remove Bad Feature") == 0))
+								{
+									pLoopPlot->setFeatureType(NO_FEATURE);
 								}
 							}
 						}
@@ -1696,7 +1673,8 @@ void CvGame::normalizeRemoveBadFeatures()
 void CvGame::normalizeRemoveBadTerrain()
 {
 	const int iCityRange = CITY_PLOTS_RADIUS;
-	const int iMaxRange = iCityRange + 1;
+	const int iExtraRange = 1;
+	const int iMaxRange = iCityRange + iExtraRange;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -1707,48 +1685,40 @@ void CvGame::normalizeRemoveBadTerrain()
 		if (pStartingPlot == NULL)
 			continue;
 
-		for (int iX = -iMaxRange; iX <= iMaxRange; iX++)
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
 		{
-			for (int iY = -iMaxRange; iY <= iMaxRange; iY++)
+			const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+			if (iDistance <= iMaxRange && !pLoopPlot->isWater()
+			&& (iDistance <= iCityRange || pLoopPlot->isCoastalLand() || 0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food")))
 			{
-				CvPlot* pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
+				const int iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
 
-				if (pLoopPlot == NULL)
-					continue;
-
-				const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-				if (iDistance <= iMaxRange && !pLoopPlot->isWater()
-				&& (iDistance <= iCityRange || pLoopPlot->isCoastalLand() || 0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food")))
+				if (iPlotFood + GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION) <= 1)
 				{
-					const int iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
+					int iTargetFood;
 
-					if (iPlotFood + GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION) <= 1)
+					if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
 					{
-						int iTargetFood;
+						iTargetFood = 1;
+					}
+					else if (iPlotFood == 1 || iDistance <= iCityRange)
+					{
+						iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
+					}
+					else
+					{
+						iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
+					}
 
-						if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
+					for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+					{
+						if (!GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()
+						&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood
+						&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION) == 2
+						&& (pLoopPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK)))
 						{
-							iTargetFood = 1;
-						}
-						else if (iPlotFood == 1 || iDistance <= iCityRange)
-						{
-							iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
-						}
-						else
-						{
-							iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
-						}
-
-						for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
-						{
-							if (!GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()
-							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood
-							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION) == 2
-							&& (pLoopPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK)))
-							{
-								pLoopPlot->setTerrainType((TerrainTypes)iK);
-							}
+							pLoopPlot->setTerrainType((TerrainTypes)iK);
 						}
 					}
 				}
@@ -1987,7 +1957,7 @@ void CvGame::normalizeAddExtras()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+			const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 			if (pStartingPlot != NULL)
 			{
@@ -2063,7 +2033,7 @@ void CvGame::normalizeAddExtras()
 				int iWaterCount = 0;
 				for (iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
 				{
-					CvPlot* pLoopPlot = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), iJ);
+					const CvPlot* pLoopPlot = plotCity(pStartingPlot->getX(), pStartingPlot->getY(), iJ);
 					if (pLoopPlot != NULL)
 					{
 						if (pLoopPlot != pStartingPlot)
@@ -2578,7 +2548,7 @@ again:
 	}
 
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
+	const CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
 	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
 		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
 	{
@@ -6834,7 +6804,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
 		const SpawnTypes eSpawn = (SpawnTypes)j;
-		CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
+		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
 		//I think for the sake of speed and data efficiency we can get away with a singular player reference rather than
@@ -7021,17 +6991,13 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				const int LocalRange = 3;
 				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
 
-				for (int iX = -LocalRange; iX <= LocalRange; iX++)
+				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), LocalRange, LocalRange))
 				{
-					for (int iY = -LocalRange; iY <= LocalRange; iY++)
+					if (pLoopPlot->area() == pPlot->area())
 					{
-						const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
-						if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
-						{
-							localAreaSize++;
-							localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
-							localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, spawnInfo.getPlayer());
-						}
+						localAreaSize++;
+						localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
+						localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, spawnInfo.getPlayer());
 					}
 				}
 				// We know that localAreaSize > 0 because pLoopPlot == pPlot in one of the above iterations.

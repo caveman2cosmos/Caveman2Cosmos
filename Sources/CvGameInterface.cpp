@@ -461,18 +461,13 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				for (int iDX = -(iMaxAirRange); iDX <= iMaxAirRange; iDX++)
+				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iMaxAirRange, iMaxAirRange))
 				{
-					for (int iDY = -(iMaxAirRange); iDY <= iMaxAirRange; iDY++)
+					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
-						pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
-						{
-							NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
-							color.a = 0.4f;
-							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
-						}
+						NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
+						color.a = 0.4f;
+						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
 			}
@@ -498,39 +493,29 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				for (int iDX = -(iMaxAirRange); iDX <= iMaxAirRange; iDX++)
+				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iMaxAirRange, iMaxAirRange))
 				{
-					for (int iDY = -(iMaxAirRange); iDY <= iMaxAirRange; iDY++)
+					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
-						pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
-						{
-							NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
-							color.a = 0.5f;
-							gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
-						}
+						NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
+						color.a = 0.5f;
+						gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 					}
 				}
 			}
 		}
 		else if(pHeadSelectedUnit->airRange() > 0) //other ranged units
 		{
-			int iRange = pHeadSelectedUnit->airRange();
-			for (int iDX = -iRange; iDX <= iRange; iDX++)
+			const int iRange = pHeadSelectedUnit->airRange();
+			foreach_(CvPlot* pTargetPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iRange, iRange))
 			{
-				for (int iDY = -iRange; iDY <= iRange; iDY++)
+				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
+				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
+				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
 				{
-					CvPlot* pTargetPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-					if (pTargetPlot != NULL && pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
-					&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
-					&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
-					{
-						NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
-						color.a = 0.5f;
-						gDLL->getEngineIFace()->fillAreaBorderPlot(pTargetPlot->getX(), pTargetPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
-					}
+					NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
+					color.a = 0.5f;
+					gDLL->getEngineIFace()->fillAreaBorderPlot(pTargetPlot->getX(), pTargetPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 				}
 			}
 		}
@@ -557,34 +542,29 @@ void CvGame::updateColoredPlots()
 				}
 			}
 
-			int iRange = 4;
+			const int iRange = 4;
 
-			for (int iDX = -iRange; iDX <= iRange; iDX++)
+			foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iRange, iRange))
 			{
-				for (int iDY = -iRange; iDY <= iRange; iDY++)
+				if (pLoopPlot->area() == pHeadSelectedUnit->area() || pLoopPlot->isAdjacentToArea(pHeadSelectedUnit->area()))
 				{
-					pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL && (pLoopPlot->area() == pHeadSelectedUnit->area() || pLoopPlot->isAdjacentToArea(pHeadSelectedUnit->area())))
+					if (pHeadSelectedUnit->canFound(pLoopPlot) && GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
 					{
-						if (pHeadSelectedUnit->canFound(pLoopPlot) && GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
-						{
-							gDLL->getEngineIFace()->addColoredPlot(
-								pLoopPlot->getX(), pLoopPlot->getY(),
-								GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
-								PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
-							);
-						}
-						if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getViewportX(), pLoopPlot->getViewportY(), pLoopPlot->getY()) <= iRange
-						&& pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && pHeadSelectedUnit->isNoBadGoodies()
-						&& pLoopPlot->isRevealedGoody(pHeadSelectedUnit->getTeam()))
-						{
-							gDLL->getEngineIFace()->addColoredPlot(
-								pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
-								GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
-								PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
-							);
-						}
+						gDLL->getEngineIFace()->addColoredPlot(
+							pLoopPlot->getX(), pLoopPlot->getY(),
+							GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
+							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+						);
+					}
+					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getViewportX(), pLoopPlot->getViewportY(), pLoopPlot->getY()) <= iRange
+					&& pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && pHeadSelectedUnit->isNoBadGoodies()
+					&& pLoopPlot->isRevealedGoody(pHeadSelectedUnit->getTeam()))
+					{
+						gDLL->getEngineIFace()->addColoredPlot(
+							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
+							GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
+							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
+						);
 					}
 				}
 			}
@@ -600,31 +580,23 @@ void CvGame::updateColoredPlots()
 
 				if (kPlayer.getTeam() == getActiveTeam())
 				{
-					foreach_(const CvUnit* pLoopUnit, kPlayer.units())
+					foreach_(const CvUnit* pLoopUnit, kPlayer.units()
+					| filtered(CvUnit::fn::isBlockading()))
 					{
-						if (pLoopUnit->isBlockading())
+						foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pLoopUnit->getX(), pLoopUnit->getY(), iBlockadeRange, iBlockadeRange)
+						| filtered(CvPlot::fn::isRevealed(getActiveTeam(), false)))
 						{
-							for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+							if (GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange)
 							{
-								for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
-								{
-									const CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX(), pLoopUnit->getY(), i, j);
-									if (NULL != pLoopPlot && pLoopPlot->isRevealed(getActiveTeam(), false))
-									{
-										if (GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange)
-										{
-											// No blockading on other side of an isthmus
-											continue;
-										}
+								// No blockading on other side of an isthmus
+								continue;
+							}
 
-										if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
-										{
-											NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());
-											color.a = 0.5f;
-											gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADING);
-										}
-									}
-								}
+							if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
+							{
+								NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());
+								color.a = 0.5f;
+								gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADING);
 							}
 						}
 					}

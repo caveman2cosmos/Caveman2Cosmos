@@ -255,7 +255,7 @@ public:
 	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python
 	int seeThroughLevel() const; // Exposed to Python
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
-	bool canSeePlot(CvPlot *plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
+	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
 	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
@@ -1187,13 +1187,18 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isFreshWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
+
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isCity, bool, TeamTypes);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
 	};

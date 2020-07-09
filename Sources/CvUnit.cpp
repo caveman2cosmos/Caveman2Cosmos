@@ -5912,19 +5912,12 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
-	int iRange = visibilityRange(pPlot) + 1;
-	for (int i = -iRange; i <= iRange; ++i)
+	const int iRange = visibilityRange(pPlot) + 1;
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (int j = -iRange; j <= iRange; ++j)
+		if (!pLoopPlot->isRevealed(getTeam(), false) && pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
 		{
-			CvPlot* pLoopPlot = ::plotXY(pPlot->getX(), pPlot->getY(), i, j);
-			if (NULL != pLoopPlot)
-			{
-				if (!pLoopPlot->isRevealed(getTeam(), false) && pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
 
@@ -7715,13 +7708,12 @@ void CvUnit::load()
 
 bool CvUnit::canUnload() const
 {
-	CvPlot& kPlot = *(plot());
-
 	if (getTransportUnit() == NULL)
 	{
 		return false;
 	}
 
+	const CvPlot& kPlot = *(plot());
 	if (!kPlot.isValidDomainForLocation(*this))
 	{
 		return false;
@@ -8682,9 +8674,6 @@ bool CvUnit::airlift(int iX, int iY)
 
 bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
 	if (!(GET_TEAM(eTeam).isAlive()))
 	{
 		return false;
@@ -8695,24 +8684,16 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 		return false;
 	}
 
-	for (iDX = -(nukeRange()); iDX <= nukeRange(); iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), nukeRange(), nukeRange()))
 	{
-		for (iDY = -(nukeRange()); iDY <= nukeRange(); iDY++)
+		if (pLoopPlot->getTeam() == eTeam)
 		{
-			pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+			return true;
+		}
 
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->getTeam() == eTeam)
-				{
-					return true;
-				}
-
-				if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
-				{
-					return true;
-				}
-			}
+		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
+		{
+			return true;
 		}
 	}
 
@@ -10434,54 +10415,49 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 		CvPlot::setDeferredPlotGroupRecalculationMode(true);
 	}
 
-	for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange))
 	{
-		for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
+		if (pLoopPlot->isWater() && pLoopPlot->area() == area())
 		{
-			CvPlot* pLoopPlot = ::plotXY(getX(), getY(), i, j);
 
-			if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
+			const int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
+
+			// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
+			// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable
+			// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which
+			// would appear randomly, it should cause extra blockade clearing only very rarely.
+			/*
+			if( iPathDist > iBlockadeRange )
 			{
+				// No blockading on other side of an isthmus
+				continue;
+			}
+			*/
 
-				int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
-
-				// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
-				// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable
-				// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which
-				// would appear randomly, it should cause extra blockade clearing only very rarely.
-				/*
-				if( iPathDist > iBlockadeRange )
+			if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
+			{
+				for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
 				{
-					// No blockading on other side of an isthmus
-					continue;
-				}
-				*/
-
-				if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
-				{
-					for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
+					if (isEnemy((TeamTypes)iTeam))
 					{
-						if (isEnemy((TeamTypes)iTeam))
+						bValid = (iPathDist <= iBlockadeRange);
+						if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0) )
 						{
-							bValid = (iPathDist <= iBlockadeRange);
-							if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0) )
+							bValid = true;
+						}
+
+						if( bValid )
+						{
+							bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
+
+							pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
+
+							if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
 							{
-								bValid = true;
-							}
-
-							if( bValid )
-							{
-								bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
-
-								pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
-
-								if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
+								bChanged = true;
+								if (bUpdatePlotGroups)
 								{
-									bChanged = true;
-									if (bUpdatePlotGroups)
-									{
-										pLoopPlot->updatePlotGroup();
-									}
+									pLoopPlot->updatePlotGroup();
 								}
 							}
 						}
@@ -10884,9 +10860,7 @@ bool CvUnit::destroy()
 
 int CvUnit::stealPlansCost(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -30975,7 +30949,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 // Dale - RB: Field Bombard START
 bool CvUnit::canRBombard(bool bEver) const
 {
-
 	if (!GC.isDCM_RANGE_BOMBARD())
 	{
 		return false;
@@ -32497,9 +32470,6 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 
 bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
 	if (!(GET_TEAM(eTeam).isAlive()))
 	{
 		return false;
@@ -32510,24 +32480,16 @@ bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) c
 		return false;
 	}
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->getTeam() == eTeam)
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+			return true;
+		}
 
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->getTeam() == eTeam)
-				{
-					return true;
-				}
-
-				if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
-				{
-					return true;
-				}
-			}
+		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
+		{
+			return true;
 		}
 	}
 
