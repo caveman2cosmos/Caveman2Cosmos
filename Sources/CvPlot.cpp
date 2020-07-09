@@ -4634,9 +4634,6 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity = NULL;
-	int iLoop;
-
 	FAssert(eMoveTeam != NO_TEAM);
 
 	if( (area()->getCitiesPerPlayer(eOtherPlayer) == 0) )

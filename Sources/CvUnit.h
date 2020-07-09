@@ -970,7 +970,7 @@ public:
 	int airCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	int rangeCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	CvUnit* bestInterceptor(const CvPlot* pPlot) const; // Exposed to Python
-	CvUnit* bestSeaPillageInterceptor(CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
+	CvUnit* bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
 
 	bool isAutomated() const; // Exposed to Python
 	DllExport bool isWaiting() const; // Exposed to Python
