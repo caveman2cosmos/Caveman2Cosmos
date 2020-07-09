@@ -15539,7 +15539,6 @@ bool CvUnitAI::AI_spreadReligion()
 	int iValue;
 	int iBestValue;
 	int iPlayerMultiplierPercent;
-	int iLoop;
 	int iI;
 	int iBaseFlags = (isHuman() ? MOVE_NO_ENEMY_TERRITORY : (MOVE_NO_ENEMY_TERRITORY | MOVE_IGNORE_DANGER));
 
@@ -16853,12 +16852,11 @@ bool CvUnitAI::AI_join(int iMaxCount)
 	return false;
 }
 
-CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(CvCity* pCity, BuildingTypes eBuilding, CvSelectionGroup* omitGroup) const
+CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const
 {
 	PROFILE_FUNC();
 
-	int iLoop;
-	for(CvSelectionGroup* pLoopSelectionGroup = GET_PLAYER(getOwner()).firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = GET_PLAYER(getOwner()).nextSelectionGroup(&iLoop))
+	foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(getOwner()).groups())
 	{
 		if ( pLoopSelectionGroup != omitGroup &&
 			 pLoopSelectionGroup->AI_getMissionAIPlot() == pCity->plot() &&
@@ -22774,17 +22772,15 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 /* War tactics AI																			   */
 /************************************************************************************************/
 		// Cancel missions of all those coming to join departing transport
-		CvSelectionGroup* pLoopGroup = NULL;
-		int iLoop = 0;
-		CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
-		for(pLoopGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopGroup != NULL; pLoopGroup = kPlayer.nextSelectionGroup(&iLoop))
+		foreach_(CvSelectionGroup* pLoopGroup, kPlayer.groups())
 		{
 			if( pLoopGroup != getGroup() )
 			{
 				if( pLoopGroup->AI_getMissionAIType() == MISSIONAI_GROUP && pLoopGroup->getHeadUnitAI() == AI_getUnitAIType() )
 				{
-					CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
+					const CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
 
 					if( pMissionUnit != NULL && pMissionUnit->getGroup() == getGroup() )
 					{
@@ -22962,8 +22958,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		{
 			PROFILE("AI_assaultSeaReinforce.Sync");
 
-			int iLoop;
-			for(CvSelectionGroup* pLoopSelectionGroup = GET_PLAYER(getOwner()).firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = GET_PLAYER(getOwner()).nextSelectionGroup(&iLoop))
+			foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(getOwner()).groups())
 			{
 				if (pLoopSelectionGroup != getGroup())
 				{
@@ -23221,17 +23216,15 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		FAssert(!(pBestPlot->isImpassable(getTeam())));
 
 		// Cancel missions of all those coming to join departing transport
-		CvSelectionGroup* pLoopGroup = NULL;
-		int iLoop = 0;
-		CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
-		for(pLoopGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopGroup != NULL; pLoopGroup = kPlayer.nextSelectionGroup(&iLoop))
+		foreach_(CvSelectionGroup* pLoopGroup, kPlayer.groups())
 		{
 			if( pLoopGroup != getGroup() )
 			{
 				if( pLoopGroup->AI_getMissionAIType() == MISSIONAI_GROUP && pLoopGroup->getHeadUnitAI() == AI_getUnitAIType() )
 				{
-					CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
+					const CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
 
 					if( pMissionUnit != NULL && pMissionUnit->getGroup() == getGroup() )
 					{

@@ -7895,9 +7895,7 @@ void CvGame::updateMoves()
 
 	MEMORY_TRACE_FUNCTION();
 
-	CvSelectionGroup* pLoopSelectionGroup;
 	int aiShuffle[MAX_PLAYERS];
-	int iLoop;
 	int iI;
 
 	if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -7936,7 +7934,7 @@ void CvGame::updateMoves()
 							player.AI_unitUpdate();
 						}
 
-						for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
+						foreach_(CvSelectionGroup* pLoopSelectionGroup, player.groups())
 						{
 							pLoopSelectionGroup->autoMission();
 						}
@@ -7967,13 +7965,10 @@ void CvGame::updateMoves()
 					CvPathGenerator::EnableMaxPerformance(true);
 
 					//	Always try to do automations first for the AI
-					for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
+					foreach_(CvSelectionGroup* pLoopSelectionGroup, player.groups())
 					{
 						FAssert(pLoopSelectionGroup != NULL);
-						if (pLoopSelectionGroup != NULL)
-						{
-							pLoopSelectionGroup->autoMission();
-						}
+						pLoopSelectionGroup->autoMission();
 					}
 
 					CvPathGenerator::EnableMaxPerformance(false);
