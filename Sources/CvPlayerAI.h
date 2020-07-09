@@ -438,7 +438,7 @@ public:
 
 	void AI_nowHasTech(TechTypes eTech);
 	
-	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
+	int AI_countDeadlockedBonuses(const CvPlot* pPlot) const;
 	
 	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
@@ -511,7 +511,7 @@ public:
 	int AI_getPlotChokeValue(const CvPlot* pPlot) const;
 	// Super Forts end
 
-	bool AI_isPlotThreatened(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_isPlotThreatened(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 
 	bool AI_isFirstTech(TechTypes eTech) const;
 

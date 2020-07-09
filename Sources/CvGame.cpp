@@ -1544,7 +1544,7 @@ void CvGame::normalizeRemovePeaks()
 
 			if (pStartingPlot != NULL)
 			{
-				foreach_(const CvPlot* pLoopPlot, rect(pStartingPlot->getX(), pStartingPlot->getY(), 3, 3))
+				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), 3, 3))
 				{
 					if (pLoopPlot->isPeak())
 					{
@@ -1639,7 +1639,7 @@ void CvGame::normalizeRemoveBadFeatures()
 
 				const int iMaxRange = CITY_PLOTS_RADIUS + 2;
 
-				foreach_(CvPlot* pLoopPlot, rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
+				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
 				{
 					const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 					if (iDistance <= iMaxRange)
@@ -1672,7 +1672,9 @@ void CvGame::normalizeRemoveBadFeatures()
 
 void CvGame::normalizeRemoveBadTerrain()
 {
-	const int iMaxRange = CITY_PLOTS_RADIUS + 1;
+	const int iCityRange = CITY_PLOTS_RADIUS;
+	const int iExtraRange = 1;
+	const int iMaxRange = iCityRange + iExtraRange;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -1683,7 +1685,7 @@ void CvGame::normalizeRemoveBadTerrain()
 		if (pStartingPlot == NULL)
 			continue;
 
-		foreach_(CvPlot* pLoopPlot, rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
 		{
 			const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
@@ -6989,7 +6991,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				const int LocalRange = 3;
 				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
 
-				foreach_(const CvPlot* pLoopPlot, rect(pPlot->getX(), pPlot->getY(), LocalRange, LocalRange))
+				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), LocalRange, LocalRange))
 				{
 					if (pLoopPlot->area() == pPlot->area())
 					{

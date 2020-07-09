@@ -2527,7 +2527,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	int iTeamAreaCities;
 	int iTempValue;
 	int iRange;
-	int iDX, iDY;
 	int iI;
 	bool bIsCoastal;
 	int iResourceValue = 0;
@@ -2603,16 +2602,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (iMinRivalRange != -1)
 	{
-		for (iDX = -(iMinRivalRange); iDX <= iMinRivalRange; iDX++)
+		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iMinRivalRange, iMinRivalRange))
 		{
-			for (iDY = -(iMinRivalRange); iDY <= iMinRivalRange; iDY++)
+			if (pLoopPlot->plotCheck(PUF_isOtherTeam, getID()) != NULL)
 			{
-				pLoopPlot = plotXY(iX, iY, iDX, iDY);
-
-				if (pLoopPlot != NULL && pLoopPlot->plotCheck(PUF_isOtherTeam, getID()) != NULL)
-				{
-					return 0;
-				}
+				return 0;
 			}
 		}
 	}
@@ -3190,28 +3184,23 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		iRange = GREATER_FOUND_RANGE;
 		int iGreaterBadTile = 0;
 
-		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iRange, iRange))
 		{
-			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			if ((pLoopPlot->isWater() || pLoopPlot->area() == pArea)
+			&& plotDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
 			{
-				pLoopPlot = plotXY(iX, iY, iDX, iDY);
-
-				if (pLoopPlot != NULL && (pLoopPlot->isWater() || pLoopPlot->area() == pArea)
-				&& plotDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
+				iTempValue = 0;
+				iTempValue += (pLoopPlot->getYield(YIELD_FOOD) * 15);
+				iTempValue += (pLoopPlot->getYield(YIELD_PRODUCTION) * 11);
+				iTempValue += (pLoopPlot->getYield(YIELD_COMMERCE) * 5);
+				iValue += iTempValue;
+				if (iTempValue < 21)
 				{
-					iTempValue = 0;
-					iTempValue += (pLoopPlot->getYield(YIELD_FOOD) * 15);
-					iTempValue += (pLoopPlot->getYield(YIELD_PRODUCTION) * 11);
-					iTempValue += (pLoopPlot->getYield(YIELD_COMMERCE) * 5);
-					iValue += iTempValue;
-					if (iTempValue < 21)
+					iGreaterBadTile += 2;
+					if (pLoopPlot->getFeatureType() != NO_FEATURE
+					&& pLoopPlot->calculateBestNatureYield(YIELD_FOOD,getTeam()) > 1)
 					{
-						iGreaterBadTile += 2;
-						if (pLoopPlot->getFeatureType() != NO_FEATURE
-						&& pLoopPlot->calculateBestNatureYield(YIELD_FOOD,getTeam()) > 1)
-						{
-							iGreaterBadTile--;
-						}
+						iGreaterBadTile--;
 					}
 				}
 			}
@@ -3722,45 +3711,33 @@ bool CvPlayerAI::AI_isCommercePlot(const CvPlot* pPlot) const
 
 bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group, int acceptableOdds) const
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
 	const CvArea* pPlotArea = pPlot->area();
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	| filtered(CvPlot::fn::area() == pPlotArea))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			// No need to loop over tiles full of our own units
+			if( pLoopUnit->getTeam() == getTeam() )
 			{
-				if (pLoopPlot->area() == pPlotArea)
+				if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
 				{
-					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
-					{
-						// No need to loop over tiles full of our own units
-						if( pLoopUnit->getTeam() == getTeam() )
-						{
-							if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
-							{
-								break;
-							}
-						}
+					break;
+				}
+			}
 
-						if (pLoopUnit->isEnemy(getTeam()) && (!bAnimalOnly || (pLoopUnit->isAnimal() && pLoopUnit->canAnimalIgnoresBorders() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))))
+			if (pLoopUnit->isEnemy(getTeam()) && (!bAnimalOnly || (pLoopUnit->isAnimal() && pLoopUnit->canAnimalIgnoresBorders() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))))
+			{
+				if (pLoopUnit->canAttack())
+				{
+					if (!(pLoopUnit->isInvisible(getTeam(), false)))
+					{
+						if (pLoopUnit->canMoveOrAttackInto(pPlot))
 						{
-							if (pLoopUnit->canAttack())
+							if ( group == NULL || pLoopUnit->getGroup()->AI_attackOdds(pPlot,true,true) > 100 - acceptableOdds )
 							{
-								if (!(pLoopUnit->isInvisible(getTeam(), false)))
-								{
-									if (pLoopUnit->canMoveOrAttackInto(pPlot))
-									{
-										if ( group == NULL || pLoopUnit->getGroup()->AI_attackOdds(pPlot,true,true) > 100 - acceptableOdds )
-										{
-											return true;
-										}
-									}
-								}
+								return true;
 							}
 						}
 					}
@@ -26165,7 +26142,7 @@ void CvPlayerAI::AI_nowHasTech(TechTypes eTech)
 }
 
 
-int CvPlayerAI::AI_countDeadlockedBonuses(CvPlot* pPlot) const
+int CvPlayerAI::AI_countDeadlockedBonuses(const CvPlot* pPlot) const
 {
 	CvPlot* pLoopPlot;
 	CvPlot* pLoopPlot2;
@@ -26229,48 +26206,30 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iValue;
-	int iDistance;
-	int iDX, iDY;
+	int iValue = 0;
 
-	iValue = 0;
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	| filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			if (pLoopUnit->getOwner() == getID())
 			{
-				if (pLoopPlot->area() == pPlot->area())
+				if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
 				{
-					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+					if (!(pLoopUnit->isInvisible(getTeam(), false)))
 					{
-						if (pLoopUnit->getOwner() == getID())
+						if (pLoopUnit->atPlot(pPlot) || pLoopUnit->canMoveInto(pPlot) || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
 						{
-							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
+							if (!bTestMoves)
 							{
-								if (!(pLoopUnit->isInvisible(getTeam(), false)))
-								{
-									if (pLoopUnit->atPlot(pPlot) || pLoopUnit->canMoveInto(pPlot) || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
-									{
-										if (!bTestMoves)
-										{
-											iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-										}
-										else
-										{
-											if (pLoopUnit->baseMoves() >= iDistance)
-											{
-												iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-											}
-										}
-									}
-								}
+								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
+							}
+							else if (pLoopUnit->baseMoves() >= iDistance)
+							{
+								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 							}
 						}
 					}
@@ -26286,49 +26245,34 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iValue;
-	int iDistance;
-	int iDX, iDY;
+	int iValue = 0;
 
-	iValue = 0;
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	| filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			if (atWar(pLoopUnit->getTeam(), getTeam()))
 			{
-				if (pLoopPlot->area() == pPlot->area())
+				if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
 				{
-					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+					if (!(pLoopUnit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)))
 					{
-						if (atWar(pLoopUnit->getTeam(), getTeam()))
+						if (pPlot->isValidDomainForAction(*pLoopUnit))
 						{
-							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
+							if (!bTestMoves)
 							{
-								if (!(pLoopUnit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)))
+								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
+							}
+							else
+							{
+								int iDangerRange = pLoopUnit->baseMoves();
+								iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+								if (iDangerRange >= iDistance)
 								{
-									if (pPlot->isValidDomainForAction(*pLoopUnit))
-									{
-										if (!bTestMoves)
-										{
-											iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-										}
-										else
-										{
-											int iDangerRange = pLoopUnit->baseMoves();
-											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-											if (iDangerRange >= iDistance)
-											{
-												iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-											}
-										}
-									}
+									iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 								}
 							}
 						}
@@ -26338,9 +26282,7 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 		}
 	}
 
-
 	return iValue;
-
 }
 
 int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
@@ -27571,57 +27513,43 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 	}
 
 	//Connect Cities
-	foreach_(const CvCity* pLoopCity, cities())
+	foreach_(const CvCity* pLoopCity, cities()
+	| filtered(!CvCity::fn::isCapital() && !CvCity::fn::isConnectedToCapital()))
 	{
-		if (!pLoopCity->isCapital() && !pLoopCity->isConnectedToCapital())
+		int iBestValue = 0;
+		CvPlot* pBestPlot = NULL;
+		const int iRange = 5;
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pLoopCity->getX(), pLoopCity->getY(), iRange, iRange)
+		| filtered(CvPlot::fn::getOwner() == getID() && (CvPlot::fn::isConnectedToCapital(NO_PLAYER) || CvPlot::fn::isCity())))
 		{
-			int iBestValue = 0;
-			CvPlot* pBestPlot = NULL;
-			int iRange = 5;
-			for (int iX = -iRange; iX <= iRange; iX++)
+			int iValue = 1000;
+			if (pLoopPlot->isCity())
 			{
-				for (int iY = -iRange; iY <= iRange; iY++)
+				iValue += 500;
+				if (pLoopPlot->getPlotCity()->isCapital())
 				{
-					CvPlot* pLoopPlot = plotXY(pLoopCity->getX(), pLoopCity->getY(), iX, iY);
-					if ((pLoopPlot != NULL) && (pLoopPlot->getOwner() == getID()))
-					{
-						if ((pLoopPlot->isConnectedToCapital()) || pLoopPlot->isCity())
-						{
-							int iValue = 1000;
-							if (pLoopPlot->isCity())
-							{
-								iValue += 500;
-								if (pLoopPlot->getPlotCity()->isCapital())
-								{
-									iValue += 500;
-								}
-							}
-							if (pLoopPlot->isRoute())
-							{
-								iValue += 100;
-							}
-							int iDistance = GC.getMap().calculatePathDistance(pLoopCity->plot(), pLoopPlot);
-							if (iDistance > 0)
-							{
-								iValue /= (1 + iDistance);
+					iValue += 500;
+				}
+			}
+			if (pLoopPlot->isRoute())
+			{
+				iValue += 100;
+			}
+			const int iDistance = GC.getMap().calculatePathDistance(pLoopCity->plot(), pLoopPlot);
+			if (iDistance > 0)
+			{
+				iValue /= (1 + iDistance);
 
-								if (iValue > iBestValue)
-								{
-									iBestValue = iValue;
-									pBestPlot = pLoopPlot;
-								}
-							}
-						}
-					}
-				}
-			}
-			if (NULL != pBestPlot)
-			{
-				if (!AI_advancedStartDoRoute(pBestPlot, pLoopCity->plot()))
+				if (iValue > iBestValue)
 				{
-					return;
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
+		}
+		if (NULL != pBestPlot && !AI_advancedStartDoRoute(pBestPlot, pLoopCity->plot()))
+		{
+			return;
 		}
 	}
 }
@@ -27945,50 +27873,41 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const
 {
-	CvPlot* pLoopPlot;
-	int iLoopX, iLoopY;
 	int iValue;
 
-	for (iLoopX = -iOuterRadius; iLoopX <= iOuterRadius; iLoopX++)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iOuterRadius, iOuterRadius))
 	{
-		for (iLoopY = -iOuterRadius; iLoopY <= iOuterRadius; iLoopY++)
+		if (!AI_isPlotCitySite(pLoopPlot))
 		{
-			pLoopPlot = plotXY(iX, iY, iLoopX, iLoopY);
-			if ((NULL != pLoopPlot) && !AI_isPlotCitySite(pLoopPlot))
+			if (stepDistance(0, 0, iLoopX, iLoopY) <= iInnerRadius)
 			{
-				if (stepDistance(0, 0, iLoopX, iLoopY) <= iInnerRadius)
+				if (!((iLoopX == 0) && (iLoopY == 0)))
 				{
-					if (!((iLoopX == 0) && (iLoopY == 0)))
-					{
-						pLoopPlot->setFoundValue(getID(), 0);
-					}
+					pLoopPlot->setFoundValue(getID(), 0);
+				}
+			}
+			else if (pLoopPlot->isRevealed(getTeam(), false))
+			{
+				int iResult=-1;
+				if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
+				{
+					iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
+				}
+
+				if (iResult == -1)
+				{
+					iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
 				}
 				else
 				{
-					if ((pLoopPlot != NULL) && (pLoopPlot->isRevealed(getTeam(), false)))
-					{
-						int iResult=-1;
-						if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
-						{
-							iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
-						}
+					iValue = iResult;
+				}
 
-						if (iResult == -1)
-						{
-							iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
-						}
-						else
-						{
-							iValue = iResult;
-						}
+				pLoopPlot->setFoundValue(getID(), iValue);
 
-						pLoopPlot->setFoundValue(getID(), iValue);
-
-						if (iValue > pLoopPlot->area()->getBestFoundValue(getID()))
-						{
-							pLoopPlot->area()->setBestFoundValue(getID(), iValue);
-						}
-					}
+				if (iValue > pLoopPlot->area()->getBestFoundValue(getID()))
+				{
+					pLoopPlot->area()->setBestFoundValue(getID(), iValue);
 				}
 			}
 		}
@@ -28590,48 +28509,38 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	int iOtherCityCount = 0;
 
 	int iRange = 4;
-	for (int iX = -iRange; iX <= iRange; iX++)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (int iY = -iRange; iY <= iRange; iY++)
+		if (pPlot != pLoopPlot)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
-			if ((pLoopPlot != NULL) && (pPlot != pLoopPlot))
-			{
-				int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+			const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
-				if (pLoopPlot->getTeam() == getTeam())
+			if (pLoopPlot->getTeam() == getTeam())
+			{
+				if (pLoopPlot->isCity(true))
 				{
-					if (pLoopPlot->isCity(true))
+					if (1 == iDistance)
 					{
-						if (1 == iDistance)
-						{
-							return 0;
-						}
-//						if (iDistance < iMinFriendlyCityDistance)
-//						{
-//							iMinFriendlyCityDistance = iDistance;
-//							iMinFriendlyCityPlot = pLoopPlot;
-//						}
-	// Super Forts end
+						return 0;
 					}
+//					if (iDistance < iMinFriendlyCityDistance)
+//					{
+//						iMinFriendlyCityDistance = iDistance;
+//						iMinFriendlyCityPlot = pLoopPlot;
+//					}
+// Super Forts end
 				}
-				else
+			}
+			else if (pLoopPlot->isOwned() && pLoopPlot->isCity(false))
+			{
+				if (iDistance < iMinOtherCityDistance)
 				{
-					if (pLoopPlot->isOwned())
-					{
-						if (pLoopPlot->isCity(false))
-						{
-							if (iDistance < iMinOtherCityDistance)
-							{
-								iMinOtherCityDistance = iDistance;
-								iMinOtherCityPlot = pLoopPlot;
-							// Super Forts begin  *choke* *canal* - move iOtherCityCount outside the if statement
-							}
-							iOtherCityCount++;
-							// Super Forts end
-						}
-					}
+					iMinOtherCityDistance = iDistance;
+					iMinOtherCityPlot = pLoopPlot;
+				// Super Forts begin  *choke* *canal* - move iOtherCityCount outside the if statement
 				}
+				iOtherCityCount++;
+				// Super Forts end
 			}
 		}
 	}
@@ -29148,81 +29057,68 @@ void CvPlayerAI::AI_invalidateCloseBordersAttitudeCache()
 	}
 }
 
-bool CvPlayerAI::AI_isPlotThreatened(CvPlot* pPlot, int iRange, bool bTestMoves) const
+bool CvPlayerAI::AI_isPlotThreatened(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
-	CvArea *pPlotArea = pPlot->area();
+	const CvArea* pPlotArea = pPlot->area();
 
 	if (iRange == -1)
 	{
 		iRange = DANGER_RANGE;
 	}
 
-	for (int iDX = -iRange; iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	| filtered(CvPlot::fn::area() == pPlotArea))
 	{
-		for (int iDY = -iRange; iDY <= iRange; iDY++)
+		CvSelectionGroup* pLoopGroup = NULL;
+
+		do
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+			CvSelectionGroup* pNextGroup = NULL;
 
-			if (pLoopPlot != NULL)
+			for (CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pLoopPlot->nextUnitNode(pUnitNode))
 			{
-				if (pLoopPlot->area() == pPlotArea)
+				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				if (pLoopUnit != NULL)
 				{
-					CvSelectionGroup* pLoopGroup = NULL;
-
-					do
+					if (pLoopUnit->isEnemy(getTeam()) && pLoopUnit->canAttack() && !pLoopUnit->isInvisible(getTeam(), false))
 					{
-						CvSelectionGroup* pNextGroup = NULL;
-
-						for (CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pLoopPlot->nextUnitNode(pUnitNode))
+						if ( pLoopGroup == NULL ||
+							 pLoopUnit->getOwner() > pLoopGroup->getOwner() ||
+							 (pLoopUnit->getOwner() == pLoopGroup->getOwner() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
 						{
-							CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-							if (pLoopUnit != NULL)
+							if ( pNextGroup == NULL ||
+								 pLoopUnit->getOwner() < pNextGroup->getOwner() ||
+								 (pLoopUnit->getOwner() == pNextGroup->getOwner() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
 							{
-								if (pLoopUnit->isEnemy(getTeam()) && pLoopUnit->canAttack() && !pLoopUnit->isInvisible(getTeam(), false))
-								{
-									if ( pLoopGroup == NULL ||
-										 pLoopUnit->getOwner() > pLoopGroup->getOwner() ||
-										 (pLoopUnit->getOwner() == pLoopGroup->getOwner() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
-									{
-										if ( pNextGroup == NULL ||
-											 pLoopUnit->getOwner() < pNextGroup->getOwner() ||
-											 (pLoopUnit->getOwner() == pNextGroup->getOwner() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
-										{
-											pNextGroup = pLoopUnit->getGroup();
-										}
-									}
-								}
+								pNextGroup = pLoopUnit->getGroup();
 							}
 						}
-
-						pLoopGroup = pNextGroup;
-
-						if ( pLoopGroup != NULL )
-						{
-							if (pLoopGroup->canMoveOrAttackInto(pPlot))
-							{
-								int iPathTurns = 0;
-								if (bTestMoves)
-								{
-									iPathTurns = pLoopGroup->canPathDirectlyTo(pLoopPlot, pPlot) ? 1 : MAX_INT;
-									//if (!pLoopUnit->getGroup()->generatePath(pLoopPlot, pPlot, MOVE_MAX_MOVES | MOVE_IGNORE_DANGER, false, &iPathTurns))
-									//{
-									//	iPathTurns = MAX_INT;
-									//}
-								}
-
-								if (iPathTurns <= 1)
-								{
-									return true;
-								}
-							}
-						}
-					} while( pLoopGroup != NULL );
+					}
 				}
 			}
-		}
+
+			pLoopGroup = pNextGroup;
+
+			if (pLoopGroup != NULL && pLoopGroup->canMoveOrAttackInto(pPlot))
+			{
+				int iPathTurns = 0;
+				if (bTestMoves)
+				{
+					iPathTurns = pLoopGroup->canPathDirectlyTo(pLoopPlot, pPlot) ? 1 : MAX_INT;
+					//if (!pLoopUnit->getGroup()->generatePath(pLoopPlot, pPlot, MOVE_MAX_MOVES | MOVE_IGNORE_DANGER, false, &iPathTurns))
+					//{
+					//	iPathTurns = MAX_INT;
+					//}
+				}
+
+				if (iPathTurns <= 1)
+				{
+					return true;
+				}
+			}
+		} while( pLoopGroup != NULL );
 	}
 
 	return false;
