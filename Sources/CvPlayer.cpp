@@ -30179,10 +30179,7 @@ void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIn
 
 void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 {
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->setCommerceModifierDirty(eCommerce);
 	}
@@ -30244,15 +30241,10 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 {
 	GC.getInitCore().setColor( getID(), eColor );
 	gDLL->getInterfaceIFace()->makeInterfaceDirty();
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+
+	foreach_(CvCity* pLoopCity, cities())
 	{
-		if (pLoopCity->getOwner() == getID())
-		{
-			pLoopCity->setLayoutDirty(true);
-		}
+		pLoopCity->setLayoutDirty(true);
 	}
 // Forces update of units flags
 	EraTypes eEra = getCurrentEra();

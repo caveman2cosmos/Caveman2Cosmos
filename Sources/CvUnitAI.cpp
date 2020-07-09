@@ -13801,14 +13801,11 @@ bool CvUnitAI::AI_guardCityMinDefender(bool bSearch)
 	if (bSearch)
 	{
 		int iBestValue = 0;
-		CvPlot* pBestPlot = NULL;
-		CvPlot* pBestGuardPlot = NULL;
+		const CvPlot* pBestPlot = NULL;
+		const CvPlot* pBestGuardPlot = NULL;
 
-		CvCity* pLoopCity;
-		int iLoop;
-
-		int iCurrentTurn = GC.getGame().getGameTurn();
-		for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+		const int iCurrentTurn = GC.getGame().getGameTurn();
+		foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
 			if (AI_plotValid(pLoopCity->plot()))
 			{
@@ -13890,16 +13887,14 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 	PROFILE_FUNC();
 
 	CvCity* pCity;
-	CvCity* pLoopCity;
 	CvPlot* pPlot;
-	CvPlot* pBestPlot;
+	const CvPlot* pBestPlot;
 	CvPlot* pBestGuardPlot;
 	bool bDefend;
 	int iExtra;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 
 	FAssert(getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_IMMOBILE);
 
@@ -14190,7 +14185,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 		pBestPlot = NULL;
 		pBestGuardPlot = NULL;
 
-		for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
 			if (AI_plotValid(pLoopCity->plot()))
 			{
@@ -14300,19 +14295,12 @@ bool CvUnitAI::AI_guardCityAirlift()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-
 	if (getGroup()->getNumUnits() > 1)
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -14324,10 +14312,10 @@ bool CvUnitAI::AI_guardCityAirlift()
 		return false;
 	}
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity != pCity)
 		{
@@ -14335,7 +14323,7 @@ bool CvUnitAI::AI_guardCityAirlift()
 			{
 				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0)))	// XXX check for other team's units?
 				{
-					iValue = pLoopCity->getPopulation();
+					int iValue = pLoopCity->getPopulation();
 
 					if (pLoopCity->AI_isDanger())
 					{
@@ -14818,18 +14806,11 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	CvPlot* pBestGuardPlot;
-	int iValue;
-	int iBestValue;
-	int iLoop;
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestGuardPlot = NULL;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestGuardPlot = NULL;
-
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
@@ -14846,7 +14827,7 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 					continue;
 				}
 
-				iValue = 0;
+				int iValue = 0;
 
 				if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
 				{
@@ -14947,12 +14928,10 @@ bool CvUnitAI::AI_destroySpy()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
 	CvCity* pBestCity;
 	CvPlot* pBestPlot;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 	int iI;
 
 	iBestValue = 0;
@@ -14967,7 +14946,7 @@ bool CvUnitAI::AI_destroySpy()
 			{
 				if (GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI) <= ATTITUDE_ANNOYED)
 				{
-					for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+					foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 					{
 						if (AI_plotValid(pLoopCity->plot()))
 						{
@@ -15162,13 +15141,11 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	PROFILE_FUNC();
 
 	CvCity* pCity;
-	CvCity* pLoopCity;
 	CvPlot* pBestPlot;
 	CvPlot* pBestPickupPlot;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 
 	pCity = plot()->getPlotCity();
 
@@ -15188,7 +15165,7 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	pBestPlot = NULL;
 	pBestPickupPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
@@ -15772,7 +15749,7 @@ bool CvUnitAI::AI_spreadReligion()
 
 				if (iPlayerMultiplierPercent > 0)
 				{
-					for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+					foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 					{
 						if (AI_plotValid(pLoopCity->plot()) && (itr = m_cachedMissionaryPlotset->find(pLoopCity->plot())) != m_cachedMissionaryPlotset->end())
 						{
@@ -15985,7 +15962,6 @@ bool CvUnitAI::AI_spreadCorporation()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestSpreadPlot = NULL;
-	CvCity* pLoopCity;
 
 	if ( m_cachedPlayer != getOwner() ||
 		 m_cachedMissionaryPlotset == NULL ||
@@ -16010,7 +15986,7 @@ bool CvUnitAI::AI_spreadCorporation()
 
 		CvPlot*	pPlot = getGroup()->AI_getMissionAIPlot();
 
-		pLoopCity = pPlot->getPlotCity();
+		const CvCity* pLoopCity = pPlot->getPlotCity();
 
 		//OutputDebugString(CvString::format("Missionary at (%d,%d) already targeting city at (%d,%d)\n", plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY()).c_str());
 
@@ -16078,8 +16054,7 @@ bool CvUnitAI::AI_spreadCorporation()
 	/************************************************************************************************/
 				int iLoopPlayerCorpCount = kLoopPlayer.countCorporations(eCorporation);
 				CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
-				int iLoop;
-				for (pLoopCity = kLoopPlayer.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 				{
 					if (AI_plotValid(pLoopCity->plot()) && (itr = m_cachedMissionaryPlotset->find(pLoopCity->plot())) != m_cachedMissionaryPlotset->end())
 					{
@@ -16158,7 +16133,7 @@ bool CvUnitAI::AI_spreadCorporation()
 		int iBestEvaluationFoundOn = -1;
 		for(std::multimap<int,CvCity*>::const_iterator itr = targetValues.begin(); itr != targetValues.end(); ++itr)
 		{
-			pLoopCity = itr->second;
+			const CvCity* pLoopCity = itr->second;
 
 			if ( generatePath(pLoopCity->plot(),
 							  iBaseFlags,
@@ -16246,10 +16221,7 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 {
 	PROFILE_FUNC();
 
-	CvPlot* pBestPlot;
-	ReligionTypes eReligion;
 	int iValue;
-	int iBestValue;
 	int iI;
 
 	if (getGroup()->getNumUnits() > 1)
@@ -16257,7 +16229,7 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 		return false;
 	}
 
-	CvCity* pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -16270,7 +16242,7 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 	}
 
 	//bool bCultureVictory = GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_CULTURE2);
-	eReligion = NO_RELIGION;
+	ReligionTypes eReligion = NO_RELIGION;
 
 	if (eReligion == NO_RELIGION)
 	{
@@ -16303,16 +16275,15 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 		return false;
 	}
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive() && (getTeam() == kLoopPlayer.getTeam()))
 		{
-			int iLoop;
-			for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, kLoopPlayer.cities())
 			{
 				if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
 				{
@@ -16409,15 +16380,14 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 	}
 
 	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive() && (getTeam() == kLoopPlayer.getTeam()))
 		{
-			int iLoop;
-			for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, kLoopPlayer.cities())
 			{
 				if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
 				{
@@ -16790,20 +16760,14 @@ bool CvUnitAI::AI_join(int iMaxCount)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	SpecialistTypes eBestSpecialist;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 	int iI;
-	int iCount;
 	int iPathTurns = 0;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	eBestSpecialist = NO_SPECIALIST;
-	iCount = 0;
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
+	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
+	int iCount = 0;
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  09/03/10								jdog5000	  */
@@ -16815,7 +16779,7 @@ bool CvUnitAI::AI_join(int iMaxCount)
 		return false;
 	}
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		// BBAI efficiency: check same area
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
@@ -17338,8 +17302,8 @@ bool CvUnitAI::AI_outcomeMission()
 {
 	PROFILE_FUNC();
 
-	CvPlot* pBestPlot = NULL;
-	CvPlot* pBestMissionPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestMissionPlot = NULL;
 	MissionTypes eBestMission = NO_MISSION;
 	int iBestValue = 0;
 
@@ -17383,8 +17347,7 @@ bool CvUnitAI::AI_outcomeMission()
 			{
 				if (pClosestCity)
 				{
-					int iLoop;
-					for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+					foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 					{
 						//if (pLoopCity->area() == area())
 						if (plotSet.find(pLoopCity->plot()) != plotSet.end())
@@ -17534,21 +17497,16 @@ bool CvUnitAI::AI_hurry(bool bAny)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	CvPlot* pBestHurryPlot;
 	bool bHurry;
 	int iTurnsLeft;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestHurryPlot = NULL;
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestHurryPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
@@ -17922,19 +17880,14 @@ bool CvUnitAI::AI_greatWork()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	CvPlot* pBestGreatWorkPlot;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 	int iPathTurns = 0;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestGreatWorkPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestGreatWorkPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
@@ -18000,13 +17953,8 @@ bool CvUnitAI::AI_offensiveAirlift()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
 	CvCity* pTargetCity;
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 
 	if (getGroup()->getNumUnits() > 1)
 	{
@@ -18018,7 +17966,7 @@ bool CvUnitAI::AI_offensiveAirlift()
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -18030,10 +17978,10 @@ bool CvUnitAI::AI_offensiveAirlift()
 		return false;
 	}
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	const CvPlot* pBestPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity->area() != pCity->area())
 		{
@@ -19960,8 +19908,7 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && ::isPotentialEnemy(getTeam(), GET_PLAYER((PlayerTypes)iI).getTeam()))
 			{
-				int iLoop = 0;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					// BBAI efficiency: check area for land units before generating path
 					if (((iMaxPathTurns == MAX_INT && stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()) < AI_searchRange(iMaxPathTurns)) ||
@@ -22123,11 +22070,10 @@ bool CvUnitAI::AI_canPillage(const CvPlot& kPlot) const
 
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS && bPillageUnowned; ++iPlayer)
 		{
-			int iIndx;
-			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 			if (!isEnemy(kLoopPlayer.getTeam(), &kPlot))
 			{
-				for (CvCity* pCity = kLoopPlayer.firstCity(&iIndx); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIndx))
+				foreach_(const CvCity* pCity, kLoopPlayer.cities())
 				{
 					if (kPlot.getPlotGroup((PlayerTypes)iPlayer) == pCity->plot()->getPlotGroup((PlayerTypes)iPlayer))
 					{
@@ -23092,10 +23038,8 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 	{
 		{
 			PROFILE("AI_assaultSeaReinforce.Cities");
-			int iLoop;
-			CvCity* pLoopCity;
 
-			for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+			foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 			{
 				if( bCanMoveAllTerrain || (pWaterArea != NULL && (pLoopCity->waterArea(true) == pWaterArea || pLoopCity->secondWaterArea() == pWaterArea)) )
 				{
@@ -23197,10 +23141,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 					{
 						if( GET_PLAYER((PlayerTypes)iI).getTeam() == eMasterTeam )
 						{
-							int iLoop;
-							CvCity* pLoopCity;
-
-							for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+							foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 							{
 								if( pLoopCity->area() != area() )
 								{
@@ -23603,10 +23544,7 @@ bool CvUnitAI::AI_settlerSeaFerry()
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
 
-	CvCity* pLoopCity;
-
-	int iLoop;
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		int iValue = pLoopCity->AI_getWorkersNeeded();
 		if (iValue > 0)
@@ -24213,8 +24151,6 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	int iLoop;
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 	int iPathTurns = 0;
 
@@ -24242,7 +24178,7 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 			{
 				bool	bHasPossibleTargetCity = false;
 
-				for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 				{
 					if (!(pPlot->isConnectedTo(pLoopCity)))
 					{
@@ -24279,7 +24215,7 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 					return false;
 				}
 
-				for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 				{
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
@@ -24555,23 +24491,18 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
 	CvPlot* pPlot;
-	CvPlot* pBestPlot;
 	CvPlot* pEndTurnPlot;
 	BuildTypes eBuild;
-	BuildTypes eBestBuild;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
-	iBestValue = 0;
-	eBestBuild = NO_BUILD;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	BuildTypes eBestBuild = NO_BUILD;
+	CvPlot* pBestPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity != pCity)
 		{
@@ -24685,18 +24616,16 @@ bool CvUnitAI::AI_nextCityToImproveAirlift()
 	{
 		return false;
 	}
-	CvCity* pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity == NULL || pCity->getMaxAirlift() == 0)
 	{
 		return false;
 	}
 	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 
-	CvCity* pLoopCity;
-	int iLoop;
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity != pCity && canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
 		{
@@ -25851,7 +25780,6 @@ bool CvUnitAI::AI_connectCity()
 	PROFILE_FUNC();
 
 	CvCity* pLoopCity;
-	int iLoop;
 
 	// XXX how do we make sure that we can build roads???
 
@@ -25870,7 +25798,7 @@ bool CvUnitAI::AI_connectCity()
 		}
 	}
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
@@ -25894,8 +25822,6 @@ bool CvUnitAI::AI_routeCity()
 	PROFILE_FUNC();
 
 	CvCity* pRouteToCity;
-	CvCity* pLoopCity;
-	int iLoop;
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
 	if (!canBuildRoute())
@@ -25905,7 +25831,7 @@ bool CvUnitAI::AI_routeCity()
 
 	FAssert(canBuildRoute());
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
@@ -26218,14 +26144,12 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 	PROFILE_FUNC();
 
 	CvCity* pCity;
-	CvCity* pLoopCity;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
 	int iBestValue = MAX_INT;
 	int iPass;
-	int iLoop;
 	int iCurrentDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot());
 
 	pCity = plot()->getPlotCity();
@@ -26264,7 +26188,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 	{
 		CvReachablePlotSet plotSet(getGroup(), (iPass > 1) ? MOVE_IGNORE_DANGER : 0, iSearchRange);
 
-		for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+		foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
 			if ( plotSet.find(pLoopCity->plot()) != plotSet.end() )
 			{
@@ -26440,14 +26364,12 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 	PROFILE_FUNC();
 
 	CvCity* pCity;
-	CvCity* pLoopCity;
 	CvPlot* pBestPlot;
 	CvPlot* pBestPickupPlot;
 	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 
 	bool bFull =  (getGroup()->AI_isFull() && (getGroup()->getCargo() > 0));
 	if (bFull)
@@ -26554,7 +26476,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 	pBestPlot = NULL;
 	pBestPickupPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
@@ -27277,11 +27199,9 @@ bool CvUnitAI::AI_airDefensiveCity()
 	//PROFILE_FUNC();
 
 	CvCity* pCity;
-	CvCity* pLoopCity;
 	CvPlot* pBestPlot;
 	int iValue;
 	int iBestValue;
-	int iLoop;
 
 	FAssert(getDomainType() == DOMAIN_AIR);
 	FAssert(canAirDefend());
@@ -27328,7 +27248,7 @@ bool CvUnitAI::AI_airDefensiveCity()
 	iBestValue = 0;
 	pBestPlot = NULL;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (canAirDefend(pLoopCity->plot()))
 		{
@@ -28048,8 +27968,7 @@ bool CvUnitAI::AI_exploreAir()
 	PROFILE_FUNC();
 
 	CvPlayer& kPlayer = GET_PLAYER(getOwner());
-	int iLoop;
-	CvCity* pLoopCity;
+
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
@@ -28059,7 +27978,7 @@ bool CvUnitAI::AI_exploreAir()
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 			{
-				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if (!pLoopCity->isVisible(getTeam(), false))
 					{
@@ -28199,18 +28118,10 @@ bool CvUnitAI::AI_nuke()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvCity* pBestCity;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI;
+	const CvCity* pBestCity = NULL;
+	int iBestValue = 0;
 
-	pBestCity = NULL;
-
-	iBestValue = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isNPC())
 		{
@@ -28218,11 +28129,11 @@ bool CvUnitAI::AI_nuke()
 			{
 				if (GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI) == ATTITUDE_FURIOUS)
 				{
-					for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 					{
 						if (canNukeAt(plot(), pLoopCity->getX(), pLoopCity->getY()))
 						{
-							iValue = AI_nukeValue(pLoopCity);
+							const int iValue = AI_nukeValue(pLoopCity);
 
 							if (iValue > iBestValue)
 							{
@@ -28379,24 +28290,17 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 
 bool CvUnitAI::AI_trade(int iValueThreshold)
 {
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI;
 
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				if (AI_plotValid(pLoopCity->plot()))
 				{
@@ -28450,17 +28354,11 @@ bool CvUnitAI::AI_infiltrate()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	if (canInfiltrate(plot()))
 	{
@@ -28468,11 +28366,11 @@ bool CvUnitAI::AI_infiltrate()
 		return true;
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if ((GET_PLAYER((PlayerTypes)iI).isAlive()) && GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 		{
-			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				if (canInfiltrate(pLoopCity->plot()))
 				{
@@ -28801,8 +28699,7 @@ bool CvUnitAI::AI_cityOffenseSpy(int iMaxPath, CvCity* pSkipCity)
 				|| GET_TEAM(getTeam()).AI_getWarPlan(kLoopPlayer.getTeam()) != NO_WARPLAN
 				|| GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85 )
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, kLoopPlayer.cities())
 				{
 					if( pLoopCity == pSkipCity )
 					{
@@ -28943,18 +28840,14 @@ bool CvUnitAI::AI_moveToStagingCity()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
 	CvCity* pBestCity = NULL;
-	CvPlot* pBestPlot;
 	CvPlot* endTurnPlot = NULL;
 
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	int iWarCount = 0;
 	TeamTypes eTargetTeam = NO_TEAM;
@@ -28985,7 +28878,7 @@ bool CvUnitAI::AI_moveToStagingCity()
 	//	that the detailed pathing is most likely to get the best cities first, and hence generate lower
 	//	cutoffs for max path on later ones (and hence execute faster)
 	std::multimap<int,std::pair<CvCity*,int> > orderedTargets;
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		PROFILE("AI_moveToStagingCity.Valuation");
 
@@ -29090,7 +28983,7 @@ bool CvUnitAI::AI_moveToStagingCity()
 
 	for(std::multimap<int,std::pair<CvCity*,int> >::const_iterator itr = orderedTargets.begin(); itr != orderedTargets.end(); ++itr)
 	{
-		pLoopCity = itr->second.first;
+		CvCity* pLoopCity = itr->second.first;
 		iValue = itr->second.second;
 
 		//	For barbarians we can assume they won't be using routes so we can make
@@ -29913,25 +29806,21 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 	PROFILE_FUNC();
 
 	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
 	CvPlot* pBestCityPlot;
-	CvCity* pLoopCity;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop = 0;
 
 	FAssert(canMove());
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	if (plot()->isCity())
 	{
 		return false;
 	}
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
 		{
@@ -30000,26 +29889,21 @@ bool CvUnitAI::AI_artistCultureVictoryMove()
 	int iCultureCitiesNeeded = GC.getGame().culturalVictoryNumCultureCities();
 	FAssertMsg(iCultureCitiesNeeded > 0, "CultureVictory Strategy should not be true");
 
-	CvCity* pLoopCity;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
-	CvCity* pBestCity;
-	SpecialistTypes eBestSpecialist;
-	int iLoop, iValue, iBestValue;
+	int iValue;
 	int iPathTurns = 0;
 
-	pBestPlot = NULL;
-	eBestSpecialist = NO_SPECIALIST;
+	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
 
-	pBestCity = NULL;
+	CvCity* pBestCity = NULL;
 
-	iBestValue = 0;
-	iLoop = 0;
+	int iBestValue = 0;
 
 	int iTargetCultureRank = iCultureCitiesNeeded;
 	while (iTargetCultureRank > 0 && pBestCity == NULL)
 	{
-		for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+		foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
 			// BBAI efficiency: check same area
 			if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
@@ -31250,21 +31134,16 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
-	CvPlot* pBestHurryPlot;
 	CvPlot* endTurnPlot = NULL;
 	bool bHurry;
 	int iTurnsLeft;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iLoop;
 	int iNumCities = GET_PLAYER(getOwner()).getNumCities();
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestHurryPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestHurryPlot = NULL;
 
 	//Avoid using Great People
 	if (getUnitInfo().getProductionCost() < 0)
@@ -31272,7 +31151,7 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 		return false;
 	}
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
 		{
@@ -31363,8 +31242,7 @@ bool CvUnitAI::AI_hurryFood()
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
-	int iLoop;
-	for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity->area() == area() && AI_plotValid(pLoopCity->plot())
 			// Hurry is possible
@@ -32778,23 +32656,15 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pBestPlot;
 	CvPlot* endTurnPlot = NULL;
-	SpecialistTypes eBestSpecialist;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI;
-	int iCount;
 	int iPathTurns = 0;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	eBestSpecialist = NO_SPECIALIST;
-	iCount = 0;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
+	int iCount = 0;
 
-	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
 		{
@@ -32804,11 +32674,11 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 				{
 					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
 					{
-						for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 						{
 							if (canJoin(pLoopCity->plot(), ((SpecialistTypes)iI)))
 							{
-								iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
+								const int iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
@@ -34587,10 +34457,9 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
-	CvCity* pBestCity = NULL;
+	//CvCity* pBestCity = NULL;
 
-	int iLoop = 0;
-	for (CvCity* pLoopCity = player.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = player.nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, player.cities())
 	{
 		CvPlot*  pLoopPlot = pLoopCity->plot();
 		bool bAtPlot = atPlot(pLoopPlot);
@@ -34636,7 +34505,7 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 		{
 			iBestValue = iValue;
 			pBestPlot = pLoopPlot;
-			pBestCity = pLoopCity;
+			//pBestCity = pLoopCity;
 		}
 	}
 
