@@ -132,7 +132,7 @@ class CvEventManager:
 		#
 		# Enum values less than 1000 are reserved for dll popup events
 		# Enum values greater than 9999 are reserved for CvUtil.getNewEventID().
-		# Enum 9999 is reserved for worldbuilder
+		# Enums 9998-9999 are reserved for worldbuilder
 		#
 		self.OverrideEventApply = {}
 		import CvMainInterface

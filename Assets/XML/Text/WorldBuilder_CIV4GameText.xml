@@ -73,6 +73,10 @@
 		<English>Cargo</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE</Tag>
+		<English>Circumnavigated globe: team </English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WB_CITY</Tag>
 		<English>City</English>
 	</TEXT>

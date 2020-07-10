@@ -24,6 +24,7 @@ class WBGameDataScreen:
 		# setup pupup handler
 		import CvEventInterface
 		self.eventMng = CvEventInterface.getEventManager()
+		self.eventMng.Events[9998] = ('PullDown', self.applyPullDownData)
 		self.eventMng.Events[9999] = ('SpinBox', self.applySpinBoxData)
 
 		self.xRes = xRes = self.WB.xRes
@@ -102,14 +103,13 @@ class WBGameDataScreen:
 		x = 3
 		y = 0
 		dy = 22 + 3 * self.iFontScale
-
 		self.szStartYear = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_START_YEAR", ()) + ': '
 		iYear = GAME.getStartYear()
 		if iYear < 0:
 			szTxt += str(-iYear) + " BC"
 		else: szTxt += str(iYear) + " AD"
 
-		screen.setTextAt("Values|Date|StartYear", valueScrlPnl, szTxt, 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|Date|StartYear", valueScrlPnl, szTxt, 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		iYear = GAME.getGameTurnYear()
@@ -122,11 +122,11 @@ class WBGameDataScreen:
 
 		y += dy
 		self.szGameTurn = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_GAME_TURN", ())
-		screen.setTextAt("Values|Date|GameTurn", valueScrlPnl, szTxt + str(GAME.getGameTurn()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|Date|GameTurn", valueScrlPnl, szTxt + str(GAME.getGameTurn()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		self.szMaxTurns = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_MAX_TURNS", ())
-		screen.setTextAt("Values|Date|MaxTurns", valueScrlPnl, szTxt + str(GAME.getMaxTurns()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|Date|MaxTurns", valueScrlPnl, szTxt + str(GAME.getMaxTurns()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		self.szEstimateEndTurn = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_ESTIMATED_END_TURN", ("%d",))
@@ -134,19 +134,27 @@ class WBGameDataScreen:
 
 		y += dy
 		self.szMaxCityElimination = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_MAX_CITY_ELIMINATION", ())
-		screen.setTextAt("Values|MaxCityElimination", valueScrlPnl, szTxt + str(GAME.getMaxCityElimination()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|MaxCityElimination", valueScrlPnl, szTxt + str(GAME.getMaxCityElimination()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		self.szTargetScore = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_TARGET_SCORE", ())
-		screen.setTextAt("Values|TargetScore", valueScrlPnl, szTxt + str(GAME.getTargetScore()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|TargetScore", valueScrlPnl, szTxt + str(GAME.getTargetScore()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		self.szNukesExploded = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_NUKES_EXPLODED", ())
-		screen.setTextAt("Values|NukesExploded", valueScrlPnl, szTxt + str(GAME.getNukesExploded()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|NukesExploded", valueScrlPnl, szTxt + str(GAME.getNukesExploded()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		y += dy
 		self.szTradeRoutes = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_HEADING_TRADEROUTE_LIST", ()) + ": "
-		screen.setTextAt("Values|TradeRoutes", valueScrlPnl, szTxt + str(GAME.getTradeRoutes()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+		screen.setTextAt("SpinBox|TradeRoutes", valueScrlPnl, szTxt + str(GAME.getTradeRoutes()), 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
+
+		y += dy
+		self.szCircumnavigatedGlobe = szTxt = scaledFont3 + TRNSLTR.getText("TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE", ())
+		iTeam = GAME.getCircumnavigatedTeam()
+		szTxt += str(iTeam)
+		if iTeam > -1:
+			szTxt += " (%s)" % GC.getTeam(iTeam).getName()
+		screen.setTextAt("PullDown|CircumnavigatedGlobe", valueScrlPnl, szTxt, 1<<0, x, y, 0, eFontGame, eWidGen, 1, 2)
 
 		#--------------------#
 		# New Player Section #
@@ -390,87 +398,135 @@ class WBGameDataScreen:
 		else: iValue = userData[1]
 
 		screen = self.WB.getScreen()
-		BASE, TYPE, CASE, NAME = userData[0]
+		TYPE, CASE, NAME = userData[0]
 
-		if BASE == "Values":
+		if TYPE == "Date":
 
-			if TYPE == "Date":
+			if CASE[0] == "StartYear":
+				self.GAME.setStartYear(iValue)
+				if iValue < 0:
+					szTxt = self.szStartYear + str(-iValue) + " BC"
+				else: szTxt = self.szStartYear + str(iValue) + " AD"
 
-				if CASE[0] == "StartYear":
-					self.GAME.setStartYear(iValue)
-					if iValue < 0:
-						szTxt = self.szStartYear + str(-iValue) + " BC"
-					else: szTxt = self.szStartYear + str(iValue) + " AD"
+			else:
+				if CASE[0] == "GameTurn":
+					self.GAME.setGameTurn(iValue)
+					szTxt = self.szGameTurn + str(iValue)
+					iGameTurn = iValue
+					iMaxTurns = self.GAME.getMaxTurns()
 
-				else:
-					if CASE[0] == "GameTurn":
-						self.GAME.setGameTurn(iValue)
-						szTxt = self.szGameTurn + str(iValue)
-						iGameTurn = iValue
-						iMaxTurns = self.GAME.getMaxTurns()
-
-					elif CASE[0] == "MaxTurns":
-						self.GAME.setMaxTurns(iValue)
-						szTxt = self.szMaxTurns + str(iValue)
-						iMaxTurns = iValue
-						if iMaxTurns:
-							iGameTurn = self.GAME.getGameTurn()
-
+				elif CASE[0] == "MaxTurns":
+					self.GAME.setMaxTurns(iValue)
+					szTxt = self.szMaxTurns + str(iValue)
+					iMaxTurns = iValue
 					if iMaxTurns:
-						iEstimateEndTurn = iGameTurn + iMaxTurns
-						self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns);
-					else:
-						iEstimateEndTurn = 0;
-						gameSpeed = self.GC.getGameSpeedInfo(self.GAME.getGameSpeedType())
+						iGameTurn = self.GAME.getGameTurn()
 
-						for i in xrange(gameSpeed.getNumTurnIncrements()):
-							iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement;
-
-						self.GAME.setEstimateEndTurn(iEstimateEndTurn);
-
-					screen.hide("EstimateEndTurn")
-					screen.modifyLabel("EstimateEndTurn", self.szEstimateEndTurn % iEstimateEndTurn, 1<<0)
-					screen.show("EstimateEndTurn")
-
-				if CASE[0] != "MaxTurns":
-
-					iYear = self.GAME.getGameTurnYear()
-					if iYear < 0:
-						sYear = str(-iYear) + " BC"
-					else: sYear = str(iYear) + " AD"
-					screen.hide("GameTurnYear")
-					screen.modifyLabel("GameTurnYear", self.szGameTurnYear % sYear, 1<<0)
-					screen.show("GameTurnYear")
-
-			elif TYPE == "MaxCityElimination":
-				self.GAME.setMaxCityElimination(iValue)
-				szTxt = self.szMaxCityElimination + str(iValue)
-
-			elif TYPE == "TargetScore":
-				self.GAME.setTargetScore(iValue)
-				szTxt = self.szTargetScore + str(iValue)
-
-			elif TYPE == "NukesExploded":
-				if userData[-1] is None:
-					iChange = iValue - userData[1]
+				if iMaxTurns:
+					iEstimateEndTurn = iGameTurn + iMaxTurns
+					self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns);
 				else:
-					iChange = userData[2]
-				print "NukesExploded: %d" % iChange
-				self.GAME.changeNukesExploded(iChange)
-				szTxt = self.szNukesExploded + str(iValue)
+					iEstimateEndTurn = 0;
+					gameSpeed = self.GC.getGameSpeedInfo(self.GAME.getGameSpeedType())
 
-			elif TYPE == "TradeRoutes":
-				if userData[-1] is None:
-					iChange = iValue - userData[1]
-				else:
-					iChange = userData[2]
-				print "TradeRoutes: %d" % iChange
-				self.GAME.changeTradeRoutes(iChange)
-				szTxt = self.szTradeRoutes + str(iValue)
+					for i in xrange(gameSpeed.getNumTurnIncrements()):
+						iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement;
 
-			screen.hide(NAME)
-			screen.modifyString(NAME, szTxt, 1<<0)
-			screen.show(NAME)
+					self.GAME.setEstimateEndTurn(iEstimateEndTurn);
+
+				screen.hide("EstimateEndTurn")
+				screen.modifyLabel("EstimateEndTurn", self.szEstimateEndTurn % iEstimateEndTurn, 1<<0)
+				screen.show("EstimateEndTurn")
+
+			if CASE[0] != "MaxTurns":
+
+				iYear = self.GAME.getGameTurnYear()
+				if iYear < 0:
+					sYear = str(-iYear) + " BC"
+				else: sYear = str(iYear) + " AD"
+				screen.hide("GameTurnYear")
+				screen.modifyLabel("GameTurnYear", self.szGameTurnYear % sYear, 1<<0)
+				screen.show("GameTurnYear")
+
+		elif TYPE == "MaxCityElimination":
+			self.GAME.setMaxCityElimination(iValue)
+			szTxt = self.szMaxCityElimination + str(iValue)
+
+		elif TYPE == "TargetScore":
+			self.GAME.setTargetScore(iValue)
+			szTxt = self.szTargetScore + str(iValue)
+
+		elif TYPE == "NukesExploded":
+			if userData[-1] is None:
+				iChange = iValue - userData[1]
+			else:
+				iChange = userData[2]
+			print "NukesExploded: %d" % iChange
+			self.GAME.changeNukesExploded(iChange)
+			szTxt = self.szNukesExploded + str(iValue)
+
+		elif TYPE == "TradeRoutes":
+			if userData[-1] is None:
+				iChange = iValue - userData[1]
+			else:
+				iChange = userData[2]
+			print "TradeRoutes: %d" % iChange
+			self.GAME.changeTradeRoutes(iChange)
+			szTxt = self.szTradeRoutes + str(iValue)
+
+		screen.hide(NAME)
+		screen.modifyString(NAME, szTxt, 1<<0)
+		screen.show(NAME)
+
+
+	def initPullDown(self, ID, iDefault, szTxt):
+
+		w = CyInterface().determineWidth(szTxt) + 32; h = 140
+		if w < 160:
+			w = 160
+		x = self.xRes/2 - w/2 - 16
+		y = self.yRes/2 - h/2 - 16
+
+		popup = CyPopup(9998, EventContextTypes.EVENTCONTEXT_SELF, False)
+		popup.setUserData((ID, iDefault, szTxt))
+		popup.setSize(w, h)
+		popup.setPosition(x, y)
+		popup.setHeaderString(szTxt, 1<<0)
+		popup.createPullDown(0)
+
+		if ID[0] == "CircumnavigatedGlobe":
+			for i in xrange(-1, self.GC.getMAX_PC_TEAMS()):
+				name = ""
+				if i > -1:
+					name = self.GC.getTeam(i).getName()
+					if name:
+						name = " - " + name
+				popup.addPullDownString(str(i) + name, i, 0)
+
+			popup.setSelectedPulldownID(iDefault, 0)
+
+		popup.addButton(self.szOk)
+		popup.addButton(self.szCancel)
+		popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
+
+	def applyPullDownData(self, iPlayer, userData, popupReturn):
+		if popupReturn.getButtonClicked() == 1:
+			return
+		iValue = popupReturn.getSelectedPullDownValue(0)
+		if iValue == userData[1]:
+			return
+		screen = self.WB.getScreen()
+		TYPE, CASE, NAME = userData[0]
+		if TYPE == "CircumnavigatedGlobe":
+			self.GAME.setCircumnavigatedTeam(iValue)
+			szTxt = userData[2] + str(iValue)
+			if iValue > -1:
+				szTxt += " (%s)" % self.GC.getTeam(iValue).getName()
+
+		screen.hide(NAME)
+		screen.modifyString(NAME, szTxt, 1<<0)
+		screen.show(NAME)
+
 
 	def initEditBox(self, screen):
 		screen.setEditBoxString("ScriptEditBox", self.szScriptData)
@@ -539,12 +595,12 @@ class WBGameDataScreen:
 
 		elif not iCode: # click
 
-			if BASE == "Values":
+			if BASE == "SpinBox":
 				if bCtrl:
 					if szFlag == "MOUSE_RBUTTONUP":
 						iInc = -1
 					else: iInc = 1
-				aList = (BASE, TYPE, CASE, NAME)
+				aList = (TYPE, CASE, NAME)
 
 				if TYPE == "Date":
 
@@ -601,6 +657,12 @@ class WBGameDataScreen:
 							self.applySpinBoxData(None, (aList, iNewValue, iInc))
 					else:
 						self.initSpinBox(aList, self.GAME.getTradeRoutes(), 1, 10000000, 0, self.szTradeRoutes)
+
+			elif BASE == "PullDown":
+
+				aList = (TYPE, CASE, NAME)
+				if TYPE == "CircumnavigatedGlobe":
+					self.initPullDown(aList, self.GAME.getCircumnavigatedTeam(), self.szCircumnavigatedGlobe)
 
 			elif BASE == "ScriptData":
 				if TYPE == "Btn":
@@ -694,7 +756,7 @@ class WBGameDataScreen:
 		for widget in self.aWidgetBucket:
 			screen.deleteWidget(widget)
 		# Only clear significant stuff, this object is deleted when you exit the worldbuilder anyway.
-		del self.aWidgetBucket, self.aFontList, self.eventMng.Events[9999]
+		del self.aWidgetBucket, self.aFontList, self.eventMng.Events[9998], self.eventMng.Events[9999]
 
 		screen.setRenderInterfaceOnly(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, True)
