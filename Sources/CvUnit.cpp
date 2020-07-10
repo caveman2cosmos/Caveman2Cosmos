@@ -40430,10 +40430,8 @@ bool CvUnit::canMerge(bool bAutocheck) const
 
 	CvPlot* pPlot = plot();
 	int iValidUnitCount = 0;
-	for(CvPlot::unit_iterator itr = pPlot->beginUnits(); itr != pPlot->endUnits(); ++itr)
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = *itr;
-
 		if (pLoopUnit->getOwner() == getOwner() && pLoopUnit->getID() != getID()
 
 			&& pLoopUnit->getUnitType() == getUnitType()
@@ -40562,10 +40560,8 @@ void CvUnit::doMerge()
 		CvUnit* pUnit1 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getBaseMergeSelectionUnit());
 		CvSelectionGroup* pMergingGroup = pUnit1->getGroup();
 
-		for(CvPlot::unit_iterator itr = pPlot->beginUnits(); itr != pPlot->endUnits(); ++itr)
+		foreach_(const CvUnit* pLoopUnit, pPlot->units())
 		{
-			CvUnit* pLoopUnit = *itr;
-
 			if (pLoopUnit->getOwner() == getOwner()
 				&& pLoopUnit->getID() != pUnit1->getID()
 

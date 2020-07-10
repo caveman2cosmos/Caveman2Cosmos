@@ -4531,7 +4531,10 @@ void CvGame::setCircumnavigatedTeam(TeamTypes eTeam)
 	}
 	m_circumnavigatingTeam = eTeam;
 
-	GET_TEAM(eTeam).setCircumnavigated(true);
+	if (m_circumnavigatingTeam != NO_TEAM)
+	{
+		GET_TEAM(eTeam).setCircumnavigated(true);
+	}
 }
 
 bool CvGame::circumnavigationAvailable() const

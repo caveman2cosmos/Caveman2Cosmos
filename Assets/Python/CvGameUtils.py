@@ -511,8 +511,6 @@ class CvGameUtils:
 		elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
 			if iData1 == 1027:
 				return CyTranslator().getText("TXT_KEY_WB_PLOT_DATA",())
-			elif iData1 == 1028:
-				return GC.getGameOptionInfo(iData2).getHelp()
 			elif iData1 == 1029:
 				if iData2 == 0:
 					sText = CyTranslator().getText("TXT_KEY_WB_PYTHON", ())

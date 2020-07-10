@@ -4931,7 +4931,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Alt_Style
 		}
 		with .Size
 		{
-			.Scroll					= GSize(4,4);
+			.Scroll = GSize(6, 6); // Vertical, Horizontal
 		}
 	}
 	map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultTable_Style;

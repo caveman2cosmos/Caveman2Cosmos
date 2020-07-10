@@ -7345,11 +7345,8 @@ bool CvCityAI::AI_isAirDefended(bool bCountLand, int iExtra)
 	int iAirIntercept = 0;
 	int iLandIntercept = 0;
 
-	CvPlot* pPlot = plot();
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_(const CvUnit* pLoopUnit, plot()->units())
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
 		if (pLoopUnit->getOwner() == getOwner() &&
 			pLoopUnit->canAirDefend())
 		{
@@ -16189,10 +16186,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 									{
 										bool bValidUnit = false;
 										int iValidUnitCount = 0;
-										const CvPlot* pPlot = plot();
-										for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+										foreach_(const CvUnit* pLoopUnit, plot()->units())
 										{
-											const CvUnit* pLoopUnit = *unitItr;
 											if (pLoopUnit->getTeam() == getTeam())
 											{
 												if (pLoopUnit->getUnitCombatType() == iI)
