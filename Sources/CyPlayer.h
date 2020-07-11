@@ -275,6 +275,7 @@ public:
 	int getGreatGeneralsCreated();
 	int getGreatPeopleThresholdModifier();
 	int getGreatGeneralsThresholdModifier();
+	void changeGreatGeneralsThresholdModifier(int iChange);
 	int getGreatPeopleRateModifier();
 	int getGreatGeneralRateModifier();
 	int getDomesticGreatGeneralRateModifier();

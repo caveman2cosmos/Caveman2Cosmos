@@ -1,424 +1,117 @@
-Version=14
-BeginGame
-	StartYear=-200000
+BeginMeta
+	Version=C2C_1
 	Description= C2C 10% larger Standard Earth Map with 20 Civs. By Harrier.
-	ModPath=
-EndGame
-BeginTeam
-	TeamID=0
-	ContactWithTeam=0
-EndTeam
-BeginTeam
-	TeamID=1
-	ContactWithTeam=1
-EndTeam
-BeginTeam
-	TeamID=2
-	ContactWithTeam=2
-EndTeam
-BeginTeam
-	TeamID=3
-	ContactWithTeam=3
-EndTeam
-BeginTeam
-	TeamID=4
-	ContactWithTeam=4
-EndTeam
-BeginTeam
-	TeamID=5
-	ContactWithTeam=5
-EndTeam
-BeginTeam
-	TeamID=6
-	ContactWithTeam=6
-EndTeam
-BeginTeam
-	TeamID=7
-	ContactWithTeam=7
-EndTeam
-BeginTeam
-	TeamID=8
-	ContactWithTeam=8
-EndTeam
-BeginTeam
-	TeamID=9
-	ContactWithTeam=9
-EndTeam
-BeginTeam
-	TeamID=10
-	ContactWithTeam=10
-EndTeam
-BeginTeam
-	TeamID=11
-	ContactWithTeam=11
-EndTeam
-BeginTeam
-	TeamID=12
-	ContactWithTeam=12
-EndTeam
-BeginTeam
-	TeamID=13
-	ContactWithTeam=13
-EndTeam
-BeginTeam
-	TeamID=14
-	ContactWithTeam=14
-EndTeam
-BeginTeam
-	TeamID=15
-	ContactWithTeam=15
-EndTeam
-BeginTeam
-	TeamID=16
-	ContactWithTeam=16
-EndTeam
-BeginTeam
-	TeamID=17
-	ContactWithTeam=17
-EndTeam
-BeginTeam
-	TeamID=18
-	ContactWithTeam=18
-EndTeam
-BeginTeam
-	TeamID=19
-	ContactWithTeam=19
-EndTeam
-BeginTeam
-	TeamID=20
-	ContactWithTeam=20
-EndTeam
-BeginTeam
-	TeamID=21
-	ContactWithTeam=21
-EndTeam
-BeginTeam
-	TeamID=22
-	ContactWithTeam=22
-EndTeam
-BeginTeam
-	TeamID=23
-	ContactWithTeam=23
-EndTeam
-BeginTeam
-	TeamID=24
-	ContactWithTeam=24
-EndTeam
-BeginTeam
-	TeamID=25
-	ContactWithTeam=25
-EndTeam
-BeginTeam
-	TeamID=26
-	ContactWithTeam=26
-EndTeam
-BeginTeam
-	TeamID=27
-	ContactWithTeam=27
-EndTeam
-BeginTeam
-	TeamID=28
-	ContactWithTeam=28
-EndTeam
-BeginTeam
-	TeamID=29
-	ContactWithTeam=29
-EndTeam
-BeginTeam
-	TeamID=30
-	ContactWithTeam=30
-EndTeam
-BeginTeam
-	TeamID=31
-	ContactWithTeam=31
-EndTeam
-BeginTeam
-	TeamID=32
-	ContactWithTeam=32
-EndTeam
-BeginTeam
-	TeamID=33
-	ContactWithTeam=33
-EndTeam
-BeginTeam
-	TeamID=34
-	ContactWithTeam=34
-EndTeam
-BeginTeam
-	TeamID=35
-	ContactWithTeam=35
-EndTeam
-BeginTeam
-	TeamID=36
-	ContactWithTeam=36
-EndTeam
-BeginTeam
-	TeamID=37
-	ContactWithTeam=37
-EndTeam
-BeginTeam
-	TeamID=38
-	ContactWithTeam=38
-EndTeam
-BeginTeam
-	TeamID=39
-	ContactWithTeam=39
-EndTeam
-BeginPlayer
-	Team=0
-	LeaderType=LEADER_QIN_SHI_HUANG
-	CivType=CIVILIZATION_CHINA
-	StartingX=83, StartingY=35
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=1
-	LeaderType=LEADER_SHAKA
-	CivType=CIVILIZATION_ZULU
-	StartingX=55, StartingY=9
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=2
-	LeaderType=LEADER_CYRUS
-	CivType=CIVILIZATION_PERSIA
-	StartingX=66, StartingY=30
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=3
-	LeaderType=LEADER_MEIJI
-	CivType=CIVILIZATION_JAPAN
-	StartingX=88, StartingY=34
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=4
-	LeaderType=LEADER_ELIZABETH
-	CivType=CIVILIZATION_ENGLAND
-	StartingX=45, StartingY=43
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=5
-	LeaderType=LEADER_HEKE
-	CivType=CIVILIZATION_MAORI
-	StartingX=2, StartingY=7
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=6
-	LeaderType=LEADER_CHIEF_HEAD_HUNTER
-	CivType=CIVILIZATION_JIVARO
-	StartingX=27, StartingY=21
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=7
-	LeaderType=LEADER_RAMESSES
-	CivType=CIVILIZATION_EGYPT
-	StartingX=56, StartingY=25
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=8
-	LeaderType=LEADER_CATHERINE
-	CivType=CIVILIZATION_RUSSIA
-	StartingX=59, StartingY=43
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=9
-	LeaderType=LEADER_MANSA_MUSA
-	CivType=CIVILIZATION_MALI
-	StartingX=46, StartingY=25
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=10
-	LeaderType=LEADER_HUAYNA_CAPAC
-	CivType=CIVILIZATION_INCA
-	StartingX=26, StartingY=16
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=11
-	LeaderType=LEADER_MONTEZUMA
-	CivType=CIVILIZATION_AZTEC
-	StartingX=18, StartingY=28
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=12
-	LeaderType=LEADER_SUPPI
-	CivType=CIVILIZATION_HITTITES
-	StartingX=60, StartingY=36
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=13
-	LeaderType=LEADER_SULEIMAN
-	CivType=CIVILIZATION_OTTOMAN
-	StartingX=68, StartingY=36
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=14
-	LeaderType=LEADER_FREDERICK
-	CivType=CIVILIZATION_GERMANY
-	StartingX=52, StartingY=42
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=15
-	LeaderType=LEADER_SURYAVARMAN
-	CivType=CIVILIZATION_KHMER
-	StartingX=82, StartingY=27
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=16
-	LeaderType=LEADER_SITTING_BULL
-	CivType=CIVILIZATION_NATIVE_AMERICA
-	StartingX=18, StartingY=41
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=17
-	LeaderType=LEADER_CUNHAMBEBE
-	CivType=CIVILIZATION_TUPI
-	StartingX=34, StartingY=13
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=18
-	LeaderType=LEADER_DEGANAWIDA
-	CivType=CIVILIZATION_IROQUOIS
-	StartingX=28, StartingY=38
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=19
-	LeaderType=LEADER_YAGAN
-	CivType=CIVILIZATION_ABORIGINES
-	StartingX=85, StartingY=12
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=20
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=21
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=22
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=23
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=24
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=25
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=26
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=27
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=28
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=29
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=30
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=31
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=32
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=33
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=34
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=35
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=36
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=37
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=38
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
+	ModPath=Mods\Caveman2Cosmos
+EndMeta
 BeginMap
 	grid width=92
 	grid height=52
-	top latitude=90
 	bottom latitude=-70
 	wrap X=1
-	wrap Y=0
 	world size=WORLDSIZE_SMALL
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
-	num plots written=4784
-	num signs written=0
-	Randomize Resources=false
 EndMap
-### Plot Info ###
+BeginPlayer
+	LeaderType=LEADER_QIN_SHI_HUANG
+	CivType=CIVILIZATION_CHINA
+	StartingX=83, StartingY=35
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_SHAKA
+	CivType=CIVILIZATION_ZULU
+	StartingX=55, StartingY=9
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_CYRUS
+	CivType=CIVILIZATION_PERSIA
+	StartingX=66, StartingY=30
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_MEIJI
+	CivType=CIVILIZATION_JAPAN
+	StartingX=88, StartingY=34
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_ELIZABETH
+	CivType=CIVILIZATION_ENGLAND
+	StartingX=45, StartingY=43
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_HEKE
+	CivType=CIVILIZATION_MAORI
+	StartingX=2, StartingY=7
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_CHIEF_HEAD_HUNTER
+	CivType=CIVILIZATION_JIVARO
+	StartingX=27, StartingY=21
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_RAMESSES
+	CivType=CIVILIZATION_EGYPT
+	StartingX=56, StartingY=25
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_CATHERINE
+	CivType=CIVILIZATION_RUSSIA
+	StartingX=59, StartingY=43
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_MANSA_MUSA
+	CivType=CIVILIZATION_MALI
+	StartingX=46, StartingY=25
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_HUAYNA_CAPAC
+	CivType=CIVILIZATION_INCA
+	StartingX=26, StartingY=16
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_MONTEZUMA
+	CivType=CIVILIZATION_AZTEC
+	StartingX=18, StartingY=28
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_SUPPI
+	CivType=CIVILIZATION_HITTITES
+	StartingX=60, StartingY=36
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_SULEIMAN
+	CivType=CIVILIZATION_OTTOMAN
+	StartingX=68, StartingY=36
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_FREDERICK
+	CivType=CIVILIZATION_GERMANY
+	StartingX=52, StartingY=42
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_SURYAVARMAN
+	CivType=CIVILIZATION_KHMER
+	StartingX=82, StartingY=27
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_SITTING_BULL
+	CivType=CIVILIZATION_NATIVE_AMERICA
+	StartingX=18, StartingY=41
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_CUNHAMBEBE
+	CivType=CIVILIZATION_TUPI
+	StartingX=34, StartingY=13
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_DEGANAWIDA
+	CivType=CIVILIZATION_IROQUOIS
+	StartingX=28, StartingY=38
+EndPlayer
+BeginPlayer
+	LeaderType=LEADER_YAGAN
+	CivType=CIVILIZATION_ABORIGINES
+	StartingX=85, StartingY=12
+EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -28746,4 +28439,3 @@ BeginPlot
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
-### Sign Info ###

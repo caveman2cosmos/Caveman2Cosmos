@@ -1,425 +1,78 @@
-Version=14
-BeginGame
-	Speed=GAMESPEED_MARATHON
-	StartYear=-200000
+BeginMeta
+	Version=C2C_1
 	Description=Never use more than 20 civs or some civs will start in weird places!! This Space map includes a random earth map (Standard size (124x56); Earthlike; 150% Hills and Peaks; +4 rivers; 20 random nations). Have fun!
-	ModPath=
-EndGame
-BeginTeam
-	TeamID=0
-	ContactWithTeam=0
-EndTeam
-BeginTeam
-	TeamID=1
-	ContactWithTeam=1
-EndTeam
-BeginTeam
-	TeamID=2
-	ContactWithTeam=2
-EndTeam
-BeginTeam
-	TeamID=3
-	ContactWithTeam=3
-EndTeam
-BeginTeam
-	TeamID=4
-	ContactWithTeam=4
-EndTeam
-BeginTeam
-	TeamID=5
-	ContactWithTeam=5
-EndTeam
-BeginTeam
-	TeamID=6
-	ContactWithTeam=6
-EndTeam
-BeginTeam
-	TeamID=7
-	ContactWithTeam=7
-EndTeam
-BeginTeam
-	TeamID=8
-	ContactWithTeam=8
-EndTeam
-BeginTeam
-	TeamID=9
-	ContactWithTeam=9
-EndTeam
-BeginTeam
-	TeamID=10
-	ContactWithTeam=10
-EndTeam
-BeginTeam
-	TeamID=11
-	ContactWithTeam=11
-EndTeam
-BeginTeam
-	TeamID=12
-	ContactWithTeam=12
-EndTeam
-BeginTeam
-	TeamID=13
-	ContactWithTeam=13
-EndTeam
-BeginTeam
-	TeamID=14
-	ContactWithTeam=14
-EndTeam
-BeginTeam
-	TeamID=15
-	ContactWithTeam=15
-EndTeam
-BeginTeam
-	TeamID=16
-	ContactWithTeam=16
-EndTeam
-BeginTeam
-	TeamID=17
-	ContactWithTeam=17
-EndTeam
-BeginTeam
-	TeamID=18
-	ContactWithTeam=18
-EndTeam
-BeginTeam
-	TeamID=19
-	ContactWithTeam=19
-EndTeam
-BeginTeam
-	TeamID=20
-	ContactWithTeam=20
-EndTeam
-BeginTeam
-	TeamID=21
-	ContactWithTeam=21
-EndTeam
-BeginTeam
-	TeamID=22
-	ContactWithTeam=22
-EndTeam
-BeginTeam
-	TeamID=23
-	ContactWithTeam=23
-EndTeam
-BeginTeam
-	TeamID=24
-	ContactWithTeam=24
-EndTeam
-BeginTeam
-	TeamID=25
-	ContactWithTeam=25
-EndTeam
-BeginTeam
-	TeamID=26
-	ContactWithTeam=26
-EndTeam
-BeginTeam
-	TeamID=27
-	ContactWithTeam=27
-EndTeam
-BeginTeam
-	TeamID=28
-	ContactWithTeam=28
-EndTeam
-BeginTeam
-	TeamID=29
-	ContactWithTeam=29
-EndTeam
-BeginTeam
-	TeamID=30
-	ContactWithTeam=30
-EndTeam
-BeginTeam
-	TeamID=31
-	ContactWithTeam=31
-EndTeam
-BeginTeam
-	TeamID=32
-	ContactWithTeam=32
-EndTeam
-BeginTeam
-	TeamID=33
-	ContactWithTeam=33
-EndTeam
-BeginTeam
-	TeamID=34
-	ContactWithTeam=34
-EndTeam
-BeginTeam
-	TeamID=35
-	ContactWithTeam=35
-EndTeam
-BeginTeam
-	TeamID=36
-	ContactWithTeam=36
-EndTeam
-BeginTeam
-	TeamID=37
-	ContactWithTeam=37
-EndTeam
-BeginTeam
-	TeamID=38
-	ContactWithTeam=38
-EndTeam
-BeginTeam
-	TeamID=39
-	ContactWithTeam=39
-EndTeam
-BeginPlayer
-    Team=0
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=82, StartingY=31
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=1
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=17, StartingY=38
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=2
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=1, StartingY=24
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=3
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=113, StartingY=28
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=4
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=118, StartingY=41
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=5
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=67, StartingY=25
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=6
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=93, StartingY=24
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=7
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=99, StartingY=46
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=8
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=37, StartingY=17
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=9
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=33, StartingY=33
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=10
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=26, StartingY=23
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=11
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=11, StartingY=32
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=12
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=118, StartingY=8
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=13
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=92, StartingY=31
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=14
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=73, StartingY=33
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=15
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=8, StartingY=12
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=16
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=104, StartingY=8
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=17
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=10, StartingY=39
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=18
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=62, StartingY=12
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-    Team=19
-    LeaderType=NONE
-    CivType=NONE
-	StartingX=79, StartingY=46
-	RandomStartLocation=false
-EndPlayer
-BeginPlayer
-	Team=20
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=21
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=22
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=23
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=24
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=25
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=26
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=27
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=28
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=29
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=30
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=31
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=32
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=33
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=34
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=35
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=36
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=37
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=38
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
+	ModPath=Mods\Caveman2Cosmos
+EndMeta
 BeginMap
 	grid width=124
 	grid height=200
 	top latitude=85
 	bottom latitude=-14
 	wrap X=1
-	wrap Y=0
 	world size=WORLDSIZE_STANDARD
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
-	num plots written=24800
-	num signs written=0
-	Randomize Resources=false
 EndMap
-### Plot Info ###
+BeginPlayer
+	StartingX=82, StartingY=31
+EndPlayer
+BeginPlayer
+	StartingX=17, StartingY=38
+EndPlayer
+BeginPlayer
+	StartingX=1, StartingY=24
+EndPlayer
+BeginPlayer
+	StartingX=113, StartingY=28
+EndPlayer
+BeginPlayer
+	StartingX=118, StartingY=41
+EndPlayer
+BeginPlayer
+	StartingX=67, StartingY=25
+EndPlayer
+BeginPlayer
+	StartingX=93, StartingY=24
+EndPlayer
+BeginPlayer
+	StartingX=99, StartingY=46
+EndPlayer
+BeginPlayer
+	StartingX=37, StartingY=17
+EndPlayer
+BeginPlayer
+	StartingX=33, StartingY=33
+EndPlayer
+BeginPlayer
+	StartingX=26, StartingY=23
+EndPlayer
+BeginPlayer
+	StartingX=11, StartingY=32
+EndPlayer
+BeginPlayer
+	StartingX=118, StartingY=8
+EndPlayer
+BeginPlayer
+	StartingX=92, StartingY=31
+EndPlayer
+BeginPlayer
+	StartingX=73, StartingY=33
+EndPlayer
+BeginPlayer
+	StartingX=8, StartingY=12
+EndPlayer
+BeginPlayer
+	StartingX=104, StartingY=8
+EndPlayer
+BeginPlayer
+	StartingX=10, StartingY=39
+EndPlayer
+BeginPlayer
+	StartingX=62, StartingY=12
+EndPlayer
+BeginPlayer
+	StartingX=79, StartingY=46
+EndPlayer
 BeginPlot
 	x=0,y=0
 	BonusType=BONUS_IRON_ORE
@@ -129856,4 +129509,3 @@ BeginPlot
 	TerrainType=TERRAIN_HYPERSPACE
 	PlotType=2
 EndPlot
-### Sign Info ###

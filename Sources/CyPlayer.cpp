@@ -1222,6 +1222,11 @@ int CyPlayer::getGreatGeneralsThresholdModifier()
 	return m_pPlayer ? m_pPlayer->getGreatGeneralsThresholdModifier() : -1;
 }
 
+void CyPlayer::changeGreatGeneralsThresholdModifier(int iChange)
+{
+	if (m_pPlayer) m_pPlayer->changeGreatGeneralsThresholdModifier(iChange);
+}
+
 int CyPlayer::getGreatPeopleRateModifier()
 {
 	return m_pPlayer ? m_pPlayer->getGreatPeopleRateModifier() : -1;

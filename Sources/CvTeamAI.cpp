@@ -934,9 +934,9 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 {
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 		if (iTeam != getID())
 		{
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 			if (iTeam == eTeam || kLoopTeam.isVassal(eTeam) || GET_TEAM(eTeam).isVassal((TeamTypes)iTeam) || kLoopTeam.isDefensivePact(eTeam))
 			{
 				if (AI_isLandTarget((TeamTypes)iTeam))
@@ -1137,8 +1137,8 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 	for (int iI = 0; iI < (int)kVoteSelectionData.aVoteOptions.size(); iI++)
 	{
-		VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
-		CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
+		const VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
+		const CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
 
 		FAssert(kVoteInfo.isVoteSourceType(eVoteSource));
 
@@ -2879,14 +2879,11 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 	int iValuableCitiesThreatenedByUs = 0;
 	int iCitiesThreatenedByOthers = 0;
 
-	CvCity* pLoopCity;
-	int iLoop;
-
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if( GET_PLAYER((PlayerTypes)iI).getTeam() == eSurrenderTeam && GET_PLAYER((PlayerTypes)iI).isAlive() )
 		{
-			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				bool bValuable = false;
 
@@ -6169,10 +6166,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 
 		if ((iTeamCities < 2 && (kPlayer.getTeam() == getID())) || (iOtherTeamCities < 2 && (kPlayer.getTeam() != getID())))
 		{
-			int iLoop;
-			CvCity* pLoopCity;
-
-			for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, kPlayer.cities())
 			{
 				if (pLoopCity->plot()->isAdjacentToArea(pArea->getID()))
 				{

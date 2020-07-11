@@ -282,9 +282,8 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				const CvCity* pLoopCity = *cityItr;
 				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasReligion(eReligion))
 				{
 					iCount++;
@@ -304,9 +303,8 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				const CvCity* pLoopCity = *cityItr;
 				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasCorporation(eCorporation))
 				{
 					++iCount;
@@ -922,7 +920,7 @@ CvCity* CvArea::getTargetCity(PlayerTypes eIndex) const
 }
 
 
-void CvArea::setTargetCity(PlayerTypes eIndex, CvCity* pNewValue)
+void CvArea::setTargetCity(PlayerTypes eIndex, const CvCity* pNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");

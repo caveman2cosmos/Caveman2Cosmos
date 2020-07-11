@@ -1324,17 +1324,12 @@ def canTriggerIndependentFilms(argsList):
   return True
 
 def doIndependentFilms(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  city = player.getCity(kTriggeredData.iCityId)
-
-  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
-
-  city.changeFreeBonus(iBonus, 1)
-
-  return 1
+	GC.getPlayer(argsList[1].ePlayer).getCity(
+		argsList[1].iCityId
+		).changeFreeBonus(
+			GC.getInfoTypeForString("BONUS_HIT_MOVIES"), 1
+			)
+	return 1
 
 def getHelpIndependentFilms(argsList):
   iEvent = argsList[0]
@@ -3540,7 +3535,6 @@ def getHelpOverwhelm1(argsList):
   iNumCarriers = 3
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
-# iProject = GC.getInfoTypeForString("PROJECT_MANHATTAN_PROJECT")
   iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
 
 # szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getProjectInfo(iProject).getTextKey()))
@@ -3590,14 +3584,11 @@ def canApplyOverwhelmDone3(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
-# Rise of Mankind 2.9 start
-# iProject = GC.getInfoTypeForString("PROJECT_MANHATTAN_PROJECT")
   iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
-# Rise of Mankind 2.9 end
 
   return True
 
@@ -4538,17 +4529,12 @@ def getHelpSyntheticFuels4(argsList):
   return szHelp
 
 def doSyntheticFuels4(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  pCity = pPlayer.getCity(kTriggeredData.iCityId)
-
-  iBonus = GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS")
-
-  pCity.changeFreeBonus(iBonus, 1)
-
-  return 1
+	GC.getPlayer(argsList[1].ePlayer).getCity(
+		argsList[1].iCityId
+		).changeFreeBonus(
+			GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS"), 1
+			)
+	return 1
 
 
 ####### ALTERNATIVE_ENERGY ######
@@ -7924,7 +7910,7 @@ def doGlobalWarming(argsList):
       iGW += 4
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_FACTORY"):
       iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_INDUSTRIAL_COMPLEX"):
+    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MANUFACTURING_COMPLEX"):
       iGW += 16
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MINE"):
       iGW += 1
@@ -7954,21 +7940,19 @@ def doGlobalWarming(argsList):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_TAIGA"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_TAIGA"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_POLAR_OUTCROP"):
-          iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_MUDDY"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_LUSH"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_LUSH"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASSLAND"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_GRASSLAND"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_PLAINS"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BOG"):
+        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_PEAT_BOG"):
           iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_PLAINS") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_BARREN") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_ROCKY"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SCRUB"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_SCRUB"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DESERT"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BAMBOO") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_TALL_GRASS"):
+        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BAMBOO") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VERY_TALL_GRASS"):
           iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_DESERT"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DUNES"), True, True)
@@ -7991,10 +7975,10 @@ def doGlobalWarming(argsList):
                   randFlood = GAME.getSorenRandNum(100, "Global Warming flooding chance")
                   if iIce > randFlood:
                     iDPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-                    iDPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-                    iDPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-                    iDPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-                    iDPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+                    iDPlot.setImprovementType(-1)
+                    iDPlot.setBonusType(-1)
+                    iDPlot.setImprovementType(-1)
+                    iDPlot.setRouteType(-1)
                     iDPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST"), True, True)
                     iDPlot.setPlotType(PlotTypes.PLOT_OCEAN, True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_OCEAN_POLAR"):
@@ -8003,18 +7987,18 @@ def doGlobalWarming(argsList):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iIce > 100 and not iPlot.isLake():
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+        iPlot.setImprovementType(-1)
+        iPlot.setBonusType(-1)
+        iPlot.setImprovementType(-1)
+        iPlot.setRouteType(-1)
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
         iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iPlot.isLake():
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+        iPlot.setImprovementType(-1)
+        iPlot.setBonusType(-1)
+        iPlot.setImprovementType(-1)
+        iPlot.setRouteType(-1)
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
         iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
 
@@ -8300,7 +8284,6 @@ def doRemoveWVSlavery(argsList):
 		iSlaveMarket = GC.getInfoTypeForString("BUILDING_SLAVE_MARKET")
 		aiSlaveBuildings = [
 			GC.getInfoTypeForString("BUILDING_SLAVERY"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_I"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_I"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_II"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND"),

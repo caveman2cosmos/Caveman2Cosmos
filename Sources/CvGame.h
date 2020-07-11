@@ -98,7 +98,7 @@ public:
 	DllExport void selectionListGameNetMessage(int eMessage, int iData2 = -1, int iData3 = -1, int iData4 = -1, int iFlags = 0, bool bAlt = false, bool bShift = false) const; // Exposed to Python
 	void selectionListGameNetMessageInternal(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift, bool bInViewportCoordinates) const;
 	DllExport void selectedCitiesGameNetMessage(int eMessage, int iData2 = -1, int iData3 = -1, int iData4 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
-	void cityPushOrder(CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
+	void cityPushOrder(const CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
 
 	DllExport void selectUnit(CvUnit* pUnit, bool bClear, bool bToggle = false, bool bSound = false) const;
 	DllExport void selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) const;
@@ -406,8 +406,8 @@ public:
 	bool isScoreDirty() const; // Exposed to Python
 	void setScoreDirty(bool bNewValue); // Exposed to Python
 
-	bool isCircumnavigated(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	void makeCircumnavigated(TeamTypes eTeam);
+	TeamTypes getCircumnavigatedTeam() const; // Exposed to Python
+	void setCircumnavigatedTeam(TeamTypes eTeam); // Exposed to Python
 	bool circumnavigationAvailable() const;
 
 	bool isDiploVote(VoteSourceTypes eVoteSource) const; // Exposed to Python

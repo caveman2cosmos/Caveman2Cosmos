@@ -164,12 +164,12 @@ class TerraMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Terra.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      (3,2,1,2),
-			WorldSizeTypes.WORLDSIZE_TINY:      (3,2,1,2),
-			WorldSizeTypes.WORLDSIZE_SMALL:     (4,2,1,2),
+			WorldSizeTypes.WORLDSIZE_DUEL:	  (3,2,1,2),
+			WorldSizeTypes.WORLDSIZE_TINY:	  (3,2,1,2),
+			WorldSizeTypes.WORLDSIZE_SMALL:	 (4,2,1,2),
 			WorldSizeTypes.WORLDSIZE_STANDARD:  (4,2,1,2),
-			WorldSizeTypes.WORLDSIZE_LARGE:     (4,2,1,2),
-			WorldSizeTypes.WORLDSIZE_HUGE:      (5,2,1,2),
+			WorldSizeTypes.WORLDSIZE_LARGE:	 (4,2,1,2),
+			WorldSizeTypes.WORLDSIZE_HUGE:	  (5,2,1,2),
 			6:									(5,2,1,2),
 			7:									(6,2,1,2)
 			}
