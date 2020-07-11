@@ -110,8 +110,6 @@
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>
-	<!--
 	<events module="ParallelMapsInput"/>
-	-->
 	<events module="WoodlandCycle"/>
 </bug>
