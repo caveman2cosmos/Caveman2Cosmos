@@ -21,9 +21,10 @@ public:
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 	bool isNone() const { return m_pPlayer == NULL; }
 
+#ifdef PARALLEL_MAPS
 	void updateMembers();
 	void initMembers(const int iIndex);
-
+#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );

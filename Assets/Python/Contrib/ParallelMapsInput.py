@@ -10,6 +10,7 @@ from CvPythonExtensions import *
 import CvUtil
 
 GC = CyGlobalContext()
+bIsSwitchingMap = False
 
 
 class ParallelMapsInput:
@@ -20,11 +21,11 @@ class ParallelMapsInput:
 
 	def enableMultiMaps(self, argsList):
 		self.pEventManager.removeEventHandler("kbdEvent", self.enableMultiMaps)
-		GC.enableMultiMaps()
-		GC.updateMaps()
-		self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
-		self.updatePlayerContainers()
-		CvUtil.sendImmediateMessage("Multi-Maps enabled.")
+		if GC.enableMultiMaps():
+			GC.updateMaps()
+			self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
+			self.updatePlayerContainers()
+			CvUtil.sendImmediateMessage("Multi-Maps enabled.")
 
 	def updatePlayerContainers(self):
 		try:
@@ -36,14 +37,19 @@ class ParallelMapsInput:
 	def filterInput(self, argsList):
 		eventType = argsList[0]
 		if self.pEventManager.bAlt and eventType == EventType.EVT_KEYDOWN:
-			i = int(argsList[1]) -2
+			i = argsList[1] -2
 			if i < GC.getNumMapInfos() and i != CyGame().getCurrentMap():
-				CvUtil.sendImmediateMessage("Key: %d" %i)
+				global bIsSwitchingMap
+				bIsSwitchingMap = True
 				if not GC.mapInitialized(i):
 					self.initMap(i)
 					self.initPlayerContainers(i)
-				#else:
 				GC.switchMap(i)
+				bIsSwitchingMap = false
+				if i == 0:
+					CvUtil.sendImmediateMessage("Initial map")
+				else:
+					CvUtil.sendImmediateMessage("Map %d" %i)
 
 	def initMap(self, eMap):
 		try:
@@ -58,6 +64,5 @@ class ParallelMapsInput:
 				CyPlayer = GC.getPlayer(i)
 				#if CyPlayer.isAlive():
 				CyPlayer.initMembers(eMap)
-			CvUtil.sendImmediateMessage("Initialized data containers for the players.")
 		except:
 			CyPythonMgr().errorMsg("Error while initializing data for the players.")

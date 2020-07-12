@@ -1648,7 +1648,11 @@ void CvPlayerAI::AI_unitUpdate()
 	//	counts go through and fix it!
 	//	Note - this is fixing a symptom rather than a cause which is distasteful, but as
 	//	yet the cause remains elusive
+#ifdef PARALLEL_MAPS
 	if ( m_groupCycles[GC.getGame().getCurrentMap()]->getLength() != m_selectionGroups[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit == NULL ? 0 : 1) )
+#else
+	if ( m_groupCycle.getLength() != m_selectionGroups.getCount() - (m_pTempUnit == NULL ? 0 : 1) )
+#endif
 	{
 		if ( m_pTempUnit != NULL )
 		{
@@ -1666,8 +1670,11 @@ void CvPlayerAI::AI_unitUpdate()
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY()).c_str());
 		}
 
+#ifdef PARALLEL_MAPS
 		FAssert(m_selectionGroups[GC.getGame().getCurrentMap()]->getCount() > m_groupCycles[GC.getGame().getCurrentMap()]->getLength());	//	Other way round not seen - not handled currently
-
+#else
+		FAssert(m_selectionGroups.getCount() > m_groupCycle.getLength());	//	Other way round not seen - not handled currently
+#endif
 		OutputDebugString("Selection groups:\n");
 		foreach_ (CvSelectionGroup* pLoopSelectionGroup, groups())
 		{
