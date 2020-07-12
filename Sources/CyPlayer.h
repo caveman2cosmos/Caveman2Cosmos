@@ -23,7 +23,7 @@ public:
 
 #ifdef PARALLEL_MAPS
 	void updateMembers();
-	void initMembers(const int iIndex);
+	void initMembers(int iIndex);
 #endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );

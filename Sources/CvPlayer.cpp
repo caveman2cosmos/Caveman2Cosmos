@@ -17197,7 +17197,7 @@ void CvPlayer::addMembers()
 	m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
 }
 
-void CvPlayer::initMembers(const int iIndex)
+void CvPlayer::initMembers(int iIndex)
 {
 	m_plotGroups[iIndex]->init();
 	m_cities[iIndex]->init();
@@ -17251,7 +17251,7 @@ CvPlotGroup* CvPlayer::addPlotGroup()
 #ifdef PARALLEL_MAPS
 	return m_plotGroups[GC.getGame().getCurrentMap()]->add();
 #else
-	return((CvPlotGroup *)(m_plotGroups[GC.getGame().getCurrentMap()]->add()));
+	return((CvPlotGroup *)(m_plotGroups.add()));
 #endif
 }
 

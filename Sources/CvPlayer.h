@@ -1055,7 +1055,7 @@ public:
 #ifdef PARALLEL_MAPS
 	void updateMembers();
 	void addMembers();
-	void initMembers(const int iIndex);
+	void initMembers(int iIndex);
 #endif
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);

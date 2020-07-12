@@ -8097,12 +8097,13 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-	if (m_eCurrentMap == MAP_INITIAL)
+#ifdef PARALLEL_MAPS
+	if (m_eCurrentMap != MAP_INITIAL)
+		return;
+#endif
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			GET_PLAYER((PlayerTypes)iI).verifyAlive();
-		}
+		GET_PLAYER((PlayerTypes)iI).verifyAlive();
 	}
 }
 

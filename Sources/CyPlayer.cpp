@@ -26,7 +26,7 @@ void CyPlayer::updateMembers()
 	m_pPlayer->updateMembers();
 }
 
-void CyPlayer::initMembers(const int iIndex)
+void CyPlayer::initMembers(int iIndex)
 {
 	m_pPlayer->initMembers(iIndex);
 }
