@@ -1534,21 +1534,19 @@ class CvEventManager:
 				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_DJENNE_PYTHON",()), iPlayer, 16, 'Art/Interface/Buttons/Great_Wonders/great_mosque_of_djenne.dds', ColorTypes(44), iX, iY, True, True)
 		# Lotus Temple
 		elif iBuilding == mapBuildingType["LOTUS_TEMPLE"]:
-			iTeam = CyPlayer.getTeam()
 			bHuman = CyPlayer.isHuman()
-			iAttitude = GC.getInfoTypeForString("ATTITUDE_CAUTIOUS")
+			iCautious = GC.getInfoTypeForString("ATTITUDE_CAUTIOUS")
 			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-				if iPlayer == iPlayerX:
+				if iPlayerX == iPlayer:
 					continue
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
 					if not bHuman:
-						iTeamX = CyPlayerX.getTeam()
-						while CyPlayer.AI_getAttitudeExtra(iPlayerX) < iAttitude:
-							CyPlayer.AI_changeAttitudeExtra(iTeamX, 1)
+						while CyPlayer.AI_getAttitude(iPlayerX) < iCautious:
+							CyPlayer.AI_changeAttitudeExtra(iPlayerX, 1)
 					if not CyPlayerX.isHuman():
-						while CyPlayerX.AI_getAttitudeExtra(iPlayer) < iAttitude:
-							CyPlayerX.AI_changeAttitudeExtra(iTeam, 1)
+						while CyPlayerX.AI_getAttitude(iPlayer) < iCautious:
+							CyPlayerX.AI_changeAttitudeExtra(iPlayer, 1)
 		# Cleopatra's Needle
 		elif iBuilding == mapBuildingType["CLEOPATRA_NEEDLE"]:
 			from operator import itemgetter
