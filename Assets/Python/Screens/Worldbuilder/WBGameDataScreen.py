@@ -461,7 +461,6 @@ class WBGameDataScreen:
 				iChange = iValue - userData[1]
 			else:
 				iChange = userData[2]
-			print "NukesExploded: %d" % iChange
 			self.GAME.changeNukesExploded(iChange)
 			szTxt = self.szNukesExploded + str(iValue)
 
@@ -470,7 +469,6 @@ class WBGameDataScreen:
 				iChange = iValue - userData[1]
 			else:
 				iChange = userData[2]
-			print "TradeRoutes: %d" % iChange
 			self.GAME.changeTradeRoutes(iChange)
 			szTxt = self.szTradeRoutes + str(iValue)
 
