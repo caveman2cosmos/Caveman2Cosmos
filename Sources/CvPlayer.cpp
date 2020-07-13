@@ -3097,14 +3097,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	pCityPlot->updateCulture(true, false);
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(CvPlot* pAdjacentPlot, pCityPlot->adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pCityPlot->getX(), pCityPlot->getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			pAdjacentPlot->updateCulture(true, false);
-		}
+		pAdjacentPlot->updateCulture(true, false);
 	}
 
 	//Team Project (6)
@@ -7400,11 +7395,9 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 		{
 			if (iBarbCount < GC.getGoodyInfo(eGoody).getMinBarbarians())
 			{
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+				foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 				{
-					pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-					if (pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea()
+					if (pLoopPlot->getArea() == pPlot->getArea()
 					&& !pLoopPlot->isImpassable(getTeam()) && pLoopPlot->getNumUnits() == 0
 					&& (iPass > 0 || GC.getGame().getSorenRandNum(100, "Goody Barbs") < GC.getGoodyInfo(eGoody).getBarbarianUnitProb()))
 					{
@@ -30024,24 +30017,19 @@ void CvPlayer::acquireFort(CvPlot* pPlot)
 
 	ImprovementTypes eOldFortImprovement = pPlot->getImprovementType();
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		if (!pLoopPlot->isCity())
 		{
-			if (!pLoopPlot->isCity())
+			if ((pLoopPlot->getOwner() == pPlot->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
 			{
-				if ((pLoopPlot->getOwner() == pPlot->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
-				{
-					const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwner(), 1);
+				const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwner(), 1);
 
-					if (iNumCitiesForRange == 1 && pLoopPlot->calculateCulturalOwner() == getID())
-					{
-						//	This captures surrounding tiles that are culturally owned by the
-						//	captor even if the previous owner has fixed borders
-						pLoopPlot->setOwner(getID(), true, false);
-					}
+				if (iNumCitiesForRange == 1 && pLoopPlot->calculateCulturalOwner() == getID())
+				{
+					//	This captures surrounding tiles that are culturally owned by the
+					//	captor even if the previous owner has fixed borders
+					pLoopPlot->setOwner(getID(), true, false);
 				}
 			}
 		}

@@ -17,8 +17,8 @@ import BugCore
 import BugUtil
 import TradeUtil
 
-OPEN_LOG_EVENT_ID = CvUtil.getNewEventID("Autolog.OpenLog")
-CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID("Autolog.CustomEntry")
+OPEN_LOG_EVENT_ID = CvUtil.getNewEventID()
+CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID()
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
