@@ -12295,11 +12295,9 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		//once everything is nicely irrigated, this code should be really fast...
 		if ((pPlot->isIrrigated()) || (pPlot->isFreshWater() && pPlot->canHavePotentialIrrigation()))
 		{
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* pAdjacentPlot, pPlot->adjacent())
 			{
-				CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-				if ((pAdjacentPlot != NULL) && (pAdjacentPlot->getOwner() == getOwner()) && (pAdjacentPlot->isCityRadius()))
+				if (pAdjacentPlot->getOwner() == getOwner() && pAdjacentPlot->isCityRadius())
 				{
 					if (!pAdjacentPlot->isFreshWater())
 					{
@@ -12309,13 +12307,11 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						{
 							CvPlot* eBestIrrigationPlot = NULL;
 
-
-							for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
+							foreach_(CvPlot* pAdjacentPlot2, pAdjacentPlot->adjacent())
 							{
-								CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX(), pAdjacentPlot->getY(), ((DirectionTypes)iJ));
-								if ((pAdjacentPlot2 != NULL) && (pAdjacentPlot2->getOwner() == getOwner()))
+								if (pAdjacentPlot2->getOwner() == getOwner())
 								{
-									BonusTypes eTempBonus = pAdjacentPlot2->getNonObsoleteBonusType(getTeam());
+									const BonusTypes eTempBonus = pAdjacentPlot2->getNonObsoleteBonusType(getTeam());
 									if (pAdjacentPlot->isIrrigated())
 									{
 										//the irrigation has to be coming from somewhere
@@ -12334,7 +12330,6 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 												}
 											}
 										}
-
 									}
 									else
 									{
