@@ -6,8 +6,7 @@ import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
+
 GC = CyGlobalContext()
 
 iSelectedEvent = -1
@@ -21,7 +20,8 @@ iSelectedBuilding = -1
 
 class WBEventScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 80
 
 	def interfaceScreen(self, pPlotX):
@@ -282,26 +282,26 @@ class WBEventScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pPlot)
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 2:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(pPlot.getOwner())
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pPlot.getOwner())
 			elif iIndex == 3:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pPlot.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pPlot.getTeam())
 			elif iIndex == 4:
 				if pPlot.isCity():
-					WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pPlot.getPlotCity())
+					WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pPlot.getPlotCity())
 			elif iIndex == 5:
 				if iSelectedUnit > -1 and iEventPlayer > -1:
 					pUnit = GC.getPlayer(iEventPlayer).getUnit(iSelectedUnit)
 				else:
 					pUnit = pPlot.getUnit(0)
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnit)
+					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
 			elif iIndex == 11:
 				iPlayer = pPlot.getOwner()
 				if iPlayer == -1:
 					iPlayer = CyGame().getActivePlayer()
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "WBEvent":
 			iSelectedEvent = inputClass.getData2()
