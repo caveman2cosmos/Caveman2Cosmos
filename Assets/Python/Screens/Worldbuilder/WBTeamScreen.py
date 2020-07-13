@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBProjectScreen
-import WBTechScreen
 import WBPlayerScreen
 import WBPlayerUnits
 import WBInfoScreen
@@ -13,7 +12,8 @@ iSelectedYield = 0
 
 class WBTeamScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 
 	def interfaceScreen(self, iTeamX):
@@ -421,15 +421,15 @@ class WBTeamScreen:
 		elif inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(pTeam.getLeaderID())
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pTeam.getLeaderID())
 			elif iIndex == 2:
-				WBProjectScreen.WBProjectScreen().interfaceScreen(iTeam)
+				WBProjectScreen.WBProjectScreen(self.WB).interfaceScreen(iTeam)
 			elif iIndex == 3:
-				WBTechScreen.WBTechScreen().interfaceScreen(iTeam)
+				self.WB.goToSubScreen("TechScreen")
 			elif iIndex == 4:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(pTeam.getLeaderID())
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(pTeam.getLeaderID())
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(pTeam.getLeaderID())
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(pTeam.getLeaderID())
 
 		elif inputClass.getFunctionName() == "CurrentTeam":
 			iTeamX = screen.getPullDownData("CurrentTeam", screen.getSelectedPullDownID("CurrentTeam"))
@@ -438,7 +438,7 @@ class WBTeamScreen:
 		elif inputClass.getFunctionName() == "WBTeamMembers":
 			if inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
 				iPlayer = inputClass.getData2() /10000
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "MergeTeam":
 			pTeam.addTeam(screen.getPullDownData("MergeTeam", screen.getSelectedPullDownID("MergeTeam")))

@@ -8,7 +8,6 @@ import WBCityDataScreen
 import WBBuildingScreen
 import WBUnitScreen
 import WBPromotionScreen
-import WBGameDataScreen
 import WBReligionScreen
 import WBCorporationScreen
 import WBDiplomacyScreen
@@ -26,7 +25,7 @@ GAME = GC.getGame()
 bPython = True
 Activities = ["AWAKE", "HOLD", "SLEEP", "HEAL", "SENTRY", "INTERCEPT", "MISSION", "PATROL", "PLUNDER"]
 
-class CvWorldBuilderScreen:
+class WorldBuilder:
 
 	def __init__(self, screenId):
 		self.screenId = screenId
@@ -67,8 +66,10 @@ class CvWorldBuilderScreen:
 			# init sub-screens
 			self.inSubScreen = None
 			import WBTechScreen
+			import WBGameDataScreen
 			self.subScreens = {
-				"TechScreen" : WBTechScreen.WBTechScreen(self)
+				"TechScreen" : WBTechScreen.WBTechScreen(self),
+				"GameScreen" : WBGameDataScreen.WBGameDataScreen(self)
 			}
 			self.iPlayerAddMode = "Units"
 			self.iSelection = -1
@@ -83,6 +84,7 @@ class CvWorldBuilderScreen:
 			self.xRes = SR.x
 			self.yRes = SR.y
 			self.aFontList = SR.aFontList
+			self.iFontScale = SR.iFontScale
 			screen = self.getScreen()
 			screen.setCloseOnEscape(False)
 			screen.setAlwaysShown(True)
@@ -1168,23 +1170,23 @@ class CvWorldBuilderScreen:
 				WBUnitScreen.WBUnitScreen(self).interfaceScreen(self.m_pCurrentPlot.getUnit(0))
 		elif self.iPlayerAddMode == "Promotions":
 			if self.m_pCurrentPlot.getNumUnits():
-				WBPromotionScreen.WBPromotionScreen().interfaceScreen(self.m_pCurrentPlot.getUnit(0))
+				WBPromotionScreen.WBPromotionScreen(self).interfaceScreen(self.m_pCurrentPlot.getUnit(0))
 		elif bCtrl or self.iPlayerAddMode == "CityDataI":
 			if self.m_pCurrentPlot.isCity():
 				WBCityEditScreen.WBCityEditScreen(self).interfaceScreen(self.m_pCurrentPlot.getPlotCity())
 		elif self.iPlayerAddMode == "CityDataII":
 			if self.m_pCurrentPlot.isCity():
-				WBCityDataScreen.WBCityDataScreen().interfaceScreen(self.m_pCurrentPlot.getPlotCity())
+				WBCityDataScreen.WBCityDataScreen(self).interfaceScreen(self.m_pCurrentPlot.getPlotCity())
 		elif self.iPlayerAddMode == "CityBuildings":
 			if self.m_pCurrentPlot.isCity():
-				WBBuildingScreen.WBBuildingScreen().interfaceScreen(self.m_pCurrentPlot.getPlotCity())
+				WBBuildingScreen.WBBuildingScreen(self).interfaceScreen(self.m_pCurrentPlot.getPlotCity())
 		elif self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():
 				self.setMultipleReveal(True)
 		elif self.iPlayerAddMode == "PlotData":
-			WBPlotScreen.WBPlotScreen().interfaceScreen(self.m_pCurrentPlot)
+			WBPlotScreen.WBPlotScreen(self).interfaceScreen(self.m_pCurrentPlot)
 		elif self.iPlayerAddMode == "Events":
-			WBEventScreen.WBEventScreen().interfaceScreen(self.m_pCurrentPlot)
+			WBEventScreen.WBEventScreen(self).interfaceScreen(self.m_pCurrentPlot)
 		elif self.iPlayerAddMode == "StartingPlot":
 			pPlayer.setStartingPlot(self.m_pCurrentPlot, True)
 			self.refreshStartingPlots()
@@ -1359,11 +1361,15 @@ class CvWorldBuilderScreen:
 		return (sStart + sEnd)
 
 	def goToSubScreen(self, goTo):
-		if goTo:
+
+		if not self.inSubScreen is None:
+			self.inSubScreen.exit(self.getScreen())
+
+		if goTo in self.subScreens:
 			self.inSubScreen = self.subScreens[goTo]
 			self.inSubScreen.interfaceScreen()
 		else:
-			self.inSubScreen = None
+			raise "WorldBuilder.goToScreen - invalid argument: goTo = '%s'" % goTo
 
 	def getScreen(self):
 		return CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -1424,37 +1430,37 @@ class CvWorldBuilderScreen:
 				self.placeObject()
 
 		elif NAME == "TradeScreen":
-			WBTradeScreen.WBTradeScreen().interfaceScreen()
+			WBTradeScreen.WBTradeScreen(self).interfaceScreen()
 
 		elif NAME == "InfoScreen":
-			WBInfoScreen.WBInfoScreen().interfaceScreen(self.iCurrentPlayer)
+			WBInfoScreen.WBInfoScreen(self).interfaceScreen(self.iCurrentPlayer)
 
 		elif NAME == "EditGameOptions":
-			WBGameDataScreen.WBGameDataScreen(self).interfaceScreen()
+			self.goToSubScreen("GameScreen")
 
 		elif NAME == "EditReligions":
-			WBReligionScreen.WBReligionScreen().interfaceScreen(self.iCurrentPlayer)
+			WBReligionScreen.WBReligionScreen(self).interfaceScreen(self.iCurrentPlayer)
 
 		elif NAME == "EditCorporations":
-			WBCorporationScreen.WBCorporationScreen().interfaceScreen(self.iCurrentPlayer)
+			WBCorporationScreen.WBCorporationScreen(self).interfaceScreen(self.iCurrentPlayer)
 
 		elif NAME == "EditEspionage":
-			WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(self.iCurrentPlayer, True)
+			WBDiplomacyScreen.WBDiplomacyScreen(self).interfaceScreen(self.iCurrentPlayer, True)
 
 		elif NAME == "EditPlayerData":
-			WBPlayerScreen.WBPlayerScreen().interfaceScreen(self.iCurrentPlayer)
+			WBPlayerScreen.WBPlayerScreen(self).interfaceScreen(self.iCurrentPlayer)
 
 		elif NAME == "EditTeamData":
-			WBTeamScreen.WBTeamScreen().interfaceScreen(self.m_iCurrentTeam)
+			WBTeamScreen.WBTeamScreen(self).interfaceScreen(self.m_iCurrentTeam)
 
 		elif NAME == "EditTechnologies":
 			self.goToSubScreen("TechScreen")
 
 		elif NAME == "EditProjects":
-			WBProjectScreen.WBProjectScreen().interfaceScreen(self.m_iCurrentTeam)
+			WBProjectScreen.WBProjectScreen(self).interfaceScreen(self.m_iCurrentTeam)
 
 		elif NAME == "EditUnitsCities":
-			WBPlayerUnits.WBPlayerUnits().interfaceScreen(self.iCurrentPlayer)
+			WBPlayerUnits.WBPlayerUnits(self).interfaceScreen(self.iCurrentPlayer)
 
 		elif NAME == "WorldBuilderPlayerChoice":
 			self.iCurrentPlayer = screen.getPullDownData("WorldBuilderPlayerChoice", screen.getSelectedPullDownID("WorldBuilderPlayerChoice"))
@@ -1575,7 +1581,7 @@ class CvWorldBuilderScreen:
 		elif NAME == "SensibilityCheck":
 			self.bSensibility = not self.bSensibility
 			self.setCurrentModeCheckbox()
-		return 1
+		return 0
 
 	def killScreen(self):
 		screen = self.getScreen()

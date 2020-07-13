@@ -320,13 +320,13 @@ public:
 	void changeMercyRuleCounter(int iChange);
 	void setMercyRuleCounter(int iNewVal);
 
-	int countPeaks(CvPlot* pPlot, bool bCountHill = false);
-	void markBayPlots(CvPlot* pPlot);
-	int countForest(CvPlot* pPlot, int iForest);
+	int countPeaks(const CvPlot* pPlot, bool bCountHill = false);
+	void markBayPlots(const CvPlot* pPlot);
+	int countForest(const CvPlot* pPlot, int iForest);
 	void addLandmarkSigns();
-	int countDesert(CvPlot* pPlot);
-	void markLakePlots(CvPlot* pPlot);
-	int countJungle(CvPlot* pPlot, int iJungle);
+	int countDesert(const CvPlot* pPlot);
+	void markLakePlots(const CvPlot* pPlot);
+	int countJungle(const CvPlot* pPlot, int iJungle);
 	char getRandomVowel();
 	char getRandomConsonant();
 	bool isValidName(CvWString szName) const;
@@ -349,7 +349,7 @@ public:
 	void findDeserts();
 	void findLakes();
 	void pruneLandmarks();
-	void removeAdjacentLandmarks(CvPlot* pCenterPlot, CvPlot* pExceptionPlot = NULL, int iRadius = 1);
+	void removeAdjacentLandmarks(const CvPlot* pCenterPlot, const CvPlot* pExceptionPlot = NULL, int iRadius = 1);
 	void clearLandmarks(bool bClear = true);
 	void updateInitialSigns();
 

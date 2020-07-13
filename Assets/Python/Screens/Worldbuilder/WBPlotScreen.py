@@ -7,9 +7,8 @@ import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
 import Popup
-import CvScreensInterface
+
 GC = CyGlobalContext()
 
 bAdd = True
@@ -22,7 +21,8 @@ iSelectedClass = -1
 
 class WBPlotScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 
 	def interfaceScreen(self, pPlotX):
@@ -195,7 +195,7 @@ class WBPlotScreen:
 				iLeader = pPlayerX.getLeaderType()
 				screen.setTableText("WBSigns", 0, iRow, "", GC.getCivilizationInfo(iCivilization).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, iPlayerX * 10000 + iCivilization, 1<<0 )
 				screen.setTableText("WBSigns", 1, iRow, "", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayerX * 10000 + iLeader, 1<<0 )
-				sText = "<font=3>" + CvScreensInterface.worldBuilderScreen.addComma(pPlot.getCulture(iPlayerX)) + CyTranslator().getText("[ICON_CULTURE]", ()) + "</font>"
+				sText = "<font=3>" + self.WB.addComma(pPlot.getCulture(iPlayerX)) + CyTranslator().getText("[ICON_CULTURE]", ()) + "</font>"
 				screen.setTableText("WBSigns", 2, iRow, sText, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
 				iIndex = lSigns[iPlayerX]
 				sText = ""
@@ -512,24 +512,24 @@ class WBPlotScreen:
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			iPlayer = pPlot.getOwner()
 			if iIndex == 1:
-				WBEventScreen.WBEventScreen().interfaceScreen(pPlot)
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 2:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 3:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pPlot.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pPlot.getTeam())
 			elif iIndex == 4:
 				if pPlot.isCity():
-					WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pPlot.getPlotCity())
+					WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pPlot.getPlotCity())
 			elif iIndex == 5:
 				pUnit = pPlot.getUnit(0)
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnit)
+					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
 			elif iIndex == 6:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(iPlayer)
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 11:
 				if iPlayer == -1:
 					iPlayer = CyGame().getActivePlayer()
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "NextPlotUpButton":
 			pNewPlot = CyMap().plot(pPlot.getX(), pPlot.getY() + 1)

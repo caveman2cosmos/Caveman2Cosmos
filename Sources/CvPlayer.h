@@ -1736,9 +1736,9 @@ public:
 	virtual int AI_getNumAIUnits(UnitAITypes eIndex) const = 0; // Exposed to Python
 	virtual void AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange) = 0;
 	virtual void AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange) = 0;
-	virtual int AI_getAttitudeExtra(PlayerTypes eIndex) const = 0; // Exposed to Python
-	virtual void AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue) = 0; // Exposed to Python
-	virtual void AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange) = 0; // Exposed to Python
+	virtual int AI_getAttitudeExtra(const PlayerTypes ePlayer) const = 0; // Exposed to Python
+	virtual void AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue) = 0; // Exposed to Python
+	virtual void AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange) = 0; // Exposed to Python
 	virtual void AI_setFirstContact(PlayerTypes eIndex, bool bNewValue) = 0;
 	virtual int AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const = 0;
 	virtual void AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange) = 0;

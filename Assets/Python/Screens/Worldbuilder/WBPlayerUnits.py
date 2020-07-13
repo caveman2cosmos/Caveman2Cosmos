@@ -3,7 +3,6 @@ import CvScreenEnums
 import WBPlayerScreen
 import WBTeamScreen
 import WBProjectScreen
-import WBTechScreen
 import WBCityEditScreen
 import WBUnitScreen
 import WBInfoScreen
@@ -12,8 +11,7 @@ import WBBuildingScreen
 import WBPromotionScreen
 import WBPlotScreen
 import WBEventScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
+import WorldBuilder
 
 GC = CyGlobalContext()
 iCityID = -1
@@ -26,7 +24,8 @@ iPlotType = 2
 iActivityType = 0
 
 class WBPlayerUnits:
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 
 	def interfaceScreen(self, iPlayerX):
@@ -81,8 +80,8 @@ class WBPlayerUnits:
 
 		iX += iWidth
 		screen.addDropDownBoxGFC("ActivityType", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		for i in xrange(len(CvWorldBuilderScreen.Activities)):
-			screen.addPullDownString("ActivityType", CvWorldBuilderScreen.Activities[i], i, i, i == iActivityType)
+		for i in xrange(len(WorldBuilder.Activities)):
+			screen.addPullDownString("ActivityType", WorldBuilder.Activities[i], i, i, i == iActivityType)
 		if iCopyType != 5:
 			screen.hide("ActivityType")
 
@@ -271,7 +270,7 @@ class WBPlayerUnits:
 			screen.setTableText("WBCityList", 0, iRow, "", GC.getCivilizationInfo(iCivilization).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, i[0] * 10000 + iCivilization, 1<<2)
 			screen.setTableText("WBCityList", 1, iRow, "<font=3>" + sColor + loopCity.getName() + "</color></font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<0)
 			screen.setTableInt("WBCityList", 2, iRow, "<font=3>" + str(loopCity.getID()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
-			screen.setTableInt("WBCityList", 3, iRow, "<font=3>" + CvScreensInterface.worldBuilderScreen.addComma(loopCity.getCulture(i[0])) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
+			screen.setTableInt("WBCityList", 3, iRow, "<font=3>" + self.WB.addComma(loopCity.getCulture(i[0])) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
 			screen.setTableInt("WBCityList", 4, iRow, "<font=3>" + str(loopCity.getPopulation()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
 			screen.setTableInt("WBCityList", 5, iRow, "<font=3>" + str(loopCity.happyLevel() - loopCity.unhappyLevel(0)) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
 			screen.setTableInt("WBCityList", 6, iRow, "<font=3>" + str(loopCity.goodHealth() - loopCity.badHealth(0)) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 7200 + i[0], i[1], 1<<2)
@@ -394,8 +393,8 @@ class WBPlayerUnits:
 		sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
 		pGroup = pUnit.getGroup()
 		iActivity = pGroup.getActivityType()
-		if iActivity > -1 and iActivity < len(CvWorldBuilderScreen.Activities):
-			sText += "\n" + CvWorldBuilderScreen.Activities[iActivity]
+		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
+			sText += "\n" + WorldBuilder.Activities[iActivity]
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(pUnit.getID())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 		sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
@@ -448,33 +447,33 @@ class WBPlayerUnits:
 		if sName == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 1:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pPlayer.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pPlayer.getTeam())
 			elif iIndex == 2:
-				WBProjectScreen.WBProjectScreen().interfaceScreen(pPlayer.getTeam())
+				WBProjectScreen.WBProjectScreen(self.WB).interfaceScreen(pPlayer.getTeam())
 			elif iIndex == 3:
-				WBTechScreen.WBTechScreen().interfaceScreen(pPlayer.getTeam())
+				self.WB.goToSubScreen("TechScreen")
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 5:
-				WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnitOwner.getUnit(iUnitID))
+				WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
 			elif iIndex == 6:
-				WBPromotionScreen.WBPromotionScreen().interfaceScreen(pUnitOwner.getUnit(iUnitID))
+				WBPromotionScreen.WBPromotionScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
 			elif iIndex == 7:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pUnitOwner.getUnit(iUnitID).plot())
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID).plot())
 			elif iIndex == 8:
-				WBEventScreen.WBEventScreen().interfaceScreen(pUnitOwner.getUnit(iUnitID).plot())
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID).plot())
 			elif iIndex == 9:
-				WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pCityOwner.getCity(iCityID))
+				WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID))
 			elif iIndex == 10:
-				WBCityDataScreen.WBCityDataScreen().interfaceScreen(pCityOwner.getCity(iCityID))
+				WBCityDataScreen.WBCityDataScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID))
 			elif iIndex == 14:
-				WBBuildingScreen.WBBuildingScreen().interfaceScreen(pCityOwner.getCity(iCityID))
+				WBBuildingScreen.WBBuildingScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID))
 			elif iIndex == 12:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pCityOwner.getCity(iCityID).plot())
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID).plot())
 			elif iIndex == 13:
-				WBEventScreen.WBEventScreen().interfaceScreen(pCityOwner.getCity(iCityID).plot())
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID).plot())
 
 		elif sName == "CurrentPlayer":
 			iIndex = screen.getPullDownData("CurrentPlayer", screen.getSelectedPullDownID("CurrentPlayer"))
@@ -512,15 +511,15 @@ class WBPlayerUnits:
 			self.sortUnits()
 
 		elif sName == "GoToCity":
-			WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pCityOwner.getCity(iCityID))
+			WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID))
 
 		elif sName == "GoToUnit":
-			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnitOwner.getUnit(iUnitID))
+			WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
 
 		elif sName == "WBCityList":
 			if inputClass.getData1() == 7872:
 				iCityOwner = inputClass.getData2() /10000
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iCityOwner)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iCityOwner)
 			else:
 				iCityID = inputClass.getData2()
 				iCityOwner = inputClass.getData1() - 7200
@@ -548,7 +547,7 @@ class WBPlayerUnits:
 			if inputClass.getData1() == 1043: return
 			elif inputClass.getData1() == 7872:
 				iUnitOwner = inputClass.getData2() /10000
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iUnitOwner)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iUnitOwner)
 			else:
 				iUnitID = inputClass.getData2()
 				iUnitOwner = inputClass.getData1() - 8300

@@ -10,9 +10,7 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
-import CvEventManager
+import WorldBuilder
 
 GC = CyGlobalContext()
 
@@ -24,7 +22,8 @@ bApplyAll = False
 
 class WBBuildingScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 80
 		self.lCities = []
 		import CvEventInterface
@@ -229,25 +228,25 @@ class WBBuildingScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pCity)
+				WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pCity)
 			elif iIndex == 1:
-				WBCityDataScreen.WBCityDataScreen().interfaceScreen(pCity)
+				WBCityDataScreen.WBCityDataScreen(self.WB).interfaceScreen(pCity)
 			elif iIndex == 3:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 4:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pCity.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pCity.getTeam())
 			elif iIndex == 5:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(iPlayer)
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 6:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pCity.plot())
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pCity.plot())
 			elif iIndex == 7:
-				WBEventScreen.WBEventScreen().interfaceScreen(pCity.plot())
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pCity.plot())
 			elif iIndex == 8:
-				WBReligionScreen.WBReligionScreen().interfaceScreen(iPlayer)
+				WBReligionScreen.WBReligionScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 9:
-				WBCorporationScreen.WBCorporationScreen().interfaceScreen(iPlayer)
+				WBCorporationScreen.WBCorporationScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "OwnerType":
 			iOwnerType = screen.getPullDownData("OwnerType", screen.getSelectedPullDownID("OwnerType"))
@@ -376,7 +375,7 @@ class WBBuildingScreen:
 
 	def doEffects(self, pCity, item, bAdd):
 		bEffects = False
-		if bAdd and CvWorldBuilderScreen.bPython and pCity.getNumRealBuilding(item) == 0:
+		if bAdd and WorldBuilder.bPython and pCity.getNumRealBuilding(item) == 0:
 			bEffects = True
 		pCity.setNumRealBuilding(item, bAdd)
 		if bEffects:
