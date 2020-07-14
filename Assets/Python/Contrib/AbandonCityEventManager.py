@@ -186,13 +186,9 @@ class CityDemolish:
 			Y = CyCity.getY()
 
 			iCulturePercent = CyCity.calculateCulturePercent(iPlayer)
-			print "iCulturePercent = %d" % iCulturePercent
 			iPopulation = CyCity.getPopulation()
 			iOwnCulturePop = iPopulation * iCulturePercent / 100
 			iForeignPop = iPopulation - iOwnCulturePop
-			print "iPopulation = %d" % iPopulation
-			print "iOwnCulturePop = %d" % iOwnCulturePop
-			print "iForeignPop = %d" % iForeignPop
 
 			# Judge
 			UNIT = GC.getInfoTypeForString("UNIT_JUDGE")
