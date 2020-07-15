@@ -732,10 +732,9 @@
 		<Tag>TXT_KEY_REVDCM_HINT_12</Tag>
 		<English>*Revolutions Mod Hint*: In Revolutions, your potential opponent is not just your rival civ, but your own people...</English>
 		<French>*Conseil Mod Revolution*: Dans Révolutions, votre adversaire potentiel n'est pas uniquement une Civ rivale, mais également votre propre peuple...</French>
-		<German>*Revolutions Mod Hint*: In Revolutions, your potential opponent is not just your rival civ, but your own people..</German>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: In 'Revolutions', il nemico potenziale non è solo una delle civiltà rivali, ma il tuo stesso popolo..</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: In 'Revolutions', il nemico potenziale non è solo una delle civiltà rivali, ma il tuo stesso popolo...</Italian>
 		<Spanish>*Consejo de Revolution*: En Revolution, tu enemigo potencial no son solo las civilizaciones rivales, sino también tu propio pueblo...</Spanish>
-		<Polish>*Podpowiedź do moda Rewolucje*: W Rewolucjach, Twoim potencjalnym przeciwnikiem nie jest tylko Twój sąsiad, ale też Twoi ludzie..</Polish>
+		<Polish>*Podpowiedź do moda Rewolucje*: W Rewolucjach, Twoim potencjalnym przeciwnikiem nie jest tylko Twój sąsiad, ale też Twoi ludzie...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_13</Tag>
@@ -827,9 +826,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_23</Tag>
-		<English>*Revolutions Mod Hint*: If you pay out cash to one city in order to keep it quiet, other cities may increase their disloyalty too...unless you pay up to them as well!</English>
-		<French>*Conseil Mod Revolution*: Si vous payez une Ville pour la réduire au silence, les autres Villes pourraient se montrer de moins en moins loyales également...jusqu'à que vous ayez à payer pour toutes!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Se cominci a pagare una città per mantenere la calma, altre città potranno aumentare il loro dissenso, fino quando non pagherai anche loro!</Italian>
+		<English>*Revolutions Mod Hint*: If you pay out cash to one city in order to keep it quiet, other cities may increase their disloyalty too... unless you pay up to them as well!</English>
+		<French>*Conseil Mod Revolution*: Si vous payez une Ville pour la réduire au silence, les autres Villes pourraient se montrer de moins en moins loyales également... jusqu'à que vous ayez à payer pour toutes!</French>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Se cominci a pagare una città per mantenere la calma, altre città potranno aumentare il loro dissenso... fino quando non pagherai anche loro!</Italian>
 		<Spanish>*Consejo de Revolution*: Si repartes dinero en una ciudad para mantener el orden, otras ciudades también podrian incrementar su deslealtad... ¡a no ser que les pagues tambien a ellos!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli zaczniesz inwestować w jedno z miast by utrzymać spokój, inne miasta mogą zwiększyć swoją nielojalność wobec Ciebie - chyba, że je również dobrze opłacisz!</Polish>
 	</TEXT>
@@ -884,7 +883,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_3</Tag>
 		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor can also display important buildings constructed in a city that are relevant to Revolutions, especially cultural buildings like wonders, and theatres!</English>
-		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution peut également afficher les bâtiments construits, ayant une influence pour la stabilité de l'Empire, particulièrement les bâtiments culturels (Merveilles, théatres,...)</French>
+		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution peut également afficher les bâtiments construits, ayant une influence pour la stabilité de l'Empire, particulièrement les bâtiments culturels (Merveilles, théatres...)</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermata del Consigliere Rivoluzionario può mostrare edifici cittadini rilevanti per 'Revolutions', tipo edifici culturali come Meraviglie e Teatri!</Italian>
 		<Spanish>*Consejo de Revolution*: El Consejero de Revolución también puede mostrar edificios relevantes para la estabilidad construidos en una ciudad, especialmente edificios culturales como Maravillas y teatros.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Ekran Doradcy ds. Rewolucji może również pokazać ważne budynki wybudowane w mieście powiązane z Rewolucją, szczególnie budynki kulturowe - takie jak: Cuda i Teatry!</Polish>
@@ -996,7 +995,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_42</Tag>
 		<English>*Revolutions Mod Hint*: Distant settlements need special attention. Give them extras like cultural assets, defence assets and military support to ensure that you are looking after them!</English>
-		<French>*Conseil Mod Revolution*: Les Villes distantes ont besoin d'une attention particulière. Donnez-leur des bâtiments supplémentaires (culturels, défensifs,...) et également le soutien militaire nécessaire pour leur assurer que vous les considérez et ne les oubliez pas!</French>
+		<French>*Conseil Mod Revolution*: Les Villes distantes ont besoin d'une attention particulière. Donnez-leur des bâtiments supplémentaires (culturels, défensifs...) et également le soutien militaire nécessaire pour leur assurer que vous les considérez et ne les oubliez pas!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Insediamenti lontani devno essere seguiti con attenzione. Sviluppa per loro infrastrutture culturali e militari aggiuntive, per convincerli che ti prendi cura di loro!</Italian>
 		<Spanish>*Consejo de Revolution*: Los asentamientos lejanos requieren especial cuidado. Proporciónales elementos como infraestructuras culturales o soporte militar... ¡para que sus habitantes noten que te preocupas por ellos!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Dalekie osady potrzebują specjalnej uwagi. Zapewnij im więc kulturę, obronę i wsparcie wojskowe, by udowodnić, że dbasz o nie!</Polish>
@@ -1246,9 +1245,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_70</Tag>
-		<English>*Revolutions Mod Hint*: Don't be scared to run slavery! The citizens will endure the whipping.....for a time!</English>
-		<French>*Conseil Mod Revolution*: Ne soyez pas effrayés par l'esclavage! Les citoyens vont endurer le fouet.....pour un temps!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Non abbiate paura di imporre lo Schiavismo! I cittadini sapranno sopportare le frustate..... per un po'!</Italian>
+		<English>*Revolutions Mod Hint*: Don't be scared to run slavery! The citizens will endure the whipping... for a time!</English>
+		<French>*Conseil Mod Revolution*: Ne soyez pas effrayés par l'esclavage! Les citoyens vont endurer le fouet... pour un temps!</French>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Non abbiate paura di imporre lo Schiavismo! I cittadini sapranno sopportare le frustate... per un po'!</Italian>
 		<Spanish>*Consejo de Revolution*: ¡No tengas miedo de adoptar la Esclavitud! Los ciudadanos podrán soporta los latigazos... ¡al menos durante un tiempo!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Nie bój się przejść na niewolnictwo! Obywatele zniosą chłostę... przez jakiś czas!</Polish>
 	</TEXT>
@@ -1343,10 +1342,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_81</Tag>
 		<English>*DCM Hint*: Range bombarding cities has much less impact on the defenders than the defences of the city. Defenders can seek cover even behind damaged walls... for a time.</English>
-		<French>*Conseils DCM*: Le Bombardement à distance des Villes a beaucoup moins d'impact sur les défenseurs que sur les défenses. Ceux-ci peuvent chercher à se protéger derrière les ruines... pour un temps...</French>
-		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha meno impatto sui difensori che sulle difese. I difensori possono cercare riparo anche dietro le mura danneggiate... per una sola volta...</Italian>
-		<Spanish>*Consejo de DCM*: Realizar cañoneo de alcance sobre las ciudades produce mucho menos impacto sobre los defensores que sobre las defensas. Los defensores pues buscar cobijo incluso detrás de las murallas dañadas, al menos durante un tiempo...</Spanish>
-		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu miasta ma dużo mniejszy wpływ na obrońców niż na obronę miasta. Obrońcy mogą szukać schronienia nawet z tyłu uszkodzonych ścian... Przez jakiś czas...</Polish>
+		<French>*Conseils DCM*: Le Bombardement à distance des Villes a beaucoup moins d'impact sur les défenseurs que sur les défenses. Ceux-ci peuvent chercher à se protéger derrière les ruines... pour un temps.</French>
+		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha meno impatto sui difensori che sulle difese. I difensori possono cercare riparo anche dietro le mura danneggiate... per una sola volta.</Italian>
+		<Spanish>*Consejo de DCM*: Realizar cañoneo de alcance sobre las ciudades produce mucho menos impacto sobre los defensores que sobre las defensas. Los defensores pues buscar cobijo incluso detrás de las murallas dañadas... al menos durante un tiempo.</Spanish>
+		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu miasta ma dużo mniejszy wpływ na obrońców niż na obronę miasta. Obrońcy mogą szukać schronienia nawet z tyłu uszkodzonych ścian... Przez jakiś czas.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_82</Tag>
@@ -1774,7 +1773,7 @@
 		<Tag>TXT_KEY_ROM_HINT_40</Tag>
 		<English>Caveman2Cosmos: With the Barbarian World game option the barbarians start with a free city for every civilization in the game. Combined with Barbarian Civ game option you'll see those Barbarian civs to grow into new civilizations earlier than with just the Barbarian Civ game option alone - if you survive the barbarian hordes...</English>
 		<French>Caveman2Cosmos: Avec l'option 'Monde Barbare' les barbares démarrent avec une Ville pour chaque civilisation de la partie. Combinée avec l'option 'Civ Barbare', vous allez voir ces Villes barbares rapidement faire émerger de nouvelles Civilisations - si vous survivez aux hordes barbares...</French>
-		<Italian>Caveman2Cosmos: Con l'opzione Mondo barbarico, i barbari cominciano il gioco con una città per ogni civiltà in gioco. Combinato con l'opzione civiltà barbare vedrai spunatre molto prima nuove civiltà, ovviamente se riesci a sopravvivere all'orda barbarica....</Italian>
+		<Italian>Caveman2Cosmos: Con l'opzione Mondo barbarico, i barbari cominciano il gioco con una città per ogni civiltà in gioco. Combinato con l'opzione civiltà barbare vedrai spunatre molto prima nuove civiltà, ovviamente se riesci a sopravvivere all'orda barbarica...</Italian>
 		<Spanish>Caveman2Cosmos: Con la opción de partida 'Mundo bárbaro', los bárbaros comenzarán con una ciudad por cada civilización en la partida. Si la combinas con la opción 'Civilizaciones bárbaras' podrás observar cómo dichas ciudades bárbaras se convierten en civilizaciones más rapido... si sobrevives a las hordas de bárbaros, claro...</Spanish>
 		<Polish>Caveman2Cosmos: Z włączoną opcją Barbarzyński Świat, barbarzyńcy rozpoczynają z miastami. Kombinacja z Cywilizacjami Barbarzyńców może dać wcześnie nowe cywilizacje, ale tylko jeśli przetrwasz hordy barbarzyńców...</Polish>
 	</TEXT>

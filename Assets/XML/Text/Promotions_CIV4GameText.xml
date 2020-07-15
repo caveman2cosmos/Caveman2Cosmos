@@ -600,7 +600,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUSHWHACK</Tag>
 		<English>Bushwhack Promotionline</English>
-		<French>Spécialisation Débroussaillage </French>
+		<French>Spécialisation Débroussaillage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CAUTIOUS</Tag>
@@ -753,7 +753,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CROWS_NEST</Tag>
 		<English>Crow's Nest Promotion Line</English>
-		<French>Spécialisation Nid de </French>
+		<French>Spécialisation Nid de</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CRUEL</Tag>
@@ -4875,7 +4875,7 @@
 		<English>[ICON_BULLET]Makes the unit unable to merge or split.</English>
 		<French>[ICON_BULLET]Ne peut être groupée ou divisée.</French>
 		<German>[ICON_BULLET]kann weder aufgeteilt noch zusammengeführt werden</German>
-		<Italian>[ICON_BULLET]Makes the unit unable to merge or split..</Italian>
+		<Italian>[ICON_BULLET]Makes the unit unable to merge or split.</Italian>
 		<Polish>[ICON_BULLET]Zakazuje podziału/łączenia jednostki</Polish>
 	</TEXT>
 	<TEXT>
@@ -10578,11 +10578,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE1_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
@@ -10595,11 +10595,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE2_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
@@ -14068,7 +14068,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Seefahrtskunst II</German>		
+		<German>Seefahrtskunst II</German>
 		<Italian>
 			<Text>Marinaio II</Text>
 			<Gender>Male</Gender>
@@ -17240,7 +17240,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT</Tag>
-		<English>[ICON_BULLET]Withdraw vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%% </English>
+		<English>[ICON_BULLET]Withdraw vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Withdraw gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>

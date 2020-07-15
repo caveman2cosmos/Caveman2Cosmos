@@ -251,7 +251,7 @@
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Non disponible lorsque l'option de jeu %s1_Option est active.[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar bei aktivierter Einstellung "%s1_Option".[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è attiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION</Tag>
@@ -259,7 +259,7 @@
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert l'option de jeu %s1_Option.[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar ohne aktivierte Einstellung "%s1_Option".[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è inattiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DAMAGE_MODIFIER</Tag>
