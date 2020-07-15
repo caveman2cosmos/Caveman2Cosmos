@@ -1,9 +1,9 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlayerScreen
-import CvWorldBuilderScreen
-import CvEventManager
+import WorldBuilder
 import WBTradeScreen
+
 GC = CyGlobalContext()
 
 iChange = 1
@@ -18,7 +18,8 @@ bDiplomacyPage = False
 
 class WBDiplomacyScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 		self.lAttitude = ["COLOR_RED", "COLOR_MAGENTA", "", "COLOR_CYAN", "COLOR_GREEN"]
 		import CvEventInterface
@@ -289,7 +290,7 @@ class WBDiplomacyScreen:
 		if inputClass.getButtonType() == WidgetTypes.WIDGET_PYTHON:
 			if inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
 				iPlayerX = inputClass.getData2() /10000
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayerX)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayerX)
 
 		if inputClass.getFunctionName() == "ChangeBy":
 			iChange = screen.getPullDownData("ChangeBy", screen.getSelectedPullDownID("ChangeBy"))
@@ -301,7 +302,7 @@ class WBDiplomacyScreen:
 		elif inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 2:
-				WBTradeScreen.WBTradeScreen().interfaceScreen()
+				WBTradeScreen.WBTradeScreen(self.WB).interfaceScreen()
 			elif iIndex != bDiplomacyPage:
 				bDiplomacyPage = not bDiplomacyPage
 				self.interfaceScreen(iSelectedPlayer, bDiplomacyPage)
@@ -414,7 +415,7 @@ class WBDiplomacyScreen:
 			GC.getTeam(iTeam2).assignVassal(iTeam1, False)
 		elif iNewStatus == 3:
 			GC.getTeam(iTeam1).assignVassal(iTeam2, True)
-		if CvWorldBuilderScreen.bPython:
+		if WorldBuilder.bPython:
 			if iNewStatus == 2:
 				if iOldStatus == 3:
 					self.eventManager.onVassalState([iTeam1, iTeam2, False])

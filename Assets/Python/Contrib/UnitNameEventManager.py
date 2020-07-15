@@ -80,7 +80,7 @@ import BugData
 
 
 SD_MOD_ID = "UnitCnt"
-RENAME_EVENT_ID = CvUtil.getNewEventID("UnitNaming.Rename")
+RENAME_EVENT_ID = CvUtil.getNewEventID()
 
 gc = CyGlobalContext()
 localText = CyTranslator()

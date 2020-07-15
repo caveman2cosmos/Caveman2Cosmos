@@ -1242,11 +1242,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 				if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
 				{
-					for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+					foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 					{
-						CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-						if (pAdjacentPlot != NULL && !pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
+						if (!pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
 						{
 							pRescuePlot = pAdjacentPlot;
 							if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2)
@@ -1391,14 +1389,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 /*
 		if (isZoneOfControl())
 		{
-			for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
+			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 			{
-				CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iJ));
-
-				if (pAdjacentPlot != NULL)
-				{
-					pAdjacentPlot->clearZoneOfControlCache();
-				}
+				pAdjacentPlot->clearZoneOfControlCache();
 			}
 		}
 */
@@ -3629,24 +3622,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= pDefender->getVictoryAdjacentHeal())
 				{
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-						if (pLoopPlot != NULL)
+						foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							if (pLoopPlot->area() == pPlot->area())
+							if (pLoopUnit->getTeam() == pDefender->getTeam())
 							{
-								foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+								if (pLoopUnit->isHurt())
 								{
-									if (pLoopUnit->getTeam() == pDefender->getTeam())
-									{
-										if (pLoopUnit->isHurt())
-										{
-											iUnitsHealed++;
-											pLoopUnit->doHeal();
-										}
-									}
+									iUnitsHealed++;
+									pLoopUnit->doHeal();
 								}
 							}
 						}
@@ -4040,24 +4025,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= getVictoryAdjacentHeal())
 				{
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-						if (pLoopPlot != NULL)
+						foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							if (pLoopPlot->area() == pPlot->area())
+							if (pLoopUnit->getTeam() == getTeam())
 							{
-								foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+								if (pLoopUnit->isHurt())
 								{
-									if (pLoopUnit->getTeam() == getTeam())
-									{
-										if (pLoopUnit->isHurt())
-										{
-											iUnitsHealed++;
-											pLoopUnit->doHeal();
-										}
-									}
+									iUnitsHealed++;
+									pLoopUnit->doHeal();
 								}
 							}
 						}
@@ -8077,7 +8054,6 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 
 	CvCity* pCity;
 	CvUnit* pHealUnit = NULL;
-	CvPlot* pLoopPlot;
 	int iTotalHeal;
 	int iHeal;
 	int iBestHeal;
@@ -8200,30 +8176,22 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		}
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			if (pLoopPlot->area() == pPlot->area())
+			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 			{
-				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-				{
-					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
-					{
-						iHeal = pLoopUnit->getAdjacentTileHeal();
-						//if (pLoopUnit->getAdjacentTileHeal() > 0)
-						//{
-						//	iHeal += pLoopUnit->establishModifier();
-						//}
+				iHeal = pLoopUnit->getAdjacentTileHeal();
+				//if (pLoopUnit->getAdjacentTileHeal() > 0)
+				//{
+				//	iHeal += pLoopUnit->establishModifier();
+				//}
 
-						if (iHeal > iBestHeal)
-						{
-							iBestHeal = iHeal;
-							pHealUnit = pLoopUnit;
-						}
-					}
+				if (iHeal > iBestHeal)
+				{
+					iBestHeal = iHeal;
+					pHealUnit = pLoopUnit;
 				}
 			}
 		}
@@ -8255,7 +8223,6 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 
 	CvCity* pCity;
 	CvUnit* pHealUnit = NULL;
-	CvPlot* pLoopPlot;
 	int iTotalHeal;
 	int iHeal;
 	int iBestHeal;
@@ -8340,31 +8307,23 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 		}
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			if (pLoopPlot->area() == pPlot->area())
+			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 			{
-				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-				{
-					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
-					{
-						iHeal = pLoopUnit->getAdjacentTileHeal();
-						iHeal += pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
-						//if (pLoopUnit->getAdjacentTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType) > 0)
-						//{
-						//	iHeal += pLoopUnit->establishModifier();
-						//}
+				iHeal = pLoopUnit->getAdjacentTileHeal();
+				iHeal += pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
+				//if (pLoopUnit->getAdjacentTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType) > 0)
+				//{
+				//	iHeal += pLoopUnit->establishModifier();
+				//}
 
-						if (iHeal > iBestHeal)
-						{
-							iBestHeal = iHeal;
-							pHealUnit = pLoopUnit;
-						}
-					}
+				if (iHeal > iBestHeal)
+				{
+					iBestHeal = iHeal;
+					pHealUnit = pLoopUnit;
 				}
 			}
 		}
@@ -9777,32 +9736,24 @@ CvCity* CvUnit::bombardTarget(const CvPlot* pPlot) const
 	int iBestValue = MAX_INT;
 	CvCity* pBestCity = NULL;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
 
-		if (pLoopPlot != NULL)
+		if (pLoopCity != NULL && pLoopCity->isBombardable(this))
 		{
-			CvCity* pLoopCity = pLoopPlot->getPlotCity();
+			int iValue = pLoopCity->getDefenseDamage();
 
-			if (pLoopCity != NULL)
+			// always prefer cities we are at war with
+			if (isEnemy(pLoopCity->getTeam(), pPlot))
 			{
-				if (pLoopCity->isBombardable(this))
-				{
-					int iValue = pLoopCity->getDefenseDamage();
+				iValue *= 128;
+			}
 
-					// always prefer cities we are at war with
-					if (isEnemy(pLoopCity->getTeam(), pPlot))
-					{
-						iValue *= 128;
-					}
-
-					if (iValue < iBestValue)
-					{
-						iBestValue = iValue;
-						pBestCity = pLoopCity;
-					}
-				}
+			if (iValue < iBestValue)
+			{
+				iBestValue = iValue;
+				pBestCity = pLoopCity;
 			}
 		}
 	}
@@ -9817,28 +9768,20 @@ CvPlot* CvUnit::bombardImprovementTarget(const CvPlot* pPlot) const
 	int iBestValue = MAX_INT;
 	CvPlot* pBestPlot = NULL;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::isBombardable(this)))
 	{
-		CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+		int iValue = pLoopPlot->getDefenseDamage();
 
-		if (pLoopPlot != NULL)
+		// always prefer cities we are at war with
+		if (isEnemy(pLoopPlot->getTeam(), pPlot))
 		{
-			if (pLoopPlot->isBombardable(this))
-			{
-				int iValue = pLoopPlot->getDefenseDamage();
+			iValue *= 128;
+		}
 
-				// always prefer cities we are at war with
-				if (isEnemy(pLoopPlot->getTeam(), pPlot))
-				{
-					iValue *= 128;
-				}
-
-				if (iValue < iBestValue)
-				{
-					iBestValue = iValue;
-					pBestPlot = pLoopPlot;
-				}
-			}
+		if (iValue < iBestValue)
+		{
+			iBestValue = iValue;
+			pBestPlot = pLoopPlot;
 		}
 	}
 
@@ -10516,27 +10459,19 @@ int CvUnit::sabotageCost(const CvPlot* pPlot) const
 // XXX compare with destroy prob...
 int CvUnit::sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvPlot* pLoopPlot;
 	int iDefenseCount;
 	int iCounterSpyCount;
-	int iProb;
-	int iI;
 
-	iProb = 0; // XXX
+	int iProb = 0; // XXX
 
 	if (pPlot->isOwned())
 	{
 		iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 		iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 		{
-			pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-			if (pLoopPlot != NULL)
-			{
-				iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-			}
+			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 		}
 	}
 	else
@@ -10679,17 +10614,14 @@ bool CvUnit::sabotage()
 
 int CvUnit::destroyCost(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-	bool bLimited;
-
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
 		return 0;
 	}
 
-	bLimited = false;
+	bool bLimited = false;
 
 	if (pCity->isProductionUnit())
 	{
@@ -10710,34 +10642,22 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
-	int iDefenseCount;
-	int iCounterSpyCount;
-	int iProb;
-	int iI;
-
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
 		return 0;
 	}
 
-	iProb = 0; // XXX
+	int iProb = 0; // XXX
 
-	iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+	const int iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+	int iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
-		{
-			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		}
+		iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 	}
 
 	if (eProbStyle == PROBABILITY_HIGH)
@@ -10900,34 +10820,21 @@ int CvUnit::stealPlansCost(const CvPlot* pPlot) const
 // XXX compare with destroy prob...
 int CvUnit::stealPlansProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
-	int iDefenseCount;
-	int iCounterSpyCount;
-	int iProb;
-	int iI;
-
-	pCity = pPlot->getPlotCity();
-
+	const CvCity* pCity = pPlot->getPlotCity();
 	if (pCity == NULL)
 	{
 		return 0;
 	}
 
-	iProb = ((pCity->isGovernmentCenter()) ? 20 : 0); // XXX
+	int iProb = ((pCity->isGovernmentCenter()) ? 20 : 0); // XXX
 
-	iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+	const int iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+	int iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
-		{
-			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		}
+		iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 	}
 
 	if (eProbStyle == PROBABILITY_HIGH)
@@ -17533,7 +17440,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	CvUnit* pLoopUnit;
 	CvPlot* pOldPlot;
 	CvPlot* pNewPlot;
-	CvPlot* pLoopPlot;
 	CLinkList<IDInfo> oldUnits;
 	ActivityTypes eOldActivityType;
 	int iI;
@@ -17833,24 +17739,14 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		if (pOldPlot->isWater())
 		{
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* pLoopPlot, pOldPlot->adjacent()
+			| filtered(CvPlot::fn::isWater()))
 			{
-				pLoopPlot = plotDirection(pOldPlot->getX(), pOldPlot->getY(), ((DirectionTypes)iI));
+				pWorkingCity = pLoopPlot->getWorkingCity();
 
-				if (pLoopPlot != NULL)
+				if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
 				{
-					if (pLoopPlot->isWater())
-					{
-						pWorkingCity = pLoopPlot->getWorkingCity();
-
-						if (pWorkingCity != NULL)
-						{
-							if (canSiege(pWorkingCity->getTeam()))
-							{
-								pWorkingCity->AI_setAssignWorkDirty(true);
-							}
-						}
-					}
+					pWorkingCity->AI_setAssignWorkDirty(true);
 				}
 			}
 		}
@@ -18052,24 +17948,14 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.Water");
 
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* pLoopPlot, pNewPlot->adjacent()
+			| filtered(CvPlot::fn::isWater()))
 			{
-				pLoopPlot = plotDirection(pNewPlot->getX(), pNewPlot->getY(), ((DirectionTypes)iI));
+				pWorkingCity = pLoopPlot->getWorkingCity();
 
-				if (pLoopPlot != NULL)
+				if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
 				{
-					if (pLoopPlot->isWater())
-					{
-						pWorkingCity = pLoopPlot->getWorkingCity();
-
-						if (pWorkingCity != NULL)
-						{
-							if (canSiege(pWorkingCity->getTeam()))
-							{
-								pWorkingCity->verifyWorkingPlot(pWorkingCity->getCityPlotIndex(pLoopPlot));
-							}
-						}
-					}
+					pWorkingCity->verifyWorkingPlot(pWorkingCity->getCityPlotIndex(pLoopPlot));
 				}
 			}
 		}

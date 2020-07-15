@@ -370,7 +370,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
-		<English>Turns the Great General into a Field Commander, which loses it's abilites to join cities, units, or construct wonders, but gives it the ability to earn experience, gain promotions, and lead units in the field.</English>
+		<English>Turns the Great General into a Field Commander: it loses its abilites to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
 		<French>Converti le Général Illustre en Commandant de Terrain, qui perd la possibilité de s'associer aux Villes et Unités, mais peut acquérir de l'expérience et des promotions, et mener les Unités sur le terrain.</French>
 		<German>Verwandelt den Großen General in einen Feldkommandeur, wodurch er seine normalen Fertigkeiten verliert. Dafür kann er nun Erfahrungspunkte und Beförderungen aus Schlachten erhalten, an denen er teilnimmt, und damit die Einheiten in seinem näheren Umfeld unterstützen.</German>
 		<Italian>Trasforma il grande generale in un comandante sul campo, che perchè l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma ti da l'abilità di guadagnare esperienza, ottenere promozioni e condurre unità sul campo.</Italian>
@@ -666,7 +666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH_HELP</Tag>
-		<English>Allows selection of a of the desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
+		<English>Allows selection of a desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
 		<French>Permet à la sélection d'unité d'aider à la découvert d'une technologie. L'unité sera en veille jusqu'à ce que la technologie soit disponible pour la recherche, puis sera enlevée.</French>
 		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità dormirà finchè quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
 		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>

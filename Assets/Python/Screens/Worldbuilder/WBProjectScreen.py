@@ -1,12 +1,10 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBTeamScreen
-import WBTechScreen
 import WBPlayerScreen
 import WBPlayerUnits
 import WBInfoScreen
-import CvWorldBuilderScreen
-import CvEventManager
+import WorldBuilder
 GC = CyGlobalContext()
 
 iChange = 1
@@ -17,7 +15,8 @@ iProjectType = 0
 
 class WBProjectScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 		import CvEventInterface
 		self.eventManager = CvEventInterface.getEventManager()
@@ -33,7 +32,7 @@ class WBProjectScreen:
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setDimensions(0,0, screen.getXResolution(), screen.getYResolution())
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		screen.setText("WBProjectExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 		screen.setLabel("ProjectHeader", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ()) + "</font>", 1<<2, screen.getXResolution()/2, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
@@ -73,19 +72,19 @@ class WBProjectScreen:
 		if bNoBarb:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("NoBarbarians", "Background", sColor + sText + "</color>", 1<<1, screen.getXResolution() - 20, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		sText = "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_COPY_ALL", (CyTranslator().getText("TXT_KEY_MAIN_MENU_PLAYERS", ()),)) + "</font>"
 		sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 		if bApplyAll:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("ApplyAll", "Background", sColor + sText + "</color>", 1<<1, screen.getXResolution() - 20, 50, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		screen.addDropDownBoxGFC("ChangeType", screen.getXResolution() - 120, self.iTable_Y - 30, 100, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_CITY_ADD", ()), 1, 1, 1 == iChangeType)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_CITY_REMOVE", ()), 0, 0, 0 == iChangeType)
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + " (+/-)</color></font>"
 		screen.setText("ProjectAll", "Background", sText, 1<<1, screen.getXResolution() - 120, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		self.sortProjects()
 
 	def sortProjects(self):
@@ -166,15 +165,15 @@ class WBProjectScreen:
 		elif inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(pTeam.getLeaderID())
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pTeam.getLeaderID())
 			elif iIndex == 1:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(iTeam)
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(iTeam)
 			elif iIndex == 3:
-				WBTechScreen.WBTechScreen().interfaceScreen(iTeam)
+				self.WB.goToSubScreen("TechScreen")
 			elif iIndex == 4:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(pTeam.getLeaderID())
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(pTeam.getLeaderID())
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(pTeam.getLeaderID())
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(pTeam.getLeaderID())
 
 		elif inputClass.getFunctionName() == "ProjectAll":
 			for item in lProject:
@@ -229,7 +228,7 @@ class WBProjectScreen:
 			if iMax > -1:
 				iCount = min(iCount, iMax - pTeamX.getProjectCount(item))
 		pTeamX.changeProjectCount(item, iCount)
-		if CvWorldBuilderScreen.bPython and iCount > 0:
+		if WorldBuilder.bPython and iCount > 0:
 			pCapital = GC.getPlayer(pTeamX.getLeaderID()).getCapitalCity()
 			if not pCapital.isNone():
 				for i in xrange(iCount):

@@ -23,7 +23,7 @@
 		<English>My town folks are in need, can the [CT_EMPIRE] help?</English>
 		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider?</French>
 		<German>Mein Stamm ist in Not, kann uns das [CT_EMPIRE:2] helfen?</German>
-		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
+		<Italian>I miei concittadini hanno bisogno di aiuto, potete aiutarci?</Italian>
 		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
 		<Polish>Mieszkańcy mojego imperium potrzebują Twojej pomocy. Pomożesz?</Polish>
 	</TEXT>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LOPEZ_1</Tag>
 		<English>It is good to hear from the [CT_EMPIRE]. To what do I owe this honor?</English>
-		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur? </French>
+		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur?</French>
 		<German>Es ist gut, etwas vom [CT_EMPIRE:3] zu hören. Womit haben wir diese Ehre verdient?</German>
 		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
 		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LOPEZ_1</Tag>
 		<English>You have started down a path that will lead to your destruction. Feel free to try to explain yourself.</English>
-		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.  </French>
+		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.</French>
 		<German>Ihr habt begonnen, einen Pfad zu beschreiten, der zu Eurer Vernichtung führen wird. Wollt Ihr Euch möglicherweise rechtfertigen?</German>
 		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
 		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
@@ -98,7 +98,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOPEZ_PEDIA</Tag>
-		<English>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Monster of the Andes”[NEWLINE]Lived: [\BOLD]c.October 8th, 1948 – still living, 1882[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]By far one of the most prolific serial killers of all time, the “Monster of the Andes” butchered enough people to fill a small town. After killing around 100 tribal women in Peru in the 1970s, he was apprehended by tribal forces that were just about ready to execute him when they were convinced by an American missionary that was staying with them at the time to take him to the police force instead. Unfortunately, the police then just let him go, after which Lopez travelled to Ecuador, where he proceeded to kill about 3-4 girls a week, claiming that girls in Ecuador were “more gentle and trusting, more innocent”. This carried on until he was caught in 1980, but police were still unsure as to his guilt, but a flash flood uncovered a mass grave that had hidden many of his victims, which then led to his arrest. [PARAGRAPH:1]However, the Ecuador government then released him in 1998, deporting him to Columbia. Lopez allegedly said that he was being released for “good behavior”.</English>
-		<Polish>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Potwór z Andów”[NEWLINE]Żył: [\BOLD]ok.8 Października 1848 –- 1882[PARAGRAPH:2][BOLD]Tło:[\BOLD][NEWLINE][TAB]By far one of the most prolific serial killers of all time, the “Monster of the Andes” butchered enough people to fill a small town. After killing around 100 tribal women in Peru in the 1970s, he was apprehended by tribal forces that were just about ready to execute him when they were convinced by an American missionary that was staying with them at the time to take him to the police force instead. Unfortunately, the police then just let him go, after which Lopez travelled to Ecuador, where he proceeded to kill about 3-4 girls a week, claiming that girls in Ecuador were “more gentle and trusting, more innocent”. This carried on until he was caught in 1980, but police were still unsure as to his guilt, but a flash flood uncovered a mass grave that had hidden many of his victims, which then led to his arrest. [PARAGRAPH:1]However, the Ecuador government then released him in 1998, deporting him to Columbia. Lopez allegedly said that he was being released for “good behavior”.</Polish>
+		<English>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Monster of the Andes”[NEWLINE]Lived:[\BOLD] c. October 8, 1948 –[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]By far one of the most prolific serial killers of all time, the “Monster of the Andes” butchered enough people to fill a small town. After killing around 100 tribal women in Peru in the 1970s, he was apprehended by tribal forces that were just about ready to execute him when they were convinced by an American missionary that was staying with them at the time to take him to the police force instead. Unfortunately, the police then just let him go, after which Lopez travelled to Ecuador, where he proceeded to kill about 3-4 girls a week, claiming that girls in Ecuador were “more gentle and trusting, more innocent”. This carried on until he was caught in 1980, but police were still unsure as to his guilt, but a flash flood uncovered a mass grave that had hidden many of his victims, which then led to his arrest.[PARAGRAPH:1]However, the Ecuador government then released him in 1998, deporting him to Columbia. Lopez allegedly said that he was being released for “good behavior”.</English>
+		<Polish>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Potwór z Andów”[NEWLINE]Żył:[\BOLD] ok. 8 Października 1948 –</Polish>
 	</TEXT>
 </Civ4GameText>

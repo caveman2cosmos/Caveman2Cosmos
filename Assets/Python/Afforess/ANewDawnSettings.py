@@ -6,11 +6,11 @@ import CvUtil
 GC = CyGlobalContext()
 ANewDawnOpt = BugCore.game.RoMSettings
 
-MODDEROPTION_EVENT_ID = CvUtil.getNewEventID("Modder Options")
-MODDERGAMEOPTION_EVENT_ID = CvUtil.getNewEventID("Modder Game Options")
-DIFFICULTY_EVENT_ID = CvUtil.getNewEventID("Difficulty")
-COLOR_EVENT_ID = CvUtil.getNewEventID("Color")
-CANBUILD_EVENT_ID = CvUtil.getNewEventID("CanBuild")
+MODDEROPTION_EVENT_ID = CvUtil.getNewEventID()
+MODDERGAMEOPTION_EVENT_ID = CvUtil.getNewEventID()
+DIFFICULTY_EVENT_ID = CvUtil.getNewEventID()
+COLOR_EVENT_ID = CvUtil.getNewEventID()
+CANBUILD_EVENT_ID = CvUtil.getNewEventID()
 
 class ANewDawnSettings:
 	def __init__(self, eventManager):

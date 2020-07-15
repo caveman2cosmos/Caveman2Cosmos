@@ -407,8 +407,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_HELP</Tag>
-		<English>[ICON_BULLET]May join your cities (of less than size 7) or be sacraficed for culture or production. If you are running Slavery can be sold into slavery.</English>
-		<French>[ICON_BULLET]Peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
+		<English>[ICON_BULLET] May join your cities (of less than size 7) or be sacrificed for culture or production. If you are running Slavery can be sold into slavery.</English>
+		<French>[ICON_BULLET] Peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
 		<Italian>Può unirsi alla tua città (se la popolazione è minore di 7) oppure essere sacrificato in cambio di cultura o produzione. Se la schiavitù è attiva nel tuo impero, quest'unità può essere venduta come schiava.</Italian>
 	</TEXT>
 	<TEXT>

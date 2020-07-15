@@ -3523,7 +3523,7 @@ int CvPlayerAI::AI_militaryWeight(const CvArea* pArea) const
 }
 
 
-int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
+int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers) const
 {
 	PROFILE_FUNC();
 
@@ -3675,7 +3675,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 /************************************************************************************************/
 
 	//	Prefer less defended
-	int iDefense = 5 + (static_cast<CvCityAI*>(pCity))->getGarrisonStrength();
+	int iDefense = 5 + (static_cast<const CvCityAI*>(pCity))->getGarrisonStrength();
 	iDefense = std::max(1,iDefense);
 	iValue = ((iValue*100)/iDefense);
 
@@ -13592,20 +13592,15 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
+		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+			if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 			{
-				if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
+				if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
 				{
-					if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
-					{
-						iCount++;
-					}
+					iCount++;
 				}
 			}
 		}
@@ -18701,39 +18696,30 @@ void CvPlayerAI::AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange)
 }
 
 
-int CvPlayerAI::AI_getAttitudeExtra(PlayerTypes eIndex) const
+int CvPlayerAI::AI_getAttitudeExtra(const PlayerTypes ePlayer) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_aiAttitudeExtra[eIndex];
+	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
+	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	return m_aiAttitudeExtra[ePlayer];
 }
 
 
-void CvPlayerAI::AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue)
+void CvPlayerAI::AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
-	if (m_aiAttitudeExtra[eIndex] != iNewValue)
+	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
+	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+
+	if (m_aiAttitudeExtra[ePlayer] != iNewValue)
 	{
-		GET_PLAYER(getID()).AI_invalidateAttitudeCache(eIndex);
+		AI_changeAttitudeCache(ePlayer, iNewValue - m_aiAttitudeExtra[ePlayer]);
+		m_aiAttitudeExtra[ePlayer] = iNewValue;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-	m_aiAttitudeExtra[eIndex] = iNewValue;
 }
 
 
-void CvPlayerAI::AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange)
+void CvPlayerAI::AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange)
 {
-	AI_setAttitudeExtra(eIndex, (AI_getAttitudeExtra(eIndex) + iChange));
+	AI_setAttitudeExtra(ePlayer, (AI_getAttitudeExtra(ePlayer) + iChange));
 }
 
 
@@ -28733,16 +28719,12 @@ int CvPlayerAI::AI_getPlotCanalValue(const CvPlot* pPlot) const
 			}
 		}
 
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 		{
-			CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isCity(true) && (pLoopPlot->getCanalValue() > 0))
 			{
-				if (pLoopPlot->isCity(true) && (pLoopPlot->getCanalValue() > 0))
-				{
-					// Decrease value when adjacent to a city or fort with a canal value
-					iCanalValue -= 10;
-				}
+				// Decrease value when adjacent to a city or fort with a canal value
+				iCanalValue -= 10;
 			}
 		}
 
@@ -28797,16 +28779,12 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 			}
 		}
 
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 		{
-			const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
-			if (pLoopPlot != NULL)
+			if (pLoopPlot->isCity(true) && (pLoopPlot->getChokeValue() > 0))
 			{
-				if (pLoopPlot->isCity(true) && (pLoopPlot->getChokeValue() > 0))
-				{
-					// Decrease value when adjacent to a city or fort with a choke value
-					iChokeValue -= 10;
-				}
+				// Decrease value when adjacent to a city or fort with a choke value
+				iChokeValue -= 10;
 			}
 		}
 
@@ -29288,6 +29266,17 @@ void CvPlayerAI::AI_invalidateAttitudeCache()
 		AI_invalidateAttitudeCache((PlayerTypes)iI);
 	}
 }
+
+void CvPlayerAI::AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iChange)
+{
+	if (m_aiAttitudeCache[ePlayer] == 100 && iChange < 0
+	|| m_aiAttitudeCache[ePlayer] == -100 && iChange > 0)
+	{
+		// Toffer - Why don't we allow the total value to exceed +/- 100 ?
+		AI_invalidateAttitudeCache(ePlayer);
+	}
+	else m_aiAttitudeCache[ePlayer] = range(m_aiAttitudeCache[ePlayer] + iChange, -100, 100);
+}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
 /************************************************************************************************/
@@ -29693,7 +29682,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 
 	if(isPushReligiousVictory() || isConsiderReligiousVictory())
 	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			const CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
 			if(kLoopPlayer.isAlive())

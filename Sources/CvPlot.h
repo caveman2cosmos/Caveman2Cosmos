@@ -1181,6 +1181,7 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, ImprovementTypes, getImprovementType);
 		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
@@ -1192,6 +1193,11 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, bool, isBombardable, const CvUnit*);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isCity, bool, TeamTypes);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
 

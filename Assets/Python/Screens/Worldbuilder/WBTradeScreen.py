@@ -7,7 +7,8 @@ iSelected = 0
 
 class WBTradeScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 80
 
 	def interfaceScreen(self):
@@ -97,9 +98,9 @@ class WBTradeScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(0, False)
+				WBDiplomacyScreen.WBDiplomacyScreen(self.WB).interfaceScreen(0, False)
 			elif iIndex == 1:
-				WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(0, True)
+				WBDiplomacyScreen.WBDiplomacyScreen(self.WB).interfaceScreen(0, True)
 		elif inputClass.getFunctionName() == "TradeTable":
 			iSelected = inputClass.getData2()
 		elif inputClass.getFunctionName() == "TradeCancel":

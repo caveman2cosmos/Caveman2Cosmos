@@ -21,7 +21,7 @@
 		<English>My town folks are in need, can the [CT_EMPIRE] help?</English>
 		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider?</French>
 		<German>Mein Stamm ist in Not, kann uns das [CT_EMPIRE:2] helfen?</German>
-		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
+		<Italian>I miei concittadini hanno bisogno di aiuto, potete aiutarci?</Italian>
 		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -31,7 +31,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_THUNDERBRD_1</Tag>
 		<English>It is good to hear from the [CT_EMPIRE]. To what do I owe this honor?</English>
-		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur? </French>
+		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur?</French>
 		<German>Es ist gut, etwas vom [CT_EMPIRE:3] zu hören. Womit haben wir diese Ehre verdient?</German>
 		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
 		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
@@ -39,7 +39,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_THUNDERBRD_1</Tag>
 		<English>You have started down a path that will lead to your destruction. Feel free to try to explain yourself.</English>
-		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.  </French>
+		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.</French>
 		<German>Ihr habt begonnen, einen Pfad zu beschreiten, der zu Eurer Vernichtung führen wird. Wollt Ihr Euch möglicherweise rechtfertigen?</German>
 		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
 		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
@@ -70,6 +70,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_THUNDERBRD_PEDIA</Tag>
-		<English>[H1]Thunderbrd[\H1][NEWLINE][BOLD]Town Marshal[NEWLINE]Lived: [\BOLD]c.March 19, 1848 – January 13, 1929[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was a gambler, Pima County Deputy Sheriff, [PARAGRAPH:1]Thunderbrd was [PARAGRAPH:1]Thunderbrd moved [PARAGRAPH:1]After leaving </English>
+		<English>[H1]Thunderbrd[\H1][NEWLINE][BOLD]Town Marshal[NEWLINE]Lived:[\BOLD] c. March 19, 1848 – January 13, 1929</English>
 	</TEXT>
 </Civ4GameText>
