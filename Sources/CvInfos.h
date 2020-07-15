@@ -848,6 +848,8 @@ public:
 	int getLevelPrereq() const;
 	int getDamageModifierChange() const;
 	int getCostModifierChange() const;
+	int getBaseUpkeepModifierChange() const;
+	int getUpkeepMultiplierChange() const;
 	int getRBombardDamageChange() const;
 	int getRBombardDamageLimitChange() const;
 	int getRBombardDamageMaxUnitsChange() const;
@@ -1368,7 +1370,11 @@ protected:
 	int m_iGroupChange;
 	int m_iLevelPrereq;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange;
+	int m_iCostModifierChange; // delete me
+
+	int m_iBaseUpkeepModifierChange;
+	int m_iUpkeepMultiplierChange;
+
 	int m_iRBombardDamageChange;
 	int m_iRBombardDamageLimitChange;
 	int m_iRBombardDamageMaxUnitsChange;
@@ -1804,6 +1810,7 @@ public:
 	int getConscriptionValue() const; // Exposed to Python
 	int getCultureGarrisonValue() const; // Exposed to Python
 	int getExtraCost() const; // Exposed to Python
+	int getBaseUpkeep() const; // Exposed to Python
 	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
 	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
 	int getSpecialUnitType() const; // Exposed to Python
@@ -2480,6 +2487,7 @@ protected:
 	int m_iConscriptionValue;
 	int m_iCultureGarrisonValue;
 	int m_iExtraCost;
+	int m_iBaseUpkeep;
 	int m_iAssetValue;
 	int m_iPowerValue;
 	int m_iSpecialUnitType;
@@ -10573,6 +10581,8 @@ public:
 	int getSizeBase() const;
 	int getDamageModifierChange() const;
 	int getCostModifierChange() const;
+	int getBaseUpkeepModifierChange() const;
+	int getUpkeepMultiplierChange() const;
 	int getRBombardDamageBase() const;
 	int getRBombardDamageLimitBase() const;
 	int getRBombardDamageMaxUnitsBase() const;
@@ -10929,7 +10939,11 @@ protected:
 	int m_iGroupBase;
 	int m_iSizeBase;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange;
+	int m_iCostModifierChange; // delete me
+
+	int m_iBaseUpkeepModifierChange;
+	int m_iUpkeepMultiplierChange;
+
 	int m_iRBombardDamageBase;
 	int m_iRBombardDamageLimitBase;
 	int m_iRBombardDamageMaxUnitsBase;

@@ -686,6 +686,9 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
 	m_iExtraCostModifier = 0;
+	m_iBaseUpkeepModifier = 100;
+	m_iUpkeepMultiplier = 100;
+	m_iUpkeep100 = 0;
 	m_iExtraPowerValue = 0;
 	m_iExtraAssetValue = 0;
 	m_iSMAssetValue = 0;
@@ -19748,7 +19751,7 @@ int CvUnit::getExtraDamageModifier (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraDamageModifier(int iChange)
 {
-	m_iExtraDamageModifier +=iChange;
+	m_iExtraDamageModifier += iChange;
 }
 
 int CvUnit::getExtraCostModifier() const
@@ -19758,7 +19761,7 @@ int CvUnit::getExtraCostModifier() const
 
 void CvUnit::changeExtraCostModifier(int iChange)
 {
-	m_iExtraCostModifier +=iChange;
+	m_iExtraCostModifier += iChange;
 	GET_PLAYER(getOwner()).changeUnitPercentCountForCostAdjustment(iChange);
 }
 
@@ -19770,6 +19773,53 @@ int CvUnit::getExtraUnitCost100() const
 	iTotal /= 100;
 	return iTotal;
 }
+
+void CvUnit::changeBaseUpkeepModifier(const int iChange)
+{
+	m_iBaseUpkeepModifier += iChange;
+	calcUpkeep();
+}
+
+void CvUnit::changeUpkeepMultiplier(const int iChange)
+{
+	m_iUpkeepMultiplier += iChange;
+	calcUpkeep();
+}
+
+int CvUnit::getBaseUpkeepModifier() const
+{
+	return std::max(0, m_iBaseUpkeepModifier);
+}
+
+int CvUnit::getUpkeepMultiplier() const
+{
+	return std::max(0, m_iUpkeepMultiplier);
+}
+
+void CvUnit::calcUpkeep()
+{
+	// ToDo - Update Player level unit upkeep value here when that value exist.
+	int iUpkeep100 = m_pUnitInfo->getBaseUpkeep();
+	if (iUpkeep100 > 0)
+	{
+		iUpkeep100 *= getBaseUpkeepModifier();
+		// We may want a simple addition to the base here at some point,
+		// an iExtraUpkeep in promotion/unitcombat infos.
+		// Hence the naming for "BaseUpkeepModifier" and "UpkeepMultiplier"
+		// Both are atm technically BaseUpkeepModifiers.
+		iUpkeep100 *= getUpkeepMultiplier();
+		iUpkeep100 /= 100;
+
+		m_iUpkeep100 = std::max(0,  iUpkeep100);
+	}
+	else m_iUpkeep100 = 0;
+}
+
+int CvUnit::getUpkeep100() const
+{
+	return m_iUpkeep100;
+}
+
 
 int CvUnit::getExtraOverrun (bool bIgnoreCommanders) const
 {
@@ -26524,6 +26574,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCostModifier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -27535,6 +27588,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraStrengthModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDamageModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCostModifier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, m_eGGExperienceEarnedTowardsType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargo);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargoCapacity);

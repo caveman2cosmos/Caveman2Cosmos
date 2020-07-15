@@ -90,6 +90,7 @@ m_iSMCargoVolume(0),
 m_iConscriptionValue(0),
 m_iCultureGarrisonValue(0),
 m_iExtraCost(0),
+m_iBaseUpkeep(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
 m_iSpecialUnitType(NO_SPECIALUNIT),
@@ -804,6 +805,11 @@ int CvUnitInfo::getCultureGarrisonValue() const
 int CvUnitInfo::getExtraCost() const
 {
 	return m_iExtraCost;
+}
+
+int CvUnitInfo::getBaseUpkeep() const
+{
+	return m_iBaseUpkeep;
 }
 
 int CvUnitInfo::getAssetValue(bool bForLoad) const
@@ -3894,6 +3900,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iConscriptionValue);
 	CheckSum(iSum, m_iCultureGarrisonValue);
 	CheckSum(iSum, m_iExtraCost);
+	CheckSum(iSum, m_iBaseUpkeep);
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
 	CheckSum(iSum, m_iSpecialUnitType);
@@ -4658,6 +4665,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iConscriptionValue, L"iConscription");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureGarrisonValue, L"iCultureGarrison");
 	pXML->GetOptionalChildXmlValByName(&m_iExtraCost, L"iExtraCost");
+	pXML->GetOptionalChildXmlValByName(&m_iBaseUpkeep, L"iBaseUpkeep");
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
 
@@ -5870,6 +5878,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iConscriptionValue == iDefault ) m_iConscriptionValue = pClassInfo->getConscriptionValue();
 	if ( m_iCultureGarrisonValue == iDefault ) m_iCultureGarrisonValue = pClassInfo->getCultureGarrisonValue();
 	if ( m_iExtraCost == iDefault ) m_iExtraCost = pClassInfo->getExtraCost();
+	if ( m_iBaseUpkeep == iDefault ) m_iBaseUpkeep = pClassInfo->getBaseUpkeep();
 	if ( m_iAssetValue == iDefault ) m_iAssetValue = pClassInfo->getAssetValue(true);
 	if ( m_iPowerValue == iDefault ) m_iPowerValue = pClassInfo->getPowerValue(true);
 

@@ -11975,8 +11975,7 @@ void CvPlayer::changeGoldPerMilitaryUnit(int iChange)
 
 int CvPlayer::getExtraUnitCost() const
 {
-	int iTotal = m_iExtraUnitCost/100;
-	return iTotal;
+	return m_iExtraUnitCost/100;
 }
 
 
@@ -11984,7 +11983,7 @@ void CvPlayer::changeExtraUnitCost(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iExtraUnitCost = (m_iExtraUnitCost + iChange);
+		m_iExtraUnitCost += iChange;
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
