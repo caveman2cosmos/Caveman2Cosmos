@@ -336,18 +336,15 @@ void CvUnit::changeIdentity(UnitTypes eUnit)
 
 void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark)
 {
-	CvWString szBuffer;
-	int iUnitName;
-	int iI;
-
 	FAssert(NO_UNIT != eUnit);
 
 	//	If the current viewport is not yet initialized center it on the first unit created for the active player
-	if ( GC.getGame().getActivePlayer() == eOwner && GC.getCurrentViewport()->getState() == VIEWPORT_MODE_UNINITIALIZED && UNIT_BIRTHMARK_TEMP_UNIT != iBirthmark )
+	if (GC.getGame().getActivePlayer() == eOwner
+	&& GC.getCurrentViewport()->getState() == VIEWPORT_MODE_UNINITIALIZED
+	&& UNIT_BIRTHMARK_TEMP_UNIT != iBirthmark)
 	{
 		GC.getCurrentViewport()->setOffsetToShow(iX, iY);
 	}
-
 	//--------------------------------
 	// Init saved data
 	reset(iID, eUnit, eOwner);
@@ -356,14 +353,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	{
 		GET_PLAYER(eOwner).NoteAnimalSubdued();
 	}
-	//	Koshling -  moved this earlier to get unitAI set up so that
-	//	constraint checking on the unitAI can work more uniformly
+	// Koshling -  moved this earlier to get unitAI set up so that
+	// constraint checking on the unitAI can work more uniformly
 	AI_init(eUnitAI, iBirthmark);
 
-	if(eFacingDirection == NO_DIRECTION)
+	if (eFacingDirection == NO_DIRECTION)
 		m_eFacingDirection = DIRECTION_SOUTH;
-	else
-		m_eFacingDirection = eFacingDirection;
+	else m_eFacingDirection = eFacingDirection;
 
 	//--------------------------------
 	// Init containers
@@ -380,28 +376,31 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		setCityOfOrigin(pCity);
 	}
 
-	if ( getGroup() == NULL )
-	{
 	//TB OOS fix - POSSIBLE that this represents a fix but I consider it a longshot since they should really mean the same thing (-1)
-		::MessageBox(NULL,
-					getGroupID() == FFreeList::INVALID_INDEX ? "Unit with NULL group ID after set position in init\n" : "Unit with no group after set position in init\n",
-					"CvGameCoreDLL Diagnostics",
-					MB_OK);
-	}
-
-	if ( !isTempUnit() )
+	if (getGroup() == NULL)
 	{
+		::MessageBox(
+			NULL, getGroupID() == FFreeList::INVALID_INDEX ?
+				"Unit with NULL group ID after set position in init\n"
+				:
+				"Unit with no group after set position in init\n",
+			"CvGameCoreDLL Diagnostics", MB_OK
+		);
+	}
+	// ! TB
 
-		iUnitName = GC.getGame().getUnitCreatedCount(getUnitType());
-		int iNumNames = m_pUnitInfo->getNumUnitNames();
-		if (iUnitName < iNumNames)
+	if (!isTempUnit())
+	{
+		const int iNumNames = m_pUnitInfo->getNumUnitNames();
+
+		if (GC.getGame().getUnitCreatedCount(getUnitType()) < iNumNames)
 		{
-			int iOffset = GC.getGame().getSorenRandNum(iNumNames, "Unit name selection");
+			const int iOffset = GC.getGame().getSorenRandNum(iNumNames, "Unit name selection");
 
-			for (iI = 0; iI < iNumNames; iI++)
+			for (int iI = 0; iI < iNumNames; iI++)
 			{
-				int iIndex = (iI + iOffset) % iNumNames;
-				CvWString szName = gDLL->getText(m_pUnitInfo->getUnitNames(iIndex));
+				CvWString szName = gDLL->getText(m_pUnitInfo->getUnitNames((iI + iOffset) % iNumNames));
+
 				if (!GC.getGame().isGreatPersonBorn(szName))
 				{
 					setName(szName);
@@ -410,7 +409,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 				}
 			}
 		}
-
 		setGameTurnCreated(GC.getGame().getGameTurn());
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
@@ -457,15 +455,10 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 		plot()->setFlagDirty(true);
 
-		if (getDomainType() == DOMAIN_LAND)
+		if (getDomainType() == DOMAIN_LAND && baseCombatStr() > 0
+		&& (GC.getGame().getBestLandUnit() == NO_UNIT || baseCombatStrNonGranular() > GC.getGame().getBestLandUnitCombat()))
 		{
-			if (baseCombatStr() > 0)
-			{
-				if ((GC.getGame().getBestLandUnit() == NO_UNIT) || (baseCombatStrNonGranular() > GC.getGame().getBestLandUnitCombat()))
-				{
-					GC.getGame().setBestLandUnit(getUnitType());
-				}
-			}
+			GC.getGame().setBestLandUnit(getUnitType());
 		}
 
 		if (getOwner() == GC.getGame().getActivePlayer())
@@ -475,7 +468,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 		if (isWorldUnit(eUnit))
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
@@ -483,44 +476,47 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 					if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
-						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+						AddDLLMessage(
+							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
+							(ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true
+						);
 					}
 					else
 					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CREATED_UNIT", getNameKey());
-						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
+						AddDLLMessage(
+							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_UNKNOWN_CREATED_UNIT", getNameKey()),
+							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
+							(ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT")
+						);
 					}
 				}
 			}
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
+			GC.getGame().addReplayMessage(
+				REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
+				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+				getX(), getY(), (ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT")
+			);
 		}
-
 		setGGExperienceEarnedTowardsType();
+
 		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			setHasAnyInvisibility();
 		}
-
-
 		CvEventReporter::getInstance().unitCreated(this);
 	}
 }
 
-
-void CvUnit::uninit()
-{
-}
+void CvUnit::uninit() { }
 
 
 // FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstructorCall, bool bIdentityChange)
 {
-	int iI;
-
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -528,25 +524,17 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	clearCityOfOrigin();
 
 	m_iHealUnitCombatCount = 0;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - RB: Field Bombard START
+
 	m_iDCMBombRange = 0;
 	m_iDCMBombAccuracy = 0;
-	// Dale - RB: Field Bombard END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-	// < M.A.D. Nukes Start >
+
 	m_bMADEnabled = false;
 	m_iMADTargetPlotX = INVALID_PLOT_COORD;
 	m_iMADTargetPlotY = INVALID_PLOT_COORD;
 	m_pMADTargetPlotOwner = NO_PLAYER;
-	// < M.A.D. Nukes End   >
 
 	m_iID = iID;
-	if ( !bIdentityChange )
+	if (!bIdentityChange)
 	{
 		m_iGroupID = FFreeList::INVALID_INDEX;
 	}
@@ -577,17 +565,11 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iHillsDoubleMoveCount = 0;
 	m_iImmuneToFirstStrikesCount = 0;
 	m_iAlwaysInvisibleCount = 0;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	m_iDefensiveVictoryMoveCount = 0;
 	m_iFreeDropCount = 0;
 	m_iOffensiveVictoryMoveCount = 0;
-//Team Project (2)
+
 	m_iOneUpCount = 0;
 	m_iPillageCultureCount = 0;
 	m_iPillageEspionageCount = 0;
@@ -601,15 +583,12 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iCollateralDamageMaxUnitsChange = 0;
 	m_iCombatLimitChange = 0;
 	m_iExtraDropRange = 0;
-//Team Project (2)
+
 	m_iSurvivorChance = 0;
 	m_iVictoryAdjacentHeal = 0;
 	m_iVictoryHeal = 0;
-//Team Project (2)
 	m_iVictoryStackHeal = 0;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 	m_iExtraVisibilityRange = 0;
 	m_iExtraMoves = 0;
 	m_iExtraMoveDiscount = 0;
@@ -692,10 +671,10 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iSMExtraCargoVolume = 0;
 	m_iSMCargoVolumeModifier = 0;
 	m_iCannotMergeSplitCount = 0;
-//Team Project (3)
+
 	m_iExtraCaptureProbabilityModifier = 0;
 	m_iExtraCaptureResistanceModifier = 0;
-	//
+
 	m_iExtraBreakdownChance = 0;
 	m_iExtraBreakdownDamage = 0;
 	m_iExtraTaunt = 0;
@@ -740,12 +719,11 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraCityDefensePercent = 0;
 	m_iExtraHillsAttackPercent = 0;
 	m_iExtraHillsDefensePercent = 0;
-	//Team Project (4)
-	//WorkRateMod
+
 	m_iExtraHillsWorkPercent = 0;
 	m_iExtraPeaksWorkPercent = 0;
 	m_iExtraWorkPercent = 0;
-	//
+
 	m_iRevoltProtection = 0;
 	m_iCollateralDamageProtection = 0;
 	m_iPillageChange = 0;
@@ -754,19 +732,10 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iKamikazePercent = 0;
 	m_eFacingDirection = DIRECTION_SOUTH;
 	m_iImmobileTimer = 0;
-//Team Project (2)
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 21.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	m_bCanRespawn = false;
 	m_bSurvivor = false;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 	m_bMadeAttack = false;
 	//TB Combat Mods (Att&DefCounters)
 	m_iRoundCount = 0;
@@ -785,17 +754,13 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_bInhibitSplit = false;
 	m_bIsBuildUp = false;
 	m_bIsReligionLocked = false;
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_iCanMovePeaksCount = 0;
-	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
-	//	mountains, and ability to lead a stack through mountains
+	// Koshling - enhanced mountaineering mode to differentiate between ability to move through
+	// mountains, and ability to lead a stack through mountains
 	m_iCanLeadThroughPeaksCount = 0;
 
-	if ( eUnit != NO_UNIT )
+	if (eUnit != NO_UNIT)
 	{
 		m_movementCharacteristicsHash = GC.getUnitInfo(eUnit).getZobristValue();
 	}
@@ -831,9 +796,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_bRevealed = false;
 	m_shadowUnit.reset();
 	m_eDesiredDiscoveryTech = NO_TECH;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_eOwner = eOwner;
 	m_eCapturingPlayer = NO_PLAYER;
 	m_eUnitType = eUnit;
@@ -897,12 +860,12 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	//TB Combat Mods end
 #endif // STRENGTH_IN_NUMBERS
 
-	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
+	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		m_aiExtraDomainModifier[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 	{
 		m_aiExtraVisibilityIntensity[iI] = 0;
 		m_aiExtraInvisibilityIntensity[iI] = 0;
@@ -921,7 +884,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_aExtraVisibleFeatureRanges.clear();
 	m_aExtraVisibleImprovementRanges.clear();
 	m_szName.clear();
-	m_szScriptData ="";
+	m_szScriptData = "";
 
 	m_aiExtraBuildTypes.clear();
 	m_aExtraAidChanges.clear();
@@ -936,12 +899,11 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 		m_featureKeyedInfo.clear();
 		m_unitCombatKeyedInfo.clear();
 
-		if ( !bIdentityChange )
+		if (!bIdentityChange)
 		{
 			AI_reset(NO_UNITAI, true);
 		}
 	}
-
 	m_pPlayerInvestigated = NO_PLAYER;
 	m_Properties.clear();
 }
@@ -954,17 +916,12 @@ void CvUnit::setupGraphical()
 {
 	PROFILE_FUNC();
 
-	if (!GC.IsGraphicsInitialized())
+	if (!GC.IsGraphicsInitialized() || !isInViewport())
 	{
 		return;
 	}
 
-	if (!isInViewport())
-	{
-		return;
-	}
-
-	if ( !isUsingDummyEntities() )
+	if (!isUsingDummyEntities())
 	{
 		CvDLLEntity::setup();
 	}
@@ -975,48 +932,50 @@ void CvUnit::setupGraphical()
 	}
 	else
 	{
-		// This forces multi-unit graphics to update. If it isn't done then only 1 unit shows up, then the rest
-		// appear 10s or more later. I tried every other command on the CvDLLEntityIFaceBase to trigger update
-		// of these graphics (I didn't test every animation and mission type though), but only found this
-		// one that actually works.
+		/* billw - This forces multi-unit graphics to update.
+			If it isn't done then only 1 unit shows up, then the rest appear 10s or more later.
+			I tried every other command on the CvDLLEntityIFaceBase to trigger update
+			of these graphics (I didn't test every animation and mission type though),
+			but only found this one that actually works.
+		*/
 		ExecuteMove(0, false);
 
-		// TEST CODE (billw 21/9/2019) >>>>>>
+		/* TEST CODE (billw 21/9/2019) >>>>>>
 		// Anyone can remove this later if no problems show up with using ExecuteMode(0, false) above
-		//
-		//static int mode = 1;
-		//switch (mode)
-		//{
-		//case 0: ExecuteMove(0, false); break;
-		//case 1: SetPosition(plot()); break;
-		//case 2: {
-		//	static AnimationTypes eAnim = NONE_ANIMATION;
-		//	static float fSpeed = 1.0f;
-		//	static bool bQueue = false;
-		//	static int iLayer = 0;
-		//	static float fStartPct = 0.0f;
-		//	static float fEndPct = 1.0f;
-		//	PlayAnimation(eAnim, fSpeed, bQueue, iLayer, fStartPct, fEndPct);
-		//	break;
-		//};
-		//case 3: setVisible(true); break;
-		//case 4: setVisible(false); setVisible(true); break;
-		//case 5: gDLL->getEntityIFace()->updatePosition(getEntity()); break;
-		//case 6: MoveTo(plot()); break;
-		//case 7: QueueMove(plot()); break;
-		//case 8: {
-		//	static MissionTypes eMission = NO_MISSION;
-		//	NotifyEntity(eMission);
-		//	break;
-		//}
-		//case 9: gDLL->getEntityIFace()->updateGraphicEra(getUnitEntity()); break;
-		//case 10: gDLL->getEntityIFace()->showPromotionGlow(getUnitEntity(), true); break;
-		//case 11: gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity()); break;
-		//case 12: gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity()); break;
-		//case 13: gDLL->getEntityIFace()->StopAnimation(getEntity()); break;
-		//default: break;
-		//};
-		// <<<<< TEST CODE
+
+		static int mode = 1;
+		switch (mode)
+		{
+			case 0: ExecuteMove(0, false); break;
+			case 1: SetPosition(plot()); break;
+			case 2: {
+				static AnimationTypes eAnim = NONE_ANIMATION;
+				static float fSpeed = 1.0f;
+				static bool bQueue = false;
+				static int iLayer = 0;
+				static float fStartPct = 0.0f;
+				static float fEndPct = 1.0f;
+				PlayAnimation(eAnim, fSpeed, bQueue, iLayer, fStartPct, fEndPct);
+				break;
+			};
+			case 3: setVisible(true); break;
+			case 4: setVisible(false); setVisible(true); break;
+			case 5: gDLL->getEntityIFace()->updatePosition(getEntity()); break;
+			case 6: MoveTo(plot()); break;
+			case 7: QueueMove(plot()); break;
+			case 8: {
+				static MissionTypes eMission = NO_MISSION;
+				NotifyEntity(eMission);
+				break;
+			}
+			case 9: gDLL->getEntityIFace()->updateGraphicEra(getUnitEntity()); break;
+			case 10: gDLL->getEntityIFace()->showPromotionGlow(getUnitEntity(), true); break;
+			case 11: gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity()); break;
+			case 12: gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity()); break;
+			case 13: gDLL->getEntityIFace()->StopAnimation(getEntity()); break;
+			default: break;
+		};
+		<<<<< TEST CODE */
 	}
 }
 
@@ -1552,11 +1511,7 @@ void CvUnit::doTurn()
 		{
 			changeDamagePercent(plot()->getFeatureTurnDamage(), NO_PLAYER);
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/17/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (plot()->getTerrainTurnDamage(this) != 0)
 		{
 			changeDamagePercent(plot()->getTerrainTurnDamage(this), NO_PLAYER);
@@ -1567,9 +1522,6 @@ void CvUnit::doTurn()
 			}
 			//TB Combat Mod
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	bool bHasMoved = hasMoved();
@@ -1578,11 +1530,10 @@ void CvUnit::doTurn()
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		//TB Combat Mod begin
-		int iI;
 		PromotionTypes ePromotion;
 		PromotionLineTypes eAfflictionLine;
 		CvWString szBuffer;
-		for (iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 		{
 			eAfflictionLine = ((PromotionLineTypes)iI);
 			if (GC.getPromotionLineInfo(eAfflictionLine).isAffliction())
@@ -1668,9 +1619,7 @@ void CvUnit::doTurn()
 			discover();
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	changeImmobileTimer(-1);
 	//TB Combat Mods (Att&DefCounter)
 	if (getAttackCount()>0)
@@ -5763,12 +5712,12 @@ bool CvUnit::generatePath(const CvPlot* pToPlot, int iFlags, bool bReuse, int* p
 
 bool CvUnit::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) const
 {
-	if (GET_TEAM(getTeam()).isFriendlyTerritory(eTeam))
+	if (eTeam == NO_TEAM)
 	{
 		return true;
 	}
 
-	if (eTeam == NO_TEAM)
+	if (GET_TEAM(getTeam()).isFriendlyTerritory(eTeam))
 	{
 		return true;
 	}
@@ -5800,21 +5749,15 @@ bool CvUnit::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) cons
 			return true;
 		}
 
-		if (GET_TEAM(getTeam()).isLimitedBorders(eTeam))
+		if (GET_TEAM(getTeam()).isLimitedBorders(eTeam) && (isOnlyDefensive() || !canFight() || isPassage()))
 		{
-			if (isOnlyDefensive() || !canFight() || isPassage())
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	if (!GET_TEAM(eTeam).isAlive())
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return false;
 }
@@ -5826,21 +5769,13 @@ bool CvUnit::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRigh
 	{
 		return false;
 	}
-
-	//if (isBarbarian() && DOMAIN_LAND == getDomainType())
-	//{
-	//	if (eTeam != NO_TEAM && eTeam != getTeam())
-	//	{
-	//		if (pArea && pArea->isBorderObstacle(eTeam))
-	//		{
-	//			if (getArea() != pArea->getID())
-	//			{
-	//				return false;
-	//			}
-	//		}
-	//	}
-	//}
-
+	/*
+	if (isBarbarian() && DOMAIN_LAND == getDomainType() && eTeam != NO_TEAM && eTeam != getTeam()
+	&& pArea && pArea->isBorderObstacle(eTeam) && pArea->getID() != getArea())
+	{
+		return false;
+	}
+	*/
 	return true;
 }
 
@@ -5848,63 +5783,49 @@ bool CvUnit::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRigh
 // Returns the ID of the team to declare war against
 TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 {
-	CvUnit* pUnit;
-	TeamTypes eRevealedTeam;
-
 	FAssert(isHuman());
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
-		eRevealedTeam = pPlot->getRevealedTeam(getTeam(), false);
+		const TeamTypes eRevealedTeam = pPlot->getRevealedTeam(getTeam(), false);
 
 		if (eRevealedTeam != NO_TEAM)
 		{
-			if (!canEnterArea(eRevealedTeam, pPlot->area()) || (getDomainType() == DOMAIN_SEA && !canCargoEnterArea(eRevealedTeam, pPlot->area(), false) && getGroup()->isAmphibPlot(pPlot)))
+			if ((!canEnterArea(eRevealedTeam, pPlot->area()) || getDomainType() == DOMAIN_SEA && !canCargoEnterArea(eRevealedTeam, pPlot->area(), false) && getGroup()->isAmphibPlot(pPlot))
+			&& GET_TEAM(getTeam()).canDeclareWar(pPlot->getTeam()))
 			{
-				if (GET_TEAM(getTeam()).canDeclareWar(pPlot->getTeam()))
-				{
-					return eRevealedTeam;
-				}
+				return eRevealedTeam;
 			}
 		}
-		else
+		else if (pPlot->isActiveVisible(false) && canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
 		{
-			if (pPlot->isActiveVisible(false))
-			{
-				if (canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
-				{
-					pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwner(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
+			const CvUnit* pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwner(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
 
-					if (pUnit != NULL)
-					{
-						return pUnit->getTeam();
-					}
-				}
+			if (pUnit != NULL)
+			{
+				return pUnit->getTeam();
 			}
 		}
 	}
-
 	return NO_TEAM;
 }
 
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
-	int iRange = visibilityRange(pPlot) + 1;
+	const int iRange = visibilityRange(pPlot) + 1;
+
 	for (int i = -iRange; i <= iRange; ++i)
 	{
 		for (int j = -iRange; j <= iRange; ++j)
 		{
 			CvPlot* pLoopPlot = ::plotXY(pPlot->getX(), pPlot->getY(), i, j);
-			if (NULL != pLoopPlot)
+			if (NULL != pLoopPlot && !pLoopPlot->isRevealed(getTeam(), false)
+			&& pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
 			{
-				if (!pLoopPlot->isRevealed(getTeam(), false) && pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -6012,17 +5933,9 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			//	}
 			//}
 		}
-		bool bPeak = false;
-		bool bHill = false;
-		if (m_pUnitInfo->isTerrainImpassableType(iHill))
-		{
-			bHill = true;
-		}
-		if (m_pUnitInfo->isTerrainImpassableType(iPeak))
-		{
-			bPeak = true;
-		}
-		if ((pPlot->isPeak2(true) && bPeak) || (pPlot->isHills() && bHill))
+
+		if (pPlot->isPeak2(true) && m_pUnitInfo->isTerrainImpassableType(iPeak)
+		|| pPlot->isHills() && m_pUnitInfo->isTerrainImpassableType(iHill))
 		{
 			TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -6092,59 +6005,31 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				}
 			}
 
-			if (!bValid)
+			if (!bValid && (bIgnoreLoad || !canLoad(pPlot)))
 			{
-				if (bIgnoreLoad || !canLoad(pPlot))
+				if (!bIgnoreAttack)
 				{
-					if ( !bIgnoreAttack )
-					{
-						return false;
-					}
-					else
-					{
-						bFailWithoutAttack = true;
-					}
+					return false;
 				}
+				bFailWithoutAttack = true;
 			}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/7/10                                                */
-/*                                                                                              */
-/*  Rebase Limit                                                                                */
-/************************************************************************************************/
-			if (!bFailWithoutAttack && !GET_TEAM(getTeam()).isRebaseAnywhere())
-			{
-				if ((GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)))
-				{
-					if (plotDistance(pPlot->getX(), pPlot->getY(), getX(), getY()) > (GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)))
-					{
-						if ( !bIgnoreAttack )
-						{
-							return false;
-						}
-						else
-						{
-							bFailWithoutAttack = true;
-						}
-					}
-				}
-			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		}
 
+			// Afforess - 03/7/10 - Rebase Limit
+			if (!bFailWithoutAttack && !GET_TEAM(getTeam()).isRebaseAnywhere() && GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)
+			&& plotDistance(pPlot->getX(), pPlot->getY(), getX(), getY()) > GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE))
+			{
+				if (!bIgnoreAttack)
+				{
+					return false;
+				}
+				bFailWithoutAttack = true;
+			}
+		}
 		break;
 
 	case DOMAIN_LAND:
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isCanMoveLandUnits())
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 		{
 			if (!pPlot->isCity() || (pPlot->isCity() && 0 == GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES()))
 			{
@@ -6413,11 +6298,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool bValid = false;
 	if (pPlot->isImpassable(getTeam()))
 	{
@@ -6541,9 +6422,6 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (GC.getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK())
 	{
