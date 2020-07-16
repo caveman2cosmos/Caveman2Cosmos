@@ -11965,7 +11965,13 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 
 void CvPlayer::calcUnitUpkeep()
 {
-	
+	// This will probably be filled in last as I need to consider all the factors that go in here first.
+
+	// Refresh relevant UI
+	if (getID() == GC.getGame().getActivePlayer())
+	{
+		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
+	}
 }
 
 
