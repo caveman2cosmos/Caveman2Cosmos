@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <!--
+	iBaseUpkeepModifierChange - Applied directly on the unit's base upkeep value.
+	iExtraUpkeep - Not implemented yet - Its value is added to the upkeep after iBaseUpkeepModifier is applied.
 	iUpkeepMultiplierChange - Applied last to the upkeep before reaching final upkeep
-		Its value without any "change" is 100, and its minimum limit is zero.
-		A "change" value of 75 will translate to x1.75 (100+75=175)
-		Two "change" values of 50 will translate to x2.0 (100+50+50=200)
 -->
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>
@@ -6684,7 +6683,7 @@
 			<iExperiencePercent>140</iExperiencePercent>
 			<iSelfHealModifier>18</iSelfHealModifier>
 			<iGroupBase>1</iGroupBase>
-			<iUpkeepMultiplierChange>-80</iUpkeepMultiplierChange>
+			<iUpkeepMultiplierChange>-406</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6702,7 +6701,7 @@
 			<iExperiencePercent>90</iExperiencePercent>
 			<iSelfHealModifier>12</iSelfHealModifier>
 			<iGroupBase>2</iGroupBase>
-			<iUpkeepMultiplierChange>-70</iUpkeepMultiplierChange>
+			<iUpkeepMultiplierChange>-237</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6720,7 +6719,7 @@
 			<iExperiencePercent>50</iExperiencePercent>
 			<iSelfHealModifier>7</iSelfHealModifier>
 			<iGroupBase>3</iGroupBase>
-			<iUpkeepMultiplierChange>-66</iUpkeepMultiplierChange>
+			<iUpkeepMultiplierChange>-125</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6738,7 +6737,7 @@
 			<iExperiencePercent>20</iExperiencePercent>
 			<iSelfHealModifier>3</iSelfHealModifier>
 			<iGroupBase>4</iGroupBase>
-			<iUpkeepMultiplierChange>-33</iUpkeepMultiplierChange>
+			<iUpkeepMultiplierChange>-50</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>

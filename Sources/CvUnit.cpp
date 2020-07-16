@@ -686,8 +686,8 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
 	m_iExtraCostModifier = 0;
-	m_iBaseUpkeepModifier = 100;
-	m_iUpkeepMultiplier = 100;
+	m_iBaseUpkeepModifier = 0;
+	m_iUpkeepMultiplier = 0;
 	m_iUpkeep100 = 0;
 	m_iExtraPowerValue = 0;
 	m_iExtraAssetValue = 0;
@@ -19788,27 +19788,41 @@ void CvUnit::changeUpkeepMultiplier(const int iChange)
 
 int CvUnit::getBaseUpkeepModifier() const
 {
-	return std::max(0, m_iBaseUpkeepModifier);
+	return m_iBaseUpkeepModifier;
 }
 
 int CvUnit::getUpkeepMultiplier() const
 {
-	return std::max(0, m_iUpkeepMultiplier);
+	return m_iUpkeepMultiplier;
 }
 
 void CvUnit::calcUpkeep()
 {
 	// ToDo - Update Player level unit upkeep value here when that value exist.
-	int iUpkeep100 = m_pUnitInfo->getBaseUpkeep();
+	int iUpkeep100 = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iUpkeep100 > 0)
 	{
-		iUpkeep100 *= getBaseUpkeepModifier();
+		if (m_iBaseUpkeepModifier > 0)
+		{
+			iUpkeep100 = iUpkeep100 * (100 + m_iBaseUpkeepModifier) / 100;
+		}
+		else if (m_iBaseUpkeepModifier < 0)
+		{
+			iUpkeep100 = iUpkeep100 * 100 / (100 - m_iBaseUpkeepModifier);
+		}
 		// We may want a simple addition to the base here at some point,
 		// an iExtraUpkeep in promotion/unitcombat infos.
 		// Hence the naming for "BaseUpkeepModifier" and "UpkeepMultiplier"
 		// Both are atm technically BaseUpkeepModifiers.
-		iUpkeep100 *= getUpkeepMultiplier();
-		iUpkeep100 /= 100;
+
+		if (m_iUpkeepMultiplier > 0)
+		{
+			iUpkeep100 = iUpkeep100 * (100 + m_iUpkeepMultiplier) / 100;
+		}
+		else if (m_iUpkeepMultiplier < 0)
+		{
+			iUpkeep100 = iUpkeep100 * 100 / (100 - m_iUpkeepMultiplier);
+		}
 
 		m_iUpkeep100 = std::max(0,  iUpkeep100);
 	}
