@@ -853,11 +853,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iCityDefenseModifier = 0;
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+
 	m_iNonStateReligionCommerceCount = 0;
 	m_iUpgradeAnywhereCount = 0;
 	m_iRevIdxLocal = 0;
@@ -873,9 +869,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCityLimit = 0;
 	m_iCityOverLimitUnhappy = 0;
 	m_iForeignUnhappyPercent = 0;
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	m_iNumNukeUnits = 0;
 	m_iNumOutsideUnits = 0;
 	m_iBaseFreeUnits = 0;
@@ -885,6 +879,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iGoldPerUnit = 0;
 	m_iGoldPerMilitaryUnit = 0;
 	m_iExtraUnitCost = 0;
+
+	m_iUnitUpkeepMilitary = 0;
+	m_iUnitUpkeepCivilian = 0;
+
 	m_iNumMilitaryUnits = 0;
 	m_iNumUnitPercentCountForCostAdjustment = 0;
 	m_iHappyPerMilitaryUnit = 0;
@@ -11953,6 +11951,13 @@ void CvPlayer::changeExtraUnitCost(int iChange)
 	}
 }
 
+void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
+{
+	if (bMilitary)
+		m_iUnitUpkeepMilitary += iChange;
+	else m_iUnitUpkeepCivilian += iChange;
+}
+
 
 int CvPlayer::getNumMilitaryUnits() const
 {
@@ -21122,11 +21127,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryProductionModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSpaceProductionModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCityDefenseModifier);
-	/************************************************************************************************/
-	/* REVDCM                                 09/02/10                                phungus420    */
-	/*                                                                                              */
-	/* Player Functions                                                                             */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNonStateReligionCommerceCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeAnywhereCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iRevIdxLocal);
@@ -21139,9 +21140,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_fRevIdxGoodReligionMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bInquisitionConditions);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpgradePriceModifier);
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumNukeUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumOutsideUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnits);
@@ -21151,6 +21150,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerUnit);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerMilitaryUnit);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraUnitCost);
+
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian);
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumMilitaryUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHappyPerMilitaryUnit);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryFoodProductionCount);
@@ -22282,11 +22285,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryProductionModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSpaceProductionModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityDefenseModifier);
-	/************************************************************************************************/
-	/* REVDCM                                 09/02/10                                phungus420    */
-	/*                                                                                              */
-	/* Player Functions                                                                             */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNonStateReligionCommerceCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpgradeAnywhereCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iRevIdxLocal);
@@ -22299,9 +22298,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_fRevIdxGoodReligionMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bInquisitionConditions);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpgradePriceModifier);
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumNukeUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumOutsideUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnits);
@@ -22311,6 +22308,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerUnit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraUnitCost);
+
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumMilitaryUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHappyPerMilitaryUnit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryFoodProductionCount);

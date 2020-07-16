@@ -597,6 +597,8 @@ public:
 	int getExtraUnitCost() const; // Exposed to Python
 	void changeExtraUnitCost(int iChange);
 
+	void changeUnitUpkeep(const int iChange, const bool bMilitary);
+
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
 
@@ -1816,6 +1818,10 @@ protected:
 	int m_iGoldPerUnit;
 	int m_iGoldPerMilitaryUnit;
 	int m_iExtraUnitCost;
+
+	int m_iUnitUpkeepMilitary;
+	int m_iUnitUpkeepCivilian;
+
 	int m_iNumMilitaryUnits;
 	int m_iNumUnitPercentCountForCostAdjustment;
 	int m_iHappyPerMilitaryUnit;

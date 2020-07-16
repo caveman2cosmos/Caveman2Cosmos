@@ -19798,7 +19798,12 @@ int CvUnit::getUpkeepMultiplier() const
 
 void CvUnit::calcUpkeep()
 {
-	// ToDo - Update Player level unit upkeep value here when that value exist.
+	// Remove old value from total
+	if (m_iUpkeep100 > 0)
+	{
+		// ToDo - Update Player level unit upkeep value here when said value exist.
+		//GET_PLAYER(getOwner()).changeUnitUpkeep(-m_iUpkeep100, m_pUnitInfo->isMilitarySupport());
+	}
 	int iUpkeep100 = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iUpkeep100 > 0)
 	{
@@ -19827,6 +19832,13 @@ void CvUnit::calcUpkeep()
 		m_iUpkeep100 = std::max(0,  iUpkeep100);
 	}
 	else m_iUpkeep100 = 0;
+
+	// Apply new value to total
+	if (m_iUpkeep100 > 0)
+	{
+		// ToDo - Update Player level unit upkeep value here when said value exist.
+		//GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100, m_pUnitInfo->isMilitarySupport());
+	}
 }
 
 int CvUnit::getUpkeep100() const
