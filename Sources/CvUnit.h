@@ -1372,7 +1372,6 @@ public:
 
 	int getExtraCostModifier () const;
 	void changeExtraCostModifier (int iChange);
-	int getExtraUnitCost100 () const;
 
 	void changeBaseUpkeepModifier(const int iChange);
 	void changeUpkeepMultiplier(const int iChange);

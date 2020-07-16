@@ -878,7 +878,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFreeMilitaryUnitsPopulationPercent = 0;
 	m_iGoldPerUnit = 0;
 	m_iGoldPerMilitaryUnit = 0;
-	m_iExtraUnitCost = 0;
 
 	m_iUnitUpkeepMilitary = 0;
 	m_iUnitUpkeepCivilian = 0;
@@ -9113,7 +9112,6 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 
 	iBaseUnitCost = iPaidUnits * getGoldPerUnit();
 	iMilitaryCost = iPaidMilitaryUnits * getGoldPerMilitaryUnit();
-	iExtraCost = getExtraUnitCost();
 
 	iSupport = iMilitaryCost + iBaseUnitCost + iExtraCost;
 
@@ -11931,26 +11929,6 @@ void CvPlayer::changeGoldPerMilitaryUnit(int iChange)
 	}
 }
 
-
-int CvPlayer::getExtraUnitCost() const
-{
-	return m_iExtraUnitCost/100;
-}
-
-
-void CvPlayer::changeExtraUnitCost(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iExtraUnitCost += iChange;
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
-	}
-}
-
 void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 {
 	if (iChange != 0)
@@ -11965,7 +11943,24 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 
 void CvPlayer::calcUnitUpkeep()
 {
+	if (isNPC())
+	{
+		return;
+	}
+	unsigned long long iCalc = 0;
 	// This will probably be filled in last as I need to consider all the factors that go in here first.
+
+	iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
+	iCalc /= 100;
+
+	if (!isHuman())
+	{
+		iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitCostPercent();
+		iCalc /= 100;
+
+		iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+		iCalc /= 100;
+	}
 
 	// Refresh relevant UI
 	if (getID() == GC.getGame().getActivePlayer())
@@ -21165,10 +21160,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeMilitaryUnitsPopulationPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerUnit);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerMilitaryUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraUnitCost);
 
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian);
+		// @SAVEBREAK DELETE Toffer
+		int m_iExtraUnitCost = 0;
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraUnitCost);
+		// SAVEBREAK@
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumMilitaryUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHappyPerMilitaryUnit);
@@ -21241,20 +21237,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		//TB Nukefix (Reversal) Should NOT comment out the following line
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bNukesValid);
 
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                           07/09/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_READ(wrapper, "CvPlayer", &m_bDisableHuman);
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                            END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+		WRAPPER_READ(wrapper, "CvPlayer", &m_bDisableHuman); // AI_AUTO_PLAY - 07/09/08 - jdog5000
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitCountdown);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStabilityIndex);
@@ -21269,9 +21253,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivDesc);
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivShort);
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivAdj);
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eID);
 
 		m_contractBroker.init(m_eID);
@@ -21874,12 +21856,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		// RevolutionDCM - read revolution stability history data from disk
 		{
 			m_mapRevolutionStabilityHistory.clear();
@@ -21895,9 +21871,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 		// RevolutionDCM end
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-	/************************************************************************************************/
 
 		{
 			m_mapEventsOccured.clear();
@@ -22195,6 +22168,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			doCountTotalCulture();
 		}
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -22208,15 +22183,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 
 	WRAPPER_READ_OBJECT_END(wrapper);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	updateCache();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if ( GC.viewportsEnabled() && GC.getGame().getActivePlayer() == m_eID )
 	{
@@ -22323,10 +22291,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeMilitaryUnitsPopulationPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerUnit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraUnitCost);
 
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian);
+		// @SAVEBREAK DELETE Toffer
+		int m_iExtraUnitCost = 0;
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraUnitCost);
+		// SAVEBREAK@
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumMilitaryUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHappyPerMilitaryUnit);
@@ -22338,11 +22307,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExpInBorderModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingOnlyHealthyCount);
-		//DPII < Maintenance Modifiers >
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCoastalDistanceMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iConnectedCityMaintenanceModifier);
-		//DPII < Maintenance Modifiers >
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iDistanceMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumCitiesMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCorporationMaintenanceModifier);
@@ -22398,20 +22367,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		//TB Nukefix (Reversal) Should NOT comment out the following line
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bNukesValid);
 
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                           07/09/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_bDisableHuman);
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                            END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         06/11/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_bDisableHuman); // AI_AUTO_PLAY - 07/09/08 - jdog5000
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitCountdown);
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStabilityIndex);
@@ -22426,9 +22383,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivDesc);
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivShort);
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivAdj);
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eID);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_ePersonalityType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eCurrentEra);
@@ -22760,11 +22715,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		// RevolutionDCM - save revolution stability history to disk
 		{
 			uint iSize = m_mapRevolutionStabilityHistory.size();
@@ -22777,9 +22727,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 		// RevolutionDCM - end
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-	/************************************************************************************************/
 
 		{
 			uint iSize = m_mapEventsOccured.size();
@@ -22895,12 +22842,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_DOMAIN_TYPES, m_paiNationalDomainProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiNationalTechResearchModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFixedBordersCount);
-		//Team Project (3)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNationalCaptureProbabilityModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNationalCaptureResistanceModifier);
-		//Team Project (5)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iAllReligionsActiveCount);
-		//Team Project (6)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraStateReligionSpreadModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNonStateReligionSpreadModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiEraAdvanceFreeSpecialistCount);
@@ -22921,10 +22868,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeSpecialistperNationalWonderCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeSpecialistperTeamProjectCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraGoodyCount);
-		//Team Project (7)
+
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiGoldenAgeYield);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiGoldenAgeCommerce);
-		//Team Project (8)
+
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFirstMergeSelection);
@@ -22951,9 +22898,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian);
 	}
 	//	Use condensed format now - only save non-default array elements
-
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

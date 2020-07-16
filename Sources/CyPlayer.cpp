@@ -1403,11 +1403,6 @@ int CyPlayer::getGoldPerMilitaryUnit()
 	return m_pPlayer ? m_pPlayer->getGoldPerMilitaryUnit() : -1;
 }
 
-int CyPlayer::getExtraUnitCost()
-{
-	return m_pPlayer ? m_pPlayer->getExtraUnitCost() : -1;
-}
-
 int CyPlayer::getNumMilitaryUnits()
 {
 	return m_pPlayer ? m_pPlayer->getNumMilitaryUnits() : -1;

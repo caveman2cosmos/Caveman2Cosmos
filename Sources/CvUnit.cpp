@@ -415,8 +415,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
 		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 
-		GET_PLAYER(getOwner()).changeExtraUnitCost(getExtraUnitCost100());
-
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
 			GET_PLAYER(getOwner()).changeNumNukeUnits(1);
@@ -1362,8 +1360,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	}
 	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
 	GET_PLAYER(eOwner).changeUnitCount(m_eUnitType, -1);
-
-	GET_PLAYER(eOwner).changeExtraUnitCost(-(getExtraUnitCost100()));
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
@@ -19765,15 +19761,6 @@ void CvUnit::changeExtraCostModifier(int iChange)
 	GET_PLAYER(getOwner()).changeUnitPercentCountForCostAdjustment(iChange);
 }
 
-int CvUnit::getExtraUnitCost100() const
-{
-	int iTotal = m_pUnitInfo->getExtraCost();
-	int iModifier = costModifierTotal();
-	iTotal *= (iModifier + 100);
-	iTotal /= 100;
-	return iTotal;
-}
-
 void CvUnit::changeBaseUpkeepModifier(const int iChange)
 {
 	if (iChange != 0)
@@ -26599,9 +26586,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCostModifier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -26959,6 +26943,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraGatherHerdCount);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsReligionLocked);
+
+	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -27613,9 +27601,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraStrengthModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDamageModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCostModifier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, m_eGGExperienceEarnedTowardsType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargo);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargoCapacity);
@@ -27887,6 +27872,11 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraReligiousCombatModifier);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, m_eReligionType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsReligionLocked);
+
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
