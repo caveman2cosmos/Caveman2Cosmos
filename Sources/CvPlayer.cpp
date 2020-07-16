@@ -11954,7 +11954,7 @@ void CvPlayer::calcUnitUpkeep()
 	{
 		iMilitaryUpkeep = iMilitaryUpkeep * 100 / (100 - m_iMilitaryUnitUpkeepMod);
 	}
-	iCalc += iMilitaryUpkeep;
+	iCalc += iMilitaryUpkeep / 100;
 
 	iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
 	iCalc /= 100;
