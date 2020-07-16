@@ -19776,14 +19776,20 @@ int CvUnit::getExtraUnitCost100() const
 
 void CvUnit::changeBaseUpkeepModifier(const int iChange)
 {
-	m_iBaseUpkeepModifier += iChange;
-	calcUpkeep();
+	if (iChange != 0)
+	{
+		m_iBaseUpkeepModifier += iChange;
+		calcUpkeep100();
+	}
 }
 
 void CvUnit::changeUpkeepMultiplier(const int iChange)
 {
-	m_iUpkeepMultiplier += iChange;
-	calcUpkeep();
+	if (iChange != 0)
+	{
+		m_iUpkeepMultiplier += iChange;
+		calcUpkeep100();
+	}
 }
 
 int CvUnit::getBaseUpkeepModifier() const
@@ -19796,24 +19802,18 @@ int CvUnit::getUpkeepMultiplier() const
 	return m_iUpkeepMultiplier;
 }
 
-void CvUnit::calcUpkeep()
+void CvUnit::calcUpkeep100()
 {
-	// Remove old value from total
-	if (m_iUpkeep100 > 0)
-	{
-		// ToDo - Update Player level unit upkeep value here when said value exist.
-		//GET_PLAYER(getOwner()).changeUnitUpkeep(-m_iUpkeep100, m_pUnitInfo->isMilitarySupport());
-	}
-	int iUpkeep100 = 100 * m_pUnitInfo->getBaseUpkeep();
-	if (iUpkeep100 > 0)
+	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
+	if (iCalc > 0)
 	{
 		if (m_iBaseUpkeepModifier > 0)
 		{
-			iUpkeep100 = iUpkeep100 * (100 + m_iBaseUpkeepModifier) / 100;
+			iCalc = iCalc * (100 + m_iBaseUpkeepModifier) / 100;
 		}
 		else if (m_iBaseUpkeepModifier < 0)
 		{
-			iUpkeep100 = iUpkeep100 * 100 / (100 - m_iBaseUpkeepModifier);
+			iCalc = iCalc * 100 / (100 - m_iBaseUpkeepModifier);
 		}
 		// We may want a simple addition to the base here at some point,
 		// an iExtraUpkeep in promotion/unitcombat infos, e.g. Equipment related.
@@ -19822,22 +19822,21 @@ void CvUnit::calcUpkeep()
 
 		if (m_iUpkeepMultiplier > 0)
 		{
-			iUpkeep100 = iUpkeep100 * (100 + m_iUpkeepMultiplier) / 100;
+			iCalc = iCalc * (100 + m_iUpkeepMultiplier) / 100;
 		}
 		else if (m_iUpkeepMultiplier < 0)
 		{
-			iUpkeep100 = iUpkeep100 * 100 / (100 - m_iUpkeepMultiplier);
+			iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplier);
 		}
 
-		m_iUpkeep100 = std::max(0,  iUpkeep100);
-	}
-	else m_iUpkeep100 = 0;
+		const int iOldUpkeep = m_iUpkeep100;
+		m_iUpkeep100 = std::max(0,  iCalc);
 
-	// Apply new value to total
-	if (m_iUpkeep100 > 0)
-	{
-		// ToDo - Update Player level unit upkeep value here when said value exist.
-		//GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100, m_pUnitInfo->isMilitarySupport());
+		// Update player total
+		if (m_iUpkeep100 != iOldUpkeep)
+		{
+			GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, m_pUnitInfo->isMilitarySupport());
+		}
 	}
 }
 

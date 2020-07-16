@@ -1376,7 +1376,7 @@ public:
 
 	void changeBaseUpkeepModifier(const int iChange);
 	void changeUpkeepMultiplier(const int iChange);
-	void calcUpkeep();
+	void calcUpkeep100();
 	int getBaseUpkeepModifier() const;
 	int getUpkeepMultiplier() const;
 	int getUpkeep100() const;

@@ -598,6 +598,7 @@ public:
 	void changeExtraUnitCost(int iChange);
 
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
+	void calcUnitUpkeep();
 
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);

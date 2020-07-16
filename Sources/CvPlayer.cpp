@@ -11953,9 +11953,19 @@ void CvPlayer::changeExtraUnitCost(int iChange)
 
 void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 {
-	if (bMilitary)
-		m_iUnitUpkeepMilitary += iChange;
-	else m_iUnitUpkeepCivilian += iChange;
+	if (iChange != 0)
+	{
+		if (bMilitary)
+			m_iUnitUpkeepMilitary += iChange;
+		else m_iUnitUpkeepCivilian += iChange;
+
+		calcUnitUpkeep();
+	}
+}
+
+void CvPlayer::calcUnitUpkeep()
+{
+	
 }
 
 
