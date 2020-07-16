@@ -19811,7 +19811,7 @@ void CvUnit::calcUpkeep()
 			iUpkeep100 = iUpkeep100 * 100 / (100 - m_iBaseUpkeepModifier);
 		}
 		// We may want a simple addition to the base here at some point,
-		// an iExtraUpkeep in promotion/unitcombat infos.
+		// an iExtraUpkeep in promotion/unitcombat infos, e.g. Equipment related.
 		// Hence the naming for "BaseUpkeepModifier" and "UpkeepMultiplier"
 		// Both are atm technically BaseUpkeepModifiers.
 

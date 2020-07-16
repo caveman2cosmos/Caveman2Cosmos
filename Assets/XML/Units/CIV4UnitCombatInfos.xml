@@ -6919,6 +6919,24 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_trillions.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_GROUP_COUNTLESS</Type>
+			<Description>TXT_KEY_UNITCOMBAT_GROUP_COUNTLESS</Description>
+			<iExperiencePercent>-440</iExperiencePercent>
+			<iSelfHealModifier>-52</iSelfHealModifier>
+			<iGroupBase>13</iGroupBase>
+			<iUpkeepMultiplierChange>2463</iUpkeepMultiplierChange>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<InvisibilityIntensityChangeTypes>
+				<InvisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-8</iIntensity>
+				</InvisibilityIntensityChangeType>
+			</InvisibilityIntensityChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/group_countless.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ARMOR_TYPE_PADDED</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ARMOR_TYPE_PADDED</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
@@ -7169,11 +7187,22 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_material.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_INCAPABLE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INCAPABLE</Description>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<iExperiencePercent>150</iExperiencePercent>
+			<iQualityBase>0</iQualityBase>
+			<iBaseUpkeepModifierChange>-200</iBaseUpkeepModifierChange>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_QUALITY_PATHETIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_PATHETIC</Description>
 			<iExperiencePercent>120</iExperiencePercent>
 			<iQualityBase>1</iQualityBase>
-			<iBaseUpkeepModifierChange>-20</iBaseUpkeepModifierChange>
+			<iBaseUpkeepModifierChange>-140</iBaseUpkeepModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7190,7 +7219,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INFERIOR</Description>
 			<iExperiencePercent>90</iExperiencePercent>
 			<iQualityBase>2</iQualityBase>
-			<iBaseUpkeepModifierChange>-15</iBaseUpkeepModifierChange>
+			<iBaseUpkeepModifierChange>-90</iBaseUpkeepModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7213,7 +7242,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_POOR</Description>
 			<iExperiencePercent>60</iExperiencePercent>
 			<iQualityBase>3</iQualityBase>
-			<iBaseUpkeepModifierChange>-10</iBaseUpkeepModifierChange>
+			<iBaseUpkeepModifierChange>-50</iBaseUpkeepModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7236,7 +7265,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_MEDIOCRE</Description>
 			<iExperiencePercent>30</iExperiencePercent>
 			<iQualityBase>4</iQualityBase>
-			<iBaseUpkeepModifierChange>-5</iBaseUpkeepModifierChange>
+			<iBaseUpkeepModifierChange>-20</iBaseUpkeepModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7368,37 +7397,6 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_epic.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_PROMOTED_CAUTIOUS</Type>
-			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_CAUTIOUS</Description>
-			<Button>Art/Interface/Buttons/units/sparth/categories/promoted_cautious.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_PROMOTED_STALL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_STALL</Description>
-			<Button>Art/Interface/Buttons/units/sparth/categories/promoted_stall.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_PROMOTED_ARMED_GUARD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Description>
-			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
-			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_INCAPABLE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INCAPABLE</Description>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<iExperiencePercent>150</iExperiencePercent>
-			<iQualityBase>0</iQualityBase>
-			<iBaseUpkeepModifierChange>-25</iBaseUpkeepModifierChange>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_QUALITY_DIVINE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_DIVINE</Description>
 			<OnGameOptions>
@@ -7422,22 +7420,24 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_divine.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_GROUP_COUNTLESS</Type>
-			<Description>TXT_KEY_UNITCOMBAT_GROUP_COUNTLESS</Description>
-			<iExperiencePercent>-440</iExperiencePercent>
-			<iSelfHealModifier>-52</iSelfHealModifier>
-			<iGroupBase>13</iGroupBase>
-			<iUpkeepMultiplierChange>2463</iUpkeepMultiplierChange>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<InvisibilityIntensityChangeTypes>
-				<InvisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-8</iIntensity>
-				</InvisibilityIntensityChangeType>
-			</InvisibilityIntensityChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/group_countless.dds</Button>
+			<Type>UNITCOMBAT_PROMOTED_CAUTIOUS</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_CAUTIOUS</Description>
+			<Button>Art/Interface/Buttons/units/sparth/categories/promoted_cautious.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_PROMOTED_STALL</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_STALL</Description>
+			<Button>Art/Interface/Buttons/units/sparth/categories/promoted_stall.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_PROMOTED_ARMED_GUARD</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Description>
+			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
+			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
+			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_TAMED</Type>

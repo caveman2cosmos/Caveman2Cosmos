@@ -9105,37 +9105,10 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 	iFreeMilitaryUnits = getBaseFreeMilitaryUnits();
 	iFreeMilitaryUnits += ((getTotalPopulation() * getFreeMilitaryUnitsPopulationPercent()) / 100);
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
+	// jdog5000 - 02/04/09 - rebels and BarbarianCiv
 	iFreeUnits += getFreeUnitCountdown();
 	iFreeMilitaryUnits += getFreeUnitCountdown();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/17/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original BTS code
-	if (!isHuman())
-	{
-		if (GET_TEAM(getTeam()).hasMetHuman())
-		{
-			iFreeUnits += getNumCities(); // XXX
-			iFreeMilitaryUnits += getNumCities(); // XXX
-		}
-	}
-*/
-	// Removed hidden AI bonus
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	// ! jdog5000
 
 	iPaidUnits = std::max(0, getNumUnits() - iFreeUnits);
 	iPaidMilitaryUnits = std::max(0, getNumMilitaryUnits() - iFreeMilitaryUnits);
@@ -9157,7 +9130,6 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 		iSupport *= std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
 		iSupport /= 100;
 	}
-	/*FAssert(iSupport >= 0);*///This is generally normal under complex traits - the return limits it to 0+ anyhow.
 
 	return std::max(0, iSupport);
 }
@@ -9183,38 +9155,27 @@ int CvPlayer::calculateUnitCost() const
 
 int CvPlayer::calculateUnitSupply() const
 {
-	int iPaidUnits;
-	int iBaseSupplyCost;
-
 	if (isAnarchy() || isNPC())
 	{
 		return 0;
 	}
-	int iCost = calculateUnitSupply(iPaidUnits, iBaseSupplyCost);
+	int iPaidUnits;
+	int iBaseSupplyCost;
 
-	return iCost;
+	return calculateUnitSupply(iPaidUnits, iBaseSupplyCost);
 }
 
 int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 {
-	int iSupply;
-
 	iPaidUnits = std::max(0, (getNumOutsideUnits() - GC.getDefineINT("INITIAL_FREE_OUTSIDE_UNITS")));
 
 	iBaseSupplyCost = iPaidUnits * GC.getDefineINT("INITIAL_OUTSIDE_UNIT_GOLD_PERCENT");
 	iBaseSupplyCost /= 100;
 
-/************************************************************************************************/
-/* Afforess  Unit Distance Modifier   Start          12/4/09                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	iBaseSupplyCost *= (100 + getDistantUnitSupportCostModifier());
 	iBaseSupplyCost /= 100;
-/************************************************************************************************/
-/* Afforess  Unit Distance Modifier                          END                  		         */
-/************************************************************************************************/
-	iSupply = iBaseSupplyCost;
+
+	int iSupply = iBaseSupplyCost;
 
 	if (!isHuman() && !isNPC())
 	{
