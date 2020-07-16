@@ -1819,8 +1819,8 @@ protected:
 	int m_iGoldPerMilitaryUnit;
 	int m_iExtraUnitCost;
 
-	unsigned long long m_iUnitUpkeepMilitary;
-	unsigned long long m_iUnitUpkeepCivilian;
+	unsigned long m_iUnitUpkeepMilitary;
+	unsigned long m_iUnitUpkeepCivilian;
 
 	int m_iNumMilitaryUnits;
 	int m_iNumUnitPercentCountForCostAdjustment;
