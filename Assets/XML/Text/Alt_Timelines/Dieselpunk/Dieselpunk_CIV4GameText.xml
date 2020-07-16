@@ -152,7 +152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Tag>
 		<English>The theremin is an early electronic musical instrument controlled without discernible physical contact from the player. It is named after its Russian inventor, Professor Léon Theremin, who patented the device in 1928. The controlling section usually consists of two metal antennas which sense the position of the player's hands and control oscillators for frequency with one hand, and amplitude (volume) with the other, so it can be played without being touched. The electric signals from the theremin are amplified and sent to a loudspeaker.</English>
-		<Italian>Theremin è un primitivo strumento elettronico musicale controllato senza contatto fisico dal suonatore. E' chiamato così sulla base del suo inventore russo, Professor Léon Theremin, che brevettò lo strumento nel 1928. La sezione di controllo consiste di due antenne in metallo che rilevano la posizione delle mani del suonatore che controlla gli oscillatori difrequenza con una mano e il volume con l'altra, cosicchè può essere suonato senza contatto. I segnali elettrici dal Theremin sono amplificati e inviati ad un amplificatore.</Italian>
+		<Italian>Theremin è un primitivo strumento elettronico musicale controllato senza contatto fisico dal suonatore. È chiamato così sulla base del suo inventore russo, Professor Léon Theremin, che brevettò lo strumento nel 1928. La sezione di controllo consiste di due antenne in metallo che rilevano la posizione delle mani del suonatore che controlla gli oscillatori difrequenza con una mano e il volume con l'altra, cosicchè può essere suonato senza contatto. I segnali elettrici dal Theremin sono amplificati e inviati ad un amplificatore.</Italian>
 		<Polish>Theremin (eterofon, termenvox) - instrument muzyczny z grupy elektrofonów elektronicznych skonstruowany przez rosyjskiego fizyka i wynalazcę Lwa Termena. Dźwięki produkowane przez theremin są ubogie harmonicznie i przypominają w swym brzmieniu wycie, jęk, kobiecy głos, gwizd, piłę, flet, skrzypce lub inne instrumenty.</Polish>
 	</TEXT>
 	<TEXT>
@@ -221,7 +221,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_BERTHA_STRATEGY</Tag>
 		<English>The Big Bertha is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>La Big Bertha è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>La Big Bertha è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Tag>
@@ -236,7 +236,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Tag>
-		<English>The Chromium Gunman is the unique Infantry replacement for the Dieselpunk alt-timeline culture. It starts with bonuses against gunpowder units and in city defence.  Thus the go-to city defender for his era - for those lucky enough to have the use of his services.  But use him with caution - he looks a bit shifty to me...</English>
+		<English>The Chromium Gunman is the unique Infantry replacement for the Dieselpunk alt-timeline culture. It starts with bonuses against gunpowder units and in city defence. Thus the go-to city defender for his era - for those lucky enough to have the use of his services. But use him with caution - he looks a bit shifty to me...</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE</Tag>
@@ -254,25 +254,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE_STRATEGY</Tag>
 		<English>The Double Biplane is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Biplano doppio è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>Il Biplano doppio è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER</Tag>
 		<English>Drache Helicopter</English>
-		<French>Hélicoptère 'Drache'</French>
+		<French>Hélicoptère Drache</French>
 		<Italian>Elicottero Drache</Italian>
 		<Polish>Smigłowiec Drache</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Tag>
 		<English>The Drache Helicopter is a massive helicopter, which is equiped with heavy anti-ground weapons. It is weak against naval units.</English>
-		<Italian>L'elicottero Drache è un potente elicottero, equipaggiato con armi pesanti aria-terra. E' però debole contro le unità navali.</Italian>
+		<Italian>L'elicottero Drache è un potente elicottero, equipaggiato con armi pesanti aria-terra. È però debole contro le unità navali.</Italian>
 		<Polish>Smigłowiec wielozadaniowy Fa 223 był kontynuacją założeń wykorzystanych przy budowie poprzedniej konstrukcji profesora Focke - Focke-Wulfa Fw 61. Elementem nośnym tych maszyn były dwa wirniki umieszczone na końcach kratownicowych ramion umieszczonych na bokach kadłuba. Były one napędzane przez silnik umieszczony w kadłubie. Układ dwuwirnikowy umożliwiał rezygnację ze śmigła ogonowego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER_STRATEGY</Tag>
 		<English>The Drache Helicopter is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>L'elicottero Drache è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>L'elicottero Drache è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Tag>
@@ -290,7 +290,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP_STRATEGY</Tag>
 		<English>The Goliath Airship is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Dirigibile Goliath è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse.</Italian>
+		<Italian>Il Dirigibile Goliath è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Tag>
@@ -308,7 +308,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY_STRATEGY</Tag>
 		<English>The Railroad Artillery is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il cannone ferroviario è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>Il cannone ferroviario è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TZAR_TANK</Tag>
@@ -321,12 +321,12 @@
 		<Tag>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Tag>
 		<English>The Tzar Tank is a powerful tank. It uses state of the art engines to move it's bulk around the battlefield and it's 105 mm autocannons can vaporize all oppostion.</English>
 		<Italian>Il carro armato Tzar è un potente carro armato. Usa potenti motori per spostarsi sul campo di battaglia, e i suoi cannoni da 105mm possono vaporizzare tutti gli oppositori.</Italian>
-		<Polish>Car tank lub Car wśród czołgów, zwany też Nietoperz  lub czołg Lebiedenki - prototypowy rosyjski pojazd opancerzony skonstruowany w latach 1914-1915. Projekt został zarzucony po testach, które wykazały, że zastosowane silniki są zbyt słabe, a sam pojazd podatny na ogień artylerii.</Polish>
+		<Polish>Car tank lub Car wśród czołgów, zwany też Nietoperz lub czołg Lebiedenki - prototypowy rosyjski pojazd opancerzony skonstruowany w latach 1914-1915. Projekt został zarzucony po testach, które wykazały, że zastosowane silniki są zbyt słabe, a sam pojazd podatny na ogień artylerii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TZAR_TANK_STRATEGY</Tag>
 		<English>The Tzar Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Carro armato Tzar è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>Il Carro armato Tzar è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Tag>
@@ -338,12 +338,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_PEDIA</Tag>
 		<English>The Very Heavy tank was a design much talked about after the Second World War for an armored vehicle. It never achieved fruition, but is here under the Dieselpunk alt-timeline.</English>
-		<Italian>Il carro blindato pesante fu un progetto su cu si discusse molto dopo la Seconda guerra mondiale. Non fu mai realizzato.</Italian>
+		<Italian>Il carro blindato pesante fu un progetto su cui si discusse molto dopo la Seconda guerra mondiale. Non fu mai realizzato.</Italian>
 		<Polish>Landkreuzer P-1000 Ratte ("Szczur") - prototypowy czołg superciężki, przeznaczony dla sił zbrojnych III Rzeszy. Ważący 1000 ton P-1000 Ratte (w planach) byłby ponad 5 razy cięższy od największego wyprodukowanego kiedykolwiek czołgu Maus. Zaprojektowany przez zakłady Friedrich Krupp AG w 1942 i zaaprobowany przez Adolfa Hitlera, został ostatecznie zarzucony na początku 1943 z inicjatywy Alberta Speera.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_STRATEGY</Tag>
 		<English>The Very Heavy Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
+		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
 </Civ4GameText>
