@@ -15034,9 +15034,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				 iTempValue);
 	}
 	iValue += iTempValue;
-	// Afforess - GPM is much more severe than just for warmongerers
-	// iTempValue = -(kCivic.getGoldPerMilitaryUnit() * getNumMilitaryUnits() * iWarmongerPercent) / 200
-	iTempValue = -kCivic.getGoldPerMilitaryUnit() * (bWarPlan ? ((getNumMilitaryUnits() * 3) / 2) : getNumMilitaryUnits());
+
+	iTempValue = -kCivic.getMilitaryUnitUpkeepMod() * (bWarPlan ? (getNumMilitaryUnits() * 3 / 2) : getNumMilitaryUnits());
 
 	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 	{

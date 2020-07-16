@@ -3085,7 +3085,7 @@ public:
 	int getFreeUnitsPopulationPercent() const; // Exposed to Python
 	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
 	int getGoldPerUnit() const; // Exposed to Python
-	int getGoldPerMilitaryUnit() const; // Exposed to Python
+	int getMilitaryUnitUpkeepMod() const;
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 	int getLargestCityHappiness() const; // Exposed to Python
 	int getWarWearinessModifier() const; // Exposed to Python
@@ -3283,7 +3283,7 @@ protected:
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
 	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
+	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
 	int m_iWarWearinessModifier;
@@ -7229,7 +7229,7 @@ public:
 	int getFreeUnitsPopulationPercent() const;
 	int getFreeMilitaryUnitsPopulationPercent() const;
 	int getGoldPerUnit() const;
-	int getGoldPerMilitaryUnit() const;
+	int getMilitaryUnitUpkeepMod() const;
 	int getLargestCityHappiness() const;
 	int getHappyPerMilitaryUnit() const;
 	int getFreeSpecialist() const;
@@ -7481,7 +7481,7 @@ protected:
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
 	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
+	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
 	int m_iFreeSpecialist;

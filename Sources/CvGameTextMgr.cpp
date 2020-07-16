@@ -11211,10 +11211,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		//	Gold cost per military unit
-		if (GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit() != 0)
+		if (GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit(), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MILITARY_MOD", GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod()));
 		}
 
 		//  Unit Upgrade Cost modifier
@@ -17209,11 +17209,11 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 	}
 
-	//	Gold cost per military unit
-	if (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() != 0)
+	// Military upkeep modifier
+	if (GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod() != 0)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MILITARY_MOD", GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod()));
 	}
 
 	bFirst = true;

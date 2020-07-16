@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MILITARY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Change%% military unit upkeep cost</English>
+	</TEXT>
+</Civ4GameText>

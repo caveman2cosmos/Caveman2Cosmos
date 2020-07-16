@@ -275,7 +275,7 @@ Example!
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<iGoldPerUnit>0</iGoldPerUnit>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
@@ -633,7 +633,7 @@ Example!
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<iGoldPerUnit>0</iGoldPerUnit>
 			<iLargestCityHappiness>0</iLargestCityHappiness>

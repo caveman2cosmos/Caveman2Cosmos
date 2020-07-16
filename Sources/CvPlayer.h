@@ -591,8 +591,8 @@ public:
 	int getGoldPerUnit() const; // Exposed to Python
 	void changeGoldPerUnit(int iChange);
 
-	int getGoldPerMilitaryUnit() const; // Exposed to Python
-	void changeGoldPerMilitaryUnit(int iChange);
+	int getMilitaryUnitUpkeepMod() const;
+	void changeMilitaryUnitUpkeepMod(const int iChange);
 
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
 	void calcUnitUpkeep();
@@ -1814,10 +1814,10 @@ protected:
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
 	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
+	int m_iMilitaryUnitUpkeepMod;
 
-	unsigned long m_iUnitUpkeepMilitary;
-	unsigned long m_iUnitUpkeepCivilian;
+	unsigned long m_iUnitUpkeepMilitary100;
+	unsigned long m_iUnitUpkeepCivilian100;
 
 	int m_iNumMilitaryUnits;
 	int m_iNumUnitPercentCountForCostAdjustment;

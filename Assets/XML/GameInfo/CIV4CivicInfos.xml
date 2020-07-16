@@ -51,7 +51,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -186,7 +185,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -322,7 +320,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -468,7 +465,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>3</iMaxConscript>
@@ -715,7 +711,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -864,7 +859,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -1115,7 +1109,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -1267,7 +1261,6 @@
 			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>5</iMaxConscript>
@@ -1446,7 +1439,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -1584,7 +1576,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -1722,7 +1714,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -1867,7 +1859,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -2009,7 +2000,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>5</iMaxConscript>
@@ -2168,7 +2158,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -2287,7 +2276,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -2394,7 +2382,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -2542,7 +2529,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -2683,7 +2669,6 @@
 			<iFreeUnitsPopulationPercent>15</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>5</iMaxConscript>
@@ -2796,7 +2781,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>3</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>2</iMaxConscript>
@@ -2965,7 +2949,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3132,7 +3115,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>5</iMaxConscript>
@@ -3238,7 +3220,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3336,7 +3317,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3440,7 +3420,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3546,7 +3525,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3659,7 +3637,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3770,7 +3747,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -3905,7 +3881,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4048,7 +4023,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4159,7 +4133,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4272,7 +4245,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4387,7 +4359,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4490,7 +4461,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>3</iMaxConscript>
@@ -4600,7 +4570,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>3</iMaxConscript>
@@ -4709,7 +4678,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4807,7 +4775,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4908,7 +4875,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5014,7 +4980,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5113,7 +5078,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>15</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5215,7 +5179,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5342,7 +5305,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5494,7 +5456,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5623,7 +5584,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>15</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
 			<iMaxConscript>7</iMaxConscript>
@@ -5752,7 +5712,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5857,7 +5817,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6115,7 +6074,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6242,7 +6200,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6371,7 +6328,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6521,7 +6477,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6670,7 +6625,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6830,7 +6784,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>2</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>20</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -6968,7 +6922,7 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>2</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>20</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7105,7 +7059,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7205,7 +7158,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7391,7 +7343,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7540,7 +7491,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7656,7 +7606,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>3</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7877,7 +7826,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8007,7 +7955,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8127,7 +8074,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8230,7 +8176,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8362,7 +8307,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8460,7 +8404,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8562,7 +8505,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8712,7 +8654,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8882,7 +8823,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9069,7 +9009,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9319,7 +9258,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9537,7 +9475,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9683,7 +9620,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9903,7 +9839,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10065,7 +10000,6 @@
 			<iFreeUnitsPopulationPercent>7</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10205,7 +10139,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10325,7 +10258,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10493,7 +10425,6 @@
 			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10596,7 +10527,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10742,7 +10672,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10851,7 +10780,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -10960,7 +10888,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11077,7 +11004,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11228,7 +11154,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11343,7 +11268,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11474,7 +11398,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11591,7 +11514,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11744,7 +11666,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -11912,7 +11833,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12106,7 +12026,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12240,7 +12159,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12349,7 +12267,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12456,7 +12373,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12607,7 +12523,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12748,7 +12663,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -12926,7 +12840,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13102,7 +13015,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13250,7 +13162,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13409,7 +13320,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13565,7 +13475,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13706,7 +13615,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13814,7 +13722,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>1</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -13930,7 +13837,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14046,7 +13952,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14153,7 +14058,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14295,7 +14199,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14426,7 +14329,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14534,7 +14436,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14662,7 +14563,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14770,7 +14670,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14878,7 +14777,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -14999,7 +14897,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15107,7 +15004,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15223,7 +15119,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15331,7 +15226,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15472,7 +15366,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15613,7 +15506,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15809,7 +15701,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -15927,7 +15818,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16075,7 +15965,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16191,7 +16080,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16301,7 +16189,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16416,7 +16303,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16533,7 +16419,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16668,7 +16553,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16787,7 +16671,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -16910,7 +16793,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17023,7 +16905,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17181,7 +17062,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17293,7 +17173,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17400,7 +17279,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17517,7 +17395,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17641,7 +17518,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17763,7 +17639,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17871,7 +17746,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -17979,7 +17853,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18094,7 +17967,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18218,7 +18090,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18352,7 +18223,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18486,7 +18356,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18620,7 +18489,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18749,7 +18617,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -18878,7 +18745,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19007,7 +18873,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19137,7 +19002,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19276,7 +19140,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19381,7 +19244,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19504,7 +19366,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19620,7 +19481,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19741,7 +19601,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19865,7 +19724,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19983,7 +19841,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20102,7 +19959,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20204,7 +20060,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20301,7 +20156,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20412,7 +20266,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20512,7 +20365,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20613,7 +20465,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20714,7 +20565,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20848,7 +20698,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -20966,7 +20815,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21083,7 +20931,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21200,7 +21047,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21317,7 +21163,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21426,7 +21271,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21553,7 +21397,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21662,7 +21505,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21783,7 +21625,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -21888,7 +21729,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -22014,7 +21854,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -22131,7 +21970,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -22255,7 +22093,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -22355,7 +22192,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -22459,7 +22295,6 @@
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>

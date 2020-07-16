@@ -2753,7 +2753,7 @@
 			<iWarWearinessAccumulationModifier>-20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
 			<iBaseFreeMilitaryUnits>10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iAttitudeModifier>-2</iAttitudeModifier>
@@ -2872,7 +2872,7 @@
 			<iWarWearinessAccumulationModifier>-20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
 			<iBaseFreeMilitaryUnits>10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>-10</iExpInBorderModifier>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -2995,7 +2995,7 @@
 			<iWarWearinessAccumulationModifier>-20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>4</iMaxConscript>
 			<iBaseFreeMilitaryUnits>10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>-15</iExpInBorderModifier>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -3092,7 +3092,7 @@
 			<iWarWearinessAccumulationModifier>-20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>6</iMaxConscript>
 			<iBaseFreeMilitaryUnits>10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-15</iCityDefenseBonus>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -3208,7 +3208,7 @@
 			<iWarWearinessAccumulationModifier>40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-2</iMaxConscript>
 			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iAttitudeModifier>2</iAttitudeModifier>
@@ -3300,7 +3300,7 @@
 			<iWarWearinessAccumulationModifier>40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-2</iMaxConscript>
 			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -3397,7 +3397,7 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-4</iMaxConscript>
 			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>15</iExpInBorderModifier>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -3494,7 +3494,7 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-6</iMaxConscript>
 			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>15</iCityDefenseBonus>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -8936,7 +8936,7 @@
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>1</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>-20</iUnitUpgradePriceModifier>
@@ -9104,7 +9104,7 @@
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
 			<iGoldPerUnit>1</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>-5</iUnitUpgradePriceModifier>
@@ -9454,7 +9454,7 @@
 			<iNumCitiesMaintenanceModifier>30</iNumCitiesMaintenanceModifier>
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>-15</iUnitUpgradePriceModifier>
@@ -73604,7 +73604,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iHurryCostModifier>-15</iHurryCostModifier>
@@ -73757,7 +73757,7 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iHurryCostModifier>-10</iHurryCostModifier>
 			<PropertyManipulators>
@@ -73866,7 +73866,7 @@
 			</YieldModifiers>
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
-			<iGoldPerMilitaryUnit>-1</iGoldPerMilitaryUnit>
+			<iMilitaryUnitUpkeepMod>-10</iMilitaryUnitUpkeepMod>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iHurryCostModifier>-15</iHurryCostModifier>

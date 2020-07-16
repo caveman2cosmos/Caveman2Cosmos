@@ -9385,9 +9385,6 @@ void CvCivicOptionInfo::copyNonDefaults(CvCivicOptionInfo* pClassInfo, CvXMLLoad
 	//}
 }
 
-//======================================================================================================
-//					CvCivicInfo
-//======================================================================================================
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -9396,157 +9393,146 @@ void CvCivicOptionInfo::copyNonDefaults(CvCivicOptionInfo* pClassInfo, CvXMLLoad
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvCivicInfo::CvCivicInfo() :
-m_iCivicOptionType(NO_CIVICOPTION),
-m_iAnarchyLength(0),
-m_iUpkeep(NO_UPKEEP),
-m_iAIWeight(0),
-m_iGreatPeopleRateModifier(0),
-m_iGreatGeneralRateModifier(0),
-m_iDomesticGreatGeneralRateModifier(0),
-m_iStateReligionGreatPeopleRateModifier(0),
-m_iDistanceMaintenanceModifier(0),
-m_iNumCitiesMaintenanceModifier(0),
-//DPII < Maintenance Modifiers >
-m_iHomeAreaMaintenanceModifier(0),
-m_iOtherAreaMaintenanceModifier(0),
-//DPII < Maintenance Modifiers >
-m_iCorporationMaintenanceModifier(0),
-m_iExtraHealth(0),
-m_iFreeExperience(0),
-m_iWorkerSpeedModifier(0),
-m_iImprovementUpgradeRateModifier(0),
-m_iMilitaryProductionModifier(0),
-m_iBaseFreeUnits(0),
-m_iBaseFreeMilitaryUnits(0),
-m_iFreeUnitsPopulationPercent(0),
-m_iFreeMilitaryUnitsPopulationPercent(0),
-m_iGoldPerUnit(0),
-m_iGoldPerMilitaryUnit(0),
-m_iHappyPerMilitaryUnit(0),
-m_iLargestCityHappiness(0),
-m_iWarWearinessModifier(0),
-m_iFreeSpecialist(0),
-m_iTradeRoutes(0),
-m_iTechPrereq(NO_TECH),
-m_iCivicPercentAnger(0),
-m_iMaxConscript(0),
-m_iStateReligionHappiness(0),
-m_iNonStateReligionHappiness(0),
-m_iStateReligionUnitProductionModifier(0),
-m_iStateReligionBuildingProductionModifier(0),
-m_iStateReligionFreeExperience(0),
-m_iExpInBorderModifier(0),
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* RevCivic Effects																			 */
-/************************************************************************************************/
-m_bUpgradeAnywhere(false),
-m_bAllowInquisitions(false),
-m_bDisallowInquisitions(false),
-m_iRevIdxLocal(0),
-m_iRevIdxNational(0),
-m_iRevIdxDistanceModifier(0),
-m_iRevIdxHolyCityGood(0),
-m_iRevIdxHolyCityBad(0),
-m_iRevIdxSwitchTo(0),
-m_fRevIdxNationalityMod(0),
-m_fRevIdxGoodReligionMod(0),
-m_fRevIdxBadReligionMod(0),
-m_fRevViolentMod(0),
-m_iRevReligiousFreedom(0),
-m_iRevLaborFreedom(0),
-m_iRevEnvironmentalProtection(0),
-m_iRevDemocracyLevel(0),
-m_bCommunism(false),
-m_bFreeSpeech(false),
-m_bCanDoElection(false),
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
-m_bMilitaryFoodProduction(false),
-m_bNoUnhealthyPopulation(false),
-m_bBuildingOnlyHealthy(false),
-m_bNoForeignTrade(false),
-m_bNoCorporations(false),
-m_bNoForeignCorporations(false),
-m_bStateReligion(false),
-m_bNoNonStateReligionSpread(false),
-m_piYieldModifier(NULL),
-m_piCapitalYieldModifier(NULL),
-m_piTradeYieldModifier(NULL),
-m_piCommerceModifier(NULL),
-m_piCapitalCommerceModifier(NULL),
-m_piSpecialistExtraCommerce(NULL),
-m_paiBuildingHappinessChanges(NULL),
-m_paiBuildingHealthChanges(NULL),
-m_paiFeatureHappinessChanges(NULL),
-m_pabHurry(NULL),
-m_pabSpecialBuildingNotRequired(NULL),
-m_pabSpecialistValid(NULL),
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-m_ppiImprovementYieldChanges(NULL),
-m_bAnyImprovementYieldChange(false)
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+CvCivicInfo::CvCivicInfo()
 
-,m_iAttitudeShareMod(0)
-,m_iEnslavementChance(0)
-,m_iPopulationgrowthratepercentage(0)
-,m_iReligionSpreadRate(0)
-,m_iCivicHappiness(0)
-,m_iDistantUnitSupportCostModifier(0)
-,m_iExtraCityDefense(0)
-,m_iForeignTradeRouteModifier(0)
-,m_iTaxRateUnhappiness(0)
-,m_iInflationModifier(0)
-,m_iHurryInflationModifier(0)
-,m_iHurryCostModifier(0)
-,m_iSharedCivicTradeRouteModifier(0)
-,m_iLandmarkHappiness(0)
-,m_iCorporationSpreadRate(0)
-,m_iRealCorporationMaintenanceModifier(0)
-,m_iForeignerUnhappyPercent(0)
-,m_iCityLimit(0)
-,m_iCityOverLimitUnhappy(0)
-,m_bFixedBorders(false)
-,m_bNoCapitalUnhappiness(false)
-,m_bTaxationAnger(false)
-,m_bNoLandmarkAnger(false)
-,m_bAnySpecialistYieldChanges(false)
-,m_bAnySpecialistCommerceChanges(false)
-,m_bEnablesMAD(false)
-,m_piBonusMintedPercent(NULL)
-,m_piImprovementHappinessChanges(NULL)
-,m_piImprovementHealthPercentChanges(NULL)
-,m_ppiSpecialistYieldPercentChanges(NULL)
-,m_ppiSpecialistCommercePercentChanges(NULL)
-,m_piLandmarkYieldChanges(NULL)
-,m_piFreeSpecialistCount(NULL)
-,m_paiUnitCombatProductionModifier(NULL)
-,m_paiBuildingProductionModifier(NULL)
-,m_piUnitProductionModifier(NULL)
-,m_ppiTerrainYieldChanges(NULL)
-,m_piFlavorValue(NULL)
-,m_piCivicAttitudeChanges(NULL)
-,m_pszCivicAttitudeReason(NULL)
-,m_ppiBuildingCommerceModifier(NULL)
-,m_ppiBuildingCommerceChange(NULL)
-,m_ppiBonusCommerceModifier(NULL)
-,m_iNationalCaptureProbabilityModifier(0)
-,m_iNationalCaptureResistanceModifier(0)
-,m_iFreedomFighterChange(0)
-,m_bAllReligionsActive(false)
-,m_bBansNonStateReligions(false)
-,m_bFreedomFighter(false)
-,m_bPolicy(false)
-,m_PropertyManipulators()
-{
-}
+	: m_iCivicOptionType(NO_CIVICOPTION)
+	, m_iAnarchyLength(0)
+	, m_iUpkeep(NO_UPKEEP)
+	, m_iAIWeight(0)
+	, m_iGreatPeopleRateModifier(0)
+	, m_iGreatGeneralRateModifier(0)
+	, m_iDomesticGreatGeneralRateModifier(0)
+	, m_iStateReligionGreatPeopleRateModifier(0)
+	, m_iDistanceMaintenanceModifier(0)
+	, m_iNumCitiesMaintenanceModifier(0)
+	, m_iHomeAreaMaintenanceModifier(0)
+	, m_iOtherAreaMaintenanceModifier(0)
+	, m_iCorporationMaintenanceModifier(0)
+	, m_iExtraHealth(0)
+	, m_iFreeExperience(0)
+	, m_iWorkerSpeedModifier(0)
+	, m_iImprovementUpgradeRateModifier(0)
+	, m_iMilitaryProductionModifier(0)
+	, m_iBaseFreeUnits(0)
+	, m_iBaseFreeMilitaryUnits(0)
+	, m_iFreeUnitsPopulationPercent(0)
+	, m_iFreeMilitaryUnitsPopulationPercent(0)
+	, m_iGoldPerUnit(0)
+
+	, m_iMilitaryUnitUpkeepMod(0)
+
+	, m_iHappyPerMilitaryUnit(0)
+	, m_iLargestCityHappiness(0)
+	, m_iWarWearinessModifier(0)
+	, m_iFreeSpecialist(0)
+	, m_iTradeRoutes(0)
+	, m_iTechPrereq(NO_TECH)
+	, m_iCivicPercentAnger(0)
+	, m_iMaxConscript(0)
+	, m_iStateReligionHappiness(0)
+	, m_iNonStateReligionHappiness(0)
+	, m_iStateReligionUnitProductionModifier(0)
+	, m_iStateReligionBuildingProductionModifier(0)
+	, m_iStateReligionFreeExperience(0)
+	, m_iExpInBorderModifier(0)
+
+	, m_bUpgradeAnywhere(false)
+	, m_bAllowInquisitions(false)
+	, m_bDisallowInquisitions(false)
+	, m_iRevIdxLocal(0)
+	, m_iRevIdxNational(0)
+	, m_iRevIdxDistanceModifier(0)
+	, m_iRevIdxHolyCityGood(0)
+	, m_iRevIdxHolyCityBad(0)
+	, m_iRevIdxSwitchTo(0)
+	, m_fRevIdxNationalityMod(0)
+	, m_fRevIdxGoodReligionMod(0)
+	, m_fRevIdxBadReligionMod(0)
+	, m_fRevViolentMod(0)
+	, m_iRevReligiousFreedom(0)
+	, m_iRevLaborFreedom(0)
+	, m_iRevEnvironmentalProtection(0)
+	, m_iRevDemocracyLevel(0)
+	, m_bCommunism(false)
+	, m_bFreeSpeech(false)
+	, m_bCanDoElection(false)
+
+	, m_bMilitaryFoodProduction(false)
+	, m_bNoUnhealthyPopulation(false)
+	, m_bBuildingOnlyHealthy(false)
+	, m_bNoForeignTrade(false)
+	, m_bNoCorporations(false)
+	, m_bNoForeignCorporations(false)
+	, m_bStateReligion(false)
+	, m_bNoNonStateReligionSpread(false)
+	, m_piYieldModifier(NULL)
+	, m_piCapitalYieldModifier(NULL)
+	, m_piTradeYieldModifier(NULL)
+	, m_piCommerceModifier(NULL)
+	, m_piCapitalCommerceModifier(NULL)
+	, m_piSpecialistExtraCommerce(NULL)
+	, m_paiBuildingHappinessChanges(NULL)
+	, m_paiBuildingHealthChanges(NULL)
+	, m_paiFeatureHappinessChanges(NULL)
+	, m_pabHurry(NULL)
+	, m_pabSpecialBuildingNotRequired(NULL)
+	, m_pabSpecialistValid(NULL)
+
+	, m_ppiImprovementYieldChanges(NULL)
+	, m_bAnyImprovementYieldChange(false)
+
+	, m_iAttitudeShareMod(0)
+	, m_iEnslavementChance(0)
+	, m_iPopulationgrowthratepercentage(0)
+	, m_iReligionSpreadRate(0)
+	, m_iCivicHappiness(0)
+	, m_iDistantUnitSupportCostModifier(0)
+	, m_iExtraCityDefense(0)
+	, m_iForeignTradeRouteModifier(0)
+	, m_iTaxRateUnhappiness(0)
+	, m_iInflationModifier(0)
+	, m_iHurryInflationModifier(0)
+	, m_iHurryCostModifier(0)
+	, m_iSharedCivicTradeRouteModifier(0)
+	, m_iLandmarkHappiness(0)
+	, m_iCorporationSpreadRate(0)
+	, m_iRealCorporationMaintenanceModifier(0)
+	, m_iForeignerUnhappyPercent(0)
+	, m_iCityLimit(0)
+	, m_iCityOverLimitUnhappy(0)
+	, m_bFixedBorders(false)
+	, m_bNoCapitalUnhappiness(false)
+	, m_bTaxationAnger(false)
+	, m_bNoLandmarkAnger(false)
+	, m_bAnySpecialistYieldChanges(false)
+	, m_bAnySpecialistCommerceChanges(false)
+	, m_bEnablesMAD(false)
+	, m_piBonusMintedPercent(NULL)
+	, m_piImprovementHappinessChanges(NULL)
+	, m_piImprovementHealthPercentChanges(NULL)
+	, m_ppiSpecialistYieldPercentChanges(NULL)
+	, m_ppiSpecialistCommercePercentChanges(NULL)
+	, m_piLandmarkYieldChanges(NULL)
+	, m_piFreeSpecialistCount(NULL)
+	, m_paiUnitCombatProductionModifier(NULL)
+	, m_paiBuildingProductionModifier(NULL)
+	, m_piUnitProductionModifier(NULL)
+	, m_ppiTerrainYieldChanges(NULL)
+	, m_piFlavorValue(NULL)
+	, m_piCivicAttitudeChanges(NULL)
+	, m_pszCivicAttitudeReason(NULL)
+	, m_ppiBuildingCommerceModifier(NULL)
+	, m_ppiBuildingCommerceChange(NULL)
+	, m_ppiBonusCommerceModifier(NULL)
+	, m_iNationalCaptureProbabilityModifier(0)
+	, m_iNationalCaptureResistanceModifier(0)
+	, m_iFreedomFighterChange(0)
+	, m_bAllReligionsActive(false)
+	, m_bBansNonStateReligions(false)
+	, m_bFreedomFighter(false)
+	, m_bPolicy(false)
+	, m_PropertyManipulators()
+	{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -9714,9 +9700,9 @@ int CvCivicInfo::getGoldPerUnit() const
 	return m_iGoldPerUnit;
 }
 
-int CvCivicInfo::getGoldPerMilitaryUnit() const
+int CvCivicInfo::getMilitaryUnitUpkeepMod() const
 {
-	return m_iGoldPerMilitaryUnit;
+	return m_iMilitaryUnitUpkeepMod;
 }
 
 int CvCivicInfo::getHappyPerMilitaryUnit() const
@@ -10448,7 +10434,7 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
 	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
 	CheckSum(iSum, m_iGoldPerUnit);
-	CheckSum(iSum, m_iGoldPerMilitaryUnit);
+	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);
 	CheckSum(iSum, m_iLargestCityHappiness);
 	CheckSum(iSum, m_iWarWearinessModifier);
@@ -10653,7 +10639,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iGoldPerUnit, L"iGoldPerUnit");
-	pXML->GetOptionalChildXmlValByName(&m_iGoldPerMilitaryUnit, L"iGoldPerMilitaryUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryFoodProduction, L"bMilitaryFoodProduction");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxConscript, L"iMaxConscript");
@@ -11288,7 +11274,7 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
 	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
 	if (getGoldPerUnit() == iDefault) m_iGoldPerUnit = pClassInfo->getGoldPerUnit();
-	if (getGoldPerMilitaryUnit() == iDefault) m_iGoldPerMilitaryUnit = pClassInfo->getGoldPerMilitaryUnit();
+	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
 	if (isMilitaryFoodProduction() == bDefault) m_bMilitaryFoodProduction = pClassInfo->isMilitaryFoodProduction();
 	if (getMaxConscript() == iDefault) m_iMaxConscript = pClassInfo->getMaxConscript();
@@ -23643,9 +23629,6 @@ bool CvCorporationInfo::readPass3()
 	return true;
 }
 
-//======================================================================================================
-//					CvTraitInfo
-//======================================================================================================
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -23694,7 +23677,7 @@ CvTraitInfo::CvTraitInfo()
 	, m_ePromotionLine(NO_PROMOTIONLINE)
 	, m_iGreatPeopleUnitType(NO_UNIT)
 	, m_ePrereqTech(NO_TECH)
-	//Team Project (6)
+
 	, m_eEraAdvanceFreeSpecialistType(NO_SPECIALIST)
 	, m_iGoldenAgeonBirthofGreatPeopleType(NO_UNIT)
 	//integers
@@ -23714,7 +23697,7 @@ CvTraitInfo::CvTraitInfo()
 	, m_iFreeUnitsPopulationPercent(0)
 	, m_iFreeMilitaryUnitsPopulationPercent(0)
 	, m_iGoldPerUnit(0)
-	, m_iGoldPerMilitaryUnit(0)
+	, m_iMilitaryUnitUpkeepMod(0)
 	, m_iHappyPerMilitaryUnit(0)
 	, m_iLargestCityHappiness(0)
 	, m_iFreeSpecialist(0)
@@ -23741,7 +23724,7 @@ CvTraitInfo::CvTraitInfo()
 	, m_iBombardDefense(0)
 	, m_iUnitUpgradePriceModifier(0)
 	, m_iCoastalTradeRoutes(0)
-	//Team Project (6)
+
 	, m_iGlobalPopulationgrowthratepercentage(0)
 	, m_iCityStartCulture(0)
 	, m_iGlobalAirUnitCapacity(0)
@@ -23792,7 +23775,7 @@ CvTraitInfo::CvTraitInfo()
 	, m_piSeaPlotYieldChanges(NULL)
 	, m_ppaiImprovementYieldChange(NULL)
 	, m_bAnyImprovementYieldChanges(false)
-	//Team Project (7)
+
 	, m_piGoldenAgeYieldChanges(NULL)
 	, m_piGoldenAgeCommerceChanges(NULL)
 	//For Pure Traits
@@ -23811,13 +23794,12 @@ CvTraitInfo::CvTraitInfo()
 	, m_paiLessYieldThresholdFiltered(NULL)
 	, m_piSeaPlotYieldChangesFiltered(NULL)
 	, m_ppaiImprovementYieldChangeFiltered(NULL)
-	//Team Project (7)
+
 	, m_piGoldenAgeYieldChangesFiltered(NULL)
 	, m_piGoldenAgeCommerceChangesFiltered(NULL)
 	//TB Traits Mods end
 	, m_piBonusHappinessChangesFiltered(NULL)
-{
-}
+	{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -24700,20 +24682,23 @@ int CvTraitInfo::getGoldPerUnit() const
 	return m_iGoldPerUnit;
 }
 
-int CvTraitInfo::getGoldPerMilitaryUnit() const
+int CvTraitInfo::getMilitaryUnitUpkeepMod() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iGoldPerMilitaryUnit < 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iMilitaryUnitUpkeepMod < 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iGoldPerMilitaryUnit > 0)
+		else if (m_iMilitaryUnitUpkeepMod > 0)
 		{
 			return 0;
 		}
 	}
-	return m_iGoldPerMilitaryUnit;
+	return m_iMilitaryUnitUpkeepMod;
 }
 
 int CvTraitInfo::getHappyPerMilitaryUnit() const
@@ -26902,7 +26887,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iGoldPerUnit, L"iGoldPerUnit");
-	pXML->GetOptionalChildXmlValByName(&m_iGoldPerMilitaryUnit, L"iGoldPerMilitaryUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iLargestCityHappiness, L"iLargestCityHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeSpecialist, L"iFreeSpecialist");
@@ -27985,7 +27970,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
 	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
 	if (getGoldPerUnit() == iDefault) m_iGoldPerUnit = pClassInfo->getGoldPerUnit();
-	if (getGoldPerMilitaryUnit() == iDefault) m_iGoldPerMilitaryUnit = pClassInfo->getGoldPerMilitaryUnit();
+	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
 	if (getLargestCityHappiness() == iDefault) m_iLargestCityHappiness = pClassInfo->getLargestCityHappiness();
 	if (getFreeSpecialist() == iDefault) m_iFreeSpecialist = pClassInfo->getFreeSpecialist();
@@ -28509,7 +28494,7 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
 	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
 	CheckSum(iSum, m_iGoldPerUnit);
-	CheckSum(iSum, m_iGoldPerMilitaryUnit);
+	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);
 	CheckSum(iSum, m_iLargestCityHappiness);
 	CheckSum(iSum, m_iFreeSpecialist);

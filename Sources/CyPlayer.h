@@ -316,7 +316,6 @@ public:
 	int getFreeUnitsPopulationPercent();
 	int getFreeMilitaryUnitsPopulationPercent();
 	int getGoldPerUnit();
-	int getGoldPerMilitaryUnit();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();

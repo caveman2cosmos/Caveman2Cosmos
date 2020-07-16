@@ -877,10 +877,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFreeUnitsPopulationPercent = 0;
 	m_iFreeMilitaryUnitsPopulationPercent = 0;
 	m_iGoldPerUnit = 0;
-	m_iGoldPerMilitaryUnit = 0;
+	m_iMilitaryUnitUpkeepMod = 0;
 
-	m_iUnitUpkeepMilitary = 0;
-	m_iUnitUpkeepCivilian = 0;
+	m_iUnitUpkeepMilitary100 = 0;
+	m_iUnitUpkeepCivilian100 = 0;
 
 	m_iNumMilitaryUnits = 0;
 	m_iNumUnitPercentCountForCostAdjustment = 0;
@@ -9111,9 +9111,8 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 	iPaidMilitaryUnits = std::max(0, getNumMilitaryUnits() - iFreeMilitaryUnits);
 
 	iBaseUnitCost = iPaidUnits * getGoldPerUnit();
-	iMilitaryCost = iPaidMilitaryUnits * getGoldPerMilitaryUnit();
 
-	iSupport = iMilitaryCost + iBaseUnitCost + iExtraCost;
+	iSupport = iBaseUnitCost + iExtraCost;
 
 	iSupport *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
 	iSupport /= 100;
@@ -11910,22 +11909,16 @@ void CvPlayer::changeGoldPerUnit(int iChange)
 }
 
 
-int CvPlayer::getGoldPerMilitaryUnit() const
+int CvPlayer::getMilitaryUnitUpkeepMod() const
 {
-	return m_iGoldPerMilitaryUnit;
+	return m_iMilitaryUnitUpkeepMod;
 }
 
-
-void CvPlayer::changeGoldPerMilitaryUnit(int iChange)
+void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iGoldPerMilitaryUnit = (m_iGoldPerMilitaryUnit + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iMilitaryUnitUpkeepMod += iChange;
 	}
 }
 
@@ -11934,8 +11927,10 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 	if (iChange != 0)
 	{
 		if (bMilitary)
-			m_iUnitUpkeepMilitary += iChange;
-		else m_iUnitUpkeepCivilian += iChange;
+			m_iUnitUpkeepMilitary100 += iChange;
+		else m_iUnitUpkeepCivilian100 += iChange;
+
+		FAssertMsg(m_iUnitUpkeepCivilian100 >= 0 && m_iUnitUpkeepMilitary100 >= 0, "These should always be positive!");
 
 		calcUnitUpkeep();
 	}
@@ -11948,7 +11943,18 @@ void CvPlayer::calcUnitUpkeep()
 		return;
 	}
 	unsigned long long iCalc = 0;
-	// This will probably be filled in last as I need to consider all the factors that go in here first.
+
+	unsigned long iMilitaryUpkeep = m_iUnitUpkeepMilitary100;
+
+	if (m_iMilitaryUnitUpkeepMod > 0)
+	{
+		iMilitaryUpkeep = iMilitaryUpkeep * (100 + m_iMilitaryUnitUpkeepMod) / 100;
+	}
+	else if (m_iMilitaryUnitUpkeepMod < 0)
+	{
+		iMilitaryUpkeep = iMilitaryUpkeep * 100 / (100 - m_iMilitaryUnitUpkeepMod);
+	}
+	iCalc += iMilitaryUpkeep;
 
 	iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
 	iCalc /= 100;
@@ -20717,7 +20723,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		//changeFreeUnitsPopulationPercent(kCivic.getFreeUnitsPopulationPercent() * iChange);
 		//changeFreeMilitaryUnitsPopulationPercent(kCivic.getFreeMilitaryUnitsPopulationPercent() * iChange);
 		//changeGoldPerUnit(kCivic.getGoldPerUnit() * iChange);
-		//changeGoldPerMilitaryUnit(kCivic.getGoldPerMilitaryUnit() * iChange);
+		//changeMilitaryUnitUpkeepMod(kCivic.getMilitaryUnitUpkeepMod() * iChange);
 		changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange,  bLimited);
 		changeMilitaryFoodProductionCount(((kCivic.isMilitaryFoodProduction()) ? iChange : 0), bLimited);
 		//changeMaxConscript(getWorldSizeMaxConscript(eCivic) * iChange);
@@ -20836,7 +20842,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeFreeUnitsPopulationPercent(kCivic.getFreeUnitsPopulationPercent() * iChange);
 		changeFreeMilitaryUnitsPopulationPercent(kCivic.getFreeMilitaryUnitsPopulationPercent() * iChange);
 		changeGoldPerUnit(kCivic.getGoldPerUnit() * iChange);
-		changeGoldPerMilitaryUnit(kCivic.getGoldPerMilitaryUnit() * iChange);
+		changeMilitaryUnitUpkeepMod(kCivic.getMilitaryUnitUpkeepMod() * iChange);
 		changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange);
 		changeMilitaryFoodProductionCount((kCivic.isMilitaryFoodProduction()) ? iChange : 0);
 		changeMaxConscript(getWorldSizeMaxConscript(eCivic) * iChange);
@@ -21159,7 +21165,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitsPopulationPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeMilitaryUnitsPopulationPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerMilitaryUnit);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 
 		// @SAVEBREAK DELETE Toffer
 		int m_iExtraUnitCost = 0;
@@ -22168,8 +22174,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			doCountTotalCulture();
 		}
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -22290,7 +22296,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitsPopulationPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeMilitaryUnitsPopulationPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
 
 		// @SAVEBREAK DELETE Toffer
 		int m_iExtraUnitCost = 0;
@@ -22898,8 +22904,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
 	}
 	//	Use condensed format now - only save non-default array elements
 
@@ -30942,7 +30948,7 @@ void CvPlayer::clearModifierTotals()
 	m_iFreeUnitsPopulationPercent = 0;
 	m_iFreeMilitaryUnitsPopulationPercent = 0;
 	m_iGoldPerUnit = 0;
-	m_iGoldPerMilitaryUnit = 0;
+	m_iMilitaryUnitUpkeepMod = 0;
 	m_iHappyPerMilitaryUnit = 0;
 	m_iMilitaryFoodProductionCount = 0;
 	m_iNoUnhealthyPopulationCount = 0;
@@ -31366,7 +31372,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeFreeUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent());
 	changeFreeMilitaryUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent());
 	changeGoldPerUnit(iChange*GC.getTraitInfo(eTrait).getGoldPerUnit());
-	changeGoldPerMilitaryUnit(iChange*GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit());
+	changeMilitaryUnitUpkeepMod(iChange*GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod());
 	changeHappyPerMilitaryUnit(iChange*GC.getTraitInfo(eTrait).getHappyPerMilitaryUnit());
 	changeLargestCityHappiness(iChange*GC.getTraitInfo(eTrait).getLargestCityHappiness());
 	changeFreeSpecialist(iChange*GC.getTraitInfo(eTrait).getFreeSpecialist());
