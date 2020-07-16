@@ -1687,7 +1687,7 @@ void CvPlayerAI::AI_unitUpdate()
 	{
 		CvPathGenerator::EnableMaxPerformance(true);
 
-		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; )
+		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL;)
 		{
 			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 			CLLNode<int>* pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
@@ -1715,14 +1715,20 @@ void CvPlayerAI::AI_unitUpdate()
 
 		if (isHuman())
 		{
-			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
+			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL;)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
+				CLLNode<int>* pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
-				if (pLoopSelectionGroup->AI_update())
+				if (pLoopSelectionGroup == NULL)
+				{
+					deleteGroupCycleNode(pCurrUnitNode);
+				}
+				else if (pLoopSelectionGroup->AI_update())
 				{
 					break; // pointers could become invalid...
 				}
+				pCurrUnitNode = pNextUnitNode;
 			}
 		}
 		else
