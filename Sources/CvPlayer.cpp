@@ -8873,18 +8873,23 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	}
 
 	int iCost = GC.getBuildInfo(eBuild).getCost();
-	iCost *= std::max(0, 100 + calculateInflationRate());
-	iCost /= 100;
-	if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
+	if (iCost != 0)
 	{
-		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		iCost *= std::max(0, 100 + calculateInflationRate());
+		iCost /= 100;
+		if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
-			if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteType())
+			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 			{
-				iCost = std::max(0, iCost - GC.getBuildInfo((BuildTypes)iI).getCost());
-				break;
+				if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteType())
+				{
+					iCost = std::max(0, iCost - GC.getBuildInfo((BuildTypes)iI).getCost());
+					break;
+				}
 			}
 		}
+		iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
+		iCost /= 100;
 	}
 	return iCost;
 }
