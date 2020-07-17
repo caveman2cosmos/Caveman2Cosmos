@@ -160,7 +160,7 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	int calculateUnitCost();
+	unsigned long getTotalUnitUpkeep();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();
@@ -315,7 +315,6 @@ public:
 
 	int getFreeUnitsPopulationPercent();
 	int getFreeMilitaryUnitsPopulationPercent();
-	int getGoldPerUnit();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();

@@ -1370,9 +1370,6 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	int getExtraCostModifier () const;
-	void changeExtraCostModifier (int iChange);
-
 	void changeBaseUpkeepModifier(const int iChange);
 	void changeUpkeepMultiplier(const int iChange);
 	void calcUpkeep100();

@@ -268,7 +268,6 @@ m_iBreakdownDamage(0),
 m_iTaunt(0),
 m_iMaxHP(100),
 m_iDamageModifier(0),
-m_iCostModifier(0),
 m_iTotalCombatStrengthModifierBase(0),
 m_iTotalCombatStrengthChangeBase(0),
 m_iBaseCargoVolume(0),
@@ -2479,11 +2478,6 @@ int CvUnitInfo::getDamageModifier() const
 	return m_iDamageModifier;
 }
 
-int CvUnitInfo::getCostModifier() const
-{
-	return m_iCostModifier;
-}
-
 int CvUnitInfo::getRBombardDamage() const
 {
 	return m_iRBombardDamage;
@@ -4111,7 +4105,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iTaunt);
 	CheckSum(iSum, m_iMaxHP);
 	CheckSum(iSum, m_iDamageModifier);
-	CheckSum(iSum, m_iCostModifier);
 	CheckSum(iSum, m_iTotalCombatStrengthModifierBase);
 	CheckSum(iSum, m_iTotalCombatStrengthChangeBase);
 	CheckSum(iSum, m_iBaseCargoVolume);
@@ -4894,7 +4887,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTaunt, L"iTaunt");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxHP, L"iMaxHP", 100);
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifier, L"iDamageModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iCostModifier, L"iCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamage, L"iRBombardDamage");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageLimit, L"iRBombardDamageLimit");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageMaxUnits, L"iRBombardDamageMaxUnits");
@@ -5990,7 +5982,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iTaunt == iDefault ) m_iTaunt = pClassInfo->getTaunt(true);
 	if ( m_iMaxHP == 100 ) m_iMaxHP = pClassInfo->getMaxHP(true);
 	if ( m_iDamageModifier == iDefault ) m_iDamageModifier = pClassInfo->getDamageModifier();
-	if ( m_iCostModifier == iDefault ) m_iCostModifier = pClassInfo->getCostModifier();
 	if ( m_iRBombardDamage == iDefault ) m_iRBombardDamage = pClassInfo->getRBombardDamage();
 	if ( m_iRBombardDamageLimit == iDefault ) m_iRBombardDamageLimit = pClassInfo->getRBombardDamageLimit();
 	if ( m_iRBombardDamageMaxUnits == iDefault ) m_iRBombardDamageMaxUnits = pClassInfo->getRBombardDamageMaxUnits();

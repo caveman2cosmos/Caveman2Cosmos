@@ -847,7 +847,6 @@ public:
 	int getGroupChange() const;
 	int getLevelPrereq() const;
 	int getDamageModifierChange() const;
-	int getCostModifierChange() const;
 	int getBaseUpkeepModifierChange() const;
 	int getUpkeepMultiplierChange() const;
 	int getRBombardDamageChange() const;
@@ -1370,7 +1369,6 @@ protected:
 	int m_iGroupChange;
 	int m_iLevelPrereq;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange; // delete me
 
 	int m_iBaseUpkeepModifierChange;
 	int m_iUpkeepMultiplierChange;
@@ -1977,7 +1975,6 @@ public:
 	int getTaunt(bool bForLoad = false) const;
 	int getMaxHP(bool bForLoad = false) const;
 	int getDamageModifier() const;
-	int getCostModifier() const;
 	int getRBombardDamage() const;
 	int getRBombardDamageLimit() const;
 	int getRBombardDamageMaxUnits() const;
@@ -2682,7 +2679,6 @@ protected:
 	int m_iTaunt;
 	int m_iMaxHP;
 	int m_iDamageModifier;
-	int m_iCostModifier;
 	int m_iTotalCombatStrengthModifierBase;
 	int m_iTotalCombatStrengthChangeBase;
 	int m_iBaseCargoVolume;
@@ -3084,7 +3080,7 @@ public:
 	int getBaseFreeMilitaryUnits() const; // Exposed to Python
 	int getFreeUnitsPopulationPercent() const; // Exposed to Python
 	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
-	int getGoldPerUnit() const; // Exposed to Python
+	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 	int getLargestCityHappiness() const; // Exposed to Python
@@ -3282,7 +3278,7 @@ protected:
 	int m_iBaseFreeMilitaryUnits;
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
+	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
@@ -7228,7 +7224,7 @@ public:
 	int getBaseFreeMilitaryUnits() const;
 	int getFreeUnitsPopulationPercent() const;
 	int getFreeMilitaryUnitsPopulationPercent() const;
-	int getGoldPerUnit() const;
+	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
 	int getLargestCityHappiness() const;
 	int getHappyPerMilitaryUnit() const;
@@ -7480,7 +7476,7 @@ protected:
 	int m_iBaseFreeMilitaryUnits;
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
+	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
@@ -10580,7 +10576,6 @@ public:
 	int getGroupBase() const;
 	int getSizeBase() const;
 	int getDamageModifierChange() const;
-	int getCostModifierChange() const;
 	int getBaseUpkeepModifierChange() const;
 	int getUpkeepMultiplierChange() const;
 	int getRBombardDamageBase() const;
@@ -10939,7 +10934,6 @@ protected:
 	int m_iGroupBase;
 	int m_iSizeBase;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange; // delete me
 
 	int m_iBaseUpkeepModifierChange;
 	int m_iUpkeepMultiplierChange;

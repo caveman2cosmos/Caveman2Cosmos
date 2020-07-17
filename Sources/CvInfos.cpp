@@ -2723,7 +2723,6 @@ m_iQualityChange(0),
 m_iGroupChange(0),
 m_iLevelPrereq(0),
 m_iDamageModifierChange(0),
-m_iCostModifierChange(0),
 m_iBaseUpkeepModifierChange(0),
 m_iUpkeepMultiplierChange(0),
 m_iRBombardDamageChange(0),
@@ -3866,11 +3865,6 @@ int CvPromotionInfo::getLevelPrereq() const
 int CvPromotionInfo::getDamageModifierChange() const
 {
 	return m_iDamageModifierChange;
-}
-
-int CvPromotionInfo::getCostModifierChange() const
-{
-	return m_iCostModifierChange;
 }
 
 int CvPromotionInfo::getBaseUpkeepModifierChange() const
@@ -5793,7 +5787,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGroupChange, L"iGroupChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLevelPrereq, L"iLevelPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifierChange, L"iDamageModifierChange");
-	pXML->GetOptionalChildXmlValByName(&m_iCostModifierChange, L"iCostModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iBaseUpkeepModifierChange, L"iBaseUpkeepModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iUpkeepMultiplierChange, L"iUpkeepMultiplierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageChange, L"iRBombardDamageChange");
@@ -6644,7 +6637,7 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getGroupChange() == iDefault) m_iGroupChange = pClassInfo->getGroupChange();
 	if (getLevelPrereq() == iDefault) m_iLevelPrereq = pClassInfo->getLevelPrereq();
 	if (getDamageModifierChange() == iDefault) m_iDamageModifierChange = pClassInfo->getDamageModifierChange();
-	if (getCostModifierChange() == iDefault) m_iCostModifierChange = pClassInfo->getCostModifierChange();
+
 	if (m_iBaseUpkeepModifierChange == iDefault) m_iBaseUpkeepModifierChange = pClassInfo->getBaseUpkeepModifierChange();
 	if (m_iUpkeepMultiplierChange == iDefault) m_iUpkeepMultiplierChange = pClassInfo->getUpkeepMultiplierChange();
 
@@ -7459,9 +7452,10 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iGroupChange);
 	CheckSum(iSum, m_iLevelPrereq);
 	CheckSum(iSum, m_iDamageModifierChange);
-	CheckSum(iSum, m_iCostModifierChange);
+
 	CheckSum(iSum, m_iBaseUpkeepModifierChange);
 	CheckSum(iSum, m_iUpkeepMultiplierChange);
+
 	CheckSum(iSum, m_iRBombardDamageChange);
 	CheckSum(iSum, m_iRBombardDamageLimitChange);
 	CheckSum(iSum, m_iRBombardDamageMaxUnitsChange);
@@ -9417,8 +9411,8 @@ CvCivicInfo::CvCivicInfo()
 	, m_iBaseFreeMilitaryUnits(0)
 	, m_iFreeUnitsPopulationPercent(0)
 	, m_iFreeMilitaryUnitsPopulationPercent(0)
-	, m_iGoldPerUnit(0)
 
+	, m_iCivilianUnitUpkeepMod(0)
 	, m_iMilitaryUnitUpkeepMod(0)
 
 	, m_iHappyPerMilitaryUnit(0)
@@ -9695,9 +9689,9 @@ int CvCivicInfo::getFreeMilitaryUnitsPopulationPercent() const
 	return m_iFreeMilitaryUnitsPopulationPercent;
 }
 
-int CvCivicInfo::getGoldPerUnit() const
+int CvCivicInfo::getCivilianUnitUpkeepMod() const
 {
-	return m_iGoldPerUnit;
+	return m_iCivilianUnitUpkeepMod;
 }
 
 int CvCivicInfo::getMilitaryUnitUpkeepMod() const
@@ -10433,7 +10427,7 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iBaseFreeMilitaryUnits);
 	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
 	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
-	CheckSum(iSum, m_iGoldPerUnit);
+	CheckSum(iSum, m_iCivilianUnitUpkeepMod);
 	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);
 	CheckSum(iSum, m_iLargestCityHappiness);
@@ -10638,7 +10632,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iBaseFreeMilitaryUnits, L"iBaseFreeMilitaryUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGoldPerUnit, L"iGoldPerUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iCivilianUnitUpkeepMod, L"iCivilianUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryFoodProduction, L"bMilitaryFoodProduction");
@@ -11273,7 +11267,7 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getBaseFreeMilitaryUnits() == iDefault) m_iBaseFreeMilitaryUnits = pClassInfo->getBaseFreeMilitaryUnits();
 	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
 	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
-	if (getGoldPerUnit() == iDefault) m_iGoldPerUnit = pClassInfo->getGoldPerUnit();
+	if (m_iCivilianUnitUpkeepMod == iDefault) m_iCivilianUnitUpkeepMod = pClassInfo->getCivilianUnitUpkeepMod();
 	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
 	if (isMilitaryFoodProduction() == bDefault) m_bMilitaryFoodProduction = pClassInfo->isMilitaryFoodProduction();
@@ -23696,7 +23690,7 @@ CvTraitInfo::CvTraitInfo()
 	, m_iBaseFreeMilitaryUnits(0)
 	, m_iFreeUnitsPopulationPercent(0)
 	, m_iFreeMilitaryUnitsPopulationPercent(0)
-	, m_iGoldPerUnit(0)
+	, m_iCivilianUnitUpkeepMod(0)
 	, m_iMilitaryUnitUpkeepMod(0)
 	, m_iHappyPerMilitaryUnit(0)
 	, m_iLargestCityHappiness(0)
@@ -24666,20 +24660,23 @@ int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
 	return m_iFreeMilitaryUnitsPopulationPercent;
 }
 
-int CvTraitInfo::getGoldPerUnit() const
+int CvTraitInfo::getCivilianUnitUpkeepMod() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iGoldPerUnit < 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iCivilianUnitUpkeepMod < 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iGoldPerUnit > 0)
+		else if (m_iCivilianUnitUpkeepMod > 0)
 		{
 			return 0;
 		}
 	}
-	return m_iGoldPerUnit;
+	return m_iCivilianUnitUpkeepMod;
 }
 
 int CvTraitInfo::getMilitaryUnitUpkeepMod() const
@@ -26886,7 +26883,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iBaseFreeMilitaryUnits, L"iBaseFreeMilitaryUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGoldPerUnit, L"iGoldPerUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iCivilianUnitUpkeepMod, L"iCivilianUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iLargestCityHappiness, L"iLargestCityHappiness");
@@ -27969,7 +27966,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getBaseFreeMilitaryUnits() == iDefault) m_iBaseFreeMilitaryUnits = pClassInfo->getBaseFreeMilitaryUnits();
 	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
 	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
-	if (getGoldPerUnit() == iDefault) m_iGoldPerUnit = pClassInfo->getGoldPerUnit();
+	if (m_iCivilianUnitUpkeepMod == iDefault) m_iCivilianUnitUpkeepMod = pClassInfo->getCivilianUnitUpkeepMod();
 	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
 	if (getLargestCityHappiness() == iDefault) m_iLargestCityHappiness = pClassInfo->getLargestCityHappiness();
@@ -28493,7 +28490,7 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iBaseFreeMilitaryUnits);
 	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
 	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
-	CheckSum(iSum, m_iGoldPerUnit);
+	CheckSum(iSum, m_iCivilianUnitUpkeepMod);
 	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);
 	CheckSum(iSum, m_iLargestCityHappiness);
@@ -39013,9 +39010,10 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iGroupBase(-10)
 	, m_iSizeBase(-10)
 	, m_iDamageModifierChange(0)
-	, m_iCostModifierChange(0)
+
 	, m_iBaseUpkeepModifierChange(0)
 	, m_iUpkeepMultiplierChange(0)
+
 	, m_iRBombardDamageBase(0)
 	, m_iRBombardDamageLimitBase(0)
 	, m_iRBombardDamageMaxUnitsBase(0)
@@ -39789,11 +39787,6 @@ int CvUnitCombatInfo::getSizeBase() const
 int CvUnitCombatInfo::getDamageModifierChange() const
 {
 	return m_iDamageModifierChange;
-}
-
-int CvUnitCombatInfo::getCostModifierChange() const
-{
-	return m_iCostModifierChange;
 }
 
 int CvUnitCombatInfo::getBaseUpkeepModifierChange() const
@@ -41081,9 +41074,10 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGroupBase, L"iGroupBase", -10);
 	pXML->GetOptionalChildXmlValByName(&m_iSizeBase, L"iSizeBase", -10);
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifierChange, L"iDamageModifierChange");
-	pXML->GetOptionalChildXmlValByName(&m_iCostModifierChange, L"iCostModifierChange");
+
 	pXML->GetOptionalChildXmlValByName(&m_iBaseUpkeepModifierChange, L"iBaseUpkeepModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iUpkeepMultiplierChange, L"iUpkeepMultiplierChange");
+
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageBase, L"iRBombardDamageBase");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageLimitBase, L"iRBombardDamageLimitBase");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageMaxUnitsBase, L"iRBombardDamageMaxUnitsBase");
@@ -42289,9 +42283,10 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	if (getGroupBase() == -10) m_iGroupBase = pClassInfo->getGroupBase();
 	if (getSizeBase() == -10) m_iSizeBase = pClassInfo->getSizeBase();
 	if (getDamageModifierChange() == iDefault) m_iDamageModifierChange = pClassInfo->getDamageModifierChange();
-	if (getCostModifierChange() == iDefault) m_iCostModifierChange = pClassInfo->getCostModifierChange();
+
 	if (m_iBaseUpkeepModifierChange == iDefault) m_iBaseUpkeepModifierChange = pClassInfo->getBaseUpkeepModifierChange();
 	if (m_iUpkeepMultiplierChange == iDefault) m_iUpkeepMultiplierChange = pClassInfo->getUpkeepMultiplierChange();
+
 	if (getRBombardDamageBase() == iDefault) m_iRBombardDamageBase = pClassInfo->getRBombardDamageBase();
 	if (getRBombardDamageLimitBase() == iDefault) m_iRBombardDamageLimitBase = pClassInfo->getRBombardDamageLimitBase();
 	if (getRBombardDamageMaxUnitsBase() == iDefault) m_iRBombardDamageMaxUnitsBase = pClassInfo->getRBombardDamageMaxUnitsBase();
@@ -42902,9 +42897,10 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iGroupBase);
 	CheckSum(iSum, m_iSizeBase);
 	CheckSum(iSum, m_iDamageModifierChange);
-	CheckSum(iSum, m_iCostModifierChange);
+
 	CheckSum(iSum, m_iBaseUpkeepModifierChange);
 	CheckSum(iSum, m_iUpkeepMultiplierChange);
+
 	CheckSum(iSum, m_iRBombardDamageBase);
 	CheckSum(iSum, m_iRBombardDamageLimitBase);
 	CheckSum(iSum, m_iRBombardDamageMaxUnitsBase);

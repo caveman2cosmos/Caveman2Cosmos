@@ -657,9 +657,9 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-int CyPlayer::calculateUnitCost()
+unsigned long CyPlayer::getTotalUnitUpkeep()
 {
-	return m_pPlayer ? m_pPlayer->calculateUnitCost() : -1;
+	return m_pPlayer ? m_pPlayer->getTotalUnitUpkeep() : -1;
 }
 
 int CyPlayer::calculateUnitSupply()
@@ -1391,11 +1391,6 @@ int CyPlayer::getFreeUnitsPopulationPercent()
 int CyPlayer::getFreeMilitaryUnitsPopulationPercent()
 {
 	return m_pPlayer ? m_pPlayer->getFreeMilitaryUnitsPopulationPercent() : -1;
-}
-
-int CyPlayer::getGoldPerUnit()
-{
-	return m_pPlayer ? m_pPlayer->getGoldPerUnit() : -1;
 }
 
 int CyPlayer::getNumMilitaryUnits()

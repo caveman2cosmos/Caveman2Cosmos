@@ -3745,7 +3745,7 @@
 			<iWarWearinessAccumulationModifier>-40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<iGoldPerUnit>-1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>-10</iCivilianUnitUpkeepMod>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iEnemyWarWearinessModifier>-40</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>30</iUnitUpgradePriceModifier>
@@ -3972,7 +3972,7 @@
 			<iWarWearinessAccumulationModifier>-20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<iGoldPerUnit>-1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>-10</iCivilianUnitUpkeepMod>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>10</iUnitUpgradePriceModifier>
@@ -4203,7 +4203,7 @@
 			<iWarWearinessAccumulationModifier>-30</iWarWearinessAccumulationModifier>
 			<iMaxConscript>4</iMaxConscript>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<iGoldPerUnit>-1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>-10</iCivilianUnitUpkeepMod>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iEnemyWarWearinessModifier>-30</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>10</iUnitUpgradePriceModifier>
@@ -4414,7 +4414,7 @@
 			<iWarWearinessAccumulationModifier>-40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>6</iMaxConscript>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<iGoldPerUnit>-1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>-10</iCivilianUnitUpkeepMod>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iEnemyWarWearinessModifier>-40</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>10</iUnitUpgradePriceModifier>
@@ -4623,7 +4623,7 @@
 			<iWarWearinessAccumulationModifier>40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-6</iMaxConscript>
 			<iBaseFreeUnits>-10</iBaseFreeUnits>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iUnitUpgradePriceModifier>-30</iUnitUpgradePriceModifier>
@@ -4830,7 +4830,7 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-4</iMaxConscript>
 			<iBaseFreeUnits>-10</iBaseFreeUnits>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iUnitUpgradePriceModifier>-10</iUnitUpgradePriceModifier>
@@ -5038,7 +5038,7 @@
 			<iWarWearinessAccumulationModifier>30</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-6</iMaxConscript>
 			<iBaseFreeUnits>-10</iBaseFreeUnits>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iUnitUpgradePriceModifier>-10</iUnitUpgradePriceModifier>
@@ -5249,7 +5249,7 @@
 			<iWarWearinessAccumulationModifier>40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-8</iMaxConscript>
 			<iBaseFreeUnits>-10</iBaseFreeUnits>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iUnitUpgradePriceModifier>-10</iUnitUpgradePriceModifier>
@@ -8935,7 +8935,7 @@
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
@@ -9103,7 +9103,7 @@
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
@@ -9303,7 +9303,7 @@
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>1</iGoldPerUnit>
+			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iUnitUpgradePriceModifier>-10</iUnitUpgradePriceModifier>

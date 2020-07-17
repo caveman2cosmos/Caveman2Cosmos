@@ -1082,7 +1082,7 @@ DPII < Maintenance Modifiers >
 	<ElementType name="iBaseFreeMilitaryUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnitsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeMilitaryUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldPerUnit" content="textOnly" dt:type="int"/>
+	<ElementType name="iCivilianUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iMilitaryUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="bMilitaryFoodProduction" content="textOnly" dt:type="boolean"/>
@@ -1352,7 +1352,7 @@ DPII < Maintenance Modifiers >
 		<element type="iBaseFreeMilitaryUnits" minOccurs="0"/>
 		<element type="iFreeUnitsPopulationPercent" minOccurs="0"/>
 		<element type="iFreeMilitaryUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iGoldPerUnit" minOccurs="0"/>
+		<element type="iCivilianUnitUpkeepMod" minOccurs="0"/>
 		<element type="iMilitaryUnitUpkeepMod" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnit" minOccurs="0"/>
 		<element type="bMilitaryFoodProduction" minOccurs="0"/>

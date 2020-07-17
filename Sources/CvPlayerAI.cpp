@@ -888,7 +888,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 							iCityExp += pPlotCity->getSpecialistFreeExperience(); //great generals
 							iCityExp += getFreeExperience(); //civics & wonders
 
-							if (iExp <= std::max(0, iCityExp) && calculateUnitCost() > 0
+							if (iExp <= std::max(0, iCityExp) && getTotalUnitUpkeep() > 0
 							&& (pLoopUnit->getDomainType() != DOMAIN_LAND || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
 							&& pPlotCity->canTrain(pLoopUnit->getUnitType())
 							&& pPlotCity->plot()->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders()
@@ -15032,10 +15032,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				 iTempValue);
 	}
 	iValue += iTempValue;
-	iTempValue = -(kCivic.getGoldPerUnit() * getNumUnits());
+	iTempValue = -(kCivic.getCivilianUnitUpkeepMod() * getNumUnits() - getNumMilitaryUnits());
 	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 	{
-		logBBAI("Civic %S unit cost value %d",
+		logBBAI("Civic %S civilian unit upkeep modifier %d%%",
 				 kCivic.getDescription(),
 				 iTempValue);
 	}
@@ -15045,7 +15045,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 	{
-		logBBAI("Civic %S military unit cost value %d",
+		logBBAI("Civic %S military unit upkeep modifier %d%%",
 				 kCivic.getDescription(),
 				 iTempValue);
 	}
@@ -18976,7 +18976,7 @@ void CvPlayerAI::AI_doMilitary()
 				int iFundedPercent = AI_costAsPercentIncome();
 				int iSafePercent = AI_safeCostAsPercentIncome();
 				int iSafeBuffer = (1 + iPass) * 5; // this prevents the AI from disbanding their elite units unless the financial trouble is very severe
-				while ((iFundedPercent < (iSafePercent - iSafeBuffer)) && (calculateUnitCost() > 0))
+				while (iFundedPercent < iSafePercent-iSafeBuffer && getTotalUnitUpkeep() > 0)
 				{
 					int iExperienceThreshold;
 					switch (iPass)
@@ -32452,12 +32452,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	iTemp = kPromotion.getCostModifierChange();
-	if (iTemp !=0)
+	iTemp = kPromotion.getBaseUpkeepModifierChange() + kPromotion.getUpkeepMultiplierChange();
+	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getCostModifier() : pUnit->costModifierTotal();
-		iTemp *= (100 + iExtra);
-		iTemp /= 200;
 		if ((eUnitAI == UNITAI_HEALER) ||
 			(eUnitAI == UNITAI_HEALER_SEA) ||
 			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
@@ -37357,14 +37354,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	iTemp = kUnitCombat.getCostModifierChange();
-	if (iTemp !=0)
-	{
-		iExtra = pUnit == NULL ? kUnit.getCostModifier() : pUnit->costModifierTotal();
-		iTemp *= (100 + iExtra);
-		iTemp /= 200;
-		iValue -= iTemp;
-	}
+	iValue -= kUnitCombat.getBaseUpkeepModifierChange() + kUnitCombat.getUpkeepMultiplierChange();
 
 	iTemp = kUnitCombat.getRBombardDamageBase();
 	if (iTemp !=0)

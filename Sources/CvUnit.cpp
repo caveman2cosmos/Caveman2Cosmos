@@ -410,6 +410,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			}
 		}
 		setGameTurnCreated(GC.getGame().getGameTurn());
+		calcUpkeep100(); // This updates total upkeep on the player level too
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
 		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
@@ -683,7 +684,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraMaxHP = 0;
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
-	m_iExtraCostModifier = 0;
 	m_iBaseUpkeepModifier = 0;
 	m_iUpkeepMultiplier = 0;
 	m_iUpkeep100 = 0;
@@ -1166,7 +1166,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		setMADEnabled(false);
 	}
 
-	PlayerTypes eOwner = getOwner();
+	const PlayerTypes eOwner = getOwner();
+	CvPlayerAI& owner = GET_PLAYER(eOwner);
+
 	CvPlot* pPlot = plot();
 
 	if (pPlot != NULL)
@@ -1278,7 +1280,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		if (isCanRespawn())
 		{
-			CvCity* pCapitalCity = GET_PLAYER(eOwner).getCapitalCity();
+			CvCity* pCapitalCity = owner.getCapitalCity();
 			if ( pCapitalCity != NULL && pCapitalCity->plot() != plot())
 			{
 				//GC.getGame().logOOSSpecial(14, getID(), pCapitalCity->getX(), pCapitalCity->getY());
@@ -1358,42 +1360,30 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
+
+	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
+
 	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
-	GET_PLAYER(eOwner).changeUnitCount(m_eUnitType, -1);
+	owner.changeUnitCount(m_eUnitType, -1);
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
-		GET_PLAYER(eOwner).changeNumNukeUnits(-1);
+		owner.changeNumNukeUnits(-1);
 	}
 
 	if (m_pUnitInfo->isMilitarySupport())
 	{
-		GET_PLAYER(eOwner).changeNumMilitaryUnits(-1);
+		owner.changeNumMilitaryUnits(-1);
 	}
 
-/* Toffer - This is handled below through assetValueTotal and getPowerValueTotal
-	// Afforess 04/16/10
-	// Promotions affect iAsset and iPower values, so they must be removed on unit death
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		setHasPromotion((PromotionTypes)iI, false, true, true);
-	}
-*/
-	// TB - Same reasons, and more:
-	// Upkeep adjustments pointed out the need to remove all unitcombats before erasing the unit.
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		setHasUnitCombat((UnitCombatTypes)iI, false, false);
-	}
-
-	GET_PLAYER(eOwner).changeAssets(-assetValueTotal());
-	GET_PLAYER(eOwner).changeUnitPower(-getPowerValueTotal());
+	owner.changeAssets(-assetValueTotal());
+	owner.changeUnitPower(-getPowerValueTotal());
 
 	if (pPlot != NULL)
 	{
-		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(),GET_PLAYER(eOwner).getCivilizationDescription(0)).c_str());
+		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(), owner.getCivilizationDescription(0)).c_str());
 
-		GET_PLAYER(eOwner).AI_changeNumAIUnits(AI_getUnitAIType(), -1);
+		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
 		AI_killed(); // Update AI counts for this unit
 		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
@@ -1438,7 +1428,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
-		GET_PLAYER(eOwner).deleteUnit(getID());
+		owner.deleteUnit(getID());
 	}
 }
 
@@ -16217,7 +16207,7 @@ int CvUnit::damageModifierTotal() const
 
 int CvUnit::costModifierTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getCostModifier() + getExtraCostModifier()));
+	return 0;
 }
 
 int CvUnit::overrunTotal() const
@@ -19750,17 +19740,7 @@ void CvUnit::changeExtraDamageModifier(int iChange)
 	m_iExtraDamageModifier += iChange;
 }
 
-int CvUnit::getExtraCostModifier() const
-{
-	return m_iExtraCostModifier;
-}
-
-void CvUnit::changeExtraCostModifier(int iChange)
-{
-	m_iExtraCostModifier += iChange;
-	GET_PLAYER(getOwner()).changeUnitPercentCountForCostAdjustment(iChange);
-}
-
+// Toffer - Upkeep
 void CvUnit::changeBaseUpkeepModifier(const int iChange)
 {
 	if (iChange != 0)
@@ -19831,6 +19811,7 @@ int CvUnit::getUpkeep100() const
 {
 	return m_iUpkeep100;
 }
+// ! Upkeep
 
 
 int CvUnit::getExtraOverrun (bool bIgnoreCommanders) const
@@ -24032,7 +24013,8 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		defineReligion();
 	}
 
-	changeExtraCostModifier(kUnitCombat.getCostModifierChange() * iChange * -1);//no merge/split (modified but not multiplicative)
+	changeBaseUpkeepModifier(kUnitCombat.getBaseUpkeepModifierChange() * iChange);
+	changeUpkeepMultiplier(kUnitCombat.getUpkeepMultiplierChange() * iChange);
 
 	establishBuildups();
 }
@@ -24270,7 +24252,10 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraArmor(kPromotion.getArmorChange() * iChange);
 	changeExtraPuncture(kPromotion.getPunctureChange() * iChange);
 	changeExtraDamageModifier(kPromotion.getDamageModifierChange() * iChange);
-	changeExtraCostModifier(kPromotion.getCostModifierChange() * iChange * -1);
+
+	changeBaseUpkeepModifier(kPromotion.getBaseUpkeepModifierChange() * iChange);
+	changeUpkeepMultiplier(kPromotion.getUpkeepMultiplierChange() * iChange);
+
 	changeExtraOverrun(kPromotion.getOverrunChange() * iChange);
 	changeExtraRepel(kPromotion.getRepelChange() * iChange);
 	changeExtraFortRepel(kPromotion.getFortRepelChange() * iChange);
@@ -26585,7 +26570,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCannotMergeSplitCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCostModifier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -26946,7 +26931,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -27600,7 +27584,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCannotMergeSplitCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraStrengthModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDamageModifier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCostModifier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, m_eGGExperienceEarnedTowardsType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargo);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargoCapacity);
@@ -27875,7 +27859,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

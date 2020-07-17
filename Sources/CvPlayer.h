@@ -588,21 +588,20 @@ public:
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
-	int getGoldPerUnit() const; // Exposed to Python
-	void changeGoldPerUnit(int iChange);
-
+	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
+	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
 	void calcUnitUpkeep();
 
+	unsigned long getUnitUpkeepCivilian100() const;
+	unsigned long getUnitUpkeepMilitary100() const;
+	unsigned long getTotalUnitUpkeep() const;
+
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
-
-	int getUnitPercentCountForCostAdjustment() const; // Exposed to Python
-	void changeUnitPercentCountForCostAdjustment(int iChange);
-	int getUnitCountForCostAdjustmentTotal() const;
 
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 
@@ -1813,14 +1812,14 @@ protected:
 	int m_iBaseFreeMilitaryUnits;
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
+	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 
 	unsigned long m_iUnitUpkeepMilitary100;
 	unsigned long m_iUnitUpkeepCivilian100;
+	unsigned long m_iTotalUnitUpkeep;
 
 	int m_iNumMilitaryUnits;
-	int m_iNumUnitPercentCountForCostAdjustment;
 	int m_iHappyPerMilitaryUnit;
 	int m_iMilitaryFoodProductionCount;
 	int m_iConscriptCount;

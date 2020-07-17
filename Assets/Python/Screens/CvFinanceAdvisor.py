@@ -236,7 +236,7 @@ class CvFinanceAdvisor:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
 		iExpenses = 0
-		totalUnitCost = CyPlayer.calculateUnitCost()
+		totalUnitCost = CyPlayer.getTotalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
