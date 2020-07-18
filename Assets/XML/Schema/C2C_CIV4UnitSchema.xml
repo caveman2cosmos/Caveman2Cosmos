@@ -2125,7 +2125,6 @@
 		<element type="iSMCargoVolume" minOccurs="0"/>
 		<element type="iConscription" minOccurs="0"/>
 		<element type="iCultureGarrison" minOccurs="0"/>
-		<element type="iExtraCost" minOccurs="0"/>
 		<element type="iBaseUpkeep" minOccurs="0"/>
 		<element type="iAsset" minOccurs="0"/>
 		<element type="iPower" minOccurs="0"/>
