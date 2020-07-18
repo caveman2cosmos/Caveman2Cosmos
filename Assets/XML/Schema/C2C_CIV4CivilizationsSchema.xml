@@ -121,8 +121,8 @@
 	<ElementType name="iCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeExperience" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeMilitaryUnits" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilian" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitary" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnitsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeMilitaryUnitsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivilianUnitUpkeepMod" content="textOnly" dt:type="int"/>
@@ -852,8 +852,8 @@
 		<element type="iCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iStateReligionGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iFreeExperience" minOccurs="0"/>
-		<element type="iBaseFreeUnits" minOccurs="0"/>
-		<element type="iBaseFreeMilitaryUnits" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilian" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitary" minOccurs="0"/>
 		<element type="iFreeUnitsPopulationPercent" minOccurs="0"/>
 		<element type="iFreeMilitaryUnitsPopulationPercent" minOccurs="0"/>
 		<element type="iCivilianUnitUpkeepMod" minOccurs="0"/>

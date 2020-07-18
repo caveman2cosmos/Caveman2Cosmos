@@ -405,8 +405,8 @@ void CvPlayer::init(PlayerTypes eID)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
-		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
+		changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
+		changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
 		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
 		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
 		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
@@ -568,8 +568,8 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
-		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
+		changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
+		changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
 		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
 		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
 		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
@@ -9087,13 +9087,11 @@ int CvPlayer::calculateTotalCityUnhealthiness() const
 
 int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const
 {
-	iFreeUnits = GC.getHandicapInfo(getHandicapType()).getFreeUnits();
-
 	iFreeUnits += getBaseFreeUnits();
-	iFreeUnits += ((getTotalPopulation() * getFreeUnitsPopulationPercent()) / 100);
+	iFreeUnits += getTotalPopulation() * getFreeUnitsPopulationPercent() / 100;
 
 	iFreeMilitaryUnits = getBaseFreeMilitaryUnits();
-	iFreeMilitaryUnits += ((getTotalPopulation() * getFreeMilitaryUnitsPopulationPercent()) / 100);
+	iFreeMilitaryUnits += getTotalPopulation() * getFreeMilitaryUnitsPopulationPercent() / 100;
 
 	// jdog5000 - 02/04/09 - rebels and BarbarianCiv
 	iFreeUnits += getFreeUnitCountdown();
@@ -11780,7 +11778,7 @@ int CvPlayer::getBaseFreeUnits() const
 }
 
 
-void CvPlayer::changeBaseFreeUnits(int iChange)
+void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 {
 	if (iChange != 0)
 	{
@@ -11800,11 +11798,11 @@ int CvPlayer::getBaseFreeMilitaryUnits() const
 }
 
 
-void CvPlayer::changeBaseFreeMilitaryUnits(int iChange)
+void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBaseFreeMilitaryUnits = (m_iBaseFreeMilitaryUnits + iChange);
+		m_iBaseFreeMilitaryUnits += iChange;
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -11853,6 +11851,8 @@ void CvPlayer::changeFreeMilitaryUnitsPopulationPercent(int iChange)
 	}
 }
 
+
+// Toffer - Unit Upkeep
 
 int CvPlayer::getCivilianUnitUpkeepMod() const
 {
@@ -11938,12 +11938,12 @@ void CvPlayer::calcUnitUpkeep()
 	iCalc += iMilitaryUpkeep100 / 100;
 
 	// Difficulty adjustment
-	iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
+	iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
 	iCalc /= 100;
 
 	if (!isHuman())
 	{
-		iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitCostPercent();
+		iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
 		iCalc /= 100;
 
 		iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
@@ -11968,6 +11968,8 @@ unsigned long CvPlayer::getTotalUnitUpkeep() const
 {
 	return m_iTotalUnitUpkeep;
 }
+
+// ! Unit Upkeep
 
 
 int CvPlayer::getNumMilitaryUnits() const
@@ -20760,8 +20762,8 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeWorkerSpeedModifier(kCivic.getWorkerSpeedModifier() * iChange);
 		changeImprovementUpgradeRateModifier(kCivic.getImprovementUpgradeRateModifier() * iChange);
 		changeMilitaryProductionModifier(kCivic.getMilitaryProductionModifier() * iChange);
-		changeBaseFreeUnits(kCivic.getBaseFreeUnits() * iChange);
-		changeBaseFreeMilitaryUnits(kCivic.getBaseFreeMilitaryUnits() * iChange);
+		changeBaseFreeUnitUpkeepCivilian(kCivic.getFreeUnitUpkeepCivilian() * iChange);
+		changeBaseFreeUnitUpkeepMilitary(kCivic.getFreeUnitUpkeepMilitary() * iChange);
 		changeFreeUnitsPopulationPercent(kCivic.getFreeUnitsPopulationPercent() * iChange);
 		changeFreeMilitaryUnitsPopulationPercent(kCivic.getFreeMilitaryUnitsPopulationPercent() * iChange);
 		changeCivilianUnitUpkeepMod(kCivic.getCivilianUnitUpkeepMod() * iChange);
@@ -24559,7 +24561,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	if (0 != kEvent.getFreeUnitSupport())
 	{
-		changeBaseFreeUnits(kEvent.getFreeUnitSupport());
+		changeBaseFreeUnitUpkeepCivilian(kEvent.getFreeUnitSupport());
 	}
 
 	const CvProperties* pProp = kEvent.getPropertiesAllCities();
@@ -31291,8 +31293,8 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeCorporationMaintenanceModifier(iChange*GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier());
 	changeStateReligionGreatPeopleRateModifier(iChange*GC.getTraitInfo(eTrait).getStateReligionGreatPeopleRateModifier());
 	changeFreeExperience(iChange*GC.getTraitInfo(eTrait).getFreeExperience());
-	changeBaseFreeUnits(iChange*GC.getTraitInfo(eTrait).getBaseFreeUnits());
-	changeBaseFreeMilitaryUnits(iChange*GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits());
+	changeBaseFreeUnitUpkeepCivilian(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian());
+	changeBaseFreeUnitUpkeepMilitary(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary());
 	changeFreeUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent());
 	changeFreeMilitaryUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent());
 	changeCivilianUnitUpkeepMod(iChange*GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod());
@@ -31487,8 +31489,8 @@ void CvPlayer::recalculateModifiers()
 	noteOrbitalInfrastructureCountDirty();
 
 	//	Put back starting defaults
-	changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
-	changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
+	changeBaseFreeUnitUpkeepCivilian(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_CIVILIAN"));
+	changeBaseFreeUnitUpkeepMilitary(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_MILITARY"));
 	changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
 	changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
 	changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));

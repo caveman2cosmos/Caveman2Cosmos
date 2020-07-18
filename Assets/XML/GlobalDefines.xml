@@ -645,12 +645,12 @@
 		<iDefineIntVal>14</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_UNITS</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_MILITARY_UNITS</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_UNITS_POPULATION_PERCENT</DefineName>

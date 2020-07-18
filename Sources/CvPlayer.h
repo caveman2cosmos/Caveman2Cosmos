@@ -575,10 +575,9 @@ public:
 	void changeNumOutsideUnits(int iChange);
 
 	int getBaseFreeUnits() const; // Exposed to Python
-	void changeBaseFreeUnits(int iChange);
-
 	int getBaseFreeMilitaryUnits() const; // Exposed to Python
-	void changeBaseFreeMilitaryUnits(int iChange);
+	void changeBaseFreeUnitUpkeepCivilian(const int iChange);
+	void changeBaseFreeUnitUpkeepMilitary(const int iChange);
 
 	int getFreeUnitsPopulationPercent() const; // Exposed to Python
 	void changeFreeUnitsPopulationPercent(int iChange);

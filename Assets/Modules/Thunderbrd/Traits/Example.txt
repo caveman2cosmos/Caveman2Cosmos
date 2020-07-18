@@ -270,8 +270,8 @@ Example!
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iFreeExperience>0</iFreeExperience>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>
@@ -627,8 +627,8 @@ Example!
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iFreeExperience>0</iFreeExperience>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
 			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
 			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
 			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>

@@ -3047,8 +3047,8 @@ public:
 	int getWorkerSpeedModifier() const; // Exposed to Python
 	int getImprovementUpgradeRateModifier() const; // Exposed to Python
 	int getMilitaryProductionModifier() const; // Exposed to Python
-	int getBaseFreeUnits() const; // Exposed to Python
-	int getBaseFreeMilitaryUnits() const; // Exposed to Python
+	int getFreeUnitUpkeepCivilian() const; // Exposed to Python
+	int getFreeUnitUpkeepMilitary() const; // Exposed to Python
 	int getFreeUnitsPopulationPercent() const; // Exposed to Python
 	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
 	int getCivilianUnitUpkeepMod() const;
@@ -3245,8 +3245,8 @@ protected:
 	int m_iWorkerSpeedModifier;
 	int m_iImprovementUpgradeRateModifier;
 	int m_iMilitaryProductionModifier;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
+	int m_iFreeUnitUpkeepCivilian;
+	int m_iFreeUnitUpkeepMilitary;
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
 	int m_iCivilianUnitUpkeepMod;
@@ -4700,8 +4700,7 @@ public:
 	int getStartingLocationPercent() const; // Exposed to Python
 	int getAdvancedStartPointsMod() const; // Exposed to Python
 	int getStartingGold() const; // Exposed to Python
-	int getFreeUnits() const; // Exposed to Python
-	int getUnitCostPercent() const; // Exposed to Python
+	int getUnitUpkeepPercent() const; // Exposed to Python
 	int getTrainPercent() const;
 	int getConstructPercent() const;
 	int getResearchPercent() const; // Exposed to Python
@@ -4750,7 +4749,7 @@ public:
 	int getAIResearchPercent() const;
 	int getAIWorldCreatePercent() const; // Exposed to Python
 	int getAICivicUpkeepPercent() const; // Exposed to Python
-	int getAIUnitCostPercent() const; // Exposed to Python
+	int getAIUnitUpkeepPercent() const; // Exposed to Python
 	int getAIUnitSupplyPercent() const; // Exposed to Python
 	int getAIUnitUpgradePercent() const; // Exposed to Python
 	int getAIInflationPercent() const; // Exposed to Python
@@ -4785,8 +4784,7 @@ protected:
 	int m_iStartingLocationPercent;
 	int m_iAdvancedStartPointsMod;
 	int m_iStartingGold;
-	int m_iFreeUnits;
-	int m_iUnitCostPercent;
+	int m_iUnitUpkeepPercent;
 	int m_iTrainPercent;
 	int m_iConstructPercent;
 	int m_iResearchPercent;
@@ -4835,7 +4833,7 @@ protected:
 	int m_iAIResearchPercent;
 	int m_iAIWorldCreatePercent;
 	int m_iAICivicUpkeepPercent;
-	int m_iAIUnitCostPercent;
+	int m_iAIUnitUpkeepPercent;
 	int m_iAIUnitSupplyPercent;
 	int m_iAIUnitUpgradePercent;
 	int m_iAIInflationPercent;
@@ -7191,8 +7189,8 @@ public:
 	int getCorporationMaintenanceModifier() const;
 	int getStateReligionGreatPeopleRateModifier() const;
 	int getFreeExperience() const;
-	int getBaseFreeUnits() const;
-	int getBaseFreeMilitaryUnits() const;
+	int getFreeUnitUpkeepCivilian() const;
+	int getFreeUnitUpkeepMilitary() const;
 	int getFreeUnitsPopulationPercent() const;
 	int getFreeMilitaryUnitsPopulationPercent() const;
 	int getCivilianUnitUpkeepMod() const;
@@ -7443,8 +7441,8 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iStateReligionGreatPeopleRateModifier;
 	int m_iFreeExperience;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
+	int m_iFreeUnitUpkeepCivilian;
+	int m_iFreeUnitUpkeepMilitary;
 	int m_iFreeUnitsPopulationPercent;
 	int m_iFreeMilitaryUnitsPopulationPercent;
 	int m_iCivilianUnitUpkeepMod;
