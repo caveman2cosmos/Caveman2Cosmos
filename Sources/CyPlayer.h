@@ -166,9 +166,6 @@ public:
 	int calculateInflationRate();
 	int calculateInflatedCosts();
 
-	int getFreeUnitCountdown();
-	void setFreeUnitCountdown( int iValue );
-
 	int calculateGoldRate();
 	int calculateTotalCommerce();
 	int calculateResearchRate(int /*TechTypes*/ eTech);
@@ -310,11 +307,7 @@ public:
 
 	int getNumNukeUnits();
 	int getNumOutsideUnits();
-	int getBaseFreeUnits();
-	int getBaseFreeMilitaryUnits();
 
-	int getFreeUnitsPopulationPercent();
-	int getFreeMilitaryUnitsPopulationPercent();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();

@@ -74,7 +74,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>-50</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>40</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>-40</iUnitUpgradePriceModifier>
 			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
@@ -160,7 +160,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>-40</iWarWearinessAccumulationModifier>
 			<iMaxConscript>1</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>-25</iUnitUpgradePriceModifier>
 			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
@@ -249,7 +249,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>-60</iWarWearinessAccumulationModifier>
 			<iMaxConscript>2</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>30</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>-30</iUnitUpgradePriceModifier>
 			<PropertyManipulators>
@@ -334,7 +334,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>-70</iWarWearinessAccumulationModifier>
 			<iMaxConscript>4</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>10</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>-35</iUnitUpgradePriceModifier>
 			<PropertyManipulators>
@@ -421,7 +421,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>50</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-2</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>-10</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-30</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>-50</iMilitaryProductionModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>50</iUnitUpgradePriceModifier>
@@ -504,7 +504,7 @@
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>60</iWarWearinessAccumulationModifier>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>30</iUnitUpgradePriceModifier>
@@ -593,7 +593,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>80</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-2</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>30</iUnitUpgradePriceModifier>
 			<PropertyManipulators>
@@ -680,7 +680,7 @@
 			</FreePromotionUnitCombatTypes>
 			<iWarWearinessAccumulationModifier>90</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-4</iMaxConscript>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
 			<iUnitUpgradePriceModifier>30</iUnitUpgradePriceModifier>
 			<PropertyManipulators>
@@ -5865,7 +5865,7 @@
 			<iMaxConscript>4</iMaxConscript>
 			<iDistanceMaintenanceModifier>40</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>50</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>20</iCityDefenseBonus>
@@ -6182,7 +6182,7 @@
 			<iMaxConscript>3</iMaxConscript>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>25</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
@@ -6431,7 +6431,7 @@
 			<iMaxConscript>6</iMaxConscript>
 			<iDistanceMaintenanceModifier>30</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>35</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iCityDefenseBonus>15</iCityDefenseBonus>
@@ -6680,7 +6680,7 @@
 			<iMaxConscript>9</iMaxConscript>
 			<iDistanceMaintenanceModifier>40</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>45</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iExpInBorderModifier>15</iExpInBorderModifier>
 			<iCityDefenseBonus>20</iCityDefenseBonus>
@@ -7124,7 +7124,7 @@
 			<iMaxConscript>-3</iMaxConscript>
 			<iDistanceMaintenanceModifier>-40</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-50</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-30</iExpInBorderModifier>
 			<iCityDefenseBonus>-25</iCityDefenseBonus>
 			<iEspionageDefense>-25</iEspionageDefense>
@@ -7355,7 +7355,7 @@
 			<iMaxConscript>-2</iMaxConscript>
 			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-25</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-15</iCityDefenseBonus>
 			<iEspionageDefense>-10</iEspionageDefense>
@@ -7538,7 +7538,7 @@
 			<iMaxConscript>-4</iMaxConscript>
 			<iDistanceMaintenanceModifier>-30</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-35</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-20</iCityDefenseBonus>
 			<iEspionageDefense>-20</iEspionageDefense>
@@ -7749,7 +7749,7 @@
 			<iMaxConscript>-6</iMaxConscript>
 			<iDistanceMaintenanceModifier>-40</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-45</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-25</iExpInBorderModifier>
 			<iCityDefenseBonus>-25</iCityDefenseBonus>
 			<iEspionageDefense>-20</iEspionageDefense>
@@ -8071,7 +8071,7 @@
 			<iMaxConscript>4</iMaxConscript>
 			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
-			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>20</iUnitUpgradePriceModifier>
@@ -8259,7 +8259,7 @@
 			<iMaxConscript>3</iMaxConscript>
 			<iDistanceMaintenanceModifier>-10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
-			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>5</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>5</iCapitalXPModifier>
@@ -8482,7 +8482,7 @@
 			<iMaxConscript>6</iMaxConscript>
 			<iDistanceMaintenanceModifier>-15</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
-			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>15</iUnitUpgradePriceModifier>
@@ -8631,7 +8631,7 @@
 			<iMaxConscript>9</iMaxConscript>
 			<iDistanceMaintenanceModifier>-25</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-25</iNumCitiesMaintenanceModifier>
-			<iFreeMilitaryUnitsPopulationPercent>5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iUnitUpgradePriceModifier>20</iUnitUpgradePriceModifier>
@@ -8933,8 +8933,8 @@
 			<iMaxConscript>-4</iMaxConscript>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -9101,8 +9101,8 @@
 			<iMaxConscript>-4</iMaxConscript>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -9301,8 +9301,8 @@
 			<iMaxConscript>-4</iMaxConscript>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iCivilianUnitUpkeepMod>10</iCivilianUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
@@ -9452,8 +9452,8 @@
 			<iMaxConscript>-6</iMaxConscript>
 			<iDistanceMaintenanceModifier>30</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>30</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>-5</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>-15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
@@ -58290,7 +58290,7 @@
 			<iWorkerSpeedModifier>50</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>-30</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-30</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>2</iLargestCityHappiness>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<ReplacementCondition>
@@ -58429,7 +58429,7 @@
 			<iWorkerSpeedModifier>35</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>-15</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<ReplacementCondition>
@@ -58561,7 +58561,7 @@
 			<iWorkerSpeedModifier>35</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>-15</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>2</iLargestCityHappiness>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 		</TraitInfo>
@@ -58687,7 +58687,7 @@
 			<iWorkerSpeedModifier>35</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>-15</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>15</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>45</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>3</iLargestCityHappiness>
 			<iCityDefenseBonus>-15</iCityDefenseBonus>
 		</TraitInfo>
@@ -58804,7 +58804,7 @@
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>40</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>40</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
@@ -58940,7 +58940,7 @@
 			<iWorkerSpeedModifier>-35</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
@@ -59067,7 +59067,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-2</iLargestCityHappiness>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
@@ -59194,7 +59194,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iFreeUnitsPopulationPercent>-15</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-45</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-3</iLargestCityHappiness>
 			<iCityDefenseBonus>15</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
@@ -60261,7 +60261,7 @@
 			<iNumCitiesMaintenanceModifier>-50</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
 			<iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -60379,7 +60379,7 @@
 			<iNumCitiesMaintenanceModifier>-30</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>
@@ -60481,7 +60481,7 @@
 			<iNumCitiesMaintenanceModifier>-30</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
 			<iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>
@@ -60595,7 +60595,7 @@
 			<iNumCitiesMaintenanceModifier>-40</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
 			<iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>2</iLargestCityHappiness>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 		</TraitInfo>
@@ -60690,7 +60690,7 @@
 			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iFreeExperience>-1</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>-10</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>-10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iHurryCostModifier>-25</iHurryCostModifier>
@@ -60804,7 +60804,7 @@
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iFreeExperience>-1</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>-5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 		</TraitInfo>
@@ -60900,7 +60900,7 @@
 			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iFreeExperience>-1</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>-5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>-10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 		</TraitInfo>
@@ -61014,7 +61014,7 @@
 			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iFreeExperience>-1</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>-5</iFreeUnitUpkeepCivilian>
-			<iFreeUnitsPopulationPercent>-10</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-30</iFreeUnitUpkeepCivilianPopPercent>
 			<iLargestCityHappiness>-2</iLargestCityHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 		</TraitInfo>
@@ -61462,7 +61462,7 @@
 			<iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
 			<iFreeExperience>-1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
@@ -61679,7 +61679,7 @@
 			<iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
 			<iFreeExperience>-1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iCityDefenseBonus>0</iCityDefenseBonus>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
@@ -61908,7 +61908,7 @@
 			<iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
 			<iFreeExperience>-1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
@@ -62077,7 +62077,7 @@
 			<iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
 			<iFreeExperience>-1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>-5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
@@ -62530,7 +62530,7 @@
 			<iImprovementUpgradeRateModifier>-50</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iFreeExperience>1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>-1</iFreeSpecialist>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
@@ -62747,7 +62747,7 @@
 			<iImprovementUpgradeRateModifier>-50</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iFreeExperience>1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>-1</iFreeSpecialist>
 			<iCityDefenseBonus>0</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
@@ -62975,7 +62975,7 @@
 			<iImprovementUpgradeRateModifier>-50</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iFreeExperience>1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>-1</iFreeSpecialist>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-15</iMilitaryProductionModifier>
@@ -63143,7 +63143,7 @@
 			<iImprovementUpgradeRateModifier>-50</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iFreeExperience>1</iFreeExperience>
-			<iFreeUnitsPopulationPercent>5</iFreeUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>15</iFreeUnitUpkeepCivilianPopPercent>
 			<iFreeSpecialist>-1</iFreeSpecialist>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>

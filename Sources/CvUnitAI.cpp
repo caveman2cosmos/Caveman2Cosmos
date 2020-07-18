@@ -2324,7 +2324,7 @@ void CvUnitAI::AI_workerMove()
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
 		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
-		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilian100() > 99) // Toffer - 0.99 upkeep gold
+		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
@@ -2583,7 +2583,7 @@ void CvUnitAI::AI_workerMove()
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
 		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
-		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilian100() > 99) // Toffer - 0.99 upkeep gold
+		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
@@ -3076,12 +3076,6 @@ void CvUnitAI::AI_attackMove()
 		}
 
 		if (!isEnemy(plot()->getTeam()) && AI_heal())
-		{
-			return;
-		}
-
-		// Change grouping rules shortly after civ creation
-		if (GET_PLAYER(getOwner()).getFreeUnitCountdown() > 0 && AI_groupMergeRange(UNITAI_ATTACK_CITY, 2, false, true, true))
 		{
 			return;
 		}
@@ -7488,7 +7482,7 @@ void CvUnitAI::AI_workerSeaMove()
 				scrap();
 				return;
 			}
-			else if (GET_PLAYER(getOwner()).getUnitUpkeepCivilian100() > 99)
+			else if (GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 			{
 				scrap();
 				return;
@@ -31742,7 +31736,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (!isHuman() && GET_PLAYER(getOwner()).getUnitUpkeepCivilian100() > 99 && !bWithCommander)
+	if (!isHuman() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0 && !bWithCommander)
 	{
 		const int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
 		const int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);

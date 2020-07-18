@@ -9409,8 +9409,8 @@ CvCivicInfo::CvCivicInfo()
 	, m_iMilitaryProductionModifier(0)
 	, m_iFreeUnitUpkeepCivilian(0)
 	, m_iFreeUnitUpkeepMilitary(0)
-	, m_iFreeUnitsPopulationPercent(0)
-	, m_iFreeMilitaryUnitsPopulationPercent(0)
+	, m_iFreeUnitUpkeepCivilianPopPercent(0)
+	, m_iFreeUnitUpkeepMilitaryPopPercent(0)
 
 	, m_iCivilianUnitUpkeepMod(0)
 	, m_iMilitaryUnitUpkeepMod(0)
@@ -9679,14 +9679,14 @@ int CvCivicInfo::getFreeUnitUpkeepMilitary() const
 	return m_iFreeUnitUpkeepMilitary;
 }
 
-int CvCivicInfo::getFreeUnitsPopulationPercent() const
+int CvCivicInfo::getFreeUnitUpkeepCivilianPopPercent() const
 {
-	return m_iFreeUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepCivilianPopPercent;
 }
 
-int CvCivicInfo::getFreeMilitaryUnitsPopulationPercent() const
+int CvCivicInfo::getFreeUnitUpkeepMilitaryPopPercent() const
 {
-	return m_iFreeMilitaryUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepMilitaryPopPercent;
 }
 
 int CvCivicInfo::getCivilianUnitUpkeepMod() const
@@ -10425,8 +10425,8 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iMilitaryProductionModifier);
 	CheckSum(iSum, m_iFreeUnitUpkeepCivilian);
 	CheckSum(iSum, m_iFreeUnitUpkeepMilitary);
-	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
-	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
+	CheckSum(iSum, m_iFreeUnitUpkeepCivilianPopPercent);
+	CheckSum(iSum, m_iFreeUnitUpkeepMilitaryPopPercent);
 	CheckSum(iSum, m_iCivilianUnitUpkeepMod);
 	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);
@@ -10630,8 +10630,8 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMilitaryProductionModifier, L"iMilitaryProductionModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepCivilian, L"iFreeUnitUpkeepCivilian");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepMilitary, L"iFreeUnitUpkeepMilitary");
-	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepCivilianPopPercent, L"iFreeUnitUpkeepCivilianPopPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepMilitaryPopPercent, L"iFreeUnitUpkeepMilitaryPopPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iCivilianUnitUpkeepMod, L"iCivilianUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
@@ -11265,8 +11265,8 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getMilitaryProductionModifier() == iDefault) m_iMilitaryProductionModifier = pClassInfo->getMilitaryProductionModifier();
 	if (m_iFreeUnitUpkeepCivilian == iDefault) m_iFreeUnitUpkeepCivilian = pClassInfo->getFreeUnitUpkeepCivilian();
 	if (m_iFreeUnitUpkeepMilitary == iDefault) m_iFreeUnitUpkeepMilitary = pClassInfo->getFreeUnitUpkeepMilitary();
-	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
-	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
+	if (m_iFreeUnitUpkeepCivilianPopPercent == iDefault) m_iFreeUnitUpkeepCivilianPopPercent = pClassInfo->getFreeUnitUpkeepCivilianPopPercent();
+	if (m_iFreeUnitUpkeepMilitaryPopPercent == iDefault) m_iFreeUnitUpkeepMilitaryPopPercent = pClassInfo->getFreeUnitUpkeepMilitaryPopPercent();
 	if (m_iCivilianUnitUpkeepMod == iDefault) m_iCivilianUnitUpkeepMod = pClassInfo->getCivilianUnitUpkeepMod();
 	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
@@ -23679,8 +23679,8 @@ CvTraitInfo::CvTraitInfo()
 	, m_iFreeExperience(0)
 	, m_iFreeUnitUpkeepCivilian(0)
 	, m_iFreeUnitUpkeepMilitary(0)
-	, m_iFreeUnitsPopulationPercent(0)
-	, m_iFreeMilitaryUnitsPopulationPercent(0)
+	, m_iFreeUnitUpkeepCivilianPopPercent(0)
+	, m_iFreeUnitUpkeepMilitaryPopPercent(0)
 	, m_iCivilianUnitUpkeepMod(0)
 	, m_iMilitaryUnitUpkeepMod(0)
 	, m_iHappyPerMilitaryUnit(0)
@@ -24625,36 +24625,42 @@ int CvTraitInfo::getFreeUnitUpkeepMilitary() const
 	return m_iFreeUnitUpkeepMilitary;
 }
 
-int CvTraitInfo::getFreeUnitsPopulationPercent() const
+int CvTraitInfo::getFreeUnitUpkeepCivilianPopPercent() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iFreeUnitsPopulationPercent > 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iFreeUnitUpkeepCivilianPopPercent > 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iFreeUnitsPopulationPercent < 0)
+		else if (m_iFreeUnitUpkeepCivilianPopPercent < 0)
 		{
 			return 0;
 		}
 	}
-	return m_iFreeUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepCivilianPopPercent;
 }
 
-int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
+int CvTraitInfo::getFreeUnitUpkeepMilitaryPopPercent() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent > 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iFreeUnitUpkeepMilitaryPopPercent > 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent < 0)
+		else if (m_iFreeUnitUpkeepMilitaryPopPercent < 0)
 		{
 			return 0;
 		}
 	}
-	return m_iFreeMilitaryUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepMilitaryPopPercent;
 }
 
 int CvTraitInfo::getCivilianUnitUpkeepMod() const
@@ -26878,8 +26884,8 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iFreeExperience, L"iFreeExperience");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepCivilian, L"iFreeUnitUpkeepCivilian");
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepMilitary, L"iFreeUnitUpkeepMilitary");
-	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitsPopulationPercent, L"iFreeUnitsPopulationPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iFreeMilitaryUnitsPopulationPercent, L"iFreeMilitaryUnitsPopulationPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepCivilianPopPercent, L"iFreeUnitUpkeepCivilianPopPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitUpkeepMilitaryPopPercent, L"iFreeUnitUpkeepMilitaryPopPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iCivilianUnitUpkeepMod, L"iCivilianUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iMilitaryUnitUpkeepMod, L"iMilitaryUnitUpkeepMod");
 	pXML->GetOptionalChildXmlValByName(&m_iHappyPerMilitaryUnit, L"iHappyPerMilitaryUnit");
@@ -27961,8 +27967,8 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getFreeExperience() == iDefault) m_iFreeExperience = pClassInfo->getFreeExperience();
 	if (m_iFreeUnitUpkeepCivilian == iDefault) m_iFreeUnitUpkeepCivilian = pClassInfo->getFreeUnitUpkeepCivilian();
 	if (m_iFreeUnitUpkeepMilitary == iDefault) m_iFreeUnitUpkeepMilitary = pClassInfo->getFreeUnitUpkeepMilitary();
-	if (getFreeUnitsPopulationPercent() == iDefault) m_iFreeUnitsPopulationPercent = pClassInfo->getFreeUnitsPopulationPercent();
-	if (getFreeMilitaryUnitsPopulationPercent() == iDefault) m_iFreeMilitaryUnitsPopulationPercent = pClassInfo->getFreeMilitaryUnitsPopulationPercent();
+	if (m_iFreeUnitUpkeepCivilianPopPercent == iDefault) m_iFreeUnitUpkeepCivilianPopPercent = pClassInfo->getFreeUnitUpkeepCivilianPopPercent();
+	if (m_iFreeUnitUpkeepMilitaryPopPercent == iDefault) m_iFreeUnitUpkeepMilitaryPopPercent = pClassInfo->getFreeUnitUpkeepMilitaryPopPercent();
 	if (m_iCivilianUnitUpkeepMod == iDefault) m_iCivilianUnitUpkeepMod = pClassInfo->getCivilianUnitUpkeepMod();
 	if (m_iMilitaryUnitUpkeepMod == iDefault) m_iMilitaryUnitUpkeepMod = pClassInfo->getMilitaryUnitUpkeepMod();
 	if (getHappyPerMilitaryUnit() == iDefault) m_iHappyPerMilitaryUnit = pClassInfo->getHappyPerMilitaryUnit();
@@ -28485,8 +28491,8 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iFreeExperience);
 	CheckSum(iSum, m_iFreeUnitUpkeepCivilian);
 	CheckSum(iSum, m_iFreeUnitUpkeepMilitary);
-	CheckSum(iSum, m_iFreeUnitsPopulationPercent);
-	CheckSum(iSum, m_iFreeMilitaryUnitsPopulationPercent);
+	CheckSum(iSum, m_iFreeUnitUpkeepCivilianPopPercent);
+	CheckSum(iSum, m_iFreeUnitUpkeepMilitaryPopPercent);
 	CheckSum(iSum, m_iCivilianUnitUpkeepMod);
 	CheckSum(iSum, m_iMilitaryUnitUpkeepMod);
 	CheckSum(iSum, m_iHappyPerMilitaryUnit);

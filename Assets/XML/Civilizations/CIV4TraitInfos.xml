@@ -1543,7 +1543,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
@@ -4968,7 +4968,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>5</iCityDefenseBonus>

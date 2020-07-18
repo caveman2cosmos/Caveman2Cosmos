@@ -11185,10 +11185,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		//	Free units population percent
-		if (GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
 		}
 
 		//	Free military units base
@@ -11199,10 +11199,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		//	Free Military units population percent
-		if (GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_MILITARY_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent()));
 		}
 
 		if (GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod() != 0)
@@ -15928,13 +15928,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//	Free units population percent
-	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent() != 0))
+	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0))
 	{
 		if (bPlayerContext)
 		{
 			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()
 				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
-				* GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent() / 100;
+				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() / 100;
 			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
@@ -15949,13 +15949,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//	Free military units population percent
-	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0) || (GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent() != 0))
+	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0))
 	{
 		if (bPlayerContext)
 		{
 			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()
 				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
-				* GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent() / 100;
+				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() / 100;
 			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
@@ -33086,34 +33086,29 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	}
 	CvPlayer& player = GET_PLAYER(ePlayer);
 
-	int iFreeUnits = 0;
-	int iFreeMilitaryUnits = 0;
-	int iUnits = player.getNumUnits();
-	int iMilitaryUnits = player.getNumMilitaryUnits();
-	int iPaidUnits = iUnits;
-	int iPaidMilitaryUnits = iMilitaryUnits;
-	int iMilitaryCost = 0;
-	int iBaseUnitCost = 0;
-	int iExtraCost = 0;
-	int iCost = player.calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
-	int iHandicap = iCost-iBaseUnitCost-iMilitaryCost-iExtraCost;
+	int iUnitUpkeepCivilian = player.getUnitUpkeepCivilian();
+	int iUnitUpkeepMilitary = player.getUnitUpkeepMilitary();
+
+	int iFreeCivilianUpkeep = player.getFreeUnitUpkeepCivilian();
+	int iFreeMilitaryUpkeep = player.getFreeUnitUpkeepMilitary();
+
+	int iUnitUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	int iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+
+	int iTotal = player.getTotalUnitUpkeep();
+	int iHandicap = iTotal - iUnitUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 
 	szBuffer.append(NEWLINE);
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST", iPaidUnits, iFreeUnits, iBaseUnitCost));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP",
+		iUnitUpkeepCivilian, iFreeCivilianUpkeep, iUnitUpkeepCivilianNet,
+		iUnitUpkeepMilitary, iFreeMilitaryUpkeep, iUnitUpkeepMilitaryNet));
 
-	if (iPaidMilitaryUnits != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_2", iPaidMilitaryUnits, iFreeMilitaryUnits, iMilitaryCost));
-	}
-	if (iExtraCost != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_3", iExtraCost));
-	}
 	if (iHandicap != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_HANDICAP_COST", iHandicap));
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_4", iCost));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL", iTotal));
 }
 
 void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)

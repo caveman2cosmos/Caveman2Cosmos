@@ -272,8 +272,8 @@ Example!
 			<iFreeExperience>0</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
 			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>0</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>0</iFreeUnitUpkeepMilitaryPopPercent>
 			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
@@ -629,8 +629,8 @@ Example!
 			<iFreeExperience>0</iFreeExperience>
 			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
 			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepCivilianPopPercent>0</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>0</iFreeUnitUpkeepMilitaryPopPercent>
 			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>
 			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>

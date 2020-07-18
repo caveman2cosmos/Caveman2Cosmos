@@ -6230,8 +6230,6 @@ class Revolution:
 				iGold = 10 + GAME.getSorenRandNum(20*len(cityList),'Revolt: give gold')
 			pRevPlayer.changeGold(min([iGold, 200]))
 
-			pRevPlayer.setFreeUnitCountdown(20)
-
 			# Espionage
 			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) and not bIsJoinWar:
 				espPoints = GAME.getSorenRandNum(20*len(cityList),'Revolt: esp') + (12+len(cityList))*max([pPlayer.getCommerceRate( CommerceTypes.COMMERCE_ESPIONAGE ), 6])

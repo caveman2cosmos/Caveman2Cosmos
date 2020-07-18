@@ -123,8 +123,8 @@
 	<ElementType name="iFreeExperience" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnitUpkeepCivilian" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnitUpkeepMilitary" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeMilitaryUnitsPopulationPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilianPopPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitaryPopPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivilianUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iMilitaryUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnit" content="textOnly" dt:type="int"/>
@@ -854,8 +854,8 @@
 		<element type="iFreeExperience" minOccurs="0"/>
 		<element type="iFreeUnitUpkeepCivilian" minOccurs="0"/>
 		<element type="iFreeUnitUpkeepMilitary" minOccurs="0"/>
-		<element type="iFreeUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iFreeMilitaryUnitsPopulationPercent" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilianPopPercent" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitaryPopPercent" minOccurs="0"/>
 		<element type="iCivilianUnitUpkeepMod" minOccurs="0"/>
 		<element type="iMilitaryUnitUpkeepMod" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnit" minOccurs="0"/>

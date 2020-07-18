@@ -236,7 +236,7 @@ class CvFinanceAdvisor:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
 		iExpenses = 0
-		totalUnitCost = CyPlayer.getTotalUnitUpkeep()
+		iTotalUnitUpkeep = CyPlayer.getTotalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
@@ -244,12 +244,11 @@ class CvFinanceAdvisor:
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
 		y = 0
-		if totalUnitCost:
-			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST", ())
-			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			screen.setLabelAt("", Pnl, uFont2 + str(totalUnitCost), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			iExpenses += totalUnitCost
-			y += 20
+		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST", ())
+		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
+		screen.setLabelAt("", Pnl, uFont2 + str(iTotalUnitUpkeep), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
+		iExpenses += iTotalUnitUpkeep
+		y += 20
 
 		if totalUnitSupply:
 			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())

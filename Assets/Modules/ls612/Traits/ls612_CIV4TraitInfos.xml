@@ -1209,7 +1209,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>18</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -4079,7 +4079,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>18</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>

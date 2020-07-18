@@ -3049,8 +3049,8 @@ public:
 	int getMilitaryProductionModifier() const; // Exposed to Python
 	int getFreeUnitUpkeepCivilian() const; // Exposed to Python
 	int getFreeUnitUpkeepMilitary() const; // Exposed to Python
-	int getFreeUnitsPopulationPercent() const; // Exposed to Python
-	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
+	int getFreeUnitUpkeepCivilianPopPercent() const; // Exposed to Python
+	int getFreeUnitUpkeepMilitaryPopPercent() const; // Exposed to Python
 	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
@@ -3247,8 +3247,8 @@ protected:
 	int m_iMilitaryProductionModifier;
 	int m_iFreeUnitUpkeepCivilian;
 	int m_iFreeUnitUpkeepMilitary;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
 	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
@@ -7191,8 +7191,8 @@ public:
 	int getFreeExperience() const;
 	int getFreeUnitUpkeepCivilian() const;
 	int getFreeUnitUpkeepMilitary() const;
-	int getFreeUnitsPopulationPercent() const;
-	int getFreeMilitaryUnitsPopulationPercent() const;
+	int getFreeUnitUpkeepCivilianPopPercent() const;
+	int getFreeUnitUpkeepMilitaryPopPercent() const;
 	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
 	int getLargestCityHappiness() const;
@@ -7443,8 +7443,8 @@ protected:
 	int m_iFreeExperience;
 	int m_iFreeUnitUpkeepCivilian;
 	int m_iFreeUnitUpkeepMilitary;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
 	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;

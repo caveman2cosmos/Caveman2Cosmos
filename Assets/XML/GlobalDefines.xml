@@ -653,12 +653,12 @@
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_FREE_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP</DefineName>
+		<iDefineIntVal>-200</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP</DefineName>
+		<iDefineIntVal>-100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_OUTSIDE_UNITS</DefineName>
