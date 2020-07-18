@@ -4,10 +4,7 @@
 #define CvReplayInfo_H
 
 
-#include "CvEnums.h"
-
 class CvReplayMessage;
-
 
 class CvReplayInfo
 {

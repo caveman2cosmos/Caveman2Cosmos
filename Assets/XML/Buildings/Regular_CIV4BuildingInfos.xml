@@ -24606,10 +24606,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CONDUCT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -24625,7 +24622,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>68</iCost>
+			<iCost>225</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -33251,7 +33248,6 @@
 			<Strategy>TXT_KEY_BUILDING_FIRE_DOCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DOCK</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_FIRE_DOCK</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -69276,7 +69272,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_EXECUTIONS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_CROSSES</BuildingType>
@@ -75901,7 +75897,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_TOWNWATCH</BuildingType>

@@ -28,7 +28,7 @@ def getDescription():
 
 def getNumCustomMapOptions():
 	return 4
-	
+
 def getNumHiddenCustomMapOptions():
 	return 1
 
@@ -42,7 +42,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -52,7 +52,7 @@ def getNumCustomMapOptionValues(argsList):
 		3:  3
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -83,7 +83,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -114,11 +114,11 @@ def isSeaLevelMap():
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(3) == 1 or map.getCustomMapOption(3) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(3) == 2)
-		
+
 def minStartingDistanceModifier():
 	return -65
 
@@ -150,19 +150,19 @@ def getGridSize(argsList):
 	if (argsList[0] == -1): # (-1,) is passed to function on loads
 		return []
 	[eWorldSize] = argsList
-# Rise of Mankind 2.53 - giant and gigantic mapsize fix	
+# Rise of Mankind 2.53 - giant and gigantic mapsize fix
 	global sizeSelected
 	sizeSelected = eWorldSize
-	print "    sizeSelected",sizeSelected
+	print "	sizeSelected",sizeSelected
 	# Giant size
 	if ( sizeSelected == 6 ):
 		return (26, 16)
 	# Gigantic size
 	elif ( sizeSelected == 7 ):
 		return (32, 20)
-# Rise of Mankind 2.53 - giant and gigantic mapsize fix		
+# Rise of Mankind 2.53 - giant and gigantic mapsize fix
 	return grid_sizes[eWorldSize]
-	
+
 class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 	# Subclass. Only the controlling function overridden in this case.
 	def generatePlotsByRegion(self, terrain_type):
@@ -172,18 +172,18 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Pangaea.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      3,
-			WorldSizeTypes.WORLDSIZE_TINY:      3,
-			WorldSizeTypes.WORLDSIZE_SMALL:     4,
+			WorldSizeTypes.WORLDSIZE_DUEL:	  3,
+			WorldSizeTypes.WORLDSIZE_TINY:	  3,
+			WorldSizeTypes.WORLDSIZE_SMALL:	 4,
 			WorldSizeTypes.WORLDSIZE_STANDARD:  4,
-			WorldSizeTypes.WORLDSIZE_LARGE:     4,
-			WorldSizeTypes.WORLDSIZE_HUGE:      5
+			WorldSizeTypes.WORLDSIZE_LARGE:	 4,
+			WorldSizeTypes.WORLDSIZE_HUGE:	  5
 			}
 		if ( not sizekey in sizevalues ):
 			grain = 5
 		else:
 			grain = sizevalues[sizekey]
-		
+
 		# The following regions are specific to Mirror.py
 		westX = self.iW / 2
 		eastX = self.iW - 1
@@ -191,27 +191,27 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		northY = self.iH - 1
 		iWidth = self.iW / 2
 		iHeight = self.iH
-		
+
 		# Set the grain for the primary layer.
 		if terrain_type == 1:
 			cont_grain = terrain_type
 		else:
 			cont_grain = terrain_type + 1
-		
+
 		# Set the water level for the primary layer.
 		water = 50 + (5 * cont_grain)
-		
+
 		# Generate the main land mass.
 		self.generatePlotsInRegion(water,
-		                           iWidth, iHeight,
-		                           westX, southY,
-		                           cont_grain, grain,
-		                           self.iRoundFlags, self.iTerrainFlags,
-		                           6, 6,
-		                           True, 7,
-		                           -1, False,
-		                           False
-		                           )
+								   iWidth, iHeight,
+								   westX, southY,
+								   cont_grain, grain,
+								   self.iRoundFlags, self.iTerrainFlags,
+								   6, 6,
+								   True, 7,
+								   -1, False,
+								   False
+								   )
 
 		# Second pass (to ensure cohesion), but only for Continents choices.
 		if terrain_type < 3:
@@ -223,15 +223,15 @@ class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			second_layerSouthY = southY + int(iHeight/5)
 
 			self.generatePlotsInRegion(60,
-			                           second_layerWidth, second_layerHeight,
-			                           second_layerWestX, second_layerSouthY,
-			                           1, grain,
-			                           self.iHorzFlags, self.iTerrainFlags,
-			                           6, 5,
-			                           True, 5,
-			                           -1, False,
-			                           False
-			                           )
+									   second_layerWidth, second_layerHeight,
+									   second_layerWestX, second_layerSouthY,
+									   1, grain,
+									   self.iHorzFlags, self.iTerrainFlags,
+									   6, 5,
+									   True, 5,
+									   -1, False,
+									   False
+									   )
 
 		# All regions have been processed. Plot Type generation completed.
 		return self.wholeworldPlotTypes
@@ -277,7 +277,7 @@ def generatePlotTypes():
 	else:
 		terrain_type = userInputLandmass
 	return water_world.generatePlotsByRegion(terrain_type)
-		
+
 def generateTerrainTypes():
 	# MIRRORIZE PLOTS
 	gc = CyGlobalContext()
@@ -285,7 +285,7 @@ def generateTerrainTypes():
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
 		reflect_y = lambda y: iY
@@ -304,11 +304,11 @@ def generateTerrainTypes():
 			pPlot = map.plot(iX, iY)
 			rPlot = map.plot(reflect_x(iX), reflect_y(iY))
 			pPlot.setPlotType(rPlot.getPlotType(), false, false)
-	
+
 	# Smooth any graphical glitches these changes may have produced.
 	map.recalculateAreas()
-	
-	# Now generate the terrain.	
+
+	# Now generate the terrain.
 	NiTextOut("Generating Terrain (Python Mirror) ...")
 	terraingen = CvMapGeneratorUtil.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
@@ -321,7 +321,7 @@ def addLakes():
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
 		reflect_y = lambda y: iY
@@ -340,7 +340,7 @@ def addLakes():
 			pPlot = map.plot(iX, iY)
 			rPlot = map.plot(reflect_x(iX), reflect_y(iY))
 			pPlot.setTerrainType(rPlot.getTerrainType(), false, false)
-	
+
 	# MIRRORIZE RIVERS
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
@@ -419,7 +419,7 @@ def addLakes():
 				if sPlot.isWOfRiver():
 					rivDir = sPlot.getRiverNSDirection()
 					pPlot.setWOfRiver(true, rivDir)
-		
+
 	else: # userInputPlots == 3: Opposite
 		reflect_x = lambda x: iX + (iW / 2)
 		reflect_y = lambda y: iH - iY - 1
@@ -452,7 +452,7 @@ def addLakes():
 	# Smooth any graphical glitches these changes may have produced.
 	map.recalculateAreas()
 
-	# Now add the lakes.	
+	# Now add the lakes.
 	return CyPythonMgr().allowDefaultImpl()
 
 def addFeatures():
@@ -462,7 +462,7 @@ def addFeatures():
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
 		reflect_y = lambda y: iY
@@ -491,7 +491,7 @@ def addFeatures():
 	else: # Oceanic option.
 		for plotIndex in range(iW * iH):
 			pPlot = map.plotByIndex(plotIndex)
-			if pPlot.isPeak() and pPlot.isCoastalLand():
+			if pPlot.isPeak() and pPlot.isCoastal():
 				# If a peak is along the coast, change to hills and recalc.
 				pPlot.setPlotType(PlotTypes.PLOT_HILLS, false, false)
 
@@ -503,7 +503,7 @@ def addFeatures():
 	featuregen = FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
-	
+
 def addGoodies():
 	# MIRRORIZE FEATURES AND BONUSES
 	gc = CyGlobalContext()
@@ -511,7 +511,7 @@ def addGoodies():
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
 		reflect_y = lambda y: iY
@@ -531,10 +531,10 @@ def addGoodies():
 			rPlot = map.plot(reflect_x(iX), reflect_y(iY))
 			pPlot.setFeatureType(rPlot.getFeatureType(), -1)
 			pPlot.setBonusType(rPlot.getBonusType(-1))
-	
+
 	# Now add the goodies.
 	return CyPythonMgr().allowDefaultImpl()
-	
+
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
 	# MIRRORIZE GOODIES
@@ -543,7 +543,7 @@ def afterGeneration():
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
 	iH = map.getGridHeight()
-	
+
 	if userInputPlots == 0: # Reflection
 		reflect_x = lambda x: iW - iX - 1
 		reflect_y = lambda y: iY
@@ -562,7 +562,7 @@ def afterGeneration():
 			pPlot = map.plot(iX, iY)
 			rPlot = map.plot(reflect_x(iX), reflect_y(iY))
 			pPlot.setImprovementType(rPlot.getImprovementType())
-	
+
 	# All done!
 	return None
 
@@ -589,7 +589,7 @@ def assignStartingPlots():
 	areas = CvMapGeneratorUtil.getAreas()
 	area_sizes = [(area.getNumTiles(), area.getID()) for area in areas if not area.isWater()]
 	area_sizes.sort() # sort by size -- biggest areas last.
-	
+
 	# pop the biggest two areas off the list.
 	area_size, area_ID = area_sizes.pop()
 	biggest_areas.append(area_ID)
@@ -610,7 +610,7 @@ def assignStartingPlots():
 	iPlayers = gc.getGame().countCivPlayersEverAlive()
 	playersOnTeamOne = []
 	playersOnTeamTwo = []
-	
+
 	player_list = []
 	for plrCheckLoop in range(18):
 		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
@@ -648,7 +648,7 @@ def assignStartingPlots():
 	# Check for the special case of two teams with even players.
 	# If found, force perfect mirrorization of start plots!
 	#
-	# (This is necessary because the default start plot process 
+	# (This is necessary because the default start plot process
 	# resolves "ties" differently on each side due to minor
 	# differences in the order of operations. Odd but true!)
 	#
@@ -674,7 +674,7 @@ def assignStartingPlots():
 			playersOnTeamTwo.append(shuffledPlayers[iLoop])
 		else:
 			playersOnTeamOne.append(shuffledPlayers[iLoop])
-	
+
 	# Now we pick a team to assign to the left side and assign them there.
 	userInputPlots = map.getCustomMapOption(0)
 	iW = map.getGridWidth()
@@ -750,17 +750,17 @@ def assignStartingPlots():
 			oppositePlot = map.plot(mirror_x, mirror_y)
 			opposite_player.setStartingPlot(oppositePlot, true)
 			teamTwoIndex += 1
-			
+
 	# All done.
 	return None
-	
+
 def findStartingPlot(argsList):
 	[playerID] = argsList
 	global assignedPlayers
 	global team_num
 	thisTeamID = CyGlobalContext().getPlayer(playerID).getTeam()
 	teamID = team_num[thisTeamID]
-	
+
 	assignedPlayers[teamID] += 1
 
 	def isValid(playerID, x, y):
@@ -787,7 +787,7 @@ def findStartingPlot(argsList):
 		teamID = team_num[thisTeamID]
 		iW = map.getGridWidth()
 		iH = map.getGridHeight()
-		
+
 		# Two Teams, Start Together
 		if numTeams == 2 and userInputProximity == 0: # Two teams, Start Together
 			if teamID == 0 and shuffle and x >= iW * 0.6:
@@ -846,7 +846,7 @@ def findStartingPlot(argsList):
 
 		# All conditions have failed? Wow. Is that even possible? :)
 		return true
-	
+
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 
 def normalizeStartingPlotLocations():

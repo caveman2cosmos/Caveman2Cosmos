@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BonusClassInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusClassInfos>
 		<BonusClassInfo>
@@ -27,7 +27,7 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_PRODUCTION</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>

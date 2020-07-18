@@ -26,7 +26,7 @@ class CyArtFileMgr
 public:
 	CyArtFileMgr();
 	explicit CyArtFileMgr(CvArtFileMgr* pArtFileMgr);			// Call from C++
-	bool isNone() { return (m_pArtFileMgr==NULL); }
+	bool isNone() const { return m_pArtFileMgr == NULL; }
 
 	void Reset();
 	void buildArtFileInfoMaps();

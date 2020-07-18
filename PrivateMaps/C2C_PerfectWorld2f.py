@@ -4990,7 +4990,7 @@ class StartingArea :
 								sPlot = gameMap.plot(self.plotList[m].x,self.plotList[m].y)
 								if sPlot.isWater() == True:
 										raise ValueError, "Start plot is water!"
-								sPlot.setImprovementType(gc.getInfoTypeForString("NO_IMPROVEMENT"))
+								sPlot.setImprovementType(-1)
 								playerID = self.playerList[n]
 								player = gc.getPlayer(playerID)
 								sPlot.setStartingPlot(True)

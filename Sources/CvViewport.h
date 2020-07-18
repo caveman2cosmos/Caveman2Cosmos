@@ -9,9 +9,7 @@
 //	PURPOSE: Viewport presented as a map to the game engine
 
 
-#include "CvMapInterfaceBase.h"
 #include "CvMap.h"
-//class	CvMap;
 
 enum ViewportMode
 {
@@ -78,7 +76,6 @@ public:
 
 public:
 	virtual MapTypes getType() const;
-	virtual void setType(MapTypes eNewType);
 
 	virtual void beforeSwitch();
 	virtual void afterSwitch();
@@ -115,7 +112,7 @@ public:
 	virtual void updateIrrigated();
 	virtual void updateCenterUnit();
 	virtual void updateWorkingCity();
-	virtual void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
+	virtual void updateMinOriginalStartDist(const CvArea* pArea);										// Exposed to Python
 	virtual void updateYield();
 
 	virtual void verifyUnitValidPlot();

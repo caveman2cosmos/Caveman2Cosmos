@@ -17512,6 +17512,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -23076,7 +23080,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -26977,7 +26981,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -27399,7 +27403,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -29557,7 +29561,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -30065,7 +30069,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>130</Constant>
 									</Adapt>
 								</iYield>
@@ -37506,7 +37510,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>48</Constant>
 									</Adapt>
 								</iYield>
@@ -38603,7 +38607,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>48</Constant>
 									</Adapt>
 								</iYield>
@@ -41424,7 +41428,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -44306,7 +44310,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>216</Constant>
 									</Adapt>
 								</iYield>
@@ -45381,7 +45385,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>80</Constant>
 									</Adapt>
 								</iYield>
@@ -46874,6 +46878,10 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -49572,7 +49580,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>
@@ -49936,7 +49944,7 @@
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>104</Constant>
 									</Adapt>
 								</iYield>

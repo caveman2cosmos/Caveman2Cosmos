@@ -544,7 +544,7 @@ def getGridSize(argsList):
 # b[5] = "data2"
 # - retrieving data:
 # if a[2] != None:
-#    print a[2]
+#	print a[2]
 # - length:
 # print len(a)
 # - removing item:
@@ -557,7 +557,7 @@ def getGridSize(argsList):
 # print a.randomItem(dice)
 # - reading array data:
 # for data in a:
-#    print data
+#	print data
 class bArray:
 	def __init__(self):
 		self._data = []
@@ -698,11 +698,11 @@ class probabilityArray:
 # multi dimensional array wrapper
 # usage:
 # - creating array:
-# a = mdArray([5,9],0) #creates 5×9 array with data:0 in every cell
-# b = mdArray([4,2,6],"nodata") #creates 4×2×6 array with data:"nodata" in every cell
+# a = mdArray([5,9],0) #creates 5ï¿½9 array with data:0 in every cell
+# b = mdArray([4,2,6],"nodata") #creates 4ï¿½2ï¿½6 array with data:"nodata" in every cell
 # - changing data:
-# a[0,1] = 5 #change 0×1 cell to 5
-# b[3,1,5] = "some data" #change 3×1×5 cell to "some data"
+# a[0,1] = 5 #change 0ï¿½1 cell to 5
+# b[3,1,5] = "some data" #change 3ï¿½1ï¿½5 cell to "some data"
 # - also:
 # print a[0,1]
 # print len(a)
@@ -2232,7 +2232,7 @@ def generatePlotTypes():
 			offset = world.getOffset([x,y])
 			if peakStartProbability > 0:
 				#collect peaks
-				#check if land area is 9×9 empty
+				#check if land area is 9ï¿½9 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and world[x-1,y] == PlotTypes.PLOT_LAND and world[x+1,y] == PlotTypes.PLOT_LAND and world[x,y-1] == PlotTypes.PLOT_LAND and world[x,y+1] == PlotTypes.PLOT_LAND and (not world[x+1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y-1] == PlotTypes.PLOT_PEAK) and (not world[x+1,y-1] == PlotTypes.PLOT_PEAK):
 					if getRand(dice) < peakStartProbability:
 						world._data[offset] = PlotTypes.PLOT_PEAK
@@ -2240,7 +2240,7 @@ def generatePlotTypes():
 							peakArray[offset] = [x,y,1]
 			if hillStartProbability > 0:
 				#collect hills
-				#check if land area is 11×11 empty
+				#check if land area is 11ï¿½11 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and not hillIntersect(world,x,y,x,y,1):
 					if getRand(dice) < hillStartProbability:
 						world._data[offset] = PlotTypes.PLOT_HILLS
@@ -2682,7 +2682,7 @@ def addFeatures():
 # Rise of Mankind 2.82 start
 	terrainMarsh = cgc.getInfoTypeForString("TERRAIN_MARSH")
 # Rise of Mankind 2.82 end
-	
+
 #C2C
 	terrainSaltFlats = cgc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 	terrainDunes = cgc.getInfoTypeForString("TERRAIN_DUNES")
@@ -2693,7 +2693,7 @@ def addFeatures():
 	terrainLush = cgc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = cgc.getInfoTypeForString("TERRAIN_MUDDY")
 
-	featNone = cgc.getInfoTypeForString("NO_FEATURE")
+	featNone = -1
 	featIce = cgc.getInfoTypeForString("FEATURE_ICE")
 	featJungle = cgc.getInfoTypeForString("FEATURE_JUNGLE")
 	featOasis = cgc.getInfoTypeForString("FEATURE_OASIS")
@@ -2749,7 +2749,7 @@ def addFeatures():
 				if plot != 0 and plot.isWater() == True and getRand(dice) < stormChance:
 					plot.setFeatureType(featStorm,0)
 # Rise of Mankind 2.82 end
-				
+
 			plot = map.sPlot(x,y)
 			if plot.isWater():
 				if allowLandNearIce:
@@ -2761,17 +2761,16 @@ def addFeatures():
 						prob = (poleSeparation - (iH - y - 1)) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-				else:
-					if y < poleSeparation and not plot.isAdjacentToLand():
+				elif not plot.isCoastal():
+					if y < poleSeparation:
 						prob = (poleSeparation - y) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-					elif y > iH - poleSeparation - 1 and not plot.isAdjacentToLand():
+					elif y > iH - poleSeparation - 1:
 						prob = (poleSeparation - (iH - y - 1)) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-
-				if plot.isAdjacentToLand() and y > poleSeparation and y < iH - poleSeparation - 1:
+				elif y > poleSeparation and y < iH - poleSeparation - 1:
 					if tileTemperature < -40:
 						if getRand(dice) < iceOnWater * 2:
 							plot.setFeatureType(featIce,-1)
@@ -2788,7 +2787,7 @@ def addFeatures():
 						if getRand(dice) < iceOnWater / 4:
 							plot.setFeatureType(featIce,-1)
 			else:
-				if plot.isPeak() or plot.isFreshWater() or plot.isCoastalLand():
+				if plot.isPeak() or plot.isFreshWater() or not plot.isWater() and plot.isCoastal():
 					seedList[world.getOffset([x,y])] = [x,y,1,None] # x,y,distance from river,FeatureType
 				plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 
@@ -2819,7 +2818,7 @@ def addFeatures():
 							plot.setTerrainType(terrainGrass,False,False)
 					terrain = plot.getTerrainType()
 
-				if plot.isCoastalLand() and not plot.isFreshWater():
+				if not plot.isWater() and plot.isCoastal() and not plot.isFreshWater():
 					if terrain == terrainDesert:
 						if getRand(dice) > 0.3:
 								plot.setTerrainType(terrainPlains,False,False)
@@ -2902,7 +2901,7 @@ def addFeatures():
 					randomFeat[2] = featForest
 				else:
 					randomFeat[1] = featForest
-					
+
 				feat = randomFeat.randomItem(dice)
 				if feat != None:
 					plot.setFeatureType(feat,-1)
@@ -3087,45 +3086,43 @@ def addFeatures():
 	for y in range(iH):
 		for x in range(iW):
 			plot = map.sPlot(x,y)
-			if (not plot.isWater()) and (not plot.isFreshWater()) and (not plot.isHills()) and (not plot.isCoastalLand()) and (not plot.isPeak()):
-				score = 0
-				if plot.getTerrainType() == terrainDesert:
-					score += 10
-					tileList = getTilesAround(x,y)
-					for tile in tileList:
-						tx,ty = tile
-						tilePlot = map.sPlot(tx,ty)
-						tileTerrain = tilePlot.getTerrainType()
-						if tilePlot.isFreshWater():
-							score -= 20
-						if tilePlot.isRiverSide():
-							score -= 20
-						if tilePlot.isPeak():
-							score -= 2
-						if tilePlot.getFeatureType() == featNone:
-							score += 1
-						elif tilePlot.getFeatureType() == featJungle:
-							score -= 5
-						elif tilePlot.getFeatureType() == featForest:
-							score -= 3
-						elif tilePlot.getFeatureType() == featFlood:
-							score -= 20
-						if tileTerrain == terrainDesert:
-							score += 1
-						elif tileTerrain == terrainPlains:
-							score -= 2
-						elif tileTerrain == terrainGrass:
-							score -= 6
-						elif tileTerrain == terrainTundra:
-							score -= 20
-						elif tileTerrain == terrainSnow:
-							score -= 20
-						if not tilePlot.hasYield():
-							score += 1
+			if plot.getTerrainType() != terrainDesert or plot.isFreshWater() or plot.isHills() or plot.isPeak() or plot.isCoastal():
+				continue
+			score = 10
+			tileList = getTilesAround(x, y)
+			for tile in tileList:
+				tx,ty = tile
+				tilePlot = map.sPlot(tx,ty)
+				tileTerrain = tilePlot.getTerrainType()
+				if tilePlot.isFreshWater():
+					score -= 20
+				if tilePlot.isRiverSide():
+					score -= 20
+				if tilePlot.isPeak():
+					score -= 2
+				if tilePlot.getFeatureType() == featNone:
+					score += 1
+				elif tilePlot.getFeatureType() == featJungle:
+					score -= 5
+				elif tilePlot.getFeatureType() == featForest:
+					score -= 3
+				elif tilePlot.getFeatureType() == featFlood:
+					score -= 20
+				if tileTerrain == terrainDesert:
+					score += 1
+				elif tileTerrain == terrainPlains:
+					score -= 2
+				elif tileTerrain == terrainGrass:
+					score -= 6
+				elif tileTerrain == terrainTundra:
+					score -= 20
+				elif tileTerrain == terrainSnow:
+					score -= 20
+				if not tilePlot.hasYield():
+					score += 1
 
-				if score > 0:
-					#plot.setFeatureType(featOasis,-1)
-					possibleOasisList[world.getOffset([x,y])] = [x, y]
+			if score > 0:
+				possibleOasisList[world.getOffset([x,y])] = [x, y]
 
 	missedItems = 0
 	for index in range(int(len(possibleOasisList) / 3)):
@@ -3170,11 +3167,11 @@ def addFeatures():
 					randomTerrain[1] = terrainLush
 					randomTerrain[1] = terrainMuddy
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
-			
+
 				#Remove land features that are on wrong terrain (seems to remove some things incorrectly)
 				#if plot.canHaveFeature(plot.getFeatureType()) == False:
 					#plot.setFeatureType(featNone,-1)
-	
+
 			#Add random features from full feature list
 			if plot.getFeatureType() == featNone:
 				#randomFeat = probabilityArray()
@@ -3185,8 +3182,8 @@ def addFeatures():
 						if dice.get(10000, "Add Feature PYTHON") < cgc.getFeatureInfo(iI).getAppearanceProbability():
 							plot.setFeatureType(iI, -1)
 				#plot.setFeatureType(randomTerrain.randomItem(dice),-1)
-			
-			
+
+
 def isRiverCrossing(plot1,plot2):
 	cgc = CyGlobalContext()
 
@@ -3756,11 +3753,11 @@ else:
 	def civFilePath():
 		try:
 			userFolder = regRead(_winreg.HKEY_CURRENT_USER,"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders","Personal")
-			#print "    userFolder",userFolder
+			#print "	userFolder",userFolder
 			civFolder = os.path.basename(regRead(_winreg.HKEY_LOCAL_MACHINE,"Software\\Firaxis Games\\Sid Meier's Civilization 4","INSTALLDIR"))
-			#print "    civFolder",civFolder
+			#print "	civFolder",civFolder
 			finalFolder = os.path.join(os.path.join(userFolder, "My Games"), civFolder)
-			#print "    finalFolder",finalFolder
+			#print "	finalFolder",finalFolder
 			return finalFolder
 		except:
 			return ""
@@ -3838,20 +3835,20 @@ def saveMapOptionDefaults():
 			valueName = selection_names_and_values[index][selectionIndex][0]
 			smoptions.append((smoption,valueName))
 
-		#print "    try to store settings to",fileName
+		#print "	try to store settings to",fileName
 		print smoptions
 		try:
 			pickle.dump(smoptions, settings)
 		except Exception, inst:
-			print "    Pickling Error",inst,"trying to save map settings to",fileName
+			print "	Pickling Error",inst,"trying to save map settings to",fileName
 		settings.close()
-		print "    store successful"
+		print "	store successful"
 	except IOError:
-		print "    Couldn't create ",fileName
+		print "	Couldn't create ",fileName
 	except EOFError:
-		print "    EOF writing ",fileName
+		print "	EOF writing ",fileName
 	except:
-		print "    unexpected problem writing ",fileName
+		print "	unexpected problem writing ",fileName
 
 def loadMapOptionDefaults():
 	global selection_defaults
@@ -3869,14 +3866,14 @@ def loadMapOptionDefaults():
 						selectionName, selectionValue, allowedRandomPick = selection_names_and_values[selOptionIndex][selectionIndex]
 						if selectionName == valueName:
 							selection_defaults[selOptionIndex] = selectionIndex
-		#print "    loaded option from cfg:",option,value
+		#print "	loaded option from cfg:",option,value
 		settings.close()
 	except IOError:
-		print "    Couldn't find ",fileName
+		print "	Couldn't find ",fileName
 	except EOFError:
-		print "    Bad contents in ",fileName
+		print "	Bad contents in ",fileName
 	except:
-		print "    unexpected problem reading",fileName
+		print "	unexpected problem reading",fileName
 
 def isRandomCustomMapOption(argsList):
 	return False # we use our own defaults

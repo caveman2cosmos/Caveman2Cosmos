@@ -15,9 +15,6 @@
 #ifndef CIV4_GAME_TEXT_MGR_H
 #define CIV4_GAME_TEXT_MGR_H
 
-#include "CvInfos.h"
-//#include "CvEnums.h"
-
 #pragma warning( disable: 4251 )	// needs to have dll-interface to be used by clients of class
 
 class CvCity;
@@ -42,7 +39,7 @@ public:
 	DllExport void DeInitialize();
 	DllExport void Reset();
 
-	int getCurrentLanguage();
+	int getCurrentLanguage() const;
 
 	DllExport void setTimeStr(CvWString& szString, int iGameTurn, bool bSave);
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);

@@ -1,6 +1,8 @@
 // gameAI.cpp
 
-#include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // Public Functions...
 
@@ -92,19 +94,13 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 		iValue += (((100 + GC.getUnitInfo(eUnit).getDamageModifier())/100)/5);
 		//TB Combat Mods End
 
-		// UncutDragon
-		// original
-		//iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getDefineINT("COMBAT_DAMAGE") / 5)) + 100);
-		// modified
-			iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100);
-		// /UncutDragon
+		iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100);
 		iValue /= 100;
 	}
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+		iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	}
-
 
 	iValue /= getBestLandUnitCombat();
 

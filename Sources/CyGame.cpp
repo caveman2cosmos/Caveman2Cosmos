@@ -3,6 +3,12 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvInitCore.h"
+#include "CyCity.h"
+#include "CyDeal.h"
+#include "CyGame.h"
+#include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
 
@@ -11,6 +17,11 @@ CyGame::CyGame() : m_pGame(NULL) { m_pGame = &GC.getGame(); }
 CyGame::CyGame(CvGame* pGame) : m_pGame(pGame) {}
 
 CyGame::CyGame(CvGameAI* pGame) : m_pGame(pGame) {}
+
+int CyGame::getCurrentMap() const
+{
+	return m_pGame->getCurrentMap();
+}
 
 bool CyGame::isMultiplayer()
 {
@@ -580,10 +591,18 @@ void CyGame::setScoreDirty(bool bNewValue)
 		m_pGame->setScoreDirty(bNewValue);
 }
 
-bool CyGame::isCircumnavigated() const
+
+int CyGame::getCircumnavigatedTeam() const
 {
-	return m_pGame ? m_pGame->isCircumnavigated() : false;
+	return m_pGame ? (int)m_pGame->getCircumnavigatedTeam() : -1;
 }
+
+void CyGame::setCircumnavigatedTeam(int iTeamType)
+{
+	if (m_pGame)
+		m_pGame->setCircumnavigatedTeam((TeamTypes) iTeamType);
+}
+
 
 bool CyGame::isDiploVote(int /*VoteSourceTypes*/ eVoteSource) const
 {

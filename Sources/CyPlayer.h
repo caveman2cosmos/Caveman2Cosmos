@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -21,10 +18,13 @@ class CyPlayer
 public:
 	CyPlayer();
 	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
+	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
+	bool isNone() const { return m_pPlayer == NULL; }
 
-	CvPlayer* getPlayer() { return m_pPlayer; } // Call from C++
-	bool isNone() { return (m_pPlayer==NULL); }
-
+#ifdef PARALLEL_MAPS
+	void updateMembers();
+	void initMembers(int iIndex);
+#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -246,7 +246,7 @@ public:
 	int getAdvancedStartImprovementCost(int /*ImprovementTypes*/ eImprovement, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd);
-	int getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot);
+	int getAdvancedStartVisibilityCost(CyPlot* pPlot);
 
 	int getEspionageSpending(int /*PlayerTypes*/ ePlayer);
 	bool canDoEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData);
@@ -276,6 +276,7 @@ public:
 	int getGreatGeneralsCreated();
 	int getGreatPeopleThresholdModifier();
 	int getGreatGeneralsThresholdModifier();
+	void changeGreatGeneralsThresholdModifier(int iChange);
 	int getGreatPeopleRateModifier();
 	int getGreatGeneralRateModifier();
 	int getDomesticGreatGeneralRateModifier();
@@ -693,7 +694,7 @@ public:
 	int getBLID(int index);
 	std::wstring getBLListName(int index);
 	int getBLListLength(int index);
-	OrderData* getBLOrder(int index, int iQIndex);
+	const OrderData* getBLOrder(int index, int iQIndex) const;
 	void writeBLToFile();
 	int getBLCurrentList();
 	void setBLCurrentList(int iID);

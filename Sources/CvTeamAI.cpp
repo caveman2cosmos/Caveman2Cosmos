@@ -1,16 +1,8 @@
 // teamAI.cpp
 
 #include "CvGameCoreDLL.h"
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-#include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 // statics
 
@@ -942,9 +934,9 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 {
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 		if (iTeam != getID())
 		{
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 			if (iTeam == eTeam || kLoopTeam.isVassal(eTeam) || GET_TEAM(eTeam).isVassal((TeamTypes)iTeam) || kLoopTeam.isDefensivePact(eTeam))
 			{
 				if (AI_isLandTarget((TeamTypes)iTeam))
@@ -1145,8 +1137,8 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 	for (int iI = 0; iI < (int)kVoteSelectionData.aVoteOptions.size(); iI++)
 	{
-		VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
-		CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
+		const VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
+		const CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
 
 		FAssert(kVoteInfo.isVoteSourceType(eVoteSource));
 
@@ -2887,14 +2879,11 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 	int iValuableCitiesThreatenedByUs = 0;
 	int iCitiesThreatenedByOthers = 0;
 
-	CvCity* pLoopCity;
-	int iLoop;
-
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if( GET_PLAYER((PlayerTypes)iI).getTeam() == eSurrenderTeam && GET_PLAYER((PlayerTypes)iI).isAlive() )
 		{
-			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
 				bool bValuable = false;
 
@@ -2921,20 +2910,15 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 				else
 				{
 					// Valuable terrain bonuses
-					for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+					foreach_(const CvPlot* loopPlot, pLoopCity->plots())
 					{
-						const CvPlot* pLoopPlot = plotCity(pLoopCity->getX(), pLoopCity->getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						const BonusTypes eBonus = loopPlot->getNonObsoleteBonusType(getID());
+						if ( eBonus != NO_BONUS)
 						{
-							const BonusTypes eBonus = pLoopPlot->getNonObsoleteBonusType(getID());
-							if ( eBonus != NO_BONUS)
+							if(GET_PLAYER(getLeaderID()).AI_bonusVal(eBonus) > 15)
 							{
-								if(GET_PLAYER(getLeaderID()).AI_bonusVal(eBonus) > 15)
-								{
-									bValuable = true;
-									break;
-								}
+								bValuable = true;
+								break;
 							}
 						}
 					}
@@ -6182,10 +6166,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 
 		if ((iTeamCities < 2 && (kPlayer.getTeam() == getID())) || (iOtherTeamCities < 2 && (kPlayer.getTeam() != getID())))
 		{
-			int iLoop;
-			CvCity* pLoopCity;
-
-			for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+			foreach_(const CvCity* pLoopCity, kPlayer.cities())
 			{
 				if (pLoopCity->plot()->isAdjacentToArea(pArea->getID()))
 				{

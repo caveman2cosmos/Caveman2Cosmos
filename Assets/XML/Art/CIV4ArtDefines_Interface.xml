@@ -6,22 +6,6 @@
 			<Path>art/interface/screens/TechTree/Head.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>ARROW_MXMY</Type>
-			<Path>art/interface/screens/TechTree/Corner-X-Y.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_TAB</Type>
-			<Path>Art/Interface/MainScreen/CityScreenTab.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_TAB_DOWN</Type>
-			<Path>Art/Interface/MainScreen/CityScreenTabDOWN.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTON_BACKGROUND</Type>
-			<Path>Art/Interface/MainScreen/MiniButtonDot.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>ARROW_MXY</Type>
 			<Path>art/interface/screens/TechTree/Corner-XY.dds</Path>
 		</InterfaceArtInfo>
@@ -50,28 +34,6 @@
 			<Path>Art/Interface/Buttons/Button_SELECT.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>CIVICS_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>CIVICS_CANCEL</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsRev-CancelButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>CIVICS_TOGGLE</Type>
-			<Path>Art/Interface/Screens/Civics/CivicsToggleButton.kfm</Path>
-		</InterfaceArtInfo>
-		<!-- -->
-		<InterfaceArtInfo>
-			<Type>C2C_INITIAL_OPTIONS_SCREEN_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civilopedia/WaterEnvironment/WaterEnvironment.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>C2C_NATION_ADVISOR_SCREEN_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Civilopedia/WaterEnvironment/WaterEnvironment.nif</Path>
-		</InterfaceArtInfo>
-		<!-- -->
-		<InterfaceArtInfo>
 			<Type>CIVILOPEDIA_ANCIENT_BATTLEGROUND</Type>
 			<Path>Art/Interface/Screens/Civilopedia/AncientBattlefield/AncientBattlefield.nif</Path>
 		</InterfaceArtInfo>
@@ -88,83 +50,27 @@
 			<Path>Art/Interface/Screens/Civilopedia/Amphibious/AmphibiousBG.nif</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>DAWNOFMAN</Type>
-			<Path>Art/Interface/Screens/DawnOfMan/DawnOfManBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/DiploBG.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_CLEARTABLE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/ClearTableBTN.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_INVENTORY</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/TradeTable.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_INVENTORY_BUTTON</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/InventoryButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_NEW_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyScreenHACK02.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_OFFER</Type>
-			<Path>Art/Interface/Screens/Diplomacy/Button_Offer.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RESPONSE_1LINE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/GFCFake/ConvoBTN1.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RESPONSE_2LINE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyResponseButton_2LINE.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_RETRACT</Type>
-			<Path>Art/Interface/Screens/Diplomacy/Button_Retract.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_TEXTENTRY</Type>
-			<Path>Art/Interface/Screens/Diplomacy/P2P_TextEntry.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DIPLOMACY_TRADETABLE</Type>
-			<Path>Art/Interface/Screens/Diplomacy/DiplomacyTradeTable.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DOMESTIC_BG</Type>
-			<Path>Art/Interface/Screens/Advisor/Domesticbg.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>DOMESTIC_EXIT</Type>
-			<Path>art/interface/screens/civics/CivicsRev-CancelButton.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>CURSORS_SELECTION_UNIT</Type>
 			<Path>Art/Interface/Cursors/SelectionCursor.nif</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_GAMEFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/GameFont.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_MONOCONSOLE</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/MonoSpacedConsoleFont.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_NUMBERFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/NumberFont-Sylfaen64px.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>FONTS_SMALLFONT</Type>
-			<!-- keep here and unpakked -->
+			<!-- keep here and unpacked -->
 			<Path>res/Fonts/GameFont_75.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
@@ -192,44 +98,8 @@
 			<Path>Art/Interface/MainScreen/CityScreen/Angry_Citizen.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_AUTOMATION_FRAME</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/auto_button_frame.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BACK</Type>
-			<Path>Art/Interface/MainScreen/BottomLeft.nif</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_CENTER</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Center.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_LEFT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Left.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BOTTOM_RIGHT</Type>
-			<Path>Art/Interface/MainScreen/MainUI_Right.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_CIVICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_CivicsAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DEMOGRAPHICS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Demographics.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_DOMESTIC</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_DomesticAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_EVENT_LOG</Type>
 			<Path>Art/Interface/MainScreen/Turn_Log.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_FINANCE</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_FinanceAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_FOREIGN</Type>
@@ -240,32 +110,8 @@
 			<Path>Art/Interface/MainScreen/AD_BTN_MilitaryAdvisor.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_RELIGIOUS</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_ReligiousAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BTN_TECH</Type>
 			<Path>Art/Interface/MainScreen/AD_BTN_TECHAdvisor.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BTN_VICTORY</Type>
-			<Path>Art/Interface/MainScreen/AD_BTN_Victory.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_16</Type>
-			<Path>Art/Interface/Buttons/Button_16.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_24</Type>
-			<Path>Art/Interface/Buttons/Button_24.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_32</Type>
-			<Path>Art/Interface/Buttons/Button_32.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_46</Type>
-			<Path>Art/Interface/Buttons/Button_46.kfm</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CANCEL</Type>
@@ -276,28 +122,8 @@
 			<Path>Art/Interface/Buttons/Builds/BuildVillage.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CONSCRIPT</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/hurry_draft.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_CREATEGROUP</Type>
 			<Path>Art/Interface/Buttons/Actions/CreateUnitGroup.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTY</Type>
-			<Path>Art/Interface/Buttons/Empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_EMPTYBROWN</Type>
-			<Path>Art/Interface/Buttons/Brown_empty.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_citizens.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_GOVERNOR_PRODUCTION</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/automate_production.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_LEFT</Type>
@@ -318,10 +144,6 @@
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RED_X</Type>
 			<Path>Art/Interface/Screens/TechTree/X.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_BUTTONS_CHECK</Type>
-			<Path>Art/Interface/Buttons/General/CheckMark.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_BUTTONS_RIGHT</Type>
@@ -360,17 +182,10 @@
 			<Path>Art/Interface/CityBar/CityBar_Circle.tga</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_CITY_PANEL</Type>
-			<Path>Art/Interface/MainScreen/CityScreen/PanelBG.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_STRATEGY_BAR_MODEL</Type>
 			<Path>Art/Interface/CityBar/Strategy_Billboard.nif</Path>
 		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>INTERFACE_EMPTY</Type>
-			<Path>Art/Interface/Empty.kfm</Path>
-		</InterfaceArtInfo>
+		<!-- Review point - Toffer 21.06.20-->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_GAMEDATABACK</Type>
 			<Path>Art/Interface/GameDataBack.nif</Path>

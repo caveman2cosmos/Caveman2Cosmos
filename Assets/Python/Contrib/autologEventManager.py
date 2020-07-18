@@ -17,8 +17,8 @@ import BugCore
 import BugUtil
 import TradeUtil
 
-OPEN_LOG_EVENT_ID = CvUtil.getNewEventID("Autolog.OpenLog")
-CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID("Autolog.CustomEntry")
+OPEN_LOG_EVENT_ID = CvUtil.getNewEventID()
+CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID()
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -550,7 +550,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if CyPlot.isWater():
 				if CyPlot.isLake():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_A_LAKE")
-				elif CyPlot.isAdjacentToLand():
+				elif CyPlot.isCoastal():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_JUST_OFF_SHORE")
 				else:
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")

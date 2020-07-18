@@ -50,7 +50,7 @@ public:
 	void AI_setAsGarrison(const CvCity* pCity);
 
 	MissionAITypes AI_getMissionAIType() const;
-	void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit);
+	void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit);
 	void AI_noteSizeChange(int iChange, int iVolume);
 	CvUnit* AI_findBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders, bool bConsiderPropertyValues = false) const;
 	CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders);

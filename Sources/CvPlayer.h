@@ -191,7 +191,7 @@ public:
 	void verifyCivics();
 
 	void inhibitPlotGroupCalcsUntilFullRebuild(); //	Ignore updates until an update with reInitialize set
-	void updatePlotGroups(CvArea* possibleNewInAreaOnly = NULL, bool reInitialize = false);
+	void updatePlotGroups(const CvArea* possibleNewInAreaOnly = NULL, bool reInitialize = false);
 
 	void updateYield();
 	void updateMaintenance() const;
@@ -273,7 +273,7 @@ public:
 	void raze(CvCity* pCity); // Exposed to Python
 	void disband(CvCity* pCity); // Exposed to Python
 
-	bool canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const; // Exposed to Python
+	bool canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const; // Exposed to Python
 	void receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit); // Exposed to Python
 	void doGoody(CvPlot* pPlot, CvUnit* pUnit); // Exposed to Python
 
@@ -303,7 +303,7 @@ public:
 	int getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra = false, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 
-	RouteTypes getBestRoute(CvPlot* pPlot = NULL, bool bConnect = true, CvUnit* pBuilder = NULL) const; // Exposed to Python
+	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const; // Exposed to Python
 
 	int getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const; // Exposed to Python
 
@@ -383,7 +383,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const; // Exposed to Python
 
 	CvPlot* getStartingPlot() const; // Exposed to Python
-	void setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
+	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
 
 	int getTotalPopulation() const; // Exposed to Python
 	int getAveragePopulation() const; // Exposed to Python
@@ -441,7 +441,7 @@ public:
 	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const; // Exposed to Python 
-	int getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
+	int getAdvancedStartVisibilityCost(const CvPlot* pPlot = NULL) const; // Exposed to Python 
 
 	int getGoldenAgeTurns() const;// Exposed to Python  
 	bool isGoldenAge() const; // Exposed to Python
@@ -486,7 +486,7 @@ public:
 	void changeGreatPeopleThresholdModifier(int iChange);
 
 	int getGreatGeneralsThresholdModifier() const; // Exposed to Python
-	void changeGreatGeneralsThresholdModifier(int iChange);
+	void changeGreatGeneralsThresholdModifier(int iChange); // Exposed to Python
 
 	int getGreatPeopleRateModifier() const; // Exposed to Python
 	void changeGreatPeopleRateModifier(int iChange);
@@ -1052,6 +1052,11 @@ public:
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
 
+#ifdef PARALLEL_MAPS
+	void updateMembers();
+	void addMembers();
+	void initMembers(int iIndex);
+#endif
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
 	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
@@ -1724,7 +1729,7 @@ public:
 	virtual DenialTypes AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const = 0;
 
-	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
+	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
@@ -1736,9 +1741,9 @@ public:
 	virtual int AI_getNumAIUnits(UnitAITypes eIndex) const = 0; // Exposed to Python
 	virtual void AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange) = 0;
 	virtual void AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange) = 0;
-	virtual int AI_getAttitudeExtra(PlayerTypes eIndex) const = 0; // Exposed to Python
-	virtual void AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue) = 0; // Exposed to Python
-	virtual void AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange) = 0; // Exposed to Python
+	virtual int AI_getAttitudeExtra(const PlayerTypes ePlayer) const = 0; // Exposed to Python
+	virtual void AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue) = 0; // Exposed to Python
+	virtual void AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange) = 0; // Exposed to Python
 	virtual void AI_setFirstContact(PlayerTypes eIndex, bool bNewValue) = 0;
 	virtual int AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const = 0;
 	virtual void AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange) = 0;
@@ -1990,7 +1995,6 @@ protected:
 	bool* m_pabResearchingTech;
 	bool* m_pabLoyalMember;
 
-
 	std::vector<EventTriggerTypes> m_triggersFired;
 
 	CivicTypes* m_paeCivics;
@@ -1999,19 +2003,23 @@ protected:
 	int** m_ppaaiImprovementYieldChange;
 	int** m_ppaaiSpecialistExtraCommerce;
 
-	CLinkList<int> m_groupCycle;
-
 	CLinkList<TechTypes> m_researchQueue;
 
 	CLinkList<CvWString> m_cityNames;
 
+#ifdef PARALLEL_MAPS
+	std::vector<CLinkList<int>*>						  m_groupCycles;
+	std::vector<FFreeListTrashArray<CvPlotGroup>*>		  m_plotGroups;
+	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
+	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
+	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
+#else
+	CLinkList<int> m_groupCycle;
 	FFreeListTrashArray<CvPlotGroup> m_plotGroups;
-
 	FFreeListTrashArray<CvCityAI> m_cities;
-
 	FFreeListTrashArray<CvUnitAI> m_units;
-
 	FFreeListTrashArray<CvSelectionGroupAI> m_selectionGroups;
+#endif
 
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;
@@ -2063,15 +2071,15 @@ protected:
 
 	bool checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 	void expireEvent(EventTypes eEvent, EventTriggeredData& kTriggeredData, bool bFail);
-	bool isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity* pCity, ReligionTypes eReligion) const;
-	bool isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvCity* pCity, CorporationTypes eCorporation) const;
+	bool isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, ReligionTypes eReligion) const;
+	bool isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, CorporationTypes eCorporation) const;
 	CvCity* pickTriggerCity(EventTriggerTypes eTrigger) const;
-	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, CvPlot* pPlot, bool bPickPlot) const;
+	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bPickPlot) const;
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
-	RouteTypes getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const; // Exposed to Python
-	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, CvPlot* pPlot, CvUnit* pBuilder) const;
+	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const; // Exposed to Python
+	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
 
@@ -2195,7 +2203,7 @@ public:
 	void setNationalTechResearchModifier(TechTypes eIndex, int iNewValue);
 	void changeNationalTechResearchModifier(TechTypes eIndex, int iChange);
 
-	int getCoastalAIInfluence();
+	int getCoastalAIInfluence() const;
 
 	int getEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iValue);
@@ -2350,8 +2358,8 @@ public:
 	void clearModifierTotals();
 	void recalculateModifiers();
 
-	void addPropertiesAllCities(CvProperties* pProp);
-	void subtractPropertiesAllCities(CvProperties* pProp);
+	void addPropertiesAllCities(const CvProperties* pProp);
+	void subtractPropertiesAllCities(const CvProperties* pProp);
 
 	bool canHaveBuilder(BuildTypes eBuild) const;
 	//TB Nukefix

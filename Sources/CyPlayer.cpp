@@ -1,8 +1,16 @@
+#include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
+
 //
 // Python wrapper class for CvPlayer 
 //
-
-#include "CvGameCoreDLL.h"
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL)
 {
@@ -12,6 +20,17 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
+#ifdef PARALLEL_MAPS
+void CyPlayer::updateMembers()
+{
+	m_pPlayer->updateMembers();
+}
+
+void CyPlayer::initMembers(int iIndex)
+{
+	m_pPlayer->initMembers(iIndex);
+}
+#endif
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */
@@ -1057,9 +1076,9 @@ int CyPlayer::getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd)
 	return m_pPlayer ? m_pPlayer->getAdvancedStartTechCost((TechTypes) eTech, bAdd) : -1;
 }
 
-int CyPlayer::getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot)
+int CyPlayer::getAdvancedStartVisibilityCost(CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getEspionageSpending(int /*TeamTypes*/ eIndex)
@@ -1200,6 +1219,11 @@ int CyPlayer::getGreatPeopleThresholdModifier()
 int CyPlayer::getGreatGeneralsThresholdModifier()
 {
 	return m_pPlayer ? m_pPlayer->getGreatGeneralsThresholdModifier() : -1;
+}
+
+void CyPlayer::changeGreatGeneralsThresholdModifier(int iChange)
+{
+	if (m_pPlayer) m_pPlayer->changeGreatGeneralsThresholdModifier(iChange);
 }
 
 int CyPlayer::getGreatPeopleRateModifier()
@@ -3235,7 +3259,7 @@ int CyPlayer::getBLListLength(int index)
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getListLength(index) : 0;
 }
 
-OrderData* CyPlayer::getBLOrder(int index, int iQIndex)
+const OrderData* CyPlayer::getBLOrder(int index, int iQIndex) const
 {
 	return m_pPlayer ? m_pPlayer->m_pBuildLists->getOrder(index, iQIndex) : NULL;
 }

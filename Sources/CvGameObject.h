@@ -28,7 +28,6 @@ class CvPlayer;
 class CvCity;
 class CvUnit;
 class CvPlot;
-class CvProperties;
 
 class CvGameObject
 {
@@ -47,7 +46,7 @@ public:
 	virtual void enumerateRelated(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData = 0);
 	virtual void enumerateRelatedCond(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr = NULL, int iData = 0);
 
-	typedef bst::function<void (CvPropertyManipulators*)> ManipCallbackFn;
+	typedef bst::function<void (const CvPropertyManipulators*)> ManipCallbackFn;
 	virtual void foreachManipulator(ManipCallbackFn func) const = 0;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
@@ -56,9 +55,9 @@ public:
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool hasGOM(GOMTypes eType, int iID) = 0;
 
-	virtual CvGameObjectPlayer* getOwner() = 0;
-	virtual CvGameObjectPlot* getPlot() = 0;
-	virtual CvGameObjectTeam* getTeam() = 0;
+	virtual CvGameObjectPlayer* getOwner() const = 0;
+	virtual CvGameObjectPlot* getPlot() const = 0;
+	virtual CvGameObjectTeam* getTeam() const = 0;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj) = 0;
 	virtual void disposePythonWrapper(void* pArgument) = 0;
@@ -106,9 +105,9 @@ public:
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
 
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);
@@ -128,9 +127,9 @@ public:
 
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);
@@ -153,9 +152,9 @@ public:
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	virtual bool isTag(TagTypes eTag) const;
 	
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);
@@ -184,9 +183,9 @@ public:
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);
@@ -213,9 +212,9 @@ public:
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);
@@ -243,9 +242,9 @@ public:
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
-	virtual CvGameObjectPlayer* getOwner();
-	virtual CvGameObjectPlot* getPlot();
-	virtual CvGameObjectTeam* getTeam();
+	virtual CvGameObjectPlayer* getOwner() const;
+	virtual CvGameObjectPlot* getPlot() const;
+	virtual CvGameObjectTeam* getTeam() const;
 
 	virtual void* createPythonWrapper(PyObject*& pyObj);
 	virtual void disposePythonWrapper(void* pArgument);

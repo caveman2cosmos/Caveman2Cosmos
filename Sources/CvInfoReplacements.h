@@ -21,8 +21,8 @@ template <class T>
 class CvInfoReplacement
 {
 protected:
-	uint m_uiID;
-	uint m_uiReplID;
+	const uint m_uiID;
+	const uint m_uiReplID;
 	BoolExpr* m_pCondition;
 	T* m_pInfo;
 
@@ -47,12 +47,12 @@ public:
 		((CvInfoBase*)m_pInfo)->write(pStream);
 	}
 
-	uint getID()
+	uint getID() const
 	{
 		return m_uiID;
 	}
 
-	uint getReplacementID()
+	uint getReplacementID() const
 	{
 		return m_uiReplID;
 	}
@@ -62,7 +62,7 @@ public:
 		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGame().getGameObject());
 	}
 
-	T* getInfo()
+	T* getInfo() const
 	{
 		return m_pInfo;
 	}
@@ -113,7 +113,7 @@ public:
 
 	void write(FDataStreamBase* pStream)
 	{
-		unsigned int iSize = m_apReplacements.size();
+		const unsigned int iSize = m_apReplacements.size();
 		pStream->Write(iSize);
 		for (unsigned int i=0; i<iSize; i++)
 		{
@@ -123,9 +123,9 @@ public:
 
 	static uint getReplacementIDForString(const char* szType);
 
-	CvInfoReplacement<T>* getReplacement(uint uiID, uint uiReplID)
+	CvInfoReplacement<T>* getReplacement(uint uiID, uint uiReplID) const
 	{
-		unsigned int iSize = m_apReplacements.size();
+		const unsigned int iSize = m_apReplacements.size();
 		for (unsigned int i=0; i<iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = m_apReplacements[i];
@@ -149,9 +149,9 @@ public:
 //		}
 	}
 
-	T* getReplacementInfo(uint uiID, uint uiReplID)
+	T* getReplacementInfo(uint uiID, uint uiReplID) const
 	{
-		CvInfoReplacement<T>* pReplacement = getReplacement(uiID, uiReplID);
+		const CvInfoReplacement<T>* pReplacement = getReplacement(uiID, uiReplID);
 		if (pReplacement)
 		{
 			return pReplacement->getInfo();
@@ -184,7 +184,7 @@ public:
 		for (unsigned int i=0; i<iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = m_apReplacements[i];
-			int iID = pReplacement->getID();
+			const int iID = pReplacement->getID();
 
 			if (setSwitched.count(iID) == 0)
 			{

@@ -41,6 +41,10 @@ Base XP gained when defending
 					<PromotionType>PROMOTION_SENTRY</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
 			</FreePromotions>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
@@ -3174,6 +3178,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3562,6 +3570,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3738,6 +3750,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_FARM</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3950,6 +3966,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4346,6 +4366,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -27547,6 +27571,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -27670,6 +27698,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27823,6 +27855,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27979,6 +28015,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -28108,6 +28148,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -56832,6 +56876,12 @@ Base XP gained when defending
 			<iCost>92</iCost>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
+			<VisibilityIntensityTypes>
+				<VisibilityIntensityType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityType>
+			</VisibilityIntensityTypes>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -57458,6 +57508,10 @@ Base XP gained when defending
 			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -65532,7 +65586,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>33</Constant>
 									</Adapt>
 								</iYield>
@@ -65637,7 +65691,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>92</Constant>
 									</Adapt>
 								</iYield>
@@ -65738,7 +65792,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>192</Constant>
 									</Adapt>
 								</iYield>
@@ -65838,7 +65892,7 @@ Base XP gained when defending
 								<iYield>0</iYield>
 								<iYield>
 									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
 										<Constant>396</Constant>
 									</Adapt>
 								</iYield>

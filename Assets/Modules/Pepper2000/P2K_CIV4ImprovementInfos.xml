@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- By Faustmouse -->
-	<!-- -->
-	<!-- Improvement -->
 <Civ4ImprovementInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV1</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Civilopedia>
@@ -50,7 +43,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV2</ImprovementUpgrade>
@@ -58,7 +51,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV2</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Civilopedia>
@@ -100,7 +93,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
@@ -108,7 +101,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_STATION_LV3</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Civilopedia>
@@ -150,7 +143,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
@@ -158,7 +151,6 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Lunar Arcology -->
         <ImprovementInfo>
 			<Type>IMPROVEMENT_LUNAR_ARCOLOGY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Description>
@@ -204,15 +196,15 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -234,8 +226,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Venus Surface Mine -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_VENUS_SURFACE_MINE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Civilopedia>
@@ -310,7 +301,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_VENUS_AERIAL_FARM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Civilopedia>
@@ -416,33 +407,33 @@
 					<TerrainType>TERRAIN_MARTIAN_BARREN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_PLAINS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_ROCKY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_MARTIAN_BLUEBERRIES</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MARTIAN_BLUEBERRIES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
@@ -468,7 +459,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_MARTIAN_FARM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Civilopedia>
@@ -517,7 +508,7 @@
 					<TerrainType>TERRAIN_MARTIAN_BARREN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_PLAINS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -529,7 +520,6 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraform Moon -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MOON</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
@@ -551,22 +541,21 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraform Mars -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_MARS</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
@@ -584,34 +573,33 @@
 					<TerrainType>TERRAIN_MARTIAN_ICE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_PERMAFROST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_DESERT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_DUNES</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_BARREN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_PLAINS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MARTIAN_ROCKY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Induce Supernova -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_NEUTRON_STAR</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
@@ -629,28 +617,27 @@
 					<TerrainType>TERRAIN_RED_GIANT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <FeatureMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_BLUE_SUPERGIANT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
+			</FeatureMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraform Hyperspace -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_HYPERSPACE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</ArtDefineTag>
 			<YieldChanges>
-                <iYieldChange>1</iYieldChange>
-                <iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -658,30 +645,29 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraform Past -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_PAST</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</ArtDefineTag>
 			<YieldChanges>
-                <iYieldChange>1</iYieldChange>
-                <iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -693,26 +679,25 @@
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_FUTURE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraform Future -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_FUTURE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</ArtDefineTag>
 			<YieldChanges>
-                <iYieldChange>0</iYieldChange>
-                <iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -724,25 +709,25 @@
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_PAST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_BRANESPACE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</ArtDefineTag>
 			<YieldChanges>
-                <iYieldChange>1</iYieldChange>
-                <iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -754,18 +739,18 @@
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_FUTURE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_PAST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_ASTEROID</Type>
 			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
@@ -783,22 +768,22 @@
 					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_GALAXY</Type>
 			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
@@ -813,25 +798,16 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-                <TerrainMakesValid>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-                <TerrainMakesValid>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-                <TerrainMakesValid>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Space Solar Array -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPACE_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Description>
@@ -862,7 +838,7 @@
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -879,9 +855,8 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-            <bOutsideBorders>1</bOutsideBorders>
+			<bOutsideBorders>1</bOutsideBorders>
 		</ImprovementInfo>
-        <!-- Space Solar Concentrator -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_CONCENTRATOR</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Description>
@@ -921,9 +896,8 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-            <bOutsideBorders>1</bOutsideBorders>
+			<bOutsideBorders>1</bOutsideBorders>
 		</ImprovementInfo>
-        <!-- Mercury Solar Array -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Description>
@@ -945,9 +919,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <bOutsideBorders>1</bOutsideBorders>
+			<bOutsideBorders>1</bOutsideBorders>
 		</ImprovementInfo>
-        <!-- Mercury Colony -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Description>
@@ -969,10 +942,9 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-            <bOutsideBorders>1</bOutsideBorders>
+			<bOutsideBorders>1</bOutsideBorders>
 		</ImprovementInfo>
-        <!-- Asteroid Mine -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_ASTEROID_MINE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ASTEROID_MINE_PEDIA</Civilopedia>
@@ -988,41 +960,41 @@
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
-            <bOutsideBorders>1</bOutsideBorders>
-            <FeatureMakesValids>
+			<bOutsideBorders>1</bOutsideBorders>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_ASTEROIDS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_METALLIC_ASTEROID</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>2</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ORGANIC_VOLATILES</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</FeatureMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_METALLIC_ASTEROID</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ORGANIC_VOLATILES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bNoFreshWater>0</bNoFreshWater>
 			<bRequiresFlatlands>0</bRequiresFlatlands>
 			<bRequiresRiverSide>0</bRequiresRiverSide>
@@ -1048,7 +1020,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ACOUSTOPHORESIS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -1076,8 +1048,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Blue Supergiant Colony -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY_PEDIA</Civilopedia>
@@ -1093,13 +1064,13 @@
 			<PrereqTech>TECH_APPLIED_RELATIVITY</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
-            <bOutsideBorders>1</bOutsideBorders>
-            <FeatureMakesValids>
+			<bOutsideBorders>1</bOutsideBorders>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_BLUE_SUPERGIANT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
+			</FeatureMakesValids>
 			<bNoFreshWater>0</bNoFreshWater>
 			<bRequiresFlatlands>0</bRequiresFlatlands>
 			<bRequiresRiverSide>0</bRequiresRiverSide>
@@ -1127,8 +1098,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Neutron Star Colony -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_NEUTRON_STAR_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY_PEDIA</Civilopedia>
@@ -1144,13 +1114,13 @@
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
-            <bOutsideBorders>1</bOutsideBorders>
-            <TerrainMakesValids>
+			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEUTRON_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bNoFreshWater>0</bNoFreshWater>
 			<bRequiresFlatlands>0</bRequiresFlatlands>
 			<bRequiresRiverSide>0</bRequiresRiverSide>
@@ -1178,8 +1148,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Biotic Neutron Star -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BIOTIC_NEUTRON_STAR</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR_PEDIA</Civilopedia>
@@ -1195,13 +1164,13 @@
 			<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
-            <bOutsideBorders>1</bOutsideBorders>
-            <TerrainMakesValids>
+			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEUTRON_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bNoFreshWater>0</bNoFreshWater>
 			<bRequiresFlatlands>0</bRequiresFlatlands>
 			<bRequiresRiverSide>0</bRequiresRiverSide>
@@ -1229,8 +1198,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Solar Trading Post -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_TRADING_POST</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST_PEDIA</Civilopedia>
@@ -1244,7 +1212,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
 					<bMakesValid>1</bMakesValid>
@@ -1257,7 +1225,7 @@
 					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1273,7 +1241,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1285,7 +1253,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -1297,8 +1265,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Sun Scoop -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUN_SCOOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUN_SCOOP_PEDIA</Civilopedia>
@@ -1312,12 +1279,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SUN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1333,7 +1300,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1347,8 +1314,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Jovian Scoop -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_SCOOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP_PEDIA</Civilopedia>
@@ -1362,24 +1328,24 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_JUPITER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+			<TerrainMakesValid>
 					<TerrainType>TERRAIN_SATURN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+			<TerrainMakesValid>
 					<TerrainType>TERRAIN_URANUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+			<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1395,7 +1361,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1409,8 +1375,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Jovian Floating City -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_FLOATING_CITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Civilopedia>
@@ -1424,24 +1389,24 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_JUPITER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SATURN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_URANUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1457,7 +1422,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1471,8 +1436,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Jovian Lunar Base -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_LUNAR_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE_PEDIA</Civilopedia>
@@ -1485,57 +1449,57 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-            <iUpgradeTime>40</iUpgradeTime>
+			<iUpgradeTime>40</iUpgradeTime>
 			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_IO</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GANYMEDE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_CALLISTO</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ENCELADUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_UMBRIEL</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRITON</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <FeatureMakesValids>
+			</TerrainMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_SMALL_MOON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</FeatureMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1551,7 +1515,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1565,8 +1529,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Jovian Lunar Arcology -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
@@ -1580,55 +1543,55 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_IO</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GANYMEDE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_CALLISTO</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ENCELADUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_UMBRIEL</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRITON</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <FeatureMakesValids>
+			</TerrainMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_SMALL_MOON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</FeatureMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1644,7 +1607,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1658,8 +1621,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Distant Past City -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_PAST_CITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY_PEDIA</Civilopedia>
@@ -1673,12 +1635,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_PAST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1694,7 +1656,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1708,8 +1670,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Distant Future City -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_FUTURE_CITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY_PEDIA</Civilopedia>
@@ -1723,12 +1684,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_FUTURE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1744,7 +1705,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1758,8 +1719,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Paraterraformed Asteroid -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_PARATERRAFORMED_ASTEROID</Type>
 			<Description>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID_PEDIA</Civilopedia>
@@ -1773,30 +1733,30 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ASTEROID_SURFACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_KUIPER_BELT_OBJECT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <FeatureMakesValids>
+			</TerrainMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_SEDNOID</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_PLANETARY_RING</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_OORT_CLOUD</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
+			</FeatureMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1812,7 +1772,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1822,8 +1782,8 @@
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
-            <TechYieldChanges>
-                <TechYieldChange>
+			<TechYieldChanges>
+				<TechYieldChange>
 					<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -1836,8 +1796,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Brane Factory -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BRANE_FACTORY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FACTORY_PEDIA</Civilopedia>
@@ -1851,12 +1810,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_BRANE_CONSTRUCTION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1872,7 +1831,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1886,8 +1845,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Brane Farm -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BRANE_FARM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BRANE_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BRANE_FARM_PEDIA</Civilopedia>
@@ -1901,12 +1859,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_BRANE_CONSTRUCTION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1922,7 +1880,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1936,8 +1894,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Spiritual Realm -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SPIRITUAL_REALM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM_PEDIA</Civilopedia>
@@ -1951,12 +1908,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_SPIRITUAL_REALMS</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -1972,7 +1929,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1983,8 +1940,8 @@
 			<ImprovementPillage/>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
-            <TechYieldChanges>
-                <TechYieldChange>
+			<TechYieldChanges>
+				<TechYieldChange>
 					<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -1996,8 +1953,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Trading Planet -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_TRADING_POST</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Civilopedia>
@@ -2011,28 +1967,28 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>2</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2048,7 +2004,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-            <iUnique>2</iUnique>
+			<iUnique>2</iUnique>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -2060,7 +2016,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+			<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -2072,8 +2028,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Supernova Mine -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUPERNOVA_MINE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Civilopedia>
@@ -2087,12 +2042,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEUTRON_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2119,7 +2074,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2127,7 +2082,7 @@
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_OMEGA_MINUS_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2139,8 +2094,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Intergalactic Research Base -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE_PEDIA</Civilopedia>
@@ -2154,64 +2108,64 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFLORA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFAUNA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFLORA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFAUNA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2240,8 +2194,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Cosmic Expansion Node -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_COSMIC_EXPANSION_NODE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE_PEDIA</Civilopedia>
@@ -2255,12 +2208,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_DARK_ENERGY_HARVESTING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2289,8 +2242,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- True Vacuum -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_TRUE_VACUUM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TRUE_VACUUM_PEDIA</Civilopedia>
@@ -2304,12 +2256,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2338,8 +2290,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Dyson Sphere -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_DYSON_SPHERE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DYSON_SPHERE_PEDIA</Civilopedia>
@@ -2353,36 +2304,36 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEBULA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_RED_GIANT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2409,7 +2360,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_STELLAR_COMPUTING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2417,7 +2368,7 @@
 						<iYield>3</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2429,8 +2380,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Interstellar Research Base -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE_PEDIA</Civilopedia>
@@ -2444,78 +2394,78 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEBULA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_RED_GIANT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFLORA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFAUNA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFLORA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFAUNA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_CIVILIZATION</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2544,8 +2494,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Terraformed Planet -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORMED_PLANET</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET_PEDIA</Civilopedia>
@@ -2559,50 +2508,50 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
-            <FeatureMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CARBON_PLANET</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_CHTHONIAN_PLANET</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_DESERT_PLANET</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_ROGUE_PLANET</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_SUPER_EARTH</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFLORA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_XENOFAUNA</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</FeatureMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFLORA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_XENOFAUNA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2629,7 +2578,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2637,7 +2586,7 @@
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2649,8 +2598,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Artificial Planet -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_ARTIFICIAL_PLANET</Type>
 			<Description>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET_PEDIA</Civilopedia>
@@ -2664,24 +2612,24 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ARTIFICIAL_PLANETS</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2710,8 +2658,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Star Scoop -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_STAR_SCOOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_STAR_SCOOP_PEDIA</Civilopedia>
@@ -2725,32 +2672,32 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_RED_GIANT</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_RED_DWARF</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2779,8 +2726,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Biotic Galaxy -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BIOTIC_GALAXY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY_PEDIA</Civilopedia>
@@ -2794,24 +2740,24 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2838,7 +2784,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_COMPUTRONIUM_UNIVERSE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2846,7 +2792,7 @@
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2854,7 +2800,7 @@
 						<iYield>3</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_NOOGENESIS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2862,7 +2808,7 @@
 						<iYield>3</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>3</iYield>
@@ -2870,7 +2816,7 @@
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_PANPSYCHISM</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2882,7 +2828,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Type>
 			<Description>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Civilopedia>
@@ -2896,18 +2842,18 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
-            <FeatureMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_BROWN_DWARF</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
-            <TerrainMakesValids>
+			</FeatureMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_RED_DWARF</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -2934,7 +2880,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2942,7 +2888,7 @@
 						<iYield>3</iYield>
 					</TechYields>
 				</TechYieldChange>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_APPLIED_RELATIVITY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -2954,8 +2900,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Distant Research Base -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_DISTANT_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE_PEDIA</Civilopedia>
@@ -2969,34 +2914,34 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <BonusTypeStructs>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_EXOTIC_LIFEFORMS</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>1</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>1</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-                <BonusTypeStruct>
-                    <BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
-                    <bBonusMakesValid>1</bBonusMakesValid>
-                    <bBonusTrade>1</bBonusTrade>
-                    <YieldChanges>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>0</iYieldChange>
-                        <iYieldChange>2</iYieldChange>
-                    </YieldChanges>
-                </BonusTypeStruct>
-            </BonusTypeStructs>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_EXOTIC_LIFEFORMS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ABANDONED_MEGASTRUCTURE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3025,8 +2970,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Cosmic Expansion Node -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Civilopedia>
@@ -3040,12 +2984,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3072,7 +3016,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_MOLECULAR_ASSEMBLY</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -3084,8 +3028,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Satellite Station (Deep Space) -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SATELLITE_STATION</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SATELLITE_STATION</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SATELLITE_STATION_PEDIA</Civilopedia>
@@ -3099,7 +3042,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
 					<bMakesValid>1</bMakesValid>
@@ -3112,7 +3055,7 @@
 					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3129,7 +3072,7 @@
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
-			<iUpgradeTime>0</iUpgradeTime>
+			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
 			<iDefenseModifier>0</iDefenseModifier>
 			<iHappiness>0</iHappiness>
@@ -3139,7 +3082,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_ARCOLOGY_MOON</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_MOLECULAR_ASSEMBLY</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -3151,8 +3094,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Arcology Moon (Deep Space) -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_ARCOLOGY_MOON</Type>
 			<Description>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON_PEDIA</Civilopedia>
@@ -3166,7 +3108,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
 					<bMakesValid>1</bMakesValid>
@@ -3179,7 +3121,7 @@
 					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3208,8 +3150,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Interstellar Colony -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Civilopedia>
@@ -3223,28 +3164,28 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEBULA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3271,7 +3212,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_FEMTOTECHNOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -3283,7 +3224,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Civilopedia>
@@ -3297,22 +3238,22 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
-            <FeatureMakesValids>
+			</TerrainMakesValids>
+			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_DWARF_GALAXY</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-                <FeatureMakesValid>
+				<FeatureMakesValid>
 					<FeatureType>FEATURE_GALAXY</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-            </FeatureMakesValids>
+			</FeatureMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3339,7 +3280,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_DARK_ENERGY_HARVESTING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -3351,8 +3292,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Supercluster colony -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_SUPERCLUSTER_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY_PEDIA</Civilopedia>
@@ -3366,12 +3306,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3400,8 +3340,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Observable Universe Colony -->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY_PEDIA</Civilopedia>
@@ -3415,12 +3354,12 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_CONTROLLED_INFLATION</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3449,7 +3388,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_PARALLEL_UNIVERSE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE_PEDIA</Civilopedia>
@@ -3463,24 +3402,24 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_EXPERIMENTAL_COSMOLOGY</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3507,7 +3446,7 @@
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
-                <TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -3519,8 +3458,7 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Time Manifold-->
-        <ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_TIME_MANIFOLD</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD_PEDIA</Civilopedia>
@@ -3534,16 +3472,16 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
 			<PrereqTech>TECH_MULTIDIMENSIONAL_TIME</PrereqTech>
-            <TerrainMakesValids>
+			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_PAST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_FUTURE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-            </TerrainMakesValids>
+			</TerrainMakesValids>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -3572,7 +3510,6 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <!-- Cislunar Base -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CISLUNAR_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Description>
@@ -3602,7 +3539,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-        <!-- Deep Space Base -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SOLAR_SYSTEM_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Description>
@@ -3640,7 +3576,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-        <!-- Interstellar Base -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERSTELLAR_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Description>
@@ -3659,11 +3594,11 @@
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3678,7 +3613,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-        <!-- Intergalactic Base -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INTERGALACTIC_BASE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Description>
@@ -3697,19 +3631,19 @@
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3724,7 +3658,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-        <!-- Cosmic Base -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYPERSPACE_BUNKER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Description>
@@ -3743,15 +3676,15 @@
 					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_PAST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DISTANT_FUTURE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BRANESPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3789,15 +3722,15 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3827,15 +3760,15 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3864,15 +3797,15 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3900,15 +3833,15 @@
 					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-                <TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -3918,7 +3851,7 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
@@ -3929,7 +3862,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
@@ -3940,7 +3873,7 @@
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
@@ -3980,12 +3913,34 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iPillageGold>200</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -3996,7 +3951,7 @@
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -4007,7 +3962,7 @@
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
+					<iDiscoverRand>1000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -4017,7 +3972,6 @@
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_LUNAR_MINE</ImprovementUpgrade>
 		</ImprovementInfo>
-		<!-- Crashed Probe (Graphical) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CRASHED_PROBE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CRASHED_PROBE</Description>
@@ -4082,7 +4036,6 @@
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- Colony Habitat (Small) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Description>
@@ -4167,7 +4120,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Habitat (Medium) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
@@ -4290,7 +4242,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Habitat (Large) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
@@ -4376,7 +4327,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Habitat (Huge) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
@@ -4476,7 +4426,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Hydroponics -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HYDROPONICS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS</Description>
@@ -4592,7 +4541,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Manufactory -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_MANUFACTORY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY</Description>
@@ -4692,7 +4640,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Extraction Facility -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Description>
@@ -4709,12 +4656,34 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>250</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_CARBON_DIOXIDE_ICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>100000</iDiscoverRand>
+					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4726,7 +4695,7 @@
 					<BonusType>BONUS_HELIUM3</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>100000</iDiscoverRand>
+					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -4781,7 +4750,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Colony Solar Array -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_SOLAR_ARRAY</Description>

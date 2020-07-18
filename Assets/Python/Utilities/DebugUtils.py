@@ -41,39 +41,10 @@ class DebugUtils:
 
 ################ TRIGGERED EVENTS ################
 
-	# Event 5
-	def initEffectViewer(self, argsList):
-		px, py = argsList
+	# Event 1050
+	def initUnitPicker(self, px, py):
 		pPlot = GC.getMap().plot(px,py)
-		popup = PyPopup.PyPopup(5, EventContextTypes.EVENTCONTEXT_SELF)
-		popup.setSize(550,300)
-		popup.setUserData((px,py))
-		popup.setHeaderString("Python Debug Tools: Object Placer")
-		# Pulldown0 - Player Selection
-		numEffects = GC.getNumEffectInfos()	# get total # of units from Game
-
-		popup.createPythonPullDown("Choose an Effect")
-		for i in xrange(GC.getNumEffectInfos()):
-			popup.addPullDownString(GC.getEffectInfo(i).getType(), i)
-
-		popup.createPythonEditBox("Default", "Modify the scale of the effect")
-		popup.createPythonEditBox("Default", "Modify the update rate")
-
-		# Launch Popup
-		popup.launch()
-		return 0
-
-	def applyEffectViewer(self, iPlayer, userData, popupReturn):
-		px, py = userData
-		CyPlot = GC.getMap().plot(px, py)
-		if not CyPlot.isNone():
-			CyEngine().triggerEffect(popupReturn.getSelectedPullDownValue(0), CyPlot.getPoint())
-
-	# Event 5002
-	def initUnitPicker(self, argsList):
-		px, py = argsList
-		pPlot = GC.getMap().plot(px,py)
-		popup = PyPopup.PyPopup(5002, EventContextTypes.EVENTCONTEXT_ALL)
+		popup = PyPopup.PyPopup(1050, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setSize(400,600)
 		popup.setPosition(600,25)
 		popup.setUserData((px,py))
@@ -159,98 +130,208 @@ class DebugUtils:
 
 		return 0
 
-	# Event 5003
-	def initTechsCheat(self, argsList):
-		popup = PyPopup.PyPopup(5003, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setHeaderString("Tech & Gold Cheat!")
-		popup.createPullDown()
-		popup.addPullDownString("All", GC.getMAX_PLAYERS())
-		for i in xrange(GC.getMAX_PLAYERS()):
-			if (GC.getPlayer(i).isAlive()):
-				popup.addPullDownString(GC.getPlayer(i).getName(), i)
-		popup.setBodyString("Modify Player " + unichr(8500))
-		popup.createPythonEditBox("0", "Integer value (positive or negative)")
+debugUtils = DebugUtils()
 
-		for i in xrange(GC.getNumEraInfos()):
-			popup.addButton(GC.getEraInfo(i).getDescription())
 
-		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
+# Event 1000
+def initEffectViewer(px, py):
+	pPlot = GC.getMap().plot(px,py)
+	popup = PyPopup.PyPopup(1000, EventContextTypes.EVENTCONTEXT_SELF)
+	popup.setSize(550,300)
+	popup.setUserData((px,py))
+	popup.setHeaderString("Python Debug Tools: Object Placer")
+	# Pulldown0 - Player Selection
+	numEffects = GC.getNumEffectInfos()	# get total # of units from Game
 
-	def applyTechCheat(self, iPlayer, userData, popupReturn):
+	popup.createPythonPullDown("Choose an Effect")
+	for i in xrange(GC.getNumEffectInfos()):
+		popup.addPullDownString(GC.getEffectInfo(i).getType(), i)
 
-		iPlayer = popupReturn.getSelectedPullDownValue(0)
-		iPlayers = 0
-		if iPlayer == GC.getMAX_PC_PLAYERS():
-			player = []
-			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive():
-					player.append(CyPlayerX)
-					iPlayers += 1
+	popup.createPythonEditBox("Default", "Modify the scale of the effect")
+	popup.createPythonEditBox("Default", "Modify the update rate")
 
-		else: player = GC.getPlayer(iPlayer)
+	# Launch Popup
+	popup.launch()
+	return 0
 
-		try:
-			goldChange = int(popupReturn.getEditBoxString(0))
-		except:
-			goldChange = 0
+def applyEffectViewer(iPlayer, userData, popupReturn):
+	px, py = userData
+	CyPlot = GC.getMap().plot(px, py)
+	if not CyPlot.isNone():
+		CyEngine().triggerEffect(popupReturn.getSelectedPullDownValue(0), CyPlot.getPoint())
 
-		if goldChange:
-			if iPlayers:
-				for i in xrange(iPlayers):
-					player[i].changeGold(goldChange)
 
-			else: player.changeGold(goldChange)
+# Event 1001
+def initWonderMovie():
+	popup = PyPopup.PyPopup(1001, EventContextTypes.EVENTCONTEXT_ALL)
+	popup.setHeaderString("Wonder Movie")
+	popup.createPullDown()
+	for i in xrange(GC.getNumBuildingInfos()):
+		szMovieFile = GC.getBuildingInfo(i).getMovie()
+		if szMovieFile:
+			popup.addPullDownString(GC.getBuildingInfo(i).getDescription(), i)
 
-		era = popupReturn.getButtonClicked()
-		for iTech in xrange(GC.getNumTechInfos()):
-
-			if GC.getTechInfo(iTech).getiEra() == era:
-				if iPlayers:
-					for j in xrange(iPlayers):
-						player[j].setHasTech(iTech)
-				else:
-					player.setHasTech(iTech)
-
-	# Event 5012
-	def initWonderMovie(self, argsList):
-		popup = PyPopup.PyPopup(5012, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setHeaderString("Wonder Movie")
-		popup.createPullDown()
-		for i in xrange(GC.getNumBuildingInfos()):
-			szMovieFile = GC.getBuildingInfo(i).getMovie()
-			if (szMovieFile != None and len(szMovieFile) > 0):
-				popup.addPullDownString(GC.getBuildingInfo(i).getDescription(), i)
-
-		for i in xrange(GC.getNumProjectInfos()):
-			szMovieFile = None
-			szArtDef = GC.getProjectInfo(i).getMovieArtDef()
-			if (len(szArtDef) > 0):
-				szMovieFile = CyArtFileMgr().getMovieArtInfo(szArtDef).getPath()
-			if (szMovieFile != None and len(szMovieFile) > 0):
+	for i in xrange(GC.getNumProjectInfos()):
+		szArtDef = GC.getProjectInfo(i).getMovieArtDef()
+		if szArtDef:
+			szMovieFile = CyArtFileMgr().getMovieArtInfo(szArtDef).getPath()
+			if szMovieFile:
 				popup.addPullDownString(GC.getProjectInfo(i).getDescription(), GC.getNumBuildingInfos() + i)
 
-		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
+	popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
-	def applyWonderMovie(self, iPlayer, userData, popupReturn):
+def applyWonderMovie(iPlayer, userData, popupReturn):
 
-		wonderID = popupReturn.getSelectedPullDownValue(0)
+	wonderID = popupReturn.getSelectedPullDownValue(0)
 
-		popupInfo = CyPopupInfo()
-		popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-		popupInfo.setData2(-1)
-		popupInfo.setText(u"showWonderMovie")
+	popupInfo = CyPopupInfo()
+	popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+	popupInfo.setData2(-1)
+	popupInfo.setText(u"showWonderMovie")
 
-		if wonderID < GC.getNumBuildingInfos():
-			popupInfo.setData3(0)
-			popupInfo.setData1(wonderID)
-		else:
-			popupInfo.setData3(2)
-			popupInfo.setData1(wonderID - GC.getNumBuildingInfos())
+	if wonderID < GC.getNumBuildingInfos():
+		popupInfo.setData3(0)
+		popupInfo.setData1(wonderID)
+	else:
+		popupInfo.setData3(2)
+		popupInfo.setData1(wonderID - GC.getNumBuildingInfos())
 
-		popupInfo.addPopup(0)
+	popupInfo.addPopup(0)
 
-debugUtils = DebugUtils()
+
+# Event 1002
+def initTechsCheat(argsList):
+	popup = PyPopup.PyPopup(1002, EventContextTypes.EVENTCONTEXT_ALL)
+	popup.setHeaderString("Tech & Gold Cheat!")
+	popup.createPullDown()
+	popup.addPullDownString("All", GC.getMAX_PLAYERS())
+	for i in xrange(GC.getMAX_PLAYERS()):
+		if (GC.getPlayer(i).isAlive()):
+			popup.addPullDownString(GC.getPlayer(i).getName(), i)
+	popup.setBodyString("Modify Player " + unichr(8500))
+	popup.createPythonEditBox("0", "Integer value (positive or negative)")
+
+	for i in xrange(GC.getNumEraInfos()):
+		popup.addButton(GC.getEraInfo(i).getDescription())
+
+	popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
+
+def applyTechCheat(iPlayer, userData, popupReturn):
+
+	iPlayer = popupReturn.getSelectedPullDownValue(0)
+	iPlayers = 0
+	if iPlayer == GC.getMAX_PC_PLAYERS():
+		player = []
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+			CyPlayerX = GC.getPlayer(iPlayerX)
+			if CyPlayerX.isAlive():
+				player.append(CyPlayerX)
+				iPlayers += 1
+
+	else: player = GC.getPlayer(iPlayer)
+
+	try:
+		goldChange = int(popupReturn.getEditBoxString(0))
+	except:
+		goldChange = 0
+
+	if goldChange:
+		if iPlayers:
+			for i in xrange(iPlayers):
+				player[i].changeGold(goldChange)
+
+		else: player.changeGold(goldChange)
+
+	era = popupReturn.getButtonClicked()
+	for iTech in xrange(GC.getNumTechInfos()):
+
+		if GC.getTechInfo(iTech).getiEra() == era:
+			if iPlayers:
+				for j in xrange(iPlayers):
+					player[j].setHasTech(iTech)
+			else:
+				player.setHasTech(iTech)
+
+# Event 1003
+def initEditCity(px, py):
+	local = CyTranslator()
+	city = CyMap().plot(px,py).getPlotCity()
+	iOwner = city.getOwner()
+	userData = (iOwner, city.getID())
+
+	# create popup
+	popup = PyPopup.PyPopup(1003, EventContextTypes.EVENTCONTEXT_ALL)
+	popup.setSize(600, 600)
+	popup.setPosition(16, 64)
+	popup.setUserData(userData)
+	popup.setHeaderString(local.getText("TXT_KEY_WB_HEADER_CITY_EDIT", ()))
+	# City Name - Editbox 0
+	popup.createEditBox(city.getName(), 0)
+	# Population - Editbox 1
+	popup.createEditBox('0', 1)
+	popup.setBodyString(local.getText("TXT_KEY_WB_CITY_EDIT_POP", ()))
+	# Culture - Editbox 2
+	popup.createEditBox('0', 2)
+	popup.setBodyString(local.getText("TXT_KEY_WB_CITY_EDIT_CULTURE", (city.getCulture(iOwner),)))
+	# Buildings - Listboxes Group
+	popup.createListBox(0)
+	iNumBuildings = GC.getNumBuildingInfos()
+	lBuildings = []
+	for i in range(iNumBuildings):
+		# ('Library', iIndex)
+		lBuildings.append((GC.getBuildingInfo(i).getDescription(), i))
+	lBuildings.sort()
+
+	popup.addListBoxString(local.getText("TXT_KEY_WB_CITY_NOTHING", ()), -1)
+	popup.addListBoxString(local.getText("TXT_KEY_WB_CITY_ALL", ()), iNumBuildings) #for adding/removing every building
+	for i in range(len(lBuildings)):
+		entry = lBuildings[i]
+		popup.addListBoxString(entry[0], entry[1])
+
+	# Add/Remove - Pulldown Group 0
+	popup.createPullDown(0)
+	popup.addPullDownString(local.getText("TXT_KEY_WB_CITY_ADD", ()), 1)
+	popup.addPullDownString(local.getText("TXT_KEY_WB_CITY_NOCHANGE", ()), 0) #for clean exit
+	popup.addPullDownString(local.getText("TXT_KEY_WB_CITY_REMOVE", ()), 2)
+	popup.setBodyString(local.getText("TXT_KEY_WB_CITY_ADD_REMOVE", ()))
+
+	# Launch Popup
+	popup.launch()
+
+def applyEditCity(iPlayer, userData, popupReturn):
+	iOwner, iID = userData
+	city = GC.getPlayer(iOwner).getCity(iID)
+	if city.isNone():
+		return 0
+
+	# Name
+	szName = str(popupReturn.getEditBoxString(0))
+	if szName != city.getName():
+		city.setName(szName, False)
+
+	# Population
+	iValue = int(popupReturn.getEditBoxString(1))
+	if iValue:
+		city.changePopulation(iValue)
+
+	iValue = int(popupReturn.getEditBoxString(2))
+	if iValue:
+		city.setCulture(iOwner, iValue, True)
+
+	# Buildings
+	iNumBuildings = GC.getNumBuildingInfos()
+	iBuilding = popupReturn.getSelectedListBoxValue(0)
+	if iBuilding > -1 and popupReturn.getSelectedPullDownValue(0) > 0:
+		if iBuilding == iNumBuildings + 1:
+			return 0
+		# Toggles buildings in cities
+		add = popupReturn.getSelectedPullDownValue(0) == 1
+		if iBuilding != -1:
+			if iBuilding == iNumBuildings:
+				for i in range(iBuilding):
+					city.setNumRealBuilding(i, add)
+			else:
+				city.setNumRealBuilding(iBuilding, add)
 
 
 def putOneOfEveryUnit():

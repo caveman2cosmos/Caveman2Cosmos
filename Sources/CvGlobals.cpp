@@ -2,7 +2,10 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvXMLLoadUtility.h"
+#include "FVariableSystem.h"
 #include <time.h> 
 #include <sstream>
 
@@ -109,8 +112,7 @@ ProxyTracker::~ProxyTracker()
 // CONSTRUCTOR
 //
 cvInternalGlobals::cvInternalGlobals() 
-	: m_paszEntityEventTypes2(NULL)
-	, m_paszEntityEventTypes(NULL)
+	: m_paszEntityEventTypes(NULL)
 	, m_paszAnimationOperatorTypes(NULL)
 	, m_paszFunctionTypes(NULL)
 	, m_paszFlavorTypes(NULL)
@@ -128,11 +130,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_bOverwriteLogs(false)
 	, m_bSynchLogging(false)
 	, m_bDLLProfiler(false)
-	, m_pkMainMenu(NULL)
-	, m_iNewPlayers(0)
-	, m_bZoomOut(false)
-	, m_bZoomIn(false)
-	, m_bLoadGameFromFile(false)
 	, m_pFMPMgr(NULL)
 	, m_asyncRand(NULL)
 	, m_interface(NULL)
@@ -195,7 +192,6 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-	, m_bLoadedPlayerOptions(false)
 	, m_bXMLLogging(false)
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -527,8 +523,6 @@ void cvInternalGlobals::init()
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
 
-	m_pt3Origin = NiPoint3(0.0f, 0.0f, 0.0f);
-
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);
 	COPY(m_aiPlotCardinalDirectionX, aiPlotCardinalDirectionX, int);
@@ -622,12 +616,12 @@ void cvInternalGlobals::clearTypesMap()
 	}
 }
 
-std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()		// For Moose - XML Load Util and CvInfos
+std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()
 {
 	return m_paInterfaceModeInfo;
 }
 
-CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e)
+CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e) const
 {
 	FAssertMsg(e >= 0 && e < NUM_INTERFACEMODE_TYPES, "InterfaceModeInfo index out of bounds");
 	return *(m_paInterfaceModeInfo[e]);
@@ -668,7 +662,7 @@ int* cvInternalGlobals::getCityPlotPriority() const
 	return m_aiCityPlotPriority;
 }
 
-int cvInternalGlobals::getXYCityPlot(const int i, const int j) const
+int cvInternalGlobals::getXYCityPlot(int i, int j) const
 {
 	FAssertMsg(i >= 0 && i < CITY_PLOTS_DIAMETER, "XYCityPlot i index out of bounds");
 	FAssertMsg(j >= 0 && j < CITY_PLOTS_DIAMETER, "XYCityPlot j index out of bounds");
@@ -680,7 +674,7 @@ DirectionTypes* cvInternalGlobals::getTurnLeftDirection() const
 	return m_aeTurnLeftDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnLeftDirection(const int i) const
+DirectionTypes cvInternalGlobals::getTurnLeftDirection(int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnLeftDirection index out of bounds");
 	return m_aeTurnLeftDirection[i];
@@ -691,13 +685,13 @@ DirectionTypes* cvInternalGlobals::getTurnRightDirection() const
 	return m_aeTurnRightDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnRightDirection(const int i) const
+DirectionTypes cvInternalGlobals::getTurnRightDirection(int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnRightDirection index out of bounds");
 	return m_aeTurnRightDirection[i];
 }
 
-DirectionTypes cvInternalGlobals::getXYDirection(const int i, const int j) const
+DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "XYDirection i index out of bounds");
 	FAssertMsg(j >= 0 && j < DIRECTION_DIAMETER, "XYDirection j index out of bounds");
@@ -707,7 +701,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(const int i, const int j) const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-
 bool cvInternalGlobals::multiMapsEnabled() const
 {
 	return m_bMultimapsEnabled;
@@ -733,13 +726,13 @@ int cvInternalGlobals::getNumMapSwitchInfos() const
 	return m_paMapSwitchInfo.size();
 }
 
-CvMapInfo& cvInternalGlobals::getMapInfo(const MapTypes eMap) const
+CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
 	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
 	return *(m_paMapInfo[eMap]);
 }
 
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const
+CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
 {
 	FAssertMsg(eMapSwitch > NO_MAPSWITCH && eMapSwitch < GC.getNumMapSwitchInfos(), "MapSwitchInfo index out of bounds");
 	return *(m_paMapSwitchInfo[eMapSwitch]);
@@ -747,19 +740,11 @@ CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSw
 
 void cvInternalGlobals::updateMaps()
 {
-	CvMap* pMap = NULL;
-	int i;
-	
-	for (i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapInfos(); i++)
 	{
-		m_maps.push_back(pMap);
+		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
-}
-
-const std::vector<CvMap*>& cvInternalGlobals::getMaps() const
-{
-	return m_maps;
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -1165,7 +1150,7 @@ int cvInternalGlobals::getNumBonusInfos() const
 	return (int)m_paBonusInfo.size();
 }
 
-std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos()	// For Moose - XML Load Util, CvInfos
+const std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos() const
 {
 	return m_paBonusInfo;
 }
@@ -2602,25 +2587,19 @@ CvString& cvInternalGlobals::getFootstepAudioTypes(int i)
 	return m_paszFootstepAudioTypes[i];
 }
 
-int cvInternalGlobals::getFootstepAudioTypeByTag(CvString strTag)
+int cvInternalGlobals::getFootstepAudioTypeByTag(const CvString strTag) const
 {
-	int iIndex = -1;
-
-	if ( strTag.GetLength() <= 0 )
+	if (strTag.GetLength() > 0)
 	{
-		return iIndex;
-	}
-
-	for ( int i = 0; i < m_iNumFootstepAudioTypes; i++ )
-	{
-		if ( strTag.CompareNoCase(m_paszFootstepAudioTypes[i]) == 0 )
+		for (int i = 0; i < m_iNumFootstepAudioTypes; i++)
 		{
-			iIndex = i;
-			break;
+			if (strTag.CompareNoCase(m_paszFootstepAudioTypes[i]) == 0)
+			{
+				return i;
+			}
 		}
 	}
-
-	return iIndex;
+	return -1;
 }
 
 CvString*& cvInternalGlobals::getFootstepAudioTags()
@@ -2628,9 +2607,9 @@ CvString*& cvInternalGlobals::getFootstepAudioTags()
 	return m_paszFootstepAudioTags;
 }
 
-CvString& cvInternalGlobals::getFootstepAudioTags(int i)
+CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 {
-	static CvString*	emptyString = NULL;
+	static CvString* emptyString = NULL;
 
 	if ( emptyString == NULL )
 	{
@@ -2646,7 +2625,7 @@ void cvInternalGlobals::setCurrentXMLFile(const TCHAR* szFileName)
 	m_szCurrentXMLFile = szFileName;
 }
 
-CvString& cvInternalGlobals::getCurrentXMLFile()
+const CvString& cvInternalGlobals::getCurrentXMLFile() const
 {
 	return m_szCurrentXMLFile;
 }
@@ -2665,7 +2644,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start");
+	OutputDebugString("Caching Globals: Start/n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2697,7 +2676,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 	
-	m_bMultimapsEnabled = (getDefineINT("ENABLE_MULTIMAPS") != 0);
 	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
 	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
 	m_iViewportSizeX = GC.getDefineINT("VIEWPORT_SIZE_X");
@@ -2709,7 +2687,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End");
+	OutputDebugString("Caching Globals: End/n");
 }
 
 /************************************************************************************************/
@@ -3445,7 +3423,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 	GC.getMap().afterSwitch();
 }
 
-CvViewport* cvInternalGlobals::getCurrentViewport()
+CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
 	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
 }
@@ -3471,16 +3449,16 @@ int	cvInternalGlobals::getViewportCenteringBorder() const
 }
 
 
-CvMapExternal& cvInternalGlobals::getMapExternal()
+CvMapExternal& cvInternalGlobals::getMapExternal() const
 {
-	CvViewport*	currentViewport = getCurrentViewport();
+	CvViewport* currentViewport = getCurrentViewport();
 
 	FAssert(currentViewport != NULL);
 
 	return *(currentViewport->getProxy());
 }
 
-CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex)
+CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
 	FAssert(eIndex > NO_MAP);
 	FAssert(eIndex < GC.getNumMapInfos());
@@ -3685,16 +3663,6 @@ bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-bool cvInternalGlobals::isLoadedPlayerOptions() const
-{
-	return m_bLoadedPlayerOptions;
-}
-
-void cvInternalGlobals::setLoadedPlayerOptions(bool bNewVal)
-{
-	m_bLoadedPlayerOptions = bNewVal;
-}
-
 void cvInternalGlobals::setXMLLogging(bool bNewVal)
 {
 	m_bXMLLogging = bNewVal;
@@ -3715,7 +3683,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled() const
 	return m_bGraphicalDetailPagingEnabled;
 }
 
-int cvInternalGlobals::getGraphicalDetailPageInRange()
+int cvInternalGlobals::getGraphicalDetailPageInRange() const
 {
 	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }

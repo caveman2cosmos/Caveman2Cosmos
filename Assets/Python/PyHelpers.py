@@ -66,11 +66,6 @@ class PyPlayer:
 		' none - Sets Gold to iGold '
 		self.player.setGold( iGold )
 
-	def hasGold(self, iNumGold):
-		' bool - Has at least iNumGold? '
-		if ( self.player.getGold() >= iNumGold ):
-			return True
-
 	def getTotalMaintenance(self):
 		return self.player.getTotalMaintenance()
 
@@ -81,45 +76,10 @@ class PyPlayer:
 		return self.player.calculateUnitSupply()
 
 # Players Yields / Commerce
-	def getGoldCommerceRate(self):
-		' int - Players gold commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_GOLD )
-
-	def getResearchCommerceRate(self):
-		' int - Players research commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_RESEARCH )
-
-	def getCultureCommerceRate(self):
-		' int - Players culture commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_CULTURE )
 
 	def calculateResearchRate(self):
 		' int - Total Research Rate per Turn '
 		return self.player.calculateResearchRate( TechTypes.NO_TECH )
-
-	def getCommerceYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_COMMERCE )
-
-	def getFoodYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_FOOD )
-
-	def getProductionYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_PRODUCTION )
-
-	def getCommerceSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_COMMERCE )
-
-	def getFoodSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_FOOD )
-
-	def getProductionSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_PRODUCTION )
 
 	def getGoldPerTurn(self):
 		return self.player.getGoldPerTurn()
@@ -282,10 +242,6 @@ class PyPlayer:
 				return unit
 
 		return 0
-
-	def centerCameraByScriptData(self, scriptData):
-		unit = self.getUnitByScriptData(scriptData)
-		CyCamera().LookAtUnit(unit)
 
 	def initUnit(self, unitID, X, Y, iNum = 1):
 		"none - spawns unitIdx at X, Y - ALWAYS use default UnitAIType"
@@ -686,13 +642,6 @@ class PyCity:
 			return True
 		return False
 
-	def centerCamera(self):
-		"bool - Center camera on city"
-		engine = CyEngine()
-		plot = self.plot()
-		if plot:
-			engine.LookAt(plot.getPoint(), True)
-
 	def setNumRealBuildingIdx(self, buildingIdx, iNum):
 		"none - Add or Remove (bAdd) by buildingIdx"
 		return self.city.setNumRealBuilding(buildingIdx, iNum)
@@ -873,10 +822,6 @@ class PyPlot:
 		"int - food yield"
 		return self.plot.getYield(YieldTypes.YIELD_FOOD)
 
-	def getProductionYield(self):
-		"int - production yield"
-		return self.plot.getYield(YieldTypes.YIELD_PRODUCTION)
-
 	def getCommerceYield(self):
 		"int - commerce yield"
 		return self.plot.getYield(YieldTypes.YIELD_COMMERCE)
@@ -885,11 +830,6 @@ class PyPlot:
 	def getTerrainType(self):
 		"int - terrain type XML ID"
 		return self.plot.getTerrainType()
-
-	def isCoastalLand(self):
-		"bool - is this a coastal land plot"
-		return self.plot.isCoastalLand()
-
 
 	############## B O N U S ##############
 	def getBonusType(self):
