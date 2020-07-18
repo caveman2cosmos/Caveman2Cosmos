@@ -20331,10 +20331,10 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Cost
-		if (kUnit.getExtraCost() != 0)
+		if (kUnit.getBaseUpkeep() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_EXTRA_COST", kUnit.getExtraCost()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_BASE", kUnit.getBaseUpkeep()));
 		}
 
 		//Modified Production

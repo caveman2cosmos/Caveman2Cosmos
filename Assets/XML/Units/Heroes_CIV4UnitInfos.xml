@@ -16135,10 +16135,9 @@
 			<BonusType>BONUS_ENGLISH</BonusType>
 			<iCost>3100</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>8</iAsset>
 			<iPower>20</iPower>
 			<UnitMeshGroups>

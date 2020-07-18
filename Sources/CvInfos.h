@@ -1807,7 +1807,6 @@ public:
 	int getSMCargoVolume() const;
 	int getConscriptionValue() const; // Exposed to Python
 	int getCultureGarrisonValue() const; // Exposed to Python
-	int getExtraCost() const; // Exposed to Python
 	int getBaseUpkeep() const; // Exposed to Python
 	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
 	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
@@ -2273,62 +2272,26 @@ protected:
 	BoolExpr* m_pExprTrainCondition;
 
 public:
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
-	// Dale - RB: Field Bombard START
 	int getDCMBombRange() const;
 	int getDCMBombAccuracy() const;
-protected:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
-public:
-	// Dale - RB: Field Bombard END
-	// Dale - AB: Bombing START
 	bool getDCMAirBomb1() const;
 	bool getDCMAirBomb2() const;
 	bool getDCMAirBomb3() const;
 	bool getDCMAirBomb4() const;
 	bool getDCMAirBomb5() const;
-protected:
-	bool m_bDCMAirBomb1;
-	bool m_bDCMAirBomb2;
-	bool m_bDCMAirBomb3;
-	bool m_bDCMAirBomb4;
-	bool m_bDCMAirBomb5;
-public:
-	// Dale - AB: Bombing END
-	// Dale - FE: Fighters START
 	bool getDCMFighterEngage() const;
-protected:
-	bool m_bDCMFighterEngage;
-public:
-	// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
+
 	bool isCanBeRebel() const;
 	bool isCanRebelCapture() const;
 	bool isCannotDefect() const;
 	bool isCanQuellRebellion() const;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	float getUnitMaxSpeed() const; // Exposed to Python
 	float getUnitPadTime() const; // Exposed to Python
 
-// BUG - Unit Experience - start
 	bool canAcquireExperience() const; // Exposed to Python
-// BUG - Unit Experience - end
 
 	// Arrays
-
 	int getPrereqAndTechs(int i) const; // Exposed to Python
 	int getPrereqOrBonuses(int i) const; // Exposed to Python
 	int getFlavorValue(int i) const; // Exposed to Python
@@ -2430,6 +2393,15 @@ private:
 	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
+	int m_iDCMBombRange;
+	int m_iDCMBombAccuracy;
+	bool m_bDCMFighterEngage;
+	bool m_bDCMAirBomb1;
+	bool m_bDCMAirBomb2;
+	bool m_bDCMAirBomb3;
+	bool m_bDCMAirBomb4;
+	bool m_bDCMAirBomb5;
+
 	int m_iAIWeight;
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
@@ -2483,7 +2455,6 @@ protected:
 	int m_iSMCargoVolume;
 	int m_iConscriptionValue;
 	int m_iCultureGarrisonValue;
-	int m_iExtraCost;
 	int m_iBaseUpkeep;
 	int m_iAssetValue;
 	int m_iPowerValue;

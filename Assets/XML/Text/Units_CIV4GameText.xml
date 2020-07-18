@@ -8038,15 +8038,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Spanish>Con esta unidad podrás construir la mejora de la Plataforma de extracción en casillas de Costa y Océano. Esta mejora proporciona -1 de alimentos, +3 de producción y +1 de comercio a estas casillas.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXTRA_COST</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_GOLD] Cost per turn</English>
-		<French>[ICON_BULLET]%D1_Change[ICON_GOLD] coût par tour</French>
-		<German>[ICON_BULLET]%D1_Change [ICON_GOLD] Kosten</German>
-		<Italian>[ICON_BULLET]%D1_Change[ICON_GOLD] Costo per turno</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change[ICON_GOLD] de coste adicional por turno</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change[ICON_GOLD] Koszt na turę</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_EZANA</Tag>
 		<English>Ezana</English>
 		<Spanish>

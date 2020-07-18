@@ -27,6 +27,10 @@
 	</TEXT>
 -->
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP_BASE</Tag>
+		<English>[ICON_BULLET]Base upkeep: %D1_Change[ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_AIR_RANGE</Tag>
 		<English>, %d1 Range</English>
 		<French>, portée %d1</French>

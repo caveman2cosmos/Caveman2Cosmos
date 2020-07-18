@@ -12821,23 +12821,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue *= 4;
 				iValue /= 5;
 			}
-			//  ls612: consider that a unit with ExtraCost is less useful
-			// TB: this needs to be reconsidered.
 
-			//if ( kUnitInfo.getExtraCost() > 0 )
-			//{
-			//	int iNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-			//	int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
-
-			//	if (iNetCommerce > iNetExpenses + kUnitInfo.getExtraCost())
-			//	{
-			//		iValue = (iValue*(iNetCommerce - iNetExpenses - kUnitInfo.getExtraCost())) / (iNetCommerce - iNetExpenses);
-			//	}
-			//	else
-			//	{
-			//		iValue = 1;	//	Don't set the value to 0, just make this the least useful option
-			//	}
-			//}
 			//TB Combat Mods Begin
 			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
@@ -12880,22 +12864,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue *= 4;
 				iValue /= 5;
 			}
-			//  ls612: consider that a unit with ExtraCost is less useful
 
-			//if ( kUnitInfo.getExtraCost() > 0 )
-			//{
-			//	int iNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-			//	int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
-
-			//	if (iNetCommerce > iNetExpenses + kUnitInfo.getExtraCost())
-			//	{
-			//		iValue = (iValue*(iNetCommerce - iNetExpenses - kUnitInfo.getExtraCost())) / (iNetCommerce - iNetExpenses);
-			//	}
-			//	else
-			//	{
-			//		iValue = 1;	//	Don't set the value to 0, just make this the least useful option
-			//	}
-			//}
 			//TB Combat Mods Begin
 			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
@@ -24125,265 +24094,231 @@ void CvPlayerAI::AI_doCheckFinancialTrouble()
 
 bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
 {
+	int iBestValue = MAX_INT;
+	CvUnit* pBestUnit = NULL;
 	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iValue;
-	int iBestValue;
 	int iLoop;
-
-	iBestValue = MAX_INT;
-	pBestUnit = NULL;
-
-	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 	{
-		if (!(pLoopUnit->hasCargo()))
+		if (!pLoopUnit->hasCargo() && !pLoopUnit->isGoldenAge() && pLoopUnit->getUnitInfo().getProductionCost() > 0
+		&& (iExpThreshold == -1 || pLoopUnit->canFight() && pLoopUnit->getExperience() <= iExpThreshold)
+		&& (!pLoopUnit->isMilitaryHappiness() || !pLoopUnit->plot()->isCity() || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 2))
 		{
-			if (!(pLoopUnit->isGoldenAge()))
+			int iValue = (10000 + GC.getGame().getSorenRandNum(1000, "Disband Unit"));
+
+			iValue *= 100 + (pLoopUnit->getUnitInfo().getProductionCost() * 3);
+			iValue /= 100;
+
+			iValue *= 100 + (pLoopUnit->getExperience() * 10);
+			iValue /= 100;
+
+			iValue *= 100 + (pLoopUnit->getLevel() * 25);
+			iValue /= 100;
+
+			if (pLoopUnit->plot()->getTeam() == pLoopUnit->getTeam())
 			{
-				if (pLoopUnit->getUnitInfo().getProductionCost() > 0)
+				iValue *= 3;
+
+				if (pLoopUnit->canDefend() && pLoopUnit->plot()->isCity())
 				{
-					if ((iExpThreshold == -1) || (pLoopUnit->canFight() && pLoopUnit->getExperience() <= iExpThreshold))
+					iValue *= 2;
+				}
+			}
+
+			// Multiplying by higher number means unit has higher priority, less likely to be disbanded
+			switch (pLoopUnit->AI_getUnitAIType())
+			{
+			case UNITAI_UNKNOWN:
+			case UNITAI_ANIMAL:
+			case UNITAI_BARB_CRIMINAL:
+				break;
+
+			case UNITAI_SUBDUED_ANIMAL:
+				//	For now make them less valuable the more you have (strictly this should depend
+				//	on what you need in terms of their buildable buildings, but start with an
+				//	approximation that is better than nothing
+				iValue *= std::min(0, getNumCities()*2 - AI_getNumAIUnits(UNITAI_SUBDUED_ANIMAL))/std::min(1,getNumCities());
+				break;
+
+			case UNITAI_HUNTER:
+			case UNITAI_HUNTER_ESCORT:
+				//	Treat hunters like explorers for valuation, but slightly less so
+				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
+					|| pLoopUnit->plot()->getTeam() != getTeam())
+				{
+					iValue *= 10;
+				}
+				else
+				{
+					iValue *= 2;
+				}
+				break;
+
+			case UNITAI_SETTLE:
+				iValue *= 20;
+				break;
+
+			case UNITAI_WORKER:
+				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) > 10)
+				{
+					if (pLoopUnit->plot()->isCity())
 					{
-						if (!(pLoopUnit->isMilitaryHappiness()) || !(pLoopUnit->plot()->isCity()) || (pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 2))
+						if (pLoopUnit->plot()->getPlotCity()->AI_getWorkersNeeded() == 0)
 						{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  01/12/10								jdog5000	  */
-/*																							  */
-/* Gold AI																					  */
-/************************************************************************************************/
-							iValue = (10000 + GC.getGame().getSorenRandNum(1000, "Disband Unit"));
-
-							iValue *= 100 + (pLoopUnit->getUnitInfo().getProductionCost() * 3);
-							iValue /= 100;
-
-							iValue *= 100 + (pLoopUnit->getExperience() * 10);
-							iValue /= 100;
-
-							iValue *= 100 + (pLoopUnit->getLevel() * 25);
-							iValue /= 100;
-
-							if (pLoopUnit->plot()->getTeam() == pLoopUnit->getTeam())
-							{
-								iValue *= 3;
-
-								if (pLoopUnit->canDefend() && pLoopUnit->plot()->isCity())
-								{
-									iValue *= 2;
-								}
-							}
-
-							// Multiplying by higher number means unit has higher priority, less likely to be disbanded
-							switch (pLoopUnit->AI_getUnitAIType())
-							{
-							case UNITAI_UNKNOWN:
-							case UNITAI_ANIMAL:
-							case UNITAI_BARB_CRIMINAL:
-								break;
-
-							case UNITAI_SUBDUED_ANIMAL:
-								//	For now make them less valuable the more you have (strictly this should depend
-								//	on what you need in terms of their buildable buildings, but start with an
-								//	approximation that is better than nothing
-								iValue *= std::min(0, getNumCities()*2 - AI_getNumAIUnits(UNITAI_SUBDUED_ANIMAL))/std::min(1,getNumCities());
-								break;
-
-							case UNITAI_HUNTER:
-							case UNITAI_HUNTER_ESCORT:
-								//	Treat hunters like explorers for valuation, but slightly less so
-								if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-									|| pLoopUnit->plot()->getTeam() != getTeam())
-								{
-									iValue *= 10;
-								}
-								else
-								{
-									iValue *= 2;
-								}
-								break;
-
-							case UNITAI_SETTLE:
-								iValue *= 20;
-								break;
-
-							case UNITAI_WORKER:
-								if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) > 10)
-								{
-									if (pLoopUnit->plot()->isCity())
-									{
-										if (pLoopUnit->plot()->getPlotCity()->AI_getWorkersNeeded() == 0)
-										{
-											iValue *= 10;
-										}
-									}
-								}
-								break;
-
-							case UNITAI_ATTACK:
-							case UNITAI_ATTACK_CITY:
-							case UNITAI_COLLATERAL:
-							case UNITAI_PILLAGE:
-							case UNITAI_RESERVE:
-							case UNITAI_COUNTER:
-							case UNITAI_PILLAGE_COUNTER:
-							case UNITAI_INVESTIGATOR:
-							case UNITAI_SEE_INVISIBLE:
-								iValue *= 2;
-								break;
-
-							case UNITAI_SEE_INVISIBLE_SEA:
-								iValue *= 3;
-								break;
-
-							case UNITAI_CITY_DEFENSE:
-							case UNITAI_CITY_COUNTER:
-							case UNITAI_CITY_SPECIAL:
-							case UNITAI_PARADROP:
-							case UNITAI_PROPERTY_CONTROL:
-							case UNITAI_HEALER:
-							case UNITAI_PROPERTY_CONTROL_SEA:
-							case UNITAI_HEALER_SEA:
-							case UNITAI_ESCORT:
-								iValue *= 6;
-								break;
-
-							case UNITAI_EXPLORE:
-								if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-									|| pLoopUnit->plot()->getTeam() != getTeam())
-								{
-									iValue *= 15;
-								}
-								else
-								{
-									iValue *= 2;
-								}
-								break;
-
-							case UNITAI_MISSIONARY:
-								if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-									|| pLoopUnit->plot()->getTeam() != getTeam())
-								{
-									iValue *= 8;
-								}
-								break;
-
-							case UNITAI_PROPHET:
-							case UNITAI_ARTIST:
-							case UNITAI_SCIENTIST:
-							case UNITAI_GENERAL:
-							case UNITAI_GREAT_HUNTER:
-							case UNITAI_GREAT_ADMIRAL:
-							case UNITAI_MERCHANT:
-							case UNITAI_ENGINEER:
-								iValue *= 20;
-								break;
-
-							case UNITAI_SPY:
-							case UNITAI_INFILTRATOR:
-								iValue *= 12;
-								break;
-
-							case UNITAI_ICBM:
-								iValue *= 4;
-								break;
-
-							case UNITAI_WORKER_SEA:
-								iValue *= 18;
-								break;
-
-							case UNITAI_ATTACK_SEA:
-							case UNITAI_RESERVE_SEA:
-							case UNITAI_ESCORT_SEA:
-								break;
-
-							case UNITAI_EXPLORE_SEA:
-								if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
-									|| pLoopUnit->plot()->getTeam() != getTeam())
-								{
-									iValue *= 12;
-								}
-								break;
-
-							case UNITAI_SETTLER_SEA:
-								iValue *= 6;
-								break;
-
-							case UNITAI_MISSIONARY_SEA:
-							case UNITAI_SPY_SEA:
-								iValue *= 4;
-								break;
-
-							case UNITAI_ASSAULT_SEA:
-							case UNITAI_CARRIER_SEA:
-							case UNITAI_MISSILE_CARRIER_SEA:
-								if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 )
-								{
-									iValue *= 5;
-								}
-								else
-								{
-									iValue *= 2;
-								}
-								break;
-
-							case UNITAI_PIRATE_SEA:
-							case UNITAI_ATTACK_AIR:
-								break;
-
-							case UNITAI_DEFENSE_AIR:
-							case UNITAI_CARRIER_AIR:
-							case UNITAI_MISSILE_AIR:
-								if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 )
-								{
-									iValue *= 5;
-								}
-								else
-								{
-									iValue *= 3;
-								}
-								break;
-
-							default:
-								FAssert(false);
-								break;
-							}
-
-							if (pLoopUnit->getUnitInfo().getExtraCost() > 0)
-							{
-								iValue /= (pLoopUnit->getUnitInfo().getExtraCost() + 1);
-							}
-
-							if (iValue < iBestValue)
-							{
-								iBestValue = iValue;
-								pBestUnit = pLoopUnit;
-							}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+							iValue *= 10;
 						}
 					}
 				}
+				break;
+
+			case UNITAI_ATTACK:
+			case UNITAI_ATTACK_CITY:
+			case UNITAI_COLLATERAL:
+			case UNITAI_PILLAGE:
+			case UNITAI_RESERVE:
+			case UNITAI_COUNTER:
+			case UNITAI_PILLAGE_COUNTER:
+			case UNITAI_INVESTIGATOR:
+			case UNITAI_SEE_INVISIBLE:
+				iValue *= 2;
+				break;
+
+			case UNITAI_SEE_INVISIBLE_SEA:
+				iValue *= 3;
+				break;
+
+			case UNITAI_CITY_DEFENSE:
+			case UNITAI_CITY_COUNTER:
+			case UNITAI_CITY_SPECIAL:
+			case UNITAI_PARADROP:
+			case UNITAI_PROPERTY_CONTROL:
+			case UNITAI_HEALER:
+			case UNITAI_PROPERTY_CONTROL_SEA:
+			case UNITAI_HEALER_SEA:
+			case UNITAI_ESCORT:
+				iValue *= 6;
+				break;
+
+			case UNITAI_EXPLORE:
+				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
+					|| pLoopUnit->plot()->getTeam() != getTeam())
+				{
+					iValue *= 15;
+				}
+				else
+				{
+					iValue *= 2;
+				}
+				break;
+
+			case UNITAI_MISSIONARY:
+				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
+					|| pLoopUnit->plot()->getTeam() != getTeam())
+				{
+					iValue *= 8;
+				}
+				break;
+
+			case UNITAI_PROPHET:
+			case UNITAI_ARTIST:
+			case UNITAI_SCIENTIST:
+			case UNITAI_GENERAL:
+			case UNITAI_GREAT_HUNTER:
+			case UNITAI_GREAT_ADMIRAL:
+			case UNITAI_MERCHANT:
+			case UNITAI_ENGINEER:
+				iValue *= 20;
+				break;
+
+			case UNITAI_SPY:
+			case UNITAI_INFILTRATOR:
+				iValue *= 12;
+				break;
+
+			case UNITAI_ICBM:
+				iValue *= 4;
+				break;
+
+			case UNITAI_WORKER_SEA:
+				iValue *= 18;
+				break;
+
+			case UNITAI_ATTACK_SEA:
+			case UNITAI_RESERVE_SEA:
+			case UNITAI_ESCORT_SEA:
+				break;
+
+			case UNITAI_EXPLORE_SEA:
+				if ((GC.getGame().getGameTurn() - pLoopUnit->getGameTurnCreated()) < 10
+					|| pLoopUnit->plot()->getTeam() != getTeam())
+				{
+					iValue *= 12;
+				}
+				break;
+
+			case UNITAI_SETTLER_SEA:
+				iValue *= 6;
+				break;
+
+			case UNITAI_MISSIONARY_SEA:
+			case UNITAI_SPY_SEA:
+				iValue *= 4;
+				break;
+
+			case UNITAI_ASSAULT_SEA:
+			case UNITAI_CARRIER_SEA:
+			case UNITAI_MISSILE_CARRIER_SEA:
+				if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 )
+				{
+					iValue *= 5;
+				}
+				else
+				{
+					iValue *= 2;
+				}
+				break;
+
+			case UNITAI_PIRATE_SEA:
+			case UNITAI_ATTACK_AIR:
+				break;
+
+			case UNITAI_DEFENSE_AIR:
+			case UNITAI_CARRIER_AIR:
+			case UNITAI_MISSILE_AIR:
+				if( GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 )
+				{
+					iValue *= 5;
+				}
+				else
+				{
+					iValue *= 3;
+				}
+				break;
+
+			default:
+				FAssert(false);
+				break;
+			}
+
+			iValue /= pLoopUnit->getUnitInfo().getBaseUpkeep() + 1;
+
+			if (iValue < iBestValue)
+			{
+				iBestValue = iValue;
+				pBestUnit = pLoopUnit;
 			}
 		}
 	}
 
 	if (pBestUnit != NULL)
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  01/12/10								jdog5000	  */
-/*																							  */
-/* AI logging																				   */
-/************************************************************************************************/
-		if( gPlayerLogLevel >= 2 )
+		if (gPlayerLogLevel >= 2)
 		{
 			CvWString szString;
 			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
 
 			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		pBestUnit->kill(false);
 		return true;
 	}

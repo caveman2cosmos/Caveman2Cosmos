@@ -89,7 +89,6 @@ m_iSMCargoSpace(0),
 m_iSMCargoVolume(0),
 m_iConscriptionValue(0),
 m_iCultureGarrisonValue(0),
-m_iExtraCost(0),
 m_iBaseUpkeep(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
@@ -799,11 +798,6 @@ int CvUnitInfo::getConscriptionValue() const
 int CvUnitInfo::getCultureGarrisonValue() const
 {
 	return m_iCultureGarrisonValue;
-}
-
-int CvUnitInfo::getExtraCost() const
-{
-	return m_iExtraCost;
 }
 
 int CvUnitInfo::getBaseUpkeep() const
@@ -3893,7 +3887,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iSMCargoVolume);
 	CheckSum(iSum, m_iConscriptionValue);
 	CheckSum(iSum, m_iCultureGarrisonValue);
-	CheckSum(iSum, m_iExtraCost);
 	CheckSum(iSum, m_iBaseUpkeep);
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
@@ -4657,8 +4650,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iSMCargoVolume, L"iSMCargoVolume");
 	pXML->GetOptionalChildXmlValByName(&m_iConscriptionValue, L"iConscription");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureGarrisonValue, L"iCultureGarrison");
-	pXML->GetOptionalChildXmlValByName(&m_iExtraCost, L"iExtraCost");
 	pXML->GetOptionalChildXmlValByName(&m_iBaseUpkeep, L"iBaseUpkeep");
+	if (m_iBaseUpkeep < 0) m_iBaseUpkeep = 0;
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
 
@@ -5869,7 +5862,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iSMCargoVolume == iDefault ) m_iSMCargoVolume = pClassInfo->getSMCargoVolume();
 	if ( m_iConscriptionValue == iDefault ) m_iConscriptionValue = pClassInfo->getConscriptionValue();
 	if ( m_iCultureGarrisonValue == iDefault ) m_iCultureGarrisonValue = pClassInfo->getCultureGarrisonValue();
-	if ( m_iExtraCost == iDefault ) m_iExtraCost = pClassInfo->getExtraCost();
 	if ( m_iBaseUpkeep == iDefault ) m_iBaseUpkeep = pClassInfo->getBaseUpkeep();
 	if ( m_iAssetValue == iDefault ) m_iAssetValue = pClassInfo->getAssetValue(true);
 	if ( m_iPowerValue == iDefault ) m_iPowerValue = pClassInfo->getPowerValue(true);

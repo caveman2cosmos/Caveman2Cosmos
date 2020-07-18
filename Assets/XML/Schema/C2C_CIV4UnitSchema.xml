@@ -1686,7 +1686,6 @@
 	<ElementType name="iSMCargoVolume" content="textOnly" dt:type="int"/>
 	<ElementType name="iConscription" content="textOnly" dt:type="int"/>
 	<ElementType name="iCultureGarrison" content="textOnly" dt:type="int"/>
-	<ElementType name="iExtraCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iBaseUpkeep" content="textOnly" dt:type="int"/>
 	<ElementType name="iAsset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPower" content="textOnly" dt:type="int"/>

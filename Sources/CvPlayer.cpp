@@ -3507,10 +3507,7 @@ void CvPlayer::disbandUnit(bool bAnnounce)
 							break;
 						}
 
-						if (pLoopUnit->getUnitInfo().getExtraCost() > 0)
-						{
-							iValue /= (pLoopUnit->getUnitInfo().getExtraCost() + 1);
-						}
+						iValue /= pLoopUnit->getUnitInfo().getBaseUpkeep() + 1;
 
 						if (iValue < iBestValue)
 						{
@@ -9165,18 +9162,12 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-	int iCosts = 0;
-
-	iCosts += getTotalUnitUpkeep();
+	int iCosts = getTotalUnitUpkeep();
 	iCosts += calculateUnitSupply();
 	iCosts += getTotalMaintenance();
 	iCosts += getCivicUpkeep();
 	iCosts -= getCorporateTaxIncome();
 
-	if (GC.getUSE_EXTRA_PLAYER_COSTS_CALLBACK())
-	{
-		iCosts += Cy::call<int>(PYGameModule, "getExtraCost", Cy::Args() << getID());
-	}
 	return iCosts;
 }
 
