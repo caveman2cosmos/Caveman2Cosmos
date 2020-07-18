@@ -1656,8 +1656,8 @@ void CvPlayerAI::AI_unitUpdate()
 	{
 		if ( m_pTempUnit != NULL )
 		{
-			FAssert(m_pTempUnit->getGroup() != NULL);
-			OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
+			//FAssert(m_pTempUnit->getGroup() != NULL);
+			//OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
 		}
 		OutputDebugString("Group cycle:\n");
 		for(CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
