@@ -6416,6 +6416,10 @@ void CvGame::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE_BEGIN("CvGame::doTurn()");
 
+#ifdef PARALLEL_MAPS
+	if (GC.getNumMaps() > 1)
+		GC.switchMap(m_eCurrentMap + 1 == GC.getNumMaps() ? MAP_INITIAL : m_eCurrentMap + 1);
+#endif
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
 
