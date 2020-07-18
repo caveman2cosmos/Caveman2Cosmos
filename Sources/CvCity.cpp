@@ -18891,11 +18891,14 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
+
+	// @SAVEBREAK DELETE Toffer
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNewDiseaseTypeCount, SAVE_VALUE_ANY);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNewExtraAfflictionOutbreakLevelModifier, SAVE_VALUE_ANY);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNewAfflictionToleranceModifier, SAVE_VALUE_ANY);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNewCurrentOvercomeModifier, SAVE_VALUE_ANY);
-	//Team Project (1)
+	// SAVEBREAK@
+
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
 	{
 		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);

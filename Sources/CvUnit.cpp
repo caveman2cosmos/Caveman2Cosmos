@@ -25471,7 +25471,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAnimalIgnoresBordersCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOnslaughtCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFortitude);
-	WRAPPER_SKIP_ELEMENT(wrapper,"CvUnit",&m_iExtraAid, SAVE_VALUE_ANY)
+
+	// @SAVEBREAK DELETE Toffer
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraAid, SAVE_VALUE_ANY)
+	// SAVEBREAK@
 
 	//	Backward compatibility - read array format if present
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -26570,7 +26573,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCannotMergeSplitCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
+
+	// @SAVEBREAK DELETE Toffer
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraCostModifier, SAVE_VALUE_ANY)
+	// SAVEBREAK@
+
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -26931,6 +26938,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -27584,7 +27592,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCannotMergeSplitCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraStrengthModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDamageModifier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, m_eGGExperienceEarnedTowardsType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargo);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSMCargoCapacity);
@@ -27859,6 +27866,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

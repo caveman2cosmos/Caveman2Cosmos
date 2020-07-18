@@ -21087,12 +21087,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeMilitaryUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitsPopulationPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeMilitaryUnitsPopulationPercent);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 
 		// @SAVEBREAK DELETE Toffer
-		int m_iExtraUnitCost = 0;
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraUnitCost);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iGoldPerUnit, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iExtraUnitCost, SAVE_VALUE_ANY);
 		// SAVEBREAK@
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumMilitaryUnits);
@@ -21300,8 +21299,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		// Calculate player culture as the sum of city culture if not present in save game
 		m_iCulture = -1;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
+
+		// @SAVEBREAK DELETE Toffer
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentCulturalAge, SAVE_VALUE_ANY);
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentAgeSegment, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 
 		//	Subdue and construct-by-unit stats
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumAnimalsSubdued);
@@ -22075,8 +22077,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSplittingUnit);
 
 		// @SAVEBREAK DELETE Toffer
-		int m_iNumUnitPercentCountForCostAdjustment = 0;
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumUnitPercentCountForCostAdjustment);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iNumUnitPercentCountForCostAdjustment, SAVE_VALUE_ANY);
 		// SAVEBREAK@
 
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
@@ -22102,6 +22103,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			doCountTotalCulture();
 		}
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalUnitUpkeep);
@@ -22224,13 +22227,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeMilitaryUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitsPopulationPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeMilitaryUnitsPopulationPercent);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
-
-		// @SAVEBREAK DELETE Toffer
-		int m_iExtraUnitCost = 0;
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraUnitCost);
-		// SAVEBREAK@
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumMilitaryUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHappyPerMilitaryUnit);
@@ -22813,11 +22809,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSecondMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSplittingUnit);
 
-		// @SAVEBREAK DELETE Toffer
-		int m_iNumUnitPercentCountForCostAdjustment = 0;
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumUnitPercentCountForCostAdjustment);
-		// SAVEBREAK@
-
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromBuildings);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
@@ -22838,6 +22829,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
+
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalUnitUpkeep);
