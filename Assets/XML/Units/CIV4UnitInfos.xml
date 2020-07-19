@@ -28419,7 +28419,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RAFT</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -28535,7 +28534,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CANOE</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -29573,7 +29571,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_CANOE</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -57096,7 +57093,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WAR_CANOE</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -57205,7 +57201,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CANOE</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -57318,7 +57313,6 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_RAFT</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>

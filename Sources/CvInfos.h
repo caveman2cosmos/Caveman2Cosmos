@@ -5460,7 +5460,6 @@ public:
 
 	//Post Load Functions
 	void setHighestCost();
-	int getHighestCostBuild() const;
 	int getHighestCost() const;
 
 protected:
@@ -5575,7 +5574,6 @@ protected:
 	std::vector<int> m_aiFeatureChangeTypes;
 
 	//Post Load Functions
-	int m_eHighestCostBuild;
 	int m_iHighestCost;
 	static ImprovementTypes m_ImprovementCity;
 	static ImprovementTypes m_ImprovementRuins;

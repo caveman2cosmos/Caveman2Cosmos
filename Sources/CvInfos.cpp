@@ -15876,7 +15876,6 @@ m_paImprovementBonus(NULL)
 ,m_bNotOnAnyBonus(false)
 ,m_bNational(false)
 ,m_bGlobal(false)
-,m_eHighestCostBuild(NO_BUILD)
 ,m_iHighestCost(0)
 ,m_iBonusChange(NO_BONUS)
 {
@@ -16431,13 +16430,7 @@ void CvImprovementInfo::setHighestCost()
 			}
 		}
 	}
-	m_eHighestCostBuild = (int)eHighestCostBuild;
 	m_iHighestCost = iHighestCost;
-}
-
-int CvImprovementInfo::getHighestCostBuild() const
-{
-	return m_eHighestCostBuild;
 }
 
 int CvImprovementInfo::getHighestCost() const
