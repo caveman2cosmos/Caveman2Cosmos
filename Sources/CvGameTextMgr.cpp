@@ -2346,12 +2346,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		//Setup Civil Displays
 		if (bAlt)
 		{
-			if (pUnit->getUpkeep100() > 0)
-			{
-				szTempBuffer = CvWString::format(L"%.2f", ((float)pUnit->getUpkeep100()) / 100.0);
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
-			}
 			if (pUnit->workRate(true) != 0)
 			{
 				szString.append(NEWLINE);
@@ -3070,6 +3064,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+			}
+			if (pUnit->getUpkeep100() > 0)
+			{
+				szTempBuffer = CvWString::format(L"%.2f", ((float)pUnit->getUpkeep100()) / 100.0);
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
 			}
 			//Current Cold Damage
 			if (pUnit->getColdDamage() > 0)
@@ -19632,6 +19632,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", kUnit.getMaxHP()));
 		}
 
+		if (kUnit.getBaseUpkeep() != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_BASE", kUnit.getBaseUpkeep()));
+		}
+
 		//Spy
 		if (kUnit.isCounterSpy())
 		{
@@ -20330,13 +20336,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iAdjHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
 			}
-		}
-
-		//Cost
-		if (kUnit.getBaseUpkeep() != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_BASE", kUnit.getBaseUpkeep()));
 		}
 
 		//Modified Production

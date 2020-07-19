@@ -3869,22 +3869,22 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP</Tag>
-		<English>[ICON_BULLET]Civilian Unit upkeep: %d1[ICON_GOLD]
-[SPACE][SPACE] * Upkeep: %d2[ICON_GOLD]
-[SPACE][SPACE] * Free: %d3[ICON_GOLD]
+		<English>[ICON_BULLET]Civilian Unit upkeep: %d1 [ICON_GOLD]
+[SPACE][SPACE] * Upkeep: %d2 [ICON_GOLD]
+[SPACE][SPACE] * Free: %d3 [ICON_GOLD]
 
 [ICON_BULLET]Military Unit upkeep: %d4[ICON_GOLD]
-[SPACE][SPACE] * Upkeep: %d5[ICON_GOLD]
-[SPACE][SPACE] * Free: %d6[ICON_GOLD]</English>
+[SPACE][SPACE] * Upkeep: %d5 [ICON_GOLD]
+[SPACE][SPACE] * Free: %d6 [ICON_GOLD]</English>
 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1[ICON_GOLD]</English>
+		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL</Tag>
-		<English>[NEWLINE]------------------------[NEWLINE] Total unit upkeep: %d1[ICON_GOLD]</English>
+		<English>[NEWLINE]------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>

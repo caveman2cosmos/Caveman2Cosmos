@@ -27,10 +27,6 @@
 	</TEXT>
 -->
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_UPKEEP_BASE</Tag>
-		<English>[ICON_BULLET]Base upkeep: %D1_Change[ICON_GOLD]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_AIR_RANGE</Tag>
 		<English>, %d1 Range</English>
 		<French>, portée %d1</French>
@@ -273,7 +269,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
-		<English>Upkeep: %s1 [ICON_GOLD]</English>
+		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP_BASE</Tag>
+		<English>[ICON_BULLET]Base upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>

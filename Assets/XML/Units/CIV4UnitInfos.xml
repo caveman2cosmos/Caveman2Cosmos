@@ -50,7 +50,6 @@ Base XP gained when defending
 				<UnitType>UNIT_TRIBE</UnitType>
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_TRIBALISM</ForceObsoleteTech>
-			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<UnitMeshGroups>
@@ -115,7 +114,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -181,7 +180,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -256,7 +255,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -332,7 +331,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -423,7 +422,7 @@ Base XP gained when defending
 				</And>
 			</TrainCondition>
 			<iCost>1280</iCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
+			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -892,7 +891,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iCost>90</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
 			<BonusProductionModifiers>
@@ -1225,7 +1224,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<iCost>120</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
 			<iAsset>1</iAsset>
@@ -1546,7 +1545,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
@@ -1882,7 +1881,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<iCost>150</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
@@ -2213,7 +2212,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
@@ -2538,7 +2537,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
@@ -2869,7 +2868,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3270,7 +3269,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>600</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>300</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3667,7 +3666,7 @@ Base XP gained when defending
 			</Builds>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iCost>650</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>350</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4075,7 +4074,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
 			<iCost>2800</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>475</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4475,7 +4474,7 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<iCost>3500</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
@@ -27927,7 +27926,7 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>80</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
 			<TerrainImpassableTypes>
@@ -28085,7 +28084,7 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iCost>180</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>200</iWorkRate>
 			<TerrainImpassableTypes>
@@ -28266,7 +28265,7 @@ Base XP gained when defending
 			</Builds>
 			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			<iCost>395</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iWorkRate>300</iWorkRate>
 			<iAsset>1</iAsset>
@@ -28401,7 +28400,7 @@ Base XP gained when defending
 			</Builds>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<iCost>1200</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
