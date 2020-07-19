@@ -225,7 +225,6 @@
 			<option id="Combat_COMBAT_WORKER" key="CombatCOMBAT_WORKER" type="string" default="DEFAULT"/>
 			<option id="Combat_COMMANDER" key="CombatCOMMANDER" type="string" default="DEFAULT"/>
 			<option id="Combat_CORVETTE" key="CombatCORVETTE" type="string" default="DEFAULT"/>
-			<option id="Combat_COSTLESS" key="CombatCOSTLESS" type="string" default="DEFAULT"/>
 			<option id="Combat_CRIMINAL" key="CombatCRIMINAL" type="string" default="DEFAULT"/>
 			<option id="Combat_CRUISER" key="CombatCRUISER" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_ABORIGINE" key="CombatCULTURE_ABORIGINE" type="string" default="DEFAULT"/>
