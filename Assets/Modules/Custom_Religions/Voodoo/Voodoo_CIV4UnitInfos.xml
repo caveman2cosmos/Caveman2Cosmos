@@ -87,6 +87,7 @@
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCost>310</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iAnimalCombat>25</iAnimalCombat>
@@ -107,7 +108,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<iExtraCost>3</iExtraCost>
 			<iAsset>7</iAsset>
 			<iPower>15</iPower>
 			<UnitMeshGroups>
@@ -377,6 +377,7 @@
 				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
 			<iAsset>3</iAsset>
@@ -429,6 +430,7 @@
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>

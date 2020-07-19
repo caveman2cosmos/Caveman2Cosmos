@@ -121,12 +121,12 @@
 	<ElementType name="iCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeExperience" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iBaseFreeMilitaryUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFreeMilitaryUnitsPopulationPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldPerUnit" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldPerMilitaryUnit" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilian" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitary" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepCivilianPopPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitUpkeepMilitaryPopPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCivilianUnitUpkeepMod" content="textOnly" dt:type="int"/>
+	<ElementType name="iMilitaryUnitUpkeepMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iLargestCityHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
@@ -852,12 +852,12 @@
 		<element type="iCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iStateReligionGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iFreeExperience" minOccurs="0"/>
-		<element type="iBaseFreeUnits" minOccurs="0"/>
-		<element type="iBaseFreeMilitaryUnits" minOccurs="0"/>
-		<element type="iFreeUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iFreeMilitaryUnitsPopulationPercent" minOccurs="0"/>
-		<element type="iGoldPerUnit" minOccurs="0"/>
-		<element type="iGoldPerMilitaryUnit" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilian" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitary" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepCivilianPopPercent" minOccurs="0"/>
+		<element type="iFreeUnitUpkeepMilitaryPopPercent" minOccurs="0"/>
+		<element type="iCivilianUnitUpkeepMod" minOccurs="0"/>
+		<element type="iMilitaryUnitUpkeepMod" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnit" minOccurs="0"/>
 		<element type="iLargestCityHappiness" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>

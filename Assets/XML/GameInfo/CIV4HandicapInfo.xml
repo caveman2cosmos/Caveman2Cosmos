@@ -7,8 +7,7 @@
 			<Help>TXT_KEY_HANDICAP_SETTLER_HELP</Help>
 			<iAdvancedStartPointsMod>160</iAdvancedStartPointsMod>
 			<iGold>32</iGold>
-			<iFreeUnits>36</iFreeUnits>
-			<iUnitCostPercent>40</iUnitCostPercent>
+			<iUnitUpkeepPercent>40</iUnitUpkeepPercent>
 			<iTrainPercent>40</iTrainPercent>
 			<iConstructPercent>40</iConstructPercent>
 			<iResearchPercent>40</iResearchPercent>
@@ -78,7 +77,7 @@
 			<iAIWorldCreatePercent>124</iAIWorldCreatePercent>
 			<iAIResearchPercent>112</iAIResearchPercent>
 			<iAICivicUpkeepPercent>130</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>130</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>130</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>130</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>130</iAIUnitUpgradePercent>
 			<iAIInflationPercent>130</iAIInflationPercent>
@@ -262,8 +261,7 @@
 			<Help>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Help>
 			<iAdvancedStartPointsMod>140</iAdvancedStartPointsMod>
 			<iGold>28</iGold>
-			<iFreeUnits>28</iFreeUnits>
-			<iUnitCostPercent>60</iUnitCostPercent>
+			<iUnitUpkeepPercent>60</iUnitUpkeepPercent>
 			<iTrainPercent>60</iTrainPercent>
 			<iConstructPercent>60</iConstructPercent>
 			<iResearchPercent>60</iResearchPercent>
@@ -339,7 +337,7 @@
 			<iAIWorldCreatePercent>116</iAIWorldCreatePercent>
 			<iAIResearchPercent>108</iAIResearchPercent>
 			<iAICivicUpkeepPercent>120</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>120</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>120</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>120</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>120</iAIUnitUpgradePercent>
 			<iAIInflationPercent>120</iAIInflationPercent>
@@ -556,8 +554,7 @@
 			<Help>TXT_KEY_HANDICAP_WARLORD_HELP</Help>
 			<iAdvancedStartPointsMod>120</iAdvancedStartPointsMod>
 			<iGold>24</iGold>
-			<iFreeUnits>21</iFreeUnits>
-			<iUnitCostPercent>80</iUnitCostPercent>
+			<iUnitUpkeepPercent>80</iUnitUpkeepPercent>
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iResearchPercent>80</iResearchPercent>
@@ -626,7 +623,7 @@
 			<iAIWorldCreatePercent>108</iAIWorldCreatePercent>
 			<iAIResearchPercent>104</iAIResearchPercent>
 			<iAICivicUpkeepPercent>110</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>110</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>110</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>110</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>110</iAIUnitUpgradePercent>
 			<iAIInflationPercent>110</iAIInflationPercent>
@@ -829,8 +826,7 @@
 			<Help>TXT_KEY_HANDICAP_NOBLE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>20</iGold>
-			<iFreeUnits>15</iFreeUnits>
-			<iUnitCostPercent>100</iUnitCostPercent>
+			<iUnitUpkeepPercent>100</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -896,7 +892,7 @@
 			<iAIWorldCreatePercent>100</iAIWorldCreatePercent>
 			<iAIResearchPercent>100</iAIResearchPercent>
 			<iAICivicUpkeepPercent>100</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>100</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>100</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>100</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>100</iAIUnitUpgradePercent>
 			<iAIInflationPercent>100</iAIInflationPercent>
@@ -1135,8 +1131,7 @@
 			<Help>TXT_KEY_HANDICAP_PRINCE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>16</iGold>
-			<iFreeUnits>10</iFreeUnits>
-			<iUnitCostPercent>120</iUnitCostPercent>
+			<iUnitUpkeepPercent>120</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1205,7 +1200,7 @@
 			<iAIWorldCreatePercent>92</iAIWorldCreatePercent>
 			<iAIResearchPercent>96</iAIResearchPercent>
 			<iAICivicUpkeepPercent>90</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>90</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>90</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>90</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>90</iAIUnitUpgradePercent>
 			<iAIInflationPercent>90</iAIInflationPercent>
@@ -1442,8 +1437,7 @@
 			<Help>TXT_KEY_HANDICAP_MONARCH_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>12</iGold>
-			<iFreeUnits>6</iFreeUnits>
-			<iUnitCostPercent>140</iUnitCostPercent>
+			<iUnitUpkeepPercent>140</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1519,7 +1513,7 @@
 			<iAIWorldCreatePercent>84</iAIWorldCreatePercent>
 			<iAIResearchPercent>92</iAIResearchPercent>
 			<iAICivicUpkeepPercent>80</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>80</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>80</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>80</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>80</iAIUnitUpgradePercent>
 			<iAIInflationPercent>80</iAIInflationPercent>
@@ -1771,8 +1765,7 @@
 			<Help>TXT_KEY_HANDICAP_EMPEROR_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>8</iGold>
-			<iFreeUnits>3</iFreeUnits>
-			<iUnitCostPercent>160</iUnitCostPercent>
+			<iUnitUpkeepPercent>160</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -1842,7 +1835,7 @@
 			<iAIWorldCreatePercent>76</iAIWorldCreatePercent>
 			<iAIResearchPercent>88</iAIResearchPercent>
 			<iAICivicUpkeepPercent>70</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>70</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>70</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>70</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>70</iAIUnitUpgradePercent>
 			<iAIInflationPercent>70</iAIInflationPercent>
@@ -2120,8 +2113,7 @@
 			<Help>TXT_KEY_HANDICAP_IMMORTAL_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>4</iGold>
-			<iFreeUnits>1</iFreeUnits>
-			<iUnitCostPercent>180</iUnitCostPercent>
+			<iUnitUpkeepPercent>180</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2197,7 +2189,7 @@
 			<iAIWorldCreatePercent>68</iAIWorldCreatePercent>
 			<iAIResearchPercent>84</iAIResearchPercent>
 			<iAICivicUpkeepPercent>60</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>60</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>60</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>60</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>60</iAIUnitUpgradePercent>
 			<iAIInflationPercent>60</iAIInflationPercent>
@@ -2474,7 +2466,7 @@
 			<Description>TXT_KEY_HANDICAP_DEITY</Description>
 			<Help>TXT_KEY_HANDICAP_DEITY_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
-			<iUnitCostPercent>200</iUnitCostPercent>
+			<iUnitUpkeepPercent>200</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2542,7 +2534,7 @@
 			<iAIWorldCreatePercent>60</iAIWorldCreatePercent>
 			<iAIResearchPercent>80</iAIResearchPercent>
 			<iAICivicUpkeepPercent>50</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>50</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>50</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>50</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>50</iAIUnitUpgradePercent>
 			<iAIInflationPercent>50</iAIInflationPercent>
@@ -2844,7 +2836,7 @@
 			<Description>TXT_KEY_HANDICAP_NIGHTMARE</Description>
 			<Help>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
-			<iUnitCostPercent>240</iUnitCostPercent>
+			<iUnitUpkeepPercent>240</iUnitUpkeepPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
@@ -2913,7 +2905,7 @@
 			<iAIWorldCreatePercent>44</iAIWorldCreatePercent>
 			<iAIResearchPercent>72</iAIResearchPercent>
 			<iAICivicUpkeepPercent>30</iAICivicUpkeepPercent>
-			<iAIUnitCostPercent>30</iAIUnitCostPercent>
+			<iAIUnitUpkeepPercent>30</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>30</iAIUnitSupplyPercent>
 			<iAIUnitUpgradePercent>30</iAIUnitUpgradePercent>
 			<iAIInflationPercent>30</iAIInflationPercent>

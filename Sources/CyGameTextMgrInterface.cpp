@@ -50,5 +50,6 @@ void CyGameTextMgrInterface()
 		.def("setVassalRevoltHelp", &CyGameTextMgr::setVassalRevoltHelp, "wstring (int iMaster, int iVassal)")
 		.def("getActiveDealsString", &CyGameTextMgr::getActiveDealsString, "wstring (int iThisPlayer, int iOtherPlayer)")
 		.def("getDealString", &CyGameTextMgr::getDealString, "wstring (CyDeal* pDeal, int iPlayerPerspective)")
+		.def("getFinanceUnitUpkeepString", &CyGameTextMgr::getFinanceUnitUpkeepString, "wstring (int iPlayer)")
 	;
 }

@@ -542,18 +542,16 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	CvWString szTempBuffer;
 	int iI;
 	bool bFirst;
-	bool bShift = gDLL->shiftKey();
-	bool bAlt = gDLL->altKey();
+	const bool bShift = gDLL->shiftKey();
+	const bool bCtrl = gDLL->ctrlKey();
+	const bool bAlt = gDLL->altKey();
 
 	//In this case, these views mean, in addition to debugging info displays from bShift and bAlt:
-	//bTBUnitView1 = (On unit base help: Prerequisite and Production Info, Here on Compiled Units: CombatInfo (Prereq and Production info should be standardly available, thus normal view)
-	//bTBUnitView2 = (On unit base help: Long List Infos - Civil Info - should be changed from long list to civil info on the base too)
-	//bTBUnitView3 = Combat Class Modifiers - will need to disable ones that don't have anything to display.
-	//bNormalView = default to show but replaced by any of the above - includes unit limit counts
-	bool bTBUnitView1 = gDLL->ctrlKey();
-	bool bTBUnitView2 = gDLL->altKey();
-	bool bTBUnitView3 = gDLL->shiftKey();
-	bool bNormalView = (!bTBUnitView1 && !bTBUnitView2 && !bTBUnitView3);
+	// bShift = Combat Class Modifiers - will need to disable ones that don't have anything to display.
+	// bCtrl = On unit base help: Prerequisite and Production Info, Here on Compiled Units: CombatInfo (Prereq and Production info should be standardly available, thus normal view)
+	// bAlt = On unit base help: Long List Infos - Civil Info - should be changed from long list to civil info on the base too)
+	// bNormalView = default to show but replaced by any of the above - includes unit limit counts
+	bool bNormalView = (!bCtrl && !bAlt && !bShift);
 
 	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), pUnit->getName().GetCString());
 	szString.append(szTempBuffer);
@@ -755,7 +753,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	//}
 	//TB SubCombat Mod begin
 
-	if (bTBUnitView3)
+	if (bShift)
 	{
 		bFirst = true;
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -828,7 +826,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 		}
 		//Setup Combat Value Displays
-		if (bTBUnitView1)
+		if (bCtrl)
 		{
 
 			if (pUnit->hasStealthDefense() && GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
@@ -2346,7 +2344,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		}
 
 		//Setup Civil Displays
-		if (bTBUnitView2)
+		if (bAlt)
 		{
 			if (pUnit->workRate(true) != 0)
 			{
@@ -3067,6 +3065,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
 			}
+			if (pUnit->getUpkeep100() > 0)
+			{
+				szTempBuffer = CvWString::format(L"%.2f", ((float)pUnit->getUpkeep100()) / 100.0);
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
+			}
 			//Current Cold Damage
 			if (pUnit->getColdDamage() > 0)
 			{
@@ -3629,19 +3633,19 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (!bShort && !bOneLine)
 	{
-		if (!bTBUnitView1)
+		if (!bCtrl)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_1").c_str());
 			szString.append(szTempBuffer);
 		}
-		if (!bTBUnitView2)
+		if (!bAlt)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_2").c_str());
 			szString.append(szTempBuffer);
 		}
-		if (!bTBUnitView3)
+		if (!bShift)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_3").c_str());
@@ -8881,10 +8885,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				int iUnitCost = kPlayer.calculateUnitCost();
+				const int iUnitUpkeep = kPlayer.getTotalUnitUpkeep();
 				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				int iUnitCostPercentage = (iUnitCost * 100) / std::max(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %d (%d / %d)", iUnitCostPercentage, iUnitCost, iTotalCosts));
+				int iUnitCostPercentage = (iUnitUpkeep * 100) / std::max(1, iTotalCosts);
+				szString.append(CvWString::format(L"\nUnit cost percentage: %d (%d / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -11174,47 +11178,42 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//MILITARY UPKEEP AND PRODUCTION
-		//	Free base units
-		if (GC.getTraitInfo(eTrait).getBaseFreeUnits() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_FREE_UNITS", GC.getTraitInfo(eTrait).getBaseFreeUnits()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian()));
 		}
 
 		//	Free units population percent
-		if (GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent()));
-		}
-
-		//	Gold cost per unit
-		if (GC.getTraitInfo(eTrait).getGoldPerUnit() != 0)
-		{
-			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_SUPPORT_COSTS", GC.getTraitInfo(eTrait).getGoldPerUnit(), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
 		}
 
 		//	Free military units base
-		if (GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_FREE_MILITARY_UNITS", GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary()));
 		}
 
 		//	Free Military units population percent
-		if (GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_MILITARY_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent()));
 		}
 
-		//	Gold cost per military unit
-		if (GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit() != 0)
+		if (GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit(), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN", GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod()));
+		}
+		if (GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod() != 0)
+		{
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY", GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod()));
 		}
 
 		//  Unit Upgrade Cost modifier
@@ -13464,7 +13463,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iArmorChange = 0;
 	int	iPunctureChange = 0;
 	int	iDamageModifierChange = 0;
-	int	iCostModifierChange = 0;
+	int iBaseUpkeepModifierChange = 0;
+	int iUpkeepMultiplierChange = 0;
 	int	iOverrunChange = 0;
 	int	iRepelChange = 0;
 	int	iFortRepelChange = 0;
@@ -13576,162 +13576,165 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	for (iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 	{
-		iGetControlPoints += GC.getPromotionInfo(linePromotionsOwned[iI]).getControlPoints();
-		iGetCommandRange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCommandRange();
-		iExcileChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getExcileChange();
-		iPassageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPassageChange();
-		iNoNonOwnedCityEntryChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoNonOwnedCityEntryChange();
-		iBarbCoExistChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBarbCoExistChange();
-		iBlendIntoCityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBlendIntoCityChange();
-		iUpgradeAnywhereChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUpgradeAnywhereChange();
-		iMovesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMovesChange();
-		iMoveDiscountChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMoveDiscountChange();
-		iAirRangeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAirRangeChange();
-		iInterceptChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInterceptChange();
-		iEvasionChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEvasionChange();
-		iWithdrawalChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getWithdrawalChange();
-		iAttackCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAttackCombatModifierChange();
-		iDefenseCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDefenseCombatModifierChange();
-		iCombatModifierPerSizeMore += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerSizeMoreChange();
-		iCombatModifierPerSizeLess += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerSizeLessChange();
-		iCombatModifierPerVolumeMore += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerVolumeMoreChange();
-		iCombatModifierPerVolumeLess += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerVolumeLessChange();
-		iPursuitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPursuitChange();
-		iEarlyWithdrawChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEarlyWithdrawChange();
-		iVSBarbsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getVSBarbsChange();
-		iReligiousCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getReligiousCombatModifierChange();
-		iArmorChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getArmorChange();
-		iPunctureChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPunctureChange();
-		iDamageModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDamageModifierChange();
-		iCostModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCostModifierChange();
-		iOverrunChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getOverrunChange();
-		iRepelChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRepelChange();
-		iFortRepelChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFortRepelChange();
-		iRepelRetriesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRepelRetriesChange();
-		iUnyieldingChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUnyieldingChange();
-		iKnockbackChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getKnockbackChange();
-		iKnockbackRetriesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getKnockbackRetriesChange();
-		iRoundStunProbChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRoundStunProbChange();
-		iPoisonProbabilityModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPoisonProbabilityModifierChange();
-		iStrAdjperRndChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperRndChange();
-		iStrAdjperAttChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperAttChange();
-		iStrAdjperDefChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperDefChange();
-		iWithdrawAdjperAttChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getWithdrawAdjperAttChange();
+		const CvPromotionInfo& promo = GC.getPromotionInfo(linePromotionsOwned[iI]);
+
+		iGetControlPoints += promo.getControlPoints();
+		iGetCommandRange += promo.getCommandRange();
+		iExcileChange += promo.getExcileChange();
+		iPassageChange += promo.getPassageChange();
+		iNoNonOwnedCityEntryChange += promo.getNoNonOwnedCityEntryChange();
+		iBarbCoExistChange += promo.getBarbCoExistChange();
+		iBlendIntoCityChange += promo.getBlendIntoCityChange();
+		iUpgradeAnywhereChange += promo.getUpgradeAnywhereChange();
+		iMovesChange += promo.getMovesChange();
+		iMoveDiscountChange += promo.getMoveDiscountChange();
+		iAirRangeChange += promo.getAirRangeChange();
+		iInterceptChange += promo.getInterceptChange();
+		iEvasionChange += promo.getEvasionChange();
+		iWithdrawalChange += promo.getWithdrawalChange();
+		iAttackCombatModifierChange += promo.getAttackCombatModifierChange();
+		iDefenseCombatModifierChange += promo.getDefenseCombatModifierChange();
+		iCombatModifierPerSizeMore += promo.getCombatModifierPerSizeMoreChange();
+		iCombatModifierPerSizeLess += promo.getCombatModifierPerSizeLessChange();
+		iCombatModifierPerVolumeMore += promo.getCombatModifierPerVolumeMoreChange();
+		iCombatModifierPerVolumeLess += promo.getCombatModifierPerVolumeLessChange();
+		iPursuitChange += promo.getPursuitChange();
+		iEarlyWithdrawChange += promo.getEarlyWithdrawChange();
+		iVSBarbsChange += promo.getVSBarbsChange();
+		iReligiousCombatModifierChange += promo.getReligiousCombatModifierChange();
+		iArmorChange += promo.getArmorChange();
+		iPunctureChange += promo.getPunctureChange();
+		iDamageModifierChange += promo.getDamageModifierChange();
+		iBaseUpkeepModifierChange += promo.getBaseUpkeepModifierChange();
+		iUpkeepMultiplierChange += promo.getUpkeepMultiplierChange();
+		iOverrunChange += promo.getOverrunChange();
+		iRepelChange += promo.getRepelChange();
+		iFortRepelChange += promo.getFortRepelChange();
+		iRepelRetriesChange += promo.getRepelRetriesChange();
+		iUnyieldingChange += promo.getUnyieldingChange();
+		iKnockbackChange += promo.getKnockbackChange();
+		iKnockbackRetriesChange += promo.getKnockbackRetriesChange();
+		iRoundStunProbChange += promo.getRoundStunProbChange();
+		iPoisonProbabilityModifierChange += promo.getPoisonProbabilityModifierChange();
+		iStrAdjperRndChange += promo.getStrAdjperRndChange();
+		iStrAdjperAttChange += promo.getStrAdjperAttChange();
+		iStrAdjperDefChange += promo.getStrAdjperDefChange();
+		iWithdrawAdjperAttChange += promo.getWithdrawAdjperAttChange();
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
-			iUnnerveChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUnnerveChange();
-			iEncloseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEncloseChange();
-			iLungeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getLungeChange();
-			iDynamicDefenseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDynamicDefenseChange();
+			iUnnerveChange += promo.getUnnerveChange();
+			iEncloseChange += promo.getEncloseChange();
+			iLungeChange += promo.getLungeChange();
+			iDynamicDefenseChange += promo.getDynamicDefenseChange();
 		}
-		iStrengthChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrengthChange();
-		iFortitudeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFortitudeChange();
-		iDamageperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getDamageperTurn();
-		iStrAdjperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperTurn();
-		iWeakenperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getWeakenperTurn();
+		iStrengthChange += promo.getStrengthChange();
+		iFortitudeChange += promo.getFortitudeChange();
+		iDamageperTurn += promo.getDamageperTurn();
+		iStrAdjperTurn += promo.getStrAdjperTurn();
+		iWeakenperTurn += promo.getWeakenperTurn();
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
-			iFrontSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFrontSupportPercentChange();
-			iShortRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getShortRangeSupportPercentChange();
-			iMediumRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMediumRangeSupportPercentChange();
-			iLongRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getLongRangeSupportPercentChange();
-			iFlankSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFlankSupportPercentChange();
+			iFrontSupportPercentChange += promo.getFrontSupportPercentChange();
+			iShortRangeSupportPercentChange += promo.getShortRangeSupportPercentChange();
+			iMediumRangeSupportPercentChange += promo.getMediumRangeSupportPercentChange();
+			iLongRangeSupportPercentChange += promo.getLongRangeSupportPercentChange();
+			iFlankSupportPercentChange += promo.getFlankSupportPercentChange();
 		}
-		iDodgeModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDodgeModifierChange();
-		iPrecisionModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPrecisionModifierChange();
-		iPowerShotsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotsChange();
-		iPowerShotCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotCombatModifierChange();
-		iPowerShotPunctureModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotPunctureModifierChange();
-		iPowerShotPrecisionModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotPrecisionModifierChange();
-		iPowerShotCriticalModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotCriticalModifierChange();
-		iCriticalModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCriticalModifierChange();
-		iEnduranceChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEnduranceChange();
-		iInsidiousnessChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInsidiousnessChange();
-		iInvestigationChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInvestigationChange();
-		iAssassinChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAssassinChange();
-		iStealthStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthStrikesChange();
-		iStealthCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthCombatModifierChange();
-		iStealthDefenseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthDefenseChange();
-		iDefenseOnlyChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDefenseOnlyChange();
+		iDodgeModifierChange += promo.getDodgeModifierChange();
+		iPrecisionModifierChange += promo.getPrecisionModifierChange();
+		iPowerShotsChange += promo.getPowerShotsChange();
+		iPowerShotCombatModifierChange += promo.getPowerShotCombatModifierChange();
+		iPowerShotPunctureModifierChange += promo.getPowerShotPunctureModifierChange();
+		iPowerShotPrecisionModifierChange += promo.getPowerShotPrecisionModifierChange();
+		iPowerShotCriticalModifierChange += promo.getPowerShotCriticalModifierChange();
+		iCriticalModifierChange += promo.getCriticalModifierChange();
+		iEnduranceChange += promo.getEnduranceChange();
+		iInsidiousnessChange += promo.getInsidiousnessChange();
+		iInvestigationChange += promo.getInvestigationChange();
+		iAssassinChange += promo.getAssassinChange();
+		iStealthStrikesChange += promo.getStealthStrikesChange();
+		iStealthCombatModifierChange += promo.getStealthCombatModifierChange();
+		iStealthDefenseChange += promo.getStealthDefenseChange();
+		iDefenseOnlyChange += promo.getDefenseOnlyChange();
 		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			iNoInvisibilityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoInvisibilityChange();
+			iNoInvisibilityChange += promo.getNoInvisibilityChange();
 		}
-		iTrapDamageMin += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapDamageMin();
-		iTrapDamageMax += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapDamageMax();
-		iTrapComplexity += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapComplexity();
-		iTrapNumTriggers += GC.getPromotionInfo(linePromotionsOwned[iI]).getNumTriggers();
-		iTrapTriggerBeforeAttackChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getTriggerBeforeAttackChange();
-		iVisibilityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getVisibilityChange();
-		iCaptureProbabilityModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCaptureProbabilityModifierChange();
-		iCaptureResistanceModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCaptureResistanceModifierChange();
-		iBreakdownChanceChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBreakdownChanceChange();
-		iBreakdownDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBreakdownDamageChange();
-		iTauntChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getTauntChange();
-		iMaxHPChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMaxHPChange();
-		iStrengthModifier += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrengthModifier();
-		iAirCombatLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAirCombatLimitChange();
-		iCelebrityHappy += GC.getPromotionInfo(linePromotionsOwned[iI]).getCelebrityHappy();
-		iCollateralDamageLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageLimitChange();
-		iCollateralDamageMaxUnitsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageMaxUnitsChange();
-		iCombatLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatLimitChange();
-		iExtraDropRange += GC.getPromotionInfo(linePromotionsOwned[iI]).getExtraDropRange();
-		iSurvivorChance += GC.getPromotionInfo(linePromotionsOwned[iI]).getSurvivorChance();
-		iSelfHealModifier += GC.getPromotionInfo(linePromotionsOwned[iI]).getSelfHealModifier();
-		iHealSupport += GC.getPromotionInfo(linePromotionsOwned[iI]).getNumHealSupport();
-		iVictoryAdjacentHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryAdjacentHeal();
-		iVictoryHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryHeal();
-		iVictoryStackHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryStackHeal();
-		iCargoChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCargoChange();
-		iCollateralDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageChange();
-		iBombardRateChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBombardRateChange();
+		iTrapDamageMin += promo.getTrapDamageMin();
+		iTrapDamageMax += promo.getTrapDamageMax();
+		iTrapComplexity += promo.getTrapComplexity();
+		iTrapNumTriggers += promo.getNumTriggers();
+		iTrapTriggerBeforeAttackChange += promo.getTriggerBeforeAttackChange();
+		iVisibilityChange += promo.getVisibilityChange();
+		iCaptureProbabilityModifierChange += promo.getCaptureProbabilityModifierChange();
+		iCaptureResistanceModifierChange += promo.getCaptureResistanceModifierChange();
+		iBreakdownChanceChange += promo.getBreakdownChanceChange();
+		iBreakdownDamageChange += promo.getBreakdownDamageChange();
+		iTauntChange += promo.getTauntChange();
+		iMaxHPChange += promo.getMaxHPChange();
+		iStrengthModifier += promo.getStrengthModifier();
+		iAirCombatLimitChange += promo.getAirCombatLimitChange();
+		iCelebrityHappy += promo.getCelebrityHappy();
+		iCollateralDamageLimitChange += promo.getCollateralDamageLimitChange();
+		iCollateralDamageMaxUnitsChange += promo.getCollateralDamageMaxUnitsChange();
+		iCombatLimitChange += promo.getCombatLimitChange();
+		iExtraDropRange += promo.getExtraDropRange();
+		iSurvivorChance += promo.getSurvivorChance();
+		iSelfHealModifier += promo.getSelfHealModifier();
+		iHealSupport += promo.getNumHealSupport();
+		iVictoryAdjacentHeal += promo.getVictoryAdjacentHeal();
+		iVictoryHeal += promo.getVictoryHeal();
+		iVictoryStackHeal += promo.getVictoryStackHeal();
+		iCargoChange += promo.getCargoChange();
+		iCollateralDamageChange += promo.getCollateralDamageChange();
+		iBombardRateChange += promo.getBombardRateChange();
 		if(GC.isDCM_RANGE_BOMBARD())
 		{
-			iDCMBombRangeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDCMBombRangeChange();
-			iDCMBombAccuracyChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDCMBombAccuracyChange();
-			iRBombardDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageChange();
-			iRBombardDamageLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageLimitChange();
-			iRBombardDamageMaxUnitsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageMaxUnitsChange();
+			iDCMBombRangeChange += promo.getDCMBombRangeChange();
+			iDCMBombAccuracyChange += promo.getDCMBombAccuracyChange();
+			iRBombardDamageChange += promo.getRBombardDamageChange();
+			iRBombardDamageLimitChange += promo.getRBombardDamageLimitChange();
+			iRBombardDamageMaxUnitsChange += promo.getRBombardDamageMaxUnitsChange();
 		}
-		iFirstStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFirstStrikesChange();
-		iChanceFirstStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getChanceFirstStrikesChange();
-		iEnemyHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEnemyHealChange();
-		iNeutralHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNeutralHealChange();
-		iFriendlyHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFriendlyHealChange();
-		iSameTileHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getSameTileHealChange();
-		iAdjacentTileHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAdjacentTileHealChange();
-		iCombatPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatPercent();
-		iCityAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCityAttackPercent();
-		iCityDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCityDefensePercent();
-		iHillsAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsAttackPercent();
-		iHillsDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsDefensePercent();
-		iWorkRate += GC.getPromotionInfo(linePromotionsOwned[iI]).getWorkRatePercent();
-		iHillsWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsWorkPercent();
-		iHillsWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsWorkModifierChange();
-		iPeaksWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getPeaksWorkModifierChange();
-		iRevoltProtection += GC.getPromotionInfo(linePromotionsOwned[iI]).getRevoltProtection();
-		iCollateralDamageProtection += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageProtection();
-		iPillageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPillageChange();
-		iUpgradeDiscount += GC.getPromotionInfo(linePromotionsOwned[iI]).getUpgradeDiscount();
-		iExperiencePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getExperiencePercent();
-		iKamikazePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getKamikazePercent();
+		iFirstStrikesChange += promo.getFirstStrikesChange();
+		iChanceFirstStrikesChange += promo.getChanceFirstStrikesChange();
+		iEnemyHealChange += promo.getEnemyHealChange();
+		iNeutralHealChange += promo.getNeutralHealChange();
+		iFriendlyHealChange += promo.getFriendlyHealChange();
+		iSameTileHealChange += promo.getSameTileHealChange();
+		iAdjacentTileHealChange += promo.getAdjacentTileHealChange();
+		iCombatPercent += promo.getCombatPercent();
+		iCityAttackPercent += promo.getCityAttackPercent();
+		iCityDefensePercent += promo.getCityDefensePercent();
+		iHillsAttackPercent += promo.getHillsAttackPercent();
+		iHillsDefensePercent += promo.getHillsDefensePercent();
+		iWorkRate += promo.getWorkRatePercent();
+		iHillsWorkPercent += promo.getHillsWorkPercent();
+		iHillsWorkPercent += promo.getHillsWorkModifierChange();
+		iPeaksWorkPercent += promo.getPeaksWorkModifierChange();
+		iRevoltProtection += promo.getRevoltProtection();
+		iCollateralDamageProtection += promo.getCollateralDamageProtection();
+		iPillageChange += promo.getPillageChange();
+		iUpgradeDiscount += promo.getUpgradeDiscount();
+		iExperiencePercent += promo.getExperiencePercent();
+		iKamikazePercent += promo.getKamikazePercent();
 		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
-			if (GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine() != NO_PROMOTIONLINE)
+			if (promo.getPromotionLine() != NO_PROMOTIONLINE)
 			{
-				iOvercomeProbability += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getOvercomeProbability();
-				iOvercomeProbability += (GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorsenedOvercomeIncrementModifier() * (GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() - 1));
-				iOvercomeAdjperTurn += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getOvercomeAdjperTurn();
-				iCommunicability += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getCommunicability();
-				iCommunicability += ((GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() - 1) * GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorsenedCommunicabilityIncrementModifier());
-				iWorseningProbability += ((GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() -1) * GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorseningProbabilityIncrementModifier());
-				iToleranceBuildup += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getToleranceBuildup();
-				iToleranceDecay += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getToleranceDecay();
+				iOvercomeProbability += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeProbability();
+				iOvercomeProbability += (GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedOvercomeIncrementModifier() * (promo.getLinePriority() - 1));
+				iOvercomeAdjperTurn += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeAdjperTurn();
+				iCommunicability += GC.getPromotionLineInfo(promo.getPromotionLine()).getCommunicability();
+				iCommunicability += ((promo.getLinePriority() - 1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedCommunicabilityIncrementModifier());
+				iWorseningProbability += ((promo.getLinePriority() -1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorseningProbabilityIncrementModifier());
+				iToleranceBuildup += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceBuildup();
+				iToleranceDecay += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceDecay();
 			}
 		}
-		iHiddenNationality += GC.getPromotionInfo(linePromotionsOwned[iI]).getHiddenNationalityChange();
-		iIsAnimalIgnoresBordersChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAnimalIgnoresBordersChange();
-		iNoDefensiveBonusChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoDefensiveBonusChange();
+		iHiddenNationality += promo.getHiddenNationalityChange();
+		iIsAnimalIgnoresBordersChange += promo.getAnimalIgnoresBordersChange();
+		iNoDefensiveBonusChange += promo.getNoDefensiveBonusChange();
 	}
 
 	if (iGetControlPoints > 0)
@@ -13937,10 +13940,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", iDamageModifierChange));
 	}
-	if (iCostModifierChange != 0)
+	if (iBaseUpkeepModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COST_MODIFIER_TEXT", iCostModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", iBaseUpkeepModifierChange));
+	}
+	if (iUpkeepMultiplierChange != 0)
+	{
+		szBuffer.append(pcNewline);
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MULTIPLIER", iUpkeepMultiplierChange));
 	}
 	if (iOverrunChange != 0)
 	{
@@ -15920,15 +15928,17 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//	Free units population percent
-	if ((GC.getCivicInfo(eCivic).getBaseFreeUnits() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent() != 0))
+	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0))
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUnits = (GC.getCivicInfo(eCivic).getBaseFreeUnits() + ((GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent()) / 100));
-			if (iFreeUnits > 0)
+			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()
+				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
+				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() / 100;
+			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_FREE_UNITS", iFreeUnits));
+				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", iFreeUpkeep));
 			}
 		}
 		else
@@ -15939,15 +15949,17 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//	Free military units population percent
-	if ((GC.getCivicInfo(eCivic).getBaseFreeMilitaryUnits() != 0) || (GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent() != 0))
+	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0))
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUnits = (GC.getCivicInfo(eCivic).getBaseFreeMilitaryUnits() + ((GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent()) / 100));
-			if (iFreeUnits > 0)
+			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()
+				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
+				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() / 100;
+			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_FREE_MILITARY_UNITS", iFreeUnits));
+				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", iFreeUpkeep));
 			}
 		}
 		else
@@ -17202,18 +17214,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-	//	Gold cost per unit
-	if (GC.getCivicInfo(eCivic).getGoldPerUnit() != 0)
+	if (GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod() != 0)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN", GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod()));
 	}
-
-	//	Gold cost per military unit
-	if (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() != 0)
+	if (GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod() != 0)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY", GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod()));
 	}
 
 	bFirst = true;
@@ -19623,6 +19632,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", kUnit.getMaxHP()));
 		}
 
+		if (kUnit.getBaseUpkeep() != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_BASE", kUnit.getBaseUpkeep()));
+		}
+
 		//Spy
 		if (kUnit.isCounterSpy())
 		{
@@ -20321,18 +20336,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iAdjHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
 			}
-		}
-
-		//Cost
-		if (kUnit.getCostModifier() != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_COST_MODIFIER", kUnit.getCostModifier()));
-		}
-		if (kUnit.getExtraCost() != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_EXTRA_COST", kUnit.getExtraCost()));
 		}
 
 		//Modified Production
@@ -29883,7 +29886,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", info.getDamageModifierChange()));
 	}
 
-	if (info.getCostModifierChange() != 0)
+	if (info.getBaseUpkeepModifierChange() != 0)
 	{
 		if (bFirstDisplay)
 		{
@@ -29893,7 +29896,20 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COST_MODIFIER_TEXT", info.getCostModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getBaseUpkeepModifierChange()));
+	}
+
+	if (info.getUpkeepMultiplierChange() != 0)
+	{
+		if (bFirstDisplay)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
+			szBuffer.append(info.getDescription());
+			bFirstDisplay = false;
+		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MULTIPLIER", info.getUpkeepMultiplierChange()));
 	}
 
 	if (info.getOverrunChange() != 0)
@@ -33061,7 +33077,7 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 }
 
-void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
+void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
@@ -33069,34 +33085,28 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	}
 	CvPlayer& player = GET_PLAYER(ePlayer);
 
-	int iFreeUnits = 0;
-	int iFreeMilitaryUnits = 0;
-	int iUnits = player.getNumUnits();
-	int iMilitaryUnits = player.getNumMilitaryUnits();
-	int iPaidUnits = iUnits;
-	int iPaidMilitaryUnits = iMilitaryUnits;
-	int iMilitaryCost = 0;
-	int iBaseUnitCost = 0;
-	int iExtraCost = 0;
-	int iCost = player.calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
-	int iHandicap = iCost-iBaseUnitCost-iMilitaryCost-iExtraCost;
+	int iUnitUpkeepCivilian = player.getUnitUpkeepCivilian();
+	int iUnitUpkeepMilitary = player.getUnitUpkeepMilitary();
 
-	szBuffer.append(NEWLINE);
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST", iPaidUnits, iFreeUnits, iBaseUnitCost));
+	int iFreeCivilianUpkeep = player.getFreeUnitUpkeepCivilian();
+	int iFreeMilitaryUpkeep = player.getFreeUnitUpkeepMilitary();
 
-	if (iPaidMilitaryUnits != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_2", iPaidMilitaryUnits, iFreeMilitaryUnits, iMilitaryCost));
-	}
-	if (iExtraCost != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_3", iExtraCost));
-	}
+	int iUnitUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	int iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+
+	int iTotal = player.getTotalUnitUpkeep();
+	int iHandicap = iTotal - iUnitUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP",
+		iUnitUpkeepCivilianNet, iUnitUpkeepCivilian, iFreeCivilianUpkeep,
+		iUnitUpkeepMilitaryNet, iUnitUpkeepMilitary, iFreeMilitaryUpkeep));
+
 	if (iHandicap != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_HANDICAP_COST", iHandicap));
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_4", iCost));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL", iTotal));
 }
 
 void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)

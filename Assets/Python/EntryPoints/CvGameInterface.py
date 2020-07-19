@@ -21,9 +21,6 @@ def isVictory(argsList):
 def isPlayerResearch(argsList):
 	return GameUtils.isPlayerResearch(argsList)
 
-def getExtraCost(argsList):
-	return GameUtils.getExtraCost(argsList)
-
 def createBarbarianCities():
 	return GameUtils.createBarbarianCities()
 
