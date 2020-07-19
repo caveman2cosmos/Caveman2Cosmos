@@ -33078,7 +33078,7 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 }
 
-void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
+void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
@@ -33098,10 +33098,9 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	int iTotal = player.getTotalUnitUpkeep();
 	int iHandicap = iTotal - iUnitUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 
-	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP",
-		iUnitUpkeepCivilian, iFreeCivilianUpkeep, iUnitUpkeepCivilianNet,
-		iUnitUpkeepMilitary, iFreeMilitaryUpkeep, iUnitUpkeepMilitaryNet));
+		iUnitUpkeepCivilianNet, iUnitUpkeepCivilian, iFreeCivilianUpkeep,
+		iUnitUpkeepMilitaryNet, iUnitUpkeepMilitary, iFreeMilitaryUpkeep));
 
 	if (iHandicap != 0)
 	{

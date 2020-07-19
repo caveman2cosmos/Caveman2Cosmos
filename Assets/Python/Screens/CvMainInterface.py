@@ -148,6 +148,8 @@ class CvMainInterface:
 			FONT_CENTER_JUSTIFY	= 1<<2
 			FONT_RIGHT_JUSTIFY	= 1<<1
 			FONT_LEFT_JUSTIFY	= 1<<0
+			// Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
+			//			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
 			'''
 			# Cache Icons
 			self.iconStrength			= u'%c' % GAME.getSymbolID(FontSymbols.STRENGTH_CHAR)
