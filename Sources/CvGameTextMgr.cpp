@@ -36351,96 +36351,97 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_HELP_BASE", szBaseProfit.GetCString()));
 
 			int iModifier = 100;
-			int iNewMod;
-
+			int iValue;
+			int iTradeRouteModifier = 0;
+			// getTradeRouteModifier()
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
+				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0 && !pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
 				{
-					//Team Project (5)
-					if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
+					iValue = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
+					if (0 != iValue)
 					{
-						iNewMod = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
-						if (0 != iNewMod)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewMod));
-							iModifier += iNewMod;
-						}
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iValue));
+						iTradeRouteModifier += iValue;
 					}
 				}
 			}
+			FAssert(iTradeRouteModifier == pCity->getTradeRouteModifier()); // Toffer - This one triggers - 21.07.20
+			// I can only speculate that replaced/obsolete buildings are not being processed in and out correctly during recalc.
 
-			iNewMod = pCity->getPopulationTradeModifier();
-			if (0 != iNewMod)
+			iModifier += iTradeRouteModifier;
+
+			iValue = pCity->getPopulationTradeModifier();
+			if (0 != iValue)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_POPULATION", iNewMod));
-				iModifier += iNewMod;
+				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_POPULATION", iValue));
+				iModifier += iValue;
 			}
 
 			if (pCity->isConnectedToCapital())
 			{
-				iNewMod = GC.getDefineINT("CAPITAL_TRADE_MODIFIER");
-				if (0 != iNewMod)
+				iValue = GC.getDefineINT("CAPITAL_TRADE_MODIFIER");
+				if (0 != iValue)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_CAPITAL", iNewMod));
-					iModifier += iNewMod;
+					szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_CAPITAL", iValue));
+					iModifier += iValue;
 				}
 			}
 
-			iNewMod = GET_TEAM(pCity->getTeam()).getTradeModifier();
-			if (0 != iNewMod)
+			iValue = GET_TEAM(pCity->getTeam()).getTradeModifier();
+			if (0 != iValue)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TECH", iNewMod));
-				iModifier += iNewMod;
+				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TECH", iValue));
+				iModifier += iValue;
 			}
 
 			if (NULL != pOtherCity)
 			{
 				if (pCity->area() != pOtherCity->area())
 				{
-					iNewMod = GC.getDefineINT("OVERSEAS_TRADE_MODIFIER");
-					if (0 != iNewMod)
+					iValue = GC.getDefineINT("OVERSEAS_TRADE_MODIFIER");
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_OVERSEAS", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_OVERSEAS", iValue));
+						iModifier += iValue;
 					}
 				}
 
 				if (pCity->getTeam() != pOtherCity->getTeam())
 				{
-					iNewMod = pCity->getForeignTradeRouteModifier();
+					iValue = pCity->getForeignTradeRouteModifier();
 
-					iNewMod += GET_TEAM(pCity->getTeam()).getForeignTradeModifier();
-					iNewMod += GET_PLAYER(pCity->getOwner()).getForeignTradeRouteModifier();
+					iValue += GET_TEAM(pCity->getTeam()).getForeignTradeModifier();
+					iValue += GET_PLAYER(pCity->getOwner()).getForeignTradeRouteModifier();
 					for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 					{
 						if (GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI) == GET_PLAYER(pOtherCity->getOwner()).getCivics((CivicOptionTypes)iI))
 						{
 							if (GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI) != NO_CIVIC)
 							{
-								iNewMod += GC.getCivicInfo(GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
+								iValue += GC.getCivicInfo(GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
 							}
 						}
 					}
 
-					if (0 != iNewMod)
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_FOREIGN", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_FOREIGN", iValue));
+						iModifier += iValue;
 					}
 
-					iNewMod = pCity->getPeaceTradeModifier(pOtherCity->getTeam());
-					if (0 != iNewMod)
+					iValue = pCity->getPeaceTradeModifier(pOtherCity->getTeam());
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_PEACE", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_PEACE", iValue));
+						iModifier += iValue;
 					}
 				}
 			}
@@ -36448,7 +36449,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			FAssert(pCity->totalTradeModifier(pOtherCity) == iModifier);
 
 			iProfit *= iModifier;
-// BUG - Fractional Trade Routes - start
+
 #ifdef _MOD_FRACTRADE
 			iProfit /= 100;
 			FAssert(iProfit == pCity->calculateTradeProfitTimes100(pOtherCity));
@@ -36456,12 +36457,10 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			iProfit /= 10000;
 			FAssert(iProfit == pCity->calculateTradeProfit(pOtherCity));
 #endif
-// BUG - Fractional Trade Routes - end
 
 			szBuffer.append(SEPARATOR);
-
 			szBuffer.append(NEWLINE);
-// BUG - Fractional Trade Routes - start
+
 #ifdef _MOD_FRACTRADE
 			CvWString szProfit;
 			szProfit.Format(L"%d.%02d", iProfit / 100, iProfit % 100);
@@ -36469,7 +36468,6 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 #else
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TOTAL", iProfit));
 #endif
-// BUG - Fractional Trade Routes - end
 		}
 	}
 }

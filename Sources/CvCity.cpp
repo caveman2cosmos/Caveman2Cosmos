@@ -11203,7 +11203,7 @@ void CvCity::changeTradeRouteModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
+		m_iTradeRouteModifier += iChange;
 
 		updateTradeRoutes();
 	}
