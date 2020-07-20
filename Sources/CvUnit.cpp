@@ -23608,7 +23608,6 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		}
 		if (bAdding && kUnitCombat.getGroupBase() > -10)
 		{
-			FAssertMsg(false, CvString::format("unit base group: %d - combat group: %d", getGroupBaseTotal(), kUnitCombat.getGroupBase()).c_str());
 			calcUpkeepMultiplierSM(kUnitCombat.getGroupBase() - getGroupBaseTotal());
 		}
 	}
