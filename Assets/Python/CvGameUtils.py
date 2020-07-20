@@ -49,10 +49,6 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		return True
 
-	def getExtraCost(self, argsList):
-		ePlayer = argsList[0]
-		return 0
-
 	def createBarbarianCities(self):
 		return False
 

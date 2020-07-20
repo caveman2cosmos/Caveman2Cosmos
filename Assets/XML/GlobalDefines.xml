@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Tim McCracken (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Global Defines -->
+<!--
+	BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP
+	BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP
+		By default each population provides 1 gold of free unit upkeep.
+		These values modify how much free upkeep gold each pop gives.
+		A value of 100 means each pop provides 2 gold in free upkeep.
+		a value of -100 means each pop provides 0.5 gold in free upkeep.
+		Civics and traits modifies this factor further.
+		Currently they are set to very low values (-200 and -100) as most units still only cost 1 gold in upkeep.
+		The plan is to have increasing unit upkeep values as unit technology develops,
+		and when that plan is fulfilled these values will likely be set higher too.
+ -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<DefineName>CIV4_VERSION</DefineName>
@@ -645,24 +652,20 @@
 		<iDefineIntVal>14</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_UNITS</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
+		<iDefineIntVal>28</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_BASE_FREE_MILITARY_UNITS</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY</DefineName>
+		<iDefineIntVal>16</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_FREE_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP</DefineName>
+		<iDefineIntVal>-150</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_GOLD_PER_UNIT</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP</DefineName>
+		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_OUTSIDE_UNITS</DefineName>

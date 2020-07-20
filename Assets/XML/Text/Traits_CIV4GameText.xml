@@ -953,13 +953,6 @@
 		<Polish>Cdz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_MILITARY_UNITS_POPULATION</Tag>
-		<English>[ICON_BULLET]Free Military Units equal to %D1_Num%% of total Population</English>
-		<French>[ICON_BULLET]Les Unités militaires gratuites représentent %D1_Num%% de la population totale</French>
-		<Italian>[ICON_BULLET]Le unità militari gratuite equivalgono al %D1_Num%% della popolazione totale</Italian>
-		<Polish>[ICON_BULLET]Darmowe jednostki wojskowe w ilości %D1_Num%% całej populacji</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_PROMOTION_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
 		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
@@ -986,11 +979,12 @@
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Wielki Cud który wybudujesz.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_UNITS_POPULATION</Tag>
-		<English>[ICON_BULLET]Free Units equal to %D1_Num%% of total Population</English>
-		<French>[ICON_BULLET]Les Unités gratuites représentent jusqu'à %D1_Num%% de la population totale</French>
-		<Italian>[ICON_BULLET]Le unità gratuite equivalgono al %D1_Num%% della popolazione totale</Italian>
-		<Polish>[ICON_BULLET]Darmowe jednostki w ilości %D1_Num%% całej populacji</Polish>
+		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP</Tag>
+		<English>[ICON_BULLET]Free civilian unit upkeep per 100 population: %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
+		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>

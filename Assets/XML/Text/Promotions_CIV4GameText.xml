@@ -6100,13 +6100,6 @@
 		<French>Corruption IX</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COST_MODIFIER_TEXT</Tag>
-		<English>[ICON_BULLET]Unit Support Cost: %D1_Change%</English>
-		<French>[ICON_BULLET]%D1_Change% Modif. du coût d'entretien</French>
-		<German>[ICON_BULLET]laufende Kosten: %D1_Change%</German>
-		<Polish>[ICON_BULLET]%D1_Change% Modyfikator Kosztów Utrzymania</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVER</Tag>
 		<English>Cover I</English>
 		<French>

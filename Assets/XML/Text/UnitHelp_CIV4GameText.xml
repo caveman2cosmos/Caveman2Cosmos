@@ -268,6 +268,14 @@
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
+		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP_BASE</Tag>
+		<English>[ICON_BULLET]Base upkeep: %d1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>
 		<English>, XP: (%s1/%d2)</English>
 		<German>, Erfahrungspunkte: (%s1/%d2)</German>

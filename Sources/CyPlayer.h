@@ -160,14 +160,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	int calculateUnitCost();
+	unsigned long getTotalUnitUpkeep();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();
 	int calculateInflatedCosts();
-
-	int getFreeUnitCountdown();
-	void setFreeUnitCountdown( int iValue );
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -310,14 +307,7 @@ public:
 
 	int getNumNukeUnits();
 	int getNumOutsideUnits();
-	int getBaseFreeUnits();
-	int getBaseFreeMilitaryUnits();
 
-	int getFreeUnitsPopulationPercent();
-	int getFreeMilitaryUnitsPopulationPercent();
-	int getGoldPerUnit();
-	int getGoldPerMilitaryUnit();
-	int getExtraUnitCost();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();
