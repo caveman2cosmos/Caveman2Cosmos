@@ -32383,7 +32383,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	iTemp = kPromotion.getBaseUpkeepModifierChange() + kPromotion.getUpkeepMultiplierChange();
+	iTemp = kPromotion.getUpkeepModifier();
 	if (iTemp != 0)
 	{
 		if ((eUnitAI == UNITAI_HEALER) ||
@@ -37285,7 +37285,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	iValue -= kUnitCombat.getBaseUpkeepModifierChange() + kUnitCombat.getUpkeepMultiplierChange();
+	iValue -= kUnitCombat.getUpkeepModifier();
 
 	iTemp = kUnitCombat.getRBombardDamageBase();
 	if (iTemp !=0)

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <!--
-	iBaseUpkeepModifierChange - Applied directly on the unit's base upkeep value.
-	iExtraUpkeep - Not implemented yet - Its value is added to the upkeep after iBaseUpkeepModifier is applied.
-	iUpkeepMultiplierChange - Applied last to the upkeep before reaching final upkeep
+	iUpkeepModifier - Applied directly on the unit's base upkeep value.
+	iExtraUpkeep - Not implemented yet - Its value is added to the upkeep before iBaseUpkeepModifier is applied.
 -->
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>
@@ -6683,7 +6682,6 @@
 			<iExperiencePercent>140</iExperiencePercent>
 			<iSelfHealModifier>18</iSelfHealModifier>
 			<iGroupBase>1</iGroupBase>
-			<iUpkeepMultiplierChange>-406</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6701,7 +6699,6 @@
 			<iExperiencePercent>90</iExperiencePercent>
 			<iSelfHealModifier>12</iSelfHealModifier>
 			<iGroupBase>2</iGroupBase>
-			<iUpkeepMultiplierChange>-237</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6719,7 +6716,6 @@
 			<iExperiencePercent>50</iExperiencePercent>
 			<iSelfHealModifier>7</iSelfHealModifier>
 			<iGroupBase>3</iGroupBase>
-			<iUpkeepMultiplierChange>-125</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6737,7 +6733,6 @@
 			<iExperiencePercent>20</iExperiencePercent>
 			<iSelfHealModifier>3</iSelfHealModifier>
 			<iGroupBase>4</iGroupBase>
-			<iUpkeepMultiplierChange>-50</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6770,7 +6765,6 @@
 			<iExperiencePercent>-20</iExperiencePercent>
 			<iSelfHealModifier>-3</iSelfHealModifier>
 			<iGroupBase>6</iGroupBase>
-			<iUpkeepMultiplierChange>50</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6792,7 +6786,6 @@
 			<iExperiencePercent>-50</iExperiencePercent>
 			<iSelfHealModifier>-7</iSelfHealModifier>
 			<iGroupBase>7</iGroupBase>
-			<iUpkeepMultiplierChange>125</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6814,7 +6807,6 @@
 			<iExperiencePercent>-90</iExperiencePercent>
 			<iSelfHealModifier>-12</iSelfHealModifier>
 			<iGroupBase>8</iGroupBase>
-			<iUpkeepMultiplierChange>237</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6835,7 +6827,6 @@
 			<Description>TXT_KEY_UNITCOMBAT_GROUP_MULTITUDES</Description>
 			<iExperiencePercent>-140</iExperiencePercent>
 			<iSelfHealModifier>-18</iSelfHealModifier>
-			<iUpkeepMultiplierChange>406</iUpkeepMultiplierChange>
 			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
@@ -6858,7 +6849,6 @@
 			<iExperiencePercent>-200</iExperiencePercent>
 			<iSelfHealModifier>-25</iSelfHealModifier>
 			<iGroupBase>10</iGroupBase>
-			<iUpkeepMultiplierChange>659</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6880,7 +6870,6 @@
 			<iExperiencePercent>-270</iExperiencePercent>
 			<iSelfHealModifier>-33</iSelfHealModifier>
 			<iGroupBase>11</iGroupBase>
-			<iUpkeepMultiplierChange>1039</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6902,7 +6891,6 @@
 			<iExperiencePercent>-350</iExperiencePercent>
 			<iSelfHealModifier>-42</iSelfHealModifier>
 			<iGroupBase>12</iGroupBase>
-			<iUpkeepMultiplierChange>1608</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6924,7 +6912,6 @@
 			<iExperiencePercent>-440</iExperiencePercent>
 			<iSelfHealModifier>-52</iSelfHealModifier>
 			<iGroupBase>13</iGroupBase>
-			<iUpkeepMultiplierChange>2463</iUpkeepMultiplierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7194,7 +7181,7 @@
 			</OnGameOptions>
 			<iExperiencePercent>150</iExperiencePercent>
 			<iQualityBase>0</iQualityBase>
-			<iBaseUpkeepModifierChange>-200</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>-200</iUpkeepModifier>
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -7202,7 +7189,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_PATHETIC</Description>
 			<iExperiencePercent>120</iExperiencePercent>
 			<iQualityBase>1</iQualityBase>
-			<iBaseUpkeepModifierChange>-140</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>-140</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7219,7 +7206,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INFERIOR</Description>
 			<iExperiencePercent>90</iExperiencePercent>
 			<iQualityBase>2</iQualityBase>
-			<iBaseUpkeepModifierChange>-90</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>-90</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7242,7 +7229,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_POOR</Description>
 			<iExperiencePercent>60</iExperiencePercent>
 			<iQualityBase>3</iQualityBase>
-			<iBaseUpkeepModifierChange>-50</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>-50</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7265,7 +7252,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_MEDIOCRE</Description>
 			<iExperiencePercent>30</iExperiencePercent>
 			<iQualityBase>4</iQualityBase>
-			<iBaseUpkeepModifierChange>-20</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7309,7 +7296,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_SUPERIOR</Description>
 			<iExperiencePercent>-30</iExperiencePercent>
 			<iQualityBase>6</iQualityBase>
-			<iBaseUpkeepModifierChange>20</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7332,7 +7319,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EXCEPTIONAL</Description>
 			<iExperiencePercent>-60</iExperiencePercent>
 			<iQualityBase>7</iQualityBase>
-			<iBaseUpkeepModifierChange>50</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>50</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7355,7 +7342,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_ELITE</Description>
 			<iExperiencePercent>-90</iExperiencePercent>
 			<iQualityBase>8</iQualityBase>
-			<iBaseUpkeepModifierChange>90</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>90</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7378,7 +7365,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EPIC</Description>
 			<iExperiencePercent>-120</iExperiencePercent>
 			<iQualityBase>9</iQualityBase>
-			<iBaseUpkeepModifierChange>140</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>140</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7404,7 +7391,7 @@
 			</OnGameOptions>
 			<iExperiencePercent>-150</iExperiencePercent>
 			<iQualityBase>10</iQualityBase>
-			<iBaseUpkeepModifierChange>200</iBaseUpkeepModifierChange>
+			<iUpkeepModifier>200</iUpkeepModifier>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>

@@ -684,8 +684,9 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraMaxHP = 0;
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
-	m_iBaseUpkeepModifier = 0;
-	m_iUpkeepMultiplier = 0;
+	m_iExtraUpkeep = 0;
+	m_iUpkeepModifier = 0;
+	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
 	m_iExtraPowerValue = 0;
 	m_iExtraAssetValue = 0;
@@ -19741,32 +19742,59 @@ void CvUnit::changeExtraDamageModifier(int iChange)
 }
 
 // Toffer - Upkeep
-void CvUnit::changeBaseUpkeepModifier(const int iChange)
+void CvUnit::changeExtraUpkeep(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBaseUpkeepModifier += iChange;
+		m_iExtraUpkeep += iChange;
 		calcUpkeep100();
 	}
 }
 
-void CvUnit::changeUpkeepMultiplier(const int iChange)
+int CvUnit::getExtraUpkeep() const
+{
+	return m_iExtraUpkeep;
+}
+
+void CvUnit::changeUpkeepModifier(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iUpkeepMultiplier += iChange;
+		m_iUpkeepModifier += iChange;
 		calcUpkeep100();
 	}
 }
 
-int CvUnit::getBaseUpkeepModifier() const
+int CvUnit::getUpkeepModifier() const
 {
-	return m_iBaseUpkeepModifier;
+	return m_iUpkeepModifier;
 }
 
-int CvUnit::getUpkeepMultiplier() const
+int CvUnit::getUpkeepMultiplierSM() const
 {
-	return m_iUpkeepMultiplier;
+	return m_iUpkeepMultiplierSM;
+}
+
+void CvUnit::calcUpkeepMultiplierSM(const int iGroupOffset)
+{
+	m_iUpkeepMultiplierSM = 0;
+
+	if (iGroupOffset > 0)
+	{
+		for (int iI = 0; iI < iGroupOffset; iI++)
+		{
+			m_iUpkeepMultiplierSM = (100 + m_iUpkeepMultiplierSM) * 150 / 100 - 100;
+		}
+	}
+	else if (iGroupOffset < 0)
+	{
+		for (int iI = 0; iI < -iGroupOffset; iI++)
+		{
+			m_iUpkeepMultiplierSM = (100 + m_iUpkeepMultiplierSM) * 150 / 100 - 100;
+		}
+		m_iUpkeepMultiplierSM = -m_iUpkeepMultiplierSM;
+	}
+	calcUpkeep100();
 }
 
 void CvUnit::calcUpkeep100()
@@ -19774,26 +19802,24 @@ void CvUnit::calcUpkeep100()
 	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iCalc > 0)
 	{
-		if (m_iBaseUpkeepModifier > 0)
-		{
-			iCalc = iCalc * (100 + m_iBaseUpkeepModifier) / 100;
-		}
-		else if (m_iBaseUpkeepModifier < 0)
-		{
-			iCalc = iCalc * 100 / (100 - m_iBaseUpkeepModifier);
-		}
-		// We may want a simple addition to the base here at some point,
-		// an iExtraUpkeep in promotion/unitcombat infos, e.g. Equipment related.
-		// Hence the naming for "BaseUpkeepModifier" and "UpkeepMultiplier"
-		// Both are atm technically BaseUpkeepModifiers.
+		iCalc += m_iExtraUpkeep * 100;
 
-		if (m_iUpkeepMultiplier > 0)
+		if (m_iUpkeepModifier > 0)
 		{
-			iCalc = iCalc * (100 + m_iUpkeepMultiplier) / 100;
+			iCalc = iCalc * (100 + m_iUpkeepModifier) / 100;
 		}
-		else if (m_iUpkeepMultiplier < 0)
+		else if (m_iUpkeepModifier < 0)
 		{
-			iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplier);
+			iCalc = iCalc * 100 / (100 - m_iUpkeepModifier);
+		}
+
+		if (m_iUpkeepMultiplierSM > 0)
+		{
+			iCalc = iCalc * (100 + m_iUpkeepMultiplierSM) / 100;
+		}
+		else if (m_iUpkeepMultiplierSM < 0)
+		{
+			iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplierSM);
 		}
 
 		const int iOldUpkeep = m_iUpkeep100;
@@ -23580,6 +23606,11 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 				setGroupBaseTotal(kUnitCombat.getGroupBase());
 			}
 		}
+		if (bAdding && kUnitCombat.getGroupBase() > -10)
+		{
+			FAssertMsg(false, CvString::format("unit base group: %d - combat group: %d", getGroupBaseTotal(), kUnitCombat.getGroupBase()).c_str());
+			calcUpkeepMultiplierSM(kUnitCombat.getGroupBase() - getGroupBaseTotal());
+		}
 	}
 
 	changeExtraVisibilityRange(kUnitCombat.getVisibilityChange() * iChange);//no merge/split diff
@@ -24013,8 +24044,8 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		defineReligion();
 	}
 
-	changeBaseUpkeepModifier(kUnitCombat.getBaseUpkeepModifierChange() * iChange);
-	changeUpkeepMultiplier(kUnitCombat.getUpkeepMultiplierChange() * iChange);
+	changeExtraUpkeep(kUnitCombat.getExtraUpkeep() * iChange);
+	changeUpkeepModifier(kUnitCombat.getUpkeepModifier() * iChange);
 
 	establishBuildups();
 }
@@ -24253,8 +24284,8 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraPuncture(kPromotion.getPunctureChange() * iChange);
 	changeExtraDamageModifier(kPromotion.getDamageModifierChange() * iChange);
 
-	changeBaseUpkeepModifier(kPromotion.getBaseUpkeepModifierChange() * iChange);
-	changeUpkeepMultiplier(kPromotion.getUpkeepMultiplierChange() * iChange);
+	changeExtraUpkeep(kPromotion.getExtraUpkeep() * iChange);
+	changeUpkeepModifier(kPromotion.getUpkeepModifier() * iChange);
 
 	changeExtraOverrun(kPromotion.getOverrunChange() * iChange);
 	changeExtraRepel(kPromotion.getRepelChange() * iChange);
@@ -26937,8 +26968,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsReligionLocked);
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iBaseUpkeepModifier);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepModifier);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -27864,8 +27896,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, m_eReligionType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsReligionLocked);
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iBaseUpkeepModifier);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);

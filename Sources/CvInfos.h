@@ -847,8 +847,8 @@ public:
 	int getGroupChange() const;
 	int getLevelPrereq() const;
 	int getDamageModifierChange() const;
-	int getBaseUpkeepModifierChange() const;
-	int getUpkeepMultiplierChange() const;
+	int getUpkeepModifier() const;
+	int getExtraUpkeep() const;
 	int getRBombardDamageChange() const;
 	int getRBombardDamageLimitChange() const;
 	int getRBombardDamageMaxUnitsChange() const;
@@ -1370,8 +1370,8 @@ protected:
 	int m_iLevelPrereq;
 	int m_iDamageModifierChange;
 
-	int m_iBaseUpkeepModifierChange;
-	int m_iUpkeepMultiplierChange;
+	int m_iUpkeepModifier;
+	int m_iExtraUpkeep;
 
 	int m_iRBombardDamageChange;
 	int m_iRBombardDamageLimitChange;
@@ -10543,8 +10543,8 @@ public:
 	int getGroupBase() const;
 	int getSizeBase() const;
 	int getDamageModifierChange() const;
-	int getBaseUpkeepModifierChange() const;
-	int getUpkeepMultiplierChange() const;
+	int getUpkeepModifier() const;
+	int getExtraUpkeep() const;
 	int getRBombardDamageBase() const;
 	int getRBombardDamageLimitBase() const;
 	int getRBombardDamageMaxUnitsBase() const;
@@ -10902,8 +10902,8 @@ protected:
 	int m_iSizeBase;
 	int m_iDamageModifierChange;
 
-	int m_iBaseUpkeepModifierChange;
-	int m_iUpkeepMultiplierChange;
+	int m_iUpkeepModifier;
+	int m_iExtraUpkeep;
 
 	int m_iRBombardDamageBase;
 	int m_iRBombardDamageLimitBase;

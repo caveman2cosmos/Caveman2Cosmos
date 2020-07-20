@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
+		<English>[ICON_BULLET]Extra unit upkeep: %d1</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
-		<English>[ICON_BULLET]%D1 Free Civilian Unit Upkeep</English>
+		<English>[ICON_BULLET]%d1 Free Civilian Unit Upkeep</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
-		<English>[ICON_BULLET]%D1 Free Military Unit Upkeep</English>
+		<English>[ICON_BULLET]%d1 Free Military Unit Upkeep</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
-		<English>[ICON_BULLET]%D1%% civilian unit upkeep cost</English>
+		<English>[ICON_BULLET]%d1%% civilian unit upkeep cost</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY</Tag>
-		<English>[ICON_BULLET]%D1%% military unit upkeep cost</English>
+		<English>[ICON_BULLET]%d1%% military unit upkeep cost</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
-		<English>[ICON_BULLET]Base unit upkeep change: %D1%%</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MULTIPLIER</Tag>
-		<English>[ICON_BULLET]Unit upkeep multiplier: %D1%%</English>
+		<English>[ICON_BULLET]Base unit upkeep change: %s1%%</English>
 	</TEXT>
 </Civ4GameText>

@@ -1370,11 +1370,13 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	void changeBaseUpkeepModifier(const int iChange);
-	void changeUpkeepMultiplier(const int iChange);
+	void changeExtraUpkeep(const int iChange);
+	void changeUpkeepModifier(const int iChange);
+	void calcUpkeepMultiplierSM(const int iGroupOffset);
 	void calcUpkeep100();
-	int getBaseUpkeepModifier() const;
-	int getUpkeepMultiplier() const;
+	int getExtraUpkeep() const;
+	int getUpkeepModifier() const;
+	int getUpkeepMultiplierSM() const;
 	int getUpkeep100() const;
 
 	int getExtraOverrun (bool bIgnoreCommanders = false) const;
@@ -2144,8 +2146,9 @@ protected:
 	int m_iExtraDamageModifier;
 	int m_iExtraCostModifier;
 
-	int m_iBaseUpkeepModifier;
-	int m_iUpkeepMultiplier;
+	int m_iExtraUpkeep;
+	int m_iUpkeepModifier;
+	int m_iUpkeepMultiplierSM;
 	int m_iUpkeep100;
 
 	int m_iExtraPowerValue;

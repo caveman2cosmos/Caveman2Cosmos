@@ -13463,8 +13463,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iArmorChange = 0;
 	int	iPunctureChange = 0;
 	int	iDamageModifierChange = 0;
-	int iBaseUpkeepModifierChange = 0;
-	int iUpkeepMultiplierChange = 0;
+	int iUpkeepModifier = 0;
+	int iExtraUpkeep = 0;
 	int	iOverrunChange = 0;
 	int	iRepelChange = 0;
 	int	iFortRepelChange = 0;
@@ -13605,8 +13605,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iArmorChange += promo.getArmorChange();
 		iPunctureChange += promo.getPunctureChange();
 		iDamageModifierChange += promo.getDamageModifierChange();
-		iBaseUpkeepModifierChange += promo.getBaseUpkeepModifierChange();
-		iUpkeepMultiplierChange += promo.getUpkeepMultiplierChange();
+		iUpkeepModifier += promo.getUpkeepModifier();
+		iExtraUpkeep += promo.getExtraUpkeep();
 		iOverrunChange += promo.getOverrunChange();
 		iRepelChange += promo.getRepelChange();
 		iFortRepelChange += promo.getFortRepelChange();
@@ -13940,15 +13940,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", iDamageModifierChange));
 	}
-	if (iBaseUpkeepModifierChange != 0)
+	if (iUpkeepModifier != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", iBaseUpkeepModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", iUpkeepModifier));
 	}
-	if (iUpkeepMultiplierChange != 0)
+	if (iExtraUpkeep != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MULTIPLIER", iUpkeepMultiplierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", iExtraUpkeep));
 	}
 	if (iOverrunChange != 0)
 	{
@@ -29886,7 +29886,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", info.getDamageModifierChange()));
 	}
 
-	if (info.getBaseUpkeepModifierChange() != 0)
+	if (info.getUpkeepModifier() != 0)
 	{
 		if (bFirstDisplay)
 		{
@@ -29896,10 +29896,10 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getBaseUpkeepModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getUpkeepModifier()));
 	}
 
-	if (info.getUpkeepMultiplierChange() != 0)
+	if (info.getExtraUpkeep() != 0)
 	{
 		if (bFirstDisplay)
 		{
@@ -29909,7 +29909,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MULTIPLIER", info.getUpkeepMultiplierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", info.getExtraUpkeep()));
 	}
 
 	if (info.getOverrunChange() != 0)
