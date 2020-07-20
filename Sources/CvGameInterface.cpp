@@ -730,8 +730,7 @@ void CvGame::updateTestEndTurn()
 					else
 					{
 						bool	bDisplayEndTurn = GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_WAIT_END_TURN) || !(gDLL->getInterfaceIFace()->isHasMovedUnit());
-						FAssert(!GET_PLAYER(getActivePlayer()).getTurnHadUIInteraction());
-						FAssert(getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false));
+
 						if (GET_PLAYER(getActivePlayer()).isHuman() &&
 							!GET_PLAYER(getActivePlayer()).getTurnHadUIInteraction() &&
 							getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
