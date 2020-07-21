@@ -2254,6 +2254,8 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_LION_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_MYTH</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_STORY</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_STORIES</BuildingType>
@@ -10021,6 +10023,8 @@
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
