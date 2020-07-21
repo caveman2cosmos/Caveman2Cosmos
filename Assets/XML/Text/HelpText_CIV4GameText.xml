@@ -22,6 +22,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
-		<English>[ICON_BULLET]Base unit upkeep change: %s1%%</English>
+		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
 	</TEXT>
 </Civ4GameText>

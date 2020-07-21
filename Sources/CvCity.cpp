@@ -11203,7 +11203,7 @@ void CvCity::changeTradeRouteModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
+		m_iTradeRouteModifier += iChange;
 
 		updateTradeRoutes();
 	}
@@ -24384,14 +24384,13 @@ void CvCity::recalculateModifiers()
 		}
 	}
 
-	bool bProcessValid = false;
-	bool bObsolete = false;
 	for (m_recalcBuilding = 0; m_recalcBuilding < GC.getNumBuildingInfos(); m_recalcBuilding++)
 	{
-		bProcessValid = false;
 		if (getNumRealBuilding((BuildingTypes)m_recalcBuilding) > 0)
 		{
-			bProcessValid = true;
+			bool bObsolete = false;
+			bool bProcessValid = true;
+
 			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo((BuildingTypes)m_recalcBuilding).getObsoleteTech()))
 			{
 				bObsolete = true;
