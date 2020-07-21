@@ -808,13 +808,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
-		<English> from game speed)</English>
-		<French> de la vitesse du jeu)</French>
+		<English>from game speed)</English>
+		<French>de la vitesse du jeu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
-		<English> from staring era)</English>
-		<French> de l'ère)</French>
+		<English>from staring era)</English>
+		<French>de l'ère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
@@ -1056,8 +1056,8 @@
 	</TEXT>
 <TEXT>
 		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
-		<English> turns + feature build time)</English>
-		<French> tours + temps de constr. de l'aménagement)</French>
+		<English>turns + feature build time)</English>
+		<French>tours + temps de constr. de l'aménagement)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>
@@ -1073,7 +1073,7 @@
 		<English>[NEWLINE][ICON_BULLET]Collateral or Flanking damage hits maximum of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Les Dommages Collatéraux ou de Flanc atteignent un maximum de[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Maximaler Schaden durch Kollateral oder Flanke:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]I danni collaterali e da accerchiamento danno un massimo di[SPACE]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Danni collaterali e da accerchiamento fino a un massimo di[SPACE]</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Los daños colaterales o de flanqueo golpean a un máximo de[SPACE]</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Zabezpieczanie lub Oskrzydlanie zadaje maksimum obrażeń[SPACE]</Polish>
 	</TEXT>
@@ -1106,9 +1106,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
-		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
-		<French>"Qui sommes-nous, qui est chacun de nous, sinon une combinaison d'expériences, d'informations, de livres que nous avons lus, de choses imaginées ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, une série de styles, et tout peut être constamment mélangé et réorganisé de toutes les manières imaginables" - Italo Calvino (1923-1985).</French>
-		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
+		<English>«Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.» - Italo Calvino, [I]Six Memos For the Next Millennium[/I]</English>
+		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, [I]Leçons américaines : Six propositions pour le prochain millénaire[/I]</French>
+		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, [I]Sechs Vorschläge für das nächste Jahrtausend[/I]</German>
+		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinatoria d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, [I]Lezioni americane. Sei proposte per il prossimo millennio[/I]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WITH_IMPROVEMENT_AND_ROUTE</Tag>

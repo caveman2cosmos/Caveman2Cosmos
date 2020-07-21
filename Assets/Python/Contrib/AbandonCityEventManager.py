@@ -186,13 +186,9 @@ class CityDemolish:
 			Y = CyCity.getY()
 
 			iCulturePercent = CyCity.calculateCulturePercent(iPlayer)
-			print "iCulturePercent = %d" % iCulturePercent
 			iPopulation = CyCity.getPopulation()
 			iOwnCulturePop = iPopulation * iCulturePercent / 100
 			iForeignPop = iPopulation - iOwnCulturePop
-			print "iPopulation = %d" % iPopulation
-			print "iOwnCulturePop = %d" % iOwnCulturePop
-			print "iForeignPop = %d" % iForeignPop
 
 			# Judge
 			UNIT = GC.getInfoTypeForString("UNIT_JUDGE")
@@ -263,7 +259,7 @@ class CityDemolish:
 
 			# Captives
 			if iForeignPop > 0:
-				if iPopulation > 1 or GAME.getSorenRandNum(2, "50%"):
+				if iPopulation > 1 or GC.getGame().getSorenRandNum(2, "50%"):
 					iCaptives = (iForeignPop + 1) / 2
 				else: iCaptives = iForeignPop / 2
 

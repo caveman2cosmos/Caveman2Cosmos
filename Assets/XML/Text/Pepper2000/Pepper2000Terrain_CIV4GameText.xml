@@ -167,7 +167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SMALL_MOON_PEDIA</Tag>
-		<English>That's no space station.  It's a moon!  Specifically, it is a small moon, such as the smaller moons of Jupiter or Saturn.</English>
+		<English>That's no space station. It's a moon! Specifically, it is a small moon, such as the smaller moons of Jupiter or Saturn.</English>
 		<French>Ce n'est pas une station spatiale. C'est une lune ! Plus précisément, c'est une petite lune, comme les petites lunes de Jupiter ou de Saturne.</French>
 	</TEXT>
 	<TEXT>
@@ -447,7 +447,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEBULA_PEDIA</Tag>
-		<English>Science fiction often portrays a nebula as a thick cloud, but it's not really like that.  It's more... nebulous.</English>
+		<English>Science fiction often portrays a nebula as a thick cloud, but it's not really like that. It's more... nebulous.</English>
 		<French>La science-fiction dépeint souvent une nébuleuse comme un nuage épais, mais ce n'est pas vraiment comme ça. C'est plus ... nébuleux.</French>
 	</TEXT>
 	<TEXT>
@@ -597,7 +597,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE_PEDIA</Tag>
-		<English>The space between stars, up to about 100 light years from the Sun.  This tile doesn't contain stars, but there are rogue planets and brown dwarfs.</English>
+		<English>The space between stars, up to about 100 light years from the Sun. This tile doesn't contain stars, but there are rogue planets and brown dwarfs.</English>
 		<French>L'espace entre les étoiles, jusqu'à environ 100 années-lumière du Soleil. Cette tuile ne contient pas d'étoiles, mais il y a des planètes solitaires et des naines brunes.</French>
 	</TEXT>
 	<TEXT>
@@ -627,7 +627,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_URANUS_PEDIA</Tag>
-		<English>An ice giant, such as Uranus.  No lame astronomy joke here.</English>
+		<English>An ice giant, such as Uranus. No lame astronomy joke here.</English>
 		<French>Un géant de glace, comme Uranus. Pas de blague d'astronomie boiteuse ici.</French>
 	</TEXT>
 	<TEXT>
@@ -657,7 +657,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_VIRGO_SUPERCLUSTER_PEDIA</Tag>
-		<English>The Virgo Supercluster.  Now it's getting ridiculous.</English>
+		<English>The Virgo Supercluster. Now it's getting ridiculous.</English>
 		<French>Les Superamas de la Vierge. Maintenant ça devient ridicule.</French>
 	</TEXT>
 </Civ4GameText>

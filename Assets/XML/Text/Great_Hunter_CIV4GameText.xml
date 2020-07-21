@@ -32,7 +32,7 @@
 		<English>Master Sea Hunter</English>
 		<French>Maître Chasseur des Mers</French>
 		<German>Meisterjäger des Meeres</German>
-		<Polish>Wybitny Morski Łowca </Polish>
+		<Polish>Wybitny Morski Łowca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MASTER_HUNTER1</Tag>
@@ -100,13 +100,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Tag>
 		<English>Only Great Hunters may become Master Hunters. Master Hunters are special versions of the normal hunter. They are much more likely to subdue animals so that the food and hammer returns from them are higher.</English>
-		<German>Nur Große Jäger können Meisterjäger werden. Meisterjäger sind spezielle Varianten des normalen Jägers. Es ist wesentlich wahrscheinlicher das sie Tiere bändigen, so das mehr Nahrung und Produktion von ihnen erzeugt wird </German>
+		<German>Nur Große Jäger können Meisterjäger werden. Meisterjäger sind spezielle Varianten des normalen Jägers. Es ist wesentlich wahrscheinlicher das sie Tiere bändigen, so das mehr Nahrung und Produktion von ihnen erzeugt wird.</German>
 		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalą wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Tag>
 		<English>Master Hunters are better hunters.</English>
-		<French>Les Maîtres-Chasseurs obtiennent ce titre car ils font partie des meilleurs</French>
+		<French>Les Maîtres-Chasseurs obtiennent ce titre car ils font partie des meilleurs.</French>
 		<German>Meisterjäger sind bessere Jäger.</German>
 		<Polish>Wybitni Łowcy są lepiej wyszkolonymi rodzajami łowców.</Polish>
 	</TEXT>

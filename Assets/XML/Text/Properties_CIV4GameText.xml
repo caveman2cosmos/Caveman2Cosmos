@@ -9,8 +9,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_ACTIVE</Tag>
-		<English>with </English>
-		<French>avec: </French>
+		<English>with</English>
+		<French>avec:</French>
 		<Spanish>con</Spanish>
 	</TEXT>
 	<TEXT>
@@ -290,9 +290,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_GLOBAL_SOURCED</Tag>
 		<English>General property sources (population, decay): %D1 / Turn</English>
-		<French>Sources générales (population,...): %D1 / Tour</French>
+		<French>Sources générales (population...): %D1 / Tour</French>
 		<German>Einfluss von anderen Quellen (Bevölkerung etc.): %D1 pro Runde</German>
-		<Spanish>Incremento general (población, decaída,...): %D1/turno</Spanish>
+		<Spanish>Incremento general (población, decaída...): %D1/turno</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_LUXURY</Tag>

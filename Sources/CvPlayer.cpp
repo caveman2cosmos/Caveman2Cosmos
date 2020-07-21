@@ -221,32 +221,20 @@ m_cachedBonusCount(NULL)
 	m_paiNationalDomainFreeExperience = NULL;
 	m_paiNationalDomainProductionModifier = NULL;
 	m_paiNationalTechResearchModifier = NULL;
-	//Team Project (6)
+
 	m_paiEraAdvanceFreeSpecialistCount = NULL;
 	m_paiGoldenAgeOnBirthOfGreatPersonCount = NULL;
 	m_paiGreatGeneralPointsForType = NULL;
-	//Team Project (7)
+
 	m_aiGoldenAgeYield = new int[NUM_YIELD_TYPES];
 	m_aiGoldenAgeCommerce = new int[NUM_COMMERCE_TYPES];
-	//Team Project (8)
+
 	m_paiUnitCombatFreeExperience = NULL;
 	//TB Traits end
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        09/01/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_bDisableHuman = false;
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_bPopBad = false;
-	m_iFreeUnitCountdown = 0;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -260,32 +248,12 @@ m_cachedBonusCount(NULL)
 	CvWString m_szCivDesc;
 	CvWString m_szCivShort;
 	CvWString m_szCivAdj;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM start - new diplomacy option
 	setDoNotBotherStatus(NO_PLAYER);
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 	// Free Tech Popup Fix
 	m_bChoosingFreeTech = false;
 	m_bChoosingReligion = false;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
 
@@ -405,11 +373,10 @@ void CvPlayer::init(PlayerTypes eID)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
-		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
-		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
-		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
-		changeGoldPerUnit(GC.getINITIAL_GOLD_PER_UNIT());
+		changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
+		changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
+		changeFreeUnitUpkeepCivilianPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP());
+		changeFreeUnitUpkeepMilitaryPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP());
 		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
 		changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
 		changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
@@ -569,11 +536,10 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 				setPersonalityType(eBestPersonality);
 			}
 		}
-		changeBaseFreeUnits(GC.getINITIAL_BASE_FREE_UNITS());
-		changeBaseFreeMilitaryUnits(GC.getINITIAL_BASE_FREE_MILITARY_UNITS());
-		changeFreeUnitsPopulationPercent(GC.getINITIAL_FREE_UNITS_POPULATION_PERCENT());
-		changeFreeMilitaryUnitsPopulationPercent(GC.getINITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT());
-		changeGoldPerUnit(GC.getINITIAL_GOLD_PER_UNIT());
+		changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
+		changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
+		changeFreeUnitUpkeepCivilianPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP());
+		changeFreeUnitUpkeepMilitaryPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP());
 		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
 		changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
 		changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
@@ -806,7 +772,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-	// < M.A.D. Nukes Start >
 	m_iMADDeterrent = 0;
 	m_iMADIncoming = 0;
 	m_iMADOutgoing = 0;
@@ -815,7 +780,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	{
 		m_bMADTrigger[iI] = false;
 	}
-	// < M.A.D. Nukes End   >
 
 	m_iStartingX = INVALID_PLOT_COORD;
 	m_iStartingY = INVALID_PLOT_COORD;
@@ -853,11 +817,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iCityDefenseModifier = 0;
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+
 	m_iNonStateReligionCommerceCount = 0;
 	m_iUpgradeAnywhereCount = 0;
 	m_iRevIdxLocal = 0;
@@ -873,20 +833,21 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCityLimit = 0;
 	m_iCityOverLimitUnhappy = 0;
 	m_iForeignUnhappyPercent = 0;
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	m_iNumNukeUnits = 0;
 	m_iNumOutsideUnits = 0;
-	m_iBaseFreeUnits = 0;
-	m_iBaseFreeMilitaryUnits = 0;
-	m_iFreeUnitsPopulationPercent = 0;
-	m_iFreeMilitaryUnitsPopulationPercent = 0;
-	m_iGoldPerUnit = 0;
-	m_iGoldPerMilitaryUnit = 0;
-	m_iExtraUnitCost = 0;
+	m_iBaseFreeUnitUpkeepCivilian = 0;
+	m_iBaseFreeUnitUpkeepMilitary = 0;
+	m_iFreeUnitUpkeepCivilianPopPercent = 0;
+	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
+	m_iCivilianUnitUpkeepMod = 0;
+	m_iMilitaryUnitUpkeepMod = 0;
+
+	m_iUnitUpkeepMilitary100 = 0;
+	m_iUnitUpkeepCivilian100 = 0;
+	m_iTotalUnitUpkeep = 0;
+
 	m_iNumMilitaryUnits = 0;
-	m_iNumUnitPercentCountForCostAdjustment = 0;
 	m_iHappyPerMilitaryUnit = 0;
 	m_iMilitaryFoodProductionCount = 0;
 	m_iConscriptCount = 0;
@@ -896,11 +857,11 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iNoUnhealthyPopulationCount = 0;
 	m_iExpInBorderModifier = 0;
 	m_iBuildingOnlyHealthyCount = 0;
-	//DPII < Maintenance Modifier >
+
 	m_iMaintenanceModifier = 0;
 	m_iCoastalDistanceMaintenanceModifier = 0;
 	m_iConnectedCityMaintenanceModifier = 0;
-	//DPII < Maintenance Modifier >
+
 	m_iDistanceMaintenanceModifier = 0;
 	m_iNumCitiesMaintenanceModifier = 0;
 	m_iCorporationMaintenanceModifier = 0;
@@ -976,7 +937,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFixedBordersCount = 0;
 	m_iFreedomFighterCount = 0;
 	m_iExtraFreedomFighters = 0;
-	//Team Project (6)
+
 	m_iNationalCityStartCulture = 0;
 	m_iNationalAirUnitCapacity = 0;
 	m_iCapitalXPModifier = 0;
@@ -993,12 +954,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFreeSpecialistperNationalWonderCount = 0;
 	m_iFreeSpecialistperTeamProjectCount = 0;
 	m_iExtraGoodyCount = 0;
-	//Team Project (5)
+
 	m_iAllReligionsActiveCount = 0;
-	//Team Project (3)
+
 	m_iExtraNationalCaptureProbabilityModifier = 0;
 	m_iExtraNationalCaptureResistanceModifier = 0;
-	//Team Project (6)
+
 	m_iExtraStateReligionSpreadModifier = 0;
 	m_iExtraNonStateReligionSpreadModifier = 0;
 	m_iNationalGreatPeopleRate = 0;
@@ -1019,35 +980,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_civicSwitchHistory.clear();
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 	// Free Tech Popup Fix
 	m_bChoosingFreeTech = false;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        09/01/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	m_bDisableHuman = false;
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        END                                                  */
-/************************************************************************************************/
+
 	m_bPopBad = false;
-
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	m_iFreeUnitCountdown = 0;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -1060,9 +998,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_szCivDesc.clear();
 	m_szCivShort.clear();
 	m_szCivAdj.clear();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	m_eID = eID;
 	updateTeamType();
 	updateHuman();
@@ -3512,10 +3448,7 @@ void CvPlayer::disbandUnit(bool bAnnounce)
 							break;
 						}
 
-						if (pLoopUnit->getUnitInfo().getExtraCost() > 0)
-						{
-							iValue /= (pLoopUnit->getUnitInfo().getExtraCost() + 1);
-						}
+						iValue /= pLoopUnit->getUnitInfo().getBaseUpkeep() + 1;
 
 						if (iValue < iBestValue)
 						{
@@ -4195,10 +4128,10 @@ void CvPlayer::recalculateUnitCounts()
 		m_paiUnitCount[iI] = 0;
 	}
 
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* pLoopUnit, units())
 	{
 		m_paiUnitCount[pLoopUnit->getUnitType()]++;
-		changeUnitPercentCountForCostAdjustment(pLoopUnit->getExtraCostModifier());
+		pLoopUnit->calcUpkeep100();
 	}
 }
 
@@ -4279,14 +4212,6 @@ void CvPlayer::doTurn()
 	{
 		changeConversionTimer(-1);
 	}
-
-	// jdog5000 02/04/09
-	// For rebels and BarbarianCiv
-	if( getFreeUnitCountdown() > 0 )
-	{
-		setFreeUnitCountdown(getFreeUnitCountdown() - 1);
-	}
-	// ! jdog5000
 
 	foreach_(CvUnit* pLoopUnit, units())
 	{
@@ -4407,7 +4332,7 @@ void CvPlayer::dumpStats() const
 	logBBAI("%S stats for turn %d:", getCivilizationDescription(0), GC.getGame().getGameTurn());
 
 	//	Economy stats
-	int iUnitCosts = calculateUnitCost();
+	int iUnitCosts = getTotalUnitUpkeep();
 	int iUnitSupplyCosts = calculateUnitSupply();
 	int iMaintenanceCosts = getTotalMaintenance();
 	int iCivicUpkeepCosts = getCivicUpkeep();
@@ -8873,18 +8798,23 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	}
 
 	int iCost = GC.getBuildInfo(eBuild).getCost();
-	iCost *= std::max(0, 100 + calculateInflationRate());
-	iCost /= 100;
-	if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
+	if (iCost != 0)
 	{
-		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		iCost *= std::max(0, 100 + calculateInflationRate());
+		iCost /= 100;
+		if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
-			if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteType())
+			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 			{
-				iCost = std::max(0, iCost - GC.getBuildInfo((BuildTypes)iI).getCost());
-				break;
+				if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteType())
+				{
+					iCost = std::max(0, iCost - GC.getBuildInfo((BuildTypes)iI).getCost());
+					break;
+				}
 			}
 		}
+		iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
+		iCost /= 100;
 	}
 	return iCost;
 }
@@ -9092,129 +9022,29 @@ int CvPlayer::calculateTotalCityUnhealthiness() const
 	return algo::accumulate(cities() | transformed(CvCity::fn::badHealth()), 0);
 }
 
-
-int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const
-{
-	int iSupport;
-
-	iFreeUnits = GC.getHandicapInfo(getHandicapType()).getFreeUnits();
-
-	iFreeUnits += getBaseFreeUnits();
-	iFreeUnits += ((getTotalPopulation() * getFreeUnitsPopulationPercent()) / 100);
-
-	iFreeMilitaryUnits = getBaseFreeMilitaryUnits();
-	iFreeMilitaryUnits += ((getTotalPopulation() * getFreeMilitaryUnitsPopulationPercent()) / 100);
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
-	iFreeUnits += getFreeUnitCountdown();
-	iFreeMilitaryUnits += getFreeUnitCountdown();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/17/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original BTS code
-	if (!isHuman())
-	{
-		if (GET_TEAM(getTeam()).hasMetHuman())
-		{
-			iFreeUnits += getNumCities(); // XXX
-			iFreeMilitaryUnits += getNumCities(); // XXX
-		}
-	}
-*/
-	// Removed hidden AI bonus
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
-	iPaidUnits = std::max(0, getNumUnits() - iFreeUnits);
-	iPaidMilitaryUnits = std::max(0, getNumMilitaryUnits() - iFreeMilitaryUnits);
-
-	iBaseUnitCost = iPaidUnits * getGoldPerUnit();
-	iMilitaryCost = iPaidMilitaryUnits * getGoldPerMilitaryUnit();
-	iExtraCost = getExtraUnitCost();
-
-	iSupport = iMilitaryCost + iBaseUnitCost + iExtraCost;
-
-	iSupport *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
-	iSupport /= 100;
-
-	if (!isHuman() && !isNPC())
-	{
-		iSupport *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitCostPercent();
-		iSupport /= 100;
-
-		iSupport *= std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
-		iSupport /= 100;
-	}
-	/*FAssert(iSupport >= 0);*///This is generally normal under complex traits - the return limits it to 0+ anyhow.
-
-	return std::max(0, iSupport);
-}
-
-
-int CvPlayer::calculateUnitCost() const
+int CvPlayer::calculateUnitSupply() const
 {
 	if (isAnarchy() || isNPC())
 	{
 		return 0;
 	}
-
-	int iFreeUnits;
-	int iFreeMilitaryUnits;
-	int iPaidUnits;
-	int iPaidMilitaryUnits;
-	int iMilitaryCost;
-	int iBaseUnitCost;
-	int iExtraCost;
-
-	return calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
-}
-
-int CvPlayer::calculateUnitSupply() const
-{
 	int iPaidUnits;
 	int iBaseSupplyCost;
 
-	if (isAnarchy() || isNPC())
-	{
-		return 0;
-	}
-	int iCost = calculateUnitSupply(iPaidUnits, iBaseSupplyCost);
-
-	return iCost;
+	return calculateUnitSupply(iPaidUnits, iBaseSupplyCost);
 }
 
 int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 {
-	int iSupply;
-
 	iPaidUnits = std::max(0, (getNumOutsideUnits() - GC.getDefineINT("INITIAL_FREE_OUTSIDE_UNITS")));
 
 	iBaseSupplyCost = iPaidUnits * GC.getDefineINT("INITIAL_OUTSIDE_UNIT_GOLD_PERCENT");
 	iBaseSupplyCost /= 100;
 
-/************************************************************************************************/
-/* Afforess  Unit Distance Modifier   Start          12/4/09                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	iBaseSupplyCost *= (100 + getDistantUnitSupportCostModifier());
 	iBaseSupplyCost /= 100;
-/************************************************************************************************/
-/* Afforess  Unit Distance Modifier                          END                  		         */
-/************************************************************************************************/
-	iSupply = iBaseSupplyCost;
+
+	int iSupply = iBaseSupplyCost;
 
 	if (!isHuman() && !isNPC())
 	{
@@ -9233,18 +9063,12 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-	int iCosts = 0;
-
-	iCosts += calculateUnitCost();
+	int iCosts = getTotalUnitUpkeep();
 	iCosts += calculateUnitSupply();
 	iCosts += getTotalMaintenance();
 	iCosts += getCivicUpkeep();
 	iCosts -= getCorporateTaxIncome();
 
-	if (GC.getUSE_EXTRA_PLAYER_COSTS_CALLBACK())
-	{
-		iCosts += Cy::call<int>(PYGameModule, "getExtraCost", Cy::Args() << getID());
-	}
 	return iCosts;
 }
 
@@ -9395,24 +9219,6 @@ int CvPlayer::calculateInflatedCosts() const
 
 	return iCosts;
 }
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
-int CvPlayer::getFreeUnitCountdown() const
-{
-	return m_iFreeUnitCountdown;
-}
-
-void CvPlayer::setFreeUnitCountdown( int iValue )
-{
-	m_iFreeUnitCountdown = std::max(0, iValue);
-}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 
 int CvPlayer::calculateBaseNetGold() const
@@ -11850,148 +11656,230 @@ void CvPlayer::changeNumOutsideUnits(int iChange)
 }
 
 
-int CvPlayer::getBaseFreeUnits() const
+// Toffer - Unit Upkeep
+
+int CvPlayer::getBaseFreeUnitUpkeepCivilian() const
 {
-	int iTotal = std::max(0, m_iBaseFreeUnits);
-	int iCountAdjust = getUnitCountForCostAdjustmentTotal();
-	iTotal += std::max(0, iCountAdjust);
-	return std::max(0, iTotal);
+	return std::max(0, m_iBaseFreeUnitUpkeepCivilian);
 }
 
-
-void CvPlayer::changeBaseFreeUnits(int iChange)
+void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBaseFreeUnits = (m_iBaseFreeUnits + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iBaseFreeUnitUpkeepCivilian += iChange;
+		calcUnitUpkeep();
 	}
 }
 
-
-int CvPlayer::getBaseFreeMilitaryUnits() const
+int CvPlayer::getBaseFreeUnitUpkeepMilitary() const
 {
-	return std::max(0, m_iBaseFreeMilitaryUnits);
+	return std::max(0, m_iBaseFreeUnitUpkeepMilitary);
 }
 
-
-void CvPlayer::changeBaseFreeMilitaryUnits(int iChange)
+void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBaseFreeMilitaryUnits = (m_iBaseFreeMilitaryUnits + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iBaseFreeUnitUpkeepMilitary += iChange;
+		calcUnitUpkeep();
 	}
 }
 
-
-int CvPlayer::getFreeUnitsPopulationPercent() const
+int CvPlayer::getFreeUnitUpkeepCivilianPopPercent() const
 {
-	return m_iFreeUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepCivilianPopPercent;
 }
 
-
-void CvPlayer::changeFreeUnitsPopulationPercent(int iChange)
+void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iFreeUnitsPopulationPercent = (m_iFreeUnitsPopulationPercent + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
+		calcUnitUpkeep();
 	}
 }
 
-
-int CvPlayer::getFreeMilitaryUnitsPopulationPercent() const
+int CvPlayer::getFreeUnitUpkeepMilitaryPopPercent() const
 {
-	return m_iFreeMilitaryUnitsPopulationPercent;
+	return m_iFreeUnitUpkeepMilitaryPopPercent;
 }
 
-
-void CvPlayer::changeFreeMilitaryUnitsPopulationPercent(int iChange)
+void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iFreeMilitaryUnitsPopulationPercent = (m_iFreeMilitaryUnitsPopulationPercent + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
+		calcUnitUpkeep();
 	}
 }
 
-
-int CvPlayer::getGoldPerUnit() const
+int CvPlayer::getFreeUnitUpkeepCivilian() const
 {
-	return m_iGoldPerUnit;
+	int iFreeUpkeep = getBaseFreeUnitUpkeepCivilian();
+
+	int iTemp = getFreeUnitUpkeepCivilianPopPercent();
+	if (iTemp > 0)
+	{
+		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+	}
+	else if (iTemp < 0)
+	{
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+	}
+	return std::max(0, iFreeUpkeep);
 }
 
+int CvPlayer::getFreeUnitUpkeepMilitary() const
+{
+	int iFreeUpkeep = getBaseFreeUnitUpkeepMilitary();
 
-void CvPlayer::changeGoldPerUnit(int iChange)
+	int iTemp = getFreeUnitUpkeepMilitaryPopPercent();
+	if (iTemp > 0)
+	{
+		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+	}
+	else if (iTemp < 0)
+	{
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+	}
+	return std::max(0, iFreeUpkeep);
+}
+
+int CvPlayer::getCivilianUnitUpkeepMod() const
+{
+	return m_iCivilianUnitUpkeepMod;
+}
+int CvPlayer::getMilitaryUnitUpkeepMod() const
+{
+	return m_iMilitaryUnitUpkeepMod;
+}
+
+void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iGoldPerUnit = (m_iGoldPerUnit + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iCivilianUnitUpkeepMod += iChange;
+		calcUnitUpkeep();
 	}
 }
-
-
-int CvPlayer::getGoldPerMilitaryUnit() const
-{
-	return m_iGoldPerMilitaryUnit;
-}
-
-
-void CvPlayer::changeGoldPerMilitaryUnit(int iChange)
+void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iGoldPerMilitaryUnit = (m_iGoldPerMilitaryUnit + iChange);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		m_iMilitaryUnitUpkeepMod += iChange;
+		calcUnitUpkeep();
 	}
 }
 
-
-int CvPlayer::getExtraUnitCost() const
+unsigned long CvPlayer::getUnitUpkeepCivilian() const
 {
-	int iTotal = m_iExtraUnitCost/100;
-	return iTotal;
+	unsigned long iUpkeep = m_iUnitUpkeepCivilian100;
+
+	if (m_iCivilianUnitUpkeepMod > 0)
+	{
+		iUpkeep = iUpkeep * (100 + m_iCivilianUnitUpkeepMod) / 100;
+	}
+	else if (m_iCivilianUnitUpkeepMod < 0)
+	{
+		iUpkeep = iUpkeep * 100 / (100 - m_iCivilianUnitUpkeepMod);
+	}
+	return iUpkeep / 100;
 }
 
+unsigned long CvPlayer::getUnitUpkeepCivilianNet() const
+{
+	return std::max(0, (int)getUnitUpkeepCivilian() - getFreeUnitUpkeepCivilian());
+}
 
-void CvPlayer::changeExtraUnitCost(int iChange)
+unsigned long CvPlayer::getUnitUpkeepMilitary() const
+{
+	unsigned long iUpkeep = m_iUnitUpkeepMilitary100;
+
+	if (m_iMilitaryUnitUpkeepMod > 0)
+	{
+		iUpkeep = iUpkeep * (100 + m_iMilitaryUnitUpkeepMod) / 100;
+	}
+	else if (m_iMilitaryUnitUpkeepMod < 0)
+	{
+		iUpkeep = iUpkeep * 100 / (100 - m_iMilitaryUnitUpkeepMod);
+	}
+	return iUpkeep / 100;
+}
+
+unsigned long CvPlayer::getUnitUpkeepMilitaryNet() const
+{
+	return std::max(0, (int)getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
+}
+
+void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 {
 	if (iChange != 0)
 	{
-		m_iExtraUnitCost = (m_iExtraUnitCost + iChange);
+		if (bMilitary)
+			m_iUnitUpkeepMilitary100 += iChange;
+		else m_iUnitUpkeepCivilian100 += iChange;
 
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
+		FAssertMsg(m_iUnitUpkeepCivilian100 >= 0 && m_iUnitUpkeepMilitary100 >= 0, "These should always be positive!");
+
+		calcUnitUpkeep();
 	}
 }
+
+void CvPlayer::calcUnitUpkeep()
+{
+	if (isNPC())
+	{
+		return;
+	}
+	unsigned long iCalc = 0;
+
+	unsigned long iTemp = getUnitUpkeepCivilianNet();
+	if (iTemp > 0)
+	{
+		iCalc += iTemp;
+	}
+	iTemp = getUnitUpkeepMilitaryNet();
+	if (iTemp > 0)
+	{
+		iCalc += iTemp;
+	}
+
+	if (iCalc > 0)
+	{
+		// Difficulty adjustment
+		iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
+		iCalc /= 100;
+
+		if (!isHuman())
+		{
+			iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
+			iCalc /= 100;
+
+			iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+			iCalc /= 100;
+		}
+	}
+	if (iCalc < 0)
+	{
+		FAssertMsg(false, "Total unit upkeep is negative! You don't earn gold from upkeep costs!");
+		iCalc = 0;
+	}
+	m_iTotalUnitUpkeep = iCalc;
+
+	// Refresh relevant UI
+	if (getID() == GC.getGame().getActivePlayer())
+	{
+		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
+	}
+}
+
+unsigned long CvPlayer::getTotalUnitUpkeep() const
+{
+	return m_iTotalUnitUpkeep;
+}
+
+// ! Unit Upkeep
 
 
 int CvPlayer::getNumMilitaryUnits() const
@@ -12013,31 +11901,6 @@ void CvPlayer::changeNumMilitaryUnits(int iChange)
 		}
 	}
 }
-
-int CvPlayer::getUnitPercentCountForCostAdjustment() const
-{
-	return m_iNumUnitPercentCountForCostAdjustment;
-}
-
-
-void CvPlayer::changeUnitPercentCountForCostAdjustment(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iNumUnitPercentCountForCostAdjustment += iChange;
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
-	}
-}
-
-int CvPlayer::getUnitCountForCostAdjustmentTotal() const
-{
-	return getUnitPercentCountForCostAdjustment()/100;
-}
-
 
 int CvPlayer::getHappyPerMilitaryUnit() const
 {
@@ -20723,28 +20586,10 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 
 		changeTaxRateUnhappiness(kCivic.getTaxRateUnhappiness() * iChange);
 		changePopulationgrowthratepercentage(kCivic.getPopulationgrowthratepercentage(),(iChange==1));
-		//+: doesn't change values of other civics but maybe should
-		//changeGreatPeopleRateModifier(kCivic.getGreatPeopleRateModifier() * iChange);
-		//changeGreatGeneralRateModifier(kCivic.getGreatGeneralRateModifier() * iChange);
-		//changeDomesticGreatGeneralRateModifier(kCivic.getDomesticGreatGeneralRateModifier() * iChange);
-		//changeStateReligionGreatPeopleRateModifier(kCivic.getStateReligionGreatPeopleRateModifier() * iChange);
-		//changeDistanceMaintenanceModifier(kCivic.getDistanceMaintenanceModifier() * iChange);
-		//changeNumCitiesMaintenanceModifier(kCivic.getNumCitiesMaintenanceModifier() * iChange);
 		changeCorporationMaintenanceModifier(kCivic.getCorporationMaintenanceModifier() * iChange, bLimited);
 		changeExtraHealth(kCivic.getExtraHealth() * iChange, bLimited);
-		//changeFreeExperience(kCivic.getFreeExperience() * iChange);
-		//changeWorkerSpeedModifier(kCivic.getWorkerSpeedModifier() * iChange);
-		//changeImprovementUpgradeRateModifier(kCivic.getImprovementUpgradeRateModifier() * iChange);
-		//changeMilitaryProductionModifier(kCivic.getMilitaryProductionModifier() * iChange);
-		//changeBaseFreeUnits(kCivic.getBaseFreeUnits() * iChange);
-		//changeBaseFreeMilitaryUnits(kCivic.getBaseFreeMilitaryUnits() * iChange);
-		//changeFreeUnitsPopulationPercent(kCivic.getFreeUnitsPopulationPercent() * iChange);
-		//changeFreeMilitaryUnitsPopulationPercent(kCivic.getFreeMilitaryUnitsPopulationPercent() * iChange);
-		//changeGoldPerUnit(kCivic.getGoldPerUnit() * iChange);
-		//changeGoldPerMilitaryUnit(kCivic.getGoldPerMilitaryUnit() * iChange);
 		changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange,  bLimited);
 		changeMilitaryFoodProductionCount(((kCivic.isMilitaryFoodProduction()) ? iChange : 0), bLimited);
-		//changeMaxConscript(getWorldSizeMaxConscript(eCivic) * iChange);
 		changeNoUnhealthyPopulationCount(((kCivic.isNoUnhealthyPopulation()) ? iChange : 0), bLimited);
 		changeBuildingOnlyHealthyCount(((kCivic.isBuildingOnlyHealthy()) ? iChange : 0), bLimited);
 		changeLargestCityHappiness((kCivic.getLargestCityHappiness() * iChange), bLimited);
@@ -20752,8 +20597,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		{
 			changeWarWearinessModifier((kCivic.getWarWearinessModifier() * iChange), bLimited);
 		}
-		//changeFreeSpecialist(kCivic.getFreeSpecialist() * iChange);
-		//changeTradeRoutes(kCivic.getTradeRoutes() * iChange);
 		changeNoForeignTradeCount(kCivic.isNoForeignTrade() * iChange, bLimited);
 		changeNoCorporationsCount(kCivic.isNoCorporations() * iChange, bLimited);
 		changeNoForeignCorporationsCount(kCivic.isNoForeignCorporations() * iChange, bLimited);
@@ -20761,10 +20604,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeNoNonStateReligionSpreadCount((kCivic.isNoNonStateReligionSpread()) ? iChange : 0);
 		changeStateReligionHappiness(kCivic.getStateReligionHappiness() * iChange, bLimited);
 		changeNonStateReligionHappiness(kCivic.getNonStateReligionHappiness() * iChange, bLimited);
-		//changeStateReligionUnitProductionModifier(kCivic.getStateReligionUnitProductionModifier() * iChange);
-		//changeStateReligionBuildingProductionModifier(kCivic.getStateReligionBuildingProductionModifier() * iChange);
-		//changeStateReligionFreeExperience(kCivic.getStateReligionFreeExperience() * iChange);
-		//changeExpInBorderModifier(kCivic.getExpInBorderModifier() * iChange);
 		changeRevIdxLocal(GC.getCivicInfo(eCivic).getRevIdxLocal() * iChange);
 		changeRevIdxNational(GC.getCivicInfo(eCivic).getRevIdxNational() * iChange);
 		changeRevIdxDistanceModifier(GC.getCivicInfo(eCivic).getRevIdxDistanceModifier() * iChange);
@@ -20772,19 +20611,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeCityLimit(kCivic.getCityLimit(getID()) * iChange);
 		changeCityOverLimitUnhappy(kCivic.getCityOverLimitUnhappy() * iChange);
 		changeForeignUnhappyPercent(kCivic.getForeignerUnhappyPercent() * iChange);
-		//for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
-		//{
-		//	changeYieldRateModifier(((YieldTypes)iI), (kCivic.getYieldModifier(iI) * iChange));
-		//	changeCapitalYieldRateModifier(((YieldTypes)iI), (kCivic.getCapitalYieldModifier(iI) * iChange));
-		//	changeTradeYieldModifier(((YieldTypes)iI), (kCivic.getTradeYieldModifier(iI) * iChange));
-		//}
-
-		//for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		//{
-		//	changeCommerceRateModifier(((CommerceTypes)iI), (kCivic.getCommerceModifier(iI) * iChange));
-		//	changeCapitalCommerceRateModifier(((CommerceTypes)iI), (kCivic.getCapitalCommerceModifier(iI) * iChange));
-		//	changeSpecialistExtraCommerce(((CommerceTypes)iI), (kCivic.getSpecialistExtraCommerce(iI) * iChange));
-		//}
 
 		if (kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyBuildingHealthChange())
 		{
@@ -20818,18 +20644,9 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 			changeSpecialistValidCount(((SpecialistTypes)iI), ((kCivic.isSpecialistValid(iI)) ? iChange : 0), bLimited);
 		}
 
-		//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		//{
-		//	for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-		//	{
-		//		changeImprovementYieldChange(((ImprovementTypes)iI), ((YieldTypes)iJ), (kCivic.getImprovementYieldChanges(iI, iJ) * iChange));
-		//	}
-		//}
-
 		//TB Civics Tags
 		changeAllReligionsActiveCount((kCivic.isAllReligionsActive())? iChange : 0);
 		changeAllReligionsActiveCount((kCivic.isBansNonStateReligions())? -iChange : 0);
-
 
 	}
 	else
@@ -20855,12 +20672,12 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeWorkerSpeedModifier(kCivic.getWorkerSpeedModifier() * iChange);
 		changeImprovementUpgradeRateModifier(kCivic.getImprovementUpgradeRateModifier() * iChange);
 		changeMilitaryProductionModifier(kCivic.getMilitaryProductionModifier() * iChange);
-		changeBaseFreeUnits(kCivic.getBaseFreeUnits() * iChange);
-		changeBaseFreeMilitaryUnits(kCivic.getBaseFreeMilitaryUnits() * iChange);
-		changeFreeUnitsPopulationPercent(kCivic.getFreeUnitsPopulationPercent() * iChange);
-		changeFreeMilitaryUnitsPopulationPercent(kCivic.getFreeMilitaryUnitsPopulationPercent() * iChange);
-		changeGoldPerUnit(kCivic.getGoldPerUnit() * iChange);
-		changeGoldPerMilitaryUnit(kCivic.getGoldPerMilitaryUnit() * iChange);
+		changeBaseFreeUnitUpkeepCivilian(kCivic.getFreeUnitUpkeepCivilian() * iChange);
+		changeBaseFreeUnitUpkeepMilitary(kCivic.getFreeUnitUpkeepMilitary() * iChange);
+		changeFreeUnitUpkeepCivilianPopPercent(kCivic.getFreeUnitUpkeepCivilianPopPercent() * iChange);
+		changeFreeUnitUpkeepMilitaryPopPercent(kCivic.getFreeUnitUpkeepMilitaryPopPercent() * iChange);
+		changeCivilianUnitUpkeepMod(kCivic.getCivilianUnitUpkeepMod() * iChange);
+		changeMilitaryUnitUpkeepMod(kCivic.getMilitaryUnitUpkeepMod() * iChange);
 		changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange);
 		changeMilitaryFoodProductionCount((kCivic.isMilitaryFoodProduction()) ? iChange : 0);
 		changeMaxConscript(getWorldSizeMaxConscript(eCivic) * iChange);
@@ -21162,11 +20979,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryProductionModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSpaceProductionModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCityDefenseModifier);
-	/************************************************************************************************/
-	/* REVDCM                                 09/02/10                                phungus420    */
-	/*                                                                                              */
-	/* Player Functions                                                                             */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNonStateReligionCommerceCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeAnywhereCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iRevIdxLocal);
@@ -21179,18 +20992,20 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_fRevIdxGoodReligionMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bInquisitionConditions);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpgradePriceModifier);
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumNukeUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumOutsideUnits);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnits);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeMilitaryUnits);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitsPopulationPercent);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeMilitaryUnitsPopulationPercent);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerMilitaryUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraUnitCost);
+
+		// @SAVEBREAK DELETE Toffer
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iBaseFreeUnits, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iBaseFreeMilitaryUnits, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iFreeUnitsPopulationPercent, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iFreeMilitaryUnitsPopulationPercent, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iGoldPerUnit, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iExtraUnitCost, SAVE_VALUE_ANY);
+		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumMilitaryUnits);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHappyPerMilitaryUnit);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryFoodProductionCount);
@@ -21262,21 +21077,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		//TB Nukefix (Reversal) Should NOT comment out the following line
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bNukesValid);
 
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                           07/09/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_READ(wrapper, "CvPlayer", &m_bDisableHuman);
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                            END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitCountdown);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_bDisableHuman); // AI_AUTO_PLAY - 07/09/08 - jdog5000
+
+		// @SAVEBREAK DELETE Toffer
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iFreeUnitCountdown, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStabilityIndex);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStabilityIndexAverage);
@@ -21290,9 +21095,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivDesc);
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivShort);
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szCivAdj);
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eID);
 
 		m_contractBroker.init(m_eID);
@@ -21410,8 +21213,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		// Calculate player culture as the sum of city culture if not present in save game
 		m_iCulture = -1;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
+
+		// @SAVEBREAK DELETE Toffer
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentCulturalAge, SAVE_VALUE_ANY);
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentAgeSegment, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 
 		//	Subdue and construct-by-unit stats
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumAnimalsSubdued);
@@ -21895,12 +21701,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		// RevolutionDCM - read revolution stability history data from disk
 		{
 			m_mapRevolutionStabilityHistory.clear();
@@ -21916,9 +21716,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 		// RevolutionDCM end
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-	/************************************************************************************************/
 
 		{
 			m_mapEventsOccured.clear();
@@ -22192,7 +21989,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFirstMergeSelection);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSecondMergeSelection);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSplittingUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iNumUnitPercentCountForCostAdjustment);
+
+		// @SAVEBREAK DELETE Toffer
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iNumUnitPercentCountForCostAdjustment, SAVE_VALUE_ANY);
+		// SAVEBREAK@
+
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromBuildings);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
@@ -22216,6 +22017,15 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			doCountTotalCulture();
 		}
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalUnitUpkeep);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -22229,15 +22039,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 
 	WRAPPER_READ_OBJECT_END(wrapper);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	updateCache();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if ( GC.viewportsEnabled() && GC.getGame().getActivePlayer() == m_eID )
 	{
@@ -22322,11 +22125,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryProductionModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSpaceProductionModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityDefenseModifier);
-	/************************************************************************************************/
-	/* REVDCM                                 09/02/10                                phungus420    */
-	/*                                                                                              */
-	/* Player Functions                                                                             */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNonStateReligionCommerceCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpgradeAnywhereCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iRevIdxLocal);
@@ -22339,18 +22138,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_fRevIdxGoodReligionMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bInquisitionConditions);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpgradePriceModifier);
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumNukeUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumOutsideUnits);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnits);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeMilitaryUnits);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitsPopulationPercent);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeMilitaryUnitsPopulationPercent);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerMilitaryUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraUnitCost);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumMilitaryUnits);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHappyPerMilitaryUnit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryFoodProductionCount);
@@ -22361,11 +22152,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExpInBorderModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingOnlyHealthyCount);
-		//DPII < Maintenance Modifiers >
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCoastalDistanceMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iConnectedCityMaintenanceModifier);
-		//DPII < Maintenance Modifiers >
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iDistanceMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumCitiesMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCorporationMaintenanceModifier);
@@ -22421,21 +22212,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		//TB Nukefix (Reversal) Should NOT comment out the following line
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bNukesValid);
 
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                           07/09/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_bDisableHuman);
-	/************************************************************************************************/
-	/* AI_AUTO_PLAY                            END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         06/11/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitCountdown);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_bDisableHuman); // AI_AUTO_PLAY - 07/09/08 - jdog5000
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStabilityIndex);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStabilityIndexAverage);
@@ -22449,9 +22226,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivDesc);
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivShort);
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szCivAdj);
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eID);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_ePersonalityType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eCurrentEra);
@@ -22783,11 +22558,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		// RevolutionDCM - save revolution stability history to disk
 		{
 			uint iSize = m_mapRevolutionStabilityHistory.size();
@@ -22800,9 +22570,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 		// RevolutionDCM - end
-	/************************************************************************************************/
-	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-	/************************************************************************************************/
 
 		{
 			uint iSize = m_mapEventsOccured.size();
@@ -22918,12 +22685,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_DOMAIN_TYPES, m_paiNationalDomainProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiNationalTechResearchModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFixedBordersCount);
-		//Team Project (3)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNationalCaptureProbabilityModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNationalCaptureResistanceModifier);
-		//Team Project (5)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iAllReligionsActiveCount);
-		//Team Project (6)
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraStateReligionSpreadModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNonStateReligionSpreadModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiEraAdvanceFreeSpecialistCount);
@@ -22944,16 +22711,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeSpecialistperNationalWonderCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeSpecialistperTeamProjectCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraGoodyCount);
-		//Team Project (7)
+
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiGoldenAgeYield);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiGoldenAgeCommerce);
-		//Team Project (8)
+
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFirstMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSecondMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSplittingUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumUnitPercentCountForCostAdjustment);
+
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromBuildings);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
@@ -22974,9 +22741,18 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
+
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalUnitUpkeep);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepMilitaryPopPercent);
 	}
 	//	Use condensed format now - only save non-default array elements
-
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -24699,7 +24475,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	if (0 != kEvent.getFreeUnitSupport())
 	{
-		changeBaseFreeUnits(kEvent.getFreeUnitSupport());
+		changeBaseFreeUnitUpkeepCivilian(kEvent.getFreeUnitSupport());
 	}
 
 	const CvProperties* pProp = kEvent.getPropertiesAllCities();
@@ -28954,12 +28730,10 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 		return DENIAL_NO_GAIN;
 	}
 
-	if (GET_PLAYER(ePlayer).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(ePlayer).getNumCities())
+	if (GET_PLAYER(ePlayer).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(ePlayer).getNumCities()
+	&& GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepCivilianNet() > 0)
 	{
-		if (GET_PLAYER(ePlayer).calculateUnitCost() > 0)
-		{
-			return DENIAL_NO_GAIN;
-		}
+		return DENIAL_NO_GAIN;
 	}
 
 	const AttitudeTypes eAttitude = AI_getAttitude(ePlayer);
@@ -29010,12 +28784,10 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 		return DENIAL_NO_GAIN;
 	}
 
-	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble() && (GET_PLAYER(ePlayer).calculateUnitCost() > 0))
+	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepMilitaryNet() > 0
+	&& GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getAtWarCount(true) == 0)
 	{
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getAtWarCount(true) == 0)
-		{
-			return DENIAL_NO_GAIN;
-		}
+		return DENIAL_NO_GAIN;
 	}
 
 	if (pUnit->nukeRange() > 0 && GET_PLAYER(ePlayer).getNumNukeUnits() == 0)
@@ -31012,12 +30784,12 @@ void CvPlayer::clearModifierTotals()
 	m_iCityOverLimitUnhappy = 0;
 	m_iForeignUnhappyPercent = 0;
 
-	m_iBaseFreeUnits = 0;
-	m_iBaseFreeMilitaryUnits = 0;
-	m_iFreeUnitsPopulationPercent = 0;
-	m_iFreeMilitaryUnitsPopulationPercent = 0;
-	m_iGoldPerUnit = 0;
-	m_iGoldPerMilitaryUnit = 0;
+	m_iBaseFreeUnitUpkeepCivilian = 0;
+	m_iBaseFreeUnitUpkeepMilitary = 0;
+	m_iFreeUnitUpkeepCivilianPopPercent = 0;
+	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
+	m_iCivilianUnitUpkeepMod = 0;
+	m_iMilitaryUnitUpkeepMod = 0;
 	m_iHappyPerMilitaryUnit = 0;
 	m_iMilitaryFoodProductionCount = 0;
 	m_iNoUnhealthyPopulationCount = 0;
@@ -31103,7 +30875,6 @@ void CvPlayer::clearModifierTotals()
 	//Team Project (6)
 	m_iExtraStateReligionSpreadModifier = 0;
 	m_iExtraNonStateReligionSpreadModifier = 0;
-	m_iNumUnitPercentCountForCostAdjustment = 0;
 	m_iNationalGreatPeopleRate = 0;
 
 	m_iBaseMergeSelection = FFreeList::INVALID_INDEX;
@@ -31436,12 +31207,12 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeCorporationMaintenanceModifier(iChange*GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier());
 	changeStateReligionGreatPeopleRateModifier(iChange*GC.getTraitInfo(eTrait).getStateReligionGreatPeopleRateModifier());
 	changeFreeExperience(iChange*GC.getTraitInfo(eTrait).getFreeExperience());
-	changeBaseFreeUnits(iChange*GC.getTraitInfo(eTrait).getBaseFreeUnits());
-	changeBaseFreeMilitaryUnits(iChange*GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits());
-	changeFreeUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent());
-	changeFreeMilitaryUnitsPopulationPercent(iChange*GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent());
-	changeGoldPerUnit(iChange*GC.getTraitInfo(eTrait).getGoldPerUnit());
-	changeGoldPerMilitaryUnit(iChange*GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit());
+	changeBaseFreeUnitUpkeepCivilian(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian());
+	changeBaseFreeUnitUpkeepMilitary(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary());
+	changeFreeUnitUpkeepCivilianPopPercent(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent());
+	changeFreeUnitUpkeepMilitaryPopPercent(iChange*GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent());
+	changeCivilianUnitUpkeepMod(iChange*GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod());
+	changeMilitaryUnitUpkeepMod(iChange*GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod());
 	changeHappyPerMilitaryUnit(iChange*GC.getTraitInfo(eTrait).getHappyPerMilitaryUnit());
 	changeLargestCityHappiness(iChange*GC.getTraitInfo(eTrait).getLargestCityHappiness());
 	changeFreeSpecialist(iChange*GC.getTraitInfo(eTrait).getFreeSpecialist());
@@ -31632,11 +31403,10 @@ void CvPlayer::recalculateModifiers()
 	noteOrbitalInfrastructureCountDirty();
 
 	//	Put back starting defaults
-	changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
-	changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
-	changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
-	changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
-	changeGoldPerUnit(GC.getDefineINT("INITIAL_GOLD_PER_UNIT"));
+	changeBaseFreeUnitUpkeepCivilian(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_CIVILIAN"));
+	changeBaseFreeUnitUpkeepMilitary(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_MILITARY"));
+	changeFreeUnitUpkeepCivilianPopPercent(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP"));
+	changeFreeUnitUpkeepMilitaryPopPercent(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP"));
 	changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
 	changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
 	changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));

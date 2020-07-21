@@ -25,7 +25,7 @@
 		<Polish>Witam. Ja [OUR_NAME], wódz [OUR_EMPIRE]. Dobry wódz nie zabiera, ale daje. Jesteś dobrym wodzem, [CT_NAME]?</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HIAWATHA_1 </Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HIAWATHA_1</Tag>
 		<English>My heart beats for you like the shining Big-Sea-Water, [CT_NAME]!</English>
 		<French>Mon coeur bat pour toi comme l'éclat de l'écume, [CT_NAME]!</French>
 		<Polish>Moje serce bije dla Ciebie jak błyszczące Wielko-Morze, [CT_NAME]!</Polish>
@@ -33,7 +33,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HIAWATHA_1</Tag>
 		<English>You are not my kemo sabe, [CT_NAME]!</English>
-		<French>Tu n'es pas mon sabe kemo, [CT_NAME]!</French>
+		<French>Tu n'es pas mon kemo sabe, [CT_NAME]!</French>
 		<Polish>Nie jesteś moim kemo sabe, [CT_NAME]!</Polish>
 	</TEXT>
 	<TEXT>
@@ -54,11 +54,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIAWATHA_PEDIA</Tag>
-		<English>[H1]Hiawatha[\H1][NEWLINE][BOLD]Visionary of the Five Nations[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1100s, 1400s or 1500s[NEWLINE][PARAGRAPH:2]Hiawatha (also known as Ayenwatha or Ha-yo-went'-ha) who lived (depending on the version of the story) in the 1100s, 1400s, or 1500s, was variously a leader of the Onondaga and Mohawk nations of Native Americans. Hiawatha was a follower of The Great Peacemaker, a prophet and spiritual leader who was credited as the founder of the Iroquois confederacy, (referred to as Haudenosaunee by the people). If The Great Peacemaker was the man of ideas, Hiawatha was the politician who actually put the plan into practice. Hiawatha was a skilled and charismatic orator, and was instrumental in persuading the Iroquois peoples, the Seneca, Onondaga, Oneida, Cayuga, and Mohawk, a group of Native North Americans who shared similar languages, to accept The Great Peacemaker's vision and band together to become the Five Nations of the Iroquois confederacy. (Later, in 1721, the Tuscarora nation joined the Iroquois confederacy, and they became the Six Nations).</English>
-		<French>Hiawatha</French>
-		<German>Hiawatha</German>
-		<Italian>Hiawatha</Italian>
-		<Spanish>Hiawatha</Spanish>
-		<Polish>[H1]Hiawatha[\H1][NEWLINE][BOLD]Wizjoner Pięciu Narodów[\BOLD][NEWLINE][BOLD]Żył: [\BOLD]w XII, XV lub XVI wieku[NEWLINE][PARAGRAPH:2]Żyjący (według różnych przekazów) w XII, XV lub XVI wieku wódz irokeski, według ustnych przekazów irokeskich uczeń Wielkiego Rozjemcy Deganewidy, założyciela Konfederacji Pięciu Narodów. Wraz z Deganewidą miał rozpalić Wieczny Płomień, wokół którego zbierała się Wielka Rada Konfederacji Pięciu Narodów.</Polish>
+		<English>[H1]Hiawatha[\H1][NEWLINE][BOLD]Visionary of the Five Nations[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1100s, 1400s or 1500s[NEWLINE][PARAGRAPH:2]Hiawatha (also known as Ayenwatha or Ha-yo-went'-ha) who lived (depending on the version of the story) in the 1100s, 1400s, or 1500s, was variously a leader of the Onondaga and Mohawk nations of Native Americans. Hiawatha was a follower of The Great Peacemaker, a prophet and spiritual leader who was credited as the founder of the Iroquois confederacy, (referred to as Haudenosaunee by the people). If The Great Peacemaker was the man of ideas, Hiawatha was the politician who actually put the plan into practice. Hiawatha was a skilled and charismatic orator, and was instrumental in persuading the Iroquois peoples, the Seneca, Onondaga, Oneida, Cayuga, and Mohawk, a group of Native North Americans who shared similar languages, to accept The Great Peacemaker's vision and band together to become the Five Nations of the Iroquois confederacy. (Later, in 1721, the Tuscarora nation joined the Iroquois confederacy, and they became the Six Nations).</English>
+		<Polish>[H1]Hiawatha[\H1][NEWLINE][BOLD]Wizjoner Pięciu Narodów[\BOLD][NEWLINE][BOLD]Żył:[\BOLD] w XII, XV lub XVI wieku[NEWLINE][PARAGRAPH:2]Żyjący (według różnych przekazów) w XII, XV lub XVI wieku wódz irokeski, według ustnych przekazów irokeskich uczeń Wielkiego Rozjemcy Deganewidy, założyciela Konfederacji Pięciu Narodów. Wraz z Deganewidą miał rozpalić Wieczny Płomień, wokół którego zbierała się Wielka Rada Konfederacji Pięciu Narodów.</Polish>
 	</TEXT>
 </Civ4GameText>

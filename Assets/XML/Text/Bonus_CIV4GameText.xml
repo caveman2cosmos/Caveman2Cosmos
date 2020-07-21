@@ -38,7 +38,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS_PEDIA</Tag>
 		<English>An advanced replicator is a highly intelligent and versatile replicator that, if instructed, can create manufactured goods, structures, and copies of itself.</English>
-		<Italian>Un duplicatore avanzato è un duplicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri duplicatore.</Italian>
+		<Italian>Un duplicatore avanzato è un duplicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri duplicatori.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
@@ -1081,14 +1081,7 @@
 		<Tag>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Tag>
 		<English>Carved emu eggs are an art form made by carving a kalthi-parti, or emu egg. The practice began in the mid to late 19th century and, while it has been practiced by people in Australia from many backgrounds, it is often strongly associated with Aboriginal art. Some of the earliest carvers were not strictly Aboriginal and these carvers created very decorative and complicated designs that were popular at the time.</English>
 		<Italian>Le uova di emu intagliate sono una forma d'arte creata scolpendo un kalthi-parti, o uovo di emu. La pratica è iniziata tra la metà e la fine del XIX secolo e, sebbene sia stata praticata da australiani di diversa estrazione etnico-sociale, è spesso fortemente associata all'arte aborigena. Alcuni dei primi intagliatori non erano aborigeni e questi intagliatori crearono disegni molto decorativi e complicati, molto popolari all'epoca.</Italian>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CASTILIAN</Tag>
-		<English>Castilian</English>
-		<French>Castillan</French>
-		<Italian>Castigliano</Italian>
-		<Polish>Kastylijska</Polish>
-	</TEXT> -->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAT</Tag>
 		<English>Cat</English>
@@ -3096,6 +3089,11 @@
 		<Italian>Huasteco</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
+		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
+		<Italian>Gli umani augmentati sono degli umani a cui sono stati applicati dei cambiamenti permanenti di tipo psichico, fisiologico o naturale.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
 		<French>Modif. Humain (Hybridation Alien)</French>
@@ -3104,7 +3102,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
-		<French>Modif. Humain(Archailecte)</French>
+		<French>Modif. Humain (Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3878,13 +3876,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEMONS_PEDIA</Tag>
 		<English>The lemon is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C.</English>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
-		<English>Leonese</English>
-		<French>Léonais</French>
-		<Polish>Leońska</Polish>
-	</TEXT> -->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS</Tag>
 		<English>Levitation Generators</English>
@@ -4433,7 +4425,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROCHIPS_PEDIA</Tag>
-		<English>An integrated circuit or monolithic integrated circuit (also referred to as an IC, a chip, or a microchip) is a set of electronic circuits on one small flat piece (or "chip") of semiconductor material that is normally silicon. The integration of large numbers of tiny MOS transistors into a small chip results in circuits that are orders of magnitude smaller, faster, and less expensive than those constructed of discrete electronic components. The IC's mass production capability, reliability, and building-block approach to circuit design has ensured the rapid adoption of standardized ICs in place of designs using discrete transistors. ICs are now used in virtually all electronic equipment and have revolutionized the world of electronics. Computers, mobile phones, and other digital home appliances are now inextricable parts of the structure of modern societies, made possible by the small size and low cost of ICs. </English>
+		<English>An integrated circuit or monolithic integrated circuit (also referred to as an IC, a chip, or a microchip) is a set of electronic circuits on one small flat piece (or "chip") of semiconductor material that is normally silicon. The integration of large numbers of tiny MOS transistors into a small chip results in circuits that are orders of magnitude smaller, faster, and less expensive than those constructed of discrete electronic components. The IC's mass production capability, reliability, and building-block approach to circuit design has ensured the rapid adoption of standardized ICs in place of designs using discrete transistors. ICs are now used in virtually all electronic equipment and have revolutionized the world of electronics. Computers, mobile phones, and other digital home appliances are now inextricable parts of the structure of modern societies, made possible by the small size and low cost of ICs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROGENERATORS</Tag>
@@ -4861,8 +4853,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA_PEDIA</Tag>
-		<English>Nutella is the brand name of a hazelnut chocolate spread. Manufactured by the Italian company Ferrero, it was introduced to the market in 1964. Nutella is made from sugar, modified palm oil, hazelnuts, cocoa, skimmed milk powder, whey powder, lecithin, and vanillin.</English>
+		<English>Nutella is the brand name of a hazelnut chocolate spread. Manufactured by the Italian company Ferrero, it was introduced to the market in 1964. Nutella is made from sugar, modified palm oil, hazelnuts, cocoa, skimmed milk powder, whey powder, lecithin, and vanillin. Its name is a portmanteau of the English word "nut" and the suffix "-ella", a meaningless suffix added to get a better sounding name.</English>
 		<German>Nutella ist ein süßer Haselnussbrotaufstrich des italienischen Herstellers Ferrero, der in Konsistenz und Geschmack an Nougat erinnert. Er besteht aus Zucker, Pflanzenöl, gerösteten Haselnüssen, Kakao, Milchpulver, Sojalecithin und Vanillin.</German>
+		<Italian>Nutella è il marchio di una crema di nocciole spalmabile. Prodotta dall'azienda italiana Ferrero, fu introdotta sul mercato nel 1964. Gli ingredienti sono zucchero, olio di palma, nocciole, cacao, latte scremato in polvere, siero di latte in polvere, lecitina e vanillina. Il suo nome deriva dalla parola inglese "nut" ("nocciola") e dal suffisso "-ella", un suffisso senza alcun significato, aggiunto per avere un nome orecchiabile.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTS</Tag>
@@ -5380,6 +5373,11 @@
 		<Italian>Fenice</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PHOENIX_PEDIA</Tag>
+		<English>A phoenix is a mythical long-lived bird that is cyclically regenerated or reborn, obtaining new life by arising from the ashes of its predecessor. It symbolized renewal in general, as well as entities and concepts such as the Sun, time, the Roman Empire, Christ, Mary, and virginity. According to some sources, the phoenix dies in a show of flames and combustion, although there are other sources that claim that the legendary bird dies and simply decomposes before being born again. According to some texts, the phoenix could live over 1,400 years before rebirth. Herodotus, Lucan, Pliny the Elder, Pope Clement I, Lactantius, Ovid, and Isidore of Seville are among those who have contributed to the retelling and transmission of the phoenix motif.</English>
+		<Italian>Una fenice è un uccello mitologico dalla lunga vita che si rigenera o rinasce ciclicamente, ottenendo nuova vita sorgendo dalle ceneri del suo predecessore. Simboleggiava il rinnovamento in generale, così come entità e concetti come il Sole, il tempo, l'Impero romano, Cristo, la Madonna e la verginità. Secondo alcune fonti, la morte della fenice avviene in modo spettacolare fra le fiamme, mentre altre fonti sostengono che il leggendario uccello semplicemente muoia e si decomponga normalmente prima di rinascere. Secondo alcuni testi, una fenice potrebbe vivere oltre 1400 anni, prima della rinascita. Erodoto, Lucano, Plinio il Vecchio, Papa Clemente I, Lattanzio, Ovidio e Isidoro di Siviglia sono tra quelli che hanno contribuito alla rivisitazione e alla trasmissione della leggenda della fenice.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS</Tag>
 		<English>Phonographs</English>
 		<French>Phonographes</French>
@@ -5700,7 +5698,7 @@
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE_PEDIA</Tag>
 		<English>Pumice, called pumicite in its powdered or dust form, is a volcanic rock that consists of highly vesicular rough textured volcanic glass, which may or may not contain crystals. It is typically light colored. Scoria is another vesicular volcanic rock that differs from pumice in having larger vesicles and thicker vesicle walls and being dark colored and denser.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Bimsstein[COLOR_REVERT] oder kurz Bims ist ein stark poröses vulkanisches Gestein, das entsteht, wenn zähflüssige Lava bei Eruptionen durch Gase aufgeschäumt wird. Seine Farbe kann je nach Lavaart und Einschlüssen stark variieren. Es gibt nahezu schwarzen und weißen Bims, aber auch sämtliche Zwischentöne. Bimsstein geht nicht unter, sondern schwimmt auf Wasser, was an seinen vielen Poren und der daraus resultierenden sehr geringen Dichte liegt.[NEWLINE]Bims wurde bereits seit Vorzeiten in Kreta als Baumaterial, Opfergabe, Reinigungs- und Heilmittel und für diverse andere Zwecke eingesetzt. Das Gestein wird dort häufig über die Strömung von den vulkanischen Nachbarinseln angespült. In der Antike nutzte man den Bimsstein bereits zur Körperpflege, zum Schärfen von Schreibfedern und zum Glätten von Pergamentleder. Auch heute wird das Material noch vielseitig eingesetzt, z.B. für die Herstellung von Leichtbetonsteinen und Dämmstoffen und zum Filtern von Wasser. Bimsstein ist für den Stone-washed-Effekt von Jeans verantwortlich und stellt einen Grundstoff für viele gärtnerische Substrate dar.</German>
-		<Polish>Pumeks (z łac. pumex), dawniej pemza - to wulkaniczna skała magmowa zbudowana z porowatego (ponad 50% porów) szkliwa wulkanicznego powstałego z silnie gazującej, pienistej lawy. Ma szklistą, drobnoziarnistą strukturę. Powstaje głównie z kwaśnych odmian lawy (riolitowej).</Polish>	
+		<Polish>Pumeks (z łac. pumex), dawniej pemza - to wulkaniczna skała magmowa zbudowana z porowatego (ponad 50% porów) szkliwa wulkanicznego powstałego z silnie gazującej, pienistej lawy. Ma szklistą, drobnoziarnistą strukturę. Powstaje głównie z kwaśnych odmian lawy (riolitowej).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMPKIN</Tag>
@@ -5843,6 +5841,11 @@
 		<English>Rainbow Serpent</English>
 		<French>Serpent Arc-en-ciel</French>
 		<Italian>Serpente arcobaleno</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT_PEDIA</Tag>
+		<English>The Rainbow Serpent (or Rainbow Snake) is a common deity, often a creator god, in the mythology and a common motif in the art of Aboriginal Australia. It is named for the obvious identification between the shape of a rainbow and that of a snake. Some scholars have suggested that the link between snake and rainbow suggests the cycle of the seasons and the importance of water in human life. When the rainbow is seen in the sky, it is said to be the Rainbow Serpent moving from one waterhole to another, and the divine concept explained why some waterholes never dried up when drought struck. There are innumerable names and stories associated with the serpent, all of which communicate the significance and power of this being within Aboriginal traditions. It is viewed as a giver of life, through its association with water, but can be a destructive force if angry. The Rainbow Serpent is one of the oldest continuing religious beliefs in the world and continues to be a cultural influence today.</English>
+		<Italian>Il serpente arcobaleno è una divinità comune, spesso un dio creatore, nella mitologia e un motivo comune nell'arte degli aborigeni australiani. Trae il nome dalla somiglianza tra la forma di un arcobaleno e quella di un serpente. Alcuni studiosi hanno ipotizzato che il legame tra serpente e arcobaleno rappresenti il ciclo delle stagioni e l'importanza dell'acqua nella vita umana. Quando un arcobaleno appare in cielo, si dice che sia il serpente arcobaleno che si muove da una pozza d'acqua all'altra - questo concetto contribuirebbe a spiegare anche perché alcune pozze d'acqua non si fossero seccate durante i periodi di siccità. Ci sono innumerevoli nomi e storie associati al serpente, che comunicano il significato e il potere attribuito a questo essere all'interno delle tradizioni aborigene. È visto come un donatore di vita, attraverso la sua associazione con l'acqua, ma può essere una forza distruttiva se irato. Il serpente arcobaleno è una delle più antiche credenze religiose ancora esistenti al mondo e continua a esercitare la sua influenza culturale ancora oggi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
@@ -6080,13 +6083,7 @@
 		<French>Russe</French>
 		<Italian>Russo</Italian>
 		<Polish>Rosyjski</Polish>
-	</TEXT><!-- [check]
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
-		<English>Sabbatean</English>
-		<French>Sabbatéenne</French>
-		<Italian>Sabbateo</Italian>
-	</TEXT> -->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SADDLES</Tag>
 		<English>Saddles</English>
@@ -6464,7 +6461,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_ORE_PEDIA</Tag>
-		<English>Silver is a soft, white, lustrous transition metal, silver has the highest electrical and thermal conductivity of any metal and is found in mineral deposits and in free form. Slag heaps found in Asia Minor indicate that silver has been known about for a long time, and that it was being separated from lead as early as the fourth millennium BC. </English>
+		<English>Silver is a soft, white, lustrous transition metal, silver has the highest electrical and thermal conductivity of any metal and is found in mineral deposits and in free form. Slag heaps found in Asia Minor indicate that silver has been known about for a long time, and that it was being separated from lead as early as the fourth millennium BC.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_WARES</Tag>
@@ -6743,7 +6740,7 @@
 		<French>La canne à sucre est une plante tropicale, vraisemblablement originaire de Nouvelle-Guinée. L'extraction du sucre s'est développée en Chine, en Inde et au Moyen-Orient, où on l'utilisait déjà pour la cuisine et les desserts. Au cours du XVIIIe siècle, les Européens ont développé un goût prononcé pour la confiture, les confiseries, le thé, le café et autres douceurs en tout genre. Le sucre est alors devenu très populaire, et sa production a connu de nombreux "booms" successifs.</French>
 		<German>Zuckerrohr (Saccharum officinarum) ist ein tropisches Grasgewächs aus der Familie der Süßgräser, das vermutlich aus Neu-Guinea stammt. Die Zuckerverarbeitung wurde in China, Indien und dem Mittleren Osten erfunden. Dort entstanden wenig später zahlreiche Gerichte und Desserts auf der Grundlage von Zucker. Im 18. Jahrhundert kamen die Europäer auf den Geschmack und verzehrten in großen Mengen Marmeladen, Bonbons, gesüßten Tee und Kaffee sowie andere Süßigkeiten. Durch diese Nachfrage wurde der Zucker außerordentlich populär. Seitdem hat seine Produktion und Vermarktung mehrere Aufschwünge erlebt.</German>
 		<Italian>La canna da zucchero è un'erba tropicale, probabilmente originaria della Nuova Guinea. La raffinazione dello zucchero è stata sviluppata in Cina, India e Medio Oriente, dove è diventato un ingrediente fondamentale nella preparazione di cibi e dolci. Durante il XVIII secolo, gli europei svilupparono il culto di marmellate, caramelle, tè, caffè e altre squisitezze in grandi quantità; per questo motivo, lo zucchero divenne incredibilmente popolare e visse dei grandi boom commerciali.</Italian>
-		<Spanish>La caña de azúcar es una planta tropical, probablemente originaria de Nueva Guinea. El refinado del azúcar se desarrolló en China, India y Oriente Medio, donde se convirtió en un elemento básico de la cocina y los postres. Durante el siglo XVIII, los europeos se aficionaron de manera creciente a las mermeladas, los caramelos, el té, el café y otros productos azucarados. Esta alta demanda hizo enormemente popular al azúcar, y su producción y comercialización han tenido un gran auge. </Spanish>
+		<Spanish>La caña de azúcar es una planta tropical, probablemente originaria de Nueva Guinea. El refinado del azúcar se desarrolló en China, India y Oriente Medio, donde se convirtió en un elemento básico de la cocina y los postres. Durante el siglo XVIII, los europeos se aficionaron de manera creciente a las mermeladas, los caramelos, el té, el café y otros productos azucarados. Esta alta demanda hizo enormemente popular al azúcar, y su producción y comercialización han tenido un gran auge.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR</Tag>
@@ -6993,12 +6990,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA_PEDIA</Tag>
-		<English>Made from the leaves or buds of a bush, tea is the liquid created by soaking the extracted foliage in water and it is a popular beverage throughout the world. The "Camellia Sinesis," (tea plant), is grown in tropical and sub-tropical regions of the planet such as China or India. Originally from Southeast Asia, it early on became a staple in the diet of many person from the Orient. It was not until the sixteenth or seventeenth century that it was introduced to Europe as explorers crossed the globe in search of knowledge and treasure. Tea quickly became popular with the wealthy of Western Europe, and Britain would set up numerous plantations in its colony of India to help satiate the demand - India today remains the biggest producer of tea in the world.</English>
-		<French>Constitué de feuilles ou de bourgeons d'un buisson, le thé est préparé en trempant l'extrait de feuillage dans de l'eau, et c'est une boisson extrêmement populaire à travers le monde. Le "Camellia Sinesis" (la plante) pousse dans les régions tropicales et subtropicales de la planète, et notamment en Chine et en Inde. Originaire d'Asie du Sud-est, le thé devient très tôt un produit de base dans le régime alimentaire de nombreux habitants de l'Orient. Il n'est pas introduit avant le XVIe ou XVIIe siècles en Europe, quand les explorateurs font le tour du monde en quête de nouvelles connaissances et richesses. Le thé devient vite très populaire au sein des classes supérieures de l'Europe de l'ouest et la Grande-Bretagne crée de nombreuses plantations dans ses colonies des Indes pour répondre à la demande. L'Inde reste aujourd'hui le premier producteur mondial.</French>
-		<German>Tee ist ein heißes Aufgussgetränk aus den Blättern und Blattknospen der Teepflanze (Camellia sinensis). Diese immergrünen Sträucher wachsen wild in subtropischem Monsunklima, als Kulturpflanze wird er heute hauptsächlich in China und Indien angebaut. Das alte China ist das Mutterland des Teeanbaus. Hier ist bereits aus dem 2. Jahrhundert v.Chr. eine entsprechende Steuer belegt. Tee hatte eine immense Bedeutung für die chinesische und später auch die japanische Kultur. Dies spiegelt sich auch heute noch in den Teezeremonien wider, die ab dem 13. Jahrhundert entwickelt wurden. Erst im 16. oder 17. Jahrhundert brachten Forschungsreisende die Teepflanze schließlich auch nach Europa. Das Handelsmonopol lag zunächst bei den Niederländern und ging erst 1669 an die Britische Ostindien-Kompanie. Da der Tee als Getränk im reichen Westeuropa großen Anklang fand, legten die Briten in ihrer Kolonie Indien zahlreiche Plantagen an, um die steigende Nachfrage befriedigen zu können, und auch heute noch gehört Indien zu den größten Tee produzierenden Ländern der Welt.</German>
-		<Italian>Ricavato dalle foglie o dalle gemme di un arbusto, il tè è una bevanda popolare in tutto il mondo che si ottiene immergendo le foglie nell'acqua calda. la "camellia sinesis" (la pianta del tè) cresce nelle regioni tropicali e sub-tropicali del pianeta (Cina e India, per esempio). Originario del sudest asiatico, ben presto il tè entrò a far parte della dieta di molti orientali, mentre fu introdotto in Europa soltanto nel sedicesimo o diciassettesimo secolo, portato da esploratori che giravano il mondo in lungo e in largo in cerca di nuove conoscenze e tesori. Il tè raccolse in breve tempo il consenso delle classi agiate europee e per soddisfare la domanda, l'Inghilterra creò enormi piantagioni in India, che ancora oggi rimane il più grande produttore di tè al mondo.</Italian>
-		<Spanish>El té, líquido creado por la infusión en agua de las hojas o los brotes de un matorral, es una bebida que goza de gran fama en todo el mundo. La "camellia sinesis" (planta del té) crece en regiones tropicales y subtropicales del planeta, como China y la India. Procedente del sudeste de Asia, se convirtió desde muy pronto en la base de la dieta de muchos orientales. Hasta los siglos XVI o XVII no fue introducido en Europa por los aventureros que cruzaban el mundo en busca de conocimientos y tesoros. El té se hizo rápidamente popular entre la gente acomodada de Europa occidental, y los británicos crearían inmensas plantaciones en sus colonias de la India para satisfacer la demanda. En la actualidad, la India continúa siendo el mayor productor mundial.</Spanish>
-		<Polish>Herbata to zielona roślina z rodzaju kamelia, pochodząca z południowo-wschodniej Azji. Uprawia się krzewy herbaty chińskiej (Camellia sinensis, syn. Thea sinensis), drzewa herbaty asamskiej (Camellia assamica) oraz ich mieszańce – herbatę gruzińską i cejlońską. Uprawiana w wielu krajach strefy zwrotnikowej, także poza Azją, dla pączków i liści, z których po uprzednim przygotowaniu (suszenie, czasami fermentacja) przyrządza się napar o tej samej nazwie. Nazwą „herbata określa się również napary z innych ziół, np. herbata rumiankowa, herbata paragwajska, herbata Rooibos. Historia Herbaty - Jak głosi legenda, wszystko zaczęło się pewnego pięknego dnia w 2737 roku p.n.e. w Chinach. Tego dnia legendarny cesarz chiński - Szen Nung, zielarz i uczony, który ze względów higienicznych pił przegotowaną wodę, wypoczywał pod drzewem dzikiej herbaty. Wiał lekki wiatr i jego podmuch spowodował, że kilka listków wpadło do dzbana z wodą. Oczywiście cesarz zapatrzony w piękno natury nie zauważył tego, dopiero pijąc swój napój poznał smak, który go oczarował. Opowieść z Indii przypisuje początki picia herbaty mnichowi o imieniu Bodhidharma, który postanowił przez 7 lat medytować nie mrużąc oka. Gdy do końca kontemplacji został mu jeden dzień powieki zaczęły mu się zamykać, zerwał więc kilka liści z drzewa, pod którym się znajdował i zaczął je żuć. Od razu opuściło go zmęczenie. Japończycy mają inne zakończenie historii tego mnicha. Zmęczenie, które go opanowało przypisał powiekom, wyciął je więc i rzucił na ziemię. W tym miejscu natychmiast wyrósł krzew herbaty. Mnich zerwał kilka listków i zaczął je żuć. Jak się można domyślić, zmęczenie zniknęło. Takie są legendy, które w piękny sposób opisują odkrycie herbaty. A jak było naprawdę? Trudno powiedzieć. Wiadomo, że już od bardzo dawna napój ten znany jest w Chinach. Pierwsze pisemne wzmianki o tej roślinie pochodzą dopiero z VIII wieku p.n.e., z księgi Chou Huna (770 rok). Przez długie lata herbata była ceniona jako podstawowy napój, lek i środek wzmacniający, który wytwarzano z liści dzikiego drzewa herbacianego. Dopiero w III wieku n.e. rolnicy zaczęli sadzić krzaki herbaciane i z czasem rozwinęło się suszenie liści i przetwórstwo. W VIII wieku chiński poeta Lu You napisał Swiętą księgę herbaty, zawierającą opis krzewu herbacianego, narzędzi do zbioru i selekcji liści, przyborów do ceremonii przyrządzania i picia herbaty. Zawierała również spis plantacji i wielbicieli tego napoju. Liście herbaty zawierają znaczne ilości garbników (od 8 do 30%), z których najważniejszym jest tanina. Prócz nich występują tam: kofeina (teina) - do 4%, katechiny, cukry, związki białkowe, śladowe ilości olejku eterycznego, związki żywicowe, kwasy organiczne, enzymy, pektyny (2 - 3%), glikozydy i witaminy. W te ostatnie herbata jest bardzo bogata. Znaleźć w niej można karoten (prowitaminę A), witaminy B1, B2, PP, C, a przede wszystkim witaminę P (spośród roślin ją zawierających, herbata obok gryki ma jej najwięcej). Ponadto znajduje się w niej witamina K odpowiedzialna za krzepnięcie krwi.</Polish>
+		<English>Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to East Asia. After water, it is the most widely consumed drink in the world. There are many different types of tea, with vastly different profiles of flavours that include sweet, nutty, floral or grassy notes. Tea has a stimulating effect in humans primarily due to its caffeine content. Tea originated in Southwest China during the Shang dynasty, where it was used as a medicinal drink. It was popularised as a recreational drink during the Chinese Tang dynasty, and tea drinking spread to other East Asian countries. Portuguese priests and merchants introduced it to Europe during the 16th century. During the 17th century, drinking tea became fashionable among Britons, who started large-scale production and commercialisation of the plant in India.</English>
+		<Italian>Il tè è una bevanda aromatica comunemente preparata versando acqua calda o bollente su foglie stagionate di [i]Camellia sinensis[/i], un arbusto sempreverde originario dell'Asia orientale. Dopo l'acqua, è la bevanda più consumata al mondo. Esistono molti tipi diversi di tè, con profili di sapori molto diversi che includono note dolci, nocciolate, floreali o erbose. Il tè ha un effetto stimolante sull'uomo principalmente a causa del suo contenuto di caffeina. Il tè è nato nel sud-ovest della Cina durante la dinastia Shang, dove veniva usato come bevanda medicinale. Fu reso popolare come bevanda ricreativa durante la dinastia Tang cinese e il consumo di tè si diffuse in altri paesi dell'Asia orientale. Sacerdoti e mercanti portoghesi lo introdussero in Europa nel corso del XVI secolo. Durante il XVII secolo, bere il tè divenne di moda tra i britannici, che iniziarono la produzione e la commercializzazione su larga scala della pianta in India.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TELEVISIONS</Tag>
@@ -7034,16 +7027,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA_PEDIA</Tag>
-		<English>Terra sigillata is a term with at least three distinct meanings: as a description of medieval medicinal earth; in archaeology, as a general term for some of the fine red Ancient Roman pottery with glossy surface slips made in specific areas of the Roman Empire; and more recently, as a description of a contemporary studio pottery technique supposedly inspired by ancient pottery. Usually roughly translated as 'sealed earth', the meaning of 'terra sigillata' is 'clay bearing little images' (Latin sigilla), not 'clay with a sealed (impervious) surface'. The archaeological term is applied, however, to plain-surfaced pots as well as those decorated with figures in relief. </English>
+		<English>Terra sigillata, as an archaeological term, refers chiefly to a specific type of plain and decorated tableware made in Italy and in Gaul (France and the Rhineland) during the Roman Empire. These vessels have glossy surface slips ranging from a soft lustre to a brilliant glaze-like shine, in a characteristic colour range from pale orange to bright red; they were produced in standard shapes and sizes and were manufactured on an industrial scale and widely exported. The sigillata industries grew up in areas where there were existing traditions of pottery manufacture, and where the clay deposits proved suitable. The products of the Italian workshops are also known as "Aretine ware" (i.e. "wares from Arezzo") and have been collected and admired since the Renaissance. The wares made in the Gaulish factories are often referred to by English-speaking archaeologists as "samian ware".</English>
+		<Italian>Il termine "ceramica sigillata", in archeologia, si riferisce principalmente a un tipo specifico di stoviglie semplici e decorate prodotte in Italia e in Gallia (attuali Francia e Renania) al tempo dell'Impero romano. Questi oggetti hanno una superficie lucida, con una lucentezza che andava da morbida a brillante (simile a uno smalto) e con una gamma di colori che andava dall'arancio pallido al rosso brillante. Venivano prodotte in forme e dimensioni standardizzate, fabbricate su scala industriale e ampiamente esportate. Industrie di ceramica sigillata crebbero in aree dove già esistevano tradizioni di fabbricazione di ceramiche e dove i depositi di argilla si dimostrarono adatti. I prodotti delle officine italiane sono noti anche come "ceramiche aretine" e sono stati raccolti e ammirati fin dal Rinascimento. Gli articoli fabbricati nelle fabbriche galliche sono spesso definiti dagli archeologi di lingua inglese come "ceramiche samiane".</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
 		<English>Tesseract</English>
 		<French>Tesseracte</French>
+		<Italian>Tesseratto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT_PEDIA</Tag>
-		<English>In geometry, the tesseract is the four-dimensional analog of the cube; the tesseract is to the cube as the cube is to the square. Just as the surface of the cube consists of six square faces, the hypersurface of the tesseract consists of eight cubical cells. The tesseract is one of the six convex regular 4-polytopes.</English>
+		<English>A tesseract is the four-dimensional analog of the cube. It is one of the six convex regular 4-polytopes, and has 16 vertices, 32 edges, 24 square faces and 8 three-dimensional cubic faces. The word "tesseract" was coined and first used in 1888 by Charles Howard Hinton in his book [i]A New Era of Thought[/i].</English>
+		<Italian>Un tesseratto è l'equivalente quadri-dimensionale del cubo. È uno dei sei politopi regolari convessi e ha 16 vertici, 32 spigoli, 24 facce quadrate e 8 facce tridimensionali cubiche. La parola "tesseratto" fu inventata e usata per la prima volta nel 1888 da Charles Howard Hinton nel suo libro [i]Una nuova era del pensiero[/i].</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEXAN</Tag>
@@ -7575,7 +7571,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALRUS_PEDIA</Tag>
-		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus (O. r. rosmarus) which lives in the Atlantic Ocean and the Pacific walrus (O. r. divergens) which lives in the Pacific Ocean. </English>
+		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus (O. r. rosmarus) which lives in the Atlantic Ocean and the Pacific walrus (O. r. divergens) which lives in the Pacific Ocean.</English>
 		<Polish>Mors (łac. Odobenus rosmarus) - gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, kłów i kości.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7859,9 +7855,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
-		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
 	</TEXT>
 </Civ4GameText>

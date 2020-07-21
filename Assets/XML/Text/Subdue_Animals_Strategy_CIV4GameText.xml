@@ -14,7 +14,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Military standard[COLOR_REVERT] provides a small amount of experiance to mellee and archery units. In later times this is the flag that troops rally round.</English>
+		<English>[COLOR_BUILDING_TEXT]Military standard[COLOR_REVERT] provides a small amount of experience to melee and archery units. In later times, this is the flag that troops rally round.</English>
 		<French>Les [COLOR_BUILDING_TEXT]Standards militaires[COLOR_REVERT] fournissent une petite quantité d'expérience aux unités de mêlée et de tir à l'arc. Plus tard, c'est le drapeau autour duquel les troupes se rallient.</French>
 		<Italian>La [COLOR_BUILDING_TEXT]Mascotte dell'esercito[COLOR_REVERT] fornisce una piccola quantità di esperienza alle unità di arcieri e da combattimento ravvicinato. Nei tempi moderni, questa è la bandiera attorno alla quale le tue truppe si riuniscono.</Italian>
 	</TEXT>
@@ -27,12 +27,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_STRATEGY</Tag>
@@ -49,20 +47,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_STRATEGY</Tag>
 		<English>A [COLOR_BUILDING_TEXT]Carnival[COLOR_REVERT] increases the city's happiness and its culture.</English>
-		<French>[COLOR_BUILDING_TEXT]Carnival[COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Carnival[COLOR_REVERT]</German>
 		<Italian>Un [COLOR_BUILDING_TEXT]carnevale[COLOR_REVERT] incrementa la felicità e la cultura in una città; inoltre sblocca molti edifici costruibili solo da animali addomesticati, come le gabbie.</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]Carnival[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM_STRATEGY</Tag>
@@ -79,12 +72,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_HERD_STRATEGY</Tag>
@@ -94,7 +85,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNELL_STRATEGY</Tag>
-		<English>Only subdued wolves can build the dog kennels. They increase the experiance gained by some units built in the same city. Building originally from AAranda' building pack for RoM.</English>
+		<English>Only subdued wolves can build the dog kennels. They increase the experience gained by some units built in the same city. Building originally from AAranda' building pack for RoM.</English>
 		<French>Le Chenil de chiens peut être construit directement par des loups apprivoisés. Il augmente l'expérience de certaines unités qui seront entraînées dans la ville.</French>
 		<Italian>Solo i lupi addomesticati possono costruire i canili; questi edifici incrementano l'esperienza ottenuta da alcune unità. Edificio originariamente realizzato da AAranda per RoM.</Italian>
 	</TEXT>
@@ -173,7 +164,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_STRATEGY</Tag>
@@ -183,7 +173,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_STRATEGY</Tag>
-		<English>Only subdued sea creatures can build the Master Sea Hunter building. It provides experiance and promotions to early ships.</English>
+		<English>Only subdued sea creatures can build the Master Sea Hunter building. It provides experience and promotions to early ships.</English>
 		<French>Seules les créatures marines apprivoisées peuvent construire le bâtiment Master Sea Hunter. Il offre de l'expérience et des promotions aux premiers navires.</French>
 		<Italian>Solo le creature marine addomesticate possono costruire il Mastro pescatore; quest'edificio fornisce esperienza alle tue prime unità navali.</Italian>
 	</TEXT>
@@ -196,11 +186,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Naval totem[COLOR_REVERT] provides a small amount of experiance to naval units. In later times this is the flag that troops rally round.</English>
+		<English>[COLOR_BUILDING_TEXT]Naval totem[COLOR_REVERT] provides a small amount of experience to naval units. In later times this is the flag that troops rally round.</English>
 		<French>Le [COLOR_BUILDING_TEXT]Totem naval[COLOR_REVERT] fournit une petite quantité d'expérience aux unités navales. Plus tard, c'est le drapeau autour duquel les troupes se rallient.</French>
 		<Italian>La [COLOR_BUILDING_TEXT]Mascotte della marina[COLOR_REVERT] fornisce un piccolo bonus di esperienza alle unità navali. In tempi moderni questa è la bandiera attorno alla quale le tue truppe si radunano.</Italian>
 	</TEXT>
@@ -213,7 +202,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD_STRATEGY</Tag>
@@ -223,17 +211,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_STRATEGY</Tag>
@@ -296,7 +281,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>

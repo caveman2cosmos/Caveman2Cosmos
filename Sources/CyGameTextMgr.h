@@ -59,6 +59,7 @@ public:
 	std::wstring setVassalRevoltHelp(int iMaster, int iVassal);
 	std::wstring getActiveDealsString(int iThisPlayer, int iOtherPlayer);
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
+	std::wstring getFinanceUnitUpkeepString(int iPlayer);
 
 
 protected:
