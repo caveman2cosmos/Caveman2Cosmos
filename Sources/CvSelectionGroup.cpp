@@ -744,7 +744,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 		pPlot = plot();
 	}
 #ifdef NOMADIC_START
-	static TechTypes sedentaryLifestyle = static_cast<TechTypes>(GC.getInfoTypeForString("TECH_SEDENTARY_LIFESTYLE"));
+	static const TechTypes sedentaryLifestyle = static_cast<TechTypes>(GC.getInfoTypeForString("TECH_SEDENTARY_LIFESTYLE"));
 #endif
 	CvUnit* pTargetUnit;
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
