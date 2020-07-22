@@ -17,13 +17,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Tag>
-		<English>Only subdued mammoth can build the mammoth herd.  It provides a mammoth resource.  There can only be one per civ. Based on an idea by Sarkyn.</English>
-		<Italian>Solo i mammut addomesticati possono costruire il Branco - Mammut; fornisce una risorsa di mammut. Basato su un'idea di Sarkyn.</Italian>
-		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie..</Polish>
+		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
+		<Italian>Solo i mammut addomesticati possono costruire il Branco - Mammut; fornisce una risorsa di mammut.</Italian>
+		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD_STRATEGY</Tag>
-		<English>Only subdued mammoths can build the Mammoth Herd.  It provides an ivory resource.</English>
+		<English>Only subdued mammoths can build the Mammoth Herd. It provides an ivory resource.</English>
 		<Italian>Solo i mammut addomesticati possono costruire un Branco - Mammut; quest'edificio fornisce una fonte di avorio.</Italian>
 	</TEXT>
 	<TEXT>
@@ -80,7 +80,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
-		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops. </English>
+		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_STRATEGY</Tag>

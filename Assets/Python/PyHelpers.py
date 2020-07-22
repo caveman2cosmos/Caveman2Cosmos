@@ -69,9 +69,6 @@ class PyPlayer:
 	def getTotalMaintenance(self):
 		return self.player.getTotalMaintenance()
 
-	def calculateUnitCost(self):
-		return self.player.calculateUnitCost()
-
 	def calculateUnitSupply(self):
 		return self.player.calculateUnitSupply()
 

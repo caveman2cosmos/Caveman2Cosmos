@@ -85,6 +85,7 @@
 			</TechTypes>
 			<BonusType>BONUS_AZTEC</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -174,6 +175,7 @@
 			</TechTypes>
 			<BonusType>BONUS_AZTEC</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -274,6 +276,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_INCAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -366,6 +369,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_INCAN</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -483,6 +487,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_AMERICAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -571,6 +576,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<BonusType>BONUS_AMERICAN</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -674,6 +680,7 @@
 			</TechTypes>
 			<BonusType>BONUS_ROMAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -798,6 +805,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_ROMAN</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -938,6 +946,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_GREEK</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1069,6 +1078,7 @@
 			</TechTypes>
 			<BonusType>BONUS_EGYPTIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1180,6 +1190,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_EGYPTIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1287,6 +1298,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SPANISH</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1403,6 +1415,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_SPANISH</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1538,6 +1551,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_FRENCH</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1632,6 +1646,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_FRENCH</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1763,6 +1778,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_ENGLISH</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -1873,6 +1889,7 @@
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
 			<BonusType>BONUS_ENGLISH</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2010,6 +2027,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_GERMAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2104,6 +2122,7 @@
 			</TechTypes>
 			<BonusType>BONUS_GERMAN</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2225,6 +2244,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_RUSSIAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2332,6 +2352,7 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<BonusType>BONUS_RUSSIAN</BonusType>
 			<iCost>1350</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2459,6 +2480,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_ARABIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2557,6 +2579,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_ARABIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2683,6 +2706,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_PERSIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2805,6 +2829,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_PERSIAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -2930,6 +2955,7 @@
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<BonusType>BONUS_INDIAN</BonusType>
 			<iCost>1050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3060,6 +3086,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_INDIAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3190,6 +3217,7 @@
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>1640</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3320,6 +3348,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3456,6 +3485,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_JAPANESE</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3588,6 +3618,7 @@
 			</TechTypes>
 			<BonusType>BONUS_JAPANESE</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3724,6 +3755,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_MONGOLIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3852,6 +3884,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_MONGOLIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -3992,6 +4025,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4117,6 +4151,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>13</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4249,6 +4284,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_CARTHAGINIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4352,6 +4388,7 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_CARTHAGINIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4496,6 +4533,7 @@
 			<BonusType>BONUS_CELTIC</BonusType>
 			<iCost>950</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4630,6 +4668,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_CELTIC</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4753,6 +4792,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_SWEDISH</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -4877,6 +4917,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_VIKING</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5016,6 +5057,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_OTTOMAN</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5140,6 +5182,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_OTTOMAN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5279,6 +5322,7 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_KOREAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5401,6 +5445,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_KOREAN</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5513,6 +5558,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_SOUTH_AFRICAN</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5636,6 +5682,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_ZULU</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>34</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5768,6 +5815,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_IROQUOIS</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5890,6 +5938,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_IROQUOIS</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6026,6 +6075,7 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_MAYAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6153,6 +6203,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_MAYAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6287,6 +6338,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BYZANTINE</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6420,6 +6472,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_BYZANTINE</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6559,6 +6612,7 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_PORTUGUESE</BonusType>
 			<iCost>1520</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6685,6 +6739,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_PORTUGUESE</BonusType>
 			<iCost>1350</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6819,6 +6874,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_DUTCH</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -6946,6 +7002,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BonusType>BONUS_DUTCH</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7074,6 +7131,7 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_BABYLONIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7198,6 +7256,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_BABYLONIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7310,6 +7369,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_SUMERIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7411,6 +7471,7 @@
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7524,6 +7585,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_KHMER</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7626,6 +7688,7 @@
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_KHMER</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7733,6 +7796,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_ETHIOPIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7821,6 +7885,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_ETHIOPIAN</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -7944,6 +8009,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_POLYNESIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8031,6 +8097,7 @@
 			<PrereqTech>TECH_OPTICS</PrereqTech>
 			<BonusType>BONUS_POLYNESIAN</BonusType>
 			<iCost>1330</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8182,6 +8249,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_BRAZILIAN</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8315,6 +8383,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<BonusType>BONUS_BRAZILIAN</BonusType>
 			<iCost>3000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8418,6 +8487,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_PIMA</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8544,6 +8614,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_VENEZUELAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8693,6 +8764,7 @@
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<BonusType>BONUS_ISRAELI</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8818,6 +8890,7 @@
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<BonusType>BONUS_ISRAELI</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8966,6 +9039,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_POLISH</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9090,6 +9164,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_POLISH</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9241,6 +9316,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_TURKMEN</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9373,6 +9449,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_TURKMEN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9517,6 +9594,7 @@
 			</TechTypes>
 			<BonusType>BONUS_TIBETAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9644,6 +9722,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_TIBETAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9791,6 +9870,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<BonusType>BONUS_VIETNAMESE</BonusType>
 			<iCost>3000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9924,6 +10004,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_VIETNAMESE</BonusType>
 			<iCost>4120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10068,6 +10149,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_INDONESIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10169,6 +10251,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_JAVANESE</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10293,6 +10376,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_NUBIAN</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10436,6 +10520,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_SWAHILI</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10569,6 +10654,7 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_SWAHILI</BonusType>
 			<iCost>1520</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10711,6 +10797,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_AUSTRIAN</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10843,6 +10930,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_AUSTRIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -10986,6 +11074,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_HITTITE</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11118,6 +11207,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_HITTITE</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11261,6 +11351,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_UIGHUR</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11392,6 +11483,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_UIGHUR</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11537,6 +11629,7 @@
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_PHOENICIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11665,6 +11758,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_PHOENICIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11807,6 +11901,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_CANADIAN</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -11934,6 +12029,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_CANADIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12074,6 +12170,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_AUSTRALIAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12200,6 +12297,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<BonusType>BONUS_AUSTRALIAN</BonusType>
 			<iCost>2850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>34</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12343,6 +12441,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_SIAMESE</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12474,6 +12573,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_SIAMESE</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12585,6 +12685,7 @@
 			</TechTypes>
 			<BonusType>BONUS_CHOLA</BonusType>
 			<iCost>1050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12709,6 +12810,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_CHOLA</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12852,6 +12954,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -12979,6 +13082,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13121,6 +13225,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_KONGOLESE</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13245,6 +13350,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_KONGOLESE</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13388,6 +13494,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_HOLY_ROMAN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13511,6 +13618,7 @@
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<BonusType>BONUS_VENETIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13657,6 +13765,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_BERBER</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13784,6 +13893,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BERBER</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -13925,6 +14035,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_ASSYRIAN</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14049,6 +14160,7 @@
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_ASSYRIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14189,6 +14301,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_HUNGARIAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14321,6 +14434,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_HUNGARIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14463,6 +14577,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_MINOAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14594,6 +14709,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_MINOAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14735,6 +14851,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ARMENIAN</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14862,6 +14979,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ARMENIAN</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -14982,6 +15100,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_SAXON</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -15127,6 +15246,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SELJUK</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -15241,6 +15361,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_ARAWAK</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -15375,6 +15496,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -15470,6 +15592,7 @@
 			</Flavors>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -15582,6 +15705,7 @@
 			</PrereqBonuses>
 			<iCost>750</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -15726,6 +15850,7 @@
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>27</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -15918,6 +16043,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>26</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16009,9 +16135,9 @@
 			<BonusType>BONUS_ENGLISH</BonusType>
 			<iCost>3100</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>8</iAsset>
 			<iPower>20</iPower>
 			<UnitMeshGroups>
@@ -16150,6 +16276,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16261,6 +16388,7 @@
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BonusType>BONUS_ABORIGINE</BonusType>
 			<iCost>120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16368,6 +16496,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_NAVAJO</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16492,6 +16621,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16606,6 +16736,7 @@
 				<BonusType>BONUS_IRON_ORE</BonusType>
 			</PrereqBonuses>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16750,6 +16881,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_APACHE</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16892,6 +17024,7 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_APACHE</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -16993,6 +17126,7 @@
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<BonusType>BONUS_ARAWAK</BonusType>
 			<iCost>500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17091,6 +17225,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_ANASAZI</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17190,6 +17325,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_BLACKFOOT</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17288,6 +17424,7 @@
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
 			<BonusType>BONUS_BENGALI</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17390,6 +17527,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_DANISH</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17494,6 +17632,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_HOLY_ROMAN</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17591,6 +17730,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_LYDIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17689,6 +17829,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_KANEM_BORNU</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17786,6 +17927,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_BASQUE</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17882,6 +18024,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_ANASAZI</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -17988,6 +18131,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_ARGENTINIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18085,6 +18229,7 @@
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<BonusType>BONUS_ARGENTINIAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18182,6 +18327,7 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>180</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18278,6 +18424,7 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AINU</BonusType>
 			<iCost>180</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18376,6 +18523,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_GREEK</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18483,6 +18631,7 @@
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_BULGARIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18589,6 +18738,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_BELGIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18687,6 +18837,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_BELGIAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18785,6 +18936,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_SUMERIAN</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18885,6 +19037,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_BLACKFOOT</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18982,6 +19135,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19080,6 +19234,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_ASHANTI</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>25</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19178,6 +19333,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_BENINESE</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>25</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19276,6 +19432,7 @@
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_ATHENIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19375,6 +19532,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_TAHITIAN</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19473,6 +19631,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_ASHANTI</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19577,6 +19736,7 @@
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_BASQUE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19673,6 +19833,7 @@
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<BonusType>BONUS_ABORIGINE</BonusType>
 			<iCost>2520</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>25</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19772,6 +19933,7 @@
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<BonusType>BONUS_AINU</BonusType>
 			<iCost>500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19876,6 +20038,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_BULGARIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19974,6 +20137,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_BENGALI</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20072,6 +20236,7 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<BonusType>BONUS_ROXOLANI</BonusType>
 			<iCost>390</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20168,6 +20333,7 @@
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_ATHENIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20265,6 +20431,7 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>180</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20371,6 +20538,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_AYMARA</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20469,6 +20637,7 @@
 			<PrereqTech>TECH_CLOUD_PATTERNS</PrereqTech>
 			<BonusType>BONUS_AYMARA</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20584,6 +20753,7 @@
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<BonusType>BONUS_GOTH</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20710,6 +20880,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_BENINESE</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20829,6 +21000,7 @@
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<BonusType>BONUS_MUGHAL</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -20951,6 +21123,7 @@
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<BonusType>BONUS_TUPI</BonusType>
 			<iCost>1760</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21073,6 +21246,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_ABBASID</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21174,6 +21348,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_ANDAMANESE</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21320,6 +21495,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_KILLKE</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21421,6 +21597,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_KITARAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21509,6 +21686,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<BonusType>BONUS_KOGI</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21627,6 +21805,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_KONJAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21771,6 +21950,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_KURDISH</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21887,6 +22067,7 @@
 			</TechTypes>
 			<BonusType>BONUS_KUSHITE</BonusType>
 			<iCost>1050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22011,6 +22192,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_KUSHAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22102,6 +22284,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<BonusType>BONUS_KUWAITI</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22190,6 +22373,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_LA_PLATAN</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22316,6 +22500,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BonusType>BONUS_LATVIAN</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22433,6 +22618,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_ANGOLAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22561,6 +22747,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_LEBANESE</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22692,6 +22879,7 @@
 			</TechTypes>
 			<BonusType>BONUS_LIBYAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22790,6 +22978,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_LITHUANIAN</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -22912,6 +23101,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_LONGOBARDIAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23047,6 +23237,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_LULE</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23195,6 +23386,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_LUNDA</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23319,6 +23511,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_LUSITANIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23433,6 +23626,7 @@
 			</TechTypes>
 			<BonusType>BONUS_LYDIAN</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -23550,6 +23744,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_MALAGASY</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23679,6 +23874,7 @@
 			</TechTypes>
 			<BonusType>BONUS_MALAYSIAN</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23803,6 +23999,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ARAGONESE</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -23901,6 +24098,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_MAMELUK</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24043,6 +24241,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_MADAN</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24170,6 +24369,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_MANI</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24269,6 +24469,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_MASSAGETAE</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24373,6 +24574,7 @@
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_MEDIAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24469,6 +24671,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_MELANESIAN</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24567,6 +24770,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_MICRONESIAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24695,6 +24899,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_MING</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24821,6 +25026,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_MISSISSIPPIAN</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -24938,6 +25144,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_MITANNI</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25063,6 +25270,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_MOCHE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25211,6 +25419,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_MOCOVI</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25355,6 +25564,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_MOHAWK</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25486,6 +25696,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_MOLLO</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25637,6 +25848,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_MUISCA</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25746,6 +25958,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_MARIC</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25842,6 +26055,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_NABATEANS</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -25930,6 +26144,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_NAHUA</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26082,6 +26297,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<BonusType>BONUS_NAMA</BonusType>
 			<iCost>3000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26183,6 +26399,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_SAFFARID</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26311,6 +26528,7 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_NAZCA</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26428,6 +26646,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_NIGERIAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26539,6 +26758,7 @@
 			</TechTypes>
 			<BonusType>BONUS_NOK</BonusType>
 			<iCost>750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -26637,6 +26857,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_NOONGAR</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26735,6 +26956,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_NORMAN</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26859,6 +27081,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_NUMIDIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -26984,6 +27207,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_ODAWA</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27114,6 +27338,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_OMANI</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27225,6 +27450,7 @@
 			</TechTypes>
 			<BonusType>BONUS_OPHIR</BonusType>
 			<iCost>1050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27331,6 +27557,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_ORANG_ASLI</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27429,6 +27656,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_PAIUTE</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27546,6 +27774,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_PAKISTANI</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27676,6 +27905,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_PALESTINIAN</BonusType>
 			<iCost>4120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27792,6 +28022,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_PANAMAN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -27926,6 +28157,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_PARAGUAYAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28026,6 +28258,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_PASHTUN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28124,6 +28357,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_PERUVIAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28222,6 +28456,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_FILIPINO</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28358,6 +28593,7 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_PHILISTINE</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28459,6 +28695,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_PILAGA</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28555,6 +28792,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_ARVERNIAN</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28653,6 +28891,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_POVERTY_POINT</BonusType>
 			<iCost>800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28751,6 +28990,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_POYA</BonusType>
 			<iCost>2000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28848,6 +29088,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_PUELCHE</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -28946,6 +29187,7 @@
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_QIANG</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29072,6 +29314,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_QIN</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29198,6 +29441,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_QING</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29315,6 +29559,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_QUEBECKER</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29413,6 +29658,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_QUERANDI</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29517,6 +29763,7 @@
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_AVARIC</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29623,6 +29870,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_QULLA</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29734,6 +29982,7 @@
 			</TechTypes>
 			<BonusType>BONUS_RED_OCHER</BonusType>
 			<iCost>1050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -29864,6 +30113,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_RHODESIAN</BonusType>
 			<iCost>4120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30012,6 +30262,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_ROMANI</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30144,6 +30395,7 @@
 			</TechTypes>
 			<BonusType>BONUS_SABBATEAN</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30273,6 +30525,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_SAFAVID</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30417,6 +30670,7 @@
 			</TechTypes>
 			<BonusType>BONUS_SAKA</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30537,6 +30791,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_SAMI</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30637,6 +30892,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_SAMOAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30781,6 +31037,7 @@
 			</TechTypes>
 			<BonusType>BONUS_SARMATIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30881,6 +31138,7 @@
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<BonusType>BONUS_SEMANG</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -30998,6 +31256,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_SENEGALI</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31086,6 +31345,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_SENNAR</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31199,6 +31459,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31297,6 +31558,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_SICAN</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31421,6 +31683,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_SICILIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31528,6 +31791,7 @@
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_SINTASHTA</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31634,6 +31898,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31751,6 +32016,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_SLOVENIAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31874,6 +32140,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BonusType>BONUS_AZANDE</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -31972,6 +32239,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_SONGHAI</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32078,6 +32346,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_SUDANESE</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32207,6 +32476,7 @@
 			</TechTypes>
 			<BonusType>BONUS_SUNDANESE</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32336,6 +32606,7 @@
 			</TechTypes>
 			<BonusType>BONUS_SURINAMESE</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32476,6 +32747,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_TAJIK</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32582,6 +32854,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_TAGALOG</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32670,6 +32943,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_TAHITIAN</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32819,6 +33093,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_TAIRONA</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32926,6 +33201,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_TANG</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33050,6 +33326,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_ADENAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33180,6 +33457,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_BAHRAINI</BonusType>
 			<iCost>4120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33297,6 +33575,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_TANZANIAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33425,6 +33704,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_TARASCAN</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33567,6 +33847,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_TASMANIAN</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33696,6 +33977,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_TATAR</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33796,6 +34078,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_TEXAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33919,6 +34202,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_THRACIAN</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34041,6 +34325,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_THREE_KINGDOMS</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34154,6 +34439,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_TIMURID</BonusType>
 			<iCost>150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34283,6 +34569,7 @@
 			</TechTypes>
 			<BonusType>BONUS_TIWI</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34431,6 +34718,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_TLAXCALTEC</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34562,6 +34850,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_BACTRIC</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34709,6 +34998,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_TOBA</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34843,6 +35133,7 @@
 			</TechTypes>
 			<BonusType>BONUS_TONGAN</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -34940,6 +35231,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_TOTONAC</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35037,6 +35329,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_TRANSOXANIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35163,6 +35456,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_TUCANO</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35289,6 +35583,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_TUNGUS</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35434,6 +35729,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_TUNISIAN</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35540,6 +35836,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_TURKISH</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35672,6 +35969,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_UKRAINIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35793,6 +36091,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_URUGUAYAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35924,6 +36223,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_BANDANESE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36067,6 +36367,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_UZBEK</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36207,6 +36508,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_VALDIVIAN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36316,6 +36618,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_VANUATUAN</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36460,6 +36763,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_SAUDI</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36563,6 +36867,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_WALLACHIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36667,6 +36972,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_VANDAL</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36767,6 +37073,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_WARAY</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36867,6 +37174,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_WARI</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -36985,6 +37293,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_WAYANA</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37129,6 +37438,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_BANGLADESHI</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37278,6 +37588,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_WAYUU</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37381,6 +37692,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BonusType>BONUS_XIA</BonusType>
 			<iCost>600</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37525,6 +37837,7 @@
 			</TechTypes>
 			<BonusType>BONUS_XIANBEI</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37654,6 +37967,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_XIONGNU</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37775,6 +38089,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_YAGHAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -37885,6 +38200,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_YAGUA</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38033,6 +38349,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_YANOMAMI</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38178,6 +38495,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_YEMENI</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38287,6 +38605,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_YOLNGU</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38393,6 +38712,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_ZANZIBARI</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38499,6 +38819,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_BASHKIR</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38587,6 +38908,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<BonusType>BONUS_ZENU</BonusType>
 			<iCost>3800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38685,6 +39007,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_ZIMBABWEAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38794,6 +39117,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_ZUNI</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -38892,6 +39216,7 @@
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_BATAVIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39032,6 +39357,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_BATEK</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39158,6 +39484,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_BAVARIAN</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39307,6 +39634,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_BEDOUIN</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39419,6 +39747,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_BELIZEAN</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39550,6 +39879,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_AFGHAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39647,6 +39977,7 @@
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<BonusType>BONUS_BOLIVIAN</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39753,6 +40084,7 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<BonusType>BONUS_BRETON</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39877,6 +40209,7 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BRITON</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -39975,6 +40308,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_BURGUNDIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40063,6 +40397,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<BonusType>BONUS_CAMBEBA</BonusType>
 			<iCost>2620</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40206,6 +40541,7 @@
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_CANARI</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40301,6 +40637,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_CAPAYAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40424,6 +40761,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_CARAL_SUPE</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40521,6 +40859,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_CATALONIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40619,6 +40958,7 @@
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_AKSUMITE</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40753,6 +41093,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_CELTIBERIAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40860,6 +41201,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_CHACHAPOYA</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -40996,6 +41338,7 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_CHAVIN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41141,6 +41484,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_CHECHEN</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41242,6 +41586,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_CHILEAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41340,6 +41685,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_CHIMU</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41480,6 +41826,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_CHIPPEWA</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41577,6 +41924,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_KHWARAZMIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41726,6 +42074,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<BonusType>BONUS_CHUMASH</BonusType>
 			<iCost>3000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -41856,6 +42205,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_COLOMBIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42007,6 +42357,7 @@
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_ALACALUFE</BonusType>
 			<iCost>2050</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42105,6 +42456,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_CROATIAN</BonusType>
 			<iCost>1400</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42222,6 +42574,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_CZECH</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42350,6 +42703,7 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_DACIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42492,6 +42846,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_DAYAK</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42626,6 +42981,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_DRAVIDIAN</BonusType>
 			<iCost>950</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42755,6 +43111,7 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_DZUNGAR</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42855,6 +43212,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_ECUADORIAN</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -42964,6 +43322,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_ESTONIAN</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43087,6 +43446,7 @@
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_ETRUSCAN</BonusType>
 			<iCost>1000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43219,6 +43579,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_FATIMID</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43366,6 +43727,7 @@
 			</TechTypes>
 			<BonusType>BONUS_ALEMANNIC</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43467,6 +43829,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_FIJIAN</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43597,6 +43960,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_FINNISH</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43746,6 +44110,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<BonusType>BONUS_FLEMISH</BonusType>
 			<iCost>3000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43853,6 +44218,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_FUEGIAN</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -43959,6 +44325,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<BonusType>BONUS_FURAWI</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44083,6 +44450,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_GALATIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44214,6 +44582,7 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_GAUCHO</BonusType>
 			<iCost>2500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44337,6 +44706,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BonusType>BONUS_GEORGIAN</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44446,6 +44816,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_GHANAIAN</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44572,6 +44943,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<BonusType>BONUS_GHURID</BonusType>
 			<iCost>1300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44673,6 +45045,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_ALBANIAN</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44771,6 +45144,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_KIPCHAK</BonusType>
 			<iCost>1750</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44875,6 +45249,7 @@
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_GOKTURK</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -44998,6 +45373,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BonusType>BONUS_CHAMORRAN</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45114,6 +45490,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUANCHES</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45233,6 +45610,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUARANI</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45352,6 +45730,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUATEMALAN</BonusType>
 			<iCost>1650</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45473,6 +45852,7 @@
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_GUYANESE</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45597,6 +45977,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_HELVETIAN</BonusType>
 			<iCost>850</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45694,6 +46075,7 @@
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<BonusType>BONUS_HEMUDU</BonusType>
 			<iCost>470</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45798,6 +46180,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<BonusType>BONUS_HIMYARITE</BonusType>
 			<iCost>1250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -45926,6 +46309,7 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_ALGERIAN</BonusType>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46068,6 +46452,7 @@
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_HONGKONGER</BonusType>
 			<iCost>3300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46169,6 +46554,7 @@
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_HOPEWELL</BonusType>
 			<iCost>1200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46302,6 +46688,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_HOPI</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46412,6 +46799,7 @@
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_HUASTEC</BonusType>
 			<iCost>1100</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46520,6 +46908,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_HURRIANS</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46618,6 +47007,7 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<BonusType>BONUS_HYKSOSI</BonusType>
 			<iCost>392</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46749,6 +47139,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<BonusType>BONUS_ILLYRIAN</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46852,6 +47243,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_ILOCANO</BonusType>
 			<iCost>2150</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46960,6 +47352,7 @@
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<BonusType>BONUS_INDUS</BonusType>
 			<iCost>670</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47090,6 +47483,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_IRANIAN</BonusType>
 			<iCost>4120</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47199,6 +47593,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_AMIS</BonusType>
 			<iCost>4720</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47296,6 +47691,7 @@
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<BonusType>BONUS_IRAQI</BonusType>
 			<iCost>4000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>44</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47400,6 +47796,7 @@
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_JOMON</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47530,6 +47927,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_JORDANIAN</BonusType>
 			<iCost>2200</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47625,6 +48023,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<BonusType>BONUS_JOSEON</BonusType>
 			<iCost>1500</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47747,6 +48146,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_JUTE</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -47867,6 +48267,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<BonusType>BONUS_KENYAN</BonusType>
 			<iCost>2300</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -48011,6 +48412,7 @@
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_KAZAKH</BonusType>
 			<iCost>1800</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -48138,6 +48540,7 @@
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_KHAZAR</BonusType>
 			<iCost>900</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -48255,6 +48658,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_PUNTIC</BonusType>
 			<iCost>700</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>

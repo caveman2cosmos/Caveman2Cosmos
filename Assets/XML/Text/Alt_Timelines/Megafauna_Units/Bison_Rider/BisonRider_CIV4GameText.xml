@@ -45,8 +45,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Tag>
-		<English>There is no evidence bison were ever trained for warfare.  The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
-		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite. [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</Italian>
+		<English>There is no evidence bison were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
+		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite. [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -67,7 +67,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>
-		<English>There is no evidence this unit was ever used.  It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
+		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
 	</TEXT>

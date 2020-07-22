@@ -136,7 +136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO_STRATEGY</Tag>
 		<English>Build a Peat Fired Dynamo to increase your city's electricity.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à tourbe[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville..</French>
+		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à tourbe[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville.</French>
 		<Italian>Costruisci un Generatore a torba per incrementare la produzione elettrica della tua città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -148,7 +148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Tag>
 		<English>Steampunk was influenced by, and often adopts the style of, the 19th century scientific romances of Jules Verne, H.G. Wells, and Mary Shelley.</English>
-		<Italian>Steampunk è stata influenzata, spesso adottandone lo stile, dai romanzi scientifici del 19° secolo di Jules Verne, H.G. Wells e Mary Shelley.</Italian>
+		<Italian>La cultura steampunk è stata influenzata, spesso adottandone lo stile, dai romanzi scientifici del XIX secolo di Jules Verne, H.G. Wells e Mary Shelley.</Italian>
 		<Polish>Steampunk - nurt stylistyczny w kulturze (literatura, film, komiks, moda), odmiana fantastyki naukowej, boczna gałąź cyberpunku. W przeciwieństwie do cyberpunku, technika otaczająca bohaterów nie jest oparta na elektronice lecz na mechanice (np. odpowiednikiem komputera jest maszyna różnicowa). Charakterystyczne dla steampunku zainteresowanie rozwojem techniki często prowadzi do kreowania wynalazków nieznanych w naszej historii, dlatego nurt ten bywa zaliczany do tzw. historii alternatywnych. Akcja utworów steampunkowych przeważnie rozgrywa się w epoce wiktoriańskiej - erze rewolucji technicznej, wieku pary (stąd nazwa gatunku: steam, ang. - para). Steampunk nawiązuje do twórczości ojców fantastyki: Juliusza Verne'a, Herberta George'a Wellsa czy Marka Twaina.</Polish>
 	</TEXT>
 	<TEXT>
@@ -257,7 +257,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAUTILUS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Nautilus[COLOR_REVERT] is a Steampunk Submarine. Coming at an earlier tech than the normal subs, it can give you a crippling advantage in naval warfare.</English>
-		<Italian>Il [COLOR_UNIT_TEXT]Nautilo[COLOR_REVERT] è un sottomarino in stile Steampunk. Poichè è disponibile molto prima dei normali sottomarini, può darti un grande vantaggio nella guerra navale.</Italian>
+		<Italian>Il [COLOR_UNIT_TEXT]Nautilo[COLOR_REVERT] è un sottomarino in stile Steampunk. Poiché è disponibile molto prima dei normali sottomarini, può darti un grande vantaggio nella guerra navale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER</Tag>
@@ -267,12 +267,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER_PEDIA</Tag>
-		<English>In the bowels of some hellish Victorian workhouse, a distinctly above-average mad scientist has discovered how to animate a humanoid minion using steam, to do his bidding (without the usual groans and snide comments). He was (alas for him!) unable to keep his creation a secret for long...but his loss is your gain!</English>
+		<English>In the bowels of some hellish Victorian workhouse, a distinctly above-average mad scientist has discovered how to animate a humanoid minion using steam, to do his bidding (without the usual groans and snide comments). He was (alas for him!) unable to keep his creation a secret for long... but his loss is your gain!</English>
 		<Polish>Prymitywny android napędzany silnikiem parowym.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER_STRATEGY</Tag>
-		<English>A steam robot worker, product of the Steampunk alt-timeline culture. Fast-moving for a worker, fast working too, somewhat cheaper to build, and it doesn't stop you growing to build one.  You will not think of commissioning even Modern Workers until you have exhausted your quota of these!</English>
+		<English>A steam robot worker, product of the Steampunk alt-timeline culture. Fast-moving for a worker, fast working too, somewhat cheaper to build, and it doesn't stop you growing to build one. You will not think of commissioning even Modern Workers until you have exhausted your quota of these!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAM_TANK</Tag>
@@ -286,7 +286,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAM_TANK_PEDIA</Tag>
 		<English>Steam Tanks are war machines used by steampunk armies. The thick steel armor plating of a Steam Tank makes it all but immune to lesser weapons such as arrows and crossbow bolts. The best way of disabling or destroying a Steam Tank is by cannon fire, although the Steam Tank has been known to shrug off even such damage.</English>
-		<Italian>Il carro armato a vapore è simile a un Carro blindato.</Italian>
+		<Italian>Il carro armato a vapore è simile a un carro blindato.</Italian>
 		<Polish>Czołgi Parowe to potworne, dymiące machiny wojenne, które suną w kierunku wroga strzelając w niego śmiertelnie niebezpiecznymi kulami z karabinów parowych, by zmiszczyć wszystkich ośmielających przeciwstawić się Imperium Człowieka. Zostały zaprojektowane przez sławnego wynalazcę Leonardo z Miragliano, który dostosował parę wykorzystywaną przez krasnoludy do poruszania tłoków i kół zębatych, które napędzają koła Czołgu Parowego. W czasie wojny Szkoła Inżynierów</Polish>
 	</TEXT>
 	<TEXT>

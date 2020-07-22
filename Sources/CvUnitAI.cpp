@@ -2319,22 +2319,22 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER))
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
-		if (GC.getGame().getElapsedGameTurns() > 10 && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
+		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
+
+		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
+		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
-			if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(getOwner()).getNumCities())
+			if (gUnitLogLevel > 2)
 			{
-				if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
-				{
-					if (gUnitLogLevel > 2)
-					{
-						logBBAI("	%S's %S at (%d,%d) is disbanding itself due to large number of workers available, and financial trouble.", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
-					}
-					scrap();
-					return;
-				}
+				logBBAI(
+					"%S's %S at (%d,%d) is disbanding itself due to large number of workers available, and financial trouble.",
+					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY()
+				);
 			}
+			scrap();
+			return;
 		}
 	}
 
@@ -2578,22 +2578,19 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER))
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER)
 	{
-		if (GC.getGame().getElapsedGameTurns() > 10)
+		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
+
+		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
+		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
-			if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(getOwner()).getNumCities())
+			if (gUnitLogLevel > 2)
 			{
-				if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
-				{
-					if (gUnitLogLevel > 2)
-					{
-						logBBAI("	%S's %S at (%d,%d) is disbanding itself due to large number of workers available", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
-					}
-					scrap();
-					return;
-				}
+				logBBAI("	%S's %S at (%d,%d) is disbanding itself due to large number of workers available", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
 			}
+			scrap();
+			return;
 		}
 	}
 
@@ -3079,12 +3076,6 @@ void CvUnitAI::AI_attackMove()
 		}
 
 		if (!isEnemy(plot()->getTeam()) && AI_heal())
-		{
-			return;
-		}
-
-		// Change grouping rules shortly after civ creation
-		if (GET_PLAYER(getOwner()).getFreeUnitCountdown() > 0 && AI_groupMergeRange(UNITAI_ATTACK_CITY, 2, false, true, true))
 		{
 			return;
 		}
@@ -5764,16 +5755,12 @@ void CvUnitAI::AI_exploreMove()
 		logBBAI("	%S's %S at (%d,%d) finds nothing at all to explore", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
 	}
 
-	if (!isHuman() && (AI_getUnitAIType() == UNITAI_EXPLORE))
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_EXPLORE
+	&& GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE) > GET_PLAYER(getOwner()).AI_neededExplorers(area())
+	&& GET_PLAYER(getOwner()).getTotalUnitUpkeep() > 0)
 	{
-		if (GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE) > GET_PLAYER(getOwner()).AI_neededExplorers(area()))
-		{
-			if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
-			{
-				scrap();
-				return;
-			}
-		}
+		scrap();
+		return;
 	}
 
 /************************************************************************************************/
@@ -7454,23 +7441,11 @@ void CvUnitAI::AI_workerSeaMove()
 		return;
 	}
 
-	if (!(getGroup()->canDefend()))
+	if (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/20/09								jdog5000	  */
-/*																							  */
-/* Unit AI, Efficiency																		  */
-/************************************************************************************************/
-		//if (GET_PLAYER(getOwner()).AI_getPlotDanger(plot()) > 0)
-		if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+		if (AI_retreatToCity())
 		{
-			if (AI_retreatToCity())
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -7499,27 +7474,18 @@ void CvUnitAI::AI_workerSeaMove()
 	{
 		pCity = plot()->getPlotCity();
 
-		if (pCity != NULL)
+		if (pCity != NULL && pCity->getOwner() == getOwner())
 		{
-			if (pCity->getOwner() == getOwner())
+			if (pCity->AI_neededSeaWorkers() != 0)
 			{
-				if (pCity->AI_neededSeaWorkers() == 0)
-				{
-					if (GC.getGame().getElapsedGameTurns() > 10)
-					{
-						if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
-						{
-							scrap();
-							return;
-						}
-					}
-				}
-				else
-				{
-					//Probably icelocked since it can't perform actions.
-					scrap();
-					return;
-				}
+				//Probably icelocked since it can't perform actions.
+				scrap();
+				return;
+			}
+			else if (GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+			{
+				scrap();
+				return;
 			}
 		}
 	}
@@ -8671,16 +8637,12 @@ void CvUnitAI::AI_exploreSeaMove()
 	{
 		pWaterArea = plot()->waterArea();
 
-		if (pWaterArea != NULL)
+		if (pWaterArea != NULL
+		&& GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_EXPLORE_SEA) > GET_PLAYER(getOwner()).AI_neededExplorers(pWaterArea)
+		&& GET_PLAYER(getOwner()).getTotalUnitUpkeep() > 0)
 		{
-			if (GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_EXPLORE_SEA) > GET_PLAYER(getOwner()).AI_neededExplorers(pWaterArea))
-			{
-				if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
-				{
-					scrap();
-					return;
-				}
-			}
+			scrap();
+			return;
 		}
 	}
 
@@ -31774,12 +31736,12 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (!isHuman() && GET_PLAYER(getOwner()).calculateUnitCost() > 0 && !bWithCommander)
+	if (!isHuman() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0 && !bWithCommander)
 	{
-		int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
-		int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
+		const int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
+		const int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
 
-		if ( iHasHunters > iNeededHunters + 1 )
+		if (iHasHunters > iNeededHunters + 1)
 		{
 			if( gUnitLogLevel >= 2 )
 			{

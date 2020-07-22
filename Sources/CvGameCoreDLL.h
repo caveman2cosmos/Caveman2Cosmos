@@ -139,6 +139,7 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
 #define PARALLEL_MAPS
+// #define NOMADIC_START
 
 //
 // Cache feature macros

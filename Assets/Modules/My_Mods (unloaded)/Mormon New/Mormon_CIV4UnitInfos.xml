@@ -41,6 +41,7 @@
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseHurry>20</iBaseHurry>
 			<BonusProductionModifiers>
@@ -53,7 +54,6 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -135,6 +135,7 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<iCost>-1</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueDefense>3</iXPValueDefense>
