@@ -17902,7 +17902,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 		return false;
 	}
 
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	// Need Tech Prereq, if applicable
 	if (kMission.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kMission.getTechPrereq()))
@@ -17935,7 +17935,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	// Mod espionage mission control to stop a mission from appearing in the interface where
 	// any mission will appear there if it has a cost attached to it. The BTS mission system
 	// has no mission state variable for enabling/disabling individual missions.
-	CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)eMission);
+	const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)eMission);
 
 	//Bribe
 	if (kMissionInfo.getBuyUnitCostFactor() > 0 && !GC.isSS_BRIBE())
@@ -18002,13 +18002,13 @@ int CvPlayer::getEspionageMissionCost(EspionageMissionTypes eMission, PlayerType
 	if (iMissionCost > MAX_INT)
 	{
 		iMissionCost = MAX_INT;
-}
+	}
 	return std::max(0, (int)iMissionCost);
 }
 
 int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
 {
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 	int iBaseMissionCost = kMission.getCost();
 
 	// -1 means this mission is disabled
@@ -18449,7 +18449,7 @@ int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Player
 
 int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
 {
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 	long long iModifier = 100;
 
 	CvCity* pCity = NULL;
@@ -22976,7 +22976,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 	{
 		return;
 	}
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
 
 	if (!isTriggerFired(kTriggeredData.m_eTrigger))
 	{
@@ -23085,8 +23085,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)
 {
-
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eEventTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eEventTrigger);
 
 	CvCity* pCity = getCity(iCityId);
 	CvCity* pOtherPlayerCity = NULL;
@@ -23612,7 +23611,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		return false;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (kEvent.getPrereqGameOption() != NO_GAMEOPTION)
 	{
@@ -23891,7 +23890,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 	{
 		for (int iTrigger = 0; iTrigger < GC.getNumEventTriggerInfos(); ++iTrigger)
 		{
-			CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo((EventTriggerTypes)iTrigger);
+			const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo((EventTriggerTypes)iTrigger);
 			if (!kTrigger.isRecurring())
 			{
 				for (int i = 0; i < kTrigger.getNumPrereqEvents(); ++i)
@@ -23959,7 +23958,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		setEventOccured(eEvent, *pTriggeredData);
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvCity* pCity =	(pTriggeredData == NULL ? NULL : getCity(pTriggeredData->m_iCityId));
 	CvCity* pOtherPlayerCity = NULL;
 
@@ -24708,7 +24707,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 bool CvPlayer::isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 == kEvent.getTechPercent() && 0 == kEvent.getTechCostPercent())
 	{
@@ -24742,7 +24741,7 @@ bool CvPlayer::isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes 
 TechTypes CvPlayer::getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer) const
 {
 	TechTypes eBestTech = NO_TECH;
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 == kEvent.getTechPercent() && 0 == kEvent.getTechCostPercent())
 	{
@@ -24805,7 +24804,7 @@ TechTypes CvPlayer::getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer
 
 int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	int iGold = kEvent.getGold();
 	if (bRandom)
@@ -24816,7 +24815,7 @@ int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRa
 	iGold *= std::max(0, calculateInflationRate() + 100);
 	iGold /= 100;
 
-	TechTypes eBestTech = getBestEventTech(eEvent, eOtherPlayer);
+	const TechTypes eBestTech = getBestEventTech(eEvent, eOtherPlayer);
 
 	if (NO_TECH != eBestTech)
 	{
@@ -24999,7 +24998,7 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 {
 	if ( !kTriggeredData.m_bExpired )
 	{
-		CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+		const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 		if (!CvString(kEvent.getPythonExpireCheck()).empty())
 		{
@@ -25025,11 +25024,11 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 			return false;
 		}
 
-		CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
+		const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
 
 		FAssert(kTriggeredData.m_ePlayer != NO_PLAYER);
 
-		CvPlayer& kPlayer = GET_PLAYER(kTriggeredData.m_ePlayer);
+		const CvPlayer& kPlayer = GET_PLAYER(kTriggeredData.m_ePlayer);
 
 		if (kTrigger.isStateReligion() & kTrigger.isPickReligion())
 		{
@@ -25129,8 +25128,8 @@ bool CvPlayer::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, Relig
 		return false;
 	}
 
-	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
 	if (getTeam() == kPlayer.getTeam())
 	{
@@ -25280,7 +25279,7 @@ CvUnit* CvPlayer::pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlo
 
 bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreActive) const
 {
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 	if (NO_HANDICAP != kTrigger.getMinDifficulty())
 	{
 		if (GC.getGame().getHandicapType() < kTrigger.getMinDifficulty())
@@ -25443,7 +25442,7 @@ int CvPlayer::getEventTriggerWeight(EventTriggerTypes eTrigger) const
 		return 0;
 	}
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
 	if (kTrigger.getProbability() < 0)
 	{
@@ -32288,7 +32287,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 	}
 }
 
-bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative)
+bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 {
 	FAssertMsg(eIndex >= 0 || eIndex == NO_TRAIT, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumTraitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -32298,7 +32297,7 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative)
 		return false;
 	}
 
-	CvTraitInfo& kTrait = GC.getTraitInfo(eIndex);
+	const CvTraitInfo& kTrait = GC.getTraitInfo(eIndex);
 
 	if (kTrait.getLinePriority() == 0)
 	{
@@ -32403,7 +32402,7 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative)
 	return true;
 }
 
-bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive)
+bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 {
 	if (GC.getTraitInfo(eTrait).getLinePriority() == 0)
 	{

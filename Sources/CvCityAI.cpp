@@ -16574,7 +16574,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
-									CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+									const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 									bool bUnitIsEnabler = kUnit.isPrereqAndBuilding((int)eBuilding);
 									bool bUnitIsOtherwiseEnabled = false;
 

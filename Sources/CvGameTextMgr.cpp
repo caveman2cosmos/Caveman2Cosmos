@@ -15583,7 +15583,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	// AIAndy: Help display for increasing specific outcomes
 	for (iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
 	{
-		CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
+		const CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
 
 		int iExtraChancePromotion = 0;
 		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
@@ -21266,7 +21266,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 }
 
 
-void buildingHelpTechAndSpecialistModifiers_Old(CvBuildingInfo& kBuilding, CvWStringBuffer& szBuffer, PlayerTypes ePlayer, TeamTypes eTeam)
+void buildingHelpTechAndSpecialistModifiers_Old(const CvBuildingInfo& kBuilding, CvWStringBuffer& szBuffer, PlayerTypes ePlayer, TeamTypes eTeam)
 {
 	int iTechHappiness = 0;
 	int iTechHealth = 0;
@@ -23991,7 +23991,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	//AIAndy: Display in which range of a property this building is auto built
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
-		CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
+		const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
 		int iNum = kInfo.getNumPropertyBuildings();
 		for (int j=0; j<iNum; j++)
 		{
@@ -33299,7 +33299,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
+	const CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
 	bool bNeedSubtotal = false;
 	int iBaseRate = 0;
 	int i;
@@ -33310,7 +33310,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	{
 		if (city.isWorkingPlot(i))
 		{
-			CvPlot* pPlot = city.getCityIndexPlot(i);
+			const CvPlot* pPlot = city.getCityIndexPlot(i);
 
 			if (pPlot != NULL)
 			{
@@ -34314,7 +34314,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 
 	//define commerce info.
-	CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
+	const CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
 
 	//ensure we have a player definition - if we don't, disable the help hover
 	if (NO_PLAYER == city.getOwner())
@@ -34513,8 +34513,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	{
 		if (city.hasTrait((TraitTypes)i))
 		{
-			CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
-			int iTraitMod = trait.getCommerceModifier(eCommerceType);
+			const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
+			const int iTraitMod = trait.getCommerceModifier(eCommerceType);
 			if (0 != iTraitMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TRAIT", iTraitMod, info.getChar(), trait.getTextKeyWide()));
@@ -34642,7 +34642,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	{
 		return;
 	}
-	CvYieldInfo& info = GC.getYieldInfo(eYieldType);
+	const CvYieldInfo& info = GC.getYieldInfo(eYieldType);
 	CvPlayer& owner = GET_PLAYER(city.getOwner());
 
 	const int iBaseProduction = city.getModifiedBaseYieldRate(eYieldType);
@@ -35074,7 +35074,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		if (owner.hasTrait((TraitTypes)i))
 		{
 			iTraitMod = 0;
-			CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
+			const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
 			iTraitMod += trait.getGreatPeopleRateModifier();
 			if (owner.getStateReligion() != NO_RELIGION && city.isHasReligion(owner.getStateReligion()))
 			{
@@ -35512,9 +35512,9 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		return;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvPlayer& kActivePlayer = GET_PLAYER(ePlayer);
-	EventTriggeredData* pTriggeredData = kActivePlayer.getEventTriggered(iEventTriggeredId);
+	const EventTriggeredData* pTriggeredData = kActivePlayer.getEventTriggered(iEventTriggeredId);
 
 	if (NULL == pTriggeredData)
 	{
@@ -36216,7 +36216,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes eActivePlayer, PlayerTypes eOtherPlayer)
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (eTech != NO_TECH)
 	{
@@ -36262,7 +36262,7 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 
 void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer)
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
 	int iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
@@ -36475,7 +36475,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit)
 {
 	CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	//szBuffer.assign(kMission.getDescription());
 
