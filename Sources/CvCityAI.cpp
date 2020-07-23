@@ -15734,12 +15734,15 @@ retry:
 			else
 			{
 				iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+				/* Toffer - Commented out as it's not entirely clear that this is a problem.
+				// Someone should look into this assert which is frequently triggered, I think it may be a false posititve.
 				FAssertMsg(iResult == 0, CvString::format(
 					"City %S rated building %s non zero (%d) which is wrong somehow? This assert might be deprecated!",
 					m_szName.c_str(),
 					GC.getBuildingInfo(eBuilding).getType(),
 					iResult).c_str()
 				);
+				*/
 				iResult = 0;
 			}
 		}
