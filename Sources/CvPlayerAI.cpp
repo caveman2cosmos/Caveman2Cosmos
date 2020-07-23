@@ -888,7 +888,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 							iCityExp += pPlotCity->getSpecialistFreeExperience(); //great generals
 							iCityExp += getFreeExperience(); //civics & wonders
 
-							if (iExp <= std::max(0, iCityExp) && getTotalUnitUpkeep() > 0
+							if (iExp <= std::max(0, iCityExp) && getFinalUnitUpkeep() > 0
 							&& (pLoopUnit->getDomainType() != DOMAIN_LAND || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
 							&& pPlotCity->canTrain(pLoopUnit->getUnitType())
 							&& pPlotCity->plot()->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders()
@@ -18941,7 +18941,7 @@ void CvPlayerAI::AI_doMilitary()
 				int iFundedPercent = AI_costAsPercentIncome();
 				int iSafePercent = AI_safeCostAsPercentIncome();
 				int iSafeBuffer = (1 + iPass) * 5; // this prevents the AI from disbanding their elite units unless the financial trouble is very severe
-				while (iFundedPercent < iSafePercent-iSafeBuffer && getTotalUnitUpkeep() > 0)
+				while (iFundedPercent < iSafePercent-iSafeBuffer && getFinalUnitUpkeep() > 0)
 				{
 					int iExperienceThreshold;
 					switch (iPass)

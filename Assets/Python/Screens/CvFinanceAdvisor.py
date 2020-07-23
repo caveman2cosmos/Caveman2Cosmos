@@ -241,7 +241,7 @@ class CvFinanceAdvisor:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
 		iExpenses = 0
-		iTotalUnitUpkeep = CyPlayer.getTotalUnitUpkeep()
+		iFinalUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
@@ -251,8 +251,8 @@ class CvFinanceAdvisor:
 		y = -2
 		szText = TRNSLTR.getText("TXT_KEY_UNIT_UPKEEP", ())
 		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + szText, 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
-		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iTotalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
-		iExpenses += iTotalUnitUpkeep
+		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iFinalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+		iExpenses += iFinalUnitUpkeep
 		y += 22
 
 		if totalUnitSupply:

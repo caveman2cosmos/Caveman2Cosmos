@@ -1102,7 +1102,7 @@ void CvCityAI::AI_chooseProduction()
 	bool bGetBetterUnits = kPlayer.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
 	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 
-	int iUnitCostPercentage = kPlayer.getTotalUnitUpkeep() * 100 / std::max(1, kPlayer.calculatePreInflatedCosts());
+	int iUnitCostPercentage = kPlayer.getFinalUnitUpkeep() * 100 / std::max(1, kPlayer.calculatePreInflatedCosts());
 	int iWaterPercent = AI_calculateWaterWorldPercent();
 
 	int iBuildUnitProb = AI_buildUnitProb();
@@ -4362,7 +4362,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			}
 
 			if (iHasMetCount > 0 && bWarPossible
-			&& (bLandWar || bAssault || !bFinancialTrouble || GET_PLAYER(getOwner()).getTotalUnitUpkeep() == 0))
+			&& (bLandWar || bAssault || !bFinancialTrouble || GET_PLAYER(getOwner()).getFinalUnitUpkeep() == 0))
 			{
 				aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
 				aiUnitAIVal[UNITAI_ATTACK_CITY] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 7 : 15)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));

@@ -3868,23 +3868,36 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE][ICON_BULLET]z przyśpieszania produkcji = %d5%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP</Tag>
-		<English>[ICON_BULLET]Civilian Unit upkeep: %d1 [ICON_GOLD]
-[SPACE][SPACE] * Upkeep: %d2 [ICON_GOLD]
-[SPACE][SPACE] * Free: %d3 [ICON_GOLD]
-
-[ICON_BULLET]Military Unit upkeep: %d4[ICON_GOLD]
-[SPACE][SPACE] * Upkeep: %d5 [ICON_GOLD]
-[SPACE][SPACE] * Free: %d6 [ICON_GOLD]</English>
-
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN</Tag>
+		<English>[SPACE]Civilian Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY</Tag>
+		<English>[SPACE]Military Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC</Tag>
+		<English>[NEWLINE][SPACE][SPACE] * Civic change: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
+		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE</Tag>
+		<English>[NEWLINE][SPACE][SPACE] * Free: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD]</English>
+		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD][NEWLINE]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL</Tag>
-		<English>[NEWLINE]------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1</Tag>
+		<English>[NEWLINE][SPACE][SPACE] * Total: %d1 [ICON_GOLD][NEWLINE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
+		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>
