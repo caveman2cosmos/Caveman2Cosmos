@@ -3067,7 +3067,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 			if (pUnit->getUpkeep100() > 0)
 			{
-				szTempBuffer = CvWString::format(L"%.2f", ((float)pUnit->getUpkeep100()) / 100.0);
+				szTempBuffer = CvWString::format(L"%.2f", pUnit->getUpkeep100() / 100.0);
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
 			}
@@ -8885,7 +8885,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				const int iUnitUpkeep = kPlayer.getTotalUnitUpkeep();
+				const int iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
 				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
 				int iUnitCostPercentage = (iUnitUpkeep * 100) / std::max(1, iTotalCosts);
 				szString.append(CvWString::format(L"\nUnit cost percentage: %d (%d / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
@@ -15928,13 +15928,20 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//	Free units population percent
-	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0))
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0 || GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()
-				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
-				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() / 100;
+			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian();
+			int iTemp = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent();
+			if (iTemp > 0)
+			{
+				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iTemp) / 100;
+			}
+			else if (iTemp < 0)
+			{
+				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+			}
 			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
@@ -15943,19 +15950,34 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 		else
 		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_SUPPORT"));
+			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0)
+			{
+				szHelpText.append(NEWLINE);
+				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()));
+			}
+			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
+			{
+				szHelpText.append(NEWLINE);
+				szHelpText.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
+			}
 		}
 	}
 
-	//	Free military units population percent
-	if ((GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0))
+	//	Free military units
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0 || GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()
-				+ GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation()
-				* GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() / 100;
+			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary();
+			int iTemp = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent();
+			if (iTemp > 0)
+			{
+				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iTemp) / 100;
+			}
+			else if (iTemp < 0)
+			{
+				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+			}
 			if (iFreeUpkeep > 0)
 			{
 				szHelpText.append(NEWLINE);
@@ -15964,30 +15986,24 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 		else
 		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_UNIT_SUPPORT"));
+			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0)
+			{
+				szHelpText.append(NEWLINE);
+				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()));
+			}
+			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
+			{
+				szHelpText.append(NEWLINE);
+				szHelpText.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent()));
+			}
 		}
 	}
 
 	//	Happiness per military unit
 	if (GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() != 0)
 	{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   08/28/09							jdog5000		  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-/* original bts code
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_HAPPINESS", GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit(), ((GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
-
-*/
-		// Use absolute value with unhappy face
-		//RevolutionDCM - reintroduce new line
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_HAPPINESS", abs(GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit()), ((GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 	}
 
 	//	Military units produced with food
@@ -17951,15 +17967,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 
 void CvGameTextMgr::setBasicUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool bCivilopediaText)
 {
-	//bTBUnitView1 = (Combat)
-	//bTBUnitView2 = (Civil)
-	//bTBUnitView3 = (Combat Classes)
-	//bNormalView = default to show but replaced by any of the above
-	bool bTBUnitView1 = gDLL->ctrlKey();
-	bool bTBUnitView2 = gDLL->altKey();
-	bool bTBUnitView3 = gDLL->shiftKey();
-// BUG - Starting Experience - start
-	setBasicUnitHelpWithCity(szBuffer, eUnit, bCivilopediaText, 0, false, bTBUnitView1, bTBUnitView2, bTBUnitView3);
+	setBasicUnitHelpWithCity(szBuffer, eUnit, bCivilopediaText, 0, false, gDLL->ctrlKey(), gDLL->altKey(), gDLL->shiftKey());
 }
 
 void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool bCivilopediaText, CvCity* pCity, bool bConscript, bool bTBUnitView1, bool bTBUnitView2, bool bTBUnitView3)
@@ -19632,10 +19640,40 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", kUnit.getMaxHP()));
 		}
 
-		if (kUnit.getBaseUpkeep() != 0)
+		if (kUnit.getBaseUpkeep() > 0)
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_BASE", kUnit.getBaseUpkeep()));
+			int iExtra = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getExtraUpkeep();
+			int iMod = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getUpkeepModifier();
+
+			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			{
+				iExtra += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getExtraUpkeep();
+				iMod += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getUpkeepModifier();
+			}
+			int iUpkeep = 100 * (kUnit.getBaseUpkeep() + iExtra);
+			if (iMod > 0)
+			{
+				iUpkeep = iUpkeep * (100 + iMod) / 100;
+			}
+			else if (iMod < 0)
+			{
+				iUpkeep = iUpkeep * 100 / (100 - iMod);
+			}
+			if (iUpkeep > 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", CvWString::format(L"%.2f", iUpkeep / 100.0).GetCString()));
+
+				if (pCity != NULL)
+				{
+					iUpkeep = GET_PLAYER(pCity->getOwner()).getFinalUnitUpkeepChange(iUpkeep, kUnit.isMilitarySupport());
+					if (iUpkeep > 0)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_CHANGE", iUpkeep));
+					}
+				}
+			}
 		}
 
 		//Spy
@@ -33083,30 +33121,135 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	{
 		return;
 	}
-	CvPlayer& player = GET_PLAYER(ePlayer);
+	const CvPlayer& player = GET_PLAYER(ePlayer);
 
-	int iUnitUpkeepCivilian = player.getUnitUpkeepCivilian();
-	int iUnitUpkeepMilitary = player.getUnitUpkeepMilitary();
+	int iCivicModCivilian = 0;
+	int iCivicModMilitary = 0;
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); ++iI)
+	{
+		const CivicTypes eCivic = player.getCivics((CivicOptionTypes)iI);
+		if (NO_CIVIC != eCivic)
+		{
+			iCivicModCivilian += GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod();
+			iCivicModMilitary += GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod();
+		}
+	}
 
-	int iFreeCivilianUpkeep = player.getFreeUnitUpkeepCivilian();
-	int iFreeMilitaryUpkeep = player.getFreeUnitUpkeepMilitary();
+	int iTraitModCivilian = 0;
+	int iTraitModMilitary = 0;
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	{
+		const TraitTypes eTrait = (TraitTypes) iI;
+		if (player.hasTrait(eTrait))
+		{
+			iTraitModCivilian += GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod();
+			iTraitModMilitary += GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod();
+		}
+	}
 
-	int iUnitUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	// Civilian section
+	unsigned long iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN", CvWString::format(L"%.2f", iUpkeepCivilian100 / 100.0).GetCString()));
+
+	if (iCivicModCivilian != 0)
+	{
+		int iCivicCivilian = 0;
+		if (iCivicModCivilian > 0)
+		{
+			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100;
+		}
+		else if (iCivicModCivilian < 0)
+		{
+			iCivicCivilian = iUpkeepCivilian100 * 100 / (100 - iCivicModCivilian);
+		}
+		iCivicCivilian -= iUpkeepCivilian100;
+
+		if (iCivicCivilian != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC", CvWString::format(L"%.2f", iCivicCivilian / 100.0).GetCString()));
+		}
+	}
+	if (iTraitModCivilian != 0)
+	{
+		int iTraitCivilian = 0;
+		if (iTraitModCivilian > 0)
+		{
+			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100;
+		}
+		else if (iTraitModCivilian < 0)
+		{
+			iTraitCivilian = iUpkeepCivilian100 * 100 / (100 - iTraitModCivilian);
+		}
+		iTraitCivilian -= iUpkeepCivilian100;
+
+		if (iTraitCivilian != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT", CvWString::format(L"%.2f", iTraitCivilian / 100.0).GetCString()));
+		}
+	}
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepCivilian()));
+
+	int iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUpkeepCivilianNet));
+
+	// Military section
+	szBuffer.append(NEWLINE);
+	unsigned long iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY", CvWString::format(L"%.2f", iUpkeepMilitary100 / 100.0).GetCString()));
+
+	if (iCivicModMilitary != 0)
+	{
+		int iCivicMilitary = 0;
+		if (iCivicModMilitary > 0)
+		{
+			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100;
+		}
+		else if (iCivicModMilitary < 0)
+		{
+			iCivicMilitary = iUpkeepMilitary100 * 100 / (100 - iCivicModMilitary);
+		}
+		iCivicMilitary -= iUpkeepMilitary100;
+
+		if (iCivicMilitary != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC", CvWString::format(L"%.2f", iCivicMilitary / 100.0).GetCString()));
+		}
+	}
+	if (iTraitModMilitary != 0)
+	{
+		int iTraitMilitary = 0;
+		if (iTraitModMilitary > 0)
+		{
+			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100;
+		}
+		else if (iTraitModMilitary < 0)
+		{
+			iTraitMilitary = iUpkeepMilitary100 * 100 / (100 - iTraitModMilitary);
+		}
+		iTraitMilitary -= iUpkeepMilitary100;
+
+		if (iTraitMilitary != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT", CvWString::format(L"%.2f", iTraitMilitary / 100.0).GetCString()));
+		}
+	}
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepMilitary()));
+
 	int iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
 
-	int iTotal = player.getTotalUnitUpkeep();
-	int iHandicap = iTotal - iUnitUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUnitUpkeepMilitaryNet));
 
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP",
-		iUnitUpkeepCivilianNet, iUnitUpkeepCivilian, iFreeCivilianUpkeep,
-		iUnitUpkeepMilitaryNet, iUnitUpkeepMilitary, iFreeMilitaryUpkeep));
-
+	// End Section
+	const unsigned long iTotal = player.getFinalUnitUpkeep();
+	const long long iHandicap = iTotal - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 	if (iHandicap != 0)
 	{
-		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL", iTotal));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2", iTotal));
 }
 
 void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)

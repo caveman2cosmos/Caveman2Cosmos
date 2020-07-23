@@ -845,7 +845,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iUnitUpkeepMilitary100 = 0;
 	m_iUnitUpkeepCivilian100 = 0;
-	m_iTotalUnitUpkeep = 0;
+	m_iFinalUnitUpkeep = 0;
 
 	m_iNumMilitaryUnits = 0;
 	m_iHappyPerMilitaryUnit = 0;
@@ -4332,7 +4332,7 @@ void CvPlayer::dumpStats() const
 	logBBAI("%S stats for turn %d:", getCivilizationDescription(0), GC.getGame().getGameTurn());
 
 	//	Economy stats
-	int iUnitCosts = getTotalUnitUpkeep();
+	int iUnitCosts = getFinalUnitUpkeep();
 	int iUnitSupplyCosts = calculateUnitSupply();
 	int iMaintenanceCosts = getTotalMaintenance();
 	int iCivicUpkeepCosts = getCivicUpkeep();
@@ -9063,7 +9063,7 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-	int iCosts = getTotalUnitUpkeep();
+	int iCosts = getFinalUnitUpkeep();
 	iCosts += calculateUnitSupply();
 	iCosts += getTotalMaintenance();
 	iCosts += getCivicUpkeep();
@@ -9432,12 +9432,12 @@ bool CvPlayer::isResearch() const
 			return false;
 		}
 	}
-
+#ifndef NOMADIC_START
 	if (!isFoundedFirstCity())
 	{
 		return false;
 	}
-
+#endif
 	return true;
 }
 
@@ -11668,7 +11668,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepCivilian += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
 }
 
@@ -11682,7 +11682,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepMilitary += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
 }
 
@@ -11696,7 +11696,7 @@ void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
 }
 
@@ -11710,7 +11710,7 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
 }
 
@@ -11760,7 +11760,7 @@ void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iCivilianUnitUpkeepMod += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
 }
 void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
@@ -11768,8 +11768,32 @@ void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryUnitUpkeepMod += iChange;
-		calcUnitUpkeep();
+		calcFinalUnitUpkeep();
 	}
+}
+
+void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
+{
+	if (iChange != 0)
+	{
+		FAssertMsg(iChange >= 0 || bMilitary && ((unsigned int)-iChange) <= m_iUnitUpkeepMilitary100 || !bMilitary && ((unsigned int)-iChange) <= m_iUnitUpkeepMilitary100, "These should always be positive!");
+
+		if (bMilitary)
+			m_iUnitUpkeepMilitary100 += iChange;
+		else m_iUnitUpkeepCivilian100 += iChange;
+
+		calcFinalUnitUpkeep();
+	}
+}
+
+unsigned long CvPlayer::getUnitUpkeepCivilian100() const
+{
+	return m_iUnitUpkeepCivilian100;
+}
+
+unsigned long CvPlayer::getUnitUpkeepMilitary100() const
+{
+	return m_iUnitUpkeepMilitary100;
 }
 
 unsigned long CvPlayer::getUnitUpkeepCivilian() const
@@ -11789,7 +11813,10 @@ unsigned long CvPlayer::getUnitUpkeepCivilian() const
 
 unsigned long CvPlayer::getUnitUpkeepCivilianNet() const
 {
-	return std::max(0, (int)getUnitUpkeepCivilian() - getFreeUnitUpkeepCivilian());
+	unsigned long iUpkeep = getUnitUpkeepCivilian();
+	if (iUpkeep <= (unsigned int)getFreeUnitUpkeepCivilian())
+		return 0;
+	return iUpkeep - getFreeUnitUpkeepCivilian();
 }
 
 unsigned long CvPlayer::getUnitUpkeepMilitary() const
@@ -11809,74 +11836,83 @@ unsigned long CvPlayer::getUnitUpkeepMilitary() const
 
 unsigned long CvPlayer::getUnitUpkeepMilitaryNet() const
 {
-	return std::max(0, (int)getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
+	unsigned long iUpkeep = getUnitUpkeepMilitary();
+	if (iUpkeep <= (unsigned int)getFreeUnitUpkeepMilitary())
+		return 0;
+	return iUpkeep - getFreeUnitUpkeepMilitary();
 }
 
-void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
+unsigned long CvPlayer::getFinalUnitUpkeep() const
 {
-	if (iChange != 0)
-	{
-		if (bMilitary)
-			m_iUnitUpkeepMilitary100 += iChange;
-		else m_iUnitUpkeepCivilian100 += iChange;
-
-		FAssertMsg(m_iUnitUpkeepCivilian100 >= 0 && m_iUnitUpkeepMilitary100 >= 0, "These should always be positive!");
-
-		calcUnitUpkeep();
-	}
+	return m_iFinalUnitUpkeep;
 }
 
-void CvPlayer::calcUnitUpkeep()
+unsigned long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 {
 	if (isNPC())
 	{
-		return;
+		return 0;
 	}
 	unsigned long iCalc = 0;
 
-	unsigned long iTemp = getUnitUpkeepCivilianNet();
-	if (iTemp > 0)
-	{
-		iCalc += iTemp;
-	}
-	iTemp = getUnitUpkeepMilitaryNet();
-	if (iTemp > 0)
-	{
-		iCalc += iTemp;
-	}
+	iCalc += getUnitUpkeepCivilianNet();
+	iCalc += getUnitUpkeepMilitaryNet();
 
 	if (iCalc > 0)
 	{
-		// Difficulty adjustment
-		iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
-		iCalc /= 100;
-
-		if (!isHuman())
-		{
-			iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
-			iCalc /= 100;
-
-			iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
-			iCalc /= 100;
-		}
+		applyUnitUpkeepHandicap(iCalc);
 	}
 	if (iCalc < 0)
 	{
 		FAssertMsg(false, "Total unit upkeep is negative! You don't earn gold from upkeep costs!");
 		iCalc = 0;
 	}
-	m_iTotalUnitUpkeep = iCalc;
-
-	// Refresh relevant UI
-	if (getID() == GC.getGame().getActivePlayer())
+	if (bReal)
 	{
-		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
+		m_iFinalUnitUpkeep = iCalc;
+
+		// Refresh relevant UI
+		if (getID() == GC.getGame().getActivePlayer())
+		{
+			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
+		}
+	}
+	return iCalc;
+}
+
+void CvPlayer::applyUnitUpkeepHandicap(unsigned long& iUpkeep)
+{
+	// Difficulty adjustment
+	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
+	iUpkeep /= 100;
+
+	if (!isHuman())
+	{
+		iUpkeep *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
+		iUpkeep /= 100;
+
+		iUpkeep *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+		iUpkeep /= 100;
 	}
 }
 
-unsigned long CvPlayer::getTotalUnitUpkeep() const
+int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
 {
-	return m_iTotalUnitUpkeep;
+	if (iExtra < 1) return 0;
+
+	// Temporary change
+	if (bMilitary)
+		m_iUnitUpkeepMilitary100 += iExtra;
+	else m_iUnitUpkeepCivilian100 += iExtra;
+
+	const int iChange = calcFinalUnitUpkeep(false) - getFinalUnitUpkeep();
+
+	// Very important to restore the real values!
+	if (bMilitary)
+		m_iUnitUpkeepMilitary100 -= iExtra;
+	else m_iUnitUpkeepCivilian100 -= iExtra;
+
+	return iChange;
 }
 
 // ! Unit Upkeep
@@ -22021,7 +22057,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalUnitUpkeep);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iFinalUnitUpkeep);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
@@ -22746,7 +22782,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalUnitUpkeep);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFinalUnitUpkeep);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);

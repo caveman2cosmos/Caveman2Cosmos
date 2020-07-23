@@ -588,15 +588,18 @@ public:
 	int getMilitaryUnitUpkeepMod() const;
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
-
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void calcUnitUpkeep();
+	void applyUnitUpkeepHandicap(unsigned long& iUpkeep);
 
+	unsigned long getUnitUpkeepCivilian100() const;
 	unsigned long getUnitUpkeepCivilian() const;
 	unsigned long getUnitUpkeepCivilianNet() const;
+	unsigned long getUnitUpkeepMilitary100() const;
 	unsigned long getUnitUpkeepMilitary() const;
 	unsigned long getUnitUpkeepMilitaryNet() const;
-	unsigned long getTotalUnitUpkeep() const;
+	unsigned long calcFinalUnitUpkeep(const bool bReal=true);
+	unsigned long getFinalUnitUpkeep() const;
+	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
@@ -1815,7 +1818,7 @@ protected:
 
 	unsigned long m_iUnitUpkeepMilitary100;
 	unsigned long m_iUnitUpkeepCivilian100;
-	unsigned long m_iTotalUnitUpkeep;
+	unsigned long m_iFinalUnitUpkeep;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;
