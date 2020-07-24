@@ -35,6 +35,14 @@
 		<Spanish>, %d1 de alcance</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
+		<English>[ICON_BULLET]Military Branch</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
+		<English>[ICON_BULLET]Civilian Branch</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
 		<English>[ICON_BULLET]Breakdown Chance: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% chance de démolir les défenses de la ville à chaque round d'attaque.</French>
