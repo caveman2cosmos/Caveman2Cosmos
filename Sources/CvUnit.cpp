@@ -13852,6 +13852,11 @@ bool CvUnit::isMilitaryHappiness() const
 	return m_pUnitInfo->isMilitaryHappiness();
 }
 
+bool CvUnit::isMilitaryBranch() const
+{
+	return m_pUnitInfo->isMilitarySupport();
+}
+
 
 bool CvUnit::isInvestigate() const
 {
@@ -21756,20 +21761,15 @@ int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander()) //this is not a commander
 	{
 		CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
+		{
 			return	m_aiExtraDomainModifier[eIndex] + pCommander->getExtraDomainModifier(eIndex);
+		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_aiExtraDomainModifier[eIndex];
 }
 
@@ -21781,26 +21781,16 @@ void CvUnit::changeExtraDomainModifier(DomainTypes eIndex, int iChange)
 	m_aiExtraDomainModifier[eIndex] = (m_aiExtraDomainModifier[eIndex] + iChange);
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 08/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 const CvWString CvUnit::getDescription(uint uiForm) const
 {
-	if (m_pUnitInfo->getCivilizationName(getCivilizationType()) != NULL)
+	if (m_pUnitInfo->getCivilizationName(getCivilizationType()) != NULL
+	&& !CvWString(m_pUnitInfo->getCivilizationName(getCivilizationType())).empty())
 	{
-		if (!CvWString(m_pUnitInfo->getCivilizationName(getCivilizationType())).empty())
-		{
-			return gDLL->getText(m_pUnitInfo->getCivilizationName(getCivilizationType()));
-		}
+		return gDLL->getText(m_pUnitInfo->getCivilizationName(getCivilizationType()));
 	}
-
 	return m_pUnitInfo->getDescription(uiForm);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 const CvWString CvUnit::getName(uint uiForm) const
 {
@@ -21808,59 +21798,23 @@ const CvWString CvUnit::getName(uint uiForm) const
 
 	if (m_szName.empty())
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 08/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		return m_pUnitInfo->getDescription(uiForm);
-*/
 		return getDescription(uiForm);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
-// BUG - Unit Name - start
+
 	else if (isDescInName())
 	{
 		return m_szName;
 	}
-// BUG - Unit Name - end
-/************************************************************************************************/
-/* Afforess	                  Start		 08/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	szBuffer.Format(L"%s (%s)", m_szName.GetCString(), m_pUnitInfo->getDescription(uiForm));
-*/
-	szBuffer.Format(L"%s (%s)", m_szName.GetCString(), getDescription(uiForm).GetCString());
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
+	szBuffer.Format(L"%s (%s)", m_szName.GetCString(), getDescription(uiForm).GetCString());
 
 	return szBuffer;
 }
 
-// BUG - Unit Name - start
 bool CvUnit::isDescInName() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 08/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	return (m_szName.find(m_pUnitInfo->getDescription()) != -1);
-*/
 	return (m_szName.find(getDescription()) != -1);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
-// BUG - Unit Name - end
 
 
 const wchar* CvUnit::getNameKey() const
@@ -21869,10 +21823,7 @@ const wchar* CvUnit::getNameKey() const
 	{
 		return m_pUnitInfo->getTextKeyWide();
 	}
-	else
-	{
-		return m_szName.GetCString();
-	}
+	return m_szName.GetCString();
 }
 
 

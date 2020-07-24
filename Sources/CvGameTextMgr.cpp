@@ -3060,11 +3060,23 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		if (bNormalView)
 		{
 			//Max HP
-			if (pUnit->maxHPTotal() != 100)
+			if (pUnit->baseCombatStr() > 0 && pUnit->maxHPTotal() != 100)
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
 			}
+
+			if (pUnit->isMilitaryBranch())
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_MILITARY"));
+			}
+			else
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_CIVILIAN"));
+			}
+
 			if (pUnit->getUpkeep100() > 0)
 			{
 				szTempBuffer = CvWString::format(L"%.2f", pUnit->getUpkeep100() / 100.0);
@@ -19634,10 +19646,21 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	if (bNormalView)
 	{
 		//Max HP
-		if (kUnit.getMaxHP() != 100)
+		if (kUnit.getTotalModifiedCombatStrength100() > 0 && kUnit.getMaxHP() != 100)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", kUnit.getMaxHP()));
+		}
+
+		if (kUnit.isMilitarySupport())
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_MILITARY"));
+		}
+		else
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_CIVILIAN"));
 		}
 
 		if (kUnit.getBaseUpkeep() > 0)

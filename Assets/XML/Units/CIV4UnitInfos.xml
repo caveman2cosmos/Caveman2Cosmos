@@ -43177,7 +43177,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -43290,7 +43289,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -43429,7 +43427,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -44048,7 +44045,6 @@ Base XP gained when defending
 			</SupersedingUnits>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>1</iXPValueAttack>
@@ -44181,7 +44177,6 @@ Base XP gained when defending
 			</VisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>1</iXPValueAttack>
@@ -44293,7 +44288,6 @@ Base XP gained when defending
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -44463,7 +44457,6 @@ Base XP gained when defending
 			</VisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -44577,7 +44570,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -44724,7 +44716,6 @@ Base XP gained when defending
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -44868,7 +44859,6 @@ Base XP gained when defending
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -45025,7 +45015,6 @@ Base XP gained when defending
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -45168,7 +45157,6 @@ Base XP gained when defending
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -45347,7 +45335,6 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -45504,7 +45491,6 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -45729,7 +45715,6 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -45853,7 +45838,6 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
@@ -46051,7 +46035,6 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -52151,7 +52134,6 @@ Base XP gained when defending
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<iNumHealSupport>4</iNumHealSupport>
@@ -56245,7 +56227,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -56377,7 +56358,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -56777,7 +56757,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -56890,7 +56869,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -56999,7 +56977,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<PrereqBonuses>
@@ -59344,7 +59321,6 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_SHEPHERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -59549,7 +59525,6 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_VET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>5</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -59734,7 +59709,6 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_FIELD_VET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -59937,7 +59911,6 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_MEDICAL_VET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>7</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -61711,7 +61684,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -61818,7 +61790,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -61923,7 +61894,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -62028,7 +61998,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62133,7 +62102,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62237,7 +62205,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62341,7 +62308,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62473,7 +62439,6 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -62600,7 +62565,6 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -62704,7 +62668,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62831,7 +62794,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -62974,7 +62936,6 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -63074,7 +63035,6 @@ Base XP gained when defending
 			</UnitAIs>
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -68640,7 +68600,6 @@ Base XP gained when defending
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bIgnoreNoEntryLevel>1</bIgnoreNoEntryLevel>
