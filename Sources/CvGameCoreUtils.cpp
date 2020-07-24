@@ -1443,7 +1443,7 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	if (eTrigger == NO_EVENTTRIGGER)
 		return false;
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
 	if (kTrigger.getNumPlotsRequired() > 0)
 	{

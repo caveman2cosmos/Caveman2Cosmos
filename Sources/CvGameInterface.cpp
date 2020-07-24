@@ -2915,8 +2915,8 @@ void CvGame::nextActivePlayer(bool bForward)
 
 int CvGame::getNextSoundtrack(EraTypes eLastEra, int iLastSoundtrack) const
 {
-	EraTypes eCurEra = GET_PLAYER(getActivePlayer()).getCurrentEra();
-	CvEraInfo& kCurrentEra = GC.getEraInfo(eCurEra);
+	const EraTypes eCurEra = GET_PLAYER(getActivePlayer()).getCurrentEra();
+	const CvEraInfo& kCurrentEra = GC.getEraInfo(eCurEra);
 	if (kCurrentEra.getNumSoundtracks() == 0)
 	{
 		return -1;

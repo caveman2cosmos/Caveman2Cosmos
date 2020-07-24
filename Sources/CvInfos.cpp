@@ -35259,12 +35259,12 @@ int CvEventInfo::getBuildingHealthChange(int iBuilding) const
 	return 0;
 }
 
-CvProperties* CvEventInfo::getProperties()
+const CvProperties* CvEventInfo::getProperties() const
 {
 	return &m_Properties;
 }
 
-CvProperties* CvEventInfo::getPropertiesAllCities()
+const CvProperties* CvEventInfo::getPropertiesAllCities() const
 {
 	return &m_PropertiesAllCities;
 }
