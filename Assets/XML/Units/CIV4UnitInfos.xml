@@ -5318,9 +5318,6 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5412,9 +5409,6 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5489,9 +5483,6 @@ Base XP gained when defending
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -5595,9 +5586,6 @@ Base XP gained when defending
 				<UnitType>UNIT_WARDEN</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -5691,9 +5679,6 @@ Base XP gained when defending
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -5781,9 +5766,6 @@ Base XP gained when defending
 				<UnitType>UNIT_BIG_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -5873,9 +5855,6 @@ Base XP gained when defending
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -58972,9 +58951,6 @@ Base XP gained when defending
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
@@ -59065,9 +59041,6 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqAndBuildings>
@@ -59151,9 +59124,6 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<FreePromotions>
 				<FreePromotion>
@@ -66219,9 +66189,6 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
@@ -66301,9 +66268,6 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -66407,9 +66371,6 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -66513,9 +66474,6 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -66623,9 +66581,6 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -66729,9 +66684,6 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
