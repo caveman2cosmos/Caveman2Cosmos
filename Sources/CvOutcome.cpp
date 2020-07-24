@@ -1288,7 +1288,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity() && (kUnit.plot()->getPlotCity() != NULL))
 		{
 			kPlayer.initTriggeredData(m_eEventTrigger, true, kUnit.plot()->getPlotCity()->getID());

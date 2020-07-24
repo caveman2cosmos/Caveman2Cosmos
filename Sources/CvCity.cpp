@@ -4426,14 +4426,14 @@ void CvCity::changeProduction(int iChange)
 	}
 	else if (isProductionProcess())
 	{
-		CvProcessInfo& kProcess = GC.getProcessInfo(getProductionProcess());
+		const CvProcessInfo& kProcess = GC.getProcessInfo(getProductionProcess());
 
 		//	Add gold and espionage directly to player totals
 		GET_PLAYER(getOwner()).changeGold((kProcess.getProductionToCommerceModifier(COMMERCE_GOLD) * iChange) / 100);
 		GET_PLAYER(getOwner()).doEspionageOneOffPoints((kProcess.getProductionToCommerceModifier(COMMERCE_ESPIONAGE) * iChange) / 100);
 
 		//	Research accrues to the team
-		TechTypes eCurrentTech = GET_PLAYER(getOwner()).getCurrentResearch();
+		const TechTypes eCurrentTech = GET_PLAYER(getOwner()).getCurrentResearch();
 		if (eCurrentTech != NO_TECH)
 		{
 			GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech,
@@ -19479,7 +19479,7 @@ bool CvCity::isEventTriggerPossible(EventTriggerTypes eTrigger) const
 	FAssert(eTrigger >= 0);
 	FAssert(eTrigger < GC.getNumEventTriggerInfos());
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
 	if (!CvString(kTrigger.getPythonCanDoCity()).empty())
 	{
@@ -19651,8 +19651,6 @@ int CvCity::getTriggerValue(EventTriggerTypes eTrigger) const
 	FAssert(eTrigger >= 0);
 	FAssert(eTrigger < GC.getNumEventTriggerInfos());
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
-
 	if (!isEventTriggerPossible(eTrigger))
 	{
 		return MIN_INT;
@@ -19660,14 +19658,14 @@ int CvCity::getTriggerValue(EventTriggerTypes eTrigger) const
 
 	int iValue = 0;
 
-	iValue += getFood() * kTrigger.getCityFoodWeight();
+	iValue += getFood() * GC.getEventTriggerInfo(eTrigger).getCityFoodWeight();
 
 	return iValue;
 }
 
 bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (!kEvent.isCityEffect() && !kEvent.isOtherPlayerCityEffect())
 	{
@@ -19767,7 +19765,7 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 		setEventOccured(eEvent, true);
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (kEvent.isCityEffect() || kEvent.isOtherPlayerCityEffect())
 	{

@@ -2130,8 +2130,8 @@ public:
 	void changeTraitExtraCityDefense(int iChange);
 
 	void setHasTrait(TraitTypes eIndex, bool bNewValue);
-	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false);
-	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive);
+	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false) const;
+	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive) const;
 
 	int getLeaderHeadLevel() const;
 	void setLeaderHeadLevel(int iValue);

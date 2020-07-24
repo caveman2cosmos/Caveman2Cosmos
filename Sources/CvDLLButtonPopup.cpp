@@ -2728,7 +2728,7 @@ bool CvDLLButtonPopup::launchEventPopup(CvPopup* pPopup, CvPopupInfo &info)
 		return false;
 	}
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(pTriggeredData->m_eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(pTriggeredData->m_eTrigger);
 /************************************************************************************************/
 /* Afforess	                  Start		 05/20/10                                               */
 /*                                                                                              */
@@ -3217,7 +3217,7 @@ bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &in
 
 bool CvDLLButtonPopup::launchChooseTraitPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 	if (ePlayer == NO_PLAYER)
 	{
 		return false;
@@ -3228,8 +3228,8 @@ bool CvDLLButtonPopup::launchChooseTraitPopup(CvPopup* pPopup, CvPopupInfo &info
 	bool bSelected = false;
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
 	{
-		CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iTrait);
-		TraitTypes eTrait = ((TraitTypes)iTrait);
+		const CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iTrait);
+		const TraitTypes eTrait = ((TraitTypes)iTrait);
 		if (!GET_PLAYER(ePlayer).hasTrait(eTrait) && !GC.getTraitInfo(eTrait).isNegativeTrait() && !GC.getTraitInfo(eTrait).isCivilizationTrait())
 		{
 			if (GET_PLAYER(ePlayer).canLearnTrait(eTrait))
@@ -3260,7 +3260,7 @@ bool CvDLLButtonPopup::launchChooseTraitPopup(CvPopup* pPopup, CvPopupInfo &info
 
 bool CvDLLButtonPopup::launchChooseTraitPopupNegative(CvPopup* pPopup, CvPopupInfo &info)
 {
-	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 	if (ePlayer == NO_PLAYER)
 	{
 		return false;
@@ -3271,8 +3271,8 @@ bool CvDLLButtonPopup::launchChooseTraitPopupNegative(CvPopup* pPopup, CvPopupIn
 	bool bSelected = false;
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
 	{
-		CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iTrait);
-		TraitTypes eTrait = ((TraitTypes)iTrait);
+		const CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iTrait);
+		const TraitTypes eTrait = ((TraitTypes)iTrait);
 		if (!GET_PLAYER(ePlayer).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && !GC.getTraitInfo(eTrait).isCivilizationTrait())
 		{
 			if (GET_PLAYER(ePlayer).canLearnTrait(eTrait, true))

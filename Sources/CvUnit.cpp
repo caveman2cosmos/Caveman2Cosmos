@@ -29361,7 +29361,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 
 int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bCheckPlot) const
 {
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 	if (kTrigger.getNumUnits() <= 0)
 	{
 		return MIN_INT;
@@ -29435,7 +29435,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 
 bool CvUnit::canApplyEvent(EventTypes eEvent) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{
@@ -29462,7 +29462,7 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		return;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{
