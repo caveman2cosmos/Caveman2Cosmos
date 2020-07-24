@@ -657,9 +657,9 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-int CyPlayer::calculateUnitCost()
+unsigned long CyPlayer::getFinalUnitUpkeep()
 {
-	return m_pPlayer ? m_pPlayer->calculateUnitCost() : -1;
+	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }
 
 int CyPlayer::calculateUnitSupply()
@@ -681,25 +681,6 @@ int CyPlayer::calculateInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
 }
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
-int CyPlayer::getFreeUnitCountdown()
-{
-	return m_pPlayer ? m_pPlayer->getFreeUnitCountdown() : 0;
-}
-
-void CyPlayer::setFreeUnitCountdown( int iValue )
-{
-	if( m_pPlayer )
-		m_pPlayer->setFreeUnitCountdown(iValue);
-}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 int CyPlayer::calculateGoldRate()
 {
@@ -1371,41 +1352,6 @@ int CyPlayer::getNumNukeUnits()
 int CyPlayer::getNumOutsideUnits()
 {
 	return m_pPlayer ? m_pPlayer->getNumOutsideUnits() : -1;
-}
-
-int CyPlayer::getBaseFreeUnits()
-{
-	return m_pPlayer ? m_pPlayer->getBaseFreeUnits() : -1;
-}
-
-int CyPlayer::getBaseFreeMilitaryUnits()
-{
-	return m_pPlayer ? m_pPlayer->getBaseFreeMilitaryUnits() : -1;
-}
-
-int CyPlayer::getFreeUnitsPopulationPercent()
-{
-	return m_pPlayer ? m_pPlayer->getFreeUnitsPopulationPercent() : -1;
-}
-
-int CyPlayer::getFreeMilitaryUnitsPopulationPercent()
-{
-	return m_pPlayer ? m_pPlayer->getFreeMilitaryUnitsPopulationPercent() : -1;
-}
-
-int CyPlayer::getGoldPerUnit()
-{
-	return m_pPlayer ? m_pPlayer->getGoldPerUnit() : -1;
-}
-
-int CyPlayer::getGoldPerMilitaryUnit()
-{
-	return m_pPlayer ? m_pPlayer->getGoldPerMilitaryUnit() : -1;
-}
-
-int CyPlayer::getExtraUnitCost()
-{
-	return m_pPlayer ? m_pPlayer->getExtraUnitCost() : -1;
 }
 
 int CyPlayer::getNumMilitaryUnits()

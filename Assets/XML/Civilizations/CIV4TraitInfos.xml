@@ -1543,7 +1543,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
@@ -2653,7 +2653,7 @@
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
-			<iBaseFreeMilitaryUnits>-8</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>-8</iFreeUnitUpkeepMilitary>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 		</TraitInfo>
 		<!-- END: POSITIVE_TRAIT -->
@@ -2790,7 +2790,7 @@
 			</SpecialistCommerceChanges>
 			<iReligiousAnarchyTimeModifier>100</iReligiousAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
-			<iBaseFreeMilitaryUnits>22</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>22</iFreeUnitUpkeepMilitary>
 			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
 			<iEspionageDefense>25</iEspionageDefense>
 			<PropertyManipulators>
@@ -4968,7 +4968,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
@@ -6075,7 +6075,7 @@
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
-			<iBaseFreeMilitaryUnits>-8</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>-8</iFreeUnitUpkeepMilitary>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 		</TraitInfo>
 		<!-- END: POSITIVE_TRAIT -->
@@ -6213,7 +6213,7 @@
 			</SpecialistCommerceChanges>
 			<iReligiousAnarchyTimeModifier>100</iReligiousAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
-			<iBaseFreeMilitaryUnits>22</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>22</iFreeUnitUpkeepMilitary>
 			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
 			<iEspionageDefense>25</iEspionageDefense>
 			<PropertyManipulators>

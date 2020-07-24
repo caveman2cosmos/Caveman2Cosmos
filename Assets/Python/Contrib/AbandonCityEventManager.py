@@ -259,7 +259,7 @@ class CityDemolish:
 
 			# Captives
 			if iForeignPop > 0:
-				if iPopulation > 1 or GAME.getSorenRandNum(2, "50%"):
+				if iPopulation > 1 or GC.getGame().getSorenRandNum(2, "50%"):
 					iCaptives = (iForeignPop + 1) / 2
 				else: iCaptives = iForeignPop / 2
 

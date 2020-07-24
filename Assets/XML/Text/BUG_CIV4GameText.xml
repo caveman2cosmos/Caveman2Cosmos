@@ -11395,21 +11395,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Nomenclatura: Combat[CORVETTE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_COSTLESS_HOVER</Tag>
-		<English>Enter the user defined naming convention for combat units 'COSTLESS'.</English>
-		<French>Entrez la convention des noms pour les unités 'COSTLESS'.</French>
-		<German>Eingabe der benutzerdefinierten Benennungsregel für 'COSTLESS' Einheiten</German>
-		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[COSTLESS]').</Italian>
-		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'COSTLESS'.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_COSTLESS_TEXT</Tag>
-		<English>Naming Convention: Combat[COSTLESS]</English>
-		<French>Convention des Noms: Combat[COSTLESS]</French>
-		<German>Benennungsregel: Kampf[COSTLESS]</German>
-		<Spanish>Nomenclatura: Combat[COSTLESS]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_CRIMINAL_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'CRIMINAL'.</English>
 		<French>Entrez la convention des noms pour les unités 'CRIMINAL'.</French>

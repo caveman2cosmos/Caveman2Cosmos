@@ -854,7 +854,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
-		if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 		{
 			iHash *= -2;
 			iHash += eMainUpgrade;
@@ -868,7 +869,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		if (canHaveImprovement(eUpgradeX, eTeam, false, true))
 		{
 			eUpgrade = eUpgradeX;
-			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 			{
 				iHash *= -2;
 				iHash += eUpgradeX;
@@ -935,7 +937,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
-			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true))
+			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -948,7 +951,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			{
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true))
+				// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)
@@ -7775,6 +7779,10 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 
 	if (eOldImprovement != eNewImprovement)
 	{
+		/* Toffer - This is the wrong place to have this upgrade cost.
+		// e.g. Workers building a farm on a seed camp would get charged both when they start the build and here again when they finish the build because seed camp has farm as an upgrade.
+		// Should be in an intermediate function that calls this function, an intermediate only the imp upg code calls.
+		// This issue was noticed when this happened on an unowned plot, and GET_PLAYER(getOwner()).changeGold() failed.
 		if (eOldImprovement != NO_IMPROVEMENT && eNewImprovement != NO_IMPROVEMENT)
 		{
 			//Charge for Upgrade but be careful not to charge for a downgrade (pillage).
@@ -7794,6 +7802,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				}
 			}
 		}
+		*/
 		if (eOldImprovement != NO_IMPROVEMENT)
 		{
 			if (area())
@@ -12944,7 +12953,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 	int iExtraYieldThreshold = 0;
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
 	{
-		CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
+		const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
 		iExtraYieldThreshold  = std::max(trait.getExtraYieldThreshold(eYield), iExtraYieldThreshold);
 	}
 	if (iExtraYieldThreshold > 0 && iMaxYield > iExtraYieldThreshold)

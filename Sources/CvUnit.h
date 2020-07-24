@@ -655,7 +655,7 @@ public:
 
 	bool canShadow() const;
 	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
-	
+
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
@@ -847,7 +847,7 @@ public:
 	HandicapTypes getHandicapType() const; // Exposed to Python
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
-	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
+	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python
 	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
@@ -871,7 +871,7 @@ public:
 	DllExport bool hasMoved() const; // Exposed to Python
 
 	int airRange() const; // Exposed to Python
-	int nukeRange() const; // Exposed to Python			
+	int nukeRange() const; // Exposed to Python
 
 	bool canBuildRoute() const; // Exposed to Python
 	DllExport BuildTypes getBuildType() const; // Exposed to Python
@@ -885,26 +885,15 @@ public:
 	int getRBombardForceAbilityCount() const;
 	void changeRBombardForceAbilityCount(int iChange);
 
-	bool isNoCapture() const; // Exposed to Python
-	bool isRivalTerritory() const; // Exposed to Python
-	bool isMilitaryHappiness() const; // Exposed to Python
+	bool isNoCapture() const;
+	bool isRivalTerritory() const;
+	bool isMilitaryHappiness() const;
+	bool isMilitaryBranch() const;
 	bool isInvestigate() const; // Exposed to Python
-	bool isCounterSpy() const; // Exposed to Python
+	bool isCounterSpy() const;
 	bool isSpy() const;
 	bool isFound() const; // Exposed to Python
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				DPII		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-	/*bool isCanBeRebel() const;
-	bool isCanRebelCapture() const;
-	bool isCannotDefect() const;
-	bool isCanQuellRebellion() const;
-	*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
+
 	bool isGoldenAge() const; // Exposed to Python
 
 	// Can this unit always coexist with all other units anywhere?
@@ -1370,10 +1359,15 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	int getExtraCostModifier () const;
-	void changeExtraCostModifier (int iChange);
-
-	int getExtraUnitCost100 () const;
+	void changeExtraUpkeep(const int iChange);
+	void changeUpkeepModifier(const int iChange);
+	void calcUpkeepMultiplierSM(const int iGroupOffset);
+	void calcUpkeep100();
+	void recalculateUnitUpkeep();
+	int getExtraUpkeep() const;
+	int getUpkeepModifier() const;
+	int getUpkeepMultiplierSM() const;
+	int getUpkeep100() const;
 
 	int getExtraOverrun (bool bIgnoreCommanders = false) const;
 	void changeExtraOverrun (int iChange);
@@ -2141,6 +2135,12 @@ protected:
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
 	int m_iExtraCostModifier;
+
+	int m_iExtraUpkeep;
+	int m_iUpkeepModifier;
+	int m_iUpkeepMultiplierSM;
+	int m_iUpkeep100;
+
 	int m_iExtraPowerValue;
 	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
