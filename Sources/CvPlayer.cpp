@@ -840,9 +840,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iBaseFreeUnitUpkeepMilitary = 0;
 	m_iFreeUnitUpkeepCivilianPopPercent = 0;
 	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
+
 	m_iCivilianUnitUpkeepMod = 0;
 	m_iMilitaryUnitUpkeepMod = 0;
-
 	m_iUnitUpkeepMilitary100 = 0;
 	m_iUnitUpkeepCivilian100 = 0;
 	m_iFinalUnitUpkeep = 0;
@@ -4131,7 +4131,7 @@ void CvPlayer::recalculateUnitCounts()
 	foreach_(CvUnit* pLoopUnit, units())
 	{
 		m_paiUnitCount[pLoopUnit->getUnitType()]++;
-		pLoopUnit->calcUpkeep100();
+		pLoopUnit->recalculateUnitUpkeep();
 	}
 }
 
@@ -30825,6 +30825,10 @@ void CvPlayer::clearModifierTotals()
 	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
 	m_iCivilianUnitUpkeepMod = 0;
 	m_iMilitaryUnitUpkeepMod = 0;
+	m_iUnitUpkeepMilitary100 = 0;
+	m_iUnitUpkeepCivilian100 = 0;
+	m_iFinalUnitUpkeep = 0;
+
 	m_iHappyPerMilitaryUnit = 0;
 	m_iMilitaryFoodProductionCount = 0;
 	m_iNoUnhealthyPopulationCount = 0;

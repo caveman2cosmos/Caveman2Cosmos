@@ -19849,6 +19849,12 @@ int CvUnit::getUpkeep100() const
 {
 	return m_iUpkeep100;
 }
+
+void CvUnit::recalculateUnitUpkeep()
+{
+	m_iUpkeep100 = 0;
+	calcUpkeep100();
+}
 // ! Upkeep
 
 

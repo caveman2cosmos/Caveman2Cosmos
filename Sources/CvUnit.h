@@ -1363,6 +1363,7 @@ public:
 	void changeUpkeepModifier(const int iChange);
 	void calcUpkeepMultiplierSM(const int iGroupOffset);
 	void calcUpkeep100();
+	void recalculateUnitUpkeep();
 	int getExtraUpkeep() const;
 	int getUpkeepModifier() const;
 	int getUpkeepMultiplierSM() const;
