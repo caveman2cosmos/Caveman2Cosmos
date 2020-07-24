@@ -19799,36 +19799,43 @@ void CvUnit::calcUpkeepMultiplierSM(const int iGroupOffset)
 
 void CvUnit::calcUpkeep100()
 {
+	if (isNPC())
+	{
+		return;
+	}
 	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iCalc > 0)
 	{
 		iCalc += m_iExtraUpkeep * 100;
 
-		if (m_iUpkeepModifier > 0)
+		if (iCalc > 0)
 		{
-			iCalc = iCalc * (100 + m_iUpkeepModifier) / 100;
-		}
-		else if (m_iUpkeepModifier < 0)
-		{
-			iCalc = iCalc * 100 / (100 - m_iUpkeepModifier);
-		}
+			if (m_iUpkeepModifier > 0)
+			{
+				iCalc = iCalc * (100 + m_iUpkeepModifier) / 100;
+			}
+			else if (m_iUpkeepModifier < 0)
+			{
+				iCalc = iCalc * 100 / (100 - m_iUpkeepModifier);
+			}
 
-		if (m_iUpkeepMultiplierSM > 0)
-		{
-			iCalc = iCalc * (100 + m_iUpkeepMultiplierSM) / 100;
-		}
-		else if (m_iUpkeepMultiplierSM < 0)
-		{
-			iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplierSM);
-		}
+			if (m_iUpkeepMultiplierSM > 0)
+			{
+				iCalc = iCalc * (100 + m_iUpkeepMultiplierSM) / 100;
+			}
+			else if (m_iUpkeepMultiplierSM < 0)
+			{
+				iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplierSM);
+			}
 
-		const int iOldUpkeep = m_iUpkeep100;
-		m_iUpkeep100 = std::max(0,  iCalc);
+			const int iOldUpkeep = m_iUpkeep100;
+			m_iUpkeep100 = std::max(0,  iCalc);
 
-		// Update player total
-		if (m_iUpkeep100 != iOldUpkeep)
-		{
-			GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, m_pUnitInfo->isMilitarySupport());
+			// Update player total
+			if (m_iUpkeep100 != iOldUpkeep)
+			{
+				GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, m_pUnitInfo->isMilitarySupport());
+			}
 		}
 	}
 }
@@ -29354,7 +29361,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 
 int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bCheckPlot) const
 {
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 	if (kTrigger.getNumUnits() <= 0)
 	{
 		return MIN_INT;
@@ -29428,7 +29435,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 
 bool CvUnit::canApplyEvent(EventTypes eEvent) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{
@@ -29455,7 +29462,7 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		return;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{

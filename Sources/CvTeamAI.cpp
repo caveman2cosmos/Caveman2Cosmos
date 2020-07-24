@@ -3171,7 +3171,7 @@ void CvTeamAI::AI_getWarThresholds( int &iTotalWarThreshold, int &iLimitedWarThr
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).getTotalUnitUpkeep() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
+				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).getFinalUnitUpkeep() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
 				iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
 
 				if( GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER))

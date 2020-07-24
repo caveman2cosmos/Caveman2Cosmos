@@ -2,15 +2,15 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
-		<English>[ICON_BULLET]Extra unit upkeep: %d1</English>
+		<English>[ICON_BULLET]Extra unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
-		<English>[ICON_BULLET]%d1 Free Civilian Unit Upkeep</English>
+		<English>[ICON_BULLET]Free civilian unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
-		<English>[ICON_BULLET]%d1 Free Military Unit Upkeep</English>
+		<English>[ICON_BULLET]Free military unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>

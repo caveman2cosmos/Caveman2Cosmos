@@ -12953,7 +12953,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 	int iExtraYieldThreshold = 0;
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
 	{
-		CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
+		const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
 		iExtraYieldThreshold  = std::max(trait.getExtraYieldThreshold(eYield), iExtraYieldThreshold);
 	}
 	if (iExtraYieldThreshold > 0 && iMaxYield > iExtraYieldThreshold)

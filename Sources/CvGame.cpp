@@ -185,7 +185,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	//AlbertS2 set hidden options to their default setting
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
+		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
 		{
 			setOption((GameOptionTypes)iI, kGameOption.getDefault());
@@ -6837,7 +6837,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
 		const SpawnTypes eSpawn = (SpawnTypes)j;
-		CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
+		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
 		//I think for the sake of speed and data efficiency we can get away with a singular player reference rather than
@@ -10303,7 +10303,7 @@ void CvGame::doUpdateCacheOnTurn()
 	{
 		if (isVictoryValid((VictoryTypes) iI))
 		{
-			CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
+			const CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
 			if (kVictoryInfo.getCityCulture() > 0)
 			{
 				int iNumCultureCities = kVictoryInfo.getNumCultureCities();

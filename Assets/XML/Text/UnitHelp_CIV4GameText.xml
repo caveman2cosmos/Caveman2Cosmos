@@ -272,8 +272,8 @@
 		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_UPKEEP_BASE</Tag>
-		<English>[ICON_BULLET]Base upkeep: %d1 [ICON_GOLD]</English>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>
+		<English>[ICON_BULLET]Upkeep change: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>

@@ -9662,8 +9662,8 @@ public:
 	int getBuildingHealthChange(int iBuilding) const;
 	int getNumBuildingHealthChanges() const;
 
-	CvProperties* getProperties();
-	CvProperties* getPropertiesAllCities();
+	const CvProperties* getProperties() const;
+	const CvProperties* getPropertiesAllCities() const;
 
 	const char* getPythonCallback() const;
 	const char* getPythonExpireCheck() const;

@@ -5757,7 +5757,7 @@ void CvUnitAI::AI_exploreMove()
 
 	if (!isHuman() && AI_getUnitAIType() == UNITAI_EXPLORE
 	&& GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE) > GET_PLAYER(getOwner()).AI_neededExplorers(area())
-	&& GET_PLAYER(getOwner()).getTotalUnitUpkeep() > 0)
+	&& GET_PLAYER(getOwner()).getFinalUnitUpkeep() > 0)
 	{
 		scrap();
 		return;
@@ -8639,7 +8639,7 @@ void CvUnitAI::AI_exploreSeaMove()
 
 		if (pWaterArea != NULL
 		&& GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_EXPLORE_SEA) > GET_PLAYER(getOwner()).AI_neededExplorers(pWaterArea)
-		&& GET_PLAYER(getOwner()).getTotalUnitUpkeep() > 0)
+		&& GET_PLAYER(getOwner()).getFinalUnitUpkeep() > 0)
 		{
 			scrap();
 			return;
@@ -28649,7 +28649,7 @@ bool CvUnitAI::AI_revoltCitySpy()
 
 	for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
 	{
-		CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
+		const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 		if ((kMissionInfo.getCityRevoltCounter() > 0) || (kMissionInfo.getPlayerAnarchyCounter() > 0))
 		{
 			if (!GET_PLAYER(getOwner()).canDoEspionageMission((EspionageMissionTypes)iMission, pCity->getOwner(), pCity->plot(), -1, this))
