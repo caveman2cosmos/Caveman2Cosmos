@@ -36494,7 +36494,8 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_HELP_BASE", szBaseProfit.GetCString()));
 
 			int iModifier = 100;
-			int iValue;
+			int iTestValue = pCity->getTradeRouteModifier();
+			int iValue = 0;
 			int iTradeRouteModifier = 0;
 			// getTradeRouteModifier()
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
@@ -36510,7 +36511,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 					}
 				}
 			}
-			FAssert(iTradeRouteModifier == pCity->getTradeRouteModifier()); // Toffer - This one triggers - 21.07.20
+			FAssert(iTradeRouteModifier == iTestValue); // Toffer - This one triggers - 21.07.20
 			// I can only speculate that replaced/obsolete buildings are not being processed in and out correctly during recalc.
 
 			iModifier += iTradeRouteModifier;
