@@ -4831,40 +4831,18 @@ void CvUnit::checkRemoveSelectionAfterAttack()
 
 bool CvUnit::isActionRecommended(int iAction) const
 {
-	CvCity* pWorkingCity;
-	CvPlot* pPlot;
-	ImprovementTypes eImprovement;
-	ImprovementTypes eFinalImprovement;
-	BuildTypes eBuild;
-	RouteTypes eRoute;
-	BonusTypes eBonus;
-	int iIndex;
-
-	if (getOwner() != GC.getGame().getActivePlayer())
+	if (getOwner() != GC.getGame().getActivePlayer()
+	|| GET_PLAYER(getOwner()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
 	{
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
+	CvPlot* pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
+
+	if (pPlot == NULL && gDLL->shiftKey())
 	{
-		return false;
+		pPlot = getGroup()->lastMissionPlot();
 	}
-
-	//if (Cy::call<bool>(PYGameModule, "isActionRecommended", Cy::Args() << this << iAction))
-	//{
-	//	return true;
-	//}
-
-	pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
-
-	if (pPlot == NULL)
-	{
-		if (gDLL->shiftKey())
-		{
-			pPlot = getGroup()->lastMissionPlot();
-		}
-	}
-
 	if (pPlot == NULL)
 	{
 		pPlot = plot();
@@ -4872,180 +4850,129 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FORTIFY)
 	{
-		if (pPlot->isCity(true, getTeam()))
+		if (pPlot->isCity(true, getTeam()) && canDefend(pPlot) && pPlot->getNumDefenders(getOwner()) < (atPlot(pPlot) ? 2 : 1))
 		{
-			if (canDefend(pPlot))
-			{
-				if (pPlot->getNumDefenders(getOwner()) < ((atPlot(pPlot)) ? 2 : 1))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_ESTABLISH)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_ESTABLISH)
 	{
-		if (pPlot->isCity(true, getTeam()))
+		if (pPlot->isCity(true, getTeam())
+		&& (hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0))
 		{
-			if (hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0)
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
-	if ((GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL) || (GC.getActionInfo(iAction).getMissionType() == MISSION_SENTRY_WHILE_HEAL))
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL || GC.getActionInfo(iAction).getMissionType() == MISSION_SENTRY_WHILE_HEAL)
 #else
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL ||
-		GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL_BUILDUP)
+	else if(GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL || GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL_BUILDUP)
 #endif
-// BUG - Sentry Actions - end
 	{
-		if (isHurt())
+		if (isHurt() && !hasMoved() && (pPlot->getTeam() == getTeam() || healTurns(pPlot) > 0))
 		{
-			if (!hasMoved())
-			{
-				if ((pPlot->getTeam() == getTeam()) || (healTurns(pPlot) > 0))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FOUND)
+	else if (GC.getActionInfo(iAction).getCommandType() == COMMAND_PROMOTION)
 	{
-		if (canFound(pPlot))
-		{
-			if (pPlot->isBestAdjacentFound(getOwner()))
-			{
-				return true;
-			}
-		}
+		return true;
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_BUILD)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_BUILD)
 	{
 		if (pPlot->getOwner() == getOwner())
 		{
-			eBuild = ((BuildTypes)(GC.getActionInfo(iAction).getMissionData()));
+			const BuildTypes eBuild = (BuildTypes) GC.getActionInfo(iAction).getMissionData();
+
 			FAssert(eBuild != NO_BUILD);
 			FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
 
 			if (canBuild(pPlot, eBuild))
 			{
-				eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
-				eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
-				eBonus = pPlot->getBonusType(getTeam());
-				pWorkingCity = pPlot->getWorkingCity();
+				const ImprovementTypes eImprovement = pPlot->getImprovementType();
 
-				if (pPlot->getImprovementType() == NO_IMPROVEMENT)
+				// Recommend build
+				if (eImprovement == NO_IMPROVEMENT)
 				{
+					// If City AI wants it
+					const CvCity* pWorkingCity = pPlot->getWorkingCity();
+
 					if (pWorkingCity != NULL)
 					{
-						iIndex = pWorkingCity->getCityPlotIndex(pPlot);
-
-						if (iIndex != -1)
+						const int iIndex = pWorkingCity->getCityPlotIndex(pPlot);
+						if (iIndex != -1 && pWorkingCity->AI_getBestBuild(iIndex) == eBuild)
 						{
-							if (pWorkingCity->AI_getBestBuild(iIndex) == eBuild)
-							{
-								return true;
-							}
+							return true;
 						}
 					}
+					// Recommend improvement
+					const ImprovementTypes eImprovementNew = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 
-					if (eImprovement != NO_IMPROVEMENT)
+					if (eImprovementNew != NO_IMPROVEMENT)
 					{
-						if (eBonus != NO_BONUS)
+						const CvImprovementInfo& improvement = GC.getImprovementInfo(eImprovementNew);
+
+						const BonusTypes eBonus = pPlot->getBonusType(getTeam());
+
+						// If it provides bonus
+						if (eBonus != NO_BONUS && improvement.isImprovementBonusTrade(eBonus))
 						{
-							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+							return true;
+						}
+						// If it irrigates
+						if (improvement.isCarriesIrrigation() && !pPlot->isIrrigated() && pPlot->isIrrigationAvailable(true))
+						{
+							return true;
+						}
+						// If it gives yields
+						if (pWorkingCity != NULL)
+						{
+							if (improvement.getYieldChange(YIELD_COMMERCE) > 0)
 							{
 								return true;
 							}
-						}
-
-						if (pPlot->getImprovementType() == NO_IMPROVEMENT)
-						{
-							if (!(pPlot->isIrrigated()) && pPlot->isIrrigationAvailable(true))
+							// Food is only interesting on flatland/water
+							if (improvement.getYieldChange(YIELD_FOOD) > 0 && !pPlot->isHills() && !pPlot->isPeak2(true))
 							{
-								if (GC.getImprovementInfo(eImprovement).isCarriesIrrigation())
-								{
-									return true;
-								}
+								return true;
 							}
-
-							if (pWorkingCity != NULL)
+							if (improvement.getYieldChange(YIELD_PRODUCTION) > 0)
 							{
-								if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_FOOD) > 0)
-								{
-									return true;
-								}
-
-								if (pPlot->isHills())
-								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_PRODUCTION) > 0)
-									{
-										return true;
-									}
-								}
-								else
-								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_COMMERCE) > 0)
-									{
-										return true;
-									}
-								}
+								return true;
 							}
 						}
 					}
 				}
+				// Recommend route
+				const RouteTypes eRouteNew = (RouteTypes) GC.getBuildInfo(eBuild).getRoute();
 
-				if (eRoute != NO_ROUTE)
+				if (eRouteNew != NO_ROUTE)
 				{
-					if (!(pPlot->isRoute()))
+					// If bonus with no route
+					if (!pPlot->isRoute() && pPlot->getBonusType(getTeam()) != NO_BONUS)
 					{
-						if (eBonus != NO_BONUS)
-						{
-							return true;
-						}
-
-						if (pWorkingCity != NULL)
-						{
-							if (pPlot->isRiver())
-							{
-								return true;
-							}
-						}
+						return true;
 					}
-
-					eFinalImprovement = eImprovement;
-
-					if (eFinalImprovement == NO_IMPROVEMENT)
+					// If route improves yields from improvement
+					if (eImprovement != NO_IMPROVEMENT
+					&& (
+						GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_FOOD) > 0
+					||	GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_PRODUCTION) > 0
+					||	GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_COMMERCE) > 0))
 					{
-						eFinalImprovement = pPlot->getImprovementType();
-					}
-
-					if (eFinalImprovement != NO_IMPROVEMENT)
-					{
-						if ((GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_FOOD) > 0) ||
-							(GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_PRODUCTION) > 0) ||
-							(GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_COMMERCE) > 0))
-						{
-							return true;
-						}
+						return true;
 					}
 				}
 			}
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getCommandType() == COMMAND_PROMOTION)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_FOUND)
 	{
-		return true;
+		if (canFound(pPlot) && pPlot->isBestAdjacentFound(getOwner()))
+		{
+			return true;
+		}
 	}
-
 	return false;
 }
 
@@ -18762,7 +18689,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 {
 	if (iNewValue >= GC.getDefineINT("MAX_FORTIFY_TURNS"))
 	{
-		if ((getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE) || (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE))
+		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE || getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
 			clearBuildups();
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
@@ -18770,7 +18697,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 			setInfoBarDirty(true);
 			return;
 		}
-		else if ((getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE))
+		else if (getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
 			setBuildUp(true);
 			PromotionLineTypes ePromotionLine = getBuildUpType();

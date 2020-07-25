@@ -60,9 +60,6 @@ def getRecommendedBuilding(argsList):
 def updateColoredPlots():
 	return GameUtils.updateColoredPlots()
 
-def isActionRecommended(argsList):
-	return GameUtils.isActionRecommended(argsList)
-
 def unitCannotMoveInto(argsList):
 	return GameUtils.unitCannotMoveInto(argsList)
 
