@@ -1102,7 +1102,7 @@ void CvCityAI::AI_chooseProduction()
 	bool bGetBetterUnits = kPlayer.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
 	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 
-	int iUnitCostPercentage = kPlayer.getTotalUnitUpkeep() * 100 / std::max(1, kPlayer.calculatePreInflatedCosts());
+	int iUnitCostPercentage = kPlayer.getFinalUnitUpkeep() * 100 / std::max(1, kPlayer.calculatePreInflatedCosts());
 	int iWaterPercent = AI_calculateWaterWorldPercent();
 
 	int iBuildUnitProb = AI_buildUnitProb();
@@ -4362,7 +4362,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			}
 
 			if (iHasMetCount > 0 && bWarPossible
-			&& (bLandWar || bAssault || !bFinancialTrouble || GET_PLAYER(getOwner()).getTotalUnitUpkeep() == 0))
+			&& (bLandWar || bAssault || !bFinancialTrouble || GET_PLAYER(getOwner()).getFinalUnitUpkeep() == 0))
 			{
 				aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
 				aiUnitAIVal[UNITAI_ATTACK_CITY] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 7 : 15)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
@@ -15734,12 +15734,15 @@ retry:
 			else
 			{
 				iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+				/* Toffer - Commented out as it's not entirely clear that this is a problem.
+				// Someone should look into this assert which is frequently triggered, I think it may be a false posititve.
 				FAssertMsg(iResult == 0, CvString::format(
 					"City %S rated building %s non zero (%d) which is wrong somehow? This assert might be deprecated!",
 					m_szName.c_str(),
 					GC.getBuildingInfo(eBuilding).getType(),
 					iResult).c_str()
 				);
+				*/
 				iResult = 0;
 			}
 		}
@@ -16574,7 +16577,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
-									CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+									const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 									bool bUnitIsEnabler = kUnit.isPrereqAndBuilding((int)eBuilding);
 									bool bUnitIsOtherwiseEnabled = false;
 

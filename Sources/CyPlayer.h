@@ -161,7 +161,7 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	unsigned long getTotalUnitUpkeep();
+	unsigned long getFinalUnitUpkeep();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();

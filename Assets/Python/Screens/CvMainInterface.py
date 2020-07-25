@@ -5049,7 +5049,7 @@ class CvMainInterface:
 		if iMaintenance:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iMaintenance) + iconCommerceGold
 		# Unit upkeep
-		iUnitUpkeep = CyPlayer.getTotalUnitUpkeep()
+		iUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		iUnitSupply = CyPlayer.calculateUnitSupply()
 		if iUnitUpkeep or iUnitSupply:
 			szTxt += "\n"
