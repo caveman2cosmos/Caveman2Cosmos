@@ -4978,37 +4978,31 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
+	if (!canDefend())
+	{
+		return 1;
+	}
+
 	int iValue = 0;
 
 	TeamTypes eAttackerTeam = NO_TEAM;
 	if (NULL != pAttacker)
 	{
 		eAttackerTeam = pAttacker->getTeam();
-	}
 
-	CvPlot* pPlot = plot();
-	if (pPlot != NULL)
-	{
-		if (canCoexistWithAttacker(*pAttacker))
+		CvPlot* pPlot = plot();
+		if (pPlot != NULL)
+		{
+			if (canCoexistWithAttacker(*pAttacker))
+			{
+				return 0;
+			}
+		}
+		else if (canCoexistWithTeam(eAttackerTeam))
 		{
 			return 0;
 		}
-	}
-	else
-	{
-		if (canCoexistWithTeam(eAttackerTeam))
-		{
-			return 0;
-		}
-	}
 
-	if (!canDefend())
-	{
-		return 1;
-	}
-
-	if (pAttacker)
-	{
 		if (isTargetOf(*pAttacker))
 		{
 			iValue += 10000;
@@ -5031,36 +5025,25 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 		if (collateralDamage() > 0)
 		{
 			iValue *= 100;
-			iValue /= (100 + collateralDamage());
+			iValue /= 100 + collateralDamage();
 		}
 
 		if (currInterceptionProbability() > 0)
 		{
 			iValue *= 100;
-			iValue /= (100 + currInterceptionProbability());
+			iValue /= 100 + currInterceptionProbability();
 		}
 	}
 	else
 	{
-		if (!(pAttacker->immuneToFirstStrikes()))
+		if (!pAttacker->immuneToFirstStrikes())
 		{
-			// UncutDragon
-/* original code
-			iOurDefense *= ((((firstStrikes() * 2) + chanceFirstStrikes()) * ((GC.getDefineINT("COMBAT_DAMAGE") * 2) / 5)) + 100);
-*/			// modified
-			iValue *= ((((firstStrikes() * 2) + chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
-			// /UncutDragon
+			iValue *= 100 + (firstStrikes() * 2 + chanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() * 2 / 5);
 			iValue /= 100;
 		}
-
 		if (immuneToFirstStrikes())
 		{
-			// UncutDragon
-/* original code
-			iOurDefense *= ((((pAttacker->firstStrikes() * 2) + pAttacker->chanceFirstStrikes()) * ((GC.getDefineINT("COMBAT_DAMAGE") * 2) / 5)) + 100);
-*/			// modified
-			iValue *= ((((pAttacker->firstStrikes() * 2) + pAttacker->chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
-			// /UncutDragon
+			iValue *= 100 + (pAttacker->firstStrikes() * 2 + pAttacker->chanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() * 2 / 5);
 			iValue /= 100;
 		}
 	}
@@ -18748,12 +18731,12 @@ void CvUnit::setFortifyTurns(int iNewValue)
 	if (iNewValue == 0 && isBuildUp())
 	{
 		clearBuildups();
-		m_iFortifyTurns = iNewValue;
+		m_iFortifyTurns = 0;
 		setInfoBarDirty(true);
 		return;
 	}
 
-	if (iNewValue != getFortifyTurns())
+	if (iNewValue != m_iFortifyTurns)
 	{
 		if (iNewValue > 0)
 		{
@@ -18767,8 +18750,8 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
 						if (!isHasPromotion(ePromotion)
-							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
-							&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+						&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
+						&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 						{
 							setHasPromotion(ePromotion, true, true, false, false);
 						}
@@ -18782,15 +18765,12 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					setInfoBarDirty(true);
 				}
 			}
-			else if (getSleepType() != MISSION_BUILDUP)
+			else if (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 			{
-				if (getBuildUpType() != NO_PROMOTIONLINE)
-				{
-					clearBuildups();
-					iNewValue = 0;
-					getGroup()->setActivityType(ACTIVITY_AWAKE);
-					setInfoBarDirty(true);
-				}
+				clearBuildups();
+				iNewValue = 0;
+				getGroup()->setActivityType(ACTIVITY_AWAKE);
+				setInfoBarDirty(true);
 			}
 		}
 		else
