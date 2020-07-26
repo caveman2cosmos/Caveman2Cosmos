@@ -4621,7 +4621,6 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 
 	int iI;
 	CvCity* pLoopCity = NULL;
-	int iLoop;
 
 	FAssert(eAttackerTeam != NO_TEAM);
 
@@ -4673,7 +4672,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 		{
 			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isNPC() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
 			{
-				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if( (pLoopCity->area() == area()) && !(pLoopCity->isCapital()) )
 					{
@@ -4719,16 +4718,14 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 
 	bool bFound = false;
 
-	for (pLoopCity = GET_PLAYER(eOtherPlayer).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER(eOtherPlayer).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(eOtherPlayer).cities()
+	| filtered(CvCity::fn::area() == area()))
 	{
-		if( pLoopCity->area() == area() )
-		{
-			bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
+		bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
 
-			if( bFound )
-			{
-				break;
-			}
+		if( bFound )
+		{
+			break;
 		}
 	}
 
