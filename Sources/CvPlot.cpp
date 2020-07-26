@@ -1214,9 +1214,9 @@ CvUnit* CvPlot::getPreferredCenterUnit() const
 {
 	CvUnit*  pNewCenterUnit = getSelectedUnit();
 
-	FAssertMsg(pNewCenterUnit == NULL || pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
 	if (pNewCenterUnit != NULL)
 	{
+		FAssertMsg(pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
@@ -1253,7 +1253,7 @@ void CvPlot::updateCenterUnit()
 		//	(rather than have it update multiple times) the currently cached center unit
 		//	might become an invalid pointer in the interim.  To protect against this we unconditionally
 		//	set the recorded center unit to NULL (without marking the plot dirty which would force a repaint).
-		//	This makes the interim safe state, and the correct value will be calculated once the
+		//	This makes the interim a safe state, and the correct value will be calculated once the
 		//	inhibitted section is exited
 		m_pCenterUnit = NULL;
 		return;
@@ -1262,7 +1262,7 @@ void CvPlot::updateCenterUnit()
 	CvUnit* pOldCenterUnit = getCenterUnit();
 	CvUnit* pNewCenterUnit = NULL;
 
-	if(isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
+	if (isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
 	{
 		pNewCenterUnit = getPreferredCenterUnit();
 	}
@@ -3625,8 +3625,8 @@ namespace {
 				)
 			)
 		{
-			iValue = pAttacker ? pLoopUnit->defenderValue(pAttacker) : 0;
-			iValue += (pLoopUnit->tauntTotal() * iValue) / 100;
+			iValue = pLoopUnit->defenderValue(pAttacker);
+			iValue += pLoopUnit->tauntTotal() * iValue / 100;
 			// It should be greater than 0 as this target is at least valid as per the checks above
 			iValue = std::max(1, iValue);
 		}
@@ -4621,7 +4621,6 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 
 	int iI;
 	CvCity* pLoopCity = NULL;
-	int iLoop;
 
 	FAssert(eAttackerTeam != NO_TEAM);
 
@@ -4673,7 +4672,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 		{
 			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isNPC() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
 			{
-				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if( (pLoopCity->area() == area()) && !(pLoopCity->isCapital()) )
 					{
@@ -4719,16 +4718,14 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 
 	bool bFound = false;
 
-	for (pLoopCity = GET_PLAYER(eOtherPlayer).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER(eOtherPlayer).nextCity(&iLoop))
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(eOtherPlayer).cities()
+	| filtered(CvCity::fn::area() == area()))
 	{
-		if( pLoopCity->area() == area() )
-		{
-			bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
+		bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
 
-			if( bFound )
-			{
-				break;
-			}
+		if( bFound )
+		{
+			break;
 		}
 	}
 

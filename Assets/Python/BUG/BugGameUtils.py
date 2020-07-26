@@ -165,7 +165,6 @@ class Dispatcher:
 		self._setDefault("getRecommendedUnit", UnitTypes.NO_UNIT)
 		self._setDefault("getRecommendedBuilding", BuildingTypes.NO_BUILDING)
 		self._setDefault("updateColoredPlots", False)
-		self._setDefault("isActionRecommended", False)
 		self._setDefault("unitCannotMoveInto", False)
 		self._setDefault("cannotHandleAction", False)
 		self._setDefault("cannotFoundCity", False)

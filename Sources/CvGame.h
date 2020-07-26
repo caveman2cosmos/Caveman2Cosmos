@@ -935,6 +935,8 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 };
 
 #endif

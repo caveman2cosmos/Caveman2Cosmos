@@ -753,35 +753,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	//}
 	//TB SubCombat Mod begin
 
-	if (bShift)
-	{
-		bFirst = true;
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
-			{
-				const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
-				if (bFirst)
-				{
-					szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-					bFirst = false;
-				}
-				else
-				{
-					szString.append(NEWLINE);
-					szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-				}
-			}
-		}
-		if (!bFirst)
-		{
-			szTempBuffer.Format(L")");
-			szString.append(szTempBuffer);
-		}
-	}
-
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
 		if (pUnit->isHasPromotion((PromotionTypes)iI) && !pUnit->isPromotionOverriden((PromotionTypes)iI))
@@ -808,21 +779,32 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (!bOneLine)
 	{
-		setEspionageMissionHelp(szString, pUnit);
-
-		if (pUnit->canFight())
+		if (bShift)
 		{
-			const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
-			for (iI = 0; iI < iNumHealAsTypes; iI++)
+			bFirst = true;
+			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
-				const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
-				if (iHealAsDamage > 0)
+				if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
-						GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+					const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
+					if (bFirst)
+					{
+						szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+						bFirst = false;
+					}
+					else
+					{
+						szString.append(NEWLINE);
+						szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+					}
 				}
+			}
+			if (!bFirst)
+			{
+				szTempBuffer.Format(L")");
+				szString.append(szTempBuffer);
 			}
 		}
 		//Setup Combat Value Displays
@@ -833,12 +815,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
-			}
-			//Fortification
-			if (pUnit->fortifyModifier() != 0)
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
 
 			if (pUnit->noDefensiveBonus())
@@ -3060,10 +3036,34 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		if (bNormalView)
 		{
 			//Max HP
-			if (pUnit->baseCombatStr() > 0 && pUnit->maxHPTotal() != 100)
+			if (pUnit->canFight())
+			{
+				if (pUnit->maxHPTotal() != 100)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				}
+				if (pUnit->isHurt())
+				{
+					const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
+					for (iI = 0; iI < iNumHealAsTypes; iI++)
+					{
+						const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
+						const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
+						if (iHealAsDamage > 0)
+						{
+							szString.append(NEWLINE);
+							szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
+								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+						}
+					}
+				}
+			}
+			//Fortification
+			if (pUnit->fortifyModifier() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
 
 			if (pUnit->isMilitaryBranch())
@@ -3083,6 +3083,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
 			}
+
+			setEspionageMissionHelp(szString, pUnit);
+
 			//Current Cold Damage
 			if (pUnit->getColdDamage() > 0)
 			{
@@ -4097,8 +4100,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 		return;
 	}
 
-	CvUnit* pLoopUnit;
-	static const uint iMaxNumUnits = 1;
 	std::vector<CvUnit *> plotUnits;
 
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
@@ -4122,32 +4123,22 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 	if (iNumVisibleUnits > 0)
 	{
-		//if (pPlot->getCenterUnit())
-		//{
-		//	setUnitHelp(szString, pPlot->getCenterUnit(), iNumVisibleUnits > iMaxNumUnits, true);
-		//}
+		const CvUnit* centerUnit = pPlot->getCenterUnit();
 
-		uint iNumShown = std::min<uint>(iMaxNumUnits, iNumVisibleUnits);
-		for (uint iI = 0; iI < iNumShown && iI < (int) plotUnits.size(); iI++)
+		if (centerUnit)
 		{
-			CvUnit* pLoopUnit = plotUnits[iI];
-			//if (pLoopUnit != pPlot->getCenterUnit())
-			//{
-				szString.append(NEWLINE);
-				setUnitHelp(szString, pLoopUnit, true, true);
-			//}
+			setUnitHelp(szString, centerUnit, iNumVisibleUnits > 12, true);
 		}
 
-		bool bFirst = true;
-		if (iNumVisibleUnits > iMaxNumUnits)
+		if (iNumVisibleUnits > 1)
 		{
 			std::map<int,PlayerUnitInfo> a_units;
 			int iCount = 0;
-			for (int iI = iMaxNumUnits; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
+			for (int iI = 0; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
 			{
-				pLoopUnit = plotUnits[iI];
+				CvUnit* pLoopUnit = plotUnits[iI];
 
-				if (pLoopUnit != NULL/* && pLoopUnit != pPlot->getCenterUnit()*/)
+				if (pLoopUnit != NULL && pLoopUnit != centerUnit)
 				{
 					std::map<int,PlayerUnitInfo>::iterator itr = a_units.find(PLAYER_UNIT_KEY(pLoopUnit->getOwner(), pLoopUnit->getUnitType()));
 
@@ -4189,25 +4180,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					}
 				}
 			}
-#if 0
-			for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					int iIndex = iI * MAX_PLAYERS + iJ;
 
-					if (aiUnitNumbers[iIndex] > 0)
-					{
-						if (iCount < 5 || bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						else
-						{
-							szString.append(L", ");
-						}
-#endif
+			bool bFirst = true;
 			for (std::map<int, PlayerUnitInfo>::const_iterator itr = a_units.begin(); itr != a_units.end(); ++itr)
 			{
 				const CvPlayer& kPlayer = GET_PLAYER(itr->second.m_eOwner);
@@ -4225,13 +4199,11 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 				CvWString szUnitName;
 
 				szUnitName.clear();
-				if (kPlayer.getCivilizationType() != NO_CIVILIZATION &&
-					kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL)
+				if (kPlayer.getCivilizationType() != NO_CIVILIZATION
+				&& kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL
+				&& !CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
 				{
-					if (!CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
-					{
-						szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
-					}
+					szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
 				}
 				if (szUnitName.empty())
 				{
@@ -4258,56 +4230,34 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
 					}
 				}
-				else
+				else if (itr->second.m_iTotalMaxStrength > 0)
 				{
-					if (itr->second.m_iTotalMaxStrength > 0)
+					int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
+					int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
+					int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
+
+					if (0 != iCurrent100)
 					{
-						int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
-						int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
-						int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
-						if (0 == iCurrent100)
-						{
-							if (iBase == iCurrent)
-							{
-								szString.append(CvWString::format(L" %d", iBase));
-							}
-							else
-							{
-								szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
-							}
-						}
-						else
-						{
-							szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
-						}
-						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
+						szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
 					}
+					else if (iBase == iCurrent)
+					{
+						szString.append(CvWString::format(L" %d", iBase));
+					}
+					else
+					{
+						szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
+					}
+					szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
 				}
-
-
-				//for (int iK = 0; iK < numPromotionInfos; iK++)
-				//{
-				//	std::map<PromotionTypes,int>::const_iterator promoItr = itr->second.m_promotions.find((PromotionTypes)iK);
-				//	if ( promoItr != itr->second.m_promotions.end())
-				//	{
-				//		szString.append(CvWString::format(L"%d<img=%S size=16 />", promoItr->second, GC.getPromotionInfo((PromotionTypes)iK).getButton()));
-				//	}
-				//}
 
 				if (kPlayer.getID() != GC.getGame().getActivePlayer() && !kUnit.isHiddenNationality())
 				{
 					szString.append(L", ");
-/************************************************************************************************/
-/* REVOLUTION_MOD						 02/01/08								jdog5000	  */
-/*																							  */
-/* For BarbarianCiv and minor civs															  */
-/************************************************************************************************/
-/* original code
-					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iJ).getName()));
-*/
+
 					// For minor civs, display civ name instead of player name ... to differentiate
 					// and help human recognize why they can't contact that player
-					if( kPlayer.isMinorCiv() )
+					if (kPlayer.isMinorCiv())
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getCivilizationDescription()));
 					}
@@ -4315,9 +4265,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getName()));
 					}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 				}
 			}
 		}
@@ -13476,7 +13423,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iPunctureChange = 0;
 	int	iDamageModifierChange = 0;
 	int iUpkeepModifier = 0;
-	int iExtraUpkeep = 0;
+	int iExtraUpkeep100 = 0;
 	int	iOverrunChange = 0;
 	int	iRepelChange = 0;
 	int	iFortRepelChange = 0;
@@ -13618,7 +13565,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iPunctureChange += promo.getPunctureChange();
 		iDamageModifierChange += promo.getDamageModifierChange();
 		iUpkeepModifier += promo.getUpkeepModifier();
-		iExtraUpkeep += promo.getExtraUpkeep();
+		iExtraUpkeep100 += promo.getExtraUpkeep100();
 		iOverrunChange += promo.getOverrunChange();
 		iRepelChange += promo.getRepelChange();
 		iFortRepelChange += promo.getFortRepelChange();
@@ -13957,10 +13904,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", iUpkeepModifier));
 	}
-	if (iExtraUpkeep != 0)
+	if (iExtraUpkeep100 != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", iExtraUpkeep));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", CvWString::format(L"%.2f", iExtraUpkeep100 / 100.0).GetCString()));
 	}
 	if (iOverrunChange != 0)
 	{
@@ -17990,6 +17937,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	}
 	PROFILE_FUNC();
 
+	const CvGame& game = GC.getGame();
 	CvWString szTempBuffer;
 	bool bFirst;
 	int iCount;
@@ -18056,7 +18004,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		{
 			float fCombat = (float)kUnit.getTotalModifiedCombatStrength100();
 			int iModifier = kUnit.getCombatStrengthModifier();
-			int iAdditional = GC.getGame().getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : GC.getGame().getActiveTeam()).getUnitStrengthChange(eUnit));
+			int iAdditional = game.getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : game.getActiveTeam()).getUnitStrengthChange(eUnit));
 			fCombat += (iModifier * iAdditional);
 			fCombat /= 100;
 
@@ -18825,7 +18773,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Surround and Destroy
-		if (GC.getGame().isOption(GAMEOPTION_SAD))
+		if (game.isOption(GAMEOPTION_SAD))
 		{
 			if (kUnit.getUnnerve() != 0)
 			{
@@ -19131,7 +19079,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	if (bTBUnitView2)
 	{
 		//Cargo
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			if (iCargoValue > 0)
 			{
@@ -19159,7 +19107,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+		if (game.isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
 			int iAidChange = 0;
 			//Curing, resisting and overcoming afflictions
@@ -19456,7 +19404,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Strength in Numbers offered support
-		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+		if (game.isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			if (kUnit.getFrontSupportPercent() > 0)
 			{
@@ -19530,9 +19478,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getGreatWorkCulture() > 0)
 		{
 			int iCulture = kUnit.getGreatWorkCulture();
-			if (NO_GAMESPEED != GC.getGame().getGameSpeedType())
+			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iCulture *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+				iCulture *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
 				iCulture /= 100;
 			}
 
@@ -19544,9 +19492,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getEspionagePoints() > 0)
 		{
 			int iEspionage = GC.getUnitInfo(eUnit).getEspionagePoints();
-			if (NO_GAMESPEED != GC.getGame().getGameSpeedType())
+			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iEspionage *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
 				iEspionage /= 100;
 			}
 
@@ -19625,7 +19573,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Tradeable Unit
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || bCivilopediaText)
+		if (game.isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || bCivilopediaText)
 		{
 			if (kUnit.isMilitaryTrade() || kUnit.isWorkerTrade())
 			{
@@ -19665,15 +19613,15 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		if (kUnit.getBaseUpkeep() > 0)
 		{
-			int iExtra = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getExtraUpkeep();
+			int iExtra = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getExtraUpkeep100();
 			int iMod = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getUpkeepModifier();
 
 			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				iExtra += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getExtraUpkeep();
+				iExtra += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getExtraUpkeep100();
 				iMod += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getUpkeepModifier();
 			}
-			int iUpkeep = 100 * (kUnit.getBaseUpkeep() + iExtra);
+			int iUpkeep = 100 * kUnit.getBaseUpkeep() + iExtra;
 			if (iMod > 0)
 			{
 				iUpkeep = iUpkeep * (100 + iMod) / 100;
@@ -19784,7 +19732,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INVISIBLE_ALL"));
 		}
 
-		if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		if (!game.isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			if (kUnit.getInvisibleType() != NO_INVISIBLE)
 			{
@@ -20034,7 +19982,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FLIES_TO_MOVE"));
 		}
 
-		if (kUnit.getAnimalIgnoresBorders() != 0 && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+		if (kUnit.getAnimalIgnoresBorders() != 0 && !game.isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ANIMAL_IGNORES_BORDERS", kUnit.getAnimalIgnoresBorders()));
@@ -20451,7 +20399,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INVESTIGATION_TEXT", szTempBuffer.GetCString()));
 		}
 
-		bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
+		bool bWithoutWarning = game.isOption(GAMEOPTION_WITHOUT_WARNING);
 		if (kUnit.getStealthStrikes() != 0 && bWithoutWarning)
 		{
 			szBuffer.append(NEWLINE);
@@ -20470,7 +20418,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
 		}
 
-		if (kUnit.isNoInvisibility() && GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		if (kUnit.isNoInvisibility() && game.isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_NO_INVISIBILIY_TEXT"));
@@ -20496,92 +20444,61 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 	}
 
-	if (bTBUnitView3 && GC.getGame().getActivePlayer() != NO_PLAYER && !bCivilopediaText)
+	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+		const PlayerTypes ePlayer = game.getActivePlayer();
+
 		int iDisplayCount = GET_PLAYER(ePlayer).getUnitCombatClassDisplayCount(eUnit);
 		int iPotentialDisplays = 0;
-		int iCurrentDisplay = 0;
-		int iUnitCombat = 0;
-		bool bisValid = false;
-		for (iUnitCombat = 0; iUnitCombat < GC.getNumUnitCombatInfos(); iUnitCombat++)
+		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
-			if (kUnit.hasUnitCombat((UnitCombatTypes)iUnitCombat))
+			if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getUnitCombatType())))
 			{
-				UnitCombatTypes eCombatType = ((UnitCombatTypes)iUnitCombat);
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumNotOnGameOptions(); iJ++)
+				iPotentialDisplays++;
+			}
+			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			{
+				if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getSubCombatType(iI)))
+				&& ++iPotentialDisplays > iDisplayCount)
 				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
-				}
-				if (bisValid)
-				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumOnGameOptions(); iJ++)
-					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					iPotentialDisplays++;
+					break;
 				}
 			}
 		}
-
 		if (iDisplayCount > iPotentialDisplays)
 		{
 			GET_PLAYER(ePlayer).setUnitCombatClassDisplayCount(eUnit, 0);
+			iDisplayCount = 0;
 		}
-		else
+
+		UnitCombatTypes eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+		if (eUnitCombat != NO_UNITCOMBAT)
 		{
-			GET_PLAYER(ePlayer).changeUnitCombatClassDisplayCount(eUnit, 1);
-		}
-		iDisplayCount = GET_PLAYER(ePlayer).getUnitCombatClassDisplayCount(eUnit);
-		for (iUnitCombat = 0; iUnitCombat < GC.getNumUnitCombatInfos(); ++iUnitCombat)
-		{
-			if (kUnit.hasUnitCombat((UnitCombatTypes)iUnitCombat))
+			int iCurrentDisplay = 0;
+			for (int iI = 0; iI < kUnit.getNumSubCombatTypes() + 1; iI++)
 			{
-				UnitCombatTypes eCombatType = ((UnitCombatTypes)iUnitCombat);
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumNotOnGameOptions(); iJ++)
+				if (iI > 0)
 				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
+					eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI-1);
 				}
-				if (bisValid)
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
 				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumOnGameOptions(); iJ++)
+					if (++iCurrentDisplay == iDisplayCount)
 					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					iCurrentDisplay++;
-					szBuffer.append(NEWLINE);
-					if (iCurrentDisplay == iDisplayCount)
-					{
-						setUnitCombatHelp(szBuffer, eCombatType, false, true);
+						szBuffer.append(DOUBLE_SEPARATOR);
+						setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
 						szBuffer.append(DOUBLE_SEPARATOR);
 					}
 					else
 					{
-						szBuffer.append(GC.getUnitCombatInfo(eCombatType).getDescription());
+						szBuffer.append(NEWLINE);
+						szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
 					}
 				}
 			}
 		}
+		GET_PLAYER(ePlayer).changeUnitCombatClassDisplayCount(eUnit, 1);
 	}
 	else if (bTBUnitView3 || bCivilopediaText)
 	{
@@ -20589,34 +20506,16 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
-			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText);
+			szBuffer.append(DOUBLE_SEPARATOR);
+			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText, true);
 			szBuffer.append(DOUBLE_SEPARATOR);
 
 			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				UnitCombatTypes eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI));
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumNotOnGameOptions(); iJ++)
+				UnitCombatTypes eSubCombatType = (UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI);
+
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombatType)))
 				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
-				}
-				if (bisValid)
-				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumOnGameOptions(); iJ++)
-					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					szBuffer.append(NEWLINE);
 					setUnitCombatHelp(szBuffer, eSubCombatType, bCivilopediaText, true);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
@@ -20671,10 +20570,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	PlayerTypes ePlayer;
 	bool bFirst;
 	int iI;
-	//TB SubCombat Mod Begin
-	//UnitCombatTypes eSubCombatType;
-	int CombatClassCount = 0;
-	//TB SubCombat Mod End
 
 	//bTBUnitView1 = (Combat)
 	//bTBUnitView2 = (Civil)
@@ -20712,53 +20607,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	{
 		szTempBuffer.Format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), GC.getUnitInfo(eUnit).getDescription());
 		szBuffer.append(szTempBuffer);
-
-		//TB Display Modification Note: see if this is necessary anywhere at all.
-		//if (bTBUnitView3 && GC.getUnitInfo(eUnit).getUnitCombatType() != NO_UNITCOMBAT)
-		//{
-		//	//TB SubCombat Mod Begin
-		//	if (GC.getUnitInfo(eUnit).getNumSubCombatTypes() > 0)
-		//	{
-		//		szTempBuffer.Format(L" (%s", GC.getUnitCombatInfo((UnitCombatTypes) GC.getUnitInfo(eUnit).getUnitCombatType()).getDescription());
-		//		szBuffer.append(szTempBuffer);
-		//		for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumSubCombatTypes(); iI++)
-		//		{
-		//			eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI));
-		//			bisValid = true;
-		//			for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumNotOnGameOptions(); iJ++)
-		//			{
-		//				if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getNotOnGameOption(iJ)))
-		//				{
-		//					bisValid = false;
-		//				}
-		//			}
-		//			if (bisValid)
-		//			{
-		//				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumOnGameOptions(); iJ++)
-		//				{
-		//					if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getOnGameOption(iJ)))
-		//					{
-		//						bisValid = false;
-		//					}
-		//				}
-		//			}
-		//			if (bisValid)
-		//			{
-		//				szTempBuffer.Format(L", %s", GC.getUnitCombatInfo(eSubCombatType).getDescription());
-		//				szBuffer.append(szTempBuffer);
-		//			}
-		//		}
-		//		szTempBuffer.Format(L")");
-		//		szBuffer.append(szTempBuffer);
-		//	}
-		//	else
-		//	{
-		//	//TB note: The following is the original coding
-		//	szTempBuffer.Format(L" (%s)", GC.getUnitCombatInfo((UnitCombatTypes) GC.getUnitInfo(eUnit).getUnitCombatType()).getDescription());
-		//	szBuffer.append(szTempBuffer);
-		//	}
-		//	//TB SubCombat Mod End
-		//}
 	}
 
 	// test for unique unit
@@ -28745,32 +28593,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	bool bFirstDisplay = true;
 
-	if (!bFromUnit)
-	{
-		bFirstDisplay = false;
-		szBuffer.append(info.getDescription());
-
-		for (iI = 0; iI < info.getNumNotOnGameOptions(); iI++)
-		{
-			if (GC.getGame().isOption((GameOptionTypes)info.getNotOnGameOption(iI)))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_COMBAT_CLASS_NOT_ON_GAME_OPTION", GC.getGameOptionInfo((GameOptionTypes)info.getNotOnGameOption(iI)).getDescription()));
-				return;
-			}
-		}
-
-		for (iI = 0; iI < info.getNumOnGameOptions(); iI++)
-		{
-			if (!GC.getGame().isOption((GameOptionTypes)info.getOnGameOption(iI)))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION", GC.getGameOptionInfo((GameOptionTypes)info.getOnGameOption(iI)).getDescription()));
-				return;
-			}
-		}
-	}
-
 	if (info.getExcileChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -28837,7 +28659,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -28854,7 +28675,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28869,7 +28689,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28884,7 +28703,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28899,7 +28717,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28918,7 +28735,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28937,7 +28753,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28956,7 +28771,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28975,7 +28789,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28994,7 +28807,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29013,7 +28825,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29032,7 +28843,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29051,7 +28861,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29070,7 +28879,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29090,7 +28898,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29105,7 +28912,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29118,7 +28924,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29131,7 +28936,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29144,7 +28948,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29167,7 +28970,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29188,7 +28990,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29209,7 +29010,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29222,7 +29022,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29235,7 +29034,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29252,7 +29050,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29264,7 +29061,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29276,7 +29072,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29288,7 +29083,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29300,7 +29094,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29312,7 +29105,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29326,7 +29118,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29339,7 +29130,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29352,7 +29142,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29376,7 +29165,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29397,7 +29185,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29418,7 +29205,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29445,7 +29231,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29458,7 +29243,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29471,7 +29255,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29484,7 +29267,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29497,7 +29279,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29510,7 +29291,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29523,7 +29303,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29536,7 +29315,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29549,7 +29327,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29562,7 +29339,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29575,7 +29351,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29588,7 +29363,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29601,7 +29375,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29614,7 +29387,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29627,7 +29399,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29640,7 +29411,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29653,7 +29423,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29679,7 +29448,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29692,7 +29460,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29705,7 +29472,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29718,7 +29484,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29731,7 +29496,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29744,7 +29508,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29757,7 +29520,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29770,7 +29532,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29783,7 +29544,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29796,7 +29556,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29809,7 +29568,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29822,7 +29580,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29835,7 +29592,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29848,7 +29604,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29861,7 +29616,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29874,7 +29628,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29887,7 +29640,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29900,7 +29652,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29913,7 +29664,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29926,7 +29676,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29939,7 +29688,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29952,7 +29700,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29960,17 +29707,16 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getUpkeepModifier()));
 	}
 
-	if (info.getExtraUpkeep() != 0)
+	if (info.getExtraUpkeep100() != 0)
 	{
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", info.getExtraUpkeep()));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", CvWString::format(L"%.2f", info.getExtraUpkeep100() / 100.0).GetCString()));
 	}
 
 	if (info.getOverrunChange() != 0)
@@ -29978,7 +29724,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29991,7 +29736,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30004,7 +29748,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30017,7 +29760,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30030,7 +29772,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30043,7 +29784,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30056,7 +29796,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30069,7 +29808,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30082,7 +29820,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30095,7 +29832,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30108,7 +29844,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30121,7 +29856,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30134,7 +29868,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30147,7 +29880,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30160,7 +29892,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30173,7 +29904,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30186,7 +29916,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30201,7 +29930,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30214,7 +29942,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30227,7 +29954,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30242,7 +29968,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30255,7 +29980,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30268,7 +29992,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30281,7 +30004,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30294,7 +30016,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30308,7 +30029,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30321,7 +30041,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30334,7 +30053,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30347,7 +30065,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30360,7 +30077,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30373,7 +30089,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30386,7 +30101,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30399,7 +30113,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30412,7 +30125,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30425,7 +30137,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30438,7 +30149,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30451,7 +30161,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30464,7 +30173,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30477,7 +30185,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30490,7 +30197,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30503,7 +30209,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30516,7 +30221,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30529,7 +30233,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30542,7 +30245,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30555,7 +30257,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30569,7 +30270,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30582,7 +30282,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30595,7 +30294,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30608,7 +30306,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30621,7 +30318,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30634,7 +30330,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30646,7 +30341,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30661,7 +30355,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30677,7 +30370,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30692,7 +30384,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30705,7 +30396,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30721,7 +30411,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30734,7 +30423,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30747,7 +30435,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30760,7 +30447,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30773,7 +30459,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30786,7 +30471,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30799,7 +30483,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30812,7 +30495,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30825,7 +30507,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30838,7 +30519,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30859,7 +30539,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30872,7 +30551,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30885,7 +30563,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30906,7 +30583,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30919,7 +30595,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30932,7 +30607,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30945,7 +30619,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30958,7 +30631,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30972,7 +30644,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30992,7 +30663,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31005,7 +30675,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31018,7 +30687,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31031,7 +30699,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31044,7 +30711,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31057,7 +30723,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31070,7 +30735,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31083,7 +30747,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31096,7 +30759,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31111,7 +30773,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31123,7 +30784,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31137,7 +30797,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31150,7 +30809,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31163,7 +30821,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31176,7 +30833,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31189,7 +30845,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31202,7 +30857,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31216,7 +30870,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31241,7 +30894,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -31258,7 +30910,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31274,7 +30925,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31290,7 +30940,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31307,7 +30956,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31323,7 +30971,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31359,7 +31006,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31373,7 +31019,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31392,7 +31037,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31411,7 +31055,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31430,7 +31073,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31449,7 +31091,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31468,7 +31109,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31487,7 +31127,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31506,7 +31145,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31525,7 +31163,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31544,7 +31181,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31563,7 +31199,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31584,7 +31219,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31606,7 +31240,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31625,7 +31258,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31645,7 +31277,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31664,7 +31295,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31683,7 +31313,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31702,7 +31331,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31721,7 +31349,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31740,7 +31367,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31780,7 +31406,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}

@@ -684,7 +684,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraMaxHP = 0;
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
-	m_iExtraUpkeep = 0;
+	m_iExtraUpkeep100 = 0;
 	m_iUpkeepModifier = 0;
 	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
@@ -4831,40 +4831,18 @@ void CvUnit::checkRemoveSelectionAfterAttack()
 
 bool CvUnit::isActionRecommended(int iAction) const
 {
-	CvCity* pWorkingCity;
-	CvPlot* pPlot;
-	ImprovementTypes eImprovement;
-	ImprovementTypes eFinalImprovement;
-	BuildTypes eBuild;
-	RouteTypes eRoute;
-	BonusTypes eBonus;
-	int iIndex;
-
-	if (getOwner() != GC.getGame().getActivePlayer())
+	if (getOwner() != GC.getGame().getActivePlayer()
+	|| GET_PLAYER(getOwner()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
 	{
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
+	CvPlot* pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
+
+	if (pPlot == NULL && gDLL->shiftKey())
 	{
-		return false;
+		pPlot = getGroup()->lastMissionPlot();
 	}
-
-	//if (Cy::call<bool>(PYGameModule, "isActionRecommended", Cy::Args() << this << iAction))
-	//{
-	//	return true;
-	//}
-
-	pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
-
-	if (pPlot == NULL)
-	{
-		if (gDLL->shiftKey())
-		{
-			pPlot = getGroup()->lastMissionPlot();
-		}
-	}
-
 	if (pPlot == NULL)
 	{
 		pPlot = plot();
@@ -4872,216 +4850,159 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FORTIFY)
 	{
-		if (pPlot->isCity(true, getTeam()))
+		if (pPlot->isCity(true, getTeam()) && canDefend(pPlot) && pPlot->getNumDefenders(getOwner()) < (atPlot(pPlot) ? 2 : 1))
 		{
-			if (canDefend(pPlot))
-			{
-				if (pPlot->getNumDefenders(getOwner()) < ((atPlot(pPlot)) ? 2 : 1))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_ESTABLISH)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_ESTABLISH)
 	{
-		if (pPlot->isCity(true, getTeam()))
+		if (pPlot->isCity(true, getTeam())
+		&& (hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0))
 		{
-			if (hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0)
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
-	if ((GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL) || (GC.getActionInfo(iAction).getMissionType() == MISSION_SENTRY_WHILE_HEAL))
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL || GC.getActionInfo(iAction).getMissionType() == MISSION_SENTRY_WHILE_HEAL)
 #else
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL ||
-		GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL_BUILDUP)
+	else if(GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL || GC.getActionInfo(iAction).getMissionType() == MISSION_HEAL_BUILDUP)
 #endif
-// BUG - Sentry Actions - end
 	{
-		if (isHurt())
+		if (isHurt() && !hasMoved() && (pPlot->getTeam() == getTeam() || healTurns(pPlot) > 0))
 		{
-			if (!hasMoved())
-			{
-				if ((pPlot->getTeam() == getTeam()) || (healTurns(pPlot) > 0))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FOUND)
+	else if (GC.getActionInfo(iAction).getCommandType() == COMMAND_PROMOTION)
 	{
-		if (canFound(pPlot))
-		{
-			if (pPlot->isBestAdjacentFound(getOwner()))
-			{
-				return true;
-			}
-		}
+		return true;
 	}
-
-	if (GC.getActionInfo(iAction).getMissionType() == MISSION_BUILD)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_BUILD)
 	{
 		if (pPlot->getOwner() == getOwner())
 		{
-			eBuild = ((BuildTypes)(GC.getActionInfo(iAction).getMissionData()));
+			const BuildTypes eBuild = (BuildTypes) GC.getActionInfo(iAction).getMissionData();
+
 			FAssert(eBuild != NO_BUILD);
 			FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
 
 			if (canBuild(pPlot, eBuild))
 			{
-				eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
-				eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
-				eBonus = pPlot->getBonusType(getTeam());
-				pWorkingCity = pPlot->getWorkingCity();
+				const ImprovementTypes eImprovement = pPlot->getImprovementType();
 
-				if (pPlot->getImprovementType() == NO_IMPROVEMENT)
+				// Recommend build
+				if (eImprovement == NO_IMPROVEMENT)
 				{
+					// If City AI wants it
+					const CvCity* pWorkingCity = pPlot->getWorkingCity();
+
 					if (pWorkingCity != NULL)
 					{
-						iIndex = pWorkingCity->getCityPlotIndex(pPlot);
-
-						if (iIndex != -1)
+						const int iIndex = pWorkingCity->getCityPlotIndex(pPlot);
+						if (iIndex != -1 && pWorkingCity->AI_getBestBuild(iIndex) == eBuild)
 						{
-							if (pWorkingCity->AI_getBestBuild(iIndex) == eBuild)
-							{
-								return true;
-							}
+							return true;
 						}
 					}
+					// Recommend improvement
+					const ImprovementTypes eImprovementNew = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 
-					if (eImprovement != NO_IMPROVEMENT)
+					if (eImprovementNew != NO_IMPROVEMENT)
 					{
-						if (eBonus != NO_BONUS)
+						const CvImprovementInfo& improvement = GC.getImprovementInfo(eImprovementNew);
+
+						const BonusTypes eBonus = pPlot->getBonusType(getTeam());
+
+						// If it provides bonus
+						if (eBonus != NO_BONUS && improvement.isImprovementBonusTrade(eBonus))
 						{
-							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+							return true;
+						}
+						// If it irrigates
+						if (improvement.isCarriesIrrigation() && !pPlot->isIrrigated() && pPlot->isIrrigationAvailable(true))
+						{
+							return true;
+						}
+						// If it gives yields
+						if (pWorkingCity != NULL)
+						{
+							if (improvement.getYieldChange(YIELD_COMMERCE) > 0)
 							{
 								return true;
 							}
-						}
-
-						if (pPlot->getImprovementType() == NO_IMPROVEMENT)
-						{
-							if (!(pPlot->isIrrigated()) && pPlot->isIrrigationAvailable(true))
+							// Food is only interesting on flatland/water
+							if (improvement.getYieldChange(YIELD_FOOD) > 0 && !pPlot->isHills() && !pPlot->isPeak2(true))
 							{
-								if (GC.getImprovementInfo(eImprovement).isCarriesIrrigation())
-								{
-									return true;
-								}
+								return true;
 							}
-
-							if (pWorkingCity != NULL)
+							if (improvement.getYieldChange(YIELD_PRODUCTION) > 0)
 							{
-								if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_FOOD) > 0)
-								{
-									return true;
-								}
-
-								if (pPlot->isHills())
-								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_PRODUCTION) > 0)
-									{
-										return true;
-									}
-								}
-								else
-								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_COMMERCE) > 0)
-									{
-										return true;
-									}
-								}
+								return true;
 							}
 						}
 					}
 				}
+				// Recommend route
+				const RouteTypes eRouteNew = (RouteTypes) GC.getBuildInfo(eBuild).getRoute();
 
-				if (eRoute != NO_ROUTE)
+				if (eRouteNew != NO_ROUTE)
 				{
-					if (!(pPlot->isRoute()))
+					// If bonus with no route
+					if (!pPlot->isRoute() && pPlot->getBonusType(getTeam()) != NO_BONUS)
 					{
-						if (eBonus != NO_BONUS)
-						{
-							return true;
-						}
-
-						if (pWorkingCity != NULL)
-						{
-							if (pPlot->isRiver())
-							{
-								return true;
-							}
-						}
+						return true;
 					}
-
-					eFinalImprovement = eImprovement;
-
-					if (eFinalImprovement == NO_IMPROVEMENT)
+					// If route improves yields from improvement
+					if (eImprovement != NO_IMPROVEMENT
+					&& (
+						GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_FOOD) > 0
+					||	GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_PRODUCTION) > 0
+					||	GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRouteNew, YIELD_COMMERCE) > 0))
 					{
-						eFinalImprovement = pPlot->getImprovementType();
-					}
-
-					if (eFinalImprovement != NO_IMPROVEMENT)
-					{
-						if ((GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_FOOD) > 0) ||
-							(GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_PRODUCTION) > 0) ||
-							(GC.getImprovementInfo(eFinalImprovement).getRouteYieldChanges(eRoute, YIELD_COMMERCE) > 0))
-						{
-							return true;
-						}
+						return true;
 					}
 				}
 			}
 		}
 	}
-
-	if (GC.getActionInfo(iAction).getCommandType() == COMMAND_PROMOTION)
+	else if (GC.getActionInfo(iAction).getMissionType() == MISSION_FOUND)
 	{
-		return true;
+		if (canFound(pPlot) && pPlot->isBestAdjacentFound(getOwner()))
+		{
+			return true;
+		}
 	}
-
 	return false;
 }
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
+	if (!canDefend())
+	{
+		return 1;
+	}
+
 	int iValue = 0;
 
 	TeamTypes eAttackerTeam = NO_TEAM;
 	if (NULL != pAttacker)
 	{
 		eAttackerTeam = pAttacker->getTeam();
-	}
 
-	CvPlot* pPlot = plot();
-	if (pPlot != NULL)
-	{
-		if (canCoexistWithAttacker(*pAttacker))
+		CvPlot* pPlot = plot();
+		if (pPlot != NULL)
+		{
+			if (canCoexistWithAttacker(*pAttacker))
+			{
+				return 0;
+			}
+		}
+		else if (canCoexistWithTeam(eAttackerTeam))
 		{
 			return 0;
 		}
-	}
-	else
-	{
-		if (canCoexistWithTeam(eAttackerTeam))
-		{
-			return 0;
-		}
-	}
 
-	if (!canDefend())
-	{
-		return 1;
-	}
-
-	if (pAttacker)
-	{
 		if (isTargetOf(*pAttacker))
 		{
 			iValue += 10000;
@@ -5104,36 +5025,25 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 		if (collateralDamage() > 0)
 		{
 			iValue *= 100;
-			iValue /= (100 + collateralDamage());
+			iValue /= 100 + collateralDamage();
 		}
 
 		if (currInterceptionProbability() > 0)
 		{
 			iValue *= 100;
-			iValue /= (100 + currInterceptionProbability());
+			iValue /= 100 + currInterceptionProbability();
 		}
 	}
 	else
 	{
-		if (!(pAttacker->immuneToFirstStrikes()))
+		if (!pAttacker->immuneToFirstStrikes())
 		{
-			// UncutDragon
-/* original code
-			iOurDefense *= ((((firstStrikes() * 2) + chanceFirstStrikes()) * ((GC.getDefineINT("COMBAT_DAMAGE") * 2) / 5)) + 100);
-*/			// modified
-			iValue *= ((((firstStrikes() * 2) + chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
-			// /UncutDragon
+			iValue *= 100 + (firstStrikes() * 2 + chanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() * 2 / 5);
 			iValue /= 100;
 		}
-
 		if (immuneToFirstStrikes())
 		{
-			// UncutDragon
-/* original code
-			iOurDefense *= ((((pAttacker->firstStrikes() * 2) + pAttacker->chanceFirstStrikes()) * ((GC.getDefineINT("COMBAT_DAMAGE") * 2) / 5)) + 100);
-*/			// modified
-			iValue *= ((((pAttacker->firstStrikes() * 2) + pAttacker->chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
-			// /UncutDragon
+			iValue *= 100 + (pAttacker->firstStrikes() * 2 + pAttacker->chanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() * 2 / 5);
 			iValue /= 100;
 		}
 	}
@@ -13276,11 +13186,10 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			// is this player on our team?
-			CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+			const CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == eTeam)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 				{
 					// if coastal only, then make sure we are coast
 					CvArea* pWaterArea = NULL;
@@ -18762,7 +18671,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 {
 	if (iNewValue >= GC.getDefineINT("MAX_FORTIFY_TURNS"))
 	{
-		if ((getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE) || (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE))
+		if (getSleepType() == MISSION_BUILDUP && getBuildUpType() == NO_PROMOTIONLINE || getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
 			clearBuildups();
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
@@ -18770,7 +18679,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 			setInfoBarDirty(true);
 			return;
 		}
-		else if ((getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE))
+		else if (getSleepType() == MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 		{
 			setBuildUp(true);
 			PromotionLineTypes ePromotionLine = getBuildUpType();
@@ -18821,12 +18730,12 @@ void CvUnit::setFortifyTurns(int iNewValue)
 	if (iNewValue == 0 && isBuildUp())
 	{
 		clearBuildups();
-		m_iFortifyTurns = iNewValue;
+		m_iFortifyTurns = 0;
 		setInfoBarDirty(true);
 		return;
 	}
 
-	if (iNewValue != getFortifyTurns())
+	if (iNewValue != m_iFortifyTurns)
 	{
 		if (iNewValue > 0)
 		{
@@ -18840,8 +18749,8 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
 						if (!isHasPromotion(ePromotion)
-							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
-							&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+						&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp)
+						&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 						{
 							setHasPromotion(ePromotion, true, true, false, false);
 						}
@@ -18855,15 +18764,12 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					setInfoBarDirty(true);
 				}
 			}
-			else if (getSleepType() != MISSION_BUILDUP)
+			else if (getSleepType() != MISSION_BUILDUP && getBuildUpType() != NO_PROMOTIONLINE)
 			{
-				if (getBuildUpType() != NO_PROMOTIONLINE)
-				{
-					clearBuildups();
-					iNewValue = 0;
-					getGroup()->setActivityType(ACTIVITY_AWAKE);
-					setInfoBarDirty(true);
-				}
+				clearBuildups();
+				iNewValue = 0;
+				getGroup()->setActivityType(ACTIVITY_AWAKE);
+				setInfoBarDirty(true);
 			}
 		}
 		else
@@ -19747,18 +19653,18 @@ void CvUnit::changeExtraDamageModifier(int iChange)
 }
 
 // Toffer - Upkeep
-void CvUnit::changeExtraUpkeep(const int iChange)
+void CvUnit::changeExtraUpkeep100(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iExtraUpkeep += iChange;
+		m_iExtraUpkeep100 += iChange;
 		calcUpkeep100();
 	}
 }
 
-int CvUnit::getExtraUpkeep() const
+int CvUnit::getExtraUpkeep100() const
 {
-	return m_iExtraUpkeep;
+	return m_iExtraUpkeep100;
 }
 
 void CvUnit::changeUpkeepModifier(const int iChange)
@@ -19811,7 +19717,7 @@ void CvUnit::calcUpkeep100()
 	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iCalc > 0)
 	{
-		iCalc += m_iExtraUpkeep * 100;
+		iCalc += m_iExtraUpkeep100;
 
 		if (iCalc > 0)
 		{
@@ -24007,7 +23913,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		defineReligion();
 	}
 
-	changeExtraUpkeep(kUnitCombat.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kUnitCombat.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kUnitCombat.getUpkeepModifier() * iChange);
 
 	establishBuildups();
@@ -24017,54 +23923,28 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 {
 	PROFILE_FUNC();
 
-	int iI;
-
-	// Disable spy promotions mechanism
-	bool canAdopt = true;
-
-
 	if (isHasUnitCombat(eIndex) != bNewValue)
 	{
-		if (isSpy()  && !GC.isSS_ENABLED() && !GC.getUnitCombatInfo(eIndex).isEnemyRoute())//exempt commando promotion
-		{
-			canAdopt = false;
-		}
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eIndex);
 
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumNotOnGameOptions(); iI++)
+		if (GC.getGame().isValidByGameOption(info)
+		// Disable spy promotions mechanism, exempt commando promotion
+		&& (!isSpy() || GC.isSS_ENABLED() || info.isEnemyRoute()))
 		{
-			if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getNotOnGameOption(iI)))
+			UnitCombatKeyedInfo* infoKeyed;
+
+			if (bNewValue)
 			{
-				canAdopt = false;
-			}
-		}
-
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumOnGameOptions(); iI++)
-		{
-			if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getOnGameOption(iI)))
-			{
-				canAdopt = false;
-			}
-		}
-
-		if ( canAdopt )
-		{
-			CvUnitCombatInfo &kUnitCombat = GC.getUnitCombatInfo(eIndex);
-
-			UnitCombatKeyedInfo* info;
-
-			if ( bNewValue )
-			{
-				info = findOrCreateUnitCombatKeyedInfo(eIndex);
+				infoKeyed = findOrCreateUnitCombatKeyedInfo(eIndex);
 			}
 			else
 			{
-				info = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
+				infoKeyed = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
 			}
-			if ( info != NULL )
+			if (infoKeyed != NULL)
 			{
-				info->m_bHasUnitCombat = bNewValue;
+				infoKeyed->m_bHasUnitCombat = bNewValue;
 			}
-
 			processUnitCombat(eIndex, bNewValue, bByPromo);
 
 			AI_flushValueCache();
@@ -24078,11 +23958,10 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 			}
 
 			//update graphics
-			if ( !isUsingDummyEntities() && isInViewport())
+			if (!isUsingDummyEntities() && isInViewport())
 			{
 				gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity());
 			}
-
 		}
 		setHealUnitCombatCount();
 	}
@@ -24247,7 +24126,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraPuncture(kPromotion.getPunctureChange() * iChange);
 	changeExtraDamageModifier(kPromotion.getDamageModifierChange() * iChange);
 
-	changeExtraUpkeep(kPromotion.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kPromotion.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kPromotion.getUpkeepModifier() * iChange);
 
 	changeExtraOverrun(kPromotion.getOverrunChange() * iChange);
@@ -26931,7 +26810,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsReligionLocked);
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep100);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
@@ -27859,7 +27738,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, m_eReligionType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsReligionLocked);
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep100);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
@@ -32119,9 +31998,7 @@ bool CvUnit::performInquisition()
 							if (eBestPlayer != NO_PLAYER)
 							{
 								const CvPlayerAI& kPlayer = GET_PLAYER(eBestPlayer);
-								CvCity* pLoopCity;
-								int iLoop;
-								for (pLoopCity = kPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iLoop))
+								foreach_(const CvCity* pLoopCity, kPlayer.cities())
 								{
 									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
@@ -32245,15 +32122,11 @@ bool CvUnit::isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const
 /*                                                                                              */
 /************************************************************************************************/
 
-bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer)
+bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer) const
 {
 	CvArea* pWaterArea = NULL;
-	CvCity* pCapitalCity;
-	int iLoop;
 	bool bShip = false;
 	bool bCoast = false;
-
-	pCapitalCity = GET_PLAYER(eReceivingPlayer).getCapitalCity();
 
 	if (eReceivingPlayer == NO_PLAYER || eReceivingPlayer > MAX_PLAYERS)
 	{
@@ -32268,9 +32141,9 @@ bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer)
 	if (getDomainType() == DOMAIN_SEA)
 	{
 		bShip = true;
-		for (CvCity* pLoopCity = GET_PLAYER(eReceivingPlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(eReceivingPlayer).nextCity(&iLoop))
+		foreach_(const CvCity* pLoopCity, GET_PLAYER(eReceivingPlayer).cities())
 		{
-			if (((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
+			if ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake())
 			{
 				bCoast = true;
 			}
@@ -33801,18 +33674,14 @@ void CvUnit::setMADTargetPlotOwner(PlayerTypes pPlayer)
 
 void CvUnit::doMADNukes(bool bForceRetarget)
 {
-	CvCity* pCity;
 	CvWString szBuffer;
-
-	CvCity* pBestCity;					// Dale - MAD: city required for AI stuff
-	int iLoop, iValue, iBestValue;		// Dale - MAD: ints required for AI stuff
 
 	// Dale - MAD: check validity of Human nuke targets
 	if(isMADEnabled())
 	{
 		FAssertMsg(GET_PLAYER(getOwner()).isEnabledMAD(), "Nukes Should Not Be Targeted!");
 
-		pCity = getMADTargetPlot()->getPlotCity();
+		const CvCity* pCity = getMADTargetPlot()->getPlotCity();
 		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
 		{
 			setMADEnabled(false);
@@ -33839,21 +33708,21 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 				pOldTarget = getMADTargetPlot()->getPlotCity();
 				setMADEnabled(false);
 			}
-			pBestCity = NULL;
-			iBestValue = 0;
+			const CvCity* pBestCity = NULL;
+			int iBestValue = 0;
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != GET_PLAYER(getOwner()).getID())
 				{
 					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwner()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
 					{
-						for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 						{
 							if (pLoopCity->isRevealed(getTeam(), false))
 							{
 								if (canNukeAt(plot(), pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), false))
 								{
-									iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
+									const int iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
 									if (iValue > iBestValue)
 									{
 										iBestValue = iValue;
@@ -33890,7 +33759,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 	{
 		if(canNuke(getMADTargetPlot()))
 		{
-			pCity = getMADTargetPlot()->getPlotCity();
+			const CvCity* pCity = getMADTargetPlot()->getPlotCity();
 			if(pCity != NULL && (GET_PLAYER(getOwner()).getMADTrigger(pCity->getOwner()) || atWar(getTeam(), pCity->getTeam())))
 			{
 				nuke(getMADTargetPlot()->getX(), getMADTargetPlot()->getY());

@@ -331,7 +331,7 @@
 	<ElementType name="iLevelPrereq" content="textOnly" dt:type="int"/>
 	<ElementType name="iStrengthModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iUpkeepModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iExtraUpkeep" content="textOnly" dt:type="int"/>
+	<ElementType name="iExtraUpkeep100" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamage" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamageChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamageLimit" content="textOnly" dt:type="int"/>
@@ -2469,7 +2469,7 @@
 		<element type="iLongRangeSupportPercentChange" minOccurs="0"/>
 		<element type="iFlankSupportPercentChange" minOccurs="0"/>
 		<element type="iUpkeepModifier" minOccurs="0"/>
-		<element type="iExtraUpkeep" minOccurs="0"/>
+		<element type="iExtraUpkeep100" minOccurs="0"/>
 		<element type="bStampedeChange" minOccurs="0"/>
 		<element type="bRemoveStampede" minOccurs="0"/>
 		<element type="iAnimalIgnoresBordersChange" minOccurs="0"/>
@@ -3054,7 +3054,7 @@
 		<element type="iGroupBase" minOccurs="0"/>
 		<element type="iSizeBase" minOccurs="0"/>
 		<element type="iUpkeepModifier" minOccurs="0"/>
-		<element type="iExtraUpkeep" minOccurs="0"/>
+		<element type="iExtraUpkeep100" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeMoreChange" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeLessChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeMoreChange" minOccurs="0"/>

@@ -22035,7 +22035,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eGreatGeneralTypetoAssign);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
+		// @SAVEBREAK DELETE Toffer - There is no reason to save this to file, it can reset to 0 every time you load a game
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
+		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotY);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -22762,7 +22764,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eGreatGeneralTypetoAssign);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
+		// @SAVEBREAK DELETE Toffer - There is no reason to save this to file, it can reset to 0 every time you load a game
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
+		// SAVEBREAK@
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotY);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -30021,10 +30025,7 @@ void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIn
 
 void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 {
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->setCommerceModifierDirty(eCommerce);
 	}
@@ -30086,15 +30087,10 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 {
 	GC.getInitCore().setColor( getID(), eColor );
 	gDLL->getInterfaceIFace()->makeInterfaceDirty();
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+
+	foreach_(CvCity* pLoopCity, cities())
 	{
-		if (pLoopCity->getOwner() == getID())
-		{
-			pLoopCity->setLayoutDirty(true);
-		}
+		pLoopCity->setLayoutDirty(true);
 	}
 // Forces update of units flags
 	EraTypes eEra = getCurrentEra();
@@ -31066,9 +31062,8 @@ void CvPlayer::clearModifierTotals()
 	{
 		m_paiNationalGreatPeopleUnitRate[iI] = 0;
 		m_paiUnitCombatClassDisplayCount[iI] = 0;
-	//Team Project (6)
+
 		m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
-		//m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)

@@ -46325,7 +46325,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPillage>1</bPillage>
@@ -46509,7 +46508,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPillage>1</bPillage>
@@ -46695,7 +46693,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPillage>1</bPillage>
@@ -46925,7 +46922,6 @@ Base XP gained when defending
 					<iIntensity>4</iIntensity>
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -47153,7 +47149,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -47374,7 +47369,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -47596,7 +47590,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -47775,7 +47768,6 @@ Base XP gained when defending
 			<bHiddenNationality>1</bHiddenNationality>
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPillage>1</bPillage>
@@ -48036,7 +48028,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -48239,7 +48230,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -48447,7 +48437,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bDestroy>1</bDestroy>
@@ -48643,7 +48632,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bSabotage>1</bSabotage>
 			<bDestroy>1</bDestroy>
@@ -48846,7 +48834,6 @@ Base XP gained when defending
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bSabotage>1</bSabotage>
 			<bDestroy>1</bDestroy>
@@ -49724,7 +49711,6 @@ Base XP gained when defending
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPillage>1</bPillage>

@@ -570,7 +570,7 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool canTradeUnit(PlayerTypes eReceivingPlayer);
+	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
 
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
@@ -1359,12 +1359,12 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	void changeExtraUpkeep(const int iChange);
+	void changeExtraUpkeep100(const int iChange);
 	void changeUpkeepModifier(const int iChange);
 	void calcUpkeepMultiplierSM(const int iGroupOffset);
 	void calcUpkeep100();
 	void recalculateUnitUpkeep();
-	int getExtraUpkeep() const;
+	int getExtraUpkeep100() const;
 	int getUpkeepModifier() const;
 	int getUpkeepMultiplierSM() const;
 	int getUpkeep100() const;
@@ -2136,7 +2136,7 @@ protected:
 	int m_iExtraDamageModifier;
 	int m_iExtraCostModifier;
 
-	int m_iExtraUpkeep;
+	int m_iExtraUpkeep100;
 	int m_iUpkeepModifier;
 	int m_iUpkeepMultiplierSM;
 	int m_iUpkeep100;
