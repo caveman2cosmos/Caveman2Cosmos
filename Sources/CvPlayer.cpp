@@ -840,9 +840,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iBaseFreeUnitUpkeepMilitary = 0;
 	m_iFreeUnitUpkeepCivilianPopPercent = 0;
 	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
+
 	m_iCivilianUnitUpkeepMod = 0;
 	m_iMilitaryUnitUpkeepMod = 0;
-
 	m_iUnitUpkeepMilitary100 = 0;
 	m_iUnitUpkeepCivilian100 = 0;
 	m_iFinalUnitUpkeep = 0;
@@ -4131,7 +4131,7 @@ void CvPlayer::recalculateUnitCounts()
 	foreach_(CvUnit* pLoopUnit, units())
 	{
 		m_paiUnitCount[pLoopUnit->getUnitType()]++;
-		pLoopUnit->calcUpkeep100();
+		pLoopUnit->recalculateUnitUpkeep();
 	}
 }
 
@@ -30021,10 +30021,7 @@ void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIn
 
 void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 {
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->setCommerceModifierDirty(eCommerce);
 	}
@@ -30086,15 +30083,10 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 {
 	GC.getInitCore().setColor( getID(), eColor );
 	gDLL->getInterfaceIFace()->makeInterfaceDirty();
-	int iLoop;
-	CvCity* pLoopCity;
-	// dirty all of this player's cities...
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+
+	foreach_(CvCity* pLoopCity, cities())
 	{
-		if (pLoopCity->getOwner() == getID())
-		{
-			pLoopCity->setLayoutDirty(true);
-		}
+		pLoopCity->setLayoutDirty(true);
 	}
 // Forces update of units flags
 	EraTypes eEra = getCurrentEra();
@@ -30825,6 +30817,10 @@ void CvPlayer::clearModifierTotals()
 	m_iFreeUnitUpkeepMilitaryPopPercent = 0;
 	m_iCivilianUnitUpkeepMod = 0;
 	m_iMilitaryUnitUpkeepMod = 0;
+	m_iUnitUpkeepMilitary100 = 0;
+	m_iUnitUpkeepCivilian100 = 0;
+	m_iFinalUnitUpkeep = 0;
+
 	m_iHappyPerMilitaryUnit = 0;
 	m_iMilitaryFoodProductionCount = 0;
 	m_iNoUnhealthyPopulationCount = 0;

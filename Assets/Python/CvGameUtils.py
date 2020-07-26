@@ -99,11 +99,6 @@ class CvGameUtils:
 	def updateColoredPlots(self):
 		return False
 
-	def isActionRecommended(self, argsList):
-		pUnit = argsList[0]
-		iAction = argsList[1]
-		return False
-
 	def unitCannotMoveInto(self, argsList):
 		ePlayer = argsList[0]
 		iUnitId = argsList[1]

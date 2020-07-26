@@ -5285,7 +5285,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 	//		* obsolete (unless GOING obsolete explicitly now)
 	//		* has already been replaced, except in the middle of a modifier recalc where we might be processing it out
 	//		  due to that replacement being re-detected
-	if (bObsolete || m_recalcBuilding != MAX_INT || !GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding) && (bReplacingNow || m_paiBuildingReplaced == NULL || m_paiBuildingReplaced[eBuilding] == 0))
+	if (bObsolete || !GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding)
+	&& (m_paiBuildingReplaced == NULL || m_paiBuildingReplaced[eBuilding] == 0 || bReplacingNow || m_recalcBuilding != MAX_INT && iChange < 0))
 	{
 		{
 			PROFILE("CvCity::processBuilding.properties");
@@ -5936,47 +5937,42 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		if (!bReligiouslyDisabling)
 		{
 			GC.getGame().processBuilding(eBuilding, iChange);
-		}
-	}
 
-	if (!bObsolete)
-	{
-		PROFILE("CvCity::processBuilding.NotObsolete");
-		//TB DEFENSEBUG:  The following building defense line is allowing buildings that are replaced to continue to function!  
-		//We can only assume this entire section therefore gets around replaced buildings, particularly after a recalc.
-//Team Project (5)
-		//Note: this whole section was pretty well qualified to be ignored on religious disabling.
-
-
-		if (!bReligiouslyDisabling)
-		{
-			changeBuildingDefense(kBuilding.getDefenseModifier() * iChange);
-			changeBuildingBombardDefense(kBuilding.getBombardDefenseModifier() * iChange);
-
-			changeBaseGreatPeopleRate(kBuilding.getGreatPeopleRateChange() * iChange);
-
-			UnitTypes eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
-
-			if (eGreatPeopleUnit != NO_UNIT)
+			// Note: this whole section was pretty well qualified to be ignored on religious disabling.
+			if (!bObsolete)
 			{
-				changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
-			}
+				PROFILE("CvCity::processBuilding.NotObsolete");
+				//TB DEFENSEBUG:  The following building defense line is allowing buildings that are replaced to continue to function!  
+				//We can only assume this entire section therefore gets around replaced buildings, particularly after a recalc.
 
-			const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
-			if (eSpecialBuilding != NO_SPECIALBUILDING)
-			{
-				GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
-			}
+				changeBuildingDefense(kBuilding.getDefenseModifier() * iChange);
+				changeBuildingBombardDefense(kBuilding.getBombardDefenseModifier() * iChange);
 
-			GET_PLAYER(getOwner()).changeWondersScore(getWonderScore(eBuilding) * iChange);
+				changeBaseGreatPeopleRate(kBuilding.getGreatPeopleRateChange() * iChange);
 
-			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-			{
-				if (hasBonus((BonusTypes)iI))
+				UnitTypes eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
+
+				if (eGreatPeopleUnit != NO_UNIT)
 				{
-					if (kBuilding.getBonusDefenseChanges(iI) != 0)
+					changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
+				}
+
+				const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
+				if (eSpecialBuilding != NO_SPECIALBUILDING)
+				{
+					GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
+				}
+
+				GET_PLAYER(getOwner()).changeWondersScore(getWonderScore(eBuilding) * iChange);
+
+				for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+				{
+					if (hasBonus((BonusTypes)iI))
 					{
-						changeBonusDefenseChanges((BonusTypes)iI, kBuilding.getBonusDefenseChanges(iI) * iChange);
+						if (kBuilding.getBonusDefenseChanges(iI) != 0)
+						{
+							changeBonusDefenseChanges((BonusTypes)iI, kBuilding.getBonusDefenseChanges(iI) * iChange);
+						}
 					}
 				}
 			}
@@ -5985,20 +5981,18 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 	changeBuildingReplacementCount(eBuilding, (iChange > 0));
 
-	setMaintenanceDirty(true);	//	Always assume a chnage in buildings can change maintenance
+	setMaintenanceDirty(true); // Always assume a change in buildings can change maintenance
 	updateBuildingCommerce();
 
 	m_buildingSourcedPropertyCache.clear();
 
-	//	New or removed buildings can affect the assessment of the best plot builds
+	// New or removed buildings can affect the assessment of the best plot builds
 	AI_markBestBuildValuesStale();
 
-	//Team Project (5)
 	if (!bReligiouslyDisabling && GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 	{
 		checkReligiousDisabling(eBuilding);
 	}
-
 	setLayoutDirty(true);
 }
 
@@ -7605,8 +7599,7 @@ void CvCity::changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd)
 	{
 		if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding(eBuilding))
 		{
-			//	During modifier recalculation don't count extant buildings we haven't yet
-			//	processed as already being present
+			// During modifier recalculation don't count buildings we haven't yet processed as present
 			const bool bHad = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
 
 			if (bAdd)
@@ -24029,31 +24022,9 @@ void CvCity::recalculateModifiers()
 	{
 		if (getNumRealBuilding((BuildingTypes)m_recalcBuilding) > 0)
 		{
-			bool bObsolete = false;
-			bool bProcessValid = true;
-
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo((BuildingTypes)m_recalcBuilding).getObsoleteTech()))
-			{
-				bObsolete = true;
-			}
-			//Need to speed this up
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)m_recalcBuilding))
-				{
-					//If building is replaced
-					if (getNumBuilding((BuildingTypes)iJ) > 0)
-					{
-						bProcessValid = false;
-					}
-				}
-			}
-			if (bProcessValid)
-			{
-				// Process back the buildings we physically have. This will generate free buildings as it goes.
-				// Tech reprocessing will be called later which will re-obsolete those that need it.<TBNOTE: Not anymore - see above
-				processBuilding((BuildingTypes)m_recalcBuilding, 1, bObsolete);
-			}
+			// Process back the buildings we physically have. This will generate free buildings as it goes.
+			// Tech reprocessing will be called later which will re-obsolete those that need it.
+			processBuilding((BuildingTypes)m_recalcBuilding, 1);
 		}
 	}
 	//	After processing all buildings set the indicator that reprocessing is not in progress any more
