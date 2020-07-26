@@ -753,35 +753,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	//}
 	//TB SubCombat Mod begin
 
-	if (bShift)
-	{
-		bFirst = true;
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
-			{
-				const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
-				if (bFirst)
-				{
-					szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-					bFirst = false;
-				}
-				else
-				{
-					szString.append(NEWLINE);
-					szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-				}
-			}
-		}
-		if (!bFirst)
-		{
-			szTempBuffer.Format(L")");
-			szString.append(szTempBuffer);
-		}
-	}
-
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
 		if (pUnit->isHasPromotion((PromotionTypes)iI) && !pUnit->isPromotionOverriden((PromotionTypes)iI))
@@ -808,21 +779,32 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (!bOneLine)
 	{
-		setEspionageMissionHelp(szString, pUnit);
-
-		if (pUnit->canFight())
+		if (bShift)
 		{
-			const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
-			for (iI = 0; iI < iNumHealAsTypes; iI++)
+			bFirst = true;
+			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
-				const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
-				if (iHealAsDamage > 0)
+				if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
-						GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+					const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
+					if (bFirst)
+					{
+						szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+						bFirst = false;
+					}
+					else
+					{
+						szString.append(NEWLINE);
+						szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+					}
 				}
+			}
+			if (!bFirst)
+			{
+				szTempBuffer.Format(L")");
+				szString.append(szTempBuffer);
 			}
 		}
 		//Setup Combat Value Displays
@@ -833,12 +815,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
-			}
-			//Fortification
-			if (pUnit->fortifyModifier() != 0)
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
 
 			if (pUnit->noDefensiveBonus())
@@ -3060,10 +3036,34 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		if (bNormalView)
 		{
 			//Max HP
-			if (pUnit->baseCombatStr() > 0 && pUnit->maxHPTotal() != 100)
+			if (pUnit->canFight())
+			{
+				if (pUnit->maxHPTotal() != 100)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				}
+				if (pUnit->isHurt())
+				{
+					const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
+					for (iI = 0; iI < iNumHealAsTypes; iI++)
+					{
+						const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
+						const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
+						if (iHealAsDamage > 0)
+						{
+							szString.append(NEWLINE);
+							szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
+								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+						}
+					}
+				}
+			}
+			//Fortification
+			if (pUnit->fortifyModifier() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
 
 			if (pUnit->isMilitaryBranch())
@@ -3083,6 +3083,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
 			}
+
+			setEspionageMissionHelp(szString, pUnit);
+
 			//Current Cold Damage
 			if (pUnit->getColdDamage() > 0)
 			{
@@ -4122,20 +4125,22 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 	if (iNumVisibleUnits > 0)
 	{
-		//if (pPlot->getCenterUnit())
-		//{
-		//	setUnitHelp(szString, pPlot->getCenterUnit(), iNumVisibleUnits > iMaxNumUnits, true);
-		//}
+		const CvUnit* centerUnit = pPlot->getCenterUnit();
+
+		if (centerUnit)
+		{
+			setUnitHelp(szString, centerUnit, iNumVisibleUnits > iMaxNumUnits, true);
+		}
 
 		uint iNumShown = std::min<uint>(iMaxNumUnits, iNumVisibleUnits);
 		for (uint iI = 0; iI < iNumShown && iI < (int) plotUnits.size(); iI++)
 		{
 			CvUnit* pLoopUnit = plotUnits[iI];
-			//if (pLoopUnit != pPlot->getCenterUnit())
-			//{
+			if (pLoopUnit != centerUnit)
+			{
 				szString.append(NEWLINE);
 				setUnitHelp(szString, pLoopUnit, true, true);
-			//}
+			}
 		}
 
 		bool bFirst = true;
@@ -4147,7 +4152,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 			{
 				pLoopUnit = plotUnits[iI];
 
-				if (pLoopUnit != NULL/* && pLoopUnit != pPlot->getCenterUnit()*/)
+				if (pLoopUnit != NULL && pLoopUnit != centerUnit)
 				{
 					std::map<int,PlayerUnitInfo>::iterator itr = a_units.find(PLAYER_UNIT_KEY(pLoopUnit->getOwner(), pLoopUnit->getUnitType()));
 
@@ -4284,7 +4289,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					}
 				}
 
-
 				//for (int iK = 0; iK < numPromotionInfos; iK++)
 				//{
 				//	std::map<PromotionTypes,int>::const_iterator promoItr = itr->second.m_promotions.find((PromotionTypes)iK);
@@ -4297,14 +4301,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 				if (kPlayer.getID() != GC.getGame().getActivePlayer() && !kUnit.isHiddenNationality())
 				{
 					szString.append(L", ");
-/************************************************************************************************/
-/* REVOLUTION_MOD						 02/01/08								jdog5000	  */
-/*																							  */
-/* For BarbarianCiv and minor civs															  */
-/************************************************************************************************/
-/* original code
-					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iJ).getName()));
-*/
+
 					// For minor civs, display civ name instead of player name ... to differentiate
 					// and help human recognize why they can't contact that player
 					if( kPlayer.isMinorCiv() )
@@ -4315,9 +4312,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getName()));
 					}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 				}
 			}
 		}
