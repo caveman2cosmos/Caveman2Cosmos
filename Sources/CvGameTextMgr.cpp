@@ -4100,8 +4100,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 		return;
 	}
 
-	CvUnit* pLoopUnit;
-	static const uint iMaxNumUnits = 1;
 	std::vector<CvUnit *> plotUnits;
 
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
@@ -4129,28 +4127,16 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 		if (centerUnit)
 		{
-			setUnitHelp(szString, centerUnit, iNumVisibleUnits > iMaxNumUnits, true);
+			setUnitHelp(szString, centerUnit, iNumVisibleUnits > 12, true);
 		}
 
-		uint iNumShown = std::min<uint>(iMaxNumUnits, iNumVisibleUnits);
-		for (uint iI = 0; iI < iNumShown && iI < (int) plotUnits.size(); iI++)
-		{
-			CvUnit* pLoopUnit = plotUnits[iI];
-			if (pLoopUnit != centerUnit)
-			{
-				szString.append(NEWLINE);
-				setUnitHelp(szString, pLoopUnit, true, true);
-			}
-		}
-
-		bool bFirst = true;
-		if (iNumVisibleUnits > iMaxNumUnits)
+		if (iNumVisibleUnits > 1)
 		{
 			std::map<int,PlayerUnitInfo> a_units;
 			int iCount = 0;
-			for (int iI = iMaxNumUnits; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
+			for (int iI = 0; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
 			{
-				pLoopUnit = plotUnits[iI];
+				CvUnit* pLoopUnit = plotUnits[iI];
 
 				if (pLoopUnit != NULL && pLoopUnit != centerUnit)
 				{
@@ -4194,25 +4180,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					}
 				}
 			}
-#if 0
-			for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					int iIndex = iI * MAX_PLAYERS + iJ;
 
-					if (aiUnitNumbers[iIndex] > 0)
-					{
-						if (iCount < 5 || bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						else
-						{
-							szString.append(L", ");
-						}
-#endif
+			bool bFirst = true;
 			for (std::map<int, PlayerUnitInfo>::const_iterator itr = a_units.begin(); itr != a_units.end(); ++itr)
 			{
 				const CvPlayer& kPlayer = GET_PLAYER(itr->second.m_eOwner);
@@ -4230,13 +4199,11 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 				CvWString szUnitName;
 
 				szUnitName.clear();
-				if (kPlayer.getCivilizationType() != NO_CIVILIZATION &&
-					kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL)
+				if (kPlayer.getCivilizationType() != NO_CIVILIZATION
+				&& kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL
+				&& !CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
 				{
-					if (!CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
-					{
-						szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
-					}
+					szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
 				}
 				if (szUnitName.empty())
 				{
@@ -4263,40 +4230,26 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
 					}
 				}
-				else
+				else if (itr->second.m_iTotalMaxStrength > 0)
 				{
-					if (itr->second.m_iTotalMaxStrength > 0)
-					{
-						int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
-						int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
-						int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
-						if (0 == iCurrent100)
-						{
-							if (iBase == iCurrent)
-							{
-								szString.append(CvWString::format(L" %d", iBase));
-							}
-							else
-							{
-								szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
-							}
-						}
-						else
-						{
-							szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
-						}
-						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
-					}
-				}
+					int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
+					int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
+					int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
 
-				//for (int iK = 0; iK < numPromotionInfos; iK++)
-				//{
-				//	std::map<PromotionTypes,int>::const_iterator promoItr = itr->second.m_promotions.find((PromotionTypes)iK);
-				//	if ( promoItr != itr->second.m_promotions.end())
-				//	{
-				//		szString.append(CvWString::format(L"%d<img=%S size=16 />", promoItr->second, GC.getPromotionInfo((PromotionTypes)iK).getButton()));
-				//	}
-				//}
+					if (0 != iCurrent100)
+					{
+						szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
+					}
+					else if (iBase == iCurrent)
+					{
+						szString.append(CvWString::format(L" %d", iBase));
+					}
+					else
+					{
+						szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
+					}
+					szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
+				}
 
 				if (kPlayer.getID() != GC.getGame().getActivePlayer() && !kUnit.isHiddenNationality())
 				{
@@ -4304,7 +4257,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 					// For minor civs, display civ name instead of player name ... to differentiate
 					// and help human recognize why they can't contact that player
-					if( kPlayer.isMinorCiv() )
+					if (kPlayer.isMinorCiv())
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getCivilizationDescription()));
 					}
