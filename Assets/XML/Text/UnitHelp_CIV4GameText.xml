@@ -158,11 +158,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FORTIFIED</Tag>
-		<English>Fortified: %d1_Mod%%</English>
-		<French>Bonus de retranchement : %d1_Mod%%</French>
-		<German>Verschanzungsbonus: %d1_Mod%%</German>
-		<Italian>Bonus per la fortificazione: %d1_Mod%%</Italian>
-		<Spanish>Bonif. a fortif.: %d1_Mod%%</Spanish>
+		<English>[ICON_BULLET]Fortified: %d1%%</English>
+		<French>[ICON_BULLET]Bonus de retranchement : %d1%%</French>
+		<German>[ICON_BULLET]Verschanzungsbonus: %d1%%</German>
+		<Italian>[ICON_BULLET]Bonus per la fortificazione: %d1%%</Italian>
+		<Spanish>[ICON_BULLET]Bonif. a fortif.: %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_IMMOBILE</Tag>
