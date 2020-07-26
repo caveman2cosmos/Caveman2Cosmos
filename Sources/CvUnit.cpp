@@ -684,7 +684,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraMaxHP = 0;
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
-	m_iExtraUpkeep = 0;
+	m_iExtraUpkeep100 = 0;
 	m_iUpkeepModifier = 0;
 	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
@@ -19653,18 +19653,18 @@ void CvUnit::changeExtraDamageModifier(int iChange)
 }
 
 // Toffer - Upkeep
-void CvUnit::changeExtraUpkeep(const int iChange)
+void CvUnit::changeExtraUpkeep100(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iExtraUpkeep += iChange;
+		m_iExtraUpkeep100 += iChange;
 		calcUpkeep100();
 	}
 }
 
-int CvUnit::getExtraUpkeep() const
+int CvUnit::getExtraUpkeep100() const
 {
-	return m_iExtraUpkeep;
+	return m_iExtraUpkeep100;
 }
 
 void CvUnit::changeUpkeepModifier(const int iChange)
@@ -19717,7 +19717,7 @@ void CvUnit::calcUpkeep100()
 	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iCalc > 0)
 	{
-		iCalc += m_iExtraUpkeep * 100;
+		iCalc += m_iExtraUpkeep100;
 
 		if (iCalc > 0)
 		{
@@ -23913,7 +23913,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		defineReligion();
 	}
 
-	changeExtraUpkeep(kUnitCombat.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kUnitCombat.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kUnitCombat.getUpkeepModifier() * iChange);
 
 	establishBuildups();
@@ -23923,54 +23923,28 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 {
 	PROFILE_FUNC();
 
-	int iI;
-
-	// Disable spy promotions mechanism
-	bool canAdopt = true;
-
-
 	if (isHasUnitCombat(eIndex) != bNewValue)
 	{
-		if (isSpy()  && !GC.isSS_ENABLED() && !GC.getUnitCombatInfo(eIndex).isEnemyRoute())//exempt commando promotion
-		{
-			canAdopt = false;
-		}
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eIndex);
 
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumNotOnGameOptions(); iI++)
+		if (GC.getGame().isValidByGameOption(info)
+		// Disable spy promotions mechanism, exempt commando promotion
+		&& (!isSpy() || GC.isSS_ENABLED() || info.isEnemyRoute()))
 		{
-			if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getNotOnGameOption(iI)))
+			UnitCombatKeyedInfo* infoKeyed;
+
+			if (bNewValue)
 			{
-				canAdopt = false;
-			}
-		}
-
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumOnGameOptions(); iI++)
-		{
-			if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getOnGameOption(iI)))
-			{
-				canAdopt = false;
-			}
-		}
-
-		if ( canAdopt )
-		{
-			CvUnitCombatInfo &kUnitCombat = GC.getUnitCombatInfo(eIndex);
-
-			UnitCombatKeyedInfo* info;
-
-			if ( bNewValue )
-			{
-				info = findOrCreateUnitCombatKeyedInfo(eIndex);
+				infoKeyed = findOrCreateUnitCombatKeyedInfo(eIndex);
 			}
 			else
 			{
-				info = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
+				infoKeyed = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
 			}
-			if ( info != NULL )
+			if (infoKeyed != NULL)
 			{
-				info->m_bHasUnitCombat = bNewValue;
+				infoKeyed->m_bHasUnitCombat = bNewValue;
 			}
-
 			processUnitCombat(eIndex, bNewValue, bByPromo);
 
 			AI_flushValueCache();
@@ -23984,11 +23958,10 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 			}
 
 			//update graphics
-			if ( !isUsingDummyEntities() && isInViewport())
+			if (!isUsingDummyEntities() && isInViewport())
 			{
 				gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity());
 			}
-
 		}
 		setHealUnitCombatCount();
 	}
@@ -24153,7 +24126,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraPuncture(kPromotion.getPunctureChange() * iChange);
 	changeExtraDamageModifier(kPromotion.getDamageModifierChange() * iChange);
 
-	changeExtraUpkeep(kPromotion.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kPromotion.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kPromotion.getUpkeepModifier() * iChange);
 
 	changeExtraOverrun(kPromotion.getOverrunChange() * iChange);
@@ -26837,7 +26810,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsReligionLocked);
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep100);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
@@ -27765,7 +27738,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, m_eReligionType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsReligionLocked);
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep100);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);

@@ -13020,6 +13020,25 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 	FAssert(getImprovementCount(eIndex) >= 0);
 }
 
+bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
+{
+	for (int iI = 0; iI < info.getNumNotOnGameOptions(); iI++)
+	{
+		if (isOption((GameOptionTypes) info.getNotOnGameOption(iI)))
+		{
+			return false;
+		}
+	}
+	for (int iI = 0; iI < info.getNumOnGameOptions(); iI++)
+	{
+		if (!isOption((GameOptionTypes) info.getOnGameOption(iI)))
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
 int CvGame::SorenRand::operator()(const int maxVal) const
 {
 	return GC.getGame().getSorenRandNum(maxVal, logMsg);
