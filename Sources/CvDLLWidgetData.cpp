@@ -462,10 +462,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseFinanceNumUnits(widgetDataStruct, szBuffer);
 		break;
 
-	case WIDGET_HELP_FINANCE_UNIT_COST:
-		parseFinanceUnitCost(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_HELP_FINANCE_AWAY_SUPPLY:
 		parseFinanceAwaySupply(widgetDataStruct, szBuffer);
 		break;
@@ -1033,7 +1029,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_HELP_CIVIC_REVEAL:
 	case WIDGET_HELP_PROCESS_INFO:
 	case WIDGET_HELP_FINANCE_NUM_UNITS:
-	case WIDGET_HELP_FINANCE_UNIT_COST:
 	case WIDGET_HELP_FINANCE_AWAY_SUPPLY:
 	case WIDGET_HELP_FINANCE_CITY_MAINT:
 	case WIDGET_HELP_FINANCE_CIVIC_UPKEEP:
@@ -6218,16 +6213,6 @@ void CvDLLWidgetData::parseFinanceNumUnits(CvWidgetDataStruct &widgetDataStruct,
 {
 //	szBuffer = "Number of units you are currently supporting";
 	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_NUM_UNITS_SUPPORTING"));
-}
-
-void CvDLLWidgetData::parseFinanceUnitCost(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-//	szBuffer = "The amount of money spent on unit upkeep";
-	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_MONEY_SPENT_UPKEEP"));
-	if (widgetDataStruct.m_iData2 > 0)
-	{
-		GAMETEXT.buildFinanceUnitCostString(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1);
-	}
 }
 
 void CvDLLWidgetData::parseFinanceAwaySupply(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)

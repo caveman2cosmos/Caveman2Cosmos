@@ -8430,6 +8430,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT3</PromotionPrereqOr1>
 			<TechPrereq>TECH_FUNDAMENTALISM</TechPrereq>
+			<iUpkeepModifier>-75</iUpkeepModifier>
 			<iCombatPercent>20</iCombatPercent>
 			<iCityAttack>10</iCityAttack>
 			<iDefenseCombatModifierChange>-25</iDefenseCombatModifierChange>
@@ -21168,6 +21169,7 @@
 			<iLevelPrereq>3</iLevelPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
+			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>1</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21217,6 +21219,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iLevelPrereq>5</iLevelPrereq>
+			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>1</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21262,6 +21265,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iLevelPrereq>7</iLevelPrereq>
+			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>2</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21303,6 +21307,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iLevelPrereq>9</iLevelPrereq>
+			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>2</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21340,6 +21345,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iLevelPrereq>11</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>3</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21373,6 +21379,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iLevelPrereq>13</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>4</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21406,6 +21413,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<iLevelPrereq>15</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>5</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21435,6 +21443,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iLevelPrereq>17</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>7</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21464,6 +21473,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<iLevelPrereq>19</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>10</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21489,6 +21499,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>10</iLinePriority>
 			<iLevelPrereq>21</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>15</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21514,6 +21525,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>11</iLinePriority>
 			<iLevelPrereq>23</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>20</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21535,6 +21547,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>12</iLinePriority>
 			<iLevelPrereq>25</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>25</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -21556,6 +21569,7 @@
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>13</iLinePriority>
 			<iLevelPrereq>27</iLevelPrereq>
+			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>30</iStrengthChange>
 			<UnitCombats>
 				<UnitCombat>

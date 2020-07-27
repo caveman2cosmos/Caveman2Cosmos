@@ -21,9 +21,6 @@ def isVictory(argsList):
 def isPlayerResearch(argsList):
 	return GameUtils.isPlayerResearch(argsList)
 
-def getExtraCost(argsList):
-	return GameUtils.getExtraCost(argsList)
-
 def createBarbarianCities():
 	return GameUtils.createBarbarianCities()
 
@@ -62,9 +59,6 @@ def getRecommendedBuilding(argsList):
 
 def updateColoredPlots():
 	return GameUtils.updateColoredPlots()
-
-def isActionRecommended(argsList):
-	return GameUtils.isActionRecommended(argsList)
 
 def unitCannotMoveInto(argsList):
 	return GameUtils.unitCannotMoveInto(argsList)

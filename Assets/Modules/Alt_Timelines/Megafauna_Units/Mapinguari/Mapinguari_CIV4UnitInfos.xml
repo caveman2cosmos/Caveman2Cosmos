@@ -3,7 +3,7 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_WOODEN</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>20</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -55,6 +55,7 @@
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SPEAR_MAKING</ForceObsoleteTech>
 			<iCost>100</iCost>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -88,7 +89,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_STONE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>20</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -140,6 +141,7 @@
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
 			<iCost>110</iCost>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -172,7 +174,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_OBSIDIAN</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>20</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -225,6 +227,7 @@
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
 			<iCost>140</iCost>
+			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -258,7 +261,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>20</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -315,6 +318,7 @@
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
 			<iCost>275</iCost>
+			<iBaseUpkeep>18</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -348,7 +352,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_PIKE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>20</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -401,6 +405,7 @@
 			</PrereqBonuses>
 			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
 			<iCost>480</iCost>
+			<iBaseUpkeep>25</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>

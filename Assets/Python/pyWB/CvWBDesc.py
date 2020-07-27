@@ -4,7 +4,7 @@ import os
 GC = CyGlobalContext()
 GAME = GC.getGame()
 VERSION = "C2C_1"
-fEncode = 'utf-8'
+fEncode = "utf-8"
 
 ############
 # parser functions for WB desc

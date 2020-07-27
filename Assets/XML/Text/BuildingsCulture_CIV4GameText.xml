@@ -75,8 +75,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
-		<English>C.Ac. = Culture Active[NEWLINE] This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
-		<French>Cult. Act. = Culture active[NEWLINE] Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
+		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
+		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
@@ -126,7 +126,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
 		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
-		<French>Cult. Adopt. = Culture adoptée : [NEWLINE] En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
+		<French>Cult. Adopt. = Culture adoptée :[NEWLINE]En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
@@ -176,7 +176,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
 		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
-		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE] Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
+		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE]Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
@@ -564,8 +564,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ASHANTI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Ashanti, also known as Asante, are part of the Akan ethnic group and are native to the Ashanti Region of modern-day Ghana.</English>
 		<Polish>Aszanti również Asante, Aszantowie - dominująca grupa etniczna we współczesnej Ghanie. W średniowieczu tworzyli potężne imperium w Afryce Zachodniej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -596,8 +595,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ATHENIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Athenians are the inhabitants of the city of Athens, that during the classical period of Ancient Greece (480–323 BC) was the major urban centre of the notable polis (city-state) of the same name. The peak of Athenian hegemony was achieved in the 440s to 430s BC, known as the Age of Pericles.</English>
 		<Polish>Sąsiadujące z akropolem Wzgórze Muz oraz Pnyks, w ogromnej części pokryte są śladami rozległego osadnictwa z okresu neolitu. Zalążkiem Aten historycznych była warownia z okresu mykeńskiego (połowa II tysiąclecia p.n.e.) na wzgórzu Akropolis; później wokół niego, na sąsiadujących wzgórzach powstało rozległe miasto z agorą, areopagiem (miejscem sądów), szeregiem świątyń i gmachów użyteczności publicznej. Akropolis przekształciło się w miejsce kultu (akropol ateński). W 480 roku p.n.e. miasto zniszczyli Persowie, odbudowę Temistokles rozpoczął od wzniesienia nowych murów. Szczególny rozkwit przypadł na panowanie Peryklesa (443-429 p.n.e.). Zmodernizowano wtedy Akropolis i połączono Ateny z Pireusem i z Faleronem, tzw. Długimi Murami. Powstała tak obwarowana przestrzeń, w trójkącie, pomiędzy tymi miejscowościami, w razie wojny zapewnić miała osłonę także ludności prowincji, mogąc pomieścić nawet do miliona osób. Zakładano, że zaopatrzenie zapewni oblężonym silna flota wojenna. Fortyfikacja pełniła swą funkcję w trakcie II wojny peloponeskiej. Stłoczenie dużej liczby ludności, bez uprzedniego zabezpieczenia warunków sanitarnych, doprowadziło wtedy do wybuchu epidemii, w 431 p.n.e.</Polish>
 	</TEXT>
 	<TEXT>
@@ -908,8 +906,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BLACKFOOT_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Blackfoot Confederacy, Niitsitapi or Siksikaitsitapi is a historic collective name for linguistically related groups that make up the Blackfoot or Blackfeet people: the Siksika ("Blackfoot"), the Kainai or Kainah ("Blood"), and two sections of the Piikani (Piegan Blackfeet), the Northern Piikani (Aapátohsipikáni) and the Southern Piikani (Amskapi Piikani or Pikuni). Broader definitions include groups, like the Tsúùtínà (Sarcee) and A'aninin (Gros Ventre), spoke quite different languages but allied or joined with the Blackfoot Confederacy as well.</English>
 		<Polish>Czarne Stopy (Siksika, Blackfoot) - federacja trzech blisko spokrewnionych plemion Indian Ameryki Północnejzamieszkujących prowincjęAlberta w Kanadzie i stanMontana w Stanach Zjednoczonych. W skład grupy wchodziły plemiona: Pikuni(Piegan), Kainah i Siksika, które w XIX w. obejmowały swoją opieką także sąsiednie mniejsze plemiona Gros Ventre i Sarsi. Do dziś wielu z nich zamieszkujerezerwaty po obu stronach granicy amerykańsko-kanadyjskiej i posługuje sięjęzykiem siksika z grupy języków algonkińskich.</Polish>
 	</TEXT>
 	<TEXT>
@@ -995,7 +992,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BURMESE_PEDIA</Tag>
 		<English>A diverse range of indigenous cultures exist in Burma, the majority culture is primarily Buddhist and Bamar. Bamar culture has been influenced by the cultures of neighbouring countries.</English>
-		<Polish>Najstarsze ślady obecności człowieka na terenie Mjanmy datowane są od ok. 400 000 p.n.e. - kultura anyathijska. Na stanowiskach tej kultury odkryto sześć odmian pięściaków, przedstawiciele tej kultury żyli ze zbieractwa i polowania. Pierwsze bardziej zaawansowane kultury, datowane od 11 000 p.n.e., pozostawiły po sobie malowidła naskalne w jaskiniach w centralnej części Mjanmy - np. odkryte w 1969 w grocie Padolin w Taunggyi. Rozwój osadnictwa w epokach brązu i żelaza przebiegał podobnie jak w innych rejonach Azji południowo-wschodniej. </Polish>
+		<Polish>Najstarsze ślady obecności człowieka na terenie Mjanmy datowane są od ok. 400 000 p.n.e. - kultura anyathijska. Na stanowiskach tej kultury odkryto sześć odmian pięściaków, przedstawiciele tej kultury żyli ze zbieractwa i polowania. Pierwsze bardziej zaawansowane kultury, datowane od 11 000 p.n.e., pozostawiły po sobie malowidła naskalne w jaskiniach w centralnej części Mjanmy - np. odkryte w 1969 w grocie Padolin w Taunggyi. Rozwój osadnictwa w epokach brązu i żelaza przebiegał podobnie jak w innych rejonach Azji południowo-wschodniej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BYZANTINE</Tag>
@@ -1353,8 +1350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Ojibwe, Ojibwa, Chippewa, or Saulteaux are an Anishinaabe people of Canada and the northern Midwestern United States. They are one of the most numerous indigenous peoples north of the Rio Grande. In Canada, they are the second-largest First Nations population, surpassed only by the Cree. In the United States, they have the fifth-largest population among Native American peoples, surpassed in number only by the Navajo, Cherokee, Choctaw and Sioux. The Ojibwe people traditionally speak the Ojibwe language, a branch of the Algonquian language family. They are part of the Council of Three Fires and the Anishinaabeg, which include the Algonquin, Nipissing, Oji-Cree, Odawa and the Potawatomi. Historically, through the Saulteaux branch, they were a part of the Iron Confederacy, joining the Cree, Assiniboine, and Metis. The Ojibwe are known for their birch bark canoes, birch bark scrolls, mining and trade in copper, as well as their cultivation of wild rice and maple syrup.[3][failed verification] Their Midewiwin Society is well respected as the keeper of detailed and complex scrolls of events, oral history, songs, maps, memories, stories, geometry, and mathematics.</English>
 		<Polish>Odżibwejowie lub Czipewejowie (ang. Ojibwa, Ojibwe, Ojibway, Chippewa) - nazwa własna Anishinabe (Anishinaubag, Neshnabek, Mississauga, spotykane inne nazwy spolszczone: Odżibueje, Czipeweje, Odżibwa, Odżibwe, Chipewa, Chipewe, Hakatonwan) - Indianie Ameryki Północnej, najliczniejsze plemię obszaru Wielkich Jezior. Odżibwejowie (sami preferują nazwę Ojibwa) są trzecią co do wielkości grupą Indian amerykańskich. Nazwa "Ojibwa" pochodziła od algonkińskiego"kurczyć przez przypiekanie" i oznaczała charakterystyczne szwy wypalane na mokasynach i odzieży Anishinabe. "Chippewa" jest zniekształconą nazwą "Ojibwa".</Polish>
 	</TEXT>
 	<TEXT>
@@ -1474,8 +1470,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CROATIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Croats, also known as Croatians, are a nation and South Slavic ethnic group native to Croatia and Bosnia and Herzegovina. They are also a recognized minority in a number of neighboring countries, namely Austria, the Czech Republic, Germany, Hungary, Italy, Montenegro, Romania, Serbia, Slovakia, and Slovenia.</English>
 		<Polish>Chorwacja, Republika Chorwacji - państwo leżące na pograniczu Europy Środkowej i Europy Południowej, nad Morzem Adriatyckim i graniczące od południa z Bośnią i Hercegowiną i Czarnogórą, od wschodu z Serbią oraz Węgrami i Słowenią od północy. Od południowego zachodu ma dostęp do Morza Adriatyckiego. Od 1 lipca 2013 należy do Unii Europejskiej jako 28. członek wspólnoty.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1537,8 +1532,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DANISH_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Danes are a North Germanic ethnic group native to Denmark, and a modern nation identified with the country of Denmark. This connection may be ancestral, legal, historical, or cultural. Danes generally regard themselves as a nationality and reserve the word "ethnic" for the description of recent immigrants, sometimes referred to as "new Danes".</English>
 		<Polish>Pierwotnie obszar dzisiejszej Danii został zasiedlony przez plemiona germańskie: Cymbrów i Teutonów, a następnie Anglów, Jutów i Sasów. Te 3 plemiona w V i VI wieku po podbiciu części Wysp Brytyjskich (dzisiejszaAnglia) przemieściły się tam, a na ich miejsce napłynął północnogermański ludDuńczyków. W okresie VIII-IX wieku Duńczycy brali udział w morskich wyprawach na wybrzeża Wielkiej Brytanii, państwa Franków i wybrzeżaBałtyku. Postępowało jednoczenie kraju, a w IX wieku kraj został schrystianizowany. Duński król Kanut II Wielki władał państwem, które obejmowało obok Danii, także Anglię, Norwegię, południową Szwecję oraz część Finlandii. W XII wieku Dania rozpoczęła ekspansję w rejonie Morza Bałtyckiego, zajmując m.in. Estonię, Holsztyn i Inflanty. W roku 1397 Dania utworzyła z Norwegią i Szwecją Unię Kalmarską, która przetrwała do 1523 roku, a następnie do roku 1814 istniała unia Danii z Norwegią. W 1448 r. tron objął Chrystian I z dynastii Oldenburgów. W latach 1534-1536 w Danii trwała wojna domowa, w wyniku której religią państwową stał się luteranizm. W drugiej połowie XVI wieku kraj zaangażowany był w wyniszczające wojny o panowanie na Bałtyku ze Szwecją i w ich wyniku utracił mocarstwową pozycję. W wojnie trzydziestoletniej (1618-1648) król Danii Chrystian IV wziął udział po stronie protestantów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1562,7 +1556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DENE_PEDIA</Tag>
 		<English>The Dene people are an aboriginal group of First Nations who live in the northern boreal and Arctic regions of Canada.</English>
-		<Italian>Il popolo Dene sono un gruppo di nativi che vivono nelle regioni boreali ed artiche del Canada.</Italian>
+		<Italian>Il popolo Dene è un gruppo di nativi delle regioni boreali e artiche del Canada.</Italian>
 		<Polish>Dene do grupa indian ameryki pólnocnej żyjąca w północnej Kanadzie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1660,8 +1654,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_EPIRUS_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Epirotes were the inhabitants of an ancient Greek state, located in the geographical region of Epirus in the western Balkans. The homeland of the ancient Epirotes was bordered by the Aetolian League to the south, Thessaly and Macedonia to the east, and Illyrian tribes to the north. For a brief period (280–275 BC), the Epirote king Pyrrhus managed to make Epirus a powerful state in the Greek world, comparable to the likes of Macedon and Rome. His armies marched against Rome during an unsuccessful campaign in Italy.</English>
 		<Polish>Epir - górzysta kraina położona w północno-zachodniej części Grecji, nad Morzem Jońskim, na północy graniczy z Albanią, na wschodzie z Tesalią, a na południu z Etolią i Akarnanią. Ponadto istnieje także Epir Północny, czyli zamieszkały przez Albańczykow, Greków i Wołochów obszar, położony po albańskiej stronie granicy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1716,8 +1709,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FIJIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Fijians are a nation and ethnic group native to Fiji, who speak Fijian and share a common history and culture. Fijians, or iTaukei, are the major indigenous people of the Fiji Islands, and live in an area informally called Melanesia.</English>
 		<Polish>Fidżi, Republika Fidżi - państwo wyspiarskie, położone w południowo-zachodniej części Oceanu Spokojnego na wschód od Vanuatu, zachód odTonga i południe od Tuvalu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1876,8 +1868,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GHANA_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Ghanaian people are a nation originating in the Ghanaian Gold Coast. Ghanaians predominantly inhabit the republic of Ghana, and are the predominant cultural group and residents of Ghana.</English>
 		<Polish>Od końca XVII wieku silne państwo Aszanti ze stolicą w Kumasi. Po długoletniej wojnie z Brytyjczykami od 1901 kolonia brytyjska o nazwie Złote Wybrzeże. W czasach kolonialnych duże wpływy mieli współpracujący z władzami kolonialnymi wodzowie. Po II wojnie światowej narodził się ruch antykolonialny. W 1947 roku powstałacentroprawicowo-konserwatywna partia Zjednoczonej Konwencji Złotego Wybrzeża na czele której stanął Kwame Nkrumah. W 1948 Nkrumah i inni przywódcy antykolonialni zostali aresztowani przez władze kolonialne. W 1949 roku doszło do rozłamu w Zjednoczonej Konwencji Złotego Wybrzeża w wyniku którego Nkrumah założył Ludową Partię Konwencji. W 1952 roku Nkrumah został premierem rządu autonomicznego Złotego Wybrzeża. 6 marca 1957 roku Złote Wybrzeże proklamowała niepodległość pod nową nazwą Republika Ghany, a Nkrumah został jej pierwszym premierem. Ghana przystąpiła do brytyjskiej Wspólnoty Narodów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1894,7 +1885,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOKTURK_PEDIA</Tag>
-		<English>Kok Turks were a nomadic confederation of Turkic peoples in medieval Inner Asia. The Köktürks, under the leadership of Bumin Qaghan (d. 552) and his sons, succeeded the Rouran Khaganate as the main power in the region and established the Turkic Khaganate, one of several nomadic dynasties which would shape the future geolocation, culture, and dominant beliefs of Turkic peoples. The Göktürk rulers originated from the Ashina clan, who were first attested to 439. The Book of Sui reports that in that year, on October 18, the Tuoba ruler Emperor Taiwu of Northern Wei overthrew Juqu Mujian of the Northern Liang in eastern Gansu, whence 500 Ashina families fled northwest to the Rouran Khaganate in the vicinity of Gaochang. Peter Benjamin Golden points out the possibility that the khaghans of the Turkic Khaganate, the Ashina, were themselves originally Indo-Europeans (possibly Iranian peoples) who later adopted the Turkic language but continued to use titles from their earlier Indo-European languages. German Turkologist W.-E. Scharlipp points out that many common terms in Turkic are Iranian in origin.</English>
+		<English>Gokturks were a nomadic confederation of Turkic peoples in medieval Inner Asia. The Köktürks, under the leadership of Bumin Qaghan (d. 552) and his sons, succeeded the Rouran Khaganate as the main power in the region and established the Turkic Khaganate, one of several nomadic dynasties which would shape the future geolocation, culture, and dominant beliefs of Turkic peoples. The Göktürk rulers originated from the Ashina clan, who were first attested to 439. The Book of Sui reports that in that year, on October 18, the Tuoba ruler Emperor Taiwu of Northern Wei overthrew Juqu Mujian of the Northern Liang in eastern Gansu, whence 500 Ashina families fled northwest to the Rouran Khaganate in the vicinity of Gaochang. Peter Benjamin Golden points out the possibility that the khaghans of the Turkic Khaganate, the Ashina, were themselves originally Indo-Europeans (possibly Iranian peoples) who later adopted the Turkic language but continued to use titles from their earlier Indo-European languages. German Turkologist W.-E. Scharlipp points out that many common terms in Turkic are Iranian in origin.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOTH</Tag>
@@ -1914,7 +1905,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOTH_PEDIA</Tag>
 		<English>The Goths were an East Germanic tribe of Scandinavian origin whose two branches, the Visigoths and the Ostrogoths, played an important role in the fall of the Roman Empire and the emergence of Medieval Europe.</English>
-		<Italian>I Goti era una tribù germanica originaria della Scandinavia i cui due rami, i Visigoti e gli Ostrogoti, giocarono un ruolo importante nella caduta dell'Impero Romano e nell'emergenza dell'Europa medievale.</Italian>
+		<Italian>I goti erano una tribù germanica originaria della Scandinavia i cui due rami, i Visigoti e gli Ostrogoti, giocarono un ruolo importante nella caduta dell'Impero Romano e nell'emergenza dell'Europa medievale.</Italian>
 		<Polish>Goci - jedno z największych i najważniejszych plemionwschodniogermańskich, mówiące językiem gockim.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2344,7 +2335,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INDUS_PEDIA</Tag>
-		<English>The 'Indus Valley Civilization (IVC) was a Bronze Age civilisation (3300-1300 BCE; mature period 2600-1900 BCE) extending from what today is northeast Afghanistan to Pakistan and northwest India (see map). Along with Ancient Egypt and Mesopotamia it was one of three early civilisations of the Old World, and of the three the most widespread. It flourished in the basins of the Indus River, one of the major rivers of Asia, and along a system of perennial, mostly monsoon-fed, rivers that once coursed in the vicinity of the seasonal Ghaggar-Hakra river in northwest India and eastern Pakistan. Aridification of this region during the 3rd millennium BCE may have been the initial spur for the urbanisation associated with the civilisation, but eventually also reduced the water supply enough to cause the civilisation's demise, and to scatter its population eastward.</English>
+		<English>The Indus Valley Civilization (IVC) was a Bronze Age civilisation (3300-1300 BCE; mature period 2600-1900 BCE) extending from what today is northeast Afghanistan to Pakistan and northwest India (see map). Along with Ancient Egypt and Mesopotamia it was one of three early civilisations of the Old World, and of the three the most widespread. It flourished in the basins of the Indus River, one of the major rivers of Asia, and along a system of perennial, mostly monsoon-fed, rivers that once coursed in the vicinity of the seasonal Ghaggar-Hakra river in northwest India and eastern Pakistan. Aridification of this region during the 3rd millennium BCE may have been the initial spur for the urbanisation associated with the civilisation, but eventually also reduced the water supply enough to cause the civilisation's demise, and to scatter its population eastward.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INUIT</Tag>
@@ -2702,7 +2693,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KOGI_PEDIA</Tag>
-		<English>The Kogi or Cogui or Kagaba, meaning "jaguar" in the Kogi language, are an indigenous ethnic group that lives in the Sierra Nevada de Santa Marta in Colombia. Their civilization has continued since the Pre-Columbian era. The Kogi are descendants of the Tairona culture, which flourished before the times of the Spanish conquest. The Tairona were an advanced civilization which built many stone structures and pathways in the jungles. They made many gold objects which they would hang from trees and around their necks. They lived not much differently from modern day Kogi. Before the Spanish conquistadors arrived, the Tairona were forced to move into the highlands when the Caribs invaded around 1000 CE. The decision to flee to the mountains proved beneficial and strategic by the time the Spanish entered modern-day Colombia in the 15th century. In 1498, the Spanish arrived in Northern Colombia where they began to enslave indigenous groups. Threatened by dogs and soldiers alike, the Tairona remained in isolation. Regardless, many priests were hanged, women were stolen and raped, and children where forced to accept Spanish education. Later, missionaries came and also began to influence their way of life, building chapels and churches amidst their villages to train and convert the locals. In the years since, the Kogi have remained in their home in the mountains, which allows them to escape the worst effects of colonization and aids them in preserving their traditional way of life </English>
+		<English>The Kogi or Cogui or Kagaba, meaning "jaguar" in the Kogi language, are an indigenous ethnic group that lives in the Sierra Nevada de Santa Marta in Colombia. Their civilization has continued since the Pre-Columbian era. The Kogi are descendants of the Tairona culture, which flourished before the times of the Spanish conquest. The Tairona were an advanced civilization which built many stone structures and pathways in the jungles. They made many gold objects which they would hang from trees and around their necks. They lived not much differently from modern day Kogi. Before the Spanish conquistadors arrived, the Tairona were forced to move into the highlands when the Caribs invaded around 1000 CE. The decision to flee to the mountains proved beneficial and strategic by the time the Spanish entered modern-day Colombia in the 15th century. In 1498, the Spanish arrived in Northern Colombia where they began to enslave indigenous groups. Threatened by dogs and soldiers alike, the Tairona remained in isolation. Regardless, many priests were hanged, women were stolen and raped, and children where forced to accept Spanish education. Later, missionaries came and also began to influence their way of life, building chapels and churches amidst their villages to train and convert the locals. In the years since, the Kogi have remained in their home in the mountains, which allows them to escape the worst effects of colonization and aids them in preserving their traditional way of life</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KONGOLESE</Tag>
@@ -2817,8 +2808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LIANGZHU_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Liangzhu culture was the last Neolithic jade culture in the Yangtze River Delta of China. The culture was highly stratified, as jade, silk, ivory and lacquer artifacts were found exclusively in elite burials, while pottery was more commonly found in the burial plots of poorer individuals. This division of class indicates that the Liangzhu period was an early state, symbolized by the clear distinction drawn between social classes in funeral structures. The Liangzhu culture was extremely influential and its sphere of influence reached as far north as Shanxi and as far south as Guangdong. It is believed to be East Asia's first state society.</English>
 		<Polish>Kultura Liangzhu z terenów środkowych chin.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2897,8 +2887,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LYDIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Lydians were an Anatolian people living in Lydia, a region in western Anatolia, who spoke the distinctive Lydian language, an Indo-European language of the Anatolian group. A distinct Lydian culture lasted, in all probability, until at least shortly before the Common Era, having been attested the last time among extant records by Strabo in Kibyra in south-west Anatolia around his time (1st century BC). Their recorded history of statehood, which covers three dynasties traceable to the Late Bronze Age, reached the height of its power and achievements during the 7th and 6th centuries BC, a time which coincided with the demise of the power of neighboring Phrygia, which lay to the north-east of Lydia. Lydian power came to an abrupt end with the fall of their capital in events subsequent to the Battle of Halys in 585 BC and defeat by Cyrus the Great in 546 BC.</English>
 		<Polish>Lidyjczycy należeli do ludów anatolijskich, grupy Indoeuropejczyków zamieszkujacej w II i I tys. p.n.e. dzisiejsze tereny Azji Mniejszej i Syrii. Pierwszym znanym władcą lidyjskim był Gyges, który podporządkował krajAszurbanipalowi, władcy Asyrii, potem jednak zmienił sojusze i wspierał Egipt. Jego dzieło kontynuowali Ardys,Sadyattes, Alyattes i Krezus. Upadek Asyrii pozwolił Lidyjczykom na skonsolidowanie państwa i rozszerzenie granic po rzekę Halys. Dzięki stopniowemu podbojowi kolonii greckich Lidia zapewniła sobie dostęp do morza.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2909,8 +2898,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MACEDONIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Macedonians were an ancient tribe that lived on the alluvial plain in the northeastern part of mainland Greece. Essentially an ancient Greek people, they gradually expanded from their homeland along the Haliacmon valley on the northern edge of the Greek world, absorbing or driving out neighbouring non-Greek tribes, primarily Thracian and Illyrian. Aside from the monarchy, the core of Macedonian society was its nobility. Similar to the aristocracy of neighboring Thessaly, their wealth was largely built on herding horses and cattle. Under Philip II (r. 359–336 BC), the Macedonians are credited with numerous military innovations, which enlarged their territory and increased their control over other areas extending into Thrace. This consolidation of territory allowed for the exploits of Alexander the Great (r. 336–323 BC), the conquest of the Achaemenid Empire, the establishment of the diadochi successor states, and the inauguration of the Hellenistic period in West Asia, Greece, and the broader Mediterranean world. The Macedonians were eventually conquered by the Roman Republic, which dismantled the Macedonian monarchy at the end of the Third Macedonian War (171–168 BC) and established the Roman province of Macedonia after the Fourth Macedonian War (150–148 BC).</English>
 		<Polish>Pierwsze państwo macedońskie zostało założone przez Perdikkasa I z rodu Temenidów. Z uwagi na pochodzenie z królewskiej rodziny miasta Argos, na Peloponezie, tę pierwszą, macedońską dynastię nazwano dynastią Argeadów. Za panowania pierwszych władców nawoływali do walki i obrony przed Ilirami. Do Macedonii przyłączone zostało miasto Anthemunt. Aleksander I scalił pod nazwą Macedończyków plemiona zamieszkujące górną Macedonię. Jego następca Perdikkas II prowadził politykę wyzyskiwania sprzeczności pomiędzy sąsiadami Macedonii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2929,8 +2917,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MALAYSIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Malaysians are the people who are identified with the country of Malaysia, its citizens and their descendants worldwide. This connection may be residential, legal, historical, or cultural. For most Malaysians, several of those types of connections exist and are the source of their being considered Malaysians.</English>
 		<Polish>Malaje (ang. i malajski Malaya) - nazwa stosowana do dawnych posiadłości brytyjskich na Półwyspie Malajskim (do 1946 r. kilku, następnie jednej powstałej w wyniku ich połączenia), od 1957 r. zaś do niepodległego państwa, które w 1963 roku przekształciło się w Malezję (malajski Malaysia). Dla okresu do 1957 roku stosowana jest także nazwaMalaje Brytyjskie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2989,8 +2976,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANDAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Mandan are a Native American tribe of the Great Plains who have lived for centuries primarily in what is now North Dakota. The Mandan historically lived along both banks of the Upper Missouri River and two of its tributaries—the Heart and Knife rivers— in present-day North and South Dakota. Speakers of Mandan, a Siouan language, they developed a settled, agrarian culture. They established permanent villages featuring large, round, earth lodges, some 40 feet (12 m) in diameter, surrounding a central plaza. Matrilineal families lived in the lodges. The Mandan were a great trading nation, trading especially their large corn surpluses with other tribes in exchange for bison meat and fat. Food was the primary item, but they also traded for horses, guns, and other trade goods.</English>
 		<Polish>Mandanowie (ang. Mandan, dakota Man dan), plemię Indian Ameryki Północnej z siouańskiej rodziny językowej, zamieszkujące obszar Wielkich Równin, odłam Dakotów najbliżej spokrewniony z plemieniem Winebagów. Mandanowie sami siebie określali mianem Numakiki (ludzie).</Polish>
 	</TEXT>
 	<TEXT>
@@ -3078,8 +3064,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MASSAGETAE_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Massagetae, or Massageteans, were an ancient Eastern Iranian nomadic tribal confederation, who inhabited the steppes of Central Asia, north-east of the Caspian Sea in modern Turkmenistan, western Uzbekistan, and southern Kazakhstan. They were part of the wider Scythian cultures.</English>
 		<Polish>Massageci (grec. Massagetai, łac. Massagetae, ang. The Massageteans) - w starożytności związek pasterskich szczepów irańskich żyjących na obszarze pomiędzy Persją a Jeziorem Aralskim. Znany z zapisów Herodota - według którego pokonali oni i o śmierć przyprawili władcę Persji Cyrusa Wielkiego. Przyczynili się do wyparciaScytów na zachód do Europy z Azji Środkowej z obszaru zwanego Chorezm (obecnie: Turkmenistan, część Uzbekistanu i Kazachstanu).</Polish>
 	</TEXT>
 	<TEXT>
@@ -3193,7 +3178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MINOAN_PEDIA</Tag>
 		<English>The Minoan civilization was a Bronze Age civilization that arose on the island of Crete and flourished from approximately the 27th century BC to the 15th century BC.</English>
-		<Italian>La civiltà minoica fiorì durante l'età del bronzo sull'isola di Creta, dal 27° al 15° secolo a.C..</Italian>
+		<Italian>La civiltà minoica fiorì durante l'età del bronzo sull'isola di Creta, dal XXVII al XV secolo a.C.</Italian>
 		<Polish>W okresie 3100-2100 p.n.e. nazywanym okresem przedpałacowym lub wczesnominojskim pojawiają się ślady wytwarzania narzędzi zbrązu i użycia koła garncarskiego. Niektóre budowle z tego okresu posiadają już dwie kondygnacje. W grobach znajdowana jest złota biżuteria. W latach 3000-1500 p.n.e. na wyspie rozwija się kultura minojska. W 395 Kreta stała się częścią Cesarstwa Bizantyjskiego.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3202,8 +3187,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Mississippian culture was a mound-building Native American civilization that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600, varying regionally.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MITTANNI</Tag>
@@ -3260,7 +3244,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOLLO_PEDIA</Tag>
-		<English>The Mollo culture existed in Bolivia's altiplano area after the collapse of the Tiwanaku culture during the period of AD 1000 to 1500; it predated the Inca civilization. While the Mollo showed a continuity with Late Tiwanaku culture in both domestic and village architecture, they left no pyramids. Mollo worshiped the jaguar. The Mollo were defined by their ceramics. Shoe pots, grave pots, vases, and dipping vessels have been found and these are either plain or painted black and white on red clay. They created a unique drinking cup with a built-in straw. Some of these ceramics can be found today as far away as the Naprstek Museum in Prague.</English>
+		<English>The Mollo culture existed in Bolivia's altiplano area after the collapse of the Tiwanaku culture during the period of AD 1000 to 1500; it predated the Inca civilization. While the Mollo showed a continuity with Late Tiwanaku culture in both domestic and village architecture, they left no pyramids. Mollo worshipped the jaguar. The Mollo were defined by their ceramics. Shoe pots, grave pots, vases, and dipping vessels have been found and these are either plain or painted black and white on red clay. They created a unique drinking cup with a built-in straw. Some of these ceramics can be found today as far away as the Naprstek Museum in Prague.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MONGOLIAN</Tag>
@@ -3374,8 +3358,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAMA_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Nama (in older sources also called Namaqua) are an African ethnic group of South Africa, Namibia and Botswana. They traditionally speak the Nama language of the Khoe-Kwadi language family, although many Nama also speak Afrikaans.</English>
 		<Polish>Nama - grupa etniczna w Namibii i RPA</Polish>
 	</TEXT>
 	<TEXT>
@@ -3490,8 +3473,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOK_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Nok culture is an early Iron Age population whose material remains are named after the Ham village of Nok in Kaduna State of Nigeria, where their terracotta sculptures were first discovered in 1928.</English>
 		<Polish>Nok, kultura Nok - kultura ludu zamieszkującego niegdyś tereny na południe od Sahary, między rzekami Niger i Benue (tereny dzisiejszej środkowej Nigerii). Lud ten prowadził osiadły tryb życia oraz zajmował się rolnictwem i hodowlą bydła. Istnienie kultury Nok datuje się na okres od około 500 roku p.n.e. do około 200 roku n.e.. Pozostałe po niej ślady są najstarszymi rozpoznawalnymi dowodami istnienia zorganizowanego społeczeństwa na tym terenie Afryki.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3810,8 +3792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PICTISH_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Picts were a confederation of Celtic-speaking peoples who lived in what is today eastern and northern Scotland during the Late British Iron Age and Early Medieval periods. Where they lived and what their culture was like can be inferred from early medieval texts and Pictish stones.</English>
 		<Polish>Piktowie (łac. picti - "pomalowani", ze względu na ciała pokryte tatuażami) - nazwa stosowana przez starożytnych Rzymian na określenie grupy plemion zamieszkujących ziemie obecnej Szkocji (na północ od rzek Forth i Clyde) w okresie między przybyciem Rzymian do północnej Brytanii (ok. 100 roku n.e.) a połową IX wieku. W okresie panowania rzymskiego dwoma ważnymi plemionami piktyjskimi byli Werturionowie (Verturiones), którzy mieszkali nad górnym Forth i rzekąEarn, oraz Kaledończycy. Źródła piktyjskie używają nazwy Cruithin jako nazwy własnej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3829,8 +3810,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PIMA_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Pima are a group of Native Americans living in an area consisting of what is now central and southern Arizona. They are closely related to other river people, the Ak-Chin O'odham, now forming the Ak-Chin Indian Community. They are also related to the Sobaipuri. The short name, "Pima", is believed to have come from the phrase "pi 'añi mac" or "pi mac," meaning "I don't know," which they used repeatedly in their initial meetings with Spanish colonists. The latter referred to them as "the Pima."</English>
 		<Polish>Pima (nazwa własna Akimel O'odham lub Aa'-tam, co znaczy "ludzie rzeki", słowem Pima (pol. "nie wiem") określali ich sąsiedzi nie rozumiejący ich języka) - plemię Indian Ameryki Północnej z rodziny uto-azteckiej, zamieszkujące obszary nad rzekami Gila River i Salt w stanie Arizona oraz północnej części stanu Sonora w Meksyku. Potomkowie starożytnej kulturyHohokam, sprzymierzeni z plemieniem Tohono O'odham (Papagów, zwanych też "Ludem Fasoli"). Ponad sto pięćdziesiąt lat temu połączyli się z resztkami plemienia Maricopa, którzy zostali ze swych terenów wyparci przez własnych pobratymców z plemienia Mohave. Chociaż Pimowie i Maricopa mówili zupełnie innymi językami, oba plemiona od tamtej chwili żyją razem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4092,8 +4072,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ROXOLANI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Roxolani were a Sarmatian people (a large Iranian confederation that existed in classical antiquity) and are believed to be an offshoot of the Alans. However, according to Strabo, they were the most remote of Scythian peoples.</English>
 		<Polish>Roksolanowie, Roksolanie (według Wiernadskiego od oset. ruxs alan, "jasny Alan", lat. Roxolani, od irańskiego Raochshna, "biały, światło", to jest jasny, błyszczący) - jedno z plemion sarmackich zapewne spokrewnione z Alanami. Ich ziemie leżały między Donem a Dniestrem. W I w. p.n.e. wywędrowali w kierunku Dunaju na stepy Baragan. Pod wodzą Tasjosa walczyli około 109 p.n.e. po stronie scytyjskiego władcy Palakosa przeciw wojskom pontyjskiego króla Mitrydatesa VI Eupatora, dowodzonymi w kampanii krymskiej przez Diofantesa. Liczące 50 tys. siły Roksolanów w starciu z sześciotysięczną armią pontyjską doznały ciężkiej porażki, wskutek czego zmuszeni zostali do wycofania się z Krymu. W połowie I w. n.e. rozpoczęli łupieżce wyprawy za Dunaj, w granice państwa rzymskiego. W roku 69/68 jedna z wypraw (9 tys. wojowników) została rozbita przez Legio III Gallica. Podczas wojen dackich Trajana walczyli po stronie Daków, pokonani w pierwszej kampanii w 101-102 r., w kolejnych zachowali neutralność. W 260 r. najechali prowincję Panonię. W połowie IV w. pokonani przez Hunów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4157,8 +4136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAMOAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Samoans or Samoan people (Samoan: tagata Sāmoa) are the indigenous Polynesian people of the Samoan Islands, an archipelago in Polynesia, who speak the Samoan language. The Samoan people and culture form a vital link and stepping stone in the formation and spread of Polynesian culture, language and religion throughout Eastern Polynesia.</English>
 		<Polish>Archipelag Samoa został zasiedlony około 1000 r. p.n.e. przez ludność polinezyjską pochodzącą z wysp Tonga. Wyspy zostały odkryte dla Europy w 1606, kiedy to dotarł do nich Hiszpan P.F. de Quiros, lecz o nich zapomniano, i ponownego ich odkrycia dokonano w 1722. W 1768 uczestnicy wyprawy Bougainville'a dokonali kolejnych badań wysp, nadając im nazwę Wyspy Żeglarskie. Od 1838 rozpoczął się napływ kolonistów i kupców europejskich i amerykańskich, którzy osiedlali się wokół miasta Apia na wyspie Upolu. Głównymi zainteresowanymi w kolonizacji archipelagu były Niemcy, Wielka Brytania i Stany Zjednoczone.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4306,7 +4284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SENNAR_PEDIA</Tag>
-		<English>The Funj Sultanate of Sennar (sometimes spelled Sinnar), known in Sudanese traditions as the Blue Sultanate was a sultanate in the north of Sudan, named Funj after the ethnic group of its dynasty or Sinnar (or Sennar) after its capital, which ruled a substantial area of northeast Africa between 1504 and 1821. In the 15th century the part of Nubia previously controlled by Makuria was home to a number of small states and subject to frequent incursions by desert nomads. The situation in Alodia is less well known, but it also seems as though that state had collapsed. The area was reunified under Abdallah Jamma, the gatherer, who came from the eastern regions that had grown wealthy and powerful from the trade on the Red Sea. To him is ascribed the capture of Soba, which sank into unimportance: according to Reubeni, in the time of 'Amara Dunqas it was in ruins. 'Abdallah's status as Muslim hero is confirmed by traditions representing him marrying the daughter of a Hijazi holy man called Alshikh Hamd Abou Dunana who was burned in Abu Delaig, and as the eponymous ancestor of the ruling clan, the 'Abdallab. </English>
+		<English>The Funj Sultanate of Sennar (sometimes spelled Sinnar), known in Sudanese traditions as the Blue Sultanate was a sultanate in the north of Sudan, named Funj after the ethnic group of its dynasty or Sinnar (or Sennar) after its capital, which ruled a substantial area of northeast Africa between 1504 and 1821. In the 15th century the part of Nubia previously controlled by Makuria was home to a number of small states and subject to frequent incursions by desert nomads. The situation in Alodia is less well known, but it also seems as though that state had collapsed. The area was reunified under Abdallah Jamma, the gatherer, who came from the eastern regions that had grown wealthy and powerful from the trade on the Red Sea. To him is ascribed the capture of Soba, which sank into unimportance: according to Reubeni, in the time of 'Amara Dunqas it was in ruins. 'Abdallah's status as Muslim hero is confirmed by traditions representing him marrying the daughter of a Hijazi holy man called Alshikh Hamd Abou Dunana who was burned in Abu Delaig, and as the eponymous ancestor of the ruling clan, the 'Abdallab.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SERBIAN</Tag>
@@ -4412,8 +4390,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SIOUX_PEDIA</Tag>
-		<English>The Dakotas are first recorded to have resided at the source of the Mississippi river during the seventeenth century.</English>
-		<Italian>I Dakota furono i rpimi indigeni che si stanziarono alla foce del Mississippi durante il diciassettesimo secolo.</Italian>
+		<English>The Dakotas are first recorded to have resided at the source of the Mississippi river during the 17th century.</English>
+		<Italian>I Dakota furono i primi indigeni che si stanziarono alla foce del Mississippi durante il XVII secolo.</Italian>
 		<Polish>W czasach odkrycia Ameryki przez Krzysztofa Kolumba lud Dakota zamieszkiwał pd-wsch. tereny Ameryki Pn., prawdopodobnie w okolicach Florydy. W XVII w. Dakotowie osiedli w okolicach górnego biegu Missisipi i Wielkich Jezior. Pierwsze wzmianki o Dakotach (jako Nadewisou) zostały zanotowane przez francuskich misjonarzy w 1640. Toczyli oni wówczas stałe wojny z Czipewejami (Odżibwejami). W walkach tych Czipewejowie uzyskali przewagę dzięki użyciu broni palnej, kupowanej od białych, na skutek czego około połowy XVIII w. Dakotowie zostali wyparci na zachód, na Wielkie Równiny.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4422,8 +4400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Slovaks are a West Slavic ethnic group and nation native to Slovakia who share a common ancestry, culture, history and speak the Slovak language. There are Slovak minorities in many neighboring countries including Austria, Croatia, Czech Republic, Hungary, Poland, Romania, Serbia and Ukraine and sizeable populations of immigrants and their descendants in Australia, Canada, France, Germany, United Kingdom and the United States among others, which are collectively referred to as the Slovak diaspora.</English>
 		<Polish>W VIII wieku na terenach dzisiejszej Słowacji powstało Księstwo Nitrzańskie. W 833 roku zostało podbite przez Mojmira I i odtąd aż do 906 roku obszar ten wraz z Czechami i Morawami tworzył państwo wielkomorawskie. W państwie tym działali m.in. św. Cyryl i Metody. Był to, oprócz XX wieku, jedyny okres w historii kraju, gdy był on związany administracyjnie z Czechami. Od 1001 lub 1003 roku, tereny Słowacji należały do Polski, po czym około 1031 roku została podbita przez Królestwo św. Stefana. Od tego czasu stanowiły integralną część Węgier, tworząc jego północne komitaty (Górne Węgry, węg. Felvidek). Północ kraju zamieszkana była przez ludność pochodzenia słowiańskiego, południe zaś stanowiło obszar intensywnej kolonizacji szlachty węgierskiej. Na przełomie XIII/XIV wieku, w okresie osłabienia władzy królewskiej, Słowacją rządzili suwerenni magnaci - zachodnią Słowacją rządził Mateusz Czak, który władał 14 węgierskimi powiatami, wschodnią Słowacją rządził magnat Amadej Aba, a środkową Istvan akos. Ich władzę ograniczył po długich walkach król Karol Robert. Wielkorządcą Górnych Węgier, był w okresie późnego średniowiecza magnat polskiego pochodzenia, Ścibor ze Ściborzyc, w którego posiadaniu była połowa zachodniej Słowacji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4463,8 +4440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SONGHAI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Songhai people (also Songhay or Sonrai) are an ethnic group in West Africa who speak the various Songhai languages. Their history and lingua franca is linked to the Songhai Empire which dominated the western Sahel in the 15th and 16th century.</English>
 		<Polish>Songhaj - średniowieczne państwo istniejące w VII-XVI w. na terenie zachodniej Afryki. Od XII w. wpływy islamskie, następnie przejściowo uzależnione od Mali (XIV w.). Rozkwit i szczyt potęgi w drugiej połowie wieku XV oraz pierwszym ćwierćwieczu XVI, gdy Songhaj opanował ośrodki handlowe - Timbuktu i Dżenne, przejmując kontrolę nad szlakami handlowymi. W okresie tym państwem rządził Muhammad Ture. Po jego detronizacji kraj znalazł się w stanie kryzysu politycznego. Porządek w kraju przywrócił dopiero Daud (1549-1582), za którego rządów nastąpiło odrodzenie gospodarcze kraju. W roku 1590 sułtan Maroka Ahmad I al-Mansur rozpoczął wojnę z państwem Songhaj. Pretekstem stało się niedotrzymanie postanowień układów handlowych. Na czele armii sułtańskiej stanął Hiszpan Dżaudar (Judar Pasza). 4-tysięczna armia uzbrojona w broń palną i artylerię, rozbiła doszczętnie Songhajczyków w bitwie pod Tondibi.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4695,8 +4671,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAHITIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Tahitians are a Polynesian ethnic group native to Tahiti and thirteen other Society Islands in French Polynesia, as well as the modern population of these lands of multiracial, primarily Polynesian-French, ancestry.</English>
 		<Polish>Pierwszymi mieszkańcami wyspy byli Polinezyjczycy, którzy dotarli tu pomiędzy 300 a 800 r. (zdaniem niektórych nawet wcześniej). Mimo że wyspa została dostrzeżona z pokładu hiszpańskiego statku już w 1606, pierwsi Europejczycy dotarli na nią dopiero w 1767 (angielski kapitan Samuel Wallis). Rok później dotarł tu Francuz Louis Antoine de Bougainville, który opisał Tahiti jako rajską wyspę, zamieszkaną przez tubylców wiodących proste, szczęśliwe, nieskalane przez cywilizację życie, tym samym przyczyniając się do rozpowszechniania stereotypu "szlachetnego dzikusa". W kolejnych latach zaczęły tu coraz częściej docierać europejskie statki, wśród nich m.in. "HMS Bounty" (1789). Kontakt z cywilizacją białego człowieka oznaczał dla wyspiarzy również kontakt z chorobami zakaźnymi, także wenerycznymi, alkoholem itp. W efekcie tego liczba ludności znacznie spadła (James Cook w 1774 szacował ją na 200 tys., co zdaje się być wartością zawyżoną, inne szacunki z tego okresu mówiły o 122 tys.; po licznych epidemiach w 1797 żyło tu tylko 16 tys. tubylców, później już ok. 6 tys.). W 1842 Tahiti uznane za francuski protektorat. W 1880 ostatni król tahitański Pomare V zrzekł się suwerenności na rzecz Francji. W 1891 osiadł tu francuski malarz Paul Gauguin. W latach 1946-2004 terytorium zamorskie Francji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4866,8 +4841,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TIMURID_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Timurid dynasty, self-designated as Gurkani, was a Sunni Muslim dynasty or clan of Turco-Mongol origin, descended from the warlord Timur (also known as Tamerlane). The word "Gurkani" derives from "Gurkan", a Persianized form of the Mongolian word "Kuragan" meaning "son-in-law". The origin of the Timurid dynasty goes back to the Mongol tribe known as Barlas, who were remnants of the original Mongol army of Genghis Khan, founder of the Mongol Empire. After the Mongol conquest of Central Asia, the Barlas settled in what is today southern Kazakhstan, from Shymkent to Taraz and Almaty, which then came to be known for a time as Moghulistan – "Land of Mongols" in Persian – and intermingled to a considerable degree with the local Turkic and Turkic-speaking population, so that at the time of Timur's reign the Barlas had become thoroughly Turkicized in terms of language and habits. Additionally, by adopting Islam, the Central Asian Turks and Mongols adopted the Persian literary and high culture which had dominated Central Asia since the early days of Islamic influence. Persian literature was instrumental in the assimilation of the Timurid elite to the Perso-Islamic courtly culture.</English>
 		<Polish>Timurydzi - dynastia pochodzenia mongolskiego, panująca w Azji Środkowej i Iranie w latach 1370-1526. Timur dokonał straszliwych zniszczeń, ale następnie dążył do odbudowy miast i rekultywacji terenów rolnych, którą to politykę kontynuowali jego następcy. Nie przyniosła ona jednak pełnych efektów z powodu zniszczeń związanych z kolejnymi wojnami domowymi oraz strukturą własnościową ziemi. Za czasów późniejszych Timurydów doszło do rozrostu własności feudalnej w postaci nadań świeckich sojurghali i religijnych wakfów, czego skutkiem była utrata bezpiecznej bazy podatkowej przez państwo. Perscy biurokraci, względnie słabi za panowania Timura, później uzyskali większe znaczenie, jednak do końca istnienia dynastii czagatajscy emirowie dzierżyli stanowiska nadzorcze.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5151,8 +5125,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VENETIAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Republic of Venice, or Venetian Republic, traditionally known as "La Serenissima," was a sovereign state and maritime republic in what is now northeastern Italy. It lasted from 697 AD until 1797 AD. Centered on the lagoon communities of the prosperous city of Venice, the republic grew into a trading power during the Middle Ages and strengthened this position in the Renaissance. Citizens spoke the still-surviving Venetian language, although publishing in (Florentine) Italian became the norm during the Renaissance.</English>
 		<Polish>Wenecja (wł. Venezia, łac. Venetia, wen. Venexia/Venessia) - miasto i gmina na północy Włoch nad Adriatykiem, stolica regionu Wenecja Euganejska. Ludność Wenecji w granicach administracyjnych wynosi około 270 tys. mieszkańców, z czego większość (176 tys.) mieszka na lądzie stałym, a historyczne centrum zamieszkuje niecałe 60 tys., natomiast pozostałe wyspy laguny są zamieszkane przez 31 tys. (2011). Przez ponad tysiąc lat (726-1797) miasto było stolicą niezależnej Republiki Weneckiej, która była jedną z morskich i handlowych potęg Morza Śródziemnego. Z okresu największego rozkwitu Republiki (XIII-XVI wiek) pochodzą liczne zabytki miasta, których bogactwo i forma decyduje o pierwszorzędnym znaczeniu Wenecji jako ośrodka turystyki nie tylko w skali Włoch, ale też w skali ogólnoświatowej. Zabytki te, tworząc unikatowy zespół urbanistyczny miasta kanałów i mostów, stanowią o uznaniu Wenecji za jedną z najcenniejszych pozycji na liście światowego dziedzictwa ludzkości.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5252,8 +5225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYANA_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Wayana (alternate names: Ajana, Uaiana, Alucuyana, Guaque, Ojana, Orcocoyana, Pirixi, Urukuena, Waiano etc.) are a Carib-speaking people located in the south-eastern part of the Guiana highlands, a region divided between Brazil, Surinam, and French Guiana. In 1980, when the last census took place, the Wayana numbered some 1,500 individuals, of which 150 in Brazil, among the Apalai, 400 in Surinam, and 1,000 in French Guiana, along the Maroni River.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYUU</Tag>
@@ -5289,16 +5261,16 @@
 		<English>Culture (Xia)</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Tag>
+		<English>The Xia dynasty is the first dynasty in traditional Chinese history. It is described in ancient historical chronicles such as the Bamboo Annals, the Classic of History and the Records of the Grand Historian. According to tradition, the dynasty was established by the legendary Yu the Great after Shun, the last of the Five Emperors, gave his throne to him. The Xia was later succeeded by the Shang dynasty (1600-1046 BC). According to the traditional chronology based upon calculations by Liu Xin, the Xia ruled between 2205 and 1766 BC; according to the chronology based upon the Bamboo Annals, it ruled between 1989 and 1558 BC. The Xia-Shang-Zhou Chronology Project concluded that the Xia existed between 2070 and 1600 BC. The tradition of tracing Chinese political history from heroic early emperors to the Xia to succeeding dynasties comes from the idea of the Mandate of Heaven, in which only one legitimate dynasty can exist at any given time, and was promoted by the Confucian school in the Eastern Zhou period, later becoming the basic position of imperial historiography and ideology. Although the Xia is an important element in early Chinese history, reliable information on the history of China before 13th century BC can only come from archaeological evidence since China's first established written system on a durable medium, the oracle bone script, did not exist until then; however, no mention of the Xia, or the supposed conquest of the Xia by the Shang, is found in any oracle bones found to date. The first documentary reference to the Xia dates from more than a thousand years later. Thus, concrete existence for the Xia is unproven, despite efforts by Chinese archaeologists to link the Xia with Bronze Age Erlitou archaeological sites. The Xia dynasty is considered by many modern historians to be legendary.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI</Tag>
 		<English>Culture (Xianbei)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI_PEDIA</Tag>
-		<English>The Xianbei were proto-Mongols residing in what became today's eastern Mongolia, Inner Mongolia, and Northeast China. Chinese historical texts unequivocally state that the Xianbei were descendants of the Donghu, which used to be believed to represent the "Eastern Hu" based on the Chinese record. The Xianbei were a northern or northeastern Asian population according to modern Chinese and Russian anthropologists. </English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Tag>
-		<English>The Xia dynasty is the first dynasty in traditional Chinese history. It is described in ancient historical chronicles such as the Bamboo Annals, the Classic of History and the Records of the Grand Historian. According to tradition, the dynasty was established by the legendary Yu the Great after Shun, the last of the Five Emperors, gave his throne to him. The Xia was later succeeded by the Shang dynasty (1600-1046 BC). According to the traditional chronology based upon calculations by Liu Xin, the Xia ruled between 2205 and 1766 BC; according to the chronology based upon the Bamboo Annals, it ruled between 1989 and 1558 BC. The Xia-Shang-Zhou Chronology Project concluded that the Xia existed between 2070 and 1600 BC. The tradition of tracing Chinese political history from heroic early emperors to the Xia to succeeding dynasties comes from the idea of the Mandate of Heaven, in which only one legitimate dynasty can exist at any given time, and was promoted by the Confucian school in the Eastern Zhou period, later becoming the basic position of imperial historiography and ideology. Although the Xia is an important element in early Chinese history, reliable information on the history of China before 13th century BC can only come from archaeological evidence since China's first established written system on a durable medium, the oracle bone script, did not exist until then; however, no mention of the Xia, or the supposed conquest of the Xia by the Shang, is found in any oracle bones found to date. The first documentary reference to the Xia dates from more than a thousand years later. Thus, concrete existence for the Xia is unproven, despite efforts by Chinese archaeologists to link the Xia with Bronze Age Erlitou archaeological sites. The Xia dynasty is considered by many modern historians to be legendary.</English>
+		<English>The Xianbei were proto-Mongols residing in what became today's eastern Mongolia, Inner Mongolia, and Northeast China. Chinese historical texts unequivocally state that the Xianbei were descendants of the Donghu, which used to be believed to represent the "Eastern Hu" based on the Chinese record. The Xianbei were a northern or northeastern Asian population according to modern Chinese and Russian anthropologists.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIONGNU</Tag>
@@ -5318,8 +5290,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAGHAN_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Yaghan, also called Yagán, Yahgan, Yámana, Yamana or Tequenica, are one of the indigenous peoples of the Southern Cone, who are regarded as the southernmost peoples in the world. Their traditional territory includes the islands south of Isla Grande de Tierra del Fuego, extending their presence into Cape Horn. They have been there for more than 10,000 years. In the 19th century, they were known as Fuegians by the English-speaking world, but the term is now avoided as it can refer to any of the several indigenous peoples of Tierra del Fuego. (For instance, the Selk'nam inhabited the northeastern part of Tierra del Fuego.) Some are reputed to still speak the Yaghan language (also known as Yámana), which is considered to be a language isolate; however, most speak Spanish. As of 2017, Cristina Calderón, who lives in Chile territory, is known as the last full-blooded Yaghan and last native speaker of the Yaghan language. The Yaghan were traditionally nomads and hunter-gatherers. They traveled by canoes between islands to collect food: the men hunted sea lions, while the women dove to collect shellfish. Yaghans share a series of similarities with the more northern tribes of Chonos and Alacalufe. These are a traditional canoe-faring hunter-gatherers lifestyle as well as shared physical traits such as being of short stature, being long-headed (Dolichocephalic) and having a "low face". Despite similarities, their languages were completely different.</English>
 		<Polish>Jaganie - najliczniejsze plemię Indian Ziemi Ognistej. Spędzali większość życia w łodziach, polując na wydry morskie i foki, a także łowiąc kraby. Poszukiwali również wyrzuconych na brzeg morski wielorybów. Posługiwali sięjęzykiem jagańskim, który obecnie jest na skraju wymarcia, z tylko jednym pozostałym przy życiu użytkowniku. Ponieważ jest on ostatnim żyjącym Jaganem czystej krwi, podaje się, że cała populacja ludu to obecnie jedna osoba. W 2000 roku chilijska komisja do spraw rdzennych ludów oszacowała populację Jaganów na 90-100 osób.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5353,8 +5324,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YANOMAMI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Yanomami, also spelled Yąnomamö or Yanomama, are a group of approximately 35,000 indigenous people who live in some 200–250 villages in the Amazon rainforest on the border between Venezuela and Brazil. The ethnonym Yanomami was produced by anthropologists on the basis of the word yanõmami, which, in the expression yanõmami thëpë, signifies "human beings." This expression is opposed to the categories yaro (game animals) and yai (invisible or nameless beings), but also napë (enemy, stranger, non-Indian).</English>
 		<Polish>Janomamowie - plemię indiańskie Ameryki Południowej, zamieszkujące Brazylię i Wenezuelę. Liczebność plemienia szacuje się na 20 tysięcy osób. Mniej więcej połowa spośród nich egzystuje na obrzeżach osiedli i misji religijnych, pozostali żyją w ok. 400 skupiskach w dżungli. Język Yanomami różni się od pozostałych narzeczy Amazonii. Istnieją przypuszczenia, że Yanomami mogą być potomkami pierwszych mieszkańców Ameryki Południowej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5365,8 +5335,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YEMENI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>Yemenis are mainly of Arab ethnicity. When the former states of North and South Yemen were established, most resident minority groups departed. Yemen is still a largely tribal society.</English>
 		<Polish>Na terenie dzisiejszego Jemenu istniały w starożytności państwa minejskie (XII-VII wiek p.n.e.) oraz Królestwo Saba (X/IX-II wiek p.n.e.). W II wieku p.n.e. północnym Jemenem zaczęli władać Himjaryci, a w 525 n.e. zdobyli te terytoria Abisyńczycy. W 575 n.e. tereny te zostały przyłączone do Persji. Południowy Jemen został opanowany w I wieku p.n.e. przez Rzymian, a w IV wieku n.e. wszedł w skład imperium perskiego. W VII wieku całe terytorium Jemenu zostało opanowane przez Arabów. Od XVI wieku Jemen wchodził w skład imperium osmańskiego. Północny Jemen uzyskał niepodległość od Turcji w 1918 (jako monarchia, a od 1962 - Jemeńska Republika Arabska ze stolicą w Sanie).</Polish>
 	</TEXT>
 	<TEXT>
@@ -5450,8 +5419,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZUNI_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
+		<English>The Zuni are Native American Pueblo peoples native to the Zuni River valley. The current day Zuni are a Federally recognized tribe and most live in the Pueblo of Zuni on the Zuni River, a tributary of the Little Colorado River, in western New Mexico, United States.</English>
 		<Polish>Zuni - plemię z grupy Pueblo Indian Ameryki Północnej. Większość Zuni zamieszkuje wioskę (pueblo) w stanie Nowy Meksyk w USA. Jedno z niewielu plemion amerykańskich, które nigdy nie zostały zmuszone do zmiany miejsca zamieszkania.</Polish>
 	</TEXT>
 </Civ4GameText>

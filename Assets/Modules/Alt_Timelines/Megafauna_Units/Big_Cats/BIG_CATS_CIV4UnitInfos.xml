@@ -1,10 +1,7 @@
 <?xml version="1.0"?>
-<!-- Created with Notepad by strategyonly -->
-<!-- Assets\Modules\Alt_Timelines\MegaFauna\Big_Cats\BIG_CATS_CIV4UnitInfos.xml -->
-<!-- ###################################################################################### -->
+<!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-<!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 		<UnitInfo>
 			<Type>UNIT_TRAINEDCAT</Type>
 			<EnabledCivilizationTypes>
@@ -101,6 +98,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>92</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -128,7 +126,6 @@
 			<iUnnerve>5</iUnnerve>
 			<iLunge>10</iLunge>
 			<iDynamicDefense>5</iDynamicDefense>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<UnitMeshGroups>
@@ -144,7 +141,6 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-		<!-- War Cat -->
 		<UnitInfo>
 			<Type>UNIT_WARCAT</Type>
 			<MapCategoryTypes>
@@ -158,7 +154,6 @@
 			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WARCAT_STRATEGY</Strategy>
-			<!-- Basis -->
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -181,7 +176,6 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<!-- Traits -->
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -215,7 +209,6 @@
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bNoNonOwnedCityEntry>1</bNoNonOwnedCityEntry>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -228,11 +221,9 @@
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARDCAT</UnitType>
 			</UnitUpgrades>
-			<!-- Acquisition -->
 			<iCost>216</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -240,7 +231,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main -->
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
@@ -268,8 +259,6 @@
 					<iFlankingStrengthbyUnitCombat>50</iFlankingStrengthbyUnitCombat>
 				</FlankingStrikebyUnitCombat>
 			</FlankingStrikesbyUnitCombat>
-			<!-- Special -->
-			<iExtraCost>2</iExtraCost>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -279,7 +268,6 @@
 					<iIntensity>3</iIntensity>
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
-			<!-- Other -->
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
@@ -396,6 +384,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>425</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -424,7 +413,6 @@
 			<iLunge>30</iLunge>
 			<iDynamicDefense>15</iDynamicDefense>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
-			<iExtraCost>3</iExtraCost>
 			<iAsset>7</iAsset>
 			<iPower>18</iPower>
 			<UnitMeshGroups>
@@ -550,6 +538,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>800</iCost>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>36</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -583,7 +572,6 @@
 			<iDynamicDefense>20</iDynamicDefense>
 			<iCaptureProbabilityModifier>10</iCaptureProbabilityModifier>
 			<iInvestigation>15</iInvestigation>
-			<iExtraCost>4</iExtraCost>
 			<iAsset>9</iAsset>
 			<iPower>28</iPower>
 			<UnitMeshGroups>
@@ -731,6 +719,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>5300</iCost>
+			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>160</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -764,7 +753,6 @@
 			<iDynamicDefense>25</iDynamicDefense>
 			<iCaptureProbabilityModifier>15</iCaptureProbabilityModifier>
 			<iInvestigation>30</iInvestigation>
-			<iExtraCost>6</iExtraCost>
 			<iAsset>22</iAsset>
 			<iPower>85</iPower>
 			<UnitMeshGroups>

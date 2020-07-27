@@ -126,7 +126,6 @@ class WBTechScreen:
 			iconSize = 24
 		nCol = xRes / 368
 		wCol = (xRes-24) / nCol
-		hCol = iconSize
 		h1 = iconSize + 6
 		h2 = iconSize + 2
 		font = self.aFontList[3]
@@ -232,6 +231,8 @@ class WBTechScreen:
 				self.exit(screen)
 				return 1
 			return 0
+		elif iCode in (16, 17):
+			return 0
 
 		szSplit = NAME.split("|")
 		BASE = szSplit[0]
@@ -304,20 +305,25 @@ class WBTechScreen:
 			elif NAME == "CurrentPage":
 				iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 				if iIndex == 0:
+					self.exit(screen)
 					import WBPlayerScreen
-					WBPlayerScreen.WBPlayerScreen().interfaceScreen(self.pTeam.getLeaderID())
+					WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(self.pTeam.getLeaderID())
 				elif iIndex == 1:
+					self.exit(screen)
 					import WBTeamScreen
-					WBTeamScreen.WBTeamScreen().interfaceScreen(self.WB.m_iCurrentTeam)
+					WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(self.WB.m_iCurrentTeam)
 				elif iIndex == 2:
+					self.exit(screen)
 					import WBProjectScreen
-					WBProjectScreen.WBProjectScreen().interfaceScreen(self.WB.m_iCurrentTeam)
+					WBProjectScreen.WBProjectScreen(self.WB).interfaceScreen(self.WB.m_iCurrentTeam)
 				elif iIndex == 4:
+					self.exit(screen)
 					import WBPlayerUnits
-					WBPlayerUnits.WBPlayerUnits().interfaceScreen(self.pTeam.getLeaderID())
+					WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(self.pTeam.getLeaderID())
 				elif iIndex == 11:
+					self.exit(screen)
 					import WBInfoScreen
-					WBInfoScreen.WBInfoScreen().interfaceScreen(self.pTeam.getLeaderID())
+					WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(self.pTeam.getLeaderID())
 		return 1
 
 

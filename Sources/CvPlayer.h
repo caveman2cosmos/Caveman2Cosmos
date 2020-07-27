@@ -318,16 +318,13 @@ public:
 	int calculateTotalCityUnhealthiness() const; // Exposed to Python
 
 	int calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const;
-	int calculateUnitCost() const; // Exposed to Python
+
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const; // Exposed to Python
 	int calculateUnitSupply() const; // Exposed to Python
 	int calculatePreInflatedCosts() const; // Exposed to Python
 	int calculateInflationRate() const; // Exposed to Python
 	int calculateInflatedCosts() const; // Exposed to Python
 	int getCurrentInflationPerTurnTimes10000() const;
-
-	int getFreeUnitCountdown() const;
-	void setFreeUnitCountdown(int iValue);
 
 	int calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const; // Exposed to Python
@@ -574,35 +571,38 @@ public:
 	int getNumOutsideUnits() const; // Exposed to Python
 	void changeNumOutsideUnits(int iChange);
 
-	int getBaseFreeUnits() const; // Exposed to Python
-	void changeBaseFreeUnits(int iChange);
-
-	int getBaseFreeMilitaryUnits() const; // Exposed to Python
-	void changeBaseFreeMilitaryUnits(int iChange);
-
-	int getFreeUnitsPopulationPercent() const; // Exposed to Python
-	void changeFreeUnitsPopulationPercent(int iChange);
-
-	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
-	void changeFreeMilitaryUnitsPopulationPercent(int iChange);
+	int getBaseFreeUnitUpkeepCivilian() const;
+	int getBaseFreeUnitUpkeepMilitary() const;
+	void changeBaseFreeUnitUpkeepCivilian(const int iChange);
+	void changeBaseFreeUnitUpkeepMilitary(const int iChange);
+	int getFreeUnitUpkeepCivilianPopPercent() const;
+	int getFreeUnitUpkeepMilitaryPopPercent() const;
+	void changeFreeUnitUpkeepCivilianPopPercent(const int iChange);
+	void changeFreeUnitUpkeepMilitaryPopPercent(const int iChange);
+	int getFreeUnitUpkeepCivilian() const;
+	int getFreeUnitUpkeepMilitary() const;
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
-	int getGoldPerUnit() const; // Exposed to Python
-	void changeGoldPerUnit(int iChange);
+	int getCivilianUnitUpkeepMod() const;
+	int getMilitaryUnitUpkeepMod() const;
+	void changeCivilianUnitUpkeepMod(const int iChange);
+	void changeMilitaryUnitUpkeepMod(const int iChange);
+	void changeUnitUpkeep(const int iChange, const bool bMilitary);
+	void applyUnitUpkeepHandicap(unsigned long& iUpkeep);
 
-	int getGoldPerMilitaryUnit() const; // Exposed to Python
-	void changeGoldPerMilitaryUnit(int iChange);
-
-	int getExtraUnitCost() const; // Exposed to Python
-	void changeExtraUnitCost(int iChange);
+	unsigned long getUnitUpkeepCivilian100() const;
+	unsigned long getUnitUpkeepCivilian() const;
+	unsigned long getUnitUpkeepCivilianNet() const;
+	unsigned long getUnitUpkeepMilitary100() const;
+	unsigned long getUnitUpkeepMilitary() const;
+	unsigned long getUnitUpkeepMilitaryNet() const;
+	unsigned long calcFinalUnitUpkeep(const bool bReal=true);
+	unsigned long getFinalUnitUpkeep() const;
+	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
-
-	int getUnitPercentCountForCostAdjustment() const; // Exposed to Python
-	void changeUnitPercentCountForCostAdjustment(int iChange);
-	int getUnitCountForCostAdjustmentTotal() const;
 
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 
@@ -1736,9 +1736,9 @@ public:
 	virtual int AI_getNumAIUnits(UnitAITypes eIndex) const = 0; // Exposed to Python
 	virtual void AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange) = 0;
 	virtual void AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange) = 0;
-	virtual int AI_getAttitudeExtra(PlayerTypes eIndex) const = 0; // Exposed to Python
-	virtual void AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue) = 0; // Exposed to Python
-	virtual void AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange) = 0; // Exposed to Python
+	virtual int AI_getAttitudeExtra(const PlayerTypes ePlayer) const = 0; // Exposed to Python
+	virtual void AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue) = 0; // Exposed to Python
+	virtual void AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange) = 0; // Exposed to Python
 	virtual void AI_setFirstContact(PlayerTypes eIndex, bool bNewValue) = 0;
 	virtual int AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const = 0;
 	virtual void AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange) = 0;
@@ -1809,15 +1809,18 @@ protected:
 
 	int m_iNumNukeUnits;
 	int m_iNumOutsideUnits;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
-	int m_iExtraUnitCost;
+	int m_iBaseFreeUnitUpkeepCivilian;
+	int m_iBaseFreeUnitUpkeepMilitary;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
+	int m_iCivilianUnitUpkeepMod;
+	int m_iMilitaryUnitUpkeepMod;
+
+	unsigned long m_iUnitUpkeepMilitary100;
+	unsigned long m_iUnitUpkeepCivilian100;
+	unsigned long m_iFinalUnitUpkeep;
+
 	int m_iNumMilitaryUnits;
-	int m_iNumUnitPercentCountForCostAdjustment;
 	int m_iHappyPerMilitaryUnit;
 	int m_iMilitaryFoodProductionCount;
 	int m_iConscriptCount;
@@ -1892,8 +1895,6 @@ protected:
 	bool m_bHuman;
 
 	bool m_bDisableHuman; // Set to true to disable isHuman() check
-
-	int m_iFreeUnitCountdown;
 
 	int m_iStabilityIndex;
 	int m_iStabilityIndexAverage;
@@ -2129,8 +2130,8 @@ public:
 	void changeTraitExtraCityDefense(int iChange);
 
 	void setHasTrait(TraitTypes eIndex, bool bNewValue);
-	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false);
-	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive);
+	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false) const;
+	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive) const;
 
 	int getLeaderHeadLevel() const;
 	void setLeaderHeadLevel(int iValue);

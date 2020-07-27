@@ -274,7 +274,7 @@ public:
 // BUG - Finance Advisor - end
 
 	void buildFinanceInflationString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceUnitCostString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
+	void buildFinanceUnitUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceAwaySupplyString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceCityMaintString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceCivicUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);

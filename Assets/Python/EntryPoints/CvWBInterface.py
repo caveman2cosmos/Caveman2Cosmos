@@ -3,7 +3,6 @@ Interface for reading and writing scenario files.
 Functions are sorted in the order they are typically called.
 '''
 from CvPythonExtensions import *
-import CvWBPopups
 import CvWBDesc
 
 WBDesc = CvWBDesc.CvWBDesc()
@@ -160,8 +159,3 @@ def getMapDescriptionKey():
 def isRandomMap():
 	print "IF isRandomMap"
 	return 0
-
-# Called from the Worldbuilder app - sends to CvWBPopups for handling
-def initWBEditor(argsList):
-	print "IF initWBEditor"
-	return CvWBPopups.CvWBPopups().initWB(argsList)

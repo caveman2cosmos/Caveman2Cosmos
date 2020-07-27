@@ -8,8 +8,7 @@ import WBEventScreen
 import WBPlayerUnits
 import WBInfoScreen
 import WorldBuilder
-import CvScreensInterface
-import CvEventManager
+
 GC = CyGlobalContext()
 
 bApplyAll = False
@@ -21,7 +20,8 @@ iSelectedClass = -2
 
 class WBPromotionScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 		import CvEventInterface
 		self.eventManager = CvEventInterface.getEventManager()
@@ -206,19 +206,19 @@ class WBPromotionScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnit)
+				WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
 			elif iIndex == 2:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(pUnit.getOwner())
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pUnit.getOwner())
 			elif iIndex == 3:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pUnit.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pUnit.getTeam())
 			elif iIndex == 4:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pPlot)
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 5:
-				WBEventScreen.WBEventScreen().interfaceScreen(pPlot)
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 6:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(pUnit.getOwner())
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(pUnit.getOwner())
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(pUnit.getOwner())
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(pUnit.getOwner())
 
 		elif inputClass.getFunctionName() == "ChangeType":
 			iChangeType = screen.getPullDownData("ChangeType", screen.getSelectedPullDownID("ChangeType"))

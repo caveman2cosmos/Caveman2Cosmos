@@ -6216,7 +6216,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		changeMapTradingCount(iChange);
 	}
 
-	CvTechInfo& kTech = GC.getTechInfo(eTech);
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	if (kTech.isCanPassPeaks())
 	{
 		changeCanPassPeaksCount(iChange);

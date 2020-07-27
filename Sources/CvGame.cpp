@@ -185,7 +185,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	//AlbertS2 set hidden options to their default setting
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
+		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
 		{
 			setOption((GameOptionTypes)iI, kGameOption.getDefault());
@@ -4501,7 +4501,10 @@ void CvGame::setCircumnavigatedTeam(TeamTypes eTeam)
 	}
 	m_circumnavigatingTeam = eTeam;
 
-	GET_TEAM(eTeam).setCircumnavigated(true);
+	if (m_circumnavigatingTeam != NO_TEAM)
+	{
+		GET_TEAM(eTeam).setCircumnavigated(true);
+	}
 }
 
 bool CvGame::circumnavigationAvailable() const
@@ -10261,7 +10264,7 @@ void CvGame::doUpdateCacheOnTurn()
 	{
 		if (isVictoryValid((VictoryTypes) iI))
 		{
-			CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
+			const CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
 			if (kVictoryInfo.getCityCulture() > 0)
 			{
 				int iNumCultureCities = kVictoryInfo.getNumCultureCities();

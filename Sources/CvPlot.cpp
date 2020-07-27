@@ -854,7 +854,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
-		if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 		{
 			iHash *= -2;
 			iHash += eMainUpgrade;
@@ -868,7 +869,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		if (canHaveImprovement(eUpgradeX, eTeam, false, true))
 		{
 			eUpgrade = eUpgradeX;
-			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 			{
 				iHash *= -2;
 				iHash += eUpgradeX;
@@ -935,7 +937,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
-			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true))
+			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -948,7 +951,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			{
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true))
+				// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
+				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)
@@ -1210,9 +1214,9 @@ CvUnit* CvPlot::getPreferredCenterUnit() const
 {
 	CvUnit*  pNewCenterUnit = getSelectedUnit();
 
-	FAssertMsg(pNewCenterUnit == NULL || pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
 	if (pNewCenterUnit != NULL)
 	{
+		FAssertMsg(pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
@@ -1249,7 +1253,7 @@ void CvPlot::updateCenterUnit()
 		//	(rather than have it update multiple times) the currently cached center unit
 		//	might become an invalid pointer in the interim.  To protect against this we unconditionally
 		//	set the recorded center unit to NULL (without marking the plot dirty which would force a repaint).
-		//	This makes the interim safe state, and the correct value will be calculated once the
+		//	This makes the interim a safe state, and the correct value will be calculated once the
 		//	inhibitted section is exited
 		m_pCenterUnit = NULL;
 		return;
@@ -1258,7 +1262,7 @@ void CvPlot::updateCenterUnit()
 	CvUnit* pOldCenterUnit = getCenterUnit();
 	CvUnit* pNewCenterUnit = NULL;
 
-	if(isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
+	if (isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
 	{
 		pNewCenterUnit = getPreferredCenterUnit();
 	}
@@ -3570,8 +3574,8 @@ namespace {
 				)
 			)
 		{
-			iValue = pAttacker ? pLoopUnit->defenderValue(pAttacker) : 0;
-			iValue += (pLoopUnit->tauntTotal() * iValue) / 100;
+			iValue = pLoopUnit->defenderValue(pAttacker);
+			iValue += pLoopUnit->tauntTotal() * iValue / 100;
 			// It should be greater than 0 as this target is at least valid as per the checks above
 			iValue = std::max(1, iValue);
 		}
@@ -7665,6 +7669,10 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 
 	if (eOldImprovement != eNewImprovement)
 	{
+		/* Toffer - This is the wrong place to have this upgrade cost.
+		// e.g. Workers building a farm on a seed camp would get charged both when they start the build and here again when they finish the build because seed camp has farm as an upgrade.
+		// Should be in an intermediate function that calls this function, an intermediate only the imp upg code calls.
+		// This issue was noticed when this happened on an unowned plot, and GET_PLAYER(getOwner()).changeGold() failed.
 		if (eOldImprovement != NO_IMPROVEMENT && eNewImprovement != NO_IMPROVEMENT)
 		{
 			//Charge for Upgrade but be careful not to charge for a downgrade (pillage).
@@ -7684,6 +7692,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				}
 			}
 		}
+		*/
 		if (eOldImprovement != NO_IMPROVEMENT)
 		{
 			if (area())
@@ -12834,7 +12843,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 	int iExtraYieldThreshold = 0;
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
 	{
-		CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
+		const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
 		iExtraYieldThreshold  = std::max(trait.getExtraYieldThreshold(eYield), iExtraYieldThreshold);
 	}
 	if (iExtraYieldThreshold > 0 && iMaxYield > iExtraYieldThreshold)

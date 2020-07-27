@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MEIJI_1</Tag>
-		<English>Finally we meet [CT_NAME], I have been awaiting your arrival.  I am Meiji of Japan.  Come, we have much to discuss.  You have very nice dress, and I am impressed by your armies.  Please, show me your ways and I shall show you the wonders of Japan...</English>
+		<English>Finally we meet [CT_NAME], I have been awaiting your arrival. I am Meiji of Japan. Come, we have much to discuss. You have very nice dress, and I am impressed by your armies. Please, show me your ways and I shall show you the wonders of Japan...</English>
 		<French>Enfin nous rencontrons [CT_NAME], j'ai attendu votre arrivée. Je suis Meiji du Japon. Venez, nous avons beaucoup à discuter. Vous avez très belle robe, et je suis impressionné par vos armées. S'il vous plaît, montrez-moi vos secrets, et je vous montrerai les merveilles du Japon...</French>
 		<Polish>Nareszcie się spotkaliśmy [CT_NAME], czekałem na Twoje przybycie. Jestem Meiji z Japonii. Chodź, mamy wiele do przedyskutowania.</Polish>
 	</TEXT>
