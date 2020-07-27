@@ -8844,10 +8844,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				const int iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
+				const long long iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
 				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				int iUnitCostPercentage = (iUnitUpkeep * 100) / std::max(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %d (%d / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+				long long iUnitCostPercentage = iUnitUpkeep * 100 / std::max(1, iTotalCosts);
+				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%llu / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -32796,22 +32796,21 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 
 	// Civilian section
-	unsigned long iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
+	const long long iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN", CvWString::format(L"%.2f", iUpkeepCivilian100 / 100.0).GetCString()));
 
 	if (iCivicModCivilian != 0)
 	{
-		int iCivicCivilian = 0;
+		long long iCivicCivilian = 0;
 		if (iCivicModCivilian > 0)
 		{
-			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100;
+			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100 - iUpkeepCivilian100;
 		}
 		else if (iCivicModCivilian < 0)
 		{
-			iCivicCivilian = iUpkeepCivilian100 * 100 / (100 - iCivicModCivilian);
+			iCivicCivilian = iUpkeepCivilian100 * 100 / (100 - iCivicModCivilian) - iUpkeepCivilian100;
 		}
-		iCivicCivilian -= iUpkeepCivilian100;
 
 		if (iCivicCivilian != 0)
 		{
@@ -32820,16 +32819,15 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModCivilian != 0)
 	{
-		int iTraitCivilian = 0;
+		long long iTraitCivilian = 0;
 		if (iTraitModCivilian > 0)
 		{
-			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100;
+			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100 - iUpkeepCivilian100;
 		}
 		else if (iTraitModCivilian < 0)
 		{
-			iTraitCivilian = iUpkeepCivilian100 * 100 / (100 - iTraitModCivilian);
+			iTraitCivilian = iUpkeepCivilian100 * 100 / (100 - iTraitModCivilian) - iUpkeepCivilian100;
 		}
-		iTraitCivilian -= iUpkeepCivilian100;
 
 		if (iTraitCivilian != 0)
 		{
@@ -32838,28 +32836,27 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepCivilian()));
 
-	int iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	const long long iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUpkeepCivilianNet));
 
 	// Military section
 	szBuffer.append(NEWLINE);
-	unsigned long iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
+	const long long iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY", CvWString::format(L"%.2f", iUpkeepMilitary100 / 100.0).GetCString()));
 
 	if (iCivicModMilitary != 0)
 	{
-		int iCivicMilitary = 0;
+		long long iCivicMilitary = 0;
 		if (iCivicModMilitary > 0)
 		{
-			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100;
+			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100 - iUpkeepMilitary100;
 		}
 		else if (iCivicModMilitary < 0)
 		{
-			iCivicMilitary = iUpkeepMilitary100 * 100 / (100 - iCivicModMilitary);
+			iCivicMilitary = iUpkeepMilitary100 * 100 / (100 - iCivicModMilitary) - iUpkeepMilitary100;
 		}
-		iCivicMilitary -= iUpkeepMilitary100;
 
 		if (iCivicMilitary != 0)
 		{
@@ -32868,16 +32865,15 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModMilitary != 0)
 	{
-		int iTraitMilitary = 0;
+		long long iTraitMilitary = 0;
 		if (iTraitModMilitary > 0)
 		{
-			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100;
+			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100 - iUpkeepMilitary100;
 		}
 		else if (iTraitModMilitary < 0)
 		{
-			iTraitMilitary = iUpkeepMilitary100 * 100 / (100 - iTraitModMilitary);
+			iTraitMilitary = iUpkeepMilitary100 * 100 / (100 - iTraitModMilitary) - iUpkeepMilitary100;
 		}
-		iTraitMilitary -= iUpkeepMilitary100;
 
 		if (iTraitMilitary != 0)
 		{
@@ -32886,18 +32882,17 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepMilitary()));
 
-	int iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+	const long long iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUnitUpkeepMilitaryNet));
 
 	// End Section
-	const unsigned long iTotal = player.getFinalUnitUpkeep();
-	const long long iHandicap = iTotal - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
+	const long long iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 	if (iHandicap != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2", iTotal));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2", player.getFinalUnitUpkeep()));
 }
 
 void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
