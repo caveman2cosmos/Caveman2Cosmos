@@ -20446,9 +20446,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		const PlayerTypes ePlayer = game.getActivePlayer();
-
-		int iDisplayCount = GET_PLAYER(ePlayer).getUnitCombatClassDisplayCount(eUnit);
+		const int iDisplayCount = game.getUnitCombatDetailDisplayCount(eUnit);
 		int iPotentialDisplays = 0;
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
@@ -20464,11 +20462,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					break;
 				}
 			}
-		}
-		if (iDisplayCount > iPotentialDisplays)
-		{
-			GET_PLAYER(ePlayer).setUnitCombatClassDisplayCount(eUnit, 0);
-			iDisplayCount = 0;
 		}
 
 		UnitCombatTypes eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
@@ -20498,7 +20491,18 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				}
 			}
 		}
-		GET_PLAYER(ePlayer).changeUnitCombatClassDisplayCount(eUnit, 1);
+		if (iDisplayCount == iPotentialDisplays)
+		{
+			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 0);
+		}
+		else if (iDisplayCount > iPotentialDisplays)
+		{
+			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 1);
+		}
+		else
+		{
+			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, iDisplayCount + 1);
+		}
 	}
 	else if (bTBUnitView3 || bCivilopediaText)
 	{

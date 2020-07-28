@@ -393,6 +393,7 @@ protected:
 	bool* m_abPreviousRequest;
 	int* m_aiModderGameOption;
 	int* m_aiFlexibleDifficultyTimer;
+	int* m_aiUnitCombatDetailDisplayCountByUnit;
 	int m_iRiverBuildings;
 	int m_iCoastalBuildings;
 	int m_iNumWonders;
@@ -937,6 +938,9 @@ public:
 	const CvProperties* getPropertiesConst() const;
 
 	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
+
+	int getUnitCombatDetailDisplayCount(const UnitTypes eUnit) const;
+	void setUnitCombatDetailDisplayCount(const UnitTypes eUnit, const int iValue);
 };
 
 #endif

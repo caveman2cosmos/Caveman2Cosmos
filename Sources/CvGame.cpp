@@ -67,6 +67,8 @@ CvGame::CvGame()
 	m_aiShrineBuilding = NULL;
 	m_aiShrineReligion = NULL;
 
+	m_aiUnitCombatDetailDisplayCountByUnit = NULL;
+
 	m_bRecalculatingModifiers = false;
 
 	reset(NO_HANDICAP, true);
@@ -86,6 +88,7 @@ CvGame::~CvGame()
 	SAFE_DELETE_ARRAY(m_abPreviousRequest);
 	SAFE_DELETE_ARRAY(m_aiModderGameOption);
 	SAFE_DELETE_ARRAY(m_aiFlexibleDifficultyTimer);
+	SAFE_DELETE_ARRAY(m_aiUnitCombatDetailDisplayCountByUnit);
 }
 
 namespace {
@@ -860,6 +863,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		m_aiFlexibleDifficultyTimer[iI] = 0;
 	}
 
+	const int iNumUnits = GC.getNumUnitInfos();
+
 	if (!bConstructorCall)
 	{
 		FAssertMsg(m_paiImprovementCount==NULL, "about to leak memory, CvGame::m_paiImprovementCount");
@@ -869,10 +874,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 			m_paiImprovementCount[iI] = 0;
 		}
 		FAssertMsg(m_paiUnitCreatedCount==NULL, "about to leak memory, CvGame::m_paiUnitCreatedCount");
-		m_paiUnitCreatedCount = new int[GC.getNumUnitInfos()];
-		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		m_paiUnitCreatedCount = new int[iNumUnits];
+		m_aiUnitCombatDetailDisplayCountByUnit = new int[iNumUnits];
+		for (iI = 0; iI < iNumUnits; iI++)
 		{
 			m_paiUnitCreatedCount[iI] = 0;
+			m_aiUnitCombatDetailDisplayCountByUnit[iI] = 0;
 		}
 		FAssertMsg(m_paiBuildingCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
 		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()];
@@ -937,11 +944,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 			m_paHolyCity[iI].reset();
 			m_abReligionSlotTaken[iI] = false;
 		}
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
+
 		FAssertMsg(m_abTechCanFoundReligion==NULL, "about to leak memory, CvGame::m_abTechCanFoundReligion");
 		m_abTechCanFoundReligion = new bool[GC.getNumTechInfos()];
 		FAssertMsg(m_paiTechGameTurnDiscovered==NULL, "about to leak memory, CvGame::m_abTechGameTurnDiscovered");
@@ -956,9 +959,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 			TechTypes eIndex = TechTypes(GC.getReligionInfo((ReligionTypes)iI).getTechPrereq());
 			m_abTechCanFoundReligion[eIndex] = true;
 		}
-/************************************************************************************************/
-/* LIMITED_RELIGIONS               END                                                          */
-/************************************************************************************************/
 
 		FAssertMsg(m_paiCorporationGameTurnFounded==NULL, "about to leak memory, CvGame::m_paiCorporationGameTurnFounded");
 		m_paiCorporationGameTurnFounded = new int[GC.getNumCorporationInfos()];
@@ -1021,7 +1021,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	}
 
 	//Establish Unit post load factors
-	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (iI = 0; iI < iNumUnits; iI++)
 	{
 		eUnit = (UnitTypes)iI;
 		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
@@ -13037,6 +13037,18 @@ bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 		}
 	}
 	return true;
+}
+
+int CvGame::getUnitCombatDetailDisplayCount(const UnitTypes eUnit) const
+{
+	FAssertMsg(eUnit >= 0, "eUnit expected to be >= 0");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit expected to be < GC.getNumUnitInfos()");
+	return m_aiUnitCombatDetailDisplayCountByUnit[eUnit];
+}
+
+void CvGame::setUnitCombatDetailDisplayCount(const UnitTypes eUnit, const int iValue)
+{
+	m_aiUnitCombatDetailDisplayCountByUnit[eUnit] = iValue;
 }
 
 int CvGame::SorenRand::operator()(const int maxVal) const

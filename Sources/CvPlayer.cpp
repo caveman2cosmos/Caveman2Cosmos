@@ -217,7 +217,7 @@ m_cachedBonusCount(NULL)
 	m_pabHasTrait = NULL;
 	m_aiLessYieldThreshold = new int[NUM_YIELD_TYPES];
 	m_paiNationalGreatPeopleUnitRate = NULL;
-	m_paiUnitCombatClassDisplayCount = NULL;
+
 	m_paiNationalDomainFreeExperience = NULL;
 	m_paiNationalDomainProductionModifier = NULL;
 	m_paiNationalTechResearchModifier = NULL;
@@ -718,7 +718,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiBuildWorkerSpeedModifierSpecific);
 	SAFE_DELETE_ARRAY(m_pabHasTrait);
 	SAFE_DELETE_ARRAY(m_paiNationalGreatPeopleUnitRate);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatClassDisplayCount);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
@@ -1426,15 +1425,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 		FAssertMsg((0 < GC.getNumUnitInfos()),  "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNationalGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
-		m_paiUnitCombatClassDisplayCount = new int[GC.getNumUnitInfos()];
-	//Team Project (6)
+
 		m_paiGoldenAgeOnBirthOfGreatPersonCount = new int[GC.getNumUnitInfos()];
 		m_paiGreatGeneralPointsForType = new int[GC.getNumUnitInfos()];
 		for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 		{
 			m_paiNationalGreatPeopleUnitRate[iI] = 0;
-			m_paiUnitCombatClassDisplayCount[iI] = 0;
-	//Team Project (6)
 			m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 			m_paiGreatGeneralPointsForType[iI] = 0;
 		}
@@ -22027,9 +22023,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eGreatGeneralTypetoAssign);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
+
 		// @SAVEBREAK DELETE Toffer - There is no reason to save this to file, it can reset to 0 every time you load a game
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_paiUnitCombatClassDisplayCount, SAVE_VALUE_ANY);
 		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotY);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -22766,9 +22764,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eGreatGeneralTypetoAssign);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
-		// @SAVEBREAK DELETE Toffer - There is no reason to save this to file, it can reset to 0 every time you load a game
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
-		// SAVEBREAK@
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotY);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -31070,8 +31066,6 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 	{
 		m_paiNationalGreatPeopleUnitRate[iI] = 0;
-		m_paiUnitCombatClassDisplayCount[iI] = 0;
-
 		m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 	}
 
@@ -32847,26 +32841,6 @@ void CvPlayer::setTraitDisplayCount(int iValue)
 void CvPlayer::changeTraitDisplayCount(int iChange)
 {
     setTraitDisplayCount(getTraitDisplayCount() + iChange);
-}
-
-int CvPlayer::getUnitCombatClassDisplayCount(UnitTypes eIndex) const
-{
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
-	return m_paiUnitCombatClassDisplayCount[eIndex];
-}
-
-void CvPlayer::setUnitCombatClassDisplayCount(UnitTypes eIndex, int iValue)
-{
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
-
-	m_paiUnitCombatClassDisplayCount[eIndex] = iValue;
-}
-
-void CvPlayer::changeUnitCombatClassDisplayCount(UnitTypes eIndex, int iChange)
-{
-	setUnitCombatClassDisplayCount(eIndex, (getUnitCombatClassDisplayCount(eIndex) + iChange));
 }
 
 int CvPlayer::getNationalEspionageDefense() const

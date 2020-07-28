@@ -1588,7 +1588,6 @@ protected:
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
 	int* m_paiNationalGreatPeopleUnitRate;
-	int* m_paiUnitCombatClassDisplayCount;
 	int m_iMaxTradeRoutesAdjustment;
 	int m_iNationalHurryAngerModifier;
 	int m_iNationalEnemyWarWearinessModifier;
@@ -2149,10 +2148,6 @@ public:
 	int getTraitDisplayCount() const;
 	void setTraitDisplayCount(int iNewValue);
 	void changeTraitDisplayCount(int iChange);
-
-	int getUnitCombatClassDisplayCount(UnitTypes eIndex) const;
-	void setUnitCombatClassDisplayCount(UnitTypes eIndex, int iValue);
-	void changeUnitCombatClassDisplayCount(UnitTypes eIndex, int iChange);
 
 	int getNationalEspionageDefense() const;
 	void setNationalEspionageDefense(int iNewValue);
