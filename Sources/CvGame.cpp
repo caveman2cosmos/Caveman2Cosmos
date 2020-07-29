@@ -67,8 +67,6 @@ CvGame::CvGame()
 	m_aiShrineBuilding = NULL;
 	m_aiShrineReligion = NULL;
 
-	m_aiUnitCombatDetailDisplayCountByUnit = NULL;
-
 	m_bRecalculatingModifiers = false;
 
 	reset(NO_HANDICAP, true);
@@ -88,7 +86,6 @@ CvGame::~CvGame()
 	SAFE_DELETE_ARRAY(m_abPreviousRequest);
 	SAFE_DELETE_ARRAY(m_aiModderGameOption);
 	SAFE_DELETE_ARRAY(m_aiFlexibleDifficultyTimer);
-	SAFE_DELETE_ARRAY(m_aiUnitCombatDetailDisplayCountByUnit);
 }
 
 namespace {
@@ -875,11 +872,9 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		}
 		FAssertMsg(m_paiUnitCreatedCount==NULL, "about to leak memory, CvGame::m_paiUnitCreatedCount");
 		m_paiUnitCreatedCount = new int[iNumUnits];
-		m_aiUnitCombatDetailDisplayCountByUnit = new int[iNumUnits];
 		for (iI = 0; iI < iNumUnits; iI++)
 		{
 			m_paiUnitCreatedCount[iI] = 0;
-			m_aiUnitCombatDetailDisplayCountByUnit[iI] = 0;
 		}
 		FAssertMsg(m_paiBuildingCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
 		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()];
@@ -13037,18 +13032,6 @@ bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 		}
 	}
 	return true;
-}
-
-int CvGame::getUnitCombatDetailDisplayCount(const UnitTypes eUnit) const
-{
-	FAssertMsg(eUnit >= 0, "eUnit expected to be >= 0");
-	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit expected to be < GC.getNumUnitInfos()");
-	return m_aiUnitCombatDetailDisplayCountByUnit[eUnit];
-}
-
-void CvGame::setUnitCombatDetailDisplayCount(const UnitTypes eUnit, const int iValue)
-{
-	m_aiUnitCombatDetailDisplayCountByUnit[eUnit] = iValue;
 }
 
 int CvGame::SorenRand::operator()(const int maxVal) const
