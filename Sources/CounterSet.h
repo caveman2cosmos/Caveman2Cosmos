@@ -1,11 +1,10 @@
 #pragma once
-// Toffer - Simple set of counters
+// CounterSet.h
 #ifndef COUNTER_SET_H
 #define COUNTER_SET_H
 
 class CounterSet
 {
-  private:
 	int iNext;
 	int iSize;
 	int* iArrCounters;

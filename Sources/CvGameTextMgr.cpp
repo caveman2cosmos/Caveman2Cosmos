@@ -72,10 +72,7 @@ CvGameTextMgr& CvGameTextMgr::GetInstance()
 //	PURPOSE:	Constructor
 //
 //----------------------------------------------------------------------------
-CvGameTextMgr::CvGameTextMgr()
-	:
-	inspectUnitCombatCounters(NULL)
-{ }
+CvGameTextMgr::CvGameTextMgr() : inspectUnitCombatCounters(NULL) { }
 
 CvGameTextMgr::~CvGameTextMgr() { }
 
@@ -88,7 +85,7 @@ CvGameTextMgr::~CvGameTextMgr() { }
 //----------------------------------------------------------------------------
 void CvGameTextMgr::Initialize()
 {
-	inspectUnitCombatCounters = new CounterSet(4); // 4 may be too much restraint?
+	inspectUnitCombatCounters = new CounterSet();
 }
 
 //----------------------------------------------------------------------------
