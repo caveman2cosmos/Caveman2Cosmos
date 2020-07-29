@@ -32917,17 +32917,22 @@ bool CvUnit::isCommander() const
 
 void CvUnit::setCommander(bool bNewVal)
 {
+	if (m_bCommander == bNewVal) return;
+
 	m_bCommander = bNewVal;
-	if (isCommander())
+
+	if (bNewVal)
 	{
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 		m_iControlPointsLeft = controlPoints();
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
 		{
-			if (m_pUnitInfo->hasUnitCombat((UnitCombatTypes)iI) &&
-				GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase() > -10)
+			const UnitCombatTypes eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI);
+
+			if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
 			{
-				setHasUnitCombat((UnitCombatTypes)iI, false);
+				setHasUnitCombat(eUnitCombat, false);
 			}
 		}
 	}
@@ -44607,41 +44612,54 @@ void CvUnit::defineReligion()
 	{
 		if (m_eReligionType == NO_RELIGION)
 		{
+			UnitCombatTypes eUnitCombat;
+
+			for (int iI = -1; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
+			{
+				if (iI > -1)
+				{
+					eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI);
+				}
+				else
+				{
+					eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getUnitCombatType();
+
+					if (eUnitCombat == NO_UNITCOMBAT) continue;
+				}
+				const ReligionTypes eOriginalCombatReligion = GC.getUnitCombatInfo(eUnitCombat).getReligion();
+
+				if (eOriginalCombatReligion != NO_RELIGION)
+				{
+					m_eReligionType = eOriginalCombatReligion;
+					m_bIsReligionLocked = true;
+					break;
+				}
+			}
+		}
+		if (m_eReligionType == NO_RELIGION)
+		{
+			//if not locked by innate type, after changes in unitcombat process function we'll call this function IF the unitcombat has a religion.
+			//This function is also called if the state religion changes so if we find a unit combat has defined m_eReligionType then we'll not bother with switching to the state religion so check here first
+			bool bFound = false;
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				if (m_pUnitInfo->hasUnitCombat((UnitCombatTypes)iI))
+				if (isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					const ReligionTypes eOriginalCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
-					if (eOriginalCombatReligion != NO_RELIGION)
+					const ReligionTypes eUnitCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
+					if (eUnitCombatReligion != NO_RELIGION)
 					{
-						m_eReligionType = eOriginalCombatReligion;
-						m_bIsReligionLocked = true;
-						break;
+						m_eReligionType = eUnitCombatReligion; //Let's assume there's only going to be one of these on a unit ever - it only ever comes up if the unit isn't locked with a pre-defined one anyhow
+						//and unitcombats that assign a religion should be rare to assign unless we are more advanced into the Ideas project where the city will assign its religion type to all units that it produces.
+						//There could be promos that assign overriding religious types but we'll cross that bridge when we get there.
+						bFound = true;
+						break;//thus we stop at the first one we find
 					}
 				}
 			}
-		}
-		//if not locked by innate type, after changes in unitcombat process function we'll call this function IF the unitcombat has a religion.
-		//This function is also called if the state religion changes so if we find a unit combat has defined m_eReligionType then we'll not bother with switching to the state religion so check here first
-		bool bFound = false;
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (isHasUnitCombat((UnitCombatTypes)iI))
+			if (!bFound)
 			{
-				const ReligionTypes eUnitCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
-				if (eUnitCombatReligion != NO_RELIGION)
-				{
-					m_eReligionType = eUnitCombatReligion; //Let's assume there's only going to be one of these on a unit ever - it only ever comes up if the unit isn't locked with a pre-defined one anyhow
-					//and unitcombats that assign a religion should be rare to assign unless we are more advanced into the Ideas project where the city will assign its religion type to all units that it produces.
-					//There could be promos that assign overriding religious types but we'll cross that bridge when we get there.
-					bFound = true;
-					break;//thus we stop at the first one we find
-				}
+				m_eReligionType = GET_PLAYER(getOwner()).getStateReligion();//NO_RELIGION is a perfectly satisfactory answer here.
 			}
-		}
-		if (!bFound)
-		{
-			m_eReligionType = GET_PLAYER(getOwner()).getStateReligion();//NO_RELIGION is a perfectly satisfactory answer here.
 		}
 	}
 	//else do nothing - if the religion is locked we're done here.

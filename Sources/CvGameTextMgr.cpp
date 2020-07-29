@@ -20154,26 +20154,34 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					iTotalXPBonus += iExperience;
 				}
 
-				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				UnitCombatTypes eCombat;
+				for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					if (kUnit.hasUnitCombat(eCombat))
+					if (iI > -1)
 					{
-						iExperience = pCity->getUnitCombatFreeExperience(eCombat);
-						if (iExperience != 0)
+						eCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+					}
+					else
+					{
+						eCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+						if (eCombat == NO_UNITCOMBAT) continue;
+					}
+					iExperience = pCity->getUnitCombatFreeExperience(eCombat);
+					if (iExperience != 0)
+					{
+						if (bFirst)
 						{
-							if (bFirst)
-							{
-								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
-							}
-							bFirst = false;
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
-							iTotalXPBonus += iExperience;
+							szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
 						}
+						bFirst = false;
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
+						iTotalXPBonus += iExperience;
 					}
 				}
+
 				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
@@ -20460,31 +20468,32 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				}
 			}
 		}
-
-		UnitCombatTypes eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
-
-		if (eUnitCombat != NO_UNITCOMBAT)
+		UnitCombatTypes eUnitCombat;
+		int iCount = 0;
+		for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 		{
-			int iCurrentDisplay = 0;
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes() + 1; iI++)
+			if (iI > -1)
 			{
-				if (iI > 0)
+				eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+			}
+			else
+			{
+				eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+				if (eUnitCombat == NO_UNITCOMBAT) continue;
+			}
+			if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+			{
+				if (++iCount == iDisplayCount)
 				{
-					eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI-1);
+					szBuffer.append(DOUBLE_SEPARATOR);
+					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
+					szBuffer.append(DOUBLE_SEPARATOR);
 				}
-				if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+				else
 				{
-					if (++iCurrentDisplay == iDisplayCount)
-					{
-						szBuffer.append(DOUBLE_SEPARATOR);
-						setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
-						szBuffer.append(DOUBLE_SEPARATOR);
-					}
-					else
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
 				}
 			}
 		}
