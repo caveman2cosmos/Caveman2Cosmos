@@ -657,7 +657,7 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-unsigned long CyPlayer::getFinalUnitUpkeep()
+long long CyPlayer::getFinalUnitUpkeep()
 {
 	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }

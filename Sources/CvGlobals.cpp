@@ -2,8 +2,12 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvPlayerAI.h"
+#include "CvRandom.h"
+#include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include <time.h> 
