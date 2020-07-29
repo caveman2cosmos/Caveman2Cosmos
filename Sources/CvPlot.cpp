@@ -1,11 +1,12 @@
 // plot.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
-
+#include "CvRandom.h"
 #include "CvPlotPaging.h"
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
