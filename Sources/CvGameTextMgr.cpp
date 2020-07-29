@@ -72,13 +72,11 @@ CvGameTextMgr& CvGameTextMgr::GetInstance()
 //
 //----------------------------------------------------------------------------
 CvGameTextMgr::CvGameTextMgr()
-{
+	:
+	inspectUnitCombatCounters(NULL)
+{ }
 
-}
-
-CvGameTextMgr::~CvGameTextMgr()
-{
-}
+CvGameTextMgr::~CvGameTextMgr() { }
 
 //----------------------------------------------------------------------------
 //
@@ -89,7 +87,7 @@ CvGameTextMgr::~CvGameTextMgr()
 //----------------------------------------------------------------------------
 void CvGameTextMgr::Initialize()
 {
-
+	inspectUnitCombatCounters = new CounterSet(4); // 4 may be too much restraint?
 }
 
 //----------------------------------------------------------------------------
@@ -101,6 +99,7 @@ void CvGameTextMgr::Initialize()
 //----------------------------------------------------------------------------
 void CvGameTextMgr::DeInitialize()
 {
+	SAFE_DELETE(inspectUnitCombatCounters);
 }
 
 //----------------------------------------------------------------------------
@@ -20446,7 +20445,8 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		const int iDisplayCount = game.getUnitCombatDetailDisplayCount(eUnit);
+		//const int iDisplayCount = game.getUnitCombatDetailDisplayCount(eUnit);
+		const int iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
 		int iPotentialDisplays = 0;
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
@@ -20493,15 +20493,18 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		if (iDisplayCount == iPotentialDisplays)
 		{
-			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 0);
+			//GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 0);
+			inspectUnitCombatCounters->setCount(eUnit, 0);
 		}
 		else if (iDisplayCount > iPotentialDisplays)
 		{
-			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 1);
+			//GC.getGame().setUnitCombatDetailDisplayCount(eUnit, 1);
+			inspectUnitCombatCounters->setCount(eUnit, 1);
 		}
 		else
 		{
-			GC.getGame().setUnitCombatDetailDisplayCount(eUnit, iDisplayCount + 1);
+			//GC.getGame().setUnitCombatDetailDisplayCount(eUnit, iDisplayCount + 1);
+			inspectUnitCombatCounters->setCount(eUnit, iDisplayCount + 1);
 		}
 	}
 	else if (bTBUnitView3 || bCivilopediaText)

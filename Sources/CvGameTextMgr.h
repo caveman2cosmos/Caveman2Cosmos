@@ -17,6 +17,8 @@
 
 #pragma warning( disable: 4251 )	// needs to have dll-interface to be used by clients of class
 
+#include "CounterSet.h"
+
 class CvCity;
 class CvDeal;
 class CvPopupInfo;
@@ -28,6 +30,7 @@ class CvPlayer;
 class CvGameTextMgr
 {
 	friend class CvGlobals;
+	CounterSet* inspectUnitCombatCounters;
 public:
 	// singleton accessor
 	DllExport static CvGameTextMgr& GetInstance();
