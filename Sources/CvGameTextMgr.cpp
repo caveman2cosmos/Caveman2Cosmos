@@ -11,6 +11,7 @@
 //---------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CounterSet.h"
 #include "CvGameAI.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"

@@ -2,6 +2,7 @@
 // Counter set is not dynamically sized, not optimal for large amount of counters.
 // If old counters gets less relevant to store for each new one added then a small set may be optimal anyway.
 
+#include "CvGameCoreDLL.h"
 #include "CounterSet.h"
 
 CounterSet::CounterSet() { init(8); }
