@@ -19629,13 +19629,26 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		if (kUnit.getBaseUpkeep() > 0)
 		{
-			int iExtra = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getExtraUpkeep100();
-			int iMod = GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getUnitCombatType()).getUpkeepModifier();
-
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			UnitCombatTypes eUnitCombat;
+			int iExtra = 0;
+			int iMod = 0;
+			for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				iExtra += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getExtraUpkeep100();
-				iMod += GC.getUnitCombatInfo((UnitCombatTypes) kUnit.getSubCombatType(iI)).getUpkeepModifier();
+				if (iI > -1)
+				{
+					eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+				}
+				else
+				{
+					eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+					if (eUnitCombat == NO_UNITCOMBAT) continue;
+				}
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+				{
+					iExtra += GC.getUnitCombatInfo(eUnitCombat).getExtraUpkeep100();
+					iMod += GC.getUnitCombatInfo(eUnitCombat).getUpkeepModifier();
+				}
 			}
 			int iUpkeep = 100 * kUnit.getBaseUpkeep() + iExtra;
 			if (iMod > 0)
