@@ -217,7 +217,7 @@ m_cachedBonusCount(NULL)
 	m_pabHasTrait = NULL;
 	m_aiLessYieldThreshold = new int[NUM_YIELD_TYPES];
 	m_paiNationalGreatPeopleUnitRate = NULL;
-	m_paiUnitCombatClassDisplayCount = NULL;
+
 	m_paiNationalDomainFreeExperience = NULL;
 	m_paiNationalDomainProductionModifier = NULL;
 	m_paiNationalTechResearchModifier = NULL;
@@ -718,7 +718,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiBuildWorkerSpeedModifierSpecific);
 	SAFE_DELETE_ARRAY(m_pabHasTrait);
 	SAFE_DELETE_ARRAY(m_paiNationalGreatPeopleUnitRate);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatClassDisplayCount);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
@@ -1426,15 +1425,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 		FAssertMsg((0 < GC.getNumUnitInfos()),  "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNationalGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
-		m_paiUnitCombatClassDisplayCount = new int[GC.getNumUnitInfos()];
-	//Team Project (6)
+
 		m_paiGoldenAgeOnBirthOfGreatPersonCount = new int[GC.getNumUnitInfos()];
 		m_paiGreatGeneralPointsForType = new int[GC.getNumUnitInfos()];
 		for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 		{
 			m_paiNationalGreatPeopleUnitRate[iI] = 0;
-			m_paiUnitCombatClassDisplayCount[iI] = 0;
-	//Team Project (6)
 			m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 			m_paiGreatGeneralPointsForType[iI] = 0;
 		}
@@ -4332,15 +4328,13 @@ void CvPlayer::dumpStats() const
 	logBBAI("%S stats for turn %d:", getCivilizationDescription(0), GC.getGame().getGameTurn());
 
 	//	Economy stats
-	int iUnitCosts = getFinalUnitUpkeep();
-	int iUnitSupplyCosts = calculateUnitSupply();
-	int iMaintenanceCosts = getTotalMaintenance();
-	int iCivicUpkeepCosts = getCivicUpkeep();
-	int iCorporateTaxIncome = getCorporateTaxIncome();
-	int iTotalPreInflatedCosts = iUnitCosts + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts - iCorporateTaxIncome;
-	int iTotalCosts = iTotalPreInflatedCosts*std::max(0, (calculateInflationRate() + 100));
-
-	iTotalCosts /= 100;
+	const long long iUnitUpkeep = getFinalUnitUpkeep();
+	const int iUnitSupplyCosts = calculateUnitSupply();
+	const int iMaintenanceCosts = getTotalMaintenance();
+	const int iCivicUpkeepCosts = getCivicUpkeep();
+	const int iCorporateTaxIncome = getCorporateTaxIncome();
+	const long long iTotalPreInflatedCosts = iUnitUpkeep + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts - iCorporateTaxIncome;
+	const long long iTotalCosts = iTotalPreInflatedCosts*std::max(0, calculateInflationRate() + 100)/100;
 
 	//	Accrue some stats off cities
 	int iTotalProduction = 0;
@@ -4365,12 +4359,12 @@ void CvPlayer::dumpStats() const
 	logBBAI("    Total gold income from trade agreements: %d", getGoldPerTurn());
 	logBBAI("    Num units: %d", getNumUnits());
 	logBBAI("    Num selection groups: %d", getNumSelectionGroups());
-	logBBAI("    Unit cost (pre inflation): %d", iUnitCosts);
+	logBBAI("    Unit Upkeep (pre inflation): %llu", iUnitUpkeep);
 	logBBAI("    Unit supply cost (pre inflation): %d", iUnitSupplyCosts);
 	logBBAI("    Maintenance cost (pre inflation): %d", iMaintenanceCosts);
 	logBBAI("    Civic upkeep cost (pre inflation): %d", iCivicUpkeepCosts);
 	logBBAI("    Corporate income (pre inflation): %d", iCorporateTaxIncome);
-	logBBAI("    Inflation effect: %d", iTotalCosts - iTotalPreInflatedCosts);
+	logBBAI("    Inflation effect: %lld", iTotalCosts - iTotalPreInflatedCosts);
 	logBBAI("    Is in financial difficulties: %s", AI_isFinancialTrouble() ? "yes" : "no");
 	logBBAI("    Total science output: %d", calculateResearchRate());
 	logBBAI("    Total espionage output: %d", getCommerceRate(COMMERCE_ESPIONAGE));
@@ -9063,13 +9057,13 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-	int iCosts = getFinalUnitUpkeep();
+	long long iCosts = getFinalUnitUpkeep();
 	iCosts += calculateUnitSupply();
 	iCosts += getTotalMaintenance();
 	iCosts += getCivicUpkeep();
 	iCosts -= getCorporateTaxIncome();
 
-	return iCosts;
+	return static_cast<int>(iCosts);
 }
 
 //	Called once per turn to update the current cost-to-turn-1-cost ratio
@@ -11718,15 +11712,17 @@ int CvPlayer::getFreeUnitUpkeepCivilian() const
 {
 	int iFreeUpkeep = getBaseFreeUnitUpkeepCivilian();
 
-	int iTemp = getFreeUnitUpkeepCivilianPopPercent();
-	if (iTemp > 0)
+	const int iMod = getFreeUnitUpkeepCivilianPopPercent();
+	if (iMod > 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
 	}
-	else if (iTemp < 0)
+	else if (iMod < 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
 	}
+	else iFreeUpkeep += getTotalPopulation();
+
 	return std::max(0, iFreeUpkeep);
 }
 
@@ -11734,15 +11730,17 @@ int CvPlayer::getFreeUnitUpkeepMilitary() const
 {
 	int iFreeUpkeep = getBaseFreeUnitUpkeepMilitary();
 
-	int iTemp = getFreeUnitUpkeepMilitaryPopPercent();
-	if (iTemp > 0)
+	const int iMod = getFreeUnitUpkeepMilitaryPopPercent();
+	if (iMod > 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
 	}
-	else if (iTemp < 0)
+	else if (iMod < 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
 	}
+	else iFreeUpkeep += getTotalPopulation();
+
 	return std::max(0, iFreeUpkeep);
 }
 
@@ -11776,7 +11774,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 {
 	if (iChange != 0)
 	{
-		FAssertMsg(iChange >= 0 || bMilitary && ((unsigned int)-iChange) <= m_iUnitUpkeepMilitary100 || !bMilitary && ((unsigned int)-iChange) <= m_iUnitUpkeepMilitary100, "These should always be positive!");
+		FAssertMsg(iChange >= 0 || bMilitary && -iChange <= m_iUnitUpkeepMilitary100 || !bMilitary && -iChange <= m_iUnitUpkeepMilitary100, "These should always be positive!");
 
 		if (bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
@@ -11786,19 +11784,19 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 	}
 }
 
-unsigned long CvPlayer::getUnitUpkeepCivilian100() const
+long long CvPlayer::getUnitUpkeepCivilian100() const
 {
 	return m_iUnitUpkeepCivilian100;
 }
 
-unsigned long CvPlayer::getUnitUpkeepMilitary100() const
+long long CvPlayer::getUnitUpkeepMilitary100() const
 {
 	return m_iUnitUpkeepMilitary100;
 }
 
-unsigned long CvPlayer::getUnitUpkeepCivilian() const
+long long CvPlayer::getUnitUpkeepCivilian() const
 {
-	unsigned long iUpkeep = m_iUnitUpkeepCivilian100;
+	unsigned long long iUpkeep = std::max<long long>(0, m_iUnitUpkeepCivilian100);
 
 	if (m_iCivilianUnitUpkeepMod > 0)
 	{
@@ -11808,20 +11806,17 @@ unsigned long CvPlayer::getUnitUpkeepCivilian() const
 	{
 		iUpkeep = iUpkeep * 100 / (100 - m_iCivilianUnitUpkeepMod);
 	}
-	return iUpkeep / 100;
+	return static_cast<long long>(iUpkeep / 100);
 }
 
-unsigned long CvPlayer::getUnitUpkeepCivilianNet() const
+long long CvPlayer::getUnitUpkeepCivilianNet() const
 {
-	unsigned long iUpkeep = getUnitUpkeepCivilian();
-	if (iUpkeep <= (unsigned int)getFreeUnitUpkeepCivilian())
-		return 0;
-	return iUpkeep - getFreeUnitUpkeepCivilian();
+	return std::max<long long>(0, getUnitUpkeepCivilian() - getFreeUnitUpkeepCivilian());
 }
 
-unsigned long CvPlayer::getUnitUpkeepMilitary() const
+long long CvPlayer::getUnitUpkeepMilitary() const
 {
-	unsigned long iUpkeep = m_iUnitUpkeepMilitary100;
+	unsigned long long iUpkeep = std::max<long long>(0, m_iUnitUpkeepMilitary100);
 
 	if (m_iMilitaryUnitUpkeepMod > 0)
 	{
@@ -11831,29 +11826,26 @@ unsigned long CvPlayer::getUnitUpkeepMilitary() const
 	{
 		iUpkeep = iUpkeep * 100 / (100 - m_iMilitaryUnitUpkeepMod);
 	}
-	return iUpkeep / 100;
+	return static_cast<long long>(iUpkeep / 100);
 }
 
-unsigned long CvPlayer::getUnitUpkeepMilitaryNet() const
+long long CvPlayer::getUnitUpkeepMilitaryNet() const
 {
-	unsigned long iUpkeep = getUnitUpkeepMilitary();
-	if (iUpkeep <= (unsigned int)getFreeUnitUpkeepMilitary())
-		return 0;
-	return iUpkeep - getFreeUnitUpkeepMilitary();
+	return std::max<long long>(0, getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
 }
 
-unsigned long CvPlayer::getFinalUnitUpkeep() const
+long long CvPlayer::getFinalUnitUpkeep() const
 {
 	return m_iFinalUnitUpkeep;
 }
 
-unsigned long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
+long long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 {
 	if (isNPC())
 	{
 		return 0;
 	}
-	unsigned long iCalc = 0;
+	long long iCalc = 0;
 
 	iCalc += getUnitUpkeepCivilianNet();
 	iCalc += getUnitUpkeepMilitaryNet();
@@ -11880,7 +11872,7 @@ unsigned long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	return iCalc;
 }
 
-void CvPlayer::applyUnitUpkeepHandicap(unsigned long& iUpkeep)
+void CvPlayer::applyUnitUpkeepHandicap(long long& iUpkeep)
 {
 	// Difficulty adjustment
 	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
@@ -11898,16 +11890,16 @@ void CvPlayer::applyUnitUpkeepHandicap(unsigned long& iUpkeep)
 
 int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
 {
-	if (iExtra < 1) return 0;
+	if (iExtra == 0) return 0;
 
 	// Temporary change
 	if (bMilitary)
 		m_iUnitUpkeepMilitary100 += iExtra;
 	else m_iUnitUpkeepCivilian100 += iExtra;
 
-	const int iChange = calcFinalUnitUpkeep(false) - getFinalUnitUpkeep();
+	const int iChange = static_cast<int>(calcFinalUnitUpkeep(false) - getFinalUnitUpkeep());
 
-	// Very important to restore the real values!
+	// Very important to restore the real value!
 	if (bMilitary)
 		m_iUnitUpkeepMilitary100 -= iExtra;
 	else m_iUnitUpkeepCivilian100 -= iExtra;
@@ -22035,7 +22027,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eGreatGeneralTypetoAssign);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
+
+		// @SAVEBREAK DELETE Toffer - There is no reason to save this to file, it can reset to 0 every time you load a game
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_paiUnitCombatClassDisplayCount, SAVE_VALUE_ANY);
+		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFocusPlotY);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -22055,9 +22051,19 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFinalUnitUpkeep);
+
+		double fUnitUpkeepCivilian100;
+		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepCivilian100);
+		m_iUnitUpkeepCivilian100 = static_cast<long long>(fUnitUpkeepCivilian100);
+
+		double fUnitUpkeepMilitary100;
+		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepMilitary100);
+		m_iUnitUpkeepMilitary100 = static_cast<long long>(fUnitUpkeepMilitary100);
+
+		double fFinalUnitUpkeep;
+		WRAPPER_READ(wrapper, "CvPlayer", &fFinalUnitUpkeep);
+		m_iFinalUnitUpkeep = static_cast<long long>(fFinalUnitUpkeep);
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
@@ -22762,7 +22768,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eGreatGeneralTypetoAssign);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCombatClassDisplayCount);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotY);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
@@ -22780,9 +22786,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFinalUnitUpkeep);
+
+		double fUnitUpkeepCivilian100 = static_cast<double>(m_iUnitUpkeepCivilian100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepCivilian100);
+
+		double fUnitUpkeepMilitary100 = static_cast<double>(m_iUnitUpkeepMilitary100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepMilitary100);
+
+		double fFinalUnitUpkeep = static_cast<double>(m_iFinalUnitUpkeep);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fFinalUnitUpkeep);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
@@ -31057,10 +31070,7 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 	{
 		m_paiNationalGreatPeopleUnitRate[iI] = 0;
-		m_paiUnitCombatClassDisplayCount[iI] = 0;
-	//Team Project (6)
 		m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
-		//m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -32835,26 +32845,6 @@ void CvPlayer::setTraitDisplayCount(int iValue)
 void CvPlayer::changeTraitDisplayCount(int iChange)
 {
     setTraitDisplayCount(getTraitDisplayCount() + iChange);
-}
-
-int CvPlayer::getUnitCombatClassDisplayCount(UnitTypes eIndex) const
-{
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
-	return m_paiUnitCombatClassDisplayCount[eIndex];
-}
-
-void CvPlayer::setUnitCombatClassDisplayCount(UnitTypes eIndex, int iValue)
-{
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
-
-	m_paiUnitCombatClassDisplayCount[eIndex] = iValue;
-}
-
-void CvPlayer::changeUnitCombatClassDisplayCount(UnitTypes eIndex, int iChange)
-{
-	setUnitCombatClassDisplayCount(eIndex, (getUnitCombatClassDisplayCount(eIndex) + iChange));
 }
 
 int CvPlayer::getNationalEspionageDefense() const

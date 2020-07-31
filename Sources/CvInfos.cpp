@@ -2724,7 +2724,7 @@ m_iGroupChange(0),
 m_iLevelPrereq(0),
 m_iDamageModifierChange(0),
 m_iUpkeepModifier(0),
-m_iExtraUpkeep(0),
+m_iExtraUpkeep100(0),
 m_iRBombardDamageChange(0),
 m_iRBombardDamageLimitChange(0),
 m_iRBombardDamageMaxUnitsChange(0),
@@ -3872,9 +3872,9 @@ int CvPromotionInfo::getUpkeepModifier() const
 	return m_iUpkeepModifier;
 }
 
-int CvPromotionInfo::getExtraUpkeep() const
+int CvPromotionInfo::getExtraUpkeep100() const
 {
-	return m_iExtraUpkeep;
+	return m_iExtraUpkeep100;
 }
 
 int CvPromotionInfo::getRBombardDamageChange() const
@@ -5788,7 +5788,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iLevelPrereq, L"iLevelPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifierChange, L"iDamageModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iUpkeepModifier, L"iUpkeepModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iExtraUpkeep, L"iExtraUpkeep");
+	pXML->GetOptionalChildXmlValByName(&m_iExtraUpkeep100, L"iExtraUpkeep100");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageChange, L"iRBombardDamageChange");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageLimitChange, L"iRBombardDamageLimitChange");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageMaxUnitsChange, L"iRBombardDamageMaxUnitsChange");
@@ -6639,7 +6639,7 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getDamageModifierChange() == iDefault) m_iDamageModifierChange = pClassInfo->getDamageModifierChange();
 
 	if (m_iUpkeepModifier == iDefault) m_iUpkeepModifier = pClassInfo->getUpkeepModifier();
-	if (m_iExtraUpkeep == iDefault) m_iExtraUpkeep = pClassInfo->getExtraUpkeep();
+	if (m_iExtraUpkeep100 == iDefault) m_iExtraUpkeep100 = pClassInfo->getExtraUpkeep100();
 
 	if (getRBombardDamageChange() == iDefault) m_iRBombardDamageChange = pClassInfo->getRBombardDamageChange();
 	if (getRBombardDamageLimitChange() == iDefault) m_iRBombardDamageLimitChange = pClassInfo->getRBombardDamageLimitChange();
@@ -7454,7 +7454,7 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iDamageModifierChange);
 
 	CheckSum(iSum, m_iUpkeepModifier);
-	CheckSum(iSum, m_iExtraUpkeep);
+	CheckSum(iSum, m_iExtraUpkeep100);
 
 	CheckSum(iSum, m_iRBombardDamageChange);
 	CheckSum(iSum, m_iRBombardDamageLimitChange);
@@ -39008,7 +39008,7 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iDamageModifierChange(0)
 
 	, m_iUpkeepModifier(0)
-	, m_iExtraUpkeep(0)
+	, m_iExtraUpkeep100(0)
 
 	, m_iRBombardDamageBase(0)
 	, m_iRBombardDamageLimitBase(0)
@@ -39790,9 +39790,9 @@ int CvUnitCombatInfo::getUpkeepModifier() const
 	return m_iUpkeepModifier;
 }
 
-int CvUnitCombatInfo::getExtraUpkeep() const
+int CvUnitCombatInfo::getExtraUpkeep100() const
 {
-	return m_iExtraUpkeep;
+	return m_iExtraUpkeep100;
 }
 
 int CvUnitCombatInfo::getRBombardDamageBase() const
@@ -41072,7 +41072,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifierChange, L"iDamageModifierChange");
 
 	pXML->GetOptionalChildXmlValByName(&m_iUpkeepModifier, L"iUpkeepModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iExtraUpkeep, L"iExtraUpkeep");
+	pXML->GetOptionalChildXmlValByName(&m_iExtraUpkeep100, L"iExtraUpkeep100");
 
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageBase, L"iRBombardDamageBase");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageLimitBase, L"iRBombardDamageLimitBase");
@@ -42281,7 +42281,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	if (getDamageModifierChange() == iDefault) m_iDamageModifierChange = pClassInfo->getDamageModifierChange();
 
 	if (m_iUpkeepModifier == iDefault) m_iUpkeepModifier = pClassInfo->getUpkeepModifier();
-	if (m_iExtraUpkeep == iDefault) m_iExtraUpkeep = pClassInfo->getExtraUpkeep();
+	if (m_iExtraUpkeep100 == iDefault) m_iExtraUpkeep100 = pClassInfo->getExtraUpkeep100();
 
 	if (getRBombardDamageBase() == iDefault) m_iRBombardDamageBase = pClassInfo->getRBombardDamageBase();
 	if (getRBombardDamageLimitBase() == iDefault) m_iRBombardDamageLimitBase = pClassInfo->getRBombardDamageLimitBase();
@@ -42895,7 +42895,7 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iDamageModifierChange);
 
 	CheckSum(iSum, m_iUpkeepModifier);
-	CheckSum(iSum, m_iExtraUpkeep);
+	CheckSum(iSum, m_iExtraUpkeep100);
 
 	CheckSum(iSum, m_iRBombardDamageBase);
 	CheckSum(iSum, m_iRBombardDamageLimitBase);

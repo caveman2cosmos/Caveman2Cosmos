@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 	iUpkeepModifier - Applied directly on the unit's base upkeep value.
-	iExtraUpkeep - Not implemented yet - Its value is added to the upkeep before iBaseUpkeepModifier is applied.
+	iExtraUpkeep100 - 100 = 1 gold; Its value is added to the upkeep before iBaseUpkeepModifier is applied.
 -->
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>

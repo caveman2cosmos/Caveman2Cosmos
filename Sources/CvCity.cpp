@@ -6262,36 +6262,31 @@ int CvCity::getCulturePercentAnger() const
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
+			int iCulture = plot()->getCulture((PlayerTypes)iI);
+
+			if (iCulture > 0)
 			{
-				int iCulture = plot()->getCulture((PlayerTypes)iI);
-
-				if (iCulture > 0)
+				if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 				{
-					if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
+					if (iCulture > MAX_INT / 1000)
 					{
-						if (iCulture > MAX_INT / 1000)
-						{
-							iCulture /= 100;
-							iCulture *= std::max(0, (GC.getAT_WAR_CULTURE_ANGER_MODIFIER() + 100));
-							iCulture *= 100;
-						}
-						else
-						{
-							iCulture *= std::max(0, (GC.getAT_WAR_CULTURE_ANGER_MODIFIER() + 100));
-							iCulture /= 100;
-						}
+						iCulture /= 100;
+						iCulture *= std::max(0, (GC.getAT_WAR_CULTURE_ANGER_MODIFIER() + 100));
+						iCulture *= 100;
 					}
-
-					iAngryCulture += iCulture;
+					else
+					{
+						iCulture *= std::max(0, (GC.getAT_WAR_CULTURE_ANGER_MODIFIER() + 100));
+						iCulture /= 100;
+					}
 				}
+				iAngryCulture += iCulture;
 			}
 		}
 	}
-
-	return ((GC.getCULTURE_PERCENT_ANGER() * iAngryCulture) / iTotalCulture);
+	return GC.getCULTURE_PERCENT_ANGER() * iAngryCulture / iTotalCulture;
 }
 
 
@@ -6309,34 +6304,22 @@ int CvCity::getReligionPercentAnger() const
 	}
 
 	int iCount = 0;
-
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
 		{
-			if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
-			{
-				FAssertMsg(GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam(), "Player is at war with himself! :O");
+			FAssertMsg(GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam(), "Player is at war with himself! :O");
 
-				if (GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION)
-				{
-					if (isHasReligion(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
-					{
-						iCount += GET_PLAYER((PlayerTypes)iI).getHasReligionCount(GET_PLAYER((PlayerTypes)iI).getStateReligion());
-					}
-				}
+			if (GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION
+			&& isHasReligion(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
+			{
+				iCount += GET_PLAYER((PlayerTypes)iI).getHasReligionCount(GET_PLAYER((PlayerTypes)iI).getStateReligion());
 			}
 		}
 	}
+	int iAnger = GC.getRELIGION_PERCENT_ANGER() * iCount / GC.getGame().getNumCities();
 
-	int iAnger = GC.getRELIGION_PERCENT_ANGER();
-
-	iAnger *= iCount;
-	iAnger /= GC.getGame().getNumCities();
-
-	iAnger /= religionCount;
-
-	return iAnger;
+	return iAnger / religionCount;
 }
 
 
@@ -6346,8 +6329,7 @@ int CvCity::getHurryPercentAnger(int iExtra) const
 	{
 		return 0;
 	}
-
-	return ((((((getHurryAngerTimer() - 1) / flatHurryAngerLength()) + 1) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, getPopulation() + iExtra)) + 1);
+	return 1 + (1 + (getHurryAngerTimer() - 1) / flatHurryAngerLength()) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR() / std::max(1, getPopulation() + iExtra);
 }
 
 
@@ -6357,8 +6339,7 @@ int CvCity::getConscriptPercentAnger(int iExtra) const
 	{
 		return 0;
 	}
-
-	return ((((((getConscriptAngerTimer() - 1) / flatConscriptAngerLength()) + 1) * GC.getCONSCRIPT_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, getPopulation() + iExtra)) + 1);
+	return 1 + (1 + (getConscriptAngerTimer() - 1) / flatConscriptAngerLength()) * GC.getCONSCRIPT_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR() / std::max(1, getPopulation() + iExtra);
 }
 
 int CvCity::getDefyResolutionPercentAnger(int iExtra) const
@@ -6367,8 +6348,7 @@ int CvCity::getDefyResolutionPercentAnger(int iExtra) const
 	{
 		return 0;
 	}
-
-	return ((((((getDefyResolutionAngerTimer() - 1) / flatDefyResolutionAngerLength()) + 1) * GC.getDEFY_RESOLUTION_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, getPopulation() + iExtra)) + 1);
+	return 1 + (1 + (getDefyResolutionAngerTimer() - 1) / flatDefyResolutionAngerLength()) * GC.getDEFY_RESOLUTION_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR() / std::max(1, getPopulation() + iExtra);
 }
 
 
@@ -6378,24 +6358,14 @@ int CvCity::getWarWearinessPercentAnger() const
 
 	iAnger *= std::max(0, (getWarWearinessModifier() + GET_PLAYER(getOwner()).getWarWearinessModifier() + 100));
 	iAnger /= 100;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/29/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	iAnger *= std::max(0, (getWarWearinessTimer() + 100));
 	iAnger /= 100;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+
 	return iAnger;
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/26/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 int CvCity::getRevRequestPercentAnger(int iExtra) const
 {
 	if (getRevRequestAngerTimer() == 0)
@@ -6409,21 +6379,21 @@ int CvCity::getRevRequestPercentAnger(int iExtra) const
 
 	iAnger = std::max(1, iAnger);
 
-	int iAngerPercent = 2 * ((((((getRevRequestAngerTimer() - 1) / iAnger) + 1) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, getPopulation() + iExtra)) + 1);
+	int iAngerPercent = 2 * (1 + (1 + (getRevRequestAngerTimer() - 1) / iAnger) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR() / std::max(1, getPopulation() + iExtra));
 
 	return iAngerPercent;
 }
 
 int CvCity::getRevIndexPercentAnger(int iExtra) const
 {
-	int iLocalAdjust = std::min((getLocalRevIndex() * 3) / 4, getLocalRevIndex() / 2);
-	iLocalAdjust = std::min(iLocalAdjust, 10);
+	const int iLocalAdjust = std::min(getLocalRevIndex() * 5, 100);
 
-	int iAnger = (int)((12.5 + iLocalAdjust) * (getRevolutionIndex() - 325)) / 750;
-	iAnger = std::max(0, iAnger);
+	int iAnger = (125 + iLocalAdjust) * (getRevolutionIndex() - 325) / 7500;
+	if (iAnger < 1) return 0;
+
 	iAnger = std::min(iAnger, 40);
 
-	return (GC.getPERCENT_ANGER_DIVISOR() / 100) * iAnger;
+	return iAnger * GC.getPERCENT_ANGER_DIVISOR() / 100;
 }
 
 int CvCity::getRevSuccessHappiness() const
@@ -6434,18 +6404,16 @@ int CvCity::getRevSuccessHappiness() const
 	}
 
 	int iHappy = GC.getHURRY_ANGER_DIVISOR();
+
 	iHappy *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
 	iHappy /= 100;
-
 	iHappy = std::max(1, iHappy);
 
-	int iHappyPercent = 2 * ((((((getRevSuccessTimer() - 1) / iHappy) + 1) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, getPopulation())) + 1);
+	int iHappyPercent = 2 * (1 + (1 + (getRevSuccessTimer() - 1) / iHappy) * GC.getHURRY_POP_ANGER() * GC.getPERCENT_ANGER_DIVISOR() / std::max(1, getPopulation()));
 
-	return (iHappyPercent * getPopulation()) / GC.getPERCENT_ANGER_DIVISOR();
+	return iHappyPercent * getPopulation() / GC.getPERCENT_ANGER_DIVISOR();
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 
 int CvCity::getLargestCityHappiness() const
 {
@@ -6453,7 +6421,6 @@ int CvCity::getLargestCityHappiness() const
 	{
 		return GET_PLAYER(getOwner()).getLargestCityHappiness();
 	}
-
 	return 0;
 }
 
@@ -6463,15 +6430,11 @@ int CvCity::getVassalHappiness() const
 
 	for (int i = 0; i < MAX_TEAMS; i++)
 	{
-		if (getTeam() != i)
+		if (getTeam() != i && GET_TEAM((TeamTypes)i).isVassal(getTeam()))
 		{
-			if (GET_TEAM((TeamTypes)i).isVassal(getTeam()))
-			{
-				iHappy += GC.getVASSAL_HAPPINESS();
-			}
+			iHappy += GC.getVASSAL_HAPPINESS();
 		}
 	}
-
 	return iHappy;
 }
 
@@ -6481,27 +6444,18 @@ int CvCity::getVassalUnhappiness() const
 
 	for (int i = 0; i < MAX_TEAMS; i++)
 	{
-		if (getTeam() != i)
+		if (getTeam() != i && GET_TEAM(getTeam()).isVassal((TeamTypes)i))
 		{
-			if (GET_TEAM(getTeam()).isVassal((TeamTypes)i))
-			{
-				iUnhappy += GC.getVASSAL_HAPPINESS();
-			}
+			iUnhappy += GC.getVASSAL_HAPPINESS();
 		}
 	}
-
 	return iUnhappy;
 }
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 20.10.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement iCelebrityHappy                                                        **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
 
-namespace {
+// TheLadiesOgre - 20.10.2009
+namespace
+{
 	int getCelebrityHappyClamped(const CvUnit* unit)
 	{
 		return std::max(0, unit->getCelebrityHappy());
@@ -6511,10 +6465,9 @@ int CvCity::getCelebrityHappiness() const
 {
 	return algo::accumulate(plot()->units() | transformed(getCelebrityHappyClamped), 0);
 }
+// ! TheLadiesOgre
 
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 20.10.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 int CvCity::unhappyLevel(int iExtra) const
 {
 	PROFILE_FUNC();
@@ -6603,15 +6556,7 @@ int CvCity::happyLevel() const
 
 	int iHappiness = 0;
 
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         04/28/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	iHappiness += std::max(0, getRevSuccessHappiness());
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
 	iHappiness += std::max(0, getLargestCityHappiness());
 	iHappiness += std::max(0, getMilitaryHappiness());
 	iHappiness += std::max(0, getCurrentStateReligionHappiness());
@@ -6626,40 +6571,21 @@ int CvCity::happyLevel() const
 	iHappiness += std::max(0, (getExtraHappiness() + GET_PLAYER(getOwner()).getExtraHappiness()));
 	iHappiness += std::max(0, GC.getHandicapInfo(getHandicapType()).getHappyBonus());
 	iHappiness += std::max(0, getVassalHappiness());
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	iHappiness += std::max(0, getCivicHappiness());
 	iHappiness += std::max(0, getSpecialistHappiness() / 100);
 	iHappiness += std::max(0, (GET_PLAYER(getOwner()).getWorldHappiness()));
 	iHappiness += std::max(0, (GET_PLAYER(getOwner()).getProjectHappiness()));
 	iHappiness += std::max(0, calculateCorporationHappiness());
+
 	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
 	{
 		iHappiness += std::max(0, GET_PLAYER(getOwner()).getLandmarkHappiness());
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 	if (getHappinessTimer() > 0)
 	{
 		iHappiness += GC.getTEMP_HAPPY();
 	}
-	/*****************************************************************************************************/
-	/**  Author: TheLadiesOgre                                                                          **/
-	/**  Date: 09.10.2009                                                                               **/
-	/**  ModComp: TLOTags                                                                               **/
-	/**  Reason Added: Implement iCelebrityHappy                                                        **/
-	/**  Notes: Added to C2C by TB (Thunderbrd)                                                         **/
-	/*****************************************************************************************************/
 	iHappiness += std::max(0, getCelebrityHappiness());
-	/*****************************************************************************************************/
-	/**  TheLadiesOgre; 09.10.2009; TLOTags                                                             **/
-	/*****************************************************************************************************/
-	//Team Project (1)
 	iHappiness += getExtraTechHappinessTotal();
 
 	return std::max(0, iHappiness);
@@ -6670,21 +6596,13 @@ int CvCity::angryPopulation(int iExtra) const
 {
 	PROFILE("CvCityAI::angryPopulation");
 
-	return range((unhappyLevel(iExtra) - happyLevel()), 0, (getPopulation() + iExtra));
+	return range(unhappyLevel(iExtra) - happyLevel(), 0, getPopulation() + iExtra);
 }
 
 
 int CvCity::visiblePopulation() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/23/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	return (getPopulation() - angryPopulation() - getWorkingPopulation() - getNumPopulationEmployed());
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+	return getPopulation() - angryPopulation() - getWorkingPopulation() - getNumPopulationEmployed();
 }
 
 
@@ -6705,43 +6623,38 @@ int CvCity::totalFreeSpecialists() const
 				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
 			}
 		}
-
-		//Team Project (6)
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
 		{
 			iCount += getNumWorldWonders();
 		}
-
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperNationalWonder())
 		{
 			iCount += getNumNationalWonders();
 		}
-
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperTeamProject())
 		{
 			iCount += getNumTeamWonders();
 		}
 	}
-
 	return iCount;
 }
 
 
 int CvCity::extraPopulation() const
 {
-	return (visiblePopulation() + std::min(0, extraFreeSpecialists()));
+	return visiblePopulation() + std::min(0, extraFreeSpecialists());
 }
 
 
 int CvCity::extraSpecialists() const
 {
-	return (visiblePopulation() + extraFreeSpecialists());
+	return visiblePopulation() + extraFreeSpecialists();
 }
 
 
 int CvCity::extraFreeSpecialists() const
 {
-	return (totalFreeSpecialists() - getSpecialistPopulation());
+	return totalFreeSpecialists() - getSpecialistPopulation();
 }
 
 
@@ -6751,59 +6664,36 @@ int CvCity::unhealthyPopulation(bool bNoAngry, int iExtra) const
 	{
 		return 0;
 	}
-
-	return std::max(0, (getPopulation() + iExtra - (bNoAngry ? angryPopulation(iExtra) : 0)));
+	return std::max(0, getPopulation() + iExtra - (bNoAngry ? angryPopulation(iExtra) : 0));
 }
 
 
 int CvCity::totalGoodBuildingHealth() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/31/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-		return (getBuildingGoodHealth() + area()->getBuildingGoodHealth(getOwner()) + GET_PLAYER(getOwner()).getBuildingGoodHealth() + getExtraBuildingGoodHealth());
-	*/
 	int iHealth = getBuildingGoodHealth();
+
 	iHealth += area()->getBuildingGoodHealth(getOwner());
 	iHealth += GET_PLAYER(getOwner()).getBuildingGoodHealth();
 	iHealth += getExtraBuildingGoodHealth();
 	iHealth += std::max(0, calculatePopulationHealth());
+
 	return iHealth;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 }
 
 
 int CvCity::totalBadBuildingHealth() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/31/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-		if (!isBuildingOnlyHealthy())
-		{
-			return (getBuildingBadHealth() + area()->getBuildingBadHealth(getOwner()) + GET_PLAYER(getOwner()).getBuildingBadHealth() + getExtraBuildingBadHealth());
-		}
-	*/
 	if (!isBuildingOnlyHealthy())
 	{
 		int iHealth = getBuildingBadHealth();
+
 		iHealth += area()->getBuildingBadHealth(getOwner());
 		iHealth += GET_PLAYER(getOwner()).getBuildingBadHealth();
 		iHealth += getExtraBuildingBadHealth();
 		iHealth += std::min(0, calculatePopulationHealth());
+
 		return iHealth;
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 	return 0;
 }
 
@@ -6821,24 +6711,12 @@ int CvCity::goodHealth() const
 	iTotalHealth += std::max<int>(0, totalGoodBuildingHealth());
 	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
 	iTotalHealth += std::max<int>(0, GC.getHandicapInfo(getHandicapType()).getHealthBonus());
-
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-
 	iTotalHealth += std::max<int>(0, getImprovementGoodHealth() / 100);
 	iTotalHealth += std::max<int>(0, getSpecialistGoodHealth() / 100);
 	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getCivilizationHealth());
 	iTotalHealth += std::max<int>(0, calculateCorporationHealth());
 	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getWorldHealth());
 	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getProjectHealth());
-
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-		//Team Project (1)
 	iTotalHealth += std::max<int>(0, getExtraTechHealthTotal());
 
 	return iTotalHealth;
@@ -6860,27 +6738,15 @@ int CvCity::badHealth(bool bNoAngry, int iExtra) const
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
 	iTotalHealth += std::min<int>(0, GC.getHandicapInfo(getHandicapType()).getHealthBonus());
 	iTotalHealth += std::min<int>(0, getExtraBuildingBadHealth());
-
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-
 	iTotalHealth += std::min<int>(0, getImprovementBadHealth() / 100);
 	iTotalHealth += std::min<int>(0, getSpecialistBadHealth() / 100);
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getCivilizationHealth());
 	iTotalHealth += std::min<int>(0, calculateCorporationHealth());
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getWorldHealth());
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getProjectHealth());
-
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-		//Team Project (1)
 	iTotalHealth += std::max<int>(0, getExtraTechUnHealthTotal());
 
-	return (unhealthyPopulation(bNoAngry, iExtra) - iTotalHealth);
+	return unhealthyPopulation(bNoAngry, iExtra) - iTotalHealth;
 }
 
 

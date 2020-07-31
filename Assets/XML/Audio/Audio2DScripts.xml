@@ -24798,8 +24798,8 @@
 		<ScriptID>AS2D_BUILD_FESTIVAL</ScriptID>
 		<SoundID>SND_BUILD_FESTIVAL</SoundID>
 		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>44</iMinVolume>
+		<iMaxVolume>44</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>

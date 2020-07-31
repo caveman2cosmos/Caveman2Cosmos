@@ -684,7 +684,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraMaxHP = 0;
 	m_iExtraStrengthModifier = 0;
 	m_iExtraDamageModifier = 0;
-	m_iExtraUpkeep = 0;
+	m_iExtraUpkeep100 = 0;
 	m_iUpkeepModifier = 0;
 	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
@@ -19653,18 +19653,18 @@ void CvUnit::changeExtraDamageModifier(int iChange)
 }
 
 // Toffer - Upkeep
-void CvUnit::changeExtraUpkeep(const int iChange)
+void CvUnit::changeExtraUpkeep100(const int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iExtraUpkeep += iChange;
+		m_iExtraUpkeep100 += iChange;
 		calcUpkeep100();
 	}
 }
 
-int CvUnit::getExtraUpkeep() const
+int CvUnit::getExtraUpkeep100() const
 {
-	return m_iExtraUpkeep;
+	return m_iExtraUpkeep100;
 }
 
 void CvUnit::changeUpkeepModifier(const int iChange)
@@ -19717,7 +19717,7 @@ void CvUnit::calcUpkeep100()
 	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
 	if (iCalc > 0)
 	{
-		iCalc += m_iExtraUpkeep * 100;
+		iCalc += m_iExtraUpkeep100;
 
 		if (iCalc > 0)
 		{
@@ -23913,7 +23913,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 		defineReligion();
 	}
 
-	changeExtraUpkeep(kUnitCombat.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kUnitCombat.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kUnitCombat.getUpkeepModifier() * iChange);
 
 	establishBuildups();
@@ -23923,54 +23923,28 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 {
 	PROFILE_FUNC();
 
-	int iI;
-
-	// Disable spy promotions mechanism
-	bool canAdopt = true;
-
-
 	if (isHasUnitCombat(eIndex) != bNewValue)
 	{
-		if (isSpy()  && !GC.isSS_ENABLED() && !GC.getUnitCombatInfo(eIndex).isEnemyRoute())//exempt commando promotion
-		{
-			canAdopt = false;
-		}
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eIndex);
 
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumNotOnGameOptions(); iI++)
+		if (GC.getGame().isValidByGameOption(info)
+		// Disable spy promotions mechanism, exempt commando promotion
+		&& (!isSpy() || GC.isSS_ENABLED() || info.isEnemyRoute()))
 		{
-			if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getNotOnGameOption(iI)))
+			UnitCombatKeyedInfo* infoKeyed;
+
+			if (bNewValue)
 			{
-				canAdopt = false;
-			}
-		}
-
-		for (iI = 0; iI < GC.getUnitCombatInfo(eIndex).getNumOnGameOptions(); iI++)
-		{
-			if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eIndex).getOnGameOption(iI)))
-			{
-				canAdopt = false;
-			}
-		}
-
-		if ( canAdopt )
-		{
-			CvUnitCombatInfo &kUnitCombat = GC.getUnitCombatInfo(eIndex);
-
-			UnitCombatKeyedInfo* info;
-
-			if ( bNewValue )
-			{
-				info = findOrCreateUnitCombatKeyedInfo(eIndex);
+				infoKeyed = findOrCreateUnitCombatKeyedInfo(eIndex);
 			}
 			else
 			{
-				info = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
+				infoKeyed = (UnitCombatKeyedInfo*)findUnitCombatKeyedInfo(eIndex);
 			}
-			if ( info != NULL )
+			if (infoKeyed != NULL)
 			{
-				info->m_bHasUnitCombat = bNewValue;
+				infoKeyed->m_bHasUnitCombat = bNewValue;
 			}
-
 			processUnitCombat(eIndex, bNewValue, bByPromo);
 
 			AI_flushValueCache();
@@ -23984,11 +23958,10 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 			}
 
 			//update graphics
-			if ( !isUsingDummyEntities() && isInViewport())
+			if (!isUsingDummyEntities() && isInViewport())
 			{
 				gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity());
 			}
-
 		}
 		setHealUnitCombatCount();
 	}
@@ -24153,7 +24126,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraPuncture(kPromotion.getPunctureChange() * iChange);
 	changeExtraDamageModifier(kPromotion.getDamageModifierChange() * iChange);
 
-	changeExtraUpkeep(kPromotion.getExtraUpkeep() * iChange);
+	changeExtraUpkeep100(kPromotion.getExtraUpkeep100() * iChange);
 	changeUpkeepModifier(kPromotion.getUpkeepModifier() * iChange);
 
 	changeExtraOverrun(kPromotion.getOverrunChange() * iChange);
@@ -26837,7 +26810,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsReligionLocked);
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraUpkeep100);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
@@ -27765,7 +27738,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, m_eReligionType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsReligionLocked);
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraUpkeep100);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
@@ -32944,17 +32917,22 @@ bool CvUnit::isCommander() const
 
 void CvUnit::setCommander(bool bNewVal)
 {
+	if (m_bCommander == bNewVal) return;
+
 	m_bCommander = bNewVal;
-	if (isCommander())
+
+	if (bNewVal)
 	{
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 		m_iControlPointsLeft = controlPoints();
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
 		{
-			if (m_pUnitInfo->hasUnitCombat((UnitCombatTypes)iI) &&
-				GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase() > -10)
+			const UnitCombatTypes eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI);
+
+			if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
 			{
-				setHasUnitCombat((UnitCombatTypes)iI, false);
+				setHasUnitCombat(eUnitCombat, false);
 			}
 		}
 	}
@@ -44634,41 +44612,54 @@ void CvUnit::defineReligion()
 	{
 		if (m_eReligionType == NO_RELIGION)
 		{
+			UnitCombatTypes eUnitCombat;
+
+			for (int iI = -1; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
+			{
+				if (iI > -1)
+				{
+					eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI);
+				}
+				else
+				{
+					eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getUnitCombatType();
+
+					if (eUnitCombat == NO_UNITCOMBAT) continue;
+				}
+				const ReligionTypes eOriginalCombatReligion = GC.getUnitCombatInfo(eUnitCombat).getReligion();
+
+				if (eOriginalCombatReligion != NO_RELIGION)
+				{
+					m_eReligionType = eOriginalCombatReligion;
+					m_bIsReligionLocked = true;
+					break;
+				}
+			}
+		}
+		if (m_eReligionType == NO_RELIGION)
+		{
+			//if not locked by innate type, after changes in unitcombat process function we'll call this function IF the unitcombat has a religion.
+			//This function is also called if the state religion changes so if we find a unit combat has defined m_eReligionType then we'll not bother with switching to the state religion so check here first
+			bool bFound = false;
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				if (m_pUnitInfo->hasUnitCombat((UnitCombatTypes)iI))
+				if (isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					const ReligionTypes eOriginalCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
-					if (eOriginalCombatReligion != NO_RELIGION)
+					const ReligionTypes eUnitCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
+					if (eUnitCombatReligion != NO_RELIGION)
 					{
-						m_eReligionType = eOriginalCombatReligion;
-						m_bIsReligionLocked = true;
-						break;
+						m_eReligionType = eUnitCombatReligion; //Let's assume there's only going to be one of these on a unit ever - it only ever comes up if the unit isn't locked with a pre-defined one anyhow
+						//and unitcombats that assign a religion should be rare to assign unless we are more advanced into the Ideas project where the city will assign its religion type to all units that it produces.
+						//There could be promos that assign overriding religious types but we'll cross that bridge when we get there.
+						bFound = true;
+						break;//thus we stop at the first one we find
 					}
 				}
 			}
-		}
-		//if not locked by innate type, after changes in unitcombat process function we'll call this function IF the unitcombat has a religion.
-		//This function is also called if the state religion changes so if we find a unit combat has defined m_eReligionType then we'll not bother with switching to the state religion so check here first
-		bool bFound = false;
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (isHasUnitCombat((UnitCombatTypes)iI))
+			if (!bFound)
 			{
-				const ReligionTypes eUnitCombatReligion = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
-				if (eUnitCombatReligion != NO_RELIGION)
-				{
-					m_eReligionType = eUnitCombatReligion; //Let's assume there's only going to be one of these on a unit ever - it only ever comes up if the unit isn't locked with a pre-defined one anyhow
-					//and unitcombats that assign a religion should be rare to assign unless we are more advanced into the Ideas project where the city will assign its religion type to all units that it produces.
-					//There could be promos that assign overriding religious types but we'll cross that bridge when we get there.
-					bFound = true;
-					break;//thus we stop at the first one we find
-				}
+				m_eReligionType = GET_PLAYER(getOwner()).getStateReligion();//NO_RELIGION is a perfectly satisfactory answer here.
 			}
-		}
-		if (!bFound)
-		{
-			m_eReligionType = GET_PLAYER(getOwner()).getStateReligion();//NO_RELIGION is a perfectly satisfactory answer here.
 		}
 	}
 	//else do nothing - if the religion is locked we're done here.
