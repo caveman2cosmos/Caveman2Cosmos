@@ -15896,9 +15896,11 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			}
 			else if (iTemp < 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+				iFreeUpkeep -=
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
 			}
-			if (iFreeUpkeep > 0)
+			if (iFreeUpkeep != 0)
 			{
 				szHelpText.append(NEWLINE);
 				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", iFreeUpkeep));
@@ -15932,9 +15934,11 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			}
 			else if (iTemp < 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+				iFreeUpkeep -=
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
 			}
-			if (iFreeUpkeep > 0)
+			if (iFreeUpkeep != 0)
 			{
 				szHelpText.append(NEWLINE);
 				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", iFreeUpkeep));
