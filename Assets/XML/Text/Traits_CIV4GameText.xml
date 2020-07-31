@@ -979,10 +979,6 @@
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Wielki Cud który wybudujesz.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP</Tag>
-		<English>[ICON_BULLET]Free civilian unit upkeep per 100 population: %D1</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
 	</TEXT>
