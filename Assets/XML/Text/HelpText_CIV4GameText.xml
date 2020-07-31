@@ -9,8 +9,20 @@
 		<English>[ICON_BULLET]Free civilian unit upkeep: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP</Tag>
+		<English>[ICON_BULLET]%d1%% free civilian unit upkeep per population.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep: %d1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP</Tag>
+		<English>[ICON_BULLET]%d1%% free civilian unit upkeep per population.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP</Tag>
+		<English>[SPACE](%s1 [ICON_GOLD])</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>

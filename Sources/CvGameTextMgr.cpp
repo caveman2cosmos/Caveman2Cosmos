@@ -10515,32 +10515,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	bool bFound = false;
 	bool bFirst = true;
 
-
-	// AIAndy: If the help string for the replacement traits is specifically requested, it should be provided
-	//for (iJ = 0; iJ < GC.getNumGameOptionInfos(); iJ++)
-	//{
-	//	GameOptionTypes eGameOption = ((GameOptionTypes)iJ);
-	//	if (GC.getGame().isOption(eGameOption) && GC.getTraitInfo(eTrait).isNotOnGameOption(eGameOption))
-	//	{
-	//		return;
-	//	}
-	//	if (!GC.getGame().isOption(eGameOption) && GC.getTraitInfo(eTrait).isOnGameOption(eGameOption))
-	//	{
-	//		return;
-	//	}
-	//}
-	//if (GC.getTraitInfo(eTrait).getEditedTrait() != NO_TRAIT)
-	//{
-	//	return;
-	//}
-
-	// AIAndy: Neither should a game option influence the provision of help strings, the calling function needs to check this
-	//if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0 ||
-	//	!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && !GC.getTraitInfo(eTrait).getLinePriority() == 0)
-	//{
-	//	return;
-	//}
-
 	// Trait Name
 	szText = GC.getTraitInfo(eTrait).getDescription();
 	if (bDawnOfMan)
@@ -11134,17 +11108,69 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
+		// Free Civilian units upkeep
 		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian() != 0)
 		{
 			szHelpString.append(NEWLINE);
 			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian()));
 		}
-
-		//	Free units population percent
 		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent() != 0)
 		{
+			if (GC.getGame().getActivePlayer() != NO_PLAYER)
+			{
+				int iValue = 0;
+				int iMod = GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent();
+				if (iMod > 0)
+				{
+					iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
+				}
+				else if (iMod < 0)
+				{
+					iValue =
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+				}
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
+			}
+			else
+			{
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
+			}
+		}
+		// Free Military unit upkeep
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary() != 0)
+		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary()));
+		}
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent() != 0)
+		{
+			if (GC.getGame().getActivePlayer() != NO_PLAYER)
+			{
+				int iValue = 0;
+				int iMod = GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent();
+				if (iMod > 0)
+				{
+					iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
+				}
+				else if (iMod < 0)
+				{
+					iValue =
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+				}
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP",  iMod));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
+			}
+			else
+			{
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent()));
+			}
 		}
 
 		//	Free military units base
@@ -15883,75 +15909,68 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_BUILDING_ENABLES_MAD"));
 	}
 
-	//	Free units population percent
-	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0 || GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
+	// Free Civilian unit upkeep
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()));
+	}
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian();
-			int iTemp = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent();
-			if (iTemp > 0)
+			int iValue = 0;
+			int iMod = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent();
+			if (iMod > 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iTemp) / 100;
+				iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
 			}
-			else if (iTemp < 0)
+			else if (iMod < 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+				iValue =
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
 			}
-			if (iFreeUpkeep > 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", iFreeUpkeep));
-			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 		}
 		else
 		{
-			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()));
-			}
-			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_CIVILIAN_PER_100_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
-			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
 		}
 	}
-
-	//	Free military units
-	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0 || GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
+	// Free Military unit upkeep
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()));
+	}
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUpkeep = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary();
-			int iTemp = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent();
-			if (iTemp > 0)
+			int iValue = 0;
+			int iMod = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent();
+			if (iMod > 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iTemp) / 100;
+				iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
 			}
-			else if (iTemp < 0)
+			else if (iMod < 0)
 			{
-				iFreeUpkeep += GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iTemp);
+				iValue =
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
 			}
-			if (iFreeUpkeep > 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", iFreeUpkeep));
-			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP",  iMod));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 		}
 		else
 		{
-			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()));
-			}
-			if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent()));
-			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent()));
 		}
 	}
 
@@ -20154,26 +20173,34 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					iTotalXPBonus += iExperience;
 				}
 
-				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				UnitCombatTypes eCombat;
+				for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					if (kUnit.hasUnitCombat(eCombat))
+					if (iI > -1)
 					{
-						iExperience = pCity->getUnitCombatFreeExperience(eCombat);
-						if (iExperience != 0)
+						eCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+					}
+					else
+					{
+						eCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+						if (eCombat == NO_UNITCOMBAT) continue;
+					}
+					iExperience = pCity->getUnitCombatFreeExperience(eCombat);
+					if (iExperience != 0)
+					{
+						if (bFirst)
 						{
-							if (bFirst)
-							{
-								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
-							}
-							bFirst = false;
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
-							iTotalXPBonus += iExperience;
+							szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
 						}
+						bFirst = false;
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
+						iTotalXPBonus += iExperience;
 					}
 				}
+
 				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
@@ -20460,31 +20487,32 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				}
 			}
 		}
-
-		UnitCombatTypes eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
-
-		if (eUnitCombat != NO_UNITCOMBAT)
+		UnitCombatTypes eUnitCombat;
+		int iCount = 0;
+		for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 		{
-			int iCurrentDisplay = 0;
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes() + 1; iI++)
+			if (iI > -1)
 			{
-				if (iI > 0)
+				eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+			}
+			else
+			{
+				eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+				if (eUnitCombat == NO_UNITCOMBAT) continue;
+			}
+			if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+			{
+				if (++iCount == iDisplayCount)
 				{
-					eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI-1);
+					szBuffer.append(DOUBLE_SEPARATOR);
+					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
+					szBuffer.append(DOUBLE_SEPARATOR);
 				}
-				if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+				else
 				{
-					if (++iCurrentDisplay == iDisplayCount)
-					{
-						szBuffer.append(DOUBLE_SEPARATOR);
-						setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
-						szBuffer.append(DOUBLE_SEPARATOR);
-					}
-					else
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
 				}
 			}
 		}
