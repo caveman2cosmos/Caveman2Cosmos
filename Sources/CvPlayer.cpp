@@ -11712,15 +11712,17 @@ int CvPlayer::getFreeUnitUpkeepCivilian() const
 {
 	int iFreeUpkeep = getBaseFreeUnitUpkeepCivilian();
 
-	const int iTemp = getFreeUnitUpkeepCivilianPopPercent();
-	if (iTemp > 0)
+	const int iMod = getFreeUnitUpkeepCivilianPopPercent();
+	if (iMod > 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
 	}
-	else if (iTemp < 0)
+	else if (iMod < 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
 	}
+	else iFreeUpkeep += getTotalPopulation();
+
 	return std::max(0, iFreeUpkeep);
 }
 
@@ -11728,15 +11730,17 @@ int CvPlayer::getFreeUnitUpkeepMilitary() const
 {
 	int iFreeUpkeep = getBaseFreeUnitUpkeepMilitary();
 
-	const int iTemp = getFreeUnitUpkeepMilitaryPopPercent();
-	if (iTemp > 0)
+	const int iMod = getFreeUnitUpkeepMilitaryPopPercent();
+	if (iMod > 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iTemp) / 100;
+		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
 	}
-	else if (iTemp < 0)
+	else if (iMod < 0)
 	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iTemp);
+		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
 	}
+	else iFreeUpkeep += getTotalPopulation();
+
 	return std::max(0, iFreeUpkeep);
 }
 
