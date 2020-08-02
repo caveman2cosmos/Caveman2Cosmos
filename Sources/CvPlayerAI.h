@@ -141,7 +141,7 @@ public:
 
 	int AI_militaryWeight(const CvArea* pArea) const;
 
-	int AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
+	int AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
 	CvCity* AI_findTargetCity(const CvArea* pArea) const;
 
 	bool AI_isCommercePlot(const CvPlot* pPlot) const;
@@ -390,9 +390,9 @@ public:
 	int AI_getGoldTradedTo(PlayerTypes eIndex) const;
 	void AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange);
 
-	int AI_getAttitudeExtra(PlayerTypes eIndex) const;
-	void AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue);
-	void AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange);
+	int AI_getAttitudeExtra(const PlayerTypes ePlayer) const;
+	void AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue);
+	void AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange);
 
 	bool AI_isFirstContact(PlayerTypes eIndex) const;
 	void AI_setFirstContact(PlayerTypes eIndex, bool bNewValue);
@@ -588,6 +588,7 @@ public:
 	// Attitude cache
 	void AI_invalidateAttitudeCache(PlayerTypes ePlayer);
 	void AI_invalidateAttitudeCache();
+	void AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iChange);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/

@@ -49,10 +49,6 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		return True
 
-	def getExtraCost(self, argsList):
-		ePlayer = argsList[0]
-		return 0
-
 	def createBarbarianCities(self):
 		return False
 
@@ -101,11 +97,6 @@ class CvGameUtils:
 		return BuildingTypes.NO_BUILDING
 
 	def updateColoredPlots(self):
-		return False
-
-	def isActionRecommended(self, argsList):
-		pUnit = argsList[0]
-		iAction = argsList[1]
 		return False
 
 	def unitCannotMoveInto(self, argsList):
@@ -511,8 +502,6 @@ class CvGameUtils:
 		elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
 			if iData1 == 1027:
 				return CyTranslator().getText("TXT_KEY_WB_PLOT_DATA",())
-			elif iData1 == 1028:
-				return GC.getGameOptionInfo(iData2).getHelp()
 			elif iData1 == 1029:
 				if iData2 == 0:
 					sText = CyTranslator().getText("TXT_KEY_WB_PYTHON", ())

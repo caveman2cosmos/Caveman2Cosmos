@@ -504,19 +504,8 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			const CvPlot* pAdjacentPlot = plotDirection(kUnit.plot()->getX(), kUnit.plot()->getY(), ((DirectionTypes)iI));
+		const int iCount = algo::count_if(kUnit.plot()->adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
 		if (!(iCount == 0 || (iCount == 1 && kUnit.plot()->isWater())))
 		{
 			return false;
@@ -847,19 +836,8 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			const CvPlot* pAdjacentPlot = plotDirection(kPlot.getX(), kPlot.getY(), ((DirectionTypes)iI));
+		const int iCount = algo::count_if(kPlot.adjacent(), CvPlot::fn::getBonusType(NO_TEAM) == m_eBonusType);
 
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
 		if (!(iCount == 0 || (iCount == 1 && kPlot.isWater())))
 		{
 			return false;
@@ -1310,7 +1288,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity() && (kUnit.plot()->getPlotCity() != NULL))
 		{
 			kPlayer.initTriggeredData(m_eEventTrigger, true, kUnit.plot()->getPlotCity()->getID());

@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -16,6 +17,10 @@ class CvFinanceAdvisor:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
+		# Tool Tip
+		self.szTextTT = ""
+		self.iOffsetTT = []
+		self.bLockedTT = False
 		G = GC.getGame()
 		# Get screen resolution.
 		import ScreenResolution as SR
@@ -236,20 +241,19 @@ class CvFinanceAdvisor:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
 		iExpenses = 0
-		totalUnitCost = CyPlayer.calculateUnitCost()
+		iFinalUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
 		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
-		y = 0
-		if totalUnitCost:
-			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST", ())
-			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			screen.setLabelAt("", Pnl, uFont2 + str(totalUnitCost), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			iExpenses += totalUnitCost
-			y += 20
+		y = -2
+		szText = TRNSLTR.getText("TXT_KEY_UNIT_UPKEEP", ())
+		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + szText, 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
+		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iFinalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+		iExpenses += iFinalUnitUpkeep
+		y += 22
 
 		if totalUnitSupply:
 			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())
@@ -594,27 +598,65 @@ class CvFinanceAdvisor:
 			i -= 1
 		self.nWidgetCount = 0
 
+	# Tooltip
+	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
+		if not szText:
+			return
+		if szText != self.szTextTT:
+			self.szTextTT = szText
+			if not uFont:
+				uFont = self.aFontList[6]
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = Win32.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
+		else:
+			if xPos == yPos == -1:
+				POINT = Win32.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
+			screen.moveToFront("Tooltip")
+			screen.show("Tooltip")
+		if xPos == yPos == -1:
+			self.bLockedTT = True
+
+	#--------------------------#
+	# Base operation functions #
+	#||||||||||||||||||||||||||#
+	def update(self, fDelta):
+		if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT):
+			CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
+			self.updateContents()
+		if self.bLockedTT:
+			POINT = Win32.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
-			import HandleInputUtil
-			HandleInputUtil.debugInput(inputClass)
-			screen = self.getScreen()
-			self.iPlayer = iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
-			self.CyPlayer = GC.getPlayer(iPlayer)
+
+		iCode	= inputClass.eNotifyCode
+		NAME	= inputClass.szFunctionName
+
+		screen = self.getScreen()
+		screen.hide("Tooltip") # Remove potential Help Text
+
+		if iCode == 4: # Mouse Enter
+
+			if NAME == "unitUpkeep":
+				self.updateTooltip(screen, CyGameTextMgr().getFinanceUnitUpkeepString(self.iPlayer))
+
+		elif iCode == 11: # List Select
+			self.iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
+			self.CyPlayer = GC.getPlayer(self.iPlayer)
 			self.drawBase()
 			self.updateContents()
 			return 1
 		return 0
 
-	def update(self, fDelta):
-		if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT):
-			CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
-			self.updateContents()
-
 	def onClose(self):
 		screen = self.getScreen()
 		screen.setDying(True)
-		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike
-		del self.aFontList, self.iconCommerceList
-		del self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses
+		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike, self.aFontList, self.iconCommerceList, \
+			self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses, self.szTextTT, self.iOffsetTT, self.bLockedTT

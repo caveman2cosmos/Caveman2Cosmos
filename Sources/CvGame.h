@@ -98,7 +98,7 @@ public:
 	DllExport void selectionListGameNetMessage(int eMessage, int iData2 = -1, int iData3 = -1, int iData4 = -1, int iFlags = 0, bool bAlt = false, bool bShift = false) const; // Exposed to Python
 	void selectionListGameNetMessageInternal(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift, bool bInViewportCoordinates) const;
 	DllExport void selectedCitiesGameNetMessage(int eMessage, int iData2 = -1, int iData3 = -1, int iData4 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
-	void cityPushOrder(CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
+	void cityPushOrder(const CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt = false, bool bShift = false, bool bCtrl = false) const; // Exposed to Python
 
 	DllExport void selectUnit(CvUnit* pUnit, bool bClear, bool bToggle = false, bool bSound = false) const;
 	DllExport void selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) const;
@@ -320,13 +320,13 @@ public:
 	void changeMercyRuleCounter(int iChange);
 	void setMercyRuleCounter(int iNewVal);
 
-	int countPeaks(CvPlot* pPlot, bool bCountHill = false);
-	void markBayPlots(CvPlot* pPlot);
-	int countForest(CvPlot* pPlot, int iForest);
+	int countPeaks(const CvPlot* pPlot, bool bCountHill = false);
+	void markBayPlots(const CvPlot* pPlot);
+	int countForest(const CvPlot* pPlot, int iForest);
 	void addLandmarkSigns();
-	int countDesert(CvPlot* pPlot);
-	void markLakePlots(CvPlot* pPlot);
-	int countJungle(CvPlot* pPlot, int iJungle);
+	int countDesert(const CvPlot* pPlot);
+	void markLakePlots(const CvPlot* pPlot);
+	int countJungle(const CvPlot* pPlot, int iJungle);
 	char getRandomVowel();
 	char getRandomConsonant();
 	bool isValidName(CvWString szName) const;
@@ -349,7 +349,7 @@ public:
 	void findDeserts();
 	void findLakes();
 	void pruneLandmarks();
-	void removeAdjacentLandmarks(CvPlot* pCenterPlot, CvPlot* pExceptionPlot = NULL, int iRadius = 1);
+	void removeAdjacentLandmarks(const CvPlot* pCenterPlot, const CvPlot* pExceptionPlot = NULL, int iRadius = 1);
 	void clearLandmarks(bool bClear = true);
 	void updateInitialSigns();
 
@@ -406,8 +406,8 @@ public:
 	bool isScoreDirty() const; // Exposed to Python
 	void setScoreDirty(bool bNewValue); // Exposed to Python
 
-	bool isCircumnavigated(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	void makeCircumnavigated(TeamTypes eTeam);
+	TeamTypes getCircumnavigatedTeam() const; // Exposed to Python
+	void setCircumnavigatedTeam(TeamTypes eTeam); // Exposed to Python
 	bool circumnavigationAvailable() const;
 
 	bool isDiploVote(VoteSourceTypes eVoteSource) const; // Exposed to Python
@@ -935,6 +935,8 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 };
 
 #endif

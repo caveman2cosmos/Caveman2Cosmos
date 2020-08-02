@@ -2,8 +2,12 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvPlayerAI.h"
+#include "CvRandom.h"
+#include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include <time.h> 
@@ -112,8 +116,7 @@ ProxyTracker::~ProxyTracker()
 // CONSTRUCTOR
 //
 cvInternalGlobals::cvInternalGlobals() 
-	: m_paszEntityEventTypes2(NULL)
-	, m_paszEntityEventTypes(NULL)
+	: m_paszEntityEventTypes(NULL)
 	, m_paszAnimationOperatorTypes(NULL)
 	, m_paszFunctionTypes(NULL)
 	, m_paszFlavorTypes(NULL)
@@ -131,11 +134,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_bOverwriteLogs(false)
 	, m_bSynchLogging(false)
 	, m_bDLLProfiler(false)
-	, m_pkMainMenu(NULL)
-	, m_iNewPlayers(0)
-	, m_bZoomOut(false)
-	, m_bZoomIn(false)
-	, m_bLoadGameFromFile(false)
 	, m_pFMPMgr(NULL)
 	, m_asyncRand(NULL)
 	, m_interface(NULL)
@@ -198,7 +196,6 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-	, m_bLoadedPlayerOptions(false)
 	, m_bXMLLogging(false)
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -529,8 +526,6 @@ void cvInternalGlobals::init()
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
-
-	m_pt3Origin = NiPoint3(0.0f, 0.0f, 0.0f);
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);
@@ -3680,16 +3675,6 @@ bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-
-bool cvInternalGlobals::isLoadedPlayerOptions() const
-{
-	return m_bLoadedPlayerOptions;
-}
-
-void cvInternalGlobals::setLoadedPlayerOptions(bool bNewVal)
-{
-	m_bLoadedPlayerOptions = bNewVal;
-}
 
 void cvInternalGlobals::setXMLLogging(bool bNewVal)
 {

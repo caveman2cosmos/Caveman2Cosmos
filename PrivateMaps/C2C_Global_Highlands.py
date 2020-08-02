@@ -236,13 +236,13 @@ def generatePlotTypes():
 	}
 # Rise of Mankind 2.53
 	map_size = map.getWorldSize()
-	#print "    map_size",map_size
+	#print "	map_size",map_size
 	if ( not map_size in worldsizes ):
 		grain_list = [4,5,6]
-		#print "    grain_list",grain_list
+		#print "	grain_list",grain_list
 	else:
 		grain_list = worldsizes[map_size]
-		#print "    grain_list",grain_list
+		#print "	grain_list",grain_list
 # Rise of Mankind 2.53
 	grain_list.reverse()
 	grain = grain_list[userInputGrain]

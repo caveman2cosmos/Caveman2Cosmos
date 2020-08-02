@@ -195,8 +195,7 @@ void UnitFilterList::setFilterActiveAll(UnitFilterTypes eFilter, bool bActive)
 		if (kLoopPlayer.isAlive())
 		{
 			kLoopPlayer.setUnitListFilterActive(eFilter, bActive);
-			int iIter;
-			for (CvCity* pCity = kLoopPlayer.firstCity(&iIter); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIter))
+			foreach_(CvCity* pCity, kLoopPlayer.cities())
 			{
 				pCity->setUnitListFilterActive(eFilter, bActive);
 			}

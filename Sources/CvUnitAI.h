@@ -51,15 +51,15 @@ public:
 #define	LEADER_PRIORITY_MIN 0
 #define	LEADER_PRIORITY_MAX	100
 
-	int AI_groupFirstVal();
-	int AI_groupSecondVal();
+	int AI_groupFirstVal() const;
+	int AI_groupSecondVal() const;
 
 	int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false);
 	//	Variant to test a specific defender AS IF it was in the specified plot
 	int AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults = false);
 	int AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults);
 
-	bool AI_bestCityBuild(CvCity* pCity, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, CvPlot* pIgnorePlot = NULL, CvUnit* pUnit = NULL);
+	bool AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, const CvPlot* pIgnorePlot = NULL, const CvUnit* pUnit = NULL);
 
 	bool AI_isCityAIType() const;
 
@@ -111,7 +111,7 @@ protected:
 
 	void AI_animalMove();
 	void AI_settleMove();
-	int AI_minSettlerDefense();
+	int AI_minSettlerDefense() const;
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
@@ -234,7 +234,7 @@ protected:
 	bool AI_guardCity(bool bLeave = false, bool bSearch = false, int iMaxPath = MAX_INT);
 	bool AI_guardCityAirlift();
 	bool AI_guardBonus(int iMinValue = 0);
-	int AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra);
+	int AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const;
 	bool AI_guardFort(bool bSearch = true);
 	// Super Forts begin *AI_defense*
 	bool AI_guardFortMinDefender(bool bSearch = true);
@@ -381,7 +381,7 @@ protected:
 /*                                                                                              */
 /* Player Interface                                                                             */
 /************************************************************************************************/
-	int AI_exploreAirPlotValue( CvPlot* pPlot );
+	int AI_exploreAirPlotValue(const CvPlot* pPlot) const;
 	bool AI_exploreAir2();
 	void AI_exploreAirMove();
 /************************************************************************************************/
@@ -503,7 +503,7 @@ public:
 public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
-	virtual bool AI_getHasAttacked();
+	virtual bool AI_getHasAttacked() const;
 	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const;
 
 	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts

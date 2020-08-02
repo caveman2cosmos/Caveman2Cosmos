@@ -847,7 +847,8 @@ public:
 	int getGroupChange() const;
 	int getLevelPrereq() const;
 	int getDamageModifierChange() const;
-	int getCostModifierChange() const;
+	int getUpkeepModifier() const;
+	int getExtraUpkeep100() const;
 	int getRBombardDamageChange() const;
 	int getRBombardDamageLimitChange() const;
 	int getRBombardDamageMaxUnitsChange() const;
@@ -1368,7 +1369,10 @@ protected:
 	int m_iGroupChange;
 	int m_iLevelPrereq;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange;
+
+	int m_iUpkeepModifier;
+	int m_iExtraUpkeep100;
+
 	int m_iRBombardDamageChange;
 	int m_iRBombardDamageLimitChange;
 	int m_iRBombardDamageMaxUnitsChange;
@@ -1803,7 +1807,7 @@ public:
 	int getSMCargoVolume() const;
 	int getConscriptionValue() const; // Exposed to Python
 	int getCultureGarrisonValue() const; // Exposed to Python
-	int getExtraCost() const; // Exposed to Python
+	int getBaseUpkeep() const; // Exposed to Python
 	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
 	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
 	int getSpecialUnitType() const; // Exposed to Python
@@ -1970,7 +1974,6 @@ public:
 	int getTaunt(bool bForLoad = false) const;
 	int getMaxHP(bool bForLoad = false) const;
 	int getDamageModifier() const;
-	int getCostModifier() const;
 	int getRBombardDamage() const;
 	int getRBombardDamageLimit() const;
 	int getRBombardDamageMaxUnits() const;
@@ -2044,7 +2047,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
@@ -2269,62 +2272,26 @@ protected:
 	BoolExpr* m_pExprTrainCondition;
 
 public:
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
-	// Dale - RB: Field Bombard START
 	int getDCMBombRange() const;
 	int getDCMBombAccuracy() const;
-protected:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
-public:
-	// Dale - RB: Field Bombard END
-	// Dale - AB: Bombing START
 	bool getDCMAirBomb1() const;
 	bool getDCMAirBomb2() const;
 	bool getDCMAirBomb3() const;
 	bool getDCMAirBomb4() const;
 	bool getDCMAirBomb5() const;
-protected:
-	bool m_bDCMAirBomb1;
-	bool m_bDCMAirBomb2;
-	bool m_bDCMAirBomb3;
-	bool m_bDCMAirBomb4;
-	bool m_bDCMAirBomb5;
-public:
-	// Dale - AB: Bombing END
-	// Dale - FE: Fighters START
 	bool getDCMFighterEngage() const;
-protected:
-	bool m_bDCMFighterEngage;
-public:
-	// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
+
 	bool isCanBeRebel() const;
 	bool isCanRebelCapture() const;
 	bool isCannotDefect() const;
 	bool isCanQuellRebellion() const;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	float getUnitMaxSpeed() const; // Exposed to Python
 	float getUnitPadTime() const; // Exposed to Python
 
-// BUG - Unit Experience - start
 	bool canAcquireExperience() const; // Exposed to Python
-// BUG - Unit Experience - end
 
 	// Arrays
-
 	int getPrereqAndTechs(int i) const; // Exposed to Python
 	int getPrereqOrBonuses(int i) const; // Exposed to Python
 	int getFlavorValue(int i) const; // Exposed to Python
@@ -2426,6 +2393,15 @@ private:
 	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
+	int m_iDCMBombRange;
+	int m_iDCMBombAccuracy;
+	bool m_bDCMFighterEngage;
+	bool m_bDCMAirBomb1;
+	bool m_bDCMAirBomb2;
+	bool m_bDCMAirBomb3;
+	bool m_bDCMAirBomb4;
+	bool m_bDCMAirBomb5;
+
 	int m_iAIWeight;
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
@@ -2479,7 +2455,7 @@ protected:
 	int m_iSMCargoVolume;
 	int m_iConscriptionValue;
 	int m_iCultureGarrisonValue;
-	int m_iExtraCost;
+	int m_iBaseUpkeep;
 	int m_iAssetValue;
 	int m_iPowerValue;
 	int m_iSpecialUnitType;
@@ -2674,7 +2650,6 @@ protected:
 	int m_iTaunt;
 	int m_iMaxHP;
 	int m_iDamageModifier;
-	int m_iCostModifier;
 	int m_iTotalCombatStrengthModifierBase;
 	int m_iTotalCombatStrengthChangeBase;
 	int m_iBaseCargoVolume;
@@ -3072,12 +3047,12 @@ public:
 	int getWorkerSpeedModifier() const; // Exposed to Python
 	int getImprovementUpgradeRateModifier() const; // Exposed to Python
 	int getMilitaryProductionModifier() const; // Exposed to Python
-	int getBaseFreeUnits() const; // Exposed to Python
-	int getBaseFreeMilitaryUnits() const; // Exposed to Python
-	int getFreeUnitsPopulationPercent() const; // Exposed to Python
-	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
-	int getGoldPerUnit() const; // Exposed to Python
-	int getGoldPerMilitaryUnit() const; // Exposed to Python
+	int getFreeUnitUpkeepCivilian() const; // Exposed to Python
+	int getFreeUnitUpkeepMilitary() const; // Exposed to Python
+	int getFreeUnitUpkeepCivilianPopPercent() const; // Exposed to Python
+	int getFreeUnitUpkeepMilitaryPopPercent() const; // Exposed to Python
+	int getCivilianUnitUpkeepMod() const;
+	int getMilitaryUnitUpkeepMod() const;
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 	int getLargestCityHappiness() const; // Exposed to Python
 	int getWarWearinessModifier() const; // Exposed to Python
@@ -3270,12 +3245,12 @@ protected:
 	int m_iWorkerSpeedModifier;
 	int m_iImprovementUpgradeRateModifier;
 	int m_iMilitaryProductionModifier;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
+	int m_iFreeUnitUpkeepCivilian;
+	int m_iFreeUnitUpkeepMilitary;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
+	int m_iCivilianUnitUpkeepMod;
+	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
 	int m_iWarWearinessModifier;
@@ -3864,7 +3839,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	//integer vectors with pairing method without delayed resolution
 	int getNumUnitCombatRepelModifiers() const;
@@ -4725,8 +4700,7 @@ public:
 	int getStartingLocationPercent() const; // Exposed to Python
 	int getAdvancedStartPointsMod() const; // Exposed to Python
 	int getStartingGold() const; // Exposed to Python
-	int getFreeUnits() const; // Exposed to Python
-	int getUnitCostPercent() const; // Exposed to Python
+	int getUnitUpkeepPercent() const; // Exposed to Python
 	int getTrainPercent() const;
 	int getConstructPercent() const;
 	int getResearchPercent() const; // Exposed to Python
@@ -4775,7 +4749,7 @@ public:
 	int getAIResearchPercent() const;
 	int getAIWorldCreatePercent() const; // Exposed to Python
 	int getAICivicUpkeepPercent() const; // Exposed to Python
-	int getAIUnitCostPercent() const; // Exposed to Python
+	int getAIUnitUpkeepPercent() const; // Exposed to Python
 	int getAIUnitSupplyPercent() const; // Exposed to Python
 	int getAIUnitUpgradePercent() const; // Exposed to Python
 	int getAIInflationPercent() const; // Exposed to Python
@@ -4810,8 +4784,7 @@ protected:
 	int m_iStartingLocationPercent;
 	int m_iAdvancedStartPointsMod;
 	int m_iStartingGold;
-	int m_iFreeUnits;
-	int m_iUnitCostPercent;
+	int m_iUnitUpkeepPercent;
 	int m_iTrainPercent;
 	int m_iConstructPercent;
 	int m_iResearchPercent;
@@ -4860,7 +4833,7 @@ protected:
 	int m_iAIResearchPercent;
 	int m_iAIWorldCreatePercent;
 	int m_iAICivicUpkeepPercent;
-	int m_iAIUnitCostPercent;
+	int m_iAIUnitUpkeepPercent;
 	int m_iAIUnitSupplyPercent;
 	int m_iAIUnitUpgradePercent;
 	int m_iAIInflationPercent;
@@ -5073,7 +5046,7 @@ public:
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
@@ -5173,7 +5146,7 @@ public:
 	//Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	const TCHAR* getSound() const; // Exposed to Python
 
@@ -5427,7 +5400,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	const TCHAR* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
@@ -5460,7 +5433,6 @@ public:
 
 	//Post Load Functions
 	void setHighestCost();
-	int getHighestCostBuild() const;
 	int getHighestCost() const;
 
 protected:
@@ -5575,7 +5547,6 @@ protected:
 	std::vector<int> m_aiFeatureChangeTypes;
 
 	//Post Load Functions
-	int m_eHighestCostBuild;
 	int m_iHighestCost;
 	static ImprovementTypes m_ImprovementCity;
 	static ImprovementTypes m_ImprovementRuins;
@@ -5673,7 +5644,7 @@ public:
 	//Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 
 	int getNumAfflictionCommunicabilityTypes() const;
@@ -5817,7 +5788,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -6062,7 +6033,7 @@ public:
 	// Other
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -6834,7 +6805,7 @@ public:
 	// Vectors
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -7216,12 +7187,12 @@ public:
 	int getCorporationMaintenanceModifier() const;
 	int getStateReligionGreatPeopleRateModifier() const;
 	int getFreeExperience() const;
-	int getBaseFreeUnits() const;
-	int getBaseFreeMilitaryUnits() const;
-	int getFreeUnitsPopulationPercent() const;
-	int getFreeMilitaryUnitsPopulationPercent() const;
-	int getGoldPerUnit() const;
-	int getGoldPerMilitaryUnit() const;
+	int getFreeUnitUpkeepCivilian() const;
+	int getFreeUnitUpkeepMilitary() const;
+	int getFreeUnitUpkeepCivilianPopPercent() const;
+	int getFreeUnitUpkeepMilitaryPopPercent() const;
+	int getCivilianUnitUpkeepMod() const;
+	int getMilitaryUnitUpkeepMod() const;
 	int getLargestCityHappiness() const;
 	int getHappyPerMilitaryUnit() const;
 	int getFreeSpecialist() const;
@@ -7468,12 +7439,12 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iStateReligionGreatPeopleRateModifier;
 	int m_iFreeExperience;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
+	int m_iFreeUnitUpkeepCivilian;
+	int m_iFreeUnitUpkeepMilitary;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
+	int m_iCivilianUnitUpkeepMod;
+	int m_iMilitaryUnitUpkeepMod;
 	int m_iHappyPerMilitaryUnit;
 	int m_iLargestCityHappiness;
 	int m_iFreeSpecialist;
@@ -9691,8 +9662,8 @@ public:
 	int getBuildingHealthChange(int iBuilding) const;
 	int getNumBuildingHealthChanges() const;
 
-	CvProperties* getProperties();
-	CvProperties* getPropertiesAllCities();
+	const CvProperties* getProperties() const;
+	const CvProperties* getPropertiesAllCities() const;
 
 	const char* getPythonCallback() const;
 	const char* getPythonExpireCheck() const;
@@ -10572,7 +10543,8 @@ public:
 	int getGroupBase() const;
 	int getSizeBase() const;
 	int getDamageModifierChange() const;
-	int getCostModifierChange() const;
+	int getUpkeepModifier() const;
+	int getExtraUpkeep100() const;
 	int getRBombardDamageBase() const;
 	int getRBombardDamageLimitBase() const;
 	int getRBombardDamageMaxUnitsBase() const;
@@ -10929,7 +10901,10 @@ protected:
 	int m_iGroupBase;
 	int m_iSizeBase;
 	int m_iDamageModifierChange;
-	int m_iCostModifierChange;
+
+	int m_iUpkeepModifier;
+	int m_iExtraUpkeep100;
+
 	int m_iRBombardDamageBase;
 	int m_iRBombardDamageLimitBase;
 	int m_iRBombardDamageMaxUnitsBase;

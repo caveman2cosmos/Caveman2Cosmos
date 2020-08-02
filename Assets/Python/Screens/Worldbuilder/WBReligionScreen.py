@@ -1,13 +1,11 @@
 from CvPythonExtensions import *
 import CvScreenEnums
-import WBGameDataScreen
 import WBCorporationScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBCityEditScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
+
 GC = CyGlobalContext()
 
 bHoly = False
@@ -16,7 +14,8 @@ lCities = []
 
 class WBReligionScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 80
 
 	def interfaceScreen(self, iPlayerX):
@@ -191,24 +190,24 @@ class WBReligionScreen:
 			if inputClass.getData1() > 7199 and inputClass.getData1() < 7300:
 				iCityID = inputClass.getData2()
 				iPlayerX = inputClass.getData1() - 7200
-				WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(GC.getPlayer(iPlayerX).getCity(iCityID))
+				WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(GC.getPlayer(iPlayerX).getCity(iCityID))
 
 			elif inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
 				iPlayerX = inputClass.getData2() /10000
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayerX)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayerX)
 
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iSelectedPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iSelectedPlayer)
 			elif iIndex == 1:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(GC.getPlayer(iSelectedPlayer).getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(GC.getPlayer(iSelectedPlayer).getTeam())
 			elif iIndex == 9:
-				WBCorporationScreen.WBCorporationScreen().interfaceScreen(iSelectedPlayer)
+				WBCorporationScreen.WBCorporationScreen(self.WB).interfaceScreen(iSelectedPlayer)
 			elif iIndex == 10:
-				WBGameDataScreen.WBGameDataScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen()
+				self.WB.goToSubScreen("GameScreen")
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iSelectedPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iSelectedPlayer)
 
 		elif inputClass.getFunctionName() == "OwnerType":
 			iOwnerType = screen.getPullDownData("OwnerType", screen.getSelectedPullDownID("OwnerType"))

@@ -238,7 +238,6 @@ void CyInfoPythonInterface1()
 
 		.def("getCargoSpace", &CvUnitInfo::getCargoSpace, "int ()")
 		.def("getConscriptionValue", &CvUnitInfo::getConscriptionValue, "int ()")
-		.def("getExtraCost", &CvUnitInfo::getExtraCost, "int ()")
 		.def("getPowerValue", &CvUnitInfo::getPowerValue, "int ()")
 		.def("getSpecialUnitType", &CvUnitInfo::getSpecialUnitType, "int ()")
 		.def("getUnitCaptureType", &CvUnitInfo::getUnitCaptureType, "int ()")

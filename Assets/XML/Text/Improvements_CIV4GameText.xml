@@ -2020,7 +2020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_END</Tag>
-		<English> Improvements</English>
+		<English>Improvements</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
@@ -2337,8 +2337,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
-		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals.
-Eventually they move away and let citizens work here.</English>
+		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
@@ -2346,7 +2345,6 @@ Eventually they move away and let citizens work here.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
-		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals.
-Eventually they move away and let citizens work here.</English>
+		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
 	</TEXT>
 </Civ4GameText>

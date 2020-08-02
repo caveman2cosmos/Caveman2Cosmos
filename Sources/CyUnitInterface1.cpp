@@ -193,6 +193,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("getButton", &CyUnit::getButton, "std::string ()")
 
+		.def("setCommander", &CyUnit::setCommander, "void (bool bNewVal)")
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
 		.def("controlPointsLeft", &CyUnit::controlPointsLeft, "int ()")
 		.def("controlPoints", &CyUnit::controlPoints, "int ()")

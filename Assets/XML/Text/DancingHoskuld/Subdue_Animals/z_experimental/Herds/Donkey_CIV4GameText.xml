@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DONKEY_PEDIA</Tag>
-		<English>TBD [PARAGRAPH:2]Source: Wikipedia</English>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
@@ -53,6 +53,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Donkey and Equine, Horse Herd, Carnival, Exotic Herbivore Cage and Enclosure. May place resource on map</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Donkey and Equine[NEWLINE][ICON_BULLET]Horse Herd and Carnival[NEWLINE][ICON_BULLET]Exoctic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]May place resource on map</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Donkey and Equine[NEWLINE][ICON_BULLET]Horse Herd and Carnival[NEWLINE][ICON_BULLET]Exoctic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]May place resource on map</French>
 	</TEXT>
 </Civ4GameText>

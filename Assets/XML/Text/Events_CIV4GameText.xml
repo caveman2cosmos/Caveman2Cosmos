@@ -670,7 +670,7 @@
 		<English>Religious leaders in the %s1_civ_adjective empire have lobbied against the newest bestselling 'Harry Potter' novel.</English>
 		<French>Les chefs religieux de %s1_civ_adjective empire font pression contre le dernier BestSeller 'Harry Potter'.</French>
 		<Spanish>Los líderes religiosos del imperio %s1_civ_adjective han formado un grupo de presión contra la última novela superventas de 'Harry Potter'.</Spanish>
-		<Polish>Przywódcy religijni w imperium %s1_civ_adjective lobbują rząd do sabotowania wydania serii książek 'Harry Potter'..</Polish>
+		<Polish>Przywódcy religijni w imperium %s1_civ_adjective lobbują rząd do sabotowania wydania serii książek 'Harry Potter'.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HEALING_PLANT</Tag>
@@ -762,7 +762,7 @@
 		<English>%s1_civ_adjective merchants are now selling jade carvings in small quantities.</English>
 		<French>Des marchands %s1_civ_adjective vendent des petites quantité d'objets en jade.</French>
 		<German>Von %[s1_civ_adjective]en Händlern werden neuerdings Jadeskulpturen in kleinen Mengen verkauft.</German>
-		<Polish>Kupcy z Imperium %s1_civ_adjective sprzedają od niedawna posążki z jadeitu w małych ilościach. </Polish>
+		<Polish>Kupcy z Imperium %s1_civ_adjective sprzedają od niedawna posążki z jadeitu w małych ilościach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_JAIL</Tag>
@@ -837,7 +837,7 @@
 		<German>Das %s1_civ_adjective Imperium hat damit begonnen, seine Regierung von möglichen Verrätern zu reinigen. Andere Herrscher sind besorgt.</German>
 		<Italian>L'impero %s1_civ_adjective ha iniziato a purgare il prorpio governo dai sospetti traditori. Gli altri leader mondiali sono molto attenti a riguardo.</Italian>
 		<Spanish>El imperio %s1_civ_adjective ha empezado a limpiar el gobierno de posibles traidores. Los otros líderes mundiales están preocupados.</Spanish>
-		<Polish>Imperium %s1_civ_adjective rozpoczęło czystki w swych kręgach władzy. Inni światowi przywódcy są zaniepokojeni. </Polish>
+		<Polish>Imperium %s1_civ_adjective rozpoczęło czystki w swych kręgach władzy. Inni światowi przywódcy są zaniepokojeni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MAGNA_CARTA_1</Tag>
@@ -1597,12 +1597,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1</Tag>
-		<English>[PARAGRAPH:1]To complete this quest, you must build a total of %d1 [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and/or [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] in your various cities. You are allowed to build [COLOR_POSITIVE_TEXT]any combination of Hydro Plants and Nuclear Plants that add up to the total.[COLOR_REVERT] [PARAGRAPH:1]An additional reward option will be available if your civilization is running the Economic Civic [COLOR_POSITIVE_TEXT]Environmentalism[COLOR_REVERT] when the quest is completed. [PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if your civilization constructs or acquires direct control over the [COLOR_NEGATIVE_TEXT]Three Gorges Dam[COLOR_REVERT] before having met the conditions.</English>
-		<French>[PARAGRAPH:1]Pour accomplir cette quête, vous devez avoir construit un total de %d1 [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et/ou [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] dans vos diverses villes. On vous permet de construire indifféremment[COLOR_POSITIVE_TEXT]des centrales hydro-électriques et centrales nucléaires qui s'ajoutent au total, même lorsque contruites dans la même ville.[COLOR_REVERT] [PARAGRAPH:1] Une récompense supplémentaire vous sera attribuée si vous avez adopté la doctrine [COLOR_POSITIVE_TEXT]Environmentalisme[COLOR_REVERT] lorsque la quête se termine. [PARAGRAPH:1]Vous échouerez cette quête si une civilisation rivale l'accomplit avant vous, ou si votre civilisation construit ou acquiert le contrôle direct du [COLOR_NEGATIVE_TEXT]Barrage des Trois Gorges[COLOR_REVERT] avant d'avoir remplit toutes les conditions de la quête.</French>
-		<German>[PARAGRAPH:1]Um diesen Quest durchzuführen, müssen Sie eine Gesamtmenge von %d1 [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] und/oder [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] in Ihren verschiedenen Städten errichten. Sie können dabei [COLOR_POSITIVE_TEXT]jede beliebige Kombination von Wasserkraft- und Kernkraftwerken[COLOR_REVERT] errichten. [PARAGRAPH:1]Eine zusätzliche Belohnungsoption wird vorhanden sein, wenn Ihre Zivilisation die ökonomische Gesellschaftsform [COLOR_POSITIVE_TEXT]Umweltschutz[COLOR_REVERT] betreibt, wenn der Quest beendet ist. [PARAGRAPH:1]Der Quest wird scheitern, wenn eine rivalisierende Zivilisation den Bau zuerst vollendet oder wenn Ihre Zivilisation den [COLOR_NEGATIVE_TEXT]Drei-Schluchten-Damm[COLOR_REVERT] erbaut oder kontrolliert bevor die Bedingungen erfüllt sind.</German>
-		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualundue combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT] [PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata. [PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
+		<English>[PARAGRAPH:1]To complete this quest, you must build a total of %d1 [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and/or [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] in your various cities. You are allowed to build [COLOR_POSITIVE_TEXT]any combination of Hydro Plants and Nuclear Plants that add up to the total.[COLOR_REVERT][PARAGRAPH:1]An additional reward option will be available if your civilization is running the Economic Civic [COLOR_POSITIVE_TEXT]Environmentalism[COLOR_REVERT] when the quest is completed.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if your civilization constructs or acquires direct control over the [COLOR_NEGATIVE_TEXT]Three Gorges Dam[COLOR_REVERT] before having met the conditions.</English>
+		<French>[PARAGRAPH:1]Pour accomplir cette quête, vous devez avoir construit un total de %d1 [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et/ou [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] dans vos diverses villes. On vous permet de construire indifféremment[COLOR_POSITIVE_TEXT]des centrales hydro-électriques et centrales nucléaires qui s'ajoutent au total, même lorsque contruites dans la même ville.[COLOR_REVERT][PARAGRAPH:1]Une récompense supplémentaire vous sera attribuée si vous avez adopté la doctrine [COLOR_POSITIVE_TEXT]Environmentalisme[COLOR_REVERT] lorsque la quête se termine.[PARAGRAPH:1]Vous échouerez cette quête si une civilisation rivale l'accomplit avant vous, ou si votre civilisation construit ou acquiert le contrôle direct du [COLOR_NEGATIVE_TEXT]Barrage des Trois Gorges[COLOR_REVERT] avant d'avoir remplit toutes les conditions de la quête.</French>
+		<German>[PARAGRAPH:1]Um diesen Quest durchzuführen, müssen Sie eine Gesamtmenge von %d1 [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] und/oder [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] in Ihren verschiedenen Städten errichten. Sie können dabei [COLOR_POSITIVE_TEXT]jede beliebige Kombination von Wasserkraft- und Kernkraftwerken[COLOR_REVERT] errichten.[PARAGRAPH:1]Eine zusätzliche Belohnungsoption wird vorhanden sein, wenn Ihre Zivilisation die ökonomische Gesellschaftsform [COLOR_POSITIVE_TEXT]Umweltschutz[COLOR_REVERT] betreibt, wenn der Quest beendet ist.[PARAGRAPH:1]Der Quest wird scheitern, wenn eine rivalisierende Zivilisation den Bau zuerst vollendet oder wenn Ihre Zivilisation den [COLOR_NEGATIVE_TEXT]Drei-Schluchten-Damm[COLOR_REVERT] erbaut oder kontrolliert bevor die Bedingungen erfüllt sind.</German>
+		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualundue combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT][PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás construir un total de %d1 [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y/o [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] en varias de tus ciudades. Puedes construir [COLOR_POSITIVE_TEXT]cualquier combinación de Centrales hidroeléctricas y Centrales nucleares, todas se añadirán al total.[COLOR_REVERT][PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás la misión si una civilización rival la completa primero, o si tu civilización construye o toma el control directo de la [COLOR_NEGATIVE_TEXT]Presa de las Tres Gargantas[COLOR_REVERT] antes de cumplir las condiciones.</Spanish>
-		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wybudować %d1 [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i/lub [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] w różnych miastach. Dopuszczalne są [COLOR_POSITIVE_TEXT]wszystkie kombinacje.[COLOR_REVERT] [PARAGRAPH:1]Dostaniesz dodatkową premię jeśli będziesz używać doktryny [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT], kiedy zadanie zostanie zakończone. [PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed wybudowaniem lub przejęciem [COLOR_NEGATIVE_TEXT]Zapory Trzech Przełomów[COLOR_REVERT].</Polish>
+		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wybudować %d1 [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i/lub [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] w różnych miastach. Dopuszczalne są [COLOR_POSITIVE_TEXT]wszystkie kombinacje.[COLOR_REVERT][PARAGRAPH:1]Dostaniesz dodatkową premię jeśli będziesz używać doktryny [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT], kiedy zadanie zostanie zakończone.[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed wybudowaniem lub przejęciem [COLOR_NEGATIVE_TEXT]Zapory Trzech Przełomów[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANTIMONARCHISTS</Tag>
@@ -1908,7 +1908,7 @@
 		<French>[ICON_BULLET]Si nous sommes découverts, notre réputation envers [COLOR_HIGHLIGHT_TEXT]toute les tribus[COLOR_REVERT] en sera dégradée.[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+4[COLOR_REVERT] [COLOR_UNIT_TEXT]Unités Barbares[COLOR_REVERT] à proximité des frontières %s1_civ_adjective.[NEWLINE][NEWLINE][ICON_BULLET]de Plus, 20% chance de:[NEWLINE][ICON_BULLET]recevoir une pénalité de [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en relations avec tous les leaders.</French>
 		<Italian>[ICON_BULLET]Se veniamo scoperti, la nostra reputazione con [COLOR_HIGHLIGHT_TEXT]tutte le tribù conosciute[COLOR_REVERT] verrà danneggiata.[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+4[COLOR_REVERT] [COLOR_UNIT_TEXT]Guerrieri con clava barbari[COLOR_REVERT] vicino ai confini %s1_civ_adjective.[NEWLINE][NEWLINE][ICON_BULLET]In più, 20% di chance per:[NEWLINE][ICON_BULLET]Soffri una penalità di [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] alle relazioni con tutti i leader conosciuti.</Italian>
 		<Spanish>[ICON_BULLET]Si somos descubiertos, nuestra reputación con todas las [COLOR_HIGHLIGHT_TEXT]tribus conocidas[COLOR_REVERT] se verá afectada.[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+4[COLOR_REVERT] [COLOR_UNIT_TEXT]Guerreros con garrote bárbaros[COLOR_REVERT] cerca de las fronteras %s1:4_civ_adjective.[NEWLINE][NEWLINE]Además, probabilidad del 20% de:[NEWLINE][ICON_BULLET]Sufrir [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en las relaciones con todos los líderes conocidos.</Spanish>
-		<Polish>[ICON_BULLET]Jeśli nas odkryją nasza reputacja u [COLOR_HIGHLIGHT_TEXT]wszystkich plemion[COLOR_REVERT] spadnie.[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+4[COLOR_REVERT] [COLOR_UNIT_TEXT]Barbarzyńskie jednostki[COLOR_REVERT] w pobliżu granic %s1_civ_adjective.[NEWLINE][NEWLINE][ICON_BULLET]Dodatkowo, 20% szans na: [NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji ze wszystkimi przywódcami.</Polish>
+		<Polish>[ICON_BULLET]Jeśli nas odkryją nasza reputacja u [COLOR_HIGHLIGHT_TEXT]wszystkich plemion[COLOR_REVERT] spadnie.[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+4[COLOR_REVERT] [COLOR_UNIT_TEXT]Barbarzyńskie jednostki[COLOR_REVERT] w pobliżu granic %s1_civ_adjective.[NEWLINE][NEWLINE][ICON_BULLET]Dodatkowo, 20% szans na:[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji ze wszystkimi przywódcami.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_CLUBMAN_INVATION_HELP_1</Tag>
@@ -1929,7 +1929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_FLETCHER_ASSAULT_HELP_1</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarians might get upset with us.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous..[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous.[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I Barbari potrebbero arrabbiarsi con noi.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los bárbaros podrían disgustarse con nosotros.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarzyńcy mogą się na nas zdenerwować.[COLOR_REVERT]</Polish>
@@ -2060,7 +2060,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_STONE_SPEARMAN_ASSAULT_HELP_1</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarians might get upset with us.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous..[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les barbares pourraient se fâcher contre nous.[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I barbari potrebbero arrabbiarsi con noi.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los bárbaros podrían disgustarse con nosotros.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Barbarzyńcy mogą się na nas zdenerwować.[COLOR_REVERT]</Polish>
@@ -2109,7 +2109,7 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_WOMAN_1</Tag>
 		<English>Let's take her back to the Barbarian leader. By the way... have you heard of any reward?</English>
 		<French>Ramenons-la au chef barbare. Au fait ... avez-vous entendu parler d'une récompense?</French>
-		<Italian>Riportiamola dal leader barbarico. In ogni caso...hai sentito di qualche ricompensa?</Italian>
+		<Italian>Riportiamola dal leader barbarico. A proposito... hai sentito di qualche ricompensa?</Italian>
 		<Spanish>Llevémosla de regreso con su Líder bárbaro. A propósito... ¿has oído hablar de alguna recompensa?</Spanish>
 		<Polish>Zabierz ją z powrotem na ziemie barbarzyńców. A tak na marginesie... słyszałeś o jakiejś nagrodzie?</Polish>
 	</TEXT>
@@ -2907,7 +2907,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_HELP_1</Tag>
 		<English>[ICON_BULLET]Will automatically change to [COLOR_BUILDING_TEXT]Tribal Law Civic[COLOR_REVERT][NEWLINE][ICON_BULLET]Barbarians won't be pleased with this</English>
-		<French>[ICON_BULLET] Passera automatiquement à la doctrine [COLOR_BUILDING_TEXT]Loi Tribale[COLOR_REVERT] [NEWLINE] [ICON_BULLET] Les barbares ne seront pas satisfaits de cela</French>
+		<French>[ICON_BULLET] Passera automatiquement à la doctrine [COLOR_BUILDING_TEXT]Loi Tribale[COLOR_REVERT][NEWLINE][ICON_BULLET] Les barbares ne seront pas satisfaits de cela</French>
 		<Italian>[ICON_BULLET]Adotterà automaticamente [COLOR_BUILDING_TEXT]Legge tribale[COLOR_REVERT][NEWLINE][ICON_BULLET]I barbari non saranno contenti di tutto questo</Italian>
 		<Spanish>[ICON_BULLET]Tu principio cambiará automáticamente a la [COLOR_BUILDING_TEXT]Ley tribal[COLOR_REVERT][NEWLINE][ICON_BULLET]Los bárbaros no estarán muy contentos de esto</Spanish>
 		<Polish>[ICON_BULLET]Automatyczna zmiana doktryny na [COLOR_BUILDING_TEXT]Plemienność[COLOR_REVERT][NEWLINE][ICON_BULLET]Barbarzyńcy nie będą z tego zadowoleni</Polish>
@@ -2915,7 +2915,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_HELP_3</Tag>
 		<English>[ICON_BULLET]Will destroy up to 2 buildings in the %s1_civ_adjective city of [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_BUILDING_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET]Will trigger [COLOR_NEGATIVE_TEXT]War[COLOR_REVERT]</English>
-		<French>[ICON_BULLET] Détruit jusqu'à 2 bâtiments dans la ville %s1_civ_adjective de [COLOR_BUILDING_TEXT]%s2_city [COLOR_REVERT] [NEWLINE] [ICON_BULLET] [COLOR_NEGATIVE_TEXT] -1 [COLOR_REVERT] relation avec [COLOR_REVERT]tous les Leaders connus.[COLOR_REVERT][NEWLINE][ICON_BULLET]Déclenche la [COLOR_NEGATIVE_TEXT]Guerre[COLOR_REVERT]</French>
+		<French>[ICON_BULLET] Détruit jusqu'à 2 bâtiments dans la ville %s1_civ_adjective de [COLOR_BUILDING_TEXT]%s2_city [COLOR_REVERT][NEWLINE][ICON_BULLET] [COLOR_NEGATIVE_TEXT] -1 [COLOR_REVERT] relation avec [COLOR_REVERT]tous les Leaders connus.[COLOR_REVERT][NEWLINE][ICON_BULLET]Déclenche la [COLOR_NEGATIVE_TEXT]Guerre[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET]Distruggerà fino a 2 ediici nella città %s1_civ_adjective di [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] alle relazioni con [COLOR_BUILDING_TEXT]tutti i leader conosciuti[COLOR_REVERT][NEWLINE][ICON_BULLET]Dichiarerà [COLOR_NEGATIVE_TEXT]Guerra[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Destruirás hasta 2 edificios en la ciudad %s1:2_civ_adjective de [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET]Sufres [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en las relaciones con todos los [COLOR_BUILDING_TEXT]líderes conocidos[COLOR_REVERT][NEWLINE][ICON_BULLET]Provocará una [COLOR_NEGATIVE_TEXT]declaración de guerra[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Zniszczy dwa budynki w mieście %s1_civ_adjective: [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji z [COLOR_BUILDING_TEXT]wszystkimi znanymi liderami[COLOR_REVERT][NEWLINE][ICON_BULLET]Może wywołać [COLOR_NEGATIVE_TEXT]Wojnę[COLOR_REVERT]</Polish>
@@ -3442,7 +3442,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKING_3_HELP</Tag>
 		<English>[ICON_BULLET]Will destroy some %[s1_civ_adjective] buildings in %[s2_city].[NEWLINE][ICON_BULLET]Will trigger War!</English>
-		<French>[ICON_BULLET] Détruit certains bâtiments %s1_civ_adjective dans%s2_city. [NEWLINE] [ICON_BULLET] Déclenche la guerre!</French>
+		<French>[ICON_BULLET] Détruit certains bâtiments %s1_civ_adjective dans%s2_city.[NEWLINE][ICON_BULLET] Déclenche la guerre!</French>
 		<Italian>[ICON_BULLET]Distruggerà alcuni edifici %[s1_civ_adjective] a %[s2_city].[NEWLINE][ICON_BULLET]Dichiarerà Guerra!</Italian>
 		<Spanish>[ICON_BULLET]Destruirás algunos edificios %[s1_civ_adjective] en %[s2_city].[NEWLINE][ICON_BULLET]¡Provocará una declaración de guerra!</Spanish>
 		<Polish>[ICON_BULLET]Zniszczy niektóre budynki %[s1_civ_adjective] w mieście %[s2_city].[NEWLINE][ICON_BULLET]Wywoła wojnę!</Polish>
@@ -4431,7 +4431,7 @@
 		<English>Times change, and so do we. They will get over it eventually.</English>
 		<French>Les Temps Changent, et nous avec. Cela va leur passer.</French>
 		<German>Die Zeiten ändern sich, so wie wir selbst. Sie werden eines Tages darüber hinwegkommen.</German>
-		<Italian>I tempi cambiano, e così facciamo anche noi. Se ne accorgeranno prima o poi..</Italian>
+		<Italian>I tempi cambiano, e così facciamo anche noi. Se ne accorgeranno prima o poi.</Italian>
 		<Spanish>Los tiempos cambian, y nosotros también. Lo superarán con el tiempo.</Spanish>
 		<Polish>Czasy się zmieniają, my także. Ludzie to w końcu zaakceptują.</Polish>
 	</TEXT>
@@ -4463,7 +4463,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HOLY_MOUNTAIN_PART_1_HELP</Tag>
-		<English>[PARAGRAPH:1]To complete this quest, you must extend your cultural influence and control over the Peak plot that is the Holy Mountain. You may achieve this by divine providence by settling near any Peaks you find. Eventually you may find the right one.[PARAGRAPH:1]Or you may seek further guidance from studying the holy scriptures. If you build %d1 religious buildings (Temples and Monasteries), your religious leaders will solve the puzzle and identify the correct location of the Holy Mountain, which you must then still go and settle near to complete the quest. </English>
+		<English>[PARAGRAPH:1]To complete this quest, you must extend your cultural influence and control over the Peak plot that is the Holy Mountain. You may achieve this by divine providence by settling near any Peaks you find. Eventually you may find the right one.[PARAGRAPH:1]Or you may seek further guidance from studying the holy scriptures. If you build %d1 religious buildings (Temples and Monasteries), your religious leaders will solve the puzzle and identify the correct location of the Holy Mountain, which you must then still go and settle near to complete the quest.</English>
 		<French>[PARAGRAPH:1]Pour achever cette quête, vous devez étendre votre influence culturelle et votre contrôle à la case montagneuse sur laquelle se trouve la montagne sacrée. Vous pouvez réussir cette mission en comptant sur la providence divine, c'est-à-dire en vous installant près de toutes les montagnes que vous trouverez. Au bout du compte, vous finirez bien par trouver la bonne.[PARAGRAPH:1]Ou vous pouvez tenter d'en savoir plus en étudiant les écritures sacrées. Si vous construisez %d1 bâtiments religieux (temples et monastères), vos chefs religieux résoudront l'énigme et localiseront précisément la montagne sacrée, qu'il vous faudra encore coloniser pour achever la quête.</French>
 		<German>[PARAGRAPH:1]Um diese Quest zu erfüllen, müssen Sie Ihren kulturellen Einfluss ausdehnen und die Kontrolle über das erhöhte Geländefeld erringen, auf dem sich der Heilige Berg befindet. Dies erreichen Sie nach göttlicher Vorsehung, indem Sie sich an allen erhöhten Standorten ansiedeln, bis Sie schließlich den richtigen Standort gefunden haben.[PARAGRAPH:1]Oder Sie durchsuchen die Heilige Schrift weiter nach Hinweisen. Wenn Sie %d1 religiöse Gebäude errichtet haben (Tempel und Klöster), werden Ihre religiösen Führer das Rätsel lösen und den korrekten Standort des Heiligen Berges identifizieren. Anschließend müssen Sie dorthin aufbrechen und sich in der Nähe des Berges niederlassen, um die Quest erfolgreich abzuschließen.</German>
 		<Italian>[PARAGRAPH:1]Per completare l'impresa dovrai espandere la tua influenza culturale e il tuo controllo sulla casella che ospita il picco della Montagna Sacra. Puoi riuscirci affidandoti alla divina provvidenza e accampandoti a fianco di ogni picco che incontri: prima o poi troverai quello giusto.[PARAGRAPH:1]Oppure puoi cercare aiuto nello studio delle sacre scritture. Se costruisci %d1 edifici religiosi (templi e monasteri) i tuoi capi religiosi riusciranno a risolvere l'enigma e a identificare l'esatta posizione della Montagna Sacra; dovrai comunque andarci e accampartici, per portare e termine l'impresa.</Italian>
@@ -4748,7 +4748,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LARGE_RECESSION_1</Tag>
-		<English>Stick to our guns...the government should not interfere in the markets.</English>
+		<English>Stick to our guns... the government should not interfere in the markets.</English>
 		<French>"Ranges vos armes..." Le gouvernement ne doit pas interférer dans les marchés.</French>
 		<German>Schuster bleib bei deinen Leisten...die Regierung sollte sich nicht in die Marktangelegenheiten einmischen.</German>
 		<Italian>Limitiamoci ai nostri affari... il governo non deve interferire con il mercato.</Italian>
@@ -4811,7 +4811,7 @@
 		<German>Bürger in der Nähe von %s2_city haben viele Mühlen gebaut, die es ihnen ermöglichen eine Vielzahl von Produkten herzustellen.</German>
 		<Italian>I cittadini nelle vicinanze di %s2_city hanno costruito molti mulini, permettendo loro di produrre una grande varietà di beni.</Italian>
 		<Spanish>Los ciudadanos residentes a las afueras de la ciudad de %s2_city han construido montones de fábricas, permitiédoles producir una amplia variedad de bienes de consumo.</Spanish>
-		<Polish>Obywatele mieszkający nieopodal %s2_city pobudowali wiele wiatraków, pozwalającym im na produkcję nowych dóbr konsumpcyjnych. </Polish>
+		<Polish>Obywatele mieszkający nieopodal %s2_city pobudowali wiele wiatraków, pozwalającym im na produkcję nowych dóbr konsumpcyjnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LOCAL_MILLS_1</Tag>
@@ -6264,14 +6264,14 @@
 		<Tag>TXT_KEY_EVENT_STUCK_IN_SWAMP_1</Tag>
 		<English>Eventually they will find their way out...</English>
 		<French>Espérons qu'ils trouvent leur chemin...</French>
-		<Italian>Prima o poi riusciranno ad uscire....</Italian>
+		<Italian>Prima o poi riusciranno ad uscire...</Italian>
 		<Spanish>Algún día encontrará la forma de salir...</Spanish>
 		<Polish>Mam nadzieję, że znajdą drogę powrotną...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SUPER_VIRUS_1</Tag>
 		<English>I'm sure the doctors will work something out... eventually. I hope.</English>
-		<French>Je suis sûr que les docteurs pourront mettre au point quelque chose...éventuellement. J'espère.</French>
+		<French>Je suis sûr que les docteurs pourront mettre au point quelque chose... éventuellement. J'espère.</French>
 		<Spanish>Estoy seguro de que los doctores harán algo al respecto... en algún momento. Espero.</Spanish>
 		<Polish>Jestem pewien, że lekarze znajdą na to sposób... Mam nadzieję.</Polish>
 	</TEXT>

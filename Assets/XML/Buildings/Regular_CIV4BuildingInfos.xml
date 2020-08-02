@@ -24606,10 +24606,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CONDUCT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -24625,7 +24622,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>68</iCost>
+			<iCost>225</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -69275,7 +69272,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_EXECUTIONS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_CROSSES</BuildingType>

@@ -365,9 +365,9 @@ public:
 	bool isCanUseRouteLandUnits() const;
 	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
-	int getRevoltProtection();
-	int getAverageEnemyStrength(TeamTypes eTeam);
-	int getAverageEnemyDamage(TeamTypes eTeam);
+	int getRevoltProtection() const;
+	int getAverageEnemyStrength(TeamTypes eTeam) const;
+	int getAverageEnemyDamage(TeamTypes eTeam) const;
 	LandmarkTypes getLandmarkType() const;
 	void setLandmarkType(LandmarkTypes eLandmark);
 	CvWString getLandmarkName() const;
@@ -752,7 +752,7 @@ public:
 	int getRiverCrossingCount() const; // Exposed to Python
 	void changeRiverCrossingCount(int iChange);
 
-	short* getYield();
+	short* getYield() const;
 	DllExport int getYield(YieldTypes eIndex) const; // Exposed to Python
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const; // Exposed to Python
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const; // Exposed to Python
@@ -1181,6 +1181,7 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, ImprovementTypes, getImprovementType);
 		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
@@ -1192,6 +1193,11 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, bool, isBombardable, const CvUnit*);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isCity, bool, TeamTypes);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
 

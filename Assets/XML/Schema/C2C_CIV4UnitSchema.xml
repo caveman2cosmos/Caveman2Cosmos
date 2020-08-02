@@ -330,8 +330,8 @@
 	<ElementType name="iGroupChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iLevelPrereq" content="textOnly" dt:type="int"/>
 	<ElementType name="iStrengthModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostModifierChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iUpkeepModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iExtraUpkeep100" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamage" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamageChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iRBombardDamageLimit" content="textOnly" dt:type="int"/>
@@ -1686,7 +1686,7 @@
 	<ElementType name="iSMCargoVolume" content="textOnly" dt:type="int"/>
 	<ElementType name="iConscription" content="textOnly" dt:type="int"/>
 	<ElementType name="iCultureGarrison" content="textOnly" dt:type="int"/>
-	<ElementType name="iExtraCost" content="textOnly" dt:type="int"/>
+	<ElementType name="iBaseUpkeep" content="textOnly" dt:type="int"/>
 	<ElementType name="iAsset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPower" content="textOnly" dt:type="int"/>
 	<ElementType name="EarlyArtDefineTag" content="textOnly"/>
@@ -2032,7 +2032,6 @@
 		<element type="iMediumRangeSupportPercent" minOccurs="0"/>
 		<element type="iLongRangeSupportPercent" minOccurs="0"/>
 		<element type="iFlankSupportPercent" minOccurs="0"/>
-		<element type="iCostModifier" minOccurs="0"/>
 		<element type="bStampede" minOccurs="0"/>
 		<element type="iAnimalIgnoresBorders" minOccurs="0"/>
 		<element type="bOnslaught" minOccurs="0"/>
@@ -2126,7 +2125,7 @@
 		<element type="iSMCargoVolume" minOccurs="0"/>
 		<element type="iConscription" minOccurs="0"/>
 		<element type="iCultureGarrison" minOccurs="0"/>
-		<element type="iExtraCost" minOccurs="0"/>
+		<element type="iBaseUpkeep" minOccurs="0"/>
 		<element type="iAsset" minOccurs="0"/>
 		<element type="iPower" minOccurs="0"/>
 		<element type="UnitMeshGroups" minOccurs="0"/>
@@ -2469,7 +2468,8 @@
 		<element type="iMediumRangeSupportPercentChange" minOccurs="0"/>
 		<element type="iLongRangeSupportPercentChange" minOccurs="0"/>
 		<element type="iFlankSupportPercentChange" minOccurs="0"/>
-		<element type="iCostModifierChange" minOccurs="0"/>
+		<element type="iUpkeepModifier" minOccurs="0"/>
+		<element type="iExtraUpkeep100" minOccurs="0"/>
 		<element type="bStampedeChange" minOccurs="0"/>
 		<element type="bRemoveStampede" minOccurs="0"/>
 		<element type="iAnimalIgnoresBordersChange" minOccurs="0"/>
@@ -3053,7 +3053,8 @@
 		<element type="iQualityBase" minOccurs="0"/>
 		<element type="iGroupBase" minOccurs="0"/>
 		<element type="iSizeBase" minOccurs="0"/>
-		<element type="iCostModifierChange" minOccurs="0"/>
+		<element type="iUpkeepModifier" minOccurs="0"/>
+		<element type="iExtraUpkeep100" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeMoreChange" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeLessChange" minOccurs="0"/>
 		<element type="iCombatModifierPerVolumeMoreChange" minOccurs="0"/>

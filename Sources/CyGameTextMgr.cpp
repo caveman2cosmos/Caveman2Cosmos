@@ -298,3 +298,10 @@ std::wstring CyGameTextMgr::getDealString(CyDeal* pDeal, int iPlayerPerspective)
 	}
 	return szBuffer.getCString();
 }
+
+std::wstring CyGameTextMgr::getFinanceUnitUpkeepString(int iPlayer)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.buildFinanceUnitUpkeepString(szBuffer, (PlayerTypes) iPlayer);
+	return szBuffer.getCString();
+}

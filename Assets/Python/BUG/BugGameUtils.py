@@ -152,7 +152,6 @@ class Dispatcher:
 		# setup defaults
 		self._setDefault("isVictory", True)
 		self._setDefault("isPlayerResearch", True)
-		self._setDefault("getExtraCost", 0)
 		self._setDefault("createBarbarianCities", False)
 		self._setDefault("createBarbarianUnits", False)
 		self._setDefault("skipResearchPopup", False)
@@ -166,7 +165,6 @@ class Dispatcher:
 		self._setDefault("getRecommendedUnit", UnitTypes.NO_UNIT)
 		self._setDefault("getRecommendedBuilding", BuildingTypes.NO_BUILDING)
 		self._setDefault("updateColoredPlots", False)
-		self._setDefault("isActionRecommended", False)
 		self._setDefault("unitCannotMoveInto", False)
 		self._setDefault("cannotHandleAction", False)
 		self._setDefault("cannotFoundCity", False)

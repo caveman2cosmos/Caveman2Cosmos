@@ -65,15 +65,8 @@ protected:
 	void setup();
 
 public:
-/************************************************************************************************/
-/* Afforess	                  Start		 07/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int percentUnoccupiedLand(bool bExcludeWater = true, bool bIncludeBarbarian = false, bool bExcludePeaks = true, CvArea* pArea = NULL, int iRange = -1, CvPlot* pRangeFromPlot = NULL);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	//int percentUnoccupiedLand(bool bExcludeWater = true, bool bIncludeBarbarian = false, bool bExcludePeaks = true, CvArea* pArea = NULL, int iRange = -1, CvPlot* pRangeFromPlot = NULL);
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -298,13 +291,6 @@ protected:
 	FFreeListTrashArray<CvArea> m_areas;
 
 	void calculateAreas();
-
-public:
-	// AIAndy: Expose path generation functionality here to expose it to Python via CyMap
-	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns) const;
-	const CvPath& getLastPath() const;
-	int getLastPathStepNum() const;
-	CvPlot* getLastPathPlotByIndex(int index) const;
 };
 
 #endif
