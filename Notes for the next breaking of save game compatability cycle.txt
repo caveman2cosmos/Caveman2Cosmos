@@ -43,7 +43,19 @@ Mark up sections of code with the @SAVEBREAK tag to indicate changes that should
 When it comes times to break the save we need to apply all the changes that are marked like this.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-Toffer - Rewrite CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
+Toffer
+
+Rewrite CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
 Reduce amount of excess colour definitions, many duplicates and unused ones currently.
 Would cause issues with old saves without some extra recalc code for civ colours.
+
+Change treasury gold data to long long, and get rid of greater gold as it is currently the cause of some minor bugs.
+	Alternatively fix the bugs instead...
+
+Set barb NPC to be the last slot again, the exe initialize the barb in the last slot currently, so we have two barb teams, one initialized by the dll + one by the exe.
+only the one at the lowest NPC slot number is active though, gets units and such, but the last slot cannot be used for anyrthing as it is now.
+
+Currently we can't tell the exe that the last playable slot is slot 39, because NPC's at slots higher than 40 will then get an empty city bar that never upddates.
+I'm thinking we may have to give neadnerthals and higher NPC slots a unique dll/python handled city bar, perhaps not use the city object at all for their cities.
+That way we could fix the bug where the exe allows the player to define regular starting players in the NPC slots by telling the exe that slot 39 is the last playable one.
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
