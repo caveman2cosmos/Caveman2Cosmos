@@ -2117,8 +2117,7 @@ int CvPlot::seeThroughLevel() const
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
 {
-	bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
-	int iUnitID = 0;
+	const bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
 
 	DirectionTypes eFacingDirection = NO_DIRECTION;
 	if (!bAerial && NULL != pUnit)
@@ -2126,21 +2125,22 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		eFacingDirection = pUnit->getFacingDirection(true);
 	}
 
+	int iUnitID = 0;
 	//fill invisible types
 	std::vector<InvisibleTypes> aSeeInvisibleTypes;
 	if (NULL != pUnit)
 	{
 		iUnitID = pUnit->getID();
-		if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			for(int i=0;i<pUnit->getNumSeeInvisibleTypes();i++)
+			for (int i=0;i<pUnit->getNumSeeInvisibleTypes();i++)
 			{
 				aSeeInvisibleTypes.push_back(pUnit->getSeeInvisibleType(i));
 			}
 		}
 		else
 		{
-			for(int i=0; i < GC.getNumInvisibleInfos(); i++)
+			for (int i=0; i < GC.getNumInvisibleInfos(); i++)
 			{
 				if (pUnit->hasVisibilityType((InvisibleTypes)i))
 				{
@@ -2155,92 +2155,51 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		aSeeInvisibleTypes.push_back(NO_INVISIBLE);
 	}
 
-	//check one extra outer ring
-	if (!bAerial)
-	{
-		iRange++;
-	}
+	if (!bAerial) iRange++; // check one extra outer ring
 
-	int iDistance = 0;
-	int iIntensity = 0;
 	int iFinalIntensity = 0;
-	int iIncrement = 0;
-	int iAdjustment = 0;
-	int ix = 0;
-	int iy = 0;
-	bool bSameTile = false;
-	for(int i=0;i<(int)aSeeInvisibleTypes.size();i++)
+	const int iNumInvisibleTypes = aSeeInvisibleTypes.size();
+
+	for (int i = 0; i < iNumInvisibleTypes; i++)
 	{
+		const InvisibleTypes eInvisible = aSeeInvisibleTypes[i];
+
 		for (int dx = -iRange; dx <= iRange; dx++)
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK) && pUnit != NULL)
-				{
-					ix = dx;
-					iy = dy;
-					if (ix < 0)
-					{
-						ix *= -1;
-					}
-					if (iy < 0)
-					{
-						iy *= -1;
-					}
-					iDistance = std::max(ix,iy);
-					bSameTile = (iDistance == 0);
-					if (aSeeInvisibleTypes[i] != NO_INVISIBLE)
-					{
-						iIntensity = pUnit->visibilityIntensityTotal(aSeeInvisibleTypes[i]);
-						iDistance -= std::max(0, pUnit->visibilityIntensityRangeTotal(aSeeInvisibleTypes[i]));
-						iDistance = std::max(0, (iDistance -1));
-						iIncrement = 1 + (-1 * std::min(0, pUnit->visibilityIntensityRangeTotal(aSeeInvisibleTypes[i])));
-						iAdjustment = iIncrement * std::max(0, iDistance);
-						iIntensity = std::max(0, (iIntensity - iAdjustment));
-						if (bSameTile)
-						{
-							iIntensity += pUnit->visibilityIntensitySameTileTotal(aSeeInvisibleTypes[i]);
-						}
-						iFinalIntensity = std::max(0, iIntensity);
-					}
-					else
-					{
-						iFinalIntensity = 0;
-					}
-				}
 				//check if in facing direction
-				if (bAerial || shouldProcessDisplacementPlot(dx, dy, iRange - 1, eFacingDirection))
+				if (bAerial || shouldProcessDisplacementPlot(dx, dy, iRange - 1, eFacingDirection)
+				//check if anything blocking the plot
+				&& (canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange)))
 				{
-					bool outerRing = false;
-					if ((abs(dx) == iRange) || (abs(dy) == iRange))
+					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
+					if (NULL != pPlot)
 					{
-						outerRing = true;
-					}
-
-					//check if anything blocking the plot
-					if (bAerial || canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, outerRing))
-					{
-						CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
-						if (NULL != pPlot)
+						if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK) && pUnit != NULL)
 						{
-							pPlot->changeVisibilityCount(eTeam, ((bIncrement) ? 1 : -1), aSeeInvisibleTypes[i], bUpdatePlotGroups, iFinalIntensity, iUnitID);
+							if (eInvisible != NO_INVISIBLE)
+							{
+								const int iDistance = std::max(
+									0, std::max(abs(dx), abs(dy)) - 1
+									- std::max(0, pUnit->visibilityIntensityRangeTotal(eInvisible))
+								);
+								int iIntensity = std::max(
+									0, pUnit->visibilityIntensityTotal(eInvisible)
+									- iDistance * (1 - std::min(0, pUnit->visibilityIntensityRangeTotal(eInvisible)))
+								);
+
+								if (dx == 0 && dy == 0)
+								{
+									iIntensity += pUnit->visibilityIntensitySameTileTotal(eInvisible);
+								}
+								iFinalIntensity = std::max(0, iIntensity);
+							}
+							else iFinalIntensity = 0;
 						}
+						pPlot->changeVisibilityCount(eTeam, (bIncrement ? 1 : -1), eInvisible, bUpdatePlotGroups, iFinalIntensity, iUnitID);
 					}
 				}
-				//TBSITEDEBUG - Probably should remove this whole next section.
-				//If it works it's actually likely problematic since it ultimately does nothing but process in then process out without any adjustments to the game state inbetween.
-				//if (eFacingDirection != NO_DIRECTION)
-				//{
-				//	if((abs(dx) <= 1) && (abs(dy) <= 1)) //always reveal adjacent plots when using line of sight
-				//	{
-				//		CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
-				//		if (NULL != pPlot)
-				//		{
-				//			pPlot->changeVisibilityCount(eTeam, 1, aSeeInvisibleTypes[i], bUpdatePlotGroups, iFinalIntensity);
-				//			pPlot->changeVisibilityCount(eTeam, -1, aSeeInvisibleTypes[i], bUpdatePlotGroups, iFinalIntensity);
-				//		}
-				//	}
-				//}
 			}
 		}
 	}
@@ -2248,35 +2207,21 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 
 bool CvPlot::canSeePlot(CvPlot *pPlot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const
 {
-	iRange++;
-
 	if (pPlot == NULL)
 	{
 		return false;
 	}
-
 	//find displacement
-	int dx = pPlot->getX() - getX();
-	int dy = pPlot->getY() - getY();
-	dx = dxWrap(dx); //world wrap
-	dy = dyWrap(dy);
+	const int dx = dxWrap(pPlot->getX() - getX());
+	const int dy = dyWrap(pPlot->getY() - getY());
 
-	//check if in facing direction
-	if (shouldProcessDisplacementPlot(dx, dy, iRange - 1, eFacingDirection))
+	// check if in facing direction
+	if (shouldProcessDisplacementPlot(dx, dy, iRange++, eFacingDirection)
+	// check if anything blocking the plot
+	&& canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange))
 	{
-		bool outerRing = false;
-		if ((abs(dx) == iRange) || (abs(dy) == iRange))
-		{
-			outerRing = true;
-		}
-
-		//check if anything blocking the plot
-		if (canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, outerRing))
-		{
-			return true;
-		}
+		return true;
 	}
-
 	return false;
 }
 
@@ -2284,8 +2229,9 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int origina
 {
 	CvPlot *pPlot = plotXY(getX(), getY(), dx, dy);
 	if (pPlot == NULL)
+	{
 		return false;
-
+	}
 	// Base case is current plot
 	if (dx == 0 && dy == 0)
 	{
@@ -2356,55 +2302,36 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int origina
 
 bool CvPlot::shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const
 {
-	if(eFacingDirection == NO_DIRECTION)
+	if (eFacingDirection == NO_DIRECTION)
 	{
 		return true;
 	}
-	else if((dx == 0) && (dy == 0)) //always process this plot
+	if (dx == 0 && dy == 0) //always process this plot
 	{
 		return true;
 	}
-	else
+	//							N		NE		E		SE			S		SW		W			NW
+	const short displacements[8][2] = {{0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1, 1}};
+
+	const short directionX = displacements[eFacingDirection][0];
+	const short directionY = displacements[eFacingDirection][1];
+
+	//compute angle off of direction
+	int crossProduct = directionX * dy - directionY * dx; //cross product
+	int dotProduct = directionX * dx + directionY * dy; //dot product
+
+	float theta = atan2((float) crossProduct, (float) dotProduct);
+	float spread = 60 * (float) M_PI / 180;
+	if (abs(dx) <= 1 && abs(dy) <= 1) //close plots use wider spread
 	{
-		//							N		NE		E		SE			S		SW		W			NW
-		int displacements[8][2] = {{0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1, 1}};
-
-		int directionX = displacements[eFacingDirection][0];
-		int directionY = displacements[eFacingDirection][1];
-
-		//compute angle off of direction
-		int crossProduct = directionX * dy - directionY * dx; //cross product
-		int dotProduct = directionX * dx + directionY * dy; //dot product
-
-		float theta = atan2((float) crossProduct, (float) dotProduct);
-		float spread = 60 * (float) M_PI / 180;
-		if((abs(dx) <= 1) && (abs(dy) <= 1)) //close plots use wider spread
-		{
-			spread = 90 * (float) M_PI / 180;
-		}
-
-		if((theta >= -spread / 2) && (theta <= spread / 2))
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-
-		/*
-		DirectionTypes leftDirection = GC.getTurnLeftDirection(eFacingDirection);
-		DirectionTypes rightDirection = GC.getTurnRightDirection(eFacingDirection);
-
-		//test which sides of the line equation (cross product)
-		int leftSide = displacements[leftDirection][0] * dy - displacements[leftDirection][1] * dx;
-		int rightSide = displacements[rightDirection][0] * dy - displacements[rightDirection][1] * dx;
-		if((leftSide <= 0) && (rightSide >= 0))
-			return true;
-		else
-			return false;
-		*/
+		spread = 90 * (float) M_PI / 180;
 	}
+
+	if (theta >= -spread / 2 && theta <= spread / 2)
+	{
+		return true;
+	}
+	return false;
 }
 
 void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
