@@ -5,20 +5,22 @@
 
 class CounterSet
 {
-	int iNext;
-	int iSize;
-	int* iArrCounters;
+	unsigned short iNext;
+	unsigned short iSize;
+	unsigned short* iArrCounters;
 	int* iArrCurrentIDs;
 
-	void assign(const int ID, const int iValue);
+	void assign(const int ID, const unsigned short iValue);
+
+	unsigned short safeCoercion(const int iValue);
 
   public:
 	CounterSet();
 	CounterSet(const int iNumCounters);
 	~CounterSet();
-	void init(int iNumCounters);
-	int getCount(const int ID);
+	void init(const int iNumCounters);
 	void setCount(const int ID, const int iValue);
+	unsigned short getCount(const int ID);
 };
 
 #endif
