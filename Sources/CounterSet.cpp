@@ -1,7 +1,7 @@
-// Toffer - Simple tool when a limited amount of counters are needed.
-// Counter set is not dynamically sized, not optimal for large amount of counters.
-// If old counters gets less relevant to store for each new one added then a small set may be optimal anyway.
-
+/* Toffer - CounterSet.cpp
+ Simple tool when a small set of counters is needed.
+ Set is not dynamically sized, and it is not optimal for large amount of counters.
+*/
 #include "CvGameCoreDLL.h"
 #include "CounterSet.h"
 
@@ -18,22 +18,21 @@ CounterSet::CounterSet(const int iNumCounters)
 	init(iNumCounters);
 }
 
-void CounterSet::init(int iNumCounters)
+void CounterSet::init(const int iNumCounters)
 {
-	if (iNumCounters < 1) iNumCounters = 1;
-
+	iSize = safeCoercion(iNumCounters);
 	iNext = 0;
-	iSize = iNumCounters;
-	iArrCounters = new int[iNumCounters];
-	iArrCurrentIDs = new int[iNumCounters];
-	for (int iI = 0; iI < iNumCounters; iI++)
+	iArrCounters = new unsigned short[iSize];
+	iArrCurrentIDs = new int[iSize];
+
+	for (int iI = 0; iI < iSize; iI++)
 	{
 		iArrCounters[iI] = 0;
 		iArrCurrentIDs[iI] = 0;
 	}
 }
 
-int CounterSet::getCount(const int ID)
+unsigned short CounterSet::getCount(const int ID)
 {
 	for (int iI = 0; iI < iSize; iI++)
 	{
@@ -52,16 +51,25 @@ void CounterSet::setCount(const int ID, const int iValue)
 	{
 		if (iArrCurrentIDs[iI] == ID)
 		{
-			iArrCounters[iI] = iValue;
+			iArrCounters[iI] = safeCoercion(iValue);
 			return;
 		}
 	}
-	assign(ID, iValue);
+	assign(ID, safeCoercion(iValue));
 }
 
-void CounterSet::assign(const int ID, const int iValue)
+void CounterSet::assign(const int ID, const unsigned short iValue)
 {
 	iArrCounters[iNext] = iValue;
 	iArrCurrentIDs[iNext] = ID;
 	if (++iNext == iSize) iNext = 0;
+}
+
+unsigned short CounterSet::safeCoercion(const int iValue)
+{
+	if (iValue > 0 || iValue <= 65535)
+	{
+		return static_cast<unsigned short>(iValue);
+	}
+	return 0;
 }
