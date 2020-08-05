@@ -21578,8 +21578,8 @@
 		<ScriptID>AS2D_BUILD_ZORO</ScriptID>
 		<SoundID>SND_BUILD_ZORO</SoundID>
 		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>70</iMinVolume>
+		<iMaxVolume>70</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
