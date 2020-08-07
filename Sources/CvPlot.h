@@ -882,7 +882,7 @@ public:
 	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
-	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult);
+	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
 	int getNumUnits() const; // Exposed to Python
@@ -1089,7 +1089,7 @@ protected:
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);
 
-	ColorTypes plotMinimapColor();
+	ColorTypes plotMinimapColor() const;
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
