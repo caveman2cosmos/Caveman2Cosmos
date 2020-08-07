@@ -14095,7 +14095,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 }
 
 
-void CvPlayer::addPlotDangerSource(CvPlot* pPlot, int iStrength)
+void CvPlayer::addPlotDangerSource(const CvPlot* pPlot, int iStrength)
 {
 	if ( iStrength != 0 )
 	{
