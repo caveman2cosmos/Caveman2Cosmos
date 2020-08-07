@@ -7842,8 +7842,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
 		<English>This formerly active volcano has shown no activity for some time, and is now considered dormant.</English>
-		<French>TBD</French>
-		<Polish>TBD</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
