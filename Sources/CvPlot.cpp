@@ -8857,7 +8857,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
-		std::vector<std::pair<PlayerTypes, int>>::iterator itr;
+		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
 		// Toffer - 08.08.20
 		// 4 byte integer overflow protection
@@ -8890,7 +8890,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		{
 			m_aiCulture.push_back(std::make_pair(eIndex, iNewValue));
 			// Force the capacity to the size() since we need to minimize memory usage and adding cultures is rare
-			std::vector<std::pair<PlayerTypes, int>>(m_aiCulture).swap(m_aiCulture);
+			std::vector<std::pair<PlayerTypes, int> >(m_aiCulture).swap(m_aiCulture);
 		}
 		else
 		{
