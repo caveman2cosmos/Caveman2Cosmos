@@ -31271,9 +31271,9 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 
 	const int iCityPlotMultiplier = GC.isIDW_EMERGENCY_DRAFT_ENABLED() ? 100 : GC.getIDW_CITY_TILE_MULTIPLIER();
 
-	CvWString szBuffer;
-//	szBuffer.Format(L"Factors: %d, %d, %d, %d, %d", GC.getIDW_BASE_COMBAT_INFLUENCE(), iLocationMultiplier, iWarlordMultiplier, iMultiplier, iInfluenceRadius);
-//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCentralPlot->getX(), pCentralPlot->getY());
+	//CvWString szBuffer;
+	//szBuffer.Format(L"Factors: %d, %d, %d, %d, %d", GC.getIDW_BASE_COMBAT_INFLUENCE(), iLocationMultiplier, iWarlordMultiplier, iMultiplier, iInfluenceRadius);
+	//AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCentralPlot->getX(), pCentralPlot->getY());
 
 	for (int iDX = -iInfluenceRadius; iDX <= iInfluenceRadius; iDX++)
 	{
@@ -31303,13 +31303,12 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 					}
 					if (iMult < 1) continue;
 
-					const int iRoot = intSqrt(iTargetCulture);
-					szBuffer.Format(L"Value=%d, root=%d", iTargetCulture, iRoot);
-					AddDLLMessage(getOwner(), true, 24, szBuffer);
+					//szBuffer.Format(L"Value=%d, root=%d", iTargetCulture, intSqrt(iTargetCulture));
+					//AddDLLMessage(getOwner(), true, 24, szBuffer);
 
-					int iCultureTransfer = iMult * iDistanceMultiplier * iRoot / 10000;
-					szBuffer.Format(L"CultureChange=%d", iCultureTransfer);
-					AddDLLMessage(getOwner(), true, 24, szBuffer);
+					int iCultureTransfer = iMult * iDistanceMultiplier * intSqrt(iTargetCulture) / 10000;
+					//szBuffer.Format(L"CultureChange=%d", iCultureTransfer);
+					//AddDLLMessage(getOwner(), true, 24, szBuffer);
 
 					if (iTargetCulture < iCultureTransfer)
 					{
