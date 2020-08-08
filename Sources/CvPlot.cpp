@@ -216,19 +216,9 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 /***** Parallel Maps - End *****/
 /*******************************/
 
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                                Johnny Smith       */
-/*                                                                           Afforess           */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	// Dale - BE: Battle Effect START
 	m_iBattleCountdown = 0;
-	//Not saved intentionally
-	m_eBattleEffect = NO_EFFECT;
-	// Dale - BE: Battle Effect END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+	m_eBattleEffect = NO_EFFECT; //Not saved intentionally
+
 	m_iX = iX;
 	m_iY = iY;
 	m_iArea = FFreeList::INVALID_INDEX;
@@ -244,19 +234,16 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_iReconCount = 0;
 	m_iRiverCrossingCount = 0;
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts
 	m_iCanalValue = 0;
 	m_iChokeValue = 0;
-	// Super Forts end
-	// Super Forts begin *bombard*
 	m_iDefenseDamage = 0;
 	m_bBombarded = false;
-	// Super Forts end
+	// ! Super Forts
 
 	m_bStartingPlot = false;
 	m_bHills = false;
 
-	m_bDepletedMine = false; // deleteMe
 	m_eClaimingOwner = NO_PLAYER;
 	m_bCounted = false;
 	m_eLandmarkType = NO_LANDMARK;
@@ -293,12 +280,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 		m_aiYield[iI] = 0;
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// Plot danger cache
 	m_bIsActivePlayerNoDangerCache = false;
 	m_bIsActivePlayerHasDangerCache = false;
 
@@ -306,9 +287,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	{
 		m_abIsTeamBorderCache[iI] = false;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	m_pathGenerationSeq = -1;
 
@@ -8745,9 +8723,9 @@ int CvPlot::getCulture(PlayerTypes eIndex) const
 	FAssertMsg(eIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_PLAYERS, "iIndex is expected to be within maximum bounds (invalid Index)");
 
-	for(std::vector<std::pair<PlayerTypes,int> >::const_iterator itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
+	for (std::vector<std::pair<PlayerTypes,int> >::const_iterator itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
 	{
-		if ( (*itr).first == eIndex )
+		if ((*itr).first == eIndex)
 		{
 			return (*itr).second;
 		}
@@ -11778,21 +11756,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 	uint uiFlag=0;
 	WRAPPER_READ(wrapper, "CvPlot", &uiFlag);	// flags for expansion
 
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                        Johnny Smith               */
-/*                                                                   Afforess                   */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	// Dale - BE: Battle Effect START
 	WRAPPER_READ(wrapper, "CvPlot", &m_iBattleCountdown);
-	// Dale - BE: Battle Effect END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+
 	WRAPPER_READ(wrapper, "CvPlot", &m_iX);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iY);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iArea);
-	// m_pPlotArea not saved
 
 	int iNum = 0;
 	WRAPPER_READ(wrapper, "CvPlot", &iNum);
@@ -11818,21 +11786,22 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvPlot", &m_iReconCount);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iRiverCrossingCount);
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCanalValue);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iChokeValue);
-	// Super Forts end
-	// Super Forts begin *bombard*
 	WRAPPER_READ(wrapper, "CvPlot", &m_iDefenseDamage);
 	WRAPPER_READ(wrapper, "CvPlot", &m_bBombarded);
-	// Super Forts end
+	// ! Super Forts
 
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bStartingPlot");
 	m_bStartingPlot = bVal;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bHills");
 	m_bHills = bVal;
 
-	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine); // deleteMe
+	// @SAVEBREAK DELETE Toffer
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bDepletedMine, SAVE_VALUE_ANY);
+	// SAVEBREAK@
+
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eClaimingOwner);
@@ -11857,10 +11826,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	m_bIrrigated = bVal;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bPotentialCityWork");
 	m_bPotentialCityWork = bVal;
-	// m_bShowCitySymbols not saved
-	// m_bFlagDirty not saved
-	// m_bPlotLayoutDirty not saved
-	// m_bLayoutStateWorked not saved
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_eOwner);
 	WRAPPER_READ(wrapper, "CvPlot", &m_ePlotType);
@@ -11882,18 +11847,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// Plot danger cache
 	m_bIsActivePlayerNoDangerCache = false;
 	m_bIsActivePlayerHasDangerCache = false;
 	invalidateIsTeamBorderCache();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	m_aiCulture.clear();
 
@@ -11905,9 +11861,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 		FAssert(cCount <= MAX_PLAYERS);
 		WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvPlot", cCount, buffer, "m_aiCulture");
 
-		for(iI = 0; iI < (int)cCount; iI++)
+		for (iI = 0; iI < (int)cCount; iI++)
 		{
-			if ( buffer[iI] != 0 )
+			if (buffer[iI] > 0)
 			{
 				m_aiCulture.push_back(std::make_pair((PlayerTypes)iI, buffer[iI]));
 			}
@@ -12315,13 +12271,12 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
 	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlot", uiFlag);		// flag for expansion
+	WRAPPER_WRITE(wrapper, "CvPlot", uiFlag); // flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iBattleCountdown);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iX);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iY);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iArea);
-	// m_pPlotArea not saved
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
@@ -12334,19 +12289,16 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iReconCount);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iRiverCrossingCount);
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCanalValue);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iChokeValue);
-	// Super Forts end
-	// Super Forts begin *bombard*
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iDefenseDamage);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bBombarded);
-	// Super Forts end
+	// ! Super Forts
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bStartingPlot);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bHills);
 
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine); // deleteMe
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eClaimingOwner);
@@ -12368,10 +12320,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bWOfRiver);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bIrrigated);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bPotentialCityWork);
-	// m_bShowCitySymbols not saved
-	// m_bFlagDirty not saved
-	// m_bPlotLayoutDirty not saved
-	// m_bLayoutStateWorked not saved
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eOwner);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_ePlotType);
@@ -12400,12 +12348,12 @@ void CvPlot::write(FDataStreamBase* pStream)
 	{
 		int	buffer[MAX_PLAYERS];
 
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
+		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			buffer[iI] = 0;
 		}
 
-		for(iI = 0; iI < m_aiCulture.size(); iI++)
+		for (iI = 0; iI < m_aiCulture.size(); iI++)
 		{
 			buffer[m_aiCulture[iI].first] = m_aiCulture[iI].second;
 		}
