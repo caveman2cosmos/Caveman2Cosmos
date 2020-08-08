@@ -39516,14 +39516,7 @@ bool CvUnit::isPursuitPossible(const CvUnit* pOpponent) const
 
 bool CvUnit::hasCannotMergeSplit() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		if (isFreeDrop())
-		{
-			return false;
-		}
-	}
-	return (getCannotMergeSplitCount() > 0);
+	return getCannotMergeSplitCount() > 0;
 }
 
 int CvUnit::getCannotMergeSplitCount() const
@@ -40562,33 +40555,12 @@ void CvUnit::setSMCargoVolume()
 
 int CvUnit::getSizeMattersOffsetValue() const
 {
-	int offsetValue = qualityRank();
-	offsetValue += groupRank();
-	offsetValue += sizeRank();
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		offsetValue -= m_pUnitInfo->getSMRankTotal();
-	}
-	else
-	{
-		offsetValue -= 15;
-	}
-	return offsetValue;
+	return qualityRank() + groupRank() + sizeRank() - 15;
 }
 
 int CvUnit::getSizeMattersSpacialOffsetValue() const
 {
-	int spaceOffsetValue = groupRank();
-	spaceOffsetValue += sizeRank();
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		spaceOffsetValue -= m_pUnitInfo->getSMVolumetricRankTotal();
-	}
-	else
-	{
-		spaceOffsetValue -= 10;
-	}
-	return spaceOffsetValue;
+	return groupRank() + sizeRank() - 10;
 }
 
 int CvUnit::getCargoCapacitybyType(int iValue) const
