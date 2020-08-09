@@ -1740,6 +1740,7 @@
 		<Tag>TXT_KEY_BUILDING_ENEMY_WAR_WEAR</Tag>
 		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
+		<German>[ICON_BULLET]%D1_percent%% Kriegsmüdigkeit [ICON_UNHAPPY] für alle Gegner</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Tag>
@@ -11414,6 +11415,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_PER_CITY</Tag>
 		<English>/City</English>
 		<French>/Ville</French>
+		<German>pro Stadt</German>
 		<Italian>/Città</Italian>
 		<Polish>/Miasto</Polish>
 	</TEXT>
@@ -14666,6 +14668,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Großer Admiral:Großen Admirals:Großen Admiral:Großen Admiral:Große Admirale:Großen Admirale:Großen Admiralen:Große Admirale</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Wielki Admirał</Polish>
 	</TEXT>
 	<TEXT>
@@ -14677,7 +14684,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Künstler:Großen Künstlers:Großen Künstler:Großen Künstler:Große Künstler:Großen Künstler:Großen Künstlern:Großen Künstler</Text>
+			<Text>Großer Künstler:Großen Künstlers:Großen Künstler:Großen Künstler:Große Künstler:Großen Künstler:Großen Künstlern:Große Künstler</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -14711,7 +14718,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Konstrukteur:Großen Konstrukteurs:Großen Konstrukteur:Großen Konstrukteur:Große Konstrukteure:Großen Konstrukteure:Großen Konstrukteuren:Großen Konstrukteure</Text>
+			<Text>Großer Konstrukteur:Großen Konstrukteurs:Großen Konstrukteur:Großen Konstrukteur:Große Konstrukteure:Großen Konstrukteure:Großen Konstrukteuren:Große Konstrukteure</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -14764,7 +14771,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Händler:Großen Händlers:Großen Händler:Großen Händler:Große Händler:Großen Händler:Großen Händlern:Großen Händler</Text>
+			<Text>Großer Händler:Großen Händlers:Großen Händler:Großen Händler:Große Händler:Großen Händler:Großen Händlern:Große Händler</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -14789,9 +14796,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Militärausbilder</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Text>Großer Militärausbilder:Großen Militärausbilders:Großen Militärausbilder:Großen Militärausbilder:Große Militärausbilder:Großen Militärausbilder:Großen Militärausbildern:Große Militärausbilder</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
@@ -14813,7 +14820,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Prophet:Großen Propheten:Großen Propheten:Großen Propheten:Große Propheten:Großen Propheten:Großen Propheten:Großen Propheten</Text>
+			<Text>Großer Prophet:Großen Propheten:Großen Propheten:Großen Propheten:Große Propheten:Großen Propheten:Großen Propheten:Große Propheten</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -14838,7 +14845,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Großer Wissenschaftler:Großen Wissenschaftlers:Großen Wissenschaftler:Großen Wissenschaftler:Große Wissenschaftler:Großen Wissenschaftler:Großen Wissenschaftlern:Großen Wissenschaftler</Text>
+			<Text>Großer Wissenschaftler:Großen Wissenschaftlers:Großen Wissenschaftler:Großen Wissenschaftler:Große Wissenschaftler:Großen Wissenschaftler:Großen Wissenschaftlern:Große Wissenschaftler</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -14868,7 +14875,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</French>
 		<German>
-			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Großen Spione</Text>
+			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Große Spione</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
