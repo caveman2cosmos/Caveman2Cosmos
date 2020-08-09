@@ -1755,6 +1755,7 @@ DPII < Revolution Mod End >
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="Texture" minOccurs="0"/>
+		<element type="bSlave" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
 		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
@@ -1771,7 +1772,6 @@ DPII < Revolution Mod End >
 		<element type="Flavors" minOccurs="0"/>
 		<element type="HotKey" minOccurs="0"/>
 		<element type="bAltDown" minOccurs="0"/>
-		<element type="bSlave" minOccurs="0"/>
 		<element type="bShiftDown" minOccurs="0"/>
 		<element type="bCtrlDown" minOccurs="0"/>
 		<element type="iHotKeyPriority" minOccurs="0"/>

@@ -20506,29 +20506,23 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 // ------ BEGIN InfluenceDrivenWar -------------------------------
 void CvCity::emergencyConscript()
 {
-	CvUnit* pUnit;
-	UnitAITypes eCityAI;
-	UnitTypes eConscriptUnit;
-
-	int iEmergencyDraftMinPopulation = GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION();
-
-	if (getPopulation() < iEmergencyDraftMinPopulation)
+	if (getPopulation() < GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION())
 	{
 		return;
 	}
-
 	if (getConscriptUnit() == NO_UNIT)
 	{
 		return;
 	}
-
+	if (getConscriptAngerTimer() > 3 * flatConscriptAngerLength() * GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() / 100)
+	{
+		return;
+	}
+	changeConscriptAngerTimer(flatConscriptAngerLength() * GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() / 100);
 	changePopulation(-1);
 
-	float fEmergencyDraftAngerMultiplier = GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER();
-
-	changeConscriptAngerTimer(int(flatConscriptAngerLength() * fEmergencyDraftAngerMultiplier));
-
-	eConscriptUnit = getConscriptUnit();
+	const UnitTypes eConscriptUnit = getConscriptUnit();
+	UnitAITypes eCityAI;
 
 	if (GET_PLAYER(getOwner()).AI_unitValue(eConscriptUnit, UNITAI_CITY_DEFENSE, area()) > 0)
 	{
@@ -20547,16 +20541,12 @@ void CvCity::emergencyConscript()
 		eCityAI = NO_UNITAI;
 	}
 
-	pUnit = GET_PLAYER(getOwner()).initUnit(eConscriptUnit, getX(), getY(), eCityAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	CvUnit* pUnit = GET_PLAYER(getOwner()).initUnit(eConscriptUnit, getX(), getY(), eCityAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 	FAssertMsg(pUnit != NULL, "pUnit expected to be assigned (not NULL)");
 
 	addProductionExperience(pUnit, true);
-
 	pUnit->setMoves(0);
-
-	float fEmergencyDraftStrength = GC.getIDW_EMERGENCY_DRAFT_STRENGTH();
-
-	pUnit->setDamage(int((1 - fEmergencyDraftStrength) * pUnit->maxHitPoints()), getOwner());
+	pUnit->setDamage((100 - GC.getIDW_EMERGENCY_DRAFT_STRENGTH()) * pUnit->maxHitPoints() / 100, getOwner());
 }
 // ------ END InfluenceDrivenWar ---------------------------------
 

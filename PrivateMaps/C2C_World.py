@@ -3181,8 +3181,7 @@ class BonusPlacer:
 			else:
 				index = plotIndexList[i]
 			plot = MAP.plotByIndex(index)
-			x = plot.getX()
-			y = plot.getY()
+
 			if ignoreClass and self.PlotCanHaveBonus(plot, bonus.indeXML, True) or self.CanPlaceBonus(plot, bonus.indeXML, True):
 				#temporarily remove any feature
 				featureEnum = plot.getFeatureType()

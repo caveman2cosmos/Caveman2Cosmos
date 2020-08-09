@@ -271,7 +271,8 @@ public:
 	// Afforess 03/26/10
 	int getHealthPercent() const;
 	int getHappinessPercent() const;
-	bool isSlave() const;						//Exposed to Python
+
+	bool isSlave() const; // Exposed to Python
 
 	int getExperience() const; // Exposed to Python
 
@@ -5438,16 +5439,12 @@ public:
 protected:
 	bool m_bPeakMakesValid;
 	int m_iHealthPercent;
-	bool m_bDepletedMine;
 	int m_iDepletionRand;
 	int m_iPrereqTech;
 	//int** m_ppiTraitYieldChanges;
 
 	std::vector<int> m_aiMapCategoryTypes;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
@@ -5801,11 +5798,6 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	const TCHAR* getGrowthSound() const;
 	int getSpreadProbability() const;
 	int getCultureDistance() const;
@@ -5820,9 +5812,6 @@ protected:
 
 	std::vector<int> m_aiMapCategoryTypes;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -6281,7 +6270,6 @@ public:
 	const TCHAR* getArtDefineTag() const; // Exposed to Python
 
 	// Arrays
-
 	bool hasTrait(int i) const; // Exposed to Python
 
 	int getFlavorValue(int i) const; // Exposed to Python
@@ -6298,12 +6286,6 @@ public:
 	int getDiploWarMusicScriptIds(int i) const;
 
 	// Other
-
-/************************************************************************************************/
-/* Afforess					  Start		 07/29/10											   */
-/*																							  */
-/* Advanced Diplomacy																		   */
-/************************************************************************************************/
 	int getWorkerRefuseAttitudeThreshold() const;
 	int getMilitaryUnitRefuseAttitudeThreshold() const;
 	int getCorporationRefuseAttitudeThreshold() const;
@@ -6321,9 +6303,6 @@ protected:
 	void setDefaultMemoryInfo();
 	void setDefaultContactInfo();
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	DllExport const CvArtInfoLeaderhead* getArtInfo() const;
 	const TCHAR* getLeaderHead() const;
 	const TCHAR* getButton() const;
@@ -6352,19 +6331,13 @@ protected:
 	int m_iTechTradeKnownPercent;
 	int m_iMaxGoldTradePercent;
 	int m_iMaxGoldPerTurnTradePercent;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
+
 	int m_iCultureVictoryWeight;
 	int m_iSpaceVictoryWeight;
 	int m_iConquestVictoryWeight;
 	int m_iDominationVictoryWeight;
 	int m_iDiplomacyVictoryWeight;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+
 	int m_iMaxWarRand;
 	int m_iMaxWarNearbyPowerRatio;
 	int m_iMaxWarDistantPowerRatio;
@@ -6484,8 +6457,8 @@ public:
 	int getCorporationMaintenancePercent() const; // Exposed to Python
 	int getNumCitiesAnarchyPercent() const; // Exposed to Python
 	int getAdvancedStartPointsMod() const; // Exposed to Python
-	// Afforess 02/27/10
-	int getCommandersLevelThresholdsPercent() const;
+
+	int getCommandersLevelThresholdsPercent() const; // Afforess 02/27/10
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -6517,8 +6490,8 @@ protected:
 	int m_iCorporationMaintenancePercent;
 	int m_iNumCitiesAnarchyPercent;
 	int m_iAdvancedStartPointsMod;
-	// Afforess 02/27/10
-	int m_iCommandersLevelThresholdsPercent;
+
+	int m_iCommandersLevelThresholdsPercent; // Afforess 02/27/10
 
 	IDValueMapPercent m_Percent;
 
@@ -7064,11 +7037,7 @@ protected:
 	int m_iMaintenance;
 	int m_iMissionType;
 	int m_iBonusProduced;
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	int m_iObsoleteTech;
 	int m_iSpread;
 	int m_iHealth;
@@ -7087,9 +7056,6 @@ protected:
 
 	int* m_piYieldChange;
 	int* m_piCommerceChange;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	CvString m_szMovieFile;
 	CvString m_szMovieSound;
@@ -8511,9 +8477,11 @@ public:
 
 	bool isAvoidGrowth() const; // Exposed to Python
 	bool isGreatPeople() const; // Exposed to Python
+
 	// Afforess 02/10/10
 	bool isAvoidAngryCitizens() const; // Exposed to Python
 	bool isAvoidUnhealthyCitizens() const; // Exposed to Python
+	// ! Afforess
 
 	// Arrays
 	int getYieldChange(int i) const; // Exposed to Python
@@ -8524,12 +8492,13 @@ public:
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	bool m_bAvoidGrowth;
 	bool m_bGreatPeople;
+
 	// Afforess 02/10/10
 	bool m_bAvoidAngryCitizens;
 	bool m_bAvoidUnhealthyCitizens;
+	// ! Afforess
 
 	// Arrays
 	int* m_piYieldModifiers;
@@ -8653,8 +8622,8 @@ public:
 	int getSoundtrackSpace() const; // Exposed to Python
 	int getNumSoundtracks() const; // Exposed to Python
 	int getBeelineStingsTechCostModifier() const; // Exposed to Python
-	// Afforess 09/12/10
-	int getInitialCityMaintenancePercent() const;
+
+	int getInitialCityMaintenancePercent() const; // Afforess 09/12/10
 
 	const TCHAR* getAudioUnitVictoryScript() const; // Exposed to Python
 	const TCHAR* getAudioUnitDefeatScript() const; // Exposed to Python
@@ -8697,8 +8666,8 @@ protected:
 	int m_iSoundtrackSpace;
 	int m_iNumSoundtracks;
 	int m_iBeelineStingsTechCostModifier;
-	// Afforess 09/12/10
-	int m_iInitialCityMaintenancePercent;
+
+	int m_iInitialCityMaintenancePercent; // Afforess 09/12/10
 
 	CvString m_szAudioUnitVictoryScript;
 	CvString m_szAudioUnitDefeatScript;
@@ -9023,15 +8992,8 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
 	bool isBattleEffect() const;
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
+
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -9043,15 +9005,7 @@ private:
 	float m_fProjectileSpeed;
 	float m_fProjectileArc;
 
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
 	bool m_bBattleEffect;
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9848,11 +9802,6 @@ public:
 	int getCounterespionageMod() const;
 	int getDifficultyMod() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isNuke() const;
 	bool isRevolt() const;
 	bool isDisablePower() const;
@@ -9861,19 +9810,6 @@ public:
 	int getSabatogeResearchCostFactor() const;
 	int getRemoveReligionsCostFactor() const;
 	int getRemoveCorporationsCostFactor() const;
-protected:
-	bool m_bNuke;
-	bool m_bRevolt;
-	bool m_bDisablePower;
-	int m_iPrereqGameOption;
-	int m_iWarWearinessCounter;
-	int m_iSabatogeResearchCostFactor;
-	int m_iRemoveReligionsCostFactor;
-	int m_iRemoveCorporationsCostFactor;
-public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -9917,6 +9853,15 @@ protected:
 	int m_iCounterespionageNumTurns;
 	int m_iCounterespionageMod;
 	int m_iDifficultyMod;
+
+	bool m_bNuke;
+	bool m_bRevolt;
+	bool m_bDisablePower;
+	int m_iPrereqGameOption;
+	int m_iWarWearinessCounter;
+	int m_iSabatogeResearchCostFactor;
+	int m_iRemoveReligionsCostFactor;
+	int m_iRemoveCorporationsCostFactor;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9939,11 +9884,6 @@ public:
 	const TCHAR* getMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
 
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	const TCHAR* getClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
 	const TCHAR* getRennArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
@@ -9952,9 +9892,6 @@ public:
 	void setIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
 	const TCHAR* getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -9971,11 +9908,7 @@ protected:
 		CvString szTag;
 	};
 	typedef std::vector<ArtDefneTag> ArtDefineArray;
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	ArtDefineArray m_azEarlyArtDefineTags;
 	ArtDefineArray m_azClassicalArtDefineTags;
 	ArtDefineArray m_azMiddleArtDefineTags;
@@ -9983,9 +9916,6 @@ protected:
 	ArtDefineArray m_azIndustrialArtDefineTags;
 	ArtDefineArray m_azLateArtDefineTags;
 	ArtDefineArray m_azFutureArtDefineTags;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

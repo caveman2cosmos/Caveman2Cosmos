@@ -20483,8 +20483,8 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		const int iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
-		int iPotentialDisplays = 0;
+		const unsigned short iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
+		unsigned short iPotentialDisplays = 0;
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getUnitCombatType())))
