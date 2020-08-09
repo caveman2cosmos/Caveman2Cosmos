@@ -31124,8 +31124,6 @@ bool CvUnit::fighterEngage(int iX, int iY)
 /*                                                                                              */
 /* Original Author Moctezuma              Start                                                 */
 /************************************************************************************************/
-// ------ BEGIN InfluenceDrivenWar -------------------------------
-
 // unit influences combat area after victory
 // returns influence % in defended plot
 float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
@@ -31348,7 +31346,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 // returns influence % in current plot
 float CvUnit::doPillageInfluence()
 {
-	if (isAnimal())
+	if (isAnimal() || isHiddenNationality())
 	{
 		return 0.0f;
 	}
@@ -31360,10 +31358,6 @@ float CvUnit::doPillageInfluence()
 	{
 		return 0.0f;
 	}
-	if (isHiddenNationality())
-	{
-		return 0.0f;
-	}
 
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
@@ -31371,53 +31365,45 @@ float CvUnit::doPillageInfluence()
 		FAssertMsg(false, "pPlot == NULL; should not happen");
 		return 0.0f;
 	}
-
-	if (pPlot->getWorkingCity() != NULL)
+	if (pPlot->getWorkingCity() != NULL && pPlot->getWorkingCity()->isProtectedCulture())
 	{
-		if (pPlot->getWorkingCity()->isProtectedCulture())
+		return 0.0f;
+	}
+
+	const PlayerTypes eTargetPlayer = pPlot->getOwner();
+	const int iTargetCulture = pPlot->getCulture(eTargetPlayer);
+	if (iTargetCulture < 1)
+	{
+		FAssertMsg(false, "iTargetCulture < 1; should not happen");
+		return 0.0f;
+	}
+	int iCultureTransfer = GC.getIDW_BASE_PILLAGE_INFLUENCE() * intSqrt(iTargetCulture) / 100;
+	if (iCultureTransfer < 1)
+		iCultureTransfer = 1;
+	// cannot transfer more culture than remaining target culure
+	if (iTargetCulture <= iCultureTransfer)
+	{
+		iCultureTransfer = iTargetCulture;
+		// plot can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
+		if (GET_PLAYER(eTargetPlayer).hasFixedBorders())
 		{
-			return 0.0f;
+			iCultureTransfer--;
 		}
 	}
 
-	const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
-
-	PlayerTypes eTargetPlayer = pPlot->getOwner();
-	int iTargetCulture = pPlot->getCulture(eTargetPlayer);
-	if (iTargetCulture <= 0)
+	if (iCultureTransfer > 0)
 	{
-		//should not happen
-		return 0.0f;
+		const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
+
+		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
+		pPlot->changeCulture(getOwner(), iCultureTransfer, true);
+
+		// calculate influence % in pillaged plot (to be displayed in game log)
+		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 100.0f / pPlot->countTotalCulture();
 	}
-	int iCultureTransfer = int (GC.getIDW_BASE_PILLAGE_INFLUENCE() * sqrt((float) iTargetCulture) / 100);
-	if (iTargetCulture < iCultureTransfer)
-	{
-		// cannot transfer more culture than remaining target culure
-		iCultureTransfer = iTargetCulture;
-	}
-
-	// target player's culture in plot is lowered
-	pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
-	// owners's culture in plot is raised
-	pPlot->changeCulture(getOwner(), iCultureTransfer, true);
-
-	// calculate influence % in pillaged plot (to be displayed in game log)
-    const int iOurCultureAfter = pPlot->getCulture(getOwner());
-	const float fInfluenceRatio = ((iOurCultureAfter-iOurCultureBefore)*100.0f)/pPlot->countTotalCulture();
-
-//	CvWString szBuffer;
-//	szBuffer.Format(L"Factors: %d, %d, Result: %.3f, ", GC.getIDW_BASE_PILLAGE_INFLUENCE(), iTargetCulture, fInfluenceRatio);
-//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), plot()->getX(), plot()->getY());
-
-	return fInfluenceRatio;
+	return 0.0f;
 }
-
 // ------ END InfluenceDrivenWar ---------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
 
 
 bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
