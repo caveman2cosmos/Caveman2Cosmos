@@ -3998,14 +3998,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%d1%: z Wolnych Umów Handlowych</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FROM_COMBAT_CLASS</Tag>
-		<English>From</English>
-		<French>*</French>
-		<German>Klasse:</German>
-		<Italian>da</Italian>
-		<Polish>Z</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOBJECT_CITY</Tag>
 		<English>City</English>
 		<French>Ville</French>

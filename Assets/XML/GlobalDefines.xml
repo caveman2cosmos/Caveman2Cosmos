@@ -1527,10 +1527,6 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>VICTORY_SOUNDTRACK_AVAILABLE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_WITHDRAWAL_PROBABILITY</DefineName>
 		<iDefineIntVal>90</iDefineIntVal>
 	</Define>

@@ -6611,27 +6611,36 @@ void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
 {
 	m_iTotalCombatStrengthChangeBase = 0;
 	m_iTotalCombatStrengthModifierBase = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
-		if (hasUnitCombat(eUnitCombat))
+		if (iI > -1)
 		{
-			m_iTotalCombatStrengthChangeBase += GC.getUnitCombatInfo(eUnitCombat).getStrengthChange();
-			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-			{
-				if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() - 5);
-				}
-				if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() - 5);
-				}
-				if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() - 5);
-				}
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
+
+		m_iTotalCombatStrengthChangeBase += info.getStrengthChange();
+
+		if (info.getQualityBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
+		}
+		if (info.getSizeBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
+		}
+		if (info.getGroupBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getGroupBase() - 5;
 		}
 	}
 }
@@ -6744,19 +6753,28 @@ void CvUnitInfo::setBaseCargoVolume()
 {
 	int iOffset = 0;
 	int iBaseGroup = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI))
+		if (iI > -1)
 		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() > -10)
-			{
-				iOffset += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-				iBaseGroup += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase() > -10)
-			{
-				iOffset += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
+		{
+			iOffset += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+			iBaseGroup += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
+		{
+			iOffset += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
 		}
 	}
 	m_iBaseGroupRank = iBaseGroup;
@@ -6794,24 +6812,33 @@ void CvUnitInfo::setBaseSizeMattersZeroPoints()
 {
 	int iFullTotal = 0;
 	int iVolumetricTotal = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI))
+		if (iI > -1)
 		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-				iVolumetricTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-				iVolumetricTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase();
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
+			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getQualityBase();
 		}
 	}
 	m_iBaseSMRankTotal = iFullTotal;
@@ -6902,12 +6929,21 @@ void CvUnitInfo::setQualifiedPromotionTypes()
 void CvUnitInfo::setCanAnimalIgnores()
 {
 	int iCount = getAnimalIgnoresBorders();
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	UnitCombatTypes eUnitCombat;
+
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI) && GC.getUnitCombatInfo((UnitCombatTypes)iI).getAnimalIgnoresBordersChange() != 0)
+		if (iI > -1)
 		{
-			iCount += GC.getUnitCombatInfo((UnitCombatTypes)iI).getAnimalIgnoresBordersChange();
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
 		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		iCount += GC.getUnitCombatInfo(eUnitCombat).getAnimalIgnoresBordersChange();
 	}
 	m_bCanAnimalIgnoresBorders = (iCount > 0);
 	m_bCanAnimalIgnoresImprovements = (iCount > 1);

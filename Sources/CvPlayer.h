@@ -584,22 +584,24 @@ public:
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
+	// Toffer - Unit Upkeep
 	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void applyUnitUpkeepHandicap(unsigned long& iUpkeep);
+	void applyUnitUpkeepHandicap(long long& iUpkeep);
 
-	unsigned long getUnitUpkeepCivilian100() const;
-	unsigned long getUnitUpkeepCivilian() const;
-	unsigned long getUnitUpkeepCivilianNet() const;
-	unsigned long getUnitUpkeepMilitary100() const;
-	unsigned long getUnitUpkeepMilitary() const;
-	unsigned long getUnitUpkeepMilitaryNet() const;
-	unsigned long calcFinalUnitUpkeep(const bool bReal=true);
-	unsigned long getFinalUnitUpkeep() const;
+	long long getUnitUpkeepCivilian100() const;
+	long long getUnitUpkeepCivilian() const;
+	long long getUnitUpkeepCivilianNet() const;
+	long long getUnitUpkeepMilitary100() const;
+	long long getUnitUpkeepMilitary() const;
+	long long getUnitUpkeepMilitaryNet() const;
+	long long calcFinalUnitUpkeep(const bool bReal=true);
+	long long getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
+	// ! Unit Upkeep
 
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
@@ -1586,7 +1588,6 @@ protected:
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
 	int* m_paiNationalGreatPeopleUnitRate;
-	int* m_paiUnitCombatClassDisplayCount;
 	int m_iMaxTradeRoutesAdjustment;
 	int m_iNationalHurryAngerModifier;
 	int m_iNationalEnemyWarWearinessModifier;
@@ -1816,9 +1817,9 @@ protected:
 	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 
-	unsigned long m_iUnitUpkeepMilitary100;
-	unsigned long m_iUnitUpkeepCivilian100;
-	unsigned long m_iFinalUnitUpkeep;
+	long long m_iUnitUpkeepCivilian100;
+	long long m_iUnitUpkeepMilitary100;
+	long long m_iFinalUnitUpkeep;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;
@@ -2147,10 +2148,6 @@ public:
 	int getTraitDisplayCount() const;
 	void setTraitDisplayCount(int iNewValue);
 	void changeTraitDisplayCount(int iChange);
-
-	int getUnitCombatClassDisplayCount(UnitTypes eIndex) const;
-	void setUnitCombatClassDisplayCount(UnitTypes eIndex, int iValue);
-	void changeUnitCombatClassDisplayCount(UnitTypes eIndex, int iChange);
 
 	int getNationalEspionageDefense() const;
 	void setNationalEspionageDefense(int iNewValue);
