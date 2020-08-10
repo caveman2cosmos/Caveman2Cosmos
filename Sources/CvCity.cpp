@@ -6625,33 +6625,35 @@ int CvCity::healthRate(bool bNoAngry, int iExtra) const
 }
 
 
-int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
+int CvCity::getPopulationPlusProgress100(const int iExtra) const
 {
-	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
-		+ (getPopulation() + iExtra)
-		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT();
-}
-
-int CvCity::getFoodConsumedByPopulation(const int iExtra) const
-{
-	int iPop100 = 100 * (getPopulation() + iExtra);
-
 	// Toffer - Food consumption should gradually increment during the growth process
 	// so that the pop growth doesn't entail a huge food consumption change in one turn
 	if (iExtra == 0)
 	{
-		iPop100 += 100 * getFood() / growthThreshold();
+		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
 	}
-	else iPop100 += getMaxFoodKeptPercent();
+	return 100 * (getPopulation() + iExtra) + getMaxFoodKeptPercent();
+}
 
-	return iPop100 * getFoodConsumedPerPopulation100() / 10000;
+int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
+{
+	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
+		+ getPopulationPlusProgress100(iExtra)
+		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT()
+		/ 100;
+}
+
+int CvCity::getFoodConsumedByPopulation(const int iExtra) const
+{
+	return getPopulationPlusProgress100(iExtra) * getFoodConsumedPerPopulation100() / 10000;
 }
 
 
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
 	return getFoodConsumedByPopulation(iExtra)
-		- (bNoAngry ? angryPopulation(iExtra) : 0) // Toffer - Why shouldn't angry population consume food?
+		- (bNoAngry ? angryPopulation(iExtra) : 0) // Doesn't belong here, should be extracted out to wherever it is needed
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
 }
