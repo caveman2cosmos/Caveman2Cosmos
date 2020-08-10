@@ -13618,9 +13618,13 @@ int CvPlayerAI::AI_totalMissionAIs(MissionAITypes eMissionAI, const CvSelectionG
 {
 	PROFILE_FUNC();
 
-	int iCount = 0;
+	CvSelectionGroup* pLoopSelectionGroup;
+	int iCount;
+	int iLoop;
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	iCount = 0;
+
+	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
 		{
@@ -14107,9 +14111,13 @@ int CvPlayerAI::AI_areaMissionAIs(const CvArea* pArea, MissionAITypes eMissionAI
 {
 	PROFILE_FUNC();
 
-	int iCount = 0;
+	CvSelectionGroup* pLoopSelectionGroup;
+	int iCount;
+	int iLoop;
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	iCount = 0;
+
+	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
 		{
@@ -14142,9 +14150,10 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITy
 		*piClosest = MAX_INT;
 	}
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	int iLoop;
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
-		const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
+		MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 
 		if ( eMissionAI == NO_MISSIONAI || eGroupMissionAI == eMissionAI )
 		{
@@ -14185,7 +14194,8 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot
 		*piClosest = MAX_INT;
 	}
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	int iLoop;
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 
@@ -14435,16 +14445,17 @@ int CvPlayerAI::AI_cityTargetUnitsByPath(const CvCity* pCity, const CvSelectionG
 
 	int iCount = 0;
 
+	int iLoop;
 	int iPathTurns;
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup && pLoopSelectionGroup->plot() != NULL && pLoopSelectionGroup->getNumUnits() > 0)
 		{
-			const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+			CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
 
 			if (pMissionPlot != NULL )
 			{
-				const int iDistance = stepDistance(pCity->getX(), pCity->getY(), pMissionPlot->getX(), pMissionPlot->getY());
+				int iDistance = stepDistance(pCity->getX(), pCity->getY(), pMissionPlot->getX(), pMissionPlot->getY());
 
 				if (iDistance <= 1)
 				{
@@ -14547,11 +14558,12 @@ int CvPlayerAI::AI_enemyTargetMissionAIs(MissionAITypes* aeMissionAI, int iMissi
 
 	int iCount = 0;
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	int iLoop;
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
 		{
-			const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+			CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
 
 			if (NULL != pMissionPlot && pMissionPlot->isOwned())
 			{
@@ -14586,11 +14598,12 @@ int CvPlayerAI::AI_enemyTargetMissions(TeamTypes eTargetTeam, const CvSelectionG
 
 	int iCount = 0;
 
-	foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
+	int iLoop;
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
 		{
-			const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+			CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
 
 			if( pMissionPlot == NULL )
 			{
@@ -14626,14 +14639,15 @@ int CvPlayerAI::AI_wakePlotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes 
 
 	int iCount = 0;
 
-	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups())
+	int iLoop;
+	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
 		{
-			const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
+			MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 			if (eMissionAI == NO_MISSIONAI || eMissionAI == eGroupMissionAI)
 			{
-				const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+				CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
 				if (pMissionPlot != NULL && pMissionPlot == pPlot)
 				{
 					iCount += pLoopSelectionGroup->getNumUnits();

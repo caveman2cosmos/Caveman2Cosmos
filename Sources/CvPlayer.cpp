@@ -5045,16 +5045,21 @@ bool CvPlayer::hasBusyUnit() const
 {
 	PROFILE_FUNC();
 
-	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups()
-	| filtered(CvSelectionGroup::fn::isBusy()))
-	{
-		if (pLoopSelectionGroup->getNumUnits() == 0)
-		{
-			pLoopSelectionGroup->kill();
-			return false;
-		}
+	CvSelectionGroup* pLoopSelectionGroup;
+	int iLoop;
 
-		return true;
+	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+	{
+		if (pLoopSelectionGroup->isBusy())
+		{
+		    if (pLoopSelectionGroup->getNumUnits() == 0)
+		    {
+		        pLoopSelectionGroup->kill();
+		        return false;
+		    }
+
+			return true;
+		}
 	}
 
 	return false;
