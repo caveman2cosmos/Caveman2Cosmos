@@ -1,18 +1,6 @@
-##StartingPointsUtil
-###MODDER READ THIS:
-###You do not have to change anything in this file
-###all changes have to be done in the CvEventManager.
-###This file just has to be in the same folder like the CvEventManager.py.
-
 from CvPythonExtensions import *
-import sys
-import CvUtil
-import BUGPath
-import BugUtil
 
 gc = CyGlobalContext()
-
-###generic file reading function
 
 def getCoastalType(argsList):
 	pPlot = argsList

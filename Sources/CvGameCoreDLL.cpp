@@ -603,3 +603,41 @@ void stopProfilingDLL(bool longLived)
 	}
 #endif
 }
+
+// Toffer - Square root with integer math, OOS safe.
+int intSqrt(const int iValue, const bool bTreatNegAsPos)
+{
+	unsigned int iVal;
+	if (iValue < 0)
+	{
+		if (!bTreatNegAsPos)
+		{
+			return -1;
+		}
+		iVal = static_cast<unsigned int>(-iValue);
+	}
+	else if (iValue < 2)
+	{
+		return iValue;
+	}
+	else iVal = static_cast<unsigned int>(iValue);
+
+	int iRem = 0;
+	int iRoot = 0;
+	for (int iI = 0; iI < 16; iI++)
+	{
+		iRoot <<= 1;
+		iRem <<= 2;
+		iRem += iVal >> 30;
+		iVal <<= 2;
+
+		if (iRoot < iRem)
+		{
+			iRoot++;
+			iRem -= iRoot;
+			iRoot++;
+		}
+	}
+	return iRoot >> 1;
+}
+// ! Toffer
