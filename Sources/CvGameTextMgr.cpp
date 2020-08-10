@@ -33250,9 +33250,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	int iFoodConsumed = 0;
 
 	// Eaten
-	int iPopulationExponent = city.getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iEatenFood = (city.getPopulation() * iConsumptionPerPopulationBase) / 10;
+	int iEatenFood = city.getFoodConsumedByPopulation();
 	if (iEatenFood != 0)
 	{
 		szBuffer.append(NEWLINE);
