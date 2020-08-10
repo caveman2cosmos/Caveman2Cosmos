@@ -3723,7 +3723,7 @@ CvCity* CvPlayerAI::AI_findTargetCity(const CvArea* pArea) const
 
 bool CvPlayerAI::AI_isCommercePlot(const CvPlot* pPlot) const
 {
-	return (pPlot->getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION());
+	return pPlot->getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION();
 }
 
 bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group, int acceptableOdds) const

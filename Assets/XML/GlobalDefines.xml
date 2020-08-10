@@ -467,6 +467,10 @@
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>FOOD_CONSUMPTION_PER_POPULATION_PERCENT</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>NEW_HURRY_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
@@ -1525,10 +1529,6 @@
 	<Define>
 		<DefineName>COMBAT_EXPERIENCE_IN_BORDERS_PERCENT</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>VICTORY_SOUNDTRACK_AVAILABLE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_WITHDRAWAL_PROBABILITY</DefineName>

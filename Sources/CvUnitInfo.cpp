@@ -6626,22 +6626,21 @@ void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
 
 			if (eUnitCombat == NO_UNITCOMBAT) continue;
 		}
-		m_iTotalCombatStrengthChangeBase += GC.getUnitCombatInfo(eUnitCombat).getStrengthChange();
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
 
-		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
+		m_iTotalCombatStrengthChangeBase += info.getStrengthChange();
+
+		if (info.getQualityBase() > -10)
 		{
-			if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
-			{
-				m_iTotalCombatStrengthModifierBase += GC.getUnitCombatInfo(eUnitCombat).getQualityBase() - 5;
-			}
-			if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
-			{
-				m_iTotalCombatStrengthModifierBase += GC.getUnitCombatInfo(eUnitCombat).getSizeBase() - 5;
-			}
-			if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
-			{
-				m_iTotalCombatStrengthModifierBase += GC.getUnitCombatInfo(eUnitCombat).getGroupBase() - 5;
-			}
+			m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
+		}
+		if (info.getSizeBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
+		}
+		if (info.getGroupBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getGroupBase() - 5;
 		}
 	}
 }

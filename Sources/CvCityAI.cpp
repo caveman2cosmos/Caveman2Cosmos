@@ -840,21 +840,12 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		iValue += ((getMilitaryProductionModifier() * iExperience * 10) / 100);
 	}
 
-	/************************************************************************************************/
-	/* Specialists Enhancements, by Supercheese 10/12/09                                            */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getHealthPercent() / 100;
 	int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getHappinessPercent() / 100;
 	int iHappinessLevel = happyLevel() - unhappyLevel(1) + getEspionageHappinessCounter();
 	int iHealthLevel = goodHealth() - badHealth(/*bNoAngry*/ false, std::max(0, (iHappinessLevel + 1) / 2)) + getEspionageHealthCounter();
 
-	int iPopulationExponent = (getPopulation() - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	if (iSpecialistHealth != 0)
 	{
@@ -865,11 +856,8 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	{
 		iValue += (happynessValue(iSpecialistHappiness, iHappinessLevel, iHealthLevel) * 2);
 	}
-	/************************************************************************************************/
-	/* Specialists Enhancements                          END                                        */
-	/************************************************************************************************/
 
-		//	Koshling - evaluate properties
+	//	Koshling - evaluate properties
 	int iPropertyValue = 0;
 
 	const CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
@@ -5126,11 +5114,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	int iBaseHappinessLevel = happyLevel() - unhappyLevel() + getEspionageHappinessCounter();
 	int iBaseHealthLevel = goodHealth() - badHealth() + getEspionageHealthCounter();
 
-	int iPopulationExponent = getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	int iAngerPercent =	getHurryPercentAnger()
 		+ getConscriptPercentAnger()
@@ -5142,10 +5126,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	bool bShrinksWithPower = false;
 	// Allow a bit of shrinking:
 	// Population is expendable if angry, working a bad tile, or running a not-so-good specialist
-	int iAllowedShrinkRate = (iConsumptionPerPopulationBase * (0
+	int iAllowedShrinkRate = (getFoodConsumedPerPopulation100() * (0
 		+ std::max(0, -iBaseHappinessLevel - getPopulation() * iAngerPercent / GC.getPERCENT_ANGER_DIVISOR())
 		+ std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
-		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 10;
+		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 100;
 
 	if (iUnhealthyPopulationFromBuilding > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuilding ))
 	{
@@ -8582,7 +8566,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 		iExtraFoodForGrowth++;
 	}
 
-	const int iFoodDifference = iFoodTotal - iExtraFoodForGrowth - iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION();
+	const int iFoodDifference = iFoodTotal - iExtraFoodForGrowth - iTargetSize * getFoodConsumedPerPopulation100();
 
 	iDesiredFoodChange = -iFoodDifference + std::max(0, badHealth() - goodHealth());
 	if (iDesiredFoodChange > 3 && iTargetSize > getPopulation())
@@ -9160,7 +9144,7 @@ void CvCityAI::AI_updateBestBuild()
 		iExtraFoodForGrowth ++;
 	}
 
-	int iFoodDifference = iFoodTotal - ((iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION()) + iExtraFoodForGrowth);
+	int iFoodDifference = iFoodTotal - iTargetSize * getFoodConsumedPerPopulation100() - iExtraFoodForGrowth;
 
 	int iDesiredFoodChange = -iFoodDifference + std::max(0, -iHealth);
 	if (iTargetSize > getPopulation())
@@ -10271,15 +10255,8 @@ void CvCityAI::AI_doEmphasize()
 				int iHighHammerTotal = 0;
 				int iGoodFoodSink = 0;
 				int iFoodPerPop = GC.getFOOD_CONSUMPTION_PER_POPULATION();
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 				for (int iPlot = 0; iPlot < getNumCityPlots(); iPlot++)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 				{
 					CvPlot* pLoopPlot = plotCity(getX(), getY(), iPlot);
 					if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
@@ -10291,28 +10268,24 @@ void CvCityAI::AI_doEmphasize()
 							iHighFoodPlotCount++;
 						}
 						int iHammers = pLoopPlot->getYield(YIELD_PRODUCTION);
-						if ((iHammers >= 3) && ((iHammers + iFood) >= 4))
+						if (iHammers >= 3 && iHammers + iFood >= 4)
 						{
 							iHighHammerPlotCount++;
 							iHighHammerTotal += iHammers;
 						}
 						int iCommerce = pLoopPlot->getYield(YIELD_COMMERCE);
-						if ((iCommerce * 2 + iHammers * 3) > 9)
+						if (iCommerce * 2 + iHammers * 3 > 9)
 						{
 							iGoodFoodSink += std::max(0, iFoodPerPop - iFood);
 						}
 					}
 				}
 
-				if ((iHighFoodTotal + iHighFoodPlotCount - iGoodFoodSink) >= foodConsumption(true))
+				if (iHighFoodTotal + iHighFoodPlotCount - iGoodFoodSink >= foodConsumption(true)
+				&& iHighHammerPlotCount < 2 && iHighHammerTotal < getPopulation()
+				&& AI_countGoodTiles(true, false, 100, true) < getPopulation())
 				{
-					if ((iHighHammerPlotCount < 2) && (iHighHammerTotal < (getPopulation())))
-					{
-						if (AI_countGoodTiles(true, false, 100, true) < getPopulation())
-						{
-							bEmphasize = true;
-						}
-					}
+					bEmphasize = true;
 				}
 			}
 		}
@@ -11487,28 +11460,6 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		aiCommerceYieldsTimes100[iJ] += (iCommerceTimes100 * iModifier) / 100;
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       07/09/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-/* original BTS code
-	if (isProductionProcess() && !bWorkerOptimization)
-	{
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			aiCommerceYieldsTimes100[iJ] += GC.getProcessInfo(getProductionProcess()).getProductionToCommerceModifier(iJ) * aiYields[YIELD_PRODUCTION];
-		}
-
-		aiYields[YIELD_PRODUCTION] = 0;
-	}
-*/
-	// Above code causes governor and AI to heavily weight food when building any form of commerce,
-	// which is not expected by human and does not seem to produce better results for AI either.
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 	// should not really use this much, but making it accurate
 	aiYields[YIELD_COMMERCE] = 0;
 	for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
@@ -11536,11 +11487,9 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		int iPopulation = getPopulation();
 		int	iExtraPopulationThatCanWork = std::min(iPopulation - range(-iHappinessLevel, 0, iPopulation) + std::min(0, extraFreeSpecialists()) , NUM_CITY_PLOTS) - getWorkingPopulation() + ((bRemove) ? 1 : 0);
 
-		int iPopulationExponent = (iPopulation - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-		int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-		int iConsumptionbyPopulation = (iPopulation * iConsumptionPerPopulationBase) / 10;
+		int iConsumptionByPopulation = getFoodConsumedByPopulation();
 
-		int iAdjustedFoodDifference = (getYieldRate(YIELD_FOOD) + std::min(0, iHealthLevel)) - iConsumptionbyPopulation;
+		int iAdjustedFoodDifference = (getYieldRate(YIELD_FOOD) + std::min(0, iHealthLevel)) - iConsumptionByPopulation;
 
 		// if we not human, allow us to starve to half full if avoiding growth
 		if (!bIgnoreStarvation)
@@ -11563,7 +11512,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if (std::max(0, iExtraPopulationThatCanWork * aiYields[YIELD_FOOD]) >= -iFoodPerTurn)
 				{
 					// if this is high food, then we want to pick it first, this will allow us to pick some great non-food later
-					int iHighFoodThreshold = std::min(getBestYieldAvailable(YIELD_FOOD), iConsumptionbyPopulation + 1);
+					int iHighFoodThreshold = std::min(getBestYieldAvailable(YIELD_FOOD), iConsumptionByPopulation + 1);
 					if (iFoodPerTurn <= (AI_isEmphasizeGreatPeople() ? 0 : -iHighFoodThreshold) && aiYields[YIELD_FOOD] >= iHighFoodThreshold)
 					{
 						// value all the food that will contribute to not starving
@@ -11598,7 +11547,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 
 					// adjust iFoodPerTurn assuming that we work plots all equal to iConsumtionPerPop
 					// that way it is our guesstimate of how much excess food we will have
-					iFoodPerTurn += (iExtraPopulationThatCanWork * iConsumptionbyPopulation);
+					iFoodPerTurn += (iExtraPopulationThatCanWork * iConsumptionByPopulation);
 
 					// we have less than 10 extra happy, do some checks to see if we can increase it
 					if (iHappinessLevel < 10)
@@ -11617,7 +11566,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 						const int kMaxHappyIncrease = 2;
 
 						// if happy is large enough so that it will be over zero after we do the checks
-						int iNewFoodPerTurn = iFoodPerTurn + aiYields[YIELD_FOOD] - iConsumptionbyPopulation;
+						int iNewFoodPerTurn = iFoodPerTurn + aiYields[YIELD_FOOD] - iConsumptionByPopulation;
 						if ((iHappinessLevel + kMaxHappyIncrease) > 0 && iNewFoodPerTurn > 0)
 						{
 							int iApproxTurnsToGrow = (iNewFoodPerTurn > 0) ? ((iFoodToGrow - iFoodLevel) / iNewFoodPerTurn) : MAX_INT;
@@ -11746,9 +11695,9 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if ((isHuman()) && ((iPopToGrow > 0) || bCanPopRush))
 				{
 					//very high food override
-					int iTempValue = std::max(0, 30 * aiYields[YIELD_FOOD] - 15 * iConsumptionbyPopulation);
-					iTempValue *= std::max(0, 3 * iConsumptionbyPopulation - iAdjustedFoodDifference);
-					iTempValue /= 3 * std::max(1,iConsumptionbyPopulation);
+					int iTempValue = std::max(0, 30 * aiYields[YIELD_FOOD] - 15 * iConsumptionByPopulation);
+					iTempValue *= std::max(0, 3 * iConsumptionByPopulation - iAdjustedFoodDifference);
+					iTempValue /= 3 * std::max(1, iConsumptionByPopulation);
 					if (iHappinessLevel < 0)
 					{
 						iTempValue *= 2;
@@ -11765,14 +11714,14 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 					iSlaveryValue *= 100;
 					iSlaveryValue /= getHurryCostModifier(true);
 
-					iSlaveryValue *= iConsumptionbyPopulation * 2;
-					iSlaveryValue /= iConsumptionbyPopulation * 2 + std::max(1, iAdjustedFoodDifference);
+					iSlaveryValue *= iConsumptionByPopulation * 2;
+					iSlaveryValue /= iConsumptionByPopulation * 2 + std::max(1, iAdjustedFoodDifference);
 				}
 
 				//Great People Override
 				if ((iExtraPopulationThatCanWork > 1) && AI_isEmphasizeGreatPeople())
 				{
-					int iAdjust = iConsumptionbyPopulation;
+					int iAdjust = iConsumptionByPopulation;
 					if (iFoodPerTurn == 0)
 					{
 						iAdjust -= 1;
@@ -15829,11 +15778,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	int iBaseHappinessLevel = happyLevel() - unhappyLevel() + getEspionageHappinessCounter();
 	int iBaseHealthLevel = goodHealth() - badHealth() + getEspionageHealthCounter();
 
-	int iPopulationExponent = (getPopulation() - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	int iGoldValueAssessmentModifier = GET_PLAYER(getOwner()).AI_goldValueAssessmentModifier();
 
@@ -15884,10 +15829,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 	bool bFinancialTrouble = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 
-	int iAllowedShrinkRate = (iConsumptionPerPopulationBase * (0
+	int iAllowedShrinkRate = getFoodConsumedPerPopulation100() * (0
 		+ std::max(0, -iBaseHappinessLevel - iTemporaryUnhappiness)
 		+ std::min(1, std::max(0, (getWorkingPopulation() - AI_countGoodTiles(true, false, 50))))
-		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 10;
+		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false)))) / 100;
 
 
 	bool bCulturalVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);

@@ -36,6 +36,7 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SLAVES_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>1</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -52,13 +53,6 @@
 			<iExperience>0</iExperience>
 			<iHappinessPercent>-100</iHappinessPercent>
 			<iHealthPercent>-100</iHealthPercent>
-			<Flavors/>
-			<HotKey/>
-			<bAltDown>0</bAltDown>
-			<bSlave>1</bSlave>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/MainScreen/CityScreen/slave.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -871,6 +865,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1039,6 +1034,7 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_FOOD</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_food.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1078,6 +1074,7 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_production.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1118,6 +1115,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1158,6 +1156,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_sanitation.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1212,6 +1211,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_health.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1252,6 +1252,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_entertainment.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1292,6 +1293,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1339,6 +1341,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_military.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1379,6 +1382,7 @@
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SETTLED_SLAVE_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_crime_prevention.dds</Texture>
+			<bSlave>1</bSlave>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>

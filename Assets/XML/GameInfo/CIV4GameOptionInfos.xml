@@ -527,13 +527,7 @@
 			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Description>
 			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
- 					<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
- 				</EnforcesGameOptionOnType>
- 			</EnforcesGameOptionOnTypes>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>

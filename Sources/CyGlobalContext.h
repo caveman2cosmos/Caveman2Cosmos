@@ -324,24 +324,10 @@ public:
 	bool isDYNAMIC_CIV_NAMES() const { return GC.isDYNAMIC_CIV_NAMES(); }
 
 	bool isIDW_ENABLED() const { return GC.isIDW_ENABLED(); }
-	float getIDW_BASE_COMBAT_INFLUENCE() const { return GC.getIDW_BASE_COMBAT_INFLUENCE(); }
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const { return GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER(); }
-	float getIDW_FORT_CAPTURE_MULTIPLIER() const { return GC.getIDW_FORT_CAPTURE_MULTIPLIER(); }
-	float getIDW_EXPERIENCE_FACTOR() const { return GC.getIDW_EXPERIENCE_FACTOR(); }
-	float getIDW_WARLORD_MULTIPLIER() const { return GC.getIDW_WARLORD_MULTIPLIER(); }
-	int getIDW_INFLUENCE_RADIUS() const { return GC.getIDW_INFLUENCE_RADIUS(); }
-	float getIDW_PLOT_DISTANCE_FACTOR() const { return GC.getIDW_PLOT_DISTANCE_FACTOR(); }
-	float getIDW_WINNER_PLOT_MULTIPLIER() const { return GC.getIDW_WINNER_PLOT_MULTIPLIER(); }
-	float getIDW_LOSER_PLOT_MULTIPLIER() const { return GC.getIDW_LOSER_PLOT_MULTIPLIER(); }
 	bool isIDW_EMERGENCY_DRAFT_ENABLED() const { return GC.isIDW_EMERGENCY_DRAFT_ENABLED(); }
-	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const { return GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION(); }
-	float getIDW_EMERGENCY_DRAFT_STRENGTH() const { return GC.getIDW_EMERGENCY_DRAFT_STRENGTH(); }
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const { return GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(); }
 	bool isIDW_NO_BARBARIAN_INFLUENCE() const { return GC.isIDW_NO_BARBARIAN_INFLUENCE(); }
 	bool isIDW_NO_NAVAL_INFLUENCE() const { return GC.isIDW_NO_NAVAL_INFLUENCE(); }
 	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const { return GC.isIDW_PILLAGE_INFLUENCE_ENABLED(); }
-	float getIDW_BASE_PILLAGE_INFLUENCE() const { return GC.getIDW_BASE_PILLAGE_INFLUENCE(); }
-	float getIDW_CITY_TILE_MULTIPLIER() const { return GC.getIDW_CITY_TILE_MULTIPLIER(); }
 
 	bool isSS_ENABLED() const { return GC.isSS_ENABLED(); }
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
@@ -353,7 +339,6 @@ public:
 	int getMOVE_DENOMINATOR() const { return GC.getMOVE_DENOMINATOR(); }
 	int getNUM_UNIT_PREREQ_OR_BONUSES() const { return GC.getNUM_UNIT_PREREQ_OR_BONUSES(); }
 	int getNUM_BUILDING_PREREQ_OR_BONUSES() const { return GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); }
-	int getFOOD_CONSUMPTION_PER_POPULATION() const { return GC.getFOOD_CONSUMPTION_PER_POPULATION(); }
 	int getMAX_HIT_POINTS() const { return GC.getMAX_HIT_POINTS(); }
 	int getHILLS_EXTRA_DEFENSE() const { return GC.getHILLS_EXTRA_DEFENSE(); }
 	int getRIVER_ATTACK_MODIFIER() const { return GC.getRIVER_ATTACK_MODIFIER(); }

@@ -11153,47 +11153,24 @@ bool CvUnit::spreadCorporation(CorporationTypes eCorporation)
 
 bool CvUnit::canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const
 {
-	CvCity* pCity;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (isCommander())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	if (eSpecialist == NO_SPECIALIST)
 	{
 		return false;
 	}
 
-	if (!(m_pUnitInfo->getGreatPeoples(eSpecialist)))
+	if (isCommander() || isDelayedDeath())
 	{
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
+	if (!m_pUnitInfo->getGreatPeoples(eSpecialist))
 	{
 		return false;
 	}
 
-	if (!(pCity->canJoin()))
-	{
-		return false;
-	}
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity->getTeam() != getTeam())
-	{
-		return false;
-	}
-
-	if (isDelayedDeath())
+	if (pCity == NULL || pCity->getTeam() != getTeam())
 	{
 		return false;
 	}
@@ -31124,14 +31101,16 @@ bool CvUnit::fighterEngage(int iX, int iY)
 /*                                                                                              */
 /* Original Author Moctezuma              Start                                                 */
 /************************************************************************************************/
-// ------ BEGIN InfluenceDrivenWar -------------------------------
-
 // unit influences combat area after victory
 // returns influence % in defended plot
 float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
 {
 	PROFILE_FUNC();
 
+	if (!pLoserUnit->canDefend())
+	{
+		return 0.0f; // no influence from worker capture
+	}
 	if (GET_PLAYER(pLoserUnit->getOwner()).hasFixedBorders())
 	{
 		return 0.0f;
@@ -31163,157 +31142,119 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 
 	CvPlot* pWinnerPlot = plot();
 	CvPlot* pLoserPlot = pLoserUnit->plot();
-	CvPlot* pDefenderPlot;
-	if (!bAttacking)
-	{
-		pDefenderPlot = pWinnerPlot;
-	}
-	else
-	{
-		pDefenderPlot = pLoserPlot;
-	}
-	int iWinnerCultureBefore = pDefenderPlot->getCulture(getOwner()); //used later for influence %
 
-	float fWinnerPlotMultiplier = GC.getIDW_WINNER_PLOT_MULTIPLIER();
-	float fLoserPlotMultiplier = GC.getIDW_LOSER_PLOT_MULTIPLIER();
+	const CvPlot* pDefenderPlot = bAttacking ? pLoserPlot : pWinnerPlot;
 
-	float bWithdrawalMultiplier = 0.5f;
+	const int iWinnerCultureBefore = pDefenderPlot->getCulture(getOwner()); //used later for influence %
+
+	int iWinnerPlotMultiplier = GC.getIDW_WINNER_PLOT_MULTIPLIER();
+	int iLoserPlotMultiplier = GC.getIDW_LOSER_PLOT_MULTIPLIER();
 	if (bWithdrawal)
 	{
-		fWinnerPlotMultiplier *= bWithdrawalMultiplier;
-		fLoserPlotMultiplier *= bWithdrawalMultiplier;
+		iWinnerPlotMultiplier /= 3;
+		iLoserPlotMultiplier /= 3;
 	}
-
 	if (pLoserPlot->isEnemyCity(*this, true)) // city combat
 	{
-		if (pLoserPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
-		{
-			// if there are still some city defenders ->
-			// we use same influence rules as for field combat
-			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier);
-		}
-		else // last defender is dead
-		{
-			float fNoCityDefenderMultiplier = GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER();
+		int iDefenders = pLoserPlot->getNumVisibleEnemyDefenders(this);
 
-			// last city defender is dead -> influence is increased
-			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier * fNoCityDefenderMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier * fNoCityDefenderMultiplier);
+		if (iDefenders < 4 && GC.isIDW_EMERGENCY_DRAFT_ENABLED())
+		{
+			const int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwner());
+			const int iAttackerCulture = pLoserPlot->getCulture(getOwner());
 
-			if (GC.isIDW_EMERGENCY_DRAFT_ENABLED())
+			if (iDefenderCulture >= iAttackerCulture * 2)
 			{
-				int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwner());
-				int iAttackerCulture = pLoserPlot->getCulture(getOwner());
+				// if defender culture in city's central tile is still higher then atacker culture
+				// -> city is not captured yet but emergency militia is drafted
+				pLoserPlot->getPlotCity()->emergencyConscript();
+				iDefenders++;
 
-				if (iDefenderCulture >= iAttackerCulture)
+				// calculate city resistence % (to be displayed in game log)
+				const float fResistence = (iDefenderCulture-iAttackerCulture) * 100.0f / (2 * pDefenderPlot->countTotalCulture());
 				{
-					// if defender culture in city's central tile is still higher then atacker culture
-					// -> city is not captured yet but emergency militia is drafted
-					pLoserPlot->getPlotCity()->emergencyConscript();
+					MEMORY_TRACK_EXEMPT();
 
-					// calculate city resistence % (to be displayed in game log)
-					float fResistence = ((iDefenderCulture-iAttackerCulture)*100.0f)/(2*pDefenderPlot->countTotalCulture());
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						CvWString szBuffer;
-						CvWString szResistence;
-						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
-						szResistence.Format(L" %.1f%%", fResistence);				
-						szBuffer += szResistence;
-						//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
-						AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::green(), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pLoserPlot->getX(), pLoserPlot->getY());
-					}
+					CvWString szBuffer;
+					CvWString szResistence;
+					szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
+					szResistence.Format(L" %.1f%%", fResistence);
+					szBuffer += szResistence;
+					//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
+					AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::green(), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pLoserPlot->getX(), pLoserPlot->getY());
 				}
 			}
 		}
+		if (iDefenders == 0) // City Capture
+		{
+			FAssertMsg(false, "Last defender");
+			const int iNoCityDefenderMultiplier = GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER();
+
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier * iNoCityDefenderMultiplier / 100);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier * iNoCityDefenderMultiplier / 100);
+		}
+		else // As field combat
+		{
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier);
+		}
 	}
-	else // field combat
+	else if (pLoserPlot->isActsAsCity() && pLoserPlot->getNumVisibleEnemyDefenders(this) > 1)
 	{
-		if (!pLoserUnit->canDefend())
-		{
-			// no influence from worker capture
-			return 0.0f;
-		}
+		// Fort captured
+		const int iFortCaptureMultiplier = GC.getIDW_FORT_CAPTURE_MULTIPLIER();
 
-		if (pLoserPlot->getImprovementType() != NO_IMPROVEMENT
-			&& GC.getImprovementInfo(pLoserPlot->getImprovementType()).getDefenseModifier() > 0
-			&& pLoserPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
-		{
-			// fort captured
-			float fFortCaptureMultiplier = GC.getIDW_FORT_CAPTURE_MULTIPLIER();
-
-			// influence is increased
-			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier * fFortCaptureMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier * fFortCaptureMultiplier);
-
-		}
-		else
-		{
-			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier);
-		}
+		influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier * iFortCaptureMultiplier / 100);
+		influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier * iFortCaptureMultiplier / 100);
+	}
+	else // Field combat
+	{
+		influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier);
+		influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier);
 	}
 
 	// calculate influence % in defended plot (to be displayed in game log)
+	const int iTotalCulture = pDefenderPlot->countTotalCulture();
 
-	int iWinnerCultureAfter = pDefenderPlot->getCulture(getOwner());
-	int iTotalCulture = pDefenderPlot->countTotalCulture();
-	float fInfluenceRatio = 0.0f;
 	if (iTotalCulture > 0)
 	{
-		fInfluenceRatio = ((iWinnerCultureAfter-iWinnerCultureBefore)*100.0f)/iTotalCulture;
+		return (pDefenderPlot->getCulture(getOwner()) - iWinnerCultureBefore) * 100.0f / iTotalCulture;
 	}
-    return fInfluenceRatio;
+    return 0.0f;
 }
 
 // unit influences given plot and surounding area i.e. transfers culture from target civ to unit's owner
-void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, float fLocationMultiplier)
+void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier)
 {
-	float fBaseCombatInfluence = GC.getIDW_BASE_COMBAT_INFLUENCE();
-
-	// calculate base multiplier used for all plots
-	float fGameSpeedMultiplier = (float) GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier *= GC.getEraInfo(GC.getGame().getStartEra()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier = sqrt(fGameSpeedMultiplier);
-
-	float fExperienceFactor = GC.getIDW_EXPERIENCE_FACTOR();
-	float fExperienceMultiplier = 1.0f + (getExperience() * 0.01f);
-
-	float fWarlordMultiplier = 1.0;
-	if (NO_UNIT != getLeaderUnitType()) // warlord is here
-	{
-		fWarlordMultiplier = GC.getIDW_WARLORD_MULTIPLIER();
-	}
-
-	float fCityPlotMultiplier = (!GC.isIDW_EMERGENCY_DRAFT_ENABLED()) ? GC.getIDW_CITY_TILE_MULTIPLIER() : 1.0f;
-
-	float fBaseMultiplier = fBaseCombatInfluence * fGameSpeedMultiplier * fLocationMultiplier * fExperienceMultiplier * fWarlordMultiplier;
-	if (fBaseMultiplier <= 0.0f)
-		return;
-
 	// get influence radius
-	int iInfluenceRadius = GC.getIDW_INFLUENCE_RADIUS();
+	const int iInfluenceRadius = GC.getIDW_INFLUENCE_RADIUS();
 	if (iInfluenceRadius < 0)
 		return;
 
-	float fPlotDistanceFactor = GC.getIDW_PLOT_DISTANCE_FACTOR();
+	// calculate base multiplier used for all plots
+	int iMultiplier = GC.getIDW_BASE_COMBAT_INFLUENCE() * iLocationMultiplier / 100;
+	if (iMultiplier < 1)
+		return;
 
-//	CvWString szBuffer;
-//	szBuffer.Format(L"Factors: %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.3f, %d", fBaseCombatInfluence, fLocationMultiplier, fGameSpeedMultiplier, fPlotDistanceFactor, fExperienceMultiplier, fWarlordMultiplier, fBaseMultiplier, iInfluenceRadius);
-//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCentralPlot->getX(), pCentralPlot->getY());
+	if (NO_UNIT != getLeaderUnitType()) // warlord is here
+	{
+		iMultiplier *= GC.getIDW_WARLORD_MULTIPLIER();
+		iMultiplier /= 100;
+	}
+	if (iMultiplier < 1) return;
+
+	const int iCityPlotMultiplier = GC.isIDW_EMERGENCY_DRAFT_ENABLED() ? 100 : GC.getIDW_CITY_TILE_MULTIPLIER();
+
+	//CvWString szBuffer;
+	//szBuffer.Format(L"Factors: %d, %d, %d, %d, %d", GC.getIDW_BASE_COMBAT_INFLUENCE(), iLocationMultiplier, iWarlordMultiplier, iMultiplier, iInfluenceRadius);
+	//AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCentralPlot->getX(), pCentralPlot->getY());
 
 	for (int iDX = -iInfluenceRadius; iDX <= iInfluenceRadius; iDX++)
 	{
 		for (int iDY = -iInfluenceRadius; iDY <= iInfluenceRadius; iDY++)
 		{
-			int iDistance = plotDistance(0, 0, iDX, iDY);
+			const int iDistance = plotDistance(0, 0, iDX, iDY);
 
 			if (iDistance <= iInfluenceRadius)
 			{
@@ -31321,58 +31262,53 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, flo
 
 				if (pLoopPlot != NULL)
 				{
+					const int iTargetCulture = pLoopPlot->getCulture(eTargetPlayer);
+					if (iTargetCulture < 1)
+						continue;
+
+					int iMult = iMultiplier;
 					// calculate distance multiplier for current plot
-					float fDistanceMultiplier = 0.5f+0.5f*fPlotDistanceFactor-fPlotDistanceFactor*iDistance;
-					if (fDistanceMultiplier <= 0.0f)
+					int iDistanceMultiplier = 100 / (iDistance + 1);
+					if (iDistanceMultiplier < 1)
 						continue;
-					int iTargetCulture = pLoopPlot->getCulture(eTargetPlayer);
-					if (iTargetCulture <= 0)
-						continue;
-					if ( pLoopPlot->isCity() )
+					if (pLoopPlot->isCity())
 					{
-						fBaseMultiplier *= fCityPlotMultiplier;
+						iMult *= iCityPlotMultiplier;
+						iMult /= 100;
 					}
-					if (fBaseMultiplier <= 0.0f)
-						continue;
-					int iCultureTransfer = int (fBaseMultiplier * fDistanceMultiplier * sqrt((float) iTargetCulture));
+					if (iMult < 1) continue;
+
+					//szBuffer.Format(L"Value=%d, root=%d", iTargetCulture, intSqrt(iTargetCulture));
+					//AddDLLMessage(getOwner(), true, 24, szBuffer);
+
+					int iCultureTransfer = iMult * iDistanceMultiplier * intSqrt(iTargetCulture) / 10000;
+					//szBuffer.Format(L"CultureChange=%d", iCultureTransfer);
+					//AddDLLMessage(getOwner(), true, 24, szBuffer);
+
 					if (iTargetCulture < iCultureTransfer)
 					{
 						// cannot transfer more culture than remaining target culure
 						iCultureTransfer = iTargetCulture;
 					}
-					if (iCultureTransfer == 0 && iTargetCulture > 0)
+					else if (iCultureTransfer < 1)
 					{
 						// always at least 1 point of culture must be transfered
 						// othervise we may have the problems with capturing of very low culture cities.
 						iCultureTransfer = 1;
 					}
 
-					// plot that is not a city can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
-					if ((pLoopPlot->getPlotCity() == NULL) && GET_PLAYER(eTargetPlayer).hasFixedBorders())
+					if (iCultureTransfer == iTargetCulture
+					&& (pLoopPlot->isActsAsCity() // fort, must not lose all culture when it may still be garrisoned
+					// plot without city can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
+					|| pLoopPlot->getPlotCity() == NULL && GET_PLAYER(eTargetPlayer).hasFixedBorders()))
 					{
-						if (iCultureTransfer == iTargetCulture)
-						{
-							iCultureTransfer = iTargetCulture - 1;
-						}
-					}
-					// plots with forts can't lose the last point of culture, otherwise they could become unowned with some units remaining inside
-					if (pLoopPlot->isActsAsCity())
-					{
-						if (iCultureTransfer == iTargetCulture)
-						{
-							iCultureTransfer = iTargetCulture - 1;
-						}
+						iCultureTransfer--;
 					}
 
 					if (iCultureTransfer > 0)
 					{
 						// target player's culture in plot is lowered
 						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
-						if( iTargetCulture > 0 && pLoopPlot->getCulture(eTargetPlayer) <= 0 )
-						{
-							// Don't allow complete loss of all culture
-							pLoopPlot->setCulture(eTargetPlayer,1,false,false);
-						}
 						// owners's culture in plot is raised
 						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true);
 					}
@@ -31387,7 +31323,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, flo
 // returns influence % in current plot
 float CvUnit::doPillageInfluence()
 {
-	if (isAnimal())
+	if (isAnimal() || isHiddenNationality())
 	{
 		return 0.0f;
 	}
@@ -31399,10 +31335,6 @@ float CvUnit::doPillageInfluence()
 	{
 		return 0.0f;
 	}
-	if (isHiddenNationality())
-	{
-		return 0.0f;
-	}
 
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
@@ -31410,63 +31342,45 @@ float CvUnit::doPillageInfluence()
 		FAssertMsg(false, "pPlot == NULL; should not happen");
 		return 0.0f;
 	}
-
-	if (pPlot->getWorkingCity() != NULL)
+	if (pPlot->getWorkingCity() != NULL && pPlot->getWorkingCity()->isProtectedCulture())
 	{
-		if (pPlot->getWorkingCity()->isProtectedCulture())
+		return 0.0f;
+	}
+
+	const PlayerTypes eTargetPlayer = pPlot->getOwner();
+	const int iTargetCulture = pPlot->getCulture(eTargetPlayer);
+	if (iTargetCulture < 1)
+	{
+		FAssertMsg(false, "iTargetCulture < 1; should not happen");
+		return 0.0f;
+	}
+	int iCultureTransfer = GC.getIDW_BASE_PILLAGE_INFLUENCE() * intSqrt(iTargetCulture) / 100;
+	if (iCultureTransfer < 1)
+		iCultureTransfer = 1;
+	// cannot transfer more culture than remaining target culure
+	if (iTargetCulture <= iCultureTransfer)
+	{
+		iCultureTransfer = iTargetCulture;
+		// plot can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
+		if (GET_PLAYER(eTargetPlayer).hasFixedBorders())
 		{
-			return 0.0f;
+			iCultureTransfer--;
 		}
 	}
 
-	const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
-
-	float fBasePillageInfluence = GC.getIDW_BASE_PILLAGE_INFLUENCE();
-
-	float fGameSpeedMultiplier = (float) GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier *= GC.getEraInfo(GC.getGame().getStartEra()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
-	fGameSpeedMultiplier /= 100;
-	fGameSpeedMultiplier = sqrt(fGameSpeedMultiplier);
-
-	PlayerTypes eTargetPlayer = pPlot->getOwner();
-	int iTargetCulture = pPlot->getCulture(eTargetPlayer);
-	if (iTargetCulture <= 0)
+	if (iCultureTransfer > 0)
 	{
-		//should not happen
-		return 0.0f;
+		const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
+
+		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
+		pPlot->changeCulture(getOwner(), iCultureTransfer, true);
+
+		// calculate influence % in pillaged plot (to be displayed in game log)
+		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 100.0f / pPlot->countTotalCulture();
 	}
-	int iCultureTransfer = int (fBasePillageInfluence * fGameSpeedMultiplier * sqrt((float) iTargetCulture));
-	if (iTargetCulture < iCultureTransfer)
-	{
-		// cannot transfer more culture than remaining target culure
-		iCultureTransfer = iTargetCulture;
-	}
-
-	// target player's culture in plot is lowered
-	pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
-	// owners's culture in plot is raised
-	pPlot->changeCulture(getOwner(), iCultureTransfer, true);
-
-	// calculate influence % in pillaged plot (to be displayed in game log)
-    int iOurCultureAfter = pPlot->getCulture(getOwner());
-	float fInfluenceRatio = ((iOurCultureAfter-iOurCultureBefore)*100.0f)/pPlot->countTotalCulture();
-
-//	CvWString szBuffer;
-//	szBuffer.Format(L"Factors: %.1f, %.1f, %d, Result: %.3f, ", fGameSpeedMultiplier, fBasePillageInfluence, iTargetCulture, fInfluenceRatio);
-//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), plot()->getX(), plot()->getY());
-
-	return fInfluenceRatio;
+	return 0.0f;
 }
-
 // ------ END InfluenceDrivenWar ---------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
 
 
 bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
@@ -37020,7 +36934,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 			return false;
 		}
 	}
-	
+
 	for (iI = 0; iI < GC.getPromotionInfo(eEquipment).getNumPrereqBonusTypes(); iI++)
 	{
 		const BonusTypes ePrereqBonus = (BonusTypes)GC.getPromotionInfo(eEquipment).getPrereqBonusType(iI); 
@@ -38423,7 +38337,7 @@ int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineT
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeProbability);
 	const int iNum = m_pUnitInfo->getNumAfflictOnAttackTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictOnAttackType(iI).eAfflictionLine;
@@ -38474,7 +38388,7 @@ bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeCount);
 	const int iNum = m_pUnitInfo->getNumAfflictOnAttackTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictOnAttackType(iI).eAfflictionLine;
@@ -38542,7 +38456,7 @@ bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineTyp
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeImmediateCount);
 	const int iNum = m_pUnitInfo->getNumAfflictOnAttackTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictOnAttackType(iI).eAfflictionLine;
@@ -38600,7 +38514,7 @@ bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) c
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeMeleeCount);
 	const int iNum = m_pUnitInfo->getNumAfflictOnAttackTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictOnAttackType(iI).eAfflictionLine;
@@ -38658,7 +38572,7 @@ bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeDistanceCount);
 	const int iNum = m_pUnitInfo->getNumAfflictOnAttackTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictOnAttackType(iI).eAfflictionLine;
@@ -38785,7 +38699,7 @@ int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iHealUnitCombatTypeVolume);
 	const int iNum = m_pUnitInfo->getNumHealUnitCombatTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const UnitCombatTypes eUnitCombat = m_pUnitInfo->getHealUnitCombatType(iI).eUnitCombat;
@@ -38837,7 +38751,7 @@ int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) 
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iHealUnitCombatTypeAdjacentVolume);
 	const int iNum = m_pUnitInfo->getNumHealUnitCombatTypes();
-	
+
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const UnitCombatTypes eUnitCombat = m_pUnitInfo->getHealUnitCombatType(iI).eUnitCombat;
@@ -38892,7 +38806,7 @@ void CvUnit::doSetUnitCombats()
 			bUpdated = true;
 		}
 	}
-	
+
 	const TechTypes ePrereq = (TechTypes)m_pUnitInfo->getPrereqAndTech();
 
 	EraTypes eEra = NO_ERA;
@@ -39516,14 +39430,7 @@ bool CvUnit::isPursuitPossible(const CvUnit* pOpponent) const
 
 bool CvUnit::hasCannotMergeSplit() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		if (isFreeDrop())
-		{
-			return false;
-		}
-	}
-	return (getCannotMergeSplitCount() > 0);
+	return getCannotMergeSplitCount() > 0;
 }
 
 int CvUnit::getCannotMergeSplitCount() const
@@ -40562,33 +40469,12 @@ void CvUnit::setSMCargoVolume()
 
 int CvUnit::getSizeMattersOffsetValue() const
 {
-	int offsetValue = qualityRank();
-	offsetValue += groupRank();
-	offsetValue += sizeRank();
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		offsetValue -= m_pUnitInfo->getSMRankTotal();
-	}
-	else
-	{
-		offsetValue -= 15;
-	}
-	return offsetValue;
+	return qualityRank() + groupRank() + sizeRank() - 15;
 }
 
 int CvUnit::getSizeMattersSpacialOffsetValue() const
 {
-	int spaceOffsetValue = groupRank();
-	spaceOffsetValue += sizeRank();
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-	{
-		spaceOffsetValue -= m_pUnitInfo->getSMVolumetricRankTotal();
-	}
-	else
-	{
-		spaceOffsetValue -= 10;
-	}
-	return spaceOffsetValue;
+	return groupRank() + sizeRank() - 10;
 }
 
 int CvUnit::getCargoCapacitybyType(int iValue) const
