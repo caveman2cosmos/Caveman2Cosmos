@@ -3254,6 +3254,7 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isNukeImmune);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBuildUp);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canAttack);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);

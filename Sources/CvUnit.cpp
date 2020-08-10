@@ -30793,7 +30793,6 @@ void CvUnit::doOpportunityFire()
 void CvUnit::doActiveDefense()
 {
 	int iDamage, iUnitDamage;
-	CvPlot* pLoopPlot;
 	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvCity* pCity = NULL;

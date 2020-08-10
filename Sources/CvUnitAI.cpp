@@ -27949,7 +27949,7 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 		{
 			int iValue = -99;
 
-			foreach_(const CvPlot* pLoopPlot2, CvPlot::rect(pLoopPlot->getX(), pLoopPlot->getY(), nukeRange, nukeRange))
+			foreach_(const CvPlot* pLoopPlot2, CvPlot::rect(pLoopPlot->getX(), pLoopPlot->getY(), nukeRange(), nukeRange()))
 			{
 				int iEnemyCount = 0;
 				int iTeamCount = 0;
@@ -28502,7 +28502,7 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 
 	const int iSearchRange = AI_searchRange(iRange);
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
 	{
 		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 		{
@@ -29163,7 +29163,7 @@ int CvUnitAI::AI_nukeValue(const CvCity* pCity) const
 
 	iValue += -(GET_PLAYER(getOwner()).AI_getAttitudeVal(pCity->getOwner()) / 3);
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pCity->getX(), pCity->getY(), nukeRange, nukeRange))
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pCity->getX(), pCity->getY(), nukeRange(), nukeRange()))
 	{
 		if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
@@ -30212,7 +30212,7 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 			{
 				if (iBonusValueThreshold > 0)
 				{
-					const ImprovementTypes eImprovement;
+					ImprovementTypes eImprovement;
 					if (pLoopPlot->getImprovementDuration() > ((pLoopPlot->isWater()) ? 20 : 5))
 					{
 						eImprovement = pLoopPlot->getImprovementType();
