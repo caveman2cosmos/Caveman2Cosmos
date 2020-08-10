@@ -3159,8 +3159,8 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		if (!bAffliction) //bAffliction ONLY applies during the Outbreaks and Afflictions option being on!
 		{
-			if (*getPropertiesConst() > *(kBuilding.getPrereqMaxProperties())
-			||  *getPropertiesConst() < *(kBuilding.getPrereqMinProperties()))
+			if (!(*getPropertiesConst() <= *(kBuilding.getPrereqMaxProperties()))
+			|| !(*getPropertiesConst() >= *(kBuilding.getPrereqMinProperties())))
 			{
 				return false;
 			}
