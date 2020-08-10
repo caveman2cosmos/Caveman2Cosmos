@@ -296,7 +296,6 @@ public:
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
-	bool canJoin() const; // Exposed to Python
 
 	int getFoodTurnsLeft() const; // Exposed to Python
 	bool isProduction() const; // Exposed to Python
@@ -480,7 +479,7 @@ public:
 	int badHealth(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
 	int healthRate(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
 	int foodConsumption(bool bNoAngry = false, int iExtra = 0, bool bIncludeWastage = true) const; // Exposed to Python
-	int foodDifference(bool bBottom = true, bool bIncludeWastage = true, bool bIgnoreFoodBuildOrRev = false) const; // Exposed to Python
+	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
 	int growthThreshold() const; // Exposed to Python
 

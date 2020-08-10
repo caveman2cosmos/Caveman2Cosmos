@@ -11153,47 +11153,24 @@ bool CvUnit::spreadCorporation(CorporationTypes eCorporation)
 
 bool CvUnit::canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const
 {
-	CvCity* pCity;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (isCommander())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	if (eSpecialist == NO_SPECIALIST)
 	{
 		return false;
 	}
 
-	if (!(m_pUnitInfo->getGreatPeoples(eSpecialist)))
+	if (isCommander() || isDelayedDeath())
 	{
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
+	if (!m_pUnitInfo->getGreatPeoples(eSpecialist))
 	{
 		return false;
 	}
 
-	if (!(pCity->canJoin()))
-	{
-		return false;
-	}
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity->getTeam() != getTeam())
-	{
-		return false;
-	}
-
-	if (isDelayedDeath())
+	if (pCity == NULL || pCity->getTeam() != getTeam())
 	{
 		return false;
 	}
