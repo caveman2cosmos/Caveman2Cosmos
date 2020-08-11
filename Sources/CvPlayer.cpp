@@ -20911,11 +20911,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
-
-		double fGold;
-		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		m_iGold = static_cast<long long>(fGold);
-
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iGold, SAVE_VALUE_ANY);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerTurn);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iAdvancedStartPoints);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldenAgeTurns);
@@ -21979,7 +21975,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraFreedomFighters);
-		//WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterGold);
+
+		// @SAVEBREAK DELETE
+		int m_iGreaterGold;
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterGold);
+		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterCulture);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
 		if (m_iGreaterCulture > 1000000)
@@ -22005,6 +22006,14 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
+
+		double fGold;
+		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
+		m_iGold = static_cast<long long>(fGold) 
+			// @SAVEBREAK DELETE
+			+ (1000000 * m_iGreaterGold);
+			// SAVEBREAK@
+
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -22075,10 +22084,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLand);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLandScored);
-
-		double fGold = static_cast<double>(m_iGold);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
-
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerTurn);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iAdvancedStartPoints);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldenAgeTurns);
@@ -22719,7 +22724,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSelectionRegroup);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreedomFighterCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraFreedomFighters);
-		//WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterGold);
+
+		// @SAVEBREAK DELETE
+		int m_iGreaterGold = 0;
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterGold);
+		// SAVEBREAK@
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
@@ -22740,6 +22750,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepMilitaryPopPercent);
+
+		double fGold = static_cast<double>(m_iGold);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
 	}
 	//	Use condensed format now - only save non-default array elements
 
