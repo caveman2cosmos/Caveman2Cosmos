@@ -394,15 +394,11 @@ public:
 	int getTotalLandScored() const; // Exposed to Python
 	void changeTotalLandScored(int iChange);
 
-	int getEffectiveGold() const;
-
-	int getGold() const; // Exposed to Python
+	int64_t getGold() const; // Exposed to Python
+	void setGold(int64_t iNewValue);
 	DllExport void setGold(int iNewValue); // Exposed to Python
+	void changeGold(int64_t iChange);
 	DllExport void changeGold(int iChange);
-
-	int getGreaterGold() const; // Exposed to Python
-	void setGreaterGold(int iNewValue); // Exposed to Python
-	void changeGreaterGold(int iChange); // Exposed to Python
 
 	int getGoldPerTurn() const; // Exposed to Python
 
@@ -413,7 +409,7 @@ public:
 	void doEspionageOneOffPoints(int iChange);
 	int getEspionageSpending(TeamTypes eAgainstTeam, int iTotal = -1) const; // Exposed to Python
 	bool canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pUnit) const; // Exposed to Python
-	int getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
+	int64_t getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
 	int getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const; // Exposed to Python
 	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
 	bool doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pUnit, bool bCaught = false);
@@ -1761,7 +1757,7 @@ protected:
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
-	int m_iGold;
+	int64_t m_iGold;
 	int m_iGreaterGold;
 	int m_iGoldPerTurn;
 	int m_iAdvancedStartPoints;

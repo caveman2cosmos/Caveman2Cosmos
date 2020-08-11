@@ -221,15 +221,15 @@ public:
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
+	//int getEffectiveGold();
+	int64_t getGold() const;
+	//int getGreaterGold();
 	void setGold(int iNewValue);
 	void changeGold(int iChange);
 	int getGoldPerTurn();
 
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
+	//void setGreaterGold(int iNewValue);
+	//void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);

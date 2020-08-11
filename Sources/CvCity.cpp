@@ -4519,7 +4519,7 @@ bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
 			return false;
 		}
 
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < hurryGold(eHurry))
+		if (GET_PLAYER(getOwner()).getGold() < hurryGold(eHurry))
 		{
 			return false;
 		}
@@ -4552,7 +4552,7 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 
 	int iHurryGold = getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew));
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < iHurryGold)
+	if (GET_PLAYER(getOwner()).getGold() < iHurryGold)
 	{
 		return false;
 	}
@@ -4582,7 +4582,7 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool b
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
 	{
 		return false;
 	}

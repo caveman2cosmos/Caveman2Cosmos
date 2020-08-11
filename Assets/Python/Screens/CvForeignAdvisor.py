@@ -1363,19 +1363,12 @@ class CvForeignAdvisor:
 				if TYPE == "ALL":
 					CyPlayerX = GC.getPlayer(ID)
 					iGold = CyPlayerX.getGold()
-					iGrGold = CyPlayerX.getGreaterGold()
 					szTxt = ""
-					if iGrGold:
-						szTxt += str(iGrGold)
 					szTxt += str(iGold) + self.charGold
 					self.updateTooltip(screen, szTxt)
 				elif TYPE == "WILL":
 					iGold = GC.getPlayer(ID).AI_maxGoldTrade(self.iPlayer)
-					iGrGold = iGold / 1000000
 					szTxt = ""
-					if iGrGold:
-						iGold - iGrGold*1000000
-						szTxt += str(iGrGold)
 					szTxt += str(iGold) + self.charGold
 					self.updateTooltip(screen, szTxt)
 

@@ -945,19 +945,9 @@ int CyPlayer::getTotalLandScored()
 	return m_pPlayer ? m_pPlayer->getTotalLandScored() : -1;
 }
 
-int CyPlayer::getEffectiveGold() 
-{
-	return m_pPlayer ? m_pPlayer->getEffectiveGold() : -1;
-}
-
-int CyPlayer::getGold() 
+int64_t CyPlayer::getGold() const
 {
 	return m_pPlayer ? m_pPlayer->getGold() : -1;
-}
-
-int CyPlayer::getGreaterGold() 
-{
-	return m_pPlayer ? m_pPlayer->getGreaterGold() : -1;
 }
 
 void CyPlayer::setGold(int iNewValue)
@@ -970,18 +960,6 @@ void CyPlayer::changeGold(int iChange)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeGold(iChange);
-}
-
-void CyPlayer::setGreaterGold(int iNewValue)
-{
-	if (m_pPlayer)
-		m_pPlayer->setGreaterGold(iNewValue);
-}
-
-void CyPlayer::changeGreaterGold(int iChange)
-{
-	if (m_pPlayer)
-		m_pPlayer->changeGreaterGold(iChange);
 }
 
 int CyPlayer::getGoldPerTurn()

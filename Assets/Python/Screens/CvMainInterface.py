@@ -2194,25 +2194,16 @@ class CvMainInterface:
 						dY += 18
 				# Treasury and income info.
 				iGold = CyPlayer.getGold()
-				iGreaterGold = CyPlayer.getGreaterGold()
-				iEffectiveGold = iGreaterGold * 1000000 + iGold
 				iGoldRate = CyPlayer.calculateGoldRate()
 				szTxt = "<font=3>"
-				if iEffectiveGold < 0:
+				if iGold < 0:
 					szTxt += "<color=255,0,0,255>"
-				if iGold > 99999:
-					if iGreaterGold:
-						szTxt += str(iGreaterGold)
-					szTxt += str(iGold/1000) + "K"
-				else:
-					if iGreaterGold:
-						szTxt += str(iGreaterGold) + "M "
-					szTxt += str(iGold)
+				szTxt += str(iGold)
 				if iGoldRate:
 					szTxt += " <color="
-					if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+					if iGoldRate > 0 and iGold + iGoldRate >= 0:
 						szTxt += "127,255,0,255>"
-					elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+					elif iGoldRate < 0 and iGold + iGoldRate < 0:
 						szTxt += "255,124,0,255>"
 					else:
 						szTxt += "255,227,0,255>"
@@ -5031,7 +5022,7 @@ class CvMainInterface:
 	def treasuryHelp(self, screen, szTxt):
 		iconCommerceGold = self.iconCommerceList[0]
 		CyPlayer = self.CyPlayer
-		szTxt += "\n%s: %d" % (iconCommerceGold, CyPlayer.getGreaterGold() * 1000000 + CyPlayer.getGold())
+		szTxt += "\n%s: %d" % (iconCommerceGold, CyPlayer.getGold())
 		iSum = 0
 		# Civics
 		szTemp = ""

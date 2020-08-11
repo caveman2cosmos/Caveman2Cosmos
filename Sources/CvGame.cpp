@@ -8833,14 +8833,13 @@ int CvGame::calculateSyncChecksum()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isEverAlive())
 		{
-			int iMultiplier = getPlayerScore((PlayerTypes)iI);
+			int64_t iMultiplier = getPlayerScore((PlayerTypes)iI);
 
 			switch (getTurnSlice() % 4)
 			{
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGreaterGold());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());

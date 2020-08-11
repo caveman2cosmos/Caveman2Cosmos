@@ -442,7 +442,7 @@ class Revolution:
 		buttonList = []
 		lastBribeTurn = RevData.getCityVal( pCity, 'BribeTurn' )
 
-		iGold = 1000000 * CyPlayer.getGreaterGold() + CyPlayer.getGold()
+		iGold = CyPlayer.getGold()
 		if iGold < iSmall:
 			bodStr = localText.getText("TXT_KEY_REV_BRIBE_CITY_POOR",())
 			if( not lastBribeTurn == None and GAME.getGameTurn() - lastBribeTurn < 20 ) :
@@ -1779,7 +1779,7 @@ class Revolution:
 
 		# Finances
 		iGoldRate = pPlayer.calculateGoldRate()
-		iGold = 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()
+		iGold = pPlayer.getGold()
 
 		goldPerc = pPlayer.getCommercePercent( CommerceTypes.COMMERCE_GOLD )
 		sciPerc = pPlayer.getCommercePercent( CommerceTypes.COMMERCE_RESEARCH )
@@ -2012,7 +2012,7 @@ class Revolution:
 		if( pPlayer.isHuman() or pPlayer.isNPC() ) :
 			return
 
-		iGold = 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()
+		iGold = pPlayer.getGold()
 
 		if( iGold < 100 or pPlayer.isAnarchy() ) :
 			return
@@ -2046,7 +2046,7 @@ class Revolution:
 				if( iOdds > GAME.getSorenRandNum(100,'Rev: bribe city') ) :
 					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s bribing %s with small bribe to buy time, odds %d"%(pPlayer.getCivilizationDescription(0),pCity.getName(),iOdds))
 					RevUtils.bribeCity( pCity, 'Small' )
-					iGold = 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()
+					iGold = pPlayer.getGold()
 					if( iGold < 100 ) :
 						return
 					continue
@@ -2058,7 +2058,7 @@ class Revolution:
 					if( iOdds > GAME.getSorenRandNum(100,'Rev: bribe city') ) :
 						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s bribing %s with med bribe so that it won't join a revolt, odds %d"%(pPlayer.getCivilizationDescription(0),pCity.getName(),iOdds))
 						RevUtils.bribeCity( pCity, 'Med' )
-						iGold = 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()
+						iGold = pPlayer.getGold()
 						if iGold < 100:
 							return
 						continue
@@ -2068,7 +2068,7 @@ class Revolution:
 				if( iOdds > GAME.getSorenRandNum(100,'Rev: bribe city') ) :
 					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s bribing %s with large bribe so that it won't join a revolt, odds %d"%(pPlayer.getCivilizationDescription(0),pCity.getName(),iOdds))
 					RevUtils.bribeCity( pCity, 'Large' )
-					iGold = 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()
+					iGold = pPlayer.getGold()
 					if iGold < 100:
 						return
 					continue
@@ -2911,7 +2911,7 @@ class Revolution:
 						iBuyOffCost = totalRevIdx/(17-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						#iBuyOffCost = (60 + 12*pPlayer.getCurrentEra())*len(relCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-						iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+						iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 						bodStr += ' ' + localText.getText("TXT_KEY_REV_REL_CHANGE",()) + ' ' + GC.getReligionInfo( revRel ).getDescription() + '.'
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_CURRENTLY",()) + ' %d '%(revRelCount) + localText.getText("TXT_KEY_REV_REL_NEW_REL",()) + ' %d '%(stateRelCount) + localText.getText("TXT_KEY_REV_REL_STATE_REL",())
 						bodStr += '\n\n' + localText.getText("TXT_KEY_REV_REL_HONORING",())
@@ -2965,7 +2965,7 @@ class Revolution:
 						totalRevIdx += pCity.getRevolutionIndex()
 					iBuyOffCost = totalRevIdx/(17-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 					if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-					iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/12 + GAME.getSorenRandNum(50,'Rev')] )
+					iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/12 + GAME.getSorenRandNum(50,'Rev')] )
 
 					[pRevPlayer,bIsJoinWar] = self.chooseRevolutionCiv( indCities, bJoinCultureWar = False, bReincarnate = True, bJoinRebels = False, bSpreadRebels = False, giveRelType = revRel, bMatchCivics = True )
 
@@ -3144,7 +3144,7 @@ class Revolution:
 							totalRevIdx += pCity.getRevolutionIndex()
 						iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-						iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+						iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 						bodStr += ' ' + localText.getText("TXT_KEY_REV_HL_EMAN_REJECT",()) + ' %s '%(GC.getCivicInfo(newCivic).getDescription()) + localText.getText("TXT_KEY_REV_HL_EMAN_CIVIC",())
 						bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_HL_EMAN_SLAVE",())
@@ -3234,7 +3234,7 @@ class Revolution:
 							totalRevIdx += pCity.getRevolutionIndex()
 						iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-						iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+						iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 						bodStr += ' ' + localText.getText("TXT_KEY_REV_HL_ENV_REQUEST",()) + ' %s.'%(GC.getCivicInfo(newCivic).getDescription())
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_HL_ENV_GREEN",())
 						bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
@@ -3294,7 +3294,7 @@ class Revolution:
 							totalRevIdx += pCity.getRevolutionIndex()
 						iBuyOffCost = totalRevIdx/(15-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(80+10*pPlayer.getCurrentEra(),'Rev')
 						if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-						iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/8 + GAME.getSorenRandNum(50,'Rev')] )
+						iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
 						bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_COL_GOVT_PRACTICES",())
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_BRIBE",())
@@ -3343,7 +3343,7 @@ class Revolution:
 							totalRevIdx += pCity.getRevolutionIndex()
 						iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-						iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+						iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 						bodStr += ' ' + localText.getText("TXT_KEY_REV_HL_EMAN_REJECT",()) + ' %s '%(GC.getCivicInfo(newCivic).getDescription()) + localText.getText("TXT_KEY_REV_HL_EMAN_CIVIC",())
 						bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_HL_EMAN_SLAVE",())
@@ -3410,7 +3410,7 @@ class Revolution:
 								totalRevIdx += pCity.getRevolutionIndex()
 							iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
 							if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-							iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/8 + GAME.getSorenRandNum(50,'Rev')] )
+							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
 							bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
 							bodStr += '  ' + localText.getText("TXT_KEY_REV_CAP_VOTE_POWER",())
 							bodStr += "  " + localText.getText("TXT_KEY_REV_BRIBE",()) + "  " + localText.getText("TXT_KEY_REV_CAP_VOTE_STATUES",())
@@ -3445,7 +3445,7 @@ class Revolution:
 								totalRevIdx += pCity.getRevolutionIndex()
 							iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+12*pPlayer.getCurrentEra(),'Rev')
 							if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-							iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 							bodStr += ' ' + localText.getText("TXT_KEY_REV_CAP_SPEECH_REQUEST",()) + ' %s.'%(GC.getCivicInfo(newCivic).getDescription())
 							bodStr += '  ' + localText.getText("TXT_KEY_REV_CAP_SPEECH_DENY",())
 
@@ -3485,7 +3485,7 @@ class Revolution:
 									totalRevIdx += pCity.getRevolutionIndex()
 								iBuyOffCost = totalRevIdx/(20-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(80+10*pPlayer.getCurrentEra(),'Rev')
 								if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-								iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/10 + GAME.getSorenRandNum(50,'Rev')] )
+								iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/10 + GAME.getSorenRandNum(50,'Rev')] )
 								bodStr += '  ' + localText.getText("TXT_KEY_REV_CAP_LEAD_CEDE",()) + ' %s.'%(newLeaderName)
 								bodStr += '\n\n' + localText.getText("TXT_KEY_REV_CAP_LEAD_CONCLUSION",())
 								bodStr += '  %s '%(newLeaderName) + localText.getText("TXT_KEY_REV_CAP_LEAD_RULER",())
@@ -3518,7 +3518,7 @@ class Revolution:
 								totalRevIdx += pCity.getRevolutionIndex()
 							iBuyOffCost = totalRevIdx/(25-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(90+10*pPlayer.getCurrentEra(),'Rev')
 							if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-							iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/12 + GAME.getSorenRandNum(50,'Rev')] )
+							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/12 + GAME.getSorenRandNum(50,'Rev')] )
 							bodStr += '  ' + localText.getText("TXT_KEY_REV_CAP_LEAD_ELECTION",()) + ' %s!'%(newLeaderName)
 							bodStr += '\n\n' + localText.getText("TXT_KEY_REV_PEACEFUL_CONCLUSION",())
 							bodStr += '\n\n' + localText.getText("TXT_KEY_REV_CAP_LEAD_BUYOFF",())
@@ -3575,7 +3575,7 @@ class Revolution:
 								totalRevIdx += pCity.getRevolutionIndex()
 							iBuyOffCost = totalRevIdx/(22-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(80+10*pPlayer.getCurrentEra(),'Rev')
 							if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-							iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/8 + GAME.getSorenRandNum(50,'Rev')] )
+							iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
 							bodStr += '  ' + localText.getText("TXT_KEY_REV_CAP_RULE_ELECTION",()) + ' %s!'%(newLeaderName)
 							bodStr += '\n\n' + localText.getText("TXT_KEY_REV_CAP_RULE_RISE",()) + ' %s '%(pRevPlayer.getCivilizationShortDescription(0))
 							bodStr += localText.getText("TXT_KEY_REV_CAP_RULE_BUYOFF",())
@@ -3649,7 +3649,7 @@ class Revolution:
 				totalPop += pCity.getPopulation()
 			iBuyOffCost = totalRevIdx/(17-pPlayer.getCurrentEra()) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 			if( not pPlayer.isHuman() ) : iBuyOffCost = int( iBuyOffCost*.7 )
-			iBuyOffCost = max( [iBuyOffCost,(1000000 * pPlayer.getGreaterGold() + pPlayer.getGold())/8 + GAME.getSorenRandNum(50,'Rev')] )
+			iBuyOffCost = max( [iBuyOffCost, pPlayer.getGold()/8 + GAME.getSorenRandNum(50,'Rev')] )
 
 			# Determine Vassal or no
 			# if annoyed or worse, ask for independence
@@ -3689,7 +3689,7 @@ class Revolution:
 				else :
 					bodStr += ' ' + localText.getText("TXT_KEY_REV_IND_PEACE_REQUEST",()) + ' %s.'%(pRevPlayer.getCivilizationShortDescription(0))
 			bodStr += '\n\n' + localText.getText("TXT_KEY_REV_IND_PEACE_ACTION",())
-			if 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold() > iBuyOffCost:
+			if pPlayer.getGold() > iBuyOffCost:
 				bodStr += '\n\n' + localText.getText("TXT_KEY_REV_IND_PEACE_ACTION2",())
 
 		else :
@@ -4160,7 +4160,7 @@ class Revolution:
 				buttons = ('accept',)
 				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
-				if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
 					buttons += ('buyoff',)
 				if not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs:
@@ -4179,13 +4179,13 @@ class Revolution:
 					self.processRevolution( pPlayer, iRevoltIdx, cityList, revType, bPeaceful, True )
 
 				else :
-					if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+					if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 						if( bPeaceful ) :
 							base = .8
 						else :
 							base = .7
 
-						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, (1000000.0 * pPlayer.getGreaterGold() + pPlayer.getGold())/iBuyOffCost)))
+						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, pPlayer.getGold()/iBuyOffCost)))
 
 						if( buyOdds > GAME.getSorenRandNum( 100, 'Rev - AI buyoff decision' ) ) :
 							revData.dict['bDidBuyOff'] = True
@@ -4267,7 +4267,7 @@ class Revolution:
 				buttons = ('accept',)
 				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
-				if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
 					buttons += ('buyoff',)
 				if( not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs ) :
@@ -4289,7 +4289,7 @@ class Revolution:
 					self.processRevolution( pPlayer, iRevoltIdx, cityList, revType, bPeaceful, True )
 
 				else:
-					if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+					if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 						if bPeaceful:
 							base = .8
 						else:
@@ -4297,11 +4297,11 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base,(1000000.0 * pPlayer.getGreaterGold() + pPlayer.getGold())/iBuyOffCost)))
+						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, pPlayer.getGold()/iBuyOffCost)))
 #-------------------------------------------------------------------------------------------------
 # END Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff odds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost,1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()))
+						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff odds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost, pPlayer.getGold()))
 						if( buyOdds > GAME.getSorenRandNum( 100, 'Rev - AI buyoff decision' ) ) :
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyingoff rebels")
 							revData.dict['bDidBuyOff'] = True
@@ -4421,7 +4421,7 @@ class Revolution:
 				buttons = ('accept',)
 				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
-				if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 					if( bIsElection ) :
 						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUY_ELECTION",()) + ' %d'%(iBuyOffCost) )
 						buttons += ('buyelection',)
@@ -4445,7 +4445,7 @@ class Revolution:
 					self.processRevolution( pPlayer, iRevoltIdx, cityList, revType, bPeaceful, True )
 
 				else:
-					if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+					if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 						if bPeaceful:
 							base = .8
 						else:
@@ -4453,11 +4453,11 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, (1000000.0 * pPlayer.getGreaterGold() + pPlayer.getGold())/iBuyOffCost)))
+						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, pPlayer.getGold()/iBuyOffCost)))
 #-------------------------------------------------------------------------------------------------
 # END Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff iOdds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost, 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()))
+						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff iOdds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost, pPlayer.getGold()))
 						if( buyOdds > GAME.getSorenRandNum( 100, 'Rev - AI buyoff decision' ) ) :
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyingoff rebels")
 							revData.dict['bDidBuyOff'] = True
@@ -4714,7 +4714,7 @@ class Revolution:
 				if( not joinPlayer == None and not bIsJoinWar and GC.getTeam(pPlayer.getTeam()).canDeclareWar(joinPlayer.getTeam()) ) :
 					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_WAR",()) + ' ' + joinPlayer.getCivilizationDescription(0) )
 					buttons += ('war',)
-				if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
 					buttons += ('buyoff',)
 				if( bPeaceful and joinPlayer == None and (pRevPlayer.getNumCities() == 0) ) :
@@ -4740,7 +4740,7 @@ class Revolution:
 				if( GAME.getSorenRandNum(100,'Revolt: give independence') < iOdds ) :
 					self.processRevolution( pPlayer, iRevoltIdx, cityList, revType, bPeaceful, True )
 				else:
-					if iBuyOffCost > 0 and iBuyOffCost <= 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold():
+					if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
 						if bPeaceful:
 							base = .8
 						else :
@@ -4748,11 +4748,11 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, (1000000.0 * pPlayer.getGreaterGold() + pPlayer.getGold())/iBuyOffCost)))
+						buyOdds = int(iOdds/2.0 + 75*(1 - pow(base, pPlayer.getGold()/iBuyOffCost)))
 #-------------------------------------------------------------------------------------------------
 # END Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff iOdds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost, 1000000 * pPlayer.getGreaterGold() + pPlayer.getGold()))
+						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyoff iOdds are %d, with base %.1f, from cost %d and gold %d"%(buyOdds,base,iBuyOffCost, pPlayer.getGold()))
 						if( buyOdds > GAME.getSorenRandNum( 100, 'Rev - AI buyoff decision' ) ) :
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - AI buyingoff rebels")
 							revData.dict['bDidBuyOff'] = True
@@ -5299,7 +5299,7 @@ class Revolution:
 							pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), 6 + len(cityList)/2 )
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s's Extra Attitude towards %s now %d"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0),pRevPlayer.AI_getAttitudeExtra(pPlayer.getID())))
 
-						if 1000000 * pRevPlayer.getGreaterGold() + pRevPlayer.getGold() < 50:
+						if pRevPlayer.getGold() < 50:
 							pRevPlayer.changeGold( 30 + GAME.getSorenRandNum(25*len(cityList),'Revolt: give gold') )
 						else :
 							pRevPlayer.changeGold( 10 + GAME.getSorenRandNum(15*len(cityList),'Revolt: give gold') )
@@ -6224,7 +6224,7 @@ class Revolution:
 				CvUtil.pyPrint("  Revolt - The %s revolutionaries join in the war against the %s!"%(pRevPlayer.getCivilizationAdjective(0),pPlayer.getCivilizationDescription(0)))
 
 			# Money
-			if 1000000 * pRevPlayer.getGreaterGold() + pRevPlayer.getGold() < 200:
+			if pRevPlayer.getGold() < 200:
 				iGold = 30 + GAME.getSorenRandNum(30*len(cityList),'Revolt: give gold')
 			else:
 				iGold = 10 + GAME.getSorenRandNum(20*len(cityList),'Revolt: give gold')
