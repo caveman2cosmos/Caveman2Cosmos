@@ -7140,7 +7140,6 @@ ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int64_t* comm
 
 int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
-
 	int iValue = 0;
 
 	if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())

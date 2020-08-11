@@ -21308,7 +21308,7 @@ void CvPlayerAI::AI_doDiplo()
 															{
 																theirList.clear();
 
-																setTradeItem(&item, TRADE_GOLD, iReceiveGold);
+																setTradeItem(&item, TRADE_GOLD, iReceiveGold > MAX_INT ? MAX_INT : (int)iReceiveGold);
 																theirList.insertAtEnd(item);
 
 																if (!(abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()]))
