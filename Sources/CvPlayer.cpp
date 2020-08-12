@@ -10681,11 +10681,6 @@ int64_t CvPlayer::getGold() const
 	return m_iGold;
 }
 
-void CvPlayer::setGold(int iNewValue)
-{
-	setGold(static_cast<int64_t>(iNewValue));
-}
-
 void CvPlayer::setGold(int64_t iNewValue)
 {
 	if (getGold() != iNewValue)
@@ -10706,15 +10701,11 @@ void CvPlayer::changeGold(int64_t iChange)
 	setGold(getGold() + iChange);
 }
 
-void CvPlayer::changeGold(int iChange)
-{
-	setGold(getGold() + iChange);
-}
-
 int CvPlayer::getGoldPerTurn() const
 {
 	return m_iGoldPerTurn;
 }
+
 
 int CvPlayer::getAdvancedStartPoints() const
 {

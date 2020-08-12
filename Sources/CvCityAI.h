@@ -134,7 +134,7 @@ public:
 	int AI_projectValue(ProjectTypes eProject) const;
 
 	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
-	int AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
+	int64_t AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
 	bool AI_finalProcessSelection();
 
 	int AI_neededSeaWorkers() const;

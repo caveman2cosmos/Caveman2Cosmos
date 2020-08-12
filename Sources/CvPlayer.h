@@ -395,10 +395,10 @@ public:
 	void changeTotalLandScored(int iChange);
 
 	int64_t getGold() const; // Exposed to Python
-	void setGold(int64_t iNewValue);
-	DllExport void setGold(int iNewValue); // Exposed to Python
+	void setGold(int64_t iNewValue); // Exposed to Python
+	DllExport void setGold(int iNewValue) { setGold(static_cast<int64_t>(iNewValue)); }
 	void changeGold(int64_t iChange);
-	DllExport void changeGold(int iChange);
+	DllExport void changeGold(int iChange) { setGold(static_cast<int64_t>(getGold() + iChange)); }
 
 	int getGoldPerTurn() const; // Exposed to Python
 
