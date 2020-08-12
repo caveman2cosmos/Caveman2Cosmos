@@ -786,7 +786,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
 	m_iGold = 0;
-	m_iGreaterGold = 0;
 	m_iGoldPerTurn = 0;
 	m_iAdvancedStartPoints = -1;
 	m_iGoldenAgeTurns = 0;

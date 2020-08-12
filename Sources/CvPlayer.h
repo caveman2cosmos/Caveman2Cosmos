@@ -1758,7 +1758,6 @@ protected:
 	int m_iTotalLand;
 	int m_iTotalLandScored;
 	int64_t m_iGold;
-	int m_iGreaterGold;
 	int m_iGoldPerTurn;
 	int m_iAdvancedStartPoints;
 	int m_iGoldenAgeTurns;
