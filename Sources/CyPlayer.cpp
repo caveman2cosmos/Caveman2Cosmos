@@ -2744,7 +2744,7 @@ void CyPlayer::setTeam(int /*TeamTypes*/ eIndex)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-int CyPlayer::getCulture() const
+int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer ? m_pPlayer->getCulture() : 0;
 }

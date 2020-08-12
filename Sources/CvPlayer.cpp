@@ -30602,7 +30602,7 @@ CvContractBroker&	CvPlayer::getContractBroker()
 	return m_contractBroker;
 }
 
-int CvPlayer::getCulture() const
+int64_t CvPlayer::getCulture() const
 {
 	return m_iCulture;
 }

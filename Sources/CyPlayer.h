@@ -597,7 +597,7 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
 
-	int getCulture() const;
+	int64_t getCulture() const;
 	void setCulture(int iNewValue);
 	void changeCulture(int iAddValue);
 

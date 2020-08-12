@@ -829,7 +829,7 @@ public:
 	DllExport EraTypes getCurrentEra() const; // Exposed to Python
 	void setCurrentEra(EraTypes eNewValue);
 
-	int getCulture() const;
+	int64_t getCulture() const;
 	void setCulture(int iNewValue);
 	void changeCulture(int iAddValue);
 
