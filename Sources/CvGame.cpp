@@ -8817,7 +8817,7 @@ int CvGame::calculateSyncChecksum()
 
 	int iJ;
 
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	iValue += getMapRand().getSeed();
 	iValue += getSorenRand().getSeed();
@@ -8964,7 +8964,12 @@ int CvGame::calculateSyncChecksum()
 		}
 	}
 
-	return iValue;
+	while (iValue > MAX_INT)
+	{
+		iValue -= MAX_INT;
+	}
+
+	return (int)iValue;
 }
 
 
