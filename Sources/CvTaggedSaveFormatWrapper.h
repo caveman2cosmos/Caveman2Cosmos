@@ -307,6 +307,13 @@ private:
 #define WRAPPER_WRITE_CLASS_ARRAY_OF_CLASS_ENUM(wrapper,className,classType,valueClassType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).WriteClassArrayOfClassEnum(className "::" #name, _idHint, _saveSeq,classType,valueClassType,count,name); }
 #define WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).WriteClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name); }
 
+#define WRAPPER_WRITE_LONG_LONG_AS_DOUBLE(wrapper, className, name)	\
+{																	\
+	static int _idHint;												\
+	static int _saveSeq = -1;										\
+	wrapper.Write(className "::" #name, _idHint, _saveSeq, static_cast<double>(name)); \
+}
+
 #define WRAPPER_WRITE_OBJECT_START(wrapper)	{ static int _idHint; static int _saveSeq = -1; (wrapper).WriteStartObject(__FUNCTION__, _idHint, _saveSeq); }
 #define WRAPPER_WRITE_OBJECT_END(wrapper)	(wrapper).WriteEndObject()
 
@@ -328,6 +335,13 @@ private:
 #define WRAPPER_READ_CLASS_ARRAY_OF_CLASS_ENUM(wrapper,className,classType,valueClassType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArrayOfClassEnum(className "::" #name, _idHint, _saveSeq,classType,valueClassType,count,name); }
 #define WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name); }
 #define WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name,true); }
+
+#define WRAPPER_READ_LONG_LONG_AS_DOUBLE(wrapper, className, name)	\
+{																	\
+	static int _idHint;												\
+	static int _saveSeq = -1;										\
+	wrapper.Read(className "::" #name, _idHint, _saveSeq, static_cast<double>(name));	\
+}
 
 #define	WRAPPER_SKIP_ELEMENT(wrapper,className,name,type)	{ static int _idHint; static int _saveSeq = -1; (wrapper).SkipElement(className "::" #name, _idHint, _saveSeq, type); }
 
