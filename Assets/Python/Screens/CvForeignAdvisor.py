@@ -1118,7 +1118,7 @@ class CvForeignAdvisor:
 			iGold = 0
 			if bGoldTrading and CyTeamX.isGoldTrading():
 				if bHuman:
-					if CyPlayerX.getEffectiveGold() > 0:
+					if CyPlayerX.getGold() > 0:
 						iGold = -1
 				else:
 					iGold = CyPlayerX.AI_maxGoldTrade(iPlayer)
