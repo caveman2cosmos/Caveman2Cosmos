@@ -615,6 +615,8 @@ public:
 
 	void changeMilitaryFoodProductionCount(int iChange, bool bLimited = false);
 
+	int getFoodConsumedByUnitsPerCity() const;
+
 	int getHighestUnitLevel() const; // Exposed to Python
 	void setHighestUnitLevel(int iNewValue);
 

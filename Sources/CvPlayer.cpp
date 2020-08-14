@@ -33775,3 +33775,18 @@ void CvPlayer::changeExtraFreedomFighters(int iChange)
 {
     m_iExtraFreedomFighters += iChange;
 }
+
+int CvPlayer::getFoodConsumedByUnitsPerCity() const
+{
+	float foodConsumed = 0;
+
+	foreach_(const CvUnit* loopUnit, units())
+	{
+		const CvPlot* plot = loopUnit->plot();
+		if (plot == nullptr || plot->getPlotCity() == nullptr)
+		{
+			foodConsumed += loopUnit->getUnitInfo().getFoodConsumed();
+		}
+	}
+	return (int)foodConsumed / algo::count_if(cities(), CvCity::fn::isFeedingArmy());
+}

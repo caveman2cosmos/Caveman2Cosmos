@@ -1745,6 +1745,8 @@ public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
 
+	float getFoodConsumed() const { return 0.1f; }
+
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
 	bool isUnlimitedException() const; // Exposed to Python

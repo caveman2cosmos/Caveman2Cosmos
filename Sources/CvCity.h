@@ -467,6 +467,8 @@ public:
 	int getPopulationPlusProgress100(const int iExtra) const;
 	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
 	int getFoodConsumedByPopulation(const int iExtra = 0) const;
+	int getFoodConsumedByUnits() const;
+	bool isFeedingArmy() const;
 	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const; // Exposed to Python
 	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
@@ -2364,6 +2366,7 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isFeedingArmy);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
 		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);

@@ -6653,6 +6653,7 @@ int CvCity::getFoodConsumedByPopulation(const int iExtra) const
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
 	return getFoodConsumedByPopulation(iExtra)
+		+ getFoodConsumedByUnits()
 		- (bNoAngry ? angryPopulation(iExtra) : 0) // Doesn't belong here, should be extracted out to wherever it is needed
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
@@ -25855,4 +25856,20 @@ void CvCity::AI_setPropertyControlBuildingQueued(bool bSet)
 bool CvCity::AI_isPropertyControlBuildingQueued() const
 {
 	return m_bPropertyControlBuildingQueued;
+}
+
+bool CvCity::isFeedingArmy() const
+{
+	return true;
+}
+
+int CvCity::getFoodConsumedByUnits() const
+{
+	float foodConsumed = 0;
+
+	foreach_(const CvUnit* loopUnit, plot()->units())
+	{
+		foodConsumed += loopUnit->getUnitInfo().getFoodConsumed();
+	}
+	return isFeedingArmy() ? (int)foodConsumed + GET_PLAYER(getOwner()).getFoodConsumedByUnitsPerCity() : (int)foodConsumed;
 }
