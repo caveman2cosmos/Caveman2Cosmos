@@ -324,17 +324,15 @@ class CvFinanceAdvisor:
 		# Treasury footer
 		szTxt = self.szTreasury
 		iGold = CyPlayer.getGold()
-		iGreaterGold = CyPlayer.getGreaterGold()
-		iEffectiveGold = 1000000 * iGreaterGold + iGold
 		iGoldRate = CyPlayer.calculateGoldRate()
-		if iEffectiveGold < 0:
+		if iGold < 0:
 			szTxt += "<color=255,0,0,255>"
-		szTxt += "%d%s" %(iEffectiveGold, iconCommerceList[eComGold])
+		szTxt += "%d%s" %(iGold, iconCommerceList[eComGold])
 		if iGoldRate:
 			szTxt += " <color="
-			if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+			if iGoldRate > 0 and iGold + iGoldRate >= 0:
 				szTxt += "127,255,0,255>"
-			elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+			elif iGoldRate < 0 and iGold + iGoldRate < 0:
 				szTxt += "255,124,0,255>"
 			else:
 				szTxt += "255,227,0,255>"

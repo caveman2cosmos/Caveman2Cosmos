@@ -2247,12 +2247,12 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	//	Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
-	int iGold = GET_PLAYER(getOwner()).getEffectiveGold();
+	const int64_t iGold = GET_PLAYER(getOwner()).getGold();
 	int iTargetGold = GET_PLAYER(getOwner()).AI_goldTarget();
 
 	if ( iGold > iTargetGold )
 	{
-		int iTryUpgradeProbability = ((iGold - iTargetGold)*100)/iGold;
+		int64_t iTryUpgradeProbability = ((iGold - iTargetGold)*100)/iGold;
 
 		if ( GC.getGame().getSorenRandNum(100, "AI upgrade worker") < iTryUpgradeProbability )
 		{

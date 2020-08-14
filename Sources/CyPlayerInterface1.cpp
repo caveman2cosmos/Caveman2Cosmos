@@ -65,8 +65,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getArtStyleType", &CyPlayer::getArtStyleType, " int () - Returns the ArtStyleType for this player (e.g. European)")
 		.def("getUnitButton", &CyPlayer::getUnitButton, " string (int eUnit) - Returns the unit button for this player")
 
-
-
 		.def("countNumCoastalCities", &CyPlayer::countNumCoastalCities, "int ()")
 
 		.def("countTotalCulture", &CyPlayer::countTotalCulture, "int ()")
@@ -150,9 +148,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getRealPopulation", &CyPlayer::getRealPopulation, "long int ()")
 
 		.def("getTotalLand", &CyPlayer::getTotalLand, "int ()")
-		.def("getEffectiveGold", &CyPlayer::getEffectiveGold, "int ()")
-		.def("getGold", &CyPlayer::getGold, "int ()")
-		.def("getGreaterGold", &CyPlayer::getGreaterGold, "int ()")
+		.def("getGold", &CyPlayer::getGold, "long long ()")
 		.def("setGold", &CyPlayer::setGold, "void (int iNewValue)")
 		.def("changeGold", &CyPlayer::changeGold, "void (int iChange)")
 		.def("getGoldPerTurn", &CyPlayer::getGoldPerTurn, "int ()")

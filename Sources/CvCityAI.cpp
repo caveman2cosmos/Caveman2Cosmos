@@ -4201,8 +4201,8 @@ void CvCityAI::AI_chooseProduction()
 	//	Set up weights 0-100 for each commerce type to weight the choice (gold weigth can actuially go higher than
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally
 	//	gone for gold earlier in this choice)
-	int commerceWeights[NUM_COMMERCE_TYPES];
-	commerceWeights[COMMERCE_GOLD] = std::max(0,100-(GET_PLAYER(getOwner()).getEffectiveGold() - GET_PLAYER(getOwner()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwner()).AI_goldTarget()));
+	int64_t commerceWeights[NUM_COMMERCE_TYPES];
+	commerceWeights[COMMERCE_GOLD] = std::max<int64_t>(0,100-(GET_PLAYER(getOwner()).getGold() - GET_PLAYER(getOwner()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwner()).AI_goldTarget()));
 	if (isHuman() && !AI_isEmphasizeCommerce(COMMERCE_GOLD))
 	{
 		commerceWeights[COMMERCE_GOLD] = 0;
@@ -7116,16 +7116,16 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 	return iValue;
 }
 
-ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int* commerceWeights) const
+ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
-	int iBestValue = 0;
+	int64_t iBestValue = 0;
 	ProcessTypes eBestProcess = NO_PROCESS;
 
 	for (int iI = 0; iI < GC.getNumProcessInfos(); iI++)
 	{
 		if (canMaintain((ProcessTypes)iI))
 		{
-			const int iValue = AI_processValue((ProcessTypes)iI, eCommerceType, commerceWeights);
+			const int64_t iValue = AI_processValue((ProcessTypes)iI, eCommerceType, commerceWeights);
 
 			if (iValue > iBestValue)
 			{
@@ -7138,10 +7138,9 @@ ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int* commerce
 	return eBestProcess;
 }
 
-int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int* commerceWeights) const
+int64_t CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
-
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
@@ -7166,7 +7165,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 	bool bValid = (eCommerceType == NO_COMMERCE);
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		int iTempValue = GC.getProcessInfo(eProcess).getProductionToCommerceModifier((CommerceTypes)iI);
+		int64_t iTempValue = GC.getProcessInfo(eProcess).getProductionToCommerceModifier((CommerceTypes)iI);
 		if (!bValid && ((CommerceTypes)iI == eCommerceType) && (iTempValue > 0))
 		{
 			bValid = true;
@@ -9731,14 +9730,14 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 								if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
 								{
-									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
+									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
 									{
 										bWait = false;
 									}
 								}
 								else
 								{
-									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
+									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
 									{
 										bWait = false;
 									}
@@ -9765,7 +9764,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			{
 				if (GET_PLAYER(getOwner()).AI_avoidScience())
 				{
-					if (GET_PLAYER(getOwner()).getEffectiveGold() > GET_PLAYER(getOwner()).AI_goldTarget())
+					if (GET_PLAYER(getOwner()).getGold() > GET_PLAYER(getOwner()).AI_goldTarget())
 					{
 						iMinTurns = std::min(iMinTurns, 10);
 					}
@@ -9778,16 +9777,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 					if (iValuePerTurn > 0)
 					{
-						int iHurryGold = hurryGold((HurryTypes)iI);
-/* original bts code
-						if ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1))
-*/
+						const int iHurryGold = hurryGold((HurryTypes)iI);
+
 						if ( (iHurryGold > 0) && ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1)) )
 						{
-/* original bts code
-							if (iHurryGold < (GET_PLAYER(getOwner()).getGold() / 3))
-*/
-							int iGoldThreshold = GET_PLAYER(getOwner()).getEffectiveGold();
+							int64_t iGoldThreshold = GET_PLAYER(getOwner()).getGold();
 							iGoldThreshold -= (GET_PLAYER(getOwner()).AI_goldToUpgradeAllUnits() / ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0) ? 1 : 3));
 							iGoldThreshold /= 3;
 							if (iHurryGold < iGoldThreshold)
@@ -10070,11 +10064,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 			if (bGrowth)
 			{
 				int iHurryGold = hurryGold((HurryTypes)iI);
-				if ((iHurryGold > 0) && ((iHurryGold * 16) < GET_PLAYER(getOwner()).getEffectiveGold()))
+				if (iHurryGold > 0 && iHurryGold * 16 < GET_PLAYER(getOwner()).getGold())
 				{
 					if( gCityLogLevel >= 2 )
 					{
-						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getEffectiveGold() );
+						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getGold() );
 					}
 					hurry((HurryTypes)iI);
 					break;
@@ -10621,11 +10615,11 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 								int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
 								iCost /= 100;
 
-								if (kPlayer.getEffectiveGold() >= iCost)
+								if (kPlayer.getGold() >= iCost)
 								{
 									iCost *= GC.getCORPORATION_FOREIGN_SPREAD_COST_PERCENT();
 									iCost /= 100;
-									if (kPlayer.getEffectiveGold() < iCost && iTotalCount > 1)
+									if (kPlayer.getGold() < iCost && iTotalCount > 1)
 									{
 										iCorporationValue /= 2;
 									}
@@ -10723,7 +10717,7 @@ bool CvCityAI::AI_chooseProject()
 }
 
 
-bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int* commerceWeights)
+bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWeights)
 {
 #ifdef USE_UNIT_TENDERING
 	if ( m_bRequestedBuilding || m_bRequestedUnit)
@@ -10734,7 +10728,7 @@ bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int* commerceWeight
 	m_iBuildPriority = m_iTempBuildPriority;
 #endif
 
-	ProcessTypes eBestProcess = AI_bestProcess(eCommerceType, commerceWeights);
+	const ProcessTypes eBestProcess = AI_bestProcess(eCommerceType, commerceWeights);
 
 	if (eBestProcess != NO_PROCESS)
 	{

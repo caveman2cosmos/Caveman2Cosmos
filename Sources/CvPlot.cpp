@@ -834,7 +834,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
 		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getGold())
 		{
 			iHash *= -2;
 			iHash += eMainUpgrade;
@@ -849,7 +849,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		{
 			eUpgrade = eUpgradeX;
 			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getGold())
 			{
 				iHash *= -2;
 				iHash += eUpgradeX;
@@ -917,7 +917,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
 			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
+			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -931,7 +931,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
 				// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
+				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)

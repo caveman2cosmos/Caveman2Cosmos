@@ -662,7 +662,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			bool bUpgraded = true;
 
 			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
-			for (int i = 0; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
+			for (int i = 0; i < getNumUnits() * 2 && getGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
 				// Find unit with the highest cost upgrade available
 				bst::optional<UnitUpgradeScore> bestUpgrade = algo::max_element(
@@ -692,7 +692,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			bool bUpgraded = true;
 
 			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
-			for (int i = 0; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
+			for (int i = 0; i < getNumUnits() * 2 && getGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
 				// Find unit with the highest available experience that has an upgrade available
 				CvUnit* pBestUnit = nullptr;
@@ -742,13 +742,13 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		return;
 	}
-	bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
-	int iStartingGold = getEffectiveGold();
-	int iTargetGold = AI_goldTarget();
-	int iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
+	const bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
+	const int64_t iStartingGold = getGold();
+	const int iTargetGold = AI_goldTarget();
+	int64_t iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
 
-	iUpgradeBudget = std::min(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold/2);
-	iUpgradeBudget = std::max(0, iUpgradeBudget);
+	iUpgradeBudget = std::min<int64_t>(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold/2);
+	iUpgradeBudget = std::max<int64_t>(0, iUpgradeBudget);
 
 	if (gPlayerLogLevel > 2)
 	{
@@ -761,7 +761,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	}
 
 	// Always willing to upgrade 1 unit if we have the money
-	iUpgradeBudget = std::max(iUpgradeBudget,1);
+	iUpgradeBudget = std::max<int64_t>(iUpgradeBudget,1);
 
 	bool bUnderBudget = true;
 
@@ -828,7 +828,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 			case 2:
 			{
-				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
+				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
 				// Only normal transports
 				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->specialCargo() == NO_SPECIALUNIT) )
@@ -844,7 +844,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 			case 3:
 			{
-				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
+				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
 				bValid = (bAnyWar || bUnderBudget);
 				break;
@@ -915,9 +915,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	}
 	if (gPlayerLogLevel > 2)
 	{
-		if (iStartingGold - getEffectiveGold() > 0)
+		if (iStartingGold - getGold() > 0)
 		{
-			logBBAI("	%S spends %d on unit upgrades out of budget of %d, %d effective gold remaining", getCivilizationDescription(0), iStartingGold - getEffectiveGold(), iUpgradeBudget, getEffectiveGold());
+			logBBAI("	%S spends %d on unit upgrades out of budget of %d, %d effective gold remaining", getCivilizationDescription(0), iStartingGold - getGold(), iUpgradeBudget, getGold());
 		}
 	}
 	AI_doSplit();
@@ -2347,7 +2347,7 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 		if (getCommercePercent(COMMERCE_GOLD) > 70)
 		{
 			//avoid strikes
-			if (getGoldPerTurn() < -getEffectiveGold()/100)
+			if (getGoldPerTurn() < -getGold()/100)
 			{
 				iWeight += 15;
 			}
@@ -2355,7 +2355,7 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 		else if (getCommercePercent(COMMERCE_GOLD) < 25)
 		{
 			//put more money towards other commerce types
-			if (getGoldPerTurn() > -getEffectiveGold()/40)
+			if (getGoldPerTurn() > -getGold()/40)
 			{
 				iWeight -= 25 - getCommercePercent(COMMERCE_GOLD);
 			}
@@ -4434,18 +4434,18 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 	//	funding or even excess funding in such a case!
 	int iEraGoldThreshold = 100 + 100 * GC.getGame().getCurrentEra();
 
-	FAssertMsg(getEffectiveGold() + 50 * (iNetCommerce - iNetExpenses) < (GC.getGREATER_COMMERCE_SWITCH_POINT() * 2), "Might be about to overflow gold calculation");
+	FAssertMsg(getGold() + 50 * (iNetCommerce - iNetExpenses) < (GC.getGREATER_COMMERCE_SWITCH_POINT() * 2), "Might be about to overflow gold calculation");
 
-	if ( getEffectiveGold() > iEraGoldThreshold &&
+	if ( getGold() > iEraGoldThreshold &&
 		 (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50) &&	//	If we're forcing science below 50 to achieve this don't exempt it
-		 ((iNetCommerce - iNetExpenses) >= 0 || getEffectiveGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold) )//Could still overload here perhaps depending on how much (50*(iNetCommerce - iNetExpenses)) can total up to.
+		 ((iNetCommerce - iNetExpenses) >= 0 || getGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold) )//Could still overload here perhaps depending on how much (50*(iNetCommerce - iNetExpenses)) can total up to.
 	{
-		int iValue = 100 + (getEffectiveGold()/iEraGoldThreshold);
+		int64_t iValue = 100 + (getGold()/iEraGoldThreshold);
 
 		if ( iNetCommerce < iNetExpenses )
 		{
 			//	Each 10 turns we can fund entirely out of treasury, even with the deficit, add 1%
-			int iFundableTurns = (getEffectiveGold()-iEraGoldThreshold)/(iNetExpenses - iNetCommerce);
+			const int64_t iFundableTurns = (getGold()-iEraGoldThreshold)/(iNetExpenses - iNetCommerce);
 
 			//	Turns under 100 fundable slightly reduce over funding reported
 			if ( iFundableTurns < 100 )
@@ -4458,8 +4458,12 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 				}
 			}
 		}
-
-		return iValue;
+		if (iValue > MAX_INT)
+		{
+			FAssert(false);
+			return MAX_INT;
+		}
+		return (int)iValue;
 	}
 	else
 	{
@@ -10112,14 +10116,13 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 {
-	int iMaxGold;
-	int iResearchBuffer;
+	int64_t iMaxGold;
 
 	FAssert(ePlayer != getID());
 
 	if (isHuman() || (GET_PLAYER(ePlayer).getTeam() == getTeam()))
 	{
-		iMaxGold = getEffectiveGold();
+		iMaxGold = getGold();
 	}
 	else
 	{
@@ -10132,39 +10135,33 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 		iMaxGold -= AI_getGoldTradedTo(ePlayer);
 
-		iResearchBuffer = -calculateGoldRate() * 12;
+		int iResearchBuffer = -calculateGoldRate() * 12;
 		iResearchBuffer *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 		iResearchBuffer /= 100;
-/************************************************************************************************/
-/* Afforess					  Start		 04/06/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 		iMaxGold *= (100 + calculateInflationRate());
 		iMaxGold /= 100;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-		iMaxGold = std::min(iMaxGold, getEffectiveGold() - iResearchBuffer);
 
-		iMaxGold = std::min(iMaxGold, getEffectiveGold());
+		iMaxGold = std::min(iMaxGold, getGold() - iResearchBuffer);
+
+		iMaxGold = std::min(iMaxGold, getGold());
 
 		iMaxGold -= (iMaxGold % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
 	}
 
-	return std::max(0, iMaxGold);
+	return iMaxGold < MAX_INT ? std::max(0, (int)iMaxGold) : MAX_INT;
 }
 
 
 int CvPlayerAI::AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const
 {
-	int iMaxGoldPerTurn;
+	int64_t iMaxGoldPerTurn;
 
 	FAssert(ePlayer != getID());
 
 	if (isHuman() || (GET_PLAYER(ePlayer).getTeam() == getTeam()))
 	{
-		iMaxGoldPerTurn = (calculateGoldRate() + (getEffectiveGold() / getTreatyLength()));
+		iMaxGoldPerTurn = (calculateGoldRate() + (getGold() / getTreatyLength()));
 	}
 	else
 	{
@@ -10176,7 +10173,7 @@ int CvPlayerAI::AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const
 		iMaxGoldPerTurn += std::min(0, getGoldPerTurnByPlayer(ePlayer));
 	}
 
-	return std::max(0, std::min(iMaxGoldPerTurn, calculateGoldRate()));
+	return std::max(0, (int)std::min<int64_t>(iMaxGoldPerTurn, calculateGoldRate()));
 }
 
 
@@ -15206,7 +15203,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		bool bRich = false;
 		//the current gold we have plus the gold we will have in 10 turns is a decent
 		//estimate of whether we are rich (if we can afford to upgrade units, anyway)
-		if (getEffectiveGold() + (calculateBaseNetGold() * 10) > (50 + 100 * getCurrentEra()))//Some danger this equation could overflow.
+		if (getGold() + (calculateBaseNetGold() * 10) > (50 + 100 * getCurrentEra()))//Some danger this equation could overflow.
 			bRich = true;
 		if (bWarPlan)
 		{
@@ -17856,7 +17853,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		return 0;
 	}
 
-	TeamTypes eTargetTeam = GET_PLAYER(eTargetPlayer).getTeam();
+	const TeamTypes eTargetTeam = GET_PLAYER(eTargetPlayer).getTeam();
 
 	int iCost = getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iData);
 
@@ -17865,9 +17862,9 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		return 0;
 	}
 
-	bool bMalicious = (AI_getAttitudeWeight(pPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1) || GET_TEAM(getTeam()).AI_getWarPlan(eTargetTeam) != NO_WARPLAN);
+	const bool bMalicious = (AI_getAttitudeWeight(pPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1) || GET_TEAM(getTeam()).AI_getWarPlan(eTargetTeam) != NO_WARPLAN);
 
-	int iValue = 0;
+	int64_t iValue = 0;
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).isDestroyImprovement())
 	{
 		if (pPlot->getOwner() == eTargetPlayer)
@@ -18031,13 +18028,10 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	{
 		if(pPlot->getPlotCity() != NULL)
 		{
-			int iMaxGold = GC.getGREATER_COMMERCE_SWITCH_POINT()/100;
-			int iGold = std::min(iMaxGold, GET_PLAYER(eTargetPlayer).getEffectiveGold());
-			int iGoldStolen = (iGold * GC.getEspionageMissionInfo(eMission).getStealTreasuryTypes()) / 100;
-			//int iGoldStolen = (GET_PLAYER(eTargetPlayer).getGold() * GC.getEspionageMissionInfo(eMission).getStealTreasuryTypes()) / 100;
+			int64_t iGoldStolen = GET_PLAYER(eTargetPlayer).getGold() * GC.getEspionageMissionInfo(eMission).getStealTreasuryTypes() / 100;
 			iGoldStolen *= pPlot->getPlotCity()->getPopulation();
 			iGoldStolen /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
-			iValue += ((GET_PLAYER(eTargetPlayer).AI_isFinancialTrouble() || AI_isFinancialTrouble()) ? 4 : 2) * (2 * std::max(0, iGoldStolen - iCost));
+			iValue += ((GET_PLAYER(eTargetPlayer).AI_isFinancialTrouble() || AI_isFinancialTrouble()) ? 4 : 2) * (2 * std::max<int64_t>(0, iGoldStolen - iCost));
 		}
 	}
 
@@ -18318,7 +18312,12 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-	return iValue;
+	if (iValue > MAX_INT)
+	{
+		FAssert(false);
+		return MAX_INT;
+	}
+	return (int)iValue;
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
@@ -19024,7 +19023,7 @@ void CvPlayerAI::AI_doCommerce()
 				int iResearchTurnsLeft = getResearchTurnsLeft(eCurrentResearch, true);
 
 				// if we can finish the current research without running out of gold, let us spend 2/3rds of our gold
-				if (getEffectiveGold() >= iResearchTurnsLeft * iGoldRate)
+				if (getGold() >= iResearchTurnsLeft * iGoldRate)
 				{
 					iGoldTarget /= 3;
 				}
@@ -19151,9 +19150,9 @@ void CvPlayerAI::AI_doCommerce()
 				}
 			}
 
-			if (getEffectiveGold() + iTargetTurns * calculateGoldRate() < iGoldTarget) //If gold RATE is getting too high, this could overflow
+			if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget) //If gold RATE is getting too high, this could overflow
 			{
-				while (getEffectiveGold() + iTargetTurns * calculateGoldRate() <= iGoldTarget)
+				while (getGold() + iTargetTurns * calculateGoldRate() <= iGoldTarget)
 				{
 					changeCommercePercent(COMMERCE_RESEARCH, -(GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")));
 
@@ -19382,7 +19381,7 @@ void CvPlayerAI::AI_doCommerce()
 				changeCommercePercent(COMMERCE_RESEARCH, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
 				changeCommercePercent(COMMERCE_ESPIONAGE, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
 
-				if (getEffectiveGold() + iTargetTurns * calculateGoldRate() < iGoldTarget)
+				if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget)
 				{
 					break;
 				}
@@ -19402,7 +19401,7 @@ void CvPlayerAI::AI_doCommerce()
 		}
 	}
 
-	if (!bFirstTech && (getEffectiveGold() < iGoldTarget) && (getCommercePercent(COMMERCE_RESEARCH) > 40))
+	if (!bFirstTech && getGold() < iGoldTarget && getCommercePercent(COMMERCE_RESEARCH) > 40)
 	{
 		bool bHurryGold = false;
 		for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); iHurry++)
@@ -20215,7 +20214,6 @@ void CvPlayerAI::AI_doDiplo()
 	TechTypes eBestGiveTech;
 	TeamTypes eBestTeam;
 	bool bCancelDeal;
-	int iReceiveGold;
 	int iGiveGold;
 	int iGold;
 	int iGoldData;
@@ -21302,7 +21300,7 @@ void CvPlayerAI::AI_doDiplo()
 													{
 														if (GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_DEMAND_TRIBUTE), "AI Diplo Demand Tribute") == 0)
 														{
-															iReceiveGold = std::min(std::max(0, (GET_PLAYER((PlayerTypes)iI).getEffectiveGold() - 50)), GET_PLAYER((PlayerTypes)iI).AI_goldTarget());
+															int64_t iReceiveGold = std::min<int64_t>(std::max<int64_t>(0, GET_PLAYER((PlayerTypes)iI).getGold() - 50), GET_PLAYER((PlayerTypes)iI).AI_goldTarget());
 
 															iReceiveGold -= (iReceiveGold % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
 
@@ -21310,7 +21308,7 @@ void CvPlayerAI::AI_doDiplo()
 															{
 																theirList.clear();
 
-																setTradeItem(&item, TRADE_GOLD, iReceiveGold);
+																setTradeItem(&item, TRADE_GOLD, iReceiveGold > MAX_INT ? MAX_INT : (int)iReceiveGold);
 																theirList.insertAtEnd(item);
 
 																if (!(abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()]))
@@ -21680,7 +21678,7 @@ void CvPlayerAI::AI_doDiplo()
 														iTheirValue = 0;
 													}
 
-													iReceiveGold = 0;
+													int iReceiveGold = 0;
 													iGiveGold = 0;
 
 													if (iTheirValue > iOurValue)
@@ -21843,7 +21841,7 @@ void CvPlayerAI::AI_doDiplo()
 																		iTheirValue = 0;
 																	}
 
-																	iReceiveGold = 0;
+																	int iReceiveGold = 0;
 																	iGiveGold = 0;
 
 																	if (iTheirValue > iOurValue)
@@ -22025,7 +22023,7 @@ void CvPlayerAI::AI_doDiplo()
 															iTheirValue = 0;
 														}
 
-														iReceiveGold = 0;
+														int iReceiveGold = 0;
 														iGiveGold = 0;
 
 														if (iTheirValue > iOurValue)
@@ -22915,7 +22913,7 @@ void CvPlayerAI::AI_doDiplo()
 													}
 												}
 
-												iReceiveGold = 0;
+												int iReceiveGold = 0;
 												iGiveGold = 0;
 
 												if (iTheirValue > iOurValue)

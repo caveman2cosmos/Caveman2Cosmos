@@ -786,7 +786,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
 	m_iGold = 0;
-	m_iGreaterGold = 0;
 	m_iGoldPerTurn = 0;
 	m_iAdvancedStartPoints = -1;
 	m_iGoldenAgeTurns = 0;
@@ -4354,7 +4353,7 @@ void CvPlayer::dumpStats() const
 	logBBAI("    Science rate: %d", getCommercePercent(COMMERCE_RESEARCH));
 	logBBAI("    Culture rate: %d", getCommercePercent(COMMERCE_CULTURE));
 	logBBAI("    Espionage rate: %d", getCommercePercent(COMMERCE_ESPIONAGE));
-	logBBAI("    Treasury: %d%d", getGreaterGold(),getGold());
+	logBBAI("    Treasury: %d", getGold());
 	logBBAI("    Total gold income from self: %d", getCommerceRate(COMMERCE_GOLD));
 	logBBAI("    Total gold income from trade agreements: %d", getGoldPerTurn());
 	logBBAI("    Num units: %d", getNumUnits());
@@ -6016,17 +6015,8 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 	case TRADE_GOLD:
 		if (GET_TEAM(getTeam()).isGoldTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isGoldTrading())
 		{
-			if (getEffectiveGold() >= item.m_iData)
+			if (getGold() >= item.m_iData && GC.getDefineINT("CAN_TRADE_GOLD") > 0)
 			{
-			/************************************************************************************************/
-			/* Afforess	                  Start		 05/15/10                                                */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
-			if (GC.getDefineINT("CAN_TRADE_GOLD") > 0)
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
 				bResult = true;
 			}
 		}
@@ -8772,7 +8762,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 				}
 			}
 
-			if (std::max(0, getEffectiveGold()) < getBuildCost(pPlot, eBuild))
+			if (std::max<int64_t>(0, getGold()) < getBuildCost(pPlot, eBuild))
 			{
 				return false;
 			}
@@ -10685,51 +10675,15 @@ void CvPlayer::changeTotalLandScored(int iChange)
 }
 
 
-int CvPlayer::getEffectiveGold() const
-{
-	if (m_iGreaterGold >= 1)
-	{
-		return GC.getGREATER_COMMERCE_SWITCH_POINT();
-	}
-	return m_iGold;
-}
-
-
-int CvPlayer::getGold() const
+int64_t CvPlayer::getGold() const
 {
 	return m_iGold;
 }
 
-
-void CvPlayer::setGold(int iNewValue)
+void CvPlayer::setGold(int64_t iNewValue)
 {
 	if (getGold() != iNewValue)
 	{
-		int iSwitchPoint = GC.getGREATER_COMMERCE_SWITCH_POINT();
-        int iGreaterGold = getGreaterGold();
-        int iChangeGG = iNewValue / iSwitchPoint;
-        if (iNewValue >= iSwitchPoint)
-        {
-            int iChangeGG = iNewValue / iSwitchPoint;
-			iGreaterGold += iChangeGG;
-            setGreaterGold(iGreaterGold);
-            iNewValue -= iSwitchPoint * iChangeGG;
-        }
-		else if (iNewValue <= (iSwitchPoint * iChangeGG))
-		{
-			while (iChangeGG < 1 && iGreaterGold > 0)
-			{
-				changeGreaterGold(-1);
-				iChangeGG++;
-				iNewValue += iSwitchPoint;
-			}
-			if (iChangeGG < 1 && iGreaterGold < 1)
-			{
-				FAssert(true);//Something is probably wrong in that this transaction was allowed at all.
-				iNewValue = 0;
-			}
-		}
-
 		m_iGold = iNewValue;
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -10741,45 +10695,16 @@ void CvPlayer::setGold(int iNewValue)
 	}
 }
 
-void CvPlayer::changeGold(int iChange)
+void CvPlayer::changeGold(int64_t iChange)
 {
 	setGold(getGold() + iChange);
-}
-
-
-int CvPlayer::getGreaterGold() const
-{
-	return m_iGreaterGold;
-}
-
-
-void CvPlayer::setGreaterGold(int iNewValue)
-{
-	if (getGreaterGold() != iNewValue)
-	{
-
-		FAssert(iNewValue >= 0);
-		m_iGreaterGold = iNewValue;
-		FAssert(m_iGreaterGold >= 0);//I know this is retarded and redundant. Hedging against the possibility I don't quite understand the full function rules of fAssert.
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(MiscButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
-		}
-	}
-}
-
-void CvPlayer::changeGreaterGold(int iChange)
-{
-	setGreaterGold(getGreaterGold() + iChange);
 }
 
 int CvPlayer::getGoldPerTurn() const
 {
 	return m_iGoldPerTurn;
 }
+
 
 int CvPlayer::getAdvancedStartPoints() const
 {
@@ -17673,7 +17598,7 @@ void CvPlayer::doGold()
 
 	bStrike = false;
 
-	if (getEffectiveGold() < 0)
+	if (getGold() < 0)
 	{
 		setGold(0);
 
@@ -17995,7 +17920,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 		{
 			return false;
 		}
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 		if (pCity == NULL)
 		{
 			return false;
@@ -18014,7 +17939,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 
 int CvPlayer::getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
 {
-	long long iMissionCost = (long long)getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
+	int64_t iMissionCost = getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
 
 	if (-1 == iMissionCost)
 	{
@@ -18034,7 +17959,7 @@ int CvPlayer::getEspionageMissionCost(EspionageMissionTypes eMission, PlayerType
 	return std::max(0, (int)iMissionCost);
 }
 
-int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
+int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
 {
 	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 	int iBaseMissionCost = kMission.getCost();
@@ -18069,15 +17994,13 @@ int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Player
 		return -1;
 	}
 
-	int iMissionCost = -1;
+	int64_t iMissionCost = -1;
 
 	if (kMission.getStealTreasuryTypes() > 0)
 	{
 		// Steal Treasury
-		int iMaxGold = GC.getGREATER_COMMERCE_SWITCH_POINT()/100;
-		int iGold = std::min(iMaxGold, GET_PLAYER(eTargetPlayer).getEffectiveGold());
-		int iNumPreTotalGold = (iGold * kMission.getStealTreasuryTypes()) / 100;
-		int iNumTotalGold = (iNumPreTotalGold * kMission.getStealTreasuryTypes()) / 100;
+		const int64_t iGold = GET_PLAYER(eTargetPlayer).getGold() * kMission.getStealTreasuryTypes() / 100;
+		int64_t iNumTotalGold = (iGold * kMission.getStealTreasuryTypes()) / 100;
 
 		if (NULL != pCity)
 		{
@@ -18930,7 +18853,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 	// Steal Treasury
 	if (NO_PLAYER != eTargetPlayer && kMission.getStealTreasuryTypes() > 0)
 	{
-		int iNumTotalGold = std::min(GC.getGREATER_COMMERCE_SWITCH_POINT()/100, GET_PLAYER(eTargetPlayer).getEffectiveGold());
+		int64_t iNumTotalGold = GET_PLAYER(eTargetPlayer).getGold();
 
 		iNumTotalGold *= kMission.getStealTreasuryTypes();
 		iNumTotalGold /= 100;
@@ -20570,7 +20493,7 @@ void CvPlayer::verifyGoldCommercePercent()
 {
 	PROFILE_FUNC()
 
-	while ((getEffectiveGold() + calculateGoldRate()) < 0)
+	while (getGold() + calculateGoldRate() < 0)
 	{
 		changeCommercePercent(COMMERCE_GOLD, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
 
@@ -20978,7 +20901,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
+		// @SAVEBREAK DELETE
+		int m_iGold;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGold);
+		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerTurn);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iAdvancedStartPoints);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldenAgeTurns);
@@ -22042,7 +21968,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraFreedomFighters);
+
+		// @SAVEBREAK DELETE
+		int m_iGreaterGold;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterGold);
+		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterCulture);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
 		if (m_iGreaterCulture > 1000000)
@@ -22054,20 +21985,31 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		double fUnitUpkeepCivilian100;
 		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepCivilian100);
-		m_iUnitUpkeepCivilian100 = static_cast<long long>(fUnitUpkeepCivilian100);
+		m_iUnitUpkeepCivilian100 = static_cast<long long>(fUnitUpkeepCivilian100 + 0.01);
 
 		double fUnitUpkeepMilitary100;
 		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepMilitary100);
-		m_iUnitUpkeepMilitary100 = static_cast<long long>(fUnitUpkeepMilitary100);
+		m_iUnitUpkeepMilitary100 = static_cast<long long>(fUnitUpkeepMilitary100 + 0.01);
 
 		double fFinalUnitUpkeep;
 		WRAPPER_READ(wrapper, "CvPlayer", &fFinalUnitUpkeep);
-		m_iFinalUnitUpkeep = static_cast<long long>(fFinalUnitUpkeep);
+		m_iFinalUnitUpkeep = static_cast<long long>(fFinalUnitUpkeep + 0.01);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
+
+	// @SAVEBREAK REPLACE
+		double fGold = 0;
+		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
+		this->m_iGold = static_cast<long long>(fGold + 0.01) + (1000000 * m_iGreaterGold) + m_iGold;
+	/* WITH
+		double fGold;
+		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
+		m_iGold += static_cast<long long>(fGold + 0.01); // +0.01 to avoid different rounding result on different CPU's
+	// SAVEBREAK@ */
+
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -22138,7 +22080,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLand);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLandScored);
+		// @SAVEBREAK DELETE
+		int m_iGold = 0;
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGold);
+		// SAVEBREAK@
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldPerTurn);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iAdvancedStartPoints);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGoldenAgeTurns);
@@ -22779,7 +22724,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSelectionRegroup);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreedomFighterCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraFreedomFighters);
+
+		// @SAVEBREAK DELETE
+		int m_iGreaterGold = 0;
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterGold);
+		// SAVEBREAK@
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
@@ -22800,6 +22750,13 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepMilitaryPopPercent);
+
+	// @SAVEBREAK REPLACE
+		double fGold = static_cast<double>(this->m_iGold);
+	/* WITH
+		double fGold = static_cast<double>(m_iGold);
+	// SAVEBREAK@ */
+		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
 	}
 	//	Use condensed format now - only save non-default array elements
 
@@ -23676,17 +23633,14 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 	{
 		if (iGold > 0 && NO_PLAYER != kTriggeredData.m_eOtherPlayer && kEvent.isGoldToPlayer())
 		{
-			if (GET_PLAYER(kTriggeredData.m_eOtherPlayer).getEffectiveGold() < iGold)
+			if (GET_PLAYER(kTriggeredData.m_eOtherPlayer).getGold() < iGold)
 			{
 				return false;
 			}
 		}
-		else if (iGold < 0)
+		else if (iGold < 0 && getGold() < -iGold)
 		{
-			if (getEffectiveGold() < -iGold)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -25442,12 +25396,9 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 		}
 	}
 
-	if (kTrigger.getMinTreasury() > 0)
+	if (kTrigger.getMinTreasury() > 0 && getGold() < kTrigger.getMinTreasury())
 	{
-		if (getEffectiveGold() < kTrigger.getMinTreasury())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (!((*getPropertiesConst()) >= *kTrigger.getPrereqPlayerMinProperties()))
