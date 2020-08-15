@@ -30641,7 +30641,6 @@ void CvPlayer::setCulture(int iNewValue)
 			changeGreaterCulture(iChangeGC);
 			iNewValue -= iSwitchPoint * iChangeGC;
 		}
-
 		m_iCulture = iNewValue;
 	}
 }

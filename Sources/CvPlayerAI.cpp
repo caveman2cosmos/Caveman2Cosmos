@@ -4413,47 +4413,44 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 {
 	PROFILE_FUNC();
 
-	int iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
-	int iBaseNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-	int iNetCommerce = iBaseNetCommerce + ((100-getCommercePercent(COMMERCE_GOLD))*iTotalCommerce)/100;
-
-	int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
+	const int iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
+	const int iBaseNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
 
 	// Afforess - iExtraCost lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraCost should be between 0 (default) and some positive extra gold per turn cost to us
-	iNetExpenses += std::max(0, iExtraCost);
-	//	Koshling - if we can fund our ongoing expenses with no tax we never consider ourselves to be
-	//	in financial difficulties
-	if ( iBaseNetCommerce - (getCommercePercent(COMMERCE_GOLD)*iTotalCommerce)/100 > iNetExpenses )
+	const int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
+
+	// Koshling - if we can fund our ongoing expenses with no tax we never consider ourselves to be in financial difficulties
+	if (iBaseNetCommerce - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
 	{
 		return 100;
 	}
+	const int iNetCommerce = iBaseNetCommerce + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
 
 	//	Koshling - we're never in financial trouble if we can run at current deficits for more than
 	//	50 turns and stay in healthy territory (100 + 100*era as per REV calculation), so claim full
 	//	funding or even excess funding in such a case!
 	int iEraGoldThreshold = 100 + 100 * GC.getGame().getCurrentEra();
 
-	FAssertMsg(getGold() + 50 * (iNetCommerce - iNetExpenses) < (GC.getGREATER_COMMERCE_SWITCH_POINT() * 2), "Might be about to overflow gold calculation");
-
-	if ( getGold() > iEraGoldThreshold &&
-		 (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50) &&	//	If we're forcing science below 50 to achieve this don't exempt it
-		 ((iNetCommerce - iNetExpenses) >= 0 || getGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold) )//Could still overload here perhaps depending on how much (50*(iNetCommerce - iNetExpenses)) can total up to.
+	if (getGold() > iEraGoldThreshold
+	// Don't exempt it if we're forcing science below 50 to achieve this
+	&& (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50)
+	&& (iNetCommerce - iNetExpenses >= 0 || getGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold))
 	{
-		int64_t iValue = 100 + (getGold()/iEraGoldThreshold);
+		int64_t iValue = 100 + getGold() / iEraGoldThreshold;
 
-		if ( iNetCommerce < iNetExpenses )
+		if (iNetCommerce < iNetExpenses)
 		{
 			//	Each 10 turns we can fund entirely out of treasury, even with the deficit, add 1%
-			const int64_t iFundableTurns = (getGold()-iEraGoldThreshold)/(iNetExpenses - iNetCommerce);
+			const int64_t iFundableTurns = (getGold() - iEraGoldThreshold) / (iNetExpenses - iNetCommerce);
 
 			//	Turns under 100 fundable slightly reduce over funding reported
-			if ( iFundableTurns < 100 )
+			if (iFundableTurns < 100)
 			{
 				iValue -= (100 - iFundableTurns);
-				if ( iValue < 100 )
+				if (iValue < 100)
 				{
-					//	We know we are still at least fully funded - its only over-funding we're reducing
+					// We know we are still at least fully funded - its only over-funding we're reducing
 					iValue = 100;
 				}
 			}
@@ -4463,12 +4460,9 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 			FAssert(false);
 			return MAX_INT;
 		}
-		return (int)iValue;
+		return static_cast<int>(iValue);
 	}
-	else
-	{
-		return (100 * (iNetCommerce - iNetExpenses)) / std::max(1, iNetCommerce);
-	}
+	return 100 * (iNetCommerce - iNetExpenses) / std::max(1, iNetCommerce);
 }
 
 //	Calculate a (percentage) modifier the AI can apply to gold to determine
@@ -4521,7 +4515,7 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold *= (100 + calculateInflationRate());
 		iGold /= 100;
 
-		bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
+		const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
 		if (bAnyWar)
 		{
 			iGold *= 3;
@@ -4557,13 +4551,12 @@ int CvPlayerAI::AI_goldTarget() const
 		}
 		if (eActiveCorporation != NO_CORPORATION)
 		{
-			const int iSpreadCost = std::max(0, GC.getCorporationInfo(eActiveCorporation).getSpreadCost() * (100 + calculateInflationRate())) / 50;
-			iGold += iSpreadCost;
+			iGold += std::max(0, GC.getCorporationInfo(eActiveCorporation).getSpreadCost() * (100 + calculateInflationRate())) / 50;
 		}
 	}
-	const int iTotal = iGold + AI_getExtraGoldTarget();
-	FAssert(iTotal <= GC.getGREATER_COMMERCE_SWITCH_POINT()); //If it comes up over this amount, then some more reprogramming may be necessary.
-	return iTotal;
+	FAssert(iGold + AI_getExtraGoldTarget() <= 2000000000); //If it goes over this amount, then some more reprogramming may be necessary.
+
+	return iGold + AI_getExtraGoldTarget();
 }
 
 /************************************************************************************************/

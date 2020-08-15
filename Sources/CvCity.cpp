@@ -6865,18 +6865,13 @@ int CvCity::hurryGold(HurryTypes eHurry) const
 
 int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 {
-	int iGold;
-
 	if (GC.getHurryInfo(eHurry).getGoldPerProduction() == 0)
 	{
 		return 0;
 	}
+	const int iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
 
-	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
-
-	FAssert(iGold <= GC.getGREATER_COMMERCE_SWITCH_POINT());//While protected below, if this starts coming up, I'll need to start taking measures to improve this system of hurrying to allow it to start breaking into over 1 million in cost.)
-
-	iGold = std::min(iGold, GC.getGREATER_COMMERCE_SWITCH_POINT());
+	FAssert(iGold <= 2000000000); // We'll need to take measures if this comes up
 
 	return std::max(1, iGold);
 }
