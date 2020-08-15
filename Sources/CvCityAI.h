@@ -133,8 +133,8 @@ public:
 	ProjectTypes AI_bestProject() const;
 	int AI_projectValue(ProjectTypes eProject) const;
 
-	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL) const;
-	int AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL) const;
+	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
+	int64_t AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
 	bool AI_finalProcessSelection();
 
 	int AI_neededSeaWorkers() const;
@@ -310,7 +310,7 @@ protected:
 	bool AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY);
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();
-	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL);
+	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL);
 
 	int	getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) const;
 

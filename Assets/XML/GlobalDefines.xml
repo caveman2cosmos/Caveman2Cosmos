@@ -467,6 +467,10 @@
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>FOOD_CONSUMPTION_PER_POPULATION_PERCENT</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>NEW_HURRY_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>

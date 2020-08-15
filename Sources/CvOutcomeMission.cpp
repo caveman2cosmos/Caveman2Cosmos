@@ -69,7 +69,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
 	//{
 		if (m_iCost)
 		{
-			if (GET_PLAYER(pUnit->getOwner()).getEffectiveGold() < m_iCost->evaluate(pUnit->getGameObject()))
+			if (GET_PLAYER(pUnit->getOwner()).getGold() < m_iCost->evaluate(pUnit->getGameObject()))
 			{
 				return false;
 			}

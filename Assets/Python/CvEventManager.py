@@ -793,7 +793,7 @@ class CvEventManager:
 						if iPlayerX == iPlayer: continue
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and GC.getTeam(CyPlayerX.getTeam()).isVassal(iTeam):
-							iGold = int(((1000000 * CyPlayerX.getGreaterGold() + CyPlayerX.getGold()) ** 0.5)/2500)
+							iGold = ((CyPlayerX.getGold() ** 0.5)/2500)
 							if iGold:
 								CyPlayerX.changeGold(iGold)
 							CyPlayerX.changeCombatExperience(1)
@@ -1041,7 +1041,7 @@ class CvEventManager:
 							)
 				# Marauder promo
 				if bMarauder:
-					iStolen = int((((1000000 * CyPlayerL.getGreaterGold() + CyPlayerL.getGold()) / (CyPlayerL.getNumUnits() + 1)) ** .3) / fHandicapFactor)
+					iStolen = (((CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)) ** .3) / fHandicapFactor)
 					if iStolen > 0:
 						CyPlayerL.changeGold(-iStolen)
 						CyPlayerW.changeGold(iStolen)

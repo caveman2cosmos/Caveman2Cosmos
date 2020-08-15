@@ -10264,12 +10264,9 @@ bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < sabotageCost(pPlot))
 	{
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < sabotageCost(pPlot))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return true;
@@ -10426,9 +10423,7 @@ int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 
 bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 {
-	CvCity* pCity;
-
-	if (!(m_pUnitInfo->isDestroy()))
+	if (!m_pUnitInfo->isDestroy())
 	{
 		return false;
 	}
@@ -10438,7 +10433,7 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -10450,12 +10445,9 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < destroyCost(pPlot))
 	{
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < destroyCost(pPlot))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return true;
@@ -10601,8 +10593,6 @@ int CvUnit::stealPlansProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) con
 
 bool CvUnit::canStealPlans(const CvPlot* pPlot, bool bTestVisible) const
 {
-	CvCity* pCity;
-
 	if (!(m_pUnitInfo->isStealPlans()))
 	{
 		return false;
@@ -10618,19 +10608,14 @@ bool CvUnit::canStealPlans(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
+	if (pPlot->getPlotCity() == NULL)
 	{
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < stealPlansCost(pPlot))
 	{
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < stealPlansCost(pPlot))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return true;
@@ -11062,7 +11047,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < spreadCorporationCost(eCorporation, pCity))
+		if (GET_PLAYER(getOwner()).getGold() < spreadCorporationCost(eCorporation, pCity))
 		{
 			return false;
 		}
@@ -11153,47 +11138,24 @@ bool CvUnit::spreadCorporation(CorporationTypes eCorporation)
 
 bool CvUnit::canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const
 {
-	CvCity* pCity;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (isCommander())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	if (eSpecialist == NO_SPECIALIST)
 	{
 		return false;
 	}
 
-	if (!(m_pUnitInfo->getGreatPeoples(eSpecialist)))
+	if (isCommander() || isDelayedDeath())
 	{
 		return false;
 	}
 
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
+	if (!m_pUnitInfo->getGreatPeoples(eSpecialist))
 	{
 		return false;
 	}
 
-	if (!(pCity->canJoin()))
-	{
-		return false;
-	}
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity->getTeam() != getTeam())
-	{
-		return false;
-	}
-
-	if (isDelayedDeath())
+	if (pCity == NULL || pCity->getTeam() != getTeam())
 	{
 		return false;
 	}
@@ -12964,7 +12926,7 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible && GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
+	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < upgradePrice(eUnit))
 	{
 		return false;
 	}
