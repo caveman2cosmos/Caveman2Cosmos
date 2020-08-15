@@ -4792,8 +4792,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	// A couple of shortcuts to make the code more legible (probably the optimier inlines them all but better safe than sorry)
 	CvPlayerAI& player = GET_PLAYER(getOwner());
 
-	bool bAreaAlone = player.AI_isAreaAlone(area());
-	int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
+	const bool bAreaAlone = player.AI_isAreaAlone(area());
+	const int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
 
 	for (std::vector<BuildingTypes>::const_iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
 	{
@@ -4805,37 +4805,33 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		if (
 			// We are not exceeding max buildings
 			getNumBuilding(building) < GC.getCITY_MAX_NUM_BUILDINGS()
-			&&
-			(
-				// Building is not a wonder
-				!isLimitedWonder(building)
-				||
-				// Or we are allowed to build a wonder
-				// i.e. Production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
-				(!isProductionAutomated() && (iFocusFlags == 0 || (iFocusFlags & BUILDINGFOCUS_WONDEROK) || (iFocusFlags & BUILDINGFOCUS_WORLDWONDER)))
+		&&	(
+				!isLimitedWonder(building) // Building is not a wonder
+			|| ( // Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
+					!isProductionAutomated()
+				&&	(
+						iFocusFlags == 0
+					||	(iFocusFlags & BUILDINGFOCUS_WONDEROK)
+					||	(iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
+					)
+				)
 			)
-			&&
-			// adviser is not one we are ignoring
-			(eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
-			&&
-			// We can actually build the building
-			canConstruct(building)
-			&&
-			(
-				// Automated production doesn't look at buildings with prerequisites?
-				!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0
-			)
+		// adviser is not one we are ignoring
+		&& (eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
+		// We can actually build the building
+		&& canConstruct(building)
+		// Automated production doesn't look at buildings with prerequisites?
+		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0)
 		)
 		{
+			// Toffer - ToDo - Change iValue type to int64_t,
+			//	or reduce scoring as it gets dangerously close to overflowing as it is.
 			int iValue = 0;
 
-			if (
-				!(iFocusFlags & BUILDINGFOCUS_PROPERTY)
-				||
-				// If we want to build a building that influences a property (crime/pollution/tourism etc.) then
-				// invalidate the building if it doesn't influence the property we are interested in
-				AI_buildingInfluencesProperty(this, buildingInfo, eProperty)
-				)
+			if (!(iFocusFlags & BUILDINGFOCUS_PROPERTY)
+			// If we want to build a building that influences a property (crime/pollution/tourism etc.) then
+			// invalidate the building if it doesn't influence the property we are interested in
+			|| AI_buildingInfluencesProperty(this, buildingInfo, eProperty))
 			{
 				iValue = AI_buildingValueThreshold(building, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
 
@@ -4864,10 +4860,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					{
 						const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iJ);
 						if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(building)
-							&&
-							// Only care if we actually have the building
-							getNumBuilding(eJLoopBuilding) > 0
-							)
+						// Only care if we actually have the building
+						&& getNumBuilding(eJLoopBuilding) > 0)
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
@@ -4932,9 +4926,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// full-filled some of our criteria and is worth evaluating further
 			if (iValue > 0)
 			{
+				FAssert((MAX_INT / 100) >= iValue);
 				// If its a wonder and this city is rated high for production relative to our other cities, then we will bump up the score
-				if (isWorldWonder(building) &&
-					iProductionRank <= std::min(3, ((player.getNumCities() + 2) / 3)))
+				if (isWorldWonder(building) && iProductionRank <= std::min(3, (player.getNumCities() + 2) / 3))
 				{
 					int wonderScore = bAsync ?
 						GC.getASyncRand().get(player.getWonderConstructRand(), "Wonder Construction Rand ASYNC")
@@ -4951,7 +4945,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				}
 
 				// Add a general random factor between 100% to 125%
-				iValue *= bAsync ?
+				iValue *= bAsync
+					?
 					(GC.getASyncRand().get(25, "AI Best Building ASYNC") + 100)
 					:
 					(GC.getGame().getSorenRandNum(25, "AI Best Building") + 100);
@@ -4961,30 +4956,24 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue += getBuildingProduction(building);
 
 				// Factor in how many turns are left to complete this building
-				int iTurnsLeft = getProductionTurnsLeft(building, 0);
+				const int iTurnsLeft = getProductionTurnsLeft(building, 0);
 
 				// Apply final checks based on how many turns to build
-				if (
-					(iMaxTurns <= 0)
-					||
-					(iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()))
-					||
-					AI_canRushBuildingConstruction(building)
-					)
+				if (iMaxTurns <= 0
+				|| iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent())
+				|| AI_canRushBuildingConstruction(building))
 				{
-					FAssert((MAX_INT / 1000) > iValue);
-					iValue *= 1000;
+					FAssert(MAX_INT / 100 >= iValue);
 					// Adjust the score based on the turns to complete the building, more turns means lower score
-					iValue /= std::max(1, iTurnsLeft + 3);
 					// As we got this far we definitely consider this building a candidate so we should give it a score of at least 1
-					iValue = std::max(1, iValue);
+					iValue = std::max(1, iValue * 100 / (iTurnsLeft + 3));
+
 					// Add to our list of potential buildings to return later
 					scoredBuildings.push_back(ScoredBuilding(building, iValue));
 				}
 			}
 		}
 	}
-
 	// Sort from highest score to lowest. Need to reverse the order of the sort because default sort is ascending.
 	std::sort(scoredBuildings.rbegin(), scoredBuildings.rend());
 
