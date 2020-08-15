@@ -8840,7 +8840,7 @@ int CvGame::calculateSyncChecksum()
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold());
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold() % 1000000);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumCities() * 436);
@@ -8962,11 +8962,6 @@ int CvGame::calculateSyncChecksum()
 				iValue *= iMultiplier;
 			}
 		}
-	}
-
-	while (iValue > MAX_INT)
-	{
-		iValue -= MAX_INT;
 	}
 
 	return (int)iValue;
