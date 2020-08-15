@@ -394,15 +394,11 @@ public:
 	int getTotalLandScored() const; // Exposed to Python
 	void changeTotalLandScored(int iChange);
 
-	int getEffectiveGold() const;
-
-	int getGold() const; // Exposed to Python
-	DllExport void setGold(int iNewValue); // Exposed to Python
-	DllExport void changeGold(int iChange);
-
-	int getGreaterGold() const; // Exposed to Python
-	void setGreaterGold(int iNewValue); // Exposed to Python
-	void changeGreaterGold(int iChange); // Exposed to Python
+	int64_t getGold() const; // Exposed to Python
+	void setGold(int64_t iNewValue); // Exposed to Python
+	DllExport void setGold(int iNewValue) { setGold(static_cast<int64_t>(iNewValue)); }
+	void changeGold(int64_t iChange);
+	DllExport void changeGold(int iChange) { setGold(static_cast<int64_t>(getGold() + iChange)); }
 
 	int getGoldPerTurn() const; // Exposed to Python
 
@@ -413,7 +409,7 @@ public:
 	void doEspionageOneOffPoints(int iChange);
 	int getEspionageSpending(TeamTypes eAgainstTeam, int iTotal = -1) const; // Exposed to Python
 	bool canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pUnit) const; // Exposed to Python
-	int getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
+	int64_t getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
 	int getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const; // Exposed to Python
 	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
 	bool doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pUnit, bool bCaught = false);
@@ -590,16 +586,16 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void applyUnitUpkeepHandicap(long long& iUpkeep);
+	void applyUnitUpkeepHandicap(int64_t& iUpkeep);
 
-	long long getUnitUpkeepCivilian100() const;
-	long long getUnitUpkeepCivilian() const;
-	long long getUnitUpkeepCivilianNet() const;
-	long long getUnitUpkeepMilitary100() const;
-	long long getUnitUpkeepMilitary() const;
-	long long getUnitUpkeepMilitaryNet() const;
-	long long calcFinalUnitUpkeep(const bool bReal=true);
-	long long getFinalUnitUpkeep() const;
+	int64_t getUnitUpkeepCivilian100() const;
+	int64_t getUnitUpkeepCivilian() const;
+	int64_t getUnitUpkeepCivilianNet() const;
+	int64_t getUnitUpkeepMilitary100() const;
+	int64_t getUnitUpkeepMilitary() const;
+	int64_t getUnitUpkeepMilitaryNet() const;
+	int64_t calcFinalUnitUpkeep(const bool bReal=true);
+	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 	// ! Unit Upkeep
 
@@ -1023,6 +1019,8 @@ public:
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const; // Exposed to Python
 	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const; // Exposed to Python
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue); // Exposed to Python
+
+	int64_t getTreasuryUpkeep() const;
 
 	int getExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -1761,8 +1759,7 @@ protected:
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
-	int m_iGold;
-	int m_iGreaterGold;
+	int64_t m_iGold;
 	int m_iGoldPerTurn;
 	int m_iAdvancedStartPoints;
 	int m_iGoldenAgeTurns;
@@ -1817,9 +1814,9 @@ protected:
 	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 
-	long long m_iUnitUpkeepCivilian100;
-	long long m_iUnitUpkeepMilitary100;
-	long long m_iFinalUnitUpkeep;
+	int64_t m_iUnitUpkeepCivilian100;
+	int64_t m_iUnitUpkeepMilitary100;
+	int64_t m_iFinalUnitUpkeep;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;

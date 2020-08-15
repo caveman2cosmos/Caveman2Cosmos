@@ -8813,14 +8813,19 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 
 int CvGame::calculateSyncChecksum()
 {
+	// Toffer - 15.08.20
+	// No point in calculating the netwoprk sync hash value when not in a network game.
+	if (!isNetworkMultiPlayer())
+	{
+		return 0;
+	}
+	// Added lots of integer overflow protection using '% MAX_INT',
+	// should be completly water tight now, when 64 bit integers overflowed easily here before.
+	// ! Toffer
+
 	PROFILE_FUNC();
 
-	int iJ;
-
-	int iValue = 0;
-
-	iValue += getMapRand().getSeed();
-	iValue += getSorenRand().getSeed();
+	int64_t iValue = (getMapRand().getSeed() * getSorenRand().getSeed()) % MAX_INT;
 
 	iValue += getNumCities();
 	iValue += getTotalPopulation();
@@ -8829,19 +8834,20 @@ int CvGame::calculateSyncChecksum()
 	iValue += GC.getMap().getOwnedPlots();
 	iValue += GC.getMap().getNumAreas();
 
+	int64_t iFinalMult = 0;
+
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isEverAlive())
 		{
-			int iMultiplier = getPlayerScore((PlayerTypes)iI);
+			int64_t iMultiplier = getPlayerScore((PlayerTypes)iI);
 
 			switch (getTurnSlice() % 4)
 			{
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGreaterGold());
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold());
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold() % MAX_INT);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumCities() * 436);
@@ -8853,19 +8859,19 @@ int CvGame::calculateSyncChecksum()
 				break;
 
 			case 1:
-				for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).calculateTotalYield((YieldTypes)iJ));
 				}
 
-				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getCommerceRate((CommerceTypes)iJ));
 				}
 
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					for (iJ = 0; iJ < GC.getNumEventInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumEventInfos(); iJ++)
 					{
 						iMultiplier += (iJ + 1) * pLoopCity->isEventOccured((EventTypes)iJ);
 					}
@@ -8890,41 +8896,41 @@ int CvGame::calculateSyncChecksum()
 				break;
 
 			case 2:
-				for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumAvailableBonuses((BonusTypes)iJ) * 945);
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBonusImport((BonusTypes)iJ) * 326);
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBonusExport((BonusTypes)iJ) * 932);
 				}
 
-				for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getImprovementCount((ImprovementTypes)iJ) * 883);
 				}
 
-				for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBuildingCountPlusMaking((BuildingTypes)iJ) * 95);
 				}
 
-				for (iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitCountPlusMaking((UnitTypes)iJ) * 75);
 				}
 
-				for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).AI_totalUnitAIs((UnitAITypes)iJ) * 64);
 				}
 
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
 						if (pLoopCity->isHasReligion((ReligionTypes)iJ))
 							iMultiplier += pLoopCity->getID() * (iJ + 1);
 					}
-					for (iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
 					{
 						if (pLoopCity->isHasCorporation((CorporationTypes)iJ))
 							iMultiplier += (pLoopCity->getID() + 1) * (iJ + 1);
@@ -8958,14 +8964,17 @@ int CvGame::calculateSyncChecksum()
 				break;
 			}
 
-			if (iMultiplier != 0)
-			{
-				iValue *= iMultiplier;
-			}
+			iFinalMult += iMultiplier % MAX_INT;
 		}
 	}
+	iFinalMult %= MAX_INT;
 
-	return iValue;
+	if (iFinalMult != 0)
+	{
+		iValue *= iFinalMult;
+	}
+
+	return static_cast<int>(iValue % MAX_INT);
 }
 
 

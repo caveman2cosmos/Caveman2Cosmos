@@ -63,6 +63,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getOverflowResearch", &CyPlayer::getOverflowResearch, "int ()")
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
 
+		.def("getTreasuryUpkeep", &CyPlayer::getTreasuryUpkeep, "int64 ()")
 		.def("getTotalMaintenance", &CyPlayer::getTotalMaintenance, "int ()")
 		.def("getLevelExperienceModifier", &CyPlayer::getLevelExperienceModifier, "int ()")
 

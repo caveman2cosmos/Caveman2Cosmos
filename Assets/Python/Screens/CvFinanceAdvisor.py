@@ -243,6 +243,7 @@ class CvFinanceAdvisor:
 		iExpenses = 0
 		iFinalUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
+		iTreasuryUpkeep = CyPlayer.getTreasuryUpkeep()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
 		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
@@ -267,6 +268,13 @@ class CvFinanceAdvisor:
 		screen.setLabelAt("", Pnl, uFont2 + str(totalMaintenance), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, iPlayer, 1)
 		iExpenses += totalMaintenance
 		y += 20
+
+		if iTreasuryUpkeep:
+			szText = TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ())
+			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 2)
+			screen.setLabelAt("", Pnl, uFont2 + str(iTreasuryUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+			iExpenses += iTreasuryUpkeep
+			y += 20
 
 		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ())
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
@@ -324,17 +332,15 @@ class CvFinanceAdvisor:
 		# Treasury footer
 		szTxt = self.szTreasury
 		iGold = CyPlayer.getGold()
-		iGreaterGold = CyPlayer.getGreaterGold()
-		iEffectiveGold = 1000000 * iGreaterGold + iGold
 		iGoldRate = CyPlayer.calculateGoldRate()
-		if iEffectiveGold < 0:
+		if iGold < 0:
 			szTxt += "<color=255,0,0,255>"
-		szTxt += "%d%s" %(iEffectiveGold, iconCommerceList[eComGold])
+		szTxt += "%d%s" %(iGold, iconCommerceList[eComGold])
 		if iGoldRate:
 			szTxt += " <color="
-			if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+			if iGoldRate > 0 and iGold + iGoldRate >= 0:
 				szTxt += "127,255,0,255>"
-			elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+			elif iGoldRate < 0 and iGold + iGoldRate < 0:
 				szTxt += "255,124,0,255>"
 			else:
 				szTxt += "255,227,0,255>"

@@ -221,15 +221,10 @@ public:
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	int64_t getGold() const;
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
-
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);
@@ -326,6 +321,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
