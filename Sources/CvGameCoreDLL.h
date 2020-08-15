@@ -302,6 +302,7 @@ namespace python = boost::python;
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"
+
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
