@@ -11729,7 +11729,7 @@ ColorTypes CvPlot::plotMinimapColor() const
 
 		if ((pCity != NULL) && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
-			return CvColorInfo::white();
+			return (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE");
 		}
 
 		if (isActiveVisible(true))
