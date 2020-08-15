@@ -321,6 +321,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;

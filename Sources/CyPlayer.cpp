@@ -1409,6 +1409,11 @@ int CyPlayer::getCorporationMaintenanceModifier()
 	return m_pPlayer ? m_pPlayer->getCorporationMaintenanceModifier() : -1;
 }
 
+int64_t CyPlayer::getTreasuryUpkeep()
+{
+	return m_pPlayer ? m_pPlayer->getTreasuryUpkeep() : -1;
+}
+
 int CyPlayer::getTotalMaintenance()
 {
 	return m_pPlayer ? m_pPlayer->getTotalMaintenance() : -1;

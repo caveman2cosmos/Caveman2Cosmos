@@ -5021,26 +5021,30 @@ class CvMainInterface:
 
 	def treasuryHelp(self, screen, szTxt):
 		iconCommerceGold = self.iconCommerceList[0]
-		CyPlayer = self.CyPlayer
-		szTxt += "\n%s: %d" % (iconCommerceGold, CyPlayer.getGold())
-		iSum = 0
+		player = self.CyPlayer
+		szTxt += "\n%s: %d" % (iconCommerceGold, player.getGold())
+		# Treasury Upkeep
+		iValue = player.getTreasuryUpkeep()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()) + str(iValue) + iconCommerceGold
 		# Civics
+		iSum = 0
 		szTemp = ""
 		for i in xrange(GC.getNumCivicOptionInfos()):
-			iCivic = CyPlayer.getCivics(i)
-			iUpkeep = CyPlayer.getSingleCivicUpkeep(iCivic, True)
-			if iUpkeep:
-				szTemp += "\n	" + str(iUpkeep) + iconCommerceGold + " "+ TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_FROM", ())+ " " + GC.getCivicInfo(iCivic).getDescription()
-				iSum += iUpkeep
+			iCivic = player.getCivics(i)
+			iValue = player.getSingleCivicUpkeep(iCivic, True)
+			if iValue:
+				szTemp += "\n\t" + str(iValue) + iconCommerceGold + " "+ TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_FROM", ())+ " " + GC.getCivicInfo(iCivic).getDescription()
+				iSum += iValue
 		if iSum:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
 		# Maintenance
-		iMaintenance = CyPlayer.getTotalMaintenance()
-		if iMaintenance:
-			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iMaintenance) + iconCommerceGold
+		iValue = player.getTotalMaintenance()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
 		# Unit upkeep
-		iUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
-		iUnitSupply = CyPlayer.calculateUnitSupply()
+		iUnitUpkeep = player.getFinalUnitUpkeep()
+		iUnitSupply = player.calculateUnitSupply()
 		if iUnitUpkeep or iUnitSupply:
 			szTxt += "\n"
 			if iUnitUpkeep:
@@ -5050,14 +5054,14 @@ class CvMainInterface:
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
 		# Trade
-		iTradeGoPerT = CyPlayer.getGoldPerTurn()
-		if iTradeGoPerT:
+		iValue = player.getGoldPerTurn()
+		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_TRADE", ()) +" <color="
-			if iTradeGoPerT < 0:
+			if iValue < 0:
 				szTxt += "255,0,0>"
 			else:
 				szTxt += "0,255,0>"
-			szTxt += str(iTradeGoPerT) + "</color>" + iconCommerceGold
+			szTxt += str(iValue) + "</color>" + iconCommerceGold
 		self.updateTooltip(screen, szTxt)
 
 	def showRevStatusInfoPane(self, screen):

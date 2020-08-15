@@ -586,16 +586,16 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void applyUnitUpkeepHandicap(long long& iUpkeep);
+	void applyUnitUpkeepHandicap(int64_t& iUpkeep);
 
-	long long getUnitUpkeepCivilian100() const;
-	long long getUnitUpkeepCivilian() const;
-	long long getUnitUpkeepCivilianNet() const;
-	long long getUnitUpkeepMilitary100() const;
-	long long getUnitUpkeepMilitary() const;
-	long long getUnitUpkeepMilitaryNet() const;
-	long long calcFinalUnitUpkeep(const bool bReal=true);
-	long long getFinalUnitUpkeep() const;
+	int64_t getUnitUpkeepCivilian100() const;
+	int64_t getUnitUpkeepCivilian() const;
+	int64_t getUnitUpkeepCivilianNet() const;
+	int64_t getUnitUpkeepMilitary100() const;
+	int64_t getUnitUpkeepMilitary() const;
+	int64_t getUnitUpkeepMilitaryNet() const;
+	int64_t calcFinalUnitUpkeep(const bool bReal=true);
+	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 	// ! Unit Upkeep
 
@@ -1019,6 +1019,8 @@ public:
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const; // Exposed to Python
 	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const; // Exposed to Python
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue); // Exposed to Python
+
+	int64_t getTreasuryUpkeep() const;
 
 	int getExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -1812,9 +1814,9 @@ protected:
 	int m_iCivilianUnitUpkeepMod;
 	int m_iMilitaryUnitUpkeepMod;
 
-	long long m_iUnitUpkeepCivilian100;
-	long long m_iUnitUpkeepMilitary100;
-	long long m_iFinalUnitUpkeep;
+	int64_t m_iUnitUpkeepCivilian100;
+	int64_t m_iUnitUpkeepMilitary100;
+	int64_t m_iFinalUnitUpkeep;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;

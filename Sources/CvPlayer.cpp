@@ -4327,13 +4327,13 @@ void CvPlayer::dumpStats() const
 	logBBAI("%S stats for turn %d:", getCivilizationDescription(0), GC.getGame().getGameTurn());
 
 	//	Economy stats
-	const long long iUnitUpkeep = getFinalUnitUpkeep();
+	const int64_t iUnitUpkeep = getFinalUnitUpkeep();
 	const int iUnitSupplyCosts = calculateUnitSupply();
 	const int iMaintenanceCosts = getTotalMaintenance();
 	const int iCivicUpkeepCosts = getCivicUpkeep();
 	const int iCorporateTaxIncome = getCorporateTaxIncome();
-	const long long iTotalPreInflatedCosts = iUnitUpkeep + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts - iCorporateTaxIncome;
-	const long long iTotalCosts = iTotalPreInflatedCosts*std::max(0, calculateInflationRate() + 100)/100;
+	const int64_t iTotalPreInflatedCosts = iUnitUpkeep + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts - iCorporateTaxIncome;
+	const int64_t iTotalCosts = iTotalPreInflatedCosts*std::max(0, calculateInflationRate() + 100)/100;
 
 	//	Accrue some stats off cities
 	int iTotalProduction = 0;
@@ -9047,10 +9047,11 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-	long long iCosts = getFinalUnitUpkeep();
+	int64_t iCosts = getFinalUnitUpkeep();
 	iCosts += calculateUnitSupply();
 	iCosts += getTotalMaintenance();
 	iCosts += getCivicUpkeep();
+	iCosts += getTreasuryUpkeep();
 	iCosts -= getCorporateTaxIncome();
 
 	return static_cast<int>(iCosts);
@@ -10598,7 +10599,7 @@ void CvPlayer::changeTotalPopulation(int iChange)
 	}
 	changePopScore(-(getPopulationScore(getTotalPopulation())));
 
-	unsigned long long iPopTest = (long long)m_iTotalPopulation;
+	unsigned long long iPopTest = (int64_t)m_iTotalPopulation;
 
 	iPopTest += iChange;
 	if (iPopTest > MAX_INT)
@@ -11709,19 +11710,19 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 	}
 }
 
-long long CvPlayer::getUnitUpkeepCivilian100() const
+int64_t CvPlayer::getUnitUpkeepCivilian100() const
 {
 	return m_iUnitUpkeepCivilian100;
 }
 
-long long CvPlayer::getUnitUpkeepMilitary100() const
+int64_t CvPlayer::getUnitUpkeepMilitary100() const
 {
 	return m_iUnitUpkeepMilitary100;
 }
 
-long long CvPlayer::getUnitUpkeepCivilian() const
+int64_t CvPlayer::getUnitUpkeepCivilian() const
 {
-	unsigned long long iUpkeep = std::max<long long>(0, m_iUnitUpkeepCivilian100);
+	unsigned long long iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepCivilian100);
 
 	if (m_iCivilianUnitUpkeepMod > 0)
 	{
@@ -11731,17 +11732,17 @@ long long CvPlayer::getUnitUpkeepCivilian() const
 	{
 		iUpkeep = iUpkeep * 100 / (100 - m_iCivilianUnitUpkeepMod);
 	}
-	return static_cast<long long>(iUpkeep / 100);
+	return static_cast<int64_t>(iUpkeep / 100);
 }
 
-long long CvPlayer::getUnitUpkeepCivilianNet() const
+int64_t CvPlayer::getUnitUpkeepCivilianNet() const
 {
-	return std::max<long long>(0, getUnitUpkeepCivilian() - getFreeUnitUpkeepCivilian());
+	return std::max<int64_t>(0, getUnitUpkeepCivilian() - getFreeUnitUpkeepCivilian());
 }
 
-long long CvPlayer::getUnitUpkeepMilitary() const
+int64_t CvPlayer::getUnitUpkeepMilitary() const
 {
-	unsigned long long iUpkeep = std::max<long long>(0, m_iUnitUpkeepMilitary100);
+	unsigned long long iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepMilitary100);
 
 	if (m_iMilitaryUnitUpkeepMod > 0)
 	{
@@ -11751,26 +11752,26 @@ long long CvPlayer::getUnitUpkeepMilitary() const
 	{
 		iUpkeep = iUpkeep * 100 / (100 - m_iMilitaryUnitUpkeepMod);
 	}
-	return static_cast<long long>(iUpkeep / 100);
+	return static_cast<int64_t>(iUpkeep / 100);
 }
 
-long long CvPlayer::getUnitUpkeepMilitaryNet() const
+int64_t CvPlayer::getUnitUpkeepMilitaryNet() const
 {
-	return std::max<long long>(0, getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
+	return std::max<int64_t>(0, getUnitUpkeepMilitary() - getFreeUnitUpkeepMilitary());
 }
 
-long long CvPlayer::getFinalUnitUpkeep() const
+int64_t CvPlayer::getFinalUnitUpkeep() const
 {
 	return m_iFinalUnitUpkeep;
 }
 
-long long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
+int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 {
 	if (isNPC())
 	{
 		return 0;
 	}
-	long long iCalc = 0;
+	int64_t iCalc = 0;
 
 	iCalc += getUnitUpkeepCivilianNet();
 	iCalc += getUnitUpkeepMilitaryNet();
@@ -11797,7 +11798,7 @@ long long CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	return iCalc;
 }
 
-void CvPlayer::applyUnitUpkeepHandicap(long long& iUpkeep)
+void CvPlayer::applyUnitUpkeepHandicap(int64_t& iUpkeep)
 {
 	// Difficulty adjustment
 	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
@@ -16138,18 +16139,26 @@ int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 		iTotalUpkeep += getSingleCivicUpkeep(paeCivics[iI], bIgnoreAnarchy);
 	}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/01/08                                jdog5000      */
-/*                                                                                              */
-/* Rebels pay less civic upkeep                                                                 */
-/************************************************************************************************/
-	if( isRebel() )
-		iTotalUpkeep /= 2;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	if (isRebel()) iTotalUpkeep /= 2;
 
 	return iTotalUpkeep;
+}
+
+
+int64_t CvPlayer::getTreasuryUpkeep() const
+{
+	const int64_t iTreasury = getGold();
+	if (iTreasury < 3)
+	{
+		return 0;
+	}
+	int64_t iUpkeep = iTreasury / 1000 + intSqrt64(iTreasury / 10);
+
+	// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
+	iUpkeep *= 100;
+	iUpkeep /= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
+
+	return iUpkeep;
 }
 
 
@@ -18401,7 +18410,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const
 {
 	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
-	long long iModifier = 100;
+	int64_t iModifier = 100;
 
 	CvCity* pCity = NULL;
 	if (NULL != pPlot)
@@ -18431,7 +18440,7 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 		ReligionTypes eReligion = getStateReligion();
 		if (NO_RELIGION != eReligion && pCity->isHasReligion(eReligion))
 		{
-			long long iReligionModifier = 0;
+			int64_t iReligionModifier = 0;
 
 			if (GET_PLAYER(eTargetPlayer).getStateReligion() != eReligion)
 			{
@@ -18456,7 +18465,7 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 	// Distance mod
 	if (pPlot != NULL)
 	{
-		long long iDistance = GC.getMap().maxPlotDistance();
+		int64_t iDistance = GC.getMap().maxPlotDistance();
 
 		CvCity* pOurCapital = getCapitalCity();
 		if (NULL != pOurCapital)
@@ -18487,15 +18496,15 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 	}
 
 	// My points VS. Your points to mod cost
-	long long iTargetPoints = GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsEver();
-	long long iOurPoints = GET_TEAM(getTeam()).getEspionagePointsEver();
-	long long iEquation1 = 2 * iTargetPoints + iOurPoints;
-	long long iEquation2 = iTargetPoints + 2 * iOurPoints;
+	int64_t iTargetPoints = GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsEver();
+	int64_t iOurPoints = GET_TEAM(getTeam()).getEspionagePointsEver();
+	int64_t iEquation1 = 2 * iTargetPoints + iOurPoints;
+	int64_t iEquation2 = iTargetPoints + 2 * iOurPoints;
 	if (iEquation2 < 1)
 	{
 		iEquation2 = 1;
 	}
-	iModifier *= (((long long)GC.getDefineINT("ESPIONAGE_SPENDING_MULTIPLIER") * iEquation1) / iEquation2);
+	iModifier *= (((int64_t)GC.getDefineINT("ESPIONAGE_SPENDING_MULTIPLIER") * iEquation1) / iEquation2);
 	iModifier /= 100;
 
 	// Counterespionage Mission Mod
@@ -21985,15 +21994,15 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		double fUnitUpkeepCivilian100;
 		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepCivilian100);
-		m_iUnitUpkeepCivilian100 = static_cast<long long>(fUnitUpkeepCivilian100 + 0.01);
+		m_iUnitUpkeepCivilian100 = static_cast<int64_t>(fUnitUpkeepCivilian100 + 0.01);
 
 		double fUnitUpkeepMilitary100;
 		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepMilitary100);
-		m_iUnitUpkeepMilitary100 = static_cast<long long>(fUnitUpkeepMilitary100 + 0.01);
+		m_iUnitUpkeepMilitary100 = static_cast<int64_t>(fUnitUpkeepMilitary100 + 0.01);
 
 		double fFinalUnitUpkeep;
 		WRAPPER_READ(wrapper, "CvPlayer", &fFinalUnitUpkeep);
-		m_iFinalUnitUpkeep = static_cast<long long>(fFinalUnitUpkeep + 0.01);
+		m_iFinalUnitUpkeep = static_cast<int64_t>(fFinalUnitUpkeep + 0.01);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
@@ -22003,11 +22012,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	// @SAVEBREAK REPLACE
 		double fGold = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		this->m_iGold = static_cast<long long>(fGold + 0.01) + (1000000 * m_iGreaterGold) + m_iGold;
+		this->m_iGold = static_cast<int64_t>(fGold + 0.01) + (1000000 * m_iGreaterGold) + m_iGold;
 	/* WITH
 		double fGold;
 		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		m_iGold += static_cast<long long>(fGold + 0.01); // +0.01 to avoid different rounding result on different CPU's
+		m_iGold += static_cast<int64_t>(fGold + 0.01); // +0.01 to avoid different rounding result on different CPU's
 	// SAVEBREAK@ */
 
 		//Example of how to skip element
@@ -26314,11 +26323,11 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 	{
 		if (NO_RELIGION != eReligion)
 		{
-			iVotes = (long long)getReligionPopulation(eReligion);
+			iVotes = (int64_t)getReligionPopulation(eReligion);
 		}
 		else
 		{
-			iVotes = (long long)getTotalPopulation();
+			iVotes = (int64_t)getTotalPopulation();
 		}
 	}
 	else
@@ -26339,22 +26348,22 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 		{
 			if (NO_RELIGION != eReligion)
 			{
-				iVotes = (long long)getHasReligionCount(eReligion);
+				iVotes = (int64_t)getHasReligionCount(eReligion);
 			}
 			else
 			{
-				iVotes = (long long)getNumCities();
+				iVotes = (int64_t)getNumCities();
 			}
 		}
 		else
 		{
 			if (NO_RELIGION == eReligion)
 			{
-				iVotes = (long long)getTotalPopulation();
+				iVotes = (int64_t)getTotalPopulation();
 			}
 			else
 			{
-				iVotes = (long long)getReligionPopulation(eReligion);
+				iVotes = (int64_t)getReligionPopulation(eReligion);
 			}
 		}
 

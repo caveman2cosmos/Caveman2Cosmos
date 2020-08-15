@@ -640,4 +640,28 @@ int intSqrt(const int iValue, const bool bTreatNegAsPos)
 	}
 	return iRoot >> 1;
 }
+
+// Testing alternate version
+int64_t intSqrt64(unsigned long long iValue)
+{
+	unsigned long long min = 0;
+	unsigned long long max = ((unsigned long long) 1) << 32;
+	while(true)
+	{
+		if (max <= 1 + min)
+		{
+			return static_cast<int64_t>(min);
+		}
+		const unsigned long long sqt = min + (max - min)/2;
+		const unsigned long long sq = sqt*sqt;
+
+		if (sq == iValue)
+		{
+			return static_cast<int64_t>(sqt);
+		}
+		if (sq > iValue)
+			max = sqt;
+		else min = sqt;
+	}
+}
 // ! Toffer
