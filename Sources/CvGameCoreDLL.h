@@ -175,7 +175,7 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-int intSqrt(const int iValue, const bool bTreatNegAsPos=false);
+int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
 int64_t intSqrt64(const unsigned long long iValue);
 
 #define	MEMORY_TRACK()

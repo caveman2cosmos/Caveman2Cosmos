@@ -11303,29 +11303,28 @@ void CvGame::doFlexibleDifficulty()
 					}
 					FAssertMsg(iAliveCount > 0, "iAliveCount can not be <= 0");
 					const int iMeanScore = iTotalScore / iAliveCount;
-					double variance = 0.0;
+					int iVariance = 0;
 					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
 					{
 						const CvPlayerAI& pPlayer = GET_PLAYER((PlayerTypes)iJ);
 						if (pPlayer.isAlive() && GET_TEAM(pPlayer.getTeam()).getLeaderID() == pPlayer.getID())
 						{
 							int iScore = getPlayerScore((PlayerTypes)iJ);
-							//variance is sum of squared difference from mean
-							variance += (iMeanScore - iScore) * (iMeanScore - iScore);
+							// iVariance is sum of squared difference from mean
+							iVariance += (iMeanScore - iScore) * (iMeanScore - iScore);
 							logMsg("[Flexible Difficulty] Adding score for player %S, score: %d", pPlayer.getName(), iScore);
 						}
 					}
-					variance /= iAliveCount;
-					double stddev = sqrt(variance);
+					const int stddev = iVariance >= 0 ? intSqrt(10000 * iVariance / iAliveCount) : 0;
 
 					int iCurrentScore = getPlayerScore((PlayerTypes)iI);
 
-					logMsg("[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %f", kPlayer.getName(), iCurrentScore, GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(), iMeanScore, stddev);
+					logMsg("[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100", kPlayer.getName(), iCurrentScore, GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(), iMeanScore, stddev);
 
 					int newHandicap = (kPlayer.getHandicapType() > iMaxHandicap) ? iMaxHandicap : ((kPlayer.getHandicapType() < iMinHandicap) ? iMinHandicap : kPlayer.getHandicapType());
 
 					//Increased Difficulty (player's score is > 1 std dev away)
-					if (iCurrentScore > (iMeanScore + stddev))
+					if (100*iCurrentScore > 100*iMeanScore + stddev)
 					{
 						logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev above average.", kPlayer.getName());
 						if (newHandicap < (GC.getNumHandicapInfos() - 1) && newHandicap < iMaxHandicap)
@@ -11335,7 +11334,7 @@ void CvGame::doFlexibleDifficulty()
 							newHandicap++;
 						}
 					}
-					else if (iCurrentScore < (iMeanScore - stddev))
+					else if (100*iCurrentScore < 100*iMeanScore - stddev)
 					{
 						logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev below average.", kPlayer.getName());
 						if (newHandicap > 0 && newHandicap > iMinHandicap)
