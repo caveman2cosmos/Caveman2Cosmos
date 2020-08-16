@@ -223,7 +223,7 @@ public:
 
 	int64_t getGold() const;
 	void setGold(int64_t iNewValue);
-	void changeGold(int64_t iChange);
+	void changeGold(int iChange);
 	int getGoldPerTurn();
 
 	int getAdvancedStartPoints();

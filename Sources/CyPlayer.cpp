@@ -956,7 +956,7 @@ void CyPlayer::setGold(int64_t iNewValue)
 		m_pPlayer->setGold(iNewValue);
 }
 
-void CyPlayer::changeGold(int64_t iChange)
+void CyPlayer::changeGold(int iChange)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeGold(iChange);
