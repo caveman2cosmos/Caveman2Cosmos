@@ -12506,9 +12506,7 @@ void CvPlayer::changeFreeSpecialist(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iFreeSpecialist = (m_iFreeSpecialist + iChange);
-		FAssert(getFreeSpecialist() >= 0);
-
+		m_iFreeSpecialist += iChange;
 		AI_makeAssignWorkDirty();
 	}
 }

@@ -31061,7 +31061,6 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 		}
 		if (iDefenders == 0) // City Capture
 		{
-			FAssertMsg(false, "Last defender");
 			const int iNoCityDefenderMultiplier = GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER();
 
 			influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier * iNoCityDefenderMultiplier / 100);

@@ -6485,12 +6485,12 @@ int CvCity::totalFreeSpecialists() const
 		iCount += area()->getFreeSpecialist(getOwner());
 		iCount += GET_PLAYER(getOwner()).getFreeSpecialist();
 
-		for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); ++iImprovement)
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 		{
-			int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iImprovement);
+			const int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iI);
 			if (iNumSpecialistsPerImprovement > 0)
 			{
-				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
+				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iI);
 			}
 		}
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
@@ -6540,31 +6540,25 @@ int CvCity::unhealthyPopulation(bool bNoAngry, int iExtra) const
 
 int CvCity::totalGoodBuildingHealth() const
 {
-	int iHealth = getBuildingGoodHealth();
-
-	iHealth += area()->getBuildingGoodHealth(getOwner());
-	iHealth += GET_PLAYER(getOwner()).getBuildingGoodHealth();
-	iHealth += getExtraBuildingGoodHealth();
-	iHealth += std::max(0, calculatePopulationHealth());
-
-	return iHealth;
+	return getBuildingGoodHealth()
+		+ area()->getBuildingGoodHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingGoodHealth()
+		+ getExtraBuildingGoodHealth()
+		+ std::max(0, calculatePopulationHealth());
 }
 
 
 int CvCity::totalBadBuildingHealth() const
 {
-	if (!isBuildingOnlyHealthy())
+	if (isBuildingOnlyHealthy())
 	{
-		int iHealth = getBuildingBadHealth();
-
-		iHealth += area()->getBuildingBadHealth(getOwner());
-		iHealth += GET_PLAYER(getOwner()).getBuildingBadHealth();
-		iHealth += getExtraBuildingBadHealth();
-		iHealth += std::min(0, calculatePopulationHealth());
-
-		return iHealth;
+		return 0;
 	}
-	return 0;
+	return getBuildingBadHealth()
+		+ area()->getBuildingBadHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingBadHealth()
+		+ getExtraBuildingBadHealth()
+		+ std::min(0, calculatePopulationHealth());
 }
 
 
@@ -15063,7 +15057,7 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 
 	if (iChange != 0)
 	{
-		m_paiImprovementFreeSpecialists[eIndex] = std::max(0, (m_paiImprovementFreeSpecialists[eIndex] + iChange));
+		m_paiImprovementFreeSpecialists[eIndex] += iChange;
 	}
 }
 
