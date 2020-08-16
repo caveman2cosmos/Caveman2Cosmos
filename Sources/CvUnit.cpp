@@ -18977,10 +18977,10 @@ int CvUnit::getExtraVisibilityRange() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraVisibilityRange + pCommander->getExtraVisibilityRange();
+			return m_iExtraVisibilityRange + pCommander->m_iExtraVisibilityRange;
 		}
 	}
 	return m_iExtraVisibilityRange;
@@ -19011,10 +19011,10 @@ int CvUnit::getExtraMoves() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraMoves + pCommander->getExtraMoves();
+			return m_iExtraMoves + pCommander->m_iExtraMoves;
 		}
 	}
 	return m_iExtraMoves;
@@ -19032,10 +19032,10 @@ int CvUnit::getExtraMoveDiscount() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraMoveDiscount + pCommander->getExtraMoveDiscount();
+			return m_iExtraMoveDiscount + pCommander->m_iExtraMoveDiscount;
 		}
 	}
 	return m_iExtraMoveDiscount;
@@ -19052,10 +19052,10 @@ int CvUnit::getExtraAirRange() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraAirRange + pCommander->getExtraAirRange();
+			return m_iExtraAirRange + pCommander->m_iExtraAirRange;
 		}
 	}
 	return m_iExtraAirRange;
@@ -19070,10 +19070,10 @@ int CvUnit::getExtraIntercept(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraIntercept + pCommander->getExtraIntercept();
+			return m_iExtraIntercept + pCommander->m_iExtraIntercept;
 		}
 	}
 	return m_iExtraIntercept;
@@ -19088,10 +19088,10 @@ int CvUnit::getExtraEvasion(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraEvasion + pCommander->getExtraEvasion();
+			return m_iExtraEvasion + pCommander->m_iExtraEvasion;
 		}
 	}
 	return m_iExtraEvasion;
@@ -19106,7 +19106,7 @@ int CvUnit::getExtraFirstStrikes() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
 			return std::max(0, m_iExtraFirstStrikes + pCommander->getExtraFirstStrikes());
@@ -19124,7 +19124,7 @@ int CvUnit::getExtraChanceFirstStrikes() const
 {
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
 			return std::max(0, m_iExtraChanceFirstStrikes + pCommander->getExtraChanceFirstStrikes());
@@ -19142,10 +19142,10 @@ int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return  m_iExtraWithdrawal + pCommander->getExtraWithdrawal();
+			return m_iExtraWithdrawal + pCommander->m_iExtraWithdrawal;
 		}
 	}
 	return m_iExtraWithdrawal;
@@ -19157,14 +19157,14 @@ void CvUnit::changeExtraWithdrawal(int iChange)
 }
 
 //TB Combat Mods Begin
-int CvUnit::getExtraAttackCombatModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraAttackCombatModifier + pCommander->getExtraAttackCombatModifier();
+			return m_iExtraAttackCombatModifier + pCommander->m_iExtraAttackCombatModifier;
 		}
 	}
 	return m_iExtraAttackCombatModifier;
@@ -19175,14 +19175,14 @@ void CvUnit::changeExtraAttackCombatModifier(int iChange)
 	m_iExtraAttackCombatModifier +=iChange;
 }
 
-int CvUnit::getExtraDefenseCombatModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDefenseCombatModifier + pCommander->getExtraDefenseCombatModifier();
+			return m_iExtraDefenseCombatModifier + pCommander->m_iExtraDefenseCombatModifier;
 		}
 	}
 	return m_iExtraDefenseCombatModifier;
@@ -19193,14 +19193,14 @@ void CvUnit::changeExtraDefenseCombatModifier(int iChange)
 	m_iExtraDefenseCombatModifier +=iChange;
 }
 
-int CvUnit::getExtraPursuit (bool bIgnoreCommanders) const
+int CvUnit::getExtraPursuit(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPursuit + pCommander->getExtraPursuit();
+			return m_iExtraPursuit + pCommander->m_iExtraPursuit;
 		}
 	}
 	return m_iExtraPursuit;
@@ -19211,14 +19211,14 @@ void CvUnit::changeExtraPursuit(int iChange)
 	m_iExtraPursuit +=iChange;
 }
 
-int CvUnit::getExtraEarlyWithdraw (bool bIgnoreCommanders) const
+int CvUnit::getExtraEarlyWithdraw(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraEarlyWithdraw + pCommander->getExtraEarlyWithdraw();
+			return m_iExtraEarlyWithdraw + pCommander->m_iExtraEarlyWithdraw;
 		}
 	}
 	return m_iExtraEarlyWithdraw;
@@ -19229,14 +19229,14 @@ void CvUnit::changeExtraEarlyWithdraw(int iChange)
 	m_iExtraEarlyWithdraw +=iChange;
 }
 
-int CvUnit::getExtraVSBarbs (bool bIgnoreCommanders) const
+int CvUnit::getExtraVSBarbs(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraVSBarbs + pCommander->getExtraVSBarbs();
+			return m_iExtraVSBarbs + pCommander->m_iExtraVSBarbs;
 		}
 	}
 	return m_iExtraVSBarbs;
@@ -19252,10 +19252,10 @@ int CvUnit::getExtraReligiousCombatModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraReligiousCombatModifier + pCommander->getExtraReligiousCombatModifier();
+			return m_iExtraReligiousCombatModifier + pCommander->m_iExtraReligiousCombatModifier;
 		}
 	}
 	return m_iExtraReligiousCombatModifier;
@@ -19270,10 +19270,10 @@ int CvUnit::getExtraArmor(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return std::max(0, m_iExtraArmor + pCommander->getExtraArmor());
+			return std::max(0, m_iExtraArmor + pCommander->m_iExtraArmor);
 		}
 	}
 	return std::max(0, m_iExtraArmor);
@@ -19288,7 +19288,7 @@ int CvUnit::getExtraPuncture(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
 			return std::max(0, m_iExtraPuncture + pCommander->getExtraPuncture());
@@ -19302,14 +19302,14 @@ void CvUnit::changeExtraPuncture(int iChange)
 	m_iExtraPuncture +=iChange;
 }
 
-int CvUnit::getExtraDamageModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraDamageModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDamageModifier + pCommander->getExtraDamageModifier();
+			return m_iExtraDamageModifier + pCommander->m_iExtraDamageModifier;
 		}
 	}
 	return m_iExtraDamageModifier;
@@ -19436,10 +19436,10 @@ int CvUnit::getExtraOverrun(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraOverrun + pCommander->getExtraOverrun();
+			return m_iExtraOverrun + pCommander->m_iExtraOverrun;
 		}
 	}
 	return m_iExtraOverrun;
@@ -19456,10 +19456,10 @@ int CvUnit::getExtraRepel(bool bIgnoreCommanders) const
 
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRepel + pCommander->getExtraRepel();
+			return m_iExtraRepel + pCommander->m_iExtraRepel;
 		}
 	}
 	return m_iExtraRepel;
@@ -19471,14 +19471,14 @@ void CvUnit::changeExtraRepel(int iChange)
 	FAssert(getExtraRepel() >= 0);
 }
 
-int CvUnit::getExtraFortRepel (bool bIgnoreCommanders) const
+int CvUnit::getExtraFortRepel(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraFortRepel + pCommander->getExtraFortRepel();
+			return m_iExtraFortRepel + pCommander->m_iExtraFortRepel;
 		}
 	}
 	return m_iExtraFortRepel;
@@ -19490,14 +19490,14 @@ void CvUnit::changeExtraFortRepel(int iChange)
 	FAssert(getExtraFortRepel() >= 0);
 }
 
-int CvUnit::getExtraRepelRetries (bool bIgnoreCommanders) const
+int CvUnit::getExtraRepelRetries(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRepelRetries + pCommander->getExtraRepelRetries();
+			return m_iExtraRepelRetries + pCommander->m_iExtraRepelRetries;
 		}
 	}
 	return m_iExtraRepelRetries;
@@ -19509,14 +19509,14 @@ void CvUnit::changeExtraRepelRetries(int iChange)
 	FAssert(getExtraRepelRetries() >= 0);
 }
 
-int CvUnit::getExtraUnyielding (bool bIgnoreCommanders) const
+int CvUnit::getExtraUnyielding(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraUnyielding + pCommander->getExtraUnyielding();
+			return m_iExtraUnyielding + pCommander->m_iExtraUnyielding;
 		}
 	}
 	return m_iExtraUnyielding;
@@ -19528,14 +19528,14 @@ void CvUnit::changeExtraUnyielding(int iChange)
 	FAssert(getExtraUnyielding() >= 0);
 }
 
-int CvUnit::getExtraKnockback (bool bIgnoreCommanders) const
+int CvUnit::getExtraKnockback(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraKnockback + pCommander->getExtraKnockback();
+			return m_iExtraKnockback + pCommander->m_iExtraKnockback;
 		}
 	}
 	return m_iExtraKnockback;
@@ -19547,14 +19547,14 @@ void CvUnit::changeExtraKnockback(int iChange)
 	FAssert(getExtraKnockback() >= 0);
 }
 
-int CvUnit::getExtraKnockbackRetries (bool bIgnoreCommanders) const
+int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraKnockbackRetries + pCommander->getExtraKnockbackRetries();
+			return m_iExtraKnockbackRetries + pCommander->m_iExtraKnockbackRetries;
 		}
 	}
 	return m_iExtraKnockbackRetries;
@@ -19646,14 +19646,14 @@ void CvUnit::changeFliesToMoveCount(int iChange)
 	m_iFliesToMoveCount += iChange;
 }
 
-int CvUnit::getExtraStrAdjperRnd (bool bIgnoreCommanders) const
+int CvUnit::getExtraStrAdjperRnd(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraStrAdjperRnd + pCommander->getExtraStrAdjperRnd();
+			return m_iExtraStrAdjperRnd + pCommander->m_iExtraStrAdjperRnd;
 		}
 	}
 	return m_iExtraStrAdjperRnd;
@@ -19665,14 +19665,14 @@ void CvUnit::changeExtraStrAdjperRnd(int iChange)
 	FAssert(getExtraStrAdjperRnd() >= 0);
 }
 
-int CvUnit::getExtraStrAdjperAtt (bool bIgnoreCommanders) const
+int CvUnit::getExtraStrAdjperAtt(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraStrAdjperAtt + pCommander->getExtraStrAdjperAtt();
+			return m_iExtraStrAdjperAtt + pCommander->m_iExtraStrAdjperAtt;
 		}
 	}
 	return m_iExtraStrAdjperAtt;
@@ -19684,14 +19684,14 @@ void CvUnit::changeExtraStrAdjperAtt(int iChange)
 	FAssert(getExtraStrAdjperAtt() >= 0);
 }
 
-int CvUnit::getExtraStrAdjperDef (bool bIgnoreCommanders) const
+int CvUnit::getExtraStrAdjperDef(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraStrAdjperDef + pCommander->getExtraStrAdjperDef();
+			return m_iExtraStrAdjperDef + pCommander->m_iExtraStrAdjperDef;
 		}
 	}
 	return m_iExtraStrAdjperDef;
@@ -19703,14 +19703,14 @@ void CvUnit::changeExtraStrAdjperDef(int iChange)
 	FAssert(getExtraStrAdjperDef() >= 0);
 }
 
-int CvUnit::getExtraWithdrawAdjperAtt (bool bIgnoreCommanders) const
+int CvUnit::getExtraWithdrawAdjperAtt(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraWithdrawAdjperAtt + pCommander->getExtraWithdrawAdjperAtt();
+			return m_iExtraWithdrawAdjperAtt + pCommander->m_iExtraWithdrawAdjperAtt;
 		}
 	}
 	return m_iExtraWithdrawAdjperAtt;
@@ -19722,14 +19722,14 @@ void CvUnit::changeExtraWithdrawAdjperAtt(int iChange)
 	FAssert(getExtraWithdrawAdjperAtt() >= 0);
 }
 
-int CvUnit::getExtraUnnerve (bool bIgnoreCommanders) const
+int CvUnit::getExtraUnnerve(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraUnnerve + pCommander->getExtraUnnerve();
+			return m_iExtraUnnerve + pCommander->m_iExtraUnnerve;
 		}
 	}
 	return m_iExtraUnnerve;
@@ -19741,14 +19741,14 @@ void CvUnit::changeExtraUnnerve(int iChange)
 	FAssert(getExtraUnnerve() >= 0);
 }
 
-int CvUnit::getExtraEnclose (bool bIgnoreCommanders) const
+int CvUnit::getExtraEnclose(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraEnclose + pCommander->getExtraEnclose();
+			return m_iExtraEnclose + pCommander->m_iExtraEnclose;
 		}
 	}
 	return m_iExtraEnclose;
@@ -19760,14 +19760,14 @@ void CvUnit::changeExtraEnclose(int iChange)
 	FAssert(getExtraEnclose() >= 0);
 }
 
-int CvUnit::getExtraLunge (bool bIgnoreCommanders) const
+int CvUnit::getExtraLunge(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraLunge + pCommander->getExtraLunge();
+			return m_iExtraLunge + pCommander->m_iExtraLunge;
 		}
 	}
 	return m_iExtraLunge;
@@ -19779,14 +19779,14 @@ void CvUnit::changeExtraLunge(int iChange)
 	FAssert(getExtraLunge() >= 0);
 }
 
-int CvUnit::getExtraDynamicDefense (bool bIgnoreCommanders) const
+int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDynamicDefense + pCommander->getExtraDynamicDefense();
+			return m_iExtraDynamicDefense + pCommander->m_iExtraDynamicDefense;
 		}
 	}
 	return m_iExtraDynamicDefense;
@@ -19965,14 +19965,14 @@ void CvUnit::changeCureAfflictionCount(PromotionLineTypes ePromotionLineType, in
 	}
 }
 
-int CvUnit::getExtraFortitude (bool bIgnoreCommanders) const
+int CvUnit::getExtraFortitude(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraFortitude + pCommander->getExtraFortitude();
+			return m_iExtraFortitude + pCommander->m_iExtraFortitude;
 		}
 	}
 	return m_iExtraFortitude;
@@ -19988,10 +19988,10 @@ int CvUnit::getExtraDodgeModifier (bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDodgeModifier + pCommander->getExtraDodgeModifier();
+			return m_iExtraDodgeModifier + pCommander->m_iExtraDodgeModifier;
 		}
 	}
 	return m_iExtraDodgeModifier;
@@ -20002,14 +20002,14 @@ void CvUnit::changeExtraDodgeModifier(int iChange)
 	m_iExtraDodgeModifier +=iChange;
 }
 
-int CvUnit::getExtraPrecisionModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPrecisionModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPrecisionModifier + pCommander->getExtraPrecisionModifier();
+			return m_iExtraPrecisionModifier + pCommander->m_iExtraPrecisionModifier;
 		}
 	}
 	return m_iExtraPrecisionModifier;
@@ -20020,14 +20020,14 @@ void CvUnit::changeExtraPrecisionModifier(int iChange)
 	m_iExtraPrecisionModifier +=iChange;
 }
 
-int CvUnit::getExtraPowerShots (bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShots(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPowerShots + pCommander->getExtraPowerShots();
+			return m_iExtraPowerShots + pCommander->m_iExtraPowerShots;
 		}
 	}
 	return m_iExtraPowerShots;
@@ -20039,14 +20039,14 @@ void CvUnit::changeExtraPowerShots(int iChange)
 	FAssert(getExtraPowerShots() >= 0);
 }
 
-int CvUnit::getExtraPowerShotCombatModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPowerShotCombatModifier + pCommander->getExtraPowerShotCombatModifier();
+			return m_iExtraPowerShotCombatModifier + pCommander->m_iExtraPowerShotCombatModifier;
 		}
 	}
 	return m_iExtraPowerShotCombatModifier;
@@ -20058,14 +20058,14 @@ void CvUnit::changeExtraPowerShotCombatModifier(int iChange)
 	FAssert(getExtraPowerShotCombatModifier() >= 0);
 }
 
-int CvUnit::getExtraPowerShotPunctureModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPowerShotPunctureModifier + pCommander->getExtraPowerShotPunctureModifier();
+			return m_iExtraPowerShotPunctureModifier + pCommander->m_iExtraPowerShotPunctureModifier;
 		}
 	}
 	return m_iExtraPowerShotPunctureModifier;
@@ -20077,14 +20077,14 @@ void CvUnit::changeExtraPowerShotPunctureModifier(int iChange)
 	FAssert(getExtraPowerShotPunctureModifier() >= 0);
 }
 
-int CvUnit::getExtraPowerShotPrecisionModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPowerShotPrecisionModifier + pCommander->getExtraPowerShotPrecisionModifier();
+			return m_iExtraPowerShotPrecisionModifier + pCommander->m_iExtraPowerShotPrecisionModifier;
 		}
 	}
 	return m_iExtraPowerShotPrecisionModifier;
@@ -20096,14 +20096,14 @@ void CvUnit::changeExtraPowerShotPrecisionModifier(int iChange)
 	FAssert(getExtraPowerShotPrecisionModifier() >= 0);
 }
 
-int CvUnit::getExtraPowerShotCriticalModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPowerShotCriticalModifier + pCommander->getExtraPowerShotCriticalModifier();
+			return m_iExtraPowerShotCriticalModifier + pCommander->m_iExtraPowerShotCriticalModifier;
 		}
 	}
 	return m_iExtraPowerShotCriticalModifier;
@@ -20115,14 +20115,14 @@ void CvUnit::changeExtraPowerShotCriticalModifier(int iChange)
 	FAssert(getExtraPowerShotCriticalModifier() >= 0);
 }
 
-int CvUnit::getExtraCriticalModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraCriticalModifier + pCommander->getExtraCriticalModifier();
+			return m_iExtraCriticalModifier + pCommander->m_iExtraCriticalModifier;
 		}
 	}
 	return m_iExtraCriticalModifier;
@@ -20134,14 +20134,14 @@ void CvUnit::changeExtraCriticalModifier(int iChange)
 	FAssert(getExtraCriticalModifier() >= 0);
 }
 
-int CvUnit::getExtraEndurance (bool bIgnoreCommanders) const
+int CvUnit::getExtraEndurance(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraEndurance + pCommander->getExtraEndurance();
+			return m_iExtraEndurance + pCommander->m_iExtraEndurance;
 		}
 	}
 	return m_iExtraEndurance;
@@ -20153,14 +20153,14 @@ void CvUnit::changeExtraEndurance(int iChange)
 	FAssert(getExtraEndurance() >= 0);
 }
 
-int CvUnit::getExtraPoisonProbabilityModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraPoisonProbabilityModifier + pCommander->getExtraPoisonProbabilityModifier();
+			return m_iExtraPoisonProbabilityModifier + pCommander->m_iExtraPoisonProbabilityModifier;
 		}
 	}
 	return m_iExtraPoisonProbabilityModifier;
@@ -20175,22 +20175,14 @@ void CvUnit::changeExtraPoisonProbabilityModifier(int iChange)
 //TB Combat Mods End
 int CvUnit::getExtraCollateralDamage() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraCollateralDamage + pCommander->getExtraCollateralDamage();
+			return m_iExtraCollateralDamage + pCommander->m_iExtraCollateralDamage;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraCollateralDamage;
 }
 
@@ -20202,20 +20194,12 @@ void CvUnit::changeExtraCollateralDamage(int iChange)
 
 int CvUnit::getExtraEnemyHeal() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraEnemyHeal + pCommander->getExtraEnemyHeal();
+			return m_iExtraEnemyHeal + pCommander->m_iExtraEnemyHeal;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraEnemyHeal;
 }
 
@@ -20227,20 +20211,12 @@ void CvUnit::changeExtraEnemyHeal(int iChange)
 
 int CvUnit::getExtraNeutralHeal() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraNeutralHeal + pCommander->getExtraNeutralHeal();
+			return m_iExtraNeutralHeal + pCommander->m_iExtraNeutralHeal;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraNeutralHeal;
 }
 
@@ -20252,20 +20228,12 @@ void CvUnit::changeExtraNeutralHeal(int iChange)
 
 int CvUnit::getExtraFriendlyHeal() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraFriendlyHeal + pCommander->getExtraFriendlyHeal();
+			return m_iExtraFriendlyHeal + pCommander->m_iExtraFriendlyHeal;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraFriendlyHeal;
 }
 
@@ -20300,20 +20268,12 @@ void CvUnit::changeAdjacentTileHeal(int iChange)
 
 int CvUnit::getExtraCombatPercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraCombatPercent + pCommander->getExtraCombatPercent();
+			return m_iExtraCombatPercent + pCommander->m_iExtraCombatPercent;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraCombatPercent;
 }
 
@@ -20345,20 +20305,12 @@ void CvUnit::changeExtraWorkPercent(int iChange)
 
 int CvUnit::getExtraCityAttackPercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraCityAttackPercent + pCommander->getExtraCityAttackPercent();
+			return m_iExtraCityAttackPercent + pCommander->m_iExtraCityAttackPercent;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraCityAttackPercent;
 }
 
@@ -20374,20 +20326,12 @@ void CvUnit::changeExtraCityAttackPercent(int iChange)
 
 int CvUnit::getExtraCityDefensePercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraCityDefensePercent + pCommander->getExtraCityDefensePercent();
+			return m_iExtraCityDefensePercent + pCommander->m_iExtraCityDefensePercent;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraCityDefensePercent;
 }
 
@@ -20403,20 +20347,12 @@ void CvUnit::changeExtraCityDefensePercent(int iChange)
 
 int CvUnit::getExtraHillsAttackPercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraHillsAttackPercent + pCommander->getExtraHillsAttackPercent();
+			return m_iExtraHillsAttackPercent + pCommander->m_iExtraHillsAttackPercent;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraHillsAttackPercent;
 }
 
@@ -20432,20 +20368,12 @@ void CvUnit::changeExtraHillsAttackPercent(int iChange)
 
 int CvUnit::getExtraHillsDefensePercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
-			return m_iExtraHillsDefensePercent + pCommander->getExtraHillsDefensePercent();
+			return m_iExtraHillsDefensePercent + pCommander->m_iExtraHillsDefensePercent;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExtraHillsDefensePercent;
 }
 
@@ -20548,25 +20476,19 @@ void CvUnit::changeUpgradeDiscount(int iChange)
 
 int CvUnit::getExperiencePercent() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 05/4/10                                                */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return m_iExperiencePercent + pCommander->getExperiencePercent();
 	}
 	else
 	{
-		return 0; //Great Commanders can not gain XP faster
+		return 0; // Afforess - Great Commanders can not gain XP faster
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return m_iExperiencePercent;
+
+	//return !isCommander() ? m_iExperiencePercent : 0;
 }
 
 void CvUnit::changeExperiencePercent(int iChange)
@@ -21341,10 +21263,10 @@ int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_aiExtraDomainModifier[eIndex] + pCommander->getExtraDomainModifier(eIndex);
+			return m_aiExtraDomainModifier[eIndex] + pCommander->m_aiExtraDomainModifier[eIndex];
 		}
 	}
 	return m_aiExtraDomainModifier[eIndex];
@@ -21664,21 +21586,14 @@ int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraTerrainAttackPercent);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraTerrainAttackPercent);
+
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraTerrainAttackPercent(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -21705,21 +21620,14 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraTerrainDefensePercent);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraTerrainDefensePercent);
+
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraTerrainDefensePercent(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -21746,21 +21654,14 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFeatureAttackPercent);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFeatureAttackPercent);
+
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraFeatureAttackPercent(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -21787,21 +21688,14 @@ int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFeatureDefensePercent);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFeatureDefensePercent);
+
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraFeatureDefensePercent(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -21828,21 +21722,14 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraUnitCombatModifier);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraUnitCombatModifier);
+
 	if (!isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraUnitCombatModifier(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -32319,12 +32206,12 @@ CvUnit* CvUnit::getCommander() const
 	int iBestCommanderDistance = 9999999;
 	if (getOwner() != NO_PLAYER)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
 		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
 		{
 			CvUnit* pCommander = kPlayer.Commanders[i];
-			CvPlot* pCommPlot = pCommander->plot();
+			const CvPlot* pCommPlot = pCommander->plot();
 			if (pCommPlot == NULL)
 			{
 				FErrorMsg("Commander Should Exist!");
@@ -34042,14 +33929,14 @@ int CvUnit::getCityFlankSupportPercentModifier() const
 	return iModifier;
 }
 
-int CvUnit::getExtraFrontSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraFrontSupportPercent + pCommander->getExtraFrontSupportPercent();
+			return m_iExtraFrontSupportPercent + pCommander->m_iExtraFrontSupportPercent;
 		}
 	}
 	return m_iExtraFrontSupportPercent;
@@ -34061,14 +33948,14 @@ void CvUnit::changeExtraFrontSupportPercent(int iChange)
 	FAssert(getExtraFrontSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraShortRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraShortRangeSupportPercent + pCommander->getExtraShortRangeSupportPercent();
+			return m_iExtraShortRangeSupportPercent + pCommander->m_iExtraShortRangeSupportPercent;
 		}
 	}
 	return m_iExtraShortRangeSupportPercent;
@@ -34080,14 +33967,14 @@ void CvUnit::changeExtraShortRangeSupportPercent(int iChange)
 	FAssert(getExtraShortRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraMediumRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraMediumRangeSupportPercent + pCommander->getExtraMediumRangeSupportPercent();
+			return m_iExtraMediumRangeSupportPercent + pCommander->m_iExtraMediumRangeSupportPercent;
 		}
 	}
 	return m_iExtraMediumRangeSupportPercent;
@@ -34099,14 +33986,14 @@ void CvUnit::changeExtraMediumRangeSupportPercent(int iChange)
 	FAssert(getExtraMediumRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraLongRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraLongRangeSupportPercent + pCommander->getExtraLongRangeSupportPercent();
+			return m_iExtraLongRangeSupportPercent + pCommander->m_iExtraLongRangeSupportPercent;
 		}
 	}
 	return m_iExtraLongRangeSupportPercent;
@@ -34118,14 +34005,14 @@ void CvUnit::changeExtraLongRangeSupportPercent(int iChange)
 	FAssert(getExtraLongRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraFlankSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraFlankSupportPercent + pCommander->getExtraFlankSupportPercent();
+			return m_iExtraFlankSupportPercent + pCommander->m_iExtraFlankSupportPercent;
 		}
 	}
 	return m_iExtraFlankSupportPercent;
@@ -37121,20 +37008,13 @@ int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) con
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFlankingStrengthbyUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraFlankingStrengthbyUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37175,20 +37055,13 @@ int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraWithdrawOnTerrainType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraWithdrawOnTerrainType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37229,20 +37102,13 @@ int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraWithdrawOnFeatureType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraWithdrawOnFeatureType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37282,20 +37148,13 @@ int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraWithdrawVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraWithdrawVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37335,20 +37194,13 @@ int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraPursuitVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraPursuitVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37388,20 +37240,13 @@ int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraRepelVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraRepelVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37441,20 +37286,13 @@ int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraKnockbackVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraKnockbackVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37494,20 +37332,13 @@ int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraPunctureVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraPunctureVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37547,20 +37378,13 @@ int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraArmorVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraArmorVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37600,20 +37424,13 @@ int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraDodgeVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraDodgeVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37653,20 +37470,13 @@ int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraPrecisionVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraPrecisionVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37704,21 +37514,14 @@ int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraCriticalVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraCriticalVSUnitCombatType);
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraCriticalVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37756,21 +37559,14 @@ int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraRoundStunVSUnitCombatType);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraRoundStunVSUnitCombatType);
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 			return iBaseAmount + pCommander->getExtraRoundStunVSUnitCombatType(eIndex);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return iBaseAmount;
 }
 
@@ -37792,14 +37588,14 @@ bool CvUnit::hasExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 	return (getExtraRoundStunVSUnitCombatType(eIndex) != 0);
 }
 
-int CvUnit::getExtraRoundStunProb (bool bIgnoreCommanders) const
+int CvUnit::getExtraRoundStunProb(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRoundStunProb + pCommander->getExtraRoundStunProb();
+			return m_iExtraRoundStunProb + pCommander->m_iExtraRoundStunProb;
 		}
 	}
 	return m_iExtraRoundStunProb;
@@ -38957,7 +38753,7 @@ int CvUnit::getExtraCaptureProbabilityModifier(bool bIgnoreCommanders) const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraCaptureProbabilityModifier + pCommander->getExtraCaptureProbabilityModifier();
+			return m_iExtraCaptureProbabilityModifier + pCommander->m_iExtraCaptureProbabilityModifier;
 		}
 	}
 	return m_iExtraCaptureProbabilityModifier;
@@ -38987,14 +38783,14 @@ int CvUnit::captureProbabilityTotal() const
 	return std::max(0, iData);
 }
 
-int CvUnit::getExtraCaptureResistanceModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraCaptureResistanceModifier(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraCaptureResistanceModifier + pCommander->getExtraCaptureResistanceModifier();
+			return m_iExtraCaptureResistanceModifier + pCommander->m_iExtraCaptureResistanceModifier;
 		}
 	}
 	return m_iExtraCaptureResistanceModifier;
@@ -39025,14 +38821,14 @@ int CvUnit::captureResistanceTotal() const
 }
 
 //
-int CvUnit::getExtraBreakdownChance (bool bIgnoreCommanders) const
+int CvUnit::getExtraBreakdownChance(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraBreakdownChance + pCommander->getExtraBreakdownChance();
+			return m_iExtraBreakdownChance + pCommander->m_iExtraBreakdownChance;
 		}
 	}
 	return m_iExtraBreakdownChance;
@@ -39050,14 +38846,14 @@ int CvUnit::breakdownChanceTotal() const
 	return std::max(0, iData);
 }
 
-int CvUnit::getExtraBreakdownDamage (bool bIgnoreCommanders) const
+int CvUnit::getExtraBreakdownDamage(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraBreakdownDamage + pCommander->getExtraBreakdownDamage();
+			return m_iExtraBreakdownDamage + pCommander->m_iExtraBreakdownDamage;
 		}
 	}
 	return m_iExtraBreakdownDamage;
@@ -40660,7 +40456,7 @@ int CvUnit::getExtraBombardRate() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraBombardRate + pCommander->getExtraBombardRate();
+			return m_iExtraBombardRate + pCommander->m_iExtraBombardRate;
 		}
 	}
 	return m_iExtraBombardRate;
@@ -41058,7 +40854,7 @@ int CvUnit::getExtraRBombardDamage() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRBombardDamage + pCommander->getExtraRBombardDamage();
+			return m_iExtraRBombardDamage + pCommander->m_iExtraRBombardDamage;
 		}
 	}
 	return m_iExtraRBombardDamage;
@@ -41111,7 +40907,7 @@ int CvUnit::getExtraRBombardDamageLimit() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRBombardDamageLimit + pCommander->getExtraRBombardDamageLimit();
+			return m_iExtraRBombardDamageLimit + pCommander->m_iExtraRBombardDamageLimit;
 		}
 	}
 	return m_iExtraRBombardDamageLimit;
@@ -41164,7 +40960,7 @@ int CvUnit::getExtraRBombardDamageMaxUnits() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraRBombardDamageMaxUnits + pCommander->getExtraRBombardDamageMaxUnits();
+			return m_iExtraRBombardDamageMaxUnits + pCommander->m_iExtraRBombardDamageMaxUnits;
 		}
 	}
 	return m_iExtraRBombardDamageMaxUnits;
@@ -41217,7 +41013,7 @@ int CvUnit::getExtraDCMBombRange() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDCMBombRange + pCommander->getExtraDCMBombRange();
+			return m_iExtraDCMBombRange + pCommander->m_iExtraDCMBombRange;
 		}
 	}
 	return m_iExtraDCMBombRange;
@@ -41269,7 +41065,7 @@ int CvUnit::getExtraDCMBombAccuracy() const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_iExtraDCMBombAccuracy + pCommander->getExtraDCMBombAccuracy();
+			return m_iExtraDCMBombAccuracy + pCommander->m_iExtraDCMBombAccuracy;
 		}
 	}
 	return m_iExtraDCMBombAccuracy;
@@ -41976,7 +41772,7 @@ int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_aiExtraVisibilityIntensity[eIndex] + pCommander->getExtraVisibilityIntensityType(eIndex);
+			return m_aiExtraVisibilityIntensity[eIndex] + pCommander->m_aiExtraVisibilityIntensity[eIndex];
 		}
 	}
 	return m_aiExtraVisibilityIntensity[eIndex];
@@ -42086,7 +41882,7 @@ int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return m_aiExtraInvisibilityIntensity[eIndex] + pCommander->getExtraInvisibilityIntensityType(eIndex);
+			return m_aiExtraInvisibilityIntensity[eIndex] + pCommander->m_aiExtraInvisibilityIntensity[eIndex];
 		}
 	}
 	return m_aiExtraInvisibilityIntensity[eIndex];
