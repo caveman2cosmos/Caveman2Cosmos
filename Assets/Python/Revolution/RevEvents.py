@@ -490,7 +490,7 @@ def checkRebelBonuses(argsList):
 				icon = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
 				sound = "AS2D_CITY_REVOLT"
 				eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT
-				iMsgTime = GC.getDefineINT("EVENT_MESSAGE_TIME")
+				iMsgTime = GC.getEVENT_MESSAGE_TIME()
 				CvUtil.sendMessage(szTxt, newOwnerID, iMsgTime, icon, ColorTypes(8), ix, iy, True, True, eMsgType, sound, False)
 
 				szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_REBEL_CONTROL",())%(newOwner.getCivilizationDescription(0),pCity.getName())
