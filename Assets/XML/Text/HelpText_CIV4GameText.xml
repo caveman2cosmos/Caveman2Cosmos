@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_EATEN_FOOD_BY_UNITS</Tag>
+		<English>[ICON_BULLET]Food consumed by units: %d1 [ICON_FOOD]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
 	</TEXT>

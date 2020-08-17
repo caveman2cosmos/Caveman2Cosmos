@@ -33258,6 +33258,15 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		iFoodConsumed += iEatenFood;
 	}
 
+	// Food consumed by Units
+	const int iFoodConsumedByUnits = city.getFoodConsumedByUnits();
+	if (iFoodConsumedByUnits != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_EATEN_FOOD_BY_UNITS", iFoodConsumedByUnits));
+		iFoodConsumed += iFoodConsumedByUnits;
+	}
+
 	// Wasted
 	int iWastedFood = (int)city.foodWastage();
 	if (iWastedFood != 0)
