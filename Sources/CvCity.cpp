@@ -6652,11 +6652,14 @@ int CvCity::getFoodConsumedByPopulation(const int iExtra) const
 
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
-	return getFoodConsumedByPopulation(iExtra)
-		+ getFoodConsumedByUnits()
+	const int iFoodConsumed = getFoodConsumedByPopulation(iExtra)
 		- (bNoAngry ? angryPopulation(iExtra) : 0) // Doesn't belong here, should be extracted out to wherever it is needed
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
+
+	return GC.getGame().isOption(GAMEOPTION_UNITS_CONSUME_FOOD)
+		? iFoodConsumed + getFoodConsumedByUnits()
+		: iFoodConsumed;
 }
 
 // Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
