@@ -5020,9 +5020,12 @@ class CvMainInterface:
 		self.updateTooltip(screen, szTxt)
 
 	def treasuryHelp(self, screen, szTxt):
-		iconCommerceGold = self.iconCommerceList[0]
 		player = self.CyPlayer
+		iconCommerceGold = self.iconCommerceList[0]
 		szTxt += "\n%s: %d" % (iconCommerceGold, player.getGold())
+		if player.isAnarchy():
+			self.updateTooltip(screen, szTxt)
+			return
 		# Treasury Upkeep
 		iValue = player.getTreasuryUpkeep()
 		if iValue:
