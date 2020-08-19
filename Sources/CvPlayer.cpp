@@ -9046,15 +9046,20 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 
 int CvPlayer::calculatePreInflatedCosts() const
-{
-	int64_t iCosts = getFinalUnitUpkeep();
-	iCosts += calculateUnitSupply();
-	iCosts += getTotalMaintenance();
-	iCosts += getCivicUpkeep();
-	iCosts += getTreasuryUpkeep();
-	iCosts -= getCorporateTaxIncome();
-
-	return static_cast<int>(iCosts);
+{ 
+	if (isAnarchy())
+	{
+		return 0;
+	}
+	return
+	(
+		getTreasuryUpkeep()
+		+ getTotalMaintenance()
+		+ getCivicUpkeep()
+		+ getFinalUnitUpkeep()
+		+ calculateUnitSupply()
+		- getCorporateTaxIncome()
+	);
 }
 
 //	Called once per turn to update the current cost-to-turn-1-cost ratio
