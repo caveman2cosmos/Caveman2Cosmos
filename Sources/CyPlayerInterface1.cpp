@@ -108,7 +108,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getFinalUnitUpkeep", &CyPlayer::getFinalUnitUpkeep, "int64 ()")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int64 ()")
-		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int ()")
+		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int64 ()")
 
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")
