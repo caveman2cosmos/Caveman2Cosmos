@@ -657,7 +657,7 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-long long CyPlayer::getFinalUnitUpkeep()
+int64_t CyPlayer::getFinalUnitUpkeep()
 {
 	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }
@@ -667,7 +667,7 @@ int CyPlayer::calculateUnitSupply()
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
 }
 
-int CyPlayer::calculatePreInflatedCosts()
+int64_t CyPlayer::calculatePreInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculatePreInflatedCosts() : -1;
 }
