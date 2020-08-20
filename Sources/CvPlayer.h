@@ -321,12 +321,12 @@ public:
 
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const; // Exposed to Python
 	int calculateUnitSupply() const; // Exposed to Python
-	int calculatePreInflatedCosts() const; // Exposed to Python
+	int64_t calculatePreInflatedCosts() const; // Exposed to Python
 	int calculateInflationRate() const; // Exposed to Python
-	int calculateInflatedCosts() const; // Exposed to Python
+	int64_t calculateInflatedCosts() const; // Exposed to Python
 	int getCurrentInflationPerTurnTimes10000() const;
 
-	int calculateBaseNetGold() const;
+	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const; // Exposed to Python
 	int calculateResearchModifier(TechTypes eTech) const; // Exposed to Python
 	int calculateGoldRate() const; // Exposed to Python

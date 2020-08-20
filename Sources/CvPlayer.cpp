@@ -9045,7 +9045,7 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 }
 
 
-int CvPlayer::calculatePreInflatedCosts() const
+int64_t CvPlayer::calculatePreInflatedCosts() const
 { 
 	if (isAnarchy())
 	{
@@ -9143,24 +9143,11 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 		iModifier += iAIModifier - 100;
 	}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/31/08                                jdog5000      */
-/*                                                                                              */
-/* Reduced inflation cost for rebels                                                            */
-/************************************************************************************************/
-	if( isRebel() )
-		iModifier -= 50;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	if (isRebel()) iModifier -= 50;
+
 	iInflationPerTurnTimes10000 *= std::max(0, 100 + iModifier);
 	iInflationPerTurnTimes10000 /= 100;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	// ls612: remove inflation for hurrying things
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
 	{
@@ -9185,10 +9172,6 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 		iInflationPerTurnTimes10000 *= std::max(0, 100 + iHurryInflation);
 		iInflationPerTurnTimes10000 /= 100;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	return iInflationPerTurnTimes10000/100;
 }
 
@@ -9200,9 +9183,9 @@ int CvPlayer::calculateInflationRate() const
 }
 
 
-int CvPlayer::calculateInflatedCosts() const
+int64_t CvPlayer::calculateInflatedCosts() const
 {
-	int iCosts = calculatePreInflatedCosts();
+	int64_t iCosts = calculatePreInflatedCosts();
 
 	iCosts *= std::max(0, (calculateInflationRate() + 100));
 	iCosts /= 100;
@@ -9211,13 +9194,9 @@ int CvPlayer::calculateInflatedCosts() const
 }
 
 
-int CvPlayer::calculateBaseNetGold() const
+int64_t CvPlayer::calculateBaseNetGold() const
 {
-	int iNetGold = (getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn());
-
-	iNetGold -= calculateInflatedCosts();
-
-	return iNetGold;
+	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - calculateInflatedCosts();
 }
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
@@ -9240,11 +9219,6 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	int iKnownCount = 0;
 	int iPossibleKnownCount = 0;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/27/09                                jdog5000      */
-/*                                                                                              */
-/* Tech Diffusion                                                                               */
-/************************************************************************************************/
 	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
@@ -9361,46 +9335,33 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 	{
 		iMult = getNationalTechResearchModifier(eResearchTech) + calculateResearchModifier(eResearchTech);
 	}
-	return (((GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH)) * iMult / 100));
+	return (GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH)) * iMult / 100;
 }
 
 
 int CvPlayer::calculateGoldRate() const
 {
-	int iRate = 0;
-
 	if (isCommerceFlexible(COMMERCE_RESEARCH))
 	{
-		iRate = calculateBaseNetGold();
+		return static_cast<int>(calculateBaseNetGold());
 	}
-	else
-	{
-		iRate = std::min(0, (calculateBaseNetResearch() + calculateBaseNetGold()));
-	}
-
-	return iRate;
+	return static_cast<int>(std::min<int64_t>(0, calculateBaseNetResearch() + calculateBaseNetGold()));
 }
 
 
 int CvPlayer::calculateResearchRate(TechTypes eTech) const
 {
-	int iRate = 0;
-
 	if (isCommerceFlexible(COMMERCE_RESEARCH))
 	{
-		iRate = calculateBaseNetResearch(eTech);
+		return calculateBaseNetResearch(eTech);
 	}
-	else
-	{
-		iRate = std::max(1, (calculateBaseNetResearch(eTech) + calculateBaseNetGold()));
-	}
+	return static_cast<int>(std::max<int64_t>(1, calculateBaseNetResearch(eTech) + calculateBaseNetGold()));
 
-	return iRate;
 }
 
 int CvPlayer::calculateTotalCommerce() const
 {
-	int iTotalCommerce = calculateBaseNetGold() + calculateBaseNetResearch();
+	int64_t iTotalCommerce = calculateBaseNetGold() + calculateBaseNetResearch();
 
 	for (int i = 0; i < NUM_COMMERCE_TYPES; ++i)
 	{
@@ -9409,8 +9370,7 @@ int CvPlayer::calculateTotalCommerce() const
 			iTotalCommerce += getCommerceRate((CommerceTypes)i);
 		}
 	}
-
-	return iTotalCommerce;
+	return static_cast<int>(iTotalCommerce);
 }
 
 bool CvPlayer::isResearch() const
