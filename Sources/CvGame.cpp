@@ -8817,7 +8817,7 @@ int CvGame::calculateSyncChecksum()
 
 	int iJ;
 
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	iValue += getMapRand().getSeed();
 	iValue += getSorenRand().getSeed();
@@ -8840,7 +8840,7 @@ int CvGame::calculateSyncChecksum()
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold());
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold() % 1000000);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumCities() * 436);
@@ -8964,7 +8964,7 @@ int CvGame::calculateSyncChecksum()
 		}
 	}
 
-	return iValue;
+	return (int)iValue;
 }
 
 

@@ -222,8 +222,8 @@ public:
 	int getTotalLandScored();
 
 	int64_t getGold() const;
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
 
 	int getAdvancedStartPoints();

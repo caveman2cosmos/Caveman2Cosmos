@@ -950,13 +950,13 @@ int64_t CyPlayer::getGold() const
 	return m_pPlayer ? m_pPlayer->getGold() : -1;
 }
 
-void CyPlayer::setGold(int iNewValue)
+void CyPlayer::setGold(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setGold(iNewValue);
 }
 
-void CyPlayer::changeGold(int iChange)
+void CyPlayer::changeGold(int64_t iChange)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeGold(iChange);
