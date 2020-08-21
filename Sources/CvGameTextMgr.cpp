@@ -33754,37 +33754,36 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer)
 {
-	bool bFirst = true;
-	CivilizationTypes eCivilization = GET_PLAYER(ePlayer).getCivilizationType();
-	int iDisplayCount = GET_PLAYER(ePlayer).getTraitDisplayCount();
+	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 	int iPotentialDisplays = 0;
-	int iCurrentDisplay = 0;
-	int iTrait;
-	if (iPotentialDisplays == 0)
+
+	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
 	{
-		for (iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
+		if (kPlayer.hasTrait((TraitTypes)iTrait))
 		{
-			if (GET_PLAYER(ePlayer).hasTrait((TraitTypes)iTrait))
-			{
-				iPotentialDisplays++;
-			}
+			iPotentialDisplays++;
 		}
 	}
+	const int iDisplayCount = kPlayer.getTraitDisplayCount();
+
 	if (gDLL->shiftKey())
 	{
 		if (iDisplayCount > iPotentialDisplays)
 		{
-			GET_PLAYER(ePlayer).setTraitDisplayCount(0);
+			kPlayer.setTraitDisplayCount(0);
 		}
 		else
 		{
-			GET_PLAYER(ePlayer).changeTraitDisplayCount(1);
+			kPlayer.changeTraitDisplayCount(1);
 		}
 	}
-	iDisplayCount = GET_PLAYER(ePlayer).getTraitDisplayCount();
-	for (iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
+	bool bFirst = true;
+	const CivilizationTypes eCivilization = kPlayer.getCivilizationType();
+	int iCurrentDisplay = 0;
+
+	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
 	{
-		if (GET_PLAYER(ePlayer).hasTrait((TraitTypes)iTrait))
+		if (kPlayer.hasTrait((TraitTypes)iTrait))
 		{
 			iCurrentDisplay++;
 			if (bFirst)
@@ -33817,36 +33816,16 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_CYCLING_HELP"));
 
-	iCurrentDisplay = 0;
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
-		int iLeaderLevel = GET_PLAYER(ePlayer).getLeaderHeadLevel();
-		int iNationalCulture = GET_PLAYER(ePlayer).getCulture();
-		int iGreaterCulture = GET_PLAYER(ePlayer).getGreaterCulture();
-		int iNextGreaterCulture = 0;
-		int iNextLevelup = GET_PLAYER(ePlayer).getLeaderLevelupNextCultureTotal(iNextGreaterCulture);
-		int iNextGreaterCultureRemaining = 0;
-		int iRemaining = GET_PLAYER(ePlayer).getLeaderLevelupCultureToEarn(iNextGreaterCultureRemaining);
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", iLeaderLevel));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", kPlayer.getLeaderHeadLevel()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", iNationalCulture));
-		if (iGreaterCulture > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iGreaterCulture));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", kPlayer.getCulture()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", iNextLevelup));
-		if (iNextGreaterCulture > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iNextGreaterCulture));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", kPlayer.getLeaderLevelupNextCultureTotal()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", iRemaining));
-		if (iNextGreaterCultureRemaining > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iNextGreaterCultureRemaining));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", kPlayer.getLeaderLevelupCultureToEarn()));
 	}
 }
 

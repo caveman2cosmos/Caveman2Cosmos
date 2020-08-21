@@ -80,7 +80,8 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
-typedef long long        int64_t;
+typedef long long           int64_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits

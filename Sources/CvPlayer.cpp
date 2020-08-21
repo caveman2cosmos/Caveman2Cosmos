@@ -1062,7 +1062,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCorporateTaxIncome = 0;
 
 	m_iCulture = 0;
-	m_iGreaterCulture = 0;
 
 	m_iUpgradeRoundCount = 0;
 	m_iSelectionRegroup = 0;
@@ -5285,7 +5284,6 @@ unsigned long long CvPlayer::countTotalCulture() const
 void CvPlayer::doCountTotalCulture()
 {
 	m_iCulture = 0;
-	m_iGreaterCulture = 0;
 
 	foreach_(const CvCity* pLoopCity, cities())
 	{
@@ -21161,9 +21159,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCityOverLimitUnhappy);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForeignUnhappyPercent);
 
+		// @SAVEBREAK DELETE
 		// Calculate player culture as the sum of city culture if not present in save game
 		m_iCulture = -1;
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iCulture, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 
 		// @SAVEBREAK DELETE Toffer
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentCulturalAge, SAVE_VALUE_ANY);
@@ -21971,12 +21971,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterGold);
 		// SAVEBREAK@
 
+		// @SAVEBREAK DELETE
+		int m_iGreaterCulture;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterCulture);
+		// SAVEBREAK@
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
-		if (m_iGreaterCulture > 1000000)
-		{
-			doCountTotalCulture();
-		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 
@@ -22001,11 +22001,16 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
 		m_iGold = static_cast<long long>(fGold) 
 			// @SAVEBREAK DELETE
-			+ (1000000 * m_iGreaterGold);
+			+ (1000000 * m_iGreaterGold)
 			// SAVEBREAK@
-
-		//Example of how to skip element
-		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
+		;
+		double fCulture;
+		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
+		m_iCulture = static_cast<long long>(fCulture) 
+			// @SAVEBREAK DELETE
+			+ (1000000 * m_iGreaterCulture)
+			// SAVEBREAK@
+		;
 	}
 	else
 	{
@@ -22014,7 +22019,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		uninit();
 	}
-
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -22026,7 +22030,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		//	know better (avoids an initial viewport move in most cases)
 		if ( GC.getCurrentViewport()->getState() == VIEWPORT_MODE_UNINITIALIZED )
 		{
-			CvCity* pCapital = getCapitalCity();
+			const CvCity* pCapital = getCapitalCity();
 
 			if ( pCapital != NULL )
 			{
@@ -22296,8 +22300,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityLimit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityOverLimitUnhappy);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iForeignUnhappyPercent);
-
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCulture);
 
 		//	Subdue and construct-by-unit stats
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumAnimalsSubdued);
@@ -22720,7 +22722,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterGold);
 		// SAVEBREAK@
 
+		// @SAVEBREAK DELETE
+		int m_iGreaterCulture = 0;
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGreaterCulture);
+		// SAVEBREAK@
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalGreatPeopleRate);
 		//TB Traits end
 
@@ -22743,6 +22749,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		double fGold = static_cast<double>(m_iGold);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
+
+		double fCulture = static_cast<double>(m_iCulture);
+		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
 	}
 	//	Use condensed format now - only save non-default array elements
 
@@ -30610,15 +30619,6 @@ void CvPlayer::setCulture(int iNewValue)
 {
 	if (getCulture() != iNewValue)
 	{
-		int iSwitchPoint = GC.getGREATER_COMMERCE_SWITCH_POINT();
-		int iGreaterCulture = getGreaterCulture();
-		int iChangeGC = iNewValue / iSwitchPoint;
-		if (iNewValue >= iSwitchPoint)
-		{
-			changeGreaterCulture(iChangeGC);
-			iNewValue -= iSwitchPoint * iChangeGC;
-		}
-
 		m_iCulture = iNewValue;
 	}
 }
@@ -30630,21 +30630,6 @@ void CvPlayer::changeCulture(int iAddValue)
 		m_iCulture = processedNationalCulture();
 	}
 	setCulture(m_iCulture + iAddValue);
-}
-
-int CvPlayer::getGreaterCulture() const
-{
-	return m_iGreaterCulture;
-}
-
-void CvPlayer::setGreaterCulture(int iNewValue)
-{
-	m_iGreaterCulture = iNewValue;
-}
-
-void CvPlayer::changeGreaterCulture(int iAddValue)
-{
-	m_iGreaterCulture += iAddValue;
 }
 
 
@@ -32468,7 +32453,24 @@ void CvPlayer::changeLeaderHeadLevel(int iChange)
     setLeaderHeadLevel(getLeaderHeadLevel() + iChange);
 }
 
-int CvPlayer::getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq)
+uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
+{
+	uint64_t iPromoThreshold = 100;
+	int iPromoThresholdExponent = (getLeaderHeadLevel() + 1);
+
+	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	{
+		iPromoThreshold = 10;
+		iPromoThresholdExponent = getLeaderHeadLevel();
+	}
+	for (int iI = 0; iI < iPromoThresholdExponent; iI++)
+	{
+		iPromoThreshold *= 10;
+	}
+	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent() / 100;
+}
+/*
+int CvPlayer::getLeaderLevelupNextCultureTotal() const
 {
 	int iPromoThreshold = 1000;
 	int iLL = getLeaderHeadLevel();//ill=6
@@ -32490,37 +32492,18 @@ int CvPlayer::getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq)
 	for (int x = 0; x < iIteratorA; x++)
 	{
 		iZ = (iX * iY);
-		if (!bMillionsTriggered)
+		iPromoThreshold = iX + iZ;
+		iIteratorB = iPromoThreshold;
+		iIteratorB /= 1000000;
+		for (int y = 0; y < iIteratorB; y++)
 		{
-			iPromoThreshold = iX + iZ;
-			iIteratorB = iPromoThreshold;
-			iIteratorB /= 1000000;
-			for (int y = 0; y < iIteratorB; y++)
-			{
-				iUnmodifiedMillions++;
-				iPromoThreshold -= 1000000;
-				bMillionsTriggered = true;
-			}
+			iUnmodifiedMillions++;
+			iPromoThreshold -= 1000000;
+			bMillionsTriggered = true;
 		}
-		else
-		{
-			iMillions = iX + iZ;
-		}
-		if (!bMillionsTriggered)
-		{
-			iX = iPromoThreshold;
-		}
-		else if (iUnmodifiedMillions > 0)
-		{
-			iX = iUnmodifiedMillions;
-			iMillions = iUnmodifiedMillions;
-			iPromoThreshold = 0;
-			iUnmodifiedMillions = 0;
-		}
-		else
-		{
-			iX = iMillions;
-		}
+
+		iX = iPromoThreshold;
+
 		iY--;
 		iY = std::max(1, iY);
 	}
@@ -32549,54 +32532,16 @@ int CvPlayer::getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq)
 
 	return iPromoThreshold;
 }
-
-int CvPlayer::getLeaderLevelupCultureToEarn(int& iGreaterCultureReq)
+*/
+int64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
-	int iGreaterCultureThreshold = 0;
-	int iPromoThreshold = getLeaderLevelupNextCultureTotal(iGreaterCultureThreshold);
-	int iCurrentNationalCulture = getCulture();
-	int iTotal = iPromoThreshold;
-	int iGreaterCulture = getGreaterCulture();
-	if (iGreaterCultureThreshold > 0)
-	{
-		iGreaterCultureReq = iGreaterCultureThreshold - iGreaterCulture - 1;
-		iTotal += 1000000;
-	}
-	else
-	{
-		iGreaterCultureReq = 0;
-	}
-	iTotal -= iCurrentNationalCulture;
-
-	if (iGreaterCultureReq < 0)
-	{
-		iTotal = 0;
-	}
-	if (iTotal < 0)
-	{
-		iTotal = 0;
-	}
-	return iTotal;
+	//return getLeaderLevelupNextCultureTotal() - countTotalCulture();
+	return getLeaderLevelupNextCultureTotal() - getCulture();
 }
 
-bool CvPlayer::canLeaderPromote()
+bool CvPlayer::canLeaderPromote() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
-	{
-		return false;
-	}
-
-	int iGreaterCultureRequired = 0;
-	int iCultureRequired = getLeaderLevelupCultureToEarn(iGreaterCultureRequired);
-	//Here we then need to manipulate iPromoThreshold by Gamespeed and Mapsize modifiers
-	//unsigned long long iCurrentNationalCulture = getCulture();
-	//int iGreaterCulture = getGreaterCulture();
-	if (iGreaterCultureRequired < 1 && iCultureRequired < 1)
-	{
-		return true;
-	}
-
-	return false;
+	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() < 1;
 }
 
 void CvPlayer::doPromoteLeader()

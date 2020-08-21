@@ -1928,8 +1928,7 @@ protected:
 	PlayerTypes m_eParent;
 	TeamTypes m_eTeamType;
 
-	// Members for culture accumulation
-	int m_iCulture;
+	int64_t m_iCulture;
 	int m_iGreaterCulture;
 
 	int m_iUpgradeRoundCount;
@@ -2133,10 +2132,10 @@ public:
 	void setLeaderHeadLevel(int iValue);
 	void changeLeaderHeadLevel(int iChange);
 
-	int getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq);
-	int getLeaderLevelupCultureToEarn(int& iGreaterCultureReq);
+	uint64_t getLeaderLevelupNextCultureTotal() const;
+	uint64_t getLeaderLevelupCultureToEarn() const;
 
-	bool canLeaderPromote();
+	bool canLeaderPromote() const;
 	void doPromoteLeader();
 	void clearLeaderTraits();
 
