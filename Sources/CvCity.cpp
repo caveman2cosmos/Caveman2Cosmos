@@ -6656,10 +6656,10 @@ int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bI
 // Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
 float CvCity::foodWastage(int surplass) const
 {
-#define    MAX_SURPLASS    2000
+#define MAX_SURPLASS    200
 	static float calculatedWaste[MAX_SURPLASS];
 	static int calculatedTo = -1;
-	int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
+	const int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
 	float wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
 
 	if (wastageGrowthFactor == 0)
