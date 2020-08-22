@@ -2829,26 +2829,23 @@ int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) c
 }
 
 
+// This function needs to be converted to return an uint64_t.
 int CvTeam::getResearchCost(TechTypes eTech) const
 {
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
-	//This whole function needs to be converted to an unsigned long long.  That's quite a task but should be possible and if it doesn, we should be able to make it to the end of the game with the base modified even at the extremest points.
-	int iInitialCost = GC.getTechInfo(eTech).getResearchCost();
+	const int iInitialCost = GC.getTechInfo(eTech).getResearchCost();
 	if (iInitialCost < 0)
 	{
 		return -1;
 	}
-
-	uint64_t iCost = (uint64_t)iInitialCost;
-
-	iCost *= 100;
+	uint64_t iCost = 100 * iInitialCost;
 
 	int iBeelineStingsTechCostModifier = 0;
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
-		int iTechEra = GC.getTechInfo(eTech).getEra();
-		int iPlayerEra = MAXINT;
+		const int iTechEra = GC.getTechInfo(eTech).getEra();
+		int iPlayerEra = MAX_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -2857,77 +2854,59 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				break;
 			}
 		}
-		FAssertMsg(iPlayerEra != MAXINT, "No player found on team!");
+		FAssertMsg(iPlayerEra != MAX_INT, "No player found on team!");
 
 		if (iTechEra < iPlayerEra)
 		{
 			for (int iI = 0; iI < GC.getNumEraInfos(); iI++)
 			{
-				int iEvalEra = iI;
-				EraTypes eEvalEra = (EraTypes)iI;
-				if (iEvalEra >= iTechEra && iEvalEra < iPlayerEra)
+				if (iI >= iTechEra && iI < iPlayerEra)
 				{
-					iBeelineStingsTechCostModifier += GC.getEraInfo(eEvalEra).getBeelineStingsTechCostModifier();
+					iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
 					//just need to add the tag iBeelineStingsModifier to Era Infos.
 				}
-				else if (iEvalEra >= iPlayerEra)
+				else if (iI >= iPlayerEra)
 				{
 					break;
 				}
 			}
 		}
 	}
-
-	int iModifier = GC.getTECH_COST_MODIFIER();
-	iCost *= iModifier;
+	iCost *= GC.getTECH_COST_MODIFIER();
 	iCost /= 100;
 
-	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getHandicapInfo(getHandicapType()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = iBeelineStingsTechCostModifier + 100;
-	iCost *= iModifier;
+	iCost *= 100 + iBeelineStingsTechCostModifier;
 	iCost /= 100;
 
-	iModifier = std::max(0, (GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * getNumMembers()));
-	iCost *= iModifier;
+	iCost *= std::max(0, GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * getNumMembers());
 	iCost /= 100;
 
 	if (!isHuman() && !isNPC())
 	{
-		iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
-		iCost *= iModifier;
+		iCost *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
 		iCost /= 100;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
 	{
-		iModifier = GC.getUPSCALED_RESEARCH_COST_MODIFIER() + 100;
-		iCost *= iModifier;
+		iCost *= 100 + GC.getUPSCALED_RESEARCH_COST_MODIFIER();
 		iCost /= 100;
 	}
-
 	iCost /= 100;
 
-	int iFinalCost = MAX_INT;
-	if (iCost < MAX_INT)
-	{
-		iFinalCost = (int)iCost;
-	}
-	return std::max(1, iFinalCost);
+	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
 }
 
 

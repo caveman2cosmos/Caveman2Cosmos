@@ -32541,7 +32541,7 @@ bool CvPlayer::canLeaderPromote()
 	int iGreaterCultureRequired = 0;
 	int iCultureRequired = getLeaderLevelupCultureToEarn(iGreaterCultureRequired);
 	//Here we then need to manipulate iPromoThreshold by Gamespeed and Mapsize modifiers
-	//unsigned long long iCurrentNationalCulture = getCulture();
+	//uint64_t iCurrentNationalCulture = getCulture();
 	//int iGreaterCulture = getGreaterCulture();
 	if (iGreaterCultureRequired < 1 && iCultureRequired < 1)
 	{
