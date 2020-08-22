@@ -4249,7 +4249,7 @@ void CvPlayer::doTurn()
 
 	doAdvancedEconomy();
 
-	doInflation(false);
+	doInflation();
 
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
@@ -5277,7 +5277,7 @@ int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 }
 
 
-unsigned long long CvPlayer::countTotalCulture() const
+uint64_t CvPlayer::countTotalCulture() const
 {
 	return algo::accumulate(cities() | transformed(CvCity::fn::getCultureTimes100(getID())), 0) / 100;
 }
@@ -7146,7 +7146,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 		// keep messages in event log forever
 		MEMORY_TRACK_EXEMPT();
 
-		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getGoodyInfo(eGoody).getSound(), MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getImprovementArtInfo("ART_DEF_IMPROVEMENT_GOODY_HUT")->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pPlot->getX(), pPlot->getY());
+		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getGoodyInfo(eGoody).getSound(), MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getImprovementArtInfo("ART_DEF_IMPROVEMENT_GOODY_HUT")->getButton(), CvColorInfo::white(), pPlot->getX(), pPlot->getY());
 	}
 
 	CvPlot* pLoopPlot;
@@ -8175,7 +8175,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	{
 		return -1;
 	}
-	unsigned long long iProductionNeeded = (unsigned long long)iInitialProduction;
+	uint64_t iProductionNeeded = (uint64_t)iInitialProduction;
 
 
 	iProductionNeeded *= 100;
@@ -8278,7 +8278,7 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 	{
 		return -1;
 	}
-	unsigned long long iProductionNeeded = (unsigned long long) 100*iBaseCost;
+	uint64_t iProductionNeeded = (uint64_t) 100*iBaseCost;
 
 	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 	iProductionNeeded /= 100;
@@ -8335,7 +8335,7 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 	{
 		return -1;
 	}
-	unsigned long long iProductionNeeded = (unsigned long long)iInitialProduction;
+	uint64_t iProductionNeeded = (uint64_t)iInitialProduction;
 
 	iProductionNeeded *= 100;
 
@@ -9062,34 +9062,33 @@ int64_t CvPlayer::calculatePreInflatedCosts() const
 	);
 }
 
-//	Called once per turn to update the current cost-to-turn-1-cost ratio
-void CvPlayer::doInflation(bool pReinit)
+// Called once per turn to update the current cost-to-turn-1-cost ratio
+void CvPlayer::doInflation()
 {
-    if (pReinit)
-	{
-		m_accruedCostRatioTimes10000 = 10000;
-	}
-	else
-	{
-		// Keep up to second order terms in binomial series
-		int iAccruedCostRatioTimes10000 = (getEquilibriumInflationCostModifier()+100) * 100;
+	// Keep up to second order terms in binomial series
+	const int iAccruedCostRatioTimes10000 = 100 * (100 + getEquilibriumInflationCostModifier());
 
-		// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.  We
-		// 'decay' the current cost multiplier towards this equilibrium value
-		int iInflationRateMomentum = GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50);
-
-		iInflationRateMomentum *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent();
-		iInflationRateMomentum /= 100;
-
-		if ( iInflationRateMomentum < 1 )
-		{
-			iInflationRateMomentum = 1;
-		}
-		m_accruedCostRatioTimes10000 += (iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 + (iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1)*(iInflationRateMomentum - 1))/iInflationRateMomentum;
-
-		//Debug to check the evolution of the inflation value.
-		OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
-	}
+	// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.
+	// We 'decay' the current cost multiplier towards this equilibrium value.
+	const int iInflationRateMomentum = std::max
+	(
+		1,
+		(
+			GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50)
+			* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent()
+			/ 100
+		)
+	);
+	m_accruedCostRatioTimes10000 +=
+	(
+		(
+			iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 +
+			(iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1) * (iInflationRateMomentum - 1)
+		)
+		/ iInflationRateMomentum
+	);
+	//Debug to check the evolution of the inflation value.
+	OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
 }
 
 int CvPlayer::getCurrentInflationCostModifier() const
@@ -9099,32 +9098,21 @@ int CvPlayer::getCurrentInflationCostModifier() const
 
 int CvPlayer::getEquilibriumInflationCostModifier() const
 {
-	int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
-	int iTurns = ((GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2);
+	const int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
+	int iTurns = (GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2;
 
 	if (GC.getGame().getMaxTurns() > 0)
 	{
 		iTurns = std::min(GC.getGame().getMaxTurns(), iTurns);
 	}
-
 	iTurns += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationOffset();
 
-	//	How many turns (max) do we compound inflation over?
-	int	iInflationTurnCeiling = GC.getDefineINT("MAX_INFLATION_EFFECT_WINDOW", 200);
-
-	if ( iTurns > iInflationTurnCeiling )
-	{
-		iTurns = iInflationTurnCeiling;
-	}
-	else if ( iTurns < 0 )
-	{
-		iTurns = 0;
-	}
-
 	// Keep up to second order terms in binomial series
-	int iAccruedCostRatioTimes10000 = 10000 + iTurns * iInflationPerTurnTimes10000;
-	iAccruedCostRatioTimes10000 += (iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000) / 20000;
-
+	const int iAccruedCostRatioTimes10000 =
+	(
+		10000 + iTurns * iInflationPerTurnTimes10000
+		+ iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000 / 20000
+	);
 	return iAccruedCostRatioTimes10000/100 - 100;
 }
 
@@ -9148,28 +9136,21 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 	iInflationPerTurnTimes10000 *= std::max(0, 100 + iModifier);
 	iInflationPerTurnTimes10000 /= 100;
 
-	// ls612: remove inflation for hurrying things
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
 	{
-		int iCivicModifier = getCivicInflation();
-		int iProjectModifier = getProjectInflation();
-		int iTechInflation = getTechInflation();
-		int iBuildingInflation = getBuildingInflation();
-		int iHurryInflation = getHurriedCount();
-
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iCivicModifier);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iProjectModifier);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iTechInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iBuildingInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iHurryInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getHurriedCount());
 		iInflationPerTurnTimes10000 /= 100;
 	}
 	return iInflationPerTurnTimes10000/100;
@@ -9177,9 +9158,7 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 
 int CvPlayer::calculateInflationRate() const
 {
-	int iRatePercent = (m_accruedCostRatioTimes10000 == -1 ? 0 : (m_accruedCostRatioTimes10000-10000)/100);
-
-	return iRatePercent;
+	return m_accruedCostRatioTimes10000 == -1 ? 0 : m_accruedCostRatioTimes10000 / 100 - 100;
 }
 
 
@@ -9187,7 +9166,7 @@ int64_t CvPlayer::calculateInflatedCosts() const
 {
 	int64_t iCosts = calculatePreInflatedCosts();
 
-	iCosts *= std::max(0, (calculateInflationRate() + 100));
+	iCosts *= std::max(0, calculateInflationRate() + 100);
 	iCosts /= 100;
 
 	return iCosts;
@@ -10564,7 +10543,7 @@ void CvPlayer::changeTotalPopulation(int iChange)
 	}
 	changePopScore(-(getPopulationScore(getTotalPopulation())));
 
-	unsigned long long iPopTest = (int64_t)m_iTotalPopulation;
+	uint64_t iPopTest = (int64_t)m_iTotalPopulation;
 
 	iPopTest += iChange;
 	if (iPopTest > MAX_INT)
@@ -11687,7 +11666,7 @@ int64_t CvPlayer::getUnitUpkeepMilitary100() const
 
 int64_t CvPlayer::getUnitUpkeepCivilian() const
 {
-	unsigned long long iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepCivilian100);
+	uint64_t iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepCivilian100);
 
 	if (m_iCivilianUnitUpkeepMod > 0)
 	{
@@ -11707,7 +11686,7 @@ int64_t CvPlayer::getUnitUpkeepCivilianNet() const
 
 int64_t CvPlayer::getUnitUpkeepMilitary() const
 {
-	unsigned long long iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepMilitary100);
+	uint64_t iUpkeep = std::max<int64_t>(0, m_iUnitUpkeepMilitary100);
 
 	if (m_iMilitaryUnitUpkeepMod > 0)
 	{
@@ -12117,10 +12096,6 @@ int CvPlayer::getCorporationMaintenanceModifier() const
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						19.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 {
 	if (iChange != 0)
@@ -12133,9 +12108,6 @@ void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 		}
 	}
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 int CvPlayer::getTotalMaintenance() const
@@ -13984,7 +13956,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 }
 
 
-void CvPlayer::addPlotDangerSource(CvPlot* pPlot, int iStrength)
+void CvPlayer::addPlotDangerSource(const CvPlot* pPlot, int iStrength)
 {
 	if ( iStrength != 0 )
 	{
@@ -19504,7 +19476,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				changeAdvancedStartPoints(-iCost);
 				if (getAdvancedStartCityCost(true, pPlot) >= 0)
 				{
-					NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+					NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
 					color.a = 0.4f;
 					gDLL->getEngineIFace()->fillAreaBorderPlot(pPlot->getViewportX(), pPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
@@ -21114,11 +21086,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
 
-		//	Cope with old saves not having an accrued cost ratio value
-		//	Use a sentinel value of -1, which will be taken as a signal to
-		//	initialize using the old calculation on first recalculation
-		//	opportunity
-		m_accruedCostRatioTimes10000 = -1;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_accruedCostRatioTimes10000);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
@@ -23023,7 +22990,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 						if (bShowPlot)
 						{
-							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
+							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white(), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
 						}
 						else
 						{
@@ -23051,11 +23018,11 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 			if (kTrigger.isShowPlot() && NULL != pPlot && pPlot->isRevealed(getTeam(), false))
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
+				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white(), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
 			}
 			else
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"));
+				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white());
 			}
 		}
 	}
@@ -24278,7 +24245,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 						if (bShowPlot)
 						{
-							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, true, true);
+							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white(), pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, true, true);
 						}
 						else
 						{
@@ -24325,11 +24292,11 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			if (pTriggeredData->m_eTrigger > NO_EVENTTRIGGER && GC.getEventTriggerInfo(pTriggeredData->m_eTrigger).isShowPlot())
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szLocalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, true, true);
+				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szLocalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white(), pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, true, true);
 			}
 			else
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szLocalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"));
+				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szLocalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, CvColorInfo::white());
 			}
 		}
 
@@ -26278,7 +26245,7 @@ void CvPlayer::processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive)
 
 int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 {
-	unsigned long long iVotes = 0;
+	uint64_t iVotes = 0;
 
 	ReligionTypes eReligion = GC.getGame().getVoteSourceReligion(eVoteSource);
 
@@ -31515,7 +31482,7 @@ void CvPlayer::recalculateModifiers()
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
 	recalculateUnitCounts();
 
-	doInflation(false); //true was only set during two week, to 'clean' the messed savegames due to inflation calculation bugs.
+	doInflation();
 
 	setMaintenanceDirty(true);
 
@@ -32574,7 +32541,7 @@ bool CvPlayer::canLeaderPromote()
 	int iGreaterCultureRequired = 0;
 	int iCultureRequired = getLeaderLevelupCultureToEarn(iGreaterCultureRequired);
 	//Here we then need to manipulate iPromoThreshold by Gamespeed and Mapsize modifiers
-	//unsigned long long iCurrentNationalCulture = getCulture();
+	//uint64_t iCurrentNationalCulture = getCulture();
 	//int iGreaterCulture = getGreaterCulture();
 	if (iGreaterCultureRequired < 1 && iCultureRequired < 1)
 	{

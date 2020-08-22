@@ -178,7 +178,7 @@ public:
 
 	void doTurn();
 	void doTurnUnits();
-	void doInflation(bool pReinit);
+	void doInflation();
 	int getCurrentInflationCostModifier() const; //	Exposed to Python
 	int getEquilibriumInflationCostModifier() const; //	Exposed to Python
 
@@ -239,7 +239,7 @@ public:
 	int countNumCoastalCitiesByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesWithOrbitalInfrastructure() const;
 	inline void noteOrbitalInfrastructureCountDirty() { m_orbitalInfrastructureCountDirty = true; }
-	unsigned long long countTotalCulture() const;
+	uint64_t countTotalCulture() const;
 	void doCountTotalCulture(); // Exposed to Python
 	int countOwnedBonuses(BonusTypes eBonus) const; // Exposed to Python
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const; // Exposed to Python
@@ -2340,7 +2340,7 @@ public:
 	void RecalculatePlotGroupHashes();
 	CvContractBroker& getContractBroker();
 
-	void addPlotDangerSource(CvPlot* pPlot, int iStrength);
+	void addPlotDangerSource(const CvPlot* pPlot, int iStrength);
 
 	void clearModifierTotals();
 	void recalculateModifiers();

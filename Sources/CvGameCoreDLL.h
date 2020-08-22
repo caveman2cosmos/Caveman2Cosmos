@@ -80,7 +80,8 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
-typedef long long        int64_t;
+typedef long long           int64_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits
@@ -176,7 +177,7 @@ void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
 int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
-int64_t intSqrt64(const unsigned long long iValue);
+int64_t intSqrt64(const uint64_t iValue);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()

@@ -627,18 +627,18 @@ int intSqrt(unsigned int iValue, const bool bTreatNegAsPos)
 }
 
 // Testing alternate version; should compare to see which one is fastest.
-int64_t intSqrt64(unsigned long long iValue)
+int64_t intSqrt64(uint64_t iValue)
 {
-	unsigned long long min = 0;
-	unsigned long long max = ((unsigned long long) 1) << 32;
+	uint64_t min = 0;
+	uint64_t max = ((uint64_t) 1) << 32;
 	while(true)
 	{
 		if (max <= 1 + min)
 		{
 			return static_cast<int64_t>(min);
 		}
-		const unsigned long long sqt = min + (max - min)/2;
-		const unsigned long long sq = sqt*sqt;
+		const uint64_t sqt = min + (max - min)/2;
+		const uint64_t sq = sqt*sqt;
 
 		if (sq == iValue)
 		{

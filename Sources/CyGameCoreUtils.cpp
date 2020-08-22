@@ -228,7 +228,7 @@ int cyCalculateLevel(int iExperience, int ePlayer)
 	return calculateLevel(iExperience, (PlayerTypes)ePlayer);
 }
 
-int64_t cyIntSqrt64(unsigned long long iValue)
+int64_t cyIntSqrt64(uint64_t iValue)
 {
 	return intSqrt64(iValue);
 }

@@ -8255,7 +8255,7 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 	// Not in use...
 	if (bValid && GC.getVictoryInfo(eVictory).getTotalCultureRatio() > 0)
 	{
-		const unsigned long long iThreshold = GET_TEAM(eTeam).countTotalCulture() * 100 / GC.getVictoryInfo(eVictory).getTotalCultureRatio();
+		const uint64_t iThreshold = GET_TEAM(eTeam).countTotalCulture() * 100 / GC.getVictoryInfo(eVictory).getTotalCultureRatio();
 
 		for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
 		{
@@ -10271,16 +10271,16 @@ CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
-	int iThreshold = GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 	if (isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
-		//Alberts2: made this a long because a integer overflow is possible here.
-		long long lThreshold = iThreshold;
-		lThreshold *= 100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER");
-		lThreshold /= 100;
-		iThreshold = static_cast<int>(lThreshold);
+		return
+		(
+			GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType())
+			*
+			(100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER")) / 100
+		);
 	}
-	return iThreshold;
+	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 
 void CvGame::doUpdateCacheOnTurn()
