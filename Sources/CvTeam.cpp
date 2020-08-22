@@ -2665,14 +2665,14 @@ int CvTeam::getHasCorporationCount(CorporationTypes eCorporation) const
 
 int CvTeam::processedTeamCulture() const
 {
-	const unsigned long long iCount = countTotalCulture();
+	const uint64_t iCount = countTotalCulture();
 	return (iCount < MAX_INT) ? (int)iCount : MAX_INT;
 }
 
 
-unsigned long long CvTeam::countTotalCulture() const
+uint64_t CvTeam::countTotalCulture() const
 {
-	unsigned long long iCount = 0;
+	uint64_t iCount = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -2840,7 +2840,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 		return -1;
 	}
 
-	unsigned long long iCost = (unsigned long long)iInitialCost;
+	uint64_t iCost = (uint64_t)iInitialCost;
 
 	iCost *= 100;
 
@@ -7931,7 +7931,7 @@ int CvTeam::getTotalVictoryScore() const
 	// Add the culture score component
 	if (globalCulture > 0)
 	{
-		unsigned long long iTotalCulture;
+		uint64_t iTotalCulture;
 		iTotalCulture = countTotalCulture();
 
 		if ( iTotalCulture > MAX_INT/100 )

@@ -8255,7 +8255,7 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 	// Not in use...
 	if (bValid && GC.getVictoryInfo(eVictory).getTotalCultureRatio() > 0)
 	{
-		const unsigned long long iThreshold = GET_TEAM(eTeam).countTotalCulture() * 100 / GC.getVictoryInfo(eVictory).getTotalCultureRatio();
+		const uint64_t iThreshold = GET_TEAM(eTeam).countTotalCulture() * 100 / GC.getVictoryInfo(eVictory).getTotalCultureRatio();
 
 		for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
 		{

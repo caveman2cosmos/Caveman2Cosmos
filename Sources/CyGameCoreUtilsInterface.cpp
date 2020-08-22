@@ -75,5 +75,5 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getTechScore", getTechScore, "int (int /*TechTypes*/ eTech)");
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 
-	python::def("intSqrt", cyIntSqrt64, "int64_t (unsigned long long iValue)");
+	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
 }
