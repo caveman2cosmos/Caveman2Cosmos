@@ -598,8 +598,8 @@ public:
 	void setTeam(int /*TeamTypes*/ eIndex);
 
 	int64_t getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties();
 

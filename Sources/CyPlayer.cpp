@@ -2744,13 +2744,13 @@ int64_t CyPlayer::getCulture() const
 	return m_pPlayer ? m_pPlayer->getCulture() : 0;
 }
 
-void CyPlayer::setCulture(int iNewValue)
+void CyPlayer::setCulture(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setCulture(iNewValue);
 }
 
-void CyPlayer::changeCulture(int iAddValue)
+void CyPlayer::changeCulture(int64_t iAddValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeCulture(iAddValue);

@@ -21459,12 +21459,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapScoreHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21480,12 +21481,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapEconomyHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21501,12 +21503,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapIndustryHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21522,12 +21525,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapAgricultureHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21543,12 +21547,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
 				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapPowerHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
@@ -21565,12 +21569,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapCultureHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21586,12 +21591,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapEspionageHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
@@ -21608,12 +21614,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iTurn;
-				// @SAVEBREAK DELETE
-				int iScore;
-				// SAVEBREAK@
 				double fScore = 0;
 				WRAPPER_READ(wrapper, "CvPlayer", &iTurn);
+				// @SAVEBREAK DELETE
+				int iScore;
 				WRAPPER_READ(wrapper, "CvPlayer", &iScore);
+				// SAVEBREAK@
+				WRAPPER_READ(wrapper, "CvPlayer", &fScore);
 				m_mapRevolutionStabilityHistory[iTurn] = static_cast<int64_t>(fScore)
 					// @SAVEBREAK DELETE
 					+ iScore
