@@ -33764,7 +33764,7 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			iPotentialDisplays++;
 		}
 	}
-	const int iDisplayCount = kPlayer.getTraitDisplayCount();
+	int iDisplayCount = kPlayer.getTraitDisplayCount();
 
 	if (gDLL->shiftKey())
 	{
@@ -33777,6 +33777,7 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			kPlayer.changeTraitDisplayCount(1);
 		}
 	}
+	iDisplayCount = kPlayer.getTraitDisplayCount();
 	bool bFirst = true;
 	const CivilizationTypes eCivilization = kPlayer.getCivilizationType();
 	int iCurrentDisplay = 0;

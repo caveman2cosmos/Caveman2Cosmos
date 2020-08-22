@@ -33,7 +33,7 @@ typedef struct civcSwitchInstance
 typedef std::list<CvTalkingHeadMessage> CvMessageQueue;
 typedef std::list<CvPopupInfo*> CvPopupQueue;
 typedef std::list<CvDiploParameters*> CvDiploQueue;
-typedef stdext::hash_map<int, int> CvTurnScoreMap;
+typedef stdext::hash_map<int, int64_t> CvTurnScoreMap;
 typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
 typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
@@ -230,7 +230,7 @@ public:
 
 	int findBestFoundValue() const; // Exposed to Python
 
-	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit);
+	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit) const;
 
 	int countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const; // Exposed to Python
 	int countCorporationSpreadUnits(const CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const; // Exposed to Python
@@ -239,8 +239,10 @@ public:
 	int countNumCoastalCitiesByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesWithOrbitalInfrastructure() const;
 	inline void noteOrbitalInfrastructureCountDirty() { m_orbitalInfrastructureCountDirty = true; }
-	unsigned long long countTotalCulture() const;
+	uint64_t countTotalCulture() const;
+	// @SAVEBREAK DELETE
 	void doCountTotalCulture(); // Exposed to Python
+	// SAVEBREAK@
 	int countOwnedBonuses(BonusTypes eBonus) const; // Exposed to Python
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const; // Exposed to Python
 	int countCityFeatures(FeatureTypes eFeature) const; // Exposed to Python
@@ -830,13 +832,8 @@ public:
 	void setCurrentEra(EraTypes eNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
-
-
-	int getGreaterCulture() const;
-	void setGreaterCulture(int iNewValue);
-	void changeGreaterCulture(int iAddValue);
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
 	ReligionTypes getStateReligion() const; // Exposed to Python
@@ -1172,24 +1169,16 @@ public:
 	DllExport void showSpaceShip();
 	DllExport void clearSpaceShipPopups();
 
-	int getScoreHistory(int iTurn) const; // Exposed to Python
-	void updateScoreHistory(int iTurn, int iBestScore);
+	int64_t getScoreHistory(int iTurn) const; // Exposed to Python
+	void updateScoreHistory(int iTurn, int64_t iBestScore);
 
-	int getEconomyHistory(int iTurn) const; // Exposed to Python
-	void updateEconomyHistory(int iTurn, int iBestEconomy);
-	int getIndustryHistory(int iTurn) const; // Exposed to Python
-	void updateIndustryHistory(int iTurn, int iBestIndustry);
-	int getAgricultureHistory(int iTurn) const; // Exposed to Python
-	void updateAgricultureHistory(int iTurn, int iBestAgriculture);
-	int getPowerHistory(int iTurn) const; // Exposed to Python
-	void updatePowerHistory(int iTurn, int iBestPower);
-	int getCultureHistory(int iTurn) const; // Exposed to Python
-	void updateCultureHistory(int iTurn, int iBestCulture);
-	int getEspionageHistory(int iTurn) const; // Exposed to Python
-	void updateEspionageHistory(int iTurn, int iBestEspionage);
-
-	int getRevolutionStabilityHistory(int iTurn) const; // Exposed to Python
-	void updateRevolutionStabilityHistory(int iTurn, int m_iStabilityIndexAverage);
+	int64_t getEconomyHistory(int iTurn) const; // Exposed to Python
+	int64_t getIndustryHistory(int iTurn) const; // Exposed to Python
+	int64_t getAgricultureHistory(int iTurn) const; // Exposed to Python
+	int64_t getPowerHistory(int iTurn) const; // Exposed to Python
+	int64_t getCultureHistory(int iTurn) const; // Exposed to Python
+	int64_t getEspionageHistory(int iTurn) const; // Exposed to Python
+	int64_t getRevolutionStabilityHistory(int iTurn) const; // Exposed to Python
 
 	// Script data needs to be a narrow string for pickling in Python
 	std::string getScriptData() const; // Exposed to Python
@@ -1929,7 +1918,6 @@ protected:
 	TeamTypes m_eTeamType;
 
 	int64_t m_iCulture;
-	int m_iGreaterCulture;
 
 	int m_iUpgradeRoundCount;
 	int m_iSelectionRegroup;
