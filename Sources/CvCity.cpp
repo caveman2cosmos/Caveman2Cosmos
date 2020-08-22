@@ -8587,6 +8587,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 		iMaintenance += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
 	}
 
+	// Bonus Maintenance
 	int iNumBonuses = 0;
 	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 	{
@@ -8596,53 +8597,43 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 			iNumBonuses += getNumBonuses(eBonus);
 		}
 	}
+	iMaintenance +=
+	(
+		GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses
+		* GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+		/ 100
+	);
 
-	int iBonusMaintenance = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-	iBonusMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-	iBonusMaintenance /= 100;
-	iMaintenance += iBonusMaintenance;
-
-	iMaintenance *= (getPopulation() + 17);
+	// Population factor
+	iMaintenance *= 17 + getPopulation();
 	iMaintenance /= 18;
 
-	iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
-	iMaintenance /= 100;
-
-	iMaintenance *= std::max(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
-	iMaintenance /= 100;
-
-	int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-	if (iInflation > 0)
-	{
-		iMaintenance *= 100;
-		iMaintenance /= iInflation;
-	}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/17/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	iMaintenance *= (GET_TEAM(getTeam()).getCorporationMaintenanceModifier() + 100);
-	iMaintenance /= 100;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/19/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+	// Handicap
 	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
-		if (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent() > 80)
-		{
-			iMaintenance *= (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent());
-			iMaintenance /= 80;
-		}
+		iMaintenance = (
+			iMaintenance
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			/ 8000
+		);
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+	else
+	{
+		iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+		iMaintenance /= 100;
+	}
+
+	// National Modifier
+	iMaintenance *= std::max(0, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100);
+	iMaintenance /= 100;
+
+	iMaintenance *= 100;
+	iMaintenance /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
+
+	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
+	iMaintenance /= 100;
+
 	FAssert(iMaintenance >= 0);
 
 	return iMaintenance;
@@ -22871,8 +22862,7 @@ int CvCity::calculateCorporateTaxes() const
 	{
 		if (isActiveCorporation((CorporationTypes)iI) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iI))
 		{
-			CorporationTypes eCorporation = (CorporationTypes)iI;
-
+			const CorporationTypes eCorporation = (CorporationTypes)iI;
 
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 			{
@@ -22889,34 +22879,29 @@ int CvCity::calculateCorporateTaxes() const
 				}
 			}
 
-			int iBonusTaxes = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-			iBonusTaxes *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-			iBonusTaxes /= 200;
-			iTaxes += iBonusTaxes;
+			iTaxes +=
+			(
+				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+				/ 200
+			);
+			const int iAveragePopulation = GC.getGame().getTotalPopulation() / std::max(1, GC.getGame().getNumCivCities());
 
-			int iAveragePopulation = GC.getGame().getTotalPopulation();
-			iAveragePopulation /= std::max(1, GC.getGame().getNumCivCities());
 			if (iAveragePopulation > 0)
 			{
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-
-			iTaxes *= std::min(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
+			iTaxes *= std::max(0, 100 + GET_PLAYER(getOwner()).getCorporationMaintenanceModifier());
 			iTaxes /= 100;
-			iTaxes = abs(iTaxes);
 
-			int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-			if (iInflation > 0)
-			{
-				iTaxes *= 100;
-				iTaxes /= iInflation;
-			}
+			iTaxes *= 100;
+			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 
-			iTaxes /= (1 + GET_PLAYER(getOwner()).getHandicapType() / 2);
+			iTaxes *= 100;
+			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
 		}
 	}
-
 	return iTaxes / 100;
 }
 

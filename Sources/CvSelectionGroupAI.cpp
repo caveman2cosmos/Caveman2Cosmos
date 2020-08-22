@@ -834,7 +834,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			&& (eDomainType == NO_DOMAIN || unit->getDomainType() == eDomainType)
 			)
 		{
-			//strSum += (unsigned long long)unit->currEffectiveStr(pAttackedPlot, pLoopUnit);
+			//strSum += (uint64_t)unit->currEffectiveStr(pAttackedPlot, pLoopUnit);
 			//TB Simplify for speed:
 			strSum += (uint64_t)unit->currCombatStr(NULL,NULL);
 			// K-Mod estimate the attack power of collateral units

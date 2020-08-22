@@ -402,7 +402,7 @@ class CvFinanceAdvisor:
 				szCommerce = uFont2b + str(iIncome) + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 
-		if CyPlayer.isAnarchy:
+		if CyPlayer.isAnarchy():
 			return
 
 		iPlayer = self.iPlayer

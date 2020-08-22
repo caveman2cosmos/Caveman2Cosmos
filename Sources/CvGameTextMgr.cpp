@@ -32758,38 +32758,30 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iInflationRate = kPlayer.calculateInflationRate();
+	const int iInflationRate = kPlayer.calculateInflationRate();
 	if (iInflationRate != 0)
 	{
 		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
 		szBuffer.append(NEWLINE);
 
-		int	iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
-		int	iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
-		CvWString	szInflationOutlook;
+		const int iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
+		const int iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
+		CvWString szInflationOutlook;
 
-		if ( iCurrentInflationModifier > iEquilibriumInflationModifier )
+		if (iCurrentInflationModifier > iEquilibriumInflationModifier)
 		{
-			if ( (9*iCurrentInflationModifier/10) > iEquilibriumInflationModifier )
+			if (iCurrentInflationModifier * 9/10 > iEquilibriumInflationModifier)
 			{
 				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_IMPROVING");
 			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
 		}
-		else
+		else if (iEquilibriumInflationModifier * 9/10 > iCurrentInflationModifier)
 		{
-			if ( (9*iEquilibriumInflationModifier/10) > iCurrentInflationModifier )
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
-			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
 		}
+		else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
+
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW", iPreInflation, iInflationRate, iInflationRate, iPreInflation, (iPreInflation * iInflationRate) / 100, szInflationOutlook.c_str()));
 
 		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
@@ -32833,13 +32825,13 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 
 	// Civilian section
-	const long long iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
+	const int64_t iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN", CvWString::format(L"%.2f", iUpkeepCivilian100 / 100.0).GetCString()));
 
 	if (iCivicModCivilian != 0)
 	{
-		long long iCivicCivilian = 0;
+		int64_t iCivicCivilian = 0;
 		if (iCivicModCivilian > 0)
 		{
 			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100 - iUpkeepCivilian100;
@@ -32856,7 +32848,7 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModCivilian != 0)
 	{
-		long long iTraitCivilian = 0;
+		int64_t iTraitCivilian = 0;
 		if (iTraitModCivilian > 0)
 		{
 			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100 - iUpkeepCivilian100;
@@ -32873,19 +32865,19 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepCivilian()));
 
-	const long long iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	const int64_t iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUpkeepCivilianNet));
 
 	// Military section
 	szBuffer.append(NEWLINE);
-	const long long iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
+	const int64_t iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY", CvWString::format(L"%.2f", iUpkeepMilitary100 / 100.0).GetCString()));
 
 	if (iCivicModMilitary != 0)
 	{
-		long long iCivicMilitary = 0;
+		int64_t iCivicMilitary = 0;
 		if (iCivicModMilitary > 0)
 		{
 			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100 - iUpkeepMilitary100;
@@ -32902,7 +32894,7 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModMilitary != 0)
 	{
-		long long iTraitMilitary = 0;
+		int64_t iTraitMilitary = 0;
 		if (iTraitModMilitary > 0)
 		{
 			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100 - iUpkeepMilitary100;
@@ -32919,12 +32911,12 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepMilitary()));
 
-	const long long iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+	const int64_t iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUnitUpkeepMilitaryNet));
 
 	// End Section
-	const long long iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
+	const int64_t iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 	if (iHandicap != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
