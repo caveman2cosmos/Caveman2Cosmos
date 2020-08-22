@@ -160,11 +160,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	long long getFinalUnitUpkeep();
+	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
-	int calculatePreInflatedCosts();
+	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int calculateInflatedCosts();
+	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -321,6 +321,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;

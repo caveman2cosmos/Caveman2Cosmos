@@ -130,9 +130,6 @@ class PyPlayer:
 	def calculateInflatedCosts(self):
 		return self.player.calculateInflatedCosts()
 
-	def calculatePreInflatedCosts(self):
-		return self.player.calculatePreInflatedCosts()
-
 	def calculateGoldRate(self):
 		return self.player.calculateGoldRate()
 

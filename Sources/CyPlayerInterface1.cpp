@@ -105,10 +105,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalCityHealthiness", &CyPlayer::calculateTotalCityHealthiness, "int () - Returns the total sum of all city Healthiness values")
 		.def("calculateTotalCityUnhealthiness", &CyPlayer::calculateTotalCityUnhealthiness, "int () - Returns the total sum of all city Unhealthiness values")
 
-		.def("getFinalUnitUpkeep", &CyPlayer::getFinalUnitUpkeep, "long long ()")
+		.def("getFinalUnitUpkeep", &CyPlayer::getFinalUnitUpkeep, "int64 ()")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
-		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
-		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int ()")
+		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int64 ()")
+		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int64 ()")
 
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")
