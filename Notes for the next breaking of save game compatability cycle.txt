@@ -51,8 +51,7 @@ Rewrite CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
 Reduce amount of excess colour definitions, many duplicates and unused ones currently.
 Would cause issues with old saves without some extra recalc code for civ colours.
 
-Change treasury gold data to long long, and get rid of greater gold as it is currently the cause of some minor bugs.
-	Alternatively fix the bugs instead...
+Change player culture to long long, and get rid of greater culture.
 
 Set barb NPC to be the last slot again, the exe initialize the barb in the last slot currently, so we have two barb teams, one initialized by the dll + one by the exe.
 only the one at the lowest NPC slot number is active though, gets units and such, but the last slot cannot be used for anyrthing as it is now.

@@ -64,4 +64,6 @@ int cyGetEspionageModifier(int /*TeamTypes*/ iOurTeam, int /*TeamTypes*/ iTarget
 int cyCalculateExperience(int iLevel, int /*PlayerTypes*/ ePlayer);
 int cyCalculateLevel(int iExperience, int /*PlayerTypes*/ ePlayer);
 
+int64_t cyIntSqrt64(uint64_t iValue);
+
 #endif	// CyGameCoreUtils_h

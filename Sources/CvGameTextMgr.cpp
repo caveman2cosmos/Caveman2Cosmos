@@ -8836,10 +8836,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				const long long iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
-				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				long long iUnitCostPercentage = iUnitUpkeep * 100 / std::max(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%llu / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
+				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
+				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
+				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%lld / %lld)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -32761,7 +32761,7 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	int iInflationRate = kPlayer.calculateInflationRate();
 	if (iInflationRate != 0)
 	{
-		int iPreInflation = kPlayer.calculatePreInflatedCosts();
+		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
 		szBuffer.append(NEWLINE);
 
 		int	iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();

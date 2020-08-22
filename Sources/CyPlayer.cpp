@@ -657,7 +657,7 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-long long CyPlayer::getFinalUnitUpkeep()
+int64_t CyPlayer::getFinalUnitUpkeep()
 {
 	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }
@@ -667,7 +667,7 @@ int CyPlayer::calculateUnitSupply()
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
 }
 
-int CyPlayer::calculatePreInflatedCosts()
+int64_t CyPlayer::calculatePreInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculatePreInflatedCosts() : -1;
 }
@@ -677,7 +677,7 @@ int CyPlayer::calculateInflationRate()
 	return m_pPlayer ? m_pPlayer->calculateInflationRate() : -1;
 }
 
-int CyPlayer::calculateInflatedCosts()
+int64_t CyPlayer::calculateInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
 }
@@ -1407,6 +1407,11 @@ int CyPlayer::getNumCitiesMaintenanceModifier()
 int CyPlayer::getCorporationMaintenanceModifier()
 {
 	return m_pPlayer ? m_pPlayer->getCorporationMaintenanceModifier() : -1;
+}
+
+int64_t CyPlayer::getTreasuryUpkeep()
+{
+	return m_pPlayer ? m_pPlayer->getTreasuryUpkeep() : -1;
 }
 
 int CyPlayer::getTotalMaintenance()

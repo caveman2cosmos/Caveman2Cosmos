@@ -8812,14 +8812,19 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 
 int CvGame::calculateSyncChecksum()
 {
+	// Toffer - 15.08.20
+	// No point in calculating the netwoprk sync hash value when not in a network game.
+	if (!isNetworkMultiPlayer())
+	{
+		return 0;
+	}
+	// Added lots of integer overflow protection using '% MAX_INT',
+	// should be completly water tight now, when 64 bit integers overflowed easily here before.
+	// ! Toffer
+
 	PROFILE_FUNC();
 
-	int iJ;
-
-	int64_t iValue = 0;
-
-	iValue += getMapRand().getSeed();
-	iValue += getSorenRand().getSeed();
+	int64_t iValue = (getMapRand().getSeed() * getSorenRand().getSeed()) % MAX_INT;
 
 	iValue += getNumCities();
 	iValue += getTotalPopulation();
@@ -8827,6 +8832,8 @@ int CvGame::calculateSyncChecksum()
 
 	iValue += GC.getMap().getOwnedPlots();
 	iValue += GC.getMap().getNumAreas();
+
+	int64_t iFinalMult = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -8839,7 +8846,7 @@ int CvGame::calculateSyncChecksum()
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
-				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold() % 1000000);
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold() % MAX_INT);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumCities() * 436);
@@ -8851,19 +8858,19 @@ int CvGame::calculateSyncChecksum()
 				break;
 
 			case 1:
-				for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).calculateTotalYield((YieldTypes)iJ));
 				}
 
-				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getCommerceRate((CommerceTypes)iJ));
 				}
 
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					for (iJ = 0; iJ < GC.getNumEventInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumEventInfos(); iJ++)
 					{
 						iMultiplier += (iJ + 1) * pLoopCity->isEventOccured((EventTypes)iJ);
 					}
@@ -8888,41 +8895,41 @@ int CvGame::calculateSyncChecksum()
 				break;
 
 			case 2:
-				for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumAvailableBonuses((BonusTypes)iJ) * 945);
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBonusImport((BonusTypes)iJ) * 326);
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBonusExport((BonusTypes)iJ) * 932);
 				}
 
-				for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getImprovementCount((ImprovementTypes)iJ) * 883);
 				}
 
-				for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBuildingCountPlusMaking((BuildingTypes)iJ) * 95);
 				}
 
-				for (iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitCountPlusMaking((UnitTypes)iJ) * 75);
 				}
 
-				for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).AI_totalUnitAIs((UnitAITypes)iJ) * 64);
 				}
 
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
 						if (pLoopCity->isHasReligion((ReligionTypes)iJ))
 							iMultiplier += pLoopCity->getID() * (iJ + 1);
 					}
-					for (iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
 					{
 						if (pLoopCity->isHasCorporation((CorporationTypes)iJ))
 							iMultiplier += (pLoopCity->getID() + 1) * (iJ + 1);
@@ -8956,14 +8963,17 @@ int CvGame::calculateSyncChecksum()
 				break;
 			}
 
-			if (iMultiplier != 0)
-			{
-				iValue *= iMultiplier;
-			}
+			iFinalMult += iMultiplier % MAX_INT;
 		}
 	}
+	iFinalMult %= MAX_INT;
 
-	return (int)iValue;
+	if (iFinalMult != 0)
+	{
+		iValue *= iFinalMult;
+	}
+
+	return static_cast<int>(iValue % MAX_INT);
 }
 
 
@@ -11292,29 +11302,28 @@ void CvGame::doFlexibleDifficulty()
 					}
 					FAssertMsg(iAliveCount > 0, "iAliveCount can not be <= 0");
 					const int iMeanScore = iTotalScore / iAliveCount;
-					double variance = 0.0;
+					int iVariance = 0;
 					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
 					{
 						const CvPlayerAI& pPlayer = GET_PLAYER((PlayerTypes)iJ);
 						if (pPlayer.isAlive() && GET_TEAM(pPlayer.getTeam()).getLeaderID() == pPlayer.getID())
 						{
 							int iScore = getPlayerScore((PlayerTypes)iJ);
-							//variance is sum of squared difference from mean
-							variance += (iMeanScore - iScore) * (iMeanScore - iScore);
+							// iVariance is sum of squared difference from mean
+							iVariance += (iMeanScore - iScore) * (iMeanScore - iScore);
 							logMsg("[Flexible Difficulty] Adding score for player %S, score: %d", pPlayer.getName(), iScore);
 						}
 					}
-					variance /= iAliveCount;
-					double stddev = sqrt(variance);
+					const int stddev = iVariance >= 0 ? intSqrt(10000 * iVariance / iAliveCount) : 0;
 
 					int iCurrentScore = getPlayerScore((PlayerTypes)iI);
 
-					logMsg("[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %f", kPlayer.getName(), iCurrentScore, GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(), iMeanScore, stddev);
+					logMsg("[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100", kPlayer.getName(), iCurrentScore, GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(), iMeanScore, stddev);
 
 					int newHandicap = (kPlayer.getHandicapType() > iMaxHandicap) ? iMaxHandicap : ((kPlayer.getHandicapType() < iMinHandicap) ? iMinHandicap : kPlayer.getHandicapType());
 
 					//Increased Difficulty (player's score is > 1 std dev away)
-					if (iCurrentScore > (iMeanScore + stddev))
+					if (100*iCurrentScore > 100*iMeanScore + stddev)
 					{
 						logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev above average.", kPlayer.getName());
 						if (newHandicap < (GC.getNumHandicapInfos() - 1) && newHandicap < iMaxHandicap)
@@ -11324,7 +11333,7 @@ void CvGame::doFlexibleDifficulty()
 							newHandicap++;
 						}
 					}
-					else if (iCurrentScore < (iMeanScore - stddev))
+					else if (100*iCurrentScore < 100*iMeanScore - stddev)
 					{
 						logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev below average.", kPlayer.getName());
 						if (newHandicap > 0 && newHandicap > iMinHandicap)
