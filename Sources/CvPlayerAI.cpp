@@ -10850,11 +10850,9 @@ int CvPlayerAI::AI_bonusTradeVal(BonusTypes eBonus, PlayerTypes ePlayer, int iCh
 {
 	PROFILE_FUNC();
 
-	int iValue;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
-	iValue = AI_bonusVal(eBonus, iChange, true);
+	int iValue = AI_bonusVal(eBonus, iChange, true);
 
 	iValue *= ((std::min(getNumCities(), GET_PLAYER(ePlayer).getNumCities()) + 3) * 30);
 	iValue /= 100;
@@ -10866,15 +10864,6 @@ int CvPlayerAI::AI_bonusTradeVal(BonusTypes eBonus, PlayerTypes ePlayer, int iCh
 	{
 		iValue /= 2;
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 6/22/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	return (iValue * getTreatyLength());
 }
@@ -10938,7 +10927,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /*  Better AI: Strategic For Current Era														*/
 /************************************************************************************************/
 //disregard obsolete units
-	CvCity* pCapitalCity = getCapitalCity();
+	const CvCity* pCapitalCity = getCapitalCity();
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		if (!GC.getGame().canEverTrain((UnitTypes)iI))
@@ -11054,7 +11043,6 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 {
-	CvPlot* pLoopPlot;
 	int iValue;
 	int iI;
 
@@ -11137,7 +11125,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 
 	for (iI = 0; iI < pCity->getNumCityPlots(); iI++)
 	{
-		pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
+		const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
 		if (pLoopPlot != NULL)
 		{
@@ -22165,7 +22153,7 @@ void CvPlayerAI::AI_doDiplo()
 																		{
 																			MEMORY_TRACK_EXEMPT();
 
-																			AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"));
+																			AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, CvColorInfo::white());
 																		}
 																	}
 																}
