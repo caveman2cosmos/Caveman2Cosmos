@@ -32758,38 +32758,30 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iInflationRate = kPlayer.calculateInflationRate();
+	const int iInflationRate = kPlayer.calculateInflationRate();
 	if (iInflationRate != 0)
 	{
 		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
 		szBuffer.append(NEWLINE);
 
-		int	iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
-		int	iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
-		CvWString	szInflationOutlook;
+		const int iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
+		const int iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
+		CvWString szInflationOutlook;
 
-		if ( iCurrentInflationModifier > iEquilibriumInflationModifier )
+		if (iCurrentInflationModifier > iEquilibriumInflationModifier)
 		{
-			if ( (9*iCurrentInflationModifier/10) > iEquilibriumInflationModifier )
+			if (iCurrentInflationModifier * 9/10 > iEquilibriumInflationModifier)
 			{
 				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_IMPROVING");
 			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
 		}
-		else
+		else if (iEquilibriumInflationModifier * 9/10 > iCurrentInflationModifier)
 		{
-			if ( (9*iEquilibriumInflationModifier/10) > iCurrentInflationModifier )
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
-			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
 		}
+		else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
+
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW", iPreInflation, iInflationRate, iInflationRate, iPreInflation, (iPreInflation * iInflationRate) / 100, szInflationOutlook.c_str()));
 
 		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))

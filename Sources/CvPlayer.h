@@ -178,7 +178,7 @@ public:
 
 	void doTurn();
 	void doTurnUnits();
-	void doInflation(bool pReinit);
+	void doInflation();
 	int getCurrentInflationCostModifier() const; //	Exposed to Python
 	int getEquilibriumInflationCostModifier() const; //	Exposed to Python
 
