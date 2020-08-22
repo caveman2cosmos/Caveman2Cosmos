@@ -1383,8 +1383,6 @@ public:
 
 	int doMultipleResearch(int iOverflow);
 
-	int processedNationalCulture() const;
-
 	void acquireFort(CvPlot* pPlot);
 
 	int getResourceConsumption(BonusTypes eBonus) const;
