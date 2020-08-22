@@ -10271,16 +10271,16 @@ CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
-	int iThreshold = GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 	if (isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
-		//Alberts2: made this a long because a integer overflow is possible here.
-		long long lThreshold = iThreshold;
-		lThreshold *= 100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER");
-		lThreshold /= 100;
-		iThreshold = static_cast<int>(lThreshold);
+		return
+		(
+			GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType())
+			*
+			(100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER")) / 100
+		);
 	}
-	return iThreshold;
+	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 
 void CvGame::doUpdateCacheOnTurn()

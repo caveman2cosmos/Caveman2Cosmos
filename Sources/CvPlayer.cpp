@@ -4249,7 +4249,7 @@ void CvPlayer::doTurn()
 
 	doAdvancedEconomy();
 
-	doInflation(false);
+	doInflation();
 
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
@@ -9062,34 +9062,33 @@ int64_t CvPlayer::calculatePreInflatedCosts() const
 	);
 }
 
-//	Called once per turn to update the current cost-to-turn-1-cost ratio
-void CvPlayer::doInflation(bool pReinit)
+// Called once per turn to update the current cost-to-turn-1-cost ratio
+void CvPlayer::doInflation()
 {
-    if (pReinit)
-	{
-		m_accruedCostRatioTimes10000 = 10000;
-	}
-	else
-	{
-		// Keep up to second order terms in binomial series
-		int iAccruedCostRatioTimes10000 = (getEquilibriumInflationCostModifier()+100) * 100;
+	// Keep up to second order terms in binomial series
+	const int iAccruedCostRatioTimes10000 = 100 * (100 + getEquilibriumInflationCostModifier());
 
-		// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.  We
-		// 'decay' the current cost multiplier towards this equilibrium value
-		int iInflationRateMomentum = GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50);
-
-		iInflationRateMomentum *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent();
-		iInflationRateMomentum /= 100;
-
-		if ( iInflationRateMomentum < 1 )
-		{
-			iInflationRateMomentum = 1;
-		}
-		m_accruedCostRatioTimes10000 += (iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 + (iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1)*(iInflationRateMomentum - 1))/iInflationRateMomentum;
-
-		//Debug to check the evolution of the inflation value.
-		OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
-	}
+	// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.
+	// We 'decay' the current cost multiplier towards this equilibrium value.
+	const int iInflationRateMomentum = std::max
+	(
+		1,
+		(
+			GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50)
+			* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent()
+			/ 100
+		)
+	);
+	m_accruedCostRatioTimes10000 +=
+	(
+		(
+			iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 +
+			(iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1) * (iInflationRateMomentum - 1)
+		)
+		/ iInflationRateMomentum
+	);
+	//Debug to check the evolution of the inflation value.
+	OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
 }
 
 int CvPlayer::getCurrentInflationCostModifier() const
@@ -9099,32 +9098,21 @@ int CvPlayer::getCurrentInflationCostModifier() const
 
 int CvPlayer::getEquilibriumInflationCostModifier() const
 {
-	int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
-	int iTurns = ((GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2);
+	const int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
+	int iTurns = (GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2;
 
 	if (GC.getGame().getMaxTurns() > 0)
 	{
 		iTurns = std::min(GC.getGame().getMaxTurns(), iTurns);
 	}
-
 	iTurns += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationOffset();
 
-	//	How many turns (max) do we compound inflation over?
-	int	iInflationTurnCeiling = GC.getDefineINT("MAX_INFLATION_EFFECT_WINDOW", 200);
-
-	if ( iTurns > iInflationTurnCeiling )
-	{
-		iTurns = iInflationTurnCeiling;
-	}
-	else if ( iTurns < 0 )
-	{
-		iTurns = 0;
-	}
-
 	// Keep up to second order terms in binomial series
-	int iAccruedCostRatioTimes10000 = 10000 + iTurns * iInflationPerTurnTimes10000;
-	iAccruedCostRatioTimes10000 += (iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000) / 20000;
-
+	const int iAccruedCostRatioTimes10000 =
+	(
+		10000 + iTurns * iInflationPerTurnTimes10000
+		+ iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000 / 20000
+	);
 	return iAccruedCostRatioTimes10000/100 - 100;
 }
 
@@ -9148,28 +9136,21 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 	iInflationPerTurnTimes10000 *= std::max(0, 100 + iModifier);
 	iInflationPerTurnTimes10000 /= 100;
 
-	// ls612: remove inflation for hurrying things
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
 	{
-		int iCivicModifier = getCivicInflation();
-		int iProjectModifier = getProjectInflation();
-		int iTechInflation = getTechInflation();
-		int iBuildingInflation = getBuildingInflation();
-		int iHurryInflation = getHurriedCount();
-
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iCivicModifier);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iProjectModifier);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iTechInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iBuildingInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
 		iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + iHurryInflation);
+		iInflationPerTurnTimes10000 *= std::max(0, 100 + getHurriedCount());
 		iInflationPerTurnTimes10000 /= 100;
 	}
 	return iInflationPerTurnTimes10000/100;
@@ -9177,9 +9158,7 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 
 int CvPlayer::calculateInflationRate() const
 {
-	int iRatePercent = (m_accruedCostRatioTimes10000 == -1 ? 0 : (m_accruedCostRatioTimes10000-10000)/100);
-
-	return iRatePercent;
+	return m_accruedCostRatioTimes10000 == -1 ? 0 : m_accruedCostRatioTimes10000 / 100 - 100;
 }
 
 
@@ -9187,7 +9166,7 @@ int64_t CvPlayer::calculateInflatedCosts() const
 {
 	int64_t iCosts = calculatePreInflatedCosts();
 
-	iCosts *= std::max(0, (calculateInflationRate() + 100));
+	iCosts *= std::max(0, calculateInflationRate() + 100);
 	iCosts /= 100;
 
 	return iCosts;
@@ -12117,10 +12096,6 @@ int CvPlayer::getCorporationMaintenanceModifier() const
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						19.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 {
 	if (iChange != 0)
@@ -12133,9 +12108,6 @@ void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 		}
 	}
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 int CvPlayer::getTotalMaintenance() const
@@ -21114,11 +21086,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
 
-		//	Cope with old saves not having an accrued cost ratio value
-		//	Use a sentinel value of -1, which will be taken as a signal to
-		//	initialize using the old calculation on first recalculation
-		//	opportunity
-		m_accruedCostRatioTimes10000 = -1;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_accruedCostRatioTimes10000);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
@@ -31515,7 +31482,7 @@ void CvPlayer::recalculateModifiers()
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
 	recalculateUnitCounts();
 
-	doInflation(false); //true was only set during two week, to 'clean' the messed savegames due to inflation calculation bugs.
+	doInflation();
 
 	setMaintenanceDirty(true);
 
@@ -32574,7 +32541,7 @@ bool CvPlayer::canLeaderPromote()
 	int iGreaterCultureRequired = 0;
 	int iCultureRequired = getLeaderLevelupCultureToEarn(iGreaterCultureRequired);
 	//Here we then need to manipulate iPromoThreshold by Gamespeed and Mapsize modifiers
-	//unsigned long long iCurrentNationalCulture = getCulture();
+	//uint64_t iCurrentNationalCulture = getCulture();
 	//int iGreaterCulture = getGreaterCulture();
 	if (iGreaterCultureRequired < 1 && iCultureRequired < 1)
 	{
