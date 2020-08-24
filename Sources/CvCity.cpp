@@ -12873,6 +12873,7 @@ void CvCity::changeProductionToCommerceModifier(CommerceTypes eIndex, int iChang
 		m_aiProductionToCommerceModifier[eIndex] = (m_aiProductionToCommerceModifier[eIndex] + iChange);
 
 		setCommerceDirty(eIndex);
+		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 	}
 }
 
