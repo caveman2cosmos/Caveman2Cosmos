@@ -377,11 +377,6 @@ int CyPlayer::getEquilibriumInflationCostModifier()
 	return m_pPlayer ? m_pPlayer->getEquilibriumInflationCostModifier() : 0;
 }
 
-int CyPlayer::countTotalCulture()
-{
-	return m_pPlayer ? m_pPlayer->processedNationalCulture() : -1;
-}
-
 int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
 {
 	return m_pPlayer ? m_pPlayer->countOwnedBonuses((BonusTypes)eBonus) : NO_BONUS;
@@ -2511,55 +2506,45 @@ bool CyPlayer::AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer)
 // BUG - Refuses to Talk - end
 
 
-int CyPlayer::getScoreHistory(int iTurn) const
+int64_t CyPlayer::getScoreHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn) : 0);
 }
 
-int CyPlayer::getEconomyHistory(int iTurn) const
+int64_t CyPlayer::getEconomyHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getEconomyHistory(iTurn) : 0);
 }
 
-int CyPlayer::getIndustryHistory(int iTurn) const
+int64_t CyPlayer::getIndustryHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getIndustryHistory(iTurn) : 0);
 }
 
-int CyPlayer::getAgricultureHistory(int iTurn) const
+int64_t CyPlayer::getAgricultureHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getAgricultureHistory(iTurn) : 0);
 }
 
-int CyPlayer::getPowerHistory(int iTurn) const
+int64_t CyPlayer::getPowerHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getPowerHistory(iTurn) : 0);
 }
 
-int CyPlayer::getCultureHistory(int iTurn) const
+int64_t CyPlayer::getCultureHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getCultureHistory(iTurn) : 0);
 }
 
-int CyPlayer::getEspionageHistory(int iTurn) const
+int64_t CyPlayer::getEspionageHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getEspionageHistory(iTurn) : 0);
 }
 
-/****************************************************************************************/
-/* REVOLUTIONDCM				28/05/09						Glider1                 */
-/**																						*/
-/**																						*/
-/****************************************************************************************/
-// RevolutionDCM - revolution stability history start
-int CyPlayer::getRevolutionStabilityHistory(int iTurn) const
+int64_t CyPlayer::getRevolutionStabilityHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getRevolutionStabilityHistory(iTurn) : 0);
 }
-// RevolutionDCM end
-/****************************************************************************************/
-/* REVOLUTIONDCM				END     						Glider1                 */
-/****************************************************************************************/
 
 std::string CyPlayer::getScriptData() const
 {
@@ -2749,18 +2734,18 @@ void CyPlayer::setTeam(int /*TeamTypes*/ eIndex)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-int CyPlayer::getCulture() const
+int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer ? m_pPlayer->getCulture() : 0;
 }
 
-void CyPlayer::setCulture(int iNewValue)
+void CyPlayer::setCulture(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setCulture(iNewValue);
 }
 
-void CyPlayer::changeCulture(int iAddValue)
+void CyPlayer::changeCulture(int64_t iAddValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeCulture(iAddValue);
