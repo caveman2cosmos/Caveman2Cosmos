@@ -362,16 +362,16 @@ struct OrderData // Exposed to Python
 			int iData2;
 		};
 		struct { // Untyped
-			word iData1_external;
-			word iData1_aux;
-			word iData2_external;
-			word iData2_aux;
+			uint16_t iData1_external;
+			uint16_t iData1_aux;
+			uint16_t iData2_external;
+			uint16_t iData2_aux;
 		} raw;
 		struct { // For units
-			/*UnitTypes*/word type;
-			word plotIndex; // aux, 0xFFFF for none
+			/*UnitTypes*/uint16_t type;
+			uint16_t plotIndex; // aux, 0xFFFF for none
 
-			/*UnitAITypes*/word AIType;
+			/*UnitAITypes*/uint16_t AIType;
 			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
 			byte contractFlags; // aux
 		} unit;
@@ -404,11 +404,11 @@ struct OrderData // Exposed to Python
 		return eOrderType == other.eOrderType && iData1 == other.iData1 && iData2 == other.iData2 && bSave == other.bSave;
 	}
 
-	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, word plotIndex, byte contractFlags, UnitAITypes contractedAIType, bool bSave)
+	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, uint16_t plotIndex, byte contractFlags, UnitAITypes contractedAIType, bool bSave)
 	{
 		OrderData order(ORDER_TRAIN);
-		order.unit.type = static_cast<word>(type);
-		order.unit.AIType = static_cast<word>(AIType);
+		order.unit.type = static_cast<uint16_t>(type);
+		order.unit.AIType = static_cast<uint16_t>(AIType);
 		order.unit.plotIndex = plotIndex;
 		order.unit.contractFlags = contractFlags;
 		order.unit.contractedAIType = static_cast<byte>(contractedAIType);
@@ -418,21 +418,21 @@ struct OrderData // Exposed to Python
 	static OrderData createBuildingOrder(BuildingTypes type, bool bSave)
 	{
 		OrderData order(ORDER_CONSTRUCT);
-		order.building.type = static_cast<word>(type);
+		order.building.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
 	static OrderData createProjectOrder(ProjectTypes type, bool bSave)
 	{
 		OrderData order(ORDER_CREATE);
-		order.project.type = static_cast<word>(type);
+		order.project.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
 	static OrderData createProcessOrder(ProcessTypes type, bool bSave)
 	{
 		OrderData order(ORDER_MAINTAIN);
-		order.process.type = static_cast<word>(type);
+		order.process.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
@@ -450,7 +450,7 @@ struct OrderData // Exposed to Python
 	}
 	void setUnitType(UnitTypes newUnitType) { 
 		FAssert(eOrderType == ORDER_TRAIN);
-		unit.type = static_cast<word>(newUnitType); 
+		unit.type = static_cast<uint16_t>(newUnitType);
 	}
 
 	UnitAITypes getUnitAIType() const { 
@@ -459,10 +459,10 @@ struct OrderData // Exposed to Python
 	}
 	void setUnitAIType(UnitAITypes newUnitAIType) { 
 		FAssert(eOrderType == ORDER_TRAIN);
-		unit.AIType = static_cast<word>(newUnitAIType);
+		unit.AIType = static_cast<uint16_t>(newUnitAIType);
 	}
 
-	word getUnitPlotIndex() const {
+	uint16_t getUnitPlotIndex() const {
 		FAssert(eOrderType == ORDER_TRAIN);
 		return unit.plotIndex;
 	}

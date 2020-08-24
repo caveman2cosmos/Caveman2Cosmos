@@ -670,9 +670,9 @@ bool isLimitedProject(ProjectTypes eProject)
 // of k draws out of a population of n
 // Written by DeepO
 // Modified by Jason Winokur to keep the intermediate factorials small
-__int64 getBinomialCoefficient(int iN, int iK)
+int64_t getBinomialCoefficient(int iN, int iK)
 {
-	__int64 iTemp = 1;
+	int64_t iTemp = 1;
 	//take advantage of symmetry in combination, eg. 15C12 = 15C3
 	iK = std::min(iK, iN - iK);
 

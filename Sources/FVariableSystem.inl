@@ -273,7 +273,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue )
 //! \param uwValue Contains the value of the variable if the function succeeds
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, word & uwValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, uint16_t& uwValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -581,7 +581,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, short wValue )
 //! \param szVariable The name of the variable to create
 //! \param uwValue The value that the variable should take on
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, word uwValue )
+inline void FVariableSystem::SetValue( const char * szVariable, uint16_t uwValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
