@@ -861,6 +861,21 @@ int CyCity::getFoodKept() const
 	return m_pCity ? m_pCity->getFoodKept() : -1;
 }
 
+bool CyCity::isFeedingArmy() const
+{
+	return m_pCity->isFeedingArmy();
+}
+
+void CyCity::setFeedArmy(bool bFeedArmy)
+{
+	m_pCity->setFeedArmy(bFeedArmy);
+}
+
+bool CyCity::canDisableFeedArmy() const
+{
+	return m_pCity->canDisableFeedArmy();
+}
+
 int CyCity::getOverflowProduction() const
 {
 	return m_pCity ? m_pCity->getOverflowProduction() : -1;

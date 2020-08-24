@@ -609,6 +609,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bLayoutDirty = false;
 	m_bMaintenanceDirty = false;
 	m_bPlundered = false;
+	m_bFeedArmy = true;
 
 	m_recalcBuilding = MAX_INT;
 	m_bPlotWorkingMasked = false;
@@ -17947,6 +17948,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	// m_bInfoDirty not saved...
 	// m_bLayoutDirty not saved...
 	WRAPPER_READ(wrapper, "CvCity", &m_bPlundered);
+	WRAPPER_READ(wrapper, "CvCity", &m_bFeedArmy);
 
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_ePreviousOwner);
@@ -18512,6 +18514,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	// m_bInfoDirty not saved...
 	// m_bLayoutDirty not saved...
 	WRAPPER_WRITE(wrapper, "CvCity", m_bPlundered);
+	WRAPPER_WRITE(wrapper, "CvCity", m_bFeedArmy);
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOwner);
 	WRAPPER_WRITE(wrapper, "CvCity", m_ePreviousOwner);
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOriginalOwner);
@@ -25861,9 +25864,10 @@ bool CvCity::AI_isPropertyControlBuildingQueued() const
 	return m_bPropertyControlBuildingQueued;
 }
 
-bool CvCity::isFeedingArmy() const
+bool CvCity::canDisableFeedArmy() const
 {
-	return true;
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
+	return algo::count_if(kOwner.cities(), !CvCity::fn::isFeedingArmy()) < kOwner.getNumCities() - 2;
 }
 
 int CvCity::getFoodConsumedByUnits() const

@@ -468,7 +468,10 @@ public:
 	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
 	int getFoodConsumedByPopulation(const int iExtra = 0) const;
 	int getFoodConsumedByUnits() const;
-	bool isFeedingArmy() const;
+	bool isFeedingArmy() const { return m_bFeedArmy; }
+	void setFeedArmy(bool bFeedArmy) { m_bFeedArmy = bFeedArmy; }
+	bool canDisableFeedArmy() const;
+
 	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const; // Exposed to Python
 	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
@@ -1951,6 +1954,7 @@ protected:
 	bool m_bInfoDirty;
 	bool m_bLayoutDirty;
 	bool m_bPlundered;
+	bool m_bFeedArmy;
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       12/07/09                         denev & jdog5000     */
 /*                                                                                              */

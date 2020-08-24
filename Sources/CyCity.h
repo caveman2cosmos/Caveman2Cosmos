@@ -224,6 +224,10 @@ public:
 	void setFood(int iNewValue);
 	void changeFood(int iChange);
 	int getFoodKept() const;
+	bool isFeedingArmy() const;
+	void setFeedArmy(bool bFeedArmy);
+	bool canDisableFeedArmy() const;
+
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
 	int getFeatureProduction() const;
