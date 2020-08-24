@@ -31,7 +31,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum);
+	void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	MissionTypes m_eMission;

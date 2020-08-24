@@ -226,7 +226,7 @@ void CvPropertyPropagator::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyPropagator::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagator::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_eProperty);
 }
@@ -332,7 +332,7 @@ void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, Cv
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorSpread::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorSpread::getCheckSum(unsigned int &iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
@@ -433,7 +433,7 @@ void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, Cv
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyPropagatorGather::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorGather::getCheckSum(unsigned int &iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -578,7 +578,7 @@ void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, C
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int &iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
