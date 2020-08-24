@@ -60,7 +60,7 @@ public:
 
 	bool isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses=false) const;
 
-	int getTotalVictoryScore() const; // Exposed to Python
+	int64_t getTotalVictoryScore() const; // Exposed to Python
 
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
 	bool isVotingMember(VoteSourceTypes eVoteSource) const;

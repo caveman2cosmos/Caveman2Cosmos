@@ -1865,10 +1865,6 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>GREATER_COMMERCE_SWITCH_POINT</DefineName>
-		<iDefineIntVal>1000000</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>WORKER_TRADE_VALUE_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>

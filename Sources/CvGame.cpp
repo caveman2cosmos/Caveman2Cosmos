@@ -8368,9 +8368,8 @@ void CvGame::testVictory()
 			{
 				if (isModderGameOption(MODDERGAMEOPTION_MERCY_RULE))
 				{
-					int iTotalScore = 0;
-					int iTopScore = 0;
-					int iTempScore = 0;
+					int64_t iTotalScore = 0;
+					int64_t iTopScore = 0;
 
 					TeamTypes eBestTeam = (TeamTypes)0;
 					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
@@ -8378,7 +8377,7 @@ void CvGame::testVictory()
 						if (GET_TEAM((TeamTypes)iI).isAlive()
 						&& (!GET_TEAM((TeamTypes)iI).isMinorCiv() || isOption(GAMEOPTION_START_AS_MINORS)))
 						{
-							iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+							const int64_t iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
 							iTotalScore += iTempScore;
 							if (iTempScore > iTopScore)
 							{
@@ -8458,13 +8457,13 @@ void CvGame::testVictory()
 			}
 			if (getElapsedGameTurns() >= getMaxTurns() || bForceEndGame)
 			{
-				int topScore = 0;
+				int64_t topScore = 0;
 				// End of game and Total Victory is selected.  Calculate the topscore
 				for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 				{
 					if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
 					{
-						const int score1 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+						const int64_t score1 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
 						if (score1 > topScore)
 						{
 							topScore = score1;
@@ -8475,7 +8474,7 @@ void CvGame::testVictory()
 				{
 					if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
 					{
-						const int score2 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+						const int64_t score2 = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
 						if (score2 >= topScore)
 						{
 							std::vector<int> aWinner;
