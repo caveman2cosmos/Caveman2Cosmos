@@ -2678,7 +2678,7 @@ uint64_t CvTeam::countTotalCulture() const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 		{
-			iCount += GET_PLAYER((PlayerTypes)iI).countTotalCulture();
+			iCount += GET_PLAYER((PlayerTypes)iI).getCulture();
 		}
 	}
 
@@ -7783,12 +7783,11 @@ void CvTeam::changeCorporationMaintenanceModifier(int iChange)
 	}
 }
 
-int CvTeam::getTotalVictoryScore() const
+int64_t CvTeam::getTotalVictoryScore() const
 {
-	int iL;
-	int iTotalVictoryScore = 0;
+	int64_t iTotalVictoryScore = 0;
 
-	int globalCulture = 0;
+	int64_t globalCulture = 0;
 	int globalThreeCityCulture = 0;
 	int globalPopulation = 0;
 	int globalWonderScore = 0;
@@ -7799,12 +7798,8 @@ int CvTeam::getTotalVictoryScore() const
 	int totalTeamReligion = 0;
 	int totalTeamLegendaryCities = 0;
 
-	long globalPowerHistory =0;
-	long teamPowerHistory =0;
-
-	long tempPower =0;
-
-	int globalLand = GC.getMap().getLandPlots();
+	int64_t globalPowerHistory = 0;
+	int64_t teamPowerHistory = 0;
 
 	for (int iK = 0; iK < GC.getNumBuildingInfos(); iK++)
 	{
@@ -7840,7 +7835,7 @@ int CvTeam::getTotalVictoryScore() const
 		{
 			//Calculate global totals while looping through
 
-			globalCulture += GET_PLAYER((PlayerTypes)iI).processedNationalCulture();
+			globalCulture += GET_PLAYER((PlayerTypes)iI).getCulture();
 			globalPopulation += GET_PLAYER((PlayerTypes)iI).getTotalPopulation();
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -7857,8 +7852,8 @@ int CvTeam::getTotalVictoryScore() const
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			//Calculate global totals while looping through
-			tempPower = 0;
-			for (iL = 0; iL <= GC.getGame().getGameTurn(); iL++)
+			int64_t tempPower = 0;
+			for (int iL = 0; iL <= GC.getGame().getGameTurn(); iL++)
 			{
 				tempPower += GET_PLAYER((PlayerTypes)iI).getPowerHistory(iL);
 			}
@@ -7892,34 +7887,35 @@ int CvTeam::getTotalVictoryScore() const
 	// Add the WonderScore component
 	if (globalWonderScore > 0)
 	{
-		iTotalVictoryScore += int(teamWonderScore * 100 / globalWonderScore);
+		iTotalVictoryScore += teamWonderScore * 100 / globalWonderScore;
 	}
 
 	// Add the population score component
 	if (globalPopulation > 0)
 	{
-		iTotalVictoryScore += int(getTotalPopulation() * 100 / globalPopulation);
+		iTotalVictoryScore += getTotalPopulation() * 100 / globalPopulation;
 	}
 
 	// Add the land score component
+	const int globalLand = GC.getMap().getLandPlots();
+
 	if (globalLand > 0)
 	{
-		iTotalVictoryScore += int(getTotalLand() * 100 / globalLand);
+		iTotalVictoryScore += getTotalLand() * 100 / globalLand;
 	}
 
 	// Add the culture score component
 	if (globalCulture > 0)
 	{
-		uint64_t iTotalCulture;
-		iTotalCulture = countTotalCulture();
+		uint64_t iTotalCulture = countTotalCulture();
 
 		if ( iTotalCulture > MAX_INT/100 )
 		{
-			iTotalVictoryScore += int(countTotalCulture()/(globalCulture/100));
+			iTotalVictoryScore += countTotalCulture()/(globalCulture/100);
 		}
 		else
 		{
-			iTotalVictoryScore += int(countTotalCulture() * 100 / globalCulture);
+			iTotalVictoryScore += countTotalCulture() * 100 / globalCulture;
 		}
 	}
 

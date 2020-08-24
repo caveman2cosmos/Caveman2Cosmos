@@ -119,7 +119,7 @@ class CvTopCivs:
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_CULTURE", ()):
 
-					aTopCivList.append([CyPlayer.countTotalCulture(), iPlayer, CyPlayer])
+					aTopCivList.append([CyPlayer.getCulture(), iPlayer, CyPlayer])
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_SIZE", ()):
 

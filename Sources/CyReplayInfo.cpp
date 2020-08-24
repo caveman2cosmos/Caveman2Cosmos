@@ -127,22 +127,22 @@ int CyReplayInfo::getCalendar() const
 	return m_pHoF ? m_pHoF->getCalendar() : -1;
 }
 
-int CyReplayInfo::getFinalScore() const
+int64_t CyReplayInfo::getFinalScore() const
 {
 	return m_pHoF ? m_pHoF->getFinalScore() : -1;
 }
 
-int CyReplayInfo::getFinalEconomy() const
+int64_t CyReplayInfo::getFinalEconomy() const
 {
 	return m_pHoF ? m_pHoF->getFinalEconomy() : -1;
 }
 
-int CyReplayInfo::getFinalIndustry() const
+int64_t CyReplayInfo::getFinalIndustry() const
 {
 	return m_pHoF ? m_pHoF->getFinalIndustry() : -1;
 }
 
-int CyReplayInfo::getFinalAgriculture() const
+int64_t CyReplayInfo::getFinalAgriculture() const
 {
 	return m_pHoF ? m_pHoF->getFinalAgriculture() : -1;
 }
@@ -167,22 +167,22 @@ int CyReplayInfo::getNumPlayers() const
 	return m_pHoF ? m_pHoF->getNumPlayers() : -1;
 }
 
-int CyReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
+int64_t CyReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 {
 	return m_pHoF ? m_pHoF->getPlayerScore(iPlayer, iTurn) : -1;
 }
 
-int CyReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
+int64_t CyReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 {
 	return m_pHoF ? m_pHoF->getPlayerEconomy(iPlayer, iTurn) : -1;
 }
 
-int CyReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
+int64_t CyReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 {
 	return m_pHoF ? m_pHoF->getPlayerIndustry(iPlayer, iTurn) : -1;
 }
 
-int CyReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
+int64_t CyReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 {
 	return m_pHoF ? m_pHoF->getPlayerAgriculture(iPlayer, iTurn) : -1;
 }
