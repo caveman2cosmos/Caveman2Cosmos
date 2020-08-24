@@ -97,7 +97,7 @@ class CvTopCivs:
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_WEALTH", ()):
 
-					iGold = 1000000 * CyPlayer.getGreaterGold() + CyPlayer.getGold()
+					iGold = CyPlayer.getGold()
 					aTopCivList.append([iGold, iPlayer, CyPlayer])
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_POWER", ()):

@@ -574,9 +574,7 @@ void CvArea::changeFreeSpecialist(PlayerTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiFreeSpecialist[eIndex] = (m_aiFreeSpecialist[eIndex] + iChange);
-		FAssert(getFreeSpecialist(eIndex) >= 0);
-
+		m_aiFreeSpecialist[eIndex] += iChange;
 		GET_PLAYER(eIndex).AI_makeAssignWorkDirty();
 	}
 }

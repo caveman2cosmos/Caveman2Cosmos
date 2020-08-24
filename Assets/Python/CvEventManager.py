@@ -780,20 +780,20 @@ class CvEventManager:
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
 						iTeam = CyPlayer.getTeam()
-						Value = iGameTurn * 2
+						iDiv = iGameTurn * 2
 						for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 							CyTeamX = GC.getTeam(iTeamX)
 							if CyTeamX.isAlive() and CyTeamX.isVassal(iTeam):
-								Value -= Value / 8
-						iGGP = int(GAME.getPlayerScore(iPlayer) / Value)
-						CyPlayer.changeCombatExperience(iGGP)
+								iDiv -= intSqrt(iDiv)
+
+						CyPlayer.changeCombatExperience(GAME.getPlayerScore(iPlayer) / iDiv)
 				elif KEY == "TOPKAPI_PALACE":
 					iTeam = CyPlayer.getTeam()
 					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 						if iPlayerX == iPlayer: continue
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and GC.getTeam(CyPlayerX.getTeam()).isVassal(iTeam):
-							iGold = int(((1000000 * CyPlayerX.getGreaterGold() + CyPlayerX.getGold()) ** 0.5)/2500)
+							iGold = (intSqrt(CyPlayerX.getGold())/2500)
 							if iGold:
 								CyPlayerX.changeGold(iGold)
 							CyPlayerX.changeCombatExperience(1)
@@ -991,7 +991,7 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				fHandicapFactor = 1
+				iHandicapFactor = 100
 				if CyPlayerW.isHuman():
 					if CyPlayerL.isHuman():
 						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
@@ -1001,7 +1001,7 @@ class CvEventManager:
 						iHandicapFactorL = 100
 
 					if iHandicapFactorW > iHandicapFactorL:
-						fHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100) / 100.0
+						iHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100)
 				# Message
 				if iPlayerAct is None:
 					iPlayerAct = GAME.getActivePlayer()
@@ -1020,9 +1020,9 @@ class CvEventManager:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
 				if bSneak:
-					iStolen = (CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL))
+					iStolen = CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
 					if iStolen > 1:
-						iStolen = int((iStolen ** 0.5) / fHandicapFactor)
+						iStolen = intSqrt(iStolen * 100) * 10 / iHandicapFactor
 					if iStolen > 0:
 						CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
 						CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
@@ -1041,7 +1041,10 @@ class CvEventManager:
 							)
 				# Marauder promo
 				if bMarauder:
-					iStolen = int((((1000000 * CyPlayerL.getGreaterGold() + CyPlayerL.getGold()) / (CyPlayerL.getNumUnits() + 1)) ** .3) / fHandicapFactor)
+					iStolen = 100 * CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
+					if iStolen > 1:
+						# intSqrt(intSqrt(x)) = x ** 0.25 = pow(x, 0.25)
+						iStolen = intSqrt(intSqrt(iStolen) * 1000) / iHandicapFactor
 					if iStolen > 0:
 						CyPlayerL.changeGold(-iStolen)
 						CyPlayerW.changeGold(iStolen)
@@ -1065,7 +1068,7 @@ class CvEventManager:
 
 					if CyTeamL.isHasTech(iTechW) or not CyTeamW.isHasTech(iTechL):
 
-						iStolen = int((CyPlayerL.calculateBaseNetResearch() ** 0.5)/fHandicapFactor)
+						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 100) * 10 / iHandicapFactor
 						if iStolen:
 							CyTeamW.changeResearchProgress(iTechW, iStolen, iPlayerW)
 							CyTeamL.changeResearchProgress(iTechL,-iStolen, iPlayerL)
@@ -1089,7 +1092,7 @@ class CvEventManager:
 					if iPlayer != iPlayerW: continue
 					KEY = aWonderTuple[0][i]
 					if KEY == "PERGAMON":
-						iGGP = int(CyUnitL.getExperience() ** 0.5)
+						iGGP = intSqrt(CyUnitL.getExperience())
 						if iGGP:
 							CyPlayerW.changeCombatExperience(iGGP)
 					elif KEY == "GREAT_JAGUAR_TEMPLE":
@@ -1930,7 +1933,7 @@ class CvEventManager:
 				iYParam1 = 100000
 				iYParam2 = 100000
 				iYParam3 = 100000
-				iOffset = int(iGridWidth / 4)
+				iOffset = iGridWidth / 4
 				iXOff1 = iX - 3 * iOffset
 				if iXOff1 < 0:
 					iXOff1 = iX + iOffset

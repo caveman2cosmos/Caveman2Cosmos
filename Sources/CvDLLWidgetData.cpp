@@ -3746,33 +3746,30 @@ void CvDLLWidgetData::parseCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
 	{
-		if (widgetDataStruct.m_iData1 != NO_SPECIALIST)
+		GAMETEXT.parseSpecialistHelp(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity);
+
+		if (widgetDataStruct.m_iData2 != -1)
 		{
-			GAMETEXT.parseSpecialistHelp(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity);
+			int iCount = 0;
 
-			if (widgetDataStruct.m_iData2 != -1)
+			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 			{
-				int iCount = 0;
-
-				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				if (iI < widgetDataStruct.m_iData1)
 				{
-					if (iI < widgetDataStruct.m_iData1)
-					{
-						iCount += pHeadSelectedCity->getSpecialistCount((SpecialistTypes)iI);
-					}
-					else if (iI == widgetDataStruct.m_iData1)
-					{
-						iCount += widgetDataStruct.m_iData2;
-					}
+					iCount += pHeadSelectedCity->getSpecialistCount((SpecialistTypes)iI);
 				}
-
-				if (iCount < pHeadSelectedCity->totalFreeSpecialists())
+				else if (iI == widgetDataStruct.m_iData1)
 				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_FREE_SPECIALIST"));
+					iCount += widgetDataStruct.m_iData2;
 				}
+			}
+
+			if (iCount < pHeadSelectedCity->totalFreeSpecialists())
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_FREE_SPECIALIST"));
 			}
 		}
 	}

@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
@@ -3159,8 +3160,8 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		if (!bAffliction) //bAffliction ONLY applies during the Outbreaks and Afflictions option being on!
 		{
-			if (*getPropertiesConst() > *(kBuilding.getPrereqMaxProperties())
-			||  *getPropertiesConst() < *(kBuilding.getPrereqMinProperties()))
+			if (!(*getPropertiesConst() <= *(kBuilding.getPrereqMaxProperties()))
+			|| !(*getPropertiesConst() >= *(kBuilding.getPrereqMinProperties())))
 			{
 				return false;
 			}
@@ -4519,7 +4520,7 @@ bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
 			return false;
 		}
 
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < hurryGold(eHurry))
+		if (GET_PLAYER(getOwner()).getGold() < hurryGold(eHurry))
 		{
 			return false;
 		}
@@ -4552,7 +4553,7 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 
 	int iHurryGold = getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew));
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < iHurryGold)
+	if (GET_PLAYER(getOwner()).getGold() < iHurryGold)
 	{
 		return false;
 	}
@@ -4582,7 +4583,7 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool b
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
 	{
 		return false;
 	}
@@ -6484,12 +6485,12 @@ int CvCity::totalFreeSpecialists() const
 		iCount += area()->getFreeSpecialist(getOwner());
 		iCount += GET_PLAYER(getOwner()).getFreeSpecialist();
 
-		for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); ++iImprovement)
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 		{
-			int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iImprovement);
+			const int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iI);
 			if (iNumSpecialistsPerImprovement > 0)
 			{
-				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
+				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iI);
 			}
 		}
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
@@ -6539,31 +6540,25 @@ int CvCity::unhealthyPopulation(bool bNoAngry, int iExtra) const
 
 int CvCity::totalGoodBuildingHealth() const
 {
-	int iHealth = getBuildingGoodHealth();
-
-	iHealth += area()->getBuildingGoodHealth(getOwner());
-	iHealth += GET_PLAYER(getOwner()).getBuildingGoodHealth();
-	iHealth += getExtraBuildingGoodHealth();
-	iHealth += std::max(0, calculatePopulationHealth());
-
-	return iHealth;
+	return getBuildingGoodHealth()
+		+ area()->getBuildingGoodHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingGoodHealth()
+		+ getExtraBuildingGoodHealth()
+		+ std::max(0, calculatePopulationHealth());
 }
 
 
 int CvCity::totalBadBuildingHealth() const
 {
-	if (!isBuildingOnlyHealthy())
+	if (isBuildingOnlyHealthy())
 	{
-		int iHealth = getBuildingBadHealth();
-
-		iHealth += area()->getBuildingBadHealth(getOwner());
-		iHealth += GET_PLAYER(getOwner()).getBuildingBadHealth();
-		iHealth += getExtraBuildingBadHealth();
-		iHealth += std::min(0, calculatePopulationHealth());
-
-		return iHealth;
+		return 0;
 	}
-	return 0;
+	return getBuildingBadHealth()
+		+ area()->getBuildingBadHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingBadHealth()
+		+ getExtraBuildingBadHealth()
+		+ std::min(0, calculatePopulationHealth());
 }
 
 
@@ -6625,33 +6620,35 @@ int CvCity::healthRate(bool bNoAngry, int iExtra) const
 }
 
 
-int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
+int CvCity::getPopulationPlusProgress100(const int iExtra) const
 {
-	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
-		+ (getPopulation() + iExtra)
-		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT();
-}
-
-int CvCity::getFoodConsumedByPopulation(const int iExtra) const
-{
-	int iPop100 = 100 * (getPopulation() + iExtra);
-
 	// Toffer - Food consumption should gradually increment during the growth process
 	// so that the pop growth doesn't entail a huge food consumption change in one turn
 	if (iExtra == 0)
 	{
-		iPop100 += 100 * getFood() / growthThreshold();
+		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
 	}
-	else iPop100 += getMaxFoodKeptPercent();
+	return 100 * (getPopulation() + iExtra) + getMaxFoodKeptPercent();
+}
 
-	return iPop100 * getFoodConsumedPerPopulation100() / 10000;
+int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
+{
+	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
+		+ getPopulationPlusProgress100(iExtra)
+		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT()
+		/ 100;
+}
+
+int CvCity::getFoodConsumedByPopulation(const int iExtra) const
+{
+	return getPopulationPlusProgress100(iExtra) * getFoodConsumedPerPopulation100() / 10000;
 }
 
 
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
 	return getFoodConsumedByPopulation(iExtra)
-		- (bNoAngry ? angryPopulation(iExtra) : 0) // Toffer - Why shouldn't angry population consume food?
+		- (bNoAngry ? angryPopulation(iExtra) : 0) // Doesn't belong here, should be extracted out to wherever it is needed
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
 }
@@ -6862,18 +6859,13 @@ int CvCity::hurryGold(HurryTypes eHurry) const
 
 int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 {
-	int iGold;
-
 	if (GC.getHurryInfo(eHurry).getGoldPerProduction() == 0)
 	{
 		return 0;
 	}
+	const int iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
 
-	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
-
-	FAssert(iGold <= GC.getGREATER_COMMERCE_SWITCH_POINT());//While protected below, if this starts coming up, I'll need to start taking measures to improve this system of hurrying to allow it to start breaking into over 1 million in cost.)
-
-	iGold = std::min(iGold, GC.getGREATER_COMMERCE_SWITCH_POINT());
+	FAssert(iGold <= 2000000000); // We'll need to take measures if this comes up
 
 	return std::max(1, iGold);
 }
@@ -8595,6 +8587,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 		iMaintenance += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
 	}
 
+	// Bonus Maintenance
 	int iNumBonuses = 0;
 	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 	{
@@ -8604,53 +8597,43 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 			iNumBonuses += getNumBonuses(eBonus);
 		}
 	}
+	iMaintenance +=
+	(
+		GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses
+		* GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+		/ 100
+	);
 
-	int iBonusMaintenance = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-	iBonusMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-	iBonusMaintenance /= 100;
-	iMaintenance += iBonusMaintenance;
-
-	iMaintenance *= (getPopulation() + 17);
+	// Population factor
+	iMaintenance *= 17 + getPopulation();
 	iMaintenance /= 18;
 
-	iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
-	iMaintenance /= 100;
-
-	iMaintenance *= std::max(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
-	iMaintenance /= 100;
-
-	int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-	if (iInflation > 0)
-	{
-		iMaintenance *= 100;
-		iMaintenance /= iInflation;
-	}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/17/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	iMaintenance *= (GET_TEAM(getTeam()).getCorporationMaintenanceModifier() + 100);
-	iMaintenance /= 100;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/19/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+	// Handicap
 	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
-		if (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent() > 80)
-		{
-			iMaintenance *= (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent());
-			iMaintenance /= 80;
-		}
+		iMaintenance = (
+			iMaintenance
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			/ 8000
+		);
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+	else
+	{
+		iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+		iMaintenance /= 100;
+	}
+
+	// National Modifier
+	iMaintenance *= std::max(0, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100);
+	iMaintenance /= 100;
+
+	iMaintenance *= 100;
+	iMaintenance /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
+
+	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
+	iMaintenance /= 100;
+
 	FAssert(iMaintenance >= 0);
 
 	return iMaintenance;
@@ -14762,7 +14745,7 @@ int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 
 int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
 	int iTotalGreatPeopleUnitRate = 0;
 	iTotalGreatPeopleUnitRate += m_paiGreatPeopleUnitRate[eIndex];
@@ -15065,7 +15048,7 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 
 	if (iChange != 0)
 	{
-		m_paiImprovementFreeSpecialists[eIndex] = std::max(0, (m_paiImprovementFreeSpecialists[eIndex] + iChange));
+		m_paiImprovementFreeSpecialists[eIndex] += iChange;
 	}
 }
 
@@ -22879,8 +22862,7 @@ int CvCity::calculateCorporateTaxes() const
 	{
 		if (isActiveCorporation((CorporationTypes)iI) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iI))
 		{
-			CorporationTypes eCorporation = (CorporationTypes)iI;
-
+			const CorporationTypes eCorporation = (CorporationTypes)iI;
 
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 			{
@@ -22897,34 +22879,29 @@ int CvCity::calculateCorporateTaxes() const
 				}
 			}
 
-			int iBonusTaxes = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-			iBonusTaxes *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-			iBonusTaxes /= 200;
-			iTaxes += iBonusTaxes;
+			iTaxes +=
+			(
+				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+				/ 200
+			);
+			const int iAveragePopulation = GC.getGame().getTotalPopulation() / std::max(1, GC.getGame().getNumCivCities());
 
-			int iAveragePopulation = GC.getGame().getTotalPopulation();
-			iAveragePopulation /= std::max(1, GC.getGame().getNumCivCities());
 			if (iAveragePopulation > 0)
 			{
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-
-			iTaxes *= std::min(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
+			iTaxes *= std::max(0, 100 + GET_PLAYER(getOwner()).getCorporationMaintenanceModifier());
 			iTaxes /= 100;
-			iTaxes = abs(iTaxes);
 
-			int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-			if (iInflation > 0)
-			{
-				iTaxes *= 100;
-				iTaxes /= iInflation;
-			}
+			iTaxes *= 100;
+			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 
-			iTaxes /= (1 + GET_PLAYER(getOwner()).getHandicapType() / 2);
+			iTaxes *= 100;
+			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
 		}
 	}
-
 	return iTaxes / 100;
 }
 

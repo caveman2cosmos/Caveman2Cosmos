@@ -3419,7 +3419,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 		const CvImprovementInfo& kImprovementX = GC.getImprovementInfo(eImprovement);
 
 		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-		//if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getEffectiveGold())
+		//if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getGold())
 		{
 			if ((ImprovementTypes)kImprovement.getImprovementUpgrade() == eImprovement)
 			{

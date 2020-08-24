@@ -37,7 +37,7 @@ void CvGame::updateColoredPlots()
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 			if (pLoopPlot != NULL)
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -56,15 +56,15 @@ void CvGame::updateColoredPlots()
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 			if (pLoopPlot != NULL)
 			{
-				CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
-				ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+				const CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
+				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 
 				if (pWorkingCity != NULL && eImprovement != NO_IMPROVEMENT)
 				{
-					BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(pWorkingCity->getCityPlotIndex(pLoopPlot));
+					const BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(pWorkingCity->getCityPlotIndex(pLoopPlot));
 
 					if (NO_BUILD != eBestBuild && GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement())
 					{
@@ -84,14 +84,14 @@ void CvGame::updateColoredPlots()
 	{
 		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+			const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
 
 			if (pLoopPlot != NULL && GET_PLAYER(getActivePlayer()).getAdvancedStartCityCost(true, pLoopPlot) > 0)
 			{
 				bool bStartingPlot = false;
 				for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 				{
-					CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
+					const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
 					if (kPlayer.isAlive() && getActiveTeam() == kPlayer.getTeam() && pLoopPlot == kPlayer.getStartingPlot())
 					{
 						bStartingPlot = true;
@@ -116,7 +116,7 @@ void CvGame::updateColoredPlots()
 				}
 				if (pLoopPlot->isRevealed(getActiveTeam(), false))
 				{
-					NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+					NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
 					color.a = 0.4f;
 					gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}

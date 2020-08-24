@@ -328,21 +328,16 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 
 void CvGameTextMgr::setGoldStr(CvWString& szString, PlayerTypes ePlayer)
 {
-	int iGreaterGold = GET_PLAYER(ePlayer).getGreaterGold();
 	if (GET_PLAYER(ePlayer).getGold() < 0)
 	{
 		szString.Format(L"%c: " SETCOLR L"%d" SETCOLR, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER(ePlayer).getGold());
-	}
-	else if (iGreaterGold > 0)
-	{
-		szString.Format(L"%c: %d%c%d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), iGreaterGold, GC.getYieldInfo(YIELD_COMMERCE).getChar(), GET_PLAYER(ePlayer).getGold());
 	}
 	else
 	{
 		szString.Format(L"%c: %d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), GET_PLAYER(ePlayer).getGold());
 	}
 
-	int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
+	const int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
 	if (iGoldRate < 0)
 	{
 		szString += gDLL->getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate);
@@ -8841,10 +8836,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				const long long iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
-				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				long long iUnitCostPercentage = iUnitUpkeep * 100 / std::max(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%llu / %d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
+				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
+				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
+				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%lld / %lld)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -32763,38 +32758,30 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iInflationRate = kPlayer.calculateInflationRate();
+	const int iInflationRate = kPlayer.calculateInflationRate();
 	if (iInflationRate != 0)
 	{
-		int iPreInflation = kPlayer.calculatePreInflatedCosts();
+		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
 		szBuffer.append(NEWLINE);
 
-		int	iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
-		int	iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
-		CvWString	szInflationOutlook;
+		const int iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
+		const int iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
+		CvWString szInflationOutlook;
 
-		if ( iCurrentInflationModifier > iEquilibriumInflationModifier )
+		if (iCurrentInflationModifier > iEquilibriumInflationModifier)
 		{
-			if ( (9*iCurrentInflationModifier/10) > iEquilibriumInflationModifier )
+			if (iCurrentInflationModifier * 9/10 > iEquilibriumInflationModifier)
 			{
 				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_IMPROVING");
 			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
 		}
-		else
+		else if (iEquilibriumInflationModifier * 9/10 > iCurrentInflationModifier)
 		{
-			if ( (9*iEquilibriumInflationModifier/10) > iCurrentInflationModifier )
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
-			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
 		}
+		else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
+
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW", iPreInflation, iInflationRate, iInflationRate, iPreInflation, (iPreInflation * iInflationRate) / 100, szInflationOutlook.c_str()));
 
 		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
@@ -32838,13 +32825,13 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 
 	// Civilian section
-	const long long iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
+	const int64_t iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN", CvWString::format(L"%.2f", iUpkeepCivilian100 / 100.0).GetCString()));
 
 	if (iCivicModCivilian != 0)
 	{
-		long long iCivicCivilian = 0;
+		int64_t iCivicCivilian = 0;
 		if (iCivicModCivilian > 0)
 		{
 			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100 - iUpkeepCivilian100;
@@ -32861,7 +32848,7 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModCivilian != 0)
 	{
-		long long iTraitCivilian = 0;
+		int64_t iTraitCivilian = 0;
 		if (iTraitModCivilian > 0)
 		{
 			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100 - iUpkeepCivilian100;
@@ -32878,19 +32865,19 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepCivilian()));
 
-	const long long iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+	const int64_t iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUpkeepCivilianNet));
 
 	// Military section
 	szBuffer.append(NEWLINE);
-	const long long iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
+	const int64_t iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY", CvWString::format(L"%.2f", iUpkeepMilitary100 / 100.0).GetCString()));
 
 	if (iCivicModMilitary != 0)
 	{
-		long long iCivicMilitary = 0;
+		int64_t iCivicMilitary = 0;
 		if (iCivicModMilitary > 0)
 		{
 			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100 - iUpkeepMilitary100;
@@ -32907,7 +32894,7 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	if (iTraitModMilitary != 0)
 	{
-		long long iTraitMilitary = 0;
+		int64_t iTraitMilitary = 0;
 		if (iTraitModMilitary > 0)
 		{
 			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100 - iUpkeepMilitary100;
@@ -32924,12 +32911,12 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	}
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepMilitary()));
 
-	const long long iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+	const int64_t iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
 
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUnitUpkeepMilitaryNet));
 
 	// End Section
-	const long long iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
+	const int64_t iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 	if (iHandicap != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
@@ -36306,7 +36293,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 	//szBuffer.assign(kMission.getDescription());
 
-	int iMissionCost = kPlayer.getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
+	int64_t iMissionCost = kPlayer.getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
 
 	if (kMission.isDestroyImprovement())
 	{
@@ -36323,7 +36310,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36339,7 +36326,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36353,7 +36340,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36369,7 +36356,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			int iTargetUnitID = iExtraData;
 
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
+			const CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
 
 			if (NULL != pUnit)
 			{
@@ -36385,7 +36372,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			int iTargetUnitID = iExtraData;
 
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
+			const CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
 
 			if (NULL != pUnit)
 			{
@@ -36399,7 +36386,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36413,7 +36400,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity && pPlot->getCulture(GC.getGame().getActivePlayer()) > 0)
 			{
@@ -36431,7 +36418,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36445,7 +36432,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36459,7 +36446,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36473,22 +36460,20 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NO_PLAYER != eTargetPlayer)
 		{
-			int iMaxGold = GC.getGREATER_COMMERCE_SWITCH_POINT()/100;
-			int iGold = std::min(iMaxGold, GET_PLAYER(eTargetPlayer).getEffectiveGold());
-			int iNumTotalGold = (iGold * kMission.getStealTreasuryTypes()) / 100;
+			int64_t iGold = GET_PLAYER(eTargetPlayer).getGold() * kMission.getStealTreasuryTypes() / 100;
 
 			if (NULL != pPlot)
 			{
-				CvCity* pCity = pPlot->getPlotCity();
+				const CvCity* pCity = pPlot->getPlotCity();
 
 				if (NULL != pCity)
 				{
-					iNumTotalGold *= pCity->getPopulation();
-					iNumTotalGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
+					iGold *= pCity->getPopulation();
+					iGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
 				}
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_STEAL_TREASURY", iNumTotalGold, GET_PLAYER(eTargetPlayer).getCivilizationAdjectiveKey()));
+			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_STEAL_TREASURY", iGold, GET_PLAYER(eTargetPlayer).getCivilizationAdjectiveKey()));
 			szBuffer.append(NEWLINE);
 		}
 	}
@@ -36542,7 +36527,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36555,7 +36540,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36568,7 +36553,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			int iTurns = 6;
 			iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
@@ -36585,7 +36570,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36598,7 +36583,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36611,7 +36596,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36624,7 +36609,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{

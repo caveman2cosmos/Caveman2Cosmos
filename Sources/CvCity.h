@@ -464,6 +464,7 @@ public:
 	int goodHealth() const; // Exposed to Python
 	int badHealth(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
 	int healthRate(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
+	int getPopulationPlusProgress100(const int iExtra) const;
 	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
 	int getFoodConsumedByPopulation(const int iExtra = 0) const;
 	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const; // Exposed to Python

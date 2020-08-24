@@ -1,5 +1,6 @@
 //	Class representing a set of plots reachable in a fixed number of tiles with given flags
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 

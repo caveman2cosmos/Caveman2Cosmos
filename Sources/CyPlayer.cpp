@@ -657,7 +657,7 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-long long CyPlayer::getFinalUnitUpkeep()
+int64_t CyPlayer::getFinalUnitUpkeep()
 {
 	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }
@@ -667,7 +667,7 @@ int CyPlayer::calculateUnitSupply()
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
 }
 
-int CyPlayer::calculatePreInflatedCosts()
+int64_t CyPlayer::calculatePreInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculatePreInflatedCosts() : -1;
 }
@@ -677,7 +677,7 @@ int CyPlayer::calculateInflationRate()
 	return m_pPlayer ? m_pPlayer->calculateInflationRate() : -1;
 }
 
-int CyPlayer::calculateInflatedCosts()
+int64_t CyPlayer::calculateInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
 }
@@ -945,43 +945,21 @@ int CyPlayer::getTotalLandScored()
 	return m_pPlayer ? m_pPlayer->getTotalLandScored() : -1;
 }
 
-int CyPlayer::getEffectiveGold() 
-{
-	return m_pPlayer ? m_pPlayer->getEffectiveGold() : -1;
-}
-
-int CyPlayer::getGold() 
+int64_t CyPlayer::getGold() const
 {
 	return m_pPlayer ? m_pPlayer->getGold() : -1;
 }
 
-int CyPlayer::getGreaterGold() 
-{
-	return m_pPlayer ? m_pPlayer->getGreaterGold() : -1;
-}
-
-void CyPlayer::setGold(int iNewValue)
+void CyPlayer::setGold(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setGold(iNewValue);
 }
 
-void CyPlayer::changeGold(int iChange)
+void CyPlayer::changeGold(int64_t iChange)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeGold(iChange);
-}
-
-void CyPlayer::setGreaterGold(int iNewValue)
-{
-	if (m_pPlayer)
-		m_pPlayer->setGreaterGold(iNewValue);
-}
-
-void CyPlayer::changeGreaterGold(int iChange)
-{
-	if (m_pPlayer)
-		m_pPlayer->changeGreaterGold(iChange);
 }
 
 int CyPlayer::getGoldPerTurn()
@@ -1429,6 +1407,11 @@ int CyPlayer::getNumCitiesMaintenanceModifier()
 int CyPlayer::getCorporationMaintenanceModifier()
 {
 	return m_pPlayer ? m_pPlayer->getCorporationMaintenanceModifier() : -1;
+}
+
+int64_t CyPlayer::getTreasuryUpkeep()
+{
+	return m_pPlayer ? m_pPlayer->getTreasuryUpkeep() : -1;
 }
 
 int CyPlayer::getTotalMaintenance()
