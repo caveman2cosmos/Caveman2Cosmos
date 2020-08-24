@@ -246,7 +246,7 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtilit
 	}
 }
 
-void CvOutcomeList::getCheckSum(unsigned int& iSum)
+void CvOutcomeList::getCheckSum(unsigned int& iSum) const
 {
 	int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)

@@ -20570,11 +20570,8 @@ void CvGameTextMgr::setUnitExperienceHelp(CvWStringBuffer &szBuffer, CvWString s
 {
 	if (GC.getUnitInfo(eUnit).canAcquireExperience())
 	{
-		int iExperience = pCity->getProductionExperience(eUnit);
-		if (bConscript)
-		{
-			iExperience /= 2;
-		}
+		const int iExperience = pCity->getProductionExperience(eUnit) / (bConscript ? 2 : 1);
+
 		if (iExperience > 0)
 		{
 			szBuffer.append(szStart);
@@ -20582,12 +20579,9 @@ void CvGameTextMgr::setUnitExperienceHelp(CvWStringBuffer &szBuffer, CvWString s
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE_DRAFT", iExperience));
 			}
-			else
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE", iExperience));
-			}
+			else szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE", iExperience));
 
-			int iLevel = calculateLevel(iExperience, pCity->getOwner());
+			const int iLevel = calculateLevel(iExperience, pCity->getOwner());
 			if (iLevel > 1)
 			{
 				szBuffer.append(L", ");
