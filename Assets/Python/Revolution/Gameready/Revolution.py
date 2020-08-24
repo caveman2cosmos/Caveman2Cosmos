@@ -2281,12 +2281,12 @@ class Revolution:
 		cultureList = []
 		scoreList = []
 
-		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()) :
-			pPlayer = GC.getPlayer( iPlayer )
-			if( pPlayer.isAlive() and not pPlayer.getNumCities() == 0 ) :
+		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			pPlayer = GC.getPlayer(iPlayer)
+			if (pPlayer.isAlive()):
 				powerList.append((pPlayer.getPower(),iPlayer))
-				cultureList.append((pPlayer.countTotalCulture(),iPlayer))
-				scoreList.append((GAME.getPlayerScore(iPlayer),iPlayer))
+				cultureList.append((pPlayer.getCulture(), iPlayer))
+				scoreList.append((GAME.getPlayerScore(iPlayer), iPlayer))
 
 
 		powerList.sort()

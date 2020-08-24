@@ -95,7 +95,6 @@ public:
 	int getCurrentInflationCostModifier();
 	int getEquilibriumInflationCostModifier();
 
-	int64_t countTotalCulture() const;
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);

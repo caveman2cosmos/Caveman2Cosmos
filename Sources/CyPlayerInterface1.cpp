@@ -67,7 +67,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("countNumCoastalCities", &CyPlayer::countNumCoastalCities, "int ()")
 
-		.def("countTotalCulture", &CyPlayer::countTotalCulture, "int ()")
 		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) - ")
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings?")
 

@@ -377,11 +377,6 @@ int CyPlayer::getEquilibriumInflationCostModifier()
 	return m_pPlayer ? m_pPlayer->getEquilibriumInflationCostModifier() : 0;
 }
 
-int64_t CyPlayer::countTotalCulture() const
-{
-	return m_pPlayer ? m_pPlayer->countTotalCulture() : -1;
-}
-
 int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
 {
 	return m_pPlayer ? m_pPlayer->countOwnedBonuses((BonusTypes)eBonus) : NO_BONUS;

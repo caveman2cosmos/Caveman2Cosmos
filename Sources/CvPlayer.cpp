@@ -4299,7 +4299,7 @@ void CvPlayer::doTurn()
 	m_mapPowerHistory[GC.getGame().getGameTurn()] = getPower();
 	m_mapIndustryHistory[GC.getGame().getGameTurn()] = calculateTotalYield(YIELD_PRODUCTION);
 	m_mapAgricultureHistory[GC.getGame().getGameTurn()] = calculateTotalYield(YIELD_FOOD);
-	m_mapCultureHistory[GC.getGame().getGameTurn()] = countTotalCulture();
+	m_mapCultureHistory[GC.getGame().getGameTurn()] = getCulture();
 	m_mapEspionageHistory[GC.getGame().getGameTurn()] = GET_TEAM(getTeam()).getEspionagePointsEver();
 	m_mapRevolutionStabilityHistory[GC.getGame().getGameTurn()] = getStabilityIndexAverage();
 
@@ -5274,24 +5274,6 @@ int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 
 	return m_orbitalInfrastructureCount;
 }
-
-
-uint64_t CvPlayer::countTotalCulture() const
-{
-	return algo::accumulate(cities() | transformed(CvCity::fn::getCultureTimes100(getID())), 0) / 100;
-}
-
-// @SAVEBREAK DELETE
-void CvPlayer::doCountTotalCulture()
-{
-	m_iCulture = 0;
-
-	foreach_(const CvCity* pLoopCity, cities())
-	{
-		changeCulture(pLoopCity->getCultureTimes100(getID()));
-	}
-}
-// SAVEBREAK@
 
 
 int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
@@ -20768,7 +20750,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
 		// @SAVEBREAK DELETE
-		int m_iGold;
+		int m_iGold = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGold);
 		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGoldPerTurn);
@@ -21025,12 +21007,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForeignUnhappyPercent);
 
 		// @SAVEBREAK DELETE
-		// Calculate player culture as the sum of city culture if not present in save game
-		m_iCulture = -1;
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iCulture, SAVE_VALUE_ANY);
-		// SAVEBREAK@
+		int m_iCulture = 0;
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
 
-		// @SAVEBREAK DELETE Toffer
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentCulturalAge, SAVE_VALUE_ANY);
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_eCurrentAgeSegment, SAVE_VALUE_ANY);
 		// SAVEBREAK@
@@ -21896,17 +21875,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraFreedomFighters);
 
 		// @SAVEBREAK DELETE
-		int m_iGreaterGold;
+		int m_iGreaterGold = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterGold);
-		// SAVEBREAK@
-
-		// @SAVEBREAK DELETE
-		int m_iGreaterCulture;
+		int m_iGreaterCulture = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGreaterCulture);
-		if (m_iGreaterCulture > 1000000)
-		{
-			doCountTotalCulture();
-		}
 		// SAVEBREAK@
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
@@ -21933,7 +21905,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	// @SAVEBREAK REPLACE
 		double fGold = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		this->m_iGold = static_cast<int64_t>(fGold + 0.01) + (1000000 * m_iGreaterGold) + m_iGold;
+		this->m_iGold = static_cast<int64_t>(fGold + 0.01) + 1000000 * m_iGreaterGold + m_iGold;
 	/* WITH
 		double fGold;
 		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
@@ -21943,7 +21915,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	// @SAVEBREAK REPLACE
 		double fCulture = 0;
 		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
-		this->m_iCulture = static_cast<int64_t>(fCulture + 0.01) + (1000000 * m_iGreaterCulture) + m_iCulture;
+		this->m_iCulture = static_cast<int64_t>(fCulture + 0.01) + 1000000 * m_iGreaterCulture + m_iCulture;
 	/* WITH
 		double fCulture;
 		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
@@ -22245,6 +22217,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityLimit);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCityOverLimitUnhappy);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iForeignUnhappyPercent);
+
+		// @SAVEBREAK DELETE
+		int m_iCulture = 0;
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCulture);
+		// SAVEBREAK@
 
 		//	Subdue and construct-by-unit stats
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumAnimalsSubdued);
@@ -30560,20 +30537,11 @@ int64_t CvPlayer::getCulture() const
 
 void CvPlayer::setCulture(int64_t iNewValue)
 {
-	if (getCulture() != iNewValue)
-	{
-		m_iCulture = iNewValue;
-	}
+	m_iCulture = iNewValue;
 }
 
 void CvPlayer::changeCulture(int64_t iAddValue)
 {
-	// @SAVEBREAK DELETE
-	if (m_iCulture == -1) //saved game loaded which does not contain that information
-	{
-		m_iCulture = countTotalCulture();
-	}
-	// SAVEBREAK@
 	m_iCulture += iAddValue;
 }
 
@@ -32417,7 +32385,6 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 
 int64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
-	//return getLeaderLevelupNextCultureTotal() - countTotalCulture();
 	return getLeaderLevelupNextCultureTotal() - getCulture();
 }
 

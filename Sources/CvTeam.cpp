@@ -2678,7 +2678,7 @@ uint64_t CvTeam::countTotalCulture() const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 		{
-			iCount += GET_PLAYER((PlayerTypes)iI).countTotalCulture();
+			iCount += GET_PLAYER((PlayerTypes)iI).getCulture();
 		}
 	}
 
@@ -7835,7 +7835,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 		{
 			//Calculate global totals while looping through
 
-			globalCulture += GET_PLAYER((PlayerTypes)iI).countTotalCulture();
+			globalCulture += GET_PLAYER((PlayerTypes)iI).getCulture();
 			globalPopulation += GET_PLAYER((PlayerTypes)iI).getTotalPopulation();
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
