@@ -254,9 +254,9 @@ void FDataIOStream::Read(short	*s)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(unsigned short	*s)
+void FDataIOStream::Read(uint16_t* s)
 {
-	stream.read((char*)s, sizeof(unsigned short));
+	stream.read((char*)s, sizeof(uint16_t));
 	FAssert(stream.good());
 }
 
@@ -266,9 +266,9 @@ void FDataIOStream::Read(int count, short values[])
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(int count, unsigned short values[])
+void FDataIOStream::Read(int count, uint16_t values[])
 {
-	stream.read((char*)values, sizeof(unsigned short)*count);
+	stream.read((char*)values, sizeof(uint16_t)*count);
 	FAssert(stream.good());
 }
 
@@ -403,9 +403,9 @@ void FDataIOStream::Write(short value)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(unsigned short value)
+void FDataIOStream::Write(uint16_t value)
 {
-	stream.write((char*)&value, sizeof(unsigned short));
+	stream.write((char*)&value, sizeof(uint16_t));
 	FAssert(stream.good());
 }
 
@@ -415,9 +415,9 @@ void FDataIOStream::Write(int count, const short values[])
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(int count, const unsigned short values[])
+void FDataIOStream::Write(int count, const uint16_t values[])
 {
-	stream.write((char*)values, sizeof(unsigned short)*count);
+	stream.write((char*)values, sizeof(uint16_t)*count);
 	FAssert(stream.good());
 }
 

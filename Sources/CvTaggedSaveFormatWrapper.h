@@ -171,9 +171,9 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const bool values[]);
 
 	void		Write(const char* name, int& idHint, int& idSeq, short value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned short value);
+	void		Write(const char* name, int& idHint, int& idSeq, uint16_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const short values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned short values[]) ;
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int value);
 	void		Write(const char* name, int& idHint, int& idSeq, unsigned int value) ;
@@ -228,10 +228,10 @@ public:
 	void		Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, bool *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, bool values[], bool bAllowTruncation = false);
-	void		Read(const char* name, int& idHint, int& idSeq, short	*s);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned short	*s) ;
+	void		Read(const char* name, int& idHint, int& idSeq, short* s);
+	void		Read(const char* name, int& idHint, int& idSeq, uint16_t* s) ;
 	void		Read(const char* name, int& idHint, int& idSeq, int count, short values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, unsigned short values[]);
+	void		Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int* i);
 	void		Read(const char* name, int& idHint, int& idSeq, unsigned int* i);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);

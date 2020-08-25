@@ -61,10 +61,10 @@ public:
 	virtual void		Read(int count, byte values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
 	virtual void		Read(bool *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(int count, bool values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
-	virtual void		Read(short	*s) { m_wrapped->Read(s); m_lenRead += 2;}
-	virtual void		Read(unsigned short	*s)  { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(short* s) { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(uint16_t* s)  { m_wrapped->Read(s); m_lenRead += 2;}
 	virtual void		Read(int count, short values[]){ m_wrapped->Read(count, values); m_lenRead += count*2;}
-	virtual void		Read(int count, unsigned short values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
+	virtual void		Read(int count, uint16_t values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
 	virtual void		Read(int* i){ m_wrapped->Read(i); m_lenRead += 4;}
 	virtual void		Read(unsigned int* i) { m_wrapped->Read(i); m_lenRead += 4;}
 	virtual void 		Read(int count, int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
@@ -90,9 +90,9 @@ public:
 	virtual void		Write(int count, const bool values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(short value) { m_wrapped->Write(value); }
-	virtual void		Write(unsigned short value){ m_wrapped->Write(value); }
+	virtual void		Write(uint16_t value){ m_wrapped->Write(value); }
 	virtual void		Write(int count, const short values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count, const unsigned short values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const uint16_t values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(int value) { m_wrapped->Write(value); }
 	virtual void		Write(unsigned int value) { m_wrapped->Write(value); }
@@ -248,7 +248,7 @@ typedef struct value_entry_short
 typedef struct value_entry_unsigned_short
 {
 	int id;
-	unsigned short value;
+	uint16_t value;
 } value_entry_unsigned_short;
 
 //	Value entry for type short array
@@ -265,7 +265,7 @@ typedef struct value_entry_unsigned_short_array
 {
 	int id;
 	int numShorts;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_short_array;
 
 //	Value entry for type int
@@ -296,7 +296,7 @@ typedef struct value_entry_unsigned_int_array
 {
 	int id;
 	int numInts;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_int_array;
 
 //	Value entry for type long
@@ -326,7 +326,7 @@ typedef struct value_entry_unsigned_long_array
 {
 	int id;
 	int numLongs;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_long_array;
 
 //	Value entry for type float
@@ -1702,7 +1702,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, shor
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned short value)
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint16_t value)
 {
 	PROFILE_FUNC();
 
@@ -1751,7 +1751,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const unsigned short values[])
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2638,7 +2638,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsigned short	*s) 
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint16_t* s) 
 {
 	PROFILE_FUNC();
 
@@ -2693,7 +2693,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, unsigned short values[])
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -3665,7 +3665,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_UNSIGNED_SHORT_ARRAY:
 		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(unsigned short)*arraySize);
+		ConsumeBytes(sizeof(uint16_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_INT:
 		ConsumeBytes(sizeof(value_entry_int)-sizeof(int));

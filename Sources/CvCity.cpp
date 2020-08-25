@@ -16437,7 +16437,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		const UnitTypes unitType = static_cast<UnitTypes>(iData1);
 		if (canTrain(unitType) || bForce)
 		{
-			const unsigned short iAIType = EXTERNAL_ORDER_IDATA(iData2);
+			const uint16_t iAIType = EXTERNAL_ORDER_IDATA(iData2);
 			const UnitAITypes AIType = (iAIType == 0xFFFF) ?
 				static_cast<UnitAITypes>(GC.getUnitInfo(unitType).getDefaultUnitAIType())
 				:

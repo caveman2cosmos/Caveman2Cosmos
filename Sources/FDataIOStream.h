@@ -46,10 +46,10 @@ public:
 	virtual void		Read(int count, uint8_t values[]);
 	virtual void		Read(bool *);
 	virtual void		Read(int count, bool values[]);
-	virtual void		Read(short	*s);
-	virtual void		Read(unsigned short	*s);
+	virtual void		Read(short* s);
+	virtual void		Read(uint16_t* s);
 	virtual void		Read(int count, short values[]);
-	virtual void		Read(int count, unsigned short values[]);
+	virtual void		Read(int count, uint16_t values[]);
 	virtual void		Read(int* i);
 	virtual void		Read(unsigned int* i);
 	virtual void 		Read(int count, int values[]);
@@ -78,9 +78,9 @@ public:
 	virtual void		Write(int count, const bool values[]);
 
 	virtual void		Write(short value);
-	virtual void		Write(unsigned short value);
+	virtual void		Write(uint16_t value);
 	virtual void		Write(int count, const short values[]);
-	virtual void		Write(int count, const unsigned short values[]);
+	virtual void		Write(int count, const uint16_t values[]);
 
 	virtual void		Write(int value);
 	virtual void		Write(unsigned int value);
