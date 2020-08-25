@@ -37,22 +37,22 @@ public:
 	virtual unsigned int			GetSizeLeft() const = 0;
 	virtual void	CopyToMem(void* mem) = 0;
 	
-	virtual unsigned int	WriteString(const wchar *szName) = 0;
-	virtual unsigned int	WriteString(const char *szName) = 0;
+	virtual unsigned int	WriteString(const wchar_t* szName) = 0;
+	virtual unsigned int	WriteString(const char* szName) = 0;
 	virtual unsigned int	WriteString(const std::string& szName) = 0;
 	virtual unsigned int	WriteString(const std::wstring& szName) = 0;
 	virtual unsigned int	WriteString(int count, std::string values[]) = 0;
 	virtual unsigned int	WriteString(int count, std::wstring values[]) = 0;
 	
-	virtual unsigned int	ReadString(char *szName) = 0;
-	virtual unsigned int	ReadString(wchar *szName) = 0;
+	virtual unsigned int	ReadString(char* szName) = 0;
+	virtual unsigned int	ReadString(wchar_t* szName) = 0;
 	virtual unsigned int	ReadString(std::string& szName) = 0;
 	virtual unsigned int	ReadString(std::wstring& szName) = 0;
 	virtual unsigned int	ReadString(int count, std::string values[]) = 0;
 	virtual unsigned int	ReadString(int count, std::wstring values[]) = 0;
 	
-	virtual char *			ReadString() = 0;		// allocates memory 
-	virtual wchar *		ReadWideString() = 0;	// allocates memory 
+	virtual char*		ReadString() = 0;		// allocates memory 
+	virtual wchar_t*	ReadWideString() = 0;	// allocates memory 
 
 	virtual void		Read(char *) = 0;
 	virtual void		Read(uint8_t*) = 0;

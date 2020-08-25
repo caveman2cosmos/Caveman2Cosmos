@@ -407,7 +407,7 @@ CvUnitInfo::~CvUnitInfo()
 	}
 }
 
-const wchar* CvUnitInfo::getExtraHoverText() const
+const wchar_t* CvUnitInfo::getExtraHoverText() const
 {
 	if (!m_szExtraHoverTextKey.empty())
 	{

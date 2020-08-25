@@ -39,22 +39,22 @@ public:
 	virtual unsigned int			GetSizeLeft() const { return m_wrapped->GetSizeLeft(); }
 	virtual void	CopyToMem(void* mem) { m_wrapped->CopyToMem(mem); }
 	
-	virtual unsigned int	WriteString(const wchar *szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(const char *szName) { return m_wrapped->WriteString(szName); }
+	virtual unsigned int	WriteString(const wchar_t* szName) { return m_wrapped->WriteString(szName); }
+	virtual unsigned int	WriteString(const char* szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(const std::string& szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(const std::wstring& szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(int count, std::string values[]) { return m_wrapped->WriteString(count,values); }
 	virtual unsigned int	WriteString(int count, std::wstring values[]) { return m_wrapped->WriteString(count,values); }
 	
-	virtual unsigned int	ReadString(char *szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
-	virtual unsigned int	ReadString(wchar *szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
+	virtual unsigned int	ReadString(char* szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
+	virtual unsigned int	ReadString(wchar_t* szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
 	virtual unsigned int	ReadString(std::string& szName) { return m_wrapped->ReadString(szName); m_lenRead += szName.length(); }
 	virtual unsigned int	ReadString(std::wstring& szName) { return m_wrapped->ReadString(szName); m_lenRead += 2*szName.length(); }
 	virtual unsigned int	ReadString(int count, std::string values[]) { return m_wrapped->ReadString(count,values); m_lenRead += count*values[0].length(); }
 	virtual unsigned int	ReadString(int count, std::wstring values[]) { return m_wrapped->ReadString(count,values); m_lenRead += 2*count*values[0].length(); }
 	
-	virtual char *			ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
-	virtual wchar *		ReadWideString() { wchar* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
+	virtual char*		ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
+	virtual wchar_t*	ReadWideString() { wchar_t* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
 	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(byte *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(int count, char values[]){ m_wrapped->Read(count, values); m_lenRead += count;}
@@ -2074,7 +2074,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 	
 void
-CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq, const wchar *szName)
+CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq, const wchar_t* szName)
 {
 	PROFILE_FUNC();
 
@@ -2296,7 +2296,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, wchar **szName)
+CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName)
 {
 	PROFILE_FUNC();
 
@@ -3711,7 +3711,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_WSTRING:
 		{
-			wchar* dummy = m_stream->ReadWideString();
+			wchar_t* dummy = m_stream->ReadWideString();
 
 			SAFE_DELETE(dummy);
 		}

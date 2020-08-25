@@ -202,7 +202,7 @@ public:
 
 	virtual CvWString getText(CvWString szIDTag, ...) = 0;
 	virtual CvWString getObjectText(CvWString szIDTag, uint uiForm, bool bNoSubs = false) = 0;
-	virtual void addText(const TCHAR* szIDTag, const wchar* szString, const wchar* szGender = L"N", const wchar* szPlural = L"false") = 0;		
+	virtual void addText(const TCHAR* szIDTag, const wchar_t* szString, const wchar_t* szGender = L"N", const wchar_t* szPlural = L"false") = 0;		
 	virtual uint getNumForms(CvWString szIDTag) = 0;
 
 	virtual WorldSizeTypes getWorldSize() = 0;

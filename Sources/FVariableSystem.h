@@ -112,7 +112,7 @@ class FVariableSystem
 		bool GetValue( const char * szVariable, float & fValue ) const;
 		bool GetValue( const char * szVariable, double & dValue ) const;
 		bool GetValue( const char * szVariable, const char * & pszValue ) const;
-		bool GetValue( const char * szVariable, const wchar * & pszValue ) const;
+		bool GetValue( const char * szVariable, const wchar_t * & pszValue ) const;
 		const FVariable * GetVariable( const char * szVariable ) const;
 
 		// Variable additions/modifiers. If a variable does not exist, it will be added.
@@ -126,7 +126,7 @@ class FVariableSystem
 		void SetValue( const char * szVariable, float fValue );
 		void SetValue( const char * szVariable, double dValue );
 		void SetValue( const char * szVariable, const char * szValue );
-		void SetValue( const char * szVariable, const wchar * wszValue );
+		void SetValue( const char * szVariable, const wchar_t * wszValue );
 
 		// Variable removal
 		bool RemValue( const char * szVariable );

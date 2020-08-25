@@ -1073,7 +1073,7 @@ struct DllExport CvGlobeLayerData
 
 struct DllExport CvFlyoutMenuData
 {
-	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar* strTitle) : m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) { }
+	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar_t* strTitle) : m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) { }
 	FlyoutTypes m_eFlyout;
 	int m_iID;
 	int m_iX;
@@ -1108,7 +1108,7 @@ struct CvStatFloat : public CvStatBase
 
 struct DllExport CvWBData
 {
-	CvWBData(int iId, const wchar* strHelp, const char* strButton) : m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) { }
+	CvWBData(int iId, const wchar_t* strHelp, const char* strButton) : m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) { }
 	int m_iId;
 	CvWString m_strHelp;
 	CvString m_strButton;

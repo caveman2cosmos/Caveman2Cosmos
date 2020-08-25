@@ -459,7 +459,7 @@ int CvReplayInfo::getFinalTurn() const
 	return m_iFinalTurn;
 }
 
-const wchar* CvReplayInfo::getFinalDate() const
+const wchar_t* CvReplayInfo::getFinalDate() const
 {
 	return m_szFinalDate;
 }

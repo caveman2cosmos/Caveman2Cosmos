@@ -71,7 +71,7 @@ public:
 	virtual void fillAreaBorderPlot(int plotX, int plotY, const NiColorA &color, AreaBorderLayers layer) = 0;
 	virtual void clearAreaBorderPlots(AreaBorderLayers layer) = 0;
 	virtual void updateFoundingBorder() = 0;
-	virtual void addLandmark(CvPlot *plot, const wchar *caption) = 0; 
+	virtual void addLandmark(CvPlot *plot, const wchar_t* caption) = 0; 
 
 	virtual void TriggerEffect(int iEffect, NiPoint3 pt3Point, float rotation = 0.0f) = 0;
 	virtual void printProfileText() = 0;

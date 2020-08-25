@@ -40,14 +40,14 @@ public:
 	int getReplayMessagePlotX(uint i) const;
 	int getReplayMessagePlotY(uint i) const;
 	PlayerTypes getReplayMessagePlayer(uint i) const;
-	const wchar* getReplayMessageText(uint i) const;
+	const wchar_t* getReplayMessageText(uint i) const;
 	uint getNumReplayMessages() const;
 	ColorTypes getReplayMessageColor(uint i) const;
 
 	int getInitialTurn() const;
 	int getFinalTurn() const;
 	int getStartYear() const;
-	const wchar* getFinalDate() const;
+	const wchar_t* getFinalDate() const;
 	CalendarTypes getCalendar() const;
 	int getNumPlayers() const;
 	int64_t getPlayerScore(int iPlayer, int iTurn) const;

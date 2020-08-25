@@ -53,7 +53,7 @@ inline void FVariable::CopyFrom(const FVariable& varSrc)
 	if (varSrc.m_eType == FVARTYPE_WSTRING && varSrc.m_wszValue)
 	{
 		// copy string to new allocation
-		m_wszValue = new wchar[wcslen(varSrc.m_wszValue)+1];
+		m_wszValue = new wchar_t[wcslen(varSrc.m_wszValue)+1];
 		wcscpy(m_wszValue, varSrc.m_wszValue);
 	}
 	else
@@ -365,7 +365,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 		break;
 	case FVARTYPE_WSTRING:
 		{
-			const wchar* szValue;
+			const wchar_t* szValue;
 			if (!GetValue(szVariable, szValue))
 			{
 				return false;
@@ -418,7 +418,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 		break;
 	case FVARTYPE_WSTRING:
 		{
-			const wchar* szValue;
+			const wchar_t* szValue;
 			if (!GetValue(szVariable, szValue))
 			{
 				return false;
@@ -463,7 +463,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const char * & p
 //! \param pwszValue Contains the value of the variable if the function succeeds (do not modify the return value).
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, const wchar * & pwszValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, const wchar_t * & pwszValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -707,7 +707,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, const char * szV
 //! \param szVariable The name of the variable to create
 //! \param wszValue The value that the variable should take on (string is copied).
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, const wchar * wszValue )
+inline void FVariableSystem::SetValue( const char * szVariable, const wchar_t * wszValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
@@ -716,7 +716,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, const wchar * ws
 	}
 	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_WSTRING;
-	pkVariable->m_wszValue = wcscpy( new wchar[wcslen( wszValue ) + 1], wszValue ); 
+	pkVariable->m_wszValue = wcscpy( new wchar_t[wcslen( wszValue ) + 1], wszValue ); 
 	m_mapVariableMap[szVariable] = pkVariable;
 	m_iVariableIterator = m_mapVariableMap.begin();
 }

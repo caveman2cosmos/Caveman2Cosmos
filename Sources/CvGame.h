@@ -609,7 +609,7 @@ public:
 		CvString logMsg;
 	};
 
-	void logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iNum);
+	void logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iNum);
 
 	DllExport int calculateSyncChecksum(); // Exposed to Python
 	DllExport int calculateOptionsChecksum(); // Exposed to Python

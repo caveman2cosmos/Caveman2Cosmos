@@ -191,8 +191,8 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, double value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const double values[]);
 	
-	void		WriteString(const char* name, int& idHint, int& idSeq, const wchar *szName);
-	void		WriteString(const char* name, int& idHint, int& idSeq, const char *szName);
+	void		WriteString(const char* name, int& idHint, int& idSeq, const wchar_t* szName);
+	void		WriteString(const char* name, int& idHint, int& idSeq, const char* szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, const std::string& szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, const std::wstring& szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);
@@ -216,7 +216,7 @@ public:
 	//	The following methods are direct replacements for the read calls
 	//	in the underlying FDataStreamBase 
 	void		ReadString(const char* name, int& idHint, int& idSeq, char **szName);
-	void		ReadString(const char* name, int& idHint, int& idSeq, wchar **szName);
+	void		ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, std::string& szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, std::wstring& szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);

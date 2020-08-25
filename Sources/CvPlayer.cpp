@@ -3304,7 +3304,7 @@ CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI,
 
 void CvPlayer::disbandUnit(bool bAnnounce)
 {
-	wchar szBuffer[1024];
+	wchar_t szBuffer[1024];
 
 	int iBestValue = MAX_INT;
 	CvUnit* pBestUnit = NULL;
@@ -3689,7 +3689,7 @@ bool CvPlayer::isInvasionCapablePlayer() const
 }
 
 
-const wchar* CvPlayer::getName(uint uiForm) const
+const wchar_t* CvPlayer::getName(uint uiForm) const
 {
 	if (!m_szName.empty())
 	{
@@ -3726,7 +3726,7 @@ void CvPlayer::setName(std::wstring szNewValue)
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-const wchar* CvPlayer::getNameKey() const
+const wchar_t* CvPlayer::getNameKey() const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3761,7 +3761,7 @@ const wchar* CvPlayer::getNameKey() const
 }
 
 
-const wchar* CvPlayer::getCivilizationDescription(uint uiForm) const
+const wchar_t* CvPlayer::getCivilizationDescription(uint uiForm) const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3817,7 +3817,7 @@ void CvPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-const wchar* CvPlayer::getCivilizationDescriptionKey() const
+const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3852,7 +3852,7 @@ const wchar* CvPlayer::getCivilizationDescriptionKey() const
 }
 
 
-const wchar* CvPlayer::getCivilizationShortDescription(uint uiForm) const
+const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3887,7 +3887,7 @@ const wchar* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 }
 
 
-const wchar* CvPlayer::getCivilizationShortDescriptionKey() const
+const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3923,7 +3923,7 @@ const wchar* CvPlayer::getCivilizationShortDescriptionKey() const
 }
 
 
-const wchar* CvPlayer::getCivilizationAdjective(uint uiForm) const
+const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3958,7 +3958,7 @@ const wchar* CvPlayer::getCivilizationAdjective(uint uiForm) const
 /************************************************************************************************/
 }
 
-const wchar* CvPlayer::getCivilizationAdjectiveKey() const
+const wchar_t* CvPlayer::getCivilizationAdjectiveKey() const
 {
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -4018,7 +4018,7 @@ bool CvPlayer::isWhiteFlag() const
 }
 
 
-const wchar* CvPlayer::getStateReligionName(uint uiForm) const
+const wchar_t* CvPlayer::getStateReligionName(uint uiForm) const
 {
 	if (getStateReligion() != NO_RELIGION)
 	{
@@ -4030,7 +4030,7 @@ const wchar* CvPlayer::getStateReligionName(uint uiForm) const
 	}
 }
 
-const wchar* CvPlayer::getStateReligionKey() const
+const wchar_t* CvPlayer::getStateReligionKey() const
 {
 	if (getStateReligion() != NO_RELIGION)
 	{
@@ -4059,7 +4059,7 @@ const CvWString CvPlayer::getWorstEnemyName() const
 	return "";
 }
 
-const wchar* CvPlayer::getBestAttackUnitKey() const
+const wchar_t* CvPlayer::getBestAttackUnitKey() const
 {
 	int iDummyValue;
 
@@ -6878,7 +6878,7 @@ bool CvPlayer::canRaze(CvCity* pCity) const
 
 void CvPlayer::raze(CvCity* pCity)
 {
-	wchar szBuffer[1024];
+	wchar_t szBuffer[1024];
 	PlayerTypes eHighestCulturePlayer;
 	int iI, iJ;
 
@@ -20256,7 +20256,7 @@ void CvPlayer::doWarnings()
 
 	CvCity* pNearestCity;
 	CvPlot* pLoopPlot;
-	wchar szBuffer[1024];
+	wchar_t szBuffer[1024];
 	int iMaxCount;
 	int iI;
 
