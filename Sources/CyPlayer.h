@@ -215,7 +215,7 @@ public:
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
 	int getAveragePopulation();
-	long getRealPopulation();
+	int64_t getRealPopulation() const;
 
 	int getTotalLand();
 	int getTotalLandScored();
