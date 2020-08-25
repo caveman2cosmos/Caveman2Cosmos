@@ -218,7 +218,7 @@ void FDataIOStream::Read(char * pC)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(byte *pC)
+void FDataIOStream::Read(uint8_t* pC)
 {
 	stream.get(*((char*)pC));
 	FAssert(stream.good());
@@ -230,7 +230,7 @@ void FDataIOStream::Read(int count, char values[])
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(int count, byte values[])
+void FDataIOStream::Read(int count, uint8_t values[])
 {
 	stream.read((char*)values, count);
 	FAssert(stream.good());
@@ -365,7 +365,7 @@ void FDataIOStream::Write( char value)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(byte value)
+void FDataIOStream::Write(uint8_t value)
 {
 	stream.put((char)value);
 	FAssert(stream.good());
@@ -377,7 +377,7 @@ void FDataIOStream::Write(int count, const  char values[])
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(int count, const  byte values[])
+void FDataIOStream::Write(int count, const uint8_t values[])
 {
 	stream.write((char*)values, count);
 	FAssert(stream.good());

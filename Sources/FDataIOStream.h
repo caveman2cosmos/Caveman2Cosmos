@@ -41,9 +41,9 @@ public:
 	virtual wchar *		ReadWideString();	// allocates memory 
 
 	virtual void		Read(char *);
-	virtual void		Read(byte *);
+	virtual void		Read(uint8_t*);
 	virtual void		Read(int count, char values[]);
-	virtual void		Read(int count, byte values[]);
+	virtual void		Read(int count, uint8_t values[]);
 	virtual void		Read(bool *);
 	virtual void		Read(int count, bool values[]);
 	virtual void		Read(short	*s);
@@ -69,10 +69,10 @@ public:
 	virtual bool		TryRead(int* i);
 	virtual bool		TryRead(unsigned long* l);
 
-	virtual void		Write( char value);
-	virtual void		Write(byte value);
-	virtual void		Write(int count, const  char values[]);
-	virtual void		Write(int count, const  byte values[]);
+	virtual void		Write(char value);
+	virtual void		Write(uint8_t value);
+	virtual void		Write(int count, const char values[]);
+	virtual void		Write(int count, const uint8_t values[]);
 
 	virtual void		Write(bool value);
 	virtual void		Write(int count, const bool values[]);

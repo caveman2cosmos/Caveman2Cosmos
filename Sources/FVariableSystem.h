@@ -64,7 +64,7 @@ class FVariable
 		{
 			bool		m_bValue;		//!< Boolean data
 			char		m_cValue;		//!< One byte integer (signed) data.
-			byte		m_ucValue;		//!< One byte integer (unsigned) data.
+			uint8_t		m_ucValue;		//!< One byte integer (unsigned) data.
 			short		m_wValue;		//!< Two byte integer (signed) data.
 			uint16_t		m_uwValue;		//!< Two byte integer (unsigned) data.
 			int			m_iValue;		//!< Four byte integer (signed) data.
@@ -104,7 +104,7 @@ class FVariableSystem
 		// Variable accessors
 		bool GetValue( const char * szVariable, bool & bValue ) const;
 		bool GetValue( const char * szVariable, char & cValue ) const;
-		bool GetValue( const char * szVariable, byte & ucValue ) const;
+		bool GetValue( const char * szVariable, uint8_t& ucValue ) const;
 		bool GetValue( const char * szVariable, short & wValue ) const;
 		bool GetValue( const char * szVariable, uint16_t& uwValue ) const;
 		bool GetValue( const char * szVariable, int & iValue ) const;
@@ -118,7 +118,7 @@ class FVariableSystem
 		// Variable additions/modifiers. If a variable does not exist, it will be added.
 		void SetValue( const char * szVariable, bool bValue );
 		void SetValue( const char * szVariable, char cValue );
-		void SetValue( const char * szVariable, byte ucValue );
+		void SetValue( const char * szVariable, uint8_t ucValue );
 		void SetValue( const char * szVariable, short wValue );
 		void SetValue( const char * szVariable, uint16_t uwValue );
 		void SetValue( const char * szVariable, int iValue );

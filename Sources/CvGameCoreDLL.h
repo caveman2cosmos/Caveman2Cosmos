@@ -73,12 +73,12 @@
 //
 // Basic types
 //
-typedef unsigned char       byte;
 typedef unsigned int        uint;
 typedef wchar_t             wchar;
 
 typedef long long           int64_t;
 
+typedef unsigned char       uint8_t;
 typedef unsigned short      uint16_t;
 typedef unsigned long long  uint64_t;
 

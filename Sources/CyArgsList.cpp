@@ -57,7 +57,7 @@ void CyArgsList::add(const float* buf, int iLength)
 }
 
 // add byte list
-void CyArgsList::add(const byte* buf, int iLength)
+void CyArgsList::add(const uint8_t* buf, int iLength)
 {
 	PyObject* pList = PyList_New(iLength);	// new ref
 	FAssertMsg(pList, "failed creating PyList");

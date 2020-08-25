@@ -16417,7 +16417,7 @@ bool CvCity::pushFirstValidBuildListOrder(int iListID)
 	return false;
 }
 
-void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce, CvPlot* deliveryDestination, UnitAITypes contractedAIType, byte contractFlags)
+void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce, CvPlot* deliveryDestination, UnitAITypes contractedAIType, uint8_t contractFlags)
 {
 	//bool bBuildingUnit = false;
 	//bool bBuildingBuilding = false;
@@ -18113,7 +18113,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	for (int orderQueueIndex = 0; orderQueueIndex < orderQueueSize; ++orderQueueIndex)
 	{
 		OrderData orderData;
-		WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (byte*)&orderData, "OrderData");
+		WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (uint8_t*)&orderData, "OrderData");
 		bool bDeleteNode = false;
 		switch (orderData.eOrderType)
 		{
@@ -18630,7 +18630,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", orderQueueSize);
 	foreach_(const OrderData& orderData, m_orderQueue)
 	{
-		WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (const byte*)&orderData, "OrderData");
+		WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (const uint8_t*)&orderData, "OrderData");
 	}
 
 	WRAPPER_WRITE(wrapper, "CvCity", m_iPopulationRank);

@@ -62,7 +62,7 @@ public:
 
 	DllExport int getMapHeight() const;
 	DllExport int getMapWidth() const;
-	DllExport const unsigned char* getMinimapPixels() const;
+	DllExport const uint8_t* getMinimapPixels() const;
 
 	DllExport const char* getModName() const;
 
@@ -123,7 +123,7 @@ protected:
 
 	int m_iMapHeight;
 	int m_iMapWidth;
-	unsigned char* m_pcMinimapPixels;
+	uint8_t* m_pcMinimapPixels;
 
 	int m_nMinimapSize;
 

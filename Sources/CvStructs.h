@@ -372,8 +372,8 @@ struct OrderData // Exposed to Python
 			uint16_t plotIndex; // aux, 0xFFFF for none
 
 			/*UnitAITypes*/uint16_t AIType;
-			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
-			byte contractFlags; // aux
+			/*UnitAITypes*/uint8_t contractedAIType; // aux, 0xFF for none
+			uint8_t contractFlags; // aux
 		} unit;
 		struct {
 			/*BuildingTypes*/int type;
@@ -404,14 +404,14 @@ struct OrderData // Exposed to Python
 		return eOrderType == other.eOrderType && iData1 == other.iData1 && iData2 == other.iData2 && bSave == other.bSave;
 	}
 
-	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, uint16_t plotIndex, byte contractFlags, UnitAITypes contractedAIType, bool bSave)
+	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, uint16_t plotIndex, uint8_t contractFlags, UnitAITypes contractedAIType, bool bSave)
 	{
 		OrderData order(ORDER_TRAIN);
 		order.unit.type = static_cast<uint16_t>(type);
 		order.unit.AIType = static_cast<uint16_t>(AIType);
 		order.unit.plotIndex = plotIndex;
 		order.unit.contractFlags = contractFlags;
-		order.unit.contractedAIType = static_cast<byte>(contractedAIType);
+		order.unit.contractedAIType = static_cast<uint8_t>(contractedAIType);
 		order.bSave = bSave;
 		return order;
 	}
@@ -466,7 +466,7 @@ struct OrderData // Exposed to Python
 		FAssert(eOrderType == ORDER_TRAIN);
 		return unit.plotIndex;
 	}
-	byte getUnitContractFlags() const {
+	uint8_t getUnitContractFlags() const {
 		FAssert(eOrderType == ORDER_TRAIN);
 		return unit.contractedAIType;
 	}

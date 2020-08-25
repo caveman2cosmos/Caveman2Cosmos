@@ -433,7 +433,7 @@ public:
 	CvChecksum() { clear(); }
 	void clear() { sum = 0; r = 55665; c1 = 52845; c2 = 22719;}
 	void add(int i);
-	void add(byte b);
+	void add(uint8_t b);
 	int get() { return (int)sum; }
 protected:
 	WORD r;

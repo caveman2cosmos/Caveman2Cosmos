@@ -18,8 +18,8 @@ public:
 	virtual void SaveGame(CvString& szFilename, SaveGameTypes eType = SAVEGAME_NORMAL) = 0;
 	virtual void DoTurn() = 0;
 	virtual void ClearMinimap() = 0;
-	virtual byte GetLandscapePlotTerrainData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
-	virtual byte GetLandscapePlotHeightData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
+	virtual uint8_t GetLandscapePlotTerrainData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
+	virtual uint8_t GetLandscapePlotHeightData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
 	virtual LoadType getLoadType() = 0;
 	virtual void ClampToWorldCoords(NiPoint3* pPt3, float fOffset = 0.0f) = 0;
 	virtual void SetCameraZoom(float zoom) = 0;

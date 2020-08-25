@@ -163,9 +163,9 @@ public:
 	//	The following methods are direct replacements for the write calls
 	//	in the underlying FDataStreamBase 
 	void		Write(const char* name, int& idHint, int& idSeq, char value);
-	void		Write(const char* name, int& idHint, int& idSeq, byte value);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const  char values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const  byte values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, uint8_t value);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const char values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint8_t values[]);
 
 	void		Write(const char* name, int& idHint, int& idSeq, bool value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const bool values[]);
@@ -223,9 +223,9 @@ public:
 	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[]);
 	
 	void		Read(const char* name, int& idHint, int& idSeq, char *);
-	void		Read(const char* name, int& idHint, int& idSeq, byte *);
+	void		Read(const char* name, int& idHint, int& idSeq, uint8_t *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, char values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, byte values[]);
+	void		Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, bool *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, bool values[], bool bAllowTruncation = false);
 	void		Read(const char* name, int& idHint, int& idSeq, short	*s);

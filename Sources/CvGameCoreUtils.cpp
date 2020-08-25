@@ -4890,7 +4890,7 @@ int getTreatyLength()
 
 void CvChecksum::add(int i)
 {
-	union { int value; byte bytes[4]; } data;
+	union { int value; uint8_t bytes[4]; } data;
 	data.value = i;
 	for(UINT i = 0; i < sizeof(data.bytes); i++)
 	{
@@ -4898,9 +4898,9 @@ void CvChecksum::add(int i)
 	}
 }
 
-void CvChecksum::add(byte b)
+void CvChecksum::add(uint8_t b)
 {
-	byte cipher = (b ^ (r >> 8));
+	uint8_t cipher = (b ^ (r >> 8));
 	r = (cipher + r) * c1 + c2;
 	sum = (sum << 8) + ((sum >> 24) ^ cipher);
 }

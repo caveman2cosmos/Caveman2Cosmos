@@ -77,7 +77,7 @@ inline void FVariable::Read(FDataStreamBase *pStream)
 	if (m_eType==FVARTYPE_WSTRING)
 		m_wszValue = pStream->ReadWideString();
 	else
-		pStream->Read(8, (byte*)&m_dValue);		// read the maximum size of the union
+		pStream->Read(8, (uint8_t*)&m_dValue);		// read the maximum size of the union
 }
 
 inline void FVariable::Write(FDataStreamBase *pStream) const
@@ -89,7 +89,7 @@ inline void FVariable::Write(FDataStreamBase *pStream) const
 	if (m_eType==FVARTYPE_WSTRING)
 		pStream->WriteString(m_wszValue);
 	else
-		pStream->Write(8, (byte*)&m_dValue);		// write the maximum size of the union
+		pStream->Write(8, (uint8_t*)&m_dValue);		// write the maximum size of the union
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -231,7 +231,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) 
 //! \param ucValue Contains the value of the variable if the function succeeds
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, byte & ucValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, uint8_t& ucValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -539,7 +539,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, char cValue )
 //! \param szVariable The name of the variable to create
 //! \param ucValue The value that the variable should take on
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, byte ucValue )
+inline void FVariableSystem::SetValue( const char * szVariable, uint8_t ucValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
