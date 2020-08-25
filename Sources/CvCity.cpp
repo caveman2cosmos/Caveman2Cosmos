@@ -7703,12 +7703,12 @@ void CvCity::changePopulation(int iChange)
 }
 
 
-long CvCity::getRealPopulation() const
+int CvCity::getRealPopulation() const
 {
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
 
 	//	Koshling - using table provided by Praetyre to give more realistic results
-	static long	realPopulationTable[] =
+	static int realPopulationTable[] =
 	{
 		0,
 		50,
@@ -7812,7 +7812,7 @@ long CvCity::getRealPopulation() const
 		190000000,
 		200000000
 	};
-#define NUM_POP_TABLE_ENTRIES (sizeof(realPopulationTable)/sizeof(long))
+#define NUM_POP_TABLE_ENTRIES (sizeof(realPopulationTable)/sizeof(int))
 
 	if (getPopulation() < NUM_POP_TABLE_ENTRIES)
 	{

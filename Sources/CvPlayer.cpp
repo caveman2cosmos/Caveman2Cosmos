@@ -10552,17 +10552,9 @@ void CvPlayer::changeTotalPopulation(int iChange)
 }
 
 
-long CvPlayer::getRealPopulation() const
+int64_t CvPlayer::getRealPopulation() const
 {
-	__int64 iTotalPopulation = algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
-
-	if (iTotalPopulation > MAX_INT)
-	{
-		FErrorMsg("Real population overflows, capped at MAX_INT!");
-		iTotalPopulation = MAX_INT;
-	}
-
-	return ((long)(iTotalPopulation));
+	return algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
 }
 
 
