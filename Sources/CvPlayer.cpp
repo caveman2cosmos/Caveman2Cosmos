@@ -4150,10 +4150,7 @@ void CvPlayer::doTurn()
 
 #ifdef CAN_TRAIN_CACHING
 	//	Clear training caches at the start of each turn
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->clearCanTrainCache();
-	}
+	algo::for_each(cities(), CvCity::fn::clearCanTrainCache());
 #endif
 
 	m_canHaveBuilder.clear();
@@ -4207,10 +4204,7 @@ void CvPlayer::doTurn()
 		changeConversionTimer(-1);
 	}
 
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->clearCommanderCache();
-	}
+	algo::for_each(units(), CvUnit::fn::clearCommanderCache());
 
 	setConscriptCount(0);
 
@@ -4252,27 +4246,18 @@ void CvPlayer::doTurn()
 
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
-		foreach_(CvCity* pLoopCity, cities())
-		{
-			pLoopCity->doTurn();
-		}
 
+		algo::for_each(cities(), CvCity::fn::doTurn());
 	}
 
 	// Johny Smith 04/19/09
 	if (GC.isDCM_OPP_FIRE())
 	{
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			pLoopUnit->doOpportunityFire();
-		}
+		algo::for_each(units(), CvUnit::fn::doOpportunityFire());
 	}
 	if (GC.isDCM_ACTIVE_DEFENSE())
 	{
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			pLoopUnit->doActiveDefense();
-		}
+		algo::for_each(units(), CvUnit::fn::doActiveDefense());
 	}
 	// ! Johny Smith
 
@@ -4556,10 +4541,7 @@ void CvPlayer::doTurnUnits()
 		pLoopSelectionGroup->doDelayedDeath();
 	}
 
-	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups())
-	{
-		pLoopSelectionGroup->resetHealing();
-	}
+	algo::for_each(groups(), CvSelectionGroup::fn::resetHealing());
 
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
@@ -4668,10 +4650,7 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 
 	m_bInhibitPlotGroupRecalc = false;
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->startDeferredBonusProcessing();
-	}
+	algo::for_each(cities(), CvCity::fn::startDeferredBonusProcessing());
 
 	if ( possibleNewInAreaOnly == NULL )
 	{
@@ -4687,10 +4666,7 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 		}
 		else
 		{
-			foreach_(CvPlotGroup* pLoopPlotGroup, plot_groups())
-			{
-				pLoopPlotGroup->recalculatePlots();
-			}
+			algo::for_each(plot_groups(), CvPlotGroup::fn::recalculatePlots());
 		}
 	}
 
@@ -4720,10 +4696,7 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 	}
 #endif
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->endDeferredBonusProcessing();
-	}
+	algo::for_each(cities(), CvCity::fn::endDeferredBonusProcessing());
 
 	updateTradeRoutes();
 }
@@ -4732,18 +4705,12 @@ void CvPlayer::RecalculatePlotGroupHashes()
 {
 	PROFILE_FUNC();
 
-	foreach_(CvPlotGroup* pLoopPlotGroup, plot_groups())
-	{
-		pLoopPlotGroup->RecalculateHashes();
-	}
+	algo::for_each(plot_groups(), CvPlotGroup::fn::RecalculateHashes());
 }
 
 void CvPlayer::updateYield()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateYield();
-	}
+	algo::for_each(cities(), CvCity::fn::updateYield());
 }
 
 
@@ -4765,65 +4732,37 @@ void CvPlayer::updateMaintenance() const
 
 void CvPlayer::updatePowerHealth()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updatePowerHealth();
-	}
+	algo::for_each(cities(), CvCity::fn::updatePowerHealth());
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvPlayer::updateExtraBuildingHappiness(bool bLimited)
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateExtraBuildingHappiness(bLimited);
-	}
+	algo::for_each(cities(), CvCity::fn::updateExtraBuildingHappiness(bLimited));
 }
 
 
-//Fuyu bLimited
 void CvPlayer::updateExtraBuildingHealth(bool bLimited)
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateExtraBuildingHealth(bLimited);
-	}
+	algo::for_each(cities(), CvCity::fn::updateExtraBuildingHealth(bLimited));
 }
 
 
-//Fuyu bLimited
 void CvPlayer::updateFeatureHappiness(bool bLimited)
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateFeatureHappiness(bLimited);
-	}
+	algo::for_each(cities(), CvCity::fn::updateFeatureHappiness(bLimited));
 }
 
 
-//Fuyu bLimited
 void CvPlayer::updateReligionHappiness(bool bLimited)
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateReligionHappiness(bLimited);
-	}
+	algo::for_each(cities(), CvCity::fn::updateReligionHappiness(bLimited));
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 void CvPlayer::updateExtraSpecialistYield()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateExtraSpecialistYield();
-	}
+	algo::for_each(cities(), CvCity::fn::updateExtraSpecialistYield());
 }
 
 
@@ -4888,19 +4827,13 @@ void CvPlayer::updateBuildingCommerce()
 
 void CvPlayer::updateReligionCommerce()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateReligionCommerce();
-	}
+	algo::for_each(cities(), CvCity::fn::updateReligionCommerce());
 }
 
 
 void CvPlayer::updateCorporation()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateCorporation();
-	}
+	algo::for_each(cities(), CvCity::fn::updateCorporation());
 }
 
 
@@ -4929,10 +4862,7 @@ void CvPlayer::updateTradeRoutes()
 	CLLNode<int>* pCityNode;
 	CLinkList<int> cityList;
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->clearTradeRoutes();
-	}
+	algo::for_each(cities(), CvCity::fn::clearTradeRoutes());
 
 	cityList.clear();
 
@@ -15300,24 +15230,18 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* a
 
 		if (iOldFreeAreaBuildingCount == 0)
 		{
-			foreach_(CvCity* pLoopCity, cities())
+			foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::area() == area))
 			{
-				if ( pLoopCity->area() == area )
-				{
-					pLoopCity->setNumFreeAreaBuilding(eIndex, 1);
-				}
+				pLoopCity->setNumFreeAreaBuilding(eIndex, 1);
 			}
 		}
 		else if (iNewFreeBuildingCount == 0)
 		{
 			FAssertMsg(iOldFreeAreaBuildingCount > 0, "iOldFreeAreaBuildingCount is expected to be greater than 0");
 
-			foreach_(CvCity* pLoopCity, cities())
+			foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::area() == area))
 			{
-				if ( pLoopCity->area() == area )
-				{
-					pLoopCity->setNumFreeAreaBuilding(eIndex, 0);
-				}
+				pLoopCity->setNumFreeAreaBuilding(eIndex, 0);
 			}
 		}
 	}
@@ -19570,15 +19494,15 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 
 			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 			{
-				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+				const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 
 				if (kPlayer.isAlive())
 				{
-					CvPlot* pStartingPlot = kPlayer.getStartingPlot();
+					const CvPlot* pStartingPlot = kPlayer.getStartingPlot();
 
 					if (NULL != pStartingPlot)
 					{
-						int iDistance = ::plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY());
+						const int iDistance = ::plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY());
 						if (iDistance <= iMax && (iDistance < iClosestDistance || iDistance == iClosestDistance && getTeam() != kPlayer.getTeam()))
 						{
 							iClosestDistance = iDistance;

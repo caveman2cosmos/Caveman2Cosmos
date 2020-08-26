@@ -234,10 +234,10 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, int, getNumTiles);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
 	};
 };
 

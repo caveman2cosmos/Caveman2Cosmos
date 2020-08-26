@@ -2364,40 +2364,56 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, endDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, startDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, doTurn);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
 
-		DECLARE_MAP_FUNCTOR(CvCity, int, getID);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
-		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHealth, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateFeatureHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateReligionHappiness, bool);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvWString, getName);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, hasOrbitalInfrastructure);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isConnectedToCapital);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isGovernmentCenter);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, unhappyLevel);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canConstruct, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canTrain, UnitTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasReligion, ReligionTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasCorporation, CorporationTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvWString, getName);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasCorporation, CorporationTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 	};
 };
 

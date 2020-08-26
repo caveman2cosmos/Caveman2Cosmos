@@ -91,6 +91,14 @@ public:
 	int m_numPlots;
 	mutable int m_numCities;
 	//CLinkList<XYCoords> m_plots;
+
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, recalculatePlots);
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, RecalculateHashes);
+	};
 };
 
 #endif
