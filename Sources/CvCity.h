@@ -2371,14 +2371,24 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
+		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
+		DECLARE_MAP_FUNCTOR(CvCity, void, recalculateModifiers);
 
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHappiness, bool);
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHealth, bool);
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateFeatureHappiness, bool);
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateReligionHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setCommerceModifierDirty, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setLayoutDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, FlushCanConstructCache, BuildingTypes);
+
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeAreaBuilding, BuildingTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, hasOrbitalInfrastructure);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isConnectedToCapital);
@@ -2386,6 +2396,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, calculateCorporateTaxes);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);

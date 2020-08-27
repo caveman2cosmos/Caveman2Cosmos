@@ -196,6 +196,16 @@ namespace map_fun_details {
 		} \
 		val_type_ val; \
 	};
+#define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val), val2(other.val2) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val, val2); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+	};
 
 #define DECLARE_MAP_FUNCTOR_CONST(obj_type_, result_type_, mem_fn_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \

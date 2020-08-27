@@ -3257,6 +3257,9 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
+
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttack);

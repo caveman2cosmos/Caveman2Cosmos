@@ -22873,7 +22873,7 @@ int CvCity::calculateCorporateTaxes() const
 			int iNumBonuses = 0;
 			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 			{
-				BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
+				const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 				if (NO_BONUS != eBonus)
 				{
 					iNumBonuses += getNumBonuses(eBonus);

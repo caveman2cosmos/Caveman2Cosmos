@@ -10858,7 +10858,7 @@ void CvPlayer::changeAnarchyModifier(int iChange)
 {
 	if (0 != iChange)
 	{
-	m_iAnarchyModifier += iChange;
+		m_iAnarchyModifier += iChange;
 
 		setRevolutionTimer(std::max(0, ((100 + iChange) * getRevolutionTimer()) / 100));
 		setConversionTimer(std::max(0, ((100 + iChange) * getConversionTimer()) / 100));
@@ -15192,26 +15192,20 @@ void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset chnages
 	if ( (iChange > 0 || iOldFreeBuildingCount != 0) && iChange != 0)
 	{
-		m_paiFreeBuildingCount[eIndex] = (m_paiFreeBuildingCount[eIndex] + iChange);
+		m_paiFreeBuildingCount[eIndex] += iChange;
 		FAssert(getFreeBuildingCount(eIndex) >= 0);
 
 		if (iOldFreeBuildingCount == 0)
 		{
 			FAssertMsg(getFreeBuildingCount(eIndex) > 0, "getFreeBuildingCount(eIndex) is expected to be greater than 0");
 
-			foreach_(CvCity* pLoopCity, cities())
-			{
-				pLoopCity->setNumFreeBuilding(eIndex, 1);
-			}
+			algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 1));
 		}
 		else if (getFreeBuildingCount(eIndex) == 0)
 		{
 			FAssertMsg(iOldFreeBuildingCount > 0, "iOldFreeBuildingCount is expected to be greater than 0");
 
-			foreach_(CvCity* pLoopCity, cities())
-			{
-				pLoopCity->setNumFreeBuilding(eIndex, 0);
-			}
+			algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
 		}
 	}
 }
@@ -15230,19 +15224,15 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* a
 
 		if (iOldFreeAreaBuildingCount == 0)
 		{
-			foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::area() == area))
-			{
-				pLoopCity->setNumFreeAreaBuilding(eIndex, 1);
-			}
+			algo::for_each(cities() | filtered(CvCity::fn::area() == area),
+				CvCity::fn::setNumFreeAreaBuilding(eIndex, 1));
 		}
 		else if (iNewFreeBuildingCount == 0)
 		{
 			FAssertMsg(iOldFreeAreaBuildingCount > 0, "iOldFreeAreaBuildingCount is expected to be greater than 0");
 
-			foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::area() == area))
-			{
-				pLoopCity->setNumFreeAreaBuilding(eIndex, 0);
-			}
+			algo::for_each(cities() | filtered(CvCity::fn::area() == area),
+				CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
 		}
 	}
 }
@@ -29238,10 +29228,7 @@ void CvPlayer::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
 		FAssert(getFreeSpecialistCount(eIndex) >= 0);
 
-		foreach_(CvCity* pLoopCity, cities())
-		{
-			pLoopCity->changeFreeSpecialistCount(eIndex, (iNewValue - iOldValue));
-		}
+		algo::for_each(cities(), CvCity::fn::changeFreeSpecialistCount(eIndex, iNewValue - iOldValue));
 	}
 }
 
@@ -29824,10 +29811,7 @@ void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIn
 
 void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->setCommerceModifierDirty(eCommerce);
-	}
+	algo::for_each(cities(), CvCity::fn::setCommerceModifierDirty(eCommerce));
 }
 
 int CvPlayer::getLandmarkYield(YieldTypes eIndex) const
@@ -29887,10 +29871,8 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	GC.getInitCore().setColor( getID(), eColor );
 	gDLL->getInterfaceIFace()->makeInterfaceDirty();
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->setLayoutDirty(true);
-	}
+	algo::for_each(cities(), CvCity::fn::setLayoutDirty(true));
+
 // Forces update of units flags
 	EraTypes eEra = getCurrentEra();
 	//Suppresses Era popups
@@ -30117,18 +30099,10 @@ void CvPlayer::doTaxes()
 	const int iOldTaxes = getCorporateTaxIncome();
 	changeCorporateTaxIncome(-iOldTaxes);
 
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
-		return;
+		changeCorporateTaxIncome(algo::accumulate(cities() | transformed(CvCity::fn::calculateCorporateTaxes()), 0));
 	}
-
-	int iNewTaxes = 0;
-	foreach_(const CvCity* pLoopCity, cities())
-	{
-		iNewTaxes += pLoopCity->calculateCorporateTaxes();
-	}
-
-	changeCorporateTaxIncome(iNewTaxes);
 }
 
 
@@ -30296,12 +30270,9 @@ void CvPlayer::updateCache()
 
 void CvPlayer::clearTileCulture()
 {
-	int iI;
-	CvPlot* pLoopPlot;
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-		pLoopPlot->setCulture(getID(), 0, true, true);
+		GC.getMap().plotByIndex(iI)->setCulture(getID(), 0, true, true);
 	}
 }
 
@@ -30481,25 +30452,19 @@ void CvPlayer::clearCanConstructCache(BuildingTypes building, bool bIncludeCitie
 
 			if (bIncludeCities)
 			{
-				foreach_(CvCity* city, cities())
-				{
-					city->FlushCanConstructCache(building);
-				}
+				algo::for_each(cities(), CvCity::fn::FlushCanConstructCache(building));
 			}
 		}
 	}
 
-	foreach_(CvCity* city, cities())
-	{
-		city->setBuildingListInvalid();
-	}
+	algo::for_each(cities(), CvCity::fn::setBuildingListInvalid());
 }
 
 void CvPlayer::clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities) const
 {
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		SpecialBuildingTypes	eLoopSpecialBuilding = NO_SPECIALBUILDING;
+		SpecialBuildingTypes eLoopSpecialBuilding = NO_SPECIALBUILDING;
 
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
@@ -30513,18 +30478,12 @@ void CvPlayer::clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuild
 
 			if (bIncludeCities)
 			{
-				foreach_(CvCity* pLoopCity, cities())
-				{
-					pLoopCity->FlushCanConstructCache((BuildingTypes)iI);
-				}
+				algo::for_each(cities(), CvCity::fn::FlushCanConstructCache((BuildingTypes)iI));
 			}
 		}
 	}
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->setBuildingListInvalid();
-	}
+	algo::for_each(cities(), CvCity::fn::setBuildingListInvalid());
 }
 
 void CvPlayer::clearModifierTotals()
@@ -30532,10 +30491,7 @@ void CvPlayer::clearModifierTotals()
 	int iI, iJ;
 
 	//	Clear city-sourced modifiers
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->clearModifierTotals();
-	}
+	algo::for_each(cities(), CvCity::fn::clearModifierTotals());
 
 	//	Project stuff
 	m_iWorldHappiness = 0;
@@ -31178,9 +31134,9 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 
 	for (iI = 0; iI < GC.getTraitInfo(eTrait).getNumUnitCombatProductionModifiers(); iI++)
 	{
-		if ((UnitCombatTypes)GC.getTraitInfo(eTrait).getUnitCombatProductionModifier(iI).eUnitCombat != NO_UNITCOMBAT)
+		const UnitCombatTypes eUnitCombat = (UnitCombatTypes)GC.getTraitInfo(eTrait).getUnitCombatProductionModifier(iI).eUnitCombat;
+		if (eUnitCombat != NO_UNITCOMBAT)
 		{
-			UnitCombatTypes eUnitCombat = ((UnitCombatTypes)GC.getTraitInfo(eTrait).getUnitCombatProductionModifier(iI).eUnitCombat);
 			if (GC.getTraitInfo(eTrait).getUnitCombatProductionModifier(iI).iModifier != 0)
 			{
 				changeUnitCombatProductionModifier(eUnitCombat, iChange*GC.getTraitInfo(eTrait).getUnitCombatProductionModifier(iI).iModifier);
@@ -31189,11 +31145,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	}
 
 	//Run through Unit Promotion Changes
-	const bool bAdding = (iChange > 0);
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->doSetFreePromotions(bAdding, eTrait);
-	}
+	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(iChange > 0, eTrait));
 }
 
 void CvPlayer::recalculateModifiers()
@@ -31228,7 +31180,7 @@ void CvPlayer::recalculateModifiers()
 	{
 		for (int iI = 0; iI <GC.getNumTraitInfos(); iI++)
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
+			const TraitTypes eTrait = ((TraitTypes)iI);
 			////removes the extra negative trait if it shouldn't be there.  After a version or two, this should be removed entirely and m_iCompatCheckCount can be repurposed later.
 			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
 			//{
@@ -31244,7 +31196,7 @@ void CvPlayer::recalculateModifiers()
 				{
 					for (int iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
 					{
-						TraitTypes eReplacementTrait = ((TraitTypes)iJ);
+						const TraitTypes eReplacementTrait = ((TraitTypes)iJ);
 						if (GC.getTraitInfo(eReplacementTrait).getPromotionLine() != NO_PROMOTIONLINE)
 						{
 							if (GC.getTraitInfo(eReplacementTrait).getPromotionLine() == GC.getTraitInfo(eTrait).getPromotionLine())
@@ -31270,7 +31222,7 @@ void CvPlayer::recalculateModifiers()
 	{
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
+			const TraitTypes eTrait = ((TraitTypes)iI);
 			if (!GC.getTraitInfo(eTrait).isCivilizationTrait() && !GC.getTraitInfo(eTrait).isBarbarianSelectionOnly())
 			{
 				if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
@@ -31303,10 +31255,7 @@ void CvPlayer::recalculateModifiers()
 	}
 
 	//Remove trait promos during recalc - it will add them back when processing in the traits.
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->doSetFreePromotions(false);
-	}
+	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
 
 	//	Owing to an old bug the home area may not know it is our home area
 	//	so set that up now if needed as well
@@ -31321,15 +31270,12 @@ void CvPlayer::recalculateModifiers()
 	}
 
 	//	Put back city-sourced modifiers
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->recalculateModifiers();
-	}
+	algo::for_each(cities(), CvCity::fn::recalculateModifiers());
 
 	//	Put back civic-sourced modifiers
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
-		CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
+		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
 
 		if ( eCivic != NO_CIVIC )
 		{
@@ -31340,8 +31286,7 @@ void CvPlayer::recalculateModifiers()
 //	m_bNukesValid = false;
 
 	//	Replay events in so far as they effect modifiers
-	CvEventMap::iterator it;
-	for (it = m_mapEventsOccured.begin(); it != m_mapEventsOccured.end(); ++it)
+	for (CvEventMap::const_iterator it = m_mapEventsOccured.begin(); it != m_mapEventsOccured.end(); ++it)
 	{
 		applyEvent((*it).first, -1, false);
 	}
@@ -31389,8 +31334,8 @@ void CvPlayer::addPropertiesAllCities(const CvProperties *pProp)
 	foreach_(CvCity* city, cities())
 	{
 		city->getProperties()->addProperties(pProp);
-		//getProperties()->addProperties(pProp);
 	}
+	//getProperties()->addProperties(pProp);
 }
 
 void CvPlayer::subtractPropertiesAllCities(const CvProperties *pProp)
@@ -31398,8 +31343,8 @@ void CvPlayer::subtractPropertiesAllCities(const CvProperties *pProp)
 	foreach_(CvCity* city, cities())
 	{
 		city->getProperties()->subtractProperties(pProp);
-		//getProperties()->subtractProperties(pProp);
 	}
+	//getProperties()->subtractProperties(pProp);
 }
 
 
@@ -31956,10 +31901,7 @@ void CvPlayer::changeExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTy
 
 void CvPlayer::updateExtraSpecialistCommerce()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateExtraSpecialistCommerce();
-	}
+	algo::for_each(cities(), CvCity::fn::updateExtraSpecialistCommerce());
 }
 
 int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
@@ -32188,7 +32130,7 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		TraitTypes eTrait = ((TraitTypes)iI);
+		const TraitTypes eTrait = ((TraitTypes)iI);
 		if (hasTrait(eTrait))
 		{
 			for (int iJ = 0; iJ < GC.getTraitInfo(eTrait).getNumDisallowedTraitTypes(); iJ++)
@@ -32231,7 +32173,7 @@ bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		TraitTypes qTrait = ((TraitTypes)iI);
+		const TraitTypes qTrait = ((TraitTypes)iI);
 		if (hasTrait(qTrait) && GC.getTraitInfo(eTrait).getPromotionLine() == GC.getTraitInfo(qTrait).getPromotionLine())
 		{
 			if (bPositive)
@@ -33321,10 +33263,7 @@ UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 
 void CvPlayer::setSMValues()
 {
-	foreach_(CvUnit* unit, units())
-	{
-		unit->setSMValues();
-	}
+	algo::for_each(units(), CvUnit::fn::setSMValues());
 }
 
 void CvPlayer::upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY)
