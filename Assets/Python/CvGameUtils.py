@@ -49,9 +49,6 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		return True
 
-	def createBarbarianCities(self):
-		return False
-
 	def createBarbarianUnits(self):
 		return False
 

@@ -7416,48 +7416,39 @@ void CvGame::doHeadquarters()
 		const CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)iI);
 		if (!isCorporationFounded((CorporationTypes)iI))
 		{
+			const TechTypes eTechPrereq = (TechTypes)kCorporation.getTechPrereq();
+			if (NO_TECH == eTechPrereq)
+			{
+				continue;
+			}
 			int iBestValue = MAX_INT;
 			TeamTypes eBestTeam = NO_TEAM;
 
 			for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 			{
 				const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iJ);
-				if (kLoopTeam.isAlive())
+
+				if(kLoopTeam.isAlive()
+				&& kLoopTeam.isHasTech(eTechPrereq)
+				&& kLoopTeam.getNumCities() > 0)
 				{
-					if (NO_TECH != kCorporation.getTechPrereq() && kLoopTeam.isHasTech((TechTypes)(kCorporation.getTechPrereq())))
+					for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 					{
-						if (kLoopTeam.getNumCities() > 0)
+						if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopTeam.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
 						{
-							bool bHasBonus = false;
-							for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+							int iValue = getSorenRandNum(10, "Found Corporation (Team)");
+
+							for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
 							{
-								if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopTeam.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
-								{
-									bHasBonus = true;
-									break;
-								}
+								iValue += GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK) * 20;
 							}
 
-							if (bHasBonus)
+							if (iValue < iBestValue)
 							{
-								int iValue = getSorenRandNum(10, "Found Corporation (Team)");
-
-								for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
-								{
-									const int iCorporationCount = GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK);
-
-									if (iCorporationCount > 0)
-									{
-										iValue += iCorporationCount * 20;
-									}
-								}
-
-								if (iValue < iBestValue)
-								{
-									iBestValue = iValue;
-									eBestTeam = ((TeamTypes)iJ);
-								}
+								iBestValue = iValue;
+								eBestTeam = (TeamTypes) iJ;
 							}
+							break;
 						}
 					}
 				}
@@ -7470,53 +7461,34 @@ void CvGame::doHeadquarters()
 
 				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 				{
-					CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iJ);
-					if (kLoopPlayer.isAlive())
+					const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iJ);
+
+					if(playerX.isAlive()
+					&& playerX.getTeam() == eBestTeam
+					&& playerX.getNumCities() > 0)
 					{
-						if (kLoopPlayer.getTeam() == eBestTeam)
+						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 						{
-							if (kLoopPlayer.getNumCities() > 0)
+							const BonusTypes eBonus = (BonusTypes)kCorporation.getPrereqBonus(i);
+							if (NO_BONUS != eBonus && playerX.hasBonus(eBonus))
 							{
-								bool bHasBonus = false;
-								for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+								int iValue = getSorenRandNum(25, "Found Corporation (Player)") - playerX.getNumAvailableBonuses(eBonus);
+
+								for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
 								{
-									if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopPlayer.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
-									{
-										bHasBonus = true;
-										break;
-									}
+									iValue += GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK) * 20;
 								}
 
-								if (bHasBonus)
+								if (iValue < iBestValue)
 								{
-									int iValue = getSorenRandNum(10, "Found Religion (Player)");
-
-									if (!kLoopPlayer.isHuman())
-									{
-										iValue += 10;
-									}
-
-									for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
-									{
-										int iCorporationCount = GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK);
-
-										if (iCorporationCount > 0)
-										{
-											iValue += iCorporationCount * 20;
-										}
-									}
-
-									if (iValue < iBestValue)
-									{
-										iBestValue = iValue;
-										eBestPlayer = ((PlayerTypes)iJ);
-									}
+									iBestValue = iValue;
+									eBestPlayer = (PlayerTypes) iJ;
 								}
+								break;
 							}
 						}
 					}
 				}
-
 				if (eBestPlayer != NO_PLAYER)
 				{
 					GET_PLAYER(eBestPlayer).foundCorporation((CorporationTypes)iI);
@@ -7532,7 +7504,6 @@ void CvGame::doDiploVote()
 	MEMORY_TRACE_FUNCTION();
 
 	doVoteResults();
-
 	doVoteSelection();
 }
 
@@ -7541,31 +7512,42 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 {
 	MEMORY_TRACE_FUNCTION();
 
-	if (getMaxCityElimination() > 0 || isOption(GAMEOPTION_NO_BARBARIANS)
-	|| Cy::call<bool>(PYGameModule, "createBarbarianCities")
-	|| GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity() <= 0
-	|| (bNeanderthal ? (int)getCurrentEra() > 0 : GC.getEraInfo(getCurrentEra()).isNoBarbCities()))
-	{
-		return;
-	}
+	if (
+		getMaxCityElimination() > 0
+	||
+		isOption(GAMEOPTION_NO_BARBARIANS)
+	||
+		GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity() <= 0
+	|| (
+			bNeanderthal
+			?
+			(int)getCurrentEra() > 0
+			:
+			GC.getEraInfo(getCurrentEra()).isNoBarbCities()
+		)
+	) return;
+
 	const int iCivCities = getNumCivCities();
-	if (iCivCities < 1) { return; }
+	if (iCivCities < 1) return;
 
 	const int iBarbPercent = GC.getGameSpeedInfo(getGameSpeedType()).getBarbPercent();
+	const bool bBarbWorld = isOption(GAMEOPTION_BARBARIAN_WORLD);
 
-	// No barb city spawn the first X turns; X is based on difficulty and gamespeed.
-	if (getElapsedGameTurns() < GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationTurnsElapsed() * iBarbPercent / 100)
+	// No barb city spawn the first X turns (difficulty and gamespeed decide X), unless it's a barbarian world.
+	if (!bBarbWorld && getElapsedGameTurns() < GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationTurnsElapsed() * iBarbPercent / 100)
 	{
 		return;
 	}
 
-	const PlayerTypes ePlayer = bNeanderthal ? NEANDERTHAL_PLAYER : BARBARIAN_PLAYER;
+	const PlayerTypes eBarb = bNeanderthal ? NEANDERTHAL_PLAYER : BARBARIAN_PLAYER;
+	CvPlayer& pBarb = GET_PLAYER(eBarb);
 
-	const int iBarbCities = GET_PLAYER(ePlayer).getNumCities();
+	const int iBarbCities = pBarb.getNumCities();
 
 	// Hard limit on barb/civ city ratio.
-	const int iMax = iCivCities + (countCivPlayersAlive() + GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()) / 2;
-	if (isOption(GAMEOPTION_BARBARIAN_WORLD) ? iMax <= iBarbCities * 3 : iMax <= iBarbCities * 8)
+	const int iMax = iCivCities / 2 + (countCivPlayersAlive() + GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()) / 2;
+
+	if (bBarbWorld ? iMax + 4 < iBarbCities * 2 : iMax < iBarbCities * 7)
 	{
 		return;
 	}
@@ -7590,61 +7572,57 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		iRand *= 3;
 		iRand /= 2;
 	}
-
 	// Odds based on handicap
 	if (iRand >= 10 * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb())
 	{
 		return;
 	}
-	// Find plot
-	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
 
 	int iTargetCitiesMultiplier = 100;
-
-	int iTargetBarbCities = (iCivCities * 5 * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb()) / 100;
-	if (iBarbCities < iTargetBarbCities)
 	{
-		iTargetCitiesMultiplier += (300 * (iTargetBarbCities - iBarbCities)) / iTargetBarbCities;
+		const int iTargetBarbCities = 5*iCivCities * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb() / 100;
+		if (iBarbCities < iTargetBarbCities)
+		{
+			iTargetCitiesMultiplier += 300 * (iTargetBarbCities - iBarbCities) / iTargetBarbCities;
+		}
 	}
 
-	if (isOption(GAMEOPTION_RAGING_BARBARIANS))
-	{
-		iTargetCitiesMultiplier *= 3;
-		iTargetCitiesMultiplier /= 2;
-	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/19/08                                jdog5000      */
-/*                                                                                              */
-/* For BarbarianCiv, reduces emphasis on creating barb cities in                                */
-/* large, occupied areas, allows barbs more readily in unoccupied areas                         */
-/************************************************************************************************/
+	const bool bBarbCiv = isOption(GAMEOPTION_BARBARIAN_CIV);
+/* jdog5000 - BarbarianCiv
+	Reduces emphasis on creating barb cities in large occupied areas.
+*/
 	// New variable for emphaizing spawning cities on populated continents
 	int iOccupiedAreaMultiplier = 50;
-	int iOwnedPlots = 0;
 
-	if (isOption(GAMEOPTION_BARBARIAN_CIV))
+	if (bBarbCiv)
 	{
+		int iOwnedPlots = 0;
 		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
 		{
 			iOwnedPlots += GET_PLAYER((PlayerTypes)iI).getTotalLand();
 		}
 
 		// When map mostly open, emphasize areas with other civs
-		iOccupiedAreaMultiplier += 100 - (iOwnedPlots)/GC.getMap().getLandPlots();
+		iOccupiedAreaMultiplier += 100 - 100 * iOwnedPlots / GC.getMap().getLandPlots();
+	}
+// ! jdog5000
+
+	if (isOption(GAMEOPTION_RAGING_BARBARIANS))
+	{
+		iTargetCitiesMultiplier *= 3;
+		iTargetCitiesMultiplier /= 2;
 
 		// If raging barbs is on, emphasize areas with other civs
-		if (isOption(GAMEOPTION_RAGING_BARBARIANS))
-		{
-			iOccupiedAreaMultiplier *= 3;
-			iOccupiedAreaMultiplier /= 2;
-		}
+		iOccupiedAreaMultiplier *= 3;
+		iOccupiedAreaMultiplier /= 2;
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
+	// Find plot
 	static const MapCategoryTypes earth = static_cast<MapCategoryTypes>(GC.getInfoTypeForString("MAPCATEGORY_EARTH"));
+	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
+
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -7654,12 +7632,10 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
-			if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
+			if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(eBarb))
 			{
 				iTargetCities *= 3;
 			}
-
-			int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 			if (pLoopPlot->area()->getNumTiles() < iUnownedTilesThreshold / 3)
 			{
@@ -7669,15 +7645,15 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 
 			iTargetCities /= std::max(1, iUnownedTilesThreshold);
 
-			if (pLoopPlot->area()->getCitiesPerPlayer(ePlayer) < iTargetCities)
+			if (pLoopPlot->area()->getCitiesPerPlayer(eBarb) < iTargetCities)
 			{
-				int iValue = GET_PLAYER(ePlayer).AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY(), GC.getMIN_BARBARIAN_CITY_STARTING_DISTANCE());
+				int iValue = pBarb.AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY(), GC.getMIN_BARBARIAN_CITY_STARTING_DISTANCE());
 				iValue *= 100 + getSorenRandNum(50, "Variance");
 				iValue /= 100;
 
-				if (isOption(GAMEOPTION_BARBARIAN_CIV))
+				if (bBarbCiv)
 				{
-					if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
+					if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(eBarb))
 					{
 						// Counteracts the AI_foundValue emphasis on empty areas
 						iValue *= 2;
@@ -7687,7 +7663,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 					if (iTargetCitiesMultiplier > 100) // Either raging barbs is set or fewer barb cities than desired
 					{
 						// Emphasis on placing barb cities in populated areas
-						iValue += (iOccupiedAreaMultiplier * (pLoopPlot->area()->getNumCities() - pLoopPlot->area()->getCitiesPerPlayer(ePlayer))) / iCivCities;
+						iValue += iOccupiedAreaMultiplier * (pLoopPlot->area()->getNumCities() - pLoopPlot->area()->getCitiesPerPlayer(eBarb)) / iCivCities;
 					}
 				}
 				else if (iTargetCitiesMultiplier > 100)
@@ -7705,7 +7681,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 	if (pBestPlot != NULL)
 	{
-		GET_PLAYER(ePlayer).found(pBestPlot->getX(), pBestPlot->getY());
+		pBarb.found(pBestPlot->getX(), pBestPlot->getY());
 	}
 }
 
