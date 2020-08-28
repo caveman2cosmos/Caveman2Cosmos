@@ -4716,6 +4716,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<iCost>15</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4798,6 +4799,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_EXPLORATION</PrereqTech>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4882,6 +4884,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			<iCost>170</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4966,6 +4969,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqAndBuildings>
@@ -5050,6 +5054,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
@@ -5147,6 +5152,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
@@ -5237,6 +5243,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
@@ -59210,6 +59217,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
