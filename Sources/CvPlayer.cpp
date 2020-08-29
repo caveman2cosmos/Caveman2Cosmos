@@ -32355,7 +32355,7 @@ void CvPlayer::changeLeaderHeadLevel(int iChange)
 
 uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 {
-	uint64_t iPromoThreshold = 100;
+	uint64_t iPromoThreshold = 1000;
 	int iPromoThresholdExponent = (getLeaderHeadLevel() + 1);
 
 	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
