@@ -7468,18 +7468,12 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Eventos estratégicos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHTREEERACOLORS_HOVER</Tag>
-		<English>This setting changes tech tree screen to use Rise of Mankind era coloring method which is different from BUG mod's method. Requires restart before the change to this setting is applied in-game.</English>
-		<French>Ce paramètre change l'écran de l'arbre des Techs, au niveau des Couleurs utilisées pour différencier les Eres. Nécessite le redémarrage du Jeu.</French>
-		<German>Diese Einstellung verändert das Technologiefenster indem die Rise of Mankind-Farbdarstellung gewählt wird, die sich vom BUG-Mod unterscheidet. Erfordert einen Neustart des CIV-Programms.</German>
-		<Spanish>Esta opción cambia la Vista del árbol tecnológico para usar el método de coloreado de edades de Rise of Mankind, diferente al método del mod BUG. Requiere reiniciar el juego.</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_HOVER</Tag>
+		<English>When a religion is founded: Every leader who has it as their favourite religion will get it in their capital cities immediatly, regardless of where it was founded.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHTREEERACOLORS_TEXT</Tag>
-		<English>RoM Tech tree era colors</English>
-		<French>Couleur des Eres pour l'Arbre de Techs RoM</French>
-		<German>RoM Technologiebaum Zeitalter-Farben</German>
-		<Spanish>Colores de Edad de RoM</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_TEXT</Tag>
+		<English>Telepathic Religion</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TERRAINDAMAGE_HOVER</Tag>
