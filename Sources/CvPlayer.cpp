@@ -1,5 +1,4 @@
 // player.cpp
-// player.cpp
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
