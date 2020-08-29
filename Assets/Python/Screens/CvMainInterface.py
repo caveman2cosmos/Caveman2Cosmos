@@ -2163,7 +2163,7 @@ class CvMainInterface:
 				eWidGen = WidgetTypes.WIDGET_GENERAL
 				eFontGame = FontTypes.GAME_FONT
 				iCurrentResearch = CyPlayer.getCurrentResearch()
-				if iCurrentResearch != -1:
+				if iCurrentResearch != -1 or not bCityScreen:
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
 					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
 
