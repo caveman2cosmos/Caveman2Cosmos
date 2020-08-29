@@ -6401,17 +6401,14 @@ void CvGame::doTurn()
 	}
 
 #ifdef PARALLEL_MAPS
-	for (int i = 0; i < GC.getNumMaps(); i++)
+	for (int i = MAP_INITIAL; i < GC.getNumMaps(); i++)
 	{
-		const MapTypes eMap = static_cast<MapTypes>(i);
-		m_eCurrentMap = eMap;
+		m_eCurrentMap = static_cast<MapTypes>(i);
 
 		// solve property system
 		m_PropertySolver.doTurn();
 
 		GC.getMap().doTurn();
-
-		//createBarbarianUnits();
 	}
 #endif
 
@@ -6444,11 +6441,18 @@ void CvGame::doTurn()
 	//Hopefully won't create a noteable delay but it may
 	//disabled when debugging only - units should now be tracking and staying within a range of 0-1 for number of positive updates - negative updates.
 	//TBVIS
-	for (int iJ = 0; iJ < GC.getMap().numPlots(); iJ++)
+#ifdef PARALLEL_MAPS
+	for (int i = MAP_INITIAL; i < GC.getNumMaps(); i++)
 	{
-		GC.getMap().plotByIndex(iJ)->clearVisibilityCounts();
+		m_eCurrentMap = static_cast<MapTypes>(i);
+
+		for (int iJ = 0; iJ < GC.getMap().numPlots(); iJ++)
+		{
+			GC.getMap().plotByIndex(iJ)->clearVisibilityCounts();
+		}
+		GC.getMap().updateSight(true, false);
 	}
-	GC.getMap().updateSight(true, false);
+#endif
 
 	CvEventReporter::getInstance().preEndGameTurn(getGameTurn());
 
