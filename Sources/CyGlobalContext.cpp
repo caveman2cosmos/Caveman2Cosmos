@@ -38,7 +38,7 @@ bool CyGlobalContext::isDebugBuild() const
 
 CyGame* CyGlobalContext::getCyGame() const
 {
-	static CyGame cyGame(&GC.getGame());
+	static CyGame cyGame(GC.getGame());
 	return &cyGame;
 }
 

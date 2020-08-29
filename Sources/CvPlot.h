@@ -255,7 +255,7 @@ public:
 	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python
 	int seeThroughLevel() const; // Exposed to Python
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
-	bool canSeePlot(CvPlot *plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
+	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
 	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
@@ -403,7 +403,6 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
-	bool m_bDepletedMine;
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
@@ -882,7 +881,7 @@ public:
 	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
-	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult);
+	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
 	int getNumUnits() const; // Exposed to Python
@@ -1089,7 +1088,7 @@ protected:
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);
 
-	ColorTypes plotMinimapColor();
+	ColorTypes plotMinimapColor() const;
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;

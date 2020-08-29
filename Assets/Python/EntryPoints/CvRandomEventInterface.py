@@ -306,7 +306,7 @@ def canDoWeddingFeud3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   # do not use this event in multiplayer
@@ -455,7 +455,7 @@ def canApplyBardTale3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   return True
@@ -961,7 +961,7 @@ def applyGreatDepression(argsList):
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
     if loopPlayer.isAlive():
-      loopPlayer.changeGold(-loopPlayer.getEffectiveGold()/4)
+      loopPlayer.changeGold(-loopPlayer.getGold()/4)
 
       if iPlayer != kTriggeredData.ePlayer:
         szText = TRNSLTR.getText("TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION", (player.getCivilizationAdjectiveKey(), u"", u"", u"", u"", corporation.getTextKey()))
@@ -4601,7 +4601,7 @@ def canTriggerMoreFiatMoney(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.getEffectiveGold() > 5000:
+  if pPlayer.getGold() > 5000:
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_BARTER")):
     return False
@@ -6960,7 +6960,7 @@ def canTriggerUnlimitedPower2(argsList):
     return False
   if (eventCity.area().isCleanPower(player.getTeam())):
     return False
-  if (player.getEffectiveGold() < (eventCity.area().getNumCities() * 100)):
+  if (player.getGold() < (eventCity.area().getNumCities() * 100)):
     return False
   return True
 
@@ -6977,7 +6977,7 @@ def getHelpUnlimitedPower2(argsList):
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 	iGold = CyPlayer.getCity(kTriggeredData.iCityId).area().getNumCities() * 100
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szGold = "\n<color=255,76,76>"
 	else: szGold = "\n"
 	szGold += TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
@@ -7071,7 +7071,7 @@ def getHelpSuperVirus2(argsList):
 	szHelp += TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (1, CyPlayer.getCity(kTriggeredData.iCityId).getNameKey()))
 
 	iGold = 100 + CyPlayer.getNumCities() * 35
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>"
 	else: szHelp += "\n"
 
@@ -7081,7 +7081,7 @@ def canTriggerSuperVirus2(argsList):
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-	if CyPlayer.getEffectiveGold() < 100 + CyPlayer.getNumCities() * 35:
+	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 35:
 		return False
 	return True
 
@@ -7112,7 +7112,7 @@ def getHelpSuperVirus3(argsList):
 
 	iGold = 100 + CyPlayer.getNumCities() * 65
 
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
 	else: szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
 
@@ -7135,7 +7135,7 @@ def canTriggerSuperVirus3(argsList):
   team = GC.getTeam(player.getTeam())
 
   iRequireGold = 100 + player.getNumCities() * 65
-  if (player.getEffectiveGold() < (iRequireGold)):
+  if (player.getGold() < iRequireGold):
     return False
   iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
   iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
@@ -8267,14 +8267,14 @@ def doEventLawyer(argsList):
 ## Captives and Slavery mod python ##
 
 def doRemoveWVSlavery(argsList):
-	CyUnit = argsList[0]
+	unit = argsList[0]
 
-	if not CyUnit: return # False call
+	if not unit: return # False call
 
-	iPlayer = CyUnit.getOwner()
-	CyPlayer = GC.getPlayer(iPlayer)
+	iPlayer = unit.getOwner()
+	player = GC.getPlayer(iPlayer)
 
-	if not CyPlayer.isAlive():
+	if not player.isAlive():
 		return
 
 	iWVSlavery = GC.getInfoTypeForString("BUILDING_WV_SLAVERY")
@@ -8294,41 +8294,38 @@ def doRemoveWVSlavery(argsList):
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_COMMERCE"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_SANITATION"),
 		]
-		iSlaveSettled = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE")
 		iSlaveFood = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_FOOD")
 		iSlaveProd = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_PRODUCTION")
-		iSlaveCom = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_COMMERCE")
 		iSlaveHealth = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_HEALTH")
 		iSlaveEntertain = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_ENTERTAINMENT")
-		iSlaveTutor = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_TUTOR")
-		iSlaveMilitary = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_MILITARY")
 
-		iUnitCaptiveSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
-		iUnitImmigrant = GC.getInfoTypeForString("UNIT_CAPTIVE_IMMIGRANT")
+		iUnitFreedSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
 		iUnitEntertain = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 		iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
+		iUnitFoodMerchant = GC.getInfoTypeForString("UNIT_EARLY_FOOD_MERCHANT_C2C")
 		iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
 
 		bMessage = iPlayer == GAME.getActivePlayer()
 		if bMessage:
 			msg = "Slavery worldview eradicated"
-			CvUtil.sendMessage(msg, iPlayer, 16, CyUnit.getButton(), ColorTypes(8), CyUnit.getX(), CyUnit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
+			CvUtil.sendMessage(msg, iPlayer, 16, unit.getButton(), ColorTypes(8), unit.getX(), unit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
 
-		iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
+		iCost = player.getBuildingProductionNeeded(iSlaveMarket)
 		iSum = 0
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
-			sCityName = CyCity.getName()
-			iCityX = CyCity.getX()
-			iCityY = CyCity.getY()
+		city, i = player.firstCity(False)
+		while city:
+			if bMessage:
+				sCityName = city.getName()
+			iCityX = city.getX()
+			iCityY = city.getY()
 			# Remove the main slavery building
-			if CyCity.getNumActiveBuilding(iWVSlavery) > 0:
-				CyCity.setNumRealBuilding(iWVSlavery, 0)
+			if city.getNumActiveBuilding(iWVSlavery) > 0:
+				city.setNumRealBuilding(iWVSlavery, 0)
 
 			# Sell the Slave market if one exists
-			if CyCity.getNumActiveBuilding(iSlaveMarket) > 0:
+			if city.getNumActiveBuilding(iSlaveMarket) > 0:
 
-				CyCity.setNumRealBuilding(iSlaveMarket, 0)
+				city.setNumRealBuilding(iSlaveMarket, 0)
 
 				iSum += iCost
 
@@ -8338,99 +8335,59 @@ def doRemoveWVSlavery(argsList):
 
 			# Remove all other Slavery Buildings if they exist
 			for ibuilding in aiSlaveBuildings:
-				if CyCity.getNumActiveBuilding(ibuilding) > 0:
-					CyCity.setNumRealBuilding(ibuilding, 0)
+				if city.getNumActiveBuilding(ibuilding) > 0:
+					city.setNumRealBuilding(ibuilding, 0)
 
-			# Free the Settled Slaves.
-			iCountSettled = CyCity.getFreeSpecialistCount(iSlaveSettled)
-			iCountFood = CyCity.getFreeSpecialistCount(iSlaveFood)
-			iCountProd = CyCity.getFreeSpecialistCount(iSlaveProd)
-			iCountCom = CyCity.getFreeSpecialistCount(iSlaveCom)
-			iCountHealth = CyCity.getFreeSpecialistCount(iSlaveHealth)
-			iCountEntertain = CyCity.getFreeSpecialistCount(iSlaveEntertain)
-			iCountTutor = CyCity.getFreeSpecialistCount(iSlaveTutor)
-			iCountMilitary = CyCity.getFreeSpecialistCount(iSlaveMilitary)
+			iFreeSlaves = 0
+			for i in xrange(GC.getNumSpecialistInfos()):
+				if GC.getSpecialistInfo(i).isSlave():
 
-			## Process those that can become population or immagrants
-			##	where 3 slaves = 1 pop or immigrant
-			##	and can only increase the city pop to 7
-			iCount = iCountSettled + iCountFood + iCountCom + iCountTutor + iCountMilitary
-			iCountNewPop = int(iCount/3)
-			iCount = iCount - 3*iCountNewPop
+					iCount = city.getFreeSpecialistCount(i)
+					if iCount < 1: continue
 
-			if iCount > 0:
-				for j in xrange(iCount):
-					CyPlayer.initUnit(iUnitCaptiveSlave, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iCount))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+					city.changeFreeSpecialistCount(i, -iCount)
 
-			if iCountNewPop > 0:
-				iCountImmigrants = iCountNewPop
-				iCityPop = CyCity.getPopulation()
-				if iCityPop < 7:
-					## fill up the local pop and left overs become immigrants
-					iMaxToAddPop = 7 - iCityPop
-					if iMaxToAddPop > iCountImmigrants:
-						CyCity.changePopulation(iCountImmigrants)
+					if i == iSlaveEntertain:
+						for j in xrange(iCount):
+							player.initUnit(iUnitEntertain, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION", (iCountImmigrants*3, sCityName, iCountImmigrants))
-							CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-						iCountImmigrants = 0
-					else:
-						CyCity.changePopulation(iMaxToAddPop)
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS", (sCityName, iCount, "Story Tellers"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveProd:
+						for j in xrange(iCount):
+							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION", (iMaxToAddPop*3, sCityName, iMaxToAddPop))
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Merchants"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveFood:
+						for j in xrange(iCount):
+							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						if bMessage:
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Food Merchants"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveHealth:
+						for j in xrange(iCount):
+							player.initUnit(iUnitHealth, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						if bMessage:
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS", (sCityName, iCount, "Healers"))
 							CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-						iCountImmigrants = iCountImmigrants - iMaxToAddPop
-				if iCountImmigrants > 0:
-					for j in xrange(iCountImmigrants):
-						CyPlayer.initUnit(iUnitImmigrant, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					if bMessage:
-						msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_IMMIGRANTS", (iCountImmigrants*3, sCityName, iCountImmigrants))
-						CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
-			## Now remove those slaves
-			if  iCountSettled > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveSettled, -iCountSettled)
-			if  iCountFood > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveFood, -iCountFood)
-			if  iCountCom > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveCom, -iCountCom)
-			if  iCountTutor > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveTutor, -iCountTutor)
-			if  iCountMilitary > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveMilitary, -iCountMilitary)
+					else: iFreeSlaves += iCount
 
-			## Now convert the other slaves
-			if iCountProd > 0:
-				for j in xrange(iCountProd):
-					CyPlayer.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveProd,-1)
+			if iFreeSlaves > 0:
+				for j in xrange(iFreeSlaves):
+					player.initUnit(iUnitFreedSlave, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCountProd, "Early Merchants"))
+					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iFreeSlaves))
 					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
-			if iCountHealth > 0:
-				for j in xrange(iCountHealth):
-					CyPlayer.initUnit(iUnitHealth, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveHealth,-1)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS", (sCityName, iCountHealth, "Healers"))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-
-			if iCountEntertain > 0:
-				for j in xrange(iCountEntertain):
-					CyPlayer.initUnit(iUnitEntertain, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveEntertain,-1)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS", (sCityName, iCountEntertain, "Story Tellers"))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-
-			CyCity, i = CyPlayer.nextCity(i, False)
+			city, i = player.nextCity(i, False)
 
 		if iSum > 0:
-			CyPlayer.changeGold(int(iSum * 0.2))
+			player.changeGold(int(iSum * 0.2))
 
 
 def doRemoveWVCannibalism(argsList):

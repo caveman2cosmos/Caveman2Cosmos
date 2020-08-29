@@ -11,6 +11,7 @@
 //---------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CounterSet.h"
 #include "CvGameAI.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"
@@ -71,14 +72,9 @@ CvGameTextMgr& CvGameTextMgr::GetInstance()
 //	PURPOSE:	Constructor
 //
 //----------------------------------------------------------------------------
-CvGameTextMgr::CvGameTextMgr()
-{
+CvGameTextMgr::CvGameTextMgr() : inspectUnitCombatCounters(NULL) { }
 
-}
-
-CvGameTextMgr::~CvGameTextMgr()
-{
-}
+CvGameTextMgr::~CvGameTextMgr() { }
 
 //----------------------------------------------------------------------------
 //
@@ -89,7 +85,7 @@ CvGameTextMgr::~CvGameTextMgr()
 //----------------------------------------------------------------------------
 void CvGameTextMgr::Initialize()
 {
-
+	inspectUnitCombatCounters = new CounterSet();
 }
 
 //----------------------------------------------------------------------------
@@ -101,6 +97,7 @@ void CvGameTextMgr::Initialize()
 //----------------------------------------------------------------------------
 void CvGameTextMgr::DeInitialize()
 {
+	SAFE_DELETE(inspectUnitCombatCounters);
 }
 
 //----------------------------------------------------------------------------
@@ -331,21 +328,16 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 
 void CvGameTextMgr::setGoldStr(CvWString& szString, PlayerTypes ePlayer)
 {
-	int iGreaterGold = GET_PLAYER(ePlayer).getGreaterGold();
 	if (GET_PLAYER(ePlayer).getGold() < 0)
 	{
 		szString.Format(L"%c: " SETCOLR L"%d" SETCOLR, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER(ePlayer).getGold());
-	}
-	else if (iGreaterGold > 0)
-	{
-		szString.Format(L"%c: %d%c%d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), iGreaterGold, GC.getYieldInfo(YIELD_COMMERCE).getChar(), GET_PLAYER(ePlayer).getGold());
 	}
 	else
 	{
 		szString.Format(L"%c: %d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), GET_PLAYER(ePlayer).getGold());
 	}
 
-	int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
+	const int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
 	if (iGoldRate < 0)
 	{
 		szString += gDLL->getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate);
@@ -542,18 +534,16 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	CvWString szTempBuffer;
 	int iI;
 	bool bFirst;
-	bool bShift = gDLL->shiftKey();
-	bool bAlt = gDLL->altKey();
+	const bool bShift = gDLL->shiftKey();
+	const bool bCtrl = gDLL->ctrlKey();
+	const bool bAlt = gDLL->altKey();
 
 	//In this case, these views mean, in addition to debugging info displays from bShift and bAlt:
-	//bTBUnitView1 = (On unit base help: Prerequisite and Production Info, Here on Compiled Units: CombatInfo (Prereq and Production info should be standardly available, thus normal view)
-	//bTBUnitView2 = (On unit base help: Long List Infos - Civil Info - should be changed from long list to civil info on the base too)
-	//bTBUnitView3 = Combat Class Modifiers - will need to disable ones that don't have anything to display.
-	//bNormalView = default to show but replaced by any of the above - includes unit limit counts
-	bool bTBUnitView1 = gDLL->ctrlKey();
-	bool bTBUnitView2 = gDLL->altKey();
-	bool bTBUnitView3 = gDLL->shiftKey();
-	bool bNormalView = (!bTBUnitView1 && !bTBUnitView2 && !bTBUnitView3);
+	// bShift = Combat Class Modifiers - will need to disable ones that don't have anything to display.
+	// bCtrl = On unit base help: Prerequisite and Production Info, Here on Compiled Units: CombatInfo (Prereq and Production info should be standardly available, thus normal view)
+	// bAlt = On unit base help: Long List Infos - Civil Info - should be changed from long list to civil info on the base too)
+	// bNormalView = default to show but replaced by any of the above - includes unit limit counts
+	bool bNormalView = (!bCtrl && !bAlt && !bShift);
 
 	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), pUnit->getName().GetCString());
 	szString.append(szTempBuffer);
@@ -755,35 +745,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	//}
 	//TB SubCombat Mod begin
 
-	if (bTBUnitView3)
-	{
-		bFirst = true;
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
-			{
-				const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
-				if (bFirst)
-				{
-					szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-					bFirst = false;
-				}
-				else
-				{
-					szString.append(NEWLINE);
-					szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
-					szString.append(szTempBuffer);
-				}
-			}
-		}
-		if (!bFirst)
-		{
-			szTempBuffer.Format(L")");
-			szString.append(szTempBuffer);
-		}
-	}
-
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
 		if (pUnit->isHasPromotion((PromotionTypes)iI) && !pUnit->isPromotionOverriden((PromotionTypes)iI))
@@ -810,37 +771,42 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (!bOneLine)
 	{
-		setEspionageMissionHelp(szString, pUnit);
-
-		if (pUnit->canFight())
+		if (bShift)
 		{
-			const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
-			for (iI = 0; iI < iNumHealAsTypes; iI++)
+			bFirst = true;
+			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
-				const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
-				if (iHealAsDamage > 0)
+				if (pUnit->isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
-						GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+					const UnitCombatTypes eUnitCombatType = ((UnitCombatTypes)iI);
+					if (bFirst)
+					{
+						szTempBuffer.Format(L"(%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+						bFirst = false;
+					}
+					else
+					{
+						szString.append(NEWLINE);
+						szTempBuffer.Format(L"%s", GC.getUnitCombatInfo(eUnitCombatType).getDescription());
+						szString.append(szTempBuffer);
+					}
 				}
+			}
+			if (!bFirst)
+			{
+				szTempBuffer.Format(L")");
+				szString.append(szTempBuffer);
 			}
 		}
 		//Setup Combat Value Displays
-		if (bTBUnitView1)
+		if (bCtrl)
 		{
 
 			if (pUnit->hasStealthDefense() && GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
-			}
-			//Fortification
-			if (pUnit->fortifyModifier() != 0)
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
 
 			if (pUnit->noDefensiveBonus())
@@ -2346,7 +2312,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		}
 
 		//Setup Civil Displays
-		if (bTBUnitView2)
+		if (bAlt)
 		{
 			if (pUnit->workRate(true) != 0)
 			{
@@ -3062,11 +3028,56 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		if (bNormalView)
 		{
 			//Max HP
-			if (pUnit->maxHPTotal() != 100)
+			if (pUnit->canFight())
+			{
+				if (pUnit->maxHPTotal() != 100)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				}
+				if (pUnit->isHurt())
+				{
+					const int iNumHealAsTypes = GC.getUnitInfo(pUnit->getUnitType()).getNumHealAsTypes();
+					for (iI = 0; iI < iNumHealAsTypes; iI++)
+					{
+						const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
+						const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
+						if (iHealAsDamage > 0)
+						{
+							szString.append(NEWLINE);
+							szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
+								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+						}
+					}
+				}
+			}
+			//Fortification
+			if (pUnit->fortifyModifier() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", pUnit->maxHPTotal()));
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_FORTIFIED", pUnit->fortifyModifier()));
 			}
+
+			if (pUnit->isMilitaryBranch())
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_MILITARY"));
+			}
+			else
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_CIVILIAN"));
+			}
+
+			if (pUnit->getUpkeep100() > 0)
+			{
+				szTempBuffer = CvWString::format(L"%.2f", pUnit->getUpkeep100() / 100.0);
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", szTempBuffer.GetCString()));
+			}
+
+			setEspionageMissionHelp(szString, pUnit);
+
 			//Current Cold Damage
 			if (pUnit->getColdDamage() > 0)
 			{
@@ -3629,19 +3640,19 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (!bShort && !bOneLine)
 	{
-		if (!bTBUnitView1)
+		if (!bCtrl)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_1").c_str());
 			szString.append(szTempBuffer);
 		}
-		if (!bTBUnitView2)
+		if (!bAlt)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_2").c_str());
 			szString.append(szTempBuffer);
 		}
-		if (!bTBUnitView3)
+		if (!bShift)
 		{
 			szString.append(NEWLINE);
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), gDLL->getText("TXT_TB_UNIT_VIEW_3").c_str());
@@ -4081,8 +4092,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 		return;
 	}
 
-	CvUnit* pLoopUnit;
-	static const uint iMaxNumUnits = 1;
 	std::vector<CvUnit *> plotUnits;
 
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
@@ -4106,32 +4115,22 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 	if (iNumVisibleUnits > 0)
 	{
-		//if (pPlot->getCenterUnit())
-		//{
-		//	setUnitHelp(szString, pPlot->getCenterUnit(), iNumVisibleUnits > iMaxNumUnits, true);
-		//}
+		const CvUnit* centerUnit = pPlot->getCenterUnit();
 
-		uint iNumShown = std::min<uint>(iMaxNumUnits, iNumVisibleUnits);
-		for (uint iI = 0; iI < iNumShown && iI < (int) plotUnits.size(); iI++)
+		if (centerUnit)
 		{
-			CvUnit* pLoopUnit = plotUnits[iI];
-			//if (pLoopUnit != pPlot->getCenterUnit())
-			//{
-				szString.append(NEWLINE);
-				setUnitHelp(szString, pLoopUnit, true, true);
-			//}
+			setUnitHelp(szString, centerUnit, iNumVisibleUnits > 12, true);
 		}
 
-		bool bFirst = true;
-		if (iNumVisibleUnits > iMaxNumUnits)
+		if (iNumVisibleUnits > 1)
 		{
 			std::map<int,PlayerUnitInfo> a_units;
 			int iCount = 0;
-			for (int iI = iMaxNumUnits; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
+			for (int iI = 0; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
 			{
-				pLoopUnit = plotUnits[iI];
+				CvUnit* pLoopUnit = plotUnits[iI];
 
-				if (pLoopUnit != NULL/* && pLoopUnit != pPlot->getCenterUnit()*/)
+				if (pLoopUnit != NULL && pLoopUnit != centerUnit)
 				{
 					std::map<int,PlayerUnitInfo>::iterator itr = a_units.find(PLAYER_UNIT_KEY(pLoopUnit->getOwner(), pLoopUnit->getUnitType()));
 
@@ -4173,25 +4172,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					}
 				}
 			}
-#if 0
-			for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					int iIndex = iI * MAX_PLAYERS + iJ;
 
-					if (aiUnitNumbers[iIndex] > 0)
-					{
-						if (iCount < 5 || bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						else
-						{
-							szString.append(L", ");
-						}
-#endif
+			bool bFirst = true;
 			for (std::map<int, PlayerUnitInfo>::const_iterator itr = a_units.begin(); itr != a_units.end(); ++itr)
 			{
 				const CvPlayer& kPlayer = GET_PLAYER(itr->second.m_eOwner);
@@ -4209,13 +4191,11 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 				CvWString szUnitName;
 
 				szUnitName.clear();
-				if (kPlayer.getCivilizationType() != NO_CIVILIZATION &&
-					kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL)
+				if (kPlayer.getCivilizationType() != NO_CIVILIZATION
+				&& kUnit.getCivilizationName(kPlayer.getCivilizationType()) != NULL
+				&& !CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
 				{
-					if (!CvWString(kUnit.getCivilizationName(kPlayer.getCivilizationType())).empty())
-					{
-						szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
-					}
+					szUnitName = gDLL->getText(kUnit.getCivilizationName(kPlayer.getCivilizationType()));
 				}
 				if (szUnitName.empty())
 				{
@@ -4242,56 +4222,34 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
 					}
 				}
-				else
+				else if (itr->second.m_iTotalMaxStrength > 0)
 				{
-					if (itr->second.m_iTotalMaxStrength > 0)
+					int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
+					int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
+					int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
+
+					if (0 != iCurrent100)
 					{
-						int iBase = (itr->second.m_iTotalMaxStrength / itr->second.m_iCount) / 100;
-						int iCurrent = (itr->second.m_iTotalStrength / itr->second.m_iCount) / 100;
-						int iCurrent100 = (itr->second.m_iTotalStrength / itr->second.m_iCount) % 100;
-						if (0 == iCurrent100)
-						{
-							if (iBase == iCurrent)
-							{
-								szString.append(CvWString::format(L" %d", iBase));
-							}
-							else
-							{
-								szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
-							}
-						}
-						else
-						{
-							szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
-						}
-						szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
+						szString.append(CvWString::format(L" %d.%02d/%d", iCurrent, iCurrent100, iBase));
 					}
+					else if (iBase == iCurrent)
+					{
+						szString.append(CvWString::format(L" %d", iBase));
+					}
+					else
+					{
+						szString.append(CvWString::format(L" %d/%d", iCurrent, iBase));
+					}
+					szString.append(CvWString::format(L"%c", gDLL->getSymbolID(STRENGTH_CHAR)));
 				}
-
-
-				//for (int iK = 0; iK < numPromotionInfos; iK++)
-				//{
-				//	std::map<PromotionTypes,int>::const_iterator promoItr = itr->second.m_promotions.find((PromotionTypes)iK);
-				//	if ( promoItr != itr->second.m_promotions.end())
-				//	{
-				//		szString.append(CvWString::format(L"%d<img=%S size=16 />", promoItr->second, GC.getPromotionInfo((PromotionTypes)iK).getButton()));
-				//	}
-				//}
 
 				if (kPlayer.getID() != GC.getGame().getActivePlayer() && !kUnit.isHiddenNationality())
 				{
 					szString.append(L", ");
-/************************************************************************************************/
-/* REVOLUTION_MOD						 02/01/08								jdog5000	  */
-/*																							  */
-/* For BarbarianCiv and minor civs															  */
-/************************************************************************************************/
-/* original code
-					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iJ).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iJ).getName()));
-*/
+
 					// For minor civs, display civ name instead of player name ... to differentiate
 					// and help human recognize why they can't contact that player
-					if( kPlayer.isMinorCiv() )
+					if (kPlayer.isMinorCiv())
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getCivilizationDescription()));
 					}
@@ -4299,9 +4257,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					{
 						szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getName()));
 					}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 				}
 			}
 		}
@@ -8881,10 +8836,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				int iUnitCost = kPlayer.calculateUnitCost();
-				int iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				int iUnitCostPercentage = (iUnitCost * 100) / std::max(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %d (%d / %d)", iUnitCostPercentage, iUnitCost, iTotalCosts));
+				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
+				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
+				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
+				szString.append(CvWString::format(L"\nUnit cost percentage: %lld (%lld / %lld)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
 
 				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
 
@@ -10555,32 +10510,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	bool bFound = false;
 	bool bFirst = true;
 
-
-	// AIAndy: If the help string for the replacement traits is specifically requested, it should be provided
-	//for (iJ = 0; iJ < GC.getNumGameOptionInfos(); iJ++)
-	//{
-	//	GameOptionTypes eGameOption = ((GameOptionTypes)iJ);
-	//	if (GC.getGame().isOption(eGameOption) && GC.getTraitInfo(eTrait).isNotOnGameOption(eGameOption))
-	//	{
-	//		return;
-	//	}
-	//	if (!GC.getGame().isOption(eGameOption) && GC.getTraitInfo(eTrait).isOnGameOption(eGameOption))
-	//	{
-	//		return;
-	//	}
-	//}
-	//if (GC.getTraitInfo(eTrait).getEditedTrait() != NO_TRAIT)
-	//{
-	//	return;
-	//}
-
-	// AIAndy: Neither should a game option influence the provision of help strings, the calling function needs to check this
-	//if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0 ||
-	//	!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && !GC.getTraitInfo(eTrait).getLinePriority() == 0)
-	//{
-	//	return;
-	//}
-
 	// Trait Name
 	szText = GC.getTraitInfo(eTrait).getDescription();
 	if (bDawnOfMan)
@@ -11174,47 +11103,94 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//MILITARY UPKEEP AND PRODUCTION
-		//	Free base units
-		if (GC.getTraitInfo(eTrait).getBaseFreeUnits() != 0)
+		// Free Civilian units upkeep
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_FREE_UNITS", GC.getTraitInfo(eTrait).getBaseFreeUnits()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilian()));
 		}
-
-		//	Free units population percent
-		if (GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent() != 0)
 		{
-			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeUnitsPopulationPercent()));
+			if (GC.getGame().getActivePlayer() != NO_PLAYER)
+			{
+				int iValue = 0;
+				int iMod = GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent();
+				if (iMod > 0)
+				{
+					iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
+				}
+				else if (iMod < 0)
+				{
+					iValue =
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+				}
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
+			}
+			else
+			{
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
+			}
 		}
-
-		//	Gold cost per unit
-		if (GC.getTraitInfo(eTrait).getGoldPerUnit() != 0)
+		// Free Military unit upkeep
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_SUPPORT_COSTS", GC.getTraitInfo(eTrait).getGoldPerUnit(), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary()));
+		}
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent() != 0)
+		{
+			if (GC.getGame().getActivePlayer() != NO_PLAYER)
+			{
+				int iValue = 0;
+				int iMod = GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent();
+				if (iMod > 0)
+				{
+					iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
+				}
+				else if (iMod < 0)
+				{
+					iValue =
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+				}
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP",  iMod));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
+			}
+			else
+			{
+				szHelpString.append(NEWLINE);
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent()));
+			}
 		}
 
 		//	Free military units base
-		if (GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_FREE_MILITARY_UNITS", GC.getTraitInfo(eTrait).getBaseFreeMilitaryUnits()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitary()));
 		}
 
 		//	Free Military units population percent
-		if (GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent() != 0)
+		if (GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_MILITARY_UNITS_POPULATION", GC.getTraitInfo(eTrait).getFreeMilitaryUnitsPopulationPercent()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepMilitaryPopPercent()));
 		}
 
-		//	Gold cost per military unit
-		if (GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit() != 0)
+		if (GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", GC.getTraitInfo(eTrait).getGoldPerMilitaryUnit(), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN", GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod()));
+		}
+		if (GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod() != 0)
+		{
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY", GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod()));
 		}
 
 		//  Unit Upgrade Cost modifier
@@ -13464,7 +13440,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iArmorChange = 0;
 	int	iPunctureChange = 0;
 	int	iDamageModifierChange = 0;
-	int	iCostModifierChange = 0;
+	int iUpkeepModifier = 0;
+	int iExtraUpkeep100 = 0;
 	int	iOverrunChange = 0;
 	int	iRepelChange = 0;
 	int	iFortRepelChange = 0;
@@ -13576,162 +13553,165 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	for (iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 	{
-		iGetControlPoints += GC.getPromotionInfo(linePromotionsOwned[iI]).getControlPoints();
-		iGetCommandRange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCommandRange();
-		iExcileChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getExcileChange();
-		iPassageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPassageChange();
-		iNoNonOwnedCityEntryChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoNonOwnedCityEntryChange();
-		iBarbCoExistChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBarbCoExistChange();
-		iBlendIntoCityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBlendIntoCityChange();
-		iUpgradeAnywhereChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUpgradeAnywhereChange();
-		iMovesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMovesChange();
-		iMoveDiscountChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMoveDiscountChange();
-		iAirRangeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAirRangeChange();
-		iInterceptChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInterceptChange();
-		iEvasionChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEvasionChange();
-		iWithdrawalChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getWithdrawalChange();
-		iAttackCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAttackCombatModifierChange();
-		iDefenseCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDefenseCombatModifierChange();
-		iCombatModifierPerSizeMore += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerSizeMoreChange();
-		iCombatModifierPerSizeLess += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerSizeLessChange();
-		iCombatModifierPerVolumeMore += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerVolumeMoreChange();
-		iCombatModifierPerVolumeLess += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatModifierPerVolumeLessChange();
-		iPursuitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPursuitChange();
-		iEarlyWithdrawChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEarlyWithdrawChange();
-		iVSBarbsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getVSBarbsChange();
-		iReligiousCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getReligiousCombatModifierChange();
-		iArmorChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getArmorChange();
-		iPunctureChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPunctureChange();
-		iDamageModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDamageModifierChange();
-		iCostModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCostModifierChange();
-		iOverrunChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getOverrunChange();
-		iRepelChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRepelChange();
-		iFortRepelChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFortRepelChange();
-		iRepelRetriesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRepelRetriesChange();
-		iUnyieldingChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUnyieldingChange();
-		iKnockbackChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getKnockbackChange();
-		iKnockbackRetriesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getKnockbackRetriesChange();
-		iRoundStunProbChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRoundStunProbChange();
-		iPoisonProbabilityModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPoisonProbabilityModifierChange();
-		iStrAdjperRndChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperRndChange();
-		iStrAdjperAttChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperAttChange();
-		iStrAdjperDefChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperDefChange();
-		iWithdrawAdjperAttChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getWithdrawAdjperAttChange();
+		const CvPromotionInfo& promo = GC.getPromotionInfo(linePromotionsOwned[iI]);
+
+		iGetControlPoints += promo.getControlPoints();
+		iGetCommandRange += promo.getCommandRange();
+		iExcileChange += promo.getExcileChange();
+		iPassageChange += promo.getPassageChange();
+		iNoNonOwnedCityEntryChange += promo.getNoNonOwnedCityEntryChange();
+		iBarbCoExistChange += promo.getBarbCoExistChange();
+		iBlendIntoCityChange += promo.getBlendIntoCityChange();
+		iUpgradeAnywhereChange += promo.getUpgradeAnywhereChange();
+		iMovesChange += promo.getMovesChange();
+		iMoveDiscountChange += promo.getMoveDiscountChange();
+		iAirRangeChange += promo.getAirRangeChange();
+		iInterceptChange += promo.getInterceptChange();
+		iEvasionChange += promo.getEvasionChange();
+		iWithdrawalChange += promo.getWithdrawalChange();
+		iAttackCombatModifierChange += promo.getAttackCombatModifierChange();
+		iDefenseCombatModifierChange += promo.getDefenseCombatModifierChange();
+		iCombatModifierPerSizeMore += promo.getCombatModifierPerSizeMoreChange();
+		iCombatModifierPerSizeLess += promo.getCombatModifierPerSizeLessChange();
+		iCombatModifierPerVolumeMore += promo.getCombatModifierPerVolumeMoreChange();
+		iCombatModifierPerVolumeLess += promo.getCombatModifierPerVolumeLessChange();
+		iPursuitChange += promo.getPursuitChange();
+		iEarlyWithdrawChange += promo.getEarlyWithdrawChange();
+		iVSBarbsChange += promo.getVSBarbsChange();
+		iReligiousCombatModifierChange += promo.getReligiousCombatModifierChange();
+		iArmorChange += promo.getArmorChange();
+		iPunctureChange += promo.getPunctureChange();
+		iDamageModifierChange += promo.getDamageModifierChange();
+		iUpkeepModifier += promo.getUpkeepModifier();
+		iExtraUpkeep100 += promo.getExtraUpkeep100();
+		iOverrunChange += promo.getOverrunChange();
+		iRepelChange += promo.getRepelChange();
+		iFortRepelChange += promo.getFortRepelChange();
+		iRepelRetriesChange += promo.getRepelRetriesChange();
+		iUnyieldingChange += promo.getUnyieldingChange();
+		iKnockbackChange += promo.getKnockbackChange();
+		iKnockbackRetriesChange += promo.getKnockbackRetriesChange();
+		iRoundStunProbChange += promo.getRoundStunProbChange();
+		iPoisonProbabilityModifierChange += promo.getPoisonProbabilityModifierChange();
+		iStrAdjperRndChange += promo.getStrAdjperRndChange();
+		iStrAdjperAttChange += promo.getStrAdjperAttChange();
+		iStrAdjperDefChange += promo.getStrAdjperDefChange();
+		iWithdrawAdjperAttChange += promo.getWithdrawAdjperAttChange();
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
-			iUnnerveChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getUnnerveChange();
-			iEncloseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEncloseChange();
-			iLungeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getLungeChange();
-			iDynamicDefenseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDynamicDefenseChange();
+			iUnnerveChange += promo.getUnnerveChange();
+			iEncloseChange += promo.getEncloseChange();
+			iLungeChange += promo.getLungeChange();
+			iDynamicDefenseChange += promo.getDynamicDefenseChange();
 		}
-		iStrengthChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrengthChange();
-		iFortitudeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFortitudeChange();
-		iDamageperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getDamageperTurn();
-		iStrAdjperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrAdjperTurn();
-		iWeakenperTurn += GC.getPromotionInfo(linePromotionsOwned[iI]).getWeakenperTurn();
+		iStrengthChange += promo.getStrengthChange();
+		iFortitudeChange += promo.getFortitudeChange();
+		iDamageperTurn += promo.getDamageperTurn();
+		iStrAdjperTurn += promo.getStrAdjperTurn();
+		iWeakenperTurn += promo.getWeakenperTurn();
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
-			iFrontSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFrontSupportPercentChange();
-			iShortRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getShortRangeSupportPercentChange();
-			iMediumRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMediumRangeSupportPercentChange();
-			iLongRangeSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getLongRangeSupportPercentChange();
-			iFlankSupportPercentChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFlankSupportPercentChange();
+			iFrontSupportPercentChange += promo.getFrontSupportPercentChange();
+			iShortRangeSupportPercentChange += promo.getShortRangeSupportPercentChange();
+			iMediumRangeSupportPercentChange += promo.getMediumRangeSupportPercentChange();
+			iLongRangeSupportPercentChange += promo.getLongRangeSupportPercentChange();
+			iFlankSupportPercentChange += promo.getFlankSupportPercentChange();
 		}
-		iDodgeModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDodgeModifierChange();
-		iPrecisionModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPrecisionModifierChange();
-		iPowerShotsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotsChange();
-		iPowerShotCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotCombatModifierChange();
-		iPowerShotPunctureModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotPunctureModifierChange();
-		iPowerShotPrecisionModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotPrecisionModifierChange();
-		iPowerShotCriticalModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPowerShotCriticalModifierChange();
-		iCriticalModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCriticalModifierChange();
-		iEnduranceChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEnduranceChange();
-		iInsidiousnessChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInsidiousnessChange();
-		iInvestigationChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getInvestigationChange();
-		iAssassinChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAssassinChange();
-		iStealthStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthStrikesChange();
-		iStealthCombatModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthCombatModifierChange();
-		iStealthDefenseChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getStealthDefenseChange();
-		iDefenseOnlyChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDefenseOnlyChange();
+		iDodgeModifierChange += promo.getDodgeModifierChange();
+		iPrecisionModifierChange += promo.getPrecisionModifierChange();
+		iPowerShotsChange += promo.getPowerShotsChange();
+		iPowerShotCombatModifierChange += promo.getPowerShotCombatModifierChange();
+		iPowerShotPunctureModifierChange += promo.getPowerShotPunctureModifierChange();
+		iPowerShotPrecisionModifierChange += promo.getPowerShotPrecisionModifierChange();
+		iPowerShotCriticalModifierChange += promo.getPowerShotCriticalModifierChange();
+		iCriticalModifierChange += promo.getCriticalModifierChange();
+		iEnduranceChange += promo.getEnduranceChange();
+		iInsidiousnessChange += promo.getInsidiousnessChange();
+		iInvestigationChange += promo.getInvestigationChange();
+		iAssassinChange += promo.getAssassinChange();
+		iStealthStrikesChange += promo.getStealthStrikesChange();
+		iStealthCombatModifierChange += promo.getStealthCombatModifierChange();
+		iStealthDefenseChange += promo.getStealthDefenseChange();
+		iDefenseOnlyChange += promo.getDefenseOnlyChange();
 		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			iNoInvisibilityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoInvisibilityChange();
+			iNoInvisibilityChange += promo.getNoInvisibilityChange();
 		}
-		iTrapDamageMin += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapDamageMin();
-		iTrapDamageMax += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapDamageMax();
-		iTrapComplexity += GC.getPromotionInfo(linePromotionsOwned[iI]).getTrapComplexity();
-		iTrapNumTriggers += GC.getPromotionInfo(linePromotionsOwned[iI]).getNumTriggers();
-		iTrapTriggerBeforeAttackChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getTriggerBeforeAttackChange();
-		iVisibilityChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getVisibilityChange();
-		iCaptureProbabilityModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCaptureProbabilityModifierChange();
-		iCaptureResistanceModifierChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCaptureResistanceModifierChange();
-		iBreakdownChanceChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBreakdownChanceChange();
-		iBreakdownDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBreakdownDamageChange();
-		iTauntChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getTauntChange();
-		iMaxHPChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getMaxHPChange();
-		iStrengthModifier += GC.getPromotionInfo(linePromotionsOwned[iI]).getStrengthModifier();
-		iAirCombatLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAirCombatLimitChange();
-		iCelebrityHappy += GC.getPromotionInfo(linePromotionsOwned[iI]).getCelebrityHappy();
-		iCollateralDamageLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageLimitChange();
-		iCollateralDamageMaxUnitsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageMaxUnitsChange();
-		iCombatLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatLimitChange();
-		iExtraDropRange += GC.getPromotionInfo(linePromotionsOwned[iI]).getExtraDropRange();
-		iSurvivorChance += GC.getPromotionInfo(linePromotionsOwned[iI]).getSurvivorChance();
-		iSelfHealModifier += GC.getPromotionInfo(linePromotionsOwned[iI]).getSelfHealModifier();
-		iHealSupport += GC.getPromotionInfo(linePromotionsOwned[iI]).getNumHealSupport();
-		iVictoryAdjacentHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryAdjacentHeal();
-		iVictoryHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryHeal();
-		iVictoryStackHeal += GC.getPromotionInfo(linePromotionsOwned[iI]).getVictoryStackHeal();
-		iCargoChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCargoChange();
-		iCollateralDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageChange();
-		iBombardRateChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getBombardRateChange();
+		iTrapDamageMin += promo.getTrapDamageMin();
+		iTrapDamageMax += promo.getTrapDamageMax();
+		iTrapComplexity += promo.getTrapComplexity();
+		iTrapNumTriggers += promo.getNumTriggers();
+		iTrapTriggerBeforeAttackChange += promo.getTriggerBeforeAttackChange();
+		iVisibilityChange += promo.getVisibilityChange();
+		iCaptureProbabilityModifierChange += promo.getCaptureProbabilityModifierChange();
+		iCaptureResistanceModifierChange += promo.getCaptureResistanceModifierChange();
+		iBreakdownChanceChange += promo.getBreakdownChanceChange();
+		iBreakdownDamageChange += promo.getBreakdownDamageChange();
+		iTauntChange += promo.getTauntChange();
+		iMaxHPChange += promo.getMaxHPChange();
+		iStrengthModifier += promo.getStrengthModifier();
+		iAirCombatLimitChange += promo.getAirCombatLimitChange();
+		iCelebrityHappy += promo.getCelebrityHappy();
+		iCollateralDamageLimitChange += promo.getCollateralDamageLimitChange();
+		iCollateralDamageMaxUnitsChange += promo.getCollateralDamageMaxUnitsChange();
+		iCombatLimitChange += promo.getCombatLimitChange();
+		iExtraDropRange += promo.getExtraDropRange();
+		iSurvivorChance += promo.getSurvivorChance();
+		iSelfHealModifier += promo.getSelfHealModifier();
+		iHealSupport += promo.getNumHealSupport();
+		iVictoryAdjacentHeal += promo.getVictoryAdjacentHeal();
+		iVictoryHeal += promo.getVictoryHeal();
+		iVictoryStackHeal += promo.getVictoryStackHeal();
+		iCargoChange += promo.getCargoChange();
+		iCollateralDamageChange += promo.getCollateralDamageChange();
+		iBombardRateChange += promo.getBombardRateChange();
 		if(GC.isDCM_RANGE_BOMBARD())
 		{
-			iDCMBombRangeChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDCMBombRangeChange();
-			iDCMBombAccuracyChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getDCMBombAccuracyChange();
-			iRBombardDamageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageChange();
-			iRBombardDamageLimitChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageLimitChange();
-			iRBombardDamageMaxUnitsChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getRBombardDamageMaxUnitsChange();
+			iDCMBombRangeChange += promo.getDCMBombRangeChange();
+			iDCMBombAccuracyChange += promo.getDCMBombAccuracyChange();
+			iRBombardDamageChange += promo.getRBombardDamageChange();
+			iRBombardDamageLimitChange += promo.getRBombardDamageLimitChange();
+			iRBombardDamageMaxUnitsChange += promo.getRBombardDamageMaxUnitsChange();
 		}
-		iFirstStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFirstStrikesChange();
-		iChanceFirstStrikesChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getChanceFirstStrikesChange();
-		iEnemyHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getEnemyHealChange();
-		iNeutralHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNeutralHealChange();
-		iFriendlyHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getFriendlyHealChange();
-		iSameTileHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getSameTileHealChange();
-		iAdjacentTileHealChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAdjacentTileHealChange();
-		iCombatPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCombatPercent();
-		iCityAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCityAttackPercent();
-		iCityDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getCityDefensePercent();
-		iHillsAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsAttackPercent();
-		iHillsDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsDefensePercent();
-		iWorkRate += GC.getPromotionInfo(linePromotionsOwned[iI]).getWorkRatePercent();
-		iHillsWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsWorkPercent();
-		iHillsWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getHillsWorkModifierChange();
-		iPeaksWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getPeaksWorkModifierChange();
-		iRevoltProtection += GC.getPromotionInfo(linePromotionsOwned[iI]).getRevoltProtection();
-		iCollateralDamageProtection += GC.getPromotionInfo(linePromotionsOwned[iI]).getCollateralDamageProtection();
-		iPillageChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getPillageChange();
-		iUpgradeDiscount += GC.getPromotionInfo(linePromotionsOwned[iI]).getUpgradeDiscount();
-		iExperiencePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getExperiencePercent();
-		iKamikazePercent += GC.getPromotionInfo(linePromotionsOwned[iI]).getKamikazePercent();
+		iFirstStrikesChange += promo.getFirstStrikesChange();
+		iChanceFirstStrikesChange += promo.getChanceFirstStrikesChange();
+		iEnemyHealChange += promo.getEnemyHealChange();
+		iNeutralHealChange += promo.getNeutralHealChange();
+		iFriendlyHealChange += promo.getFriendlyHealChange();
+		iSameTileHealChange += promo.getSameTileHealChange();
+		iAdjacentTileHealChange += promo.getAdjacentTileHealChange();
+		iCombatPercent += promo.getCombatPercent();
+		iCityAttackPercent += promo.getCityAttackPercent();
+		iCityDefensePercent += promo.getCityDefensePercent();
+		iHillsAttackPercent += promo.getHillsAttackPercent();
+		iHillsDefensePercent += promo.getHillsDefensePercent();
+		iWorkRate += promo.getWorkRatePercent();
+		iHillsWorkPercent += promo.getHillsWorkPercent();
+		iHillsWorkPercent += promo.getHillsWorkModifierChange();
+		iPeaksWorkPercent += promo.getPeaksWorkModifierChange();
+		iRevoltProtection += promo.getRevoltProtection();
+		iCollateralDamageProtection += promo.getCollateralDamageProtection();
+		iPillageChange += promo.getPillageChange();
+		iUpgradeDiscount += promo.getUpgradeDiscount();
+		iExperiencePercent += promo.getExperiencePercent();
+		iKamikazePercent += promo.getKamikazePercent();
 		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
-			if (GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine() != NO_PROMOTIONLINE)
+			if (promo.getPromotionLine() != NO_PROMOTIONLINE)
 			{
-				iOvercomeProbability += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getOvercomeProbability();
-				iOvercomeProbability += (GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorsenedOvercomeIncrementModifier() * (GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() - 1));
-				iOvercomeAdjperTurn += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getOvercomeAdjperTurn();
-				iCommunicability += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getCommunicability();
-				iCommunicability += ((GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() - 1) * GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorsenedCommunicabilityIncrementModifier());
-				iWorseningProbability += ((GC.getPromotionInfo(linePromotionsOwned[iI]).getLinePriority() -1) * GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getWorseningProbabilityIncrementModifier());
-				iToleranceBuildup += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getToleranceBuildup();
-				iToleranceDecay += GC.getPromotionLineInfo(GC.getPromotionInfo(linePromotionsOwned[iI]).getPromotionLine()).getToleranceDecay();
+				iOvercomeProbability += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeProbability();
+				iOvercomeProbability += (GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedOvercomeIncrementModifier() * (promo.getLinePriority() - 1));
+				iOvercomeAdjperTurn += GC.getPromotionLineInfo(promo.getPromotionLine()).getOvercomeAdjperTurn();
+				iCommunicability += GC.getPromotionLineInfo(promo.getPromotionLine()).getCommunicability();
+				iCommunicability += ((promo.getLinePriority() - 1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorsenedCommunicabilityIncrementModifier());
+				iWorseningProbability += ((promo.getLinePriority() -1) * GC.getPromotionLineInfo(promo.getPromotionLine()).getWorseningProbabilityIncrementModifier());
+				iToleranceBuildup += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceBuildup();
+				iToleranceDecay += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceDecay();
 			}
 		}
-		iHiddenNationality += GC.getPromotionInfo(linePromotionsOwned[iI]).getHiddenNationalityChange();
-		iIsAnimalIgnoresBordersChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getAnimalIgnoresBordersChange();
-		iNoDefensiveBonusChange += GC.getPromotionInfo(linePromotionsOwned[iI]).getNoDefensiveBonusChange();
+		iHiddenNationality += promo.getHiddenNationalityChange();
+		iIsAnimalIgnoresBordersChange += promo.getAnimalIgnoresBordersChange();
+		iNoDefensiveBonusChange += promo.getNoDefensiveBonusChange();
 	}
 
 	if (iGetControlPoints > 0)
@@ -13937,10 +13917,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", iDamageModifierChange));
 	}
-	if (iCostModifierChange != 0)
+	if (iUpkeepModifier != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COST_MODIFIER_TEXT", iCostModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", iUpkeepModifier));
+	}
+	if (iExtraUpkeep100 != 0)
+	{
+		szBuffer.append(pcNewline);
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", CvWString::format(L"%.2f", iExtraUpkeep100 / 100.0).GetCString()));
 	}
 	if (iOverrunChange != 0)
 	{
@@ -15575,7 +15560,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	// AIAndy: Help display for increasing specific outcomes
 	for (iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
 	{
-		CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
+		const CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
 
 		int iExtraChancePromotion = 0;
 		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
@@ -15919,63 +15904,76 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_BUILDING_ENABLES_MAD"));
 	}
 
-	//	Free units population percent
-	if ((GC.getCivicInfo(eCivic).getBaseFreeUnits() != 0) || (GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent() != 0))
+	// Free Civilian unit upkeep
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian()));
+	}
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUnits = (GC.getCivicInfo(eCivic).getBaseFreeUnits() + ((GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * GC.getCivicInfo(eCivic).getFreeUnitsPopulationPercent()) / 100));
-			if (iFreeUnits > 0)
+			int iValue = 0;
+			int iMod = GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent();
+			if (iMod > 0)
 			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_FREE_UNITS", iFreeUnits));
+				iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
 			}
+			else if (iMod < 0)
+			{
+				iValue =
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 		}
 		else
 		{
 			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_SUPPORT"));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
 		}
 	}
-
-	//	Free military units population percent
-	if ((GC.getCivicInfo(eCivic).getBaseFreeMilitaryUnits() != 0) || (GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent() != 0))
+	// Free Military unit upkeep
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitary()));
+	}
+	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent() != 0)
 	{
 		if (bPlayerContext)
 		{
-			int iFreeUnits = (GC.getCivicInfo(eCivic).getBaseFreeMilitaryUnits() + ((GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * GC.getCivicInfo(eCivic).getFreeMilitaryUnitsPopulationPercent()) / 100));
-			if (iFreeUnits > 0)
+			int iValue = 0;
+			int iMod = GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent();
+			if (iMod > 0)
 			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_FREE_MILITARY_UNITS", iFreeUnits));
+				iValue = GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * (100 + iMod);
 			}
+			else if (iMod < 0)
+			{
+				iValue =
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() -
+					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
+			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP",  iMod));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 		}
 		else
 		{
 			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_UNIT_SUPPORT"));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepMilitaryPopPercent()));
 		}
 	}
 
 	//	Happiness per military unit
 	if (GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() != 0)
 	{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   08/28/09							jdog5000		  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-/* original bts code
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_HAPPINESS", GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit(), ((GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
-
-*/
-		// Use absolute value with unhappy face
-		//RevolutionDCM - reintroduce new line
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_HAPPINESS", abs(GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit()), ((GC.getCivicInfo(eCivic).getHappyPerMilitaryUnit() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 	}
 
 	//	Military units produced with food
@@ -17202,18 +17200,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-	//	Gold cost per unit
-	if (GC.getCivicInfo(eCivic).getGoldPerUnit() != 0)
+	if (GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod() != 0)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN", GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod()));
 	}
-
-	//	Gold cost per military unit
-	if (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() != 0)
+	if (GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod() != 0)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_SUPPORT_COSTS", (GC.getCivicInfo(eCivic).getGoldPerMilitaryUnit() > 0), GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
+		szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY", GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod()));
 	}
 
 	bFirst = true;
@@ -17942,15 +17937,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 
 void CvGameTextMgr::setBasicUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool bCivilopediaText)
 {
-	//bTBUnitView1 = (Combat)
-	//bTBUnitView2 = (Civil)
-	//bTBUnitView3 = (Combat Classes)
-	//bNormalView = default to show but replaced by any of the above
-	bool bTBUnitView1 = gDLL->ctrlKey();
-	bool bTBUnitView2 = gDLL->altKey();
-	bool bTBUnitView3 = gDLL->shiftKey();
-// BUG - Starting Experience - start
-	setBasicUnitHelpWithCity(szBuffer, eUnit, bCivilopediaText, 0, false, bTBUnitView1, bTBUnitView2, bTBUnitView3);
+	setBasicUnitHelpWithCity(szBuffer, eUnit, bCivilopediaText, 0, false, gDLL->ctrlKey(), gDLL->altKey(), gDLL->shiftKey());
 }
 
 void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool bCivilopediaText, CvCity* pCity, bool bConscript, bool bTBUnitView1, bool bTBUnitView2, bool bTBUnitView3)
@@ -17961,6 +17948,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	}
 	PROFILE_FUNC();
 
+	const CvGame& game = GC.getGame();
 	CvWString szTempBuffer;
 	bool bFirst;
 	int iCount;
@@ -18027,7 +18015,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		{
 			float fCombat = (float)kUnit.getTotalModifiedCombatStrength100();
 			int iModifier = kUnit.getCombatStrengthModifier();
-			int iAdditional = GC.getGame().getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : GC.getGame().getActiveTeam()).getUnitStrengthChange(eUnit));
+			int iAdditional = game.getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : game.getActiveTeam()).getUnitStrengthChange(eUnit));
 			fCombat += (iModifier * iAdditional);
 			fCombat /= 100;
 
@@ -18796,7 +18784,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Surround and Destroy
-		if (GC.getGame().isOption(GAMEOPTION_SAD))
+		if (game.isOption(GAMEOPTION_SAD))
 		{
 			if (kUnit.getUnnerve() != 0)
 			{
@@ -19102,7 +19090,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	if (bTBUnitView2)
 	{
 		//Cargo
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (game.isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			if (iCargoValue > 0)
 			{
@@ -19130,7 +19118,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+		if (game.isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
 			int iAidChange = 0;
 			//Curing, resisting and overcoming afflictions
@@ -19427,7 +19415,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Strength in Numbers offered support
-		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+		if (game.isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			if (kUnit.getFrontSupportPercent() > 0)
 			{
@@ -19501,9 +19489,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getGreatWorkCulture() > 0)
 		{
 			int iCulture = kUnit.getGreatWorkCulture();
-			if (NO_GAMESPEED != GC.getGame().getGameSpeedType())
+			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iCulture *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+				iCulture *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
 				iCulture /= 100;
 			}
 
@@ -19515,9 +19503,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getEspionagePoints() > 0)
 		{
 			int iEspionage = GC.getUnitInfo(eUnit).getEspionagePoints();
-			if (NO_GAMESPEED != GC.getGame().getGameSpeedType())
+			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iEspionage *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
 				iEspionage /= 100;
 			}
 
@@ -19596,7 +19584,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Tradeable Unit
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || bCivilopediaText)
+		if (game.isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || bCivilopediaText)
 		{
 			if (kUnit.isMilitaryTrade() || kUnit.isWorkerTrade())
 			{
@@ -19617,10 +19605,70 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	if (bNormalView)
 	{
 		//Max HP
-		if (kUnit.getMaxHP() != 100)
+		if (kUnit.getTotalModifiedCombatStrength100() > 0 && kUnit.getMaxHP() != 100)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MAX_HP", kUnit.getMaxHP()));
+		}
+
+		if (kUnit.isMilitarySupport())
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_MILITARY"));
+		}
+		else
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_BRANCH_CIVILIAN"));
+		}
+
+		if (kUnit.getBaseUpkeep() > 0)
+		{
+			UnitCombatTypes eUnitCombat;
+			int iExtra = 0;
+			int iMod = 0;
+			for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
+			{
+				if (iI > -1)
+				{
+					eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+				}
+				else
+				{
+					eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+					if (eUnitCombat == NO_UNITCOMBAT) continue;
+				}
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+				{
+					iExtra += GC.getUnitCombatInfo(eUnitCombat).getExtraUpkeep100();
+					iMod += GC.getUnitCombatInfo(eUnitCombat).getUpkeepModifier();
+				}
+			}
+			int iUpkeep = 100 * kUnit.getBaseUpkeep() + iExtra;
+			if (iMod > 0)
+			{
+				iUpkeep = iUpkeep * (100 + iMod) / 100;
+			}
+			else if (iMod < 0)
+			{
+				iUpkeep = iUpkeep * 100 / (100 - iMod);
+			}
+			if (iUpkeep > 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP", CvWString::format(L"%.2f", iUpkeep / 100.0).GetCString()));
+
+				if (pCity != NULL)
+				{
+					iUpkeep = GET_PLAYER(pCity->getOwner()).getFinalUnitUpkeepChange(iUpkeep, kUnit.isMilitarySupport());
+					if (iUpkeep > 0)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_UPKEEP_CHANGE", iUpkeep));
+					}
+				}
+			}
 		}
 
 		//Spy
@@ -19708,7 +19756,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INVISIBLE_ALL"));
 		}
 
-		if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		if (!game.isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			if (kUnit.getInvisibleType() != NO_INVISIBLE)
 			{
@@ -19958,7 +20006,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FLIES_TO_MOVE"));
 		}
 
-		if (kUnit.getAnimalIgnoresBorders() != 0 && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+		if (kUnit.getAnimalIgnoresBorders() != 0 && !game.isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ANIMAL_IGNORES_BORDERS", kUnit.getAnimalIgnoresBorders()));
@@ -20133,26 +20181,34 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					iTotalXPBonus += iExperience;
 				}
 
-				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				UnitCombatTypes eCombat;
+				for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					if (kUnit.hasUnitCombat(eCombat))
+					if (iI > -1)
 					{
-						iExperience = pCity->getUnitCombatFreeExperience(eCombat);
-						if (iExperience != 0)
+						eCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+					}
+					else
+					{
+						eCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+						if (eCombat == NO_UNITCOMBAT) continue;
+					}
+					iExperience = pCity->getUnitCombatFreeExperience(eCombat);
+					if (iExperience != 0)
+					{
+						if (bFirst)
 						{
-							if (bFirst)
-							{
-								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
-							}
-							bFirst = false;
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
-							iTotalXPBonus += iExperience;
+							szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE"));
 						}
+						bFirst = false;
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
+						iTotalXPBonus += iExperience;
 					}
 				}
+
 				DomainTypes eDomain = (DomainTypes)kUnit.getDomainType();
 				iExperience = pCity->getDomainFreeExperience(eDomain);
 				if (iExperience != 0)
@@ -20323,18 +20379,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
-		//Cost
-		if (kUnit.getCostModifier() != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_COST_MODIFIER", kUnit.getCostModifier()));
-		}
-		if (kUnit.getExtraCost() != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_EXTRA_COST", kUnit.getExtraCost()));
-		}
-
 		//Modified Production
 			//From Trait
 		for (int i = 0; i < GC.getNumTraitInfos(); ++i)
@@ -20387,7 +20431,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INVESTIGATION_TEXT", szTempBuffer.GetCString()));
 		}
 
-		bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
+		bool bWithoutWarning = game.isOption(GAMEOPTION_WITHOUT_WARNING);
 		if (kUnit.getStealthStrikes() != 0 && bWithoutWarning)
 		{
 			szBuffer.append(NEWLINE);
@@ -20406,7 +20450,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_STEALTH_DEFEND"));
 		}
 
-		if (kUnit.isNoInvisibility() && GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+		if (kUnit.isNoInvisibility() && game.isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_NO_INVISIBILIY_TEXT"));
@@ -20432,91 +20476,65 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 	}
 
-	if (bTBUnitView3 && GC.getGame().getActivePlayer() != NO_PLAYER && !bCivilopediaText)
+	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		PlayerTypes ePlayer = GC.getGame().getActivePlayer();
-		int iDisplayCount = GET_PLAYER(ePlayer).getUnitCombatClassDisplayCount(eUnit);
-		int iPotentialDisplays = 0;
-		int iCurrentDisplay = 0;
-		int iUnitCombat = 0;
-		bool bisValid = false;
-		for (iUnitCombat = 0; iUnitCombat < GC.getNumUnitCombatInfos(); iUnitCombat++)
+		const unsigned short iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
+		unsigned short iPotentialDisplays = 0;
+		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
-			if (kUnit.hasUnitCombat((UnitCombatTypes)iUnitCombat))
+			if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getUnitCombatType())))
 			{
-				UnitCombatTypes eCombatType = ((UnitCombatTypes)iUnitCombat);
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumNotOnGameOptions(); iJ++)
+				iPotentialDisplays++;
+			}
+			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			{
+				if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getSubCombatType(iI)))
+				&& ++iPotentialDisplays > iDisplayCount)
 				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
-				}
-				if (bisValid)
-				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumOnGameOptions(); iJ++)
-					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					iPotentialDisplays++;
+					break;
 				}
 			}
 		}
-
-		if (iDisplayCount > iPotentialDisplays)
+		UnitCombatTypes eUnitCombat;
+		int iCount = 0;
+		for (int iI = -1; iI < kUnit.getNumSubCombatTypes(); iI++)
 		{
-			GET_PLAYER(ePlayer).setUnitCombatClassDisplayCount(eUnit, 0);
+			if (iI > -1)
+			{
+				eUnitCombat = (UnitCombatTypes)kUnit.getSubCombatType(iI);
+			}
+			else
+			{
+				eUnitCombat = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+				if (eUnitCombat == NO_UNITCOMBAT) continue;
+			}
+			if (game.isValidByGameOption(GC.getUnitCombatInfo(eUnitCombat)))
+			{
+				if (++iCount == iDisplayCount)
+				{
+					szBuffer.append(DOUBLE_SEPARATOR);
+					setUnitCombatHelp(szBuffer, eUnitCombat, false, true);
+					szBuffer.append(DOUBLE_SEPARATOR);
+				}
+				else
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
+				}
+			}
+		}
+		if (iDisplayCount == iPotentialDisplays)
+		{
+			inspectUnitCombatCounters->setCount(eUnit, 0);
+		}
+		else if (iDisplayCount > iPotentialDisplays)
+		{
+			inspectUnitCombatCounters->setCount(eUnit, 1);
 		}
 		else
 		{
-			GET_PLAYER(ePlayer).changeUnitCombatClassDisplayCount(eUnit, 1);
-		}
-		iDisplayCount = GET_PLAYER(ePlayer).getUnitCombatClassDisplayCount(eUnit);
-		for (iUnitCombat = 0; iUnitCombat < GC.getNumUnitCombatInfos(); ++iUnitCombat)
-		{
-			if (kUnit.hasUnitCombat((UnitCombatTypes)iUnitCombat))
-			{
-				UnitCombatTypes eCombatType = ((UnitCombatTypes)iUnitCombat);
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumNotOnGameOptions(); iJ++)
-				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
-				}
-				if (bisValid)
-				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eCombatType).getNumOnGameOptions(); iJ++)
-					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					iCurrentDisplay++;
-					szBuffer.append(NEWLINE);
-					if (iCurrentDisplay == iDisplayCount)
-					{
-						setUnitCombatHelp(szBuffer, eCombatType, false, true);
-						szBuffer.append(DOUBLE_SEPARATOR);
-					}
-					else
-					{
-						szBuffer.append(GC.getUnitCombatInfo(eCombatType).getDescription());
-					}
-				}
-			}
+			inspectUnitCombatCounters->setCount(eUnit, iDisplayCount + 1);
 		}
 	}
 	else if (bTBUnitView3 || bCivilopediaText)
@@ -20525,34 +20543,16 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
-			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText);
+			szBuffer.append(DOUBLE_SEPARATOR);
+			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText, true);
 			szBuffer.append(DOUBLE_SEPARATOR);
 
 			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				UnitCombatTypes eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI));
-				bisValid = true;
-				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumNotOnGameOptions(); iJ++)
+				UnitCombatTypes eSubCombatType = (UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI);
+
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombatType)))
 				{
-					if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getNotOnGameOption(iJ)))
-					{
-						bisValid = false;
-					}
-				}
-				if (bisValid)
-				{
-					for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumOnGameOptions(); iJ++)
-					{
-						if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getOnGameOption(iJ)))
-						{
-							bisValid = false;
-						}
-					}
-				}
-				if (bisValid)
-				{
-					szBuffer.append(NEWLINE);
 					setUnitCombatHelp(szBuffer, eSubCombatType, bCivilopediaText, true);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
@@ -20570,11 +20570,8 @@ void CvGameTextMgr::setUnitExperienceHelp(CvWStringBuffer &szBuffer, CvWString s
 {
 	if (GC.getUnitInfo(eUnit).canAcquireExperience())
 	{
-		int iExperience = pCity->getProductionExperience(eUnit);
-		if (bConscript)
-		{
-			iExperience /= 2;
-		}
+		const int iExperience = pCity->getProductionExperience(eUnit) / (bConscript ? 2 : 1);
+
 		if (iExperience > 0)
 		{
 			szBuffer.append(szStart);
@@ -20582,12 +20579,9 @@ void CvGameTextMgr::setUnitExperienceHelp(CvWStringBuffer &szBuffer, CvWString s
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE_DRAFT", iExperience));
 			}
-			else
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE", iExperience));
-			}
+			else szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXPERIENCE", iExperience));
 
-			int iLevel = calculateLevel(iExperience, pCity->getOwner());
+			const int iLevel = calculateLevel(iExperience, pCity->getOwner());
 			if (iLevel > 1)
 			{
 				szBuffer.append(L", ");
@@ -20607,10 +20601,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	PlayerTypes ePlayer;
 	bool bFirst;
 	int iI;
-	//TB SubCombat Mod Begin
-	//UnitCombatTypes eSubCombatType;
-	int CombatClassCount = 0;
-	//TB SubCombat Mod End
 
 	//bTBUnitView1 = (Combat)
 	//bTBUnitView2 = (Civil)
@@ -20648,53 +20638,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	{
 		szTempBuffer.Format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), GC.getUnitInfo(eUnit).getDescription());
 		szBuffer.append(szTempBuffer);
-
-		//TB Display Modification Note: see if this is necessary anywhere at all.
-		//if (bTBUnitView3 && GC.getUnitInfo(eUnit).getUnitCombatType() != NO_UNITCOMBAT)
-		//{
-		//	//TB SubCombat Mod Begin
-		//	if (GC.getUnitInfo(eUnit).getNumSubCombatTypes() > 0)
-		//	{
-		//		szTempBuffer.Format(L" (%s", GC.getUnitCombatInfo((UnitCombatTypes) GC.getUnitInfo(eUnit).getUnitCombatType()).getDescription());
-		//		szBuffer.append(szTempBuffer);
-		//		for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumSubCombatTypes(); iI++)
-		//		{
-		//			eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI));
-		//			bisValid = true;
-		//			for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumNotOnGameOptions(); iJ++)
-		//			{
-		//				if (GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getNotOnGameOption(iJ)))
-		//				{
-		//					bisValid = false;
-		//				}
-		//			}
-		//			if (bisValid)
-		//			{
-		//				for (int iJ = 0; iJ < GC.getUnitCombatInfo(eSubCombatType).getNumOnGameOptions(); iJ++)
-		//				{
-		//					if (!GC.getGame().isOption((GameOptionTypes)GC.getUnitCombatInfo(eSubCombatType).getOnGameOption(iJ)))
-		//					{
-		//						bisValid = false;
-		//					}
-		//				}
-		//			}
-		//			if (bisValid)
-		//			{
-		//				szTempBuffer.Format(L", %s", GC.getUnitCombatInfo(eSubCombatType).getDescription());
-		//				szBuffer.append(szTempBuffer);
-		//			}
-		//		}
-		//		szTempBuffer.Format(L")");
-		//		szBuffer.append(szTempBuffer);
-		//	}
-		//	else
-		//	{
-		//	//TB note: The following is the original coding
-		//	szTempBuffer.Format(L" (%s)", GC.getUnitCombatInfo((UnitCombatTypes) GC.getUnitInfo(eUnit).getUnitCombatType()).getDescription());
-		//	szBuffer.append(szTempBuffer);
-		//	}
-		//	//TB SubCombat Mod End
-		//}
 	}
 
 	// test for unique unit
@@ -21263,7 +21206,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 }
 
 
-void buildingHelpTechAndSpecialistModifiers_Old(CvBuildingInfo& kBuilding, CvWStringBuffer& szBuffer, PlayerTypes ePlayer, TeamTypes eTeam)
+void buildingHelpTechAndSpecialistModifiers_Old(const CvBuildingInfo& kBuilding, CvWStringBuffer& szBuffer, PlayerTypes ePlayer, TeamTypes eTeam)
 {
 	int iTechHappiness = 0;
 	int iTechHealth = 0;
@@ -23988,7 +23931,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	//AIAndy: Display in which range of a property this building is auto built
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
-		CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
+		const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
 		int iNum = kInfo.getNumPropertyBuildings();
 		for (int j=0; j<iNum; j++)
 		{
@@ -28681,32 +28624,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 
 	bool bFirstDisplay = true;
 
-	if (!bFromUnit)
-	{
-		bFirstDisplay = false;
-		szBuffer.append(info.getDescription());
-
-		for (iI = 0; iI < info.getNumNotOnGameOptions(); iI++)
-		{
-			if (GC.getGame().isOption((GameOptionTypes)info.getNotOnGameOption(iI)))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_COMBAT_CLASS_NOT_ON_GAME_OPTION", GC.getGameOptionInfo((GameOptionTypes)info.getNotOnGameOption(iI)).getDescription()));
-				return;
-			}
-		}
-
-		for (iI = 0; iI < info.getNumOnGameOptions(); iI++)
-		{
-			if (!GC.getGame().isOption((GameOptionTypes)info.getOnGameOption(iI)))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION", GC.getGameOptionInfo((GameOptionTypes)info.getOnGameOption(iI)).getDescription()));
-				return;
-			}
-		}
-	}
-
 	if (info.getExcileChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -28773,7 +28690,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -28790,7 +28706,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28805,7 +28720,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28820,7 +28734,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28835,7 +28748,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28854,7 +28766,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28873,7 +28784,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28892,7 +28802,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28911,7 +28820,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28930,7 +28838,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28949,7 +28856,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28968,7 +28874,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -28987,7 +28892,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29006,7 +28910,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29026,7 +28929,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -29041,7 +28943,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29054,7 +28955,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29067,7 +28967,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29080,7 +28979,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29103,7 +29001,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29124,7 +29021,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29145,7 +29041,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29158,7 +29053,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29171,7 +29065,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29188,7 +29081,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29200,7 +29092,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29212,7 +29103,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29224,7 +29114,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29236,7 +29125,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29248,7 +29136,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -29262,7 +29149,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29275,7 +29161,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29288,7 +29173,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29312,7 +29196,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29333,7 +29216,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29354,7 +29236,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29381,7 +29262,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29394,7 +29274,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29407,7 +29286,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29420,7 +29298,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29433,7 +29310,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29446,7 +29322,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29459,7 +29334,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29472,7 +29346,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29485,7 +29358,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29498,7 +29370,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29511,7 +29382,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29524,7 +29394,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29537,7 +29406,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29550,7 +29418,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29563,7 +29430,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29576,7 +29442,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29589,7 +29454,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29615,7 +29479,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29628,7 +29491,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29641,7 +29503,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29654,7 +29515,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29667,7 +29527,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29680,7 +29539,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29693,7 +29551,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29706,7 +29563,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29719,7 +29575,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29732,7 +29587,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29745,7 +29599,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29758,7 +29611,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29771,7 +29623,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29784,7 +29635,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29797,7 +29647,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29810,7 +29659,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29823,7 +29671,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29836,7 +29683,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29849,7 +29695,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29862,7 +29707,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29875,7 +29719,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29883,17 +29726,28 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", info.getDamageModifierChange()));
 	}
 
-	if (info.getCostModifierChange() != 0)
+	if (info.getUpkeepModifier() != 0)
 	{
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COST_MODIFIER_TEXT", info.getCostModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE", info.getUpkeepModifier()));
+	}
+
+	if (info.getExtraUpkeep100() != 0)
+	{
+		if (bFirstDisplay)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(info.getDescription());
+			bFirstDisplay = false;
+		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA", CvWString::format(L"%.2f", info.getExtraUpkeep100() / 100.0).GetCString()));
 	}
 
 	if (info.getOverrunChange() != 0)
@@ -29901,7 +29755,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29914,7 +29767,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29927,7 +29779,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29940,7 +29791,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29953,7 +29803,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29966,7 +29815,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29979,7 +29827,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -29992,7 +29839,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30005,7 +29851,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30018,7 +29863,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30031,7 +29875,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30044,7 +29887,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30057,7 +29899,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30070,7 +29911,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30083,7 +29923,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30096,7 +29935,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30109,7 +29947,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30124,7 +29961,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30137,7 +29973,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30150,7 +29985,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30165,7 +29999,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30178,7 +30011,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30191,7 +30023,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30204,7 +30035,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30217,7 +30047,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30231,7 +30060,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30244,7 +30072,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30257,7 +30084,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30270,7 +30096,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30283,7 +30108,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30296,7 +30120,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30309,7 +30132,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30322,7 +30144,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30335,7 +30156,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30348,7 +30168,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30361,7 +30180,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30374,7 +30192,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30387,7 +30204,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30400,7 +30216,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30413,7 +30228,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30426,7 +30240,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30439,7 +30252,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30452,7 +30264,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30465,7 +30276,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30478,7 +30288,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30492,7 +30301,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30505,7 +30313,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30518,7 +30325,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30531,7 +30337,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30544,7 +30349,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30557,7 +30361,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30569,7 +30372,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30584,7 +30386,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30600,7 +30401,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -30615,7 +30415,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30628,7 +30427,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30644,7 +30442,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30657,7 +30454,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30670,7 +30466,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30683,7 +30478,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30696,7 +30490,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30709,7 +30502,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30722,7 +30514,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30735,7 +30526,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30748,7 +30538,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30761,7 +30550,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30782,7 +30570,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30795,7 +30582,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30808,7 +30594,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30829,7 +30614,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30842,7 +30626,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30855,7 +30638,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30868,7 +30650,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30881,7 +30662,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30895,7 +30675,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30915,7 +30694,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30928,7 +30706,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30941,7 +30718,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30954,7 +30730,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30967,7 +30742,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30980,7 +30754,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -30993,7 +30766,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31006,7 +30778,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31019,7 +30790,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31034,7 +30804,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31046,7 +30815,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31060,7 +30828,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31073,7 +30840,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31086,7 +30852,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31099,7 +30864,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31112,7 +30876,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31125,7 +30888,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31139,7 +30901,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31164,7 +30925,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (bFirstDisplay)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 					szBuffer.append(info.getDescription());
 					bFirstDisplay = false;
 				}
@@ -31181,7 +30941,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31197,7 +30956,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31213,7 +30971,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31230,7 +30987,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31246,7 +31002,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31282,7 +31037,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31296,7 +31050,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31315,7 +31068,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31334,7 +31086,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31353,7 +31104,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31372,7 +31122,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31391,7 +31140,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31410,7 +31158,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31429,7 +31176,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31448,7 +31194,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31467,7 +31212,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31486,7 +31230,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31507,7 +31250,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31529,7 +31271,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31548,7 +31289,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (bFirstDisplay)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 				szBuffer.append(info.getDescription());
 				bFirstDisplay = false;
 			}
@@ -31568,7 +31308,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31587,7 +31326,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31606,7 +31344,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31625,7 +31362,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31644,7 +31380,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31663,7 +31398,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -31703,7 +31437,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if (bFirstDisplay)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FROM_COMBAT_CLASS"));
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
@@ -33019,38 +32752,30 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iInflationRate = kPlayer.calculateInflationRate();
+	const int iInflationRate = kPlayer.calculateInflationRate();
 	if (iInflationRate != 0)
 	{
-		int iPreInflation = kPlayer.calculatePreInflatedCosts();
+		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
 		szBuffer.append(NEWLINE);
 
-		int	iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
-		int	iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
-		CvWString	szInflationOutlook;
+		const int iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
+		const int iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
+		CvWString szInflationOutlook;
 
-		if ( iCurrentInflationModifier > iEquilibriumInflationModifier )
+		if (iCurrentInflationModifier > iEquilibriumInflationModifier)
 		{
-			if ( (9*iCurrentInflationModifier/10) > iEquilibriumInflationModifier )
+			if (iCurrentInflationModifier * 9/10 > iEquilibriumInflationModifier)
 			{
 				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_IMPROVING");
 			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
 		}
-		else
+		else if (iEquilibriumInflationModifier * 9/10 > iCurrentInflationModifier)
 		{
-			if ( (9*iEquilibriumInflationModifier/10) > iCurrentInflationModifier )
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
-			}
-			else
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-			}
+			szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
 		}
+		else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
+
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW", iPreInflation, iInflationRate, iInflationRate, iPreInflation, (iPreInflation * iInflationRate) / 100, szInflationOutlook.c_str()));
 
 		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
@@ -33061,42 +32786,136 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 }
 
-void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
+void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	CvPlayer& player = GET_PLAYER(ePlayer);
+	const CvPlayer& player = GET_PLAYER(ePlayer);
 
-	int iFreeUnits = 0;
-	int iFreeMilitaryUnits = 0;
-	int iUnits = player.getNumUnits();
-	int iMilitaryUnits = player.getNumMilitaryUnits();
-	int iPaidUnits = iUnits;
-	int iPaidMilitaryUnits = iMilitaryUnits;
-	int iMilitaryCost = 0;
-	int iBaseUnitCost = 0;
-	int iExtraCost = 0;
-	int iCost = player.calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
-	int iHandicap = iCost-iBaseUnitCost-iMilitaryCost-iExtraCost;
+	int iCivicModCivilian = 0;
+	int iCivicModMilitary = 0;
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); ++iI)
+	{
+		const CivicTypes eCivic = player.getCivics((CivicOptionTypes)iI);
+		if (NO_CIVIC != eCivic)
+		{
+			iCivicModCivilian += GC.getCivicInfo(eCivic).getCivilianUnitUpkeepMod();
+			iCivicModMilitary += GC.getCivicInfo(eCivic).getMilitaryUnitUpkeepMod();
+		}
+	}
 
+	int iTraitModCivilian = 0;
+	int iTraitModMilitary = 0;
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	{
+		const TraitTypes eTrait = (TraitTypes) iI;
+		if (player.hasTrait(eTrait))
+		{
+			iTraitModCivilian += GC.getTraitInfo(eTrait).getCivilianUnitUpkeepMod();
+			iTraitModMilitary += GC.getTraitInfo(eTrait).getMilitaryUnitUpkeepMod();
+		}
+	}
+
+	// Civilian section
+	const int64_t iUpkeepCivilian100 = player.getUnitUpkeepCivilian100();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN", CvWString::format(L"%.2f", iUpkeepCivilian100 / 100.0).GetCString()));
+
+	if (iCivicModCivilian != 0)
+	{
+		int64_t iCivicCivilian = 0;
+		if (iCivicModCivilian > 0)
+		{
+			iCivicCivilian = iUpkeepCivilian100 * (100 + iCivicModCivilian) / 100 - iUpkeepCivilian100;
+		}
+		else if (iCivicModCivilian < 0)
+		{
+			iCivicCivilian = iUpkeepCivilian100 * 100 / (100 - iCivicModCivilian) - iUpkeepCivilian100;
+		}
+
+		if (iCivicCivilian != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC", CvWString::format(L"%.2f", iCivicCivilian / 100.0).GetCString()));
+		}
+	}
+	if (iTraitModCivilian != 0)
+	{
+		int64_t iTraitCivilian = 0;
+		if (iTraitModCivilian > 0)
+		{
+			iTraitCivilian = iUpkeepCivilian100 * (100 + iTraitModCivilian) / 100 - iUpkeepCivilian100;
+		}
+		else if (iTraitModCivilian < 0)
+		{
+			iTraitCivilian = iUpkeepCivilian100 * 100 / (100 - iTraitModCivilian) - iUpkeepCivilian100;
+		}
+
+		if (iTraitCivilian != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT", CvWString::format(L"%.2f", iTraitCivilian / 100.0).GetCString()));
+		}
+	}
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepCivilian()));
+
+	const int64_t iUpkeepCivilianNet = player.getUnitUpkeepCivilianNet();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUpkeepCivilianNet));
+
+	// Military section
 	szBuffer.append(NEWLINE);
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST", iPaidUnits, iFreeUnits, iBaseUnitCost));
+	const int64_t iUpkeepMilitary100 = player.getUnitUpkeepMilitary100();
 
-	if (iPaidMilitaryUnits != 0)
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY", CvWString::format(L"%.2f", iUpkeepMilitary100 / 100.0).GetCString()));
+
+	if (iCivicModMilitary != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_2", iPaidMilitaryUnits, iFreeMilitaryUnits, iMilitaryCost));
+		int64_t iCivicMilitary = 0;
+		if (iCivicModMilitary > 0)
+		{
+			iCivicMilitary = iUpkeepMilitary100 * (100 + iCivicModMilitary) / 100 - iUpkeepMilitary100;
+		}
+		else if (iCivicModMilitary < 0)
+		{
+			iCivicMilitary = iUpkeepMilitary100 * 100 / (100 - iCivicModMilitary) - iUpkeepMilitary100;
+		}
+
+		if (iCivicMilitary != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC", CvWString::format(L"%.2f", iCivicMilitary / 100.0).GetCString()));
+		}
 	}
-	if (iExtraCost != 0)
+	if (iTraitModMilitary != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_3", iExtraCost));
+		int64_t iTraitMilitary = 0;
+		if (iTraitModMilitary > 0)
+		{
+			iTraitMilitary = iUpkeepMilitary100 * (100 + iTraitModMilitary) / 100 - iUpkeepMilitary100;
+		}
+		else if (iTraitModMilitary < 0)
+		{
+			iTraitMilitary = iUpkeepMilitary100 * 100 / (100 - iTraitModMilitary) - iUpkeepMilitary100;
+		}
+
+		if (iTraitMilitary != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT", CvWString::format(L"%.2f", iTraitMilitary / 100.0).GetCString()));
+		}
 	}
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE", player.getFreeUnitUpkeepMilitary()));
+
+	const int64_t iUnitUpkeepMilitaryNet = player.getUnitUpkeepMilitaryNet();
+
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1", iUnitUpkeepMilitaryNet));
+
+	// End Section
+	const int64_t iHandicap = player.getFinalUnitUpkeep() - iUpkeepCivilianNet - iUnitUpkeepMilitaryNet;
 	if (iHandicap != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_HANDICAP_COST", iHandicap));
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT", iHandicap));
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_4", iCost));
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2", player.getFinalUnitUpkeep()));
 }
 
 void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
@@ -33289,7 +33108,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
+	const CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
 	bool bNeedSubtotal = false;
 	int iBaseRate = 0;
 	int i;
@@ -33300,7 +33119,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	{
 		if (city.isWorkingPlot(i))
 		{
-			CvPlot* pPlot = city.getCityIndexPlot(i);
+			const CvPlot* pPlot = city.getCityIndexPlot(i);
 
 			if (pPlot != NULL)
 			{
@@ -33412,9 +33231,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	int iFoodConsumed = 0;
 
 	// Eaten
-	int iPopulationExponent = city.getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iEatenFood = (city.getPopulation() * iConsumptionPerPopulationBase) / 10;
+	int iEatenFood = city.getFoodConsumedByPopulation();
 	if (iEatenFood != 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -33923,37 +33740,37 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer)
 {
-	bool bFirst = true;
-	CivilizationTypes eCivilization = GET_PLAYER(ePlayer).getCivilizationType();
-	int iDisplayCount = GET_PLAYER(ePlayer).getTraitDisplayCount();
+	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 	int iPotentialDisplays = 0;
-	int iCurrentDisplay = 0;
-	int iTrait;
-	if (iPotentialDisplays == 0)
+
+	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
 	{
-		for (iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
+		if (kPlayer.hasTrait((TraitTypes)iTrait))
 		{
-			if (GET_PLAYER(ePlayer).hasTrait((TraitTypes)iTrait))
-			{
-				iPotentialDisplays++;
-			}
+			iPotentialDisplays++;
 		}
 	}
+	int iDisplayCount = kPlayer.getTraitDisplayCount();
+
 	if (gDLL->shiftKey())
 	{
 		if (iDisplayCount > iPotentialDisplays)
 		{
-			GET_PLAYER(ePlayer).setTraitDisplayCount(0);
+			kPlayer.setTraitDisplayCount(0);
 		}
 		else
 		{
-			GET_PLAYER(ePlayer).changeTraitDisplayCount(1);
+			kPlayer.changeTraitDisplayCount(1);
 		}
 	}
-	iDisplayCount = GET_PLAYER(ePlayer).getTraitDisplayCount();
-	for (iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
+	iDisplayCount = kPlayer.getTraitDisplayCount();
+	bool bFirst = true;
+	const CivilizationTypes eCivilization = kPlayer.getCivilizationType();
+	int iCurrentDisplay = 0;
+
+	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
 	{
-		if (GET_PLAYER(ePlayer).hasTrait((TraitTypes)iTrait))
+		if (kPlayer.hasTrait((TraitTypes)iTrait))
 		{
 			iCurrentDisplay++;
 			if (bFirst)
@@ -33986,36 +33803,16 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_CYCLING_HELP"));
 
-	iCurrentDisplay = 0;
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
-		int iLeaderLevel = GET_PLAYER(ePlayer).getLeaderHeadLevel();
-		int iNationalCulture = GET_PLAYER(ePlayer).getCulture();
-		int iGreaterCulture = GET_PLAYER(ePlayer).getGreaterCulture();
-		int iNextGreaterCulture = 0;
-		int iNextLevelup = GET_PLAYER(ePlayer).getLeaderLevelupNextCultureTotal(iNextGreaterCulture);
-		int iNextGreaterCultureRemaining = 0;
-		int iRemaining = GET_PLAYER(ePlayer).getLeaderLevelupCultureToEarn(iNextGreaterCultureRemaining);
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", iLeaderLevel));
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL", kPlayer.getLeaderHeadLevel()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", iNationalCulture));
-		if (iGreaterCulture > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iGreaterCulture));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1", kPlayer.getCulture()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", iNextLevelup));
-		if (iNextGreaterCulture > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iNextGreaterCulture));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_2", kPlayer.getLeaderLevelupNextCultureTotal()));
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", iRemaining));
-		if (iNextGreaterCultureRemaining > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC", iNextGreaterCultureRemaining));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_LEADER_LEVEL_PROGRESS_3", kPlayer.getLeaderLevelupCultureToEarn()));
 	}
 }
 
@@ -34304,7 +34101,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 
 	//define commerce info.
-	CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
+	const CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
 
 	//ensure we have a player definition - if we don't, disable the help hover
 	if (NO_PLAYER == city.getOwner())
@@ -34503,8 +34300,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	{
 		if (city.hasTrait((TraitTypes)i))
 		{
-			CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
-			int iTraitMod = trait.getCommerceModifier(eCommerceType);
+			const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
+			const int iTraitMod = trait.getCommerceModifier(eCommerceType);
 			if (0 != iTraitMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TRAIT", iTraitMod, info.getChar(), trait.getTextKeyWide()));
@@ -34632,7 +34429,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	{
 		return;
 	}
-	CvYieldInfo& info = GC.getYieldInfo(eYieldType);
+	const CvYieldInfo& info = GC.getYieldInfo(eYieldType);
 	CvPlayer& owner = GET_PLAYER(city.getOwner());
 
 	const int iBaseProduction = city.getModifiedBaseYieldRate(eYieldType);
@@ -35064,7 +34861,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		if (owner.hasTrait((TraitTypes)i))
 		{
 			iTraitMod = 0;
-			CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
+			const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
 			iTraitMod += trait.getGreatPeopleRateModifier();
 			if (owner.getStateReligion() != NO_RELIGION && city.isHasReligion(owner.getStateReligion()))
 			{
@@ -35502,9 +35299,9 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		return;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvPlayer& kActivePlayer = GET_PLAYER(ePlayer);
-	EventTriggeredData* pTriggeredData = kActivePlayer.getEventTriggered(iEventTriggeredId);
+	const EventTriggeredData* pTriggeredData = kActivePlayer.getEventTriggered(iEventTriggeredId);
 
 	if (NULL == pTriggeredData)
 	{
@@ -36206,7 +36003,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes eActivePlayer, PlayerTypes eOtherPlayer)
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (eTech != NO_TECH)
 	{
@@ -36252,7 +36049,7 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 
 void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer)
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
 	int iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
@@ -36341,96 +36138,98 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_HELP_BASE", szBaseProfit.GetCString()));
 
 			int iModifier = 100;
-			int iNewMod;
-
+			int iTestValue = pCity->getTradeRouteModifier();
+			int iValue = 0;
+			int iTradeRouteModifier = 0;
+			// getTradeRouteModifier()
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
+				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0 && !pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
 				{
-					//Team Project (5)
-					if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
+					iValue = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
+					if (0 != iValue)
 					{
-						iNewMod = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
-						if (0 != iNewMod)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewMod));
-							iModifier += iNewMod;
-						}
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iValue));
+						iTradeRouteModifier += iValue;
 					}
 				}
 			}
+			FAssert(iTradeRouteModifier == iTestValue); // Toffer - This one triggers - 21.07.20
+			// I can only speculate that replaced/obsolete buildings are not being processed in and out correctly during recalc.
 
-			iNewMod = pCity->getPopulationTradeModifier();
-			if (0 != iNewMod)
+			iModifier += iTradeRouteModifier;
+
+			iValue = pCity->getPopulationTradeModifier();
+			if (0 != iValue)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_POPULATION", iNewMod));
-				iModifier += iNewMod;
+				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_POPULATION", iValue));
+				iModifier += iValue;
 			}
 
 			if (pCity->isConnectedToCapital())
 			{
-				iNewMod = GC.getDefineINT("CAPITAL_TRADE_MODIFIER");
-				if (0 != iNewMod)
+				iValue = GC.getDefineINT("CAPITAL_TRADE_MODIFIER");
+				if (0 != iValue)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_CAPITAL", iNewMod));
-					iModifier += iNewMod;
+					szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_CAPITAL", iValue));
+					iModifier += iValue;
 				}
 			}
 
-			iNewMod = GET_TEAM(pCity->getTeam()).getTradeModifier();
-			if (0 != iNewMod)
+			iValue = GET_TEAM(pCity->getTeam()).getTradeModifier();
+			if (0 != iValue)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TECH", iNewMod));
-				iModifier += iNewMod;
+				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TECH", iValue));
+				iModifier += iValue;
 			}
 
 			if (NULL != pOtherCity)
 			{
 				if (pCity->area() != pOtherCity->area())
 				{
-					iNewMod = GC.getDefineINT("OVERSEAS_TRADE_MODIFIER");
-					if (0 != iNewMod)
+					iValue = GC.getDefineINT("OVERSEAS_TRADE_MODIFIER");
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_OVERSEAS", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_OVERSEAS", iValue));
+						iModifier += iValue;
 					}
 				}
 
 				if (pCity->getTeam() != pOtherCity->getTeam())
 				{
-					iNewMod = pCity->getForeignTradeRouteModifier();
+					iValue = pCity->getForeignTradeRouteModifier();
 
-					iNewMod += GET_TEAM(pCity->getTeam()).getForeignTradeModifier();
-					iNewMod += GET_PLAYER(pCity->getOwner()).getForeignTradeRouteModifier();
+					iValue += GET_TEAM(pCity->getTeam()).getForeignTradeModifier();
+					iValue += GET_PLAYER(pCity->getOwner()).getForeignTradeRouteModifier();
 					for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 					{
 						if (GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI) == GET_PLAYER(pOtherCity->getOwner()).getCivics((CivicOptionTypes)iI))
 						{
 							if (GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI) != NO_CIVIC)
 							{
-								iNewMod += GC.getCivicInfo(GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
+								iValue += GC.getCivicInfo(GET_PLAYER(pCity->getOwner()).getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
 							}
 						}
 					}
 
-					if (0 != iNewMod)
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_FOREIGN", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_FOREIGN", iValue));
+						iModifier += iValue;
 					}
 
-					iNewMod = pCity->getPeaceTradeModifier(pOtherCity->getTeam());
-					if (0 != iNewMod)
+					iValue = pCity->getPeaceTradeModifier(pOtherCity->getTeam());
+					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_PEACE", iNewMod));
-						iModifier += iNewMod;
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_PEACE", iValue));
+						iModifier += iValue;
 					}
 				}
 			}
@@ -36438,7 +36237,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			FAssert(pCity->totalTradeModifier(pOtherCity) == iModifier);
 
 			iProfit *= iModifier;
-// BUG - Fractional Trade Routes - start
+
 #ifdef _MOD_FRACTRADE
 			iProfit /= 100;
 			FAssert(iProfit == pCity->calculateTradeProfitTimes100(pOtherCity));
@@ -36446,12 +36245,10 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			iProfit /= 10000;
 			FAssert(iProfit == pCity->calculateTradeProfit(pOtherCity));
 #endif
-// BUG - Fractional Trade Routes - end
 
 			szBuffer.append(SEPARATOR);
-
 			szBuffer.append(NEWLINE);
-// BUG - Fractional Trade Routes - start
+
 #ifdef _MOD_FRACTRADE
 			CvWString szProfit;
 			szProfit.Format(L"%d.%02d", iProfit / 100, iProfit % 100);
@@ -36459,7 +36256,6 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 #else
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TOTAL", iProfit));
 #endif
-// BUG - Fractional Trade Routes - end
 		}
 	}
 }
@@ -36467,11 +36263,11 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit)
 {
 	CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	//szBuffer.assign(kMission.getDescription());
 
-	int iMissionCost = kPlayer.getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
+	int64_t iMissionCost = kPlayer.getEspionageMissionBaseCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
 
 	if (kMission.isDestroyImprovement())
 	{
@@ -36488,7 +36284,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36504,7 +36300,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36518,7 +36314,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36534,7 +36330,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			int iTargetUnitID = iExtraData;
 
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
+			const CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
 
 			if (NULL != pUnit)
 			{
@@ -36550,7 +36346,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			int iTargetUnitID = iExtraData;
 
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
+			const CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
 
 			if (NULL != pUnit)
 			{
@@ -36564,7 +36360,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36578,7 +36374,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity && pPlot->getCulture(GC.getGame().getActivePlayer()) > 0)
 			{
@@ -36596,7 +36392,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36610,7 +36406,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36624,7 +36420,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36638,22 +36434,20 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NO_PLAYER != eTargetPlayer)
 		{
-			int iMaxGold = GC.getGREATER_COMMERCE_SWITCH_POINT()/100;
-			int iGold = std::min(iMaxGold, GET_PLAYER(eTargetPlayer).getEffectiveGold());
-			int iNumTotalGold = (iGold * kMission.getStealTreasuryTypes()) / 100;
+			int64_t iGold = GET_PLAYER(eTargetPlayer).getGold() * kMission.getStealTreasuryTypes() / 100;
 
 			if (NULL != pPlot)
 			{
-				CvCity* pCity = pPlot->getPlotCity();
+				const CvCity* pCity = pPlot->getPlotCity();
 
 				if (NULL != pCity)
 				{
-					iNumTotalGold *= pCity->getPopulation();
-					iNumTotalGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
+					iGold *= pCity->getPopulation();
+					iGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
 				}
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_STEAL_TREASURY", iNumTotalGold, GET_PLAYER(eTargetPlayer).getCivilizationAdjectiveKey()));
+			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_STEAL_TREASURY", iGold, GET_PLAYER(eTargetPlayer).getCivilizationAdjectiveKey()));
 			szBuffer.append(NEWLINE);
 		}
 	}
@@ -36707,7 +36501,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36720,7 +36514,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36733,7 +36527,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			int iTurns = 6;
 			iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
@@ -36750,7 +36544,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36763,7 +36557,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36776,7 +36570,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{
@@ -36789,7 +36583,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 	{
 		if (NULL != pPlot)
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 
 			if (NULL != pCity)
 			{

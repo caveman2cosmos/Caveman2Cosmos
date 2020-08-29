@@ -113,7 +113,7 @@
 		<English>We can do business along these lines. Agreed.</English>
 		<French>Nous pouvons faire affaire en ces termes. Marché conclu.</French>
 		<German>Auf dieser Basis können wir ins Geschäft kommen. Einverstanden.</German>
-		<Italian>Con questi termini, possiamo fare affari. D'accordo.</Italian>
+		<Italian>Possiamo fare affari a questi termini. D'accordo.</Italian>
 		<Polish>W ten sposób zawsze możemy się dogadać. Zgoda.</Polish>
 		<Spanish>Podemos aceptarlo con esas condiciones. Hecho.</Spanish>
 	</TEXT>
@@ -443,9 +443,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_5</Tag>
-		<English>%s1 is more trouble than [NUM1:he:she:x:x] is worth. (Annoyed)</English>
-		<French>%s1 ne vaut pas la peine qu'on s'intéresse à [NUM1:lui:elle:x:x]. (S'inquiète)</French>
-		<German>%s1 verursacht mehr Ärger, als [NUM1:er:sie:x:x] es wert ist. (Verärgert)</German>
+		<English>%s1 is more trouble than [NUM1:he:she] is worth. (Annoyed)</English>
+		<French>%s1 ne vaut pas la peine qu'on s'intéresse à [NUM1:lui:elle]. (S'inquiète)</French>
+		<German>%s1 verursacht mehr Ärger, als [NUM1:er:sie] es wert ist. (Verärgert)</German>
 		<Italian>%s1 crea più fastidi di quanti ne risolve. (Tono infastidito)</Italian>
 		<Polish>%s1 tylko sprawia kłopoty. (Zdenerwowany)</Polish>
 		<Spanish>%s1 no trae más que problemas. (Molesta)</Spanish>
@@ -470,8 +470,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_8</Tag>
-		<English>%s1 is no better than [NUM1:he:she:x:x] should be. (Annoyed)</English>
-		<French>%s1 ne vaut pas mieux que ce qu'[NUM1:il:elle:x:x] est. (S'inquiète)</French>
+		<English>%s1 is no better than [NUM1:he:she] should be. (Annoyed)</English>
+		<French>%s1 ne vaut pas mieux que ce qu'[NUM1:il:elle] est. (S'inquiète)</French>
 		<German>%s1 ist keinen Deut besser als erwartet. (Verärgert)</German>
 		<Italian>%s1 non è migliore di come dovrebbe essere. (Tono infastidito)</Italian>
 		<Polish>%s1 jest dokładnie tym, na co ługuje. (Zdenerwowany)</Polish>
@@ -560,7 +560,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_3</Tag>
-		<English>%s1 has [NUM1:his:her:x:x] uses. (Cautious)</English>
+		<English>%s1 has [NUM1:his:her] uses. (Cautious)</English>
 		<French>%s1 pourrait nous être utile. (se méfie)</French>
 		<German>%s1 könnte nützlich werden. (Vorsichtig)</German>
 		<Italian>%s1 ha la sua utilità. (Tono cauto)</Italian>
@@ -596,9 +596,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_7</Tag>
-		<English>%s1 is all right as long as you keep an eye on [NUM1:him:her:x:x]. (Cautious)</English>
-		<French>Vous n'avez rien à craindre de %s1 tant que vous [NUM1:le:la:x:x] surveillez. (se méfie)</French>
-		<German>%s1 ist in Ordnung, solange man [NUM1:ihn:sie:x:x] im Auge behält. (Vorsichtig)</German>
+		<English>%s1 is all right as long as you keep an eye on [NUM1:him:her]. (Cautious)</English>
+		<French>Vous n'avez rien à craindre de %s1 tant que vous [NUM1:le:la] surveillez. (se méfie)</French>
+		<German>%s1 ist in Ordnung, solange man [NUM1:ihn:sie] im Auge behält. (Vorsichtig)</German>
 		<Italian>%s1 è una persona a posto, almeno finché [NUM1:gli:le] tieni gli occhi addosso. (Tono cauto)</Italian>
 		<Polish>%s1 jest w porządku, dopóki zachowujesz czujność. (Ostrożny)</Polish>
 		<Spanish>%s1 no es un problema siempre que no [NUM1:lo:la] perdáis de vista. (Cauta)</Spanish>
@@ -821,11 +821,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FURIOUS_2</Tag>
-		<English>%s1 is a snake in the grass! Do not trust [NUM1:him:her:x:x]! (Furious)</English>
-		<French>%s1 est un serpent tapi dans l'herbe! [NUM1:Il:Elle:x:x] n'est pas digne de confiance! (Colère)</French>
+		<English>%s1 is a snake in the grass! Do not trust [NUM1:him:her]! (Furious)</English>
+		<French>%s1 est un serpent tapi dans l'herbe! [NUM1:Il:Elle] n'est pas digne de confiance! (Colère)</French>
 		<German>%s1 ist eine falsche doppelzüngige Schlange! (Wütend)</German>
-		<Italian>%s1 è un serpente a sonagli! Non mi fido di [NUM1:lui:lei]! (Tono furioso)</Italian>
-		<Polish>%s1 jest wężem pełzającym w trawie! Nie ufaj [NUM1:jemu:jej:x:x]! (Wściekły)</Polish>
+		<Italian>%s1 è un serpente a sonagli! Non fidarti di [NUM1:lui:lei]! (Tono furioso)</Italian>
+		<Polish>%s1 jest wężem pełzającym w trawie! Nie ufaj [NUM1:jemu:jej]! (Wściekły)</Polish>
 		<Spanish>¡%s1 es una serpiente en el Edén! ¡No os fiéis de [NUM1:él:ella]! (Furiosa)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -992,11 +992,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_PLEASED_6</Tag>
-		<English>%s1? I like [NUM1:him:her:x:x]. (Pleased)</English>
+		<English>%s1? I like [NUM1:him:her]. (Pleased)</English>
 		<French>%s1? Je l'apprécie. (Favorable)</French>
 		<German>Ich mag %s1. (Zufrieden)</German>
 		<Italian>%s1? Mi piace. (Tono contento)</Italian>
-		<Polish>%s1? Lubię [NUM1:go:ją:x:x]. (Uprzejmy)</Polish>
+		<Polish>%s1? Lubię [NUM1:go:ją]. (Uprzejmy)</Polish>
 		<Spanish>¿%s1? Nos cae bien. (Amable)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1019,7 +1019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_PLEASED_9</Tag>
-		<English>%s1 is a fine ruler and a credit to [NUM1:his:her:x:x] people! (Pleased)</English>
+		<English>%s1 is a fine ruler and a credit to [NUM1:his:her] people! (Pleased)</English>
 		<French>%s1 règne avec sagesse pour le bien de son peuple! (Favorable)</French>
 		<German>%s1 ist ein ehrenwertes Staatsoberhaupt! (Zufrieden)</German>
 		<Italian>%s1 è [NUM1:un grande sovrano:una grande sovrana] ed è una garanzia per il suo popolo! (Tono contento)</Italian>
@@ -1050,7 +1050,7 @@
 		<French>Je suppose que vous savez ce que vous faites...</French>
 		<German>Ich nehme an, Ihr wisst es besser.</German>
 		<Italian>Immagino che tu sappia ciò che è meglio.</Italian>
-		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre....</Polish>
+		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre...</Polish>
 		<Spanish>Suponemos que sabéis lo que hacéis.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3154,9 +3154,9 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TOKUGAWA_1</Tag>
 		<English>Welcome, [CT_NAME]! May your empire flourish and grow for as long as it remains useful to us! I mean that sincerely.</English>
-		<French>Bienvenue, [CT_NAME]! Puisse votre empire prospérer et grandir tant qu'il nous sera utile! Je suis sincère...</French>
+		<French>Bienvenue, [CT_NAME]! Puisse votre empire prospérer et grandir tant qu'il nous sera utile! Je suis sincère.</French>
 		<German>Willkommen, [CT_NAME]! Möge Euer Imperium wachsen und gedeihen, solange auch wir einen Nutzen davon haben! Glaubt mir, das meine ich ganz aufrichtig!</German>
-		<Italian>Ti do il benvenuto, [CT_NAME]! Possa il tuo impero fiorire finché ci tornerà utile... Lo dico sinceramente!</Italian>
+		<Italian>Ti do il benvenuto, [CT_NAME]! Possa il tuo impero fiorire finché ci tornerà utile! Lo dico sinceramente.</Italian>
 		<Polish>Witaj, [CT_NAME]! Niech Twoje imperium rośnie i kwitnie, tak długo jak jest to nam na rękę. Szczerze Ci tego życzę.</Polish>
 		<Spanish>¡Os doy la bienvenida, [CT_NAME]! Que vuestro imperio florezca y prospere siempre que nos sea útil. Os lo decimos con total sinceridad.</Spanish>
 	</TEXT>
@@ -3184,11 +3184,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TRUDEAU_1</Tag>
-		<English>Hello, I am [OUR_NAME] of [OUR_CIV_SHORT]. Be ready when opportunity comes...luck is the time when preparation and opportunity meet.</English>
-		<French>Bonjour, je suis [OUR_NAME] de [OUR_CIV_SHORT]. Soyez prêt quand l'occasion vient...La chance est le moment où la préparation et l'occasion se réunissent.</French>
-		<German>Hallo, ich bin [OUR_NAME] vom [OUR_CIV_SHORT]. Ergreifen Sie die Gelegenheit, wenn sie kommt...Glück ist die Zeit, wenn Vorbereitung und Gelegenheit aufeinandertreffen.</German>
-		<Italian>Ciao, sono [OUR_NAME] di [OUR_CIV_SHORT]. Sia aspettano quando l'occasione viene...fortuna è il tempo in cui la preparazione e l'occasione vengono a contatto di.</Italian>
-		<Polish>Witaj, Jestem [OUR_NAME] z [OUR_CIV_SHORT]. Bądź gotowy kiedy możliwość przyjdzie...szczęście jest czasem kiedy przygotowanie i możliwość spotykają się.</Polish>
+		<English>Hello, I am [OUR_NAME] of [OUR_CIV_SHORT]. Be ready when opportunity comes... luck is the time when preparation and opportunity meet.</English>
+		<French>Bonjour, je suis [OUR_NAME] de [OUR_CIV_SHORT]. Soyez prêt quand l'occasion vient... La chance est le moment où la préparation et l'occasion se réunissent.</French>
+		<German>Hallo, ich bin [OUR_NAME] vom [OUR_CIV_SHORT]. Ergreifen Sie die Gelegenheit, wenn sie kommt... Glück ist die Zeit, wenn Vorbereitung und Gelegenheit aufeinandertreffen.</German>
+		<Italian>Ciao, sono [OUR_NAME] di [OUR_CIV_SHORT]. Sii pronto quando l'occasione viene... la fortuna è il momento in cui la preparazione e l'occasione vengono a contatto.</Italian>
+		<Polish>Witaj, Jestem [OUR_NAME] z [OUR_CIV_SHORT]. Bądź gotowy kiedy możliwość przyjdzie... szczęście jest czasem kiedy przygotowanie i możliwość spotykają się.</Polish>
 		<Spanish>Hola, soy [OUR_NAME] del [OUR_CIV_SHORT]. Estate atento cuando venga la oportunidad... la suerte es el momento en el que coinciden la preparación y la oportunidad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4660,7 +4660,7 @@
 		<French>Mes hommages, [CT_NAME]. Avez-vous fait bon voyage depuis le pays des [CT_CIV_SHORT]? J'y ai séjourné une fois, vous savez...</French>
 		<German>Ich grüße Euch, [CT_NAME]. Wie war die Reise? Wusstet Ihr, dass ich einst in Eurem Reich genächtigt habe?</German>
 		<Italian>Salve, [CT_NAME]. Come è stato il tuo viaggio dalle terre [CT_CIV_SHORT:4]? Una volta ho dormito là.</Italian>
-		<Polish>Witaj, [CT_NAME]. Jak Ci minęła podróż? Kiedyś nocowałem u [CT_CIV_ADJ]....</Polish>
+		<Polish>Witaj, [CT_NAME]. Jak Ci minęła podróż? Kiedyś nocowałem u [CT_CIV_ADJ]...</Polish>
 		<Spanish>Saludos, [CT_NAME]. ¿Qué tal vuestro viaje desde [CT_CIV_SHORT]? Una vez dormí allí, como ya sabéis.</Spanish>
 	</TEXT>
 	<TEXT>

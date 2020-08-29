@@ -2,8 +2,12 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvPlayerAI.h"
+#include "CvRandom.h"
+#include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include <time.h> 
@@ -3483,7 +3487,7 @@ void cvInternalGlobals::reprocessSigns()
 
 void cvInternalGlobals::initializeMap(MapTypes eMap)
 {
-	OutputDebugString("Initializing Map: Start");
+	OutputDebugString("Initializing Map: Start\n");
 	while ( m_maps.size() < (size_t)eMap )
 	{
 		//	Sparse or out of order initialization
@@ -3493,7 +3497,7 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
 
 	m_maps[eMap] = new CvMap(eMap);
-	OutputDebugString("Initializing Map: End");
+	OutputDebugString("Initializing Map: End\n");
 }
 
 bool cvInternalGlobals::mapInitialized(MapTypes eMap) const

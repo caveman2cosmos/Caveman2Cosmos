@@ -9,6 +9,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_CIVILIZATION_PEDIA</Tag>
 		<English>The ruins of a not-very-advanced civilization lie here. Maybe they had a nuclear war, or collapsed from resources shortages, or didn't build enough policing units and crime got too high. You weren't surprised to find something awful in their history though - full of radicalism, bigotry, ignorance, and greed.</English>
+		<French>Les ruines d'une civilisation peu avancée se trouvent ici. Peut-être qu'ils ont eu une guerre nucléaire, ou qu'ils se sont effondrés à cause d'une pénurie de ressources, ou qu'ils n'ont pas construit suffisamment d'unités de police et que la criminalité est devenue trop élevée. Mais ne soyez pas surpris de trouver des traces de choses terribles dans leur histoire, pleines de radicalisme, de sectarisme, d'ignorance et de cupidité.</French>
+		<Italian>Le rovine di una civiltà non così avanzata si trovano qui. Magari sono stati spazzati via da una guerra nucleare, sono collassati in seguito a una carenza di risorse oppure non hanno costruito unità di polizia a sufficienza e sono stati soffocati dal crimine. Ma non ti stupisci di trovare tracce di cose orribili nella loro storia, piena di radicalismo, bigotteria, ignoranza e avidità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE</Tag>
@@ -2851,7 +2853,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
- <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Tag>
 		<English>Shapeshifting Work Crew</English>
 		<French>Equipage d'ouvriers Shapeshifting</French>

@@ -512,7 +512,8 @@ public:
 
 	bool isActionRecommended(int iAction) const;
 
-	bool isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const; // Exposed to Python
+	int defenderValue(const CvUnit* pAttacker) const;
+	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 
 	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const; // Exposed to Python
 	void doCommand(CommandTypes eCommand, int iData1, int iData2); // Exposed to Python
@@ -550,27 +551,16 @@ public:
 	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
 	void move(CvPlot* pPlot, bool bShow, bool bFree = false);
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool jumpToNearestValidPlot(bool bKill = true); // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	bool canAutomate(AutomateTypes eAutomate) const; // Exposed to Python
 	void automate(AutomateTypes eAutomate);
 
 	bool canScrap() const; // Exposed to Python
 	void scrap();
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canTradeUnit(PlayerTypes eReceivingPlayer);
+
+	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
 
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
@@ -655,16 +645,13 @@ public:
 
 	bool canShadow() const;
 	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
-	
+
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
 	TechTypes getDesiredDiscoveryTech() const;
 	void setDesiredDiscoveryTech(TechTypes eTech);
 	void waitForTech(int iFlag, int eTech);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const; // Exposed to Python
 	void gift(bool bTestTransport = true);
@@ -708,15 +695,7 @@ public:
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const; // Exposed to Python
 	bool canNuke(const CvPlot* pPlot) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 09/09/10                                               */
-/*                                                                                              */
-/*  M.A.D Nukes                                                                                 */
-/************************************************************************************************/
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar = true) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	bool nuke(int iX, int iY, bool bTrap = false);
 
 	bool canRecon(const CvPlot* pPlot) const; // Exposed to Python
@@ -847,7 +826,7 @@ public:
 	HandicapTypes getHandicapType() const; // Exposed to Python
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
-	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
+	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python
 	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
@@ -871,7 +850,7 @@ public:
 	DllExport bool hasMoved() const; // Exposed to Python
 
 	int airRange() const; // Exposed to Python
-	int nukeRange() const; // Exposed to Python			
+	int nukeRange() const; // Exposed to Python
 
 	bool canBuildRoute() const; // Exposed to Python
 	DllExport BuildTypes getBuildType() const; // Exposed to Python
@@ -885,26 +864,15 @@ public:
 	int getRBombardForceAbilityCount() const;
 	void changeRBombardForceAbilityCount(int iChange);
 
-	bool isNoCapture() const; // Exposed to Python
-	bool isRivalTerritory() const; // Exposed to Python
-	bool isMilitaryHappiness() const; // Exposed to Python
+	bool isNoCapture() const;
+	bool isRivalTerritory() const;
+	bool isMilitaryHappiness() const;
+	bool isMilitaryBranch() const;
 	bool isInvestigate() const; // Exposed to Python
-	bool isCounterSpy() const; // Exposed to Python
+	bool isCounterSpy() const;
 	bool isSpy() const;
 	bool isFound() const; // Exposed to Python
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				DPII		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-	/*bool isCanBeRebel() const;
-	bool isCanRebelCapture() const;
-	bool isCannotDefect() const;
-	bool isCanQuellRebellion() const;
-	*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
+
 	bool isGoldenAge() const; // Exposed to Python
 
 	// Can this unit always coexist with all other units anywhere?
@@ -1370,10 +1338,15 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	int getExtraCostModifier () const;
-	void changeExtraCostModifier (int iChange);
-
-	int getExtraUnitCost100 () const;
+	void changeExtraUpkeep100(const int iChange);
+	void changeUpkeepModifier(const int iChange);
+	void calcUpkeepMultiplierSM(const int iGroupOffset);
+	void calcUpkeep100();
+	void recalculateUnitUpkeep();
+	int getExtraUpkeep100() const;
+	int getUpkeepModifier() const;
+	int getUpkeepMultiplierSM() const;
+	int getUpkeep100() const;
 
 	int getExtraOverrun (bool bIgnoreCommanders = false) const;
 	void changeExtraOverrun (int iChange);
@@ -2141,6 +2114,12 @@ protected:
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
 	int m_iExtraCostModifier;
+
+	int m_iExtraUpkeep100;
+	int m_iUpkeepModifier;
+	int m_iUpkeepMultiplierSM;
+	int m_iUpkeep100;
+
 	int m_iExtraPowerValue;
 	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
@@ -2291,23 +2270,11 @@ protected:
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
-	void influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, float fLocationMultiplier);
+	void influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier);
 	float doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Lead From Behind                                                                             */
-/************************************************************************************************/
-// From Lead From Behind by UncutDragon
-public:
-	int defenderValue(const CvUnit* pAttacker) const;
-	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 protected:
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	const PromotionKeyedInfo*	findPromotionKeyedInfo(PromotionTypes ePromotion) const;
 	PromotionKeyedInfo*	findOrCreatePromotionKeyedInfo(PromotionTypes ePromotion, bool bCreate = true);
 	const PromotionLineKeyedInfo*	findPromotionLineKeyedInfo(PromotionLineTypes ePromotionLine) const;

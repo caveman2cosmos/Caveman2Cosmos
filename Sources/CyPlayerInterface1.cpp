@@ -69,11 +69,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getArtStyleType", &CyPlayer::getArtStyleType, " int () - Returns the ArtStyleType for this player (e.g. European)")
 		.def("getUnitButton", &CyPlayer::getUnitButton, " string (int eUnit) - Returns the unit button for this player")
 
-
-
 		.def("countNumCoastalCities", &CyPlayer::countNumCoastalCities, "int ()")
 
-		.def("countTotalCulture", &CyPlayer::countTotalCulture, "int ()")
 		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) - ")
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings?")
 
@@ -111,12 +108,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalCityHealthiness", &CyPlayer::calculateTotalCityHealthiness, "int () - Returns the total sum of all city Healthiness values")
 		.def("calculateTotalCityUnhealthiness", &CyPlayer::calculateTotalCityUnhealthiness, "int () - Returns the total sum of all city Unhealthiness values")
 
-		.def("calculateUnitCost", &CyPlayer::calculateUnitCost, "int ()")
+		.def("getFinalUnitUpkeep", &CyPlayer::getFinalUnitUpkeep, "int64 ()")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
-		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
-		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int ()")
-
-		.def("setFreeUnitCountdown", &CyPlayer::setFreeUnitCountdown, "void ( int iValue )")
+		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int64 ()")
+		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int64 ()")
 
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")
@@ -156,9 +151,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getRealPopulation", &CyPlayer::getRealPopulation, "long int ()")
 
 		.def("getTotalLand", &CyPlayer::getTotalLand, "int ()")
-		.def("getEffectiveGold", &CyPlayer::getEffectiveGold, "int ()")
-		.def("getGold", &CyPlayer::getGold, "int ()")
-		.def("getGreaterGold", &CyPlayer::getGreaterGold, "int ()")
+		.def("getGold", &CyPlayer::getGold, "int64 ()")
 		.def("setGold", &CyPlayer::setGold, "void (int iNewValue)")
 		.def("changeGold", &CyPlayer::changeGold, "void (int iChange)")
 		.def("getGoldPerTurn", &CyPlayer::getGoldPerTurn, "int ()")

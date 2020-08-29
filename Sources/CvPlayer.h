@@ -33,7 +33,7 @@ typedef struct civcSwitchInstance
 typedef std::list<CvTalkingHeadMessage> CvMessageQueue;
 typedef std::list<CvPopupInfo*> CvPopupQueue;
 typedef std::list<CvDiploParameters*> CvDiploQueue;
-typedef stdext::hash_map<int, int> CvTurnScoreMap;
+typedef stdext::hash_map<int, int64_t> CvTurnScoreMap;
 typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
 typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
@@ -180,7 +180,7 @@ public:
 	void doTurnUnits();
 	void doMapTurn();
 
-	void doInflation(bool pReinit);
+	void doInflation();
 	int getCurrentInflationCostModifier() const; //	Exposed to Python
 	int getEquilibriumInflationCostModifier() const; //	Exposed to Python
 
@@ -232,7 +232,7 @@ public:
 
 	int findBestFoundValue() const; // Exposed to Python
 
-	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit);
+	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit) const;
 
 	int countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const; // Exposed to Python
 	int countCorporationSpreadUnits(const CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const; // Exposed to Python
@@ -241,8 +241,7 @@ public:
 	int countNumCoastalCitiesByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesWithOrbitalInfrastructure() const;
 	inline void noteOrbitalInfrastructureCountDirty() { m_orbitalInfrastructureCountDirty = true; }
-	unsigned long long countTotalCulture() const;
-	void doCountTotalCulture(); // Exposed to Python
+
 	int countOwnedBonuses(BonusTypes eBonus) const; // Exposed to Python
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const; // Exposed to Python
 	int countCityFeatures(FeatureTypes eFeature) const; // Exposed to Python
@@ -320,18 +319,15 @@ public:
 	int calculateTotalCityUnhealthiness() const; // Exposed to Python
 
 	int calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const;
-	int calculateUnitCost() const; // Exposed to Python
+
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const; // Exposed to Python
 	int calculateUnitSupply() const; // Exposed to Python
-	int calculatePreInflatedCosts() const; // Exposed to Python
+	int64_t calculatePreInflatedCosts() const; // Exposed to Python
 	int calculateInflationRate() const; // Exposed to Python
-	int calculateInflatedCosts() const; // Exposed to Python
+	int64_t calculateInflatedCosts() const; // Exposed to Python
 	int getCurrentInflationPerTurnTimes10000() const;
 
-	int getFreeUnitCountdown() const;
-	void setFreeUnitCountdown(int iValue);
-
-	int calculateBaseNetGold() const;
+	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const; // Exposed to Python
 	int calculateResearchModifier(TechTypes eTech) const; // Exposed to Python
 	int calculateGoldRate() const; // Exposed to Python
@@ -399,15 +395,11 @@ public:
 	int getTotalLandScored() const; // Exposed to Python
 	void changeTotalLandScored(int iChange);
 
-	int getEffectiveGold() const;
-
-	int getGold() const; // Exposed to Python
-	DllExport void setGold(int iNewValue); // Exposed to Python
-	DllExport void changeGold(int iChange);
-
-	int getGreaterGold() const; // Exposed to Python
-	void setGreaterGold(int iNewValue); // Exposed to Python
-	void changeGreaterGold(int iChange); // Exposed to Python
+	int64_t getGold() const; // Exposed to Python
+	void setGold(int64_t iNewValue); // Exposed to Python
+	DllExport void setGold(int iNewValue) { setGold(static_cast<int64_t>(iNewValue)); }
+	void changeGold(int64_t iChange);
+	DllExport void changeGold(int iChange) { setGold(static_cast<int64_t>(getGold() + iChange)); }
 
 	int getGoldPerTurn() const; // Exposed to Python
 
@@ -418,7 +410,7 @@ public:
 	void doEspionageOneOffPoints(int iChange);
 	int getEspionageSpending(TeamTypes eAgainstTeam, int iTotal = -1) const; // Exposed to Python
 	bool canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pUnit) const; // Exposed to Python
-	int getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
+	int64_t getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
 	int getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const; // Exposed to Python
 	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
 	bool doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pUnit, bool bCaught = false);
@@ -576,35 +568,40 @@ public:
 	int getNumOutsideUnits() const; // Exposed to Python
 	void changeNumOutsideUnits(int iChange);
 
-	int getBaseFreeUnits() const; // Exposed to Python
-	void changeBaseFreeUnits(int iChange);
-
-	int getBaseFreeMilitaryUnits() const; // Exposed to Python
-	void changeBaseFreeMilitaryUnits(int iChange);
-
-	int getFreeUnitsPopulationPercent() const; // Exposed to Python
-	void changeFreeUnitsPopulationPercent(int iChange);
-
-	int getFreeMilitaryUnitsPopulationPercent() const; // Exposed to Python
-	void changeFreeMilitaryUnitsPopulationPercent(int iChange);
+	int getBaseFreeUnitUpkeepCivilian() const;
+	int getBaseFreeUnitUpkeepMilitary() const;
+	void changeBaseFreeUnitUpkeepCivilian(const int iChange);
+	void changeBaseFreeUnitUpkeepMilitary(const int iChange);
+	int getFreeUnitUpkeepCivilianPopPercent() const;
+	int getFreeUnitUpkeepMilitaryPopPercent() const;
+	void changeFreeUnitUpkeepCivilianPopPercent(const int iChange);
+	void changeFreeUnitUpkeepMilitaryPopPercent(const int iChange);
+	int getFreeUnitUpkeepCivilian() const;
+	int getFreeUnitUpkeepMilitary() const;
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
-	int getGoldPerUnit() const; // Exposed to Python
-	void changeGoldPerUnit(int iChange);
+	// Toffer - Unit Upkeep
+	int getCivilianUnitUpkeepMod() const;
+	int getMilitaryUnitUpkeepMod() const;
+	void changeCivilianUnitUpkeepMod(const int iChange);
+	void changeMilitaryUnitUpkeepMod(const int iChange);
+	void changeUnitUpkeep(const int iChange, const bool bMilitary);
+	void applyUnitUpkeepHandicap(int64_t& iUpkeep);
 
-	int getGoldPerMilitaryUnit() const; // Exposed to Python
-	void changeGoldPerMilitaryUnit(int iChange);
-
-	int getExtraUnitCost() const; // Exposed to Python
-	void changeExtraUnitCost(int iChange);
+	int64_t getUnitUpkeepCivilian100() const;
+	int64_t getUnitUpkeepCivilian() const;
+	int64_t getUnitUpkeepCivilianNet() const;
+	int64_t getUnitUpkeepMilitary100() const;
+	int64_t getUnitUpkeepMilitary() const;
+	int64_t getUnitUpkeepMilitaryNet() const;
+	int64_t calcFinalUnitUpkeep(const bool bReal=true);
+	int64_t getFinalUnitUpkeep() const;
+	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
+	// ! Unit Upkeep
 
 	int getNumMilitaryUnits() const; // Exposed to Python
 	void changeNumMilitaryUnits(int iChange);
-
-	int getUnitPercentCountForCostAdjustment() const; // Exposed to Python
-	void changeUnitPercentCountForCostAdjustment(int iChange);
-	int getUnitCountForCostAdjustmentTotal() const;
 
 	int getHappyPerMilitaryUnit() const; // Exposed to Python
 
@@ -833,14 +830,9 @@ public:
 	DllExport EraTypes getCurrentEra() const; // Exposed to Python
 	void setCurrentEra(EraTypes eNewValue);
 
-	int getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
-
-
-	int getGreaterCulture() const;
-	void setGreaterCulture(int iNewValue);
-	void changeGreaterCulture(int iAddValue);
+	int64_t getCulture() const;
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
 	ReligionTypes getStateReligion() const; // Exposed to Python
@@ -1024,6 +1016,8 @@ public:
 	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const; // Exposed to Python
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue); // Exposed to Python
 
+	int64_t getTreasuryUpkeep() const;
+
 	int getExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
 
@@ -1181,24 +1175,16 @@ public:
 	DllExport void showSpaceShip();
 	DllExport void clearSpaceShipPopups();
 
-	int getScoreHistory(int iTurn) const; // Exposed to Python
-	void updateScoreHistory(int iTurn, int iBestScore);
+	int64_t getScoreHistory(int iTurn) const; // Exposed to Python
+	void updateScoreHistory(int iTurn, int64_t iBestScore);
 
-	int getEconomyHistory(int iTurn) const; // Exposed to Python
-	void updateEconomyHistory(int iTurn, int iBestEconomy);
-	int getIndustryHistory(int iTurn) const; // Exposed to Python
-	void updateIndustryHistory(int iTurn, int iBestIndustry);
-	int getAgricultureHistory(int iTurn) const; // Exposed to Python
-	void updateAgricultureHistory(int iTurn, int iBestAgriculture);
-	int getPowerHistory(int iTurn) const; // Exposed to Python
-	void updatePowerHistory(int iTurn, int iBestPower);
-	int getCultureHistory(int iTurn) const; // Exposed to Python
-	void updateCultureHistory(int iTurn, int iBestCulture);
-	int getEspionageHistory(int iTurn) const; // Exposed to Python
-	void updateEspionageHistory(int iTurn, int iBestEspionage);
-
-	int getRevolutionStabilityHistory(int iTurn) const; // Exposed to Python
-	void updateRevolutionStabilityHistory(int iTurn, int m_iStabilityIndexAverage);
+	int64_t getEconomyHistory(int iTurn) const; // Exposed to Python
+	int64_t getIndustryHistory(int iTurn) const; // Exposed to Python
+	int64_t getAgricultureHistory(int iTurn) const; // Exposed to Python
+	int64_t getPowerHistory(int iTurn) const; // Exposed to Python
+	int64_t getCultureHistory(int iTurn) const; // Exposed to Python
+	int64_t getEspionageHistory(int iTurn) const; // Exposed to Python
+	int64_t getRevolutionStabilityHistory(int iTurn) const; // Exposed to Python
 
 	// Script data needs to be a narrow string for pickling in Python
 	std::string getScriptData() const; // Exposed to Python
@@ -1401,8 +1387,6 @@ public:
 
 	int doMultipleResearch(int iOverflow);
 
-	int processedNationalCulture() const;
-
 	void acquireFort(CvPlot* pPlot);
 
 	int getResourceConsumption(BonusTypes eBonus) const;
@@ -1593,7 +1577,6 @@ protected:
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
 	int* m_paiNationalGreatPeopleUnitRate;
-	int* m_paiUnitCombatClassDisplayCount;
 	int m_iMaxTradeRoutesAdjustment;
 	int m_iNationalHurryAngerModifier;
 	int m_iNationalEnemyWarWearinessModifier;
@@ -1767,8 +1750,7 @@ protected:
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
-	int m_iGold;
-	int m_iGreaterGold;
+	int64_t m_iGold;
 	int m_iGoldPerTurn;
 	int m_iAdvancedStartPoints;
 	int m_iGoldenAgeTurns;
@@ -1816,15 +1798,18 @@ protected:
 
 	int m_iNumNukeUnits;
 	int m_iNumOutsideUnits;
-	int m_iBaseFreeUnits;
-	int m_iBaseFreeMilitaryUnits;
-	int m_iFreeUnitsPopulationPercent;
-	int m_iFreeMilitaryUnitsPopulationPercent;
-	int m_iGoldPerUnit;
-	int m_iGoldPerMilitaryUnit;
-	int m_iExtraUnitCost;
+	int m_iBaseFreeUnitUpkeepCivilian;
+	int m_iBaseFreeUnitUpkeepMilitary;
+	int m_iFreeUnitUpkeepCivilianPopPercent;
+	int m_iFreeUnitUpkeepMilitaryPopPercent;
+	int m_iCivilianUnitUpkeepMod;
+	int m_iMilitaryUnitUpkeepMod;
+
+	int64_t m_iUnitUpkeepCivilian100;
+	int64_t m_iUnitUpkeepMilitary100;
+	int64_t m_iFinalUnitUpkeep;
+
 	int m_iNumMilitaryUnits;
-	int m_iNumUnitPercentCountForCostAdjustment;
 	int m_iHappyPerMilitaryUnit;
 	int m_iMilitaryFoodProductionCount;
 	int m_iConscriptCount;
@@ -1900,8 +1885,6 @@ protected:
 
 	bool m_bDisableHuman; // Set to true to disable isHuman() check
 
-	int m_iFreeUnitCountdown;
-
 	int m_iStabilityIndex;
 	int m_iStabilityIndexAverage;
 
@@ -1938,9 +1921,7 @@ protected:
 	PlayerTypes m_eParent;
 	TeamTypes m_eTeamType;
 
-	// Members for culture accumulation
-	int m_iCulture;
-	int m_iGreaterCulture;
+	int64_t m_iCulture;
 
 	int m_iUpgradeRoundCount;
 	int m_iSelectionRegroup;
@@ -2139,27 +2120,23 @@ public:
 	void changeTraitExtraCityDefense(int iChange);
 
 	void setHasTrait(TraitTypes eIndex, bool bNewValue);
-	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false);
-	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive);
+	bool canLearnTrait(TraitTypes eIndex, bool isSelectingNegative = false) const;
+	bool canUnlearnTrait(TraitTypes eTrait, bool bPositive) const;
 
 	int getLeaderHeadLevel() const;
 	void setLeaderHeadLevel(int iValue);
 	void changeLeaderHeadLevel(int iChange);
 
-	int getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq);
-	int getLeaderLevelupCultureToEarn(int& iGreaterCultureReq);
+	uint64_t getLeaderLevelupNextCultureTotal() const;
+	int64_t getLeaderLevelupCultureToEarn() const;
 
-	bool canLeaderPromote();
+	bool canLeaderPromote() const;
 	void doPromoteLeader();
 	void clearLeaderTraits();
 
 	int getTraitDisplayCount() const;
 	void setTraitDisplayCount(int iNewValue);
 	void changeTraitDisplayCount(int iChange);
-
-	int getUnitCombatClassDisplayCount(UnitTypes eIndex) const;
-	void setUnitCombatClassDisplayCount(UnitTypes eIndex, int iValue);
-	void changeUnitCombatClassDisplayCount(UnitTypes eIndex, int iChange);
 
 	int getNationalEspionageDefense() const;
 	void setNationalEspionageDefense(int iNewValue);
@@ -2355,7 +2332,7 @@ public:
 	void RecalculatePlotGroupHashes();
 	CvContractBroker& getContractBroker();
 
-	void addPlotDangerSource(CvPlot* pPlot, int iStrength);
+	void addPlotDangerSource(const CvPlot* pPlot, int iStrength);
 
 	void clearModifierTotals();
 	void recalculateModifiers();

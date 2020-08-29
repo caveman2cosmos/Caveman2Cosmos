@@ -1443,7 +1443,7 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	if (eTrigger == NO_EVENTTRIGGER)
 		return false;
 
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
 	if (kTrigger.getNumPlotsRequired() > 0)
 	{
@@ -4120,29 +4120,16 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	{
 		return FALSE;
 	}
-	// Super Forts begin *choke*
+	// Super Forts *choke*
 	const int iInvalidPlot = gDLL->getFAStarIFace()->GetInfo(finder);
-	if(iInvalidPlot > 0)
-	{
-		// 1 is subtracted because 1 was added earlier to avoid a conflict with index 0
-		if(pNewPlot == GC.getMap().plotByIndex((iInvalidPlot - 1)))
-		{
-			return FALSE;
-		}
-	}
-	// Super Forts end - Note to mergers: Make sure you also include the code from Better BTS AI below this
-
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD					12/12/08				jdog5000	*/
-/* 																			*/
-/* 	Bugfix																	*/
-/********************************************************************************/
-/* original BTS code
-	if (GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
+	if (iInvalidPlot > 0
+	// 1 is subtracted because 1 was added earlier to avoid a conflict with index 0
+	&& pNewPlot == GC.getMap().plotByIndex(iInvalidPlot - 1))
 	{
 		return FALSE;
 	}
-*/
+	// ! Super Forts
+
 	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	if (pFromPlot->area() != pNewPlot->area())
 	{
@@ -4150,25 +4137,16 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	}
 
 	// Don't count diagonal hops across land isthmus
-	if (pFromPlot->isWater() && pNewPlot->isWater())
+	if (pFromPlot->isWater() && pNewPlot->isWater()
+	&& !GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()
+	&& !GC.getMap().plot(node->m_iX, parent->m_iY)->isWater())
 	{
-		if (!(GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMap().plot(node->m_iX, parent->m_iY)->isWater()))
-		{
-			return FALSE;
-		}
+		return FALSE;
 	}
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
-
 	return TRUE;
 }
 
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD					02/02/09				jdog5000	*/
-/* 																			*/
-/* 																			*/
-/********************************************************************************/
+
 // Find paths that a team's units could follow without declaring war
 int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
@@ -4186,29 +4164,26 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 	}
 
 	// Don't count diagonal hops across land isthmus
-	if (pFromPlot->isWater() && pNewPlot->isWater())
+	if (pFromPlot->isWater() && pNewPlot->isWater()
+	&& !GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()
+	&& !GC.getMap().plot(node->m_iX, parent->m_iY)->isWater())
 	{
-		if (!(GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMap().plot(node->m_iX, parent->m_iY)->isWater()))
-		{
-			return FALSE;
-		}
+		return FALSE;
 	}
 
 	const TeamTypes ePlotTeam = pNewPlot->getTeam();
-	const std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
-	const TeamTypes eTeam = teamVec[0];
-	const TeamTypes eTargetTeam = teamVec[1];
-	const CvTeamAI& kTeam = GET_TEAM(eTeam);
 
 	if (ePlotTeam == NO_TEAM)
 	{
 		return TRUE;
 	}
+	const std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
 
-	if (ePlotTeam == eTargetTeam)
+	if (ePlotTeam == teamVec[1])
 	{
 		return TRUE;
 	}
+	const CvTeamAI& kTeam = GET_TEAM(teamVec[0]);
 
 	if (kTeam.isFriendlyTerritory(ePlotTeam))
 	{
@@ -4227,9 +4202,7 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 
 	return FALSE;
 }
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
+
 
 int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
@@ -4259,14 +4232,13 @@ int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* point
 
 	const PlayerTypes ePlayer = (PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder);
 
-	if (!(pNewPlot->isOwned()) || (pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam()))
+	if (!pNewPlot->isOwned() || pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam())
 	{
 		if (pNewPlot->getRouteType() == GET_PLAYER(ePlayer).getBestRoute(pNewPlot))
 		{
 			return TRUE;
 		}
 	}
-
 	return FALSE;
 }
 
@@ -4282,21 +4254,14 @@ int borderValid(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 
 	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
-	const PlayerTypes ePlayer = (PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder);
-
-	if (pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam())
+	if (pNewPlot->getTeam() == GET_PLAYER((PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder)).getTeam())
 	{
-		const bool isWater = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater();
-		if ( isWater )
+		if (GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater())
 		{
 			return pNewPlot->isWater() || pNewPlot->isActsAsCity();
 		}
-		else
-		{
-			return !pNewPlot->isWater();
-		}
+		return !pNewPlot->isWater();
 	}
-
 	return FALSE;
 }
 
@@ -4307,35 +4272,26 @@ int areaValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	{
 		return TRUE;
 	}
+	return GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() == GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() ? TRUE : FALSE;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-// original BTS code
-	return ((GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() == GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater()) ? TRUE : FALSE);
+/* BBAI TODO: Why doesn't this work to break water and ice into separate area?
 
-	// BBAI TODO: Why doesn't this work to break water and ice into separate area?
-/*
-	if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	if (GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater())
 	{
 		return FALSE;
 	}
 
 	// Ice blocks become their own area
-	if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() && GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	if (GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() && GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater())
 	{
-		if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isImpassable() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isImpassable() )
+		if (GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isImpassable() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isImpassable())
 		{
 			return FALSE;
 		}
 	}
 
 	return TRUE;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+*/
 }
 
 
@@ -4363,17 +4319,12 @@ int plotGroupValid(FAStarNode* parent, FAStarNode* node, int data, const void* p
 	const PlayerTypes ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
 	const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
 
-	if (pOldPlot->getPlotGroup(ePlayer) == pNewPlot->getPlotGroup(ePlayer))
+	if (pOldPlot->getPlotGroup(ePlayer) == pNewPlot->getPlotGroup(ePlayer)
+	&& pNewPlot->isTradeNetwork(eTeam)
+	&& pNewPlot->isTradeNetworkConnected(pOldPlot, eTeam))
 	{
-		if (pNewPlot->isTradeNetwork(eTeam))
-		{
-			if (pNewPlot->isTradeNetworkConnected(pOldPlot, eTeam))
-			{
-				return TRUE;
-			}
-		}
+		return TRUE;
 	}
-
 	return FALSE;
 }
 
@@ -4384,7 +4335,6 @@ int countRegion(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 	{
 		(*((int*)pointer))++;
 	}
-
 	return 1;
 }
 
@@ -4399,8 +4349,8 @@ int countPlotGroup(FAStarNode* parent, FAStarNode* node, int data, const void* p
 
 		pPlot->m_groupGenerationNumber = checkInfo->groupGenerationNumber;
 		checkInfo->hashInfo.allNodesHash ^= pPlot->getZobristContribution();
-		if ( pPlot->isCity() ||
-			 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
+
+		if (pPlot->isCity() || pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS)
 		{
 			checkInfo->hashInfo.resourceNodesHash ^= pPlot->getZobristContribution();
 		}
@@ -4412,31 +4362,13 @@ int countPlotGroup(FAStarNode* parent, FAStarNode* node, int data, const void* p
 
 int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack)
 {
-	int iReturn;	// holds the return value we will be calculating
-
-	// get the base value for the iReturn value
-	iReturn = iNumYieldTypes * GC.getDefineINT("MAX_YIELD_STACK");
-	// then add the offset to the return value
-	iReturn += iYieldStack;
-
-	// return the value we have calculated
-	return iReturn;
+	return iNumYieldTypes * GC.getDefineINT("MAX_YIELD_STACK") + iYieldStack;
 }
 
 
 bool isPickableName(const TCHAR* szName)
 {
-	if (szName)
-	{
-		int iLen = _tcslen(szName);
-
-		if (!_tcsicmp(&szName[iLen-6], "NOPICK"))
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return !szName || _tcsicmp(&szName[_tcslen(szName)-6], "NOPICK");
 }
 
 
@@ -4458,7 +4390,7 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 
 	for (iI = 0; iI < iNum; iI++)
 	{
-		const int iJ = (rand.get(iNum - iI, NULL) + iI);
+		const int iJ = iI + rand.get(iNum - iI, NULL);
 
 		if (iI != iJ)
 		{
@@ -4485,12 +4417,11 @@ int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, G
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed)
 {
-	int iTurnMonth;
 	//int iTurnCount;
 	//int iI;
 	CvDate date;
 
-	iTurnMonth = iStartYear * GC.getNumMonthInfos();
+	int iTurnMonth = iStartYear * GC.getNumMonthInfos();
 
 	switch (eCalendar)
 	{
@@ -4594,13 +4525,11 @@ void getActivityTypeString(CvWString& szString, ActivityTypes eActivityType)
 	case ACTIVITY_SLEEP: szString = L"ACTIVITY_SLEEP"; break;
 	case ACTIVITY_HEAL: szString = L"ACTIVITY_HEAL"; break;
 	case ACTIVITY_SENTRY: szString = L"ACTIVITY_SENTRY"; break;
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	case ACTIVITY_SENTRY_WHILE_HEAL: szString = L"ACTIVITY_SENTRY_WHILE_HEAL"; break;
 	case ACTIVITY_SENTRY_NAVAL_UNITS: szString = L"ACTIVITY_SENTRY_NAVAL_UNITS"; break;
 	case ACTIVITY_SENTRY_LAND_UNITS: szString = L"ACTIVITY_SENTRY_LAND_UNITS"; break;
 #endif
-// BUG - Sentry Actions - end
 	case ACTIVITY_INTERCEPT: szString = L"ACTIVITY_INTERCEPT"; break;
 	case ACTIVITY_MISSION: szString = L"ACTIVITY_MISSION"; break;
 	case ACTIVITY_PATROL: szString = L"ACTIVITY_PATROL";  break;
@@ -4617,11 +4546,9 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case NO_MISSION: szString = L"NO_MISSION"; break;
 
 	case MISSION_MOVE_TO: szString = L"MISSION_MOVE_TO"; break;
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	case MISSION_MOVE_TO_SENTRY: szString = L"MISSION_MOVE_TO_SENTRY"; break;
 #endif
-// BUG - Sentry Actions - end
 	case MISSION_ROUTE_TO: szString = L"MISSION_ROUTE_TO"; break;
 	case MISSION_MOVE_TO_UNIT: szString = L"MISSION_MOVE_TO_UNIT"; break;
 	case MISSION_SKIP: szString = L"MISSION_SKIP"; break;
@@ -4635,13 +4562,11 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_SEAPATROL: szString = L"MISSION_SEAPATROL"; break;
 	case MISSION_HEAL: szString = L"MISSION_HEAL"; break;
 	case MISSION_SENTRY: szString = L"MISSION_SENTRY"; break;
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	case MISSION_SENTRY_WHILE_HEAL: szString = L"MISSION_SENTRY_WHILE_HEAL"; break;
 	case MISSION_SENTRY_NAVAL_UNITS: szString = L"MISSION_SENTRY_NAVAL_UNITS"; break;
 	case MISSION_SENTRY_LAND_UNITS: szString = L"MISSION_SENTRY_LAND_UNITS"; break;
 #endif
-// BUG - Sentry Actions - end
 	case MISSION_AIRLIFT: szString = L"MISSION_AIRLIFT"; break;
 	case MISSION_NUKE: szString = L"MISSION_NUKE"; break;
 	case MISSION_RECON: szString = L"MISSION_RECON"; break;
@@ -4667,7 +4592,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_LEAD: szString = L"MISSION_LEAD"; break;
 	case MISSION_ESPIONAGE: szString = L"MISSION_ESPIONAGE"; break;
 	case MISSION_DIE_ANIMATION: szString = L"MISSION_DIE_ANIMATION"; break;
-
 	case MISSION_BEGIN_COMBAT: szString = L"MISSION_BEGIN_COMBAT"; break;
 	case MISSION_END_COMBAT: szString = L"MISSION_END_COMBAT"; break;
 	case MISSION_AIRSTRIKE: szString = L"MISSION_AIRSTRIKE"; break;
@@ -4678,11 +4602,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_DAMAGE: szString = L"MISSION_DAMAGE"; break;
 	case MISSION_MULTI_SELECT: szString = L"MISSION_MULTI_SELECT"; break;
 	case MISSION_MULTI_DESELECT: szString = L"MISSION_MULTI_DESELECT"; break;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	case MISSION_HURRY_FOOD: szString = L"MISSION_HURRY_FOOD"; break;
 	case MISSION_INQUISITION: szString = L"MISSION_INQUISITION"; break;
 	case MISSION_CLAIM_TERRITORY: szString = L"MISSION_CLAIM_TERRITORY"; break;
@@ -4769,17 +4688,9 @@ void getMissionAIString(CvWString& szString, MissionAITypes eMissionAI)
 	case MISSIONAI_ASSAULT: szString = L"MISSIONAI_ASSAULT"; break;
 	case MISSIONAI_CARRIER: szString = L"MISSIONAI_CARRIER"; break;
 	case MISSIONAI_PICKUP: szString = L"MISSIONAI_PICKUP"; break;
-/************************************************************************************************/
-/* Afforess                               12/7/09                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	case MISSIONAI_CLAIM_TERRITORY: szString = L"MISSIONAI_CLAIM_TERRITORY"; break;
 	case MISSIONAI_HURRY_FOOD: szString = L"MISSIONAI_HURRY_FOOD"; break;
 	case MISSIONAI_INQUISITION: szString = L"MISSIONAI_INQUISITION"; break;
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 	case MISSIONAI_CONTRACT: szString = L"MISSIONAI_CONTRACT"; break;
 	case MISSIONAI_CONTRACT_UNIT: szString = L"MISSIONAI_CONTRACT_UNIT"; break;
 	case MISSIONAI_DELIBERATE_KILL: szString = L"MISSIONAI_DELIBERATE_KILL"; break;
@@ -4871,78 +4782,25 @@ void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI)
 	}
 }
 
-// BUG - Unit Experience - start
-#include "CyArgsList.h"
-
 /*
  * Calculates the experience needed to reach the next level after the given level.
  */
-int calculateExperience(int iLevel, PlayerTypes ePlayer)
+int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer)
 {
-#ifdef NO_PYTHON_FOR_LEVEL_EXP
-	int iExperienceNeeded = iLevel*iLevel + 1;
+	int iThreshold = 99 + (iLevel*iLevel + 1) * (100 + GET_PLAYER(ePlayer).getLevelExperienceModifier());
 
-	iExperienceNeeded = (iExperienceNeeded*(100+GET_PLAYER(ePlayer).getLevelExperienceModifier()) + 99)/100;
 	if (GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
 	{
-		iExperienceNeeded *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
-		iExperienceNeeded /= 100;
+		iThreshold *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
+		iThreshold /= 100;
 	}
-	return iExperienceNeeded;
-#else
-	static	std::map<int,int>*	g_expNeededCache[MAX_PLAYERS];
-	static	int					g_cachedTurn = -1;
-	int							iI;
-
-	FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
-	FAssertMsg(iLevel > 0, "iLevel must be greater than zero");
-
-	//	Strictyly onyl need to cache once per game, but we cache on a different turn number
-	//	since this acts as an easy proxy to a reloaded game (which might be a different game)
-	if ( g_cachedTurn == -1 )
-	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			g_expNeededCache[iI] = NULL;
-		}
-	}
-
-	if ( g_expNeededCache[ePlayer] == NULL )
-	{
-		g_expNeededCache[ePlayer] = new std::map<int,int>();
-	}
-
-	if ( g_cachedTurn != GC.getGame().getGameTurn() )
-	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if ( g_expNeededCache[iI] != NULL )
-			{
-				g_expNeededCache[iI]->clear();
-			}
-		}
-
-		g_cachedTurn = GC.getGame().getGameTurn();
-	}
-
-	std::map<int,int>::const_iterator itr = g_expNeededCache[ePlayer]->find(iLevel);
-	if ( itr == g_expNeededCache[ePlayer]->end() )
-	{
-		int iExperienceNeeded = Cy::call<int>(PYGameModule, "getExperienceNeeded", Cy::Args() << iLevel << ePlayer);
-		g_expNeededCache[ePlayer]->insert(std::make_pair(iLevel, iExperienceNeeded));
-		return lExperienceNeeded;
-	}
-	else
-	{
-		return itr->second;
-	}
-#endif
+	return iThreshold / 100;
 }
 
 /*
  * Calculates the level for a unit with the given experience.
  */
-int calculateLevel(int iExperience, PlayerTypes ePlayer)
+int calculateLevel(const int iExperience, const PlayerTypes ePlayer)
 {
 	FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
 
@@ -4954,7 +4812,7 @@ int calculateLevel(int iExperience, PlayerTypes ePlayer)
 	int iLevel = 1;
 	while (true)
 	{
-		const int iNextLevelExperience = calculateExperience(iLevel, ePlayer);
+		const int iNextLevelExperience = calcBaseExpNeeded(iLevel, ePlayer);
 		if (iNextLevelExperience > iExperience)
 		{
 			break;
@@ -4965,15 +4823,9 @@ int calculateLevel(int iExperience, PlayerTypes ePlayer)
 			break;
 		}
 	}
-
 	return iLevel;
 }
-// BUG - Unit Experience - end
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 
 DirectionTypes getOppositeDirection(DirectionTypes eDirection)
 {
@@ -5023,9 +4875,7 @@ bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherD
 	}
 	return false;
 }
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
 
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength()
@@ -5055,33 +4905,27 @@ void CvChecksum::add(byte b)
 	sum = (sum << 8) + ((sum >> 24) ^ cipher);
 }
 
-void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
-		InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
-		int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
+#include "CyArgsList.h"
+
+void AddDLLMessage(
+	PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound,
+	InterfaceMessageTypes eType, LPCSTR pszIcon, ColorTypes eFlashColor,
+	int iFlashX, int iFlashY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
 {
 	OutputDebugString(CvString::format("DLLMessage: %S\n", szString.c_str()).c_str());
-
-	if (pszIcon == NULL)
-	{
-		pszIcon = "";
-	}
-	if (pszSound == NULL)
-	{
-		pszSound = "";
-	}
 
 	Cy::call(PYScreensModule, "sendMessage", Cy::Args()
 		<< szString
 		<< ePlayer
 		<< iLength
-		<< pszIcon
+		<< (pszIcon != NULL ? pszIcon : "")
 		<< eFlashColor
 		<< iFlashX
 		<< iFlashY
 		<< bShowOffScreenArrows
 		<< bShowOnScreenArrows
 		<< eType
-		<< pszSound
+		<< (pszSound != NULL ? pszSound : "")
 		<< bForce
 	);
 }

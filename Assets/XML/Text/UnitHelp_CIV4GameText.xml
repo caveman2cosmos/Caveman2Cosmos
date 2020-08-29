@@ -35,6 +35,14 @@
 		<Spanish>, %d1 de alcance</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
+		<English>[ICON_BULLET]Military Branch</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
+		<English>[ICON_BULLET]Civilian Branch</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
 		<English>[ICON_BULLET]Breakdown Chance: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% chance de démolir les défenses de la ville à chaque round d'attaque.</French>
@@ -150,11 +158,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FORTIFIED</Tag>
-		<English>Fortified: %d1_Mod%%</English>
-		<French>Bonus de retranchement : %d1_Mod%%</French>
-		<German>Verschanzungsbonus: %d1_Mod%%</German>
-		<Italian>Bonus per la fortificazione: %d1_Mod%%</Italian>
-		<Spanish>Bonif. a fortif.: %d1_Mod%%</Spanish>
+		<English>[ICON_BULLET]Fortified: %d1%%</English>
+		<French>[ICON_BULLET]Bonus de retranchement : %d1%%</French>
+		<German>[ICON_BULLET]Verschanzungsbonus: %d1%%</German>
+		<Italian>[ICON_BULLET]Bonus per la fortificazione: %d1%%</Italian>
+		<Spanish>[ICON_BULLET]Bonif. a fortif.: %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_IMMOBILE</Tag>
@@ -266,6 +274,14 @@
 		<English>[ICON_BULLET]%d1_Change Stealth Strikes</English>
 		<French>[ICON_BULLET]%d1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
+		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>
+		<English>[ICON_BULLET]Upkeep change: %d1 [ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>

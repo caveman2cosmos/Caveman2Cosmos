@@ -69,9 +69,6 @@ class PyPlayer:
 	def getTotalMaintenance(self):
 		return self.player.getTotalMaintenance()
 
-	def calculateUnitCost(self):
-		return self.player.calculateUnitCost()
-
 	def calculateUnitSupply(self):
 		return self.player.calculateUnitSupply()
 
@@ -132,9 +129,6 @@ class PyPlayer:
 
 	def calculateInflatedCosts(self):
 		return self.player.calculateInflatedCosts()
-
-	def calculatePreInflatedCosts(self):
-		return self.player.calculatePreInflatedCosts()
 
 	def calculateGoldRate(self):
 		return self.player.calculateGoldRate()

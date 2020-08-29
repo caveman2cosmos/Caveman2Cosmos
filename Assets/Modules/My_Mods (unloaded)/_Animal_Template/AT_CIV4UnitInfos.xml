@@ -130,7 +130,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>

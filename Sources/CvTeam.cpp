@@ -2665,20 +2665,20 @@ int CvTeam::getHasCorporationCount(CorporationTypes eCorporation) const
 
 int CvTeam::processedTeamCulture() const
 {
-	const unsigned long long iCount = countTotalCulture();
+	const uint64_t iCount = countTotalCulture();
 	return (iCount < MAX_INT) ? (int)iCount : MAX_INT;
 }
 
 
-unsigned long long CvTeam::countTotalCulture() const
+uint64_t CvTeam::countTotalCulture() const
 {
-	unsigned long long iCount = 0;
+	uint64_t iCount = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 		{
-			iCount += GET_PLAYER((PlayerTypes)iI).countTotalCulture();
+			iCount += GET_PLAYER((PlayerTypes)iI).getCulture();
 		}
 	}
 
@@ -2829,26 +2829,23 @@ int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) c
 }
 
 
+// This function needs to be converted to return an uint64_t.
 int CvTeam::getResearchCost(TechTypes eTech) const
 {
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
-	//This whole function needs to be converted to an unsigned long long.  That's quite a task but should be possible and if it doesn, we should be able to make it to the end of the game with the base modified even at the extremest points.
-	int iInitialCost = GC.getTechInfo(eTech).getResearchCost();
+	const int iInitialCost = GC.getTechInfo(eTech).getResearchCost();
 	if (iInitialCost < 0)
 	{
 		return -1;
 	}
-
-	unsigned long long iCost = (unsigned long long)iInitialCost;
-
-	iCost *= 100;
+	uint64_t iCost = 100 * iInitialCost;
 
 	int iBeelineStingsTechCostModifier = 0;
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
-		int iTechEra = GC.getTechInfo(eTech).getEra();
-		int iPlayerEra = MAXINT;
+		const int iTechEra = GC.getTechInfo(eTech).getEra();
+		int iPlayerEra = MAX_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -2857,77 +2854,59 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				break;
 			}
 		}
-		FAssertMsg(iPlayerEra != MAXINT, "No player found on team!");
+		FAssertMsg(iPlayerEra != MAX_INT, "No player found on team!");
 
 		if (iTechEra < iPlayerEra)
 		{
 			for (int iI = 0; iI < GC.getNumEraInfos(); iI++)
 			{
-				int iEvalEra = iI;
-				EraTypes eEvalEra = (EraTypes)iI;
-				if (iEvalEra >= iTechEra && iEvalEra < iPlayerEra)
+				if (iI >= iTechEra && iI < iPlayerEra)
 				{
-					iBeelineStingsTechCostModifier += GC.getEraInfo(eEvalEra).getBeelineStingsTechCostModifier();
+					iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
 					//just need to add the tag iBeelineStingsModifier to Era Infos.
 				}
-				else if (iEvalEra >= iPlayerEra)
+				else if (iI >= iPlayerEra)
 				{
 					break;
 				}
 			}
 		}
 	}
-
-	int iModifier = GC.getTECH_COST_MODIFIER();
-	iCost *= iModifier;
+	iCost *= GC.getTECH_COST_MODIFIER();
 	iCost /= 100;
 
-	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getHandicapInfo(getHandicapType()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
-	iCost *= iModifier;
+	iCost *= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
 	iCost /= 100;
 
-	iModifier = iBeelineStingsTechCostModifier + 100;
-	iCost *= iModifier;
+	iCost *= 100 + iBeelineStingsTechCostModifier;
 	iCost /= 100;
 
-	iModifier = std::max(0, (GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * getNumMembers()));
-	iCost *= iModifier;
+	iCost *= std::max(0, GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * getNumMembers());
 	iCost /= 100;
 
 	if (!isHuman() && !isNPC())
 	{
-		iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
-		iCost *= iModifier;
+		iCost *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
 		iCost /= 100;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
 	{
-		iModifier = GC.getUPSCALED_RESEARCH_COST_MODIFIER() + 100;
-		iCost *= iModifier;
+		iCost *= 100 + GC.getUPSCALED_RESEARCH_COST_MODIFIER();
 		iCost /= 100;
 	}
-
 	iCost /= 100;
 
-	int iFinalCost = MAX_INT;
-	if (iCost < MAX_INT)
-	{
-		iFinalCost = (int)iCost;
-	}
-	return std::max(1, iFinalCost);
+	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
 }
 
 
@@ -5600,16 +5579,15 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-				if (pLoopPlot->getBonusType() != NO_BONUS)
+				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
-					if (pLoopPlot->getTeam() == getID())
+					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
+
+					if(bonus.getTechReveal() == eIndex
+					|| bonus.getTechCityTrade() == eIndex
+					|| bonus.getTechObsolete() == eIndex)
 					{
-						if ((GC.getBonusInfo(pLoopPlot->getBonusType()).getTechReveal() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechCityTrade() == eIndex) ||
-								(GC.getBonusInfo(pLoopPlot->getBonusType()).getTechObsolete() == eIndex))
-						{
-							pLoopPlot->updatePlotGroupBonus(false);
-						}
+						pLoopPlot->updatePlotGroupBonus(false);
 					}
 				}
 			}
@@ -5620,22 +5598,21 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-				if (pLoopPlot->getBonusType() != NO_BONUS)
+				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
-					if (pLoopPlot->getTeam() == getID())
+					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
+
+					if(bonus.getTechReveal() == eIndex
+					|| bonus.getTechCityTrade() == eIndex
+					|| bonus.getTechObsolete() == eIndex)
 					{
-						if ((GC.getBonusInfo(pLoopPlot->getBonusType()).getTechReveal() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechCityTrade() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechObsolete() == eIndex))
-						{
-							pLoopPlot->updatePlotGroupBonus(true);
-						}
+						pLoopPlot->updatePlotGroupBonus(true);
 					}
 				}
 			}
 		}
 
-		processTech(eIndex, ((bNewValue) ? 1 : -1), bAnnounce);
+		processTech(eIndex, bNewValue ? 1 : -1, bAnnounce);
 
 		if (isHasTech(eIndex))
 		{
@@ -6216,7 +6193,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		changeMapTradingCount(iChange);
 	}
 
-	CvTechInfo& kTech = GC.getTechInfo(eTech);
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	if (kTech.isCanPassPeaks())
 	{
 		changeCanPassPeaksCount(iChange);
@@ -7804,12 +7781,11 @@ void CvTeam::changeCorporationMaintenanceModifier(int iChange)
 	}
 }
 
-int CvTeam::getTotalVictoryScore() const
+int64_t CvTeam::getTotalVictoryScore() const
 {
-	int iL;
-	int iTotalVictoryScore = 0;
+	int64_t iTotalVictoryScore = 0;
 
-	int globalCulture = 0;
+	int64_t globalCulture = 0;
 	int globalThreeCityCulture = 0;
 	int globalPopulation = 0;
 	int globalWonderScore = 0;
@@ -7820,12 +7796,8 @@ int CvTeam::getTotalVictoryScore() const
 	int totalTeamReligion = 0;
 	int totalTeamLegendaryCities = 0;
 
-	long globalPowerHistory =0;
-	long teamPowerHistory =0;
-
-	long tempPower =0;
-
-	int globalLand = GC.getMap().getLandPlots();
+	int64_t globalPowerHistory = 0;
+	int64_t teamPowerHistory = 0;
 
 	for (int iK = 0; iK < GC.getNumBuildingInfos(); iK++)
 	{
@@ -7861,7 +7833,7 @@ int CvTeam::getTotalVictoryScore() const
 		{
 			//Calculate global totals while looping through
 
-			globalCulture += GET_PLAYER((PlayerTypes)iI).processedNationalCulture();
+			globalCulture += GET_PLAYER((PlayerTypes)iI).getCulture();
 			globalPopulation += GET_PLAYER((PlayerTypes)iI).getTotalPopulation();
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -7878,8 +7850,8 @@ int CvTeam::getTotalVictoryScore() const
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			//Calculate global totals while looping through
-			tempPower = 0;
-			for (iL = 0; iL <= GC.getGame().getGameTurn(); iL++)
+			int64_t tempPower = 0;
+			for (int iL = 0; iL <= GC.getGame().getGameTurn(); iL++)
 			{
 				tempPower += GET_PLAYER((PlayerTypes)iI).getPowerHistory(iL);
 			}
@@ -7913,34 +7885,35 @@ int CvTeam::getTotalVictoryScore() const
 	// Add the WonderScore component
 	if (globalWonderScore > 0)
 	{
-		iTotalVictoryScore += int(teamWonderScore * 100 / globalWonderScore);
+		iTotalVictoryScore += teamWonderScore * 100 / globalWonderScore;
 	}
 
 	// Add the population score component
 	if (globalPopulation > 0)
 	{
-		iTotalVictoryScore += int(getTotalPopulation() * 100 / globalPopulation);
+		iTotalVictoryScore += getTotalPopulation() * 100 / globalPopulation;
 	}
 
 	// Add the land score component
+	const int globalLand = GC.getMap().getLandPlots();
+
 	if (globalLand > 0)
 	{
-		iTotalVictoryScore += int(getTotalLand() * 100 / globalLand);
+		iTotalVictoryScore += getTotalLand() * 100 / globalLand;
 	}
 
 	// Add the culture score component
 	if (globalCulture > 0)
 	{
-		unsigned long long iTotalCulture;
-		iTotalCulture = countTotalCulture();
+		uint64_t iTotalCulture = countTotalCulture();
 
 		if ( iTotalCulture > MAX_INT/100 )
 		{
-			iTotalVictoryScore += int(countTotalCulture()/(globalCulture/100));
+			iTotalVictoryScore += countTotalCulture()/(globalCulture/100);
 		}
 		else
 		{
-			iTotalVictoryScore += int(countTotalCulture() * 100 / globalCulture);
+			iTotalVictoryScore += countTotalCulture() * 100 / globalCulture;
 		}
 	}
 

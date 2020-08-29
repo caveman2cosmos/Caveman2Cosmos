@@ -96,7 +96,6 @@ public:
 	int getCurrentInflationCostModifier();
 	int getEquilibriumInflationCostModifier();
 
-	int countTotalCulture();
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
@@ -161,14 +160,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	int calculateUnitCost();
+	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
-	int calculatePreInflatedCosts();
+	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int calculateInflatedCosts();
-
-	int getFreeUnitCountdown();
-	void setFreeUnitCountdown( int iValue );
+	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -225,15 +221,10 @@ public:
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	int64_t getGold() const;
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
-
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);
@@ -311,14 +302,7 @@ public:
 
 	int getNumNukeUnits();
 	int getNumOutsideUnits();
-	int getBaseFreeUnits();
-	int getBaseFreeMilitaryUnits();
 
-	int getFreeUnitsPopulationPercent();
-	int getFreeMilitaryUnitsPopulationPercent();
-	int getGoldPerUnit();
-	int getGoldPerMilitaryUnit();
-	int getExtraUnitCost();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();
@@ -337,6 +321,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
@@ -558,15 +543,14 @@ public:
 
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 
-	int getScoreHistory(int iTurn) const;
-	int getEconomyHistory(int iTurn) const;
-	int getIndustryHistory(int iTurn) const;
-	int getAgricultureHistory(int iTurn) const;
-	int getPowerHistory(int iTurn) const;
-	int getCultureHistory(int iTurn) const;
-	int getEspionageHistory(int iTurn) const;
-
-	int getRevolutionStabilityHistory(int iTurn) const;
+	int64_t getScoreHistory(int iTurn) const;
+	int64_t getEconomyHistory(int iTurn) const;
+	int64_t getIndustryHistory(int iTurn) const;
+	int64_t getAgricultureHistory(int iTurn) const;
+	int64_t getPowerHistory(int iTurn) const;
+	int64_t getCultureHistory(int iTurn) const;
+	int64_t getEspionageHistory(int iTurn) const;
+	int64_t getRevolutionStabilityHistory(int iTurn) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -613,9 +597,9 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
 
-	int getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
+	int64_t getCulture() const;
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties();
 

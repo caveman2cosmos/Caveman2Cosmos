@@ -840,21 +840,12 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		iValue += ((getMilitaryProductionModifier() * iExperience * 10) / 100);
 	}
 
-	/************************************************************************************************/
-	/* Specialists Enhancements, by Supercheese 10/12/09                                            */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getHealthPercent() / 100;
 	int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getHappinessPercent() / 100;
 	int iHappinessLevel = happyLevel() - unhappyLevel(1) + getEspionageHappinessCounter();
 	int iHealthLevel = goodHealth() - badHealth(/*bNoAngry*/ false, std::max(0, (iHappinessLevel + 1) / 2)) + getEspionageHealthCounter();
 
-	int iPopulationExponent = (getPopulation() - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	if (iSpecialistHealth != 0)
 	{
@@ -865,11 +856,8 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	{
 		iValue += (happynessValue(iSpecialistHappiness, iHappinessLevel, iHealthLevel) * 2);
 	}
-	/************************************************************************************************/
-	/* Specialists Enhancements                          END                                        */
-	/************************************************************************************************/
 
-		//	Koshling - evaluate properties
+	//	Koshling - evaluate properties
 	int iPropertyValue = 0;
 
 	const CvPropertyManipulators* pMani = GC.getSpecialistInfo(eSpecialist).getPropertyManipulators();
@@ -1102,7 +1090,7 @@ void CvCityAI::AI_chooseProduction()
 	bool bGetBetterUnits = kPlayer.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
 	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 
-	int iUnitCostPercentage = (kPlayer.calculateUnitCost() * 100) / std::max(1, kPlayer.calculatePreInflatedCosts());
+	int iUnitCostPercentage = static_cast<int>(kPlayer.getFinalUnitUpkeep() * 100 / std::max<int64_t>(1, kPlayer.calculatePreInflatedCosts()));
 	int iWaterPercent = AI_calculateWaterWorldPercent();
 
 	int iBuildUnitProb = AI_buildUnitProb();
@@ -4213,8 +4201,8 @@ void CvCityAI::AI_chooseProduction()
 	//	Set up weights 0-100 for each commerce type to weight the choice (gold weigth can actuially go higher than
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally
 	//	gone for gold earlier in this choice)
-	int commerceWeights[NUM_COMMERCE_TYPES];
-	commerceWeights[COMMERCE_GOLD] = std::max(0,100-(GET_PLAYER(getOwner()).getEffectiveGold() - GET_PLAYER(getOwner()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwner()).AI_goldTarget()));
+	int64_t commerceWeights[NUM_COMMERCE_TYPES];
+	commerceWeights[COMMERCE_GOLD] = std::max<int64_t>(0,100-(GET_PLAYER(getOwner()).getGold() - GET_PLAYER(getOwner()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwner()).AI_goldTarget()));
 	if (isHuman() && !AI_isEmphasizeCommerce(COMMERCE_GOLD))
 	{
 		commerceWeights[COMMERCE_GOLD] = 0;
@@ -4361,27 +4349,25 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 				}
 			}
 
-			if ((iHasMetCount > 0) && bWarPossible)
+			if (iHasMetCount > 0 && bWarPossible
+			&& (bLandWar || bAssault || !bFinancialTrouble || GET_PLAYER(getOwner()).getFinalUnitUpkeep() == 0))
 			{
-				if (bLandWar || bAssault || !bFinancialTrouble || (GET_PLAYER(getOwner()).calculateUnitCost() == 0))
+				aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_ATTACK_CITY] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 7 : 15)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_COLLATERAL] += ((iMilitaryWeight / ((bDefense) ? 8 : 14)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_PILLAGE] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 10 : 19)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_RESERVE] += ((iMilitaryWeight / ((bLandWar) ? 12 : 17)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_COUNTER] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+				aiUnitAIVal[UNITAI_PARADROP] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 4 : 8)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
+
+				aiUnitAIVal[UNITAI_ATTACK_AIR] += (GET_PLAYER(getOwner()).getNumCities() + 1);
+
+				if (pWaterArea != NULL)
 				{
-					aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_ATTACK_CITY] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 7 : 15)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_COLLATERAL] += ((iMilitaryWeight / ((bDefense) ? 8 : 14)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_PILLAGE] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 10 : 19)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_RESERVE] += ((iMilitaryWeight / ((bLandWar) ? 12 : 17)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_COUNTER] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-					aiUnitAIVal[UNITAI_PARADROP] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 4 : 8)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
-
-					aiUnitAIVal[UNITAI_ATTACK_AIR] += (GET_PLAYER(getOwner()).getNumCities() + 1);
-
-					if (pWaterArea != NULL)
+					if ((GET_PLAYER(getOwner()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
 					{
-						if ((GET_PLAYER(getOwner()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
-						{
-							aiUnitAIVal[UNITAI_ATTACK_SEA] += std::min((pWaterArea->getNumTiles() / 100), ((((iCoastalCities * 2) + (iMilitaryWeight / 10)) / ((bAssault) ? 5 : 7)) + ((bPrimaryArea) ? 1 : 0)));
-							aiUnitAIVal[UNITAI_RESERVE_SEA] += std::min((pWaterArea->getNumTiles() / 150), ((((iCoastalCities * 2) + (iMilitaryWeight / 11)) / 8) + ((bPrimaryArea) ? 1 : 0)));
-						}
+						aiUnitAIVal[UNITAI_ATTACK_SEA] += std::min((pWaterArea->getNumTiles() / 100), ((((iCoastalCities * 2) + (iMilitaryWeight / 10)) / ((bAssault) ? 5 : 7)) + ((bPrimaryArea) ? 1 : 0)));
+						aiUnitAIVal[UNITAI_RESERVE_SEA] += std::min((pWaterArea->getNumTiles() / 150), ((((iCoastalCities * 2) + (iMilitaryWeight / 11)) / 8) + ((bPrimaryArea) ? 1 : 0)));
 					}
 				}
 			}
@@ -4806,8 +4792,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	// A couple of shortcuts to make the code more legible (probably the optimier inlines them all but better safe than sorry)
 	CvPlayerAI& player = GET_PLAYER(getOwner());
 
-	bool bAreaAlone = player.AI_isAreaAlone(area());
-	int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
+	const bool bAreaAlone = player.AI_isAreaAlone(area());
+	const int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
 
 	for (std::vector<BuildingTypes>::const_iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
 	{
@@ -4819,37 +4805,33 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		if (
 			// We are not exceeding max buildings
 			getNumBuilding(building) < GC.getCITY_MAX_NUM_BUILDINGS()
-			&&
-			(
-				// Building is not a wonder
-				!isLimitedWonder(building)
-				||
-				// Or we are allowed to build a wonder
-				// i.e. Production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
-				(!isProductionAutomated() && (iFocusFlags == 0 || (iFocusFlags & BUILDINGFOCUS_WONDEROK) || (iFocusFlags & BUILDINGFOCUS_WORLDWONDER)))
+		&&	(
+				!isLimitedWonder(building) // Building is not a wonder
+			|| ( // Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
+					!isProductionAutomated()
+				&&	(
+						iFocusFlags == 0
+					||	(iFocusFlags & BUILDINGFOCUS_WONDEROK)
+					||	(iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
+					)
+				)
 			)
-			&&
-			// adviser is not one we are ignoring
-			(eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
-			&&
-			// We can actually build the building
-			canConstruct(building)
-			&&
-			(
-				// Automated production doesn't look at buildings with prerequisites?
-				!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0
-			)
+		// adviser is not one we are ignoring
+		&& (eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
+		// We can actually build the building
+		&& canConstruct(building)
+		// Automated production doesn't look at buildings with prerequisites?
+		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0)
 		)
 		{
+			// Toffer - ToDo - Change iValue type to int64_t,
+			//	or reduce scoring as it gets dangerously close to overflowing as it is.
 			int iValue = 0;
 
-			if (
-				!(iFocusFlags & BUILDINGFOCUS_PROPERTY)
-				||
-				// If we want to build a building that influences a property (crime/pollution/tourism etc.) then
-				// invalidate the building if it doesn't influence the property we are interested in
-				AI_buildingInfluencesProperty(this, buildingInfo, eProperty)
-				)
+			if (!(iFocusFlags & BUILDINGFOCUS_PROPERTY)
+			// If we want to build a building that influences a property (crime/pollution/tourism etc.) then
+			// invalidate the building if it doesn't influence the property we are interested in
+			|| AI_buildingInfluencesProperty(this, buildingInfo, eProperty))
 			{
 				iValue = AI_buildingValueThreshold(building, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
 
@@ -4878,10 +4860,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					{
 						const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iJ);
 						if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(building)
-							&&
-							// Only care if we actually have the building
-							getNumBuilding(eJLoopBuilding) > 0
-							)
+						// Only care if we actually have the building
+						&& getNumBuilding(eJLoopBuilding) > 0)
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
@@ -4946,9 +4926,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// full-filled some of our criteria and is worth evaluating further
 			if (iValue > 0)
 			{
+				FAssert((MAX_INT / 100) >= iValue);
 				// If its a wonder and this city is rated high for production relative to our other cities, then we will bump up the score
-				if (isWorldWonder(building) &&
-					iProductionRank <= std::min(3, ((player.getNumCities() + 2) / 3)))
+				if (isWorldWonder(building) && iProductionRank <= std::min(3, (player.getNumCities() + 2) / 3))
 				{
 					int wonderScore = bAsync ?
 						GC.getASyncRand().get(player.getWonderConstructRand(), "Wonder Construction Rand ASYNC")
@@ -4965,7 +4945,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				}
 
 				// Add a general random factor between 100% to 125%
-				iValue *= bAsync ?
+				iValue *= bAsync
+					?
 					(GC.getASyncRand().get(25, "AI Best Building ASYNC") + 100)
 					:
 					(GC.getGame().getSorenRandNum(25, "AI Best Building") + 100);
@@ -4975,30 +4956,24 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue += getBuildingProduction(building);
 
 				// Factor in how many turns are left to complete this building
-				int iTurnsLeft = getProductionTurnsLeft(building, 0);
+				const int iTurnsLeft = getProductionTurnsLeft(building, 0);
 
 				// Apply final checks based on how many turns to build
-				if (
-					(iMaxTurns <= 0)
-					||
-					(iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()))
-					||
-					AI_canRushBuildingConstruction(building)
-					)
+				if (iMaxTurns <= 0
+				|| iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent())
+				|| AI_canRushBuildingConstruction(building))
 				{
-					FAssert((MAX_INT / 1000) > iValue);
-					iValue *= 1000;
+					FAssert(MAX_INT / 100 >= iValue);
 					// Adjust the score based on the turns to complete the building, more turns means lower score
-					iValue /= std::max(1, iTurnsLeft + 3);
 					// As we got this far we definitely consider this building a candidate so we should give it a score of at least 1
-					iValue = std::max(1, iValue);
+					iValue = std::max(1, iValue * 100 / (iTurnsLeft + 3));
+
 					// Add to our list of potential buildings to return later
 					scoredBuildings.push_back(ScoredBuilding(building, iValue));
 				}
 			}
 		}
 	}
-
 	// Sort from highest score to lowest. Need to reverse the order of the sort because default sort is ascending.
 	std::sort(scoredBuildings.rbegin(), scoredBuildings.rend());
 
@@ -5128,11 +5103,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	int iBaseHappinessLevel = happyLevel() - unhappyLevel() + getEspionageHappinessCounter();
 	int iBaseHealthLevel = goodHealth() - badHealth() + getEspionageHealthCounter();
 
-	int iPopulationExponent = getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	int iAngerPercent =	getHurryPercentAnger()
 		+ getConscriptPercentAnger()
@@ -5144,10 +5115,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	bool bShrinksWithPower = false;
 	// Allow a bit of shrinking:
 	// Population is expendable if angry, working a bad tile, or running a not-so-good specialist
-	int iAllowedShrinkRate = (iConsumptionPerPopulationBase * (0
+	int iAllowedShrinkRate = (getFoodConsumedPerPopulation100() * (0
 		+ std::max(0, -iBaseHappinessLevel - getPopulation() * iAngerPercent / GC.getPERCENT_ANGER_DIVISOR())
 		+ std::min(1, std::max(0, getWorkingPopulation() - AI_countGoodTiles(true, false, 50)))
-		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 10;
+		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 100;
 
 	if (iUnhealthyPopulationFromBuilding > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuilding ))
 	{
@@ -7134,16 +7105,16 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 	return iValue;
 }
 
-ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int* commerceWeights) const
+ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
-	int iBestValue = 0;
+	int64_t iBestValue = 0;
 	ProcessTypes eBestProcess = NO_PROCESS;
 
 	for (int iI = 0; iI < GC.getNumProcessInfos(); iI++)
 	{
 		if (canMaintain((ProcessTypes)iI))
 		{
-			const int iValue = AI_processValue((ProcessTypes)iI, eCommerceType, commerceWeights);
+			const int64_t iValue = AI_processValue((ProcessTypes)iI, eCommerceType, commerceWeights);
 
 			if (iValue > iBestValue)
 			{
@@ -7156,10 +7127,9 @@ ProcessTypes CvCityAI::AI_bestProcess(CommerceTypes eCommerceType, int* commerce
 	return eBestProcess;
 }
 
-int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int* commerceWeights) const
+int64_t CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType, int64_t* commerceWeights) const
 {
-
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
@@ -7184,7 +7154,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 	bool bValid = (eCommerceType == NO_COMMERCE);
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		int iTempValue = GC.getProcessInfo(eProcess).getProductionToCommerceModifier((CommerceTypes)iI);
+		int64_t iTempValue = GC.getProcessInfo(eProcess).getProductionToCommerceModifier((CommerceTypes)iI);
 		if (!bValid && ((CommerceTypes)iI == eCommerceType) && (iTempValue > 0))
 		{
 			bValid = true;
@@ -8584,7 +8554,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 		iExtraFoodForGrowth++;
 	}
 
-	const int iFoodDifference = iFoodTotal - iExtraFoodForGrowth - iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION();
+	const int iFoodDifference = iFoodTotal - iExtraFoodForGrowth - iTargetSize * getFoodConsumedPerPopulation100();
 
 	iDesiredFoodChange = -iFoodDifference + std::max(0, badHealth() - goodHealth());
 	if (iDesiredFoodChange > 3 && iTargetSize > getPopulation())
@@ -8620,8 +8590,8 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	}
 
 	const int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-	const int iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
-	const int iRatio = 100 * iNetExpenses / std::max(1, iNetCommerce);
+	const int64_t iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
+	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
 
 	if (iRatio > 40)
 	{
@@ -8893,9 +8863,9 @@ void CvCityAI::AI_updateBestBuild()
 {
 	PROFILE_FUNC();
 
-	//	This is VERY expensive to update, and is pretty accurate from
-	//	turn to turn except when suignificant things change (when we will mark it stale)
-	if ( !m_bestBuildValuesStale )
+	// This is VERY expensive to update, and is pretty accurate from
+	// turn to turn except when suignificant things change (when we will mark it stale)
+	if (!m_bestBuildValuesStale)
 	{
 		OutputDebugString(CvString::format("City %S skips re-evaluation of build values\n", getName().GetCString()).c_str());
 		return;
@@ -8912,22 +8882,15 @@ void CvCityAI::AI_updateBestBuild()
 	int iHillFoodDeficit = 0;
 	int iFoodTotal = GC.getYieldInfo(YIELD_FOOD).getMinCity();
 	int iProductionTotal = GC.getYieldInfo(YIELD_PRODUCTION).getMinCity();
-	int iFoodMultiplier = 100;
-	int iCommerceMultiplier = 100;
-	int iProductionMultiplier = 100;
 	int iWorkerCount = 0;
-
 	int iWorkableFood = 0;
 	int iWorkableFoodPlotCount = 0;
-
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-
 	int iGoodTileCount = 0;
-
-	int iSpecialistCount = getSpecialistPopulation() - totalFreeSpecialists();
-
 	int iHappyAdjust = 0;
 	int iHealthAdjust = 0;
+	const int iFoodPerPop = GC.getFOOD_CONSUMPTION_PER_POPULATION();
+
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
@@ -8937,17 +8900,12 @@ void CvCityAI::AI_updateBestBuild()
 
 			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
-				int iCount = (kPlayer.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD));
+				const int iCount = kPlayer.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD);
 				iWorkerCount += iCount;
 
 				bool bUseBaseValue = true;
 				//If the tile has a BestBuild and is being improved, then use the BestBuild
 				//determine if the tile is being improved.
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
-/*                                                                                              */
-/* Worker AI, City AI                                                                           */
-/************************************************************************************************/
 				if (iCount > 0)
 				{
 					BuildTypes eBuild = NO_BUILD;
@@ -8966,34 +8924,32 @@ void CvCityAI::AI_updateBestBuild()
 						).get_value_or(NO_BUILD);
 					}
 
-					if( eBuild != NO_BUILD )
+					if (eBuild != NO_BUILD)
 					{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-						ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+						const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 						if (eImprovement != NO_IMPROVEMENT)
 						{
-							bool bIgnoreFeature = false;
-							if (pLoopPlot->getFeatureType() != NO_FEATURE)
-							{
-								if (GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType()))
-								{
-									bIgnoreFeature = true;
-								}
-							}
-
+							const bool bIgnoreFeature =
+							(
+								pLoopPlot->getFeatureType() != NO_FEATURE
+								&&
+								GC.getBuildInfo(eBuild).isFeatureRemove(pLoopPlot->getFeatureType())
+							);
 							iHappyAdjust += GC.getImprovementInfo(eImprovement).getHappiness();
+
 							if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 							{
 								iHappyAdjust -= GC.getImprovementInfo(pLoopPlot->getImprovementType()).getHappiness();
 							}
-
-
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
+								aiFinalYields[iJ] =
+								(
+									pLoopPlot->calculateNatureYield((YieldTypes)iJ, getTeam(), bIgnoreFeature)
+									+
+									pLoopPlot->calculateImprovementYieldChange(eImprovement, (YieldTypes)iJ, getOwner(), false)
+								);
 							}
 						}
 					}
@@ -9013,30 +8969,21 @@ void CvCityAI::AI_updateBestBuild()
 					}
 				}
 
-				if (pLoopPlot->isBeingWorked())
+				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop)
 				{
-					//iWorkedFood += aiFinalYields[YIELD_FOOD];
-				}
-				else
-				{
-					if (aiFinalYields[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
-					{
-						iWorkableFood += aiFinalYields[YIELD_FOOD];
-						iWorkableFoodPlotCount++;
-					}
+					iWorkableFood += aiFinalYields[YIELD_FOOD];
+					iWorkableFoodPlotCount++;
 				}
 
-				if (pLoopPlot->isBeingWorked() || (((aiFinalYields[YIELD_FOOD]*10) + (aiFinalYields[YIELD_PRODUCTION]*6) + (aiFinalYields[YIELD_COMMERCE]*4)) > 21))
+				if (pLoopPlot->isBeingWorked() || 10*aiFinalYields[YIELD_FOOD] + 6*aiFinalYields[YIELD_PRODUCTION] + 4*aiFinalYields[YIELD_COMMERCE] > 21)
 				{
 					iGoodTileCount++;
 					if (pLoopPlot->isBeingWorked())
 					{
 						iFoodTotal += aiFinalYields[YIELD_FOOD];
 					}
-					else
-					{
-						iFoodTotal += aiFinalYields[YIELD_FOOD] / 2;
-					}
+					else iFoodTotal += aiFinalYields[YIELD_FOOD] / 2;
+
 					if (aiFinalYields[YIELD_PRODUCTION] > 1)
 					{
 						iProductionTotal += aiFinalYields[YIELD_PRODUCTION];
@@ -9045,19 +8992,22 @@ void CvCityAI::AI_updateBestBuild()
 
 				if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 				{
-					int iNetFood = (aiFinalYields[YIELD_FOOD] - GC.getFOOD_CONSUMPTION_PER_POPULATION());
-					iBonusFoodSurplus += std::max(0, iNetFood);
-					iBonusFoodDeficit += std::max(0, -iNetFood);
+					const int iNetFood = aiFinalYields[YIELD_FOOD] - iFoodPerPop;
+					if (iNetFood > 0)
+					{
+						iBonusFoodSurplus += iNetFood;
+					}
+					else iBonusFoodDeficit += iNetFood;
 				}
 
-				if ((pLoopPlot->getFeatureType()) != NO_FEATURE)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE)
 				{
-					iFeatureFoodSurplus += std::max(0, pLoopPlot->calculateNatureYield(YIELD_FOOD, getTeam()) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
+					iFeatureFoodSurplus += std::max(0, pLoopPlot->calculateNatureYield(YIELD_FOOD, getTeam()) - iFoodPerPop);
 				}
 
-				if ((pLoopPlot->isHills()))
+				if (pLoopPlot->isHills())
 				{
-					iHillFoodDeficit += std::max(0, GC.getFOOD_CONSUMPTION_PER_POPULATION() - pLoopPlot->calculateNatureYield(YIELD_FOOD, getTeam()));
+					iHillFoodDeficit += std::max(0, iFoodPerPop - pLoopPlot->calculateNatureYield(YIELD_FOOD, getTeam()));
 				}
 			}
 		}
@@ -9065,112 +9015,71 @@ void CvCityAI::AI_updateBestBuild()
 
 	if (getProductionBuilding() != NO_BUILDING)
 	{
-/********************************************************************************/
-/*	Better Evaluation							09.03.2010		Fuyu		    */
-/********************************************************************************/
-/* original code
-		iHappyAdjust += getBuildingHappiness(getProductionBuilding());
-		iHealthAdjust += getBuildingHealth(getProductionBuilding());
-*/
 		iHappyAdjust += getAdditionalHappinessByBuilding(getProductionBuilding());
 		iHealthAdjust += getAdditionalHealthByBuilding(getProductionBuilding());
-/********************************************************************************/
-/*	BE	END																		*/
-/********************************************************************************/
 	}
 
 	//XXX rewrite this to fix too many farms issue
-	int iSpecialistAdjustment = 0;
 	if (iWorkableFoodPlotCount > 0)
 	{
 		//Calculate approximately how much food the assigned specialists could work
-		iSpecialistAdjustment = (std::min(iSpecialistCount, iWorkableFoodPlotCount) * iWorkableFood) / iWorkableFoodPlotCount;
+		iFoodTotal += (
+			std::min(
+				getSpecialistPopulation() - totalFreeSpecialists(),
+				iWorkableFoodPlotCount
+			) *
+			iWorkableFood / iWorkableFoodPlotCount
+		);
 	}
-	iFoodTotal += iSpecialistAdjustment;
 
-	int iBonusFoodDiff = ((iBonusFoodSurplus + iFeatureFoodSurplus) - (iBonusFoodDeficit + iHillFoodDeficit / 2));
+	const int iHealth = goodHealth() - badHealth();
 
-	int iHealth = goodHealth() - badHealth();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/02/10                         jdog5000 & Fuyu      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
 	int iTargetSize = iGoodTileCount;
 
-	if( getEspionageHealthCounter() > 0 )
+	if (getEspionageHealthCounter() > 0)
 	{
 		iTargetSize = std::min(iTargetSize, 2 + getPopulation());
 	}
-	else
-	{
-		iTargetSize = std::min(iTargetSize, 2 + getPopulation() + (iHealth)/2);
-	}
+	else iTargetSize = std::min(iTargetSize, 2 + getPopulation() + (iHealth)/2);
 
-	if( iTargetSize < getPopulation() )
+
+	if (iTargetSize < getPopulation())
 	{
 		iTargetSize = std::max(iTargetSize, getPopulation() - (AI_countWorkedPoorTiles()/2));
 	}
 
 	// Target city size should not be perturbed by espionage, other short term effects
-	if( getEspionageHappinessCounter() > 0 )
+	if (getEspionageHappinessCounter() > 0)
 	{
 		iTargetSize = std::min(iTargetSize, getPopulation());
 	}
-	else
-	{
-		iTargetSize = std::min(iTargetSize, getPopulation()+(happyLevel()-unhappyLevel()));
-	}
+	else iTargetSize = std::min(iTargetSize, getPopulation()+(happyLevel()-unhappyLevel()));
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/02/09                                jdog5000      */
-/*                                                                                              */
-/* Worker AI                                                                                    */
-/************************************************************************************************/
-/* original bts code
-	if (GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0)
-	{
-		iTargetSize += 2 + GET_PLAYER(getOwner()).getCurrentEra() / 2;
-	}
-
-	if (kPlayer.getAdvancedStartPoints() >= 0)
-	{
-		iTargetSize += kPlayer.getCurrentEra() / 2;
-	}
-*/
-	// WTF code duplication
 	if (kPlayer.getAdvancedStartPoints() >= 0)
 	{
 		iTargetSize += 2 + kPlayer.getCurrentEra();
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
+	int iFoodMultiplier = 100;
+	const int iBonusFoodDiff = iBonusFoodSurplus + iFeatureFoodSurplus - iBonusFoodDeficit - iHillFoodDeficit / 2;
 	if (iBonusFoodDiff < 2)
 	{
 		iFoodMultiplier += 10 * (2 - iBonusFoodDiff);
 	}
 
-	int iExtraFoodForGrowth = (std::max(0, iTargetSize - getPopulation()) + 3) / 4;
-	if (getPopulation() < iTargetSize)
-	{
-		iExtraFoodForGrowth ++;
-	}
-
-	int iFoodDifference = iFoodTotal - ((iTargetSize * GC.getFOOD_CONSUMPTION_PER_POPULATION()) + iExtraFoodForGrowth);
+	const int iFoodDifference =
+	(
+		iFoodTotal - iTargetSize * getFoodConsumedPerPopulation100()
+		-
+		(getPopulation() < iTargetSize) - (std::max(0, iTargetSize - getPopulation()) + 3) / 4
+	);
 
 	int iDesiredFoodChange = -iFoodDifference + std::max(0, -iHealth);
-	if (iTargetSize > getPopulation())
+
+	if (iTargetSize > getPopulation() && iDesiredFoodChange > 3)
 	{
-		if (iDesiredFoodChange > 3)
-		{
-			iDesiredFoodChange = (iDesiredFoodChange + 3) / 2;
-		}
+		iDesiredFoodChange = (iDesiredFoodChange + 3) / 2;
 	}
 
 	if (iFoodDifference < 0)
@@ -9183,55 +9092,45 @@ void CvCityAI::AI_updateBestBuild()
 		iFoodMultiplier -= 8 + 4 * iFoodDifference;
 	}
 
+	int iProductionMultiplier = 100;
 	if (iProductionTotal < 10)
 	{
 		iProductionMultiplier += (80 - 8 * iProductionTotal);
 	}
-	int iProductionTarget = 1 + (std::min(getPopulation(), (iTargetSize * 3) / 5));
+	const int iProductionTarget = 1 + std::min(getPopulation(), iTargetSize * 3 / 5);
 
 	if (iProductionTotal < iProductionTarget)
 	{
 		iProductionMultiplier += 8 * (iProductionTarget - iProductionTotal);
 	}
 
-	if ((iBonusFoodSurplus + iFeatureFoodSurplus > 5) && ((iBonusFoodDeficit + iHillFoodDeficit) > 5))
+	int iCommerceMultiplier = 100;
+	if (iBonusFoodSurplus + iFeatureFoodSurplus > 5
+	&& iBonusFoodDeficit + iHillFoodDeficit > 8)
 	{
-		if ((iBonusFoodDeficit + iHillFoodDeficit) > 8)
-		{
-			//probably a good candidate for a wonder pump
-			iProductionMultiplier += 40;
-			iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
-		}
+		//probably a good candidate for a wonder pump
+		iProductionMultiplier += 40;
+		iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
 	}
 
 
-	int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/11/09                       jdog5000 & DanF5771    */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original BTS code
-	int iNetExpenses = kPlayer.calculateInflatedCosts() + std::min(0, kPlayer.getGoldPerTurn());
-*/
-	int iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-	int iRatio = (100 * iNetExpenses) / std::max(1, iNetCommerce);
+	const int iNetCommerce =
+	(
+		1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH)
+		+
+		std::max(0, kPlayer.getGoldPerTurn())
+	);
+	const int64_t iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
+
+	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
 
 	if (iRatio > 40)
 	{
-		iCommerceMultiplier += (33 * (iRatio - 40)) / 60;
+		iCommerceMultiplier += (iRatio - 40) * 33 / 60;
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/06/09                                jdog5000      */
-/*                                                                                              */
-/* Worker AI                                                                                    */
-/************************************************************************************************/
 	// AI no longer uses emphasis except for short term boosts.
-	if( isHuman() )
+	if (isHuman())
 	{
 		if (AI_isEmphasizeYield(YIELD_FOOD))
 		{
@@ -9249,23 +9148,23 @@ void CvCityAI::AI_updateBestBuild()
 			iCommerceMultiplier /= 100;
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-	int iProductionAdvantage = 100 * AI_yieldMultiplier(YIELD_PRODUCTION);
-	iProductionAdvantage /= kPlayer.AI_averageYieldMultiplier(YIELD_PRODUCTION);
-	iProductionAdvantage *= kPlayer.AI_averageYieldMultiplier(YIELD_COMMERCE);
-	iProductionAdvantage /= AI_yieldMultiplier(YIELD_COMMERCE);
-
+	int iProductionAdvantage =
+	(
+		100 * AI_yieldMultiplier(YIELD_PRODUCTION)
+		*
+		kPlayer.AI_averageYieldMultiplier(YIELD_COMMERCE)
+		/ (
+			kPlayer.AI_averageYieldMultiplier(YIELD_PRODUCTION)
+			*
+			AI_yieldMultiplier(YIELD_COMMERCE)
+		)
+	);
 	//now we normalize the effect by # of cities
-
-	int iNumCities = kPlayer.getNumCities();
-	FAssert(iNumCities > 0);//superstitious?
-
+	const int iNumCities = kPlayer.getNumCities();
 	//in short in an OCC the relative multipliers should *never* make a difference
 	//so this indeed equals "100" for the iNumCities == 0 case.
-	iProductionAdvantage = ((iProductionAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1));
+	iProductionAdvantage = (iProductionAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1);
 
 	iProductionMultiplier *= iProductionAdvantage;
 	iProductionMultiplier /= 100;
@@ -9275,7 +9174,7 @@ void CvCityAI::AI_updateBestBuild()
 
 	int iGreatPeopleAdvantage = 100 * getTotalGreatPeopleRateModifier();
 	iGreatPeopleAdvantage /= kPlayer.AI_averageGreatPeopleMultiplier();
-	iGreatPeopleAdvantage = ((iGreatPeopleAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1));
+	iGreatPeopleAdvantage = (iGreatPeopleAdvantage * (iNumCities - 1) + 200) / (iNumCities + 1);
 	iGreatPeopleAdvantage += 200; //gpp multipliers are larger than others so lets not go overboard
 	iGreatPeopleAdvantage /= 3;
 
@@ -9311,19 +9210,23 @@ void CvCityAI::AI_updateBestBuild()
 		iFoodMultiplier /= 2;
 	}
 
-	ProjectTypes eProductionProject = getProductionProject();
-	bool bChop = (eProductionProject != NO_PROJECT && AI_projectValue(eProductionProject) > 0);
+	const ProjectTypes eProductionProject = getProductionProject();
+	bool bChop = eProductionProject != NO_PROJECT && AI_projectValue(eProductionProject) > 0;
 	if (!bChop)
 	{
-		BuildingTypes eProductionBuilding = getProductionBuilding();
-		bChop = (eProductionBuilding != NO_BUILDING && isWorldWonder(eProductionBuilding));
+		const BuildingTypes eProductionBuilding = getProductionBuilding();
+		bChop = eProductionBuilding != NO_BUILDING && isWorldWonder(eProductionBuilding);
 		if (!bChop)
 		{
-			UnitTypes eProductionUnit = getProductionUnit();
-			bChop = (eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).isFoodProduction());
+			const UnitTypes eProductionUnit = getProductionUnit();
+			bChop = eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).isFoodProduction();
 			if (!bChop)
 			{
-				bChop = ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
+				bChop = (
+					area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE
+				||	area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE
+				||	area()->getAreaAIType(getTeam()) == AREAAI_MASSING
+				);
 			}
 		}
 	}
@@ -9339,70 +9242,51 @@ void CvCityAI::AI_updateBestBuild()
 
 			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/16/10                                jdog5000      */
-/*                                                                                              */
-/* City AI, Worker AI                                                                           */
-/************************************************************************************************/
-				int iLastBestBuildValue = m_aiBestBuildValue[iI];
+				const int iLastBestBuildValue = m_aiBestBuildValue[iI];
 				BuildTypes eLastBestBuildType = m_aeBestBuild[iI];
 
-				AI_bestPlotBuild(pLoopPlot, &(m_aiBestBuildValue[iI]), &(m_aeBestBuild[iI]), iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, bChop, iHappyAdjust, iHealthAdjust, iDesiredFoodChange);
+				AI_bestPlotBuild(
+					pLoopPlot, &(m_aiBestBuildValue[iI]), &(m_aeBestBuild[iI]),
+					iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier,
+					bChop, iHappyAdjust, iHealthAdjust, iDesiredFoodChange
+				);
 				m_aiBestBuildValue[iI] *= 4;
-				m_aiBestBuildValue[iI] += 3 + iWorkerCount;  // to round up
-				m_aiBestBuildValue[iI] /= (4 + iWorkerCount);
+				m_aiBestBuildValue[iI] += 3 + iWorkerCount; // to round up
+				m_aiBestBuildValue[iI] /= 4 + iWorkerCount;
 
-				if (m_aiBestBuildValue[iI] > 0)
-				{
-					FAssert(m_aeBestBuild[iI] != NO_BUILD);
-				}
-				if (m_aeBestBuild[iI] != NO_BUILD)
-				{
-					FAssert(m_aiBestBuildValue[iI] > 0);
-				}
+				FAssert(m_aiBestBuildValue[iI] <= 0 || m_aeBestBuild[iI] != NO_BUILD);
 
-				if( eLastBestBuildType != NO_BUILD )
-				{
-					if( eLastBestBuildType != m_aeBestBuild[iI] )
-					{
-						if( iWorkerCount > 0 )
-						{
-							// BBAI TODO: Check workers are building the new thing
+				FAssert(m_aeBestBuild[iI] == NO_BUILD || m_aiBestBuildValue[iI] > 0);
 
-							if( gCityLogLevel >= 2 )
-							{
-								logBBAI( "      City %S switches best build on plot %d, %d from %S (%d) to %S (%d) with worker count %d",getName().GetCString(),pLoopPlot->getX(),pLoopPlot->getY(),GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eLastBestBuildType).getImprovement()).getDescription(),iLastBestBuildValue,GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement()).getDescription(),m_aiBestBuildValue[iI],iWorkerCount);
-							}
-						}
-					}
+				if (eLastBestBuildType != NO_BUILD
+				&& eLastBestBuildType != m_aeBestBuild[iI]
+				&& iWorkerCount > 0
+				&& gCityLogLevel >= 2)
+				{
+					// BBAI TODO: Check workers are building the new thing
+					logBBAI(
+						"      City %S switches best build on plot %d, %d from %S (%d) to %S (%d) with worker count %d",
+						getName().GetCString(), pLoopPlot->getX(), pLoopPlot->getY(),
+						GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eLastBestBuildType).getImprovement()).getDescription(),
+						iLastBestBuildValue,
+						GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement()).getDescription(),
+						m_aiBestBuildValue[iI], iWorkerCount
+					);
 				}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 			}
 		}
 	}
-
-
-	{	//new experimental yieldValue calcuation
+	// New experimental yieldValue calcuation
+	{
 		short aiYields[NUM_YIELD_TYPES];
 		int iBestPlot = -1;
 		int iBestPlotValue = -1;
-		int iValue;
 
 		int iBestUnworkedPlotValue = 0;
 
 		int aiValues[NUM_CITY_PLOTS];
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		for (int iI = 0; iI < getNumCityPlots(); iI++)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 		{
 			if (iI != CITY_HOME_PLOT)
 			{
@@ -9417,9 +9301,9 @@ void CvCityAI::AI_updateBestBuild()
 							aiYields[iJ] = pLoopPlot->getYieldWithBuild(m_aeBestBuild[iI], (YieldTypes)iJ, true);
 						}
 
-						iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
+						int iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
 						aiValues[iI] = iValue;
-						if ((iValue > 0) && (pLoopPlot->getRouteType() != NO_ROUTE))
+						if (iValue > 0 && pLoopPlot->getRouteType() != NO_ROUTE)
 						{
 							iValue++;
 						}
@@ -9442,10 +9326,7 @@ void CvCityAI::AI_updateBestBuild()
 						{
 							aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
 						}
-
-						iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
-
-						iBestUnworkedPlotValue = std::max(iBestUnworkedPlotValue, iValue);
+						iBestUnworkedPlotValue = std::max(iBestUnworkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
 					}
 				}
 			}
@@ -9454,50 +9335,35 @@ void CvCityAI::AI_updateBestBuild()
 		{
 			m_aiBestBuildValue[iBestPlot] *= 2;
 		}
-
 		//Prune plots which are sub-par.
 		if (iBestUnworkedPlotValue > 0)
 		{
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 			for (int iI = 0; iI < getNumCityPlots(); iI++)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 			{
 				if (iI != CITY_HOME_PLOT)
 				{
 					CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
-					if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
+					if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this && m_aeBestBuild[iI] != NO_BUILD)
 					{
-						if (m_aeBestBuild[iI] != NO_BUILD)
+						if (!pLoopPlot->isBeingWorked() && (pLoopPlot->getImprovementType() == NO_IMPROVEMENT))
 						{
-							if (!pLoopPlot->isBeingWorked() && (pLoopPlot->getImprovementType() == NO_IMPROVEMENT))
+							if (GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement() != NO_IMPROVEMENT
+							&& aiValues[iI] <= iBestUnworkedPlotValue && aiValues[iI] < 500)
 							{
-								if (GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement() != NO_IMPROVEMENT)
-								{
-									if ((aiValues[iI] <= iBestUnworkedPlotValue) && (aiValues[iI] < 500))
-									{
-										m_aiBestBuildValue[iI] = 1;
-									}
-								}
+								m_aiBestBuildValue[iI] = 1;
 							}
-							else if ((pLoopPlot->getImprovementType() != NO_IMPROVEMENT) && (GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement() != NO_IMPROVEMENT))
+						}
+						else if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && GC.getBuildInfo(m_aeBestBuild[iI]).getImprovement() != NO_IMPROVEMENT)
+						{
+							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-								{
-									aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
-								}
-
-								iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
-								if (iValue > aiValues[iI])
-								{
-									m_aiBestBuildValue[iI] = 1;
-								}
+								aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
+							}
+							const int iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
+							if (iValue > aiValues[iI])
+							{
+								m_aiBestBuildValue[iI] = 1;
 							}
 						}
 					}
@@ -9749,14 +9615,14 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 								if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
 								{
-									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
+									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
 									{
 										bWait = false;
 									}
 								}
 								else
 								{
-									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
+									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
 									{
 										bWait = false;
 									}
@@ -9783,7 +9649,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			{
 				if (GET_PLAYER(getOwner()).AI_avoidScience())
 				{
-					if (GET_PLAYER(getOwner()).getEffectiveGold() > GET_PLAYER(getOwner()).AI_goldTarget())
+					if (GET_PLAYER(getOwner()).getGold() > GET_PLAYER(getOwner()).AI_goldTarget())
 					{
 						iMinTurns = std::min(iMinTurns, 10);
 					}
@@ -9796,16 +9662,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 					if (iValuePerTurn > 0)
 					{
-						int iHurryGold = hurryGold((HurryTypes)iI);
-/* original bts code
-						if ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1))
-*/
+						const int iHurryGold = hurryGold((HurryTypes)iI);
+
 						if ( (iHurryGold > 0) && ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1)) )
 						{
-/* original bts code
-							if (iHurryGold < (GET_PLAYER(getOwner()).getGold() / 3))
-*/
-							int iGoldThreshold = GET_PLAYER(getOwner()).getEffectiveGold();
+							int64_t iGoldThreshold = GET_PLAYER(getOwner()).getGold();
 							iGoldThreshold -= (GET_PLAYER(getOwner()).AI_goldToUpgradeAllUnits() / ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0) ? 1 : 3));
 							iGoldThreshold /= 3;
 							if (iHurryGold < iGoldThreshold)
@@ -10088,11 +9949,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 			if (bGrowth)
 			{
 				int iHurryGold = hurryGold((HurryTypes)iI);
-				if ((iHurryGold > 0) && ((iHurryGold * 16) < GET_PLAYER(getOwner()).getEffectiveGold()))
+				if (iHurryGold > 0 && iHurryGold * 16 < GET_PLAYER(getOwner()).getGold())
 				{
 					if( gCityLogLevel >= 2 )
 					{
-						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getEffectiveGold() );
+						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getGold() );
 					}
 					hurry((HurryTypes)iI);
 					break;
@@ -10273,15 +10134,8 @@ void CvCityAI::AI_doEmphasize()
 				int iHighHammerTotal = 0;
 				int iGoodFoodSink = 0;
 				int iFoodPerPop = GC.getFOOD_CONSUMPTION_PER_POPULATION();
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 				for (int iPlot = 0; iPlot < getNumCityPlots(); iPlot++)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 				{
 					CvPlot* pLoopPlot = plotCity(getX(), getY(), iPlot);
 					if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
@@ -10293,28 +10147,24 @@ void CvCityAI::AI_doEmphasize()
 							iHighFoodPlotCount++;
 						}
 						int iHammers = pLoopPlot->getYield(YIELD_PRODUCTION);
-						if ((iHammers >= 3) && ((iHammers + iFood) >= 4))
+						if (iHammers >= 3 && iHammers + iFood >= 4)
 						{
 							iHighHammerPlotCount++;
 							iHighHammerTotal += iHammers;
 						}
 						int iCommerce = pLoopPlot->getYield(YIELD_COMMERCE);
-						if ((iCommerce * 2 + iHammers * 3) > 9)
+						if (iCommerce * 2 + iHammers * 3 > 9)
 						{
 							iGoodFoodSink += std::max(0, iFoodPerPop - iFood);
 						}
 					}
 				}
 
-				if ((iHighFoodTotal + iHighFoodPlotCount - iGoodFoodSink) >= foodConsumption(true))
+				if (iHighFoodTotal + iHighFoodPlotCount - iGoodFoodSink >= foodConsumption(true)
+				&& iHighHammerPlotCount < 2 && iHighHammerTotal < getPopulation()
+				&& AI_countGoodTiles(true, false, 100, true) < getPopulation())
 				{
-					if ((iHighHammerPlotCount < 2) && (iHighHammerTotal < (getPopulation())))
-					{
-						if (AI_countGoodTiles(true, false, 100, true) < getPopulation())
-						{
-							bEmphasize = true;
-						}
-					}
+					bEmphasize = true;
 				}
 			}
 		}
@@ -10650,11 +10500,11 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 								int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
 								iCost /= 100;
 
-								if (kPlayer.getEffectiveGold() >= iCost)
+								if (kPlayer.getGold() >= iCost)
 								{
 									iCost *= GC.getCORPORATION_FOREIGN_SPREAD_COST_PERCENT();
 									iCost /= 100;
-									if (kPlayer.getEffectiveGold() < iCost && iTotalCount > 1)
+									if (kPlayer.getGold() < iCost && iTotalCount > 1)
 									{
 										iCorporationValue /= 2;
 									}
@@ -10752,7 +10602,7 @@ bool CvCityAI::AI_chooseProject()
 }
 
 
-bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int* commerceWeights)
+bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWeights)
 {
 #ifdef USE_UNIT_TENDERING
 	if ( m_bRequestedBuilding || m_bRequestedUnit)
@@ -10763,7 +10613,7 @@ bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int* commerceWeight
 	m_iBuildPriority = m_iTempBuildPriority;
 #endif
 
-	ProcessTypes eBestProcess = AI_bestProcess(eCommerceType, commerceWeights);
+	const ProcessTypes eBestProcess = AI_bestProcess(eCommerceType, commerceWeights);
 
 	if (eBestProcess != NO_PROCESS)
 	{
@@ -11489,28 +11339,6 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		aiCommerceYieldsTimes100[iJ] += (iCommerceTimes100 * iModifier) / 100;
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       07/09/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-/* original BTS code
-	if (isProductionProcess() && !bWorkerOptimization)
-	{
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			aiCommerceYieldsTimes100[iJ] += GC.getProcessInfo(getProductionProcess()).getProductionToCommerceModifier(iJ) * aiYields[YIELD_PRODUCTION];
-		}
-
-		aiYields[YIELD_PRODUCTION] = 0;
-	}
-*/
-	// Above code causes governor and AI to heavily weight food when building any form of commerce,
-	// which is not expected by human and does not seem to produce better results for AI either.
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 	// should not really use this much, but making it accurate
 	aiYields[YIELD_COMMERCE] = 0;
 	for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
@@ -11538,11 +11366,9 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		int iPopulation = getPopulation();
 		int	iExtraPopulationThatCanWork = std::min(iPopulation - range(-iHappinessLevel, 0, iPopulation) + std::min(0, extraFreeSpecialists()) , NUM_CITY_PLOTS) - getWorkingPopulation() + ((bRemove) ? 1 : 0);
 
-		int iPopulationExponent = (iPopulation - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-		int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-		int iConsumptionbyPopulation = (iPopulation * iConsumptionPerPopulationBase) / 10;
+		int iConsumptionByPopulation = getFoodConsumedByPopulation();
 
-		int iAdjustedFoodDifference = (getYieldRate(YIELD_FOOD) + std::min(0, iHealthLevel)) - iConsumptionbyPopulation;
+		int iAdjustedFoodDifference = (getYieldRate(YIELD_FOOD) + std::min(0, iHealthLevel)) - iConsumptionByPopulation;
 
 		// if we not human, allow us to starve to half full if avoiding growth
 		if (!bIgnoreStarvation)
@@ -11565,7 +11391,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if (std::max(0, iExtraPopulationThatCanWork * aiYields[YIELD_FOOD]) >= -iFoodPerTurn)
 				{
 					// if this is high food, then we want to pick it first, this will allow us to pick some great non-food later
-					int iHighFoodThreshold = std::min(getBestYieldAvailable(YIELD_FOOD), iConsumptionbyPopulation + 1);
+					int iHighFoodThreshold = std::min(getBestYieldAvailable(YIELD_FOOD), iConsumptionByPopulation + 1);
 					if (iFoodPerTurn <= (AI_isEmphasizeGreatPeople() ? 0 : -iHighFoodThreshold) && aiYields[YIELD_FOOD] >= iHighFoodThreshold)
 					{
 						// value all the food that will contribute to not starving
@@ -11600,7 +11426,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 
 					// adjust iFoodPerTurn assuming that we work plots all equal to iConsumtionPerPop
 					// that way it is our guesstimate of how much excess food we will have
-					iFoodPerTurn += (iExtraPopulationThatCanWork * iConsumptionbyPopulation);
+					iFoodPerTurn += (iExtraPopulationThatCanWork * iConsumptionByPopulation);
 
 					// we have less than 10 extra happy, do some checks to see if we can increase it
 					if (iHappinessLevel < 10)
@@ -11619,7 +11445,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 						const int kMaxHappyIncrease = 2;
 
 						// if happy is large enough so that it will be over zero after we do the checks
-						int iNewFoodPerTurn = iFoodPerTurn + aiYields[YIELD_FOOD] - iConsumptionbyPopulation;
+						int iNewFoodPerTurn = iFoodPerTurn + aiYields[YIELD_FOOD] - iConsumptionByPopulation;
 						if ((iHappinessLevel + kMaxHappyIncrease) > 0 && iNewFoodPerTurn > 0)
 						{
 							int iApproxTurnsToGrow = (iNewFoodPerTurn > 0) ? ((iFoodToGrow - iFoodLevel) / iNewFoodPerTurn) : MAX_INT;
@@ -11748,9 +11574,9 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if ((isHuman()) && ((iPopToGrow > 0) || bCanPopRush))
 				{
 					//very high food override
-					int iTempValue = std::max(0, 30 * aiYields[YIELD_FOOD] - 15 * iConsumptionbyPopulation);
-					iTempValue *= std::max(0, 3 * iConsumptionbyPopulation - iAdjustedFoodDifference);
-					iTempValue /= 3 * std::max(1,iConsumptionbyPopulation);
+					int iTempValue = std::max(0, 30 * aiYields[YIELD_FOOD] - 15 * iConsumptionByPopulation);
+					iTempValue *= std::max(0, 3 * iConsumptionByPopulation - iAdjustedFoodDifference);
+					iTempValue /= 3 * std::max(1, iConsumptionByPopulation);
 					if (iHappinessLevel < 0)
 					{
 						iTempValue *= 2;
@@ -11767,14 +11593,14 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 					iSlaveryValue *= 100;
 					iSlaveryValue /= getHurryCostModifier(true);
 
-					iSlaveryValue *= iConsumptionbyPopulation * 2;
-					iSlaveryValue /= iConsumptionbyPopulation * 2 + std::max(1, iAdjustedFoodDifference);
+					iSlaveryValue *= iConsumptionByPopulation * 2;
+					iSlaveryValue /= iConsumptionByPopulation * 2 + std::max(1, iAdjustedFoodDifference);
 				}
 
 				//Great People Override
 				if ((iExtraPopulationThatCanWork > 1) && AI_isEmphasizeGreatPeople())
 				{
-					int iAdjust = iConsumptionbyPopulation;
+					int iAdjust = iConsumptionByPopulation;
 					if (iFoodPerTurn == 0)
 					{
 						iAdjust -= 1;
@@ -13839,11 +13665,11 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 			}
 		}
 
-		int iIncome = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-		int iExpenses = 1 + kPlayer.calculateInflatedCosts() - std::min(0, kPlayer.getGoldPerTurn());
+		const int iIncome = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
+		const int64_t iExpenses = 1 + kPlayer.calculateInflatedCosts() - std::min(0, kPlayer.getGoldPerTurn());
 		FAssert(iIncome > 0);
 
-		int iRatio = (100 * iExpenses) / std::max(1, iIncome);
+		const int iRatio = static_cast<int>((100 * iExpenses) / std::max(1, iIncome));
 
 		//Gold -> Production Reduced To
 		// 40- -> 100%
@@ -15736,12 +15562,15 @@ retry:
 			else
 			{
 				iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+				/* Toffer - Commented out as it's not entirely clear that this is a problem.
+				// Someone should look into this assert which is frequently triggered, I think it may be a false posititve.
 				FAssertMsg(iResult == 0, CvString::format(
 					"City %S rated building %s non zero (%d) which is wrong somehow? This assert might be deprecated!",
 					m_szName.c_str(),
 					GC.getBuildingInfo(eBuilding).getType(),
 					iResult).c_str()
 				);
+				*/
 				iResult = 0;
 			}
 		}
@@ -15828,11 +15657,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	int iBaseHappinessLevel = happyLevel() - unhappyLevel() + getEspionageHappinessCounter();
 	int iBaseHealthLevel = goodHealth() - badHealth() + getEspionageHealthCounter();
 
-	int iPopulationExponent = (getPopulation() - 1); // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-
-	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
+	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - getFoodConsumedByPopulation() - std::max(0, -iHealthLevel);
 
 	int iGoldValueAssessmentModifier = GET_PLAYER(getOwner()).AI_goldValueAssessmentModifier();
 
@@ -15883,10 +15708,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 	bool bFinancialTrouble = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 
-	int iAllowedShrinkRate = (iConsumptionPerPopulationBase * (0
+	int iAllowedShrinkRate = getFoodConsumedPerPopulation100() * (0
 		+ std::max(0, -iBaseHappinessLevel - iTemporaryUnhappiness)
 		+ std::min(1, std::max(0, (getWorkingPopulation() - AI_countGoodTiles(true, false, 50))))
-		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false))))) / 10;
+		+ std::max(0, (visiblePopulation() - AI_countGoodSpecialists(false)))) / 100;
 
 
 	bool bCulturalVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
@@ -16576,7 +16401,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
-									CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+									const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 									bool bUnitIsEnabler = kUnit.isPrereqAndBuilding((int)eBuilding);
 									bool bUnitIsOtherwiseEnabled = false;
 

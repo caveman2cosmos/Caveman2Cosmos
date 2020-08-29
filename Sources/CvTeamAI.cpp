@@ -3171,8 +3171,8 @@ void CvTeamAI::AI_getWarThresholds( int &iTotalWarThreshold, int &iLimitedWarThr
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).calculateUnitCost() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
-				iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
+				const int iUnitSpendingPercent = static_cast<int>(GET_PLAYER((PlayerTypes)iI).getFinalUnitUpkeep() * 100 / std::max<int64_t>(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts()));
+				iHighUnitSpendingPercent += std::max(0, iUnitSpendingPercent - 7) / 2;
 
 				if( GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER))
 				{
@@ -5340,25 +5340,6 @@ void CvTeamAI::AI_doWar()
 	}
 
 	int iNumMembers = getNumMembers();
-
-	// AIAndy: This calculation does not seem to be used. Deactivating it. This might also be a bug.
-	/*
-	int iHighUnitSpendingPercent = 0;
-	int iLowUnitSpendingPercent = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).calculateUnitCost() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
-				iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
-				iLowUnitSpendingPercent += iUnitSpendingPercent;
-			}
-		}
-	}*/
-
 
 	// if at war, check for making peace
 	if (getAtWarCount(true) > 0) // XXX

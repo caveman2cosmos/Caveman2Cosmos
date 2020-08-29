@@ -127,7 +127,7 @@ int CyTeam::getNumNukeUnits()
 }
 
 //Sevo Begin--VCM
-int CyTeam::getTotalVictoryScore()
+int64_t CyTeam::getTotalVictoryScore() const
 {
 	return m_pTeam ? m_pTeam->getTotalVictoryScore() : -1;
 }
@@ -197,11 +197,13 @@ int CyTeam::getHasReligionCount(int /*ReligionTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasReligionCount((ReligionTypes)eReligion) : -1;
 }
+
 int CyTeam::getHasCorporationCount(int /*CorporationTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasCorporationCount((CorporationTypes)eReligion) : -1;
 }
-int CyTeam::countTotalCulture()
+
+int64_t CyTeam::countTotalCulture() const
 {
 	return m_pTeam ? m_pTeam->processedTeamCulture() : -1;
 }

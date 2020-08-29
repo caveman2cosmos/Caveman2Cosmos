@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_KELLY_1</Tag>
 		<English>It is good to hear from the [CT_EMPIRE]. To what do I owe this honor?</English>
-		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur? </French>
+		<French>Quel plaisir d'avoir de vos nouvelles! Que me vaut cet honneur?</French>
 		<German>Es ist gut, etwas vom [CT_EMPIRE:3] zu hören. Womit haben wir diese Ehre verdient?</German>
 		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
 		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_KELLY_1</Tag>
 		<English>You have started down a path that will lead to your destruction. Feel free to try to explain yourself.</English>
-		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.  </French>
+		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.</French>
 		<German>Ihr habt begonnen, einen Pfad zu beschreiten, der zu Eurer Vernichtung führen wird. Wollt Ihr Euch möglicherweise rechtfertigen?</German>
 		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
 		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
@@ -75,30 +75,10 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</English>
-		<French>
-			<Text>Kelly</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kelly</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Kelly</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Kelly</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KELLY_PEDIA</Tag>
-		<English>[H1]Edward "Ned" Kelly[\H1][NEWLINE][BOLD]Bushranger[NEWLINE]Lived: [\BOLD]c.(June 1854 or 1855 – 11 November 1880[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was an Irish Australian bushranger. Kelly's legacy is controversial; many consider him to be a folk hero and symbol of Irish Australian resistance against the Anglo-Australian ruling class, while others emphasise his involvement in killing. [PARAGRAPH:1]Kelly was born in Victoria to an Irish convict father, and as a young man he clashed with the Victoria Police. Following an incident at his home in 1878, police parties searched for him in the bush. After he and his colleagues killed three policemen, the colonial government proclaimed Kelly and his gang wanted outlaws. [PARAGRAPH:1]A final violent confrontation with police took place at Glenrowan on 28 June 1880. Kelly, dressed in home-made plate metal armour and a helmet, was captured and sent to gaol. He was convicted of three counts of wilful murder and hanged at Old Melbourne Gaol in November 1880. His daring and notoriety made him an iconic figure in Australian history, folklore, literature, art and film. [PARAGRAPH:1]In August 2011, anthropologists announced that a skeleton found in a mass grave in Pentridge Prison had been confirmed as Kelly's. His skull, however, remains missing.</English>
-		<Polish>[H1]Edward "Ned" Kelly[\H1][NEWLINE][BOLD]Ranger[NEWLINE]Żył: [\BOLD]c.(Czerwiec 1854 lub 1855 –- 11 Listopada 1880[PARAGRAPH:2][BOLD]Tło:[\BOLD][NEWLINE][TAB]was an Irish Australian bushranger. Kelly's legacy is controversial; many consider him to be a folk hero and symbol of Irish Australian resistance against the Anglo-Australian ruling class, while others emphasise his involvement in killing. [PARAGRAPH:1]Kelly was born in Victoria to an Irish convict father, and as a young man he clashed with the Victoria Police. Following an incident at his home in 1878, police parties searched for him in the bush. After he and his colleagues killed three policemen, the colonial government proclaimed Kelly and his gang wanted outlaws. [PARAGRAPH:1]A final violent confrontation with police took place at Glenrowan on 28 June 1880. Kelly, dressed in home-made plate metal armour and a helmet, was captured and sent to gaol. He was convicted of three counts of wilful murder and hanged at Old Melbourne Gaol in November 1880. His daring and notoriety made him an iconic figure in Australian history, folklore, literature, art and film. [PARAGRAPH:1]In August 2011, anthropologists announced that a skeleton found in a mass grave in Pentridge Prison had been confirmed as Kelly's. His skull, however, remains missing.</Polish>
+		<English>[H1]Edward "Ned" Kelly[\H1][NEWLINE][BOLD]Bushranger[NEWLINE]Lived:[\BOLD] c. June 1854 or 1855 – 11 November 1880[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]was an Irish Australian bushranger. Kelly's legacy is controversial; many consider him to be a folk hero and symbol of Irish Australian resistance against the Anglo-Australian ruling class, while others emphasise his involvement in killing.[PARAGRAPH:1]Kelly was born in Victoria to an Irish convict father, and as a young man he clashed with the Victoria Police. Following an incident at his home in 1878, police parties searched for him in the bush. After he and his colleagues killed three policemen, the colonial government proclaimed Kelly and his gang wanted outlaws.[PARAGRAPH:1]A final violent confrontation with police took place at Glenrowan on 28 June 1880. Kelly, dressed in home-made plate metal armour and a helmet, was captured and sent to gaol. He was convicted of three counts of wilful murder and hanged at Old Melbourne Gaol in November 1880. His daring and notoriety made him an iconic figure in Australian history, folklore, literature, art and film.[PARAGRAPH:1]In August 2011, anthropologists announced that a skeleton found in a mass grave in Pentridge Prison had been confirmed as Kelly's. His skull, however, remains missing.</English>
+		<Polish>[H1]Edward "Ned" Kelly[\H1][NEWLINE][BOLD]Ranger[NEWLINE]Żył:[\BOLD] c. Czerwiec 1854 lub 1855 –- 11 Listopada 1880</Polish>
 	</TEXT>
 </Civ4GameText>

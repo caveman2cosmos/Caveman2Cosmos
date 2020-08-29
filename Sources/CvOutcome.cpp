@@ -1288,7 +1288,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity() && (kUnit.plot()->getPlotCity() != NULL))
 		{
 			kPlayer.initTriggeredData(m_eEventTrigger, true, kUnit.plot()->getPlotCity()->getID());
@@ -1960,7 +1960,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum)
+void CvOutcome::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);

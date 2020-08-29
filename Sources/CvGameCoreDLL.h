@@ -80,6 +80,9 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
+typedef long long           int64_t;
+typedef unsigned long long  uint64_t;
+
 //
 // Type traits
 //
@@ -139,6 +142,7 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
 #define PARALLEL_MAPS
+// #define NOMADIC_START
 
 //
 // Cache feature macros
@@ -172,6 +176,9 @@ void dumpProfileStack();
 void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
+
+int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()

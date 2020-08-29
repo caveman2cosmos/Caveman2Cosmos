@@ -70,6 +70,7 @@
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<BonusType>BONUS_ORGANIC_COMPUTERS</BonusType>
 			<iCost>3665</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>225</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -83,7 +84,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>3</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>111</iPower>
 			<UnitMeshGroups>
