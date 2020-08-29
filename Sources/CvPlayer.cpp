@@ -22671,7 +22671,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	// SAVEBREAK@ */
 		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
 
-		double fCulture = static_cast<double>(m_iCulture);
+		double fCulture = static_cast<double>(this->m_iCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
 	}
 	//	Use condensed format now - only save non-default array elements
@@ -32355,17 +32355,23 @@ void CvPlayer::changeLeaderHeadLevel(int iChange)
 
 uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 {
-	uint64_t iPromoThreshold = 100;
-	int iPromoThresholdExponent = (getLeaderHeadLevel() + 1);
+	uint64_t iPromoThreshold = 1000;
+	uint64_t iX = 1000;
+	int iY = 10;
 
 	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
 	{
-		iPromoThreshold = 10;
-		iPromoThresholdExponent = getLeaderHeadLevel();
+		iX = 10;
+		iY = 8;
 	}
-	for (int iI = 0; iI < iPromoThresholdExponent; iI++)
+	const int iIteratorA = getLeaderHeadLevel() + 1;
+	for (int x = 0; x < iIteratorA; x++)
 	{
-		iPromoThreshold *= 10;
+		const uint64_t iZ = (iX * iY);
+		iPromoThreshold = iX + iZ;
+		iX = iPromoThreshold;
+		iY--;
+		iY = std::max(1, iY);
 	}
 	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent() / 100;
 }
