@@ -370,6 +370,22 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
+	//for (int iI = 0; iI < MAX_TEAMS; iI++)
+	//{
+	//	const CvTeam& team = GET_TEAM((TeamTypes)iI);
+	//	if (team.isAlive())
+	//	{
+	//		team.doMapTurn();
+	//	}
+	//}
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+		if (player.isAlive())
+		{
+			player.doMapTurn();
+		}
+	}
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->doTurn();

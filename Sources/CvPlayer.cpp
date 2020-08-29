@@ -4438,6 +4438,10 @@ void CvPlayer::doTurn()
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGame().getGameTurn(),  getID());
 }
 
+void CvPlayer::doMapTurn()
+{
+}
+
 //	Dump stats to BBAI log
 void CvPlayer::dumpStats() const
 {

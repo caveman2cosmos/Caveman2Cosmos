@@ -6382,8 +6382,8 @@ void CvGame::doTurn()
 	PROFILE_BEGIN("CvGame::doTurn()");
 
 #ifdef PARALLEL_MAPS
-	if (GC.getNumMaps() > 1)
-		GC.switchMap(static_cast<MapTypes>(m_eCurrentMap + 1 == GC.getNumMaps() ? MAP_INITIAL : m_eCurrentMap + 1));
+//	if (GC.getNumMaps() > 1)
+//		GC.switchMap(static_cast<MapTypes>(m_eCurrentMap + 1 == GC.getNumMaps() ? MAP_INITIAL : m_eCurrentMap + 1));
 #endif
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -6393,7 +6393,7 @@ void CvGame::doTurn()
 	updateScore();
 
 	// solve property system
-	m_PropertySolver.doTurn();
+	//m_PropertySolver.doTurn();
 
 	doDeals();
 
@@ -6405,7 +6405,20 @@ void CvGame::doTurn()
 		}
 	}
 
-	GC.getMap().doTurn();
+#ifdef PARALLEL_MAPS
+	for (int i = 0; i < GC.getNumMaps(); i++)
+	{
+		const MapTypes eMap = static_cast<MapTypes>(i);
+		m_eCurrentMap = eMap;
+
+		// solve property system
+		m_PropertySolver.doTurn();
+
+		GC.getMap().doTurn();
+
+		//createBarbarianUnits();
+	}
+#endif
 
 	createBarbarianCities(false);
 	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
@@ -6438,8 +6451,7 @@ void CvGame::doTurn()
 	//TBVIS
 	for (int iJ = 0; iJ < GC.getMap().numPlots(); iJ++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iJ);
-		pLoopPlot->clearVisibilityCounts();
+		GC.getMap().plotByIndex(iJ)->clearVisibilityCounts();
 	}
 	GC.getMap().updateSight(true, false);
 
