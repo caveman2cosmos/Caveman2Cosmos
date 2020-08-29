@@ -74,15 +74,14 @@ public:
 	CvPlayerAI();
 	virtual ~CvPlayerAI();
 
-  // inlined for performance reasons
-#ifdef _USRDLL
-  static CvPlayerAI& getPlayer(PlayerTypes ePlayer) 
-  {
-	  FAssertMsg(ePlayer != NO_PLAYER, "Player is not assigned a valid value");
-	  FAssertMsg(ePlayer < MAX_PLAYERS, "Player is not assigned a valid value");
-	  return m_aPlayers[ePlayer]; 
-  }
-#endif
+	// inlined for performance reasons
+	static CvPlayerAI& getPlayer(PlayerTypes ePlayer) 
+	{
+		FAssertMsg(ePlayer != NO_PLAYER, "Player is not assigned a valid value");
+		FAssertMsg(ePlayer < MAX_PLAYERS, "Player is not assigned a valid value");
+		return m_aPlayers[ePlayer]; 
+	}
+
 	DllExport static CvPlayerAI& getPlayerNonInl(PlayerTypes ePlayer);
 
 	static void initStatics();
@@ -775,10 +774,6 @@ private:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_PLAYER CvPlayerAI::getPlayer
-#else
-#define GET_PLAYER CvPlayerAI::getPlayerNonInl
-#endif
 
 #endif
