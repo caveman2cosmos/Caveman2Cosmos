@@ -8071,6 +8071,10 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
+#ifdef PARALLEL_MAPS	// XXX - Currently players are killed after switching to a new map.
+	if (m_eCurrentMap != MAP_INITIAL)
+		return;
+#endif
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		GET_PLAYER((PlayerTypes)iI).verifyAlive();

@@ -21,7 +21,6 @@
 				<choice id="Food" get="isResourceBarTypesFood"/>
 				<choice id="Luxury" get="isResourceBarTypesLuxury"/>
 			</list>
-			<option id="TechTreeEraColors" key="Show Tech tree era colors" type="boolean" default="True" get="isRoMTechTreeColors"/>
 
 			<option id="RoMReset" key="RoMReset" type="boolean" default="False" get="isRoMReset" set="setRoMReset">
 				<change module="ANewDawnSettings" function="changedRoMReset"/>
@@ -166,6 +165,8 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="MultipleReligionSpread" key="MultipleReligionSpread" type="boolean" default="True" get="isMultipleReligionSpread" set="setMultipleReligionSpread">
 				<change module="ANewDawnSettings" function="changedMultipleReligionSpread"/>
 			</option>
+			<option id="TelepathicReligion" key="TelepathicReligion" type="boolean" default="False" get="isTelepathicReligion" set="setTelepathicReligion"/>
+
 			<option id="TerrainDamage" key="TerrainDamage" type="boolean" default="False" get="isTerrainDamage" set="setTerrainDamage">
 				<change module="ANewDawnSettings" function="changedTerrainDamage"/>
 			</option>

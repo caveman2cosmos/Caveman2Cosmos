@@ -44,12 +44,9 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
-
 	friend class CyMap;
 
 public:
-
-	CvMap();
 	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
 	virtual ~CvMap();
 
@@ -71,7 +68,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	MapTypes getType() const;
-	void setType(MapTypes eNewType);
 
 	void beforeSwitch();
 	void afterSwitch();
@@ -270,7 +266,7 @@ protected:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	MapTypes m_eType;
+	const MapTypes m_eType;
 	std::vector<CvViewport*> m_viewports;
 	int m_iCurrentViewportIndex;
 /*******************************/

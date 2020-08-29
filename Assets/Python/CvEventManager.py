@@ -217,6 +217,8 @@ class CvEventManager:
 		if bActive:
 			if self.bNotReady:
 				CvScreensInterface.lateInit()
+				import BugCore
+				self.RoMOpt = BugCore.game.RoMSettings
 				# Cache game constants.
 				self.MAX_PLAYERS	= GC.getMAX_PLAYERS()
 				self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
@@ -353,8 +355,8 @@ class CvEventManager:
 					GC.getInfoTypeForString('C2C_ERA_ATOMIC')		: iModern,
 					GC.getInfoTypeForString('C2C_ERA_INFORMATION')	: iModern
 				}
-				# Only needs to be done once.
-				self.bNotReady = False
+
+				self.bNotReady = False # Only needs to be done once.
 
 
 	def onMouseEvent(self, argsList):
@@ -385,8 +387,11 @@ class CvEventManager:
 
 		# Screen specific input handlers
 		iCode = eventType + 10
-		if iCode in (16, 17) \
-		and CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0]):
+		if (
+			iCode in (16, 17)
+		and
+			CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
+		):
 			return 1
 
 		bAlt = self.bAlt
@@ -2467,18 +2472,19 @@ class CvEventManager:
 			popupInfo.setData3(1)
 			popupInfo.setText('showWonderMovie')
 			popupInfo.addPopup(iPlayer)
-		# Favorite religion
-		for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-			if iPlayerX == iPlayer: continue
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
-				CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
-				if CyPlayerX.isHuman():
-					strReligionName = GC.getReligionInfo(iReligion).getText()
-					popup = PyPopup.PyPopup(-1)
-					popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
-					popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
-					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
+		if self.RoMOpt.isTelepathicReligion():
+			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
+				if iPlayerX == iPlayer: continue
+				CyPlayerX = GC.getPlayer(iPlayerX)
+				if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
+					CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
+					if CyPlayerX.isHuman():
+						strReligionName = GC.getReligionInfo(iReligion).getText()
+						popup = PyPopup.PyPopup(-1)
+						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
+						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
+						popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
 	'''
