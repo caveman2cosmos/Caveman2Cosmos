@@ -2197,14 +2197,14 @@ class CvMainInterface:
 
 							screen.setLabel("CityPercentText" + str(i), "", szTxt, 1<<1, 252, 53 + dY, 0, eFontGame, WidgetTypes.WIDGET_COMMERCE_MOD_HELP, j, -1)
 						else:
-							if j == CommerceTypes.COMMERCE_RESEARCH:
-								if bTDDisplayOption:
-									commerceRate = 100 * iResearchRate / iResearchMod
-									techDiffusionHelp = iResearchRate - commerceRate
-								else:
-									commerceRate = iResearchRate
-							else:
+							if j != CommerceTypes.COMMERCE_RESEARCH:
 								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
+
+							elif bTDDisplayOption:
+								commerceRate = 100 * iResearchRate / iResearchMod
+								techDiffusionHelp = iResearchRate - commerceRate
+							else:
+								commerceRate = iResearchRate
 
 							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
