@@ -5579,16 +5579,15 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-				if (pLoopPlot->getBonusType() != NO_BONUS)
+				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
-					if (pLoopPlot->getTeam() == getID())
+					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
+
+					if(bonus.getTechReveal() == eIndex
+					|| bonus.getTechCityTrade() == eIndex
+					|| bonus.getTechObsolete() == eIndex)
 					{
-						if ((GC.getBonusInfo(pLoopPlot->getBonusType()).getTechReveal() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechCityTrade() == eIndex) ||
-								(GC.getBonusInfo(pLoopPlot->getBonusType()).getTechObsolete() == eIndex))
-						{
-							pLoopPlot->updatePlotGroupBonus(false);
-						}
+						pLoopPlot->updatePlotGroupBonus(false);
 					}
 				}
 			}
@@ -5599,22 +5598,21 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-				if (pLoopPlot->getBonusType() != NO_BONUS)
+				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
-					if (pLoopPlot->getTeam() == getID())
+					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
+
+					if(bonus.getTechReveal() == eIndex
+					|| bonus.getTechCityTrade() == eIndex
+					|| bonus.getTechObsolete() == eIndex)
 					{
-						if ((GC.getBonusInfo(pLoopPlot->getBonusType()).getTechReveal() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechCityTrade() == eIndex) ||
-							  (GC.getBonusInfo(pLoopPlot->getBonusType()).getTechObsolete() == eIndex))
-						{
-							pLoopPlot->updatePlotGroupBonus(true);
-						}
+						pLoopPlot->updatePlotGroupBonus(true);
 					}
 				}
 			}
 		}
 
-		processTech(eIndex, ((bNewValue) ? 1 : -1), bAnnounce);
+		processTech(eIndex, bNewValue ? 1 : -1, bAnnounce);
 
 		if (isHasTech(eIndex))
 		{

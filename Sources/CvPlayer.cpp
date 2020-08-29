@@ -6609,9 +6609,8 @@ int CvPlayer::getNumAvailableBonuses(BonusTypes eBonus) const
 
 	if (pPlotGroup != NULL)
 	{
-		return std::max(0,pPlotGroup->getNumBonuses(eBonus));
+		return std::max(0, pPlotGroup->getNumBonuses(eBonus));
 	}
-
 	return 0;
 }
 
@@ -15788,30 +15787,18 @@ int CvPlayer::countTotalHasCorporation() const
 
 bool CvPlayer::isActiveCorporation(CorporationTypes eIndex) const
 {
-	if (isNoCorporations())
+	if (isNoCorporations() || isNoForeignCorporations() && !hasHeadquarters(eIndex))
 	{
 		return false;
 	}
 
-	if (isNoForeignCorporations() && !hasHeadquarters(eIndex))
+	if (
+		GC.getCorporationInfo(eIndex).getObsoleteTech() != NO_TECH
+	&&
+		GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eIndex).getObsoleteTech()))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (GC.getCorporationInfo(eIndex).getObsoleteTech() != NO_TECH)
-	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eIndex).getObsoleteTech()))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return true;
 }
