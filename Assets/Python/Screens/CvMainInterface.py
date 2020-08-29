@@ -8,7 +8,7 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import RevInstances
-import ParallelMapsInput
+import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -1196,7 +1196,7 @@ class CvMainInterface:
 				if dataTT[3]:
 					szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
 					self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
-				elif not ParallelMapsInput.bIsSwitchingMap:
+				elif not ParallelMaps.bIsSwitchingMap:
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False

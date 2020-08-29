@@ -1,11 +1,3 @@
-##  $Header:
-##------------------------------------------------------------------------------------------------
-##
-##  FILE:	ParallelMapsInput.py
-##
-##  PURPOSE:  User input component for the Parallel Maps mod.
-##
-##------------------------------------------------------------------------------------------------
 from CvPythonExtensions import *
 import CvUtil
 
@@ -13,7 +5,7 @@ GC = CyGlobalContext()
 bIsSwitchingMap = False
 
 
-class ParallelMapsInput:
+class ParallelMaps:
 
 	def __init__(self, pEventManager):
 		self.pEventManager = pEventManager
@@ -45,7 +37,7 @@ class ParallelMapsInput:
 					self.initMap(i)
 					self.initPlayerContainers(i)
 				GC.switchMap(i)
-				bIsSwitchingMap = false
+				bIsSwitchingMap = False
 				if i == 0:
 					CvUtil.sendImmediateMessage("Initial map")
 				else:
