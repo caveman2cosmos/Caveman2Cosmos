@@ -22671,7 +22671,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	// SAVEBREAK@ */
 		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
 
-		double fCulture = static_cast<double>(m_iCulture);
+		double fCulture = static_cast<double>(this->m_iCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
 	}
 	//	Use condensed format now - only save non-default array elements
