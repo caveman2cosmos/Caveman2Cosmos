@@ -32353,29 +32353,9 @@ void CvPlayer::changeLeaderHeadLevel(int iChange)
     setLeaderHeadLevel(getLeaderHeadLevel() + iChange);
 }
 
-/*
-uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
-{
-	uint64_t iPromoThreshold = 100;
-	int iPromoThresholdExponent = (getLeaderHeadLevel() + 1);
-
-	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
-	{
-		iPromoThreshold = 10;
-		iPromoThresholdExponent = getLeaderHeadLevel();
-	}
-	for (int iI = 0; iI < iPromoThresholdExponent; iI++)
-	{
-		iPromoThreshold *= 10;
-	}
-	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent() / 100;
-}
-*/
-
 uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 {
 	uint64_t iPromoThreshold = 1000;
-	const int iIteratorA = getLeaderHeadLevel() + 1;
 	uint64_t iX = 1000;
 	int iY = 10;
 
@@ -32384,6 +32364,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 		iX = 10;
 		iY = 8;
 	}
+	const int iIteratorA = getLeaderHeadLevel() + 1;
 	for (int x = 0; x < iIteratorA; x++)
 	{
 		const uint64_t iZ = (iX * iY);
@@ -32395,92 +32376,6 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 
 	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent() / 100;
 }
-
-/*
-int CvPlayer::getLeaderLevelupNextCultureTotal(int& iGreaterCultureReq)
-{
-	int iPromoThreshold = 1000;
-	int iLL = getLeaderHeadLevel();//ill=6
-	int iIteratorA = iLL + 1;
-	int iX = 1000;
-	int iY = 10;
-	int iZ = 0;
-	int iIteratorB = 0;
-	int iUnmodifiedMillions = 0;
-	int iMillions = 0;
-	bool bMillionsTriggered = false;
-	int iGameSpeedModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent();
-	uint64_t iPromoThreshold = 100;
-	int iPromoThresholdExponent = (getLeaderHeadLevel() + 1);
-
-	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
-	{
-		iX = 10;
-		iY = 8;
-	}
-	for (int x = 0; x < iIteratorA; x++)
-	{
-		iZ = (iX * iY);
-		if (!bMillionsTriggered)
-		{
-			iPromoThreshold = iX + iZ;
-			iIteratorB = iPromoThreshold;
-			iIteratorB /= 1000000;
-			for (int y = 0; y < iIteratorB; y++)
-			{
-				iUnmodifiedMillions++;
-				iPromoThreshold -= 1000000;
-				bMillionsTriggered = true;
-			}
-		}
-		else
-		{
-			iMillions = iX + iZ;
-		}
-		if (!bMillionsTriggered)
-		{
-			iX = iPromoThreshold;
-		}
-		else if (iUnmodifiedMillions > 0)
-		{
-			iX = iUnmodifiedMillions;
-			iMillions = iUnmodifiedMillions;
-			iPromoThreshold = 0;
-			iUnmodifiedMillions = 0;
-		}
-		else
-		{
-			iX = iMillions;
-		}
-		iY--;
-		iY = std::max(1, iY);
-	}
-
-	iPromoThreshold *= iGameSpeedModifier;
-	iPromoThreshold /= 100;
-
-	if (bMillionsTriggered)
-	{
-		iMillions *= iGameSpeedModifier;
-		iMillions /= 100;
-		iGreaterCultureReq = std::max(1,iMillions);
-	}
-	else
-	{
-		if (iPromoThreshold >= 1000000)
-		{
-			iGreaterCultureReq = iPromoThreshold / 1000000;
-			iPromoThreshold = 0;
-		}
-		else
-		{
-			iGreaterCultureReq = 0;
-		}
-	}
-
-	return iPromoThreshold;
-}
-*/
 
 int64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 {
