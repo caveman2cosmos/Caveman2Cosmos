@@ -3107,7 +3107,7 @@ bool CvBuildingInfo::EnablesUnits() const
 	return m_bEnablesUnits;
 }
 
-void CvBuildingInfo::getCheckSum(unsigned int& iSum)
+void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
@@ -3557,7 +3557,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	for (std::vector<BuildingCommerceChange>::iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
+	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
 	{
 		CheckSum(iSum, (*it).eBuilding);
 		CheckSum(iSum, (*it).eCommerce);

@@ -296,7 +296,6 @@ public:
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
-	bool canJoin() const; // Exposed to Python
 
 	int getFoodTurnsLeft() const; // Exposed to Python
 	bool isProduction() const; // Exposed to Python
@@ -438,31 +437,17 @@ public:
 	int getConscriptPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getDefyResolutionPercentAnger(int iExtra = 0) const;
 	int getWarWearinessPercentAnger() const; // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/19/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int getRevRequestPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getRevIndexPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getRevSuccessHappiness() const; // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	int getLargestCityHappiness() const; // Exposed to Python
 	int getVassalHappiness() const; // Exposed to Python
 	int getVassalUnhappiness() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 20.10.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement iCelebrityHappy                                                        **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	int getCelebrityHappiness() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 20.10.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 	int unhappyLevel(int iExtra = 0) const; // Exposed to Python
 	int happyLevel() const; // Exposed to Python
 	int angryPopulation(int iExtra = 0) const; // Exposed to Python
@@ -479,10 +464,13 @@ public:
 	int goodHealth() const; // Exposed to Python
 	int badHealth(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
 	int healthRate(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
-	int foodConsumption(bool bNoAngry = false, int iExtra = 0, bool bIncludeWastage = true) const; // Exposed to Python
-	int foodDifference(bool bBottom = true, bool bIncludeWastage = true, bool bIgnoreFoodBuildOrRev = false) const; // Exposed to Python
+	int getPopulationPlusProgress100(const int iExtra) const;
+	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
+	int getFoodConsumedByPopulation(const int iExtra = 0) const;
+	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const; // Exposed to Python
+	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
-	int growthThreshold() const; // Exposed to Python
+	int growthThreshold(const int iPopChange = 0) const; // Exposed to Python
 
 	int productionLeft() const; // Exposed to Python
 	int hurryCost(bool bExtra) const; // Exposed to Python
@@ -506,15 +494,9 @@ public:
 	int getNumBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	int getNumActiveBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	bool hasActiveWorldWonder() const; // Exposed to Python
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
+
 	int getNumActiveWorldWonders() const;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+
 
 	bool processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true);
 

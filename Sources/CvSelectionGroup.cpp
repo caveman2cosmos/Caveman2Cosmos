@@ -5822,17 +5822,8 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	FAssertNotInScope(CvSelectionGroup_CvUnit_LOOP);
 	if (getOwner() != NO_PLAYER)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*  Allow Automated Units to Stack Attack                                                       */
-/************************************************************************************************/
-/*
-		setAutomateType(NO_AUTOMATE);
-*/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		//setAutomateType(NO_AUTOMATE); // Afforess: Allow Automated Units to Stack Attack
+
 		clearMissionQueue();
 
 		switch (getActivityType())
@@ -5849,7 +5840,7 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	}
 
 	const CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
-	const int iVolume = pLoopUnit->getCargoVolume();
+	const int iVolume = pLoopUnit ? pLoopUnit->getCargoVolume() : 0;
 
 	CLLNode<IDInfo>* pNextUnitNode = m_units.deleteNode(pNode);
 

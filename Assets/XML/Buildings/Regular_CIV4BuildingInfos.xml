@@ -4409,8 +4409,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -4433,7 +4433,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>234</iCost>
+			<iCost>146</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -21630,7 +21630,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>

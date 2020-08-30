@@ -413,23 +413,11 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType);
 void getMissionAIString(CvWString& szString, MissionAITypes eMissionAI);
 void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI);
 
-// BUG - Unit Experience - start
-/*
- * Calculates the experience needed to reach the next level after the given level.
- */
-int calculateExperience(int iLevel, PlayerTypes ePlayer);								// Exposed to Python
-int calculateLevel(int iExperience, PlayerTypes ePlayer);								// Exposed to Python
-// BUG - Unit Experience - end
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer);
+int calculateLevel(const int iExperience, const PlayerTypes ePlayer);
+
 DirectionTypes getOppositeDirection(DirectionTypes eDirection);
 bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherDirection);
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/	
 
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();

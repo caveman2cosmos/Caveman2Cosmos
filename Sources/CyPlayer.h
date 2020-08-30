@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -24,6 +21,10 @@ public:
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 	bool isNone() const { return m_pPlayer == NULL; }
 
+#ifdef PARALLEL_MAPS
+	void updateMembers();
+	void initMembers(int iIndex);
+#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -95,7 +96,6 @@ public:
 	int getCurrentInflationCostModifier();
 	int getEquilibriumInflationCostModifier();
 
-	int countTotalCulture();
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
@@ -160,11 +160,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	long long getFinalUnitUpkeep();
+	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
-	int calculatePreInflatedCosts();
+	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int calculateInflatedCosts();
+	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -221,15 +221,10 @@ public:
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	int64_t getGold() const;
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
-
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);
@@ -326,6 +321,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
@@ -547,15 +543,14 @@ public:
 
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 
-	int getScoreHistory(int iTurn) const;
-	int getEconomyHistory(int iTurn) const;
-	int getIndustryHistory(int iTurn) const;
-	int getAgricultureHistory(int iTurn) const;
-	int getPowerHistory(int iTurn) const;
-	int getCultureHistory(int iTurn) const;
-	int getEspionageHistory(int iTurn) const;
-
-	int getRevolutionStabilityHistory(int iTurn) const;
+	int64_t getScoreHistory(int iTurn) const;
+	int64_t getEconomyHistory(int iTurn) const;
+	int64_t getIndustryHistory(int iTurn) const;
+	int64_t getAgricultureHistory(int iTurn) const;
+	int64_t getPowerHistory(int iTurn) const;
+	int64_t getCultureHistory(int iTurn) const;
+	int64_t getEspionageHistory(int iTurn) const;
+	int64_t getRevolutionStabilityHistory(int iTurn) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -602,9 +597,9 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
 
-	int getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
+	int64_t getCulture() const;
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties();
 

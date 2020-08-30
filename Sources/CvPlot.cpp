@@ -747,7 +747,7 @@ void CvPlot::doImprovement()
 
 						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey());
 						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
-							GC.getBonusInfo((BonusTypes)iBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+							GC.getBonusInfo((BonusTypes)iBonus).getButton(), CvColorInfo::white(), getViewportX(), getViewportY(), true, true);
 					}
 				}
 				break;
@@ -834,7 +834,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
 		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+		// if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getGold())
 		{
 			iHash *= -2;
 			iHash += eMainUpgrade;
@@ -849,7 +849,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		{
 			eUpgrade = eUpgradeX;
 			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
+			//if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getGold())
 			{
 				iHash *= -2;
 				iHash += eUpgradeX;
@@ -917,7 +917,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
 			// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
+			if (/*GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getGold() && */ canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -931,7 +931,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
 				// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
+				if (/* GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getGold() && */ canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)
@@ -2111,19 +2111,19 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		iUnitID = pUnit->getID();
 		if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
-			for (int i=0;i<pUnit->getNumSeeInvisibleTypes();i++)
-			{
-				aSeeInvisibleTypes.push_back(pUnit->getSeeInvisibleType(i));
-			}
-		}
-		else
-		{
 			for (int i=0; i < GC.getNumInvisibleInfos(); i++)
 			{
 				if (pUnit->hasVisibilityType((InvisibleTypes)i))
 				{
 					aSeeInvisibleTypes.push_back((InvisibleTypes)i);
 				}
+			}
+		}
+		else
+		{
+			for (int i=0; i < pUnit->getNumSeeInvisibleTypes(); i++)
+			{
+				aSeeInvisibleTypes.push_back(pUnit->getSeeInvisibleType(i));
 			}
 		}
 	}
@@ -2183,7 +2183,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	}
 }
 
-bool CvPlot::canSeePlot(CvPlot *pPlot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const
+bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const
 {
 	if (pPlot == NULL)
 	{
@@ -2906,150 +2906,88 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 {
 	PROFILE_FUNC();
 
-	ImprovementTypes eImprovement;
-	ImprovementTypes eFinalImprovementType;
-	RouteTypes eRoute;
-	bool bValid;
-
 	if (eBuild == NO_BUILD)
 	{
 		return false;
 	}
+	// Tech requirements are not checked here - they are checked in CvPlayer::canBuild()
 
-	//	Tech requirements are not checked here - they are checked in CvPlayer::canBuild() which will also be called
-	//	when necessary (which is why the enabling tech is not checked here)
-
-	if(bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK())
+	if (bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK())
 	{
-		long lResult = canBuildFromPython(eBuild, ePlayer);
+		const int lResult = canBuildFromPython(eBuild, ePlayer);
 
-		if (lResult >= 1)
+		if (lResult > -1)
 		{
-			return true;
-		}
-		else if (lResult == 0)
-		{
-			return false;
+			return lResult > 0;
 		}
 	}
+	const CvBuildInfo& info = GC.getBuildInfo(eBuild);
 
-	bValid = false;
-
-	if (GC.getBuildInfo(eBuild).getNumPlaceBonusTypes() > 0)
+	if (info.getNumPlaceBonusTypes() > 0)
 	{
 		if (getBonusType() != NO_BONUS)
 		{
 			return false;
 		}
 
-		bool bAccessFound = false;
-		for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumPlaceBonusTypes(); iI++)
+		bool bInvalid = true;
+		for (int iI = 0; iI < info.getNumPlaceBonusTypes(); iI++)
 		{
-			BonusTypes eBonus = GC.getBuildInfo(eBuild).getPlaceBonusType(iI).eBonus;
-			bAccessFound = false;
-			if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).bRequiresAccess)
-			{
-				if (GET_PLAYER(getOwner()).hasBonus(eBonus))
-				{
-					bAccessFound = true;
-				}
-			}
-			else
-			{
-				bAccessFound = true;
-			}
-			//Check MapCategoryType
-			if (bAccessFound)
-			{
-				if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory != NO_MAPCATEGORY)
-				{
-					bAccessFound = false;
-					if (isMapCategoryType(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory))
-					{
-						bAccessFound = true;
-					}
-				}
-			}
-			if (bAccessFound)
-			{
-				if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTech != NO_TECH)
-				{
-					bAccessFound = false;
-					if (GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTech))
-					{
-						bAccessFound = true;
-					}
-				}
-			}
-			if (bAccessFound)
-			{
-				if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTerrain != NO_TERRAIN)
-				{
-					bAccessFound = false;
-					if (getTerrainType() == GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqTerrain)
-					{
-						bAccessFound = true;
-					}
-				}
-			}
-			if (bAccessFound)
-			{
-				if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqFeature != NO_FEATURE)
-				{
-					bAccessFound = false;
-					if (getFeatureType() == GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqFeature)
-					{
-						bAccessFound = true;
-					}
-				}
-			}
-			if (bAccessFound)
-			{
-				bAccessFound = false;
-				if(canHaveBonus(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).eBonus))
-				{
-					bAccessFound = true;
-				}
-			}
-			if (bAccessFound)
+			const PlaceBonusTypes& obj = info.getPlaceBonusType(iI);
+
+			bInvalid = 
+			(
+				obj.bRequiresAccess && !GET_PLAYER(getOwner()).hasBonus(obj.eBonus)
+			||
+				obj.ePrereqMapCategory != NO_MAPCATEGORY && !isMapCategoryType(obj.ePrereqMapCategory)
+			||
+				obj.ePrereqTech != NO_TECH && !GET_TEAM(getTeam()).isHasTech(obj.ePrereqTech)
+			||
+				obj.ePrereqTerrain != NO_TERRAIN && getTerrainType() != obj.ePrereqTerrain
+			||
+				obj.ePrereqFeature != NO_FEATURE && getFeatureType() != obj.ePrereqFeature
+			||
+				!canHaveBonus(obj.eBonus)
+			);
+
+			if (!bInvalid)
 			{
 				break;
 			}
 		}
-		if (!bAccessFound)
+		if (bInvalid)
 		{
 			return false;
 		}
 	}
 
-
-
-	for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumPrereqBonusTypes(); iI++)
+	for (int iI = 0; iI < info.getNumPrereqBonusTypes(); iI++)
 	{
-		BonusTypes ePrereqBonus = ((BonusTypes)GC.getBuildInfo(eBuild).getPrereqBonusType(iI));
-
-		if (!isAdjacentPlotGroupConnectedBonus(ePlayer, ePrereqBonus))
+		if (!isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)info.getPrereqBonusType(iI)))
 		{
 			return false;
 		}
 	}
 
-	int iCount = GC.getBuildInfo(eBuild).getNumMapCategoryTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)GC.getBuildInfo(eBuild).getMapCategoryType(iI)))
+		const int iCount = info.getNumMapCategoryTypes();
+		bool bFound = (iCount < 1);
+		for (int iI = 0; iI < iCount; iI++)
 		{
-			bFound = true;
-			break;
+			if (isMapCategoryType((MapCategoryTypes)info.getMapCategoryType(iI)))
+			{
+				bFound = true;
+				break;
+			}
+		}
+		if (!bFound)
+		{
+			return false;
 		}
 	}
-	if (!bFound)
-	{
-		return false;
-	}
 
-	eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
+	bool bValid = false;
+	const ImprovementTypes eImprovement = (ImprovementTypes) info.getImprovement();
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -3058,7 +2996,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
-		// Super Forts begin *build*
+		// Unique range between improvements within same improvement line (e.g. forts)
 		if (GC.getImprovementInfo(eImprovement).getUniqueRange() > 0)
 		{
 			int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
@@ -3067,163 +3005,117 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 				for (int iDY = -iUniqueRange; iDY <= iUniqueRange; iDY++)
 				{
 					CvPlot *pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-					if (pLoopPlot != NULL && pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-					{
-						if (finalImprovementUpgrade(pLoopPlot->getImprovementType()) == finalImprovementUpgrade(eImprovement))
-						{
-							return false;
-						}
-					}
-				}
-			}
-		}
-		// Super Forts end
 
-		if (getImprovementType() != NO_IMPROVEMENT)
-		{
-			if (GC.getImprovementInfo(getImprovementType()).isPermanent())
-			{
-				return false;
-			}
-
-			if (getImprovementType() == eImprovement)
-			{
-				return false;
-			}
-
-			eFinalImprovementType = finalImprovementUpgrade(getImprovementType());
-
-			//TB Commented out to allow for units to build over current improvements with their upgrads (if the build to do so is defined.)
-			//if (eFinalImprovementType != NO_IMPROVEMENT)
-			//{
-			//	if (eFinalImprovementType == finalImprovementUpgrade(eImprovement))
-			//	{
-			//		return false;
-			//	}
-			//}
-		}
-
-		if (!bTestVisible)
-		{
-			if (GET_PLAYER(ePlayer).getTeam() != getTeam())
-			{
-				//outside borders can't be built in other's culture
-				if (GC.getImprovementInfo(eImprovement).isOutsideBorders())
-				{
-					if (getTeam() != NO_TEAM)
+					if (pLoopPlot != NULL && pLoopPlot->getImprovementType() != NO_IMPROVEMENT
+					&& finalImprovementUpgrade(pLoopPlot->getImprovementType()) == finalImprovementUpgrade(eImprovement))
 					{
 						return false;
 					}
 				}
-				else //only buildable in own culture
-				{
-					return false;
-				}
+			}
+		}
+
+		if (getImprovementType() != NO_IMPROVEMENT)
+		{
+			if (getImprovementType() == eImprovement
+			|| GC.getImprovementInfo(getImprovementType()).isPermanent())
+			{
+				return false;
+			}
+
+/* TB Commented out to allow for units to build over current improvements with their upgrads (if the build to do so is defined.)
+			ImprovementTypes eFinalImprovementType = finalImprovementUpgrade(getImprovementType());
+
+			if (eFinalImprovementType != NO_IMPROVEMENT
+			&& eFinalImprovementType == finalImprovementUpgrade(eImprovement))
+			{
+				return false;
+			}
+*/
+		}
+
+		if (!bTestVisible)
+		{
+			if (GET_PLAYER(ePlayer).getTeam() != getTeam()
+			// only allow specific improvements in neutral land.
+			&& (getTeam() != NO_TEAM || !GC.getImprovementInfo(eImprovement).isOutsideBorders()))
+			{
+				return false;
 			}
 			// Super Forts begin *AI_worker* - prevent workers from two different players from building a fort in the same plot
 			if(GC.getImprovementInfo(eImprovement).isActsAsCity())
 			{
 				foreach_(const CvUnit* pLoopUnit, units())
 				{
-					if(pLoopUnit->getOwner() != ePlayer)
+					if(pLoopUnit->getOwner() != ePlayer
+					&& pLoopUnit->getBuildType() != NO_BUILD)
 					{
-						if(pLoopUnit->getBuildType() != NO_BUILD)
+						const ImprovementTypes eImprovementBuild = (ImprovementTypes)GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement();
+
+						if (eImprovementBuild != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovementBuild).isActsAsCity())
 						{
-							const ImprovementTypes eImprovementBuild = (ImprovementTypes)GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement();
-							if(eImprovementBuild != NO_IMPROVEMENT)
-							{
-								if(GC.getImprovementInfo(eImprovementBuild).isActsAsCity())
-								{
-									return false;
-								}
-							}
+							return false;
 						}
 					}
 				}
 			}
 			// Super Forts end
 		}
-
 		bValid = true;
 	}
 
-	eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
+	RouteTypes eRoute = ((RouteTypes)(info.getRoute()));
 
 	if (eRoute != NO_ROUTE)
 	{
 		if (getRouteType() != NO_ROUTE)
 		{
-			if (GC.getRouteInfo(getRouteType()).getValue() >= GC.getRouteInfo(eRoute).getValue())
-			{
-				return false;
-			}
-			/************************************************************************************************/
-			/* Afforess	                  Start		 12/8/09                                                */
-			/*                                                                                              */
-			/*    The AI should not replace sea tunnels with non-sea tunnels                                */
-			/************************************************************************************************/
-			else if (GC.getRouteInfo(getRouteType()).isSeaTunnel() && (!GC.getRouteInfo(eRoute).isSeaTunnel()))
-			{
-				return false;
-			}
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
+			if (
+				GC.getRouteInfo(getRouteType()).getValue() >= GC.getRouteInfo(eRoute).getValue()
+			|| // Afforess - The AI should not replace sea tunnels with non-sea tunnels
+				GC.getRouteInfo(getRouteType()).isSeaTunnel() && !GC.getRouteInfo(eRoute).isSeaTunnel()
+			) return false;
 		}
 
 		if (!bTestVisible)
 		{
-			if (GC.getRouteInfo(eRoute).getPrereqBonus() != NO_BONUS)
-			{
-				if (!isAdjacentPlotGroupConnectedBonus(ePlayer, ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus()))))
-				{
-					return false;
-				}
-			}
+			if (
+				GC.getRouteInfo(eRoute).getPrereqBonus() != NO_BONUS
+			&&
+				!isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqBonus())
+			) return false;
 
 			bool bFoundValid = true;
 			for (int i = 0; i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); ++i)
 			{
 				if (NO_BONUS != GC.getRouteInfo(eRoute).getPrereqOrBonus(i))
 				{
-					bFoundValid = false;
-
-					if (isAdjacentPlotGroupConnectedBonus(ePlayer, ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
+					if (isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))
 					{
 						bFoundValid = true;
 						break;
 					}
+					else bFoundValid = false;
 				}
 			}
-
 			if (!bFoundValid)
 			{
 				return false;
 			}
 		}
-
 		bValid = true;
 	}
 
-	if (getFeatureType() != NO_FEATURE)
+	if (getFeatureType() != NO_FEATURE && info.isFeatureRemove(getFeatureType()))
 	{
-		if (GC.getBuildInfo(eBuild).isFeatureRemove(getFeatureType()))
+		if (isOwned() && GET_PLAYER(ePlayer).getTeam() != getTeam() && !atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
 		{
-			if (isOwned() && (GET_PLAYER(ePlayer).getTeam() != getTeam()) && !atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
-			{
-				return false;
-			}
-
-			bValid = true;
+			return false;
 		}
+		bValid = true;
 	}
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/13/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	TerrainTypes eTerrain;
-	eTerrain = ((TerrainTypes)(GC.getBuildInfo(eBuild).getTerrainChange()));
+
+	const TerrainTypes eTerrain = (TerrainTypes)info.getTerrainChange();
 
 	if (eTerrain != NO_TERRAIN)
 	{
@@ -3231,11 +3123,10 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		{
 			return false;
 		}
-
 		bValid = true;
 	}
 
-	const FeatureTypes eFeature = static_cast<FeatureTypes>(GC.getBuildInfo(eBuild).getFeatureChange());
+	const FeatureTypes eFeature = static_cast<FeatureTypes>(info.getFeatureChange());
 
 	if (eFeature != NO_FEATURE)
 	{
@@ -3244,7 +3135,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
-		int iCount = GC.getFeatureInfo(eFeature).getNumMapCategoryTypes();
+		const int iCount = GC.getFeatureInfo(eFeature).getNumMapCategoryTypes();
 		bool bFound = (iCount < 1);
 		for (int iI = 0; iI < iCount; iI++)
 		{
@@ -3258,12 +3149,8 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		{
 			return false;
 		}
-
 		bValid = true;
 	}
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 
 	return bValid;
 }
@@ -8830,29 +8717,45 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-
 	FAssertMsg(eIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_PLAYERS, "iIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (getCulture(eIndex) != iNewValue)
 	{
-		std::vector<std::pair<PlayerTypes,int> >::iterator itr;
+		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
-		for(itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
+		// Toffer - 08.08.20
+		// 4 byte integer overflow protection
+		if (iNewValue > 1000000000) // trigger reduction at a billion
 		{
-			if ( (*itr).first == eIndex )
+			// This player may not yet be in the vector if it goes from 0 to a billion in one go through worldbuilder or something.
+			iNewValue /= 10; // So we do this outside the vector loop.
+			// Reduce culture by same factor for all players
+			for (itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
+			{
+				if ((*itr).first != eIndex)
+				{
+					(*itr).second /= 10;
+				}
+			}
+			// This overflow protection will start to break down if a plot is getting 900 million+ culture from a specific player per turn.
+			// it reduce 1 billion+ down to 100 million+, this should be an adequate overflow protection in this case.
+		}
+		// ! Toffer
+
+		for (itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
+		{
+			if ((*itr).first == eIndex)
 			{
 				break;
 			}
 		}
 
-		if ( itr == m_aiCulture.end() )
+		if (itr == m_aiCulture.end())
 		{
-			m_aiCulture.push_back(std::make_pair(eIndex,iNewValue));
-			//	Force the capacity to the size() since we need to mto minimize memory usage
-			//	and adding cultures is rare
-			std::vector<std::pair<PlayerTypes,int> >(m_aiCulture).swap(m_aiCulture);
+			m_aiCulture.push_back(std::make_pair(eIndex, iNewValue));
+			// Force the capacity to the size() since we need to minimize memory usage and adding cultures is rare
+			std::vector<std::pair<PlayerTypes, int> >(m_aiCulture).swap(m_aiCulture);
 		}
 		else
 		{
@@ -8865,11 +8768,9 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 			updateCulture(true, bUpdatePlotGroups);
 		}
 
-		pCity = getPlotCity();
-
-		if (pCity != NULL)
+		if (getPlotCity() != NULL)
 		{
-			pCity->AI_setAssignWorkDirty(true);
+			getPlotCity()->AI_setAssignWorkDirty(true);
 		}
 	}
 }
@@ -10139,7 +10040,7 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 									szIcon = GC.getTerrainInfo((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
 								else
 									szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
-								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
+								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, CvColorInfo::white(), getX(), getY(), true, true);
 							}
 						}
 					}
@@ -10456,7 +10357,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					if ( isInViewport() )
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_PLACED_BONUS", GC.getBonusInfo(eBonusPlaced).getTextKeyWide());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getBonusInfo(getBonusType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getBonusInfo(getBonusType()).getButton(), CvColorInfo::white(), getViewportX(),getViewportY(), true, true);
 					}
 				}
 				else
@@ -10518,7 +10419,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 						if ( isInViewport() )
 						{
 							szBuffer = gDLL->getText("TXT_KEY_MISC_CLEARING_FEATURE_BONUS", GC.getFeatureInfo(getFeatureType()).getTextKeyWide(), iProduction, pCity->getNameKey());
-							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(getFeatureType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(getFeatureType()).getButton(), CvColorInfo::white(), getViewportX(),getViewportY(), true, true);
 						}
 					}
 
@@ -11485,7 +11386,7 @@ void CvPlot::doFeature()
 						gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
 
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO,
-						kFeature.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
+						kFeature.getButton(), CvColorInfo::white(), getViewportX(),getViewportY(), true, true);
 				}
 				break;
 			}
@@ -11699,15 +11600,11 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 }
 
 
-ColorTypes CvPlot::plotMinimapColor()
+ColorTypes CvPlot::plotMinimapColor() const
 {
-	CvUnit* pCenterUnit;
-
 	if (GC.getGame().getActivePlayer() != NO_PLAYER)
 	{
-		CvCity* pCity;
-
-		pCity = getPlotCity();
+		const CvCity* pCity = getPlotCity();
 
 		if ((pCity != NULL) && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
@@ -11716,7 +11613,7 @@ ColorTypes CvPlot::plotMinimapColor()
 
 		if (isActiveVisible(true))
 		{
-			pCenterUnit = getDebugCenterUnit();
+			const CvUnit* pCenterUnit = getDebugCenterUnit();
 
 			if (pCenterUnit != NULL)
 			{
@@ -13435,7 +13332,7 @@ int CvPlot::countAirInterceptorsActive(TeamTypes eTeam) const
 
 bool CvPlot::isEspionageCounterSpy(TeamTypes eTeam) const
 {
-	CvCity* pCity = getPlotCity();
+	const CvCity* pCity = getPlotCity();
 
 	if (NULL != pCity && pCity->getTeam() == eTeam)
 	{
@@ -14292,7 +14189,7 @@ const CvProperties* CvPlot::getPropertiesConst() const
 	return &m_Properties;
 }
 
-bool CvPlot::HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult)
+bool CvPlot::HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const
 {
 	if ( m_iCachePathEpoch == m_iGlobalCachePathEpoch )
 	{

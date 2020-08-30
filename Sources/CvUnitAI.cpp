@@ -2247,12 +2247,12 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	//	Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
-	int iGold = GET_PLAYER(getOwner()).getEffectiveGold();
+	const int64_t iGold = GET_PLAYER(getOwner()).getGold();
 	int iTargetGold = GET_PLAYER(getOwner()).AI_goldTarget();
 
 	if ( iGold > iTargetGold )
 	{
-		int iTryUpgradeProbability = ((iGold - iTargetGold)*100)/iGold;
+		int64_t iTryUpgradeProbability = ((iGold - iTargetGold)*100)/iGold;
 
 		if ( GC.getGame().getSorenRandNum(100, "AI upgrade worker") < iTryUpgradeProbability )
 		{
@@ -19713,28 +19713,24 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 
 	static std::map<CvPlot*,bool>* cachedTargets = NULL;
 
-
-	//pTargetCity = area()->getTargetCity(getOwner());
+	/*
+	CvCity* pTargetCity = area()->getTargetCity(getOwner());
 
 	// Don't always go after area target ... don't know how far away it is
-	/*
-	if (pTargetCity != NULL)
+	if (pTargetCity != NULL
+	&& AI_potentialEnemy(pTargetCity->getTeam(), pTargetCity->plot())
+	&& !atPlot(pTargetCity->plot())
+	&& generatePath(pTargetCity->plot(), iFlags, true))
 	{
-		if (AI_potentialEnemy(pTargetCity->getTeam(), pTargetCity->plot()))
-		{
-			if (!atPlot(pTargetCity->plot()) && generatePath(pTargetCity->plot(), iFlags, true))
-			{
-				pBestCity = pTargetCity;
-			}
-		}
+		pBestCity = pTargetCity;
 	}
 	*/
-	if ( cachedTargets == NULL )
+	if (cachedTargets == NULL)
 	{
 		cachedTargets = new std::map<CvPlot*,bool>();
 	}
 
-	if ( eCachedTargetCityPlayer != getOwner() )
+	if (eCachedTargetCityPlayer != getOwner())
 	{
 		eCachedTargetCityPlayer = getOwner();
 		cachedTargets->clear();
@@ -19745,10 +19741,10 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 	{
 		CvCity* possibleTargetCity = itr->first->getPlotCity();
 
-		if ( possibleTargetCity != NULL &&
-			 itr->first->area() == area() &&
-			 stepDistance(getX(), getY(), itr->first->getX(), itr->first->getY()) < AI_searchRange(iMaxPathTurns) &&
-			 generatePath(itr->first, iFlags, true, NULL, MAX_CLOSE_TARGET_DISTANCE) )
+		if (possibleTargetCity != NULL
+		&& itr->first->area() == area()
+		&& stepDistance(getX(), getY(), itr->first->getX(), itr->first->getY()) < AI_searchRange(iMaxPathTurns)
+		&& generatePath(itr->first, iFlags, true, NULL, MAX_CLOSE_TARGET_DISTANCE))
 		{
 			pBestCity = possibleTargetCity;
 			break;
@@ -19757,7 +19753,7 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 
 	CvReachablePlotSet plotSet(getGroup(), iFlags);
 
-	if ( iMaxPathTurns != MAX_INT )
+	if (iMaxPathTurns != MAX_INT)
 	{
 		plotSet.Populate(AI_searchRange(iMaxPathTurns));
 	}
@@ -19772,60 +19768,62 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 			{
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					// BBAI efficiency: check area for land units before generating path
-					if (((iMaxPathTurns == MAX_INT && stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()) < AI_searchRange(iMaxPathTurns)) ||
-						(iMaxPathTurns != MAX_INT && plotSet.find(pLoopCity->plot()) != plotSet.end())) &&
-						pLoopCity->plot()->isRevealed(getTeam(),false) &&
-						(getDomainType() != DOMAIN_LAND || pLoopCity->area() == area()))
+					if 
+					(
+						(
+							iMaxPathTurns == MAX_INT && stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()) < AI_searchRange(iMaxPathTurns)
+						||
+							iMaxPathTurns != MAX_INT && plotSet.find(pLoopCity->plot()) != plotSet.end()
+						)
+					&&
+						pLoopCity->plot()->isRevealed(getTeam(), false)
+					&&
+						(getDomainType() != DOMAIN_LAND || pLoopCity->area() == area()
+					&&
+						AI_potentialEnemy(GET_PLAYER((PlayerTypes)iI).getTeam(), pLoopCity->plot())
+					&&
+						!atPlot(pLoopCity->plot()))
+					)
 					{
-						if(AI_potentialEnemy(GET_PLAYER((PlayerTypes)iI).getTeam(), pLoopCity->plot()))
+						int iValue =
+						(
+							AI_getUnitAIType() == UNITAI_ATTACK_CITY
+							?
+							GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, false, false)
+							:
+							GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, true)
+						);
+
+						/* TODO: cleanup this function - There is no target city, it was disabled
+						if (pLoopCity == pTargetCity)
 						{
-							if (!atPlot(pLoopCity->plot()))
-							{
-								int iValue = 0;
-								if (AI_getUnitAIType() == UNITAI_ATTACK_CITY) //lemming?
-								{
-									iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, false, false);
-								}
-								else
-								{
-									iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, true);
-								}
+							iValue *= 2;
+						} */
 
-								// TODO: cleanup this function
-								// There is no target city, it was disabled
-								//if( pLoopCity == pTargetCity )
-								//{
-								//	iValue *= 2;
-								//}
+						if (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE)
+						{
+							iValue *= 50 + pLoopCity->calculateCulturePercent(getOwner());
+							iValue /= 50;
+						}
+						iValue *= 1000;
 
-								if ((area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE))
-								{
-									iValue *= 50 + pLoopCity->calculateCulturePercent(getOwner());
-									iValue /= 50;
-								}
+						// If city is minor civ, less interesting
+						if (GET_PLAYER(pLoopCity->getOwner()).isMinorCiv() || GET_PLAYER(pLoopCity->getOwner()).isNPC())
+						{
+							iValue /= 2;
+						}
 
-								iValue *= 1000;
+						if (iValue > 0)
+						{
+							targetInfo info;
 
-								// If city is minor civ, less interesting
-								if( GET_PLAYER(pLoopCity->getOwner()).isMinorCiv() || GET_PLAYER(pLoopCity->getOwner()).isNPC() )
-								{
-									iValue /= 2;
-								}
+							info.iValue = iValue;
+							info.pCity = pLoopCity;
 
-								if ( iValue > 0 )
-								{
-									targetInfo info;
+							const int iDistanceEstimate = (stepDistance(plot()->getX(), plot()->getY(), pLoopCity->getX(), pLoopCity->getY()) + 2)/2;
+							const int iOrderingValue = -iValue / (iDistanceEstimate*iDistanceEstimate);
 
-									info.iValue = iValue;
-									info.pCity = pLoopCity;
-
-									int iDistanceEstimate = (stepDistance(plot()->getX(), plot()->getY(), pLoopCity->getX(), pLoopCity->getY()) + 2)/2;
-									int	iOrderingValue = -iValue/(iDistanceEstimate*iDistanceEstimate);
-
-									possibleTargets.insert(std::make_pair(iOrderingValue, info));
-								}
-							}
+							possibleTargets.insert(std::make_pair(iOrderingValue, info));
 						}
 					}
 				}
@@ -19837,40 +19835,39 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 
 	if (pBestCity == NULL)
 	{
-		//	Following loop verifies
+		// Following loop verifies
 		bVerifiedPathing = true;
 		int iBestValue = 0;
 
 		for(std::multimap<int,targetInfo>::const_iterator itr = possibleTargets.begin(); itr != possibleTargets.end(); ++itr)
 		{
 			CvCity* pLoopCity = itr->second.pCity;
-			int		iPathTurnsExtra = std::min(12, getGroup()->getBombardTurns(pLoopCity)/4);
-			int		iMaxPath;
+			int iMaxPath;
 
-			if ( iBestValue > 0 )
+			if (iBestValue > 0)
 			{
-				float	fLongestPossibleWinningPath = sqrt(((float)itr->second.iValue)/((float)iBestValue) - 4);
+				int iLongestWinningPath = itr->second.iValue / iBestValue - 4;
+				if (iLongestWinningPath > 1)
+					iLongestWinningPath = intSqrt(iLongestWinningPath);
 
-				iMaxPath = std::min((int)fLongestPossibleWinningPath - iPathTurnsExtra, iMaxPathTurns);
-			}
-			else
-			{
-				iMaxPath = iMaxPathTurns;
-			}
+				const int iPathTurnsExtra = std::min(12, getGroup()->getBombardTurns(pLoopCity)/4);
 
-			if ( iMaxPath > 0 )
+				iMaxPath = std::min(iLongestWinningPath - iPathTurnsExtra, iMaxPathTurns);
+			}
+			else iMaxPath = iMaxPathTurns;
+
+			if (iMaxPath > 0)
 			{
 				PROFILE("AI_pickTargetCity.PrePathing");
 				int iPathTurns = 0;
-				if (generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns, iMaxPath) ||
-					(stepDistance(pLoopCity->getX(), pLoopCity->getY(), getX(), getY()) == 1 &&
-					 getGroup()->canBombard(plot(),true)))
+				if (generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns, iMaxPath)
+				|| stepDistance(pLoopCity->getX(), pLoopCity->getY(), getX(), getY()) == 1 && getGroup()->canBombard(plot(),true))
 				{
 					PROFILE("AI_pickTargetCity.PostPathing");
 
 					// If city is visible and our force already in position is dominantly powerful or we have a huge force
 					// already on the way, pick a different target
-					if( iPathTurns > 2 && pLoopCity->isVisible(getTeam(), false) )
+					if (iPathTurns > 2 && pLoopCity->isVisible(getTeam(), false))
 					{
 						/*
 						int iOurOffense = GET_TEAM(getTeam()).AI_getOurPlotStrength(pLoopCity->plot(),2,false,false,true);
@@ -19882,25 +19879,20 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 						}
 						*/
 
-						if( GET_PLAYER(getOwner()).AI_cityTargetUnitsByPath(pLoopCity, getGroup(), iPathTurns) > std::max( 6, 3 * pLoopCity->plot()->getNumVisiblePotentialEnemyDefenders(this) ) )
+						if (GET_PLAYER(getOwner()).AI_cityTargetUnitsByPath(pLoopCity, getGroup(), iPathTurns) > std::max(6, 3*pLoopCity->plot()->getNumVisiblePotentialEnemyDefenders(this)))
 						{
 							continue;
 						}
 					}
 
-					//	For barbarians, if the city is distant, build a larger stack first than we
-					//	would if it were close by
-					if ( isNPC() )
+					// For barbarians, if the city is distant, build a larger stack first than we
+					// would if it were close by
+					if (isNPC() && getGroup()->getNumUnits() < 3 + iPathTurns/5)
 					{
-						int	iMinStack = 3 + iPathTurns/5;
-
-						if ( getGroup()->getNumUnits() < iMinStack )
-						{
-							continue;
-						}
+						continue;
 					}
 
-					int iValue = itr->second.iValue/(4 + iPathTurns*iPathTurns);
+					const int iValue = itr->second.iValue/(4 + iPathTurns*iPathTurns);
 
 					if (iValue > iBestValue)
 					{
@@ -19912,25 +19904,21 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 		}
 	}
 
-	if ( pBestCity != NULL )
+	if (pBestCity != NULL)
 	{
-		if ( !bVerifiedPathing && !generatePath(pBestCity->plot(), iFlags, true) )
+		if (!bVerifiedPathing && !generatePath(pBestCity->plot(), iFlags, true))
 		{
-			pBestCity = NULL;
+			return NULL;
 		}
-		else
-		{
-			logBBAI("Unit %d at (%d,%d) picks target city at (%d,%d)",
-					getID(),
-					getX(),
-					getY(),
-					pBestCity->getX(),
-					pBestCity->getY());
+		logBBAI("Unit %d at (%d,%d) picks target city at (%d,%d)",
+				getID(),
+				getX(),
+				getY(),
+				pBestCity->getX(),
+				pBestCity->getY());
 
-			(*cachedTargets)[pBestCity->plot()] = true;
-		}
+		(*cachedTargets)[pBestCity->plot()] = true;
 	}
-
 	return pBestCity;
 }
 

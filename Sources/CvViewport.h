@@ -76,7 +76,6 @@ public:
 
 public:
 	virtual MapTypes getType() const;
-	virtual void setType(MapTypes eNewType);
 
 	virtual void beforeSwitch();
 	virtual void afterSwitch();

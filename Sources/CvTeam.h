@@ -60,7 +60,7 @@ public:
 
 	bool isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses=false) const;
 
-	int getTotalVictoryScore() const; // Exposed to Python
+	int64_t getTotalVictoryScore() const; // Exposed to Python
 
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
 	bool isVotingMember(VoteSourceTypes eVoteSource) const;
@@ -89,7 +89,7 @@ public:
 	int getHasCorporationCount(CorporationTypes eCorporation) const; // Exposed to Python
 
 	int processedTeamCulture() const;
-	unsigned long long countTotalCulture() const; // Exposed to Python
+	uint64_t countTotalCulture() const; // Exposed to Python
 
 	int countNumUnitsByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesByArea(const CvArea* pArea) const; // Exposed to Python

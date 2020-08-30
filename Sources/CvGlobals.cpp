@@ -705,7 +705,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-
 bool cvInternalGlobals::multiMapsEnabled() const
 {
 	return m_bMultimapsEnabled;
@@ -745,19 +744,11 @@ CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) 
 
 void cvInternalGlobals::updateMaps()
 {
-	CvMap* pMap = NULL;
-	int i;
-	
-	for (i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapInfos(); i++)
 	{
-		m_maps.push_back(pMap);
+		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
-}
-
-const std::vector<CvMap*>& cvInternalGlobals::getMaps() const
-{
-	return m_maps;
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -2657,7 +2648,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start");
+	OutputDebugString("Caching Globals: Start/n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2700,7 +2691,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End");
+	OutputDebugString("Caching Globals: End/n");
 }
 
 /************************************************************************************************/
@@ -3496,7 +3487,7 @@ void cvInternalGlobals::reprocessSigns()
 
 void cvInternalGlobals::initializeMap(MapTypes eMap)
 {
-	OutputDebugString("Initializing Map: Start");
+	OutputDebugString("Initializing Map: Start\n");
 	while ( m_maps.size() < (size_t)eMap )
 	{
 		//	Sparse or out of order initialization
@@ -3506,7 +3497,7 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
 
 	m_maps[eMap] = new CvMap(eMap);
-	OutputDebugString("Initializing Map: End");
+	OutputDebugString("Initializing Map: End\n");
 }
 
 bool cvInternalGlobals::mapInitialized(MapTypes eMap) const

@@ -50,14 +50,14 @@ public:
 	const wchar* getFinalDate() const;
 	CalendarTypes getCalendar() const;
 	int getNumPlayers() const;
-	int getPlayerScore(int iPlayer, int iTurn) const;
-	int getPlayerEconomy(int iPlayer, int iTurn) const;
-	int getPlayerIndustry(int iPlayer, int iTurn) const;
-	int getPlayerAgriculture(int iPlayer, int iTurn) const;
-	int getFinalScore() const;
-	int getFinalEconomy() const;
-	int getFinalIndustry() const;
-	int getFinalAgriculture() const;
+	int64_t getPlayerScore(int iPlayer, int iTurn) const;
+	int64_t getPlayerEconomy(int iPlayer, int iTurn) const;
+	int64_t getPlayerIndustry(int iPlayer, int iTurn) const;
+	int64_t getPlayerAgriculture(int iPlayer, int iTurn) const;
+	int64_t getFinalScore() const;
+	int64_t getFinalEconomy() const;
+	int64_t getFinalIndustry() const;
+	int64_t getFinalAgriculture() const;
 	int getNormalizedScore() const;
 
 	DllExport int getMapHeight() const;
@@ -105,10 +105,10 @@ protected:
 
 	struct TurnData
 	{
-		int m_iScore;
-		int m_iEconomy;
-		int m_iIndustry;
-		int m_iAgriculture;
+		int64_t m_iScore;
+		int64_t m_iEconomy;
+		int64_t m_iIndustry;
+		int64_t m_iAgriculture;
 	};
 	typedef std::vector<TurnData> ScoreHistory;
 

@@ -16996,6 +16996,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Mapy Świata</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TREASURY_UPKEEP</Tag>
+		<English>Treasury Upkeep:[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TURNTIMER_FAST</Tag>
 		<English>Fast</English>
 		<French>

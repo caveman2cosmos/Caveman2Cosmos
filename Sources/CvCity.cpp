@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
@@ -2941,9 +2942,9 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	bool bQual = false;
 	if (GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted() && isNPC())
 	{
+		bool bQual = false;
 		for (int iI = 0; iI < kBuilding.getNumEnabledCivilizationTypes(); iI++)
 		{
 			if (getCivilizationType() == kBuilding.getEnabledCivilizationType(iI).eCivilization)
@@ -2952,48 +2953,42 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				break;
 			}
 		}
-	}
-	else
-	{
-		bQual = true;
-	}
-	if (!bQual)
-	{
-		return false;
+		if (!bQual)
+		{
+			return false;
+		}
 	}
 
-	if (GC.getUSE_CAN_CONSTRUCT_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "canConstruct", Cy::Args()
+	if (
+		GC.getUSE_CAN_CONSTRUCT_CALLBACK()
+	&&
+		Cy::call<bool>(
+			PYGameModule, "canConstruct", Cy::Args()
 			// CyCity doesn't have a const only interface
 			<< const_cast<CvCity*>(this)
 			<< eBuilding
 			<< bContinue
 			<< bTestVisible
 			<< bIgnoreCost
-			))
-		{
-			return true;
-		}
-	}
+		)
+	) return true;
 
 	//ls612: No Holy City Tag
-	if (GC.getBuildingInfo(eBuilding).isNoHolyCity() && isHolyCity() && !bExposed)
+	if (!bExposed && GC.getBuildingInfo(eBuilding).isNoHolyCity() && isHolyCity())
 	{
 		return false;
 	}
 
-	if (!(GET_PLAYER(getOwner()).canConstruct(eBuilding, bContinue, bTestVisible, bIgnoreCost, eIgnoreTechReq, probabilityEverConstructable, bAffliction, bExposed)))
+	if (
+		!GET_PLAYER(getOwner()).canConstruct(
+			eBuilding, bContinue, bTestVisible, bIgnoreCost, eIgnoreTechReq,
+			probabilityEverConstructable, bAffliction, bExposed
+		)
+	) return false;
+
+	if (!bIgnoreAmount && getNumBuilding(eBuilding) >= GC.getCITY_MAX_NUM_BUILDINGS())
 	{
 		return false;
-	}
-
-	if (!bIgnoreAmount)
-	{
-		if (getNumBuilding(eBuilding) >= GC.getCITY_MAX_NUM_BUILDINGS())
-		{
-			return false;
-		}
 	}
 	if (isDisabledBuilding(eBuilding))
 	{
@@ -3004,7 +2999,8 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		if (kBuilding.isStateReligion())
 		{
-			ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+			const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+
 			if (NO_RELIGION == eStateReligion || !isHasReligion(eStateReligion))
 			{
 				if (probabilityEverConstructable != NULL)
@@ -3015,32 +3011,30 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 		}
 
-		if (kBuilding.getPrereqReligion() != NO_RELIGION)
+		const ReligionTypes eReligion = (ReligionTypes)kBuilding.getPrereqReligion();
+
+		if (eReligion != NO_RELIGION && !isHasReligion(eReligion))
 		{
-			if (!(isHasReligion((ReligionTypes)(kBuilding.getPrereqReligion()))))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 50;
-				}
-				return false;
+				*probabilityEverConstructable = 50;
 			}
+			return false;
 		}
 
-		CorporationTypes prereqCorp = (CorporationTypes)kBuilding.getPrereqCorporation();
-		if (prereqCorp != NO_CORPORATION)
+		const CorporationTypes prereqCorp = (CorporationTypes)kBuilding.getPrereqCorporation();
+
+		if (prereqCorp != NO_CORPORATION && !isHasCorporation(prereqCorp))
 		{
-			if (!isHasCorporation(prereqCorp))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 30;
-				}
-				return false;
+				*probabilityEverConstructable = 30;
 			}
+			return false;
 		}
 
-		CorporationTypes foundsCorp = (CorporationTypes)kBuilding.getFoundsCorporation();
+		const CorporationTypes foundsCorp = (CorporationTypes)kBuilding.getFoundsCorporation();
+
 		if (foundsCorp != NO_CORPORATION)
 		{
 			if (GC.getGame().isCorporationFounded(foundsCorp))
@@ -3050,12 +3044,10 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 			for (int iCorporation = 0; iCorporation < GC.getNumCorporationInfos(); ++iCorporation)
 			{
-				if (isHeadquarters((CorporationTypes)iCorporation))
+				if (isHeadquarters((CorporationTypes)iCorporation)
+				&& GC.getGame().isCompetingCorporation((CorporationTypes)iCorporation, foundsCorp))
 				{
-					if (GC.getGame().isCompetingCorporation((CorporationTypes)iCorporation, foundsCorp))
-					{
-						return false;
-					}
+					return false;
 				}
 			}
 		}
@@ -3065,16 +3057,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 
-		if (kBuilding.isGovernmentCenter())
+		if (kBuilding.isGovernmentCenter() && isGovernmentCenter())
 		{
-			if (isGovernmentCenter())
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 10;
-				}
-				return false;
+				*probabilityEverConstructable = 10;
 			}
+			return false;
 		}
 	}
 
@@ -3082,28 +3071,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		if (!bAffliction)
 		{
-			if (!bContinue)
+			if (!bContinue && getFirstBuildingOrder(eBuilding) != -1)
 			{
-				if (getFirstBuildingOrder(eBuilding) != -1)
-				{
-					return false;
-				}
+				return false;
 			}
 
-			if (isNPC())
+			if (isNPC() && isLimitedWonder(eBuilding))
 			{
-				if (isWorldWonder(eBuilding))
-				{
-					return false;
-				}
-				else if (isTeamWonder(eBuilding))
-				{
-					return false;
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					return false;
-				}
+				return false;
 			}
 
 			if (!kBuilding.isNoLimit())
@@ -3132,39 +3107,32 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 		}
 
-		if (kBuilding.getHolyCity() != NO_RELIGION)
+		if (kBuilding.getHolyCity() != NO_RELIGION
+		&& !isHolyCity((ReligionTypes)kBuilding.getHolyCity()))
 		{
-			if (!isHolyCity(((ReligionTypes)(kBuilding.getHolyCity()))))
-			{
-				return false;
-			}
+			return false;
 		}
 
-		if (kBuilding.getPrereqAndBonus() != NO_BONUS)
+		if (kBuilding.getPrereqAndBonus() != NO_BONUS
+		&& !hasBonus((BonusTypes)kBuilding.getPrereqAndBonus()))
 		{
-			if (!hasBonus((BonusTypes)kBuilding.getPrereqAndBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 50;
-				}
-				return false;
+				*probabilityEverConstructable = 50;
 			}
+			return false;
 		}
 
-		CorporationTypes foundsCorp = (CorporationTypes)kBuilding.getFoundsCorporation();
+		const CorporationTypes foundsCorp = (CorporationTypes)kBuilding.getFoundsCorporation();
+
 		if (foundsCorp != NO_CORPORATION && !bAffliction)
 		{
-			if (GC.getGame().isCorporationFounded(foundsCorp))
+			if (GC.getGame().isCorporationFounded(foundsCorp)
+			|| GET_PLAYER(getOwner()).isNoCorporations())
 			{
 				return false;
 			}
-
-			if (GET_PLAYER(getOwner()).isNoCorporations())
-			{
-				return false;
-			}
-			bool bValid = false;
+			bool bHasBonus = false;
 			bool bRequiresBonus = false;
 			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 			{
@@ -3174,13 +3142,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 					bRequiresBonus = true;
 					if (hasBonus(eBonus))
 					{
-						bValid = true;
+						bHasBonus = true;
 						break;
 					}
 				}
 			}
 
-			if (!bValid && bRequiresBonus)
+			if (bRequiresBonus && !bHasBonus)
 			{
 				if (probabilityEverConstructable != NULL)
 				{
@@ -3192,57 +3160,51 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		if (!bAffliction) //bAffliction ONLY applies during the Outbreaks and Afflictions option being on!
 		{
-			if (!(*getPropertiesConst() <= *(kBuilding.getPrereqMaxProperties())))
+			if (!(*getPropertiesConst() <= *(kBuilding.getPrereqMaxProperties()))
+			|| !(*getPropertiesConst() >= *(kBuilding.getPrereqMinProperties())))
+			{
 				return false;
-
-			if (!(*getPropertiesConst() >= *(kBuilding.getPrereqMinProperties())))
-				return false;
+			}
 		}
 
-		if (plot()->getLatitude() > kBuilding.getMaxLatitude())
+		if (plot()->getLatitude() > kBuilding.getMaxLatitude()
+		||  plot()->getLatitude() < kBuilding.getMinLatitude())
 		{
 			return false;
 		}
 
-		if (plot()->getLatitude() < kBuilding.getMinLatitude())
+		if (kBuilding.isBuildOnlyOnPeaks() && !plot()->isPeak2(true))
 		{
 			return false;
 		}
 
-		if (kBuilding.isBuildOnlyOnPeaks())
+		const int iPrereqPopulation = (
+			std::max(
+				kBuilding.getPrereqPopulation(),
+				1 + getNumPopulationEmployed() + kBuilding.getNumPopulationEmployed()
+			)
+		);
+		if (iPrereqPopulation > 0 && getPopulation() < iPrereqPopulation)
 		{
-			if (!(plot()->isPeak2(true)))
+			if (probabilityEverConstructable != NULL)
 			{
-				return false;
+				*probabilityEverConstructable = 50;
 			}
+			return false;
 		}
 
-		int iPrereqPopulation = std::max(kBuilding.getPrereqPopulation(), getNumPopulationEmployed() + kBuilding.getNumPopulationEmployed() + 1);
-		if (iPrereqPopulation > 0)
+		if (kBuilding.getPrereqCultureLevel() != NO_CULTURELEVEL
+		&& getCultureLevel() < kBuilding.getPrereqCultureLevel())
 		{
-			if (getPopulation() < iPrereqPopulation)
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 50;
-				}
-				return false;
+				*probabilityEverConstructable = 50;
 			}
-		}
-
-		if (kBuilding.getPrereqCultureLevel() != NO_CULTURELEVEL)
-		{
-			if (getCultureLevel() < kBuilding.getPrereqCultureLevel())
-			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 50;
-				}
-				return false;
-			}
+			return false;
 		}
 
 		const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqAnyoneBuilding());
+
 		if (ePrereqBuilding != NO_BUILDING && GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0)
 		{
 			return false;
@@ -3250,7 +3212,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bRequiresBonus = false;
 		bool bNeedsBonus = true;
-
 		for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
 		{
 			if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
@@ -3260,10 +3221,10 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
 				{
 					bNeedsBonus = false;
+					break;
 				}
 			}
 		}
-
 		if (bRequiresBonus && bNeedsBonus)
 		{
 			if (probabilityEverConstructable != NULL)
@@ -3272,13 +3233,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 			return false;
 		}
-	}
-
-	//Hide Buildings that shouldn't appear in the early game and require other buildings
-	bool bOldTestVisible = bTestVisible;
-	if (kBuilding.getPrereqAndTech() == NO_TECH && kBuilding.getObsoleteTech() == NO_TECH)
-	{
-		bTestVisible = false;
 	}
 
 	/************************************************************************************************/
@@ -3311,11 +3265,20 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				return false;
 			}
 		}
-		if (!bTestVisible && !bIgnoreBuildings)
+		//Hide Buildings that shouldn't appear in the early game and require other buildings
+		const bool bTest = (
+			(
+				kBuilding.getPrereqAndTech() == NO_TECH &&
+				kBuilding.getObsoleteTech() == NO_TECH
+			)
+			? true : !bTestVisible
+		);
+		if (bTest && !bIgnoreBuildings)
 		{
 			for (int iI = 0; iI < kBuilding.getNumPrereqInCityBuildings(); iI++)
 			{
 				const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqInCityBuilding(iI));
+
 				if (ePrereqBuilding != withExtraBuilding && 0 == getNumBuilding(ePrereqBuilding))
 				{
 					if (probabilityEverConstructable != NULL)
@@ -3328,9 +3291,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 	}
 
-	bTestVisible = bOldTestVisible;
-
-	if ((!bTestVisible && !bIgnoreBuildings) || bAffliction)
+	if (!bTestVisible && !bIgnoreBuildings || bAffliction)
 	{
 		if (kBuilding.isPrereqNotBuilding(NO_BUILDING))
 		{
@@ -3369,39 +3330,35 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 			return false;
 		}
-		if (kBuilding.isPrereqPower())
+		if (kBuilding.isPrereqPower() && !isPower())
 		{
-			if (!isPower())
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 25;
-				}
-				return false;
+				*probabilityEverConstructable = 25;
 			}
+			return false;
 		}
 	}
 
-	if (!bAffliction)
+	if (!bAffliction && kBuilding.isReplaceBuilding(NO_BUILDING))
 	{
 		//Can not construct replaced buildings.
-		if (kBuilding.isReplaceBuilding(NO_BUILDING))
+		for (int iI = 0; iI < numBuildingInfos; iI++)
 		{
-			for (int iI = 0; iI < numBuildingInfos; iI++)
-			{
-				if (kBuilding.isReplaceBuilding(iI))
-				{
-					if (getNumActiveBuilding((BuildingTypes)iI) > 0 || (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS) && canConstruct((BuildingTypes)iI, true, false, false, true)))
-					{
-						return false;
-					}
-				}
-			}
+			if (
+				kBuilding.isReplaceBuilding(iI)
+			&&
+				(
+					getNumActiveBuilding((BuildingTypes)iI) > 0
+				||	GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
+				&&	canConstruct((BuildingTypes)iI, true, false, false, true)
+				)
+			) return false;
 		}
 	}
 
-	//	Koshling - always hide things not buildable due to vicinity bonuses - its
-	//	not really useful to see them
+	//	Koshling - always hide things not buildable due to vicinity bonuses
+	//	it's not really useful to see them
 	//if (!bTestVisible)
 	if (!bExposed)
 	{
@@ -3450,32 +3407,26 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
-	if (!bTestVisible && kBuilding.getConstructCondition() && !bExposed)
+	if (!bTestVisible && kBuilding.getConstructCondition() && !bExposed
+	&& !kBuilding.getConstructCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObject())))
 	{
-		if (!kBuilding.getConstructCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObject()))) // Const wegcasten ist hier ok da evaluate nicht wirklich etwas �ndert
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (GC.getUSE_CANNOT_CONSTRUCT_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotConstruct", Cy::Args()
+	if (
+		GC.getUSE_CANNOT_CONSTRUCT_CALLBACK()
+	&&
+		Cy::call<bool>(
+			PYGameModule, "cannotConstruct", Cy::Args()
 			// CyCity doesn't have a const only interface
 			<< const_cast<CvCity*>(this)
 			<< eBuilding
 			<< bContinue
 			<< bTestVisible
 			<< bIgnoreCost
-			))
-		{
-			return false;
-		}
-	}
+		)
+	) return false;
 
 	return true;
 }
@@ -3483,39 +3434,11 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible) const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/21/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (GC.getUSE_CAN_CREATE_PROJECT_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "canCreate", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eProject
-			<< bContinue
-			<< bTestVisible
-			))
-		{
-			return true;
-		}
-	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-
-	if (!(GET_PLAYER(getOwner()).canCreate(eProject, bContinue, bTestVisible)))
+	if (!GET_PLAYER(getOwner()).canCreate(eProject, bContinue, bTestVisible))
 	{
 		return false;
 	}
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/21/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	int iCount = GC.getProjectInfo(eProject).getNumMapCategoryTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
@@ -3531,23 +3454,18 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 		return false;
 	}
 
-	if (GC.getUSE_CANNOT_CREATE_PROJECT_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotCreate", Cy::Args()
+	if (
+		GC.getUSE_CANNOT_CREATE_PROJECT_CALLBACK()
+	&&
+		Cy::call<bool>(
+			PYGameModule, "cannotCreate", Cy::Args()
 			// CyCity doesn't have a const only interface
 			<< const_cast<CvCity*>(this)
 			<< eProject
 			<< bContinue
 			<< bTestVisible
-			))
-		{
-			return false;
-		}
-	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
+		)
+	) return false;
 
 	return true;
 }
@@ -3555,73 +3473,37 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 
 bool CvCity::canMaintain(ProcessTypes eProcess, bool bContinue) const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/21/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (GC.getUSE_CAN_MAINTAIN_PROCESS_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "canMaintain", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eProcess
-			<< bContinue
-			))
-		{
-			return true;
-		}
-	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	if (!(GET_PLAYER(getOwner()).canMaintain(eProcess, bContinue)))
+	if (!GET_PLAYER(getOwner()).canMaintain(eProcess, bContinue))
 	{
 		return false;
 	}
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/21/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (GC.getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotMaintain", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eProcess
-			<< bContinue
-			))
-		{
-			return false;
-		}
-	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	return true;
-}
+	if (
+		GC.getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK()
+	&&
+		Cy::call<bool>(
+			PYGameModule, "cannotMaintain", Cy::Args()
+			<< const_cast<CvCity*>(this) << eProcess << bContinue
+		)
+	) return false;
 
-
-bool CvCity::canJoin() const
-{
 	return true;
 }
 
 
 int CvCity::getFoodTurnsLeft() const
 {
-	int iFoodLeft = (growthThreshold() - getFood());
+	const int iFoodDifference = foodDifference();
 
-	if (foodDifference() <= 0)
+	if (iFoodDifference <= 0)
 	{
-		return iFoodLeft;
+		return growthThreshold() - getFood();
 	}
+	const int iFoodLeft = growthThreshold() - getFood();
 
-	int iTurnsLeft = (iFoodLeft / foodDifference());
+	int iTurnsLeft = iFoodLeft / iFoodDifference;
 
-	if ((iTurnsLeft * foodDifference()) < iFoodLeft)
+	if (iTurnsLeft * iFoodDifference < iFoodLeft)
 	{
 		iTurnsLeft++;
 	}
@@ -3788,7 +3670,6 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 		iExperience += kPlayer.getStateReligionFreeExperience();
 	}
 
-	//Team Project (6)
 	int iExperienceModifier = 0;
 	if (kPlayer.getCapitalXPModifier() != 0 && (isCapital() || isGovernmentCenter()))
 	{
@@ -3807,7 +3688,7 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 
 	if (iExperienceModifier != 0)
 	{
-		iExperience *= (iExperienceModifier + 100);
+		iExperience *= 100 + iExperienceModifier;
 		iExperience /= 100;
 	}
 
@@ -3824,9 +3705,10 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	}
 
 	const int numNumPromotionInfos = GC.getNumPromotionInfos();
+
 	for (int iI = 0; iI < numNumPromotionInfos; iI++)
 	{
-		PromotionTypes ePromotion = ((PromotionTypes)iI);
+		const PromotionTypes ePromotion = (PromotionTypes) iI;
 
 		if (isFreePromotion(ePromotion))
 		{
@@ -3835,17 +3717,16 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	}
 
 	const int numNumBuildingInfos = GC.getNumBuildingInfos();
+
 	for (int iJ = 0; iJ < numNumBuildingInfos; iJ++)
 	{
-		const BuildingTypes eBuilding = ((BuildingTypes)iJ);
+		const BuildingTypes eBuilding = (BuildingTypes) iJ;
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-		if (kBuilding.getNumFreePromoTypes() > 0)
+		if (kBuilding.getNumFreePromoTypes() > 0
+		&& getNumActiveBuilding(eBuilding) > 0)
 		{
-			if (getNumActiveBuilding(eBuilding) > 0)
-			{
-				assignPromotionsFromBuildingChecked(kBuilding, pUnit);
-			}
+			assignPromotionsFromBuildingChecked(kBuilding, pUnit);
 		}
 	}
 }
@@ -4082,20 +3963,9 @@ bool CvCity::isFoodProduction() const
 
 bool CvCity::isFoodProduction(UnitTypes eUnit) const
 {
-	if (GC.getUnitInfo(eUnit).isFoodProduction())
-	{
-		return true;
-	}
-
-	if (GET_PLAYER(getOwner()).isMilitaryFoodProduction())
-	{
-		if (GC.getUnitInfo(eUnit).isMilitaryProduction())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return GC.getUnitInfo(eUnit).isFoodProduction()
+		|| GET_PLAYER(getOwner()).isMilitaryFoodProduction()
+		&& GC.getUnitInfo(eUnit).isMilitaryProduction();
 }
 
 namespace {
@@ -4650,7 +4520,7 @@ bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
 			return false;
 		}
 
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < hurryGold(eHurry))
+		if (GET_PLAYER(getOwner()).getGold() < hurryGold(eHurry))
 		{
 			return false;
 		}
@@ -4683,7 +4553,7 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 
 	int iHurryGold = getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew));
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < iHurryGold)
+	if (GET_PLAYER(getOwner()).getGold() < iHurryGold)
 	{
 		return false;
 	}
@@ -4713,7 +4583,7 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool b
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getEffectiveGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
 	{
 		return false;
 	}
@@ -6615,12 +6485,12 @@ int CvCity::totalFreeSpecialists() const
 		iCount += area()->getFreeSpecialist(getOwner());
 		iCount += GET_PLAYER(getOwner()).getFreeSpecialist();
 
-		for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); ++iImprovement)
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 		{
-			int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iImprovement);
+			const int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iI);
 			if (iNumSpecialistsPerImprovement > 0)
 			{
-				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
+				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iI);
 			}
 		}
 		if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
@@ -6670,31 +6540,25 @@ int CvCity::unhealthyPopulation(bool bNoAngry, int iExtra) const
 
 int CvCity::totalGoodBuildingHealth() const
 {
-	int iHealth = getBuildingGoodHealth();
-
-	iHealth += area()->getBuildingGoodHealth(getOwner());
-	iHealth += GET_PLAYER(getOwner()).getBuildingGoodHealth();
-	iHealth += getExtraBuildingGoodHealth();
-	iHealth += std::max(0, calculatePopulationHealth());
-
-	return iHealth;
+	return getBuildingGoodHealth()
+		+ area()->getBuildingGoodHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingGoodHealth()
+		+ getExtraBuildingGoodHealth()
+		+ std::max(0, calculatePopulationHealth());
 }
 
 
 int CvCity::totalBadBuildingHealth() const
 {
-	if (!isBuildingOnlyHealthy())
+	if (isBuildingOnlyHealthy())
 	{
-		int iHealth = getBuildingBadHealth();
-
-		iHealth += area()->getBuildingBadHealth(getOwner());
-		iHealth += GET_PLAYER(getOwner()).getBuildingBadHealth();
-		iHealth += getExtraBuildingBadHealth();
-		iHealth += std::min(0, calculatePopulationHealth());
-
-		return iHealth;
+		return 0;
 	}
-	return 0;
+	return getBuildingBadHealth()
+		+ area()->getBuildingBadHealth(getOwner())
+		+ GET_PLAYER(getOwner()).getBuildingBadHealth()
+		+ getExtraBuildingBadHealth()
+		+ std::min(0, calculatePopulationHealth());
 }
 
 
@@ -6756,163 +6620,113 @@ int CvCity::healthRate(bool bNoAngry, int iExtra) const
 }
 
 
-int CvCity::foodConsumption(bool bNoAngry, int iExtra, bool bIncludeWastage) const
+int CvCity::getPopulationPlusProgress100(const int iExtra) const
 {
-	int iPopulationExponent = getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-	int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-	int iConsumptionbyPopulation = (((getPopulation() + iExtra) - ((bNoAngry) ? angryPopulation(iExtra) : 0)) * iConsumptionPerPopulationBase) / 10;
-	int result = (iConsumptionbyPopulation - healthRate(bNoAngry, iExtra) + (bIncludeWastage ? (int)foodWastage() : 0));
-
-	return result;
+	// Toffer - Food consumption should gradually increment during the growth process
+	// so that the pop growth doesn't entail a huge food consumption change in one turn
+	if (iExtra == 0)
+	{
+		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
+	}
+	return 100 * (getPopulation() + iExtra) + getMaxFoodKeptPercent();
 }
 
-float CvCity::foodWastage(int surplass) const//Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
+int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
+{
+	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
+		+ getPopulationPlusProgress100(iExtra)
+		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT()
+		/ 100;
+}
+
+int CvCity::getFoodConsumedByPopulation(const int iExtra) const
+{
+	return getPopulationPlusProgress100(iExtra) * getFoodConsumedPerPopulation100() / 10000;
+}
+
+
+int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
+{
+	return getFoodConsumedByPopulation(iExtra)
+		- (bNoAngry ? angryPopulation(iExtra) : 0) // Doesn't belong here, should be extracted out to wherever it is needed
+		- healthRate(bNoAngry, iExtra)
+		+ (bIncludeWastage ? (int)foodWastage() : 0);
+}
+
+// Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
+float CvCity::foodWastage(int surplass) const
 {
 #define    MAX_SURPLASS    2000
-	static    float    calculatedWaste[MAX_SURPLASS];
-	static    int calculatedTo = -1;
-	int        startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
-	float    wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
+	static float calculatedWaste[MAX_SURPLASS];
+	static int calculatedTo = -1;
+	int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
+	float wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
 
 	if (wastageGrowthFactor == 0)
 	{
-		wastageGrowthFactor = (float)0.05;    //    default
+		wastageGrowthFactor = (float)0.05; // default
 	}
 
 	if (startWasteAtConsumptionPercent >= 0)
 	{
 		if (surplass == -1)
 		{
-			const int iPopulationExponent = getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-			const int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-			const int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-			surplass = foodDifference(true, false) - (iConsumptionbyPopulation * startWasteAtConsumptionPercent) / 100;
+			surplass = foodDifference(true, false) - getFoodConsumedByPopulation() * startWasteAtConsumptionPercent / 100;
 		}
 	}
-	else
-	{
-		surplass = -1;
-	}
+	else surplass = -1;
 
-	//    Nothing wasted if there is no surplass
+	// Nothing wasted if there is no surplass
 	if (surplass <= 0)
 	{
 		return 0;
 	}
-	//    Cache what we can as it's not a trivially cheap computation
+	// Cache what we can as it's not a trivially cheap computation
 	else if (surplass <= calculatedTo)
 	{
 		return calculatedWaste[surplass];
 	}
+	else if (surplass >= MAX_SURPLASS)
+	{
+		// After the max we shift to from assymtotic behavior toward the limit to the limit of efficiency
+		return foodWastage(MAX_SURPLASS - 1) + (foodWastage(MAX_SURPLASS - 1) - foodWastage(MAX_SURPLASS - 2)) * (surplass - MAX_SURPLASS + 1);
+	}
 	else
 	{
-		if (surplass >= MAX_SURPLASS)
-		{
-			//    After the max we shift to from assymtotic behavior toward the limit to the limit of efficiency
-			return foodWastage(MAX_SURPLASS - 1) + (foodWastage(MAX_SURPLASS - 1) - foodWastage(MAX_SURPLASS - 2)) * (surplass - MAX_SURPLASS + 1);
-			//return foodWastage(MAX_SURPLASS - 1) + ((float)1.0 - wastageGrowthFactor/((float)1.0+wastageGrowthFactor)) * (surplass - MAX_SURPLASS + 1);
-			//    After the max we bother calculating it all gets wasted
-			//return calculatedWaste[MAX_SURPLASS-1] + ((float)1.0 - wastageGrowthFactor) * (surplass - MAX_SURPLASS + 1);
-		}
-		else
-		{
-			calculatedWaste[surplass] = foodWastage(surplass - 1) + (float)1.0 - (wastageGrowthFactor + ((float)1.0 - wastageGrowthFactor) / ((float)1.0 + (float)0.05 * (float)surplass));
-			//calculatedWaste[surplass] = foodWastage(surplass-1) + ((float)1 - (wastageGrowthFactor + pow((float)1.0 - wastageGrowthFactor, surplass))/((float)1.0+wastageGrowthFactor));
-			calculatedTo = surplass;
+		calculatedWaste[surplass] = foodWastage(surplass - 1) + (float)1.0 - (wastageGrowthFactor + ((float)1.0 - wastageGrowthFactor) / ((float)1.0 + (float)0.05 * (float)surplass));
+		calculatedTo = surplass;
 
-			return calculatedWaste[surplass];
-		}
+		return calculatedWaste[surplass];
 	}
 }
-//Old version
-//float CvCity::foodWastage(int surplass) const
-//{
-//#define	MAX_SURPLASS	500
-//	static	float	calculatedWaste[MAX_SURPLASS];
-//	static	int calculatedTo = -1;
-//	int		startWasteAtConsumptionPercent = GC.getDefineINT("WASTAGE_START_CONSUMPTION_PERCENT");
-//	float	wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
-//
-//	if ( wastageGrowthFactor == 0 )
-//	{
-//		wastageGrowthFactor = (float)0.05;	//	default
-//	}
-//
-//	if ( startWasteAtConsumptionPercent >= 0 )
-//	{
-//		if ( surplass == -1 )
-//		{
-//			int iPopulationExponent = getPopulation() - 1; // Each pop past the first increases consumption per population by .1, rounded down.  Each point of population means more actual people the higher the amount goes.
-//			int iConsumptionPerPopulationBase = iPopulationExponent + (GC.getFOOD_CONSUMPTION_PER_POPULATION() * 10);
-//			int iConsumptionbyPopulation = (getPopulation() * iConsumptionPerPopulationBase) / 10;
-//			surplass = foodDifference(true, false) - (iConsumptionbyPopulation * startWasteAtConsumptionPercent)/100;
-//		}
-//	}
-//	else
-//	{
-//		surplass = -1;
-//	}
-//
-//	//	Nothing wasted if there is no surplass
-//	if ( surplass <= 0 )
-//	{
-//		return 0;
-//	}
-//	//	Cache what we can as it's not a trivially cheap computation
-//	else if ( surplass <= calculatedTo )
-//	{
-//		return calculatedWaste[surplass];
-//	}
-//	else
-//	{
-//		if ( surplass >= MAX_SURPLASS )
-//		{
-//			//	After the max we bother calculating it all gets wasted
-//			return calculatedWaste[MAX_SURPLASS-1] + (surplass - MAX_SURPLASS + 1);
-//		}
-//		else
-//		{
-//			calculatedWaste[surplass] = foodWastage(surplass-1) + ((float)1 - (wastageGrowthFactor + pow((float)1.0 - wastageGrowthFactor, surplass))/((float)1.0+wastageGrowthFactor));
-//			calculatedTo = surplass;
-//
-//			return calculatedWaste[surplass];
-//		}
-//	}
-//}
 
-int CvCity::foodDifference(bool bBottom, bool bIncludeWastage, bool bIgnoreFoodBuildOrRev) const
+
+int CvCity::foodDifference(const bool bBottom, const bool bIncludeWastage, const bool bIgnoreFoodBuildOrRev) const
 {
-	int iDifference;
-
 	if (!bIgnoreFoodBuildOrRev && isDisorder())
 	{
 		return 0;
 	}
+	int iDifference;
 
 	if (!bIgnoreFoodBuildOrRev && isFoodProduction())
 	{
-		iDifference = std::min(0, (getYieldRate(YIELD_FOOD) - foodConsumption(false, 0, bIncludeWastage)));
+		iDifference = std::min(0, getYieldRate(YIELD_FOOD) - foodConsumption(false, 0, bIncludeWastage));
 	}
-	else
-	{
-		iDifference = (getYieldRate(YIELD_FOOD) - foodConsumption(false, 0, bIncludeWastage));
-	}
+	else iDifference = getYieldRate(YIELD_FOOD) - foodConsumption(false, 0, bIncludeWastage);
 
-	if (bBottom)
+	if (bBottom && getPopulation() == 1 && getFood() == 0)
 	{
-		if ((getPopulation() == 1) && (getFood() == 0))
-		{
-			iDifference = std::max(0, iDifference);
-		}
+		iDifference = std::max(0, iDifference);
 	}
 
 	return iDifference;
 }
 
 
-int CvCity::growthThreshold() const
+int CvCity::growthThreshold(const int iPopChange) const
 {
-	int iThreshold = GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation());
+	int iThreshold = GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation() + iPopChange);
 
 	iThreshold *= (GET_PLAYER(getOwner()).getPopulationgrowthratepercentage() + 100);
 	iThreshold /= 100;
@@ -7045,18 +6859,13 @@ int CvCity::hurryGold(HurryTypes eHurry) const
 
 int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 {
-	int iGold;
-
 	if (GC.getHurryInfo(eHurry).getGoldPerProduction() == 0)
 	{
 		return 0;
 	}
+	const int iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
 
-	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
-
-	FAssert(iGold <= GC.getGREATER_COMMERCE_SWITCH_POINT());//While protected below, if this starts coming up, I'll need to start taking measures to improve this system of hurrying to allow it to start breaking into over 1 million in cost.)
-
-	iGold = std::min(iGold, GC.getGREATER_COMMERCE_SWITCH_POINT());
+	FAssert(iGold <= 2000000000); // We'll need to take measures if this comes up
 
 	return std::max(1, iGold);
 }
@@ -8778,6 +8587,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 		iMaintenance += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
 	}
 
+	// Bonus Maintenance
 	int iNumBonuses = 0;
 	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 	{
@@ -8787,53 +8597,43 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 			iNumBonuses += getNumBonuses(eBonus);
 		}
 	}
+	iMaintenance +=
+	(
+		GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses
+		* GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+		/ 100
+	);
 
-	int iBonusMaintenance = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-	iBonusMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-	iBonusMaintenance /= 100;
-	iMaintenance += iBonusMaintenance;
-
-	iMaintenance *= (getPopulation() + 17);
+	// Population factor
+	iMaintenance *= 17 + getPopulation();
 	iMaintenance /= 18;
 
-	iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
-	iMaintenance /= 100;
-
-	iMaintenance *= std::max(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
-	iMaintenance /= 100;
-
-	int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-	if (iInflation > 0)
-	{
-		iMaintenance *= 100;
-		iMaintenance /= iInflation;
-	}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/17/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	iMaintenance *= (GET_TEAM(getTeam()).getCorporationMaintenanceModifier() + 100);
-	iMaintenance /= 100;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/19/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+	// Handicap
 	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
-		if (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent() > 80)
-		{
-			iMaintenance *= (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent());
-			iMaintenance /= 80;
-		}
+		iMaintenance = (
+			iMaintenance
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			* GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent()
+			/ 8000
+		);
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+	else
+	{
+		iMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+		iMaintenance /= 100;
+	}
+
+	// National Modifier
+	iMaintenance *= std::max(0, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100);
+	iMaintenance /= 100;
+
+	iMaintenance *= 100;
+	iMaintenance /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
+
+	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
+	iMaintenance /= 100;
+
 	FAssert(iMaintenance >= 0);
 
 	return iMaintenance;
@@ -13073,6 +12873,7 @@ void CvCity::changeProductionToCommerceModifier(CommerceTypes eIndex, int iChang
 		m_aiProductionToCommerceModifier[eIndex] = (m_aiProductionToCommerceModifier[eIndex] + iChange);
 
 		setCommerceDirty(eIndex);
+		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 	}
 }
 
@@ -14945,7 +14746,7 @@ int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 
 int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
 	int iTotalGreatPeopleUnitRate = 0;
 	iTotalGreatPeopleUnitRate += m_paiGreatPeopleUnitRate[eIndex];
@@ -15248,7 +15049,7 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 
 	if (iChange != 0)
 	{
-		m_paiImprovementFreeSpecialists[eIndex] = std::max(0, (m_paiImprovementFreeSpecialists[eIndex] + iChange));
+		m_paiImprovementFreeSpecialists[eIndex] += iChange;
 	}
 }
 
@@ -17374,7 +17175,7 @@ void CvCity::doGrowth()
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
 
-	setFoodKept(range(getFoodKept(), 0, ((growthThreshold() * getMaxFoodKeptPercent()) / 100)));
+	setFoodKept(range(getFoodKept(), 0, growthThreshold() * getMaxFoodKeptPercent() / 100));
 
 	if (getFood() >= growthThreshold())
 	{
@@ -17384,7 +17185,7 @@ void CvCity::doGrowth()
 		}
 		else
 		{
-			changeFood(-(std::max(0, growthThreshold() - getFoodKept())));
+			changeFood(-std::max(0, growthThreshold() - getFoodKept()));
 			changePopulation(1);
 			CvEventReporter::getInstance().cityGrowth(this, getOwner());
 		}
@@ -17400,11 +17201,12 @@ void CvCity::doGrowth()
 	}
 	else if (getFood() < 0)
 	{
-		changeFood(-(getFood()));
+		changeFood(-getFood());
 
 		if (getPopulation() > 1)
 		{
 			changePopulation(-1);
+			changeFood(std::max(0, growthThreshold() * getMaxFoodKeptPercent() / 100));
 		}
 	}
 }
@@ -23061,8 +22863,7 @@ int CvCity::calculateCorporateTaxes() const
 	{
 		if (isActiveCorporation((CorporationTypes)iI) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iI))
 		{
-			CorporationTypes eCorporation = (CorporationTypes)iI;
-
+			const CorporationTypes eCorporation = (CorporationTypes)iI;
 
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 			{
@@ -23079,34 +22880,29 @@ int CvCity::calculateCorporateTaxes() const
 				}
 			}
 
-			int iBonusTaxes = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-			iBonusTaxes *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
-			iBonusTaxes /= 200;
-			iTaxes += iBonusTaxes;
+			iTaxes +=
+			(
+				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
+				/ 200
+			);
+			const int iAveragePopulation = GC.getGame().getTotalPopulation() / std::max(1, GC.getGame().getNumCivCities());
 
-			int iAveragePopulation = GC.getGame().getTotalPopulation();
-			iAveragePopulation /= std::max(1, GC.getGame().getNumCivCities());
 			if (iAveragePopulation > 0)
 			{
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-
-			iTaxes *= std::min(0, (GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100));
+			iTaxes *= std::max(0, 100 + GET_PLAYER(getOwner()).getCorporationMaintenanceModifier());
 			iTaxes /= 100;
-			iTaxes = abs(iTaxes);
 
-			int iInflation = GET_PLAYER(getOwner()).calculateInflationRate() + 100;
-			if (iInflation > 0)
-			{
-				iTaxes *= 100;
-				iTaxes /= iInflation;
-			}
+			iTaxes *= 100;
+			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 
-			iTaxes /= (1 + GET_PLAYER(getOwner()).getHandicapType() / 2);
+			iTaxes *= 100;
+			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
 		}
 	}
-
 	return iTaxes / 100;
 }
 
