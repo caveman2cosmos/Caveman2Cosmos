@@ -2514,10 +2514,6 @@ inline CvGlobals& CvGlobals::getInstance()
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
 
-#ifndef FIXED_MISSION_NUMBER
-#define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
-
 #endif
 
 /**********************************************************************

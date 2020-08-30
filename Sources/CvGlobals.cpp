@@ -2122,7 +2122,7 @@ CvActionInfo& cvInternalGlobals::getActionInfo(int i) const
 CvMissionInfo& cvInternalGlobals::getMissionInfo(MissionTypes eMissionNum) const
 {
 	FAssert(eMissionNum > -1);
-	FAssert(eMissionNum < NUM_MISSION_TYPES);
+	FAssert(eMissionNum < GC.getNumMissionInfos());
 	return *(m_paMissionInfo[eMissionNum]);
 }
 
@@ -3556,11 +3556,7 @@ void cvInternalGlobals::resolveDelayedResolution()
 
 int cvInternalGlobals::getNumMissionInfos() const
 { 
-#ifdef FIXED_MISSION_NUMBER
-	return NUM_MISSION_TYPES;
-#else
 	return (int) m_paMissionInfo.size();
-#endif
 }
 
 inline CvMap& cvInternalGlobals::getMap() const

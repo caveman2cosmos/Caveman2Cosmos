@@ -1823,9 +1823,6 @@ enum MissionTypes				// Exposed to Python
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER,
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER,
 	//TB Combat Mod and Mission fix end
-#ifdef FIXED_MISSION_NUMBER
-	NUM_MISSION_TYPES
-#endif
 };
 
 enum MissionAITypes		// Exposed to Python
