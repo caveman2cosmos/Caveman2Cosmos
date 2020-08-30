@@ -287,7 +287,6 @@ public:
 /************************************************************************************************/
 	int getNumSaveGameVector();
 	CvString getSaveGameVector(int i);
-	void doReloadInfoClasses();
 	
 	void reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID);
 /************************************************************************************************/
