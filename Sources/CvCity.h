@@ -1175,7 +1175,6 @@ public:
 
 	int getNumRevolts(PlayerTypes eIndex) const;
 	void changeNumRevolts(PlayerTypes eIndex, int iChange);
-	int getRevoltTestProbability() const;
 
 	bool isTradeRoute(PlayerTypes eIndex) const; // Exposed to Python
 	void setTradeRoute(PlayerTypes eIndex, bool bNewValue);
