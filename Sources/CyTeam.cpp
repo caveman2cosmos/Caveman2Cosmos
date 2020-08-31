@@ -205,7 +205,7 @@ int CyTeam::getHasCorporationCount(int /*CorporationTypes*/ eReligion)
 
 int64_t CyTeam::countTotalCulture() const
 {
-	return m_pTeam ? m_pTeam->processedTeamCulture() : -1;
+	return m_pTeam ? m_pTeam->countTotalCulture() : -1;
 }
 
 int CyTeam::countNumUnitsByArea(CyArea* pArea)
