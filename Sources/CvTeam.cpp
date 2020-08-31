@@ -2663,12 +2663,6 @@ int CvTeam::getHasCorporationCount(CorporationTypes eCorporation) const
 	return iCount;
 }
 
-int CvTeam::processedTeamCulture() const
-{
-	const uint64_t iCount = countTotalCulture();
-	return (iCount < MAX_INT) ? (int)iCount : MAX_INT;
-}
-
 
 uint64_t CvTeam::countTotalCulture() const
 {

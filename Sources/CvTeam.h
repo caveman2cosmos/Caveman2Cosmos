@@ -88,7 +88,6 @@ public:
 	int getHasReligionCount(ReligionTypes eReligion) const; // Exposed to Python
 	int getHasCorporationCount(CorporationTypes eCorporation) const; // Exposed to Python
 
-	int processedTeamCulture() const;
 	uint64_t countTotalCulture() const; // Exposed to Python
 
 	int countNumUnitsByArea(const CvArea* pArea) const; // Exposed to Python
