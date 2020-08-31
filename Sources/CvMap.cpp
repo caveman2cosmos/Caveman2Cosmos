@@ -926,7 +926,7 @@ int CvMap::getLandPlots() const
 
 void CvMap::changeLandPlots(int iChange)
 {
-	m_iLandPlots = (m_iLandPlots + iChange);
+	m_iLandPlots += iChange;
 	FAssert(getLandPlots() >= 0);
 }
 
@@ -939,7 +939,7 @@ int CvMap::getOwnedPlots() const
 
 void CvMap::changeOwnedPlots(int iChange)
 {
-	m_iOwnedPlots = (m_iOwnedPlots + iChange);
+	m_iOwnedPlots += iChange;
 	FAssert(getOwnedPlots() >= 0);
 }
 
@@ -1000,16 +1000,14 @@ CustomMapOptionTypes CvMap::getCustomMapOption(int iOption) const
 
 int CvMap::getNumBonuses(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNumBonus[eIndex];
 }
 
 
 void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonus[eIndex] += iChange;
 	FAssertMsg(m_paiNumBonus[eIndex] >= 0, "Negative bonus occurance on the map!");
 }
@@ -1017,17 +1015,15 @@ void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 
 int CvMap::getNumBonusesOnLand(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNumBonusOnLand[eIndex];
 }
 
 
 void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiNumBonusOnLand[eIndex] = (m_paiNumBonusOnLand[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	m_paiNumBonusOnLand[eIndex] += iChange;
 	FAssert(getNumBonusesOnLand(eIndex) >= 0);
 }
 

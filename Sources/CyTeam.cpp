@@ -709,8 +709,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index) (Python)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index) (Python)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG

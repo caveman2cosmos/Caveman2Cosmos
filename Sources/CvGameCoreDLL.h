@@ -116,6 +116,20 @@ typedef unsigned long long  uint64_t;
 #define M_PI       3.14159265358979323846
 #define fM_PI		3.141592654f		//!< Pi (float)
 
+#define FASSERT_BOUNDS(lower,upper,index)\
+	if (index < lower)\
+	{\
+		char acOut[256];\
+		sprintf(acOut, "Index value (%d) is expected to be >= %d", index, lower);\
+		FAssertMsg(index >= lower, acOut);\
+	}\
+	else if (index >= upper)\
+	{\
+		char acOut[256];\
+		sprintf(acOut, "Index value (%d) is to be < %d", index, upper);\
+		FAssertMsg(index < upper, acOut);\
+	}
+
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
