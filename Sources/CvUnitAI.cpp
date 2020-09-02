@@ -318,7 +318,7 @@ bool CvUnitAI::AI_update()
 		case AUTOMATE_CANCEL_UPGRADING:
 		case AUTOMATE_PROMOTIONS:
 		case AUTOMATE_CANCEL_PROMOTIONS:
-			FAssertMsg(false, "SelectionGroup Should Not be Using These Automations!")
+			FErrorMsg("SelectionGroup Should Not be Using These Automations!")
 			break;
 		case AUTOMATE_SHADOW:
 			//	If we've lost the unit qwe should be shadowing (not sure how this can happen but empirically
@@ -1588,7 +1588,7 @@ UnitAITypes CvUnitAI::AI_getUnitAIType() const
 	//	has not yet been found) set it to its default AI
 	if ( m_eUnitAIType == NO_UNITAI )
 	{
-		FAssertMsg(false,"Unit has no UnitAI!");
+		FErrorMsg("Unit has no UnitAI!");
 
 		((CvUnitAI*)this)->m_eUnitAIType = (UnitAITypes)m_pUnitInfo->getDefaultUnitAIType();
 

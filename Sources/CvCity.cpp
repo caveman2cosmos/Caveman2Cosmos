@@ -1965,7 +1965,7 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		setRallyPlot(NULL);
 		break;
 	default:
-		FAssertMsg(false, "eTask failed to match a valid option");
+		FErrorMsg("eTask failed to match a valid option");
 		break;
 	}
 }
@@ -2748,7 +2748,7 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 #ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
 				if (canTrainInternal(eUnit))
 				{
-					FAssertMsg(false, "Consistency check failure in canTrain cache - false negative\n");
+					FErrorMsg("Consistency check failure in canTrain cache - false negative\n");
 				}
 #endif
 				bResult = false;
@@ -2759,7 +2759,7 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 #ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
 				if (!canTrainInternal(eUnit))
 				{
-					FAssertMsg(false, "Consistency check failure in canTrain cache - false positive\n");
+					FErrorMsg("Consistency check failure in canTrain cache - false positive\n");
 				}
 #endif
 				bResult = true;
@@ -2895,7 +2895,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 				if (bResult != canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, NULL, bAffliction, bExposed))
 				{
 					MessageBox(NULL, "canConstruct cached result mismatch", "cvGameCore", MB_OK);
-					FAssertMsg(false, "canConstruct cached result mismatch");
+					FErrorMsg("canConstruct cached result mismatch");
 				}
 #endif
 			}
@@ -3543,7 +3543,7 @@ bool CvCity::isProductionLimited() const
 			break;
 
 		default:
-			FAssertMsg(false, "order->m_data.eOrderType failed to match a valid option");
+			FErrorMsg("order->m_data.eOrderType failed to match a valid option");
 			break;
 		}
 	}
@@ -4042,7 +4042,7 @@ int CvCity::getProduction() const
 			break;
 
 		default:
-			FAssertMsg(false, "order->eOrderType failed to match a valid option");
+			FErrorMsg("order->eOrderType failed to match a valid option");
 			break;
 		}
 	}
@@ -6772,7 +6772,7 @@ int CvCity::getHurryCostModifier(bool bIgnoreNew) const
 			break;
 
 		default:
-			FAssertMsg(false, "order->eOrderType did not match a valid option");
+			FErrorMsg("order->eOrderType did not match a valid option");
 			break;
 		}
 	}
@@ -16498,7 +16498,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		break;
 
 	default:
-		FAssertMsg(false, "iOrder did not match a valid option");
+		FErrorMsg("iOrder did not match a valid option");
 		break;
 	}
 
@@ -16945,7 +16945,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		break;
 
 	default:
-		FAssertMsg(false, "order.eOrderType is not a valid option");
+		FErrorMsg("order.eOrderType is not a valid option");
 		break;
 	}
 

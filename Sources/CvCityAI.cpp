@@ -10963,7 +10963,7 @@ void CvCityAI::AI_juggleCitizens()
 			iCount++;
 			if (iCount > (NUM_CITY_PLOTS + 1))
 			{
-				FAssertMsg(false, "infinite loop");
+				FErrorMsg("infinite loop");
 				break; // XXX
 			}
 		}
@@ -11218,7 +11218,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 			if ( realValue != entry->iResult )
 			{
 				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
-				FAssertMsg(false, "Yield value cache verification failure");
+				FErrorMsg("Yield value cache verification failure");
 				CHECK_YIELD_VALUE_CACHE("Validation");
 			}
 #endif
@@ -15594,7 +15594,7 @@ retry:
 			int realResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold);
 			if ( realResult != iResult )
 			{
-				FAssertMsg(false,"Cached building value result mismatch!!\n");
+				FErrorMsg("Cached building value result mismatch!!\n");
 			}
 #endif
 		}

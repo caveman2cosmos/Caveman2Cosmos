@@ -3135,7 +3135,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 							{
 								if (!isAtWar((TeamTypes)iI))
 								{
-									FAssertMsg(false, "!isAtWar((TeamTypes)iI); Shouldn't happen here");
+									FErrorMsg("!isAtWar((TeamTypes)iI); Shouldn't happen here");
 									bPeace = false;
 								}
 								else if (GET_TEAM((TeamTypes)iI).AI_minorKeepWarVal(getID()) > 0)
@@ -4198,7 +4198,7 @@ void CvTeam::setAtWar(TeamTypes eIndex, bool bNewValue)
 		}
 		else
 		{
-			FAssertMsg(false, "Team trying to mark itself as at war with itself");
+			FErrorMsg("Team trying to mark itself as at war with itself");
 		}
 	}
 }
@@ -7204,7 +7204,7 @@ int CvTeam::getProjectPartNumber(ProjectTypes eProject, bool bAssert) const
 	//didn't find empty part number
 	if (bAssert)
 	{
-		FAssertMsg(false, "Unknown part number.");
+		FErrorMsg("Unknown part number.");
 	}
 
 	//return the last one
