@@ -126,7 +126,7 @@ typedef unsigned long long  uint64_t;
 	else if (index >= upper)\
 	{\
 		char acOut[256];\
-		sprintf(acOut, "Index value (%d) is to be < %d", index, upper);\
+		sprintf(acOut, "Index value (%d) is expected to be < %d", index, upper);\
 		FAssertMsg(index < upper, acOut);\
 	}
 
