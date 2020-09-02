@@ -6897,7 +6897,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	//	Koshling - fix bugged state where the ganme thinks a team is at war with itself!
 	if ( m_abAtWar[getID()] )
 	{
-		FAssertMsg(false,"Team flagged as at war with itself (correcting)");
+		FErrorMsg("Team flagged as at war with itself (correcting)");
 		m_abAtWar[getID()] = false;
 	}
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abPermanentWarPeace);
