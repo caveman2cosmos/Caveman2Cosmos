@@ -6376,9 +6376,9 @@ void CvGame::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE_BEGIN("CvGame::doTurn()");
 
-#ifdef PARALLEL_MAPS
+#ifdef PARALLEL_MAPS	// XXX Cycle to the next map each turn.
 //	if (GC.getNumMaps() > 1)
-//		GC.switchMap(static_cast<MapTypes>(m_eCurrentMap + 1 == GC.getNumMaps() ? MAP_INITIAL : m_eCurrentMap + 1));
+//		GC.switchMap(getNextMap());
 #endif
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -6401,10 +6401,16 @@ void CvGame::doTurn()
 	}
 
 #ifdef PARALLEL_MAPS
-	for (int i = MAP_INITIAL; i < GC.getNumMaps(); i++)
-	{
-		m_eCurrentMap = static_cast<MapTypes>(i);
+	const int numMaps = GC.getNumMaps();
+	const bool multipleMaps = numMaps > 1;
 
+	for (int i = MAP_INITIAL; i < numMaps; i++)
+	{
+		if (multipleMaps)
+		{
+			GC.switchMap(getNextMap());
+			//m_eCurrentMap = getNextMap();
+		}
 		// solve property system
 		m_PropertySolver.doTurn();
 
@@ -6442,10 +6448,13 @@ void CvGame::doTurn()
 	//disabled when debugging only - units should now be tracking and staying within a range of 0-1 for number of positive updates - negative updates.
 	//TBVIS
 #ifdef PARALLEL_MAPS
-	for (int i = MAP_INITIAL; i < GC.getNumMaps(); i++)
+	for (int i = MAP_INITIAL; i < numMaps; i++)
 	{
-		m_eCurrentMap = static_cast<MapTypes>(i);
-
+		if (multipleMaps)
+		{
+			GC.switchMap(getNextMap());
+			//m_eCurrentMap = getNextMap();
+		}
 		for (int iJ = 0; iJ < GC.getMap().numPlots(); iJ++)
 		{
 			GC.getMap().plotByIndex(iJ)->clearVisibilityCounts();
@@ -12880,6 +12889,11 @@ const CvProperties* CvGame::getPropertiesConst() const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+MapTypes CvGame::getNextMap() const
+{
+	const int nextMap = m_eCurrentMap +1;
+	return nextMap < GC.getNumMaps() ? (MapTypes)nextMap : MAP_INITIAL;
+}
 
 MapTypes CvGame::getCurrentMap() const
 {

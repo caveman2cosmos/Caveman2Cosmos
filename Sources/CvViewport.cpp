@@ -489,11 +489,6 @@ void CvViewport::setAllPlotTypes(PlotTypes ePlotType)
 	m_pMap->setAllPlotTypes(ePlotType);
 }
 
-void CvViewport::doTurn()
-{
-	m_pMap->doTurn();
-}
-
 void CvViewport::updateFlagSymbols()
 {
 	m_pMap->updateFlagSymbols();

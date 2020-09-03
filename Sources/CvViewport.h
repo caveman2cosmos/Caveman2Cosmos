@@ -99,8 +99,6 @@ public:
 	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
 	virtual void setAllPlotTypes(PlotTypes ePlotType);												// Exposed to Python
 
-	virtual void doTurn();																			
-
 	virtual void updateFlagSymbols();
 
 	virtual void updateFog();
