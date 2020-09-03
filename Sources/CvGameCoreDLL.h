@@ -141,8 +141,12 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
-#define PARALLEL_MAPS
 // #define NOMADIC_START
+#define PARALLEL_MAPS
+
+#ifdef PARALLEL_MAPS
+#define PARALLEL_MAPS_TURN
+#endif
 
 //
 // Cache feature macros

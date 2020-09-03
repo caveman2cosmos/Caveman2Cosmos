@@ -4170,6 +4170,7 @@ void CvPlayer::doTurn()
 {
 	PROFILE_FUNC();
 
+#ifndef PARALLEL_MAPS_TURN
 #ifdef VALIDATION_FOR_PLOT_GROUPS
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -4181,16 +4182,19 @@ void CvPlayer::doTurn()
 		}
 	}
 #endif
+#endif
 
 	//	Each turn flush the movement cost cache for each player to avoid it getting too large
 	CvPlot::flushMovementCostCache();
 
+#ifndef PARALLEL_MAPS_TURN
 #ifdef CAN_TRAIN_CACHING
 	//	Clear training caches at the start of each turn
 	foreach_(CvCity* pLoopCity, cities())
 	{
 		pLoopCity->clearCanTrainCache();
 	}
+#endif
 #endif
 
 	m_canHaveBuilder.clear();
@@ -4244,10 +4248,12 @@ void CvPlayer::doTurn()
 		changeConversionTimer(-1);
 	}
 
+#ifndef PARALLEL_MAPS_TURN
 	foreach_(CvUnit* pLoopUnit, units())
 	{
 		pLoopUnit->clearCommanderCache();
 	}
+#endif
 
 	setConscriptCount(0);
 
@@ -4287,6 +4293,7 @@ void CvPlayer::doTurn()
 
 	doInflation();
 
+#ifndef PARALLEL_MAPS_TURN
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
 		foreach_(CvCity* pLoopCity, cities())
@@ -4312,6 +4319,7 @@ void CvPlayer::doTurn()
 		}
 	}
 	// ! Johny Smith
+#endif
 
 	if (getGoldenAgeTurns() > 0)
 	{
@@ -4357,9 +4365,59 @@ void CvPlayer::doTurn()
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGame().getGameTurn(),  getID());
 }
 
+#ifdef PARALLEL_MAPS_TURN
 void CvPlayer::doMapTurn()
 {
+#ifdef VALIDATION_FOR_PLOT_GROUPS
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	{
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+
+		if (pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL)
+		{
+			::MessageBox(NULL, "Invalid plot group id found!", "CvGameCoreDLL", MB_OK);
+		}
+	}
+#endif
+
+#ifdef CAN_TRAIN_CACHING
+	//	Clear training caches at the start of each turn
+	foreach_(CvCity* pLoopCity, cities())
+	{
+		pLoopCity->clearCanTrainCache();
+	}
+#endif
+	foreach_(CvUnit* pLoopUnit, units())
+	{
+		pLoopUnit->clearCommanderCache();
+	}
+
+	{
+		PROFILE("CvPlayer::doTurn.DoCityTurn");
+		foreach_(CvCity* pLoopCity, cities())
+		{
+			pLoopCity->doTurn();
+		}
+	}
+
+	// Johny Smith 04/19/09
+	if (GC.isDCM_OPP_FIRE())
+	{
+		foreach_(CvUnit* pLoopUnit, units())
+		{
+			pLoopUnit->doOpportunityFire();
+		}
+	}
+	if (GC.isDCM_ACTIVE_DEFENSE())
+	{
+		foreach_(CvUnit* pLoopUnit, units())
+		{
+			pLoopUnit->doActiveDefense();
+		}
+	}
+	// ! Johny Smith
 }
+#endif
 
 //	Dump stats to BBAI log
 void CvPlayer::dumpStats() const

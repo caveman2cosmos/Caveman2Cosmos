@@ -371,6 +371,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
+#ifdef PARALLEL_MAPS_TURN
 	//for (int iI = 0; iI < MAX_TEAMS; iI++)
 	//{
 	//	CvTeam& team = GET_TEAM((TeamTypes)iI);
@@ -387,6 +388,7 @@ void CvMap::doTurn()
 			player.doMapTurn();
 		}
 	}
+#endif
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->doTurn();

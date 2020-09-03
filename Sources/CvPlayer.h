@@ -178,7 +178,9 @@ public:
 
 	void doTurn();
 	void doTurnUnits();
+#ifdef PARALLEL_MAPS_TURN
 	void doMapTurn();
+#endif
 
 	void doInflation();
 	int getCurrentInflationCostModifier() const; //	Exposed to Python
