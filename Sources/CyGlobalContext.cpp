@@ -334,7 +334,7 @@ CvControlInfo* CyGlobalContext::getControlInfo(int i) const
 
 CvMissionInfo* CyGlobalContext::getMissionInfo(int i) const
 {
-	return (i>=0 && i<NUM_MISSION_TYPES) ? &GC.getMissionInfo((MissionTypes) i) : NULL;
+	return (i>=0 && i<GC.getNumMissionInfos()) ? &GC.getMissionInfo((MissionTypes) i) : NULL;
 }
 
 CvPromotionInfo* CyGlobalContext::getPromotionInfo(int i) const

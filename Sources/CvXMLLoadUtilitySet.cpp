@@ -1405,10 +1405,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		sprintf( szMessage, "NUM_COMMAND_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(NUM_MISSION_TYPES > 0) )
+	if(!(GC.getNumMissionInfos() > 0) )
 	{
 		char	szMessage[1024];
-		sprintf( szMessage, "NUM_MISSION_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+		sprintf( szMessage, "GC.getNumMissionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 
@@ -1428,7 +1428,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		NUM_CONTROL_TYPES +
 		NUM_COMMAND_TYPES +
 		GC.getNumAutomateInfos() +
-		NUM_MISSION_TYPES;
+		GC.getNumMissionInfos();
 
 	int* piIndexList = new int[iNumActionInfos];
 	int* piPriorityList = new int[iNumActionInfos];
@@ -1525,7 +1525,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	for (i=0;i<NUM_MISSION_TYPES;i++)
+	for (i=0;i<GC.getNumMissionInfos();i++)
 	{
 		piIndexList[iTotalActionInfoCount] = i;
 		piPriorityList[iTotalActionInfoCount] = GC.getMissionInfo((MissionTypes)i).getOrderPriority();
