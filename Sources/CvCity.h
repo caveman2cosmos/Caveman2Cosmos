@@ -633,7 +633,7 @@ public:
 	void setPopulation(int iNewValue); // Exposed to Python
 	void changePopulation(int iChange); // Exposed to Python
 
-	long getRealPopulation() const; // Exposed to Python
+	int getRealPopulation() const; // Exposed to Python
 
 	int getHighestPopulation() const; // Exposed to Python
 	void setHighestPopulation(int iNewValue);

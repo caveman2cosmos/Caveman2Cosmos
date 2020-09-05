@@ -936,7 +936,7 @@ int CyPlayer::getAveragePopulation()
 	return m_pPlayer ? m_pPlayer->getAveragePopulation() : -1;
 }
 
-long CyPlayer::getRealPopulation()
+int64_t CyPlayer::getRealPopulation() const
 {
 	return m_pPlayer ? m_pPlayer->getRealPopulation() : -1;
 }
