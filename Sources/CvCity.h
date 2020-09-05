@@ -895,7 +895,7 @@ public:
 	void setOverflowProduction(int iNewValue); // Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
-	int getFeatureProduction()const; // Exposed to Python
+	int getFeatureProduction() const; // Exposed to Python
 	void setFeatureProduction(int iNewValue); // Exposed to Python
 	void changeFeatureProduction(int iChange);
 
