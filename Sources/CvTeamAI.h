@@ -18,8 +18,7 @@ public:
 	// inlined for performance reasons, only in the dll
 	static CvTeamAI& getTeam(TeamTypes eTeam)
 	{
-		FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
-		FAssertMsg(eTeam <= MAX_TEAMS, "eTeam is not assigned a valid value");
+		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 		return m_aTeams[eTeam]; 
 	}
 

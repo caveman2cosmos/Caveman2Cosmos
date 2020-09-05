@@ -2090,7 +2090,7 @@ CvActionInfo& cvInternalGlobals::getActionInfo(int i) const
 
 CvMissionInfo& cvInternalGlobals::getMissionInfo(MissionTypes eMissionNum) const
 {
-	FASSERT_BOUNDS(0, NUM_MISSION_TYPES, eMissionNum)
+	FASSERT_BOUNDS(0, GC.getNumMissionInfos(), eMissionNum)
 	return *(m_paMissionInfo[eMissionNum]);
 }
 
