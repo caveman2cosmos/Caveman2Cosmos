@@ -5870,7 +5870,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 			break;
 
 		default:
-			FAssertMsg(false, "eOrderType did not match valid options");
+			FErrorMsg("eOrderType did not match valid options");
 			break;
 		}
 	}
@@ -5901,7 +5901,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 				break;
 
 			default:
-				FAssertMsg(false, "eOrderType did not match valid options");
+				FErrorMsg("eOrderType did not match valid options");
 				break;
 			}
 		}

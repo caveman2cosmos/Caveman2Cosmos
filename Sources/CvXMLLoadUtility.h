@@ -203,7 +203,7 @@ public:
 			else
 			{
 				char* tmp = xercesc::XMLString::transcode(nodesText);
-				FAssertMsg(false, tmp);
+				FErrorMsg(tmp);
 				xercesc::XMLString::release(&tmp);
 				// not the right type, assume it is a global define
 				char* nodeTextC = xercesc::XMLString::transcode(nodesText);
@@ -244,7 +244,7 @@ public:
 		else
 		{
 			char* tmp = xercesc::XMLString::transcode(szName);
-			FAssertMsg(false, tmp);
+			FErrorMsg(tmp);
 			xercesc::XMLString::release(&tmp);
 			*pVal = pDefault;
 

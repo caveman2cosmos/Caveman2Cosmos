@@ -2827,7 +2827,7 @@ bool CvPlot::hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTyp
 			if ( lRealValue != entry->lResult )
 			{
 				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
-				FAssertMsg(false, "Can build value cache verification failure");
+				FErrorMsg("Can build value cache verification failure");
 			}
 #endif
 			return true;
