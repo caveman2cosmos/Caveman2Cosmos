@@ -3590,7 +3590,6 @@ void cvInternalGlobals::setRouteFinder(FAStar* pVal) { m_routeFinder = pVal; }
 void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
-CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;
