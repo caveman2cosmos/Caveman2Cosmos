@@ -428,7 +428,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 				if ( iCount != pLoopArea->getNumAIUnits(getID(), (UnitAITypes)iI) )
 				{
-					FAssertMsg(false,"UnitAI miscount");
+					FErrorMsg("UnitAI miscount");
 				}
 			}
 		}
@@ -4028,7 +4028,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 			if ( realValue != entry->iResult )
 			{
-				FAssertMsg(false, "Plot danger cache verification failure");
+				FErrorMsg("Plot danger cache verification failure");
 			}
 #endif
 			return entry->iResult;
@@ -22119,7 +22119,7 @@ void CvPlayerAI::AI_doDiplo()
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_FRIENDLY", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	default:
-																		FAssertMsg(false, "No Valid Attitude");
+																		FErrorMsg("No Valid Attitude");
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_CAUTIOUS", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	}
@@ -26783,7 +26783,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 				}
 				else
 				{
-					FAssertMsg(false, "StartingPlot for a live player is NULL!");
+					FErrorMsg("StartingPlot for a live player is NULL!");
 				}
 			}
 		}
@@ -26794,7 +26794,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 		return pBestPlot;
 	}
 
-	FAssertMsg(false, "AS: Failed to find a starting plot for a player");
+	FErrorMsg("AS: Failed to find a starting plot for a player");
 
 	//Execution should almost never reach here.
 
@@ -26833,7 +26833,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 	}
 
 	//Commence panic.
-	FAssertMsg(false, "Failed to find an advanced start starting plot");
+	FErrorMsg("Failed to find an advanced start starting plot");
 	return NULL;
 }
 
@@ -26959,7 +26959,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 			//this should never happen since the cost for a city should be 0 if
 			//the city can't be placed.
 			//(It can happen if another player has placed a city in the fog)
-			FAssertMsg(false, "ADVANCEDSTARTACTION_CITY failed in unexpected way");
+			FErrorMsg("ADVANCEDSTARTACTION_CITY failed in unexpected way");
 			return false;
 		}
 	}
@@ -27356,7 +27356,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			{
 				if (!AI_advancedStartPlaceCity(pBestCapitalPlot))
 				{
-					FAssertMsg(false, "AS AI: Unexpected failure placing capital");
+					FErrorMsg("AS AI: Unexpected failure placing capital");
 				}
 				break;
 			}
@@ -27524,7 +27524,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		{
 			if (!AI_advancedStartPlaceCity(pBestFoundPlot))
 			{
-				FAssertMsg(false, "AS AI: Failed to place city (non-capital)");
+				FErrorMsg("AS AI: Failed to place city (non-capital)");
 				bDonePlacingCities = true;
 			}
 		}

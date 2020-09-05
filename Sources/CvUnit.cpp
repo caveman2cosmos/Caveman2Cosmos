@@ -30827,7 +30827,7 @@ float CvUnit::doPillageInfluence()
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
-		FAssertMsg(false, "pPlot == NULL; should not happen");
+		FErrorMsg("pPlot == NULL; should not happen");
 		return 0.0f;
 	}
 	if (pPlot->getWorkingCity() != NULL && pPlot->getWorkingCity()->isProtectedCulture())
@@ -30839,7 +30839,7 @@ float CvUnit::doPillageInfluence()
 	const int iTargetCulture = pPlot->getCulture(eTargetPlayer);
 	if (iTargetCulture < 1)
 	{
-		FAssertMsg(false, "iTargetCulture < 1; should not happen");
+		FErrorMsg("iTargetCulture < 1; should not happen");
 		return 0.0f;
 	}
 	int iCultureTransfer = GC.getIDW_BASE_PILLAGE_INFLUENCE() * intSqrt(iTargetCulture) / 100;

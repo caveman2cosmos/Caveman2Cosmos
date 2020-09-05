@@ -80,6 +80,7 @@ public:
 		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 		return m_aPlayers[ePlayer]; 
 	}
+
 	DllExport static CvPlayerAI& getPlayerNonInl(PlayerTypes ePlayer);
 
 	static void initStatics();
@@ -772,10 +773,6 @@ private:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_PLAYER CvPlayerAI::getPlayer
-#else
-#define GET_PLAYER CvPlayerAI::getPlayerNonInl
-#endif
 
 #endif

@@ -1231,7 +1231,7 @@ void CvInitCore::setType(const CvWString & szType)
 	}
 	else
 	{
-		//FAssertMsg(false, "Invalid game type in ini file!");
+		//FErrorMsg("Invalid game type in ini file!");
 		setType(GAME_NONE);
 	}
 }
@@ -2292,7 +2292,7 @@ void CvInitCore::checkInitialCivics()
 				else
 				{
 					//Should not get here, having no initial civic is very bad
-					FAssertMsg(false, "Error, No Valid Civic Was Found!");
+					FErrorMsg("Error, No Valid Civic Was Found!");
 				}
 			}
 		}

@@ -217,7 +217,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -253,7 +253,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -280,7 +280,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -307,7 +307,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -336,7 +336,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}
@@ -365,7 +365,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}

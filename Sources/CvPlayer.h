@@ -384,7 +384,7 @@ public:
 	int getTotalPopulation() const; // Exposed to Python
 	int getAveragePopulation() const; // Exposed to Python
 	void changeTotalPopulation(int iChange);
-	long getRealPopulation() const; // Exposed to Python
+	int64_t getRealPopulation() const; // Exposed to Python
 	int getReligionPopulation(ReligionTypes eReligion) const;
 
 	int getTotalLand() const; // Exposed to Python

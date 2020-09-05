@@ -3965,7 +3965,7 @@ void CvTeamAI::AI_setAtWarCounter(TeamTypes eIndex, int iNewValue)
 	}
 	else
 	{
-		FAssertMsg(false, "Team attempting to incremnt it's own atWar counter (wuith itself)");
+		FErrorMsg("Team attempting to incremnt it's own atWar counter (wuith itself)");
 	}
 }
 
@@ -4343,13 +4343,13 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	{
 		m_aeWarPlan[getID()] = NO_WARPLAN;
 
-		FAssertMsg(false, "Team apparently planning war with itself! (corrected)");
+		FErrorMsg("Team apparently planning war with itself! (corrected)");
 	}
 	if ( m_eWorstEnemy == getID() )
 	{
 		m_eWorstEnemy = NO_TEAM;
 
-		FAssertMsg(false, "Team apparently its own worst enemy! (corrected)");
+		FErrorMsg("Team apparently its own worst enemy! (corrected)");
 	}
 
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iNoTechTradeThreshold);
@@ -4410,7 +4410,7 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 	{
 		m_eWorstEnemy = NO_TEAM;
 
-		FAssertMsg(false, "Team apparently its own worst enemy! (corrected)");
+		FErrorMsg("Team apparently its own worst enemy! (corrected)");
 	}
 	WRAPPER_WRITE(wrapper, "CvTeamAI", (int)m_eWorstEnemy);
 	WRAPPER_WRITE(wrapper, "CvTeamAI", m_iNoTechTradeThreshold);

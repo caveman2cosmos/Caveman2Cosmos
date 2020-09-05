@@ -5330,7 +5330,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	// Alberts2 Commented this out to allow Animals with a different AI
 	//if ( isAnimal() && getDefaultUnitAIType() != UNITAI_ANIMAL )
 	//{
-	//	FAssertMsg(false, CvString::format("Auto-corrected: UnitAI not set to UNITAI_ANIMAL for animal unit %s", m_szType.c_str()).c_str());
+	//	FErrorMsg(CvString::format("Auto-corrected: UnitAI not set to UNITAI_ANIMAL for animal unit %s", m_szType.c_str()).c_str());
 	//	m_iDefaultUnitAIType = UNITAI_ANIMAL;
 	//}
 
