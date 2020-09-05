@@ -2365,7 +2365,7 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 								}
 								else if (iPlayerStart == iOtherPlayerStart)
 								{
-									FAssertMsg(false, "Two players are (hypothetically) assigned to the same starting location!");
+									FErrorMsg("Two players are (hypothetically) assigned to the same starting location!");
 								}
 								iTeamTotalDist += aaiDistances[iPlayerStart][iOtherPlayerStart];
 							}
@@ -11977,7 +11977,7 @@ void CvGame::addLandmarkSigns()
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_LAKE_NAMES"), "Landmark Naming"))));
 					break;
 				default:
-					FAssertMsg(false, "Unknown Landmark Type");
+					FErrorMsg("Unknown Landmark Type");
 			}
 			szSign = szTextKey;
 			CvWString szDummy = " ";

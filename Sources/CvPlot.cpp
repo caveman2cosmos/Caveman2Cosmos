@@ -2827,7 +2827,7 @@ bool CvPlot::hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTyp
 			if ( lRealValue != entry->lResult )
 			{
 				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
-				FAssertMsg(false, "Can build value cache verification failure");
+				FErrorMsg("Can build value cache verification failure");
 			}
 #endif
 			return true;
@@ -11408,12 +11408,12 @@ void CvPlot::doCulture()
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 
 		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation()
-		&& GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
+		&& GC.getGame().getSorenRandNum(100, "Revolt #1") < GC.getREVOLT_TEST_PROB())
 		{
 			int iOriginal = 0; // Dummy variable
 			const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
 
-			if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
+			if (pCity->isNPC() || GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength)
 			{
 				foreach_(CvUnit* pLoopUnit, units())
 				{
@@ -11423,7 +11423,7 @@ void CvPlot::doCulture()
 					}
 					else if (pLoopUnit->canDefend())
 					{
-						pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
+						pLoopUnit->changeDamage(pLoopUnit->currHitPoints() / 2, eCulturalOwner);
 					}
 				}
 
@@ -11440,12 +11440,11 @@ void CvPlot::doCulture()
 					{
 						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
 					}
-					pCity = NULL;
 				}
 				else
 				{
 					pCity->changeNumRevolts(eCulturalOwner, 1);
-					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
+					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 100);
 
 					// XXX announce for all seen cities?
 					MEMORY_TRACK_EXEMPT();
@@ -11467,15 +11466,9 @@ void CvPlot::doCulture()
 	//Decay if you've lost any source of culture on the plot
 	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
 	{
-		int iCultureBase = getCulture(getOwner());
-		if (iCultureBase > 0)
-		{
-			iCultureBase /= 2;
-			iCultureBase -= 10;
-			iCultureBase = std::max(iCultureBase, 0);
-			setCulture(getOwner(), iCultureBase, true, true);
-		}
+		setCulture(getOwner(), std::max(0, getCulture(getOwner())/2 - 10), true, true);
 	}
+
 	updateCulture(true, true);
 }
 

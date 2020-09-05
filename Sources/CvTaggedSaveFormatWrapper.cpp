@@ -1051,7 +1051,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		}
 		break;
 	default:
-		FAssertMsg(false, "Unexpected RemappedClassType");
+		FErrorMsg("Unexpected RemappedClassType");
 		break;
 	}
 }
@@ -1249,7 +1249,7 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			result = NUM_DOMAIN_TYPES;
 			break;
 		default:
-			FAssertMsg(false, "Unexpected RemappedClassType");
+			FErrorMsg("Unexpected RemappedClassType");
 			break;
 		}
 

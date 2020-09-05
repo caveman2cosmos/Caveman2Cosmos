@@ -389,7 +389,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(std::string& pszVal, char* pszDefault)
 			pszVal.clear();
 		}
 
-		FAssertMsg(false , "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -421,7 +421,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 			pszVal.clear();
 		}
 
-		FAssertMsg(false , "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -454,7 +454,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(char* pszVal, char* pszDefault)
 			strcpy(pszVal, "");
 		}
 
-		FAssertMsg(false , "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -486,7 +486,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(wchar_t* pszVal, wchar_t* pszDefault)
 			wcscpy(pszVal, L"");
 		}
 
-		FAssertMsg(false , "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -512,7 +512,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(int* piVal, int iDefault)
 		// set the value to the default
 		*piVal = iDefault;
 
-		FAssertMsg(false , "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -538,7 +538,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(float* pfVal, float fDefault)
 		// set the value to the default
 		*pfVal = fDefault;
 	
-		FAssertMsg(false, "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -564,7 +564,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(bool* pbVal, bool bDefault)
 		// set the boolean value to it's default value
 		*pbVal = bDefault;
 
-		FAssertMsg(false, "Error in GetChildXmlVal function, unable to find a child node");
+		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
 }
@@ -591,7 +591,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(wchar_t* pszVal, const wchar_t* szNa
 	else
 	{
 		char* tmp = xercesc::XMLString::transcode(szName);
-		FAssertMsg(false, tmp);
+		FErrorMsg(tmp);
 		xercesc::XMLString::release(&tmp);
 		if (pszDefault)
 		{
@@ -627,7 +627,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(char* pszVal, const wchar_t* szName,
 	else
 	{
 		char* tmp = xercesc::XMLString::transcode(szName);
-		FAssertMsg(false, tmp);
+		FErrorMsg(tmp);
 		xercesc::XMLString::release(&tmp);
 		if (pszDefault)
 		{
@@ -744,7 +744,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(std::string& pszVal, const wchar_t* 
 		char* tmp = xercesc::XMLString::transcode(szName);
 		OutputDebugStringW(szName);
 		OutputDebugStringW(GetXmlTagName());
-		FAssertMsg(false, tmp);
+		FErrorMsg(tmp);
 		xercesc::XMLString::release(&tmp);
 		if (pszDefault)
 		{
@@ -776,7 +776,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(std::wstring& pszVal, const wchar_t*
 		char* tmp = xercesc::XMLString::transcode(szName);
 		OutputDebugStringW(szName);
 		OutputDebugStringW(GetXmlTagName());
-		FAssertMsg(false, tmp);
+		FErrorMsg(tmp);
 		xercesc::XMLString::release(&tmp);
 		if (pszDefault)
 		{

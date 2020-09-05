@@ -3,18 +3,12 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
-//	Moved exp for next level calc into the DLL.  If you need to undefine this
-//	and go back to using Python you need to make sure that the Python is not
-//	called on any bu the main thread, so you'd neee to pre-calculate all possibly
-//	needed results ion the mian thread before the CvCity::doTurn pipeline begins
-#define NO_PYTHON_FOR_LEVEL_EXP
-
 #define PATH_MOVEMENT_WEIGHT									(1000)
-#define PATH_RIVER_WEIGHT											(100)
-#define PATH_CITY_WEIGHT											(100)
+#define PATH_RIVER_WEIGHT										(100)
+#define PATH_CITY_WEIGHT										(100)
 #define PATH_DEFENSE_WEIGHT										(10)
 #define PATH_TERRITORY_WEIGHT									(3)
-#define PATH_STEP_WEIGHT											(2)
+#define PATH_STEP_WEIGHT										(2)
 #define PATH_STRAIGHT_WEIGHT									(1)
 #define	PATH_ENEMY_CITY_WEIGHT									(500)
 #define PATH_DAMAGE_WEIGHT										(2000)

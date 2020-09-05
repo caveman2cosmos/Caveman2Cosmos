@@ -15,7 +15,6 @@ public:
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-#ifdef _USRDLL
 	// inlined for performance reasons, only in the dll
 	static CvTeamAI& getTeam(TeamTypes eTeam)
 	{
@@ -23,7 +22,7 @@ public:
 		FAssertMsg(eTeam <= MAX_TEAMS, "eTeam is not assigned a valid value");
 		return m_aTeams[eTeam]; 
 	}
-#endif
+
 	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
 
 	static void initStatics();
@@ -312,10 +311,6 @@ protected:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_TEAM CvTeamAI::getTeam
-#else
-#define GET_TEAM CvTeamAI::getTeamNonInl
-#endif
 
 #endif

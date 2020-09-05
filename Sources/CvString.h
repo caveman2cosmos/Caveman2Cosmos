@@ -32,13 +32,6 @@ public:
 //	CvWString(const __wchar_t* s) { if (s) *this = s; }
 	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::wstring& s) { assign(s.c_str()); }
-#ifndef _USRDLL
-	// FString conversion, if not in the DLL
-	// cppcheck-suppress noExplicitConstructor
-	CvWString(const FStringA& s) { Copy(s.GetCString()); }
-	// cppcheck-suppress noExplicitConstructor
-	CvWString(const FStringW& s) { assign(s.GetCString()); }
-#endif
 
 	void Copy(const char* s)
 	{
@@ -69,11 +62,6 @@ public:
 	CvWString& operator=( const std::wstring& s) { assign(s.c_str());	return *this; }	
 	CvWString& operator=( const std::string& w) { Copy(w.c_str());	return *this; }	
 	CvWString& operator=( const CvWString& w) { assign(w.c_str());	return *this; }	
-#ifndef _USRDLL
-	// FString conversion, if not in the DLL
-	CvWString& operator=( const FStringW& s) { assign(s.GetCString());	return *this; }	
-	CvWString& operator=( const FStringA& w) { Copy(w.GetCString());	return *this; }	
-#endif
 	CvWString& operator=(const char* w) { if (w) Copy(w); else clear();	return *this; }
 
 	void Format( LPCWSTR lpszFormat, ... );

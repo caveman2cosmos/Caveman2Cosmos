@@ -2321,7 +2321,7 @@ int CvPlayer::findStartingArea() const
 		}
 		else
 		{
-			FAssertMsg(false, "python findStartingArea() must return -1 or the ID of a valid area");
+			FErrorMsg("python findStartingArea() must return -1 or the ID of a valid area");
 		}
 	}
 
@@ -2339,7 +2339,6 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	PROFILE_FUNC();
 
 	{
-
 		int result = -1;
 		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
@@ -2350,7 +2349,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			}
 			else
 			{
-				FAssertMsg(false, "python findStartingPlot() returned an invalid plot index!");
+				FErrorMsg("python findStartingPlot() returned an invalid plot index!");
 			}
 		}
 	}
@@ -2418,7 +2417,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		FAssertMsg(iPass != 0, "CvPlayer::findStartingPlot - could not find starting plot in first pass.");
 	}
 
-	FAssertMsg(false, "Could not find starting plot.");
+	FErrorMsg("Could not find starting plot.");
 	return NULL;
 }
 
@@ -10591,17 +10590,9 @@ void CvPlayer::changeTotalPopulation(int iChange)
 }
 
 
-long CvPlayer::getRealPopulation() const
+int64_t CvPlayer::getRealPopulation() const
 {
-	int64_t iTotalPopulation = algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
-
-	if (iTotalPopulation > MAX_INT)
-	{
-		FErrorMsg("Real population overflows, capped at MAX_INT!");
-		iTotalPopulation = MAX_INT;
-	}
-
-	return ((long)(iTotalPopulation));
+	return algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
 }
 
 
@@ -11746,7 +11737,7 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	}
 	if (iCalc < 0)
 	{
-		FAssertMsg(false, "Total unit upkeep is negative! You don't earn gold from upkeep costs!");
+		FErrorMsg("Total unit upkeep is negative! You don't earn gold from upkeep costs!");
 		iCalc = 0;
 	}
 	if (bReal)
@@ -13163,7 +13154,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
 	if (iExperience < 0)
 	{
-		FAssertMsg(false, "iExperience < 0");
+		FErrorMsg("iExperience < 0");
 		iExperience = 0;
 	}
 
@@ -21490,7 +21481,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
 				if(putativeGroup != pLoopGroup)
 				{
-					FAssertMsg(false, "Corrupt group detected on load");
+					FErrorMsg("Corrupt group detected on load");
 					OutputDebugString(CvString::format("\t\tunit claims to be in group %d\n", putativeGroup->getID()).c_str());
 
 					//	Try to fix it
@@ -27927,7 +27918,7 @@ void CvPlayer::getGlobeLayerColors(GlobeLayerTypes eGlobeLayerType, int iOption,
 		getCultureLayerColors(aColors, aIndicators);
 		break;
 	default:
-		FAssertMsg(false, "Unknown globe layer type");
+		FErrorMsg("Unknown globe layer type");
 		break;
 	}
 }
