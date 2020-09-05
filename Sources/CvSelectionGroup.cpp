@@ -4255,7 +4255,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 				GC.iStuckUnitCount++;
 				if (GC.iStuckUnitCount > 5)
 				{
-					FAssertMsg(false, "Unit Stuck in Loop!");
+					FErrorMsg("Unit Stuck in Loop!");
 					CvUnit* pHeadUnit = getHeadUnit();
 					if (NULL != pHeadUnit)
 					{
@@ -6104,7 +6104,7 @@ CvUnit* CvSelectionGroup::getUnitAt(int index) const
 {
 	if (index >= getNumUnits())
 	{
-		FAssertMsg(false, "[Jason] Selectiongroup unit index out of bounds.");
+		FErrorMsg("[Jason] Selectiongroup unit index out of bounds.");
 		return NULL;
 	}
 
@@ -6807,7 +6807,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 		{
 			if ( bFixup )
 			{
-				FAssertMsg(false, "Group split in cargo state - fixing");
+				FErrorMsg("Group split in cargo state - fixing");
 
 				pLoopUnit->joinGroup(NULL);
 			}
@@ -6815,7 +6815,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if(!pLoopUnit->isHuman())
 				{
-					FAssertMsg(false, "Group split in cargo state");
+					FErrorMsg("Group split in cargo state");
 				}
 			}
 		}
@@ -6830,7 +6830,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if ( pPlot != pLoopUnit->plot() )
 				{
-					FAssertMsg(false, "Incorrect plot on unit of group - fixing");
+					FErrorMsg("Incorrect plot on unit of group - fixing");
 
 					//	Drop the errant unit from the group
 					pLoopUnit->joinGroup(NULL);

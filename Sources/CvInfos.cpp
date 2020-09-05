@@ -9107,7 +9107,7 @@ bool CvUnitFormationInfo::read(CvXMLLoadUtility* pXML)
 				m_vctSiegeUnitEntries.push_back(unitEntry);
 			else
 			{
-				//FAssertMsg(false, "[Jason] Unknown unit formation entry type.");
+				//FErrorMsg("[Jason] Unknown unit formation entry type.");
 			}
 		}
 		while ( pXML->TryMoveToXmlNextSibling(L"UnitEntry"));
@@ -11912,16 +11912,16 @@ void CvDiplomacyInfo::copyNonDefaults(CvXMLLoadUtility* pXML)
 				}
 
 				// Check which case we have
-				//			if ( bLeaderHeadTypes && !bLeaderHeadTypesExist) FAssertMsg(false, L"Wrong XML format!");
-				//			if ( bAttitudeTypes && !bAttitudeTypesExist) FAssertMsg(false, L"Wrong XML format!");
-				//			if ( bPowerTypes && !bPowerTypesExist) FAssertMsg(false, L"Wrong XML format!");
+				//			if ( bLeaderHeadTypes && !bLeaderHeadTypesExist) FErrorMsg(L"Wrong XML format!");
+				//			if ( bAttitudeTypes && !bAttitudeTypesExist) FErrorMsg(L"Wrong XML format!");
+				//			if ( bPowerTypes && !bPowerTypesExist) FErrorMsg(L"Wrong XML format!");
 				if (!(bLeaderHeadTypes || bAttitudeTypes || bPowerTypes)) iCase = 1;
 				else if (bLeaderHeadTypes && !(bAttitudeTypes || bPowerTypes)) iCase = 2;
 				else if (bAttitudeTypes && !(bLeaderHeadTypes || bPowerTypes)) iCase = 3;
 				else if (bPowerTypes && !(bLeaderHeadTypes || bAttitudeTypes)) iCase = 4;
 				else if (bLeaderHeadTypes && bAttitudeTypes && !bPowerTypes) iCase = 5;
 				else if (bLeaderHeadTypes && bPowerTypes && !bAttitudeTypes) iCase = 6;
-				else FAssertMsg(false, "A new case with an added Diplomacy XML but already exists?");
+				else FErrorMsg("A new case with an added Diplomacy XML but already exists?");
 
 				// Find ResponseIndex(if already exists)
 				int iIndex = 0;
@@ -29530,7 +29530,7 @@ bool CvSpaceShipInfo::read(CvXMLLoadUtility* pXML)
 		m_eCameraUpAxis = AXIS_Z;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown Axis Type.");
+		FErrorMsg("[Jason] Unknown Axis Type.");
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iPartNumber, L"PartNumber");
@@ -29569,7 +29569,7 @@ bool CvSpaceShipInfo::read(CvXMLLoadUtility* pXML)
 		m_eSpaceShipInfoType = SPACE_SHIP_INFO_TYPE_IN_GAME_SMOKE_ON;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown SpaceShipInfoType.");
+		FErrorMsg("[Jason] Unknown SpaceShipInfoType.");
 	}
 
 	return true;
@@ -30859,7 +30859,7 @@ bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 		m_eTileArtType = TILE_ART_TYPE_PLOT_TILING;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown TileArtType.");
+		FErrorMsg("[Jason] Unknown TileArtType.");
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTemp, L"LightType", "LIGHT_TYPE_NONE");
@@ -30873,7 +30873,7 @@ bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 		m_eLightType = LIGHT_TYPE_UNIT;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown LightType.");
+		FErrorMsg("[Jason] Unknown LightType.");
 	}
 
 	//feature varieties
@@ -31088,7 +31088,7 @@ int CvArtInfoFeature::getConnectionMaskFromString(const CvString& connectionStri
 				connectionMask |= DIRECTION_WEST_MASK;
 			else
 			{
-				FAssertMsg(false, "[Jason] Invalid connection direction.");
+				FErrorMsg("[Jason] Invalid connection direction.");
 			}
 		}
 

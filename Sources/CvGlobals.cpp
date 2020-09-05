@@ -2122,7 +2122,7 @@ CvActionInfo& cvInternalGlobals::getActionInfo(int i) const
 CvMissionInfo& cvInternalGlobals::getMissionInfo(MissionTypes eMissionNum) const
 {
 	FAssert(eMissionNum > -1);
-	FAssert(eMissionNum < NUM_MISSION_TYPES);
+	FAssert(eMissionNum < GC.getNumMissionInfos());
 	return *(m_paMissionInfo[eMissionNum]);
 }
 
@@ -3556,11 +3556,7 @@ void cvInternalGlobals::resolveDelayedResolution()
 
 int cvInternalGlobals::getNumMissionInfos() const
 { 
-#ifdef FIXED_MISSION_NUMBER
-	return NUM_MISSION_TYPES;
-#else
 	return (int) m_paMissionInfo.size();
-#endif
 }
 
 inline CvMap& cvInternalGlobals::getMap() const
@@ -3590,7 +3586,6 @@ void cvInternalGlobals::setRouteFinder(FAStar* pVal) { m_routeFinder = pVal; }
 void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
-CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;

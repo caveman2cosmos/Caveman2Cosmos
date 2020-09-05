@@ -205,7 +205,7 @@ int CyTeam::getHasCorporationCount(int /*CorporationTypes*/ eReligion)
 
 int64_t CyTeam::countTotalCulture() const
 {
-	return m_pTeam ? m_pTeam->processedTeamCulture() : -1;
+	return m_pTeam ? m_pTeam->countTotalCulture() : -1;
 }
 
 int CyTeam::countNumUnitsByArea(CyArea* pArea)
@@ -302,7 +302,7 @@ void CyTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 			{
 				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 				{
-					FAssertMsg(false, "GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
+					FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 #ifdef _DEBUG
 					throw new std::exception();
 #endif
