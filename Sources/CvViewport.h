@@ -202,8 +202,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iXSize);
+				FASSERT_BOUNDS(0, m_iXSize, iResult)
 
 				return iResult;
 			}
@@ -239,8 +238,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iYSize);
+				FASSERT_BOUNDS(0, m_iYSize, iResult)
 
 				return iResult;
 			}

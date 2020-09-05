@@ -2097,8 +2097,7 @@ int CvInitCore::getNumSaveGameVector()
 
 CvString CvInitCore::getSaveGameVector(int i)
 {
-	FAssert( i > -1);
-	FAssert( i < (int)m_aszSaveGameVector.size() );
+	FASSERT_BOUNDS(0, getNumSaveGameVector(), i)
 	return m_aszSaveGameVector[i];
 }
 

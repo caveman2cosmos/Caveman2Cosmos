@@ -48,29 +48,25 @@ CvProperties::CvProperties(CvPlot* pPlot)
 
 PropertyTypes CvProperties::getProperty(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiProperty.size());
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
 	return m_aiProperty[index].prop;
 }
 
 int CvProperties::getValue(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiProperty.size());
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
 	return m_aiProperty[index].value;
 }
 
 PropertyTypes CvProperties::getChangeProperty(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiPropertyChange.size());
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
 	return m_aiPropertyChange[index].prop;
 }
 
 int CvProperties::getChange(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiPropertyChange.size());
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
 	return m_aiPropertyChange[index].value;
 }
 
@@ -91,7 +87,7 @@ int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 
 int CvProperties::getValueByProperty(PropertyTypes eProp) const
 {
-	int index = getPositionByProperty(eProp);
+	const int index = getPositionByProperty(eProp);
 	if (index < 0)
 		return 0;
 	else
@@ -140,8 +136,7 @@ void CvProperties::setValue(int index, int iVal)
 	//CvString szBuffer;
 	//szBuffer.format("SetValue, index %i, iValue %i.", index, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiProperty.size());
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
 	const int iOldVal = m_aiProperty[index].value;
 	if (iOldVal != iVal)
 	{
@@ -156,8 +151,7 @@ void CvProperties::setValue(int index, int iVal)
 
 void CvProperties::setChange(int index, int iVal)
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aiPropertyChange.size());
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
 	m_aiPropertyChange[index].value = iVal;
 }
 

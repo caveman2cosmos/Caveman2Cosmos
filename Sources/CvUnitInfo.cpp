@@ -855,7 +855,7 @@ int CvUnitInfo::getInvisibleType() const
 
 int CvUnitInfo::getSeeInvisibleType(int i) const
 {
-	FAssert(i < (int)m_aiSeeInvisibleTypes.size());
+	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
 
 	return m_aiSeeInvisibleTypes[i];
 }
@@ -935,8 +935,7 @@ int CvUnitInfo::getPrereqOrBuildingsNum() const
 
 BuildingTypes CvUnitInfo::getPrereqOrBuilding(int i) const
 {
-	FAssertMsg(i < getPrereqOrBuildingsNum(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getPrereqOrBuildingsNum(), i)
 	return (BuildingTypes)m_aiPrereqOrBuildings[i];
 }
 
@@ -1266,8 +1265,8 @@ bool CvUnitInfo::canAcquireExperience() const
 
 bool CvUnitInfo::isPrereqOrCivics(int i) const
 {
-	FAssertMsg(i < GC.getNumCivicInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_CIVIC, GC.getNumCivicInfos(), i)
+
 	if (i == NO_CIVIC)
 	{
 		return m_pbPrereqOrCivics != NULL;
@@ -1381,22 +1380,19 @@ void CvUnitInfo::addUnitToUpgradeChain(int i)
 
 int CvUnitInfo::getPrereqAndTechs(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_AND_TECH_PREREQS(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_AND_TECH_PREREQS(), i)
 	return m_piPrereqAndTechs ? m_piPrereqAndTechs[i] : -1;
 }
 
 int CvUnitInfo::getPrereqOrBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrBonuses ? m_piPrereqOrBonuses[i] : -1;
 }
 
 int CvUnitInfo::getFlavorValue(int i) const
 {
-	FAssertMsg(i < GC.getNumFlavorTypes(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
@@ -1577,8 +1573,7 @@ bool CvUnitInfo::getFeatureNative(int i) const
 
 bool CvUnitInfo::getFreePromotions(int i) const
 {
-	FAssertMsg(i < GC.getNumPromotionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i)
 	return m_pbFreePromotions ? m_pbFreePromotions[i] : false;
 }
 
@@ -1643,8 +1638,7 @@ CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) 
 
 const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1664,15 +1658,13 @@ const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) c
 
 void CvUnitInfo::setEarlyArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszEarlyArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1693,15 +1685,13 @@ const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 void CvUnitInfo::setLateArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszLateArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1721,15 +1711,13 @@ const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 void CvUnitInfo::setMiddleArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszMiddleArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getUnitNames(int i) const
 {
-	FAssertMsg(i < getNumUnitNames(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumUnitNames(), i)
 	return (m_paszUnitNames) ? m_paszUnitNames[i] : NULL;
 }
 
@@ -1750,8 +1738,7 @@ void CvUnitInfo::updateArtDefineButton()
 
 const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1772,15 +1759,13 @@ const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyl
 
 void CvUnitInfo::setClassicalArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszClassicalArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1801,15 +1786,13 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 void CvUnitInfo::setRennArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszRennArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1830,15 +1813,13 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 
 void CvUnitInfo::setIndustrialArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszIndustrialArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1859,8 +1840,7 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 void CvUnitInfo::setFutureArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszFutureArtDefineTags[i] = szVal;
 }
 
@@ -1953,22 +1933,19 @@ bool CvUnitInfo::isRequiresStateReligionInCity() const
 
 bool CvUnitInfo::getPassableRouteNeeded(int i) const
 {
-	FAssertMsg(i < GC.getNumRouteInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i)
 	return m_pbPassableRouteNeeded ? m_pbPassableRouteNeeded[i] : false;
 }
 
 int CvUnitInfo::getPrereqOrVicinityBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrVicinityBonuses ? m_piPrereqOrVicinityBonuses[i] : -1;
 }
 
 CvWString CvUnitInfo::getCivilizationName(int i) const
 {
-	FAssertMsg(i < GC.getNumCivilizationInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i)
 	return m_paszCivilizationNames[i];
 }
 
@@ -2891,8 +2868,7 @@ int CvUnitInfo::getNumAfflictionFortitudeModifiers() const
 
 const PromotionLineModifier& CvUnitInfo::getAfflictionFortitudeModifier(int iAffliction) const
 {
-	FAssertMsg(iAffliction < (int)m_aAfflictionFortitudeModifiers.size(), "Index out of bounds");
-	FAssertMsg(iAffliction > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumAfflictionFortitudeModifiers(), iAffliction)
 	return m_aAfflictionFortitudeModifiers[iAffliction];
 }
 
@@ -2903,8 +2879,7 @@ int CvUnitInfo::getNumAfflictOnAttackTypes() const
 
 const AfflictOnAttack& CvUnitInfo::getAfflictOnAttackType(int iAfflictionLine) const
 {
-	FAssertMsg(iAfflictionLine < (int)m_aAfflictOnAttackTypes.size(), "Index out of bounds");
-	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumAfflictOnAttackTypes(), iAfflictionLine)
 	return m_aAfflictOnAttackTypes[iAfflictionLine];
 }
 
@@ -2915,8 +2890,7 @@ int CvUnitInfo::getNumHealUnitCombatTypes() const
 
 const HealUnitCombat& CvUnitInfo::getHealUnitCombatType(int iUnitCombat) const
 {
-	FAssertMsg(iUnitCombat < (int)m_aHealUnitCombatTypes.size(), "Index out of bounds");
-	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat)
 	return m_aHealUnitCombatTypes[iUnitCombat];
 }
 
@@ -6551,7 +6525,7 @@ bool CvUnitInfo::readPass3()
 
 bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FAssert(0 <= eUnitCombat && eUnitCombat < GC.getNumUnitCombatInfos());
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	if ( m_abHasCombatType == NULL )
 	{

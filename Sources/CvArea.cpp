@@ -702,7 +702,7 @@ int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 
 int CvArea::getNumRevealedTiles(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiNumRevealedTiles[eIndex];
 }
 
@@ -815,7 +815,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 	{
 		const bool bWasCleanPower = isCleanPower(eIndex);
 
-		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
+		m_aiCleanPowerCount[eIndex] += iChange;
 		
 		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasCleanPower != isCleanPower(eIndex))

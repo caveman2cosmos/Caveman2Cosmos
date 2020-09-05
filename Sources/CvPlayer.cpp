@@ -7343,8 +7343,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 		receiveGoody(pPlot, ptGoody, pUnit);
 
-		FAssert(ptGoody >= 0);
-		FAssert(ptGoody < GC.getNumGoodyInfos());
+		FASSERT_BOUNDS(0, GC.getNumGoodyInfos(), ptGoody)
 
 		// Python Event
 		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, ptGoody);
@@ -8794,7 +8793,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 // Returns the cost
 int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 {
-	FAssert(eBuild >= 0 && eBuild < GC.getNumBuildInfos());
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
 
 	if (pPlot->getBuildProgress(eBuild) > 0)
 	{

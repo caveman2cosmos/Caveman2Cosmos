@@ -1487,7 +1487,7 @@ int	CvMap::getNumViewports() const
 
 CvViewport* CvMap::getViewport(int iIndex) const
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	return m_viewports[iIndex];
 }
@@ -1507,7 +1507,7 @@ int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Re
 
 void CvMap::deleteViewport(int iIndex)
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	if (m_iCurrentViewportIndex == iIndex)
 	{
@@ -1526,7 +1526,7 @@ void CvMap::deleteViewport(int iIndex)
 
 void CvMap::setCurrentViewport(int iIndex)
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	m_iCurrentViewportIndex = iIndex;
 }

@@ -19396,10 +19396,9 @@ void CvPlayerAI::AI_doCivics()
 	{
 		if ( canDoCivics((CivicTypes)iI) )
 		{
-			int	iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
+			const int iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
 
-			FAssert(iCivicOption >= 0);
-			FAssert(iCivicOption < GC.getNumCivicOptionInfos());
+			FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), iCivicOption)
 
 			paiAvailableChoices[iCivicOption]++;
 		}
@@ -26165,8 +26164,7 @@ int CvPlayerAI::AI_goldTradeValuePercent() const
 
 int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 {
-	FAssert(eYield > -1);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26179,8 +26177,7 @@ int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 
 int CvPlayerAI::AI_averageCommerceMultiplier(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26202,8 +26199,7 @@ int CvPlayerAI::AI_averageGreatPeopleMultiplier() const
 //"100 eCommerce is worth (return) raw YIELD_COMMERCE
 int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
