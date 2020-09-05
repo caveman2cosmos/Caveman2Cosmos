@@ -9669,44 +9669,26 @@ bool CvUnit::bombard()
 
 bool CvUnit::canPillage(const CvPlot* pPlot) const
 {
-	if (!(m_pUnitInfo->isPillage()))
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (pPlot == NULL)
+	if (pPlot == NULL || !m_pUnitInfo->isPillage())
 	{
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_NO_FRIENDLY_PILLAGING))
+	if (isOnlyDefensive() && !isAnimal())
 	{
-		if (pPlot->getTeam() == getTeam())
-		{
-			return false;
-		}
+		// Toffer - This is an odd one, probably specific to the locust swarm unit.
+		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/23/10                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	// From Mongoose SDK
+
+	if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_NO_FRIENDLY_PILLAGING) && pPlot->getTeam() == getTeam())
+	{
+		return false;
+	}
+
 	if (isCargo())
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 
 	if (pPlot->isCity())
 	{
@@ -9715,36 +9697,23 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 
 	if (pPlot->getImprovementType() == NO_IMPROVEMENT)
 	{
-		if (!(pPlot->isRoute()))
+		if (!pPlot->isRoute())
 		{
 			return false;
 		}
 	}
-	else
-	{
-		if (GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-		{
-			return false;
-		}
-	}
-
-	if (pPlot->isOwned())
-	{
-		if (!potentialWarAction(pPlot))
-		{
-			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwner() != getOwner()))
-			{
-				return false;
-			}
-		}
-	}
-
-	if (!(pPlot->isValidDomainForAction(*this)))
+	else if (GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
 	{
 		return false;
 	}
 
-	if (isOnlyDefensive() && !isAnimal())
+	if (pPlot->isOwned() && !potentialWarAction(pPlot)
+	&& (pPlot->getImprovementType() == NO_IMPROVEMENT || pPlot->getOwner() != getOwner()))
+	{
+		return false;
+	}
+
+	if (!pPlot->isValidDomainForAction(*this))
 	{
 		return false;
 	}

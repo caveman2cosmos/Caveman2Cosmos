@@ -25,7 +25,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	int getType();
-	void setType(int iNewType);
 	CyMap& operator = (CvMap& kMap);
 
 	bool viewportsEnabled();

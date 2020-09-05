@@ -152,7 +152,6 @@ class Dispatcher:
 		# setup defaults
 		self._setDefault("isVictory", True)
 		self._setDefault("isPlayerResearch", True)
-		self._setDefault("createBarbarianCities", False)
 		self._setDefault("createBarbarianUnits", False)
 		self._setDefault("skipResearchPopup", False)
 		self._setDefault("showTechChooserButton", True)
