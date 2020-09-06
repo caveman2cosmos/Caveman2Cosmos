@@ -2535,7 +2535,7 @@ int CvBuildingInfo::getNumFreePromoTypes() const
 
 const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
 {
-	FASSERT_BOUNDS(0, (int)m_aFreePromoTypes.size(), iPromotion)
+	FASSERT_BOUNDS(0, getNumFreePromoTypes(), iPromotion)
 	return m_aFreePromoTypes[iPromotion];
 }
 
@@ -2546,7 +2546,7 @@ int CvBuildingInfo::getNumFreeTraitTypes() const
 
 int CvBuildingInfo::getFreeTraitType(int iIndex) const
 {
-	FASSERT_BOUNDS(0, (int)m_aFreePromoTypes.size(), iIndex)
+	FASSERT_BOUNDS(0, getNumFreeTraitTypes(), iIndex)
 	return m_aiFreeTraitTypes[iIndex];
 }
 
@@ -2557,7 +2557,7 @@ int CvBuildingInfo::getNumHealUnitCombatTypes() const
 
 const HealUnitCombat& CvBuildingInfo::getHealUnitCombatType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, (int)m_aHealUnitCombatTypes.size(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat)
 	return m_aHealUnitCombatTypes[iUnitCombat];
 }
 
