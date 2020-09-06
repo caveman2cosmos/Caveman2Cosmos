@@ -37895,7 +37895,7 @@ int CvOutcomeInfo::getNumPrereqBuildings() const
 
 BuildingTypes CvOutcomeInfo::getPrereqBuilding(int i) const
 {
-	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i)
+	FASSERT_BOUNDS(0, getNumPrereqBuildings(), i)
 	return m_aePrereqBuildings[i];
 }
 
