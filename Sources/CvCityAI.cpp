@@ -7931,8 +7931,7 @@ void CvCityAI::AI_updateRouteToCity() const
 
 int CvCityAI::AI_getEmphasizeYieldCount(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiEmphasizeYieldCount[eIndex];
 }
 
@@ -7945,8 +7944,7 @@ bool CvCityAI::AI_isEmphasizeYield(YieldTypes eIndex) const
 
 int CvCityAI::AI_getEmphasizeCommerceCount(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return (m_aiEmphasizeCommerceCount[eIndex] > 0);
 }
 
@@ -7959,16 +7957,14 @@ bool CvCityAI::AI_isEmphasizeCommerce(CommerceTypes eIndex) const
 
 bool CvCityAI::AI_isEmphasize(EmphasizeTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumEmphasizeInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumEmphasizeInfos(), eIndex)
 	FAssertMsg(m_pbEmphasize != NULL, "m_pbEmphasize is not expected to be equal with NULL");
 	return m_pbEmphasize[eIndex];
 }
 
 bool CvCityAI::AI_isEmphasizeSpecialist(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	FAssertMsg(m_pbEmphasizeSpecialist != NULL, "m_pbEmphasize is not expected to be equal with NULL");
 	return m_pbEmphasizeSpecialist[eIndex];
 }
@@ -7976,8 +7972,7 @@ bool CvCityAI::AI_isEmphasizeSpecialist(SpecialistTypes eIndex) const
 
 void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumEmphasizeInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumEmphasizeInfos(), eIndex)
 
 	if (AI_isEmphasize(eIndex) != bNewValue)
 	{
@@ -8043,9 +8038,7 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 
 void CvCityAI::AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue)
 {
-
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	if (AI_isEmphasizeSpecialist(eIndex) != bNewValue)
 	{
@@ -8074,8 +8067,7 @@ void CvCityAI::AI_forceEmphasizeCulture(bool bNewValue)
 
 int CvCityAI::AI_getBestBuildValue(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 	return m_aiBestBuildValue[iIndex];
 }
 
@@ -8821,8 +8813,7 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 
 BuildTypes CvCityAI::AI_getBestBuild(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 	return m_aeBestBuild[iIndex];
 }
 
@@ -13004,8 +12995,7 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork) const
 				else
 				{
 					iTempValue = (100 - iTempValue);
-					FAssert(iTempValue > 0);
-					FAssert(iTempValue <= 100);
+					FASSERT_BOUNDS(1, 101, iTempValue)
 
 					if (iI != CITY_HOME_PLOT)
 					{
