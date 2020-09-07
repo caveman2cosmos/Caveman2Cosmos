@@ -1,11 +1,13 @@
 // player.cpp
 
+#include "CvGameAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvDiploParameters.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvUnitAI.h"
 #include "CyCity.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
@@ -17176,6 +17178,12 @@ CvUnit* CvPlayer::addUnit()
 #endif
 }
 
+#ifdef PARALLEL_MAPS
+void CvPlayer::addUnit(CvUnit* unit)
+{
+	return m_units[GC.getGame().getCurrentMap()]->load(reinterpret_cast<CvUnitAI*>(unit));
+}
+#endif
 
 void CvPlayer::deleteUnit(int iID)
 {

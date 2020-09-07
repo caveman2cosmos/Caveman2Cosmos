@@ -10,15 +10,9 @@
 //-----------------------------------------------------------------------------
 //	Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //-----------------------------------------------------------------------------
-//
-
 
 #include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
-
-
-class CvPlotGroup;
-
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
@@ -37,11 +31,15 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 	return iCoord;
 }
 
+class CvPlotGroup;
+class CvSelectionGroup;
+class CvUnit;
+
+typedef std::pair<CvUnit*, int> TravelingUnit;
 
 //
 // CvMap
 //
-class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
 	friend class CyMap;
@@ -71,6 +69,8 @@ public:
 
 	void beforeSwitch();
 	void afterSwitch();
+
+	void addIncomingUnit(CvUnit* unit, int numTravelTurns);
 
 	//	Viewports are owned by their underlying maps
 	int	getNumViewports() const;
@@ -285,6 +285,8 @@ protected:
 	CvPlot* m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
+
+	std::vector<TravelingUnit> m_IncomingUnits;
 
 	void calculateAreas();
 };

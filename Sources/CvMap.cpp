@@ -13,6 +13,7 @@
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
 #include "CvPlayerAI.h"
+#include "CvUnit.h"
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -365,11 +366,29 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
+void updateIncomingUnits(std::vector<TravelingUnit> incomingUnits)
+{
+	for (std::vector<TravelingUnit>::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
+	//foreach_(TravelingUnit travelingUnit, incomingUnits)
+	{
+		int* travelTurnsLeft = &(*itr).second;
+		travelTurnsLeft--;
+		if (travelTurnsLeft <= 0)
+		{
+			CvUnit* unit = (*itr).first;
+			GET_PLAYER(unit->getOwner()).addUnit(unit);
+			//incomingUnits.erase(travelingUnit);
+		}
+	}
+}
+
+
 void CvMap::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
+
+	updateIncomingUnits(m_IncomingUnits);
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1541,12 +1560,18 @@ CvViewport* CvMap::getCurrentViewport() const
 
 	return (m_iCurrentViewportIndex == -1 ? NULL : m_viewports[m_iCurrentViewportIndex]);
 }
-	
+
 MapTypes CvMap::getType() const
 {
 	return m_eType;
 }
 
+void CvMap::addIncomingUnit(CvUnit* unit, int numTravelTurns)
+{
+	//unit.setX()
+
+	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
+}
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
