@@ -516,7 +516,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	if (bTeamInit || GET_TEAM(getTeam()).getNumMembers() == iOtherTeamMembers)
 	{
-		GET_TEAM(getTeam()).changeNumMembers(1);
+		//GET_TEAM(getTeam()).changeNumMembers(1);
 	}
 
 	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
@@ -13286,7 +13286,7 @@ void CvPlayer::setAlive(bool bNewValue)
 
 		if (isAlive())
 		{
-			GET_TEAM(getTeam()).addTeamMember(getID());
+			GET_TEAM(getTeam()).addMember(reinterpret_cast<CvPlayerAI&>(*this));
 
 			if (!isEverAlive())
 			{
@@ -13326,7 +13326,7 @@ void CvPlayer::setAlive(bool bNewValue)
 		}
 		else
 		{
-			GET_TEAM(getTeam()).removeTeamMember(getID());
+			GET_TEAM(getTeam()).removeMember(reinterpret_cast<CvPlayerAI&>(*this));
 
 			clearResearchQueue();
 			killUnits();
@@ -13351,7 +13351,7 @@ void CvPlayer::setAlive(bool bNewValue)
 
 			if (GC.getGame().getElapsedGameTurns() > 0 && !isNPC())
 			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
 
 				// Report Deaths For Known Teams
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -13489,8 +13489,6 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 
 void CvPlayer::verifyAlive()
 {
-	bool bKill;
-
 	if (isAlive())
 	{
 		bool bKill = false;
@@ -14415,7 +14413,7 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 	{
 		GET_TEAM(eOldTeam).changeEverAliveCount(-1);
 	}
-	GET_TEAM(eOldTeam).changeNumMembers(-1);
+	//GET_TEAM(eOldTeam).changeNumMembers(-1);
 	GET_TEAM(eOldTeam).changeNumCities(-(getNumCities()));
 	GET_TEAM(eOldTeam).changeTotalPopulation(-(getTotalPopulation()));
 	GET_TEAM(eOldTeam).changeTotalLand(-(getTotalLand()));
@@ -14430,7 +14428,7 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 	{
 		GET_TEAM(eTeam).changeEverAliveCount(1);
 	}
-	GET_TEAM(eTeam).changeNumMembers(1);
+	//GET_TEAM(eTeam).changeNumMembers(1);
 	GET_TEAM(eTeam).changeNumCities(getNumCities());
 	GET_TEAM(eTeam).changeTotalPopulation(getTotalPopulation());
 	GET_TEAM(eTeam).changeTotalLand(getTotalLand());

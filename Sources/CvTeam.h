@@ -130,10 +130,23 @@ public:
 	CvWString getName() const; // Exposed to Python
 
 	DllExport int getNumMembers() const; // Exposed to Python
-	void changeNumMembers(int iChange);
-	void addTeamMember(const PlayerTypes player);
-	void removeTeamMember(const PlayerTypes player);
-	PlayerTypes getTeamMember(const int index) const;
+	//void changeNumMembers(int iChange);
+	void addMember(CvPlayerAI& player);
+	void removeMember(CvPlayerAI& player);
+	CvPlayerAI& getMember(int index);
+	const CvPlayerAI& getMember(int index) const;
+
+	// team members iteration
+	DECLARE_INDEX_ITERATOR(const CvTeam, CvPlayer, team_member_iterator, firstMember, nextMember);
+	team_member_iterator beginMembers() const { return team_member_iterator(this); }
+	team_member_iterator endMembers() const { return team_member_iterator(); }
+	typedef bst::iterator_range<team_member_iterator> team_member_range;
+	team_member_range members() const { return team_member_range(beginMembers(), endMembers()); }
+
+	// deprecated, use team_member_iterator
+	CvPlayer* firstMember(int* pIterIdx, bool bRev = false) const;
+	// deprecated, use team_member_iterator
+	CvPlayer* nextMember(int* pIterIdx, bool bRev = false) const;
 
 	int getAliveCount() const;
 	int isAlive() const; // Exposed to Python
@@ -604,7 +617,8 @@ protected:
 	std::vector<int> *m_pavProjectArtTypes;
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;
-	std::vector<PlayerTypes> m_aeTeamMembers;
+
+	FFreeListTrashArray<CvPlayerAI> m_aMembers;
 
 	void doWarWeariness();
 	void updateTechShare(TechTypes eTech);
