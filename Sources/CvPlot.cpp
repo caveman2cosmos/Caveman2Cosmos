@@ -2827,7 +2827,7 @@ bool CvPlot::hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTyp
 			if ( lRealValue != entry->lResult )
 			{
 				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
-				FAssertMsg(false, "Can build value cache verification failure");
+				FErrorMsg("Can build value cache verification failure");
 			}
 #endif
 			return true;
@@ -5837,7 +5837,7 @@ bool CvPlot::isImpassable(TeamTypes eTeam) const
 
 int CvPlot::getViewportX() const
 {
-	CvViewport*	pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 
 	return pCurrentViewPort->getViewportXFromMapX(m_iX);
@@ -5846,7 +5846,7 @@ int CvPlot::getViewportX() const
 
 int CvPlot::getViewportY() const
 {
-	CvViewport*	pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 
 	return pCurrentViewPort->getViewportYFromMapY(m_iY);
@@ -5854,7 +5854,7 @@ int CvPlot::getViewportY() const
 
 bool CvPlot::isInViewport(int comfortBorderSize) const
 {
-	CvViewport*	pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 
 	return pCurrentViewPort->isInViewport(m_iX, m_iY, comfortBorderSize);
@@ -8175,8 +8175,7 @@ short* CvPlot::getYield() const
 
 int CvPlot::getYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiYield[eIndex];
 }
 
@@ -8607,8 +8606,7 @@ void CvPlot::updateYield()
 
 int CvPlot::getCulture(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "iIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	for (std::vector<std::pair<PlayerTypes,int> >::const_iterator itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
 	{
@@ -8717,8 +8715,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "iIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (getCulture(eIndex) != iNewValue)
 	{
@@ -8787,8 +8784,7 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 
 int CvPlot::getFoundValue(PlayerTypes eIndex)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (NULL == m_aiFoundValue || (!isRevealed(GET_PLAYER(eIndex).getTeam(), false) && GET_PLAYER(eIndex).getNumCities() > 0))
 	{
@@ -8851,8 +8847,7 @@ bool CvPlot::isBestAdjacentFound(PlayerTypes eIndex)
 
 void CvPlot::clearFoundValue(PlayerTypes eIndex)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (NULL == m_aiFoundValue)
 	{
@@ -8871,8 +8866,7 @@ void CvPlot::clearFoundValue(PlayerTypes eIndex)
 
 void CvPlot::setFoundValue(PlayerTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	FAssert(iNewValue >= 0);
 
 	MEMORY_TRACK_EXEMPT();
@@ -8896,15 +8890,9 @@ void CvPlot::setFoundValue(PlayerTypes eIndex, int iNewValue)
 
 int CvPlot::getPlayerCityRadiusCount(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
-	if (NULL == m_aiPlayerCityRadiusCount)
-	{
-		return 0;
-	}
-
-	return m_aiPlayerCityRadiusCount[eIndex];
+	return m_aiPlayerCityRadiusCount ? m_aiPlayerCityRadiusCount[eIndex] : 0;
 }
 
 
@@ -8916,8 +8904,7 @@ bool CvPlot::isPlayerCityRadius(PlayerTypes eIndex) const
 
 void CvPlot::changePlayerCityRadiusCount(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (0 != iChange)
 	{
@@ -8938,8 +8925,7 @@ void CvPlot::changePlayerCityRadiusCount(PlayerTypes eIndex, int iChange)
 
 int CvPlot::getPlotGroupId(PlayerTypes ePlayer) const
 {
-	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
 	if (NULL == m_aiPlotGroup)
 	{
@@ -8951,8 +8937,7 @@ int CvPlot::getPlotGroupId(PlayerTypes ePlayer) const
 
 CvPlotGroup* CvPlot::getPlotGroup(PlayerTypes ePlayer) const
 {
-	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
 	if (NULL == m_aiPlotGroup)
 	{
@@ -9280,8 +9265,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 
 int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 #ifndef PARALLEL_MAPS
 	if (NULL == m_aiVisibilityCount)
 	{
@@ -9293,16 +9277,14 @@ int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 
 int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer) const
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
-	return (m_aiDangerCount == NULL) ? 0 : m_aiDangerCount[ePlayer];
+	return m_aiDangerCount ? m_aiDangerCount[ePlayer] : 0;
 }
 
 void CvPlot::setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount)
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
 	if (NULL == m_aiDangerCount)
 	{
@@ -9319,26 +9301,19 @@ void CvPlot::setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount)
 
 int CvPlot::getLastVisibleTurn(TeamTypes eTeam) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if ( isVisible(eTeam, false) )
 	{
 		return GC.getGame().getGameTurn();
 	}
 
-	if (NULL == m_aiLastSeenTurn)
-	{
-		return 0;
-	}
-
-	return m_aiLastSeenTurn[eTeam];
+	return m_aiLastSeenTurn ? m_aiLastSeenTurn[eTeam] : 0;
 }
 
 void CvPlot::setLastVisibleTurn(TeamTypes eTeam, short turn)
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (NULL == m_aiLastSeenTurn)
 	{
@@ -9410,8 +9385,7 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 	CvCity* pCity;
 	int iI;
 
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (iChange != 0)
 	{
@@ -9503,25 +9477,15 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 
 int CvPlot::getStolenVisibilityCount(TeamTypes eTeam) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
-	if (NULL == m_aiStolenVisibilityCount)
-	{
-		return 0;
-	}
-
-	return m_aiStolenVisibilityCount[eTeam];
+	return m_aiStolenVisibilityCount ? m_aiStolenVisibilityCount[eTeam] : 0;
 }
 
 
 void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 {
-	CvCity* pCity;
-	bool bOldVisible;
-
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (iChange != 0)
 	{
@@ -9534,7 +9498,7 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 			}
 		}
 
-		bOldVisible = isVisible(eTeam, false);
+		const bool bOldVisible = isVisible(eTeam, false);
 
 		m_aiStolenVisibilityCount[eTeam] += iChange;
 		FAssert(getStolenVisibilityCount(eTeam) >= 0);
@@ -9550,7 +9514,7 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 				setLastVisibleTurn( eTeam, GC.getGame().getGameTurn() - 1 );
 			}
 
-			pCity = getPlotCity();
+			CvCity* pCity = getPlotCity();
 
 			if (pCity != NULL)
 			{
@@ -9569,15 +9533,9 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 
 int CvPlot::getBlockadedCount(TeamTypes eTeam) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
-	if (NULL == m_aiBlockadedCount)
-	{
-		return 0;
-	}
-
-	return std::max<int>(0, m_aiBlockadedCount[eTeam]);
+	return m_aiBlockadedCount ? std::max<int>(0, m_aiBlockadedCount[eTeam]) : 0;
 }
 
 void CvPlot::resetBlockadedCounts()
@@ -9587,8 +9545,7 @@ void CvPlot::resetBlockadedCounts()
 
 void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (iChange != 0)
 	{
@@ -9636,21 +9593,15 @@ PlayerTypes CvPlot::getRevealedOwner(TeamTypes eTeam, bool bDebug) const
 	{
 		return getOwner();
 	}
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
-	if (NULL == m_aiRevealedOwner)
-	{
-		return NO_PLAYER;
-	}
-	return (PlayerTypes)m_aiRevealedOwner[eTeam];
+	return m_aiRevealedOwner ? (PlayerTypes)m_aiRevealedOwner[eTeam] : NO_PLAYER;
 }
 
 
 TeamTypes CvPlot::getRevealedTeam(TeamTypes eTeam, bool bDebug) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	const PlayerTypes eRevealedOwner = getRevealedOwner(eTeam, bDebug);
 
@@ -9660,8 +9611,7 @@ TeamTypes CvPlot::getRevealedTeam(TeamTypes eTeam, bool bDebug) const
 
 void CvPlot::setRevealedOwner(TeamTypes eTeam, PlayerTypes eNewValue)
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (getRevealedOwner(eTeam, false) != eNewValue)
 	{
@@ -9697,8 +9647,7 @@ void CvPlot::updateRevealedOwner(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (isVisible(eTeam, false) || algo::any_of(adjacent(), CvPlot::fn::isVisible(eTeam, false)))
 	{
@@ -9733,16 +9682,12 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 	CvPlot* pSouthEastPlot;
 	CvPlot* pSouthWestPlot;
 	CvPlot* pNorthWestPlot;
-	CvPlot* pCornerPlot;
-	CvPlot* pPlot;
-	bool bValid;
 
-	FAssertMsg(eIndex >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_DIRECTION_TYPES, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_DIRECTION_TYPES, eIndex)
 
-	pCornerPlot = NULL;
-	bValid = false;
-	pPlot = plotDirection(getX(), getY(), eIndex);
+	CvPlot* pCornerPlot = NULL;
+	bool bValid = false;
+	CvPlot* pPlot = plotDirection(getX(), getY(), eIndex);
 
 	if ((NULL == pPlot || !pPlot->isWater()) && !isWater())
 	{
@@ -9873,9 +9818,7 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 
 void CvPlot::updateRiverCrossing()
 {
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
 		updateRiverCrossing((DirectionTypes)iI);
 	}
@@ -9884,20 +9827,14 @@ void CvPlot::updateRiverCrossing()
 
 bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return true;
 	}
 
-	if (NULL == m_abRevealed)
-	{
-		return false;
-	}
-
-	return m_abRevealed[eTeam];
+	return m_abRevealed ? m_abRevealed[eTeam] : false;
 }
 
 
@@ -9905,8 +9842,7 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 {
 	int iI;
 
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -10121,25 +10057,21 @@ ImprovementTypes CvPlot::getRevealedImprovementType(TeamTypes eTeam, bool bDebug
 	{
 		return getImprovementType();
 	}
-	else
+
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+
+	if (NULL == m_aeRevealedImprovementType)
 	{
-		FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-		FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
-
-		if (NULL == m_aeRevealedImprovementType)
-		{
-			return NO_IMPROVEMENT;
-		}
-
-		return (ImprovementTypes)m_aeRevealedImprovementType[eTeam];
+		return NO_IMPROVEMENT;
 	}
+
+	return (ImprovementTypes)m_aeRevealedImprovementType[eTeam];
 }
 
 
 void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue)
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (getRevealedImprovementType(eTeam, false) != eNewValue)
 	{
@@ -10170,25 +10102,21 @@ RouteTypes CvPlot::getRevealedRouteType(TeamTypes eTeam, bool bDebug) const
 	{
 		return getRouteType();
 	}
-	else
+
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+
+	if (NULL == m_aeRevealedRouteType)
 	{
-		FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-		FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
-
-		if (NULL == m_aeRevealedRouteType)
-		{
-			return NO_ROUTE;
-		}
-
-		return (RouteTypes)m_aeRevealedRouteType[eTeam];
+		return NO_ROUTE;
 	}
+
+	return (RouteTypes)m_aeRevealedRouteType[eTeam];
 }
 
 
 void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (getRevealedRouteType(eTeam, false) != eNewValue)
 	{
@@ -10214,12 +10142,7 @@ void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 
 int CvPlot::getBuildProgress(BuildTypes eBuild) const
 {
-	if (NULL == m_paiBuildProgress)
-	{
-		return 0;
-	}
-
-	return m_paiBuildProgress[eBuild];
+	return m_paiBuildProgress ? m_paiBuildProgress[eBuild] : 0;
 }
 
 
@@ -10229,9 +10152,8 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 	CvCity* pCity = NULL;
 	CvWString szBuffer;
 	int iProduction;
-	bool bFinished;
 
-	bFinished = false;
+	bool bFinished = false;
 
 	if (iChange != 0)
 	{
@@ -10845,19 +10767,12 @@ void CvPlot::setCenterUnit(CvUnit* pNewValue)
 
 int CvPlot::getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const
 {
-	FAssert(eOwnerIndex < MAX_PLAYERS);
-	FAssert(iRangeIndex >= 0);
-	FAssert(iRangeIndex < GC.getNumCultureLevelInfos());
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex)
+	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), iRangeIndex)
 
-	if (NULL == m_apaiCultureRangeCities)
-	{
-		return 0;
-	}
-	else if (eOwnerIndex == NO_PLAYER)
-	{
-		return 0;
-	}
-	else if (NULL == m_apaiCultureRangeCities[eOwnerIndex])
+	if (m_apaiCultureRangeCities == NULL
+	|| eOwnerIndex == NO_PLAYER
+	|| m_apaiCultureRangeCities[eOwnerIndex] == NULL)
 	{
 		return 0;
 	}
@@ -10873,16 +10788,12 @@ bool CvPlot::isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const
 
 void CvPlot::changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture)
 {
-	bool bOldCultureRangeCities;
-
-	FAssert(eOwnerIndex >= 0);
-	FAssert(eOwnerIndex < MAX_PLAYERS);
-	FAssert(iRangeIndex >= 0);
-	FAssert(iRangeIndex < GC.getNumCultureLevelInfos());
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex)
+	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), iRangeIndex)
 
 	if (0 != iChange)
 	{
-		bOldCultureRangeCities = isCultureRangeCity(eOwnerIndex, iRangeIndex);
+		const bool bOldCultureRangeCities = isCultureRangeCity(eOwnerIndex, iRangeIndex);
 
 		if (NULL == m_apaiCultureRangeCities)
 		{
@@ -10903,11 +10814,7 @@ void CvPlot::changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, 
 		}
 
 		m_apaiCultureRangeCities[eOwnerIndex][iRangeIndex] += iChange;
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (bUpdateCulture)
 		{
 			if (bOldCultureRangeCities != isCultureRangeCity(eOwnerIndex, iRangeIndex))
@@ -10915,19 +10822,14 @@ void CvPlot::changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, 
 				updateCulture(true, bUpdatePlotGroups);
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 }
 
 
 int CvPlot::getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const
 {
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eInvisible >= 0, "eInvisible is expected to be non-negative (invalid Index)");
-	FAssertMsg(eInvisible < GC.getNumInvisibleInfos(), "eInvisible is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
 
 	if (NULL == m_apaiInvisibleVisibilityCount)
 	{
@@ -10950,17 +10852,13 @@ bool CvPlot::isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible)	cons
 
 void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange, int iIntensity, int iUnitID)
 {
-	bool bOldInvisibleVisible;
-
-	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eInvisible >= 0, "eInvisible is expected to be non-negative (invalid Index)");
-	FAssertMsg(eInvisible < GC.getNumInvisibleInfos(), "eInvisible is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(iIntensity >= 0, "iIntensity is expected to be non-negative (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
+	FAssertMsg(iIntensity >= 0, "iIntensity is expected to be non-negative");
 
 	if (iChange != 0)
 	{
-		bOldInvisibleVisible = isInvisibleVisible(eTeam, eInvisible);
+		const bool bOldInvisibleVisible = isInvisibleVisible(eTeam, eInvisible);
 
 		if (NULL == m_apaiInvisibleVisibilityCount)
 		{
@@ -12513,12 +12411,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 void CvPlot::setLayoutDirty(bool bDirty)
 {
-	if (!GC.IsGraphicsInitialized())
-	{
-		return;
-	}
-
-	if ( !isInViewport() )
+	if (!GC.IsGraphicsInitialized() || !isInViewport())
 	{
 		return;
 	}
@@ -13737,8 +13630,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 
 int CvPlot::getOccupationCultureRangeCities(PlayerTypes eOwnerIndex) const
 {
-	FAssert(eOwnerIndex >= 0);
-	FAssert(eOwnerIndex < MAX_PLAYERS);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex)
 
 	if (NULL == m_aiOccupationCultureRangeCities)
 	{
@@ -13755,10 +13647,9 @@ bool CvPlot::isWithinOccupationRange(PlayerTypes eOwnerIndex) const
 }
 
 
-void CvPlot::changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange)
+void CvPlot::changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex, int iChange)
 {
-	FAssert(eOwnerIndex >= 0);
-	FAssert(eOwnerIndex < MAX_PLAYERS);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex)
 
 	if (0 != iChange)
 	{

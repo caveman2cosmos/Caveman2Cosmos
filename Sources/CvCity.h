@@ -633,7 +633,7 @@ public:
 	void setPopulation(int iNewValue); // Exposed to Python
 	void changePopulation(int iChange); // Exposed to Python
 
-	long getRealPopulation() const; // Exposed to Python
+	int getRealPopulation() const; // Exposed to Python
 
 	int getHighestPopulation() const; // Exposed to Python
 	void setHighestPopulation(int iNewValue);
@@ -895,7 +895,7 @@ public:
 	void setOverflowProduction(int iNewValue); // Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
-	int getFeatureProduction()const; // Exposed to Python
+	int getFeatureProduction() const; // Exposed to Python
 	void setFeatureProduction(int iNewValue); // Exposed to Python
 	void changeFeatureProduction(int iChange);
 

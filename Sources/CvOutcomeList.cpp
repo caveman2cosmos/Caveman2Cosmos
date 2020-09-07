@@ -16,8 +16,7 @@ CvOutcomeList::~CvOutcomeList()
 
 CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aOutcome.size());
+	FASSERT_BOUNDS(0, getNumOutcomes(), index)
 	return m_aOutcome[index];
 }
 

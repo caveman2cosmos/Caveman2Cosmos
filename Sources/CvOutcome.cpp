@@ -77,8 +77,8 @@ CvOutcome::~CvOutcome()
 
 int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eYield);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+
 	if (m_aiYield[eYield])
 	{
 		return m_aiYield[eYield]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
@@ -91,8 +91,8 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eCommerce);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+
 	if (m_aiCommerce[eCommerce])
 	{
 		return m_aiCommerce[eCommerce]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());

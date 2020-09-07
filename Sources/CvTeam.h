@@ -68,7 +68,7 @@ public:
 
 	int getCurrentMasterPower(bool bIncludeVassals) const;
 	bool isMasterPlanningLandWar(const CvArea* pArea) const;
-	bool isMasterPlanningSeaWar(const CvArea* pArea)const;
+	bool isMasterPlanningSeaWar(const CvArea* pArea) const;
 	int getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals = false) const; // Exposed to Python
 
 	int getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const; // Exposed to Python

@@ -122,12 +122,10 @@ public:
 	int getMapFractalFlags() const;																												// Exposed to Python
 	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
-#ifdef _USRDLL
 	inline bool isPlot(int iX, int iY) const // Exposed to Python
 	{
 		return (iX >= 0 && iX < getGridWidth() && iY >= 0 && iY < getGridHeight());
 	}
-#endif
 
 	inline int numPlots() const { return getGridWidth() * getGridHeight(); } // Exposed to Python
 

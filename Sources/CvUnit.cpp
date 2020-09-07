@@ -16442,62 +16442,54 @@ int CvUnit::hillsDefenseModifier() const
 
 int CvUnit::terrainAttackModifier(TerrainTypes eTerrain) const
 {
-	FAssertMsg(eTerrain >= 0, "eTerrain is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTerrain < GC.getNumTerrainInfos(), "eTerrain is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
 	return (m_pUnitInfo->getTerrainAttackModifier(eTerrain) + getExtraTerrainAttackPercent(eTerrain));
 }
 
 
 int CvUnit::terrainDefenseModifier(TerrainTypes eTerrain) const
 {
-	FAssertMsg(eTerrain >= 0, "eTerrain is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTerrain < GC.getNumTerrainInfos(), "eTerrain is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
 	return (m_pUnitInfo->getTerrainDefenseModifier(eTerrain) + getExtraTerrainDefensePercent(eTerrain));
 }
 
 
 int CvUnit::featureAttackModifier(FeatureTypes eFeature) const
 {
-	FAssertMsg(eFeature >= 0, "eFeature is expected to be non-negative (invalid Index)");
-	FAssertMsg(eFeature < GC.getNumFeatureInfos(), "eFeature is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
 	return (m_pUnitInfo->getFeatureAttackModifier(eFeature) + getExtraFeatureAttackPercent(eFeature));
 }
 
 int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 {
-	FAssertMsg(eFeature >= 0, "eFeature is expected to be non-negative (invalid Index)");
-	FAssertMsg(eFeature < GC.getNumFeatureInfos(), "eFeature is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
 
 int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	return m_pUnitInfo->getUnitAttackModifier(eUnit);
 }
 
 
 int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
 
 
 int CvUnit::unitCombatModifier(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat));
 }
 
 
 int CvUnit::domainModifier(DomainTypes eDomain) const
 {
-	FAssertMsg(eDomain >= 0, "eDomain is expected to be non-negative (invalid Index)");
-	FAssertMsg(eDomain < NUM_DOMAIN_TYPES, "eDomain is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eDomain)
 	return (m_pUnitInfo->getDomainModifier(eDomain) + getExtraDomainModifier(eDomain));
 }
 
@@ -17848,8 +17840,7 @@ int CvUnit::getDamage() const
 
 int CvUnit::getHealAsDamage(UnitCombatTypes eHealAsType) const
 {
-	FAssertMsg(eHealAsType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eHealAsType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eHealAsType);
 
@@ -17858,8 +17849,7 @@ int CvUnit::getHealAsDamage(UnitCombatTypes eHealAsType) const
 
 void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, PlayerTypes ePlayer)
 {
-	FAssertMsg(eHealAsType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eHealAsType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
 
 	if (iChange != 0)
 	{
@@ -17875,14 +17865,11 @@ void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, Player
 
 void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity)
 {
-	FAssertMsg(eHealAsType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eHealAsType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType)
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
 
-	int iOldValue;
-
-	iOldValue = info->m_iHealAsDamage;
+	const int iOldValue = info->m_iHealAsDamage;
 	info->m_iHealAsDamage = range(iNewValue, 0, maxHitPoints());
 
 	int iHighestDamage = 0;
@@ -19837,8 +19824,7 @@ void CvUnit::changeColdImmuneCount(int iChange)
 //TB SubCombat Mod Begin
 int CvUnit::getSubCombatTypeCount(UnitCombatTypes eCombatType) const
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eCombatType);
 
@@ -19847,15 +19833,13 @@ int CvUnit::getSubCombatTypeCount(UnitCombatTypes eCombatType) const
 
 bool CvUnit::hasExtraSubCombatType(UnitCombatTypes eCombatType) const
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 	return (getSubCombatTypeCount(eCombatType) > 0);
 }
 
 void CvUnit::changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 
 	if (iChange != 0)
 	{
@@ -19868,8 +19852,7 @@ void CvUnit::changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
 
 int CvUnit::getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eCombatType);
 
@@ -19878,15 +19861,13 @@ int CvUnit::getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const
 
 bool CvUnit::hasRemovesUnitCombatType(UnitCombatTypes eCombatType) const
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 	return (getRemovesUnitCombatTypeCount(eCombatType) > 0);
 }
 
 void CvUnit::changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int iChange)
 {
-	FAssertMsg(eCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eCombatType)
 
 	if (iChange != 0)
 	{
@@ -19900,8 +19881,7 @@ void CvUnit::changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int i
 
 int CvUnit::getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -19910,15 +19890,13 @@ int CvUnit::getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const
 
 bool CvUnit::hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	return (getCureAfflictionCount(ePromotionLineType) > 0);
 }
 
 void CvUnit::changeCureAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -21221,8 +21199,7 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 
 int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 
 	if (!isCommander())
 	{
@@ -21238,9 +21215,8 @@ int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 
 void CvUnit::changeExtraDomainModifier(DomainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiExtraDomainModifier[eIndex] = (m_aiExtraDomainModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
+	m_aiExtraDomainModifier[eIndex] += iChange;
 }
 
 
@@ -21322,8 +21298,7 @@ void CvUnit::setScriptData(std::string szNewValue)
 
 int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -21333,16 +21308,14 @@ int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 
 bool CvUnit::isTerrainDoubleMove(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 	return (getTerrainDoubleMoveCount(eIndex) > 0);
 }
 
 
 void CvUnit::changeTerrainDoubleMoveCount(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21356,8 +21329,7 @@ void CvUnit::changeTerrainDoubleMoveCount(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getFeatureDoubleMoveCount(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -21367,16 +21339,14 @@ int CvUnit::getFeatureDoubleMoveCount(FeatureTypes eIndex) const
 
 bool CvUnit::isFeatureDoubleMove(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 	return (getFeatureDoubleMoveCount(eIndex) > 0);
 }
 
 
 void CvUnit::changeFeatureDoubleMoveCount(FeatureTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21392,8 +21362,7 @@ void CvUnit::changeFeatureDoubleMoveCount(FeatureTypes eIndex, int iChange)
 //ls612: Terrain Work Modifiers
 int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -21406,8 +21375,7 @@ int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 //ls612: Terrain Work Modifiers
 int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -21418,8 +21386,7 @@ int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21434,8 +21401,7 @@ void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -21447,8 +21413,7 @@ int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 
 int CvUnit::getFeatureWorkPercent(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -21459,8 +21424,7 @@ int CvUnit::getFeatureWorkPercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21474,8 +21438,7 @@ void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	std::map<short, short>::const_iterator itr = m_extraBuildWorkPercent.find((short)eIndex);
 	if ( itr == m_extraBuildWorkPercent.end() )
@@ -21490,12 +21453,11 @@ int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
 
 void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_extraBuildWorkPercent[eIndex] = (getExtraBuildWorkPercent(eIndex) + iChange);
+		m_extraBuildWorkPercent[eIndex] += iChange;
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMBaseWorkRate();
@@ -21508,8 +21470,7 @@ void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
 //get totals
 int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 	return
 	(
 		m_pUnitInfo->getTerrainWorkRateModifierType(eIndex)
@@ -21520,8 +21481,7 @@ int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 
 int CvUnit::featureWorkPercent(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 	return
 	(
 		m_pUnitInfo->getFeatureWorkRateModifierType(eIndex)
@@ -21532,8 +21492,7 @@ int CvUnit::featureWorkPercent(FeatureTypes eIndex) const
 
 int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	int iBaseAmount = m_pUnitInfo->getBuildWorkRateModifierType(eIndex);
 	iBaseAmount += getExtraBuildWorkPercent(eIndex);
@@ -21544,8 +21503,7 @@ int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 
 int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -21563,8 +21521,7 @@ int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21578,8 +21535,7 @@ void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -21597,8 +21553,7 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21612,8 +21567,7 @@ void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -21631,8 +21585,7 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureAttackPercent(FeatureTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21646,8 +21599,7 @@ void CvUnit::changeExtraFeatureAttackPercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -21665,8 +21617,7 @@ int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21680,8 +21631,7 @@ void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -21699,8 +21649,7 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -21729,8 +21678,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(ePromotion >= 0 || ePromotion == NO_PROMOTION, "ePromotion is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "ePromotion is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), ePromotion)
 
 	if (ePromotion == NO_PROMOTION)
 	{
@@ -22811,8 +22759,7 @@ std::map<UnitCombatTypes, UnitCombatKeyedInfo>& CvUnit::getUnitCombatKeyedInfo()
 
 bool CvUnit::isHealsUnitCombat(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0 || eIndex == NO_UNITCOMBAT, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex)
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	return (info != NULL && (info->m_iHealUnitCombatTypeVolume > 0));
@@ -22820,8 +22767,7 @@ bool CvUnit::isHealsUnitCombat(UnitCombatTypes eIndex) const
 
 bool CvUnit::isHasUnitCombat(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0 || eIndex == NO_UNITCOMBAT, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), eIndex)
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
 	return (info != NULL && info->m_bHasUnitCombat);
@@ -23344,8 +23290,7 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 
 bool CvUnit::isHasPromotion(PromotionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0 || eIndex == NO_PROMOTION, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eIndex)
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(eIndex);
 
 	return (info != NULL && info->m_bHasPromotion);
@@ -30882,7 +30827,7 @@ float CvUnit::doPillageInfluence()
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
-		FAssertMsg(false, "pPlot == NULL; should not happen");
+		FErrorMsg("pPlot == NULL; should not happen");
 		return 0.0f;
 	}
 	if (pPlot->getWorkingCity() != NULL && pPlot->getWorkingCity()->isProtectedCulture())
@@ -30894,7 +30839,7 @@ float CvUnit::doPillageInfluence()
 	const int iTargetCulture = pPlot->getCulture(eTargetPlayer);
 	if (iTargetCulture < 1)
 	{
-		FAssertMsg(false, "iTargetCulture < 1; should not happen");
+		FErrorMsg("iTargetCulture < 1; should not happen");
 		return 0.0f;
 	}
 	int iCultureTransfer = GC.getIDW_BASE_PILLAGE_INFLUENCE() * intSqrt(iTargetCulture) / 100;
@@ -32524,23 +32469,17 @@ int CvUnit::getRandomMinExperienceTimes100() const
 
 bool CvUnit::isTerrainProtected(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 	return getTerrainProtectedCount(eIndex) > 0;
 }
 
 int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	int iTotal = 0;
-	if (info != NULL)
-	{
-		iTotal = info->m_iTerrainProtected;
-	}
+	int iTotal = info != NULL ? info->m_iTerrainProtected : 0;
 
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -32557,8 +32496,7 @@ int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders
 
 void CvUnit::changeTerrainProtected(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -33151,8 +33089,7 @@ int CvUnit::currentOvercome(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getAfflictionTurnCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -33161,8 +33098,7 @@ int CvUnit::getAfflictionTurnCount(PromotionLineTypes ePromotionLineType) const
 
 void CvUnit::changeAfflictionTurnCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -33174,8 +33110,7 @@ void CvUnit::changeAfflictionTurnCount(PromotionLineTypes ePromotionLineType, in
 
 void CvUnit::setAfflictionTurnCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -33223,8 +33158,7 @@ int CvUnit::aidVolume(const CvPlot* pPlot, PropertyTypes eProperty) const
 
 int CvUnit::getAfflictionHitCount(PromotionTypes ePromotionType) const
 {
-	FAssertMsg(ePromotionType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionType < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotionType);
 
@@ -33233,8 +33167,7 @@ int CvUnit::getAfflictionHitCount(PromotionTypes ePromotionType) const
 
 void CvUnit::changeAfflictionHitCount(PromotionTypes ePromotionType, int iChange)
 {
-	FAssertMsg(ePromotionType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionType < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
 
 	if (iChange != 0)
 	{
@@ -33246,8 +33179,7 @@ void CvUnit::changeAfflictionHitCount(PromotionTypes ePromotionType, int iChange
 
 void CvUnit::setAfflictionHitCount(PromotionTypes ePromotionType, int iChange)
 {
-	FAssertMsg(ePromotionType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionType < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionType)
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotionType, iChange != 0);
 
@@ -33350,8 +33282,7 @@ int CvUnit::getChancetoContract(PromotionLineTypes eAfflictionLine, int iCommuni
 
 int CvUnit::getUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -33360,8 +33291,7 @@ int CvUnit::getUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType) co
 
 void CvUnit::changeUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -33373,8 +33303,7 @@ void CvUnit::changeUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType
 
 void CvUnit::setUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -33438,17 +33367,16 @@ int CvUnit::getOvercomeChange(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	int iI;
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
 	int iEvaluation = (info == NULL ? 0 : info->m_iFortitudeModifierAmount);
-	int iNum = m_pUnitInfo->getNumAfflictionFortitudeModifiers();
+	const int iNum = m_pUnitInfo->getNumAfflictionFortitudeModifiers();
 
-	for (iI = 0; iI < iNum; iI++)
+	for (int iI = 0; iI < iNum; iI++)
 	{
-		PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictionFortitudeModifier(iI).ePromotionLine;
+		const PromotionLineTypes eAfflictionLine = m_pUnitInfo->getAfflictionFortitudeModifier(iI).ePromotionLine;
 		if (eAfflictionLine == ePromotionLineType)
 		{
 			iEvaluation += m_pUnitInfo->getAfflictionFortitudeModifier(iI).iModifier;
@@ -33459,8 +33387,7 @@ int CvUnit::getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType
 
 void CvUnit::changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -33472,8 +33399,7 @@ void CvUnit::changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLine
 
 void CvUnit::setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -35184,8 +35110,7 @@ void CvUnit::ClearSupports()
 
 int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -35194,8 +35119,7 @@ int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 
 void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	if (iChange != 0)
 	{
@@ -35207,8 +35131,7 @@ void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iCh
 
 void CvUnit::setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -36197,8 +36120,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 int CvUnit::getPromotionFreeCount(PromotionTypes ePromotion) const
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -36212,8 +36134,7 @@ bool CvUnit::isPromotionFree(PromotionTypes ePromotion) const
 
 void CvUnit::changePromotionFreeCount(PromotionTypes ePromotion, int iChange)
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	if (iChange != 0)
 	{
@@ -36225,8 +36146,7 @@ void CvUnit::changePromotionFreeCount(PromotionTypes ePromotion, int iChange)
 
 void CvUnit::setPromotionFreeCount(PromotionTypes ePromotion, int iChange)
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotion, iChange != 0);
 
@@ -36380,8 +36300,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eEquipment >= 0 || eEquipment == NO_PROMOTION, "ePromotion is expected to be non-negative (invalid Index)");
-	FAssertMsg(eEquipment < GC.getNumPromotionInfos(), "ePromotion is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_PROMOTION, GC.getNumPromotionInfos(), eEquipment)
 
 	int iI;
 	CvPlot* pPlot = plot();
@@ -36672,8 +36591,7 @@ int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -36691,8 +36609,7 @@ int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) con
 
 void CvUnit::changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36719,8 +36636,7 @@ int CvUnit::withdrawOnTerrainTotal(TerrainTypes eTerrainType) const
 
 int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -36738,8 +36654,7 @@ int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36766,8 +36681,7 @@ int CvUnit::withdrawOnFeatureTotal(FeatureTypes eFeatureType) const
 
 int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
@@ -36785,8 +36699,7 @@ int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawOnFeatureType(FeatureTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36812,8 +36725,7 @@ int CvUnit::withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -36831,8 +36743,7 @@ int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36858,8 +36769,7 @@ int CvUnit::pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -36877,8 +36787,7 @@ int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36904,8 +36813,7 @@ int CvUnit::repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -36923,8 +36831,7 @@ int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36950,8 +36857,7 @@ int CvUnit::knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -36969,8 +36875,7 @@ int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -36996,8 +36901,7 @@ int CvUnit::punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37015,8 +36919,7 @@ int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37042,8 +36945,7 @@ int CvUnit::armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37061,8 +36963,7 @@ int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37088,8 +36989,7 @@ int CvUnit::dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37107,8 +37007,7 @@ int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37134,8 +37033,7 @@ int CvUnit::precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37152,8 +37050,7 @@ int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37179,8 +37076,7 @@ int CvUnit::criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37197,8 +37093,7 @@ int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37224,8 +37119,7 @@ int CvUnit::roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -37242,8 +37136,7 @@ int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -37447,8 +37340,7 @@ int CvUnit::pursuitVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::repelVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
-	CvCity* pCity;
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	int iBase = repelTotal();
 
@@ -37582,8 +37474,7 @@ bool CvUnit::canInflictCritical(PromotionTypes eCritical) const
 
 int CvUnit::getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37592,15 +37483,13 @@ int CvUnit::getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const
 
 bool CvUnit::hasAfflictionLine(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	return (getAfflictionLineCount(ePromotionLineType) > 0);
 }
 
 void CvUnit::changeAfflictionLineCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -37782,8 +37671,7 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 
 int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37807,8 +37695,7 @@ int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineT
 
 void CvUnit::changeAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -37820,8 +37707,7 @@ void CvUnit::changeAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionL
 
 void CvUnit::setAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -37833,8 +37719,7 @@ void CvUnit::setAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLine
 
 bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37854,8 +37739,7 @@ bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 
 int CvUnit::getAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37864,8 +37748,7 @@ int CvUnit::getAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType) c
 
 void CvUnit::changeAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -37878,8 +37761,7 @@ void CvUnit::changeAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineTyp
 
 void CvUnit::setAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -37891,8 +37773,7 @@ void CvUnit::setAfflictOnAttackTypeCount(PromotionLineTypes ePromotionLineType, 
 
 int CvUnit::getAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37901,8 +37782,7 @@ int CvUnit::getAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLi
 
 bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37923,8 +37803,7 @@ bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineTyp
 
 void CvUnit::changeAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -37936,8 +37815,7 @@ void CvUnit::changeAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromoti
 
 void CvUnit::setAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -37949,8 +37827,7 @@ void CvUnit::setAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionL
 
 int CvUnit::getAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37959,8 +37836,7 @@ int CvUnit::getAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineTy
 
 bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -37981,8 +37857,7 @@ bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) c
 
 void CvUnit::changeAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -37994,8 +37869,7 @@ void CvUnit::changeAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLi
 
 void CvUnit::setAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -38007,8 +37881,7 @@ void CvUnit::setAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineT
 
 int CvUnit::getAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType) const//
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -38017,8 +37890,7 @@ int CvUnit::getAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLin
 
 bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -38039,8 +37911,7 @@ bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType
 
 void CvUnit::changeAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -38052,8 +37923,7 @@ void CvUnit::changeAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotio
 
 void CvUnit::setAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange!= 0);
 
@@ -38065,8 +37935,7 @@ void CvUnit::setAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLi
 //
 int CvUnit::getAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
@@ -38075,19 +37944,15 @@ int CvUnit::getAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLi
 
 bool CvUnit::isAfflictOnAttackTypeAttempted(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
 
-	const int iEvaluation = (info == NULL ? 0 : info->m_iAfflictOnAttackTypeAttemptedCount);
-
-	return (iEvaluation > 0);
+	return info ? info->m_iAfflictOnAttackTypeAttemptedCount > 0 : false;
 }
 
 void CvUnit::changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -38099,8 +37964,7 @@ void CvUnit::changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromoti
 
 void CvUnit::setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLineType, iChange != 0);
 
@@ -38144,8 +38008,7 @@ void CvUnit::setHealUnitCombatCount()
 
 int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -38166,8 +38029,7 @@ int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 
 void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	if (iChange != 0)
 	{
@@ -38181,8 +38043,7 @@ void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int
 
 void CvUnit::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -38196,8 +38057,7 @@ void CvUnit::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iC
 
 int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) const
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
@@ -38218,8 +38078,7 @@ int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) 
 
 void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	if (iChange != 0)
 	{
@@ -38233,8 +38092,7 @@ void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatT
 
 void CvUnit::setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
 {
-	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombatType < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType)
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
 
@@ -41226,8 +41084,8 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 
 int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -41242,13 +41100,12 @@ int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 
 void CvUnit::changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
 	if (iChange !=0)
 	{
 		deleteVisibility();
 	}
-	m_aiExtraVisibilityIntensity[eIndex] = (m_aiExtraVisibilityIntensity[eIndex] + iChange);
+	m_aiExtraVisibilityIntensity[eIndex] += iChange;
 	if (iChange !=0)
 	{
 		addVisibility();
@@ -41336,8 +41193,8 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 
 int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -41352,9 +41209,8 @@ int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 
 void CvUnit::changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiExtraInvisibilityIntensity[eIndex] = (m_aiExtraInvisibilityIntensity[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
+	m_aiExtraInvisibilityIntensity[eIndex] += iChange;
 	setHasAnyInvisibility();
 }
 
@@ -41433,21 +41289,19 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 
 int CvUnit::getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
 	return m_aiExtraVisibilityIntensityRange[eIndex];
 }
 
 
 void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
 	if (iChange != 0)
 	{
 		deleteVisibility();
 	}
-	m_aiExtraVisibilityIntensityRange[eIndex] = (m_aiExtraVisibilityIntensityRange[eIndex] + iChange);
+	m_aiExtraVisibilityIntensityRange[eIndex] += iChange;
 	if (iChange != 0)
 	{
 		addVisibility();
@@ -41461,21 +41315,19 @@ int CvUnit::visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) cons
 
 int CvUnit::getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
 	return m_aiExtraVisibilityIntensitySameTile[eIndex];
 }
 
 
 void CvUnit::changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
 	if (iChange != 0)
 	{
 		deleteVisibility();
 	}
-	m_aiExtraVisibilityIntensitySameTile[eIndex] = (m_aiExtraVisibilityIntensitySameTile[eIndex] + iChange);
+	m_aiExtraVisibilityIntensitySameTile[eIndex] += iChange;
 	if (iChange != 0)
 	{
 		addVisibility();
@@ -42075,20 +41927,17 @@ void CvUnit::addVisibility()
 }
 bool CvUnit::isNegatesInvisible(InvisibleTypes eInvisible) const
 {
-	FAssertMsg(eInvisible >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eInvisible < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
 	return (getNegatesInvisibleCount(eInvisible) > 0 || isRevealed());
 }
 int CvUnit::getNegatesInvisibleCount(InvisibleTypes eInvisible) const
 {
-	FAssertMsg(eInvisible >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eInvisible < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
 	return m_aiNegatesInvisibleCount[eInvisible];
 }
 void CvUnit::changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange)
 {
-	FAssertMsg(eInvisible >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eInvisible < GC.getNumInvisibleInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible)
 	m_aiNegatesInvisibleCount[eInvisible] += iChange;
 	setHasAnyInvisibility();
 }
@@ -42753,8 +42602,7 @@ void CvUnit::changeTriggerBeforeAttackCount(int iChange)
 
 int CvUnit::getTrapSetWithPromotionCount(PromotionTypes ePromotion) const
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -42763,15 +42611,13 @@ int CvUnit::getTrapSetWithPromotionCount(PromotionTypes ePromotion) const
 
 bool CvUnit::hasTrapSetWithPromotion(PromotionTypes ePromotion) const
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 	return (getTrapSetWithPromotionCount(ePromotion) > 0);
 }
 
 void CvUnit::changeTrapSetWithPromotionCount(PromotionTypes ePromotion, int iChange)
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	if (iChange != 0)
 	{
@@ -42784,8 +42630,7 @@ void CvUnit::changeTrapSetWithPromotionCount(PromotionTypes ePromotion, int iCha
 
 int CvUnit::getTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
 
@@ -42794,15 +42639,13 @@ int CvUnit::getTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat) const
 
 bool CvUnit::hasTrapImmunityUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 	return (getTrapImmunityUnitCombatCount(eUnitCombat) > 0);
 }
 
 void CvUnit::changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	if (iChange != 0)
 	{
@@ -42814,8 +42657,7 @@ void CvUnit::changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int 
 
 int CvUnit::getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
 
@@ -42824,15 +42666,13 @@ int CvUnit::getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const
 
 bool CvUnit::hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 	return (getTargetUnitCombatCount(eUnitCombat) > 0);
 }
 
 void CvUnit::changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FAssertMsg(eUnitCombat >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	if (iChange != 0)
 	{
@@ -42853,8 +42693,7 @@ int CvUnit::trapDisableUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -42863,8 +42702,7 @@ int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -42891,8 +42729,7 @@ int CvUnit::trapAvoidanceUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -42901,8 +42738,7 @@ int CvUnit::getExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -42928,8 +42764,7 @@ int CvUnit::trapTriggerUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
@@ -42938,8 +42773,7 @@ int CvUnit::getExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex) const
 
 void CvUnit::changeExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -43189,8 +43023,7 @@ void CvUnit::makeWanted(const CvCity* pCity)
 
 int CvUnit::getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const
 {
-	FAssertMsg(eAfflictionLine >= 0, "eAfflictionLine is expected to be non-negative (invalid Index)");
-	FAssertMsg(eAfflictionLine < GC.getNumPromotionLineInfos(), "eAfflictionLine is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(eAfflictionLine);
 
@@ -43209,8 +43042,7 @@ int CvUnit::getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine)
 
 void CvUnit::changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange)
 {
-	FAssertMsg(eAfflictionLine >= 0, "eAfflictionLine is expected to be non-negative (invalid Index)");
-	FAssertMsg(eAfflictionLine < GC.getNumPromotionLineInfos(), "eAfflictionLine is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
 
 	if (iChange != 0)
 	{
@@ -43222,8 +43054,7 @@ void CvUnit::changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionL
 
 void CvUnit::setDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iValue)
 {
-	FAssertMsg(eAfflictionLine >= 0, "eAfflictionLine is expected to be non-negative (invalid Index)");
-	FAssertMsg(eAfflictionLine < GC.getNumPromotionLineInfos(), "eAfflictionLine is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine)
 
 	PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(eAfflictionLine, iValue != 0);
 
@@ -43263,8 +43094,7 @@ CvCity* CvUnit::getCityOfOrigin() const
 
 bool CvUnit::isPromotionFromTrait(PromotionTypes ePromotion) const
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	const PromotionKeyedInfo* info = findPromotionKeyedInfo(ePromotion);
 
@@ -43273,8 +43103,7 @@ bool CvUnit::isPromotionFromTrait(PromotionTypes ePromotion) const
 
 void CvUnit::setPromotionFromTrait(PromotionTypes ePromotion, bool iChange)
 {
-	FAssertMsg(ePromotion >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotion < GC.getNumPromotionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotion)
 
 	PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo(ePromotion, iChange != 0);
 

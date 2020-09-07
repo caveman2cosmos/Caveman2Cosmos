@@ -2323,7 +2323,7 @@ int CvPlayer::findStartingArea() const
 		}
 		else
 		{
-			FAssertMsg(false, "python findStartingArea() must return -1 or the ID of a valid area");
+			FErrorMsg("python findStartingArea() must return -1 or the ID of a valid area");
 		}
 	}
 
@@ -2341,7 +2341,6 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	PROFILE_FUNC();
 
 	{
-
 		int result = -1;
 		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
@@ -2352,7 +2351,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			}
 			else
 			{
-				FAssertMsg(false, "python findStartingPlot() returned an invalid plot index!");
+				FErrorMsg("python findStartingPlot() returned an invalid plot index!");
 			}
 		}
 	}
@@ -2420,7 +2419,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		FAssertMsg(iPass != 0, "CvPlayer::findStartingPlot - could not find starting plot in first pass.");
 	}
 
-	FAssertMsg(false, "Could not find starting plot.");
+	FErrorMsg("Could not find starting plot.");
 	return NULL;
 }
 
@@ -7345,8 +7344,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 		receiveGoody(pPlot, ptGoody, pUnit);
 
-		FAssert(ptGoody >= 0);
-		FAssert(ptGoody < GC.getNumGoodyInfos());
+		FASSERT_BOUNDS(0, GC.getNumGoodyInfos(), ptGoody)
 
 		// Python Event
 		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, ptGoody);
@@ -8796,7 +8794,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 // Returns the cost
 int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 {
-	FAssert(eBuild >= 0 && eBuild < GC.getNumBuildInfos());
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
 
 	if (pPlot->getBuildProgress(eBuild) > 0)
 	{
@@ -10593,17 +10591,9 @@ void CvPlayer::changeTotalPopulation(int iChange)
 }
 
 
-long CvPlayer::getRealPopulation() const
+int64_t CvPlayer::getRealPopulation() const
 {
-	__int64 iTotalPopulation = algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
-
-	if (iTotalPopulation > MAX_INT)
-	{
-		FErrorMsg("Real population overflows, capped at MAX_INT!");
-		iTotalPopulation = MAX_INT;
-	}
-
-	return ((long)(iTotalPopulation));
+	return algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
 }
 
 
@@ -11748,7 +11738,7 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	}
 	if (iCalc < 0)
 	{
-		FAssertMsg(false, "Total unit upkeep is negative! You don't earn gold from upkeep costs!");
+		FErrorMsg("Total unit upkeep is negative! You don't earn gold from upkeep costs!");
 		iCalc = 0;
 	}
 	if (bReal)
@@ -13165,7 +13155,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
 	if (iExperience < 0)
 	{
-		FAssertMsg(false, "iExperience < 0");
+		FErrorMsg("iExperience < 0");
 		iExperience = 0;
 	}
 
@@ -14512,20 +14502,18 @@ int CvPlayer::getPlayerTextColorA() const
 
 int CvPlayer::getSeaPlotYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiSeaPlotYield[eIndex];
 }
 
 
 void CvPlayer::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiSeaPlotYield[eIndex] = (m_aiSeaPlotYield[eIndex] + iChange);
+		m_aiSeaPlotYield[eIndex] += iChange;
 
 		updateYield();
 	}
@@ -14535,20 +14523,18 @@ void CvPlayer::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 	//Team Project (7)
 int CvPlayer::getGoldenAgeYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return std::max(0,m_aiGoldenAgeYield[eIndex]);
 }
 
 
 void CvPlayer::changeGoldenAgeYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiGoldenAgeYield[eIndex] = (m_aiGoldenAgeYield[eIndex] + iChange);
+		m_aiGoldenAgeYield[eIndex] += iChange;
 
 		updateYield();
 	}
@@ -14557,20 +14543,18 @@ void CvPlayer::changeGoldenAgeYield(YieldTypes eIndex, int iChange)
 
 int CvPlayer::getGoldenAgeCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return std::max(0,m_aiGoldenAgeCommerce[eIndex]);
 }
 
 
 void CvPlayer::changeGoldenAgeCommerce(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiGoldenAgeCommerce[eIndex] = (m_aiGoldenAgeCommerce[eIndex] + iChange);
+		m_aiGoldenAgeCommerce[eIndex] += iChange;
 
 		setCommerceDirty(eIndex);
 	}
@@ -14579,16 +14563,14 @@ void CvPlayer::changeGoldenAgeCommerce(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getYieldRateModifier(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiYieldRateModifier[eIndex];
 }
 
 
 void CvPlayer::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -14612,18 +14594,14 @@ void CvPlayer::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 
 int CvPlayer::getCapitalYieldRateModifier(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiCapitalYieldRateModifier[eIndex];
 }
 
 
 void CvPlayer::changeCapitalYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -14631,7 +14609,7 @@ void CvPlayer::changeCapitalYieldRateModifier(YieldTypes eIndex, int iChange)
 
 		invalidateYieldRankCache(eIndex);
 
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 
 		if (pCapitalCity != NULL)
 		{
@@ -14653,24 +14631,19 @@ void CvPlayer::changeCapitalYieldRateModifier(YieldTypes eIndex, int iChange)
 
 int CvPlayer::getExtraYieldThreshold(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiExtraYieldThreshold[eIndex];
 }
 
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 {
-	int iBestValue;
-	int iI;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-
-	iBestValue = 0;
+	int iBestValue = 0;
 
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldThreshold");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
@@ -14696,24 +14669,19 @@ void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 
 int CvPlayer::getLessYieldThreshold(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiLessYieldThreshold[eIndex];
 }
 
 
 void CvPlayer::updateLessYieldThreshold(YieldTypes eIndex)
 {
-	int iWorstValue;
-	int iI;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-
-	iWorstValue = 0;
+	int iWorstValue = 0;
 
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldThreshold");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
@@ -14739,20 +14707,18 @@ void CvPlayer::updateLessYieldThreshold(YieldTypes eIndex)
 
 int CvPlayer::getTradeYieldModifier(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiTradeYieldModifier[eIndex];
 }
 
 
 void CvPlayer::changeTradeYieldModifier(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiTradeYieldModifier[eIndex] = (m_aiTradeYieldModifier[eIndex] + iChange);
+		m_aiTradeYieldModifier[eIndex] += iChange;
 
 		updateTradeRoutes();
 	}
@@ -14761,8 +14727,7 @@ void CvPlayer::changeTradeYieldModifier(YieldTypes eIndex, int iChange)
 
 int CvPlayer::getFreeCityCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	return m_aiFreeCityCommerce[eIndex];
 }
@@ -14770,12 +14735,11 @@ int CvPlayer::getFreeCityCommerce(CommerceTypes eIndex) const
 
 void CvPlayer::changeFreeCityCommerce(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiFreeCityCommerce[eIndex] = (m_aiFreeCityCommerce[eIndex] + iChange);
+		m_aiFreeCityCommerce[eIndex] += iChange;
 		//TB Note: A negative should be allowed
 
 		setCommerceDirty(eIndex);
@@ -14785,16 +14749,14 @@ void CvPlayer::changeFreeCityCommerce(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommercePercent(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommercePercent[eIndex];
 }
 
 
 void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	const int iOldValue = getCommercePercent(eIndex);
 
@@ -14847,8 +14809,7 @@ void CvPlayer::changeCommercePercent(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if ( !m_bUpdatesDeferred && m_abCommerceDirty[eIndex] )
 	{
@@ -14887,8 +14848,7 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 
 void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -14903,20 +14863,18 @@ void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceRateModifier(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommerceRateModifier[eIndex];
 }
 
 
 void CvPlayer::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRateModifier[eIndex] = (m_aiCommerceRateModifier[eIndex] + iChange);
+		m_aiCommerceRateModifier[eIndex] += iChange;
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -14927,15 +14885,13 @@ void CvPlayer::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceRateModifierfromEvents(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommerceRateModifierfromEvents[eIndex];
 }
 
 void CvPlayer::changeCommerceRateModifierfromEvents(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -14953,22 +14909,20 @@ void CvPlayer::changeCommerceRateModifierfromEvents(CommerceTypes eIndex, int iC
 
 int CvPlayer::getCommerceRateModifierfromBuildings(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommerceRateModifierfromBuildings[eIndex];
 }
 
 void CvPlayer::changeCommerceRateModifierfromBuildings(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
 		//Totals into Buildings to split for display
-		m_aiCommerceRateModifierfromBuildings[eIndex] = (m_aiCommerceRateModifierfromBuildings[eIndex] + iChange);
+		m_aiCommerceRateModifierfromBuildings[eIndex] += iChange;
 		//Also totals into generic Rate Modifier total
-		m_aiCommerceRateModifier[eIndex] = (m_aiCommerceRateModifier[eIndex] + iChange);
+		m_aiCommerceRateModifier[eIndex] += iChange;
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -14980,20 +14934,18 @@ void CvPlayer::changeCommerceRateModifierfromBuildings(CommerceTypes eIndex, int
 
 int CvPlayer::getCapitalCommerceRateModifier(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCapitalCommerceRateModifier[eIndex];
 }
 
 
 void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCapitalCommerceRateModifier[eIndex] = (m_aiCapitalCommerceRateModifier[eIndex] + iChange);
+		m_aiCapitalCommerceRateModifier[eIndex] += iChange;
 
 		CvCity* pCapitalCity = getCapitalCity();
 
@@ -15009,20 +14961,18 @@ void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChan
 
 int CvPlayer::getStateReligionBuildingCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiStateReligionBuildingCommerce[eIndex];
 }
 
 
 void CvPlayer::changeStateReligionBuildingCommerce(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiStateReligionBuildingCommerce[eIndex] = (m_aiStateReligionBuildingCommerce[eIndex] + iChange);
+		m_aiStateReligionBuildingCommerce[eIndex] += iChange;
 		FAssert(getStateReligionBuildingCommerce(eIndex) >= 0);
 
 		setCommerceDirty(eIndex);
@@ -15032,16 +14982,14 @@ void CvPlayer::changeStateReligionBuildingCommerce(CommerceTypes eIndex, int iCh
 
 int CvPlayer::getSpecialistExtraCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiSpecialistExtraCommerce[eIndex];
 }
 
 
 void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -15056,16 +15004,13 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceFlexibleCount(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_aiCommerceFlexibleCount[eIndex];
+  	return m_aiCommerceFlexibleCount[eIndex];
 }
 
 
 bool CvPlayer::isCommerceFlexible(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (!isFoundedFirstCity())
 	{
@@ -15086,12 +15031,11 @@ bool CvPlayer::isCommerceFlexible(CommerceTypes eIndex) const
 
 void CvPlayer::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceFlexibleCount[eIndex] = (m_aiCommerceFlexibleCount[eIndex] + iChange);
+		m_aiCommerceFlexibleCount[eIndex] += iChange;
 		FAssert(getCommerceFlexibleCount(eIndex) >= 0);
 
 		if (!isCommerceFlexible(eIndex))
@@ -15110,21 +15054,19 @@ void CvPlayer::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getGoldPerTurnByPlayer(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiGoldPerTurnByPlayer[eIndex];
 }
 
 
 void CvPlayer::changeGoldPerTurnByPlayer(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (iChange != 0)
 	{
-		m_iGoldPerTurn = (m_iGoldPerTurn + iChange);
-		m_aiGoldPerTurnByPlayer[eIndex] = (m_aiGoldPerTurnByPlayer[eIndex] + iChange);
+		m_iGoldPerTurn += iChange;
+		m_aiGoldPerTurnByPlayer[eIndex] += iChange;
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -15141,32 +15083,28 @@ void CvPlayer::changeGoldPerTurnByPlayer(PlayerTypes eIndex, int iChange)
 
 bool CvPlayer::isFeatAccomplished(FeatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_FEAT_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_FEAT_TYPES, eIndex)
 	return m_abFeatAccomplished[eIndex];
 }
 
 
 void CvPlayer::setFeatAccomplished(FeatTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_FEAT_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_FEAT_TYPES, eIndex)
 	m_abFeatAccomplished[eIndex] = bNewValue;
 }
 
 
 bool CvPlayer::isOption(PlayerOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_PLAYEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_PLAYEROPTION_TYPES, eIndex)
 	return m_abOptions[eIndex];
 }
 
 
 void CvPlayer::setOption(PlayerOptionTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_PLAYEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_PLAYEROPTION_TYPES, eIndex)
 	m_abOptions[eIndex] = bNewValue;
 }
 
@@ -15183,20 +15121,18 @@ void CvPlayer::setPlayable(bool bNewValue)
 
 int CvPlayer::getBonusExport(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiBonusExport[eIndex];
 }
 
 
 void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiBonusExport[eIndex] = (m_paiBonusExport[eIndex] + iChange);
+		m_paiBonusExport[eIndex] += iChange;
 		FAssert(getBonusExport(eIndex) >= 0);
 
 		const CvCity* pCapitalCity = getCapitalCity();
@@ -15214,20 +15150,18 @@ void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
 
 int CvPlayer::getBonusImport(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiBonusImport[eIndex];
 }
 
 
 void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiBonusImport[eIndex] = (m_paiBonusImport[eIndex] + iChange);
+		m_paiBonusImport[eIndex] += iChange;
 		FAssert(getBonusImport(eIndex) >= 0);
 
 		const CvCity* pCapitalCity = getCapitalCity();
@@ -15245,32 +15179,28 @@ void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 
 int CvPlayer::getImprovementCount(ImprovementTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumImprovementInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 	return m_paiImprovementCount[eIndex];
 }
 
 
 void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumImprovementInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiImprovementCount[eIndex] = (m_paiImprovementCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
+	m_paiImprovementCount[eIndex] += iChange;
 	FAssert(getImprovementCount(eIndex) >= 0);
 }
 
 
 int CvPlayer::getFreeBuildingCount(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiFreeBuildingCount[eIndex];
 }
 
 int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	foreach_(const CvCity* pLoopCity, cities())
 	{
@@ -15297,14 +15227,13 @@ bool CvPlayer::isBuildingFree(BuildingTypes eIndex, const CvArea* area) const
 
 void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	const int iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset chnages
 	if ( (iChange > 0 || iOldFreeBuildingCount != 0) && iChange != 0)
 	{
-		m_paiFreeBuildingCount[eIndex] = (m_paiFreeBuildingCount[eIndex] + iChange);
+		m_paiFreeBuildingCount[eIndex] += iChange;
 		FAssert(getFreeBuildingCount(eIndex) >= 0);
 
 		if (iOldFreeBuildingCount == 0)
@@ -15330,8 +15259,7 @@ void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 
 void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	const int iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset changes
@@ -15368,8 +15296,7 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* a
 
 int CvPlayer::getExtraBuildingHappiness(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiExtraBuildingHappiness[eIndex];
 }
 
@@ -15380,8 +15307,7 @@ int CvPlayer::getExtraBuildingHappiness(BuildingTypes eIndex) const
 //Fuyu bLimited
 void CvPlayer::changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -15393,8 +15319,7 @@ void CvPlayer::changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, b
 
 int CvPlayer::getExtraBuildingHealth(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiExtraBuildingHealth[eIndex];
 }
 
@@ -15402,8 +15327,7 @@ int CvPlayer::getExtraBuildingHealth(BuildingTypes eIndex) const
 //Fuyu bLimited
 void CvPlayer::changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -15419,8 +15343,7 @@ void CvPlayer::changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool
 
 int CvPlayer::getFeatureHappiness(FeatureTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 	return m_paiFeatureHappiness[eIndex];
 }
 
@@ -15431,12 +15354,11 @@ int CvPlayer::getFeatureHappiness(FeatureTypes eIndex) const
 //Fuyu bLimited
 void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumFeatureInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiFeatureHappiness[eIndex] = (m_paiFeatureHappiness[eIndex] + iChange);
+		m_paiFeatureHappiness[eIndex] += iChange;
 
 		updateFeatureHappiness(bLimited);
 	}
@@ -15448,16 +15370,14 @@ void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLi
 
 int CvPlayer::getUnitCount(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiUnitCount[eIndex];
 }
 
 
 bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	// NPC's are not organized as nations so they shouldn't respect national limits.
 	if (!isNationalUnit(eIndex) || isNPC())
@@ -15482,29 +15402,26 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 
 void CvPlayer::changeUnitCount(UnitTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiUnitCount[eIndex] = (m_paiUnitCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	m_paiUnitCount[eIndex] += iChange;
 	FAssert(getUnitCount(eIndex) >= 0);
 }
 
 
 int CvPlayer::getUnitMaking(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiUnitMaking[eIndex];
 }
 
 
 void CvPlayer::changeUnitMaking(UnitTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiUnitMaking[eIndex] = (m_paiUnitMaking[eIndex] + iChange);
+		m_paiUnitMaking[eIndex] += iChange;
 		FAssert(getUnitMaking(eIndex) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -15523,8 +15440,7 @@ int CvPlayer::getUnitCountPlusMaking(UnitTypes eIndex) const
 
 int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (m_paiBuildingCount[eIndex] < 0)
 		return 0;
@@ -15534,8 +15450,7 @@ int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 
 int CvPlayer::getBuildingGroupCount(SpecialBuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 
 	if (m_paiBuildingGroupCount[eIndex] < 0)
 		return 0;
@@ -15547,8 +15462,7 @@ bool CvPlayer::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (!isNationalWonder(eIndex))
 	{
@@ -15571,8 +15485,7 @@ bool CvPlayer::isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra) 
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 
 	if (!isNationalWonderGroupSpecialBuilding(eIndex))
 	{
@@ -15588,9 +15501,8 @@ bool CvPlayer::isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra) 
 
 void CvPlayer::changeBuildingCount(BuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiBuildingCount[eIndex] = (m_paiBuildingCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	m_paiBuildingCount[eIndex] += iChange;
 	FAssert(getBuildingCount(eIndex) >= 0);
 
 	clearCanConstructCache(eIndex, true);
@@ -15598,9 +15510,8 @@ void CvPlayer::changeBuildingCount(BuildingTypes eIndex, int iChange)
 
 void CvPlayer::changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiBuildingGroupCount[eIndex] = (m_paiBuildingGroupCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	m_paiBuildingGroupCount[eIndex] += iChange;
 	FAssert(getBuildingGroupCount(eIndex) >= 0);
 
 	clearCanConstructCacheForGroup(eIndex, true);
@@ -15609,27 +15520,24 @@ void CvPlayer::changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange
 
 int CvPlayer::getBuildingMaking(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiBuildingMaking[eIndex];
 }
 
 int CvPlayer::getBuildingGroupMaking(SpecialBuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 	return m_paiBuildingGroupMaking[eIndex];
 }
 
 
 void CvPlayer::changeBuildingMaking(BuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiBuildingMaking[eIndex] = (m_paiBuildingMaking[eIndex] + iChange);
+		m_paiBuildingMaking[eIndex] += iChange;
 		FAssert(getBuildingMaking(eIndex) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -15642,12 +15550,11 @@ void CvPlayer::changeBuildingMaking(BuildingTypes eIndex, int iChange)
 }
 void CvPlayer::changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiBuildingGroupMaking[eIndex] = (m_paiBuildingGroupMaking[eIndex] + iChange);
+		m_paiBuildingGroupMaking[eIndex] += iChange;
 		FAssert(getBuildingGroupMaking(eIndex) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -15674,8 +15581,7 @@ int CvPlayer::getBuildingGroupCountPlusMaking(SpecialBuildingTypes eIndex) const
 
 int CvPlayer::getHurryCount(HurryTypes eIndex) const
 {
-	FAssert(eIndex >= 0);
-	FAssert(eIndex < GC.getNumHurryInfos());
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), eIndex)
 	return m_paiHurryCount[eIndex];
 }
 
@@ -15693,11 +15599,10 @@ bool CvPlayer::canPopRush() const
 
 void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 {
-	FAssert(eIndex >= 0);
-	FAssert(eIndex < GC.getNumHurryInfos());
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), eIndex)
 
 	const int oldHurryCount = m_paiHurryCount[eIndex];
-	m_paiHurryCount[eIndex] = (m_paiHurryCount[eIndex] + iChange);
+	m_paiHurryCount[eIndex] += iChange;
 	FAssert(getHurryCount(eIndex) >= 0);
 
 	// if we just went from 0 to 1 (or the reverse)
@@ -15714,8 +15619,7 @@ void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 
 int CvPlayer::getSpecialBuildingNotRequiredCount(SpecialBuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 	return m_paiSpecialBuildingNotRequiredCount[eIndex];
 }
 
@@ -15728,17 +15632,15 @@ bool CvPlayer::isSpecialBuildingNotRequired(SpecialBuildingTypes eIndex) const
 
 void CvPlayer::changeSpecialBuildingNotRequiredCount(SpecialBuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiSpecialBuildingNotRequiredCount[eIndex] = (m_paiSpecialBuildingNotRequiredCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	m_paiSpecialBuildingNotRequiredCount[eIndex] += iChange;
 	FAssert(getSpecialBuildingNotRequiredCount(eIndex) >= 0);
 }
 
 
 int CvPlayer::getHasCivicOptionCount(CivicOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
 	return m_paiHasCivicOptionCount[eIndex];
 }
 
@@ -15751,17 +15653,15 @@ bool CvPlayer::isHasCivicOption(CivicOptionTypes eIndex) const
 
 void CvPlayer::changeHasCivicOptionCount(CivicOptionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiHasCivicOptionCount[eIndex] = (m_paiHasCivicOptionCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
+	m_paiHasCivicOptionCount[eIndex] += iChange;
 	FAssert(getHasCivicOptionCount(eIndex) >= 0);
 }
 
 
 int CvPlayer::getNoCivicUpkeepCount(CivicOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
 	return m_paiNoCivicUpkeepCount[eIndex];
 }
 
@@ -15774,12 +15674,11 @@ bool CvPlayer::isNoCivicUpkeep(CivicOptionTypes eIndex) const
 
 void CvPlayer::changeNoCivicUpkeepCount(CivicOptionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiNoCivicUpkeepCount[eIndex] = (m_paiNoCivicUpkeepCount[eIndex] + iChange);
+		m_paiNoCivicUpkeepCount[eIndex] += iChange;
 		FAssert(getNoCivicUpkeepCount(eIndex) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -15792,8 +15691,7 @@ void CvPlayer::changeNoCivicUpkeepCount(CivicOptionTypes eIndex, int iChange)
 
 int CvPlayer::getHasReligionCount(ReligionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	return m_paiHasReligionCount[eIndex];
 }
 
@@ -15866,12 +15764,11 @@ int CvPlayer::findHighestHasReligionCount() const
 
 void CvPlayer::changeHasReligionCount(ReligionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiHasReligionCount[eIndex] = (m_paiHasReligionCount[eIndex] + iChange);
+		m_paiHasReligionCount[eIndex] += iChange;
 		FAssert(getHasReligionCount(eIndex) >= 0);
 
 		//AIAndy: Commented out for now to make interfaith project work properly
@@ -15884,8 +15781,7 @@ void CvPlayer::changeHasReligionCount(ReligionTypes eIndex, int iChange)
 
 void CvPlayer::changeHasCorporationCount(CorporationTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCorporationInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -15902,8 +15798,7 @@ void CvPlayer::changeHasCorporationCount(CorporationTypes eIndex, int iChange)
 
 int CvPlayer::getUpkeepCount(UpkeepTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUpkeepInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUpkeepInfos(), eIndex)
 	FAssertMsg(m_paiUpkeepCount != NULL, "m_paiUpkeepCount is not expected to be equal with NULL");
 	return m_paiUpkeepCount[eIndex];
 }
@@ -15911,13 +15806,12 @@ int CvPlayer::getUpkeepCount(UpkeepTypes eIndex) const
 
 void CvPlayer::changeUpkeepCount(UpkeepTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUpkeepInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumUpkeepInfos(), eIndex)
 
 	if (iChange != 0)
 	{
 		FAssertMsg(m_paiUpkeepCount != NULL, "m_paiUpkeepCount is not expected to be equal with NULL");
-		m_paiUpkeepCount[eIndex] = (m_paiUpkeepCount[eIndex] + iChange);
+		m_paiUpkeepCount[eIndex] += iChange;
 		FAssertMsg(getUpkeepCount(eIndex) >= 0, "getUpkeepCount(eIndex) is expected to be non-negative (invalid Index)");
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -15930,8 +15824,7 @@ void CvPlayer::changeUpkeepCount(UpkeepTypes eIndex, int iChange)
 
 int CvPlayer::getSpecialistValidCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	FAssertMsg(m_paiSpecialistValidCount != NULL, "m_paiSpecialistValidCount is not expected to be equal with NULL");
 	return m_paiSpecialistValidCount[eIndex];
 }
@@ -15949,13 +15842,12 @@ bool CvPlayer::isSpecialistValid(SpecialistTypes eIndex) const
 //Fuyu bLimited
 void CvPlayer::changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	if (iChange != 0)
 	{
 		FAssertMsg(m_paiSpecialistValidCount != NULL, "m_paiSpecialistValidCount is not expected to be equal with NULL");
-		m_paiSpecialistValidCount[eIndex] = (m_paiSpecialistValidCount[eIndex] + iChange);
+		m_paiSpecialistValidCount[eIndex] += iChange;
 		FAssertMsg(getSpecialistValidCount(eIndex) >= 0, "getSpecialistValidCount(eIndex) is expected to be non-negative (invalid Index)");
 
 		if (!bLimited)
@@ -15971,16 +15863,14 @@ void CvPlayer::changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, b
 
 bool CvPlayer::isResearchingTech(TechTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
 	return m_pabResearchingTech[eIndex];
 }
 
 
 void CvPlayer::setResearchingTech(TechTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
 
 	if (isResearchingTech(eIndex) != bNewValue)
 	{
@@ -15995,13 +15885,13 @@ void CvPlayer::setResearchingTech(TechTypes eIndex, bool bNewValue)
 
 bool CvPlayer::isLoyalMember(VoteSourceTypes eVoteSource) const
 {
-	FAssertMsg(eVoteSource >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eVoteSource < GC.getNumVoteSourceInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	return m_pabLoyalMember[eVoteSource];
 }
 
 void CvPlayer::setLoyalMember(VoteSourceTypes eVoteSource, bool bNewValue)
 {
+	//FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	FAssertMsg(eVoteSource >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eVoteSource < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
@@ -16017,8 +15907,7 @@ void CvPlayer::setLoyalMember(VoteSourceTypes eVoteSource, bool bNewValue)
 
 CivicTypes CvPlayer::getCivics(CivicOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
 	return m_paeCivics != NULL ? m_paeCivics[eIndex] : NO_CIVIC;
 }
 
@@ -16114,10 +16003,8 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 
 	CvWString szBuffer;
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eNewValue >= 0, "eNewValue is expected to be non-negative (invalid Index)");
-	FAssertMsg(eNewValue < GC.getNumCivicInfos(), "eNewValue is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eNewValue)
 
 	const CivicTypes eOldCivic = getCivics(eIndex);
 
@@ -16259,24 +16146,20 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 
 int CvPlayer::getExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 	return m_ppaaiSpecialistExtraYield[eIndex1][eIndex2];
 }
 
 
 void CvPlayer::changeExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
-		m_ppaaiSpecialistExtraYield[eIndex1][eIndex2] = (m_ppaaiSpecialistExtraYield[eIndex1][eIndex2] + iChange);
+		m_ppaaiSpecialistExtraYield[eIndex1][eIndex2] += iChange;
 		//TB Note: it should be ok to have a negative total Extra Specialist Yield now
 
 		updateExtraSpecialistYield();
@@ -16288,24 +16171,20 @@ void CvPlayer::changeExtraSpecialistYield(SpecialistTypes eIndex1, YieldTypes eI
 
 int CvPlayer::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumImprovementInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 	return m_ppaaiImprovementYieldChange[eIndex1][eIndex2];
 }
 
 
 void CvPlayer::changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumImprovementInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
-		m_ppaaiImprovementYieldChange[eIndex1][eIndex2] = (m_ppaaiImprovementYieldChange[eIndex1][eIndex2] + iChange);
+		m_ppaaiImprovementYieldChange[eIndex1][eIndex2] += iChange;
 		updateYield();
 	}
 }
@@ -19033,15 +18912,13 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 int CvPlayer::getEspionageSpendingWeightAgainstTeam(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiEspionageSpendingWeightAgainstTeam[eIndex];
 }
 
 void CvPlayer::setEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	FAssert(iValue >= 0);
 
 	iValue = std::min(std::max(0, iValue), 99);
@@ -19056,8 +18933,7 @@ void CvPlayer::setEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iValu
 
 void CvPlayer::changeEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	setEspionageSpendingWeightAgainstTeam(eIndex, getEspionageSpendingWeightAgainstTeam(eIndex) + iChange);
 }
@@ -21498,7 +21374,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
 				if(putativeGroup != pLoopGroup)
 				{
-					FAssertMsg(false, "Corrupt group detected on load");
+					FErrorMsg("Corrupt group detected on load");
 					OutputDebugString(CvString::format("\t\tunit claims to be in group %d\n", putativeGroup->getID()).c_str());
 
 					//	Try to fix it
@@ -27935,7 +27811,7 @@ void CvPlayer::getGlobeLayerColors(GlobeLayerTypes eGlobeLayerType, int iOption,
 		getCultureLayerColors(aColors, aIndicators);
 		break;
 	default:
-		FAssertMsg(false, "Unknown globe layer type");
+		FErrorMsg("Unknown globe layer type");
 		break;
 	}
 }
@@ -29505,15 +29381,13 @@ int CvPlayer::getLastTurnTaxRate() const
 
 int CvPlayer::getFreeSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiFreeSpecialistCount[eIndex];
 }
 
 void CvPlayer::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	const int iOldValue = getFreeSpecialistCount(eIndex);
 
@@ -29536,23 +29410,19 @@ void CvPlayer::changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange)
 
 int CvPlayer::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
 }
 
 void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
-		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] = (m_ppaaiTerrainYieldChange[eIndex1][eIndex2] + iChange);
+		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] += iChange;
 
 		updateYield();
 	}
@@ -29560,8 +29430,7 @@ void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2
 
 int CvPlayer::doMultipleResearch(int iOverflow)
 {
-	TechTypes eCurrentTech;
-	eCurrentTech = getCurrentResearch();
+	TechTypes eCurrentTech = getCurrentResearch();
 
 	FAssertMsg(eCurrentTech < GC.getNumTechInfos(), "eCurrentTech is expected to be within maximum bounds (invalid Index)");
 
@@ -30009,19 +29878,15 @@ void CvPlayer::checkAIStrategy()
 
 int CvPlayer::getBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType) const
 {
-	FAssertMsg(building >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(building < GC.getNumBuildingInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(CommerceType >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(CommerceType < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), building)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, CommerceType)
 	return m_ppiBuildingCommerceChange[building][CommerceType];
 }
 
 void CvPlayer::changeBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType, int iChange)
 {
-	FAssertMsg(building >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(building < GC.getNumBuildingInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(CommerceType >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(CommerceType < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), building)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, CommerceType)
 
 	if (iChange != 0)
 	{
@@ -30044,19 +29909,15 @@ void CvPlayer::changeBuildingCommerceChange(BuildingTypes building, CommerceType
 
 int CvPlayer::getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumBuildingInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 	return m_ppiBuildingCommerceModifier[eIndex1][eIndex2];
 }
 
 void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumBuildingInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
@@ -30082,19 +29943,15 @@ void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTyp
 
 int CvPlayer::getBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumBonusInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 	return m_ppiBonusCommerceModifier[eIndex1][eIndex2];
 }
 
 void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumBonusInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
@@ -30116,20 +29973,18 @@ void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 
 int CvPlayer::getLandmarkYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiLandmarkYield[eIndex];
 }
 
 
 void CvPlayer::changeLandmarkYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiLandmarkYield[eIndex] = (m_aiLandmarkYield[eIndex] + iChange);
+		m_aiLandmarkYield[eIndex] += iChange;
 
 		updateYield();
 	}
@@ -30230,29 +30085,25 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool
 
 bool CvPlayer::isModderOption(ModderOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_MODDEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_MODDEROPTION_TYPES, eIndex)
 	return m_aiModderOptions[eIndex] != 0;
 }
 
 int CvPlayer::getModderOption(ModderOptionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_MODDEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_MODDEROPTION_TYPES, eIndex)
 	return m_aiModderOptions[eIndex];
 }
 
 void CvPlayer::setModderOption(ModderOptionTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_MODDEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_MODDEROPTION_TYPES, eIndex)
 	m_aiModderOptions[eIndex] = iNewValue;
 }
 
 void CvPlayer::setModderOption(ModderOptionTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_MODDEROPTION_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_MODDEROPTION_TYPES, eIndex)
 	m_aiModderOptions[eIndex] = bNewValue;
 }
 
@@ -30491,19 +30342,15 @@ int CvPlayer::getWonderConstructRand() const
 
 int CvPlayer::getSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 	return m_ppiSpecialistCommercePercentChanges[eIndex1][eIndex2];
 }
 
 void CvPlayer::changeSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
@@ -30521,19 +30368,15 @@ void CvPlayer::changeSpecialistCommercePercentChanges(SpecialistTypes eIndex1, C
 
 int CvPlayer::getSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 	return m_ppiSpecialistYieldPercentChanges[eIndex1][eIndex2];
 }
 
 void CvPlayer::changeSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
@@ -30557,7 +30400,7 @@ int CvPlayer::getFractionalCombatExperience() const
 void CvPlayer::changeFractionalCombatExperience(int iChange, UnitTypes eGGType)
 {
 	m_iFractionalCombatExperience += iChange;
-	int iNewXP = std::max(1, m_iFractionalCombatExperience / 100);
+	const int iNewXP = std::max(1, m_iFractionalCombatExperience / 100);
 	changeCombatExperience(iNewXP, eGGType);
 	m_iFractionalCombatExperience -= iNewXP * 100;
 }
@@ -32061,19 +31904,17 @@ void CvPlayer::validateCommerce() const
 
 int CvPlayer::getPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	return m_paiPlayerWideAfflictionCount[ePromotionLineType];
 }
 
 void CvPlayer::changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "ePromotionLineType is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "ePromotionLineType is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
-		m_paiPlayerWideAfflictionCount[ePromotionLineType] = (m_paiPlayerWideAfflictionCount[ePromotionLineType] + iChange);
+		m_paiPlayerWideAfflictionCount[ePromotionLineType] += iChange;
 		FAssert(getPlayerWideAfflictionCount(ePromotionLineType) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
@@ -32085,8 +31926,7 @@ void CvPlayer::changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLine
 
 void CvPlayer::setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "ePromotionLineType is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "ePromotionLineType is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 
 	if (iChange != 0)
 	{
@@ -32211,24 +32051,20 @@ void CvPlayer::changeAIAttitudeModifier( int iChange )
 
 int CvPlayer::getExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 	return m_ppaaiSpecialistExtraCommerce[eIndex1][eIndex2];
 }
 
 
 void CvPlayer::changeExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
-	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
-	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex1)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
 
 	if (iChange != 0)
 	{
-		m_ppaaiSpecialistExtraCommerce[eIndex1][eIndex2] = (m_ppaaiSpecialistExtraCommerce[eIndex1][eIndex2] + iChange);
+		m_ppaaiSpecialistExtraCommerce[eIndex1][eIndex2] += iChange;
 		//TB Note: should be allowed to be negative.
 		//FAssert(getExtraSpecialistCommerce(eIndex1, eIndex2) >= 0);
 
@@ -32248,19 +32084,17 @@ void CvPlayer::updateExtraSpecialistCommerce()
 
 int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiSpecialistExtraYield[eIndex];
 }
 
 void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiSpecialistExtraYield[eIndex] = (m_aiSpecialistExtraYield[eIndex] + iChange);
+		m_aiSpecialistExtraYield[eIndex] += iChange;
 		FAssert(getSpecialistExtraYield(eIndex) >= 0);
 
 		updateYield();
@@ -32271,20 +32105,18 @@ void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
 
 int CvPlayer::getFreeCityYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	return m_aiFreeCityYield[eIndex];
 }
 
 void CvPlayer::changeFreeCityYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiFreeCityYield[eIndex] = (m_aiFreeCityYield[eIndex] + iChange);
+		m_aiFreeCityYield[eIndex] += iChange;
 
 		updateYield();
 	}
@@ -32374,8 +32206,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 
 bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 {
-	FAssertMsg(eIndex >= 0 || eIndex == NO_TRAIT, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTraitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_TRAIT, GC.getNumTraitInfos(), eIndex)
 
 	if (eIndex == NO_TRAIT || isNPC() || hasTrait(eIndex))
 	{
@@ -32824,15 +32655,13 @@ void CvPlayer::changeInquisitionCount(int iChange)
 
 int CvPlayer::getNationalGreatPeopleUnitRate(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiNationalGreatPeopleUnitRate[eIndex];
 }
 
 void CvPlayer::setNationalGreatPeopleUnitRate(UnitTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
 	{
 		return;
@@ -32931,15 +32760,13 @@ void CvPlayer::changeNationalBombardDefenseModifier(int iChange)
 
 int CvPlayer::getNationalDomainFreeExperience(DomainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	return m_paiNationalDomainFreeExperience[eIndex];
 }
 
 void CvPlayer::setNationalDomainFreeExperience(DomainTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 
 	m_paiNationalDomainFreeExperience[eIndex] = iValue;
 }
@@ -32951,15 +32778,13 @@ void CvPlayer::changeNationalDomainFreeExperience(DomainTypes eIndex, int iChang
 
 int CvPlayer::getNationalDomainProductionModifier(DomainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	return m_paiNationalDomainProductionModifier[eIndex];
 }
 
 void CvPlayer::setNationalDomainProductionModifier(DomainTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 
 	m_paiNationalDomainProductionModifier[eIndex] = iValue;
 }
@@ -32971,15 +32796,13 @@ void CvPlayer::changeNationalDomainProductionModifier(DomainTypes eIndex, int iC
 
 int CvPlayer::getNationalTechResearchModifier(TechTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
 	return m_paiNationalTechResearchModifier[eIndex];
 }
 
 void CvPlayer::setNationalTechResearchModifier(TechTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
 
 	m_paiNationalTechResearchModifier[eIndex] = iValue;
 }
@@ -33015,15 +32838,13 @@ int CvPlayer::getCoastalAIInfluence() const
 	//Team Project (6)
 int CvPlayer::getEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiEraAdvanceFreeSpecialistCount[eIndex];
 }
 
 void CvPlayer::setEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	m_paiEraAdvanceFreeSpecialistCount[eIndex] = iValue;
 }
@@ -33035,15 +32856,13 @@ void CvPlayer::changeEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int i
 
 int CvPlayer::getGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiGoldenAgeOnBirthOfGreatPersonCount[eIndex];
 }
 
 void CvPlayer::setGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	m_paiGoldenAgeOnBirthOfGreatPersonCount[eIndex] = iValue;
 }
@@ -33562,15 +33381,13 @@ void CvPlayer::setAmbushingUnit(int iNewValue, bool bAssassinate)
 
 int CvPlayer::getGreatGeneralPointsForType(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiGreatGeneralPointsForType[eIndex];
 }
 
 void CvPlayer::setGreatGeneralPointsForType(UnitTypes eIndex, int iValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	m_paiGreatGeneralPointsForType[eIndex] = iValue;
 	setGreatGeneralTypetoAssign();
@@ -33578,8 +33395,7 @@ void CvPlayer::setGreatGeneralPointsForType(UnitTypes eIndex, int iValue)
 
 void CvPlayer::changeGreatGeneralPointsForType(UnitTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	setGreatGeneralPointsForType(eIndex, (m_paiGreatGeneralPointsForType[eIndex] + iChange));
 }

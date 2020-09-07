@@ -2023,10 +2023,9 @@ void CvDLLWidgetData::parseLiberateCityHelp(CvWidgetDataStruct &widgetDataStruct
 
 void CvDLLWidgetData::parseCityNameHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	CvCity* pHeadSelectedCity;
 	CvWString szTempBuffer;
 
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
 	{
@@ -5870,7 +5869,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 			break;
 
 		default:
-			FAssertMsg(false, "eOrderType did not match valid options");
+			FErrorMsg("eOrderType did not match valid options");
 			break;
 		}
 	}
@@ -5901,7 +5900,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 				break;
 
 			default:
-				FAssertMsg(false, "eOrderType did not match valid options");
+				FErrorMsg("eOrderType did not match valid options");
 				break;
 			}
 		}
