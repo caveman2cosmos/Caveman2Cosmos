@@ -1570,12 +1570,12 @@ MapTypes CvMap::getType() const
 	return m_eType;
 }
 
+#ifdef PARALLEL_MAPS
 void CvMap::addIncomingUnit(CvUnit* unit, int numTravelTurns)
 {
-	//unit.setX()
-
 	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
+#endif
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/

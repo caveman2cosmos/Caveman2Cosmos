@@ -33,13 +33,13 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 
 class CvPlotGroup;
 class CvSelectionGroup;
+#ifdef PARALLEL_MAPS
 class CvUnit;
 
 typedef std::pair<CvUnit*, int> TravelingUnit;
+#endif
 
-//
-// CvMap
-//
+
 class CvMap : public CvMapInterfaceBase
 {
 	friend class CyMap;
@@ -70,7 +70,9 @@ public:
 	void beforeSwitch();
 	void afterSwitch();
 
+#ifdef PARALLEL_MAPS
 	void addIncomingUnit(CvUnit* unit, int numTravelTurns);
+#endif
 
 	//	Viewports are owned by their underlying maps
 	int	getNumViewports() const;
