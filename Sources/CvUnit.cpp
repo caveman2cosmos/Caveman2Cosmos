@@ -43370,8 +43370,3 @@ ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
 }
-
-//void CvUnit::switchMap(MapTypes newMap) const
-//{
-//	GC.getMapByIndex(newMap).addIncomingUnit(*this, 1);
-//}

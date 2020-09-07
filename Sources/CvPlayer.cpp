@@ -17181,7 +17181,7 @@ CvUnit* CvPlayer::addUnit()
 #ifdef PARALLEL_MAPS
 void CvPlayer::addUnit(CvUnit* unit)
 {
-	return m_units[GC.getGame().getCurrentMap()]->load(reinterpret_cast<CvUnitAI*>(unit));
+	m_units[GC.getGame().getCurrentMap()]->load(reinterpret_cast<CvUnitAI*>(unit));
 }
 #endif
 
