@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvInitCore.h"
 #include "FInputDevice.h"
 
 //
@@ -172,6 +174,11 @@ void CvEventReporter::gameStart()
 void CvEventReporter::gameEnd()
 {
 	m_kPythonEventMgr.reportGameEnd();
+}
+
+void CvEventReporter::mapRegen()
+{
+	m_kPythonEventMgr.reportMapRegen();
 }
 
 void CvEventReporter::beginGameTurn(int iGameTurn)
@@ -653,16 +660,9 @@ void CvEventReporter::writeStatistics(FDataStreamBase* pStream)
 {
 	m_kStatistics.write(pStream);
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
-void CvEventReporter::addTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded)
+
+void CvEventReporter::changeTeam(TeamTypes eOld, TeamTypes eNew)
 {
-	m_kPythonEventMgr.reportAddTeam(eIndex0, eIndex1, bAdded);
+	m_kPythonEventMgr.reportChangeTeam(eOld, eNew);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/

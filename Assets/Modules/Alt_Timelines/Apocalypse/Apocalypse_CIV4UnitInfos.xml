@@ -8,7 +8,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_APOCALYPSE_URBAN_CROSSBOWMAN</Class>
 			<Type>UNIT_APOCALYPSE_URBAN_CROSSBOWMAN</Type>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
@@ -42,12 +41,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -72,6 +68,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -99,7 +96,6 @@
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MACHETE_WARRIOR</Class>
 			<Type>UNIT_MACHETE_WARRIOR</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -131,12 +127,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -161,6 +154,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -182,7 +176,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WRENCH_WARRIOR</Class>
 			<Type>UNIT_WRENCH_WARRIOR</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -213,12 +206,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -247,6 +237,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>270</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -278,7 +269,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CROWBAR_GUARD</Class>
 			<Type>UNIT_CROWBAR_GUARD</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -318,12 +308,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCounterSpy>1</bCounterSpy>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CITY_GUARD</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_CITY_GUARD</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>
@@ -349,13 +336,13 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>430</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iFirstStrikes>1</iFirstStrikes>
 			<iPursuit>5</iPursuit>
 			<iCityDefense>50</iCityDefense>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -372,7 +359,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HATCHET_MAN</Class>
 			<Type>UNIT_HATCHET_MAN</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -402,12 +388,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -440,6 +423,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>270</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -467,7 +451,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POST_APOCALYPTIC_GRENADIER</Class>
 			<Type>UNIT_POST_APOCALYPTIC_GRENADIER</Type>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
@@ -501,16 +484,10 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GRENADIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ANCIENT_FLAMETHROWER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GRENADIER</UnitType>
+				<UnitType>UNIT_ANCIENT_FLAMETHROWER</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -537,15 +514,15 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_TAR</BonusType>
-				<BonusType>BONUS_OLIVEOIL</BonusType>
-				<BonusType>BONUS_FISHOIL</BonusType>
-				<BonusType>BONUS_GHEEOIL</BonusType>
+				<BonusType>BONUS_OLIVE_OIL</BonusType>
+				<BonusType>BONUS_FISH_OIL</BonusType>
+				<BonusType>BONUS_GHEE_OIL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALEOIL</ID>
+						<ID>BONUS_WHALE_OIL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -554,6 +531,7 @@
 				</Or>
 			</TrainCondition>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>13</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

@@ -272,7 +272,7 @@ void BuildingYieldChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",&iChange);
 
@@ -287,7 +287,7 @@ void BuildingYieldChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", iChange);
 
@@ -302,7 +302,7 @@ void BuildingCommerceChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",&iChange);
 
@@ -316,27 +316,8 @@ void PropertySpawns::read(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eProperty);
-	if (eProperty == -2)
-	{
-		PropertyTypes eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)&eRemappedProperty);
-		eProperty = eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)&eUnitClass);
-	}
-	else
-	{
-		WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eUnitClass);
-	}
-	// REPLACE WITH
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)& eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, (int*)& eUnit);
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
@@ -347,19 +328,8 @@ void PropertySpawns::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_WRITE_DECORATED(wrapper, "PropertySpawns", -2, "eProperty");
-	PropertyTypes eRemappedProperty = eProperty;
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// REPLACE WITH
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eProperty);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, eUnit);
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -371,7 +341,7 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", iChange);
 
@@ -391,7 +361,7 @@ void BuildingYieldModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
 
@@ -406,7 +376,7 @@ void BuildingYieldModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
 
@@ -421,7 +391,7 @@ void BuildingCommerceModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
 
@@ -436,7 +406,7 @@ void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
 
@@ -446,11 +416,6 @@ void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-
-void checkBattleUnitType(BattleUnitTypes unitType)
-{
-	FAssertMsg((unitType >= 0) && (unitType < BATTLE_UNIT_COUNT), "[Jason] Invalid battle unit type.");
-}
 
 CvBattleRound::CvBattleRound() :
 	m_iWaveSize(0),
@@ -493,31 +458,31 @@ void CvBattleRound::setWaveSize(int size)
 
 int CvBattleRound::getNumKilled(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aNumKilled[unitType];
 }
 
 void CvBattleRound::setNumKilled(BattleUnitTypes unitType, int value)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumKilled[unitType] = value;
 }
 
 void CvBattleRound::addNumKilled(BattleUnitTypes unitType, int increment)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumKilled[unitType] += increment;
 }
 
 int CvBattleRound::getNumAlive(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aNumAlive[unitType];
 }
 
 void CvBattleRound::setNumAlive(BattleUnitTypes unitType, int value)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumAlive[unitType] = value;
 }
 
@@ -558,13 +523,13 @@ void CvMissionDefinition::setMissionTime(float time)
 
 CvUnit *CvMissionDefinition::getUnit(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aUnits[unitType];
 }
 
 void CvMissionDefinition::setUnit(BattleUnitTypes unitType, CvUnit *unit)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aUnits[unitType] = unit;
 }
 
@@ -652,40 +617,40 @@ CvBattleDefinition::~CvBattleDefinition() {}
 
 int CvBattleDefinition::getDamage(BattleUnitTypes unitType, BattleTimeTypes timeType) const
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	return m_aDamage[unitType][timeType];
 }
 
 void CvBattleDefinition::setDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int damage)
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	m_aDamage[unitType][timeType] = damage;
 }
 
 void CvBattleDefinition::addDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int increment)
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	m_aDamage[unitType][timeType] += increment;
 }
 
 int CvBattleDefinition::getFirstStrikes(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aFirstStrikes[unitType];
 }
 
 void CvBattleDefinition::setFirstStrikes(BattleUnitTypes unitType, int firstStrikes)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aFirstStrikes[unitType] = firstStrikes;
 }
 
 void CvBattleDefinition::addFirstStrikes(BattleUnitTypes unitType, int increment)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aFirstStrikes[unitType] += increment;
 }
 
@@ -741,13 +706,13 @@ void CvBattleDefinition::clearBattleRounds()
 
 CvBattleRound &CvBattleDefinition::getBattleRound(int index)
 {
-	checkBattleRound(index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index)
 	return m_aBattleRounds[index];
 }
 
 const CvBattleRound &CvBattleDefinition::getBattleRound(int index) const
 {
-	checkBattleRound(index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index)
 	return m_aBattleRounds[index];
 }
 
@@ -759,16 +724,6 @@ void CvBattleDefinition::addBattleRound(const CvBattleRound &round)
 void CvBattleDefinition::setBattleRound(int index, const CvBattleRound &round)
 {
 	m_aBattleRounds.assign(index, round);
-}
-
-void CvBattleDefinition::checkBattleTimeType(BattleTimeTypes timeType) const
-{
-	FAssertMsg((timeType >= 0) && (timeType < BATTLE_TIME_COUNT), "[Jason] Invalid battle time type.");
-}
-
-void CvBattleDefinition::checkBattleRound(int index) const
-{
-	FAssertMsg((index >= 0) && (index < (int)m_aBattleRounds.size()), "[Jason] Invalid battle round index.");
 }
 
 //------------------------------------------------------------------------------------------------
@@ -803,24 +758,21 @@ CvAirMissionDefinition::CvAirMissionDefinition( const CvAirMissionDefinition & k
 
 int CvAirMissionDefinition::getDamage(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aDamage[unitType];
 }
 
 void CvAirMissionDefinition::setDamage(BattleUnitTypes unitType, int damage)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aDamage[unitType] = damage;
 }
 
 bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	FAssertMsg(getUnit(unitType) != NULL, "[Jason] Invalid battle unit type.");
-	if(getDamage(unitType) >= getUnit(unitType)->maxHitPoints())
-		return true;
-	else
-		return false;
+	return getDamage(unitType) >= getUnit(unitType)->maxHitPoints();
 }
 
 PBGameSetupData::PBGameSetupData()

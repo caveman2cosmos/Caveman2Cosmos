@@ -17,7 +17,7 @@ class CyGameTextMgr
 public:
 	CyGameTextMgr();
 	CyGameTextMgr(CvGameTextMgr* m_pGameTextMgr);			// Call from C++
-	bool isNone() { return (m_pGameTextMgr==NULL); }
+	bool isNone() const { return m_pGameTextMgr == NULL; }
 
 	void Reset();
 
@@ -36,6 +36,7 @@ public:
 	std::wstring getPromotionHelp(int iPromotion, bool bCivilopediaText);
 	std::wstring getTraitHelp(int iTrait);
 	std::wstring getBonusHelp(int iBonus, bool bCivilopediaText);
+	std::wstring getProductionHelpCity(CyCity* pCity);
 	std::wstring getReligionHelpCity(int iReligion, CyCity* pCity, bool bCityScreen, bool bForceReligion, bool bForceState, bool bNoStateReligion);
 	std::wstring getCorporationHelpCity(int iCorporation, CyCity* pCity, bool bCityScreen, bool bForceCorporation);
 	std::wstring getImprovementHelp(int iImprovement, bool bCivilopediaText);
@@ -58,6 +59,7 @@ public:
 	std::wstring setVassalRevoltHelp(int iMaster, int iVassal);
 	std::wstring getActiveDealsString(int iThisPlayer, int iOtherPlayer);
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
+	std::wstring getFinanceUnitUpkeepString(int iPlayer);
 
 
 protected:

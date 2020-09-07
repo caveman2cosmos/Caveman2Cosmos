@@ -4,22 +4,9 @@
 //	PURPOSE: Game map externals class
 //
 
-
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
-#include "CvMapGenerator.h"
-#include "CvFractal.h"
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-#include <direct.h>			// for getcwd()
-#include <stdlib.h>			// for MAX_PATH
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
-// Public Functions...
 
 CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
 								 m_bMapCoordinates(false)
@@ -105,12 +92,7 @@ void CvMapExternal::updateCenterUnit()
 	m_proxiedMap->updateCenterUnit();
 }
 
-CvCity* CvMapExternal::_findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
-{
-	return findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
-}
-
-CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, const CvCity* pSkipCity) const
+CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
 {
 	return m_proxiedMap->findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
 }
@@ -143,13 +125,7 @@ int CvMapExternal::pointXToPlotX(float fX) const
 }
 
 
-float CvMapExternal::_plotXToPointX(int iX)
-{
-	return plotXToPointX(iX);
-}
-
-
-float CvMapExternal::plotXToPointX(int iX) const
+float CvMapExternal::plotXToPointX(int iX)
 {
 	return m_proxiedMap->plotXToPointX(iX);
 }
@@ -161,13 +137,7 @@ int CvMapExternal::pointYToPlotY(float fY) const
 }
 
 
-float CvMapExternal::_plotYToPointY(int iY)
-{
-	return plotYToPointY(iY);
-}
-
-
-float CvMapExternal::plotYToPointY(int iY) const
+float CvMapExternal::plotYToPointY(int iY)
 {
 	return m_proxiedMap->plotYToPointY(iY);
 }
@@ -197,49 +167,25 @@ int CvMapExternal::getOwnedPlots() const
 }
 
 
-bool CvMapExternal::_isWrapX()
-{
-	return isWrapX();
-}
-
-
-bool CvMapExternal::isWrapX() const
+bool CvMapExternal::isWrapX()
 {
 	return m_proxiedMap->isWrapX();
 }
 
 
-bool CvMapExternal::_isWrapY()
-{
-	return isWrapY();
-}
-
-
-bool CvMapExternal::isWrapY() const
+bool CvMapExternal::isWrapY()
 {
 	return m_proxiedMap->isWrapY();
 }
 
 
-bool CvMapExternal::_isWrap()
-{
-	return isWrap();
-}
-
-
-bool CvMapExternal::isWrap() const
+bool CvMapExternal::isWrap()
 {
 	return m_proxiedMap->isWrap();
 }
 
 
-WorldSizeTypes CvMapExternal::_getWorldSize()
-{
-	return getWorldSize();
-}
-
-
-WorldSizeTypes CvMapExternal::getWorldSize() const
+WorldSizeTypes CvMapExternal::getWorldSize()
 {
 	return m_proxiedMap->getWorldSize();
 }
@@ -295,13 +241,7 @@ CvPlot* CvMapExternal::plot(int iX, int iY) const
 }
 
 
-CvPlot* CvMapExternal::_pointToPlot(float fX, float fY)
-{
-	return pointToPlot(fX, fY);
-}
-
-
-CvPlot* CvMapExternal::pointToPlot(float fX, float fY) const
+CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 {
 	return m_proxiedMap->pointToPlot(fX, fY);
 }

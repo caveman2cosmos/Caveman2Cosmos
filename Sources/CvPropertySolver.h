@@ -11,9 +11,7 @@
 #ifndef CV_PROPERTY_SOLVER_H
 #define CV_PROPERTY_SOLVER_H
 
-#include <vector>
 #include <map>
-#include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
 #include "CvPropertyPropagator.h"
@@ -40,10 +38,10 @@ class PropertySourceContext
 {
 public:
 	PropertySourceContext(CvPropertySource* pSource, CvGameObject* pObject);
-	CvPropertySource* getSource();
-	CvGameObject* getObject();
-	int getData1();
-	int getData2();
+	CvPropertySource* getSource() const;
+	CvGameObject* getObject() const;
+	int getData1() const;
+	int getData2() const;
 	void setData1(int iData);
 	void setData2(int iData);
 
@@ -62,8 +60,8 @@ class PropertyInteractionContext
 {
 public:
 	PropertyInteractionContext(CvPropertyInteraction* pInteraction, CvGameObject* pObject);
-	CvPropertyInteraction* getInteraction();
-	CvGameObject* getObject();
+	CvPropertyInteraction* getInteraction() const;
+	CvGameObject* getObject() const;
 
 	void doPredict(CvPropertySolver* pSolver);
 	void doCorrect(CvPropertySolver* pSolver);
@@ -79,8 +77,8 @@ class PropertyPropagatorContext
 {
 public:
 	PropertyPropagatorContext(CvPropertyPropagator* pPropagator, CvGameObject* pObject);
-	CvPropertyPropagator* getPropagator();
-	CvGameObject* getObject();
+	CvPropertyPropagator* getPropagator() const;
+	CvGameObject* getObject() const;
 	std::vector<CvGameObject*>* getTargetObjects();
 
 	void doPredict(CvPropertySolver* pSolver);
@@ -101,7 +99,7 @@ public:
 	void instantiateSource(CvGameObject* pObject, CvPropertySource* pSource);
 	void instantiateInteraction(CvGameObject* pObject, CvPropertyInteraction* pInteraction);
 	void instantiatePropagator(CvGameObject* pObject, CvPropertyPropagator* pPropagator);
-	void instantiateManipulators(CvGameObject* pObject, CvPropertyManipulators* pMani);
+	void instantiateManipulators(CvGameObject* pObject, const CvPropertyManipulators* pMani);
 	void instantiateGlobalManipulators(CvGameObject* pObject);
 	void gatherActiveManipulators();
 	
@@ -124,7 +122,7 @@ public:
 
 	// Passed on to the solver map
 	void addChange(CvGameObject* pObject, PropertyTypes eProperty, int iChange);
-	int getPredictValue(CvGameObject* pObject, PropertyTypes eProperty);
+	int getPredictValue(CvGameObject* pObject, PropertyTypes eProperty) const;
 
 protected:
 	std::vector<PropertySourceContext> m_aSourceContexts;
@@ -142,10 +140,10 @@ public:
 
 	PropertySolverMap* getSolverMap();
 
-	void addGlobalManipulators(CvPropertyManipulators* pMani);
+	void addGlobalManipulators(const CvPropertyManipulators* pMani);
 	void gatherGlobalManipulators();
-	int getNumGlobalManipulators();
-	CvPropertyManipulators* getGlobalManipulator(int index);
+	int getNumGlobalManipulators() const;
+	const CvPropertyManipulators* getGlobalManipulator(int index) const;
 
 	void resetPropertyChanges();
 
@@ -154,7 +152,7 @@ public:
 	void doTurn();
 
 protected:
-	std::vector<CvPropertyManipulators*> m_apGlobalManipulators;
+	std::vector<const CvPropertyManipulators*> m_apGlobalManipulators;
 	CvPropertySolver m_Solver;
 	PropertySolverMap m_mapProperties;
 };

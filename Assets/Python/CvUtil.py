@@ -13,8 +13,8 @@ CyIF = CyInterface()
 TRNSLTR = CyTranslator()
 
 # Event IDs
-g_nextEventID = 5050
-def getNewEventID(name=None):
+g_nextEventID = 9999
+def getNewEventID():
 	"""
 	Defines a new event and returns its unique ID
 	to be passed to BugEventManager.beginEvent(id).
@@ -22,9 +22,8 @@ def getNewEventID(name=None):
 	Perhaps move over to CvEventManager.py
 	"""
 	global g_nextEventID
-	id = g_nextEventID
 	g_nextEventID += 1
-	return id
+	return g_nextEventID
 
 # Screen IDs
 BUG_FIRST_SCREEN = 1000
@@ -40,13 +39,13 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
-# if the string is non unicode, convert it to unicode by decoding it using 8859-1, latin_1
+# if the string is non unicode, convert it to unicode by decoding it using utf-8
 def convertToUnicode(s):
 	if isinstance(s, str):
-		return s.decode("latin_1")
+		return s.decode("utf-8")
 	return s
 
-# if the string is unicode, convert it to str by encoding it using 8859-1, latin_1
+# if the string is unicode, convert it to str by encoding it using utf-8
 def convertToStr(txt):
 	if isinstance(txt, unicode):
 		i = 0
@@ -56,7 +55,7 @@ def convertToStr(txt):
 			if ordinal > 255:
 				txt[i] = '?'
 			i += 1
-		return txt.encode("latin_1")
+		return txt.encode("utf-8")
 	return txt
 
 def remove_diacriticals(txt):
@@ -213,12 +212,12 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_BARBARIAN_DEFENSE",(cdUnit.iCityBarbarianDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iClassDefenseModifier * iChange,))
+	if cdUnit.iDefenseModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassAttackModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iClassAttackModifier * iChange,))
+	if cdUnit.iAttackModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iAttackModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCombatModifierT:

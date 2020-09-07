@@ -66,60 +66,17 @@ class PyPlayer:
 		' none - Sets Gold to iGold '
 		self.player.setGold( iGold )
 
-	def hasGold(self, iNumGold):
-		' bool - Has at least iNumGold? '
-		if ( self.player.getGold() >= iNumGold ):
-			return True
-
 	def getTotalMaintenance(self):
 		return self.player.getTotalMaintenance()
-
-	def calculateUnitCost(self):
-		return self.player.calculateUnitCost()
 
 	def calculateUnitSupply(self):
 		return self.player.calculateUnitSupply()
 
 # Players Yields / Commerce
-	def getGoldCommerceRate(self):
-		' int - Players gold commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_GOLD )
-
-	def getResearchCommerceRate(self):
-		' int - Players research commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_RESEARCH )
-
-	def getCultureCommerceRate(self):
-		' int - Players culture commerce rate '
-		return self.player.getCommerceRate( CommerceTypes.COMMERCE_CULTURE )
 
 	def calculateResearchRate(self):
 		' int - Total Research Rate per Turn '
 		return self.player.calculateResearchRate( TechTypes.NO_TECH )
-
-	def getCommerceYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_COMMERCE )
-
-	def getFoodYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_FOOD )
-
-	def getProductionYieldRateModifier(self):
-		' int '
-		return self.player.getYieldRateModifier( YieldTypes.YIELD_PRODUCTION )
-
-	def getCommerceSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_COMMERCE )
-
-	def getFoodSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_FOOD )
-
-	def getProductionSeaPlotYield(self):
-		' int '
-		return self.player.getSeaPlotYield( YieldTypes.YIELD_PRODUCTION )
 
 	def getGoldPerTurn(self):
 		return self.player.getGoldPerTurn()
@@ -172,9 +129,6 @@ class PyPlayer:
 
 	def calculateInflatedCosts(self):
 		return self.player.calculateInflatedCosts()
-
-	def calculatePreInflatedCosts(self):
-		return self.player.calculatePreInflatedCosts()
 
 	def calculateGoldRate(self):
 		return self.player.calculateGoldRate()
@@ -282,10 +236,6 @@ class PyPlayer:
 				return unit
 
 		return 0
-
-	def centerCameraByScriptData(self, scriptData):
-		unit = self.getUnitByScriptData(scriptData)
-		CyCamera().LookAtUnit(unit)
 
 	def initUnit(self, unitID, X, Y, iNum = 1):
 		"none - spawns unitIdx at X, Y - ALWAYS use default UnitAIType"
@@ -686,13 +636,6 @@ class PyCity:
 			return True
 		return False
 
-	def centerCamera(self):
-		"bool - Center camera on city"
-		engine = CyEngine()
-		plot = self.plot()
-		if plot:
-			engine.LookAt(plot.getPoint(), True)
-
 	def setNumRealBuildingIdx(self, buildingIdx, iNum):
 		"none - Add or Remove (bAdd) by buildingIdx"
 		return self.city.setNumRealBuilding(buildingIdx, iNum)
@@ -807,44 +750,11 @@ class PyGame:
 				listTechs.append(loopInfo)
 		return listTechs
 
-	def getListUniqueUnits(self):
-		lUniqueUnits = self.getListUniqueUnitID()
-		lUnitInfos = []
-		for i in range(len(lUniqueUnits)):
-			lUnitInfos.append(PyInfo.UnitInfo(lUniqueUnits[i]))
-		return lUnitInfos
-
-	def getListUniqueUnitID(self):
-		listUU = []
-		unitClass = []
-		for i in range(gc.getNumUnitInfos()):
-			iUnitClass = PyInfo.UnitInfo(i).getUnitClassType()
-			if iUnitClass in unitClass:
-				listUU.append(i)
-			else:
-				unitClass.append(iUnitClass)
-		return listUU
-
 	def getListAnimalUnits(self):
 		listUnits = []
 		for i in range(gc.getNumUnitInfos()):
 			loopUnit = PyInfo.UnitInfo(i)
 			if loopUnit.isAnimal():
-				listUnits.append(loopUnit)
-		return listUnits
-
-	def getListUnitCombatTypes(self, combatType, bUnique):
-		"listObj - list of unit infos of a particular combat type"
-		CombatTypes = {0:(0,'Neutral'),1:(1,'Recon'),2:(2,'Archery'),3:(3,'Mounted'),4:(4,'Melee'),5:(5,'Siege'),6:(6,'Gunpowder')}
-		listUnits = []
-		if bUnique:
-			UUidList = self.getListUniqueUnitID()
-		for i in range(gc.getNumUnitInfos()):
-			if bUnique:
-				if i in UUidList:
-					continue
-			loopUnit = PyInfo.UnitInfo(i)
-			if loopUnit.getUnitCombatType() == combatType:
 				listUnits.append(loopUnit)
 		return listUnits
 
@@ -906,10 +816,6 @@ class PyPlot:
 		"int - food yield"
 		return self.plot.getYield(YieldTypes.YIELD_FOOD)
 
-	def getProductionYield(self):
-		"int - production yield"
-		return self.plot.getYield(YieldTypes.YIELD_PRODUCTION)
-
 	def getCommerceYield(self):
 		"int - commerce yield"
 		return self.plot.getYield(YieldTypes.YIELD_COMMERCE)
@@ -918,11 +824,6 @@ class PyPlot:
 	def getTerrainType(self):
 		"int - terrain type XML ID"
 		return self.plot.getTerrainType()
-
-	def isCoastalLand(self):
-		"bool - is this a coastal land plot"
-		return self.plot.isCoastalLand()
-
 
 	############## B O N U S ##############
 	def getBonusType(self):
@@ -1013,25 +914,6 @@ class PyInfo:
 		def getDomainType(self):
 			"int - domain type"
 			return self.info.getDomainType()
-
-		def getUnitClassType(self):
-			"str - unit class type"
-			return self.info.getUnitClassType()
-
-		def isUniqueUnit(self):
-			"bool - is this unit a unique unit"
-			lUniqueUnits = PyGame.PyGame().getListUniqueUnitID()
-			if self.unitID in lUniqueUnits:
-				return True
-			return False
-
-		def getListUnitClassID(self):
-			"intList - id list of all unit infos that match combat type with current unit"
-			lUnitClassID = []
-			for i in range(gc.getNumUnitInfos()):
-				if UnitInfo(i).getUnitClassType() == self.getUnitClassType():
-					lUnitClassID.append(i)
-			return lUnitClassID
 
 		def getUnitCombatType(self):
 			"int - combat type"
@@ -1305,30 +1187,12 @@ class PyInfo:
 					unitList.append(i)
 			return unitList
 
-		def getNoUniqueUnlockedUnitIDList(self):
-			lUniqueUnits = PyGame.PyGame().getListUniqueUnitID()
-			lAllUnits = self.getUnlockedUnitIdxList()
-			lUnits = []
-			for i in range(len(lAllUnits)):
-				loopUnit = lAllUnits[i]
-				if loopUnit in lUniqueUnits:
-					continue
-				else:
-					lUnits.append(loopUnit)
-			return lUnits
-
 		def getListUnlockedUnitInfos(self):
 			"objList - info list of unlocked units"
 			unitList = []
 			for i in range(len(self.getUnlockedUnitIdxList())):
 				unitList.append(UnitInfo(idList[i]))
 			return unitList
-
-		def getNoUniqueUnlockedUnitInfoList(self):
-			lUnitInfos = []
-			for unitID in self.getNoUniqueUnlockedUnitIDList():
-				lUnitInfos.append(UnitInfo(unitID))
-			return lUnitInfos
 
 		def getUnlockedReligionIdxList(self):
 			"intList - IDList of unlocked Religions"

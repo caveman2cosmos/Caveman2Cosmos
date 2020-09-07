@@ -270,14 +270,13 @@ Example!
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iFreeExperience>0</iFreeExperience>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
+			<iFreeUnitUpkeepCivilianPopPercent>0</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>0</iFreeUnitUpkeepMilitaryPopPercent>
+			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>
+			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
-			<iGoldPerUnit>0</iGoldPerUnit>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -293,7 +292,7 @@ Example!
 			<iMinAnarchy>0</iMinAnarchy>
 			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
 			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>
@@ -628,14 +627,13 @@ Example!
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iFreeExperience>0</iFreeExperience>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iFreeUnitUpkeepCivilian>0</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepMilitary>0</iFreeUnitUpkeepMilitary>
+			<iFreeUnitUpkeepCivilianPopPercent>0</iFreeUnitUpkeepCivilianPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>0</iFreeUnitUpkeepMilitaryPopPercent>
+			<iCivilianUnitUpkeepMod>0</iCivilianUnitUpkeepMod>
+			<iMilitaryUnitUpkeepMod>0</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
-			<iGoldPerUnit>0</iGoldPerUnit>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -651,7 +649,7 @@ Example!
 			<iMinAnarchy>0</iMinAnarchy>
 			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
 			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>

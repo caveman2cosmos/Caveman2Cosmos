@@ -64,13 +64,13 @@ def resetNoLiberateCities():
 			lLuxury.append(i)
 		if GC.getBonusInfo(i).getHealth() > 0:
 			lFood.append(i)
-	iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_COPPER_CONNECTED, [iBonus], "TXT_KEY_FEAT_COPPER_CONNECTED"])
 	iBonus = GC.getInfoTypeForString("BONUS_HORSE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_HORSE_CONNECTED, [iBonus], "TXT_KEY_FEAT_HORSE_CONNECTED"])
-	iBonus = GC.getInfoTypeForString("BONUS_IRON")
+	iBonus = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_IRON_CONNECTED, [iBonus], "TXT_KEY_FEAT_IRON_CONNECTED"])
 	if lLuxury:
@@ -95,16 +95,9 @@ def resetNoLiberateCities():
 	iCombat = GC.getInfoTypeForString("UNITCOMBAT_GUN")
 	if iCombat > -1:
 		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_GUN, "TXT_KEY_FEAT_UNITCOMBAT_GUN"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_ARMOR")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_ARMOR, "TXT_KEY_FEAT_UNITCOMBAT_ARMOR"]
 	iCombat = GC.getInfoTypeForString("UNITCOMBAT_HELICOPTER")
 	if iCombat > -1:
 		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_HELICOPTER, "TXT_KEY_FEAT_UNITCOMBAT_HELICOPTER"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_NAVAL")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_NAVAL, "TXT_KEY_FEAT_UNITCOMBAT_NAVAL"]
-
 
 def unitBuiltFeats(CyCity, CyUnit):
 	iCombat = CyUnit.getUnitCombatType()
@@ -323,25 +316,22 @@ def cityAdvise(CyCity, iPlayer):
 							iBestValue = 0
 							eBestUnit = -1
 
-							for iI in xrange(GC.getNumUnitClassInfos()):
+							for iUnitX in xrange(GC.getNumUnitInfos()):
 
-								if isLimitedUnitClass(iI): continue
+								if isLimitedUnit(iUnitX): continue
 
-								eLoopUnit = GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationUnits(iI)
-								if eLoopUnit == -1: continue
+								if GC.getUnitInfo(iUnitX).getDomainType() == DomainTypes.DOMAIN_LAND:
 
-								if GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND:
+									if CyCity.canTrain(iUnitX, False, False, False, False):
 
-									if CyCity.canTrain(eLoopUnit, False, False, False, False):
+										if CyCity.getFirstUnitOrder(iUnitX) == -1:
 
-										if CyCity.getFirstUnitOrder(eLoopUnit) == -1:
-
-											iValue = CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_SETTLE, CyArea)
+											iValue = CyPlayer.AI_unitValue(iUnitX, UnitAITypes.UNITAI_SETTLE, CyArea)
 
 											if iValue > iBestValue:
 
 												iBestValue = iValue
-												eBestUnit = eLoopUnit
+												eBestUnit = iUnitX
 
 							if eBestUnit > -1:
 								popupInfo = CyPopupInfo()
@@ -365,20 +355,15 @@ def cityAdvise(CyCity, iPlayer):
 
 						if CyCity.AI_countBestBuilds(CyArea) > 3:
 							iBestValue = 0
-							for iI in xrange(GC.getNumUnitClassInfos()):
-								if isLimitedUnitClass(iI): continue
+							for iUnit in xrange(GC.getNumUnitInfos()):
+								if isLimitedUnit(iUnit) or GC.getUnitInfo(iUnit).getDomainType() != DomainTypes.DOMAIN_LAND:
+									continue
 
-								eLoopUnit = GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationUnits(iI)
-								if eLoopUnit == -1: continue
-
-								if GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND:
-									if CyCity.canTrain(eLoopUnit, False, False, False, False):
-										if CyCity.getFirstUnitOrder(eLoopUnit) == -1:
-											iValue = CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_WORKER, CyArea)
-
-											if iValue > iBestValue:
-												iBestValue = iValue
-												eBestUnit = eLoopUnit
+								if CyCity.getFirstUnitOrder(iUnit) == -1 and CyCity.canTrain(iUnit, False, False, False, False):
+									iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_WORKER, CyArea)
+									if iValue > iBestValue:
+										iBestValue = iValue
+										eBestUnit = iUnit
 
 						if eBestUnit != -1:
 							popupInfo = CyPopupInfo()
@@ -403,24 +388,16 @@ def cityAdvise(CyCity, iPlayer):
 						iBestValue = 0
 						eBestUnit = -1
 
-						for iI in xrange(GC.getNumUnitClassInfos()):
+						for iUnit in xrange(GC.getNumUnitInfos()):
 
-							if isLimitedUnitClass(iI): continue
-
-							eLoopUnit = GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationUnits(iI)
-							if eLoopUnit == -1: continue
-
-							if GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND:
-
-								if CyCity.canTrain(eLoopUnit, False, False, False, False):
-
-									iValue = CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_CITY_DEFENSE, CyArea) * 2
-									iValue += CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_ATTACK, CyArea)
-
-									if iValue > iBestValue:
-
-										iBestValue = iValue
-										eBestUnit = eLoopUnit
+							if isLimitedUnit(iUnit) or GC.getUnitInfo(iUnit).getDomainType() != DomainTypes.DOMAIN_LAND:
+								continue
+							if CyCity.canTrain(iUnit, False, False, False, False):
+								iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_CITY_DEFENSE, CyArea) * 2
+								iValue += CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyArea)
+								if iValue > iBestValue:
+									iBestValue = iValue
+									eBestUnit = iUnit
 
 						if eBestUnit != -1:
 							popupInfo = CyPopupInfo()
@@ -495,9 +472,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getHealth()
 							if iValue <= iBestValue: continue
@@ -533,9 +510,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getHappiness()
 							if iValue <= iBestValue: continue
@@ -571,9 +548,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getDefenseModifier()
 							if iValue <= iBestValue: continue
@@ -609,9 +586,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getMaintenanceModifier()
 							if iValue >= iBestValue: continue
@@ -647,9 +624,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
@@ -685,9 +662,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getCommerceModifier(CommerceTypes.COMMERCE_GOLD)
 							if iValue <= iBestValue: continue
@@ -723,9 +700,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH)
 							if iValue <= iBestValue: continue
@@ -761,9 +738,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD)
 							if iValue <= iBestValue: continue

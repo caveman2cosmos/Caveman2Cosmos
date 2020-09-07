@@ -98,15 +98,12 @@ class PediaLeader:
 		screen.addMultilineText(aName(), szText, X_COL_2+4, Y_ROW_1+16, W_COL_2-8, H_ROW_1-32, eWidGen, 0, 0, 1<<0)
 
 		# Traits
-		panelName = aName()
-		screen.addPanel(panelName, "", "", True, False, X_COL_2, Y_ROW_2, W_COL_2, H_ROW_2, ePanelBlue50)
-		listName = aName()
-		szSpecialText = szfont3 + CyGameTextMgr().parseLeaderTraits(iLeader, -1, False, True)[1:]
-		screen.addMultilineText(listName, szSpecialText, X_COL_2+4, Y_ROW_2+16, W_COL_2-8, H_ROW_2-32, eWidGen, -1, -1, 1<<0)
+		screen.addPanel(aName(), "", "", True, False, X_COL_2, Y_ROW_2, W_COL_2, H_ROW_2, ePanelBlue50)
+		szSpecialText = szfont3 + CyGameTextMgr().parseLeaderTraits(iLeader, -1, False, True)
+		screen.addMultilineText(aName(), szSpecialText, X_COL_2+4, Y_ROW_2+16, W_COL_2-8, H_ROW_2-32, eWidGen, -1, -1, 1<<0)
 
 		# Personality
-		panelName = aName()
-		screen.addPanel(panelName, "", "", True, True, X_COL_1, Y_ROW_4, W_COL_1, H_ROW_4, ePanelBlue50)
+		screen.addPanel(aName(), "", "", True, True, X_COL_1, Y_ROW_4, W_COL_1, H_ROW_4, ePanelBlue50)
 
 		iFull = CvLeaderHeadInfo.getMaxWarRand()
 		iNearby = CvLeaderHeadInfo.getMaxWarNearbyPowerRatio()

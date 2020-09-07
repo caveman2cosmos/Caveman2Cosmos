@@ -475,7 +475,7 @@ def checkRebelBonuses(argsList):
 			ix = pCity.getX()
 			iy = pCity.getY()
 
-			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity, newOwner, newOwner)
+			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 			newUnitList = []
 
@@ -490,7 +490,7 @@ def checkRebelBonuses(argsList):
 				icon = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
 				sound = "AS2D_CITY_REVOLT"
 				eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT
-				iMsgTime = GC.getDefineINT("EVENT_MESSAGE_TIME")
+				iMsgTime = GC.getEVENT_MESSAGE_TIME()
 				CvUtil.sendMessage(szTxt, newOwnerID, iMsgTime, icon, ColorTypes(8), ix, iy, True, True, eMsgType, sound, False)
 
 				szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_REBEL_CONTROL",())%(newOwner.getCivilizationDescription(0),pCity.getName())
@@ -526,18 +526,22 @@ def checkRebelBonuses(argsList):
 
 				# Give a boat to island rebels
 				if pCity.isCoastal(10) and pCity.area().getNumCities() < 3 and pCity.area().getNumTiles() < 25:
-					iAssaultShip = UnitTypes.NO_UNIT
-					for unitID in xrange(GC.getNumUnitInfos()):
-						unitClass = GC.getUnitInfo(unitID).getUnitClassType()
-						if unitID == GC.getCivilizationInfo(newOwner.getCivilizationType()).getCivilizationUnits(unitClass):
-							if GC.getUnitInfo(unitID).getDomainType() == DomainTypes.DOMAIN_SEA and newOwner.canTrain(unitID,False,False):
-								# Military unit transport ship
-								if GC.getUnitInfo(unitID).getUnitAIType(UnitAITypes.UNITAI_ASSAULT_SEA):
-									if iAssaultShip == UnitTypes.NO_UNIT or GC.getUnitInfo(unitID).getCombat() >= GC.getUnitInfo(iAssaultShip).getCombat():
-										iAssaultShip = unitID
-					if not iAssaultShip == UnitTypes.NO_UNIT:
-						newOwner.initUnit(iAssaultShip, ix, iy, UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
-						print "Rev - Rebels get a %s to raid motherland" % GC.getUnitInfo(iAssaultShip).getDescription()
+					iBestCombat = -1
+					for iUnitX in xrange(GC.getNumUnitInfos()):
+						info = GC.getUnitInfo(iUnitX)
+						if (info.getDomainType() == DomainTypes.DOMAIN_SEA
+						and info.getUnitAIType(UnitAITypes.UNITAI_ASSAULT_SEA)
+						and newOwner.canTrain(iUnitX,False,False)
+						):
+							iCombat = info.getCombat()
+							if iBestCombat < iCombat:
+								bestUnit = info
+								iBestUnit = iUnitX
+								iBestCombat = iCombat
+
+					if iBestCombat > -1:
+						newOwner.initUnit(iBestUnit, ix, iy, UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
+						print "Rev - Rebels get a %s to raid motherland" % bestUnit.getDescription()
 
 				# Change city disorder timer to favor new player
 				iTurns = pCity.getOccupationTimer()
@@ -669,8 +673,7 @@ def updateRevolutionIndices( argsList ) :
 				# TODO: support this with a popup question
 				pass
 			else:
-				capitalClass = CvUtil.findInfoTypeNum(GC.getBuildingClassInfo,GC.getNumBuildingClassInfos(),RevDefs.sXMLPalace)
-				eCapitalBuilding = GC.getCivilizationInfo(newOwner.getCivilizationType()).getCivilizationBuildings(capitalClass)
+				eCapitalBuilding = GC.getInfoTypeForString(RevDefs.sXMLPalace)
 				oldCapital = newOwner.getCapitalCity()
 				oldCapital.setNumRealBuilding(eCapitalBuilding, 0)
 				pCity.setNumRealBuilding(eCapitalBuilding, 1)
@@ -738,9 +741,8 @@ def onBuildingBuilt(argsList):
 	pCity, iBuildingType = argsList
 
 	buildingInfo = GC.getBuildingInfo(iBuildingType)
-	buildingClassInfo = GC.getBuildingClassInfo(buildingInfo.getBuildingClassType())
 
-	if( buildingClassInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
+	if buildingInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10:
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - World wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([150,int(0.25*curRevIdx)]) )
@@ -753,7 +755,7 @@ def onBuildingBuilt(argsList):
 			revIdxHist['Events'][0] += iRevIdxChange
 			RevData.updateCityVal( pCity, 'RevIdxHistory', revIdxHist )
 
-	elif( buildingClassInfo.getMaxPlayerInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
+	elif buildingInfo.getMaxPlayerInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10:
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - National wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([80,int(0.12*curRevIdx)]) )

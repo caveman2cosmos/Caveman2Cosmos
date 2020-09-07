@@ -1,6 +1,7 @@
 // plotGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 
 //#define VALIDATION_FOR_PLOT_GROUPS
 
@@ -478,8 +479,7 @@ void CvPlotGroup::setID(int iID)
 
 int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 {
-	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	return (m_paiNumBonuses == NULL ? 0 : m_paiNumBonuses[eBonus]);
 }
 
@@ -494,8 +494,7 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 
 	if (iChange != 0)
 	{
@@ -505,11 +504,10 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 			memset(m_paiNumBonuses, 0, sizeof(int)*GC.getNumBonusInfos());
 		}
 
-		m_paiNumBonuses[eBonus] = (m_paiNumBonuses[eBonus] + iChange);
+		m_paiNumBonuses[eBonus] += iChange;
 
-		for (CvPlayer::city_iterator cityItr = GET_PLAYER(getOwner()).beginCities(); cityItr != GET_PLAYER(getOwner()).endCities(); ++cityItr)
+		foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
-			CvCity* pLoopCity = *cityItr;
 			if (pLoopCity->plotGroup(getOwner()) == this)
 			{
 				pLoopCity->changeNumBonuses(eBonus, iChange);
@@ -691,19 +689,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 		SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	}
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Legacy for FreeTradeRegionBuilding. It was never used.
-	arrayPresent = true;
-	WRAPPER_READ_DECORATED(wrapper, "CvPlotGroup", &arrayPresent, "freeBuildingsPresent");
-	if ( arrayPresent )
-	{
-		int* dummy = new int[GC.getNumBuildingInfos()];
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlotGroup", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), dummy);
-		SAFE_DELETE_ARRAY(dummy);
-	}
-	// SAVEBREAK@
-
 	m_numPlots = -1;
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_numPlots);
 
@@ -750,27 +735,19 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag);		// flag for expansion
-
+	uint uiFlag = 0;
+	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvPlotGroup", (bool)(m_paiNumBonuses != NULL), "bonusesPresent");
-	if ( m_paiNumBonuses != NULL )
+
+	if (m_paiNumBonuses != NULL)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlotGroup", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	}
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Dummy value. FreeTradeRegionBuilding was removed, so just always write out false.
-	WRAPPER_WRITE_DECORATED(wrapper, "CvPlotGroup", false, "freeBuildingsPresent");
-	// SAVEBREAK@
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_numPlots);
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_seedPlotX);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_seedPlotY);
 
@@ -863,11 +840,9 @@ CvPlotGroup* CvPlotGroup::colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner,
 					pPlotGroup->addPlot(pLoopPlot, bRecalculateBonuses);
 				}
 
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+				foreach_(CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
 				{
-					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), (DirectionTypes)iI);
-
-					if (pAdjacentPlot != NULL && pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
+					if (pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
 					{
 						CvPlotGroup* pAdjacentPlotGroup = pAdjacentPlot->getPlotGroup(eOwner);
 

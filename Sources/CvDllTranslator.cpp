@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvDllTranslator.h"
+#include "CvPlayerAI.h"
 
 void CvDllTranslator::initializeTags(CvWString& szTagStartIcon, CvWString& szTagStartOur, CvWString& szTagStartCT, CvWString& szTagStartColor, CvWString& szTagStartLink, CvWString& szTagEndLink, CvWString& szEndLinkReplacement, std::map<std::wstring, CvWString>& aIconMap, std::map<std::wstring, CvWString>& aColorMap)
 {
@@ -112,7 +113,7 @@ bool CvDllTranslator::replaceOur(const CvWString& szKey, int iForm, CvWString& s
 	}
 	else
 	{
-		FAssertMsg(false, "Unknown Diplomacy String");
+		FErrorMsg("Unknown Diplomacy String");
 		return false;
 	}
 	return true;
@@ -151,7 +152,7 @@ bool CvDllTranslator::replaceCt(const CvWString& szKey, int iForm, CvWString& sz
 	}
 	else
 	{
-		FAssertMsg(false, "Unknown Diplomacy String");
+		FErrorMsg("Unknown Diplomacy String");
 		return false;
 	}
 	return true;

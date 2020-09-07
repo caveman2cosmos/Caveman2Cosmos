@@ -10,17 +10,17 @@
 
 # Version History
 # 9.1
-#     Added support for loading and resizing Civ4WorldBuilderSave files (WBS files), you'll
-#       find them in the 'continents' menu since they define the land shape for the map.
-#     Added support for loading terrains from map (WBS) see option: 'use map data' in terrain menu.
-#       This should resolve the 'unrealistic terrain' problem for the BlueMarble based maps as well.
-#     Sampled terrain from blue marble data for earth based maps.
-#     Tweaked 'earth' map option to remove useless antarctica.
-#     Tweaked player placement to be less willing to place players near the poles.
-#     Changed crazy resource option to place land/water resources only on those tiles.
-#     Split resource placement rules from resource density controls.  The combination of the
-#       two was creating too much confusion over what option did what to resources.  Hopefully
-#       the resource controls will be both clearer and give you more options now.
+#	 Added support for loading and resizing Civ4WorldBuilderSave files (WBS files), you'll
+#	   find them in the 'continents' menu since they define the land shape for the map.
+#	 Added support for loading terrains from map (WBS) see option: 'use map data' in terrain menu.
+#	   This should resolve the 'unrealistic terrain' problem for the BlueMarble based maps as well.
+#	 Sampled terrain from blue marble data for earth based maps.
+#	 Tweaked 'earth' map option to remove useless antarctica.
+#	 Tweaked player placement to be less willing to place players near the poles.
+#	 Changed crazy resource option to place land/water resources only on those tiles.
+#	 Split resource placement rules from resource density controls.  The combination of the
+#	   two was creating too much confusion over what option did what to resources.  Hopefully
+#	   the resource controls will be both clearer and give you more options now.
 #
 
 
@@ -38,13 +38,13 @@ from math import pi
 #stuff the user may want to configure
 
 #these are the resources you find only in water tiles
-resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONUS_PEARLS', 'BONUS_SHRIMP', 'BONUS_LOBSTER', 'BONUS_KELP')
+resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONUS_PEARLS', 'BONUS_SHRIMP', 'BONUS_LOBSTER')
 #these resources should be given more often than others
 resourcesCommon = ('BONUS_CORN', 'BONUS_COW', 'BONUS_DEER', 'BONUS_PIG', 'BONUS_RICE', 'BONUS_SHEEP', 'BONUS_WHEAT')
 #these resources are important early on, and will place extras unless using one of the 'stricter' options
-resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER', 'BONUS_IRON', 'BONUS_HORSE', 'BONUS_SULPHUR')
+resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_HORSE', 'BONUS_SULPHUR')
 #these are the strategic resources restricted by the 'restricted' settings
-resourcesStrategic = ('BONUS_IRON', 'BONUS_OIL', 'BONUS_URANIUM')
+resourcesStrategic = ('BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM')
 
 ##########################################################################
 #global variables
@@ -61,7 +61,7 @@ cardinalDirs = [(-1,0),(0,-1),(0,1),(1,0)]
 nearDirs = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
 #the set of tiles that can be used by a given tile if a city is built there
 playerStartCross = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1),
-                    (-2,-1),(-2,0),(-2,1),(2,-1),(2,0),(2,1),(-1,2),(0,2),(1,2),(-1,-2),(0,-2),(1,-2)]
+					(-2,-1),(-2,0),(-2,1),(2,-1),(2,0),(2,1),(-1,2),(0,2),(1,2),(-1,-2),(0,-2),(1,-2)]
 
 #a list of lists: of the continents, and all their land tiles
 postContinentLists = []
@@ -128,9 +128,9 @@ def getGridSize(argsList):
 
 	#calculate the map area and min dimension given the mapsize selection
 	#this data is (map area, minDimension)
-	#         Areas     Duel Tiny Small Standard Large Huge
-	#         SmartMap: 68   103  176   290      445   643
-	#         Standard: 60   104  160   273      416   640
+	#		 Areas	 Duel Tiny Small Standard Large Huge
+	#		 SmartMap: 68   103  176   290	  445   643
+	#		 Standard: 60   104  160   273	  416   640
 	#note that a 60x60 which is bigger than my 1Gig machine can handle
 	#would be 3600, or 3x the area of this huge
 	#the min dimension i've chosen is rounddown(sqrt((area / pi)))
@@ -139,16 +139,16 @@ def getGridSize(argsList):
 	[eWorldSize] = argsList
 	global sizeSelected
 	sizeSelected = eWorldSize
-	print "    sizeSelected",sizeSelected
+	print "	sizeSelected",sizeSelected
 
 	#This will yield the following areas for up to size 20:
 	# 68 103 176 290 445 643 884 1172 1508 1896 2338 2839 3404 4039 4751 5547 6439 7439 8560 9820
 	mapArea = int(127*(1.1971**sizeSelected)) + (17*sizeSelected*sizeSelected) + (-7*sizeSelected) + (-59)
 	minDimension = int( (mapArea / pi) ** 0.5 ) + 1
 	maxDimension = 1+int(mapArea / minDimension)
-	print "    mapArea",mapArea
-	print "    minDimension",minDimension
-	print "    maxDimension",maxDimension
+	print "	mapArea",mapArea
+	print "	minDimension",minDimension
+	print "	maxDimension",maxDimension
 
 	#calculate a random width that will fit the world size, base width is minDimension, with up to extra minDimension
 	calcwidth = minDimension + dice.get(maxDimension - minDimension, "Python: SmartMap: Dice: Random Continent X")
@@ -203,32 +203,32 @@ def getGridSize(argsList):
 
 	if overrideWidth > 0:
 		calcwidth = overrideWidth
-		print "    override width",overrideWidth
+		print "	override width",overrideWidth
 	if overrideHeight > 0:
 		calcheight = overrideHeight
-		print "    override height",overrideHeight
+		print "	override height",overrideHeight
 
 	if overrideWidth == -2:
 		calcwidth = 4 + dice.get(12, "Python: SmartMap: Dice: Random Width 16-64")
-		print "    override width",overrideWidth
+		print "	override width",overrideWidth
 	if overrideHeight == -2:
 		calcheight = 4 + dice.get(12, "Python: SmartMap: Dice: Random Height 16-64")
-		print "    override height",overrideHeight
+		print "	override height",overrideHeight
 	if overrideWidth == -3:
 		calcwidth = 8 + dice.get(24, "Python: SmartMap: Dice: Random Width 32-128")
-		print "    override width",overrideWidth
+		print "	override width",overrideWidth
 	if overrideHeight == -3:
 		calcheight = 8 + dice.get(24, "Python: SmartMap: Dice: Random Height 32-128")
-		print "    override height",overrideHeight
+		print "	override height",overrideHeight
 	if overrideWidth == -4:
 		calcwidth = 16 + dice.get(48, "Python: SmartMap: Dice: Random Width 64-256")
-		print "    override width",overrideWidth
+		print "	override width",overrideWidth
 	if overrideHeight == -4:
 		calcheight = 16 + dice.get(48, "Python: SmartMap: Dice: Random Height 64-256")
-		print "    override height",overrideHeight
+		print "	override height",overrideHeight
 
 	#return the computed width and height
-	print "    final width",calcwidth,"height",calcheight
+	print "	final width",calcwidth,"height",calcheight
 	OutputMessage("Python: SmartMap: Step 1 Setting Map Size: complete")
 	return (calcwidth,calcheight)
 
@@ -238,7 +238,7 @@ def getGridSize(argsList):
 #a user-selected option to control map wrapping
 def getWrapX():
 	lwrapX, lwrapY, centralPole = getSelectedMapValue("Wrap:")
-	print "    getWrapX: wrapX", lwrapX, "wrapY", lwrapY
+	print "	getWrapX: wrapX", lwrapX, "wrapY", lwrapY
 	return lwrapX
 
 ##########################################################################
@@ -247,7 +247,7 @@ def getWrapX():
 #a user-selected option to control map wrapping
 def getWrapY():
 	lwrapX, lwrapY, centralPole = getSelectedMapValue("Wrap:")
-	print "    getWrapY: wrapX", lwrapX, "wrapY", lwrapY
+	print "	getWrapY: wrapX", lwrapX, "wrapY", lwrapY
 	return lwrapY
 
 ##########################################################################
@@ -278,7 +278,7 @@ def generatePlotTypes():
 	OutputMessage("Python: SmartMap: Step 2 Setting Plot Types")
 
 	### Configuration
-	print "    in step two width",width,"height",height,"wrapxy",wrapX, wrapY
+	print "	in step two width",width,"height",height,"wrapxy",wrapX, wrapY
 	cymap = CyMap()
 	dice = GC.getGame().getMapRand()
 	widthLimit = width-1 #range of array is 0..width-1
@@ -304,7 +304,7 @@ def generatePlotTypes():
 	overrideSeparation = getSelectedMapValue("Override Separation:")
 	if overrideSeparation >= 0:
 		seaWidth = overrideSeparation
-	print "    seawidth",seaWidth
+	print "	seawidth",seaWidth
 
 	#Number of continents
 	singleTiles = False
@@ -319,7 +319,7 @@ def generatePlotTypes():
 	if isinstance(continentCount,str):
 		try:
 			if loadWorldBuilderMapData(continentCount):
-				print "    loaded map data successfully from map",continentCount
+				print "	loaded map data successfully from map",continentCount
 				continentCount = 0
 				fromMap = True
 				mapTileData = worldBuilderMapData
@@ -404,12 +404,12 @@ def generatePlotTypes():
 
 	if continentCount < 0:
 		continentCount = 1
-	print "    continentCount",continentCount
+	print "	continentCount",continentCount
 
 	#find out the land style
 	(roundFactor,fragPPT) = getSelectedMapValue("Land Style:")
-	print "    roundFactor", roundFactor
-	print "    fragPPT", fragPPT
+	print "	roundFactor", roundFactor
+	print "	fragPPT", fragPPT
 
 	#figure out how much of the map is supposed to be ocean
 	noLakes = False
@@ -479,7 +479,7 @@ def generatePlotTypes():
 		greatLakes = True
 
 
-	print "    percentOcean",percentOcean
+	print "	percentOcean",percentOcean
 
 	percentHills = getSelectedMapValue("Hills:")
 	if percentHills == -1:
@@ -490,7 +490,7 @@ def generatePlotTypes():
 		percentHills = 14 + dice.get(14, "Python: SmartMap: Dice: normal Random Hills %")
 	if climate == climateRocky:
 		percentHills += 6
-	print "    percentHills",percentHills
+	print "	percentHills",percentHills
 
 	percentPeaks = getSelectedMapValue("Peaks:")
 	noBlockPeaks = False
@@ -511,11 +511,11 @@ def generatePlotTypes():
 		noBlockPeaks = True
 	if climate == climateRocky:
 		percentPeaks += 4
-	print "    percentPeaks",percentPeaks
+	print "	percentPeaks",percentPeaks
 
 	(riverPct,lakePct) = getSelectedMapValue("Rivers/Lakes:")
-	print "    riverPct",riverPct
-	print "    lakePct",lakePct
+	print "	riverPct",riverPct
+	print "	lakePct",lakePct
 
 	if percentOcean == -4:
 		lakePct += 100
@@ -549,7 +549,7 @@ def generatePlotTypes():
 		canBeLandLists.append([])
 
 	setupSpaceHash()
-	print "    landToPlace",landToPlace,"fragLandCount",fragLandCount,"expectedLandPlotCount",expectedLandPlotCount,"from total tiles:", usefulPlotCount
+	print "	landToPlace",landToPlace,"fragLandCount",fragLandCount,"expectedLandPlotCount",expectedLandPlotCount,"from total tiles:", usefulPlotCount
 
 	### Generate continents
 	#make a list for each continent
@@ -595,14 +595,14 @@ def generatePlotTypes():
 						plotTypes[indexA] = PlotTypes.PLOT_LAND
 						spaceHashItem(initX,initY,contIndex)
 						ownerContinents[indexA] = contIndex
-						print "    initial tile addition",continentList,indexA
+						print "	initial tile addition",continentList,indexA
 						for nearDir in nearDirs:
 							usablePlotX,usablePlotY = getTileCoordXYWithWrap((initX,initY),nearDir)
 							usableIndex = getTileIndexAtXY(usablePlotX,usablePlotY)
 							if plotTypes[usableIndex] == PlotTypes.PLOT_OCEAN:
 								canBeLandLists[contIndex].append((usablePlotX,usablePlotY))
 
-						print "    canbeland",canBeLandLists[contIndex]
+						print "	canbeland",canBeLandLists[contIndex]
 						break
 
 		#remove any continent that couldn't be placed
@@ -617,7 +617,7 @@ def generatePlotTypes():
 					del continentLists[indexB]
 					del canBeLandLists[indexB]
 					break
-		print "    placed continents", len(continentLists)
+		print "	placed continents", len(continentLists)
 
 		#generate land plots
 
@@ -703,7 +703,7 @@ def generatePlotTypes():
 
 				#this land plot is not going to touch any other continent so place
 				if (index < 0 or index > (width*height)-1):
-					print "    possibly illegal place land at x",newX,"y",newY,"width",width,"height",height,"index",index
+					print "	possibly illegal place land at x",newX,"y",newY,"width",width,"height",height,"index",index
 				plotTypes[index] = PlotTypes.PLOT_LAND
 				ownerContinents[index] = contIndex
 				continentLists[contIndex].append((newX,newY))
@@ -720,10 +720,10 @@ def generatePlotTypes():
 						roundTest = dice.get(1000, "Python: SmartMap: Dice: Random Continent growth bending")
 						if roundTest < roundChance:
 							canBeLandLists[contIndex].append((usablePlotX,usablePlotY))
-		print "    placed",landPlaced," initial land"
+		print "	placed",landPlaced," initial land"
 
 		#fill in any one tile lakes caused by wierd growth patterns
-		print "    remove single tile lakes"
+		print "	remove single tile lakes"
 		for x in range(width):
 			for y in range(height):
 				countNearLand = 0
@@ -757,10 +757,10 @@ def generatePlotTypes():
 					ownerContinents[tileIndex] = ownerCont
 					continentLists[ownerCont].append((x,y))
 					continue
-		print "    removed",restoreLake,"single tile lakes"
+		print "	removed",restoreLake,"single tile lakes"
 
 		#place some random land fragments
-		print "    try to place",fragLandCount,"land fragment tiles"
+		print "	try to place",fragLandCount,"land fragment tiles"
 		#tries is used to ensure that this can't loop forever
 		tries=0
 		fragPlaced = 0
@@ -851,7 +851,7 @@ def generatePlotTypes():
 				fragSize += 1
 				continentLists[listToAddIndex].append((gx,gy))
 
-		print "    placed",fragPlaced,"frag tiles","out of required",fragLandCount,"in",fragCount,"chunks in",tries,"tries"
+		print "	placed",fragPlaced,"frag tiles","out of required",fragLandCount,"in",fragCount,"chunks in",tries,"tries"
 
 	else:
 		continentLists = []
@@ -863,7 +863,7 @@ def generatePlotTypes():
 	#generate hills on land plots
 	allLandList = getPlotsOfTypes(plotTypes, [PlotTypes.PLOT_LAND])
 	hillPlotCount = int((percentHills * len(allLandList)) / 100)
-	print "    hillPlotCount",hillPlotCount,"from land tiles:", len(allLandList)
+	print "	hillPlotCount",hillPlotCount,"from land tiles:", len(allLandList)
 	firstPlotCount = int((3*hillPlotCount)/4)
 
 	#first portion of hills are placed randomly
@@ -871,7 +871,7 @@ def generatePlotTypes():
 	#tries is used to ensure that this can't loop forever
 	hillPlaced = 0
 	hillsSoFar = []
-	print "      place initial hills"
+	print "	  place initial hills"
 	while (hillPlaced < firstPlotCount and tries < 5 * firstPlotCount):
 		tries+=1
 		indexListB = dice.get(len(allLandList), "Python: SmartMap: Dice: Random Continent listIndex")
@@ -896,7 +896,7 @@ def generatePlotTypes():
 		plotTypes[index] = PlotTypes.PLOT_HILLS
 		hillPlaced += 1
 		hillsSoFar.append((existingX, existingY))
-	print "      placed",hillPlaced," initial hills"
+	print "	  placed",hillPlaced," initial hills"
 
 
 	#second portion of hills must touch a hill
@@ -904,7 +904,7 @@ def generatePlotTypes():
 	#tries is used to ensure that this can't loop forever
 	secondPlotCount = int(1*hillPlotCount/4)
 	secondHillPlaced = 0
-	print "      place neighbor hills"
+	print "	  place neighbor hills"
 	while (secondHillPlaced < secondPlotCount and tries < 5 * secondPlotCount):
 		tries+=1
 		indexListC = dice.get(len(allLandList), "Python: SmartMap: Dice: Random Continent listIndex")
@@ -922,15 +922,15 @@ def generatePlotTypes():
 					plotTypes[existingIndex] = PlotTypes.PLOT_HILLS
 					secondHillPlaced += 1
 					break #don't have to look any further
-	print "      placed",secondHillPlaced," neighbor hills"
+	print "	  placed",secondHillPlaced," neighbor hills"
 
 
 	totalHillsPlaced = hillPlaced + secondHillPlaced
-	print "    placed",totalHillsPlaced,"hills out of max",hillPlotCount
+	print "	placed",totalHillsPlaced,"hills out of max",hillPlotCount
 
 	#generate peaks near hills
 	peakPlotCount = int((percentPeaks) * len(allLandList) / 100)
-	print "    peakPlotCount",peakPlotCount,"from land tiles:", len(allLandList)
+	print "	peakPlotCount",peakPlotCount,"from land tiles:", len(allLandList)
 
 	#peaks must touch a hill
 	tries=0
@@ -953,8 +953,8 @@ def generatePlotTypes():
 					plotTypes[existingIndex] = PlotTypes.PLOT_PEAK
 					peakPlaced += 1
 					break #don't have to consider any more dirs
-	#				print "    land tile addition",continentList
-	print "    placed",peakPlaced,"peaks out of max",peakPlotCount
+	#				print "	land tile addition",continentList
+	print "	placed",peakPlaced,"peaks out of max",peakPlotCount
 
 	#place some random lakes
 	lakePlotCount = int((1+int(sizeSelected)) * len(allLandList) / 600)
@@ -964,7 +964,7 @@ def generatePlotTypes():
 	if len(allLandList) - lakePlotCount < expectedLandPlotCount:
 		lakePlotCount = len(allLandList) - expectedLandPlotCount
 
-	print "    try to place",lakePlotCount,"lake tiles"
+	print "	try to place",lakePlotCount,"lake tiles"
 	#tries is used to ensure that this can't loop forever
 	tries=0
 	lakePlaced = 0
@@ -1045,7 +1045,7 @@ def generatePlotTypes():
 							if lakeSize > largestLake:
 								largestLake = lakeSize
 
-	print "    placed",lakePlaced,"lake tiles","out of required",lakePlotCount,"in",lakeCount,"lakes, with largest",largestLake
+	print "	placed",lakePlaced,"lake tiles","out of required",lakePlotCount,"in",lakeCount,"lakes, with largest",largestLake
 
 	#central or other sea option placed here
 	if centralSea or cornerSea or edgeSea or greatLakes:
@@ -1079,7 +1079,7 @@ def generatePlotTypes():
 		#fixme
 		seaPlotCount = int(seaPlotCount / numGreatLakes)
 		for seaPosition in seaPositions:
-			print "    try to place central sea",seaPlotCount,"lake tiles at",seaPosition
+			print "	try to place central sea",seaPlotCount,"lake tiles at",seaPosition
 			#tries is used to ensure that this can't loop forever
 			tries=0
 			seaPlaced = 0
@@ -1099,17 +1099,17 @@ def generatePlotTypes():
 					seaPlaced += 1
 					usedSeaLocs.append((growX,growY))
 
-			print "    placed",seaPlaced,"sea tiles","out of required",seaPlotCount
+			print "	placed",seaPlaced,"sea tiles","out of required",seaPlotCount
 
 	#correct the ocean percentage since we may have placed too many land earlier
-	print "    fix ocean percentage"
+	print "	fix ocean percentage"
 
 	#recalculate land count
 	allLandList = getPlotsOfTypes(plotTypes, landPlotTypes)
 	currentLandPlotCount = len(allLandList)
 
 	landRemovalTries = 0
-	print "    remove extra land currentLandPlotCount",currentLandPlotCount,"expectedLandPlotCount",expectedLandPlotCount
+	print "	remove extra land currentLandPlotCount",currentLandPlotCount,"expectedLandPlotCount",expectedLandPlotCount
 	while currentLandPlotCount > expectedLandPlotCount and landRemovalTries < expectedLandPlotCount * 2048:
 		landRemovalTries += 1
 		rmIndex = dice.get(len(allLandList), "Python: SmartMap: Dice: Land removal X")
@@ -1125,7 +1125,7 @@ def generatePlotTypes():
 				allLandList.remove((rmX,rmY))
 				currentLandPlotCount -= 1
 				break
-	print "    remove extra land completed currentLandPlotCount",currentLandPlotCount,"expectedLandPlotCount",expectedLandPlotCount
+	print "	remove extra land completed currentLandPlotCount",currentLandPlotCount,"expectedLandPlotCount",expectedLandPlotCount
 
 	if fromMap:
 		minX = int((minXPct * len(mapTileData[0]))/100)
@@ -1167,8 +1167,8 @@ def generatePlotTypes():
 
 
 	if singleTiles:
-		print "    make all land into single tile isles"
-		print "      processing",len(allLandList),"plots of land"
+		print "	make all land into single tile isles"
+		print "	  processing",len(allLandList),"plots of land"
 		while len(allLandList) > 0:
 			landIndex = dice.get(len(allLandList), "Python: SmartMap: Dice: Random Sea listIndex")
 			lx, ly = allLandList[landIndex]
@@ -1183,7 +1183,7 @@ def generatePlotTypes():
 			allLandList.remove((lx,ly))
 
 	if noBlockPeaks:
-		print "    flatten blocking peaks to hills"
+		print "	flatten blocking peaks to hills"
 		flattened = 0
 		for x,y in allLandList:
 			tileIndex = getTileIndexAtXY(x,y)
@@ -1212,7 +1212,7 @@ def generatePlotTypes():
 				plotTypes[tileIndex] = PlotTypes.PLOT_HILLS
 				flattened += 1
 				continue
-		print "      flattened",flattened,"peaks"
+		print "	  flattened",flattened,"peaks"
 
 
 	if not centralSea and not cornerSea and not edgeSea and not greatLakes and not fromMap:
@@ -1220,7 +1220,7 @@ def generatePlotTypes():
 		#insert a transformation to put the widest vertical ocean on the x-wrap
 		transPlotTypes = plotTypes[:]
 		if wrapX:
-			print "    execute x-wrap transformation"
+			print "	execute x-wrap transformation"
 			maxVerticalOcean = 0
 			verticalOceanLocation = [1]
 			for x in range(width):
@@ -1252,7 +1252,7 @@ def generatePlotTypes():
 			usedLocs.sort()
 			actualWrapLocation = usedLocs[int(len(usedLocs)/2)]
 			actualWrapLocation += 1
-			print "    wrap X at",actualWrapLocation,"chosen from",usedLocs
+			print "	wrap X at",actualWrapLocation,"chosen from",usedLocs
 			#transform the resultplottypes by x
 			for x in range(width):
 				for y in range(height):
@@ -1266,7 +1266,7 @@ def generatePlotTypes():
 		#insert a transformation to put the widest horizontal ocean on the y-wrap
 		transPlotTypes = plotTypes[:]
 		if wrapY:
-			print "    execute y-wrap transformation"
+			print "	execute y-wrap transformation"
 			maxHorizontalOcean = 0
 			horizontalOceanLocation = [1]
 			for y in range(height):
@@ -1298,7 +1298,7 @@ def generatePlotTypes():
 			usedLocs.sort()
 			actualWrapLocation = usedLocs[int(len(usedLocs)/2)]
 			actualWrapLocation += 1
-			print "    wrap Y at",actualWrapLocation,"chosen from",usedLocs
+			print "	wrap Y at",actualWrapLocation,"chosen from",usedLocs
 			#transform the resultplottypes by y
 			for x in range(width):
 				for y in range(height):
@@ -1362,11 +1362,11 @@ def generateTerrainTypes():
 			if not pPlot.isWater():
 				totalLandCount += 1
 	pctLand = int((100*totalLandCount)/totalPlotCount)
-	print "    step 3 totalLandCount",totalLandCount,"from total",totalPlotCount,"pct land",pctLand,"pct ocean",100-pctLand
+	print "	step 3 totalLandCount",totalLandCount,"from total",totalPlotCount,"pct land",pctLand,"pct ocean",100-pctLand
 
 	#find out the user selected terrain method
 	terrainMethod = getSelectedMapValue("Terrain:")
-	print "    terrainMethod",terrainMethod
+	print "	terrainMethod",terrainMethod
 
 	useMapData = False
 
@@ -1441,7 +1441,7 @@ def generateTerrainTypes():
 	extraRiverPct = 1+int((extraRiverPct*riverPct)/100)
 
 
-	print "    generate rivers"
+	print "	generate rivers"
 	#first pass: place rivers.  if you don't place rivers first
 	#then oasis and floodplains are impossible
 	#1 in 1000 hills or 1 in 200 peaks spawns a river in a random direction
@@ -1517,8 +1517,8 @@ def generateTerrainTypes():
 			percentFromPoleXY = percentFromPole(rx,ry)
 			riverOdds = dice.get(10000, "Python: SmartMap: Dice: River Placement Odds")
 			if ( (pPlot.isHills() and riverOdds < int(((400+(3*hillBonus)+(5*extraRiverPct)+(2*percentFromEquatorXY)+(2*percentFromPoleXY)+(3*int(plotAltitude*plotAltitude/20)))*extraRiverPct)/100)) or
-			     (pPlot.isPeak() and riverOdds < int(((2400+extraRiverPct+(10*percentFromEquatorXY)+(10*percentFromPoleXY)+(12*int(plotAltitude*plotAltitude/20)))*extraRiverPct)/100))
-			     ):
+				 (pPlot.isPeak() and riverOdds < int(((2400+extraRiverPct+(10*percentFromEquatorXY)+(10*percentFromPoleXY)+(12*int(plotAltitude*plotAltitude/20)))*extraRiverPct)/100))
+				 ):
 				riverDirIndex = dice.get(len(riverDirTypes), "Python: SmartMap: Dice: River Placement")
 				CyMapGenerator().doRiver(pPlot, riverDirTypes[riverDirIndex])
 
@@ -1553,7 +1553,7 @@ def generateTerrainTypes():
 	if extraJungle < 0:
 		extraDesert += 3
 
-	print "    generate terrain"
+	print "	generate terrain"
 	#default generation method: SmartMap terrain
 	terrainData = [TerrainTypes.NO_TERRAIN]*(width*height)
 
@@ -1567,7 +1567,7 @@ def generateTerrainTypes():
 	terrainIce = GC.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = GC.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = GC.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = GC.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = GC.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -1695,7 +1695,7 @@ def generateTerrainTypes():
 				if climate == climateTropical:
 					desertWaterFactor = waterFactor
 				if not noDesert and (percentFromEquatorXY<(42+desertWidthFactor+plotAltitudeFactor) and
-				    #desertRand < 60+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
+					#desertRand < 60+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
 					desertRand < 40+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
 					terrainData[index] = terrainDesert
 					continue
@@ -1891,7 +1891,7 @@ def addRivers():
 
 	#find out the user selected terrain method
 	terrainMethod = getSelectedMapValue("Terrain:")
-	print "    riverMethod",terrainMethod
+	print "	riverMethod",terrainMethod
 
 	standardRiverMethods = ["standard","great plains","oasis"]
 	if terrainMethod in standardRiverMethods:
@@ -1910,7 +1910,7 @@ def addLakes():
 
 	#find out the user selected terrain method
 	terrainMethod = getSelectedMapValue("Terrain:")
-	print "    lakeMethod",terrainMethod
+	print "	lakeMethod",terrainMethod
 
 	standardLakeMethods = ["standard","great plains","oasis"]
 	if terrainMethod in standardLakeMethods:
@@ -1936,7 +1936,7 @@ def addFeatures():
 
 	#find out the user selected terrain method
 	featureMethod = getSelectedMapValue("Features:")
-	print "    featureMethod",featureMethod
+	print "	featureMethod",featureMethod
 
 	#we have to recompute wetness in case we used standard river or lake methods
 	preComputeWetness()
@@ -2013,7 +2013,7 @@ def addFeatures():
 	featOasis = GC.getInfoTypeForString("FEATURE_OASIS")
 	featFlood = GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = GC.getInfoTypeForString("FEATURE_FOREST")
-	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO")
+	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE")
 	terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
 	terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
@@ -2021,7 +2021,7 @@ def addFeatures():
 
 
 	lastFeature = featForest
-	print "    generate smartmap features"
+	print "	generate smartmap features"
 	for x in range(width):
 		for y in range(height):
 			#force ice at poles
@@ -2078,7 +2078,7 @@ def addFeatures():
 			if terrainType == terrainDesert:
 				oasisBonus += 15
 			if (pPlot.isFlatlands() and not pPlot.isFreshWater() and oasisOdds<5+extraOasis+oasisBonus and
-			    (terrainType == terrainDesert or terrainType == terrainTundra)):
+				(terrainType == terrainDesert or terrainType == terrainTundra)):
 				if not strict or pPlot.canHaveFeature(featOasis):
 					pPlot.setFeatureType(featOasis,-1)
 					lastFeature = featOasis
@@ -2166,9 +2166,9 @@ def addBonuses():
 
 	#find out the user selected terrain method
 	bonusMethod = getSelectedMapValue("Bonus Placement:")
-	print "    bonusMethod",bonusMethod
+	print "	bonusMethod",bonusMethod
 	densityStrategic, densityHappy, densityOther = getSelectedMapValue("Bonus Density:")
-	print "    densityStrategic",densityStrategic,"densityHappy",densityHappy,"densityOther",densityOther
+	print "	densityStrategic",densityStrategic,"densityHappy",densityHappy,"densityOther",densityOther
 
 	if bonusMethod == "standard":
 		CyPythonMgr().allowDefaultImpl()
@@ -2245,18 +2245,18 @@ def addBonuses():
 		bonusId, order = bonusIdAndOrder
 		bonusInfoXML = GC.getBonusInfo(bonusId)
 		type_string = bonusInfoXML.getType()
-		print "    place bonus",type_string
+		print "	place bonus",type_string
 
 		if bonusInfoXML.getHappiness() > 0 and clumpHappy:
 			addBonusType([bonusId])
-			print "      using standard placement due to clump happy"
+			print "	  using standard placement due to clump happy"
 			continue
 		if bonusInfoXML.getHealth() > 0 and clumpHealth:
 			addBonusType([bonusId])
-			print "      using standard placement due to clump health"
+			print "	  using standard placement due to clump health"
 			continue
 
-		print "      using smartmap placement"
+		print "	  using smartmap placement"
 		#find out how many players in game, and make sure there are some for each
 		playerFactor = players/6 #one per six players
 
@@ -2292,7 +2292,7 @@ def addBonuses():
 		else:
 			count = int((densityOther*count)/100)
 
-		print "    for bonus type",type_string,"expecting to place a total of:",count,"of this bonus"
+		print "	for bonus type",type_string,"expecting to place a total of:",count,"of this bonus"
 
 		#compute the fair shares of each resource each continent is due
 		#first, decide which continents will participate, including only continents that are sufficiently big
@@ -2304,7 +2304,7 @@ def addBonuses():
 					fairShareContinents.append(continentList)
 
 			#if there are no continents big enough for this, skip fair sharing
-			print "      fair share over", len(fairShareContinents),"continents"
+			print "	  fair share over", len(fairShareContinents),"continents"
 			if len(fairShareContinents) > 0:
 				shares = []
 				smallestFairShareContinent = len(fairShareContinents[0])
@@ -2326,7 +2326,7 @@ def addBonuses():
 				#if there are enough of this resource to apply the expected shares
 				if totalSharesNeeded < count:
 					#this tries to give each continent a fair share of each resource
-					print "    attempting to fair-share",totalSharesNeeded,"out of",count,"of",type_string,"over",len(fairShareContinents),"continents"
+					print "	attempting to fair-share",totalSharesNeeded,"out of",count,"of",type_string,"over",len(fairShareContinents),"continents"
 					for contIndex in range(len(fairShareContinents)):
 						contShare = multiplier * shares[contIndex]
 						continentList = fairShareContinents[contIndex]
@@ -2393,7 +2393,7 @@ def addBonuses():
 					break
 
 		tries = 0
-		print "    fair share added",added,"now place remaining",count-added,"of",type_string,"on",len(eligible[bonusId]),"tiles"
+		print "	fair share added",added,"now place remaining",count-added,"of",type_string,"on",len(eligible[bonusId]),"tiles"
 		while added < count and tries < 100:
 			tries += 1
 			if eligible[bonusId] == []:
@@ -2472,11 +2472,11 @@ def addBonuses():
 
 			eligible[bonusId].remove(lowScore[index]) # Remove this plot from the eligible list, we used it
 		if added == 0:
-			print "    failed to add type",type_string,"from count",count
+			print "	failed to add type",type_string,"from count",count
 		elif added > 0 and count-added > 0:
-			print "    added",added,"of type",type_string,"and failed remaining",count-added
+			print "	added",added,"of type",type_string,"and failed remaining",count-added
 		elif added > 0:
-			print "    added all",added,"of type",type_string,"successfully"
+			print "	added all",added,"of type",type_string,"successfully"
 		# This bonus type is done.
 
 	OutputMessage("Python: SmartMap: Step 5 Add bonuses: complete")
@@ -2504,7 +2504,7 @@ def addGoodies():
 
 	#find out the user selected terrain method
 	bonusMethod = getSelectedMapValue("Goodies:")
-	print "    hutMethod (uses bonusMethod)",bonusMethod
+	print "	hutMethod (uses bonusMethod)",bonusMethod
 
 	if bonusMethod == "standard":
 		CyPythonMgr().allowDefaultImpl()
@@ -2587,7 +2587,7 @@ def assignStartingPlots():
 
 	#find out the user selected placement method
 	placeMethod = getSelectedMapValue("Start Placement:")
-	print "    placeMethod",placeMethod
+	print "	placeMethod",placeMethod
 
 	if placeMethod == "standard":
 		CyPythonMgr().allowDefaultImpl()
@@ -2626,7 +2626,7 @@ def assignStartingPlots():
 	#now we know how the players get distributed per continent
 	#so we just have to pick the particular starting plot on each continent per player
 
-	print "    start pre-computing plot scores"
+	print "	start pre-computing plot scores"
 	#pre-compute plot scores for all land plots
 	plotScores = [0]*(width*height)
 	baseScores = [0]*(width*height)
@@ -2747,10 +2747,10 @@ def assignStartingPlots():
 						pickedScore += 400
 
 			plotScores[pindex] = pickedScore
-	print "    finished pre-computing plot scores"
+	print "	finished pre-computing plot scores"
 
 	#now for each continent, figure out the total score of all the land tiles it owns
-	print "    score continents"
+	print "	score continents"
 	postContinentScores = []
 	for postContinentList in postContinentLists:
 		totalYield = int(((len(postContinentList)) * 1000) / (width*height))
@@ -2761,7 +2761,7 @@ def assignStartingPlots():
 		postContinentScores.append(totalYield)
 		print "continent length:",len(postContinentList), "scored:",totalYield
 
-	print "    postContinentScores", postContinentScores
+	print "	postContinentScores", postContinentScores
 
 	players = GC.getGame().countCivPlayersEverAlive()
 
@@ -2874,7 +2874,7 @@ def assignStartingPlots():
 
 				alternativeTheory.append((contList,score,numPlayers))
 
-			print "    minScore",minScore,"maxScore",maxScore,"theory altminScore",altminScore,"theory altmaxScore",altmaxScore
+			print "	minScore",minScore,"maxScore",maxScore,"theory altminScore",altminScore,"theory altmaxScore",altmaxScore
 			for setIndex in range(len(alternativeTheory)):
 				contList, score, numPlayers = alternativeTheory[setIndex]
 				scorePP = score
@@ -2890,13 +2890,13 @@ def assignStartingPlots():
 			if altminScore > minScore:
 				listsScoresPlayers = alternativeTheory
 				anyImbalance = True
-				print "    theory succeeds on minScore"
+				print "	theory succeeds on minScore"
 			elif altminScore == minScore and altmaxScore < maxScore:
 				listsScoresPlayers = alternativeTheory
 				anyImbalance = True
-				print "    theory succeeds on maxScore"
+				print "	theory succeeds on maxScore"
 			else:
-				print "    theory fails"
+				print "	theory fails"
 
 	#now we know how many players will be placed on each continent
 	for setIndex in range(len(listsScoresPlayers)):
@@ -2916,7 +2916,7 @@ def assignStartingPlots():
 		contList, score, numPlayers = listsScoresPlayers[index]
 		if numPlayers <= 0:
 			continue
-		print "    find placements for continent", index, "with players", numPlayers
+		print "	find placements for continent", index, "with players", numPlayers
 
 		#keep track of the best scoring plots (the winner we'll use)
 		bestScore = 0
@@ -2926,7 +2926,7 @@ def assignStartingPlots():
 		#finally chosen plots must come reasonably close to maximum separation
 		bestMinSeparation = 0
 
-		print "    estimate continent separation for continent",index
+		print "	estimate continent separation for continent",index
 		#calculate a base expected separation
 		maxPossibleSeparation = 0
 		for tries in range(128 * numPlayers):
@@ -2941,7 +2941,7 @@ def assignStartingPlots():
 
 		demandSeparation = int(65*(maxPossibleSeparation/(numPlayers+2))/100)
 		demandSeparation = max(demandSeparation, 5)
-		print "    continent", index, "estimated initial separation", demandSeparation, " with total tiles", len(contList)
+		print "	continent", index, "estimated initial separation", demandSeparation, " with total tiles", len(contList)
 
 		tryLimit = 50 + (250 * numPlayers * (numPlayers-1))
 		for tries in range(tryLimit):
@@ -3029,11 +3029,11 @@ def assignStartingPlots():
 					bestScore = totalScore
 					bestSeparation = minSeparation
 					bestPickedPlotsXY = plotSet
-					print "      new bestPickedPlotsXY",bestPickedPlotsXY,"sep",bestSeparation,"score",bestScore,"demand",demandSeparation,"numPlayers",numPlayers,"tries",tries
+					print "	  new bestPickedPlotsXY",bestPickedPlotsXY,"sep",bestSeparation,"score",bestScore,"demand",demandSeparation,"numPlayers",numPlayers,"tries",tries
 					demandSeparation += 1
 
 
-		print "    found placements for continent", index, "with players", numPlayers, "places",bestPickedPlotsXY
+		print "	found placements for continent", index, "with players", numPlayers, "places",bestPickedPlotsXY
 		for plotXY in bestPickedPlotsXY:
 			if not plotXY in finalPlots:
 				finalPlots.append(plotXY)
@@ -3046,7 +3046,7 @@ def assignStartingPlots():
 				dist = int(((distX*distX) + (distY*distY))**0.5)
 				if minDist == -1 or dist < minDist:
 					minDist = dist
-	print "    tentative player Plots",finalPlots,"minimum distance is",minDist
+	print "	tentative player Plots",finalPlots,"minimum distance is",minDist
 
 
 	#now that we have very good plots, check nearby and make sure we didn't make a close miss
@@ -3079,7 +3079,7 @@ def assignStartingPlots():
 				dist = int(((distX*distX) + (distY*distY))**0.5)
 				if minAltDist == -1 or dist < minAltDist:
 					minAltDist = dist
-	print "    final player Plots",finalPlots,"minimum distance is",minDist
+	print "	final player Plots",finalPlots,"minimum distance is",minDist
 
 	if minAltDist >= minDist or minAltDist > 4:
 		finalPlots = altFinalPlots
@@ -3138,330 +3138,330 @@ def assignStartingPlots():
 # Stuff associated with menus
 ###########################################################################
 selection_titles = [unicode("Continents:"),
-                   unicode("Terrain:"),
-                   unicode("Features:"),
-                   unicode("Bonus Placement:"),
-                   unicode("Bonus Density:"),
-                   unicode("Goodies:"),
-                   unicode("Ocean:"),
-                   unicode("Hills:"),
-                   unicode("Peaks:"),
-                   unicode("Forest/Jungle:"),
-                   unicode("Rivers/Lakes:"),
-                   unicode("Land Style:"),
-                   unicode("Start Placement:"),
-                   unicode("Wrap:"),
-                   unicode("Override Width:"),
-                   unicode("Override Height:"),
-                   unicode("Override Separation:"),
-                   ]
+				   unicode("Terrain:"),
+				   unicode("Features:"),
+				   unicode("Bonus Placement:"),
+				   unicode("Bonus Density:"),
+				   unicode("Goodies:"),
+				   unicode("Ocean:"),
+				   unicode("Hills:"),
+				   unicode("Peaks:"),
+				   unicode("Forest/Jungle:"),
+				   unicode("Rivers/Lakes:"),
+				   unicode("Land Style:"),
+				   unicode("Start Placement:"),
+				   unicode("Wrap:"),
+				   unicode("Override Width:"),
+				   unicode("Override Height:"),
+				   unicode("Override Separation:"),
+				   ]
 
 #dropdown list names and corresponding values used in code
 selection_names_and_values = [
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["no continents (all fragments)",0,True],
-	                   ["1 pangea",1,True],
-	                   ["2 huge lands",2,True],
-	                   ["3 large lands",3,True],
-	                   ["4 continents",4,True],
-	                   ["5 continents",5,True],
-	                   ["6 continents",6,True],
-	                   ["7 continents",7,True],
-	                   ["8 continents",8,True],
-	                   ["12 islands",12,True],
-	                   ["18 isles",18,True],
-	                   ["24 isles",24,False],
-	                   ["36 islets",36,False],
-	                   ["single tile isles",-20,False],
-	                   ["earth",-30,False],
-	                   ["north america",-31,False],
-	                   ["south america",-32,False],
-	                   ["africa",-33,False],
-	                   ["asia",-34,False],
-	                   ["australia",-35,False],
-	                   ["europe",-36,False],
-	                   ["1 per player",-7,True],
-	                   ["1 per 2 players",-8,False],
-	                   ["1 per 3 players",-9,False],
-	                   ["1 per 4 players",-10,False],
-	                   ["2 per player",-11,True],
-	                   ["3 per player",-12,False],
-	                   ["4 per player",-13,False],
-	                   ["random 1-6",-1,True],
-	                   ["random 2-5",-2,True],
-	                   ["random 3-8",-3,True],
-	                   ["random 4-12",-4,True],
-	                   ["random 1-12",-6,True],
-	                   ["random 2-7",-5,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["standard","standard",True],
-	                   ["great plains","great plains",True],
-	                   ["oasis","oasis",True],
-	                   ["use map data","use map data",False],
-	                   ["SmartMap Crazy","SmartMap Crazy",False],
-	                   ["SmartMap no snow","SmartMap no snow",True],
-	                   ["SmartMap no desert","SmartMap no desert",True],
-	                   ["SmartMap no snow/desert","SmartMap no snow/desert",True],
-	                   ["SmartMap no snow/desert/tundra","SmartMap no snow/desert/tundra",True],
-	                   ["SmartMap only plains","SmartMap only plains",True],
-	                   ["SmartMap only grass","SmartMap only grass",True],
-	                   ["SmartMap extra grass","SmartMap extra grass",True],
-	                   ["SmartMap extra plains","SmartMap extra plains",True],
-	                   ["SmartMap","SmartMap",True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["standard","standard",True],
-	                   ["great plains","great plains",True],
-	                   ["oasis","oasis",True],
-	                   ["SmartMap Insane","SmartMap Insane",False],
-	                   ["SmartMap Crazy","SmartMap Crazy",False],
-	                   ["SmartMap","SmartMap",False],
-	                   ["SmartMap Strict","SmartMap Strict",True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["standard","standard",True],
-	                   ["None","None",True],
-	                   ["SmartMap Crazy","SmartMap Crazy",False],
-	                   ["SmartMap Clump Happy","SmartMap Clump Happy",True],
-	                   ["SmartMap Clump Health","SmartMap Clump Health",True],
-	                   ["SmartMap Clump Both","SmartMap Clump Both",True],
-	                   ["SmartMap Normal","SmartMap Normal",True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["no continents (all fragments)",0,True],
+					   ["1 pangea",1,True],
+					   ["2 huge lands",2,True],
+					   ["3 large lands",3,True],
+					   ["4 continents",4,True],
+					   ["5 continents",5,True],
+					   ["6 continents",6,True],
+					   ["7 continents",7,True],
+					   ["8 continents",8,True],
+					   ["12 islands",12,True],
+					   ["18 isles",18,True],
+					   ["24 isles",24,False],
+					   ["36 islets",36,False],
+					   ["single tile isles",-20,False],
+					   ["earth",-30,False],
+					   ["north america",-31,False],
+					   ["south america",-32,False],
+					   ["africa",-33,False],
+					   ["asia",-34,False],
+					   ["australia",-35,False],
+					   ["europe",-36,False],
+					   ["1 per player",-7,True],
+					   ["1 per 2 players",-8,False],
+					   ["1 per 3 players",-9,False],
+					   ["1 per 4 players",-10,False],
+					   ["2 per player",-11,True],
+					   ["3 per player",-12,False],
+					   ["4 per player",-13,False],
+					   ["random 1-6",-1,True],
+					   ["random 2-5",-2,True],
+					   ["random 3-8",-3,True],
+					   ["random 4-12",-4,True],
+					   ["random 1-12",-6,True],
+					   ["random 2-7",-5,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["standard","standard",True],
+					   ["great plains","great plains",True],
+					   ["oasis","oasis",True],
+					   ["use map data","use map data",False],
+					   ["SmartMap Crazy","SmartMap Crazy",False],
+					   ["SmartMap no snow","SmartMap no snow",True],
+					   ["SmartMap no desert","SmartMap no desert",True],
+					   ["SmartMap no snow/desert","SmartMap no snow/desert",True],
+					   ["SmartMap no snow/desert/tundra","SmartMap no snow/desert/tundra",True],
+					   ["SmartMap only plains","SmartMap only plains",True],
+					   ["SmartMap only grass","SmartMap only grass",True],
+					   ["SmartMap extra grass","SmartMap extra grass",True],
+					   ["SmartMap extra plains","SmartMap extra plains",True],
+					   ["SmartMap","SmartMap",True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["standard","standard",True],
+					   ["great plains","great plains",True],
+					   ["oasis","oasis",True],
+					   ["SmartMap Insane","SmartMap Insane",False],
+					   ["SmartMap Crazy","SmartMap Crazy",False],
+					   ["SmartMap","SmartMap",False],
+					   ["SmartMap Strict","SmartMap Strict",True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["standard","standard",True],
+					   ["None","None",True],
+					   ["SmartMap Crazy","SmartMap Crazy",False],
+					   ["SmartMap Clump Happy","SmartMap Clump Happy",True],
+					   ["SmartMap Clump Health","SmartMap Clump Health",True],
+					   ["SmartMap Clump Both","SmartMap Clump Both",True],
+					   ["SmartMap Normal","SmartMap Normal",True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
 
-	                   ["few strat, few happy, few other",(50,50,50),True],
-	                   ["few strat, few happy, norm other",(50,50,100),True],
-	                   ["few strat, few happy, many other",(50,50,200),True],
-	                   ["few strat, norm happy, few other",(50,100,50),True],
-	                   ["few strat, norm happy, norm other",(50,100,100),True],
-	                   ["few strat, norm happy, many other",(50,100,200),True],
-	                   ["few strat, many happy, few other",(50,200,50),True],
-	                   ["few strat, many happy, norm other",(50,200,100),True],
-	                   ["few strat, many happy, many other",(50,200,200),True],
+					   ["few strat, few happy, few other",(50,50,50),True],
+					   ["few strat, few happy, norm other",(50,50,100),True],
+					   ["few strat, few happy, many other",(50,50,200),True],
+					   ["few strat, norm happy, few other",(50,100,50),True],
+					   ["few strat, norm happy, norm other",(50,100,100),True],
+					   ["few strat, norm happy, many other",(50,100,200),True],
+					   ["few strat, many happy, few other",(50,200,50),True],
+					   ["few strat, many happy, norm other",(50,200,100),True],
+					   ["few strat, many happy, many other",(50,200,200),True],
 
-	                   ["norm strat, few happy, few other",(100,50,50),True],
-	                   ["norm strat, few happy, norm other",(100,50,100),True],
-	                   ["norm strat, few happy, many other",(100,50,200),True],
-	                   ["norm strat, norm happy, few other",(100,100,50),True],
-	                   ["norm strat, norm happy, norm other",(100,100,100),True],
-	                   ["norm strat, norm happy, many other",(100,100,200),True],
-	                   ["norm strat, many happy, few other",(100,200,50),True],
-	                   ["norm strat, many happy, norm other",(100,200,100),True],
-	                   ["norm strat, many happy, many other",(100,200,200),True],
+					   ["norm strat, few happy, few other",(100,50,50),True],
+					   ["norm strat, few happy, norm other",(100,50,100),True],
+					   ["norm strat, few happy, many other",(100,50,200),True],
+					   ["norm strat, norm happy, few other",(100,100,50),True],
+					   ["norm strat, norm happy, norm other",(100,100,100),True],
+					   ["norm strat, norm happy, many other",(100,100,200),True],
+					   ["norm strat, many happy, few other",(100,200,50),True],
+					   ["norm strat, many happy, norm other",(100,200,100),True],
+					   ["norm strat, many happy, many other",(100,200,200),True],
 
-	                   ["many strat, few happy, few other",(200,50,50),True],
-	                   ["many strat, few happy, norm other",(200,50,100),True],
-	                   ["many strat, few happy, many other",(200,50,200),True],
-	                   ["many strat, norm happy, few other",(200,100,50),True],
-	                   ["many strat, norm happy, norm other",(200,100,100),True],
-	                   ["many strat, norm happy, many other",(200,100,200),True],
-	                   ["many strat, many happy, few other",(200,200,50),True],
-	                   ["many strat, many happy, norm other",(200,200,100),True],
-	                   ["many strat, many happy, many other",(200,200,200),True],
+					   ["many strat, few happy, few other",(200,50,50),True],
+					   ["many strat, few happy, norm other",(200,50,100),True],
+					   ["many strat, few happy, many other",(200,50,200),True],
+					   ["many strat, norm happy, few other",(200,100,50),True],
+					   ["many strat, norm happy, norm other",(200,100,100),True],
+					   ["many strat, norm happy, many other",(200,100,200),True],
+					   ["many strat, many happy, few other",(200,200,50),True],
+					   ["many strat, many happy, norm other",(200,200,100),True],
+					   ["many strat, many happy, many other",(200,200,200),True],
 
-	                   ["low levels of all",(25,25,25),False],
-	                   ["very high levels of all",(800,800,800),False],
-	                   ["high levels of all",(400,400,400),True],
-	                   ["normal levels of all",(100,100,100),True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["standard","standard",True],
-	                   ["None","None",True],
-	                   ["SmartMap Few","SmartMap Few",True],
-	                   ["SmartMap Many","SmartMap Many",True],
-	                   ["SmartMap Normal","SmartMap Normal",True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["no ocean, no lakes",-5,False],
-	                   ["no ocean",-4,False],
-	                   ["central sea",-6,False],
-	                   ["corner sea",-7,False],
-	                   ["edge sea",-8,False],
-	                   ["random sea",-9,False],
-	                   ["few great lakes",-10,False],
-	                   ["great lakes",-11,False],
-	                   ["many great lakes",-12,False],
-	                   ["minimal ocean",10,False],
-	                   ["40% ocean",40,False],
-	                   ["50% ocean",50,False],
-	                   ["60% ocean",60,True],
-	                   ["65% ocean",65,True],
-	                   ["70% ocean",70,True],
-	                   ["75% ocean",75,True],
-	                   ["80% ocean",80,True],
-	                   ["85% ocean",85,True],
-	                   ["90% ocean",90,False],
-	                   ["95% ocean",95,False],
-	                   ["99% ocean",99,False],
-	                   ["small ocean",-1,True],
-	                   ["big ocean",-2,True],
-	                   ["normal ocean",-3,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["no hills",0,False],
-	                   ["2% hills",2,False],
-	                   ["4% hills",4,True],
-	                   ["6% hills",6,True],
-	                   ["8% hills",8,True],
-	                   ["10% hills",10,True],
-	                   ["12% hills",12,True],
-	                   ["14% hills",14,True],
-	                   ["16% hills",16,True],
-	                   ["18% hills",18,True],
-	                   ["20% hills",20,True],
-	                   ["25% hills",25,False],
-	                   ["30% hills",30,False],
-	                   ["40% hills",40,False],
-	                   ["50% hills",50,False],
-	                   ["few hills",-1,True],
-	                   ["many hills",-2,True],
-	                   ["normal hills",-3,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["no peaks",0,False],
-	                   ["1% peaks",1,False],
-	                   ["2% peaks",2,True],
-	                   ["3% peaks",3,True],
-	                   ["4% peaks",4,True],
-	                   ["5% peaks",5,True],
-	                   ["6% peaks",6,True],
-	                   ["7% peaks",7,True],
-	                   ["8% peaks",8,True],
-	                   ["9% peaks",9,True],
-	                   ["10% peaks",10,False],
-	                   ["15% peaks",15,False],
-	                   ["20% peaks",20,False],
-	                   ["20% peaks",25,False],
-	                   ["few peaks no block",-4,True],
-	                   ["many peaks no block",-5,True],
-	                   ["normal peaks no block",-6,True],
-	                   ["few peaks",-1,True],
-	                   ["many peaks",-2,True],
-	                   ["normal peaks",-3,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["no forest,no jungle", (-2000,-2000),False],
-	                   ["no forest,normal jungle", (-2000,0),False],
-	                   ["normal forest,no jungle", (0,-2000),False],
-	                   ["light forest,normal jungle", (-200,0),True],
-	                   ["light forest,heavy jungle", (-200,200),True],
-	                   ["normal forest,light jungle", (0,-200),True],
-	                   ["normal forest,heavy jungle", (0,200),True],
-	                   ["heavy forest,light jungle", (200,-200),True],
-	                   ["heavy forest,normal jungle", (200,0),True],
-	                   ["light forest,light jungle", (-200,-200),True],
-	                   ["heavy forest,heavy jungle", (200,200),True],
-	                   ["normal forest,normal jungle", (0,0),True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["few rivers, normal lakes", (80,100),True],
-	                   ["few rivers, many lakes", (80,200),True],
-	                   ["normal rivers, few lakes", (100,33),True],
-	                   ["normal rivers, many lakes", (100,200),True],
-	                   ["many rivers, few lakes", (300,33),True],
-	                   ["many rivers, normal lakes", (300,100),True],
-	                   ["few rivers, few lakes", (80,33),True],
-	                   ["many rivers, many lakes", (300,200),True],
-	                   ["normal rivers, normal lakes", (100,100),True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["least round, extreme fragments", (-800,800),False],
-	                   ["least round, heavy fragments", (-800,600),False],
-	                   ["least round, many fragments", (-800,400),True],
-	                   ["least round, some fragments", (-800,200),True],
-	                   ["least round, no fragments", (-800,0),True],
-	                   ["somewhat round, extreme fragments", (-400,800),False],
-	                   ["somewhat round, heavy fragments", (-400,600),False],
-	                   ["somewhat round, many fragments", (-400,400),True],
-	                   ["somewhat round, some fragments", (-400,200),True],
-	                   ["somewhat round, no fragments", (-400,0),True],
-	                   ["very round, extreme fragments", (0,800),False],
-	                   ["very round, heavy fragments", (0,600),False],
-	                   ["very round, many fragments", (0,400),True],
-	                   ["very round, some fragments", (0,200),True],
-	                   ["very round, no fragments", (0,0),True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["standard","standard",True],
-	                   ["SmartMap Player Inland","SmartMap Player Inland",True],
-	                   ["SmartMap Player Coastal","SmartMap Player Coastal",True],
-	                   ["SmartMap All Inland","SmartMap All Inland",True],
-	                   ["SmartMap All Coastal","SmartMap All Coastal",True],
-	                   ["SmartMap New World","SmartMap New World",True],
-	                   ["SmartMap New World Inland","SmartMap New World Inland",True],
-	                   ["SmartMap New World Coastal","SmartMap New World Coastal",True],
-	                   ["SmartMap","SmartMap",True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["wrap y - central pole",(False,True,True),False],
-	                   ["wrap both - central pole",(True,True,True),False],
-	                   ["no wrap - central pole",(False,False,True),False],
-	                   ["wrap x - central pole",(True,False,True),False],
-	                   ["wrap y",(False,True,False),True],
-	                   ["wrap both",(True,True,False),True],
-	                   ["no wrap",(False,False,False),True],
-	                   ["wrap x",(True,False,False),True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["48",12,True],
-	                   ["60",15,True],
-	                   ["72",18,True],
-	                   ["84",21,True],
-	                   ["96",24,True],
-	                   ["108",27,True],
-	                   ["120",30,False],
-	                   ["132",33,False],
-	                   ["144",36,False],
-	                   ["don't override",-1,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["32",8,False],
-	                   ["40",10,True],
-	                   ["48",12,True],
-	                   ["56",14,True],
-	                   ["64",16,True],
-	                   ["72",18,True],
-	                   ["80",20,True],
-	                   ["88",22,True],
-	                   ["96",24,False],
-	                   ["don't override",-1,True],
-	                   ],
-	                  [
-	                   ["smartmap random pick","smartmap random pick",False],
-	                   ["0 sealevel low-no separation",0,True],
-	                   ["1 single coast separation",1,True],
-	                   ["2 coasts touch",2,True],
-	                   ["3 frequent coast crossing",3,True],
-	                   ["4 sealevel medium-rare coast crossing",4,True],
-	                   ["5 no coastal crossing",5,True],
-	                   ["6 developing culture touch",6,True],
-	                   ["7 sealevel high",7,True],
-	                   ["8 refined culture touch",8,True],
-	                   ["9 refined+influential touch",9,True],
-	                   ["10 influential culture touch",10,True],
-	                   ["11 influential+legendary touch",11,True],
-	                   ["12 legendary culture touch",12,True],
-	                   ["13 no culture touch",13,True],
-	                   ["don't override",-1,True],
-	                   ],
-	                   ]
+					   ["low levels of all",(25,25,25),False],
+					   ["very high levels of all",(800,800,800),False],
+					   ["high levels of all",(400,400,400),True],
+					   ["normal levels of all",(100,100,100),True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["standard","standard",True],
+					   ["None","None",True],
+					   ["SmartMap Few","SmartMap Few",True],
+					   ["SmartMap Many","SmartMap Many",True],
+					   ["SmartMap Normal","SmartMap Normal",True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["no ocean, no lakes",-5,False],
+					   ["no ocean",-4,False],
+					   ["central sea",-6,False],
+					   ["corner sea",-7,False],
+					   ["edge sea",-8,False],
+					   ["random sea",-9,False],
+					   ["few great lakes",-10,False],
+					   ["great lakes",-11,False],
+					   ["many great lakes",-12,False],
+					   ["minimal ocean",10,False],
+					   ["40% ocean",40,False],
+					   ["50% ocean",50,False],
+					   ["60% ocean",60,True],
+					   ["65% ocean",65,True],
+					   ["70% ocean",70,True],
+					   ["75% ocean",75,True],
+					   ["80% ocean",80,True],
+					   ["85% ocean",85,True],
+					   ["90% ocean",90,False],
+					   ["95% ocean",95,False],
+					   ["99% ocean",99,False],
+					   ["small ocean",-1,True],
+					   ["big ocean",-2,True],
+					   ["normal ocean",-3,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["no hills",0,False],
+					   ["2% hills",2,False],
+					   ["4% hills",4,True],
+					   ["6% hills",6,True],
+					   ["8% hills",8,True],
+					   ["10% hills",10,True],
+					   ["12% hills",12,True],
+					   ["14% hills",14,True],
+					   ["16% hills",16,True],
+					   ["18% hills",18,True],
+					   ["20% hills",20,True],
+					   ["25% hills",25,False],
+					   ["30% hills",30,False],
+					   ["40% hills",40,False],
+					   ["50% hills",50,False],
+					   ["few hills",-1,True],
+					   ["many hills",-2,True],
+					   ["normal hills",-3,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["no peaks",0,False],
+					   ["1% peaks",1,False],
+					   ["2% peaks",2,True],
+					   ["3% peaks",3,True],
+					   ["4% peaks",4,True],
+					   ["5% peaks",5,True],
+					   ["6% peaks",6,True],
+					   ["7% peaks",7,True],
+					   ["8% peaks",8,True],
+					   ["9% peaks",9,True],
+					   ["10% peaks",10,False],
+					   ["15% peaks",15,False],
+					   ["20% peaks",20,False],
+					   ["20% peaks",25,False],
+					   ["few peaks no block",-4,True],
+					   ["many peaks no block",-5,True],
+					   ["normal peaks no block",-6,True],
+					   ["few peaks",-1,True],
+					   ["many peaks",-2,True],
+					   ["normal peaks",-3,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["no forest,no jungle", (-2000,-2000),False],
+					   ["no forest,normal jungle", (-2000,0),False],
+					   ["normal forest,no jungle", (0,-2000),False],
+					   ["light forest,normal jungle", (-200,0),True],
+					   ["light forest,heavy jungle", (-200,200),True],
+					   ["normal forest,light jungle", (0,-200),True],
+					   ["normal forest,heavy jungle", (0,200),True],
+					   ["heavy forest,light jungle", (200,-200),True],
+					   ["heavy forest,normal jungle", (200,0),True],
+					   ["light forest,light jungle", (-200,-200),True],
+					   ["heavy forest,heavy jungle", (200,200),True],
+					   ["normal forest,normal jungle", (0,0),True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["few rivers, normal lakes", (80,100),True],
+					   ["few rivers, many lakes", (80,200),True],
+					   ["normal rivers, few lakes", (100,33),True],
+					   ["normal rivers, many lakes", (100,200),True],
+					   ["many rivers, few lakes", (300,33),True],
+					   ["many rivers, normal lakes", (300,100),True],
+					   ["few rivers, few lakes", (80,33),True],
+					   ["many rivers, many lakes", (300,200),True],
+					   ["normal rivers, normal lakes", (100,100),True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["least round, extreme fragments", (-800,800),False],
+					   ["least round, heavy fragments", (-800,600),False],
+					   ["least round, many fragments", (-800,400),True],
+					   ["least round, some fragments", (-800,200),True],
+					   ["least round, no fragments", (-800,0),True],
+					   ["somewhat round, extreme fragments", (-400,800),False],
+					   ["somewhat round, heavy fragments", (-400,600),False],
+					   ["somewhat round, many fragments", (-400,400),True],
+					   ["somewhat round, some fragments", (-400,200),True],
+					   ["somewhat round, no fragments", (-400,0),True],
+					   ["very round, extreme fragments", (0,800),False],
+					   ["very round, heavy fragments", (0,600),False],
+					   ["very round, many fragments", (0,400),True],
+					   ["very round, some fragments", (0,200),True],
+					   ["very round, no fragments", (0,0),True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["standard","standard",True],
+					   ["SmartMap Player Inland","SmartMap Player Inland",True],
+					   ["SmartMap Player Coastal","SmartMap Player Coastal",True],
+					   ["SmartMap All Inland","SmartMap All Inland",True],
+					   ["SmartMap All Coastal","SmartMap All Coastal",True],
+					   ["SmartMap New World","SmartMap New World",True],
+					   ["SmartMap New World Inland","SmartMap New World Inland",True],
+					   ["SmartMap New World Coastal","SmartMap New World Coastal",True],
+					   ["SmartMap","SmartMap",True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["wrap y - central pole",(False,True,True),False],
+					   ["wrap both - central pole",(True,True,True),False],
+					   ["no wrap - central pole",(False,False,True),False],
+					   ["wrap x - central pole",(True,False,True),False],
+					   ["wrap y",(False,True,False),True],
+					   ["wrap both",(True,True,False),True],
+					   ["no wrap",(False,False,False),True],
+					   ["wrap x",(True,False,False),True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["48",12,True],
+					   ["60",15,True],
+					   ["72",18,True],
+					   ["84",21,True],
+					   ["96",24,True],
+					   ["108",27,True],
+					   ["120",30,False],
+					   ["132",33,False],
+					   ["144",36,False],
+					   ["don't override",-1,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["32",8,False],
+					   ["40",10,True],
+					   ["48",12,True],
+					   ["56",14,True],
+					   ["64",16,True],
+					   ["72",18,True],
+					   ["80",20,True],
+					   ["88",22,True],
+					   ["96",24,False],
+					   ["don't override",-1,True],
+					   ],
+					  [
+					   ["smartmap random pick","smartmap random pick",False],
+					   ["0 sealevel low-no separation",0,True],
+					   ["1 single coast separation",1,True],
+					   ["2 coasts touch",2,True],
+					   ["3 frequent coast crossing",3,True],
+					   ["4 sealevel medium-rare coast crossing",4,True],
+					   ["5 no coastal crossing",5,True],
+					   ["6 developing culture touch",6,True],
+					   ["7 sealevel high",7,True],
+					   ["8 refined culture touch",8,True],
+					   ["9 refined+influential touch",9,True],
+					   ["10 influential culture touch",10,True],
+					   ["11 influential+legendary touch",11,True],
+					   ["12 legendary culture touch",12,True],
+					   ["13 no culture touch",13,True],
+					   ["don't override",-1,True],
+					   ],
+					   ]
 
 #I don't know where this shows up!  You would think this would be
 #used as the text for the Map: button, but that uses the name of
@@ -3493,7 +3493,7 @@ def getSelectedMapValue(optionName):
 			break
 
 	if not found:
-		print "    !error, couldn't find entry for option named",optionName
+		print "	!error, couldn't find entry for option named",optionName
 
 	#get the user selected index (which item in the dropdown list the user selected)
 	userSelectedIndex = int(cymap.getCustomMapOption(optionIndex))
@@ -3550,11 +3550,11 @@ def getCustomMapOptionDefault(argsList):
 						result = selectionIndex
 		settings.close()
 	except IOError:
-		print "    Couldn't find",fileName
+		print "	Couldn't find",fileName
 	except EOFError:
-		print "    Bad contents in",fileName
+		print "	Bad contents in",fileName
 	except:
-		print "    unexpected problem reading",fileName
+		print "	unexpected problem reading",fileName
 
 	return result
 	#replace with return -1 to set 'random' as the default choice
@@ -3582,18 +3582,18 @@ def isClimateMap():
 
 def firstTimeInit():
 	global initFirstTimeDone
-	print "    first time init"
+	print "	first time init"
 	if initFirstTimeDone:
-		print "    first time init already completed"
+		print "	first time init already completed"
 		return
-	print "    first time init in progress"
+	print "	first time init in progress"
 	initFirstTimeDone = True
 	addWBSFilesToLandForms()
 	createMenuCache()
-	print "    first time init complete"
+	print "	first time init complete"
 
 def createMenuCache():
-	print "    createMenuCache"
+	print "	createMenuCache"
 	global cachedMenuChoices
 
 	if len(cachedMenuChoices) <= 0:
@@ -3602,11 +3602,11 @@ def createMenuCache():
 			cachedMenuChoices.append(0)
 
 def beforeInit():
-	print "    before init"
+	print "	before init"
 
 def beforeGeneration():
 	global cachedMenuChoices
-	print "    before generation"
+	print "	before generation"
 	for i in range(len(selection_names_and_values)):
 		if selection_names_and_values[i][0] != "Wrap:":
 			cachedMenuChoices[i] = 0
@@ -3625,12 +3625,12 @@ import os.path
 import _winreg
 
 def regRead(registry, path, field):
-    pathKey = _winreg.OpenKey(registry, path)
-    try:
-        fieldValue = _winreg.QueryValueEx(pathKey, field)
-        return fieldValue[0]
-    finally:
-        pathKey.Close()
+	pathKey = _winreg.OpenKey(registry, path)
+	try:
+		fieldValue = _winreg.QueryValueEx(pathKey, field)
+		return fieldValue[0]
+	finally:
+		pathKey.Close()
 
 
 
@@ -3650,7 +3650,7 @@ def beforeStepOne():
 	global wrapY
 	global centralPole
 	wrapX, wrapY, centralPole = getSelectedMapValue("Wrap:")
-	print "    before step one wrapxy", wrapX, wrapY
+	print "	before step one wrapxy", wrapX, wrapY
 
 	#save users settings
 	cymap = CyMap()
@@ -3665,45 +3665,45 @@ def beforeStepOne():
 			valueName = selection_names_and_values[index][selectionIndex][0]
 			smoptions.append((smoption,valueName))
 
-		print "    try to store settings to",fileName
+		print "	try to store settings to",fileName
 		print smoptions
 		try:
 			pickle.dump(smoptions, settings)
 		except Exception, inst:
-			print "    Pickling Error",inst,"trying to save smartmap settings to",fileName
+			print "	Pickling Error",inst,"trying to save smartmap settings to",fileName
 		settings.close()
-		print "    store successful"
+		print "	store successful"
 	except IOError:
-		print "    Couldn't create",fileName
+		print "	Couldn't create",fileName
 	except EOFError:
-		print "    EOF writing",fileName
+		print "	EOF writing",fileName
 	except:
-		print "    unexpected problem writing",fileName
+		print "	unexpected problem writing",fileName
 
 def loadWorldBuilderMapData(whichMap):
 	fileName = "PublicMaps\\" + whichMap + ".Civ4WorldBuilderSave"
-	print "    load worldbuilder file:",whichMap,"from file:", fileName
+	print "	load worldbuilder file:",whichMap,"from file:", fileName
 	fileError = False
 	try:
 		worldBuilderFile = open(fileName,'r')
 		worldText = worldBuilderFile.readlines()
 	except IOError:
-		print "    Couldn't open",fileName
+		print "	Couldn't open",fileName
 		fileError = True
 	except EOFError:
-		print "    EOF reading",fileName
+		print "	EOF reading",fileName
 		fileError = True
 	except:
-		print "    unexpected problem reading",fileName
+		print "	unexpected problem reading",fileName
 		fileError = True
 
 	try:
 		worldBuilderFile.close()
 	except:
-		print "    unexpected problem closing",fileName
+		print "	unexpected problem closing",fileName
 
 	if fileError:
-		print "    failed to load worldbuilder file:",whichMap,"from file:", fileName
+		print "	failed to load worldbuilder file:",whichMap,"from file:", fileName
 		return False
 
 	global worldBuilderMapData
@@ -3721,7 +3721,7 @@ def loadWorldBuilderMapData(whichMap):
 		if worldwidth != -1 and worldheight != -1:
 			break
 
-	print "      worldwidth",worldwidth,"worldheight",worldheight
+	print "	  worldwidth",worldwidth,"worldheight",worldheight
 
 	worldBuilderMapData = []
 	mapTerrainData = []
@@ -3795,15 +3795,15 @@ def beforeStepTwo():
 	height = cymap.getGridHeight()
 	global mapDimensionSize
 	mapDimensionSize = int((((width*width)+(height*height))**0.5)/2)
-	print "    before step two width", width, "height", height
-	print "    Configuration of this mapgen:"
+	print "	before step two width", width, "height", height
+	print "	Configuration of this mapgen:"
 	valueName = ""
 	for i in range(len(selection_titles)):
 		value = getSelectedMapValue(selection_titles[i])
 		for j in range(len(selection_names_and_values[i])):
 			if value == selection_names_and_values[i][j][1]:
 				valueName = selection_names_and_values[i][j][0]
-		print "        ",selection_titles[i], valueName
+		print "		",selection_titles[i], valueName
 	initGlobalVars()
 
 def initGlobalVars():
@@ -3832,7 +3832,7 @@ def computeContinents():
 	#first collect all continents, this isn't the same as the continent lists
 	#calculated during land layout because post generation touchups may have
 	#changed things
-	print "    start continent analysis"
+	print "	start continent analysis"
 	global postContinentLists
 	global totalLandCount
 	global totalCoastCount
@@ -3851,7 +3851,7 @@ def computeContinents():
 
 			pPlot = cymap.plot(x,y)
 			if pPlot.isWater():
-				if pPlot.isAdjacentToLand():
+				if pPlot.isCoastal():
 					totalCoastCount += 1
 				continue
 
@@ -4383,7 +4383,7 @@ def isPlotLegalForBonus(plot,bonus,strict):
 
 	#for whatever reason, these resources never validate as canHaveBonus so we override
 	#and place them on any empty hill, unless strict mode is set
-	resourcesEmptyHill = ('BONUS_GOLD','BONUS_SILVER')
+	resourcesEmptyHill = ('BONUS_GOLD_ORE','BONUS_SILVER_ORE')
 	if not strict:
 		if type_string in resourcesEmptyHill and plot.isHills():
 			return True
@@ -5121,10 +5121,10 @@ blueMarbleTerrainData = [
 # subclass TerrainGenerator to redefine everything. This is a regional map.
 class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 	def __init__(self, iRockyDesertPercent=50, iRockyPlainsPercent=30,
-	             iGrassPercent=17, iDesertPercent=8, iTexDesertPercent=20,
-	             iEastDesertPercent=2, iEastPlainsPercent=23,
-	             fWestLongitude=0.15, fEastLongitude=0.65, fTexLat=0.37,
-	             fTexEast=0.55, fracXExp=-1, fracYExp=-1, grain_amount=4):
+				 iGrassPercent=17, iDesertPercent=8, iTexDesertPercent=20,
+				 iEastDesertPercent=2, iEastPlainsPercent=23,
+				 fWestLongitude=0.15, fEastLongitude=0.65, fTexLat=0.37,
+				 fTexEast=0.55, fracXExp=-1, fracYExp=-1, grain_amount=4):
 		 #Note: If you change longitude values here, then you will...
 		 #...need to change them elsewhere in the script, as well.
 		self.map = CyMap()
@@ -5205,7 +5205,7 @@ class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iX/float(self.iWidth) # 0.0 = west
@@ -5360,7 +5360,7 @@ class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iY/float(self.iHeight) # 0.0 = south edge, 1.0 = north edge
@@ -5555,7 +5555,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 			# Jungles only in the deep south or in the Oasis!
 			if lat < 0.16:
 				self.addJunglesAtPlot(pPlot, iX, iY, lat)
-			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASS")):
+			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASSLAND")):
 				pPlot.setFeatureType(self.featureJungle, -1)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):
@@ -5583,402 +5583,402 @@ def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
 
 # 9.0
-#     New land layout: earth.  Selecting this will generate the earth, with source data
-#       from a blue marble projection.  This is a highly accurate earth layout, with peaks
-#       and hills somewhat fuzzed to make for a more playable map.
-#     Also added: north america, south america, africa, europe, asia, australia
-#     All of the new maps are based on blue marble data, and so are going to be more accurate
-#       than they are going to be strategically well designed, and resource placement will
-#       be random rather than historically accurate.  The current version will also have
-#       generated terrain, but the next version will probably include an option to use
-#       terrain sampled from blue marble data.
-#     New resource placement options: very many (places a _lot_ of resources), crazy, and
-#       crazy many.  The crazy options place resources on any workable tile.  This makes for
-#       a rather different gameplay experience.
-#     New terrain placement option: crazy which will place terrains randomly.
-#     New feature placement option: crazy which will place features randomly.
-#     Protected read / write of the smartmap config file so file errors won't cause a script
-#       error, and moved the config file to the user dir, which should help people not playing
-#       as admin on windows.
-#     Improved odds of generating flood plains in desert river tiles.
-#     Changed the grid infos to be compatible with mods with arbitrary number of map sizes, which
-#       will make smartmap compatible with mods that have more than the usual number of map sizes.
-#       This change also makes SmartMap maps closer to the usual size.
-#     Improved speed for calculating the altitude of plots on very land heavy maps.
-#     Call the python garbage collector and clean up memory usage to allow larger maps.  I can
-#       now generate maps somewhere around 10% larger than before.  I can now generate a map
-#       with twice the area of the usual huge, and start it on my 1G computer.
-#       Base CivIV = 200M, 280x84, 65% ocean = 500M, 280x84 0% ocean = 700M, that's roughly
-#       13K or so per additional land tile allocated by CivIV, so keep that in mind when
-#       deciding on your ocean levels.
-#     Fixed a bug that tried to place continents too close to the map edges some times.
-#     Fixed a bug with regenerate map that occurs if you load a first turn savegame and then
-#       immediately try to regenerate it, thanks skovran for the report.
-#     Cleaned up code in player placement, improved speed.
-#     Added catches to player placement to prevent overlapping starts.  If an
-#       overlapping start is somehow generated (a bug reported a couple of times),
-#       it will now fallback to standard placement mode.  I'm unsure how an overlapping start
-#       can ever happen in the first place, but this should really guarantee it is impossible
-#       for it to get through and actually place the players that way.
-#     Fixed a bug that would sometimes misjudge whether or not to place additional players
-#       on a large continent.
-#     Improved the way continents are calculated to be more accurate in certain cases around
-#       blocking peaks, and improved performance.
+#	 New land layout: earth.  Selecting this will generate the earth, with source data
+#	   from a blue marble projection.  This is a highly accurate earth layout, with peaks
+#	   and hills somewhat fuzzed to make for a more playable map.
+#	 Also added: north america, south america, africa, europe, asia, australia
+#	 All of the new maps are based on blue marble data, and so are going to be more accurate
+#	   than they are going to be strategically well designed, and resource placement will
+#	   be random rather than historically accurate.  The current version will also have
+#	   generated terrain, but the next version will probably include an option to use
+#	   terrain sampled from blue marble data.
+#	 New resource placement options: very many (places a _lot_ of resources), crazy, and
+#	   crazy many.  The crazy options place resources on any workable tile.  This makes for
+#	   a rather different gameplay experience.
+#	 New terrain placement option: crazy which will place terrains randomly.
+#	 New feature placement option: crazy which will place features randomly.
+#	 Protected read / write of the smartmap config file so file errors won't cause a script
+#	   error, and moved the config file to the user dir, which should help people not playing
+#	   as admin on windows.
+#	 Improved odds of generating flood plains in desert river tiles.
+#	 Changed the grid infos to be compatible with mods with arbitrary number of map sizes, which
+#	   will make smartmap compatible with mods that have more than the usual number of map sizes.
+#	   This change also makes SmartMap maps closer to the usual size.
+#	 Improved speed for calculating the altitude of plots on very land heavy maps.
+#	 Call the python garbage collector and clean up memory usage to allow larger maps.  I can
+#	   now generate maps somewhere around 10% larger than before.  I can now generate a map
+#	   with twice the area of the usual huge, and start it on my 1G computer.
+#	   Base CivIV = 200M, 280x84, 65% ocean = 500M, 280x84 0% ocean = 700M, that's roughly
+#	   13K or so per additional land tile allocated by CivIV, so keep that in mind when
+#	   deciding on your ocean levels.
+#	 Fixed a bug that tried to place continents too close to the map edges some times.
+#	 Fixed a bug with regenerate map that occurs if you load a first turn savegame and then
+#	   immediately try to regenerate it, thanks skovran for the report.
+#	 Cleaned up code in player placement, improved speed.
+#	 Added catches to player placement to prevent overlapping starts.  If an
+#	   overlapping start is somehow generated (a bug reported a couple of times),
+#	   it will now fallback to standard placement mode.  I'm unsure how an overlapping start
+#	   can ever happen in the first place, but this should really guarantee it is impossible
+#	   for it to get through and actually place the players that way.
+#	 Fixed a bug that would sometimes misjudge whether or not to place additional players
+#	   on a large continent.
+#	 Improved the way continents are calculated to be more accurate in certain cases around
+#	   blocking peaks, and improved performance.
 # 8.7
-#     Added 3 great lakes options (few, normal, many).  This will generate a map with a number
-#       of large lakes (large enough to typically have ocean tiles).
-#     Edge sea and corner sea were reversed in what they generated, fixed.
-#     Corrected the usage of cardinal directions, thanks to Sto for noticing.  This turned out to
-#       be harmless, but would show up in the xml error log.
-#     Fixed bug with generating inland sea maps, thanks DG for noticing.
-#     Corrected minor math error in hill placement that was generating more hills than specified.
-#     Corrected disagreement between ocean percentage and size of central sea in such maps.
-#     Fixed problem with counting number of available sea resource spots that would place too
-#       many sea resources on certain styles of maps.
-#     Removed all used of CyPlot.isCoastalLand() because this method doesn't do what you'd expect.
-#     Forced central sea maps to keep the central sea away from the poles to prevent splitting
-#       the map in two.
-#     Speed up altitude calculation by simplifying the search for nearby ocean.
-#     Speed up wetness calculation by skipping water tiles.
-#     Speed up hash lookups by increasing step size.
-#     These speed improvements should knock about 10-20% off the total generation time.
+#	 Added 3 great lakes options (few, normal, many).  This will generate a map with a number
+#	   of large lakes (large enough to typically have ocean tiles).
+#	 Edge sea and corner sea were reversed in what they generated, fixed.
+#	 Corrected the usage of cardinal directions, thanks to Sto for noticing.  This turned out to
+#	   be harmless, but would show up in the xml error log.
+#	 Fixed bug with generating inland sea maps, thanks DG for noticing.
+#	 Corrected minor math error in hill placement that was generating more hills than specified.
+#	 Corrected disagreement between ocean percentage and size of central sea in such maps.
+#	 Fixed problem with counting number of available sea resource spots that would place too
+#	   many sea resources on certain styles of maps.
+#	 Removed all used of CyPlot.isCoastalLand() because this method doesn't do what you'd expect.
+#	 Forced central sea maps to keep the central sea away from the poles to prevent splitting
+#	   the map in two.
+#	 Speed up altitude calculation by simplifying the search for nearby ocean.
+#	 Speed up wetness calculation by skipping water tiles.
+#	 Speed up hash lookups by increasing step size.
+#	 These speed improvements should knock about 10-20% off the total generation time.
 # 8.6
-#     Correct the override width/height entries to reflect the 'standard'
-#       width and height numbers (previously this was rough, now it is exact).
-#       So these numbers now match what scripts that use the base XML produce.
-#     Added extra plains / extra grass options to the terrain options, which
-#       will produce more of that type of terrain.
-#     Added 'new world' coastal/inland start options, which will place start
-#       positions in the east (as new world) but also favor coastal or inland
-#       starts.
-#     Added 'no block' peak options.  This forbids peaks from having ocean
-#       on both sides either vertically of horizontally.  This prevents certain
-#       common cases of resource blocking that some people found annoying.
-#       Any such peak is reduced to a hill, as a result you will have less total
-#       peaks on your map.
-#     Improved performance of land placement in low sea width (removed unneeded checks).
-#     Improved performance of land placement in high sea width by spatially
-#       hashing the previously placed lands, and reducing the search for conflicting
-#       lands to nearby hash entries.  This makes a huge difference on big maps with
-#       high sea levels selected (>50% faster).
-#     Improved distribution of hills and peaks so that small continents don't get
-#       a disproportionate amount of them.
-#     Tweaked up likelihood of floodplains slightly.  You may see a bit more desert
-#       in temperate maps.  If you don't like desert much you can of course turn it
-#       off or switch to tropical which has much less desert.
-#     Improved performance for placing resources on large maps with lots of resources.
-#     Overall performance improvements will no generate the most difficult type of map
-#       (huge, land heavy, high sea level map with 2 or more continents) in less than
-#       a minute on my p4m-1.8ghz.
+#	 Correct the override width/height entries to reflect the 'standard'
+#	   width and height numbers (previously this was rough, now it is exact).
+#	   So these numbers now match what scripts that use the base XML produce.
+#	 Added extra plains / extra grass options to the terrain options, which
+#	   will produce more of that type of terrain.
+#	 Added 'new world' coastal/inland start options, which will place start
+#	   positions in the east (as new world) but also favor coastal or inland
+#	   starts.
+#	 Added 'no block' peak options.  This forbids peaks from having ocean
+#	   on both sides either vertically of horizontally.  This prevents certain
+#	   common cases of resource blocking that some people found annoying.
+#	   Any such peak is reduced to a hill, as a result you will have less total
+#	   peaks on your map.
+#	 Improved performance of land placement in low sea width (removed unneeded checks).
+#	 Improved performance of land placement in high sea width by spatially
+#	   hashing the previously placed lands, and reducing the search for conflicting
+#	   lands to nearby hash entries.  This makes a huge difference on big maps with
+#	   high sea levels selected (>50% faster).
+#	 Improved distribution of hills and peaks so that small continents don't get
+#	   a disproportionate amount of them.
+#	 Tweaked up likelihood of floodplains slightly.  You may see a bit more desert
+#	   in temperate maps.  If you don't like desert much you can of course turn it
+#	   off or switch to tropical which has much less desert.
+#	 Improved performance for placing resources on large maps with lots of resources.
+#	 Overall performance improvements will no generate the most difficult type of map
+#	   (huge, land heavy, high sea level map with 2 or more continents) in less than
+#	   a minute on my p4m-1.8ghz.
 # 8.5
-#     Performance improvements.
-#     Improved hill placement for a huge/65ocean/30hills map from 12 seconds to 2.
-#     Improved huge/65ocean/many resources from 90 seconds to 30.
+#	 Performance improvements.
+#	 Improved hill placement for a huge/65ocean/30hills map from 12 seconds to 2.
+#	 Improved huge/65ocean/many resources from 90 seconds to 30.
 # 8.4A
-#     Quick Fix for problem with placing players on pangea maps introduced in 8.4
-#       (would cause an endless loop, freezing civ iv on pangea and certain other
-#        maps where it couldn't decide the best continental distribution of players)
+#	 Quick Fix for problem with placing players on pangea maps introduced in 8.4
+#	   (would cause an endless loop, freezing civ iv on pangea and certain other
+#		maps where it couldn't decide the best continental distribution of players)
 # 8.4
-#     Tweaked resource placement to obey minlatitude and maxlatitude for the stricter
-#       resource placement options (SmartMap few, and all clumping options).
-#     Tweaked resource rates some more based on forum feedback.
-#     Made some other adjustments to the fair resource distribution to simplify it, and
-#       to distribute resources a little more evenly in certain cases.  Also improved
-#       chances that all expected resources will be placed.
-#     Added terrain options to place no desert, no snow, no snow/desert,
-#       no snow/desert/tundra, only plains, or only grass.  If you wan't minimal
-#       snow/desert/tundra, play on tropical, and turn jungles to light if necessary.
-#     Added 'SmartMap restricted / most restricted' option to resource placement, which
-#       enforces every placement rule I understand, clumps both happy and health resources,
-#       and offers fewer (restricted)/much fewer (most restricted) resources in general.
-#     Move the version history for prior versions to end of file
-#     Added player/all inland/coastal placement options.  Player inland will do its best
-#       to give the first player an inland start.  Coastal prefers a coastal start.  All
-#       attempts to do the same for all players (less likely to succeed, based on available
-#       map positions).
-#     Add single tile isles option.  This make for a very wierd game in generic civiv, but
-#       was requested by people developing space/planet based variants.
-#     Fixed bug in override separation that caused it to behave always as if low sea level
-#       was selected instead.
-#     Added 'central pole' variation on all wrap options.  This creates an icy pole in the
-#       center of the map, as if you were looking down on earth from above the north pole,
-#       also known as polar projection.  This now allows you to have 0,1,2,3 poled maps,
-#       which you can envision as different ways to unwrap a spherical world onto a flat
-#       rectangular map.
-#     Fixed a small math error in determining the distance from the pole/equator which
-#       became obvious when working with the polar projection maps.  This may cause you
-#       to see a little more snow/tundra than previously.
+#	 Tweaked resource placement to obey minlatitude and maxlatitude for the stricter
+#	   resource placement options (SmartMap few, and all clumping options).
+#	 Tweaked resource rates some more based on forum feedback.
+#	 Made some other adjustments to the fair resource distribution to simplify it, and
+#	   to distribute resources a little more evenly in certain cases.  Also improved
+#	   chances that all expected resources will be placed.
+#	 Added terrain options to place no desert, no snow, no snow/desert,
+#	   no snow/desert/tundra, only plains, or only grass.  If you wan't minimal
+#	   snow/desert/tundra, play on tropical, and turn jungles to light if necessary.
+#	 Added 'SmartMap restricted / most restricted' option to resource placement, which
+#	   enforces every placement rule I understand, clumps both happy and health resources,
+#	   and offers fewer (restricted)/much fewer (most restricted) resources in general.
+#	 Move the version history for prior versions to end of file
+#	 Added player/all inland/coastal placement options.  Player inland will do its best
+#	   to give the first player an inland start.  Coastal prefers a coastal start.  All
+#	   attempts to do the same for all players (less likely to succeed, based on available
+#	   map positions).
+#	 Add single tile isles option.  This make for a very wierd game in generic civiv, but
+#	   was requested by people developing space/planet based variants.
+#	 Fixed bug in override separation that caused it to behave always as if low sea level
+#	   was selected instead.
+#	 Added 'central pole' variation on all wrap options.  This creates an icy pole in the
+#	   center of the map, as if you were looking down on earth from above the north pole,
+#	   also known as polar projection.  This now allows you to have 0,1,2,3 poled maps,
+#	   which you can envision as different ways to unwrap a spherical world onto a flat
+#	   rectangular map.
+#	 Fixed a small math error in determining the distance from the pole/equator which
+#	   became obvious when working with the polar projection maps.  This may cause you
+#	   to see a little more snow/tundra than previously.
 #
 #
 # 8.3
-#     Tweak tundra, snow, desert picking process to make more likely on small maps.
-#     Add new separation override to allow absolute control of continent separation.
-#     More rivers sourced from hills if there are few peaks.
-#     Added options for central, edge, and corner sea to the ocean selections to
-#       generate that style of map.  Particularly, if you enjoy the 'central sea'
-#       map style, you can now generate that with SmartMap.
-#     Tweak resource rates to make whales not quite so common, and to address other
-#       resource rate comments reported.
-#     Place resources in placement order to try to prevent good map positions from
-#       being taken by resources placed in wrong order.
-#     Added SmartMap New World placement option.  This will prefer to place civs
-#       only on continents in the eastern hemisphere.  This option will default
-#       to ordinary smartmap placement if there are not at least 2 continents, or if there
-#       is not a continent at least 90% of which is located in the western hemisphere.
+#	 Tweak tundra, snow, desert picking process to make more likely on small maps.
+#	 Add new separation override to allow absolute control of continent separation.
+#	 More rivers sourced from hills if there are few peaks.
+#	 Added options for central, edge, and corner sea to the ocean selections to
+#	   generate that style of map.  Particularly, if you enjoy the 'central sea'
+#	   map style, you can now generate that with SmartMap.
+#	 Tweak resource rates to make whales not quite so common, and to address other
+#	   resource rate comments reported.
+#	 Place resources in placement order to try to prevent good map positions from
+#	   being taken by resources placed in wrong order.
+#	 Added SmartMap New World placement option.  This will prefer to place civs
+#	   only on continents in the eastern hemisphere.  This option will default
+#	   to ordinary smartmap placement if there are not at least 2 continents, or if there
+#	   is not a continent at least 90% of which is located in the western hemisphere.
 # 8.2
-#     Add option for 'no ocean' that will place nearly all land.
-#       Note: takes longer to generate high land count maps.  Be patient.
-#     Add option for 'no ocean, no lakes' that will place all land.
-#     Improve the placement performance of smartmap placement on high land count
-#       maps by ruling out very low scoring placement positions earlier.
-#       This will improve overall map generation performance slightly.
-#     Small improvements to forest and lake placement, attempt to cure the
-#       rare 'all forest tiles' on normal forest problem (I've never reproduced
-#       this, but the chance that any such bug survived should be low.)
-#     Added 'smartmap random pick' option to all (smartmap controlled)
-#       menus, this makes a choice from among the more typically desirable
-#       options, and also stays random the next time you create a map,
-#       unlike the standard 'random' option, and even randomly re-picks if you
-#       choose to 'regenerate map'.  I highly recommend using this in place of
-#       the standard 'random' option.
+#	 Add option for 'no ocean' that will place nearly all land.
+#	   Note: takes longer to generate high land count maps.  Be patient.
+#	 Add option for 'no ocean, no lakes' that will place all land.
+#	 Improve the placement performance of smartmap placement on high land count
+#	   maps by ruling out very low scoring placement positions earlier.
+#	   This will improve overall map generation performance slightly.
+#	 Small improvements to forest and lake placement, attempt to cure the
+#	   rare 'all forest tiles' on normal forest problem (I've never reproduced
+#	   this, but the chance that any such bug survived should be low.)
+#	 Added 'smartmap random pick' option to all (smartmap controlled)
+#	   menus, this makes a choice from among the more typically desirable
+#	   options, and also stays random the next time you create a map,
+#	   unlike the standard 'random' option, and even randomly re-picks if you
+#	   choose to 'regenerate map'.  I highly recommend using this in place of
+#	   the standard 'random' option.
 # 8.1
-#     Add Clump Health and Clump Both resource placement options.
-#     Clean up land placement code organization a little bit.
-#     Force release of spiral search memory, and reduce how far spiral search
-#       searches to improve performance.
-#     Fix the defaults for override with and height that were causing people
-#       to get out of memory errors.
+#	 Add Clump Health and Clump Both resource placement options.
+#	 Clean up land placement code organization a little bit.
+#	 Force release of spiral search memory, and reduce how far spiral search
+#	   searches to improve performance.
+#	 Fix the defaults for override with and height that were causing people
+#	   to get out of memory errors.
 # 8.0
-#     Use pickle to store last preferences.
-#     Tweaked the adjustment to rivers and lakes so that many rivers will be more
-#       noticeable, and few lakes will really cut down the amount of lakes.
-#     Fix resource rates for smaller maps.
-#     Allow start placement to place settlers on hills as well as flatlands.
-#     Weight hills for start placement appropriately to the defensive bonus.
-#     Add spiral search feature, this may be of use to other mapmakers, used in
-#       my script to assign fragments as belonging to the nearest continent.  Spiral
-#       search is the most efficient method of doing a 'find nearest X' on any grid
-#       based map, assuming you don't have a list of all X available.
-#     On higher river levels, make hills more likely to start rivers.
-#     Make rivers a little more common in general.  Make the automatic river for each
-#       sufficiently large continent always start from a hill or peak if one is
-#       available, or a random tile if no hill or peak is found.
-#     Improve river paths by using spiral search to measure distance to nearest ocean
-#     Don't flatten peaks on coast, as this can create interesting strategic issues,
-#       and also tended to leave far fewer than the expected number of peaks.
-#     Fix a bug in the start placement picker that was giving extra scores for the
-#       start plot when it was supposed to be scoring nearby plots.
-#     Adjust how fragments are generated, and the number of fragments for few/many,
-#       to make maps using smaller numbers of fragments look less chaotic.  Fragments
-#       also now sort-of obey the sealevel rules: they are allowed to start anywhere,
-#       but can only grow into one neighboring continent, so they are more likely to
-#       create an archipelago type of continental extension, rather than so frequently
-#       causing continents to merge.
-#     New SmartMap Clump Happy resources option which distributes all happiness
-#       resources like the standard generator (in clumps so trade is more likely to be
-#       necessary, hence 'clump happy'), but other resources in the smartmap style so
-#       that the distribution is fairer.
-#     Corrected a small land counting problem that sometimes gave too much land for
-#       a given ocean percentage.
-#     Added a few new options to the override width and height to allow for generating
-#       random ranges of sizes, as a couple of people had requested that.
+#	 Use pickle to store last preferences.
+#	 Tweaked the adjustment to rivers and lakes so that many rivers will be more
+#	   noticeable, and few lakes will really cut down the amount of lakes.
+#	 Fix resource rates for smaller maps.
+#	 Allow start placement to place settlers on hills as well as flatlands.
+#	 Weight hills for start placement appropriately to the defensive bonus.
+#	 Add spiral search feature, this may be of use to other mapmakers, used in
+#	   my script to assign fragments as belonging to the nearest continent.  Spiral
+#	   search is the most efficient method of doing a 'find nearest X' on any grid
+#	   based map, assuming you don't have a list of all X available.
+#	 On higher river levels, make hills more likely to start rivers.
+#	 Make rivers a little more common in general.  Make the automatic river for each
+#	   sufficiently large continent always start from a hill or peak if one is
+#	   available, or a random tile if no hill or peak is found.
+#	 Improve river paths by using spiral search to measure distance to nearest ocean
+#	 Don't flatten peaks on coast, as this can create interesting strategic issues,
+#	   and also tended to leave far fewer than the expected number of peaks.
+#	 Fix a bug in the start placement picker that was giving extra scores for the
+#	   start plot when it was supposed to be scoring nearby plots.
+#	 Adjust how fragments are generated, and the number of fragments for few/many,
+#	   to make maps using smaller numbers of fragments look less chaotic.  Fragments
+#	   also now sort-of obey the sealevel rules: they are allowed to start anywhere,
+#	   but can only grow into one neighboring continent, so they are more likely to
+#	   create an archipelago type of continental extension, rather than so frequently
+#	   causing continents to merge.
+#	 New SmartMap Clump Happy resources option which distributes all happiness
+#	   resources like the standard generator (in clumps so trade is more likely to be
+#	   necessary, hence 'clump happy'), but other resources in the smartmap style so
+#	   that the distribution is fairer.
+#	 Corrected a small land counting problem that sometimes gave too much land for
+#	   a given ocean percentage.
+#	 Added a few new options to the override width and height to allow for generating
+#	   random ranges of sizes, as a couple of people had requested that.
 # 7.2
-#     Separate GoodyHut option from Bonuses, and add support for
-#       no/low/normal/high rates of goody huts.
-#     Add support for low/normal/high levels of resources (with low = 2/3rds
-#       and high = 4/3rds normal, same for goody huts).
-#     Rearrange all of the options to put the less commonly used ones at the end.
-#     Tweak up the default hills % slightly.
-#     Tweak up the river rate slightly.
-#     Make broad empty plains a little less likely by distributing hills better.
-#     Add some extra continent options, 1 per 2 players, 1 per 3, 1 per 4
-#       these may be easier for some to think about than picking an exact number.
-#     Added continent options 2 per player, 3 per, 4 per.  These are good to use
-#       if you're using low sea levels to allow land blobs to merge.
-#     Improve the likelyhood that small numbers of continents are well separated.
-#     Improve the chance that player start plots will neighbor at least one hill.
-#     Added option to adjust the river and lake frequencies.
-#     Tweaked the width/height calculation so that super wide maps aren't as likely.
-#     Tweaked hills placement to make big empty plains less likely.
-#     Improved the resource distribution to get better strategic resource separation.
-#     Added no-continents option, which will result in all land being placed in
-#       fragments instead (looks suspiciously like 'archipelago').
-#     Fixed a bug in the counting of land resulting in fewer peaks than expected.
+#	 Separate GoodyHut option from Bonuses, and add support for
+#	   no/low/normal/high rates of goody huts.
+#	 Add support for low/normal/high levels of resources (with low = 2/3rds
+#	   and high = 4/3rds normal, same for goody huts).
+#	 Rearrange all of the options to put the less commonly used ones at the end.
+#	 Tweak up the default hills % slightly.
+#	 Tweak up the river rate slightly.
+#	 Make broad empty plains a little less likely by distributing hills better.
+#	 Add some extra continent options, 1 per 2 players, 1 per 3, 1 per 4
+#	   these may be easier for some to think about than picking an exact number.
+#	 Added continent options 2 per player, 3 per, 4 per.  These are good to use
+#	   if you're using low sea levels to allow land blobs to merge.
+#	 Improve the likelyhood that small numbers of continents are well separated.
+#	 Improve the chance that player start plots will neighbor at least one hill.
+#	 Added option to adjust the river and lake frequencies.
+#	 Tweaked the width/height calculation so that super wide maps aren't as likely.
+#	 Tweaked hills placement to make big empty plains less likely.
+#	 Improved the resource distribution to get better strategic resource separation.
+#	 Added no-continents option, which will result in all land being placed in
+#	   fragments instead (looks suspiciously like 'archipelago').
+#	 Fixed a bug in the counting of land resulting in fewer peaks than expected.
 #
 # 7.1
-#     After reading that Atlas can generate 1600x1600 maps (not that civiv can
-#       load them) decided to bump up the maximum width/height overrides so
-#       that if, in the future, civiv can handle such maps, SmartMap will be
-#       ready.  Can now, hypothetically, generate 5000x5000 maps.
-#     Also, converted the units to map tiles, since that is probably less confusing
-#       for non map-scripters.
-#     Bump up the size of duel, tiny, small due to our allowance for more ocean
-#       and also because the actual chosen dimensions tend to result in a map with
-#       slightly smaller than the expected area.
-#         Areas     Duel Tiny Small Standard Large Huge
-#         SmartMap: 80   140  220   360      560   860
-#         Standard: 60   104  160   273      416   640
-#     Make SmartMap strict default for feature generation.
-#     Tweak up the default ocean size due to the larger map size.
+#	 After reading that Atlas can generate 1600x1600 maps (not that civiv can
+#	   load them) decided to bump up the maximum width/height overrides so
+#	   that if, in the future, civiv can handle such maps, SmartMap will be
+#	   ready.  Can now, hypothetically, generate 5000x5000 maps.
+#	 Also, converted the units to map tiles, since that is probably less confusing
+#	   for non map-scripters.
+#	 Bump up the size of duel, tiny, small due to our allowance for more ocean
+#	   and also because the actual chosen dimensions tend to result in a map with
+#	   slightly smaller than the expected area.
+#		 Areas	 Duel Tiny Small Standard Large Huge
+#		 SmartMap: 80   140  220   360	  560   860
+#		 Standard: 60   104  160   273	  416   640
+#	 Make SmartMap strict default for feature generation.
+#	 Tweak up the default ocean size due to the larger map size.
 # 7.0
-#     Add new generation option: Land Style.  Land style allows you to opt
-#       for less roundish continents, and also to allow for small independent
-#       land fragments separate from the main continents.  When land fragments
-#       are generated, they may be generated anywhere, and may violate the
-#       sea level strategy guarantees, so use at your own risk.  The less rounded
-#       continent options without land fragments will obey the sea level rules,
-#       but may be less fair.
-#     Based on a report of it being annoying to have your capital placed on
-#       the wrap-edge of the minimap, I now rotate the initial land placement
-#       to put the minimum number possible of land near the map wrap edge.
-#       While this does not guarantee this will not happen, it makes it highly
-#       unlikely.
-#     Further, made the first player always pick the center most start position
-#       if wrap is enabled.  This should make single player games always have
-#       the human player start fairly well centered.  This should absolutely
-#       guarantee that a single human player will not start with their capital
-#       on a map wrap edge.
-#     Fixed a couple of places where I did not consider y-wrapping correctly.
-#       But I guess no one plays y-wrap (or both wrap), or they'd have surely noticed.
-#     Introduce option 'SmartMap Strict' for feature generation.  This will only place
-#       floodplains & tundra where the normal scripts would.
-#     Made floodplains on anything other than desert less likely, and oasis on tundra
-#       less likely for the non-strict feature generator.
-#     Enhanced the plot wetness calculator so plot wetness can be factored into more
-#       of the generation process.
-#     Improved the player placement rules to prefer not to place players initially
-#       on a stretch of land reaching into the ocean.
-#     Added ReadMeSmartMap.txt
+#	 Add new generation option: Land Style.  Land style allows you to opt
+#	   for less roundish continents, and also to allow for small independent
+#	   land fragments separate from the main continents.  When land fragments
+#	   are generated, they may be generated anywhere, and may violate the
+#	   sea level strategy guarantees, so use at your own risk.  The less rounded
+#	   continent options without land fragments will obey the sea level rules,
+#	   but may be less fair.
+#	 Based on a report of it being annoying to have your capital placed on
+#	   the wrap-edge of the minimap, I now rotate the initial land placement
+#	   to put the minimum number possible of land near the map wrap edge.
+#	   While this does not guarantee this will not happen, it makes it highly
+#	   unlikely.
+#	 Further, made the first player always pick the center most start position
+#	   if wrap is enabled.  This should make single player games always have
+#	   the human player start fairly well centered.  This should absolutely
+#	   guarantee that a single human player will not start with their capital
+#	   on a map wrap edge.
+#	 Fixed a couple of places where I did not consider y-wrapping correctly.
+#	   But I guess no one plays y-wrap (or both wrap), or they'd have surely noticed.
+#	 Introduce option 'SmartMap Strict' for feature generation.  This will only place
+#	   floodplains & tundra where the normal scripts would.
+#	 Made floodplains on anything other than desert less likely, and oasis on tundra
+#	   less likely for the non-strict feature generator.
+#	 Enhanced the plot wetness calculator so plot wetness can be factored into more
+#	   of the generation process.
+#	 Improved the player placement rules to prefer not to place players initially
+#	   on a stretch of land reaching into the ocean.
+#	 Added ReadMeSmartMap.txt
 # 6.1
-#     Tweak up number of hills for 'many hills'.
+#	 Tweak up number of hills for 'many hills'.
 # 6.0
-#     Improved lake generation system, grows more lakes beyond one plot
-#     Numerous terrain relevance improvements.  More desert&snow at high altitude,
-#       less desert near water, etc.
-#     Changed continent computation to more accurately determine the large
-#       continents, which should as a side effect improve the fair resource
-#       distribution.  Removed tiny continents which will never be player
-#       starts from the fair resource distribution.
-#     Improved tile wetness calculator to consider number of rivers and lakes
-#       touched by tile (a tile touched by fresh water on multiple sides is
-#       now more likely to shift from desert->plains->grass).
-#     Added a river originating at the highest point of each continent, which
-#       greatly improves the fairness of river distribution overall.
-#     Changed forest/jungle options to allow independent choice of forest and
-#       jungle coverage (light,normal,heavy independently selectable for each)
-#     General code cleanup, reorganization, commenting.
-#     Ran code through pychecker and cleaned all warnings, pychecker found a
-#       couple of legitimate bugs that may have improved the resulting maps.
+#	 Improved lake generation system, grows more lakes beyond one plot
+#	 Numerous terrain relevance improvements.  More desert&snow at high altitude,
+#	   less desert near water, etc.
+#	 Changed continent computation to more accurately determine the large
+#	   continents, which should as a side effect improve the fair resource
+#	   distribution.  Removed tiny continents which will never be player
+#	   starts from the fair resource distribution.
+#	 Improved tile wetness calculator to consider number of rivers and lakes
+#	   touched by tile (a tile touched by fresh water on multiple sides is
+#	   now more likely to shift from desert->plains->grass).
+#	 Added a river originating at the highest point of each continent, which
+#	   greatly improves the fairness of river distribution overall.
+#	 Changed forest/jungle options to allow independent choice of forest and
+#	   jungle coverage (light,normal,heavy independently selectable for each)
+#	 General code cleanup, reorganization, commenting.
+#	 Ran code through pychecker and cleaned all warnings, pychecker found a
+#	   couple of legitimate bugs that may have improved the resulting maps.
 # 5.1
-#     Improvements to fair bonus distribution algorithm.
-#     Fixed a typo bug causing python error on undefined edgeprob.
-#     Tweak desert rate down slightly.
+#	 Improvements to fair bonus distribution algorithm.
+#	 Fixed a typo bug causing python error on undefined edgeprob.
+#	 Tweak desert rate down slightly.
 # 5.0
-#     Work on refining the continent boundaries so water straights are not so
-#       obvious when you see the resulting cymap.
-#     Rewrite river generation, move it before terrain generation so terrains
-#       can consider rivers (allow grasslands and other 'wetter' terrain to be
-#       more common around rivers, as well as forests/jungle).
-#     Replace the standard river altitude function with one that seems to yeild
-#       better river paths.
-#     Assorted terrain and feature improvements.  Restored possibility of flood
-#       plains in desert, and made terrain tend to blob together more rather
-#       than appearing so completely random.  Allowed hills to have terrain rather
-#       than always defaulting to grass (so desert/hills are now possible).  I can't
-#       believe no one complained about that one.
-#     Found a major logic error in the player placement algorithm that was unfairly
-#       favoring near-lake placements (I has assumed CyPlot.isCoastalLand() was equivalent
-#       to asking: can I build a lighthouse?, this turned out not to be true).
-#       As a result, initial placement is much more likely to be coastal now, and
-#       this has a nice side effect of improving the average separation of players.
-#     Tweaked resource rates a little more based on various feedback.
-#     Replace standard lake addition function so we don't get lakes in odd places.
-#     Futher performance optimization.  The low and medium sea level options are
-#       now more than twice as fast, and the high sea level option is about 50%
-#       faster.  I can now generate a huge map with low sea level in under a minute.
-#     After discovering that the map sizes in great plains are way off, resized my
-#       maps to the following settings:
-#                   Duel Tiny Small Standard Large Huge
-#         SmartMap: 60   100  180   320      560   1000
-#         Standard: 60   104  160   273      416   640
-#       This is a bump up for everything except huge, which becomes slightly smaller,
-#       and thus hopefully usable by more people.
-#     Added related option to override the map width and height.  You can now select
-#       your map size fairly precisely, including the ability to pick map sizes that
-#       are so large they may cause civiv to have problems.  Up to 256x256 map positions,
-#       which would be a 1024x1024 map, with an area of over 1 million (compare to huge at
-#       an area of 16 thousand!)  If you are able to generate a map of even 128x128 I'll be
-#       shocked.  Nevertheless, the option is there.  So no complaining that I made huge
-#       smaller!  Just set your game to huge, then override the size to whatever you want.
-#       Or for a bizarre experience, set your map to duel, and override the size to whatever
-#       you'd like.  For kicks I generated a 256x8 map, and that was just barely startable
-#       with my 1 Gig of memory.  Minimap looks ridiculous.
+#	 Work on refining the continent boundaries so water straights are not so
+#	   obvious when you see the resulting cymap.
+#	 Rewrite river generation, move it before terrain generation so terrains
+#	   can consider rivers (allow grasslands and other 'wetter' terrain to be
+#	   more common around rivers, as well as forests/jungle).
+#	 Replace the standard river altitude function with one that seems to yeild
+#	   better river paths.
+#	 Assorted terrain and feature improvements.  Restored possibility of flood
+#	   plains in desert, and made terrain tend to blob together more rather
+#	   than appearing so completely random.  Allowed hills to have terrain rather
+#	   than always defaulting to grass (so desert/hills are now possible).  I can't
+#	   believe no one complained about that one.
+#	 Found a major logic error in the player placement algorithm that was unfairly
+#	   favoring near-lake placements (I has assumed CyPlot.isCoastalLand() was equivalent
+#	   to asking: can I build a lighthouse?, this turned out not to be true).
+#	   As a result, initial placement is much more likely to be coastal now, and
+#	   this has a nice side effect of improving the average separation of players.
+#	 Tweaked resource rates a little more based on various feedback.
+#	 Replace standard lake addition function so we don't get lakes in odd places.
+#	 Futher performance optimization.  The low and medium sea level options are
+#	   now more than twice as fast, and the high sea level option is about 50%
+#	   faster.  I can now generate a huge map with low sea level in under a minute.
+#	 After discovering that the map sizes in great plains are way off, resized my
+#	   maps to the following settings:
+#				   Duel Tiny Small Standard Large Huge
+#		 SmartMap: 60   100  180   320	  560   1000
+#		 Standard: 60   104  160   273	  416   640
+#	   This is a bump up for everything except huge, which becomes slightly smaller,
+#	   and thus hopefully usable by more people.
+#	 Added related option to override the map width and height.  You can now select
+#	   your map size fairly precisely, including the ability to pick map sizes that
+#	   are so large they may cause civiv to have problems.  Up to 256x256 map positions,
+#	   which would be a 1024x1024 map, with an area of over 1 million (compare to huge at
+#	   an area of 16 thousand!)  If you are able to generate a map of even 128x128 I'll be
+#	   shocked.  Nevertheless, the option is there.  So no complaining that I made huge
+#	   smaller!  Just set your game to huge, then override the size to whatever you want.
+#	   Or for a bizarre experience, set your map to duel, and override the size to whatever
+#	   you'd like.  For kicks I generated a 256x8 map, and that was just barely startable
+#	   with my 1 Gig of memory.  Minimap looks ridiculous.
 # 4.2
-#     Increase goody hut count slightly, particularly on maps with lots of land.
+#	 Increase goody hut count slightly, particularly on maps with lots of land.
 # 4.1
-#     Slightly refined smartmap resource placement to make distribution
-#       fairer between continents, and not to allow so many duped resources
-#       within one city radius.
-#     Small upward tweak to resource rates.
+#	 Slightly refined smartmap resource placement to make distribution
+#	   fairer between continents, and not to allow so many duped resources
+#	   within one city radius.
+#	 Small upward tweak to resource rates.
 # 4.0
-#     Overall performance improvement:
-#        Now down to about:
-#        <5 seconds for duel,tiny,small
-#        10 seconds for standard,
-#        40 seconds for large,
-#        ~2 minutes on huge
-#        On a 1.8Ghz Pentium-M with 1Gig.
-#     Optimize land placement speed by remembering all potential growth positions
-#       rather than looking for them randomly.
-#     Optimized and improved player placement function.  No longer makes certain
-#       rare placement errors, and the speed is dramatically better, particularly
-#       for continents with a large number of players to be placed (pangea).
-#     Optimized bonus placement.  This used to get very slow on large/huge maps due
-#       to making a pass through all tiles for each bonus type.  Now makes one pass
-#       through all tiles and caches the result.
-#     Changed the player option read function to take a string rather than an index
-#       to make it clearer in code, and also make it impossible to break when
-#       changing the order of options in the list.
-#     Land areas are 20,40,90,210,500,1200 (duel,tiny,small,standard,large,huge)
-#       Compared to  15,24,48,88 ,154,252 for great plains.
-#       Smartmap rounds down calculated width and height,
-#       so the areas are not quite as big as they seem,
-#       but large and huge are noticeably bigger.  This allows for more flexible
-#       use of the ocean coverage option.  Note to firaxis: it would be a better
-#       design if in the expansion pack or a patch you passed the expected land
-#       area to the grid size function from the current mod!  Then maps could
-#       dynamically size themselves to the expected land area and provide fair
-#       gameplay regardless of other chosen settings (and be compatible with mods
-#       that make use of different sized maps ... no more hardcoding like in
-#       great plains)!
-#       Note: I can just barely start a huge game with 1Gig memory.  This implies
-#       firaxis is using somewhere in the neighborhood of 32k memory per tile.
-#       Good grief, what on earth are they storing!
+#	 Overall performance improvement:
+#		Now down to about:
+#		<5 seconds for duel,tiny,small
+#		10 seconds for standard,
+#		40 seconds for large,
+#		~2 minutes on huge
+#		On a 1.8Ghz Pentium-M with 1Gig.
+#	 Optimize land placement speed by remembering all potential growth positions
+#	   rather than looking for them randomly.
+#	 Optimized and improved player placement function.  No longer makes certain
+#	   rare placement errors, and the speed is dramatically better, particularly
+#	   for continents with a large number of players to be placed (pangea).
+#	 Optimized bonus placement.  This used to get very slow on large/huge maps due
+#	   to making a pass through all tiles for each bonus type.  Now makes one pass
+#	   through all tiles and caches the result.
+#	 Changed the player option read function to take a string rather than an index
+#	   to make it clearer in code, and also make it impossible to break when
+#	   changing the order of options in the list.
+#	 Land areas are 20,40,90,210,500,1200 (duel,tiny,small,standard,large,huge)
+#	   Compared to  15,24,48,88 ,154,252 for great plains.
+#	   Smartmap rounds down calculated width and height,
+#	   so the areas are not quite as big as they seem,
+#	   but large and huge are noticeably bigger.  This allows for more flexible
+#	   use of the ocean coverage option.  Note to firaxis: it would be a better
+#	   design if in the expansion pack or a patch you passed the expected land
+#	   area to the grid size function from the current mod!  Then maps could
+#	   dynamically size themselves to the expected land area and provide fair
+#	   gameplay regardless of other chosen settings (and be compatible with mods
+#	   that make use of different sized maps ... no more hardcoding like in
+#	   great plains)!
+#	   Note: I can just barely start a huge game with 1Gig memory.  This implies
+#	   firaxis is using somewhere in the neighborhood of 32k memory per tile.
+#	   Good grief, what on earth are they storing!
 # 3.2
-#     Add options for specifying weight of initial jungle/forest cover.
-#     More performance optimizations.
+#	 Add options for specifying weight of initial jungle/forest cover.
+#	 More performance optimizations.
 # 3.1
-#     Fix rare issue with placements landing too close together.
-#     Slight tweaks to placement scoring to value early resources higher.
-#     Fix issue with placements on separate continents too close together.
+#	 Fix rare issue with placements landing too close together.
+#	 Slight tweaks to placement scoring to value early resources higher.
+#	 Fix issue with placements on separate continents too close together.
 # 3.0
-#     Re-enable climate selection, which may or may not be honored.
-#     Restore 36-continent option, accidental deletion.
-#     Create a better default option for each selector.
-#     Un-smooth edges near poles.
-#     Properly handle allowing continents to wrap on wrap axis.
-#     Performance optimizations by reducing function call counts.
-#     Custom player placement rules.
-#     Complete replacement of bonus system.
-#     Separate out goody hut placement and put in correct order.
-#     Cleaner debug print messages.
+#	 Re-enable climate selection, which may or may not be honored.
+#	 Restore 36-continent option, accidental deletion.
+#	 Create a better default option for each selector.
+#	 Un-smooth edges near poles.
+#	 Properly handle allowing continents to wrap on wrap axis.
+#	 Performance optimizations by reducing function call counts.
+#	 Custom player placement rules.
+#	 Complete replacement of bonus system.
+#	 Separate out goody hut placement and put in correct order.
+#	 Cleaner debug print messages.
 # 2.0
-#     Reduce bonus percentage for SmartMap bonus.
-#     Allow standard bonus distribution as an option.
-#     Bias width,height towards wrap direction.
-#     un-straight-edge where continents meet.
-#     SmartMap terrainGen allows more desert.
-#     SmartMap featureGen suggests more forest and jungle.
-#     Support for random ranges in number of continents.
+#	 Reduce bonus percentage for SmartMap bonus.
+#	 Allow standard bonus distribution as an option.
+#	 Bias width,height towards wrap direction.
+#	 un-straight-edge where continents meet.
+#	 SmartMap terrainGen allows more desert.
+#	 SmartMap featureGen suggests more forest and jungle.
+#	 Support for random ranges in number of continents.
 # 1.0
-#     Initial version.
+#	 Initial version.

@@ -34,6 +34,7 @@ class PediaBuild:
 
 	def interfaceScreen(self, iTheBuild):
 		GC = CyGlobalContext()
+		TRNSLTR = CyTranslator()
 		CvTheBuildInfo = GC.getBuildInfo(iTheBuild)
 		screen = self.main.screen()
 		CyPlayer = self.main.CyPlayer
@@ -78,13 +79,13 @@ class PediaBuild:
 		szStats = ""
 		BULLET = unichr(8854)
 		if CvTheBuildInfo.isKill():
-			szStats += BULLET + " Consumes the worker\n"
+			szStats += BULLET + " " + TRNSLTR.getText("TXT_KEY_PEDIA_CONSUMES_WORKER", ()) + "\n"
 		iCost = CvTheBuildInfo.getCost()
 		fTime = CvTheBuildInfo.getTime() / 100.0
 		if iCost or fTime:
 			szStats += BULLET
 			if iCost:
-				szStats += "Costs %d%s" %(iCost, unichr(8500))
+				szStats += TRNSLTR.getText("TXT_KEY_PEDIA_COSTS", ()) + " %d%s" %(iCost, unichr(8500))
 			if fTime:
 				if CyPlayer:
 					G = GC.getGame()
@@ -100,10 +101,10 @@ class PediaBuild:
 					index += 3
 				szTime = szTime[:index]
 				if iCost:
-					szStats += " and build time is ("
+					szStats += " " + TRNSLTR.getText("TXT_KEY_PEDIA_AND_BUILD_TIME", ()) + " ("
 				else:
-					szStats += " Build time is ("
-				szStats += szTime + " turns + feature build time)"
+					szStats += " " + TRNSLTR.getText("TXT_KEY_PEDIA_BUILD_TIME", ()) + " ("
+				szStats += szTime + TRNSLTR.getText("TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME", ())
 				if CyPlayer:
 					szStats += " * ("
 					if fGameSpeedMod:
@@ -115,7 +116,7 @@ class PediaBuild:
 							index += 2
 						else:
 							index += 3
-						szStats += szGameSpeedMod[:index] + " from game speed)"
+						szStats += szGameSpeedMod[:index] + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_GAME_SPEED", ())
 						if fEraMod:
 							szStats += " * ("
 					if fEraMod:
@@ -127,7 +128,7 @@ class PediaBuild:
 							index += 2
 						else:
 							index += 3
-						szStats += szEraMod[:index] + " from staring era)"
+						szStats += szEraMod[:index] + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_STARING_ERA", ())
 		if szStats:
 			screen.addMultilineText(aName(), uFont3b + szStats, self.X_MAIN_L + 4, self.Y_MAIN_L, W_STATS - 8, self.H_MAIN_L, iWidGen, 0, 0, 1<<0)
 		# Construct & Requires
@@ -141,7 +142,7 @@ class PediaBuild:
 			if iImp or iRou:
 				Panel2 = aName()
 				screen.attachPanel(Panel, Panel2, "", "", True, True, iPanelEmpty)
-				screen.attachLabel(Panel2, "", uFont4b + "Construct:")
+				screen.attachLabel(Panel2, "", uFont4b + TRNSLTR.getText("TXT_KEY_PEDIA_CONSTRUCT", ()))
 				Panel3 = aName()
 				screen.attachPanel(Panel2, Panel3, "", "", False, True, iPanelEmpty)
 				if iImp:
@@ -154,7 +155,7 @@ class PediaBuild:
 				iTech -= 1
 				Panel2 = aName()
 				screen.attachPanel(Panel, Panel2, "", "", True, True, iPanelEmpty)
-				screen.attachLabel(Panel2, "", uFont4b + "Requires: ")
+				screen.attachLabel(Panel2, "", uFont4b + TRNSLTR.getText("TXT_KEY_PEDIA_REQUIRES", ()))
 				Panel3 = aName()
 				screen.attachPanel(Panel2, Panel3, "", "", False, True, iPanelEmpty)
 				screen.attachImageButton(Panel3, PF + "TECH" + str(iTech), GC.getTechInfo(iTech).getButton(), enumBS, iWidGen, 1, 1, False)
@@ -169,7 +170,7 @@ class PediaBuild:
 		if aList:
 			szChild = PF + "UNIT"
 			Panel = aName()
-			screen.addPanel(Panel, "Capable Units:", "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, iPanelBlue50)
+			screen.addPanel(Panel, TRNSLTR.getText("TXT_KEY_PEDIA_CAPABLE_UNITS", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, iPanelBlue50)
 			for BTN, i in aList:
 				screen.attachImageButton(Panel, szChild + str(i), BTN, enumGBS, iWidGen, 1, 1, False)
 		else:
@@ -208,7 +209,7 @@ class PediaBuild:
 			screen.setStyle(Panel, "Panel_Game_HudMap_Style")
 			screen.setLabelAt(aName(), ScrollPanel, uFont3b + "Feature", 1<<0, 10, 6, 0, iFontGame, iWidGen, 0, 0)
 			screen.attachPanelAt(ScrollPanel, aName(), "", "", True, False, iPanelIn, iOne4, 0, iOne4, dy - 2, iWidGen, 0, 0)
-			screen.setLabelAt(aName(), ScrollPanel, uFont3b + "Tech Required", 1<<0, iOne4 + 10, 6, 0, iFontGame, iWidGen, 0, 0)
+			screen.setLabelAt(aName(), ScrollPanel, uFont3b + TRNSLTR.getText("TXT_KEY_PEDIA_TECH_REQUIRED", ()), 1<<0, iOne4 + 10, 6, 0, iFontGame, iWidGen, 0, 0)
 			screen.setLabelAt(aName(), ScrollPanel, uFont3b + "Build Time", 1<<2, 7*iOne12, 6, 0, iFontGame, iWidGen, 0, 0)
 			screen.attachPanelAt(ScrollPanel, aName(), "", "", True, False, iPanelIn, iOne2 + iOne6, 0, iOne6, dy - 2, iWidGen, 0, 0)
 			screen.setLabelAt(aName(), ScrollPanel, uFont3b + "Removed?", 1<<2, 3*iOne4 + 10, 6, 0, iFontGame, iWidGen, 0, 0)
@@ -257,7 +258,7 @@ class PediaBuild:
 						index += 2
 					else:
 						index += 3
-					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> Turns"
+					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> " + TRNSLTR.getText("TXT_KEY_WB_TURNS", ())
 					screen.setLabelAt(aName(), Panel, szText, 1<<2, iOne12, 6, 0, iFontGame, iWidGen, 1, 1)
 				# Col 4 - Removed?
 				Panel = "Remove" + str(iRow)

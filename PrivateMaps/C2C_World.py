@@ -38,7 +38,7 @@ class MapConstants:
 		self.HillPercent = 0.26
 
 		# Percentage of land squares to be Peaks.
-		self.PeakPercent = 0.08
+		self.PeakPercent = 0.07
 
 		#Hotter than this temperature will be considered deciduous forest, colder will
 		#be evergreen forest.Temperatures range from coldest 0.0 to hottest 1.0.
@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.BonusBonus = 1.0
+		self.fBonusMult = 1.0
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
@@ -169,7 +169,7 @@ class MapConstants:
 		##############################################################################
 		''' These are values that affect the elevation map,
 		higher numbers give greater chaos and smaller features.'''
-		self.fBaseFreq = 0.4444
+		self.fBaseFreq = 0.45
 		self.fLacunarity = 1.48
 		# Roughness boundaries; range: 0-1.
 		self.fMinPersi = 0.6
@@ -228,18 +228,17 @@ class MapConstants:
 		#How many land squares will be below desert rainfall threshold. In this case,
 		#rain levels close to zero are very likely to be desert, while rain levels close
 		#to the desert threshold will more likely be plains.
-		self.SaltFlatsPercent	= 0.02
-		self.DunesPercent		= 0.05
-		self.DesertPercent		= 0.10
-		self.ScrubPercent		= 0.15
+		self.SaltFlatsPercent	= 0.03
+		self.DunesPercent		= 0.09
+		self.DesertPercent		= 0.18
+		self.ScrubPercent		= 0.25
 		#Affects the amount of rocky terrain. Proportional, Range 0-1.
 		self.fRockyPercent = 0.05
 
 		#How many land squares will be below plains rainfall threshold. Rain levels close
 		#to the desert threshold are likely to be plains, while those close to the plains
 		#threshold are likely to be grassland.
-		self.BarrenPercent		= 0.20
-		self.PlainsPercent		= 0.36
+		self.PlainsPercent		= 0.44
 		self.GrasslandPercent	= 0.68
 		self.LushPercent		= 0.84
 		self.MuddyPercent		= 0.92
@@ -250,15 +249,23 @@ class MapConstants:
 		# Hills & Peaks
 		selectionID = MAP.getCustomMapOption(0)
 		if not selectionID:
-			self.HillPercent *= 0.5
-		elif selectionID == 2:
-			self.HillPercent *= 1.5
+			self.HillPercent *= 0.50
+		elif selectionID == 1:
+			self.HillPercent *= 0.75
+		elif selectionID == 3:
+			self.HillPercent *= 1.25
+		elif selectionID == 4:
+			self.HillPercent *= 1.50
 		# Peaks
 		selectionID = MAP.getCustomMapOption(1)
 		if not selectionID:
-			self.PeakPercent *= 0.5
-		elif selectionID == 2:
-			self.PeakPercent *= 1.5
+			self.HillPercent *= 0.50
+		elif selectionID == 1:
+			self.HillPercent *= 0.75
+		elif selectionID == 3:
+			self.HillPercent *= 1.25
+		elif selectionID == 4:
+			self.HillPercent *= 1.50
 		# Landmass Type
 		selectionID = MAP.getCustomMapOption(2)
 		self.bDryland = False
@@ -340,11 +347,17 @@ class MapConstants:
 		# Bonuses
 		selectionID = MAP.getCustomMapOption(6)
 		if not selectionID:
-			self.BonusBonus = 0.0
+			self.fBonusMult = 0.0
 		elif selectionID == 1:
-			self.BonusBonus *= 0.5
-		elif selectionID == 3:
-			self.BonusBonus *= 2.0
+			self.fBonusMult *= 0.50
+		elif selectionID == 2:
+			self.fBonusMult *= 0.75
+		elif selectionID == 4:
+			self.fBonusMult *= 1.25
+		elif selectionID == 5:
+			self.fBonusMult *= 1.50
+		elif selectionID == 6:
+			self.fBonusMult *= 1.75
 		# Pangea Breaker
 		selectionID = MAP.getCustomMapOption(7)
 		if selectionID or self.bDryland or self.bPangea:
@@ -405,11 +418,11 @@ class MapConstants:
 			self.upLiftExponent  = 5
 
 		elif iClimate == 2: # Arid, more desert, less wet plots.
-			self.SaltFlatsPercent	= 0.06
-			self.DunesPercent		= 0.14
-			self.DesertPercent		= 0.20
-			self.ScrubPercent		= 0.28
-			self.PlainsPercent		= 0.7
+			self.SaltFlatsPercent	= 0.10
+			self.DunesPercent		= 0.20
+			self.DesertPercent		= 0.35
+			self.ScrubPercent		= 0.50
+			self.PlainsPercent		= 0.8
 			self.GrasslandPercent	= 0.9
 			self.LushPercent		= 0.95
 			self.MuddyPercent		= 0.98
@@ -1408,7 +1421,7 @@ class ClimateMap:
 		W	= mc.W
 		geoIndex = 0
 		for zone in xrange(6):
-			topY    = em.GetYFromZone(zone, True)
+			topY	= em.GetYFromZone(zone, True)
 			bottomY = em.GetYFromZone(zone, False)
 			if not (topY == -1 and bottomY == -1):
 				if topY == -1:
@@ -1648,15 +1661,16 @@ class TerrainMap:
 			if self.plotData[i]:
 				if Rainfall[i] < minRain:
 					minRain = Rainfall[i]
-		#Normalize terrain rainfall thresholds
+		# Normalize terrain rainfall thresholds
 		self.desertThreshold	= desertThreshoLoc = FindValueFromPercent(Rainfall, mc.DesertPercent)
 		self.saltflatsThreshold = saltFlatThresLoc = FindValueFromPercent(Rainfall, mc.SaltFlatsPercent)
-		self.dunesThreshold		= dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
 		self.scrubThreshold		= scrubThresholLoc = FindValueFromPercent(Rainfall, mc.ScrubPercent)
 		self.plainsThreshold	= plainThresholLoc = FindValueFromPercent(Rainfall, mc.PlainsPercent)
-		self.grasslandThreshold	= grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
 		self.lushThreshold		= lushThresholdLoc = FindValueFromPercent(Rainfall, mc.LushPercent)
-		self.muddyThreshold		= muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
+
+		dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
+		grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
+		muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
 		#################################################
 		## Terrain Picker
 		#################################################
@@ -1938,7 +1952,7 @@ class PangaeaBreaker:
 
 
 	def createContinentList(self, ID):
-		C        = []
+		C		= []
 		indexMap = []
 		gap = int(round(2 + mc.iWorldSize / (1.5 + mc.bArchipelago)))
 		n = 0
@@ -2761,6 +2775,7 @@ class RiverMap:
 				iRestrict = 0
 			else:
 				iRestrict = 1
+			print "	Generating River Map Debug Point 1"
 			loop = -1
 			while True:
 				loop += 1
@@ -2872,6 +2887,7 @@ class RiverMap:
 			yy = y
 			fCarryOver = drainageMap[i]
 			idxPrev = i
+			print "	Generating River Map Debug Point 2"
 			while True:
 				if flow1 == N:
 					yy += 1
@@ -2930,6 +2946,7 @@ class RiverMap:
 		queueList = []
 		while aList:
 			x, y, i, drainage = aList.pop()
+			print "	Generating River Map Debug Point 3"
 			while True:
 				drainageMap[i] += drainage
 				flow1, flow2 = flowMap[i]
@@ -3000,8 +3017,8 @@ class BonusPlacer:
 		MAP = GC.getMap()
 		MAP.recalculateAreas()
 		iWorldSize = mc.iWorldSize
-		BonusBonus = mc.BonusBonus
-		self.aBonusList = aList = []
+		fBonusMult = mc.fBonusMult
+		self.aBonusList = bonusList = []
 		# Create and shuffle the bonus list.
 		n = 0
 		pOrderDict = {}
@@ -3012,7 +3029,7 @@ class BonusPlacer:
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			iPlaceOrder = CvBonusInfo.getPlacementOrder()
 			# Filter out bonuses with iPlacementOrder at -1 or below.
-			if iPlaceOrder < 0:
+			if iPlaceOrder < 1:
 				n += 1
 				continue
 			bonus = BonusArea()
@@ -3020,12 +3037,13 @@ class BonusPlacer:
 			# Calculate desired amount
 			fBaseCount = (
 				(
-					randint(0, CvBonusInfo.getRandAppearance1()) + randint(0, CvBonusInfo.getRandAppearance2()) +
-					randint(0, CvBonusInfo.getRandAppearance3()) + randint(0, CvBonusInfo.getRandAppearance4()) + CvBonusInfo.getConstAppearance()
+					CvBonusInfo.getConstAppearance() +
+					randint(0, CvBonusInfo.getRandAppearance1()) +
+					randint(0, CvBonusInfo.getRandAppearance2()) +
+					randint(0, CvBonusInfo.getRandAppearance3()) +
+					randint(0, CvBonusInfo.getRandAppearance4())
 				) / 100.0
 			)
-			if iWorldSize:
-				fBaseCount += fBaseCount * iWorldSize / 4.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
@@ -3035,36 +3053,32 @@ class BonusPlacer:
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
-			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
-			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.1f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
+			iBonusCount = int(fBonusMult * (fBaseCount + fDensityCount))
 			if iBonusCount < 1:
 				iBonusCount = 1
+			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tDesired amount = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, fBonusMult, iBonusCount)
 			bonus.desiredBonusCount = iBonusCount
 
-			aList.append(bonus)
+			bonusList.append(bonus)
 			# Check which placement orders are used.
 			if iPlaceOrder in pOrderDict:
-				indexList = pOrderDict[iPlaceOrder]
-				indexList.append(iBonus)
+				pOrderDict[iPlaceOrder].append(iBonus)
 			else:
-				indexList = [iBonus]
-			pOrderDict[iPlaceOrder] = indexList
-		temp = sorted(pOrderDict.keys())
-		pOrderList = []
-		for i in temp:
-			pOrderList.append((i, pOrderDict[i]))
-		shuffle(aList)
+				pOrderDict[iPlaceOrder] = [iBonus]
+
+		shuffle(bonusList)
 		self.iNumBonuses = iNumBonuses = iNumBonusInfos - n
-		self.AssignBonusAreas(iNumBonuses, aList)
+		self.AssignBonusAreas(iNumBonuses, bonusList)
 		bonusDictLoc = self.bonusDict
 		# Shuffle the list of map indices.
 		shuffle(plotIndexList)
 		startAtIndex = 0
-		for i in xrange(len(pOrderList)):
+
+		pOrderList = sorted(pOrderDict.items())
+		for iOrder, aList in pOrderList:
 			placementList = []
-			for indeXML in pOrderList[i][1]:
-				i = bonusDictLoc[indeXML]
-				for n in xrange(aList[i].desiredBonusCount):
+			for indeXML in aList:
+				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
 			if len(placementList) > 0:
 				shuffle(placementList)
@@ -3072,21 +3086,20 @@ class BonusPlacer:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
 		# Now check to see that all resources have been placed at least once while ignoring area rules.
 		for i in xrange(iNumBonuses):
-			bonus = aList[i]
+			bonus = bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				startAtIndex = self.AddEmergencyBonus(bonus, False, plotIndexList, startAtIndex)
 		#now check again to see that all resources have been placed at least once,
 		#this time ignoring area rules and also class spacing
 		for i in xrange(iNumBonuses):
-			bonus = aList[i]
+			bonus = bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				startAtIndex = self.AddEmergencyBonus(bonus, True, plotIndexList, startAtIndex)
 		#now report resources that simply could not be placed
-		for i in xrange(len(pOrderList)):
-			for indeXML in pOrderList[i][1]:
+		for iOrder, aList in pOrderList:
+			for indeXML in aList:
 				CvBonusInfo = GC.getBonusInfo(indeXML)
-				i = bonusDictLoc[indeXML]
-				bonus = aList[i]
+				bonus = bonusList[bonusDictLoc[indeXML]]
 				print "%d - Placed %d, desired %d for %s" %(CvBonusInfo.getPlacementOrder(), bonus.currentBonusCount, bonus.desiredBonusCount, CvBonusInfo.getType())
 
 
@@ -3099,6 +3112,7 @@ class BonusPlacer:
 			return False
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
+		GAME = GC.getGame()
 		bonusInfo = GC.getBonusInfo(indeXML)
 		plotListLength = len(plotIndexList)
 		lastI = 0
@@ -3108,38 +3122,45 @@ class BonusPlacer:
 			lastI = i
 			if i >= plotListLength:
 				index = plotIndexList[i - plotListLength]
-			else:
-				index = plotIndexList[i]
+			else: index = plotIndexList[i]
+
 			CyPlot = MAP.plotByIndex(index)
-			if not self.CanPlaceBonus(CyPlot, indeXML, False): continue
-			# Place bonus.
+			if not self.CanPlaceBonus(CyPlot, indeXML, False):
+				continue
+			# Place bonus
 			CyPlot.setBonusType(indeXML)
 			bonus.currentBonusCount += 1
 			# Clustering
-			groupRange = bonusInfo.getGroupRange()
-			if not groupRange: break
-			maxAdd = groupRange * (iWorldSize + 2) / 3
+			iGroupRange = bonusInfo.getGroupRange()
+			if iGroupRange < 1: break
+			iRand = bonusInfo.getGroupRand()
+			if iRand < 1: break
+			# Scale by worldsize
+			if iWorldSize / 3 > 0:
+				iGroupRange += iWorldSize / 3 # increase range
+				iRand -= iRand * iGroupRange / (iGroupRange + 4) # decrease chance
+
+			if iRand < 1: iRand = 1
+			iMaxCluster = iGroupRange + (iWorldSize + 1) / 2
 			iDeficit = iDesired - bonus.currentBonusCount
-			if maxAdd > iDeficit:
-				maxAdd = iDeficit
-			if maxAdd < 1: break
-			added = 0
-			szType = bonusInfo.getType()
-			fRand = bonusInfo.getGroupRand() / 100.0
+			if iMaxCluster > iDeficit:
+				iMaxCluster = iDeficit
+			iCluster = 0
 			x = CyPlot.getX()
 			y = CyPlot.getY()
-			for dx in xrange(-groupRange, groupRange + 1):
-				for dy in xrange(-groupRange, groupRange + 1):
-					if added == maxAdd:
-						return (lastI + 1) % plotListLength
+			for dx in xrange(-iGroupRange, iGroupRange + 1):
+				for dy in xrange(-iGroupRange, iGroupRange + 1):
 					CyPlotX = self.plotXY(x, y, dx, dy)
-					if not CyPlotX: continue
-					if self.CanPlaceBonus(CyPlotX, indeXML, False) and random() <= fRand:
+					if CyPlotX and GAME.getSorenRandNum(100, "0-99") < iRand and self.PlotCanHaveBonus(CyPlotX, indeXML, False):
 						#place bonus
 						CyPlotX.setBonusType(indeXML)
-						print "Group Placed: " + szType
 						bonus.currentBonusCount += 1
-						added += 1
+						iCluster += 1
+						if iCluster == iMaxCluster:
+							print ("Group Placed %d " % iCluster) + bonusInfo.getType()
+							return (lastI + 1) % plotListLength
+			if iCluster:
+				print ("Group Placed %d " % iCluster) + bonusInfo.getType()
 			break
 		return (lastI + 1) % plotListLength
 
@@ -3160,8 +3181,7 @@ class BonusPlacer:
 			else:
 				index = plotIndexList[i]
 			plot = MAP.plotByIndex(index)
-			x = plot.getX()
-			y = plot.getY()
+
 			if ignoreClass and self.PlotCanHaveBonus(plot, bonus.indeXML, True) or self.CanPlaceBonus(plot, bonus.indeXML, True):
 				#temporarily remove any feature
 				featureEnum = plot.getFeatureType()
@@ -3303,27 +3323,23 @@ class BonusPlacer:
 				if iFeature == ICE and not bonusInfo.isFeature(ICE):
 					# Special case, ice block bonuses, mostly because it looks graphically glitchy.
 					return False
-			elif not (iFeature > -1 and bonusInfo.isFeature(iFeature) and bonusInfo.isFeatureTerrain(iTerrain)):
+			elif iFeature == -1 or not bonusInfo.isFeature(iFeature) or not bonusInfo.isFeatureTerrain(iTerrain):
 				return False
+
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
 
 		if bonusInfo.isNoRiverSide() and plot.isRiverSide():
 			return False
 
 		iTemp = bonusInfo.getMinAreaSize()
-		if iTemp > 1:
-			if plot.area().getNumTiles() < iTemp:
+		if iTemp > 0:
+			iTemp + 2*mc.iWorldSize
+			if iTemp > 1 and plot.area().getNumTiles() < iTemp:
 				return False
 
 		if not bIgnoreArea and bonusInfo.isOneArea():
-			areaID = plot.getArea()
-			areaFound = False
-			i = self.bonusDict[indeXML]
-			areaList = self.aBonusList[i].areaList
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					areaFound = True
-					break
-			if not areaFound:
+			if plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList:
 				return False
 
 		if not plot.isPotentialCityWork():
@@ -3336,15 +3352,12 @@ class BonusPlacer:
 		GC = CyGlobalContext()
 		areaID = area.getID()
 		uniqueBonusCount = 0
-		for i in xrange(len(self.aBonusList)):
-			areaList = self.aBonusList[i].areaList
-			bonusInfo = GC.getBonusInfo(self.aBonusList[i].indeXML)
-			if not bonusInfo.isOneArea():
+		for bonus in self.aBonusList:
+
+			if not GC.getBonusInfo(bonus.indeXML).isOneArea():
 				continue
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					uniqueBonusCount += 1
-					break
+			if areaID in bonus.areaList:
+				uniqueBonusCount += 1
 		return uniqueBonusCount
 
 
@@ -3359,20 +3372,18 @@ class BonusPlacer:
 		classInfo = GC.getBonusClassInfo(eClass)
 		if classInfo == None:
 			return 0
-		iRange = int(classInfo.getUniqueRange() - (round(mc.BonusBonus) - 1))
-		if iRange < 0:
-			iRange = 0
-		for i in xrange(len(self.aBonusList)):
-			areaList = self.aBonusList[i].areaList
-			bonusInfo = GC.getBonusInfo(self.aBonusList[i].indeXML)
+		iRange = classInfo.getUniqueRange()
+		if iRange < 1:
+			return 0
+		for bonus in self.aBonusList:
+			bonusInfo = GC.getBonusInfo(bonus.indeXML)
 			if not bonusInfo.isOneArea():
 				continue
 			if bonusInfo.getBonusClassType() != eClass:
 				continue
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					uniqueBonusCount += 1
-					break
+			if areaID in bonus.areaList:
+				uniqueBonusCount += 1
+				break
 		# Same class types tend to really crowd out any bonus types that are placed later.
 		# A single cow can block 5 * 5 squares of pig territory for example.
 		# Probably shouldn't place them on the same area at all, but sometimes it might be necessary.
@@ -3380,18 +3391,17 @@ class BonusPlacer:
 
 
 	def CalculateAreaSuitability(self, area, indeXML):
-		GC = CyGlobalContext()
-		MAP = GC.getMap()
-		areaID = area.getID()
-		uniqueTypesInArea    = self.GetUniqueBonusTypeCountInArea(area)
+		MAP = CyGlobalContext().getMap()
+		uniqueTypesInArea	= self.GetUniqueBonusTypeCountInArea(area)
 		sameClassTypesInArea = self.GetSameClassTypeCountInArea(area, indeXML)
 		#Get the raw number of suitable tiles
+		areaID = area.getID()
 		iPossible = 0
 		for i in xrange(mc.iArea):
 			plot = MAP.plotByIndex(i)
-			if plot.getArea() == areaID:
-				if self.PlotCanHaveBonus(plot, indeXML, True):
-					iPossible += 1
+			if plot.getArea() == areaID and self.PlotCanHaveBonus(plot, indeXML, True):
+				iPossible += 1
+
 		iPossible /= uniqueTypesInArea + sameClassTypesInArea + 1
 		suitability = 1.0*iPossible / area.getNumTiles()
 		return suitability, iPossible
@@ -3626,7 +3636,7 @@ class StartingPlotFinder:
 			if not self.plotList[i].vacant:
 				currentTotalValue = self.plotList[i].fTotalValue
 				percentLacking = 1.0 - currentTotalValue / bestTotalValue
-				if percentLacking > .0 and mc.BonusBonus:
+				if percentLacking > .0 and mc.fBonusMult:
 					value1 = int(percentLacking / 0.2)
 					if 5 > value1:
 						bonuses = value1
@@ -3851,7 +3861,7 @@ class StartingArea:
 				sPlot = MAP.plot(self.plotList[m].x, self.plotList[m].y)
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
-				sPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
+				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)
@@ -3927,13 +3937,13 @@ class MapOptions:
 	def __init__(self):
 		self.bfirstRun = True
 		self.optionList = [ # Title, Default, Random, Choices)
-							["Hills:",			1,	True, 3],
-							["Peaks:",			1,	True, 3],
+							["Hills:",			2,	True, 5],
+							["Peaks:",			2,	True, 5],
 							["Landform:",		2,	True, 5],
 							["World Wrap:",		0, False, 3],
 							["Start:",			1, False, 2],
 							["Rivers:",			4,	True, 9],
-							["Resources:",		2,	True, 4],
+							["Resources:",		3,	True, 7],
 							["Pangea Breaker:",	0, False, 2]
 						] # When dding/removing options: Update the return of getNumCustomMapOptions().
 
@@ -4040,16 +4050,24 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 0:
 			return "50%"
 		if selectionID == 1:
-			return "100%"
+			return "75%"
 		if selectionID == 2:
+			return "100%"
+		if selectionID == 3:
+			return "125%"
+		if selectionID == 4:
 			return "150%"
 	# Peaks
 	if optionID == 1:
 		if selectionID == 0:
 			return "50%"
 		if selectionID == 1:
-			return "100%"
+			return "75%"
 		if selectionID == 2:
+			return "100%"
+		if selectionID == 3:
+			return "125%"
+		if selectionID == 4:
 			return "150%"
 	# Landform
 	if optionID == 2:
@@ -4106,9 +4124,15 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "50%"
 		if selectionID == 2:
-			return "100%"
+			return "75%"
 		if selectionID == 3:
-			return "200%"
+			return "100%"
+		if selectionID == 4:
+			return "125%"
+		if selectionID == 5:
+			return "150%"
+		if selectionID == 6:
+			return "175%"
 	# Pangea Breaker
 	if optionID == 7:
 		if selectionID == 0: # On
@@ -4133,15 +4157,23 @@ def beforeInit():
 	if optionList[0][1] == 0:
 		print "	%s			50 percent" % optionList[0][0]
 	elif optionList[0][1] == 1:
-		print "	%s			100 percent" % optionList[0][0]
+		print "	%s			75 percent" % optionList[0][0]
 	elif optionList[0][1] == 2:
+		print "	%s			100 percent" % optionList[0][0]
+	elif optionList[0][1] == 3:
+		print "	%s			125 percent" % optionList[0][0]
+	elif optionList[0][1] == 4:
 		print "	%s			150 percent" % optionList[0][0]
 	# Peaks
 	if optionList[1][1] == 0:
 		print "	%s			50 percent" % optionList[1][0]
 	elif optionList[1][1] == 1:
-		print "	%s			100 percent" % optionList[1][0]
+		print "	%s			75 percent" % optionList[1][0]
 	elif optionList[1][1] == 2:
+		print "	%s			100 percent" % optionList[1][0]
+	elif optionList[1][1] == 3:
+		print "	%s			100 percent" % optionList[1][0]
+	elif optionList[1][1] == 4:
 		print "	%s			150 percent" % optionList[1][0]
 	# Landform
 	if optionList[2][1] == 0:
@@ -4193,9 +4225,15 @@ def beforeInit():
 	elif optionList[6][1] == 1:
 		print "	%s		50 percent" % optionList[6][0]
 	elif optionList[6][1] == 2:
-		print "	%s		100 percent" % optionList[6][0]
+		print "	%s		75 percent" % optionList[6][0]
 	elif optionList[6][1] == 3:
-		print "	%s		200 percent" % optionList[6][0]
+		print "	%s		100 percent" % optionList[6][0]
+	elif optionList[6][1] == 4:
+		print "	%s		125 percent" % optionList[6][0]
+	elif optionList[6][1] == 5:
+		print "	%s		150 percent" % optionList[6][0]
+	elif optionList[6][1] == 6:
+		print "	%s		175 percent" % optionList[6][0]
 	# Pangea Breaker
 	if optionList[2][1] == 0 or optionList[2][1] == 1:
 		print "	%s	Off (Dryland|Pangea)" % optionList[7][0]
@@ -4324,15 +4362,15 @@ def generateTerrainTypes():
 	terrDunes		= GC.getInfoTypeForString("TERRAIN_DUNES")
 	terrScrub		= GC.getInfoTypeForString("TERRAIN_SCRUB")
 	terrRocky		= GC.getInfoTypeForString("TERRAIN_ROCKY")
-	terrRockyArid	= GC.getInfoTypeForString("TERRAIN_ROCKY_ARID")
-	terrRockyCold	= GC.getInfoTypeForString("TERRAIN_ROCKY_COLD")
+	terrRockyArid	= GC.getInfoTypeForString("TERRAIN_BADLAND")
+	terrRockyCold	= GC.getInfoTypeForString("TERRAIN_JAGGED")
 	terrBarren		= GC.getInfoTypeForString("TERRAIN_BARREN")
 	terrPlains		= GC.getInfoTypeForString("TERRAIN_PLAINS")
 	terrIce			= GC.getInfoTypeForString("TERRAIN_ICE")
 	terrPermaFrost	= GC.getInfoTypeForString("TERRAIN_PERMAFROST")
 	terrTundra		= GC.getInfoTypeForString("TERRAIN_TUNDRA")
 	terrTaiga		= GC.getInfoTypeForString("TERRAIN_TAIGA")
-	terrGrass		= GC.getInfoTypeForString("TERRAIN_GRASS")
+	terrGrass		= GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrLush		= GC.getInfoTypeForString("TERRAIN_LUSH")
 	terrMuddy		= GC.getInfoTypeForString("TERRAIN_MUDDY")
 	terrMarsh		= GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -4459,7 +4497,7 @@ def addFeatures():
 	featureJungle		= GC.getInfoTypeForString("FEATURE_JUNGLE")
 	featureFloodPlains	= GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featureOasis		= GC.getInfoTypeForString("FEATURE_OASIS")
-	featureCactus		= GC.getInfoTypeForString("FEATURE_KAKTUS")
+	featureCactus		= GC.getInfoTypeForString("FEATURE_CACTUS")
 	featureBog			= GC.getInfoTypeForString("FEATURE_PEAT_BOG")
 	featureSwamp		= GC.getInfoTypeForString("FEATURE_SWAMP")
 	featureIce			= GC.getInfoTypeForString("FEATURE_ICE")
@@ -4610,7 +4648,7 @@ def addFeatures():
 
 
 def addBonuses():
-	if mc.BonusBonus:
+	if mc.fBonusMult:
 		print "Bonus generation"
 		timer = BugUtil.Timer('Bonus generation')
 		bp.AddBonuses()
@@ -4639,13 +4677,10 @@ def normalizeAddLakes(): return
 def normalizeRemoveBadFeatures(): return
 def normalizeRemoveBadTerrain(): return
 def normalizeAddFoodBonuses(): return
-def normalizeAddExtras(): return
 def normalizeAddGoodTerrain(): return
-
-def startHumansOnSameTile():
+def normalizeAddExtras():
 	# This is the last function processed before the game begins.
-	# Clean up memory usage.
-	return True
+	return
 
 ###############################################################################
 ## Additional Global functions
@@ -4764,7 +4799,7 @@ def FindValueFromPercent(map, percent):
 			if maxV < map[i]:
 				maxV = map[i]
 	mid = (maxV - minV) / 2.0 + minV
-	threshold       = mid
+	threshold	   = mid
 	thresholdChange = mid
 	lastAdded	= False
 	inTolerance = False

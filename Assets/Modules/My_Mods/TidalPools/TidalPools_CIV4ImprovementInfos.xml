@@ -15,7 +15,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_POOLS</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<bWater>1</bWater>
+			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iUpgradeTime>5</iUpgradeTime>

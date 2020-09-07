@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Route Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4RouteInfos xmlns="x-schema:../Schema/C2C_CIV4MiscSchema.xml">
 	<RouteInfos>
 		<RouteInfo>
@@ -50,8 +44,8 @@
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_PAVED</Type>
-			<Description>TXT_KEY_ROUTE_PAVED</Description>
+			<Type>ROUTE_PAVED_ROAD</Type>
+			<Description>TXT_KEY_ROUTE_PAVED_ROAD</Description>
 			<iValue>4</iValue>
 			<iAdvancedStartCost>8</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -64,19 +58,19 @@
 			<Button>Art/Interface/Buttons/Builds/BuildPavedRoad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_MODERN_ROAD</Type>
+			<Type>ROUTE_HIGHWAY</Type>
 			<Description>TXT_KEY_ROUTE_HIGHWAY</Description>
 			<iValue>5</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>30</iFlatMovement>
-			<BonusType>BONUS_DIESEL</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqOrBonuses/>
 			<Yields/>
 			<TechMovementChanges>
 				<TechMovementChange>
-					<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<iMovementChange>-6</iMovementChange>
 				</TechMovementChange>
 				<TechMovementChange>
@@ -94,7 +88,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>12</iFlatMovement>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
 					<BonusType>BONUS_COAL</BonusType>
@@ -103,7 +97,7 @@
 					<BonusType>BONUS_OIL</BonusType>
 				</PrereqOrBonus>
 				<PrereqOrBonus>
-					<BonusType>BONUS_DIESEL</BonusType>
+					<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				</PrereqOrBonus>
 			</PrereqOrBonuses>
 			<Yields/>
@@ -111,17 +105,17 @@
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_RAILROAD_ELECTRIC</Type>
-			<Description>TXT_KEY_ROUTE_RAILROAD_ELECTRIC</Description>
+			<Type>ROUTE_ELECTRIC_RAILROAD</Type>
+			<Description>TXT_KEY_ROUTE_ELECTRIC_RAILROAD</Description>
 			<iValue>7</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>10</iFlatMovement>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 				</PrereqOrBonus>
 			</PrereqOrBonuses>
 			<Yields/>
@@ -129,14 +123,14 @@
 			<Button>Art/Interface/Buttons/Builds/BuildElectricRailroad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_GRAVTUBE</Type>
-			<Description>TXT_KEY_ROUTE_GRAVTUBE</Description>
+			<Type>ROUTE_MAGLEV</Type>
+			<Description>TXT_KEY_ROUTE_MAGLEV</Description>
 			<iValue>8</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>20</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARE_COPPER</BonusType>
+			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
 					<BonusType>BONUS_PLASTIC</BonusType>
@@ -152,14 +146,14 @@
 		</RouteInfo>
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<RouteInfo>
-			<Type>ROUTE_HYPERLOOP</Type>
-			<Description>TXT_KEY_ROUTE_HYPERLOOP</Description>
+			<Type>ROUTE_VACTRAIN</Type>
+			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
 			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>18</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARE_TITANIUM</BonusType>
+			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -176,7 +170,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>16</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARES_LIQUID_METAL</BonusType>
+			<BonusType>BONUS_LIQUID_METAL</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -212,7 +206,7 @@
 			<iMovement>60</iMovement>
 			<iFlatMovement>60</iFlatMovement>
 			<bSeaTunnel>1</bSeaTunnel>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
 				<iYield>0</iYield>

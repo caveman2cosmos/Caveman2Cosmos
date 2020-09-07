@@ -3,96 +3,56 @@
 #ifndef CySelectionGroup_h__
 #define CySelectionGroup_h__
 
-struct MissionData;
+//
+// Python wrapper class for CvSelectionGroup
+//
 
+class CvSelectionGroup;
 class CyPlot;
 class CyArea;
 class CyUnit;
-class CvSelectionGroup;
 
-//
-// Python wrapper class for CySelectionGroup
-//
 class CySelectionGroup
 {
 public:
 	CySelectionGroup();
 	explicit CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
-	CvSelectionGroup* getSelectionGroup() { return m_pSelectionGroup;	}	// Call from C++
 
-	bool isNone() { return (m_pSelectionGroup==NULL); }
-	void pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, CyPlot* pMissionAIPlot, CyUnit* pMissionAIUnit);
-	void pushMoveToMission(int iX, int iY);
-	void popMission();
-	CyPlot* lastMissionPlot();
-	bool canStartMission(int iMission, int iData1, int iData2, CyPlot* pPlot, bool bTestVisible);
+	//CvSelectionGroup* getSelectionGroup() const { return m_pSelectionGroup; }	// Call from C++
+	bool isNone() const { return m_pSelectionGroup == NULL; }
 
-	bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);
-	bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CyPlot* pPlot);
+	void pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, const CyPlot& kMissionAIPlot, const CyUnit& kMissionAIUnit);
+	bool canStartMission(int iMission, int iData1, int iData2, const CyPlot& kPlot, bool bTestVisible) const;
 
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible);
+	bool isHuman() const;
+	int baseMoves() const;	
+	bool isWaiting() const;
+	bool isFull() const;
+	bool hasMoved() const;
+	bool canMoveInto(const CyPlot& kPlot, bool bAttack) const;
+	bool canMoveOrAttackInto(const CyPlot& kPlot, bool bDeclareWar) const;
+	bool canFight() const;
+	bool isInvisible(int /*TeamTypes*/ eTeam) const;	
 
-	bool isHuman();
-	int baseMoves();	
-	bool isWaiting();
-	bool isFull();
-	bool hasCargo();
-	bool canAllMove();
-	bool canAnyMove();
-	bool hasMoved();
-	bool canEnterTerritory(int /*TeamTypes*/ eTeam, bool bIgnoreRightOfPassage);
-	bool canEnterArea(int /*TeamTypes*/ eTeam, CyArea* pArea, bool bIgnoreRightOfPassage);
-	bool canMoveInto(CyPlot* pPlot, bool bAttack);
-	bool canMoveOrAttackInto(CyPlot* pPlot, bool bDeclareWar);
-	bool canMoveThrough(CyPlot* pPlot);
-	bool canFight();
-	bool canDefend();	
-	bool alwaysInvisible();	
-	bool isInvisible(int /*TeamTypes*/ eTeam);	
-	int countNumUnitAIType(UnitAITypes eUnitAI);
-	bool hasWorker();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-	bool isStranded();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	CyPlot* plot() const;
+	CyArea* area() const;
 
-	bool at(int iX, int iY);
-	bool atPlot(CyPlot* pPlot);
-	CyPlot* plot();
-	CyArea* area();
-	int /*RouteTypes*/ getBestBuildRoute(CyPlot* pPlot, BuildTypes* peBestBuild);
+	bool readyToMove(bool bAny) const;
 
-	bool isAmphibPlot(CyPlot* pPlot);
-
-	bool readyToSelect(bool bAny);
-	bool readyToMove(bool bAny);
-	bool readyToAuto();	
-	int getID();
-	int /*PlayerTypes*/ getOwner();
-	int /*TeamTypes*/ getTeam();
-	int /*ActivityTypes*/ getActivityType();
+	int getID() const;
+	int /*PlayerTypes*/ getOwner() const;
+	int /*TeamTypes*/ getTeam() const;
+	int /*ActivityTypes*/ getActivityType() const;
 	void setActivityType(int /*ActivityTypes*/ eNewValue);
-	int /*AutomateTypes*/ getAutomateType();
-	bool isAutomated();
+	int /*AutomateTypes*/ getAutomateType() const;
+	bool isAutomated() const;
 	void setAutomateType(int /*AutomateTypes*/ eNewValue);
-	CyPlot* getPathFirstPlot();
-	CyPlot* getPathEndTurnPlot();
-	bool generatePath(CyPlot* pFromPlot, CyPlot* pToPlot, int iFlags, bool bReuse, int* piPathTurns);
-	void resetPath();
-	int getNumUnits();
-	void clearMissionQueue();
-	int getLengthMissionQueue();
-	int getMissionType( int iNode );
-	int getMissionData1( int iNode );
-	int getMissionData2( int iNode );
-	MissionData* getMissionFromQueue(int iIndex);
-	CyUnit* getHeadUnit();
-	CyUnit* getUnitAt(int index);
+
+	int getNumUnits() const;
+	int getLengthMissionQueue() const;
+	int getMissionType(int iNode) const;
+	int getMissionData1(int iNode) const;
+	CyUnit* getHeadUnit() const;
 
 protected:
 	CvSelectionGroup* m_pSelectionGroup;

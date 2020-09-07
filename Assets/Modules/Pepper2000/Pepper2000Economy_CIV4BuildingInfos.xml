@@ -2,8 +2,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_ECONOMY</BuildingClass>
 			<Type>BUILDING_CISLUNAR_ECONOMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Strategy>
@@ -15,49 +16,49 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>9310</iCost>
-			<FreeBuilding>BUILDINGCLASS_CISLUNAR_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
+			<FreeBuilding>BUILDING_CISLUNAR_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAGLEV_LAUNCH</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SOLAR_SATELLITE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ASTEROID_MINE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_STATION</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SPACE_PORT</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPACE_WAREHOUSE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -66,7 +67,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARES_METAMATERIALS</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -77,8 +78,9 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SOLAR_ECONOMY</BuildingClass>
 			<Type>BUILDING_SOLAR_ECONOMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_ECONOMY_STRATEGY</Strategy>
@@ -90,46 +92,47 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>15610</iCost>
-			<FreeBuilding>BUILDINGCLASS_SOLAR_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STARPORT</BuildingClassType>
+			<FreeBuilding>BUILDING_SOLAR_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_COLONY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MARS_MEGACITY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VENUS_SURFACE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STRATOSPHERIC_TOWER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FOCUS_SUN</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CISLUNAR_ONEILL_CYLINDER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GALACTIC_ECONOMY</BuildingClass>
 			<Type>BUILDING_GALACTIC_ECONOMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_ECONOMY_STRATEGY</Strategy>
@@ -141,58 +144,59 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>26310</iCost>
-			<FreeBuilding>BUILDINGCLASS_GALACTIC_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ECUMENOPOLIS</BuildingClassType>
+			<FreeBuilding>BUILDING_GALACTIC_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ARTIFICIAL_PLANET</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PAIR_PRODUCTION_PLANT</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_PAIR_PRODUCTION_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DYSON_SPHERE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACKHOLE_FACTORY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BLACKHOLE_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPACESCRAPER2</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LAUNCH_ARCO</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MATRIOSHKA_BRAIN</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WORMHOLE_TRADE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SOLAR_IMPORTER_EXPORTER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SOLAR_IMPORTER_EXPORTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACKHOLE_COLONY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_UNIVERSAL_ECONOMY</BuildingClass>
 			<Type>BUILDING_UNIVERSAL_ECONOMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_STRATEGY</Strategy>
@@ -204,50 +208,51 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>39510</iCost>
-			<FreeBuilding>BUILDINGCLASS_UNIVERSAL_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_INTERGALACTIC_WORMHOLE_HIVEMIND</BuildingClassType>
+			<FreeBuilding>BUILDING_UNIVERSAL_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OMEGA_ASSEMBLER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMPUTRONIUM_CONVERSION_SHIP</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMPUTRONIUM_CONVERSION_SHIP</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DARK_ENERGY_POWER_PLANT</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_DARK_ENERGY_POWER_PLANT</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GALACTIC_SUPERCLUSTER_COLONY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_QUARK_STAR_BASE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_QUARK_STAR_BASE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ELECTROWEAK_STAR_BASE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_QUANTUM_VACUUM</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_INTERGALACTIC_COLONY</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COSMIC_ECONOMY</BuildingClass>
 			<Type>BUILDING_COSMIC_ECONOMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_ECONOMY_STRATEGY</Strategy>
@@ -257,104 +262,179 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>57510</iCost>
-			<FreeBuilding>BUILDINGCLASS_COSMIC_ECONOMY_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COSMIC_EXPLORER_BASE</BuildingClassType>
+			<FreeBuilding>BUILDING_COSMIC_ECONOMY_EFFECT</FreeBuilding>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COSMIC_EXPLORER_BASE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TACHYON_COMMUNICATION_CENTER</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_TACHYON_COMMUNICATION_CENTER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANCESTOR_RESURRECTION</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANCESTOR_RESURRECTION</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HYPERPLANET</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_HYPERPLANET</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SIMULATED_UNIVERSE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COSMIC_NODE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NEUTRONIUM</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NEUTRONIUM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CISLUNAR_EFFECT</BuildingClass>
 			<Type>BUILDING_CISLUNAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SOLAR_EFFECT</BuildingClass>
 			<Type>BUILDING_SOLAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GALACTIC_EFFECT</BuildingClass>
 			<Type>BUILDING_GALACTIC_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GALACTIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_UNIVERSAL_EFFECT</BuildingClass>
 			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COSMIC_ECONOMY_EFFECT</BuildingClass>
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
-			<iCost>-1</iCost>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 	</BuildingInfos>

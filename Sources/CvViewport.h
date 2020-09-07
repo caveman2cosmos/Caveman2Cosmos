@@ -9,9 +9,7 @@
 //	PURPOSE: Viewport presented as a map to the game engine
 
 
-#include "CvMapInterfaceBase.h"
 #include "CvMap.h"
-//class	CvMap;
 
 enum ViewportMode
 {
@@ -78,7 +76,6 @@ public:
 
 public:
 	virtual MapTypes getType() const;
-	virtual void setType(MapTypes eNewType);
 
 	virtual void beforeSwitch();
 	virtual void afterSwitch();
@@ -115,7 +112,7 @@ public:
 	virtual void updateIrrigated();
 	virtual void updateCenterUnit();
 	virtual void updateWorkingCity();
-	virtual void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
+	virtual void updateMinOriginalStartDist(const CvArea* pArea);										// Exposed to Python
 	virtual void updateYield();
 
 	virtual void verifyUnitValidPlot();
@@ -205,8 +202,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iXSize);
+				FASSERT_BOUNDS(0, m_iXSize, iResult)
 
 				return iResult;
 			}
@@ -221,7 +217,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -242,8 +238,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iYSize);
+				FASSERT_BOUNDS(0, m_iYSize, iResult)
 
 				return iResult;
 			}
@@ -258,7 +253,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -285,7 +280,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -312,7 +307,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -341,7 +336,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}
@@ -370,7 +365,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}

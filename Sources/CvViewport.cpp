@@ -208,9 +208,9 @@ void CvViewport::setupGraphical()
 
 void CvViewport::reset(CvMapInitData* pInitData)
 {
-	OutputDebugString("Reseting Viewport: Start");
+	OutputDebugString("Reseting Viewport: Start/n");
 	m_pMap->reset(pInitData);
-	OutputDebugString("Reseting Viewport: End");
+	OutputDebugString("Reseting Viewport: End/n");
 }
 
 /*********************************/
@@ -219,11 +219,6 @@ void CvViewport::reset(CvMapInitData* pInitData)
 MapTypes CvViewport::getType() const
 {
 	return m_pMap->getType();
-}
-
-void CvViewport::setType(MapTypes eNewType)
-{
-	m_pMap->setType(eNewType);
 }
 
 void CvViewport::beforeSwitch()
@@ -549,7 +544,7 @@ void CvViewport::updateWorkingCity()
 	m_pMap->updateWorkingCity();
 }
 
-void CvViewport::updateMinOriginalStartDist(CvArea* pArea)
+void CvViewport::updateMinOriginalStartDist(const CvArea* pArea)
 {
 	m_pMap->updateMinOriginalStartDist(pArea);
 }

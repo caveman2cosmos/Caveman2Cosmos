@@ -115,7 +115,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	etCoast		= GC.getInfoTypeForString('TERRAIN_COAST')
 	etDesert	= GC.getInfoTypeForString('TERRAIN_DESERT')	# FlatArid, RockyArid
 	etPlains	= GC.getInfoTypeForString('TERRAIN_PLAINS')	# FlatMoist, RockyMoist
-	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASS')	# FlatRainy, RockyRainy
+	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASSLAND')	# FlatRainy, RockyRainy
 	etTundra	= GC.getInfoTypeForString('TERRAIN_TAIGA')	# RockyMoist, FlatPolar
 	etSnow		= GC.getInfoTypeForString('TERRAIN_ICE')	# FlatPolar, RockyPolar
 	etMarsh 	= GC.getInfoTypeForString("TERRAIN_MARSH")	# FlatRainy
@@ -134,15 +134,15 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	################################
 	### define globals for some boni
 	################################
-	global ebAluminum, ebBauxite, ebCopper, ebGold, ebSilver, ebIron, ebOil, ebSulphur, ebUranium, ebCoal,\
-		ebClam, ebFish, ebCrab, ebShrimp, ebHorse, ebBanana, ebCow, ebDeer, ebFur, ebGems, ebMarble, ebSheep
+	global ebBauxite, ebCopper, ebGold, ebSilver, ebIron, ebOil, ebSulphur, ebUranium, ebCoal,\
+		ebClam, ebFish, ebCrab, ebShrimp, ebHorse, ebBanana, ebCow, ebDeer, ebFur, ebMarble, ebSheep
 
 	# strategic boni
-	ebAluminum        = GC.getInfoTypeForString('BONUS_ALUMINUM')
-	ebBauxite         = GC.getInfoTypeForString('BONUS_BAUXITE')
-	ebCopper          = GC.getInfoTypeForString('BONUS_COPPER')
+
+	ebBauxite         = GC.getInfoTypeForString('BONUS_BAUXITE_ORE')
+	ebCopper          = GC.getInfoTypeForString('BONUS_COPPER_ORE')
 	ebHorse           = GC.getInfoTypeForString('BONUS_HORSE')
-	ebIron            = GC.getInfoTypeForString('BONUS_IRON')
+	ebIron            = GC.getInfoTypeForString('BONUS_IRON_ORE')
 	ebOil             = GC.getInfoTypeForString('BONUS_OIL')
 	ebSulphur         = GC.getInfoTypeForString('BONUS_SULPHUR')
 	ebUranium         = GC.getInfoTypeForString('BONUS_URANIUM')
@@ -151,13 +151,12 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebFish            = GC.getInfoTypeForString('BONUS_FISH')			# water
 	ebShrimp          = GC.getInfoTypeForString('BONUS_SHRIMP')			# water
 	ebCoal            = GC.getInfoTypeForString('BONUS_COAL')
-	ebGold            = GC.getInfoTypeForString('BONUS_GOLD')			# plains, desert
-	ebSilver          = GC.getInfoTypeForString('BONUS_SILVER')			# tundra, snow
+	ebGold            = GC.getInfoTypeForString('BONUS_GOLD_ORE')			# plains, desert
+	ebSilver          = GC.getInfoTypeForString('BONUS_SILVER_ORE')			# tundra, snow
 	ebBanana          = GC.getInfoTypeForString('BONUS_BANANA')			# grass, jungle
 	ebCow             = GC.getInfoTypeForString('BONUS_COW')			# grass, plains
 	ebDeer            = GC.getInfoTypeForString('BONUS_DEER')			# tundra, forest
-	ebFur             = GC.getInfoTypeForString('BONUS_FUR')			# tundra, snow, forest
-	ebGems            = GC.getInfoTypeForString('BONUS_GEMS')			# grass, jungle
+	ebFur             = GC.getInfoTypeForString('BONUS_BEAVERS')			# tundra, snow, forest
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')			# plains, tundra, snow
 	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')			# grass, plains
 
@@ -931,12 +930,10 @@ def getTerrainPercentage( eTerrain, bPercent=True ):
 		if plot.isWater(): cntWater += 1
 		if ter == eTerrain: cntTer += 1
 	if bPercent:
-		if GC.getTerrainInfo(eTerrain).isWater():
+		if GC.getTerrainInfo(eTerrain).isWaterTerrain():
 			return round(cntTer * 100.0 / cntWater, 2)
-		else:
-			return round(cntTer * 100.0 / (MAP.numPlots() - cntWater), 2)
-	else:
-		return cntTer
+		return round(cntTer * 100.0 / (MAP.numPlots() - cntWater), 2)
+	return cntTer
 
 
 ################################################################################
@@ -1064,35 +1061,34 @@ def getContinentCoastXY( continentPlots, bLakes=False ):
 # get the shortest distance between continents
 # if 2nd continent is not given, then the distance to
 # the nearest other continent is returned
-def getContinentDistance( areaID, otherAreaID=None ):
+def getContinentDistance(areaID, otherAreaID=None):
 	if areaID == otherAreaID: return 0
 	# get 1st area
-	area = MAP.getArea( areaID )
+	area = MAP.getArea(areaID)
 	if area.isWater(): return -1
-	aPlotList = getAreaPlots( areaID )
-	if len(aPlotList) == 0: return -1
-	aCoastList = getContinentCoastXY( aPlotList )
-	if len(aCoastList) == 0:
-		aCoastList = getContinentCoastXY( aPlotList, True )
+	aPlotList = getAreaPlots(areaID)
+	if not aPlotList: return -1
+	aCoastList = getContinentCoastXY(aPlotList)
+	if not aCoastList:
+		aCoastList = getContinentCoastXY(aPlotList, True)
 	# get 2nd area
 	if otherAreaID == None:
 		# get coast of all other continents
 		otherCoastList = []
-		for inx in range( MAP.numPlots() ):
-			pl = MAP.plotByIndex( inx )
-			if pl.isCoastalLand():
-				if pl.getArea() != areaID:
-					x,y = coordByPlot( pl )
-					otherCoastList.append( (x,y) )
+		for inx in range(MAP.numPlots()):
+			pl = MAP.plotByIndex(inx)
+			if pl.getArea() != areaID and not pl.isWater() and pl.isCoastal():
+				x,y = coordByPlot(pl)
+				otherCoastList.append((x, y))
 	else:
 		# get coast of given continent
-		otherArea = MAP.getArea( otherAreaID )
+		otherArea = MAP.getArea(otherAreaID)
 		if otherArea.isWater(): return -1
-		otherPlotList = getAreaPlots( otherAreaID )
-		if len(otherPlotList) == 0: return -1
-		otherCoastList = getContinentCoastXY( otherPlotList )
-		if len(otherCoastList) == 0:
-			aCoastList = getContinentCoastXY( otherPlotList, True )
+		otherPlotList = getAreaPlots(otherAreaID)
+		if not otherPlotList: return -1
+		otherCoastList = getContinentCoastXY(otherPlotList)
+		if not otherCoastList:
+			aCoastList = getContinentCoastXY(otherPlotList, True)
 	# get minimum distance
 	minDist = 99999
 	for x,y in aCoastList:
@@ -1213,7 +1209,7 @@ def choose( iPercent, a, b ):
 # choose from several (iPercent,xValue) tuples; iPercent ascending toward 100%
 # parameter may be also a list of tuples
 # Usage:
-# bon = chooseMore( (10,"BONUS_SILVER"), (35,"BONUS_GOLD"), (50,"BONUS_COPPER"), (85,"BONUS_IRON") )
+# bon = chooseMore( (10,"BONUS_SILVER_ORE"), (35,"BONUS_GOLD_ORE"), (50,"BONUS_COPPER_ORE"), (85,"BONUS_IRON_ORE") )
 # will give the boni names with 10%, 25%, 15% and 35% probability or None with 15% probability
 def chooseMore(*t):
 	iRand = GC.getGame().getMapRand().get(100, "MapScriptTools.chooseMore()")
@@ -1461,9 +1457,9 @@ class MapPrettifier:
 		for x in range( x0, x1 ):
 			for y in range( y0, y1 ):
 				pl = MAP.plot(x, y)
-				if pl.isPeak() and pl.isCoastalLand():
+				if pl.isPeak() and pl.isCoastal():
 					if pl.getFeatureType() < 0:					# don't transform volcanos
-						if choose( chHills, True, False ):
+						if choose(chHills, True, False):
 							# If a peak is along the coast, change to hills and recalc.
 							pl.setPlotType(PlotTypes.PLOT_HILLS, True, True)
 							iCnt += 1
@@ -1568,13 +1564,13 @@ class MapPrettifier:
 			return
 		# read parameter
 		eTerrain, chPercent = targetTerTuple
-		bWater = GC.getTerrainInfo(eTerrain).isWater()
+		bWater = GC.getTerrainInfo(eTerrain).isWaterTerrain()
 		srcTer = []
 		chTer = []
 		for i in range( len(sourceTerTuples) ):
 			srcTerrain, srcChance = sourceTerTuples[i]
 			# we don't change plots
-			if GC.getTerrainInfo(srcTerrain).isWater() == bWater:
+			if GC.getTerrainInfo(srcTerrain).isWaterTerrain() == bWater:
 				srcTer.append( srcTerrain )
 				chTer.append( srcChance )
 		# check seed terrain
@@ -1904,28 +1900,28 @@ class MarshMaker:
 	###############
 
 	# assign chances for conversion to plot and choose
-	def convertTerrainPlot( self, plot ):
-#		print "[MST] ======== MarshMaker:convertTerrainPlot()"
+	def convertTerrainPlot(self, plot):
 		if plot.isFlatlands():
-			iLat = abs( plot.getLatitude() )
+			iLat = plot.getLatitude()
+			if iLat < 0: iLat = -iLat
 			eTerrain = plot.getTerrainType()
 			if self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop:
 				# tundra near equator is always converted
-				if eTerrain==etTundra:
-					self.buildMarshlands( plot, eTerrain )
+				if eTerrain == etTundra:
+					self.buildMarshlands(plot, eTerrain)
 					return
-			if (self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop) or (self.iMarshColdBottom<=iLat and iLat<=self.iMarshColdTop):
+			if self.iMarshHotBottom<=iLat and iLat<=self.iMarshHotTop or self.iMarshColdBottom<=iLat and iLat<=self.iMarshColdTop:
 				iWet = 0.3
 				if plot.isFreshWater(): iWet += 1.2
-				if plot.isCoastalLand(): iWet += 0.3
-				if eTerrain==etTundra:
-					if choose( int(iWet*self.chTundra), True, False ):
-						self.buildMarshlands( plot, eTerrain )
-				elif eTerrain==etGrass:
-					if choose( int(iWet*self.chGrass), True, False ):
-						self.buildMarshlands( plot, eTerrain )
-				elif eTerrain==etMarsh:
-					self.buildMarshlands( plot, eTerrain )		# give extra chance to convert neighbor
+				if plot.isCoastal(): iWet += 0.3
+				if eTerrain == etTundra:
+					if choose(int(iWet*self.chTundra), True, False):
+						self.buildMarshlands(plot, eTerrain)
+				elif eTerrain == etGrass:
+					if choose(int(iWet*self.chGrass), True, False):
+						self.buildMarshlands(plot, eTerrain)
+				elif eTerrain == etMarsh:
+					self.buildMarshlands(plot, eTerrain) # give extra chance to convert neighbor
 
 	# put marsh on map and try for a neighbor
 	def buildMarshlands( self, plot, eTerrain ):
@@ -2488,7 +2484,7 @@ class MapRegions:
 
 		dentBoni = {
 			'Flat':		[ebSilver, ebFur, ebDeer, ebMarble, ebCow, ebHorse],
-			'Hills':	[ebSilver, ebMarble, ebGold, ebGems, ebSheep, None],
+			'Hills':	[ebSilver, ebMarble, ebGold, ebSheep, None],
 			'Terrain':	[etSnow, etTundra, etTundra, etMarsh, etGrass, etGrass]
 		}
 
@@ -2888,12 +2884,16 @@ class MapRegions:
 		lostIsleNames_Pfall = [ "Alien HQ", "Command Center", "City of Light", "Atlantis Command" ]
 
 		sprint = ""
-		for x0,y0,pList,bAliens in self.lostIsleList:
+		for x0, y0, pList, bAliens in self.lostIsleList:
 			plDone = []
 
 			# city ruins
 			printList(pList, "Lost Isle Tiles:", prefix="[MST] ")
-			pListCoast = [GetPlot(x,y) for x,y in pList if (not GetPlot(x,y).isPeak()) and GetPlot(x,y).isCoastalLand()]
+			pListCoast = []
+			for x, y in pList:
+				plotX = GetPlot(x, y)
+				if not plotX.isPeak() and not plotX.isWater() and plotX.isCoastal():
+					pListCoast.append(plotX)
 			plot = chooseListElement(pListCoast)
 			if plot == None:
 				print "[MST] Unable to place City Ruins"
@@ -2907,37 +2907,36 @@ class MapRegions:
 
 			# river
 			rList = []
-			riverDirs = riverMaker.checkRiverEnd( plot, bDownFlow=True )
-			rDir = chooseListElement( riverDirs )
+			riverDirs = riverMaker.checkRiverEnd(plot, bDownFlow=True)
+			rDir = chooseListElement(riverDirs)
 			if rDir != None:
-				riverMaker.buildRiver( plot, False, rDir, riverList=rList )		# upFlow
-				print riverMaker.outRiverList( rList, "[MST] " )
-			else:
-				print "[MST] Unable to build river"
+				riverMaker.buildRiver(plot, False, rDir, riverList=rList) # upFlow
+				print riverMaker.outRiverList(rList, "[MST] ")
+			else: print "[MST] Unable to build river"
 
 			# improve terrain
-			pListTer = [ GetPlot(x,y) for x,y in pList if not GetPlot(x,y).isPeak() ]
+			pListTer = [GetPlot(x,y) for x,y in pList if not GetPlot(x,y).isPeak()]
 			for pl in pListTer:
 				if pl.getTerrainType() == etSnow:
-					newTerrain = chooseMore( (20,etGrass), (85,etTundra), (100,etSnow) )
+					newTerrain = chooseMore((20, etGrass), (85, etTundra), (100, etSnow))
 					if pl.isFreshWater():
-						newTerrain = chooseMore( (25,etMarsh), (75,newTerrain), (100,etGrass) )
-					pl.setTerrainType( newTerrain, True, True )
+						newTerrain = chooseMore((25,etMarsh), (75,newTerrain), (100,etGrass))
+					pl.setTerrainType(newTerrain, True, True)
 				elif pl.getTerrainType() == etTundra:
 					if pl.isFreshWater():
-						newTerrain = chooseMore( (30,etGrass), (60,etMarsh), (100,etTundra) )
+						newTerrain = chooseMore((30,etGrass), (60,etMarsh), (100,etTundra))
 					else:
-						newTerrain = chooseMore( (30,etGrass), (100,etTundra) )
-					pl.setTerrainType( newTerrain, True, True )
+						newTerrain = chooseMore((30,etGrass), (100,etTundra))
+					pl.setTerrainType(newTerrain, True, True)
 				elif pl.getTerrainType() == etDesert:
-					newTerrain = choose( 20, etGrass, etPlains )
-					if not pl.isFreshWater() and not plot.isCoastalLand():
-						newTerrain = choose( 25, etDesert ,newTerrain )
-					pl.setTerrainType( newTerrain, True, True )
+					newTerrain = choose(20, etGrass, etPlains)
+					if not pl.isFreshWater() and not pl.isCoastal():
+						newTerrain = choose(25, etDesert ,newTerrain)
+					pl.setTerrainType(newTerrain, True, True)
 
 			# place boni and work them
 			pListBoni = [GetPlot(x,y) for x,y in pList if (x,y) != (cx,cy) and not GetPlot(x,y).isPeak()]
-			bonList = [ebGold, ebGems, ebSilver, [ebCopper, ebIron], ebOil, [ebSheep, ebCow], ebCoal, ebSulphur, ebUranium]
+			bonList = [ebGold, ebSilver, [ebCopper, ebIron], ebOil, [ebSheep, ebCow], ebCoal, ebSulphur, ebUranium]
 			chance = iif(bAliens, 90, 60)
 			# try for four landbased boni on the island
 			for i in range(4):
@@ -3141,43 +3140,38 @@ class MapRegions:
 
 	# delete plots which can't be bog centers
 	def deleteNonBogPlots( self, plotList ):
-#		print "[MST] ======== MapRegions:deleteNonBogPlots()"
 		for inx in range( len(plotList)-1,-1,-1 ):
 			pl = plotList[inx]
-			if pl.isCoastalLand():
+			if not p1.isWater() and pl.isCoastal():
 				del plotList[inx]
-			else:
-				iLat = evalLatitude( pl )		# 0..90
-				bZone = marshMaker.iMarshHotBottom<=iLat and iLat<=marshMaker.iMarshHotTop or marshMaker.iMarshColdBottom<=iLat and iLat<=marshMaker.iMarshColdTop
-				if bZone:
-					if not MAP.isWrapX():
-						if (pl.getX()<3) or (pl.getX()>(iNumPlotsX-4)):
-							del plotList[inx]
-							continue
-					if not MAP.isWrapY():
-						if (pl.getY()<3) or (pl.getY()>(iNumPlotsY-4)):
-							del plotList[inx]
-				else:
+				continue
+
+			iLat = evalLatitude(pl) # 0..90
+			bZone = marshMaker.iMarshHotBottom<=iLat and iLat<=marshMaker.iMarshHotTop or marshMaker.iMarshColdBottom<=iLat and iLat<=marshMaker.iMarshColdTop
+			if bZone:
+				if not MAP.isWrapX() and (pl.getX() < 3 or pl.getX() > iNumPlotsX-4):
 					del plotList[inx]
+
+				elif not MAP.isWrapY() and (pl.getY() < 3 or pl.getY() > iNumPlotsY-4):
+					del plotList[inx]
+			else:
+				del plotList[inx]
 
 	# delete plots which can't be dent centers
 	def deleteNonDentPlots( self, plotList ):
-#		print "[MST] ======== MapRegions:deleteNonDentPlots()"
-		for inx in range( len(plotList)-1,-1,-1 ):
+		for inx in range(len(plotList)-1, -1, -1):
 			pl = plotList[inx]
-			if pl.isCoastalLand():
+			if not pl.isWater() and pl.isCoastal():
 				del plotList[inx]
-			else:
-				if not MAP.isWrapX():
-					if (pl.getX()<3) or (pl.getX()>(iNumPlotsX-4)):
-						del plotList[inx]
-				elif not MAP.isWrapY():
-					if (pl.getY()<3) or (pl.getY()>(iNumPlotsY-4)):
-						del plotList[inx]
+				continue
+
+			if not MAP.isWrapX() and (pl.getX() < 3 or pl.getX() > iNumPlotsX-4):
+				del plotList[inx]
+			elif not MAP.isWrapY() and (pl.getY() < 3 or pl.getY() > iNumPlotsY-4):
+				del plotList[inx]
 
 	# change to bog-terrain
 	def changeBogTerrain( self, plot, temp ):
-#		print "[MST] ======== MapRegions:changeBogTerrain()"
 		sprint = ""
 		if temp==0: return sprint
 
@@ -3422,9 +3416,9 @@ class BonusBalancer:
 	# class variables
 	# Note: The first bonus will be ignored about half the time,
 	#       not all players will have it near their starting-plot
-	resourcesToBalance   = ( 'BONUS_ALUMINUM', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON', 'BONUS_COPPER', )
+	resourcesToBalance   = ( 'BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE', )
 	resourcesToEliminate = ('', )
-	mineralsToMove       = ( 'BONUS_COPPER', 'BONUS_IRON', 'BONUS_MITHRIL', 'BONUS_SILVER', 'BONUS_GOLD', 'BONUS_URANIUM' )
+	mineralsToMove       = ( 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_SILVER_ORE', 'BONUS_GOLD_ORE', 'BONUS_URANIUM' )
 
 	def initialize(self, bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False ):
 		print "[MST] ===== BonusBalancer:initialize( %r, %r, %r, %r )" % (bBalanceOnOff, bMissingOnOff, bMineralsOnOff, bWideRange)
@@ -3461,7 +3455,7 @@ class BonusBalancer:
 			self.resourcesToBalance = ('', )
 			self.resourcesToEliminate = ('', )
 		else:
-			self.resourcesToBalance = ('BONUS_BAUXITE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON', 'BONUS_COPPER',)
+			self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE',)
 
 	# organize resourceLists, make areaList, place missing boni and balance starting-plots
 	def normalizeAddExtras(self, *lResources):
@@ -4985,7 +4979,7 @@ class MapPrint:
 		# feature dictionaries
 		# --------------------
 		self.__featureDict = {
-			efIce											: ["°", "Ice"	],
+			efIce											: ["ï¿½", "Ice"	],
 			GC.getInfoTypeForString('FEATURE_FALLOUT')		: ["*", "Fallout"],
 			efJungle										: ["j", "Jungle"],
 			efForest										: ["f", "Forest"],
@@ -5000,7 +4994,6 @@ class MapPrint:
 		# bonus dictionaries
 		# ------------------
 		self.__bonusDict = {
-			ebAluminum : [ "A", "Aluminum" ],
 			ebCopper   : [ "C", "Copper"   ],
 			ebIron     : [ "I", "Iron"     ],
 			ebOil      : [ "O", "Oil"      ],
@@ -6320,7 +6313,7 @@ print "[MST] ########### pre-init MapScriptTools ########### End"
 #    humans start only on coastal lands near biggest ocean or all on one continent
 # adjust for team-options in 'OccStart'
 # -------------- sooner or later
-# balance on wider scale and two tiers: (aluminum,uranium,mithril,(reagens?),oil,(coal?)) within 7-radius
+# balance on wider scale and two tiers: (uranium,oil,(coal?)) within 7-radius
 #    and other, earlier resources (copper,iron,horses,mana) within 5-radius?
 #    may have to adjust for players / map-plots ratio ?
 # better missing boni recognition? (check all terrain/features against 3 is..() -> build list, check list)
@@ -6799,7 +6792,6 @@ The Map Building Process according to Temudjin
 7.8)     normalizeGoodTerrain()
 7.9)     normalizeAddExtras()
 7.9.1)     isBonusIgnoreLatitude()*
-8 )    startHumansOnSameTile()
 
 * used by default 'CyPythonMgr().allowDefaultImpl()' in:
   addBonuses(), normalizeAddFoodBonuses(), normalizeAddExtras()
@@ -6997,9 +6989,8 @@ def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
 	CyPythonMgr().allowDefaultImpl()
 
-# This function will be called by the system, after the map was generated, after the
-# starting-plots have been choosen, at the end of the normalizing process and
-# before startHumansOnSameTile() which is the last map-function so called.
+# This function will be called by the system after the starting-plots have been choosen
+# at the end of the normalizing process, and is the last map-function called externally.
 # - balance boni (depending on initialization also place missing boni and move minerals)
 # - give names and boni to special regions
 # - print plot-map and the difference-map to the call before

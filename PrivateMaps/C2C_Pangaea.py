@@ -38,7 +38,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -47,7 +47,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:  2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -69,7 +69,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -91,11 +91,11 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 1 or map.getCustomMapOption(1) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(1) == 2)
-	
+
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(2) == 1):
 		balancer.normalizeAddExtras()
@@ -103,13 +103,12 @@ def normalizeAddExtras():
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
+	type_string = CyGlobalContext().getBonusInfo(iBonusType).getType()
 
 	if (CyMap().getCustomMapOption(2) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def isAdvancedMap():
@@ -138,9 +137,9 @@ def beforeGeneration():
 	# Detect whether this game is primarily a team game or not. (1v1 treated as a team game!)
 	# Team games, everybody starts on the coast. Otherwise, start anywhere on the pangaea.
 	global isTeamGame
-	gc = CyGlobalContext()
-	iPlayers = gc.getGame().countCivPlayersEverAlive()
-	iTeams = gc.getGame().countCivTeamsEverAlive()
+	GAME = CyGame()
+	iPlayers = GAME.countCivPlayersEverAlive()
+	iTeams = GAME.countCivTeamsEverAlive()
 	if iPlayers >= iTeams * 2 or iPlayers == 2:
 		isTeamGame = True
 	else:
@@ -152,7 +151,7 @@ class PangaeaHintedWorld:
 		global hinted_world
 		hinted_world = HintedWorld(8,4)
 
-		mapRand = CyGlobalContext().getGame().getMapRand()
+		mapRand = CyGame().getMapRand()
 
 		for y in range(hinted_world.h):
 			for x in range(hinted_world.w):
@@ -172,13 +171,13 @@ class PangaeaHintedWorld:
 
 		hinted_world.buildAllContinents()
 		return hinted_world.generatePlotTypes(shift_plot_types=True)
-	
+
 	def generateAndysHintedPangaea(self):
 		NiTextOut("Setting Plot Types (Python Pangaea Hinted) ...")
 		global hinted_world
 		hinted_world = HintedWorld(16,8)
 
-		mapRand = CyGlobalContext().getGame().getMapRand()
+		mapRand = CyGame().getMapRand()
 
 		numBlocks = hinted_world.w * hinted_world.h
 		numBlocksLand = int(numBlocks*0.33)
@@ -186,7 +185,7 @@ class PangaeaHintedWorld:
 		if not cont:
 			# Couldn't create continent! Reverting to Soren's Hinted Pangaea
 			return self.generateSorensHintedPangaea()
-		else:		
+		else:
 			for x in range(hinted_world.w):
 				for y in (0, hinted_world.h - 1):
 					hinted_world.setValue(x,y, 1) # force ocean at poles
@@ -202,19 +201,19 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Pangaea.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      3,
-			WorldSizeTypes.WORLDSIZE_TINY:      3,
-			WorldSizeTypes.WORLDSIZE_SMALL:     4,
+			WorldSizeTypes.WORLDSIZE_DUEL:	  3,
+			WorldSizeTypes.WORLDSIZE_TINY:	  3,
+			WorldSizeTypes.WORLDSIZE_SMALL:	 4,
 			WorldSizeTypes.WORLDSIZE_STANDARD:  4,
-			WorldSizeTypes.WORLDSIZE_LARGE:     4,
-			WorldSizeTypes.WORLDSIZE_HUGE:      5,
+			WorldSizeTypes.WORLDSIZE_LARGE:	 4,
+			WorldSizeTypes.WORLDSIZE_HUGE:	  5,
 			6: 5,
 			7: 5
 			}
 		grain = sizevalues[sizekey]
-		
+
 		# Sea Level adjustment (from user input), limited to value of 5%.
-		sea = self.gc.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+		sea = CyGlobalContext().getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
 		sea = min(sea, 5)
 		sea = max(sea, -5)
 
@@ -238,19 +237,19 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				# Define potential subcontinent slots (regional definitions).
 				# List values: [westLon, southLat, vertRange, horzRange, southShift]
 				scValues = [[0.05, 0.375, 0.2, 0.0, 0],
-				            [0.55, 0.375, 0.2, 0.0, 0],
-				            [0.1, 0.225, 0.0, 0.15, 0],
-				            [0.3, 0.225, 0.0, 0.15, 0]
-				            ]
+							[0.55, 0.375, 0.2, 0.0, 0],
+							[0.1, 0.225, 0.0, 0.15, 0],
+							[0.3, 0.225, 0.0, 0.15, 0]
+							]
 			else:
 				mainNorthLat -= 0.175
 				mainSouthLat -= 0.175
 				# List values: [westLon, southLat, vertRange, horzRange, southShift]
 				scValues = [[0.05, 0.025, 0.2, 0.0, 0],
-				            [0.55, 0.025, 0.2, 0.0, 0],
-				            [0.1, 0.375, 0.0, 0.15, 0],
-				            [0.3, 0.375, 0.0, 0.15, 0]
-				            ]
+							[0.55, 0.025, 0.2, 0.0, 0],
+							[0.1, 0.375, 0.0, 0.15, 0],
+							[0.3, 0.375, 0.0, 0.15, 0]
+							]
 		elif pangaea_type == 1: # Pressed Equatorial
 			# Define potential subcontinent slots (regional definitions).
 			equRoll = self.dice.get(4, "Subcontinents - Pangaea PYTHON")
@@ -258,10 +257,10 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			numSubcontinents = 2 + equRoll
 			# List values: [westLon, southLat, vertRange, horzRange, southShift]
 			scValues = [[0.05, 0.2, 0.2, 0.0, 0.0],
-			            [0.55, 0.2, 0.2, 0.0, 0.0],
-			            [0.2, 0.05, 0.0, 0.2, 0.0],
-			            [0.2, 0.55, 0.0, 0.2, 0.0]
-			            ]
+						[0.55, 0.2, 0.2, 0.0, 0.0],
+						[0.2, 0.05, 0.0, 0.2, 0.0],
+						[0.2, 0.55, 0.0, 0.2, 0.0]
+						]
 		else: # Natural
 			subcontinentDimension = 0.3
 			# Shift mainland north or south?
@@ -278,14 +277,14 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			numSubcontinents = 4 + self.dice.get(3, "Subcontinents - Pangaea PYTHON")
 			# List values: [westLon, southLat, vertRange, horzRange, southShift]
 			scValues = [[0.05, 0.575, 0.0, 0.0, 0.15],
-			            [0.05, 0.275, 0.0, 0.0, 0.15],
-			            [0.2, 0.175, 0.0, 0.0, 0.15],
-			            [0.5, 0.175, 0.0, 0.0, 0.15],
-			            [0.65, 0.575, 0.0, 0.0, 0.15],
-			            [0.65, 0.275, 0.0, 0.0, 0.15],
-			            [0.2, 0.675, 0.0, 0.0, 0.15],
-			            [0.5, 0.675, 0.0, 0.0, 0.15]
-			            ]
+						[0.05, 0.275, 0.0, 0.0, 0.15],
+						[0.2, 0.175, 0.0, 0.0, 0.15],
+						[0.5, 0.175, 0.0, 0.0, 0.15],
+						[0.65, 0.575, 0.0, 0.0, 0.15],
+						[0.65, 0.275, 0.0, 0.0, 0.15],
+						[0.2, 0.675, 0.0, 0.0, 0.15],
+						[0.5, 0.675, 0.0, 0.0, 0.15]
+						]
 
 		# Generate the main land mass, first pass (to vary shape).
 		mainWestX = int(self.iW * mainWestLon)
@@ -294,19 +293,19 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		mainSouthY = int(self.iH * mainSouthLat)
 		mainWidth = mainEastX - mainWestX + 1
 		mainHeight = mainNorthY - mainSouthY + 1
-		
+
 		mainWater = 55+sea
 
 		self.generatePlotsInRegion(mainWater,
-		                           mainWidth, mainHeight,
-		                           mainWestX, mainSouthY,
-		                           2, grain,
-		                           self.iHorzFlags, self.iTerrainFlags,
-		                           -1, -1,
-		                           True, 15,
-		                           2, False,
-		                           False
-		                           )
+								   mainWidth, mainHeight,
+								   mainWestX, mainSouthY,
+								   2, grain,
+								   self.iHorzFlags, self.iTerrainFlags,
+								   -1, -1,
+								   True, 15,
+								   2, False,
+								   False
+								   )
 
 		# Second pass (to ensure cohesion).
 		second_layerHeight = mainHeight/2
@@ -317,17 +316,17 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		second_layerSouthY = mainSouthY + mainHeight/4
 
 		second_layerWater = 60+sea
-                
+
 		self.generatePlotsInRegion(second_layerWater,
-		                           second_layerWidth, second_layerHeight,
-		                           second_layerWestX, second_layerSouthY,
-		                           1, grain,
-		                           self.iHorzFlags, self.iTerrainFlags,
-		                           -1, -1,
-		                           True, 15,
-		                           2, False,
-		                           False
-		                           )
+								   second_layerWidth, second_layerHeight,
+								   second_layerWestX, second_layerSouthY,
+								   1, grain,
+								   self.iHorzFlags, self.iTerrainFlags,
+								   -1, -1,
+								   True, 15,
+								   2, False,
+								   False
+								   )
 
 		# Add subcontinents.
 		# Subcontinents can be akin to India/Alaska, Europe, or the East Indies.
@@ -368,17 +367,17 @@ class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 				scWater = 66+sea; scGrain = 2; scRift = 2
 			else: # scShape == 0, Archipelago subcontinent.
 				scWater = 77+sea; scGrain = grain; scRift = -1
-                
+
 			self.generatePlotsInRegion(scWater,
-			                           scWidth, scHeight,
-			                           scWestX, scSouthY,
-			                           scGrain, grain,
-			                           self.iRoundFlags, self.iTerrainFlags,
-			                           6, 6,
-			                           True, 7,
-			                           scRift, False,
-			                           False
-			                           )
+									   scWidth, scHeight,
+									   scWestX, scSouthY,
+									   scGrain, grain,
+									   self.iRoundFlags, self.iTerrainFlags,
+									   6, 6,
+									   True, 7,
+									   scRift, False,
+									   False
+									   )
 
 			del scValues[scIndex]
 			numSubcontinents -= 1
@@ -403,16 +402,15 @@ invert_heights
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Pangaea) ...")
 	global pangaea_type
-	gc = CyGlobalContext()
 	mapgen = CyMapGenerator()
 	map = CyMap()
-	dice = gc.getGame().getMapRand()
+	dice = CyGame().getMapRand()
 	hinted_world = PangaeaHintedWorld()
 	fractal_world = PangaeaMultilayeredFractal()
 
 	# Get user input.
 	userInputLandmass = map.getCustomMapOption(0)
-	
+
 	# Implement Pangaea by Type
 	if userInputLandmass == 3: # Solid
 		# Roll for type selection.
@@ -442,11 +440,11 @@ def generatePlotTypes():
 		else:
 			pangaea_type = 2
 		return fractal_world.generatePlotsByRegion(pangaea_type)
-		
+
 	elif userInputLandmass == 1: # Natural
 		pangaea_type = 0
 		return fractal_world.generatePlotsByRegion(pangaea_type)
-		
+
 	else: # Random
 		global terrainRoll
 		terrainRoll = dice.get(10, "PlotGen Chooser - Pangaea PYTHON")
@@ -455,7 +453,7 @@ def generatePlotTypes():
 		# 5,6 = Pressed, Polar
 		# 7,8 = Solid, Irregular
 		# 9 = Solid, Round
-		
+
 		if terrainRoll > 6:
 			# Solid Shoreline cohesion check and catch - patched Dec 30, 2005 - Sirian
 			cohesive = False
@@ -486,11 +484,10 @@ def generatePlotTypes():
 def generateTerrainTypes():
 	# Run a check for cohesion failure.
 	# If the largest land area contains less than 80% of the land (Natural/Pressed),
-	# or less than 90% of the land (Solid), add a third layer of fractal terrain 
+	# or less than 90% of the land (Solid), add a third layer of fractal terrain
 	# to try to link the main landmasses in to a true Pangaea.
-	gc = CyGlobalContext()
 	map = CyMap()
-	dice = gc.getGame().getMapRand()
+	dice = CyGame().getMapRand()
 	iHorzFlags = CyFractal.FracVals.FRAC_WRAP_X + CyFractal.FracVals.FRAC_POLAR
 	biggest_area = map.findBiggestArea(false)
 	global terrainRoll
@@ -533,7 +530,7 @@ def generateTerrainTypes():
 		northY = int(northLat * iH)
 		iRegionWidth = eastX - iWestX + 1
 		iRegionHeight = northY - iSouthY + 1
-		
+
 		# Init the plot types array and the regional fractals
 		plotTypes = [] # reinit the array for each pass
 		plotTypes = [PlotTypes.PLOT_OCEAN] * (iRegionWidth*iRegionHeight)
@@ -594,7 +591,7 @@ def addFeatures():
 	featuregen = FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
-	
+
 def findStartingPlot(argsList):
 	[playerID] = argsList
 
@@ -613,7 +610,7 @@ def findStartingPlot(argsList):
 			return not pWaterArea.isLake()
 		else:
 			return true
-	
+
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 
 def afterGeneration():

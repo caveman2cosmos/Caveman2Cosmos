@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Assets\Modules\Custom_Religions\Asatru\Asatru_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_ASATRU_MISSIONARY</Class>
 			<Type>UNIT_ASATRU_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ASATRU_MISSIONARY</Capture>
+			<Capture>UNIT_ASATRU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -22,6 +16,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASATRU_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Civilopedia>
@@ -34,7 +31,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_ASATRU_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -53,8 +52,8 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOKI</Class>
 			<Type>UNIT_LOKI</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -73,6 +72,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LOKI</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
@@ -82,12 +84,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
@@ -101,11 +100,13 @@
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_LOKI_SANCTUARY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LOKI_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>300</iCost>
 			<iMoves>1</iMoves>

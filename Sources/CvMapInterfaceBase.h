@@ -17,9 +17,6 @@
 #include "CvPlot.h"
 
 
-class FAStar;
-class CvPlotGroup;
-
 //
 // holds initialization info
 //
@@ -62,7 +59,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	virtual MapTypes getType() const = 0;
-	virtual void setType(MapTypes eNewType) = 0;
 
 	virtual void beforeSwitch() = 0;
 	virtual void afterSwitch() = 0;
@@ -87,7 +83,7 @@ public:
 	virtual void updateIrrigated() = 0;
 	virtual void updateCenterUnit() = 0;
 	virtual void updateWorkingCity() = 0;
-	virtual void updateMinOriginalStartDist(CvArea* pArea) = 0;										// Exposed to Python
+	virtual void updateMinOriginalStartDist(const CvArea* pArea) = 0;										// Exposed to Python
 	virtual void updateYield() = 0;
 
 	virtual void verifyUnitValidPlot() = 0;

@@ -15,15 +15,13 @@ public:
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
-#ifdef _USRDLL
 	// inlined for performance reasons, only in the dll
 	static CvTeamAI& getTeam(TeamTypes eTeam)
 	{
-		FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
-		FAssertMsg(eTeam <= MAX_TEAMS, "eTeam is not assigned a valid value");
+		FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 		return m_aTeams[eTeam]; 
 	}
-#endif
+
 	DllExport static CvTeamAI& getTeamNonInl(TeamTypes eTeam);
 
 	static void initStatics();
@@ -285,9 +283,7 @@ protected:
 	int m_iLimitedWarPowerRatio;
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
-	
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
+
 	//edited functions
 	int AI_noTechTradeThreshold(bool bRecalculate = false) const;
 	int AI_techTradeKnownPercent(bool bRecalculate = false) const;
@@ -314,10 +310,6 @@ protected:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_TEAM CvTeamAI::getTeam
-#else
-#define GET_TEAM CvTeamAI::getTeamNonInl
-#endif
 
 #endif

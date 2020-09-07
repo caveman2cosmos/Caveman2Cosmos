@@ -3,6 +3,10 @@
 // updated 6-5
 //
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeam.h"
+#include "CyArea.h"
+#include "CyTeam.h"
 
 CyTeam::CyTeam() : m_pTeam(NULL)
 {
@@ -123,7 +127,7 @@ int CyTeam::getNumNukeUnits()
 }
 
 //Sevo Begin--VCM
-int CyTeam::getTotalVictoryScore()
+int64_t CyTeam::getTotalVictoryScore() const
 {
 	return m_pTeam ? m_pTeam->getTotalVictoryScore() : -1;
 }
@@ -169,37 +173,39 @@ bool CyTeam::isAVassal() const
 	return m_pTeam ? m_pTeam->isAVassal() : false;
 }
 
-int CyTeam::getUnitClassMaking(int /*UnitClassTypes*/ eUnitClass)
+int CyTeam::getUnitMaking(int /*UnitTypes*/ eUnit)
 {
-	return m_pTeam ? m_pTeam->getUnitClassMaking((UnitClassTypes)eUnitClass) : -1;
+	return m_pTeam ? m_pTeam->getUnitMaking((UnitTypes)eUnit) : -1;
 }
 
-int CyTeam::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eUnitClass)
+int CyTeam::getUnitCountPlusMaking(int /*UnitTypes*/ eUnit)
 {
-	return m_pTeam ? m_pTeam->getUnitClassCountPlusMaking((UnitClassTypes)eUnitClass) : -1;
+	return m_pTeam ? m_pTeam->getUnitCountPlusMaking((UnitTypes)eUnit) : -1;
 }
 
-int CyTeam::getBuildingClassMaking(int /*BuildingClassTypes*/ eBuildingClass)
+int CyTeam::getBuildingMaking(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pTeam ? m_pTeam->getBuildingClassMaking((BuildingClassTypes)eBuildingClass) : -1;
+	return m_pTeam ? m_pTeam->getBuildingMaking((BuildingTypes)eBuilding) : -1;
 }
 
-int CyTeam::getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ eBuildingClass)
+int CyTeam::getBuildingCountPlusMaking(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pTeam ? m_pTeam->getBuildingClassCountPlusMaking((BuildingClassTypes)eBuildingClass) : -1;
+	return m_pTeam ? m_pTeam->getBuildingCountPlusMaking((BuildingTypes)eBuilding) : -1;
 }
 
 int CyTeam::getHasReligionCount(int /*ReligionTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasReligionCount((ReligionTypes)eReligion) : -1;
 }
+
 int CyTeam::getHasCorporationCount(int /*CorporationTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasCorporationCount((CorporationTypes)eReligion) : -1;
 }
-int CyTeam::countTotalCulture()
+
+int64_t CyTeam::countTotalCulture() const
 {
-	return m_pTeam ? m_pTeam->processedTeamCulture() : -1;
+	return m_pTeam ? m_pTeam->countTotalCulture() : -1;
 }
 
 int CyTeam::countNumUnitsByArea(CyArea* pArea)
@@ -296,7 +302,7 @@ void CyTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 			{
 				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 				{
-					FAssertMsg(false, "GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
+					FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 #ifdef _DEBUG
 					throw new std::exception();
 #endif
@@ -703,8 +709,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index) (Python)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index) (Python)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG
@@ -845,24 +850,24 @@ int CyTeam::getProjectMaking(int /*ProjectTypes*/ eIndex)
 	return m_pTeam ? m_pTeam->getProjectMaking((ProjectTypes)eIndex) : -1;
 }
 
-int CyTeam::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
+int CyTeam::getUnitCount(int /*UnitTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getUnitClassCount((UnitClassTypes)eIndex) : -1;
+	return m_pTeam ? m_pTeam->getUnitCount((UnitTypes)eIndex) : -1;
 }
 
-bool CyTeam::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+bool CyTeam::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return m_pTeam ? m_pTeam->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : false;
+	return m_pTeam ? m_pTeam->isUnitMaxedOut((UnitTypes)eIndex, iExtra) : false;
 }
 
-int CyTeam::getBuildingClassCount(int /*BuildingClassTypes*/ eIndex)
+int CyTeam::getBuildingCount(int /*BuildingTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getBuildingClassCount((BuildingClassTypes)eIndex) : -1;
+	return m_pTeam ? m_pTeam->getBuildingCount((BuildingTypes)eIndex) : -1;
 }
 
-bool CyTeam::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra)
+bool CyTeam::isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra)
 {
-	return m_pTeam ? m_pTeam->isBuildingClassMaxedOut((BuildingClassTypes)eIndex, iExtra) : false;
+	return m_pTeam ? m_pTeam->isBuildingMaxedOut((BuildingTypes)eIndex, iExtra) : false;
 }
 
 int CyTeam::getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex)

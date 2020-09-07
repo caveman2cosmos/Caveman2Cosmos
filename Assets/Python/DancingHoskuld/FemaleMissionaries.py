@@ -1,82 +1,54 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-##
-## Femaile Missionaries by saibotlieh.
-##	Converted to BUG format by by Dancing Hoskuld
-##
+## Femaile Missionaries and beastmaster by saibotlieh.
 
 from CvPythonExtensions import *
 
-# globals
 GC = CyGlobalContext()
-
-###################################################
-#~ def onUnitCreated(argsList):
-	#~ 'Unit Completed'
-	#~ unit = argsList[0]
-
-#~ # Beastmaster - saibotlieh - start
-
-	#~ iUnitType = unit.getUnitType()
-	#~ UnitInfo = GC.getUnitInfo(iUnitType)
-	#~ sUnitType = UnitInfo.getType()
-
-	#~ if sUnitType[:10] == 'UNIT_TAMED':	# A Beastmaster will be added to all units which first 10 letters of the UnitType are UNIT_TAMED
-		#~ iRnd = CyGame().getSorenRandNum(100, "Female Beastmaster")
-		#~ if iRnd < 15:
-			#~ unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER"))
-		#~ else:
-			#~ unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_BEASTMASTER"))
-
-#~ # Beastmaster - saibotlieh - end
 
 def onUnitBuilt(argsList):
 	CyCity = argsList[0]
-	unit = argsList[1]
-	CyPlayer = GC.getPlayer(CyCity.getOwner())
+	CyUnit = argsList[1]
 
-# Female Missionaries - saibotlieh
+	UnitInfo = GC.getUnitInfo(CyUnit.getUnitType())
+	sUnitType = UnitInfo.getType()
 
-	iUnitType = unit.getUnitType()
-	UnitInfo = GC.getUnitInfo(iUnitType)
+	# Female Missionaries
 	if UnitInfo.getDefaultUnitAIType() == GC.getInfoTypeForString('UNITAI_MISSIONARY'):
-		sUnitType = UnitInfo.getType()
 		sFemaleUnitType = 'UNIT_FEMALE'+sUnitType[4:]
-		iFemaleUnitType = GC.getInfoTypeForString(sFemaleUnitType)
+		iFemaleUnitType = GC.getInfoTypeForStringWithHiddenAssert(sFemaleUnitType)
 
 		if iFemaleUnitType > -1:
-			if CyPlayer.isCivic(GC.getInfoTypeForString('CIVIC_LIBERAL')):
+			CyPlayer = GC.getPlayer(CyCity.getOwner())
+			if CyPlayer.isCivic(GC.getInfoTypeForString('CIVIC_EGALITARIAN')):
 				iFemaleChance = 50
 			else:
 				iFemaleChance = 15
 
-			iRnd = CyGame().getSorenRandNum(100, "Female unit")
-			if iRnd < iFemaleChance:
-				oldunit = unit
-				pFemaleUnit = CyPlayer.initUnit(iFemaleUnitType,oldunit.getX(),oldunit.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-				pFemaleUnit.convert(oldunit)
-				if oldunit.getGroup().isAutomated():
-					pFemaleUnit.getGroup().setAutomateType(AutomateTypes.AUTOMATE_RELIGION)
-				## If city has a rally point send the female missionary there
-				else:
-					rallyPlot = CyCity.getRallyPlot()
-					# if not (rallyPlot == None):
-					if rallyPlot.getX() > -1 and rallyPlot.getY() > -1:
-						pFemaleUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, rallyPlot.getX(), rallyPlot.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pFemaleUnit.plot(), pFemaleUnit)
-				oldunit.kill(False, oldunit.getOwner())
+			if CyGame().getSorenRandNum(100, "Female unit") < iFemaleChance:
+				oldUnit = CyUnit
+				CyUnit = CyPlayer.initUnit(iFemaleUnitType, CyUnit.getX(), CyUnit.getY(), UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+				CyUnit.convert(oldUnit, True) # This kills oldUnit with a delay
+				if oldUnit.getGroup().isAutomated():
+					CyUnit.getGroup().setAutomateType(AutomateTypes.AUTOMATE_RELIGION)
 
-				## Fa Men Si
+				else: # If city has a rally point send the female missionary there
+					rallyPlot = CyCity.getRallyPlot()
+					if rallyPlot.getX() > -1 and rallyPlot.getY() > -1:
+						CyUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, rallyPlot.getX(), rallyPlot.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, CyUnit.plot(), CyUnit)
+
+				# Fa Men Si
 				FA_MEN_SI = GC.getInfoTypeForString("BUILDING_FA_MEN_SI")
 				if FA_MEN_SI > -1 and CyPlayer.countNumBuildings(FA_MEN_SI):
-					pFemaleUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"),True)
+					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"),True)
+				return
 
-# Beastmaster - saibotlieh
-
-	sUnitType = UnitInfo.getType()
-
-	if sUnitType[:10] == 'UNIT_TAMED':	# A Beastmaster will be added to all units which first 10 letters of the UnitType are UNIT_TAMED
-		iRnd = CyGame().getSorenRandNum(100, "Female Beastmaster")
-		if iRnd < 15:
-			unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER"))
+	# Beastmaster
+	if sUnitType[:10] == 'UNIT_TAMED':
+		if GC.getPlayer(CyCity.getOwner()).isCivic(GC.getInfoTypeForString('CIVIC_EGALITARIAN')):
+			iOdds = 50
 		else:
-			unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_BEASTMASTER"))
+			iOdds = 15
+
+		if CyGame().getSorenRandNum(100, "Female Beastmaster") < iOdds:
+			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER"))
+		else:
+			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_BEASTMASTER"))

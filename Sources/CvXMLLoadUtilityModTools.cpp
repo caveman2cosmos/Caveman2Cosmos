@@ -11,6 +11,7 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 
 using namespace std;
 
@@ -585,7 +586,7 @@ CvString CvXMLLoadUtilityModTools::GetProgramDir()
 	CvString szExeLocation = _pgmptr;
 	if ( szExeLocation == NULL)
 	{
-		FAssertMsg(false, "Not running Stdlib Compatible Operating System?");
+		FErrorMsg("Not running Stdlib Compatible Operating System?");
 	}
 	
 	string::size_type posDot = szExeLocation.find_last_of('\\');
@@ -608,7 +609,7 @@ CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const c
 	}
 	else
 	{
-		FAssertMsg(false, "Couldn't find the directory slash")
+		FErrorMsg("Couldn't find the directory slash")
 	}
 
 	return szDirNameStrip;
@@ -636,7 +637,7 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 	}
 	else
 	{
-		FAssertMsg(false, "Something went wrong with the Theme file");
+		FErrorMsg("Something went wrong with the Theme file");
 	}
 	
 	FILE *pFile = fopen(szTextVal, "w");

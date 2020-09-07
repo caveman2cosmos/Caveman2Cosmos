@@ -1,18 +1,21 @@
+#include "CvGameCoreDLL.h"
+#include "CvRandom.h"
+#include "CyGame.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
+
 //
 // published python interface for CyGlobalContext
 // Author - Mustafa Thamer
 //
 
-#include "CvGameCoreDLL.h"
-
-
 void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 {
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface1\n");
-
 	x
 		.def("isDebugBuild", &CyGlobalContext::isDebugBuild, "() - returns true if running a debug build")
-		.def("setIsInPedia", &CyGlobalContext::setIsInPedia, "void (bool bIsInPedia)")
 		.def("getGame", &CyGlobalContext::getCyGame, python::return_value_policy<python::reference_existing_object>(), "() - CyGame()")
 		.def("getMap", &CyGlobalContext::getCyMap, python::return_value_policy<python::reference_existing_object>(), "() - CyMap()")
 		.def("getPlayer", &CyGlobalContext::getCyPlayer, python::return_value_policy<python::reference_existing_object>(), "(iPlayer) - iPlayer instance")
@@ -91,17 +94,8 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		.def("getNumGameSpeedInfos", &CyGlobalContext::getNumGameSpeedInfos, "() - Total Game speed Infos XML\\GameInfo\\CIV4GameSpeedInfo.xml")
 		.def("getGameSpeedInfo", &CyGlobalContext::getGameSpeedInfo, python::return_value_policy<python::reference_existing_object>(), "(GameSpeed Info) - CvInfo for GameSpeedID")
 
-		.def("getNumTurnTimerInfos", &CyGlobalContext::getNumTurnTimerInfos, "() - Total Turn timer Infos XML\\GameInfo\\CIV4TurnTimerInfo.xml")
-		.def("getTurnTimerInfo", &CyGlobalContext::getTurnTimerInfo, python::return_value_policy<python::reference_existing_object>(), "(TurnTimer Info) - CvInfo for TurnTimerID")
-
-		.def("getNumBuildingClassInfos", &CyGlobalContext::getNumBuildingClassInfos, "() - Total Building Class Infos XML\\Buildings\\CIV4BuildingClassInfos.xml")
-		.def("getBuildingClassInfo", &CyGlobalContext::getBuildingClassInfo, python::return_value_policy<python::reference_existing_object>(), "(BuildingClassID) - CvInfo for BuildingClassID")
-
 		.def("getNumBuildingInfos", &CyGlobalContext::getNumBuildingInfos, "() - Total Building Infos XML\\Buildings\\CIV4BuildingInfos.xml")
 		.def("getBuildingInfo", &CyGlobalContext::getBuildingInfo, python::return_value_policy<python::reference_existing_object>(), "(BuildingID) - CvInfo for BuildingID")
-
-		.def("getNumUnitClassInfos", &CyGlobalContext::getNumUnitClassInfos, "() - Total Unit Class Infos XML\\Units\\CIV4UnitClassInfos.xml")
-		.def("getUnitClassInfo", &CyGlobalContext::getUnitClassInfo, python::return_value_policy<python::reference_existing_object>(), "(UnitClassID) - CvInfo for UnitClassID")
 
 		.def("getNumUnitCombatInfos", &CyGlobalContext::getNumUnitCombatInfos, "() - Total Unit Combat Infos XML\\Units\\CIV4UnitCombatInfos.xml")
 		.def("getUnitCombatInfo", &CyGlobalContext::getUnitCombatInfo, python::return_value_policy<python::reference_existing_object>(), "(UnitCombatID) - CvInfo for UnitCombatID")
@@ -116,29 +110,21 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		.def("getPromotionLineInfo", &CyGlobalContext::getPromotionLineInfo, python::return_value_policy<python::reference_existing_object>(), "(PromotionLineID) - CvInfo for PromotionLineID")
 		//TB Promotion Line Mod end
 
-		.def("getNumMapCategoryInfos", &CyGlobalContext::getNumMapCategoryInfos, "() - Total Map Category Infos XML\\Terrains\\CIV4MapCategoryInfos.xml")
-		.def("getMapCategoryInfo", &CyGlobalContext::getMapCategoryInfo, python::return_value_policy<python::reference_existing_object>(), "(MapCategoryID) - CvInfo for MapCategoryID")
+		//.def("getNumMapCategoryInfos", &CyGlobalContext::getNumMapCategoryInfos, "() - Total Map Category Infos XML\\Terrains\\CIV4MapCategoryInfos.xml")
+		//.def("getMapCategoryInfo", &CyGlobalContext::getMapCategoryInfo, python::return_value_policy<python::reference_existing_object>(), "(MapCategoryID) - CvInfo for MapCategoryID")
 
-		.def("getNumIdeaClassInfos", &CyGlobalContext::getNumIdeaClassInfos, "() - Total Idea Class Infos XML\\GameInfo\\CIV4IdeaClassInfos.xml")
-		.def("getIdeaClassInfo", &CyGlobalContext::getIdeaClassInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaClassID) - CvInfo for IdeaClassID")
+		//.def("getNumIdeaClassInfos", &CyGlobalContext::getNumIdeaClassInfos, "() - Total Idea Class Infos XML\\GameInfo\\CIV4IdeaClassInfos.xml")
+		//.def("getIdeaClassInfo", &CyGlobalContext::getIdeaClassInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaClassID) - CvInfo for IdeaClassID")
 
-		.def("getNumIdeaInfos", &CyGlobalContext::getNumIdeaInfos, "() - Total Idea Infos XML\\GameInfo\\CIV4IdeaInfos.xml")
-		.def("getIdeaInfo", &CyGlobalContext::getIdeaInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaID) - CvInfo for IdeaID")
+		//.def("getNumIdeaInfos", &CyGlobalContext::getNumIdeaInfos, "() - Total Idea Infos XML\\GameInfo\\CIV4IdeaInfos.xml")
+		//.def("getIdeaInfo", &CyGlobalContext::getIdeaInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaID) - CvInfo for IdeaID")
 
-		.def("getNumInvisibleInfos", &CyGlobalContext::getNumInvisibleInfos, "() - Total Invisible Infos XML\\GameInfo\\CIV4InvisibleInfos.xml")
-		.def("getInvisibleInfo", &CyGlobalContext::getInvisibleInfo, python::return_value_policy<python::reference_existing_object>(), "(InvisibleID) - CvInfo for InvisibleID")
+		//.def("getNumInvisibleInfos", &CyGlobalContext::getNumInvisibleInfos, "() - Total Invisible Infos XML\\GameInfo\\CIV4InvisibleInfos.xml")
+		//.def("getInvisibleInfo", &CyGlobalContext::getInvisibleInfo, python::return_value_policy<python::reference_existing_object>(), "(InvisibleID) - CvInfo for InvisibleID")
 
 		//.def("getNumTraitOptionEditsInfos", &CyGlobalContext::getNumTraitOptionEditsInfos, "() - Total Trait Option Edits Infos XML\\Traits\\CIV4TraitOptionEditsInfos.xml")
 		//.def("getTraitOptionEditsInfo", &CyGlobalContext::getTraitOptionEditsInfo, python::return_value_policy<python::reference_existing_object>(), "(TraitOptionEditsID) - CvInfo for TraitOptionEditsID")
 
-// BUG - BUG Info - start
 		.def("setIsBug", &CyGlobalContext::setIsBug, "void (bool bIsBug) - tells BULL that BUG is present and can receive queries for options")
-// BUG - BUG Info - end
-
-		.def("isXMLLogging", &CyGlobalContext::isXMLLogging, "bool ()")
-		.def("setXMLLogging", &CyGlobalContext::setXMLLogging, "bool ()")
-		.def("isShiftDown", &CyGlobalContext::isShiftDown, "bool ()")
-		.def("isAltDown", &CyGlobalContext::isAltDown, "bool ()")
-		.def("isCtrlDown", &CyGlobalContext::isCtrlDown, "bool ()")
 	;
 }

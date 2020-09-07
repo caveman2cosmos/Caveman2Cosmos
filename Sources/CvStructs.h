@@ -5,17 +5,8 @@
 
 // structs.h
 
-//#include "CvEnums.h"
 #include "CvString.h"
-/************************************************************************************************/
-/* Afforess	                  Start		 02/02/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 #include "CvGlobals.h"
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
@@ -80,12 +71,7 @@ struct FreePromoTypes
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
-struct FreeTraitTypes
-{	
-	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
-};
+
 struct AfflictOnAttack
 {	
 	PromotionLineTypes eAfflictionLine;
@@ -277,12 +263,12 @@ struct AidRateChanges
 	operator int() const {return (int)ePropertyType;}
 	bool operator< (const AidRateChanges& rhs) const {return (int)ePropertyType < (int)rhs.ePropertyType;}
 };
-struct PrereqBuildingClass
+struct PrereqBuilding
 {	
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	int iMinimumRequired;
-	operator int() const {return (int)eBuildingClass;}
-	bool operator< (const PrereqBuildingClass& rhs) const {return (int)eBuildingClass < (int)rhs.eBuildingClass;}
+	operator int() const {return (int)eBuilding;}
+	bool operator< (const PrereqBuilding& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
 };
 struct TerrainStructs
 {	
@@ -702,16 +688,16 @@ struct PlotExtraCost
 	void write(FDataStreamBase* pStream);
 };
 
-typedef std::vector< std::pair<BuildingClassTypes, int> > BuildingChangeArray;
+typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	YieldTypes eYield;
 	int iChange;
 
 	BuildingYieldChange()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eYield(NO_YIELD)
 		, iChange(0)
 	{}
@@ -722,12 +708,12 @@ struct BuildingYieldChange
 
 struct BuildingCommerceChange
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	CommerceTypes eCommerce;
 	int iChange;
 
 	BuildingCommerceChange()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
 	{}
@@ -744,11 +730,11 @@ struct BuildingCommerceChange
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
-	UnitClassTypes eUnitClass;
+	UnitTypes eUnit;
 
 	PropertySpawns()
 		: eProperty(NO_PROPERTY)
-		, eUnitClass(NO_UNITCLASS)
+		, eUnit(NO_UNIT)
 	{}
 
 	void read(FDataStreamBase* pStream);
@@ -756,12 +742,12 @@ struct PropertySpawns
 };
 struct BuildingYieldModifier
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	YieldTypes eYield;
 	int iChange;
 
 	BuildingYieldModifier()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eYield(NO_YIELD)
 		, iChange(0)
 	{}
@@ -772,12 +758,12 @@ struct BuildingYieldModifier
 
 struct BuildingCommerceModifier
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	CommerceTypes eCommerce;
 	int iChange;
 
 	BuildingCommerceModifier()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
 	{}
@@ -888,8 +874,6 @@ enum BattleUnitTypes
 	BATTLE_UNIT_DEFENDER,	//!< Index referencing the defending unit
 	BATTLE_UNIT_COUNT		//!< The number of unit index references
 };
-
-void checkBattleUnitType(BattleUnitTypes unitType);
 
 //!< An enumeration for indexing times within the CvBattleDefinition
 enum BattleTimeTypes
@@ -1002,9 +986,6 @@ public:
 	void setBattleRound(int index, const CvBattleRound &round);
 
 private:
-	void checkBattleTimeType(BattleTimeTypes timeType) const;
-	void checkBattleRound(int index) const;
-
 	int					m_aDamage[BATTLE_UNIT_COUNT][BATTLE_TIME_COUNT];	//!< The beginning damage of the units
 	int					m_aFirstStrikes[BATTLE_UNIT_COUNT];		//!< The number of ranged first strikes the units made
 	int					m_iNumRangedRounds;				//!< The number of ranged rounds

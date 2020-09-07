@@ -57,7 +57,7 @@
 ## setting Fuyu's clump limit based on WorldSize, clarified the description of what
 ## the 0 option there actually does, and fixed the random bounds. Added a minimum
 ## value to the StartEra checks to include all Classical resources, improvements and
-## clearing abilities in the plot valuations. Changed allowWonderBonusChance to allow
+## clearing abilities in the plot valuations. Changed allowStrategicBonusChance to allow
 ## any strategic resource (not just Stone or Marble), and the city sweetener to allow
 ## non-strategic resources - both up through Classical (or later). Adjusted lake and
 ## river values again, and added separate controls for them for the two climate
@@ -600,7 +600,7 @@ class MapConstants:
 
 		#Randomly allows strategic bonuses to be used to sweeten starting positions.
 		#(Chance per starting position to allow 1 Classical Era or earlier strategic resource)
-		self.allowWonderBonusChance = 0.0
+		self.allowStrategicBonusChance = 0.0
 
 		#Randomly allows bonuses with continent limiter to be used to sweeting starting positions.
 		#(Chance per attempt to place an area-restricted resource in the wrong area)
@@ -3772,7 +3772,7 @@ class BonusPlacer:
 			return False
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if plot.isPeak():
-			if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_MOUNTAINS) or not bonusInfo.isPeaks():
+			if not bonusInfo.isPeaks():
 				return False
 		else:
 			#Here is the change from canHaveBonus. Forest does not block bonus
@@ -4291,7 +4291,7 @@ class StartingPlotFinder:
 		yields.append(YieldTypes.YIELD_COMMERCE)
 		yields.append(YieldTypes.YIELD_FOOD)
 		#NEW CODE - Fuyu
-		allowBonusWonderClass = (PRand.random() <= mc.allowWonderBonusChance)
+		bAllowStrategicBonus = (PRand.random() <= mc.allowStrategicBonusChance)
 		plotList = []
 		#print "Num city plots: %d" % gc.getNUM_CITY_PLOTS()
 		for i in range(21): # gc.getNUM_CITY_PLOTS()
@@ -4337,11 +4337,10 @@ class StartingPlotFinder:
 							continue
 						if not bp.PlotCanHaveBonus(plot, bonusEnum, False, True):
 							continue
-					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_WONDER") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_RUSH") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_MODERN"):
-						if not allowBonusWonderClass:
+					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_STRATEGIC"):
+						if not bAllowStrategicBonus:
 							continue
-						else:
-							allowBonusWonderClass = False
+						bAllowStrategicBonus = False
 					plot.setBonusType(bonusEnum)
 					bonusCount += 1
 					break
@@ -4651,7 +4650,7 @@ class StartingArea:
 				sPlot = gameMap.plot(self.plotList[m].x,self.plotList[m].y)
 				if sPlot.isWater() == True:
 					raise ValueError, "Start plot is water!"
-				sPlot.setImprovementType(gc.getInfoTypeForString("NO_IMPROVEMENT"))
+				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = gc.getPlayer(playerID)
 				sPlot.setStartingPlot(True)
@@ -5012,7 +5011,7 @@ def generateTerrainTypes():
 	terrainIce = gc.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = gc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = gc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = gc.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = gc.getInfoTypeForString("TERRAIN_MARSH")
@@ -5446,7 +5445,7 @@ def addFeatures():
 	featureReef = gc.getInfoTypeForString("FEATURE_REEF")
 	featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 	featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
-	featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
+	featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 	featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
 
 	FORESTLEAFY			= 0

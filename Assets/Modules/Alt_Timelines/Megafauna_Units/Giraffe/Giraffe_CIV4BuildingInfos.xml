@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClass>
 			<Type>BUILDING_GIRAFFE_TRAINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Strategy>
@@ -21,7 +16,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>624</iCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iMaxLatitude>45</iMaxLatitude>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
@@ -53,19 +48,18 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GIRAFFE_TRAINER_HERITAGE</BuildingClass>
 			<Type>BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
@@ -80,7 +74,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<FreeBuilding>BUILDINGCLASS_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -96,12 +90,9 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -111,7 +102,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GIRAFFE_TRAINER_EFFECT</BuildingClass>
 			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
@@ -123,7 +113,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -135,7 +124,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ANIMAL_TOTEM_GIRAFFE</BuildingClass>
 			<Type>BUILDING_ANIMAL_TOTEM_GIRAFFE</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
@@ -151,33 +139,29 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iCost>-1</iCost>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TOTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GIRAFFE_ARCHER</UnitClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GIRAFFE_ARCHER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -186,32 +170,31 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
 			<Type>BUILDING_STABLE</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -1,8 +1,4 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Tech Schema -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
   <ElementType name="ReplacementCondition"/>
   <ElementType name="ReplacementID"/>
@@ -57,7 +53,7 @@
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="Era" content="textOnly"/>
-	<ElementType name="FirstFreeUnitClass" content="textOnly"/>
+	<ElementType name="FirstFreeUnit" content="textOnly"/>
 	<ElementType name="FirstFreeProphet" content="textOnly"/>
 	<ElementType name="iFeatureProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorkerSpeedModifier" content="textOnly" dt:type="int"/>
@@ -186,7 +182,7 @@
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="Era" minOccurs="0"/>
-		<element type="FirstFreeUnitClass" minOccurs="0"/>
+		<element type="FirstFreeUnit" minOccurs="0"/>
 		<element type="FirstFreeProphet" minOccurs="0"/>
 		<element type="iFeatureProductionModifier" minOccurs="0"/>
 		<element type="iWorkerSpeedModifier" minOccurs="0"/>
@@ -258,8 +254,8 @@
 		<element type="bDCMAirBombTech1" minOccurs="0"/>
 		<element type="bDCMAirBombTech2" minOccurs="0"/>
 		<!--Afforess-->
-		<element type="PrereqBuildingClasses" minOccurs="0"/>
-		<element type="PrereqOrBuildingClasses" minOccurs="0"/>
+		<element type="PrereqBuildings" minOccurs="0"/>
+		<element type="PrereqOrBuildings" minOccurs="0"/>
 		<!--Afforess-->
 	</ElementType>
 	<ElementType name="TechInfos" content="eltOnly">
@@ -269,21 +265,21 @@
 		<element type="TechInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!--Afforess-->
-	<ElementType name="BuildingClassType" content="textOnly"/>
+	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqBuildingClasses" content="eltOnly">
-		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqBuildings" content="eltOnly">
+		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="PrereqOrBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqOrBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqOrBuildingClasses" content="eltOnly">
-		<element type="PrereqOrBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqOrBuildings" content="eltOnly">
+		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
 	<ElementType name="SpecialistType" content="textOnly"/>
@@ -296,14 +292,13 @@
 		<element type="FreeSpecialistCount" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
-	<ElementType name="UnitClassType" content="textOnly"/>
+	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="iStrengthChange" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitClassStrengthChange" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitStrengthChange" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iStrengthChange"/>
 	</ElementType>
-	<ElementType name="UnitClassStrengthChanges" content="eltOnly">
-		<element type="UnitClassStrengthChange" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitStrengthChanges" content="eltOnly">
+		<element type="UnitStrengthChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 </Schema>

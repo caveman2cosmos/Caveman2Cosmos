@@ -47,26 +47,26 @@
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MICROWORMHOLE</Type>
-			<Description>TXT_KEY_BUILD_MICROWORMHOLE</Description>
-			<PrereqTech>TECH_MICROWORMHOLES</PrereqTech>
+			<Type>BUILD_COMPACT_WORMHOLE</Type>
+			<Description>TXT_KEY_BUILD_COMPACT_WORMHOLE</Description>
+			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_MICROWORMHOLE</RouteType>
+			<RouteType>ROUTE_COMPACT_WORMHOLE</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MEGAWORMHOLE_ROUTE</Type>
-			<Description>TXT_KEY_BUILD_MEGAWORMHOLE_ROUTE</Description>
+			<Type>BUILD_MEGAWORMHOLE</Type>
+			<Description>TXT_KEY_BUILD_MEGAWORMHOLE</Description>
 			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_MEGAWORMHOLE_ROUTE</RouteType>
+			<RouteType>ROUTE_MEGAWORMHOLE</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -99,14 +99,14 @@
 			<Button>art/interface/buttons/improvements/aspatial_route.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION1</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION1</Description>
+			<Type>BUILD_SPACE_STATION_LV1</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV1</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iTime>6000</iTime>
 			<iCost>400</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION1</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV1</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -118,14 +118,14 @@
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION2</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION2</Description>
+			<Type>BUILD_SPACE_STATION_LV2</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV2</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iTime>9000</iTime>
 			<iCost>800</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV2</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -137,14 +137,14 @@
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION3</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION3</Description>
+			<Type>BUILD_SPACE_STATION_LV3</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV3</Description>
 			<Help/>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
 			<iTime>12000</iTime>
 			<iCost>1200</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION3</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV3</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -251,14 +251,14 @@
 			<Button>art/interface/buttons/improvements/venus_aerial_farm.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MARS_MINE</Type>
-			<Description>TXT_KEY_BUILD_MARS_MINE</Description>
+			<Type>BUILD_MARTIAN_MINE</Type>
+			<Description>TXT_KEY_BUILD_MARTIAN_MINE</Description>
 			<Help/>
-			<PrereqTech>TECH_PLANET_EXTRACTION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MARS_MINE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MARTIAN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -270,14 +270,14 @@
 			<Button>art/interface/buttons/improvements/mars_mine.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MARS_FARM</Type>
-			<Description>TXT_KEY_BUILD_MARS_FARM</Description>
+			<Type>BUILD_MARTIAN_FARM</Type>
+			<Description>TXT_KEY_BUILD_MARTIAN_FARM</Description>
 			<Help/>
 			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MARS_FARM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MARTIAN_FARM</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -308,14 +308,14 @@
 			<Button>art/interface/buttons/improvements/dyson_sphere.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_CISLUNAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_CISLUNAR_MILITARY_BASE</Description>
+			<Type>BUILD_CISLUNAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_CISLUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_CISLUNAR_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_CISLUNAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -327,14 +327,14 @@
 			<Button>art/interface/buttons/improvements/cislunar_military_base.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_DEEP_SPACE_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_DEEP_SPACE_MILITARY_BASE</Description>
+			<Type>BUILD_SOLAR_SYSTEM_BASE</Type>
+			<Description>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SOLAR_SYSTEM_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -346,14 +346,14 @@
 			<Button>art/interface/buttons/improvements/deep_space_military_base.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_INTERSTELLAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_INTERSTELLAR_MILITARY_BASE</Description>
+			<Type>BUILD_INTERSTELLAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_INTERSTELLAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INTERSTELLAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -368,7 +368,7 @@
 			<Type>BUILD_INTERGALACTIC_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_WAVE_MOTION_GUN</PrereqTech>
+			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
@@ -508,13 +508,13 @@
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_ASTEROID</Type>
-			<Description>TXT_KEY_BUILD_ASTEROID</Description>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
+			<Type>BUILD_PLACE_ASTEROID</Type>
+			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
+			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_BUILD_ASTEROID</ImprovementType>
+            <ImprovementType>IMPROVEMENT_PLACE_ASTEROID</ImprovementType>
 			<FeatureChange>FEATURE_ASTEROIDS</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -523,13 +523,13 @@
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,5,4</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_GALAXY</Type>
-			<Description>TXT_KEY_BUILD_GALAXY</Description>
+			<Type>BUILD_PLACE_GALAXY</Type>
+			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_BUILD_GALAXY</ImprovementType>
+            <ImprovementType>IMPROVEMENT_PLACE_GALAXY</ImprovementType>
 			<FeatureChange>FEATURE_GALAXY</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -564,7 +564,7 @@
 			<iTime>2500</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SOLAR_CONCENTRATOR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -690,14 +690,14 @@
 			<Button>art/interface/buttons/improvements/spiritual_realm.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_TRADING_PLANET</Type>
-			<Description>TXT_KEY_BUILD_TRADING_PLANET</Description>
+			<Type>BUILD_INTERSTELLAR_TRADING_POST</Type>
+			<Description>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Description>
 			<Help/>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_TRADING_PLANET</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INTERSTELLAR_TRADING_POST</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -731,7 +731,7 @@
 			<Type>BUILD_SUN_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_SUN_SCOOP</Description>
 			<Help/>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -788,7 +788,7 @@
 			<Type>BUILD_JOVIAN_LUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -902,7 +902,7 @@
 			<Type>BUILD_STAR_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_STAR_SCOOP</Description>
 			<Help/>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -959,7 +959,7 @@
 			<Type>BUILD_NEUTRON_STAR_COLONY</Type>
 			<Description>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Description>
 			<Help/>
-			<PrereqTech>TECH_ELECTRONUCLEAR_MATTER</PrereqTech>
+			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -994,14 +994,14 @@
 			<Button>art/interface/buttons/improvements/biotic_galaxy.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_HELIOFORM</Type>
-			<Description>TXT_KEY_BUILD_HELIOFORM</Description>
+			<Type>BUILD_HELIOFORMED_BROWN_DWARF</Type>
+			<Description>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Description>
 			<Help/>
 			<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HELIOFORM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HELIOFORMED_BROWN_DWARF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1013,14 +1013,14 @@
 			<Button>art/interface/buttons/improvements/helioform.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_EXPANDED_HABITAT</Type>
-			<Description>TXT_KEY_BUILD_EXPANDED_HABITAT</Description>
+			<Type>BUILD_CISLUNAR_EXPANSION_MODULE</Type>
+			<Description>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Description>
 			<Help/>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_EXPANDED_HABITAT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1092,7 +1092,7 @@
 			<Type>BUILD_INTERGALACTIC_COLONY</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Description>
 			<Help/>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1244,7 +1244,7 @@
 			<Type>BUILD_INTERGALACTIC_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1279,14 +1279,14 @@
 			<Button>art/interface/buttons/improvements/distant_research_base.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_LUNAR_BASE_IMPROVEMENT</Type>
-			<Description>TXT_KEY_BUILD_LUNAR_BASE_IMPROVEMENT</Description>
+			<Type>BUILD_LUNAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_LUNAR_BASE_IMPROVEMENT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_LUNAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1339,7 +1339,7 @@
 			<Type>BUILD_LUNAR_MINE</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_MINE</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1370,6 +1370,118 @@
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Habitat (Small) -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>500</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Habitat (Medium) -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1500</iTime>
+			<iCost>1000</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Habitat (Large) -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<iTime>2000</iTime>
+			<iCost>1500</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Habitat (Huge) -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_HABITAT_HUGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Description>
+			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
+			<iTime>3000</iTime>
+			<iCost>2500</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Hydroponics -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_HYDROPONICS</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HYDROPONICS</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>800</iTime>
+			<iCost>400</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Extraction Facility -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_EXTRACTION_FACILITY</Type>
+			<Description>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1200</iTime>
+			<iCost>800</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Solar Array -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_SOLAR_ARRAY</Type>
+			<Description>TXT_KEY_BUILD_COLONY_SOLAR_ARRAY</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>500</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<!-- Colony Manufactory -->
+		<BuildInfo>
+			<Type>BUILD_COLONY_MANUFACTORY</Type>
+			<Description>TXT_KEY_BUILD_COLONY_MANUFACTORY</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1500</iTime>
+			<iCost>1200</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_COLONY_MANUFACTORY</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</BuildInfo>

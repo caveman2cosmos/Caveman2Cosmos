@@ -17,8 +17,8 @@ import BugCore
 import BugUtil
 import TradeUtil
 
-OPEN_LOG_EVENT_ID = CvUtil.getNewEventID("Autolog.OpenLog")
-CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID("Autolog.CustomEntry")
+OPEN_LOG_EVENT_ID = CvUtil.getNewEventID()
+CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID()
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -335,26 +335,21 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			self.checkStuff()
 			self.storeStuff()
 
-			zcurrturn = GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
-			zmaxturn = GAME.getMaxTurns()
-			zturn = GAME.getGameTurn() + 1
-			zyear = GAME.getTurnYear(zturn)
-			if (zyear < 0):
-				zyear = str(-zyear) + BugUtil.getPlainText("TXT_KEY_AUTOLOG_BC")
+			iMaxTurns = GAME.getMaxTurns()
+			year = GAME.getTurnYear(iGameTurn + 1)
+			if year < 0:
+				year = TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
 			else:
-				zyear = str(zyear) + BugUtil.getPlainText("TXT_KEY_AUTOLOG_AD")
-			zCurrDateTime = time.strftime("%d-%b-%Y %H:%M:%S")
+				year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
-			if (zmaxturn == 0):
-				zsTurn = "%i" % (zcurrturn)
+			if iMaxTurns:
+				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn(), iMaxTurns)
 			else:
-				zsTurn = "%i/%i" % (zcurrturn, zmaxturn)
-
-			message = TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zsTurn, zyear, zCurrDateTime))
+				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
 
 			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
-			Logger.writeLog_pending(message, vBold=True, vUnderline=True)
+			Logger.writeLog_pending(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (sTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 
 		self.bHumanPlaying = True
 		self.bHumanEndTurn = False
@@ -555,7 +550,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if CyPlot.isWater():
 				if CyPlot.isLake():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_A_LAKE")
-				elif CyPlot.isAdjacentToLand():
+				elif CyPlot.isCoastal():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_JUST_OFF_SHORE")
 				else:
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")
@@ -1637,7 +1632,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if (eCommerce == CommerceTypes.COMMERCE_GOLD):
 				zPercent = pPlayer.getCommercePercent(eCommerce)
 				zRate = pPlayer.calculateGoldRate()
-				zTotal = pPlayer.getEffectiveGold()
+				zTotal = pPlayer.getGold()
 
 				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_COMMERCE_GOLD_SLIDERS", (zPercent, zDesc, zRate, zTotal))
 				Logger.writeLog(message, vColor="Blue")
@@ -1645,7 +1640,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				if pPlayer.isCommerceFlexible(eCommerce):
 					zPercent = pPlayer.getCommercePercent(eCommerce)
 					zRate = pPlayer.getCommerceRate(CommerceTypes(eCommerce))
-					zTotal = pPlayer.getEffectiveGold()
+					zTotal = pPlayer.getGold()
 
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_COMMERCE_OTHER_SLIDERS", (zPercent, zDesc, zRate))
 					Logger.writeLog(message, vColor="Blue")

@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Special Building -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4SpecialBuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
@@ -13,7 +8,6 @@
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>TECH_FISSION</TechPrereqAnyone>
 			<bValid>1</bValid>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<Button>Art/Interface/Buttons/Buildings/BombShelters.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -22,7 +16,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Temple.dds</Button>
 		</SpecialBuildingInfo>
@@ -30,7 +23,7 @@
 			<Type>SPECIALBUILDING_CATHEDRAL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_CATHEDRAL</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>TECH_MUSIC</TechPrereq>
+			<TechPrereq>TECH_MUSICAL_NOTATION</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Cathedral.dds</Button>
@@ -41,7 +34,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Cathedral.dds</Button>
 		</SpecialBuildingInfo>
@@ -57,10 +49,9 @@
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_MONASTERY</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_MONASTERY</Description>
-			<ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech>
 			<TechPrereq>TECH_MEDITATION</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Monastery_Hindu.dds</Button>
 		</SpecialBuildingInfo>
@@ -70,7 +61,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Monastery_Hindu.dds</Button>
 		</SpecialBuildingInfo>
@@ -134,7 +124,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>

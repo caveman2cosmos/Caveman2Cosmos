@@ -3,12 +3,10 @@
 #ifndef CvPlot_h__
 #define CvPlot_h__
 
-
 // CvPlot.h
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
@@ -107,7 +105,7 @@ struct ECvPlotGraphics
 		// WHAT					MEM		SPEED
 		// ==================================
 		NONE = 0,
-		// Yield icons			Low		Fast 
+		// Yield icons			Low		Fast
 		SYMBOLS = 1 << 0,
 		// Improvements,
 		// Resources,
@@ -127,10 +125,10 @@ struct ECvPlotGraphics
 	};
 
 	// Get enum flag by index, for use in for loops and the like
-	static inline type fromIndex(int idx) 
-	{ 
+	static inline type fromIndex(int idx)
+	{
 		FAssertMsg(idx >= 0 && idx < type::NUM, "Enum index out of range");
-		return static_cast<type>(1 << idx); 
+		return static_cast<type>(1 << idx);
 	}
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
@@ -142,7 +140,8 @@ public:
 	CvPlot();
 	virtual ~CvPlot();
 
-	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+	CvGameObjectPlot* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlot* getGameObject() const { return &m_GameObject; };
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -153,12 +152,7 @@ protected:
 	CvGameObjectPlot m_GameObject;
 
 public:
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                        Johnny Smith               */
-/*                                                                   Afforess                   */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	// Dale - BE: Battle Effect START
+	// Dale - Battle Effect
 	void changeBattleCountdown(int iValue);
 	void setBattleCountdown(int iValue);
 	int getBattleCountdown() const;
@@ -169,11 +163,8 @@ public:
 protected:
 	int m_iBattleCountdown;
 	EffectTypes m_eBattleEffect;
+	// ! Dale
 public:
-	// Dale - BE: Battle Effect END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	void init(int iX, int iY);
 	void uninit();
 	void reset(int iX = 0, int iY = 0, bool bConstructorCall=false);
@@ -190,7 +181,7 @@ public:
 	void setNull(bool bNull);
 /*******************************/
 /***** Parallel Maps - End *****/
-/*******************************/	
+/*******************************/
 
 	DllExport float getPointX() const;
 	DllExport float getPointY() const;
@@ -236,25 +227,16 @@ public:
 	bool isAdjacentToArea(int iAreaID) const;
 	bool isAdjacentToArea(const CvArea* pArea) const; // Exposed to Python
 	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
-	bool isAdjacentToLand() const; // Exposed to Python 
+	bool isAdjacentToLand() const; // Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
 
 	bool isVisibleWorked() const;
 	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python
 
 	DllExport bool isLake() const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	bool isFreshWater() const;
-*/
-	bool isFreshWater(bool bIgnoreJungle = false) const; // Exposed to Python ?
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	bool isFreshWater() const; // Exposed to Python ?
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -270,10 +252,10 @@ public:
 	int getNearestLandArea() const; // Exposed to Python
 	CvPlot* getNearestLandPlot() const; // Exposed to Python
 
-	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python  
+	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python
 	int seeThroughLevel() const; // Exposed to Python
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
-	bool canSeePlot(CvPlot *plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
+	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
 	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
@@ -282,26 +264,16 @@ public:
 	bool canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude = false) const;
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
-	bool canHaveImprovementAsUpgrade(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 05/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true, bool bUpgradeCheck = false) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const; // Exposed to Python
 
-	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python												// Exposed to Python
+	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);
 	long canBuildFromPython(BuildTypes eBuild, PlayerTypes ePlayer) const;
 	long canBuildFromPythonInternal(BuildTypes eBuild, PlayerTypes ePlayer) const;
 	int getBuildTime(BuildTypes eBuild) const; // Exposed to Python
-// BUG - Partial Builds - start
 	int getBuildTurnsLeft(BuildTypes eBuild, PlayerTypes ePlayer) const;
 	int getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra, bool bIncludeUnits = true) const; // Exposed to Python
-// BUG - Partial Builds - end
+
 	int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** ppCity) const; // Exposed to Python
 
 	// Don't call this at all
@@ -312,31 +284,30 @@ public:
 	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const; // Exposed to Python
 	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
-	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, 
-		StrengthFlags::flags flags = StrengthFlags::DefensiveBonuses, int iRange = 0) const;
-	CvUnit* getSelectedUnit() const; // Exposed to Python				
-	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python	
-	/*int getUnitNukeIntercept(PlayerTypes eOwner) const;*/
 
-	// Super Forts begin *bombard*
+	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, StrengthFlags::flags flags = StrengthFlags::DefensiveBonuses, int iRange = 0) const;
+	CvUnit* getSelectedUnit() const; // Exposed to Python
+	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python
+
+	// Super Forts *bombard*
 	bool isBombardable(const CvUnit* pUnit) const;
 	bool isBombarded() const;
 	void setBombarded(bool bNewValue);
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
-	// Super Forts end
-	// Super Forts begin *culture*
-	//	Koshling - due to the implementatino of fort culture inheritted from AND we need
-	//	to handle fort culture a bit differently in C2C and some of these methods are
-	//	not needed
-	//int getCultureRangeForts(PlayerTypes ePlayer) const;
-	//void setCultureRangeForts(PlayerTypes ePlayer, int iNewValue);
-	//void changeCultureRangeForts(PlayerTypes ePlayer, int iChange);
-	//bool isWithinFortCultureRange(PlayerTypes ePlayer) const;
+
+	// Super Forts *culture*
+/*	Koshling - due to the implementatino of fort culture inheritted from AND we need to
+// handle fort culture a bit differently in C2C and some of these methods are not needed
+	int getCultureRangeForts(PlayerTypes ePlayer) const;
+	void setCultureRangeForts(PlayerTypes ePlayer, int iNewValue);
+	void changeCultureRangeForts(PlayerTypes ePlayer, int iChange);
+	bool isWithinFortCultureRange(PlayerTypes ePlayer) const;
+*/
 	void changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture();
-	// Super Forts end
-	// Super Forts begin *canal* *choke*
+
+	// Super Forts *canal* *choke*
 	int countRegionPlots(const CvPlot* pInvalidPlot = NULL) const;
 	int countAdjacentPassableSections(bool bWater) const;
 	int countImpassableCardinalDirections() const;
@@ -346,10 +317,10 @@ public:
 	int getChokeValue() const;
 	void setChokeValue(int iNewValue);
 	void calculateChokeValue();
-	// Super Forts end
+	// ! Super Forts
 
-	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const; // Exposed to Python				
-	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const; // Exposed to Python				
+	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const; // Exposed to Python
+	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const; // Exposed to Python
 	static void flushMovementCostCache();
 
 	int getExtraMovePathCost() const; // Exposed to Python
@@ -357,29 +328,17 @@ public:
 	//	Koshling - count of mountain leaders present per team maintained for efficiency of movement calculations
 	// TB: This was not working properly so has been changed to a plotcount method.
 	int getHasMountainLeader(TeamTypes eTeam) const;
-	
+
 	bool isAdjacentOwned() const; // Exposed to Python
 	bool isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly = false) const; // Exposed to Python
 	bool isAdjacentTeam(TeamTypes eTeam, bool bLandOnly = false) const; // Exposed to Python
 	bool isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange = NULL) const; // Exposed to Python
 	int getNumCultureRangeCities(PlayerTypes ePlayer) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+
 	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
 	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 	// Plot danger cache
 	bool isActivePlayerNoDangerCache() const;
 	bool isActivePlayerHasDangerCache() const;
@@ -388,15 +347,7 @@ public:
 	void setIsActivePlayerHasDangerCache( bool bNewValue ) const;
 	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const;
 	void invalidateIsTeamBorderCache() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
 	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
@@ -406,9 +357,7 @@ public:
 	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange);
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
-#ifdef OLD_VERSION_PRE_SUPER_FORTS
-	void changeActsAsCity(PlayerTypes ePlayer, int iChange);
-#endif
+
 	bool isActsAsCity() const;
 	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
@@ -416,9 +365,9 @@ public:
 	bool isCanUseRouteLandUnits() const;
 	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
-	int getRevoltProtection();
-	int getAverageEnemyStrength(TeamTypes eTeam);
-	int getAverageEnemyDamage(TeamTypes eTeam);
+	int getRevoltProtection() const;
+	int getAverageEnemyStrength(TeamTypes eTeam) const;
+	int getAverageEnemyDamage(TeamTypes eTeam) const;
 	LandmarkTypes getLandmarkType() const;
 	void setLandmarkType(LandmarkTypes eLandmark);
 	CvWString getLandmarkName() const;
@@ -437,13 +386,13 @@ public:
 	int getTotalTurnDamage(const CvUnit* pUnit = NULL) const;
 	CvUnit* getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
 	bool isBorder(bool bIgnoreWater = false) const;
-	
+
 	int getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const;
-	
+
 	void addSign(PlayerTypes ePlayer, CvWString szMessage);
 	void removeSign(PlayerTypes ePlayer);
 	void removeSignForAllPlayers();
-	
+
 	int getNumVisibleEnemyUnits(const CvUnit* pUnit) const;
 	int getNumVisibleEnemyTargetUnits(const CvUnit* pUnit) const;
 	int getNumVisibleEnemyUnits(PlayerTypes ePlayer) const;
@@ -454,7 +403,6 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
-	bool m_bDepletedMine;
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
@@ -464,11 +412,7 @@ protected:
 	bool m_bCounted;
 	static stdext::hash_map<int,int>* m_resultHashMap;
 
-	public:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
+public:
 	PlayerTypes calculateCulturalOwner() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
@@ -483,18 +427,21 @@ protected:
 	bool isHominid() const; // Exposed to Python
 	bool isRevealedBarbarian() const; // Exposed to Python
 
-	bool isVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
 	DllExport bool isActiveVisible(bool bDebug) const; // Exposed to Python
+
+	bool isVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
 	bool isVisibleToCivTeam() const; // Exposed to Python
 	bool isVisibleToWatchingHuman() const; // Exposed to Python
 	bool isAdjacentVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
 	bool isAdjacentNonvisible(TeamTypes eTeam) const; // Exposed to Python
 
 	DllExport bool isGoody(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
+
 	bool isRevealedGoody(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
 	void removeGoody(); // Exposed to Python
 
 	DllExport bool isCity(bool bCheckImprovement = false, TeamTypes eForTeam = NO_TEAM) const; // Exposed to Python
+
 	bool isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const; // Exposed to Python
 	bool isEnemyCity(const CvUnit& kUnit, bool bOnlyRealCities = false) const; // Exposed to Python
 
@@ -515,23 +462,18 @@ protected:
 	int getNumVisiblePotentialEnemyDefenderless(const CvUnit* pUnit) const;
 	bool isVisiblePotentialEnemyDefender(const CvUnit* pUnit) const;
 	bool isVisiblePotentialEnemyDefenderless(const CvUnit* pUnit) const;
+
+	DllExport bool isFighting() const; // Exposed to Python
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const; // Exposed to Python
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
+
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
 	bool isVisibleOtherUnit(PlayerTypes ePlayer) const; // Exposed to Python
-	DllExport bool isFighting() const; // Exposed to Python
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/31/10                                               */
-/*                                                                                              */
-/*   New parameter                                                                              */
-/************************************************************************************************/
 	bool canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature = false) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	DllExport bool isRoute() const; // Exposed to Python
+
 	bool isValidRoute(const CvUnit* pUnit) const; // Exposed to Python
 	bool isTradeNetworkImpassable(TeamTypes eTeam) const; // Exposed to Python
 	bool isNetworkTerrain(TeamTypes eTeam) const; // Exposed to Python
@@ -542,16 +484,8 @@ protected:
 
 	bool isValidDomainForLocation(const CvUnit& unit) const; // Exposed to Python
 	bool isValidDomainForAction(const CvUnit& unit) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	Mountains Start		 09/18/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//bool isImpassable() const; // Exposed to Python
-	bool isImpassable(TeamTypes eTeam = NO_TEAM) const;
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+
+	bool isImpassable(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
 
 	DllExport int getViewportX() const;
 	inline int getX() const { return m_iX; }
@@ -561,11 +495,11 @@ protected:
 
 	// Base iterator type for iterating over adjacent valid plots
 	template < class Value_ >
-	struct adjacent_iterator_base : 
+	struct adjacent_iterator_base :
 		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
 		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
+		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
 		{
 			increment();
 		}
@@ -574,17 +508,18 @@ protected:
 		friend class bst::iterator_core_access;
 		void increment()
 		{
-			do
+			m_curr = nullptr;
+			while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES)
 			{
-				++m_idx;
 				m_curr = plotDirection(m_centerX, m_centerY, ((DirectionTypes)m_idx));
-			} while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES);
+				++m_idx;
+			}
 		}
 		bool equal(adjacent_iterator_base const& other) const
 		{
-			return (this->m_centerX == other.m_centerX 
-				&& this->m_centerY == other.m_centerY 
-				&& this->m_idx == other.m_idx) 
+			return (this->m_centerX == other.m_centerX
+				&& this->m_centerY == other.m_centerY
+				&& this->m_idx == other.m_idx)
 				|| (this->m_curr == NULL && other.m_curr == NULL);
 		}
 
@@ -623,7 +558,7 @@ protected:
 			{
 				m_curr = plotXY(m_centerX, m_centerY, m_x, m_y);
 				++m_y;
-				if(m_y > m_hgt) 
+				if(m_y > m_hgt)
 				{
 					m_y = -m_hgt;
 					++m_x;
@@ -684,31 +619,19 @@ protected:
 	bool shouldHaveGraphics() const;
 
 	bool at(int iX, int iY) const; // Exposed to Python
-// BUG - Lat/Long Coordinates - start
+	// BUG - Lat/Long Coordinates
 	int calculateMinutes(int iPlotIndex, int iPlotCount, bool bWrap, int iDegreeMin, int iDegreeMax) const;
 	int getLongitudeMinutes() const; // Exposed to Python
 	int getLatitudeMinutes() const; // Exposed to Python
-// BUG - Lat/Long Coordinates - end
-	int getLatitude() const; // Exposed to Python  
+	// ! BUG
+	int getLatitude() const; // Exposed to Python
 	int getLatitudeRaw() const;
-	int getLongitude() const; // Exposed to Python  
+	int getLongitude() const; // Exposed to Python
 	int getLongitudeRaw() const;
 	int getFOWIndex() const;
 
 	CvArea* area() const; // Exposed to Python
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
-/* 																			*/
-/* 	General AI																*/
-/********************************************************************************/
-/* original BTS code
-	CvArea* waterArea() const;
-*/
 	CvArea* waterArea(bool bNoImpassable = false) const;
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/	
-
 	CvArea* secondWaterArea() const;
 	int getArea() const; // Exposed to Python
 	void setArea(int iNewValue);
@@ -740,15 +663,15 @@ protected:
 
 	bool isStartingPlot() const; // Exposed to Python
 	void setStartingPlot(bool bNewValue); // Exposed to Python
-	
-	DllExport bool isNOfRiver() const; // Exposed to Python					
-	void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python					
-										
-	DllExport bool isWOfRiver() const; // Exposed to Python					
-	void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python					
-										
-	DllExport CardinalDirectionTypes getRiverNSDirection() const; // Exposed to Python					
-	DllExport CardinalDirectionTypes getRiverWEDirection() const; // Exposed to Python					
+
+	DllExport bool isNOfRiver() const; // Exposed to Python
+	void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python
+
+	DllExport bool isWOfRiver() const; // Exposed to Python
+	void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python
+
+	DllExport CardinalDirectionTypes getRiverNSDirection() const; // Exposed to Python
+	DllExport CardinalDirectionTypes getRiverWEDirection() const; // Exposed to Python
 
 	CvPlot* getInlandCorner() const; // Exposed to Python
 	bool hasCoastAtSECorner() const;
@@ -828,20 +751,12 @@ protected:
 	int getRiverCrossingCount() const; // Exposed to Python
 	void changeRiverCrossingCount(int iChange);
 
-	short* getYield();
+	short* getYield() const;
 	DllExport int getYield(YieldTypes eIndex) const; // Exposed to Python
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const; // Exposed to Python
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const; // Exposed to Python
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/06/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const; // Exposed to Python
 	bool hasYield() const; // Exposed to Python
 	void updateYield();
@@ -860,15 +775,7 @@ protected:
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						10/17/08		jdog5000		*/
-/* 																			*/
-/* 	Air AI																	*/
-/********************************************************************************/
 	int countAirInterceptorsActive(TeamTypes eTeam) const;
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 
 	int getFoundValue(PlayerTypes eIndex); // Exposed to Python
 	bool isBestAdjacentFound(PlayerTypes eIndex); // Exposed to Python
@@ -923,14 +830,11 @@ protected:
 	RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
 	void setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue);
 
-	int getBuildProgress(BuildTypes eBuild) const; // Exposed to Python  
-	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM); // Exposed to Python 
-
-// BUG - Partial Builds - start
+	int getBuildProgress(BuildTypes eBuild) const; // Exposed to Python
+	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM); // Exposed to Python
 	bool hasAnyBuildProgress() const;
-// BUG - Partial Builds - end
 
-	void updateFeatureSymbolVisibility(); 
+	void updateFeatureSymbolVisibility();
 	void updateFeatureSymbol(bool bForce = false);
 
 	DllExport bool isLayoutDirty() const; // The plot layout contains bonuses and improvements --- it is, like the city layout, passively computed by LSystems
@@ -942,7 +846,7 @@ protected:
 	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
 	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
 	bool shouldUsePlotBuilder();
-	CvPlotBuilder* getPlotBuilder() { return m_pPlotBuilder; }
+	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
 	void updateRouteSymbol(bool bForce = false, bool bAdjacent = false);
@@ -977,7 +881,7 @@ protected:
 	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
-	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult);
+	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
 	int getNumUnits() const; // Exposed to Python
@@ -1004,7 +908,7 @@ protected:
 	typedef bst::iterator_range<unit_iterator> unit_range;
 	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
-	// As the plot doesn't own the units they aren't const even if the plot it, so not 
+	// As the plot doesn't own the units they aren't const even if the plot it, so not
 	// point in a const unit iterator
 	//class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
 	//{
@@ -1038,7 +942,7 @@ protected:
 	bool canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const;
 
 	bool isEspionageCounterSpy(TeamTypes eTeam) const;
-	
+
 	DllExport int getAreaIdForGreatWall() const;
 	DllExport int getSoundScriptId() const;
 	DllExport int get3DAudioScriptFootstepIndex(int iFootstepTag) const;
@@ -1056,7 +960,7 @@ protected:
 	bool m_bNull;
 /*******************************/
 /***** Parallel Maps - End *****/
-/*******************************/	
+/*******************************/
 	short m_iX;
 	short m_iY;
 	int m_iArea;
@@ -1071,18 +975,17 @@ protected:
 	short m_iMinOriginalStartDist;
 	short m_iReconCount;
 	short m_iRiverCrossingCount;
-	mutable int m_iCanHaveImprovementAsUpgradeCache;
+	mutable int m_iImprovementUpgradeHash;
 	mutable int m_iCurrentRoundofUpgradeCache;
 	int m_iImprovementCurrentValue;
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts *canal* *choke*
 	int m_iCanalValue;
 	int m_iChokeValue;
-	// Super Forts end
-	// Super Forts begin *bombard*
+	// Super Forts *bombard*
 	int m_iDefenseDamage;
 	bool m_bBombarded;
-	// Super Forts end
+	// ! Super Forts
 
 	bool m_bStartingPlot:1;
 	bool m_bHills:1;
@@ -1109,18 +1012,10 @@ protected:
 	IDInfo m_workingCity;
 	IDInfo m_workingCityOverride;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 	// Plot danger cache
 	mutable bool m_bIsActivePlayerHasDangerCache;
 	mutable bool m_bIsActivePlayerNoDangerCache;
 	mutable bool* m_abIsTeamBorderCache;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	static	int m_iGlobalCachePathEpoch;
 	mutable int		m_iCachePathEpoch;
@@ -1176,14 +1071,12 @@ protected:
 	short** m_apaiInvisibleVisibilityCount;
 	//short** m_apaiCachedHighestTeamInvisibilityIntensity;
 
-	//	Koshling - need to cache presence of mountain leaders in mountain
-	//	plots so that CanMoveThrough calculations don't get bogged down
-	//	searching unit stacks.  This is a count of mountain leader units
-	//	in the plot for each team.  The array is only created if the plot is
-	//	a mountain plot and at least one team has a mountain leader present.
-	//	The array is cleared when the last leader leaves, so the memory overhead is
-	//	low
+/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
+	This is a count of mountain leader units in the plot for each team.
+	The array is only created if the plot is a mountain plot and at least one team has a mountain leader present.
+	The array is cleared when the last leader leaves, so the memory overhead is low */
 	short*	m_aiMountainLeaderCount;
+	// ! Koshling
 
 	CLinkList<IDInfo> m_units;
 
@@ -1193,9 +1086,9 @@ protected:
 	void doCulture();
 
 	void processArea(CvArea* pArea, int iChange);
-	void doImprovementUpgrade();
+	void doImprovementUpgrade(const ImprovementTypes eType);
 
-	ColorTypes plotMinimapColor();
+	ColorTypes plotMinimapColor() const;
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
@@ -1249,9 +1142,8 @@ public:
 	//TB Combat Mod AI
 	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 
-	bool isPlotIgnoringImprovementUpgrade() const;
-	void setPlotIgnoringImprovementUpgrade(bool bNewValue);
-	void setImprovementUpgrade();
+	bool isImprovementUpgradable() const;
+	void setImprovementUpgradeCache(const int iNewValue);
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
@@ -1277,7 +1169,7 @@ private:
 
 protected:
 	bool m_bInhibitCenterUnitCalculation;
-	bool m_bIgnoringImprovementUpgrade;
+	bool m_bImprovementUpgradable;
 
 	ECvPlotGraphics::type m_requiredVisibleGraphics;
 	ECvPlotGraphics::type m_visibleGraphics;
@@ -1288,8 +1180,28 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
-	}; 
+		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
+
+		DECLARE_MAP_FUNCTOR_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, bool, isBombardable, const CvUnit*);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isCity, bool, TeamTypes);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
+	};
 };
 
 #endif // CvPlot_h__

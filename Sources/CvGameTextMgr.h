@@ -15,11 +15,9 @@
 #ifndef CIV4_GAME_TEXT_MGR_H
 #define CIV4_GAME_TEXT_MGR_H
 
-#include "CvInfos.h"
-//#include "CvEnums.h"
-
 #pragma warning( disable: 4251 )	// needs to have dll-interface to be used by clients of class
 
+class CounterSet;
 class CvCity;
 class CvDeal;
 class CvPopupInfo;
@@ -31,6 +29,7 @@ class CvPlayer;
 class CvGameTextMgr
 {
 	friend class CvGlobals;
+	CounterSet* inspectUnitCombatCounters;
 public:
 	// singleton accessor
 	DllExport static CvGameTextMgr& GetInstance();
@@ -42,7 +41,7 @@ public:
 	DllExport void DeInitialize();
 	DllExport void Reset();
 
-	int getCurrentLanguage();
+	int getCurrentLanguage() const;
 
 	DllExport void setTimeStr(CvWString& szString, int iGameTurn, bool bSave);
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
@@ -277,7 +276,7 @@ public:
 // BUG - Finance Advisor - end
 
 	void buildFinanceInflationString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceUnitCostString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
+	void buildFinanceUnitUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceAwaySupplyString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceCityMaintString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	void buildFinanceCivicUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);

@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Map Infos. This file contains the maps included in the game -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4MapInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MapInfos>
 		<MapInfo>
@@ -11,15 +6,15 @@
 			<Description>TXT_KEY_MAP_EXAMPLE</Description>
 			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
 			<!-- default grid size and wrapping is the same as the original map -->
-			<iGridWidth>100</iGridWidth>
-			<iGridHeight>100</iGridHeight>
-			<bWrapX>1</bWrapX>
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
-			<!-- WB map path should look like the one below, i.e. beginning with \ -->
-			<!--<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
 			<MapScript>Continents.py</MapScript> -->
-			<InitialWBMap />
-			<MapScript />
+			<InitialWBMap/>
+			<MapScript/>
 			<MapInteraction>
 				<Map>MAP_EXAMPLE2</Map>
 				<bContactable>1</bContactable>
@@ -33,12 +28,12 @@
 			<Type>MAP_EXAMPLE2</Type>
 			<Description>TXT_KEY_MAP_EXAMPLE</Description>
 			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
-			<iGridWidth>100</iGridWidth>
-			<iGridHeight>100</iGridHeight>
-			<bWrapX>1</bWrapX>
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap />
-			<MapScript />
+			<InitialWBMap/>
+			<MapScript/>
 			<MapInteraction>
 				<Map>MAP_EXAMPLE</Map>
 				<bContactable>1</bContactable>

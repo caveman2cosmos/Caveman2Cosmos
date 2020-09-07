@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHINTO_TEMPLE</BuildingClass>
 			<Type>BUILDING_SHINTO_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_TEMPLE</Description>
@@ -15,10 +14,13 @@
 			<Strategy>TXT_KEY_BUILDING_SHINTO_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
@@ -67,7 +69,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHINTO_MONASTERY</BuildingClass>
 			<Type>BUILDING_SHINTO_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_MONASTERY</Description>
@@ -75,9 +76,12 @@
 			<Strategy>TXT_KEY_BUILDING_SHINTO_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
 			</PrereqBonuses>
@@ -127,7 +131,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHINTO_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_SHINTO_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_CATHEDRAL</Description>
@@ -135,6 +138,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHINTO_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<FreePromotion>PROMOTION_BUSHIDO</FreePromotion>
@@ -177,30 +183,27 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CITY_COUNCIL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_METROPOLITAN_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHINTO_TEMPLE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHINTO_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -216,20 +219,21 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHINTO_SHRINE</BuildingClass>
 			<Type>BUILDING_SHINTO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHINTO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHINTO</MovieDefineTag>
 			<HolyCity>RELIGION_SHINTO</HolyCity>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHINTO</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iAsset>8</iAsset>
@@ -264,26 +268,29 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MATSUMOTO_CASTLE</BuildingClass>
 			<Type>BUILDING_MATSUMOTO_CASTLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MATSUMOTO_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_MATSUMOTO_CASTLE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<ObsoleteTech>TECH_UTOPIA</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<FreePromotion>PROMOTION_LOOTER</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -323,20 +330,23 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ITSUKUSHIMA_SHRINE</BuildingClass>
 			<Type>BUILDING_ITSUKUSHIMA_SHRINE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_ITSUKUSHIMA_SHRINE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bWater>1</bWater>
@@ -365,14 +375,13 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHINTO_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHINTO_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -130,11 +130,8 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // Returns the distance between plots according to the pattern above...
 inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
 {
-	int iDX;
-	int iDY;
-
-	iDX = xDistance(iX1, iX2);
-	iDY = yDistance(iY1, iY2);
+	const int iDX = xDistance(iX1, iX2);
+	const int iDY = yDistance(iY1, iY2);
 
 	return (std::max(iDX, iDY) + (std::min(iDX, iDY) / 2));
 }
@@ -171,7 +168,7 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 	}
 }
 
-inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
+inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 {
 	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
@@ -241,7 +238,7 @@ int getPopulationPower(int iPopulation);								// Exposed to Python
 int getPopulationScore(int iPopulation);								// Exposed to Python
 int getLandPlotsScore(int iLandPlots);									// Exposed to Python
 int getTechScore(TechTypes eTech);											// Exposed to Python
-int getWonderScore(BuildingClassTypes eWonderClass);		// Exposed to Python
+int getWonderScore(BuildingTypes eWonder);		// Exposed to Python
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);		// Exposed to Python
 
@@ -253,30 +250,29 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);							// Exposed t
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);	// Exposed to Python
 bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);		// Exposed to Python
 
-bool isWorldUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isTeamUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isNationalUnitClass(UnitClassTypes eUnitClass);									// Exposed to Python
-bool isLimitedUnitClass(UnitClassTypes eUnitClass);										// Exposed to Python
+bool isWorldUnit(UnitTypes eUnit);											// Exposed to Python
+bool isNationalUnit(UnitTypes eUnit);									// Exposed to Python
+bool isLimitedUnit(UnitTypes eUnit);										// Exposed to Python
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass);				// Exposed to Python
-bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass);
+bool isWorldWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isTeamWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isNationalWonder(BuildingTypes eBuilding);				// Exposed to Python
+bool isNationalWonderGroup(BuildingTypes eBuilding);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass);					// Exposed to Python
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass);
+bool isLimitedWonder(BuildingTypes eBuilding);					// Exposed to Python
+int limitedWonderLimit(BuildingTypes eBuilding);
 
 bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
 bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
 bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
 
 __int64 getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender);							// Exposed to Python
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
 /////////////////////////////////////////////////////////////////
-float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D);
+float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // END                                                         //
@@ -417,23 +413,11 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType);
 void getMissionAIString(CvWString& szString, MissionAITypes eMissionAI);
 void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI);
 
-// BUG - Unit Experience - start
-/*
- * Calculates the experience needed to reach the next level after the given level.
- */
-int calculateExperience(int iLevel, PlayerTypes ePlayer);								// Exposed to Python
-int calculateLevel(int iExperience, PlayerTypes ePlayer);								// Exposed to Python
-// BUG - Unit Experience - end
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer);
+int calculateLevel(const int iExperience, const PlayerTypes ePlayer);
+
 DirectionTypes getOppositeDirection(DirectionTypes eDirection);
 bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherDirection);
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/	
 
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();

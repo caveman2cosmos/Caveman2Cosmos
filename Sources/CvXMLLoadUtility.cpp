@@ -12,8 +12,8 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
-
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 
 static const int kBufSize = 2048;
 
@@ -309,10 +309,10 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 {
 	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getLandscapeInfos()[i]);
+		SAFE_DELETE(GC.m_paLandscapeInfo[i]);
 	}
 
-	GC.getLandscapeInfos().clear();
+	GC.m_paLandscapeInfo.clear();
 
 	SetupGlobalLandscapeInfo();
 }
@@ -328,173 +328,12 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
 	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getEffectInfos()[i]);
+		SAFE_DELETE(GC.m_paEffectInfo[i]);
 	}
 
-	GC.getEffectInfos().clear();
+	GC.m_paEffectInfo.clear();
 
-	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
-}
-
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   MakeMaskFromString(unsigned int *puiMask, char* szMask)
-//
-//  PURPOSE :   takes a string of hex digits, 0-f and converts it into an unsigned integer
-//				mask value
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::MakeMaskFromString(unsigned int* puiMask, char* szMask)
-{
-	int iLen = strlen(szMask);
-
-	// loop through each character in the szMask parameter
-	for (int i = 0; i < iLen; i++)
-	{
-		// if the current character in the string is a zero
-		if (szMask[i] == '0')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// making the last 4 bits of the mask 0000
-		}
-		// if the current character in the string is a zero
-		else if (szMask[i] == '1')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 1 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0001
-			*puiMask += 1;
-		}
-		// if the current character in the string is a two
-		else if (szMask[i] == '2')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 2 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0010
-			*puiMask += 2;
-		}
-		// if the current character in the string is a three
-		else if (szMask[i] == '3')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 3 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0011
-			*puiMask += 3;
-		}
-		// if the current character in the string is a four
-		else if (szMask[i] == '4')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 4 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0100
-			*puiMask += 4;
-		}
-		// if the current character in the string is a five
-		else if (szMask[i] == '5')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 5 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0101
-			*puiMask += 5;
-		}
-		// if the current character in the string is a six
-		else if (szMask[i] == '6')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 6 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0110
-			*puiMask += 6;
-		}
-		// if the current character in the string is a seven
-		else if (szMask[i] == '7')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 7 to the adjusted value of the mask
-			// making the last 4 bits of the mask 0111
-			*puiMask += 7;
-		}
-		// if the current character in the string is a eight
-		else if (szMask[i] == '8')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 8 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1000
-			*puiMask += 8;
-		}
-		// if the current character in the string is a nine
-		else if (szMask[i] == '9')
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 9 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1001
-			*puiMask += 9;
-		}
-		// if the current character in the string is a A, 10
-		else if ((szMask[i] == 'a') || (szMask[i] == 'A'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 10 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1010
-			*puiMask += 10;
-		}
-		// if the current character in the string is a B, 11
-		else if ((szMask[i] == 'b') || (szMask[i] == 'B'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 11 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1011
-			*puiMask += 11;
-		}
-		// if the current character in the string is a C, 12
-		else if ((szMask[i] == 'c') || (szMask[i] == 'C'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 12 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1100
-			*puiMask += 12;
-		}
-		// if the current character in the string is a D, 13
-		else if ((szMask[i] == 'd') || (szMask[i] == 'D'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 13 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1101
-			*puiMask += 13;
-		}
-		// if the current character in the string is a E, 14
-		else if ((szMask[i] == 'd') || (szMask[i] == 'E'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 14 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1110
-			*puiMask += 14;
-		}
-		// if the current character in the string is a F, 15
-		else if ((szMask[i] == 'f') || (szMask[i] == 'F'))
-		{
-			// shift the current value of the mask to the left by 4 bits
-			*puiMask <<= 4;
-			// add 15 to the adjusted value of the mask
-			// making the last 4 bits of the mask 1111
-			*puiMask += 15;
-		}
-	}
+	LoadGlobalClassInfo(GC.m_paEffectInfo, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -521,7 +360,7 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
 
-	int idx = GC.getInfoTypeForString(pszVal, false);
+	const int idx = GC.getInfoTypeForString(pszVal, false);
 
 	// if we found a match in the list we will return the value of the loop counter
 	// which will hold the location of the match in the list

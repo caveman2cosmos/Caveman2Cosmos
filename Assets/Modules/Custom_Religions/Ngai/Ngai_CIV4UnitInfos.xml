@@ -7,10 +7,9 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_NGAI_MISSIONARY</Class>
 			<Type>UNIT_NGAI_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_NGAI_MISSIONARY</Capture>
+			<Capture>UNIT_NGAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -22,6 +21,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NGAI_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_NGAI_MISSIONARY_PEDIA</Civilopedia>
@@ -29,12 +31,14 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionSpread>80</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
-			<PrereqBuilding>BUILDING_NGAI</PrereqBuilding>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -59,7 +63,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

@@ -74,15 +74,13 @@ public:
 	CvPlayerAI();
 	virtual ~CvPlayerAI();
 
-  // inlined for performance reasons
-#ifdef _USRDLL
-  static CvPlayerAI& getPlayer(PlayerTypes ePlayer) 
-  {
-	  FAssertMsg(ePlayer != NO_PLAYER, "Player is not assigned a valid value");
-	  FAssertMsg(ePlayer < MAX_PLAYERS, "Player is not assigned a valid value");
-	  return m_aPlayers[ePlayer]; 
-  }
-#endif
+	// inlined for performance reasons
+	static CvPlayerAI& getPlayer(PlayerTypes ePlayer) 
+	{
+		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+		return m_aPlayers[ePlayer]; 
+	}
+
 	DllExport static CvPlayerAI& getPlayerNonInl(PlayerTypes ePlayer);
 
 	static void initStatics();
@@ -127,7 +125,6 @@ public:
 	void AI_conquerCity(CvCity* pCity);
 
 	bool AI_acceptUnit(const CvUnit* pUnit) const;
-	bool AI_captureUnit(UnitTypes eUnit, CvPlot* pPlot) const;
 
 	DomainTypes AI_unitAIDomainType(UnitAITypes eUnitAI) const;
 
@@ -142,7 +139,7 @@ public:
 
 	int AI_militaryWeight(const CvArea* pArea) const;
 
-	int AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
+	int AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
 	CvCity* AI_findTargetCity(const CvArea* pArea) const;
 
 	bool AI_isCommercePlot(const CvPlot* pPlot) const;
@@ -263,7 +260,7 @@ public:
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const;
 /********************************************************************************/
 /* 	City Defenders												END 			*/
 /********************************************************************************/
@@ -391,9 +388,9 @@ public:
 	int AI_getGoldTradedTo(PlayerTypes eIndex) const;
 	void AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange);
 
-	int AI_getAttitudeExtra(PlayerTypes eIndex) const;
-	void AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue);
-	void AI_changeAttitudeExtra(PlayerTypes eIndex, int iChange);
+	int AI_getAttitudeExtra(const PlayerTypes ePlayer) const;
+	void AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue);
+	void AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iChange);
 
 	bool AI_isFirstContact(PlayerTypes eIndex) const;
 	void AI_setFirstContact(PlayerTypes eIndex, bool bNewValue);
@@ -490,12 +487,12 @@ public:
 	int AI_getNumCitySites() const;
 	CvPlot* AI_getCitySite(int iIndex) const;
 	
-	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
-	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
 	
 	int AI_calculateTotalBombard(DomainTypes eDomain) const;
 	
-	int AI_getUnitClassWeight(UnitClassTypes eUnitClass) const;
+	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
 	
@@ -571,7 +568,7 @@ public:
 	int AI_getNavalMilitaryProductionCityCount() const;
 
 	CvCity* findBestCoastalCity() const;
-	UnitTypes bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, CvUnitSelectionCriteria* criteria = NULL) const;
+	UnitTypes bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, const CvUnitSelectionCriteria* criteria = NULL) const;
 	int strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAIType) const;
 	
 	mutable int m_iMilitaryProductionCityCount;
@@ -589,6 +586,7 @@ public:
 	// Attitude cache
 	void AI_invalidateAttitudeCache(PlayerTypes ePlayer);
 	void AI_invalidateAttitudeCache();
+	void AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iChange);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -598,8 +596,6 @@ public:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
 
 	void AI_noteUnitRecalcNeeded();
 	void AI_recalculateUnitCounts();
@@ -668,7 +664,7 @@ protected:
 	int* m_aiBonusValue;
 	int* m_aiTradeBonusValue;
 	bool* m_abNonTradeBonusCalculated;
-	int* m_aiUnitClassWeights;
+	int* m_aiUnitWeights;
 	int* m_aiUnitCombatWeights;
 	
 	mutable int* m_aiCloseBordersAttitudeCache;
@@ -777,10 +773,6 @@ private:
 };
 
 // helper for accessing static functions
-#ifdef _USRDLL
 #define GET_PLAYER CvPlayerAI::getPlayer
-#else
-#define GET_PLAYER CvPlayerAI::getPlayerNonInl
-#endif
 
 #endif

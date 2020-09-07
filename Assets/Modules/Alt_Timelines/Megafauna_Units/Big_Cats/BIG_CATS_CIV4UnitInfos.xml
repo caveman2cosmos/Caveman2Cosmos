@@ -1,12 +1,8 @@
 <?xml version="1.0"?>
-<!-- Created with Notepad by strategyonly -->
-<!-- Assets\Modules\Alt_Timelines\MegaFauna\Big_Cats\BIG_CATS_CIV4UnitInfos.xml -->
-<!-- ###################################################################################### -->
+<!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-<!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 		<UnitInfo>
-			<Class>UNITCLASS_TRAINEDCAT</Class>
 			<Type>UNIT_TRAINEDCAT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -64,19 +60,18 @@
 			<TechTypes>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WARCAT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARCAT</UnitType>
+			</UnitUpgrades>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
 				<InvisibilityIntensityType>
@@ -103,6 +98,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>92</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -130,7 +126,6 @@
 			<iUnnerve>5</iUnnerve>
 			<iLunge>10</iLunge>
 			<iDynamicDefense>5</iDynamicDefense>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<UnitMeshGroups>
@@ -146,9 +141,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-		<!-- War Cat -->
 		<UnitInfo>
-			<Class>UNITCLASS_WARCAT</Class>
 			<Type>UNIT_WARCAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -161,7 +154,6 @@
 			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WARCAT_STRATEGY</Strategy>
-			<!-- Basis -->
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -184,7 +176,6 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<!-- Traits -->
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -218,30 +209,21 @@
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bNoNonOwnedCityEntry>1</bNoNonOwnedCityEntry>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BARRACKS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUARDCAT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<!-- Acquisition -->
+			<UnitUpgrades>
+				<UnitType>UNIT_GUARDCAT</UnitType>
+			</UnitUpgrades>
 			<iCost>216</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -249,7 +231,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main -->
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
@@ -277,8 +259,6 @@
 					<iFlankingStrengthbyUnitCombat>50</iFlankingStrengthbyUnitCombat>
 				</FlankingStrikebyUnitCombat>
 			</FlankingStrikesbyUnitCombat>
-			<!-- Special -->
-			<iExtraCost>2</iExtraCost>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -288,7 +268,6 @@
 					<iIntensity>3</iIntensity>
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
-			<!-- Other -->
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
@@ -306,7 +285,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GUARDCAT</Class>
 			<Type>UNIT_GUARDCAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -359,16 +337,13 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -376,12 +351,9 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_POLICE_CAT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_POLICE_CAT</UnitType>
+			</UnitUpgrades>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
 				<InvisibilityIntensityType>
@@ -412,6 +384,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>425</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -440,7 +413,6 @@
 			<iLunge>30</iLunge>
 			<iDynamicDefense>15</iDynamicDefense>
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
-			<iExtraCost>3</iExtraCost>
 			<iAsset>7</iAsset>
 			<iPower>18</iPower>
 			<UnitMeshGroups>
@@ -457,7 +429,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POLICE_CAT</Class>
 			<Type>UNIT_POLICE_CAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -518,25 +489,19 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_CAT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_POLICE_CAT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_FELINE_SUPERIOR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_FELINE_SUPERIOR</UnitType>
+			</UnitUpgrades>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
 				<InvisibilityIntensityType>
@@ -573,6 +538,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>800</iCost>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>36</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -606,7 +572,6 @@
 			<iDynamicDefense>20</iDynamicDefense>
 			<iCaptureProbabilityModifier>10</iCaptureProbabilityModifier>
 			<iInvestigation>15</iInvestigation>
-			<iExtraCost>4</iExtraCost>
 			<iAsset>9</iAsset>
 			<iPower>28</iPower>
 			<UnitMeshGroups>
@@ -639,7 +604,6 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_FELINE_SUPERIOR</Class>
 			<Type>UNIT_FELINE_SUPERIOR</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -705,13 +669,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RE_PET_SHOP</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -758,6 +719,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>5300</iCost>
+			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>160</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -791,7 +753,6 @@
 			<iDynamicDefense>25</iDynamicDefense>
 			<iCaptureProbabilityModifier>15</iCaptureProbabilityModifier>
 			<iInvestigation>30</iInvestigation>
-			<iExtraCost>6</iExtraCost>
 			<iAsset>22</iAsset>
 			<iPower>85</iPower>
 			<UnitMeshGroups>
@@ -824,63 +785,54 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BENGALTIGER</Class>
 			<Type>UNIT_SUBDUED_BENGALTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAVE_LION</Class>
 			<Type>UNIT_SUBDUED_CAVE_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CHEETAH</Class>
 			<Type>UNIT_SUBDUED_CHEETAH</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JAGUAR</Class>
 			<Type>UNIT_SUBDUED_JAGUAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LION</Class>
 			<Type>UNIT_SUBDUED_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LYNX</Class>
 			<Type>UNIT_SUBDUED_LYNX</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PANTHER</Class>
 			<Type>UNIT_SUBDUED_PANTHER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SIBERIANTIGER</Class>
 			<Type>UNIT_SUBDUED_SIBERIANTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SNOWLEOPARD</Class>
 			<Type>UNIT_SUBDUED_SNOWLEOPARD</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>

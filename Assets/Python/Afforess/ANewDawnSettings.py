@@ -6,11 +6,11 @@ import CvUtil
 GC = CyGlobalContext()
 ANewDawnOpt = BugCore.game.RoMSettings
 
-MODDEROPTION_EVENT_ID = CvUtil.getNewEventID("Modder Options")
-MODDERGAMEOPTION_EVENT_ID = CvUtil.getNewEventID("Modder Game Options")
-DIFFICULTY_EVENT_ID = CvUtil.getNewEventID("Difficulty")
-COLOR_EVENT_ID = CvUtil.getNewEventID("Color")
-CANBUILD_EVENT_ID = CvUtil.getNewEventID("CanBuild")
+MODDEROPTION_EVENT_ID = CvUtil.getNewEventID()
+MODDERGAMEOPTION_EVENT_ID = CvUtil.getNewEventID()
+DIFFICULTY_EVENT_ID = CvUtil.getNewEventID()
+COLOR_EVENT_ID = CvUtil.getNewEventID()
+CANBUILD_EVENT_ID = CvUtil.getNewEventID()
 
 class ANewDawnSettings:
 	def __init__(self, eventManager):
@@ -261,8 +261,8 @@ def changedAllowTerraforming(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TERRAFORM_TUNDRA"), not value, 0)
 
 def changedReforestation(option, value):
-	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_PLANT_FOREST"), not value, 0)
-	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_MAKE_JUNGLE"), not value, 0)
+	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_YOUNG_FOREST"), not value, 0)
+	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_PLANT_JUNGLE"), not value, 0)
 
 def changedSeaTunnels(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TUNNEL"), not value, 0)

@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
-	<!-- Created with Notepad by strategyonly -->
-	<!-- Assets\Modules\Alt_Timelines\MegaFauna\Giraffe_Archer\GiraffeArcher_CIV4UnitInfos.xml -->
-	<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_ARCHER</Class>
 			<Type>UNIT_GIRAFFE_ARCHER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -48,12 +45,9 @@
 			<bPillage>1</bPillage>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -83,7 +77,7 @@
 			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -135,8 +129,8 @@
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_CROSSBOW</Class>
 			<Type>UNIT_GIRAFFE_CROSSBOW</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -178,19 +172,16 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -217,7 +208,7 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>245</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>8</iCombat>
@@ -231,7 +222,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -297,8 +288,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_CUIRASSIER</Class>
 			<Type>UNIT_GIRAFFE_CUIRASSIER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -340,31 +331,25 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CARABINIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-        			<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_DRAGOON</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CARABINIER</UnitType>
+				<UnitType>UNIT_GIRAFFE_DRAGOON</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -402,7 +387,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -432,34 +417,34 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -488,8 +473,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_CARABINIER</Class>
 			<Type>UNIT_GIRAFFE_CARABINIER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -531,27 +516,24 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CAVALRY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CAVALRY</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -589,7 +571,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -619,34 +601,34 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -675,8 +657,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_DRAGOON</Class>
 			<Type>UNIT_GIRAFFE_DRAGOON</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -714,12 +696,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CAVALRY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CAVALRY</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -775,7 +754,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -833,8 +812,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_CAVALRY</Class>
 			<Type>UNIT_GIRAFFE_CAVALRY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -876,27 +855,24 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_TRENCH_CAVALRY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_TRENCH_CAVALRY</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -918,7 +894,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -934,7 +910,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -964,38 +940,38 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CANNON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CANNON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -1024,8 +1000,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE_TRENCH_CAVALRY</Class>
 			<Type>UNIT_GIRAFFE_TRENCH_CAVALRY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1064,31 +1040,28 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_LIGHT_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_LIGHT_TANK</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -1114,7 +1087,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -1129,7 +1102,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1159,42 +1132,42 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CANNON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_ARTILLERY</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CANNON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -1227,8 +1200,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_URBAN_GIRAFFEMAN</Class>
 			<Type>UNIT_URBAN_GIRAFFEMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1267,19 +1240,16 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GIRAFFE_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -1301,7 +1271,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>1030</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -1311,7 +1281,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>

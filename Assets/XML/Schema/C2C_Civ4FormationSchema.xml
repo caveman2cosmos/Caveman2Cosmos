@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Formation Schema -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="FormationType" content="textOnly"/>

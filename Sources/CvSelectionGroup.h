@@ -7,12 +7,13 @@
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
-#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
 class CvPlot;
 class CvArea;
+#ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
+#endif
 
 struct CachedEdgeCosts
 {
@@ -71,8 +72,8 @@ public:
 
 	void playActionSound();
 
-	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, CvPlot* pMissionAIPlot = NULL, CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
-	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, CvPlot* pMissionAIPlot = NULL, CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
+	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
+	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
 	void popMission();																																										// Exposed to Python
 	void autoMission();
 	void updateMission();
@@ -89,8 +90,8 @@ public:
 	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);				// Exposed to Python
 
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false);		// Exposed to Python
-	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache);
+	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false) const;		// Exposed to Python
+	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const;
 	void setupActionCache();
 
 	bool isHuman() const; // Exposed to Python
@@ -131,22 +132,14 @@ public:
 	int getMinimumRBombardDamageLimit() const;
 	int getMinimumRBombardRange() const;
 	int getRBombardDamageMaxUnits() const;
-	bool visibilityRange() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+
 	int getBombardTurns(const CvCity* pCity ) const;
 	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
-	bool isHasPathToAreaEnemyCity( bool bIgnoreMinors = true, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
+	bool isHasPathToAreaEnemyCity(int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
 	bool isStranded();
 	void invalidateIsStrandedCache();
 	bool calculateIsStranded();
 	bool canMoveAllTerrain() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	void unloadAll();
 	bool alwaysInvisible() const;																																							// Exposed to Python
@@ -227,16 +220,16 @@ public:
 #endif
 	CvPlot* getPathFirstPlot() const;																																		// Exposed to Python
 	CvPlot* getPathEndTurnPlot() const;																														// Exposed to Python
-	CvPath&	getPath() const;
+	const CvPath& getPath() const;
 	static CvPathGenerator* getPathGenerator();
 	//TB OOS Fix
-	bool generatePath( const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;	// Exposed to Python
+	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;	// Exposed to Python
 	void resetPath();	
 	
-	bool canPathDirectlyToInternal(CvPlot* pFromPlot, CvPlot* pToPlot, int movesRemaining);
-	bool canPathDirectlyTo(CvPlot* pFromPlot, CvPlot* pToPlot);
+	bool canPathDirectlyToInternal(const CvPlot* pFromPlot, const CvPlot* pToPlot, int movesRemaining) const;
+	bool canPathDirectlyTo(const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
 
-	int movesRemainingAfterMovingTo(int iStartMoves, CvPlot* pFromPlot, CvPlot* pToPlot) const;
+	int movesRemainingAfterMovingTo(int iStartMoves, const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
 	int movesLeft() const;
 
 	// Exposed to Python
@@ -318,7 +311,7 @@ public:
 	virtual bool AI_isForceSeparate() const = 0;
 	virtual void AI_makeForceSeparate() = 0;
 	virtual MissionAITypes AI_getMissionAIType() const = 0;
-	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit) = 0;
+	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
 	virtual CvUnit* AI_getMissionAIUnit() const = 0;
 	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
@@ -425,8 +418,8 @@ private:
 
 		void clear();
 
-		bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
-		void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
+		bool HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
+		void CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
 
 		CvPathGenerator* get() { return &m_pathGenerator; }
 		const CvPathGenerator* get() const { return &m_pathGenerator; }
@@ -450,8 +443,8 @@ private:
 public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);
 
-	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
-	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
+	bool HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
+	void CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
 
 public:
 	//
@@ -465,7 +458,7 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, readyToAuto);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, isAutomated);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, CvUnit*, getHeadUnit);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, const CvUnit*, getHeadUnit);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);

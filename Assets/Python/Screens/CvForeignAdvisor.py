@@ -933,7 +933,7 @@ class CvForeignAdvisor:
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_ECONOMY", ())		],
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_WELFARE", ())		],
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_CURRENCY", ())	],
-			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_LABOR", ())		],
+			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_WORKFORCE", ())		],
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_EDUCATION", ())	],
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_LANGUAGE", ())	],
 			[dx,	TRNSLTR.getText("TXT_KEY_CIVICOPTION_ABBR_IMMIGRATION", ())	],
@@ -1118,7 +1118,7 @@ class CvForeignAdvisor:
 			iGold = 0
 			if bGoldTrading and CyTeamX.isGoldTrading():
 				if bHuman:
-					if CyPlayerX.getEffectiveGold() > 0:
+					if CyPlayerX.getGold() > 0:
 						iGold = -1
 				else:
 					iGold = CyPlayerX.AI_maxGoldTrade(iPlayer)
@@ -1271,7 +1271,7 @@ class CvForeignAdvisor:
 			self.getScreen().moveItem("Tooltip", iX, iY, 0)
 
 	# Handles the input for this screen...
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		screen = self.getScreen()
 		if not screen.isActive():
 			return
@@ -1296,9 +1296,8 @@ class CvForeignAdvisor:
 			CASE = szSplit[2:]
 		else:
 			CASE = [0]
-		# Remove potential Help Text
-		self.bTooltip = False
-		screen.hide("Tooltip")
+
+		screen.hide("Tooltip") # Remove potential Help Text
 
 		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 
@@ -1364,19 +1363,12 @@ class CvForeignAdvisor:
 				if TYPE == "ALL":
 					CyPlayerX = GC.getPlayer(ID)
 					iGold = CyPlayerX.getGold()
-					iGrGold = CyPlayerX.getGreaterGold()
 					szTxt = ""
-					if iGrGold:
-						szTxt += str(iGrGold)
 					szTxt += str(iGold) + self.charGold
 					self.updateTooltip(screen, szTxt)
 				elif TYPE == "WILL":
 					iGold = GC.getPlayer(ID).AI_maxGoldTrade(self.iPlayer)
-					iGrGold = iGold / 1000000
 					szTxt = ""
-					if iGrGold:
-						iGold - iGrGold*1000000
-						szTxt += str(iGrGold)
 					szTxt += str(iGold) + self.charGold
 					self.updateTooltip(screen, szTxt)
 

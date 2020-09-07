@@ -15,10 +15,21 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-//#include "CvStructs.h"
-#include "CvInfos.h"
 #include "CvGlobals.h"
 #include "FVariableSystem.h"
+
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
 
 class FXmlSchemaCache;
 class FXml;
@@ -192,7 +203,7 @@ public:
 			else
 			{
 				char* tmp = xercesc::XMLString::transcode(nodesText);
-				FAssertMsg(false, tmp);
+				FErrorMsg(tmp);
 				xercesc::XMLString::release(&tmp);
 				// not the right type, assume it is a global define
 				char* nodeTextC = xercesc::XMLString::transcode(nodesText);
@@ -233,7 +244,7 @@ public:
 		else
 		{
 			char* tmp = xercesc::XMLString::transcode(szName);
-			FAssertMsg(false, tmp);
+			FErrorMsg(tmp);
 			xercesc::XMLString::release(&tmp);
 			*pVal = pDefault;
 
@@ -500,29 +511,18 @@ public:
 	//	and then gets that node's boolean value
 	bool GetChildXmlVal(bool* pbVal, bool bDefault = false);
 
-#ifdef _USRDLL
 	FXml* GetXML() { return NULL; }
 	xercesc::DOMElement* GetCurrentXMLElement() { return m_pCurrentXmlElement; }
 	void SetCurrentXMLElement(xercesc::DOMElement* element) { m_pCurrentXmlElement = element; }
-#endif
 
 	// loads the local yield from the xml file
 	int SetYields(int** ppiYield);
 
-#ifdef _USRDLL
 	template <class T>
 	int SetCommerce(T** ppiCommerce);
-#endif
-/************************************************************************************************/
-/* Afforess	                  Start		 05/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and set the feature struct variables for the CvBuildInfo class
 	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
@@ -548,27 +548,16 @@ public:
 	//				is found.
 	static int GetInfoClass(const TCHAR* pszVal);
 
-#ifdef _USRDLL
 	template <class T>
 	static void InitList(T **ppList, int iListLen, T val = 0);
-#endif
+
 	void InitStringList(CvString **ppszList, int iListLen, CvString szString);
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
-	// allocate and initialize the civilization's default buildings
-	void InitBuildingDefaults(int **ppiDefaults);
-	// allocate and initialize the civilization's default units
-	void InitUnitDefaults(int **ppiDefaults);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of bool pointers
 	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of int pointers
 	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
 	// allocate and initialize a 2 dimensional array of float pointers
@@ -633,10 +622,10 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName){return SetOptionalVector<int>(aInfos, szRootTagName);}
+	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
 
 	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, std::vector<int>& source){return CopyNonDefaultsFromVector<int>(target, source);}
+	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
@@ -645,7 +634,7 @@ public:
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
-			int iNumSibs = GetXmlChildrenNumber();
+			const int iNumSibs = GetXmlChildrenNumber();
 
 			if (0 < iNumSibs)
 			{
@@ -679,7 +668,7 @@ public:
 		}
 	}
 	template<class T>
-	static void CopyNonDefaultsFromVector(std::vector<T>& target, std::vector<T>& source)
+	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
 		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{
@@ -815,27 +804,21 @@ private:
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	// take a character string of hex values and return their unsigned int value
-	void MakeMaskFromString(unsigned int *puiMask, char* szMask);
-
 	// find the tag name in the xml file and set the string parameter and num val parameter based on it's value
 	void SetGlobalStringArray(CvString** ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum=false);
 	void SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals);	// sets diplomacy comments
 
 	void SetGlobalUnitScales(float* pfLargeScale, float* pfSmallScale, const wchar_t* szTagName);
 
-#ifdef _USRDLL
 	template <class T>
-		void SetGlobalDefine(const char* szDefineName, T*& piDefVal)
+	void SetGlobalDefine(const char* szDefineName, T*& piDefVal)
 	{ 
 		GC.getDefinesVarSystem()->GetValue(szDefineName, piDefVal); 
 	}
-#endif
 	//
 	// template which can handle all info classes
 	//
 	// a dynamic value for the list size
-#ifdef _USRDLL
 	template <class T>
 	void SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, bool bTwoPass, CvInfoReplacements<T>* pReplacements = NULL);
 /************************************************************************************************/
@@ -862,7 +845,6 @@ private:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-#endif
 	void SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const wchar_t* szTagName);
 	void LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching);
 
@@ -913,7 +895,6 @@ private:
 /************************************************************************************************/
 };
 
-#ifdef _USRDLL
 //
 /////////////////////////// inlines / templates
 //
@@ -1022,7 +1003,5 @@ bool CvXMLLoadUtility::CheckDependency()
 	}
 	return true;
 }
-
-#endif
 
 #endif	// XML_LOAD_UTILITY_H

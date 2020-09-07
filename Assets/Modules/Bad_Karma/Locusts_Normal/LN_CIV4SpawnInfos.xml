@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- -->
-<!-- Spawn Infos -->
 <Civ4SpawnInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
 		<SpawnInfo>
@@ -10,7 +7,9 @@
 			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -28,7 +27,9 @@
 			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -43,10 +44,12 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -61,10 +64,12 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
