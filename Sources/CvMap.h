@@ -286,7 +286,9 @@ protected:
 
 	FFreeListTrashArray<CvArea> m_areas;
 
+#ifdef PARALLEL_MAPS
 	std::vector<TravelingUnit> m_IncomingUnits;
+#endif
 
 	void calculateAreas();
 };

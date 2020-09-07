@@ -366,21 +366,24 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-void updateIncomingUnits(std::vector<TravelingUnit> incomingUnits)
-{
-	for (std::vector<TravelingUnit>::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
-	//foreach_(TravelingUnit travelingUnit, incomingUnits)
+#ifdef PARALLEL_MAPS
+namespace {
+	void updateIncomingUnits(std::vector<TravelingUnit> incomingUnits)
 	{
-		int* travelTurnsLeft = &(*itr).second;
-		travelTurnsLeft--;
-		if (travelTurnsLeft <= 0)
+		for (std::vector<TravelingUnit>::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
 		{
-			CvUnit* unit = (*itr).first;
-			GET_PLAYER(unit->getOwner()).addUnit(unit);
-			//incomingUnits.erase(travelingUnit);
+			int* travelTurnsLeft = &(*itr).second;
+			travelTurnsLeft--;
+			if (travelTurnsLeft <= 0)
+			{
+				CvUnit* unit = (*itr).first;
+				GET_PLAYER(unit->getOwner()).addUnit(unit);
+				incomingUnits.erase(itr);
+			}
 		}
 	}
 }
+#endif
 
 
 void CvMap::doTurn()
@@ -388,8 +391,9 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
+#ifdef PARALLEL_MAPS
 	updateIncomingUnits(m_IncomingUnits);
-
+#endif
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->doTurn();
