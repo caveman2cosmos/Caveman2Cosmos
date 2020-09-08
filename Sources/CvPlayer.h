@@ -1108,9 +1108,9 @@ public:
 	DllExport int getNumUnits() const; // Exposed to Python
 	CvUnit* getUnit(int iID) const; // Exposed to Python
 	CvUnit* addUnit();
-	#ifdef PARALLEL_MAPS
+#ifdef PARALLEL_MAPS
 	void addUnit(CvUnit* unit);
-	#endif
+#endif
 	void deleteUnit(int iID);
 
 	// selection groups iteration

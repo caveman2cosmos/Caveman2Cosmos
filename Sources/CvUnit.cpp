@@ -5403,6 +5403,12 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		return false;
 		break;
 
+#ifdef PARALLEL_MAPS
+#if 0
+	case INCOMPLETE:
+		
+#endif
+#endif
 	default:
 		FAssert(false);
 		break;
@@ -5533,6 +5539,15 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 
 		case COMMAND_AMBUSH:
 			break;
+
+#ifdef PARALLEL_MAPS
+//#if 0
+		case INCOMPLETE:
+			GC.getMapByIndex((MapTypes)1).addIncomingUnit(this, 1);
+			GET_PLAYER(getOwner()).deleteUnit(getID());
+			break;
+//#endif
+#endif
 
 		default:
 			FAssert(false);

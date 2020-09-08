@@ -35,10 +35,7 @@ class CvPlotGroup;
 class CvSelectionGroup;
 #ifdef PARALLEL_MAPS
 class CvUnit;
-
-typedef std::pair<CvUnit*, int> TravelingUnit;
 #endif
-
 
 class CvMap : public CvMapInterfaceBase
 {
@@ -287,7 +284,7 @@ protected:
 	FFreeListTrashArray<CvArea> m_areas;
 
 #ifdef PARALLEL_MAPS
-	std::vector<TravelingUnit> m_IncomingUnits;
+	std::vector<std::pair<CvUnit*, int> > m_IncomingUnits;
 #endif
 
 	void calculateAreas();

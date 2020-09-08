@@ -368,9 +368,9 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 #ifdef PARALLEL_MAPS
 namespace {
-	void updateIncomingUnits(std::vector<TravelingUnit> incomingUnits)
+	void updateIncomingUnits(std::vector<std::pair<CvUnit*, int> > incomingUnits)
 	{
-		for (std::vector<TravelingUnit>::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
+		for (std::vector<std::pair<CvUnit*, int> >::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
 		{
 			int* travelTurnsLeft = &(*itr).second;
 			travelTurnsLeft--;

@@ -1846,6 +1846,8 @@ enum CommandTypes					// Exposed to Python
 	COMMAND_ARREST,
 	COMMAND_AMBUSH,
 
+	INCOMPLETE,
+
 	NUM_COMMAND_TYPES
 };
 
