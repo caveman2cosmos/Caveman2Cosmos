@@ -19317,5 +19317,33 @@
 		<Tag>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
-	</Civ4GameText>
-
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV1</Tag>
+		<English>Space Station - Level 1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV1_PEDIA</Tag>
+		<English>This is early space station representing research and exploration like MIR or Skylab.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_STRATEGY</Tag>
+		<English>Space station chain exists as alternative for sending units to build/upgrade space stations, and to upgrade units to cislunar settler.
+		Level 3 allows to build Cislunar settler.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV2</Tag>
+		<English>Space Station - Level 2</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV2_PEDIA</Tag>
+		<English>This is modern space station representing research and exploration like ISS.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV3</Tag>
+		<English>Space Station - Level 3</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACE_STATION_LV3_PEDIA</Tag>
+		<English>This is advanced space station, a gateway for space colonization.</English>
+	</TEXT>
+</Civ4GameText>
