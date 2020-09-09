@@ -1908,9 +1908,10 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>500</iCost>
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -1932,7 +1933,8 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
+			<iCost>500</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -1954,9 +1956,10 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>500</iCost>
 			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>-1</iHealth>
@@ -1979,8 +1982,9 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>500</iCost>
 			<bPower>1</bPower>
-			<iHurryCostModifier>10000</iHurryCostModifier>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

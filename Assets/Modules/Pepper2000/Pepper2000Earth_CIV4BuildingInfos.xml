@@ -25978,5 +25978,28 @@
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SPACE_STATION_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_SPACE_STATION_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SPACE_STATION_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SPACE_STATION_EFFECT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_SPACE_STATION_LV3</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SPACE_STATION_LV3</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bAutoBuild>1</bAutoBuild>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -419,7 +419,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-				<BuildingType>BUILDING_SPACE_STATION_LV3</BuildingType>
+				<BuildingType>BUILDING_SPACE_STATION_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
@@ -494,6 +494,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -512,9 +513,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION_EFFECT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
