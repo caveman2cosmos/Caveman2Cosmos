@@ -9899,10 +9899,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION_EFFECT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1700</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
