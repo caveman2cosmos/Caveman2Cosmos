@@ -16940,6 +16940,14 @@ int CvPlayer::getNumCities() const
 }
 
 
+#ifdef PARALLEL_MAPS
+int CvPlayer::getNumCities(MapTypes mapIndex) const
+{
+	return m_cities[mapIndex]->getCount();
+}
+#endif
+
+
 CvCity* CvPlayer::getCity(int iID) const
 {
 #ifdef PARALLEL_MAPS
@@ -16948,6 +16956,14 @@ CvCity* CvPlayer::getCity(int iID) const
 	return(m_cities.getAt(iID));
 #endif
 }
+
+
+#ifdef PARALLEL_MAPS
+CvCity* CvPlayer::getCity(int iID, MapTypes mapIndex) const
+{
+	return m_cities[(int)mapIndex]->getAt(iID);
+}
+#endif
 
 
 CvCity* CvPlayer::addCity()
@@ -17030,11 +17046,19 @@ CvUnit* CvPlayer::nextUnitExternal(int *pIterIdx, bool bRev) const
 int CvPlayer::getNumUnits() const
 {
 #ifdef PARALLEL_MAPS
-	return m_units[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_units[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit ? 1 : 0);
 #else
 	return m_units.getCount() - (m_pTempUnit != NULL ? 1 : 0);
 #endif
 }
+
+
+#ifdef PARALLEL_MAPS
+int CvPlayer::getNumUnits(MapTypes mapIndex) const
+{
+	return m_units[mapIndex]->getCount() - (m_pTempUnit ? 1 : 0);
+}
+#endif
 
 
 CvUnit* CvPlayer::getUnit(int iID) const
@@ -17045,6 +17069,15 @@ CvUnit* CvPlayer::getUnit(int iID) const
 	return (m_units.getAt(iID));
 #endif
 }
+
+
+#ifdef PARALLEL_MAPS
+CvUnit* CvPlayer::getUnit(int iID, MapTypes mapIndex) const
+{
+	return m_units[(int)mapIndex]->getAt(iID);
+}
+#endif
+
 
 CvUnit* CvPlayer::addUnit()
 {

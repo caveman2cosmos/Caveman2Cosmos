@@ -1083,7 +1083,13 @@ public:
 	DllExport CvCity* firstCityExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
 	DllExport CvCity* nextCityExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
 	DllExport int getNumCities() const; // Exposed to Python
+#ifdef PARALLEL_MAPS
+	int getNumCities(MapTypes mapIndex) const;
+#endif
 	DllExport CvCity* getCity(int iID) const; // Exposed to Python
+#ifdef PARALLEL_MAPS
+	CvCity* getCity(int iID, MapTypes mapIndex) const;
+#endif
 	CvCity* addCity();
 	void deleteCity(int iID);
 
@@ -1106,7 +1112,13 @@ public:
 	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
 	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
 	DllExport int getNumUnits() const; // Exposed to Python
+#ifdef PARALLEL_MAPS
+	int getNumUnits(MapTypes mapIndex) const;
+#endif
 	CvUnit* getUnit(int iID) const; // Exposed to Python
+#ifdef PARALLEL_MAPS
+	CvUnit* getUnit(int iID, MapTypes mapIndex) const;
+#endif
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
 

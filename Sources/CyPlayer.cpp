@@ -2256,7 +2256,7 @@ std::wstring CyPlayer::getCityName(int iIndex)
 }
 
 // returns tuple of (CyCity, iterOut)
-python::tuple CyPlayer::firstCity(bool bRev)
+python::tuple CyPlayer::firstCity(bool bRev) const
 {
 	int iterIn = 0;
 	CvCity* pvObj = m_pPlayer ? m_pPlayer->firstCity(&iterIn, bRev) : NULL;
@@ -2267,7 +2267,7 @@ python::tuple CyPlayer::firstCity(bool bRev)
 }
 
 // returns tuple of (CyCity, iterOut)
-python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
+python::tuple CyPlayer::nextCity(int iterIn, bool bRev) const
 {
 	CvCity* pvObj = m_pPlayer ? m_pPlayer->nextCity(&iterIn, bRev) : NULL;
 	CyCity* pyObj = pvObj ? new CyCity(pvObj) : NULL;
@@ -2276,7 +2276,7 @@ python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
 	return tup;
 }
 
-CyCity* CyPlayer::nthCity(int n, bool bRev)
+CyCity* CyPlayer::nthCity(int n, bool bRev) const
 {
 	FAssert(n >= 0);
 	int it;
@@ -2286,18 +2286,32 @@ CyCity* CyPlayer::nthCity(int n, bool bRev)
 	return new CyCity(c);
 }
 
-int CyPlayer::getNumCities()
+int CyPlayer::getNumCities() const
 {
 	return m_pPlayer ? m_pPlayer->getNumCities() : -1;
 }
 
-CyCity* CyPlayer::getCity(int iID)
+#ifdef PARALLEL_MAPS
+int CyPlayer::getNumCitiesOnMap(int /*MapTypes*/ eMap) const
+{
+	return m_pPlayer->getNumCities((MapTypes)eMap);
+}
+#endif
+
+CyCity* CyPlayer::getCity(int iID) const
 {
 	return m_pPlayer ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
 }
 
+#ifdef PARALLEL_MAPS
+CyCity* CyPlayer::getCityOnMap(int iID, int /*MapTypes*/ eMap) const
+{
+	return new CyCity(m_pPlayer->getCity(iID, (MapTypes)eMap));
+}
+#endif
+
 // returns tuple of (CyUnit, iterOut)
-python::tuple CyPlayer::firstUnit(bool bRev)
+python::tuple CyPlayer::firstUnit(bool bRev) const
 {
 	int iterIn = 0;
 	CvUnit* pvUnit = m_pPlayer ? m_pPlayer->firstUnit(&iterIn, bRev) : NULL;
@@ -2308,7 +2322,7 @@ python::tuple CyPlayer::firstUnit(bool bRev)
 }
 
 // returns tuple of (CyUnit, iterOut)
-python::tuple CyPlayer::nextUnit(int iterIn, bool bRev)
+python::tuple CyPlayer::nextUnit(int iterIn, bool bRev) const
 {
 	CvUnit* pvObj = m_pPlayer ? m_pPlayer->nextUnit(&iterIn, bRev) : NULL;
 	CyUnit* pyObj = pvObj ? new CyUnit(pvObj) : NULL;
@@ -2318,18 +2332,32 @@ python::tuple CyPlayer::nextUnit(int iterIn, bool bRev)
 
 }
 
-int CyPlayer::getNumUnits()
+int CyPlayer::getNumUnits() const
 {
 	return m_pPlayer ? m_pPlayer->getNumUnits() : -1;
 }
 
-CyUnit* CyPlayer::getUnit(int iID)
+#ifdef PARALLEL_MAPS
+int CyPlayer::getNumUnitsOnMap(int /*MapTypes*/ eMap) const
+{
+	return m_pPlayer->getNumUnits((MapTypes)eMap);
+}
+#endif
+
+CyUnit* CyPlayer::getUnit(int iID) const
 {
 	return m_pPlayer ? new CyUnit(m_pPlayer->getUnit(iID)) : NULL;
 }
 
+#ifdef PARALLEL_MAPS
+CyUnit* CyPlayer::getUnitOnMap(int iID, int /*MapTypes*/ eMap) const
+{
+	return new CyUnit(m_pPlayer->getUnit(iID, (MapTypes)eMap));
+}
+#endif
+
 // returns tuple of (CySelectionGroup, iterOut)
-python::tuple CyPlayer::firstSelectionGroup(bool bRev)
+python::tuple CyPlayer::firstSelectionGroup(bool bRev) const
 {
 	int iterIn = 0;
 	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->firstSelectionGroup(&iterIn, bRev) : NULL;
@@ -2340,7 +2368,7 @@ python::tuple CyPlayer::firstSelectionGroup(bool bRev)
 }
 
 // returns tuple of (CySelectionGroup, iterOut)
-python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev)
+python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev) const
 {
 	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->nextSelectionGroup(&iterIn, bRev) : NULL;
 	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
@@ -2349,12 +2377,12 @@ python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev)
 	return tup;
 }
 
-int CyPlayer::getNumSelectionGroups()
+int CyPlayer::getNumSelectionGroups() const
 {
 	return m_pPlayer ? m_pPlayer->getNumSelectionGroups() : -1;
 }
 
-CySelectionGroup* CyPlayer::getSelectionGroup(int iID)
+CySelectionGroup* CyPlayer::getSelectionGroup(int iID) const
 {
 	return m_pPlayer ? new CySelectionGroup(m_pPlayer->getSelectionGroup(iID)) : NULL;
 }

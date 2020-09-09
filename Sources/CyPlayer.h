@@ -500,19 +500,31 @@ public:
 	void addCityName(std::wstring szName);
 	int getNumCityNames();
 	std::wstring getCityName(int iIndex);
-	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
-	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
-	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
-	int getNumCities();
-	CyCity* getCity(int iID);
-	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
-	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
-	int getNumUnits();
-	CyUnit* getUnit(int iID);
-	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
-	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
-	int getNumSelectionGroups();
-	CySelectionGroup* getSelectionGroup(int iID);
+	python::tuple firstCity(bool bRev) const; // returns tuple of (CyCity, iterOut)
+	python::tuple nextCity(int iterIn, bool bRev) const; // returns tuple of (CyCity, iterOut)
+	CyCity* nthCity(int n, bool bRev) const; // shortcut for firstCity + nextCity + nextCity ...
+	int getNumCities() const;
+#ifdef PARALLEL_MAPS
+	int getNumCitiesOnMap(int /*MapTypes*/ eMap) const;
+#endif
+	CyCity* getCity(int iID) const;
+#ifdef PARALLEL_MAPS
+	CyCity* getCityOnMap(int iID, int /*MapTypes*/ eMap) const;
+#endif
+	python::tuple firstUnit(bool bRev) const; // returns tuple of (CyUnit, iterOut)
+	python::tuple nextUnit(int iterIn, bool bRev) const; // returns tuple of (CyUnit, iterOut)
+	int getNumUnits() const;
+#ifdef PARALLEL_MAPS
+	int getNumUnitsOnMap(int /*MapTypes*/ eMap) const;
+#endif
+	CyUnit* getUnit(int iID) const;
+#ifdef PARALLEL_MAPS
+	CyUnit* getUnitOnMap(int iID, int /*MapTypes*/ eMap) const;
+#endif
+ 	python::tuple firstSelectionGroup(bool bRev) const; // returns tuple of (CySelectionGroup, iterOut)
+	python::tuple nextSelectionGroup(int iterIn, bool bRev) const; // returns tuple of (CySelectionGroup, iterOut)
+	int getNumSelectionGroups() const;
+	CySelectionGroup* getSelectionGroup(int iID) const;
 
 	void trigger(/*EventTriggerTypes*/int eEventTrigger);
 	const EventTriggeredData* getEventOccured(int /*EventTypes*/ eEvent) const;
