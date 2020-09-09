@@ -11039,10 +11039,9 @@ void CvGame::drawBattleEffects()
 {
 	if (GC.isDCM_BATTLE_EFFECTS())
 	{
-		CvPlot* pLoopPlot;
 		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iPlot);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 			if (pLoopPlot->isBattle())
 			{
 				gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
@@ -12793,10 +12792,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	foreach_(CvArea * pLoopArea, GC.getMap().areas())
-	{
-		pLoopArea->clearModifierTotals();
-	}
+	algo::for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
 	for(iI = 0; iI < MAX_TEAMS; iI++)
 	{

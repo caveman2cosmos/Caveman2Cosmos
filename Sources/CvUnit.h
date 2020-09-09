@@ -3258,9 +3258,26 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, checkPromotionObsoletion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, reloadEntity);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, defineReligion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, unloadAll);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, verifyStackValid);
+
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, jumpToNearestValidPlot, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, kill, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, NotifyEntity, MissionTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, airCircle, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setBlockading, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setTransportUnit, CvUnit*);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setHealSupportUsed, int);
 
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, joinGroup, CvSelectionGroup*);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttack);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isDead);
@@ -3286,15 +3303,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
-
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
-
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
-
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, visibilityRange);
@@ -3308,7 +3316,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitCombatTypes, getUnitCombatType);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitAITypes, AI_getUnitAIType);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, DomainTypes, getDomainType);
-
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvPlot*, plot);
@@ -3321,11 +3328,17 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMCargoVolume);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, revoltProtectionTotal);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, aidTotal, PropertyTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, isEnemy, TeamTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, isInvisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
 		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
 		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);

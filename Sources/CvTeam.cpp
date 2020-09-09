@@ -6477,10 +6477,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			GET_PLAYER((PlayerTypes)iI).updateCorporation();
 
 			//	A new tech can effect best plot build decisions so mark stale in all cities
-			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-			{
-				pLoopCity->AI_markBestBuildValuesStale();
-			}
+			algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::AI_markBestBuildValuesStale());
 		}
 	}
 
@@ -6679,21 +6676,12 @@ void CvTeam::verifySpyUnitsValidPlot()
 
 		if (kPlayer.isAlive() && kPlayer.getTeam() == getID())
 		{
-			foreach_(CvUnit* pUnit, kPlayer.units())
+			foreach_(CvUnit* pUnit, kPlayer.units() | filtered(CvUnit::fn::plot() && CvUnit::fn::isSpy()))
 			{
-				if ( pUnit->plot() != NULL )
+				const PlayerTypes eOwner = pUnit->plot()->getOwner();
+				if (NO_PLAYER != eOwner && !kPlayer.canSpiesEnterBorders(eOwner))
 				{
-					const PlayerTypes eOwner = pUnit->plot()->getOwner();
-					if (NO_PLAYER != eOwner)
-					{
-						if (pUnit->isSpy())
-						{
-							if (!kPlayer.canSpiesEnterBorders(eOwner))
-							{
-								aUnits.push_back(pUnit);
-							}
-						}
-					}
+					aUnits.push_back(pUnit);
 				}
 			}
 		}
@@ -7346,13 +7334,9 @@ void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTy
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
 		{
-			foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
-			{
-				if (pLoopCity->getNumActiveBuilding(eBuilding) > 0)
-				{
-					pLoopCity->AI_setAssignWorkDirty(true);
-				}
-			}
+			algo::for_each(kLoopPlayer.cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
+				CvCity::fn::AI_setAssignWorkDirty(true)
+			);
 		}
 	}
 }
@@ -7621,10 +7605,7 @@ void CvTeam::ObsoletePromotions(TechTypes eObsoleteTech)
 					const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 					if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
 					{
-						foreach_(CvUnit* pLoopUnit, kLoopPlayer.units())
-						{
-							pLoopUnit->checkPromotionObsoletion();
-						}
+						algo::for_each(kLoopPlayer.units(), CvUnit::fn::checkPromotionObsoletion());
 					}
 				}
 				break;
@@ -7635,13 +7616,12 @@ void CvTeam::ObsoletePromotions(TechTypes eObsoleteTech)
 
 void CvTeam::ObsoleteCorporations(TechTypes eObsoleteTech)
 {
-	int iI;
 	bool bValid = false;
 	if (eObsoleteTech != NO_TECH)
 	{
-		for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 		{
-			if ((GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech()) == eObsoleteTech)
+			if (GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech() == eObsoleteTech)
 			{
 				bValid = true;
 				break;
@@ -7744,16 +7724,13 @@ void CvTeam::changeCorporationRevenueModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iCorporationRevenueModifier += iChange;
+
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 		{
 			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-
-			if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
+			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
-				{
-					pLoopCity->updateCorporation();
-				}
+				algo::for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
 			}
 		}
 	}
@@ -7769,15 +7746,13 @@ void CvTeam::changeCorporationMaintenanceModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iCorporationMaintenanceModifier += iChange;
+
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 		{
 			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 			if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
-				{
-					pLoopCity->updateCorporation();
-				}
+				algo::for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
 			}
 		}
 	}
