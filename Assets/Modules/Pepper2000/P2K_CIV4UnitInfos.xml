@@ -399,6 +399,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -416,9 +417,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION_LV3</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -553,10 +555,6 @@
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
-										return False
-									valid_improvement_strings = ['LUNAR_OUTPOST','LUNAR_HABITATION_COMPLEX']
-									valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
-									if plot.getImprovementType() not in valid_improvements:
 										return False
 									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
