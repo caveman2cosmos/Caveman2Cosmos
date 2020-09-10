@@ -31957,7 +31957,7 @@ void CvGameTextMgr::getDealString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer
 {
 	if (NO_PLAYER == ePlayer1 || NO_PLAYER == ePlayer2)
 	{
-		FAssertMsg(false, "Deal needs two parties");
+		FErrorMsg("Deal needs two parties");
 		return;
 	}
 

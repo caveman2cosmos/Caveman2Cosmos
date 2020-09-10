@@ -4,6 +4,7 @@
 		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER_C2C</Tag>
 		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders</English>
 		<French>[ICON_BULLET]%D1%% Émergence des militaires illustres à l'intérieur des frontières culturelles</French>
+		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren innerhalb der eigenen Grenzen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ADDITIONAL_NAVAL_MOVES</Tag>
@@ -315,6 +316,7 @@
 		<Tag>TXT_KEY_TRAIT_ATTITUDE_MODIFIER_NEGATIVE</Tag>
 		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
 		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
+		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
 		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
 		<Polish>[ICON_BULLET]%D1_Num Kary do Dyplomacji (zamienne na bonus do Przywódców z tą samą cechą)</Polish>
 	</TEXT>
@@ -322,6 +324,7 @@
 		<Tag>TXT_KEY_TRAIT_ATTITUDE_MODIFIER_POSITIVE</Tag>
 		<English>[ICON_BULLET]%D1_Num Diplomacy Bonus with other Leaders</English>
 		<French>[ICON_BULLET]%D1_Num Bonus Diplomatique envers les autres Leaders</French>
+		<German>[ICON_BULLET]%D1_Num Diplomatiebonus</German>
 		<Italian>[ICON_BULLET]%D1_Num nei rapporti diplomatici con gli altri leader</Italian>
 		<Polish>[ICON_BULLET]%D1_Num Bonusu do Dyplomacji z innymi Przywódcami</Polish>
 	</TEXT>
@@ -674,6 +677,7 @@
 		<Tag>TXT_KEY_TRAIT_DISABLED_OFF</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Dévelopement des Leader[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców w grze z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -681,6 +685,7 @@
 		<Tag>TXT_KEY_TRAIT_DISABLED_ON</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Dévelopement des Leader[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców bez gry z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -688,6 +693,7 @@
 		<Tag>TXT_KEY_TRAIT_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISTANCE_MOD</Tag>
@@ -956,6 +962,7 @@
 		<Tag>TXT_KEY_TRAIT_FREE_PROMOTION_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
 		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
+		<German>[ICON_BULLET]freie Beförderung [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_SPEC_NW</Tag>
@@ -981,6 +988,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
+		<German>[ICON_BULLET]freie militärische Einheiten pro 100 Bürger: %D1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>
@@ -1002,6 +1010,7 @@
 		<Tag>TXT_KEY_TRAIT_GREAT_GENERAL_MODIFIER_C2C</Tag>
 		<English>[ICON_BULLET]%D1%% Great Military People Emergence</English>
 		<French>[ICON_BULLET]%D1%% Emergen de Général illustre</French>
+		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren</German>
 		<Italian>[ICON_BULLET]%D1%% ritmo di nascita dei Grandi Generali</Italian>
 		<Polish>[ICON_BULLET]%D1%% do Wielkiego Generała</Polish>
 	</TEXT>
@@ -1395,6 +1404,7 @@
 		<Tag>TXT_KEY_TRAIT_NEGATIVE</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This is a Negative Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]C'est un Trait Négatif[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo è un tratto negativo[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]To jest Negatywna Cecha[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -1482,6 +1492,7 @@
 		<Tag>TXT_KEY_TRAIT_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Attivo solo se l'opzione %s1_Option è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aktywna tylko gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -2239,6 +2250,7 @@
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained %s2_CombatClass Units.</English>
 		<French>[ICON_BULLET]%D1 Experience pour les unités de type %s2_CombatClass nouvellement entraînées.</French>
+		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten %s2_CombatClass</German>	
 		<Italian>[ICON_BULLET]%D1 XP a tutte le nuove %s2_CombatClass addestrate.</Italian>
 		<Polish>[ICON_BULLET]%D1 Doświadczenia dla wszystkich nowo wyszkolonych jednostek %s2_CombatClass.</Polish>
 	</TEXT>
@@ -2250,16 +2262,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English>Unit Types</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</German>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training %s2_CombatClass Units.</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de Production en entraînant des unités de type: %s2_CombatClass.</French>
+		<German>[ICON_BULLET]%D1%% schnellere Ausbildung von %s2:3_CombatClass</German>
 		<Italian>[ICON_BULLET]%D1%% alla velocità di addestramento di %s2_CombatClass Units.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Szybkości Produkcji przy szkoleniu jednostek: %s2_CombatClass.</Polish>
 	</TEXT>
@@ -2271,11 +2286,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_END</Tag>
 		<English>Unit Types</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<German>[ICON_BULLET]%D1%% schnellere Ausbildung von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WONDER_PRODUCTION_MODIFIER_C2C</Tag>

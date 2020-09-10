@@ -1965,7 +1965,7 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		setRallyPlot(NULL);
 		break;
 	default:
-		FAssertMsg(false, "eTask failed to match a valid option");
+		FErrorMsg("eTask failed to match a valid option");
 		break;
 	}
 }
@@ -2083,8 +2083,7 @@ bool CvCity::canWork(const CvPlot* pPlot) const
 
 void CvCity::verifyWorkingPlot(int iIndex)
 {
-	FAssertMsg(iIndex >= 0, "iIndex expected to be >= 0");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "iIndex expected to be < NUM_CITY_PLOTS");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 
 	if (isWorkingPlot(iIndex))
 	{
@@ -2748,7 +2747,7 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 #ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
 				if (canTrainInternal(eUnit))
 				{
-					FAssertMsg(false, "Consistency check failure in canTrain cache - false negative\n");
+					FErrorMsg("Consistency check failure in canTrain cache - false negative\n");
 				}
 #endif
 				bResult = false;
@@ -2759,7 +2758,7 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 #ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
 				if (!canTrainInternal(eUnit))
 				{
-					FAssertMsg(false, "Consistency check failure in canTrain cache - false positive\n");
+					FErrorMsg("Consistency check failure in canTrain cache - false positive\n");
 				}
 #endif
 				bResult = true;
@@ -2895,7 +2894,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 				if (bResult != canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, NULL, bAffliction, bExposed))
 				{
 					MessageBox(NULL, "canConstruct cached result mismatch", "cvGameCore", MB_OK);
-					FAssertMsg(false, "canConstruct cached result mismatch");
+					FErrorMsg("canConstruct cached result mismatch");
 				}
 #endif
 			}
@@ -3543,7 +3542,7 @@ bool CvCity::isProductionLimited() const
 			break;
 
 		default:
-			FAssertMsg(false, "order->m_data.eOrderType failed to match a valid option");
+			FErrorMsg("order->m_data.eOrderType failed to match a valid option");
 			break;
 		}
 	}
@@ -4042,7 +4041,7 @@ int CvCity::getProduction() const
 			break;
 
 		default:
-			FAssertMsg(false, "order->eOrderType failed to match a valid option");
+			FErrorMsg("order->eOrderType failed to match a valid option");
 			break;
 		}
 	}
@@ -6656,10 +6655,10 @@ int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bI
 // Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
 float CvCity::foodWastage(int surplass) const
 {
-#define    MAX_SURPLASS    2000
+#define MAX_SURPLASS    200
 	static float calculatedWaste[MAX_SURPLASS];
 	static int calculatedTo = -1;
-	int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
+	const int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
 	float wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
 
 	if (wastageGrowthFactor == 0)
@@ -6772,7 +6771,7 @@ int CvCity::getHurryCostModifier(bool bIgnoreNew) const
 			break;
 
 		default:
-			FAssertMsg(false, "order->eOrderType did not match a valid option");
+			FErrorMsg("order->eOrderType did not match a valid option");
 			break;
 		}
 	}
@@ -7304,7 +7303,7 @@ void CvCity::changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd)
 
 int CvCity::getNumBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex != NO_BUILDING, "BuildingType eIndex is expected to not be NO_BUILDING");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (m_paiBuildingReplaced == NULL)
 	{
@@ -7320,7 +7319,7 @@ int CvCity::getNumBuilding(BuildingTypes eIndex) const
 
 int CvCity::getNumActiveBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex != NO_BUILDING, "BuildingType eIndex is expected to not be NO_BUILDING");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (GET_TEAM(getTeam()).isObsoleteBuilding(eIndex))
 	{
@@ -7703,12 +7702,12 @@ void CvCity::changePopulation(int iChange)
 }
 
 
-long CvCity::getRealPopulation() const
+int CvCity::getRealPopulation() const
 {
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
 
 	//	Koshling - using table provided by Praetyre to give more realistic results
-	static long	realPopulationTable[] =
+	static int realPopulationTable[] =
 	{
 		0,
 		50,
@@ -7812,7 +7811,7 @@ long CvCity::getRealPopulation() const
 		190000000,
 		200000000
 	};
-#define NUM_POP_TABLE_ENTRIES (sizeof(realPopulationTable)/sizeof(long))
+#define NUM_POP_TABLE_ENTRIES (sizeof(realPopulationTable)/sizeof(int))
 
 	if (getPopulation() < NUM_POP_TABLE_ENTRIES)
 	{
@@ -7976,8 +7975,7 @@ const CvProperties* CvCity::getPropertiesConst() const
  */
 int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const int iRate = getBaseGreatPeopleRate();
 	const int iModifier = getTotalGreatPeopleRateModifier();
@@ -8008,14 +8006,11 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
  */
 int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	const bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
-	int iExtraRate = 0;
-
-	iExtraRate += kBuilding.getGreatPeopleRateChange();
+	int iExtraRate = kBuilding.getGreatPeopleRateChange();
 
 	// Specialists
 	if (!bObsolete)
@@ -8072,8 +8067,7 @@ int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
  */
 int CvCity::getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding)
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	const bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
@@ -8110,8 +8104,7 @@ int CvCity::getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist
  */
 int CvCity::getAdditionalBaseGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	return iChange * GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange();
 }
@@ -8212,8 +8205,7 @@ int CvCity::getSavedMaintenanceByBuilding(BuildingTypes eBuilding) const
  */
 int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iModifier = kBuilding.getMaintenanceModifier();
@@ -8260,8 +8252,7 @@ int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 
 int CvCity::getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
-	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
-	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	const int iModifier = kCivic.getDistanceMaintenanceModifier();
@@ -8280,8 +8271,7 @@ int CvCity::getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 
 int CvCity::getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
-	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
-	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	const int iModifier = kCivic.getNumCitiesMaintenanceModifier();
@@ -8300,8 +8290,7 @@ int CvCity::getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 
 int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
-	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
-	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	const int iModifier = kCivic.getHomeAreaMaintenanceModifier();
@@ -8319,8 +8308,7 @@ int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 
 int CvCity::getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
-	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
-	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	const int iModifier = kCivic.getOtherAreaMaintenanceModifier();
@@ -8750,16 +8738,14 @@ void CvCity::changeHealRate(int iChange)
 
 int CvCity::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat expected to be >= 0");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	return m_paiHealUnitCombatTypeVolume[eUnitCombat];
 }
 
 void CvCity::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat expected to be >= 0");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	m_paiHealUnitCombatTypeVolume[eUnitCombat] += iChange;
 }
@@ -8982,10 +8968,9 @@ int CvCity::getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange) con
  */
 int CvCity::getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange, int& iGood, int& iBad) const
 {
-	FAssertMsg(eFeature >= 0, "eFeature expected to be >= 0");
-	FAssertMsg(eFeature < GC.getNumFeatureInfos(), "eFeature expected to be < GC.getNumFeatureInfos()");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
 
-	int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
+	const int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
 
 	if (iHealth > 0)
 	{
@@ -9761,8 +9746,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
@@ -9950,8 +9934,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
@@ -10886,8 +10869,7 @@ void CvCity::changeBuildingBombardDefense(int iChange)
 // BUG - Building Additional Bombard Defense - start
 int CvCity::getAdditionalBombardDefenseByBuilding(BuildingTypes eBuilding) const
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const int iBaseDefense = getBuildingBombardDefense();
 
@@ -11549,7 +11531,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 			{
 				for (int iDY = -eOldValue; iDY <= eOldValue; iDY++)
 				{
-					int iCultureRange = cultureDistance(iDX, iDY, true);
+					const int iCultureRange = cultureDistance(iDX, iDY, true);
 
 					if (iCultureRange > getCultureLevel())
 					{
@@ -11589,7 +11571,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 			{
 				for (int iDY = -getCultureLevel(); iDY <= getCultureLevel(); iDY++)
 				{
-					int iCultureRange = cultureDistance(iDX, iDY, true);
+					const int iCultureRange = cultureDistance(iDX, iDY, true);
 
 					if (iCultureRange > eOldValue)
 					{
@@ -11694,8 +11676,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 
 int CvCity::getSeaPlotYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	//TB Debug
 	//Somehow we are getting under 0 values here and that could cause problems down the road
 	//This is definately an xml value caused by the current settings on the Garbage Dock and as a result should actually be a fairly safe fix in this case.
@@ -11710,8 +11691,7 @@ int CvCity::getSeaPlotYield(YieldTypes eIndex) const
 
 void CvCity::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -11725,16 +11705,14 @@ void CvCity::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 
 int CvCity::getRiverPlotYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiRiverPlotYield[eIndex];
 }
 
 
 void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -11776,10 +11754,8 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
  */
 int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	if (GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding))
 	{
@@ -11928,10 +11904,8 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
  */
 int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
@@ -12008,10 +11982,8 @@ int CvCity::getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eS
  */
 int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
 
@@ -12021,8 +11993,7 @@ int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, Specialist
 
 int CvCity::getBaseYieldRate(YieldTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiBaseYieldRate[eIndex] + popYield(eIndex);
 }
 
@@ -12062,8 +12033,7 @@ int CvCity::getYieldRate(YieldTypes eIndex) const
 
 void CvCity::setBaseYieldRate(YieldTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (m_aiBaseYieldRate[eIndex] != iNewValue)
 	{
@@ -12096,22 +12066,19 @@ void CvCity::changeBaseYieldRate(YieldTypes eIndex, int iChange)
 
 int CvCity::popYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return (getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100);
 }
 
 int CvCity::getBaseYieldPerPopRate(YieldTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	return m_aiBaseYieldPerPopRate[eIndex];
 }
 void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (m_aiBaseYieldPerPopRate[eIndex] != iNewValue)
 	{
@@ -12144,16 +12111,14 @@ void CvCity::changeBaseYieldPerPopRate(YieldTypes eIndex, int iChange)
 
 int CvCity::getYieldRateModifier(YieldTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiYieldRateModifier[eIndex];
 }
 
 
 void CvCity::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
@@ -12179,20 +12144,18 @@ void CvCity::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 
 int CvCity::getPowerYieldRateModifier(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiPowerYieldRateModifier[eIndex];
 }
 
 
 void CvCity::changePowerYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiPowerYieldRateModifier[eIndex] = (m_aiPowerYieldRateModifier[eIndex] + iChange);
+		m_aiPowerYieldRateModifier[eIndex] += iChange;
 		FAssert(getYieldRate(eIndex) >= 0);
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
@@ -12214,20 +12177,18 @@ void CvCity::changePowerYieldRateModifier(YieldTypes eIndex, int iChange)
 
 int CvCity::getBonusYieldRateModifier(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiBonusYieldRateModifier[eIndex];
 }
 
 
 void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiBonusYieldRateModifier[eIndex] = (m_aiBonusYieldRateModifier[eIndex] + iChange);
+		m_aiBonusYieldRateModifier[eIndex] += iChange;
 		FAssert(getYieldRate(eIndex) >= 0);
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
@@ -12249,8 +12210,7 @@ void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 
 int CvCity::getTradeYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiTradeYield[eIndex];
 }
 
@@ -12489,12 +12449,9 @@ int CvCity::calculateTotalTradeYield(YieldTypes eIndex, PlayerTypes eWithPlayer,
 
 void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
 {
-	int iOldValue;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
-
-	iOldValue = getTradeYield(eIndex);
+	const int iOldValue = getTradeYield(eIndex);
 
 	if (iOldValue != iNewValue)
 	{
@@ -12508,18 +12465,15 @@ void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
 
 int CvCity::getExtraSpecialistYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiExtraSpecialistYield[eIndex];
 }
 
 
 int CvCity::getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 	//TB Traits begin
 //Team Project (1)
 	return (specialistCount(eSpecialist) * (getLocalSpecialistExtraYield(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraYield(eIndex)));
@@ -12531,10 +12485,9 @@ int CvCity::getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpeciali
 
 void CvCity::updateExtraSpecialistYield(YieldTypes eYield)
 {
-	FAssertMsg(eYield >= 0, "eYield expected to be >= 0");
-	FAssertMsg(eYield < NUM_YIELD_TYPES, "eYield expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
-	int iOldYield = getExtraSpecialistYield(eYield);
+	const int iOldYield = getExtraSpecialistYield(eYield);
 	int iNewYield = 0;
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -12561,24 +12514,20 @@ void CvCity::updateExtraSpecialistYield()
 
 int CvCity::getExtraSpecialistCommerceTotal(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiExtraSpecialistCommerce[eIndex];
 }
 
 int CvCity::getExtraSpecialistCommerce(CommerceTypes eIndex, SpecialistTypes eSpecialist) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 	return (specialistCount(eSpecialist) * (getLocalSpecialistExtraCommerce(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex)));
 }
 
 void CvCity::updateExtraSpecialistCommerce(CommerceTypes eCommerce)
 {
-	FAssertMsg(eCommerce >= 0, "eCommerce expected to be >= 0");
-	FAssertMsg(eCommerce < NUM_COMMERCE_TYPES, "eCommerce expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	int iOldCommerce = getExtraSpecialistCommerceTotal(eCommerce);
 
@@ -12626,8 +12575,7 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (m_abCommerceRateDirty[eIndex])
 	{
@@ -12803,8 +12751,7 @@ void CvCity::updateCommerce(CommerceTypes eIndex, bool bForce) const
 		}
 		else
 		{
-			FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-			FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+			FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 			if (bForce || m_abCommerceRateDirty[eIndex])
 			{
@@ -12857,20 +12804,18 @@ void CvCity::updateCommerce(CommerceTypes eIndex, bool bForce) const
 
 int CvCity::getProductionToCommerceModifier(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiProductionToCommerceModifier[eIndex];
 }
 
 
 void CvCity::changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiProductionToCommerceModifier[eIndex] = (m_aiProductionToCommerceModifier[eIndex] + iChange);
+		m_aiProductionToCommerceModifier[eIndex] += iChange;
 
 		setCommerceDirty(eIndex);
 		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
@@ -12880,8 +12825,7 @@ void CvCity::changeProductionToCommerceModifier(CommerceTypes eIndex, int iChang
 
 int CvCity::getBuildingCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiBuildingCommerce[eIndex];
 }
 
@@ -12890,11 +12834,8 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "GC.getNumBuildingInfos expected to be >= 0");
-
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	if (getNumBuilding(eBuilding) > 0)
 	{
@@ -12958,10 +12899,8 @@ int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingT
 	PROFILE_FUNC();
 
 	//ls612: Orbital Buildings have their commerce handled in a special manner
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "GC.getNumBuildingInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	if (getNumActiveBuilding(eBuilding) > 0)
 	{
@@ -13121,10 +13060,8 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
  */
 int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iExtraRate = kBuilding.getObsoleteSafeCommerceChange(eIndex);
@@ -13221,12 +13158,10 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, Bu
  */
 int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	bool bNoEspionage = GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE);
+	const bool bNoEspionage = GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE);
 
 	if (bNoEspionage && eIndex == COMMERCE_ESPIONAGE)
 	{
@@ -13248,10 +13183,8 @@ int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, Bu
  */
 int CvCity::getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
@@ -13320,20 +13253,18 @@ void CvCity::updateBuildingCommerce()
 
 int CvCity::getSpecialistCommerce(CommerceTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiSpecialistCommerce[eIndex] / 100;
 }
 
 
 void CvCity::changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiSpecialistCommerce[eIndex] = (m_aiSpecialistCommerce[eIndex] + iChange);
+		m_aiSpecialistCommerce[eIndex] += iChange;
 		//TBNOTE: This should be allowed to be less than one.  Some specialists go negative on commerce.
 		/*FAssert(getSpecialistCommerce(eIndex) >= 0);*/
 
@@ -13405,10 +13336,8 @@ int CvCity::getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, Spec
  */
 int CvCity::getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
 
@@ -13419,18 +13348,15 @@ int CvCity::getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, 
 
 int CvCity::getReligionCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiReligionCommerce[eIndex];
 }
 
 
 int CvCity::getReligionCommerceByReligion(CommerceTypes eIndex, ReligionTypes eReligion) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eReligion >= 0, "eReligion expected to be >= 0");
-	FAssertMsg(eReligion < GC.getNumReligionInfos(), "GC.getNumReligionInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion)
 
 	int iCommerce = 0;
 
@@ -13483,17 +13409,15 @@ void CvCity::updateReligionCommerce()
 
 int CvCity::getCorporationYield(YieldTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiCorporationYield[eIndex];
 }
 
 void CvCity::setCorporationYield(YieldTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	int iOldValue = getCorporationYield(eIndex);
+	const int iOldValue = getCorporationYield(eIndex);
 
 	if (iOldValue != iNewValue)
 	{
@@ -13506,18 +13430,15 @@ void CvCity::setCorporationYield(YieldTypes eIndex, int iNewValue)
 
 int CvCity::getCorporationCommerce(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCorporationCommerce[eIndex];
 }
 
 
 int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes eCorporation) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eCorporation >= 0, "eCorporation expected to be >= 0");
-	FAssertMsg(eCorporation < GC.getNumCorporationInfos(), "GC.getNumCorporationInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporation)
 
 	int iYield = 0;
 
@@ -13525,7 +13446,7 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 	{
 		for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 		{
-			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
+			const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
 				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
@@ -13539,10 +13460,8 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 
 int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, CorporationTypes eCorporation) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	FAssertMsg(eCorporation >= 0, "eCorporation expected to be >= 0");
-	FAssertMsg(eCorporation < GC.getNumCorporationInfos(), "GC.getNumCorporationInfos expected to be >= 0");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporation)
 
 	int iCommerce = 0;
 
@@ -13550,7 +13469,7 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 	{
 		for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 		{
-			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
+			const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
 				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
@@ -13585,7 +13504,7 @@ void CvCity::updateCorporationCommerce(CommerceTypes eIndex)
 
 void CvCity::updateCorporationYield(YieldTypes eIndex)
 {
-	int iOldYield = getCorporationYield(eIndex);
+	const int iOldYield = getCorporationYield(eIndex);
 	int iNewYield = 0;
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
@@ -13713,20 +13632,18 @@ void CvCity::updateCorporationBonus()
 //TB NOTE: getCommerceRateModifier and changeCommerceRateModifier now only apply to events.  I'd rename them but it might get more confusing that way.
 int CvCity::getCommerceRateModifier(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommerceRateModifier[eIndex];
 }
 
 
 void CvCity::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRateModifier[eIndex] = (m_aiCommerceRateModifier[eIndex] + iChange);
+		m_aiCommerceRateModifier[eIndex] += iChange;
 
 		setCommerceModifierDirty(eIndex);
 
@@ -13737,8 +13654,7 @@ void CvCity::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 
 int CvCity::getCommerceHappinessPer(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiCommerceHappinessPer[eIndex];
 }
 
@@ -13764,12 +13680,11 @@ int CvCity::getCommerceHappiness() const
 
 void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceHappinessPer[eIndex] = (m_aiCommerceHappinessPer[eIndex] + iChange);
+		m_aiCommerceHappinessPer[eIndex] += iChange;
 		FAssert(getCommerceHappinessPer(eIndex) >= 0);
 
 		AI_setAssignWorkDirty(true);
@@ -13779,8 +13694,7 @@ void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 
 int CvCity::getDomainFreeExperience(DomainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	int iTotalDomainFreeExperience = m_aiDomainFreeExperience[eIndex];
 	iTotalDomainFreeExperience += GET_PLAYER(getOwner()).getNationalDomainFreeExperience(eIndex);
 
@@ -13790,17 +13704,15 @@ int CvCity::getDomainFreeExperience(DomainTypes eIndex) const
 
 void CvCity::changeDomainFreeExperience(DomainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
-	m_aiDomainFreeExperience[eIndex] = (m_aiDomainFreeExperience[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
+	m_aiDomainFreeExperience[eIndex] += iChange;
 	FAssert(getDomainFreeExperience(eIndex) >= 0);
 }
 
 
 int CvCity::getDomainProductionModifier(DomainTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	int iTotalDomainProductionModifier = m_aiDomainProductionModifier[eIndex];
 	iTotalDomainProductionModifier += GET_PLAYER(getOwner()).getNationalDomainProductionModifier(eIndex);
 
@@ -13810,23 +13722,20 @@ int CvCity::getDomainProductionModifier(DomainTypes eIndex) const
 
 void CvCity::changeDomainProductionModifier(DomainTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
-	m_aiDomainProductionModifier[eIndex] = (m_aiDomainProductionModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
+	m_aiDomainProductionModifier[eIndex] += iChange;
 }
 
 
 int CvCity::getCulture(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return (m_aiCulture[eIndex] < 0 ? MAX_INT / 100 : m_aiCulture[eIndex] / 100);
 }
 
 int CvCity::getCultureTimes100(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return (m_aiCulture[eIndex] < 0 ? MAX_INT : m_aiCulture[eIndex]);
 }
 
@@ -13842,7 +13751,6 @@ int CvCity::countTotalCultureTimes100() const
 			iTotalCulture += getCultureTimes100((PlayerTypes)iI);
 		}
 	}
-
 	return iTotalCulture;
 }
 
@@ -13865,7 +13773,6 @@ PlayerTypes CvCity::findHighestCulture() const
 			}
 		}
 	}
-
 	return eBestPlayer;
 }
 
@@ -13908,9 +13815,10 @@ void CvCity::setCulture(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUp
 
 void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
-	int iOldCulture = getCultureTimes100(eIndex);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+
+	const int iOldCulture = getCultureTimes100(eIndex);
+
 	if (iOldCulture != iNewValue)
 	{
 		m_aiCulture[eIndex] = iNewValue;
@@ -13918,12 +13826,10 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 		updateCultureLevel(bUpdatePlotGroups);
 
-		if (bPlots)
-		{
-			doPlotCulture(true, eIndex, 0);
-		}
+		if (bPlots) doPlotCulture(true, eIndex, 0);
 	}
-	if (!bNationalSet && (iOldCulture < iNewValue))
+
+	if (!bNationalSet && iOldCulture < iNewValue)
 	{
 		GET_PLAYER(getOwner()).changeCulture((iNewValue - iOldCulture) / 100);
 	}
@@ -13932,126 +13838,87 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 void CvCity::changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	int	iOld = getCultureTimes100(eIndex);
+	const int iOld = getCultureTimes100(eIndex);
 
 	GET_PLAYER(getOwner()).changeCulture(iChange);
-	bool bNationalSet = true;
 
 	int iNew;
-	if (iChange > 0)
-	{
-		if (MAX_INT - 100 * iChange > iOld)
-		{
-			iNew = iOld + 100 * iChange;
-		}
-		else
-		{
-			iNew = MAX_INT;
-		}
-	}
-	else
+	if (iChange <= 0)
 	{
 		iNew = iOld + 100 * iChange;
 	}
-
-	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, bNationalSet);
+	else if (MAX_INT - 100 * iChange > iOld)
+	{
+		iNew = iOld + 100 * iChange;
+	}
+	else
+	{
+		iNew = MAX_INT;
+	}
+	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
 }
 
 void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	int iOld = getCultureTimes100(eIndex);
+	const int iOld = getCultureTimes100(eIndex);
 
 	GET_PLAYER(getOwner()).changeCulture(iChange / 100);
-	bool bNationalSet = true;
 
 	int iNew;
-	if (iChange > 0)
-	{
-		if (MAX_INT - iChange > iOld)
-		{
-			iNew = iOld + iChange;
-		}
-		else
-		{
-			iNew = MAX_INT;
-		}
-	}
-	else
+	if (iChange <= 0)
 	{
 		iNew = iOld + iChange;
 	}
-
-	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, bNationalSet);
+	else if (MAX_INT - iChange > iOld)
+	{
+		iNew = iOld + iChange;
+	}
+	else
+	{
+		iNew = MAX_INT;
+	}
+	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
 }
 
 
 int CvCity::getNumRevolts(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiNumRevolts[eIndex];
 }
 
 
 void CvCity::changeNumRevolts(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
-	m_aiNumRevolts[eIndex] = (m_aiNumRevolts[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiNumRevolts[eIndex] += iChange;
 	FAssert(getNumRevolts(eIndex) >= 0);
-}
-
-int CvCity::getRevoltTestProbability() const
-{
-	int iBestModifier = 0;
-
-	//TB Note: Revolt Protection is now added into Culture Garrison mechanism.
-	//The way this was handled was potentially eliminating all chance of revolt too easily/too difficult to balance as it's just not granular enough for a longer progression curve.
-	//By placing the effect of Revolt Protection onto Culture Garrison, we have a much more expandable system of adding protection vs revolt.
-	//CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode();
-	//while (pUnitNode)
-	//{
-	//	CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-	//	pUnitNode = plot()->nextUnitNode(pUnitNode);
-
-	//	if (pLoopUnit->revoltProtectionTotal() > iBestModifier)
-	//	{
-	//		iBestModifier = pLoopUnit->revoltProtectionTotal();
-	//	}
-	//}
-	//iBestModifier = range(iBestModifier, 0, 100);
-
-	return ((GC.getREVOLT_TEST_PROB() * (100 - iBestModifier)) / 100);
 }
 
 bool CvCity::isEverOwned(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_abEverOwned[eIndex];
 }
 
 
 void CvCity::setEverOwned(PlayerTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_abEverOwned[eIndex] = bNewValue;
 }
 
 
 bool CvCity::isTradeRoute(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_abTradeRoute[eIndex];
 }
 
 
 void CvCity::setTradeRoute(PlayerTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_abTradeRoute[eIndex] = bNewValue;
 }
 
@@ -14062,20 +13929,14 @@ bool CvCity::isRevealed(TeamTypes eIndex, bool bDebug) const
 	{
 		return true;
 	}
-	else
-	{
-		FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-		FAssertMsg(eIndex < MAX_TEAMS, "eIndex expected to be < MAX_TEAMS");
-
-		return m_abRevealed[eIndex];
-	}
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	return m_abRevealed[eIndex];
 }
 
 
 void CvCity::setRevealed(TeamTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex expected to be < MAX_TEAMS");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	setupGraphical();
 
@@ -14103,17 +13964,14 @@ void CvCity::setRevealed(TeamTypes eIndex, bool bNewValue)
 
 bool CvCity::getEspionageVisibility(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex expected to be < MAX_TEAMS");
-
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_abEspionageVisibility[eIndex];
 }
 
 
 void CvCity::setEspionageVisibility(TeamTypes eIndex, bool bNewValue, bool bUpdatePlotGroups)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex expected to be < MAX_TEAMS");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	if (getEspionageVisibility(eIndex) != bNewValue)
 	{
@@ -14231,8 +14089,7 @@ void CvCity::setScriptData(std::string szNewValue)
 
 int CvCity::getNoBonusCount(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNoBonus[eIndex];
 }
 
@@ -14243,8 +14100,7 @@ bool CvCity::isNoBonus(BonusTypes eIndex) const
 
 void CvCity::changeNoBonusCount(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -14272,16 +14128,14 @@ void CvCity::changeNoBonusCount(BonusTypes eIndex, int iChange)
 
 int CvCity::getFreeBonus(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiFreeBonus[eIndex];
 }
 
 
 void CvCity::changeFreeBonus(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -14311,8 +14165,7 @@ int CvCity::getNumBonusesFromBase(BonusTypes eIndex, int iBaseNum) const
 
 int CvCity::getNumBonuses(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo(eIndex).getTechCityTrade()))
 	{
@@ -14388,8 +14241,7 @@ void CvCity::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -14406,16 +14258,14 @@ void CvCity::changeNumBonuses(BonusTypes eIndex, int iChange)
 
 int CvCity::getNumCorpProducedBonuses(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNumCorpProducedBonuses[eIndex];
 }
 
 
 bool CvCity::isCorporationBonus(BonusTypes eBonus) const
 {
-	FAssert(eBonus >= 0);
-	FAssert(eBonus < GC.getNumBonusInfos());
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 
 	for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 	{
@@ -14439,7 +14289,7 @@ bool CvCity::isCorporationBonus(BonusTypes eBonus) const
 
 bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 {
-	FAssert(eCorporation >= 0 && eCorporation < GC.getNumCorporationInfos());
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporation)
 
 	if (!isHasCorporation(eCorporation))
 	{
@@ -14489,18 +14339,14 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 
 int CvCity::getBuildingProduction(BuildingTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
-	int iAdaptedProduction = std::max(0, m_paiBuildingProduction[eIndex]);
-
-	return iAdaptedProduction;
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	return std::max(0, m_paiBuildingProduction[eIndex]);
 }
 
 
 void CvCity::setBuildingProduction(BuildingTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (getBuildingProduction(eIndex) != iNewValue)
 	{
@@ -14529,16 +14375,14 @@ void CvCity::changeBuildingProduction(BuildingTypes eIndex, int iChange)
 
 int CvCity::getBuildingProductionTime(BuildingTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiBuildingProductionTime[eIndex];
 }
 
 
 void CvCity::setBuildingProductionTime(BuildingTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	m_paiBuildingProductionTime[eIndex] = iNewValue;
 	FAssert(getBuildingProductionTime(eIndex) >= 0);
 }
@@ -14556,8 +14400,7 @@ void CvCity::changeBuildingProductionTime(BuildingTypes eIndex, int iChange)
  */
 bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return isHuman() && getProductionBuilding() != eIndex && getBuildingProduction(eIndex) > 0
 		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 }
@@ -14568,9 +14411,8 @@ bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
  */
 int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
-	int iProduction = getBuildingProduction(eIndex);
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	const int iProduction = getBuildingProduction(eIndex);
 	return iProduction - ((iProduction * GC.getBUILDING_PRODUCTION_DECAY_PERCENT()) / 100);
 }
 
@@ -14579,8 +14421,7 @@ int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
  */
 int CvCity::getBuildingProductionDecayTurns(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
@@ -14588,16 +14429,14 @@ int CvCity::getBuildingProductionDecayTurns(BuildingTypes eIndex) const
 
 int CvCity::getProjectProduction(ProjectTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex expected to be < GC.getNumProjectInfos()");
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
 	return m_paiProjectProduction[eIndex];
 }
 
 
 void CvCity::setProjectProduction(ProjectTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex expected to be < GC.getNumProjectInfos()");
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
 
 	if (getProjectProduction(eIndex) != iNewValue)
 	{
@@ -14619,47 +14458,41 @@ void CvCity::setProjectProduction(ProjectTypes eIndex, int iNewValue)
 
 void CvCity::changeProjectProduction(ProjectTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex expected to be < GC.getNumProjectInfos()");
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
 	setProjectProduction(eIndex, (getProjectProduction(eIndex) + iChange));
 }
 
 
 int CvCity::getBuildingOriginalOwner(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiBuildingOriginalOwner[eIndex];
 }
 
 
 int CvCity::getBuildingOriginalTime(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiBuildingOriginalTime[eIndex];
 }
 
 void CvCity::setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	m_paiBuildingOriginalTime[eIndex] = iNewValue;
 }
 
 
 int CvCity::getUnitProduction(UnitTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiUnitProduction[eIndex];
 }
 
 
 void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
 	if (getUnitProduction(eIndex) != iNewValue)
 	{
@@ -14687,16 +14520,14 @@ void CvCity::changeUnitProduction(UnitTypes eIndex, int iChange)
 
 int CvCity::getUnitProductionTime(UnitTypes eIndex)	const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiUnitProductionTime[eIndex];
 }
 
 
 void CvCity::setUnitProductionTime(UnitTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	m_paiUnitProductionTime[eIndex] = iNewValue;
 	FAssert(getUnitProductionTime(eIndex) >= 0);
 }
@@ -14714,8 +14545,7 @@ void CvCity::changeUnitProductionTime(UnitTypes eIndex, int iChange)
  */
 bool CvCity::isUnitProductionDecay(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return isHuman() && getProductionUnit() != eIndex && getUnitProduction(eIndex) > 0
 		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 }
@@ -14726,8 +14556,7 @@ bool CvCity::isUnitProductionDecay(UnitTypes eIndex) const
  */
 int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	const int iProduction = getUnitProduction(eIndex);
 	return iProduction - ((iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT()) / 100);
 }
@@ -14737,8 +14566,7 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
  */
 int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
@@ -14746,8 +14574,7 @@ int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 
 int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	int iTotalGreatPeopleUnitRate = 0;
 	iTotalGreatPeopleUnitRate += m_paiGreatPeopleUnitRate[eIndex];
 	iTotalGreatPeopleUnitRate += GET_PLAYER(getOwner()).getNationalGreatPeopleUnitRate(eIndex);
@@ -14757,8 +14584,7 @@ int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 
 void CvCity::setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
 	{
 		return;
@@ -14776,16 +14602,14 @@ void CvCity::changeGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
 
 int CvCity::getGreatPeopleUnitProgress(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiGreatPeopleUnitProgress[eIndex];
 }
 
 
 void CvCity::setGreatPeopleUnitProgress(UnitTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	m_paiGreatPeopleUnitProgress[eIndex] = iNewValue;
 	FAssert(getGreatPeopleUnitProgress(eIndex) >= 0);
 }
@@ -14799,18 +14623,16 @@ void CvCity::changeGreatPeopleUnitProgress(UnitTypes eIndex, int iChange)
 
 int CvCity::getSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiSpecialistCount[eIndex];
 }
 
 
 void CvCity::setSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
-	int iOldValue = getSpecialistCount(eIndex);
+	const int iOldValue = getSpecialistCount(eIndex);
 
 	if (iOldValue != iNewValue)
 	{
@@ -14914,8 +14736,7 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 
 int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiMaxSpecialistCount[eIndex];
 }
 
@@ -14928,8 +14749,7 @@ bool CvCity::isSpecialistValid(SpecialistTypes eIndex, int iExtra) const
 
 void CvCity::changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -14942,8 +14762,7 @@ void CvCity::changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange)
 
 int CvCity::getForceSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiForceSpecialistCount[eIndex];
 }
 
@@ -14963,8 +14782,7 @@ bool CvCity::isSpecialistForced() const
 
 void CvCity::setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
 	if (getForceSpecialistCount(eIndex) != iNewValue)
 	{
@@ -14988,8 +14806,7 @@ void CvCity::changeForceSpecialistCount(SpecialistTypes eIndex, int iChange)
 
 int CvCity::getFreeSpecialistCount(SpecialistTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiFreeSpecialistCount[eIndex];
 }
 
@@ -15000,10 +14817,9 @@ int CvCity::getAddedFreeSpecialistCount(SpecialistTypes eIndex) const
 
 void CvCity::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 
-	int iOldValue = getFreeSpecialistCount(eIndex);
+	const int iOldValue = getFreeSpecialistCount(eIndex);
 
 	iNewValue += GET_PLAYER(getOwner()).getFreeSpecialistCount(eIndex);
 	iNewValue += GET_TEAM(getTeam()).getFreeSpecialistCount(eIndex);
@@ -15037,15 +14853,13 @@ void CvCity::changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange, bool
 
 int CvCity::getImprovementFreeSpecialists(ImprovementTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumImprovementInfos(), "eIndex expected to be < GC.getNumImprovementInfos()");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 	return m_paiImprovementFreeSpecialists[eIndex];
 }
 
 void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumImprovementInfos(), "eIndex expected to be < GC.getNumImprovementInfos()");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 
 	if (iChange != 0)
 	{
@@ -15055,8 +14869,7 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 
 int CvCity::getReligionInfluence(ReligionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	//TB Debug
 	//Somehow we are getting under 0 values here and that could cause problems down the road
 	//This method enforces minimum of 0 without changing the actual value of m_paiReligionInfluence[eIndex] as the integrity of that value should be maintained.
@@ -15075,9 +14888,8 @@ int CvCity::getReligionInfluence(ReligionTypes eIndex) const
 
 void CvCity::changeReligionInfluence(ReligionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
-	m_paiReligionInfluence[eIndex] = m_paiReligionInfluence[eIndex] + iChange;
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
+	m_paiReligionInfluence[eIndex] += iChange;
 	FAssert(getReligionInfluence(eIndex) >= 0);
 }
 
@@ -15095,20 +14907,18 @@ int CvCity::getCurrentStateReligionHappiness() const
 
 int CvCity::getStateReligionHappiness(ReligionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	return m_paiStateReligionHappiness[eIndex];
 }
 
 
 void CvCity::changeStateReligionHappiness(ReligionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 
 	if (iChange != 0)
 	{
-		m_paiStateReligionHappiness[eIndex] = (m_paiStateReligionHappiness[eIndex] + iChange);
+		m_paiStateReligionHappiness[eIndex] += iChange;
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -15117,8 +14927,7 @@ void CvCity::changeStateReligionHappiness(ReligionTypes eIndex, int iChange)
 
 int CvCity::getUnitCombatFreeExperience(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= -1, "eIndex expected to be >= -1");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	if (eIndex == -1) return 0;
 	return m_paiUnitCombatFreeExperience[eIndex];
 }
@@ -15126,16 +14935,14 @@ int CvCity::getUnitCombatFreeExperience(UnitCombatTypes eIndex) const
 
 void CvCity::changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatFreeExperience[eIndex] = (m_paiUnitCombatFreeExperience[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatFreeExperience[eIndex] += iChange;
 }
 
 
 int CvCity::getFreePromotionCount(PromotionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumPromotionInfos(), "eIndex expected to be < GC.getNumPromotionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex)
 	//TB Debug
 	//Somehow we are getting under 0 values here and that could cause problems down the road
 	//This method enforces minimum of 0 without changing the actual value of m_paiFreePromotionCount[eIndex](particularly puzzling) as the integrity of that value should be maintained.
@@ -15160,9 +14967,8 @@ bool CvCity::isFreePromotion(PromotionTypes eIndex) const
 
 void CvCity::changeFreePromotionCount(PromotionTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumPromotionInfos(), "eIndex expected to be < GC.getNumPromotionInfos()");
-	m_paiFreePromotionCount[eIndex] = (m_paiFreePromotionCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex)
+	m_paiFreePromotionCount[eIndex] += iChange;
 	FAssert(getFreePromotionCount(eIndex) >= 0);
 }
 
@@ -15199,8 +15005,7 @@ void CvCity::changeEspionageDefenseModifier(int iChange)
 
 bool CvCity::isWorkingPlot(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0, "iIndex expected to be >= 0");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "iIndex expected to be < NUM_CITY_PLOTS");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 
 	return (m_bPlotWorkingMasked ? 0 : m_pabWorkingPlot[iIndex]);
 }
@@ -15262,8 +15067,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 
 void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 {
-	FAssertMsg(iIndex >= 0, "iIndex expected to be >= 0");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "iIndex expected to be < NUM_CITY_PLOTS");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 
 	if (isWorkingPlot(iIndex) != bNewValue)
 	{
@@ -15286,8 +15090,7 @@ void CvCity::setWorkingPlot(CvPlot* pPlot, bool bNewValue)
 
 void CvCity::alterWorkingPlot(int iIndex)
 {
-	FAssertMsg(iIndex >= 0, "iIndex expected to be >= 0");
-	FAssertMsg(iIndex < NUM_CITY_PLOTS, "iIndex expected to be < NUM_CITY_PLOTS");
+	FASSERT_BOUNDS(0, NUM_CITY_PLOTS, iIndex)
 
 	if (iIndex != CITY_HOME_PLOT)
 	{
@@ -15329,8 +15132,7 @@ void CvCity::alterWorkingPlot(int iIndex)
 
 int CvCity::getNumRealBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return isDisabledBuilding(eIndex) ? 0 : m_paiNumRealBuilding[eIndex];
 }
 
@@ -15343,14 +15145,13 @@ void CvCity::setNumRealBuilding(BuildingTypes eIndex, int iNewValue)
 
 void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool bFirst, PlayerTypes eOriginalOwner, int iOriginalTime)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
-	int iChangeNumRealBuilding = iNewValue - getNumRealBuilding(eIndex);
+	const int iChangeNumRealBuilding = iNewValue - getNumRealBuilding(eIndex);
 
 	if (iChangeNumRealBuilding != 0)
 	{
-		int iOldNumBuilding = getNumBuilding(eIndex);
+		const int iOldNumBuilding = getNumBuilding(eIndex);
 
 		if (m_paiNumRealBuilding[eIndex] != iNewValue)
 		{
@@ -15653,22 +15454,19 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 int CvCity::getNumFreeBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiNumFreeBuilding[eIndex];
 }
 
 int CvCity::getNumFreeAreaBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiNumFreeAreaBuilding[eIndex];
 }
 
 void CvCity::setNumFreeBuilding(BuildingTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (iNewValue != 0)
 	{
@@ -15693,8 +15491,7 @@ void CvCity::setNumFreeBuilding(BuildingTypes eIndex, int iNewValue)
 
 void CvCity::setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (iNewValue != 0)
 	{
@@ -15721,8 +15518,7 @@ void CvCity::setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue)
 
 bool CvCity::isHasReligion(ReligionTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	return m_pabHasReligion[eIndex];
 }
 
@@ -15915,8 +15711,7 @@ void CvCity::applyReligionModifiers(ReligionTypes eIndex, bool bValue)
 
 void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex expected to be < GC.getNumReligionInfos()");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 
 	if (isHasReligion(eIndex) != bNewValue)
 	{
@@ -16086,8 +15881,7 @@ void CvCity::processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive)
 
 bool CvCity::isHasCorporation(CorporationTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumCorporationInfos(), "eIndex expected to be < GC.getNumCorporationInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
 	return m_pabHasCorporation[eIndex];
 }
 
@@ -16123,8 +15917,7 @@ void CvCity::applyCorporationModifiers(CorporationTypes eIndex, bool bValue)
 
 void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumCorporationInfos(), "eIndex expected to be < GC.getNumCorporationInfos()");
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex)
 
 	if (isHasCorporation(eIndex) != bNewValue)
 	{
@@ -16249,8 +16042,7 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 CvCity* CvCity::getTradeCity(int iIndex) const
 {
 	//int iMaxTradeRoutes = GC.getDefineINT(MAX_TRADE_ROUTES) + GET_PLAYER(getOwner()).getMaxTradeRoutesAdjustment();
-	FAssert(iIndex >= 0);
-	FAssert(iIndex < static_cast<int>(m_paTradeCities.size()));
+	FASSERT_BOUNDS(0, static_cast<int>(m_paTradeCities.size()), iIndex)
 	return getCity(m_paTradeCities[iIndex]);
 }
 
@@ -16294,7 +16086,7 @@ void CvCity::clearTradeRoutes()
 void CvCity::updateTradeRoutes()
 {
 	PROFILE_FUNC();
-	int iMaxTradeRoutes = GC.getMAX_TRADE_ROUTES() + GET_PLAYER(getOwner()).getMaxTradeRoutesAdjustment();
+	const int iMaxTradeRoutes = GC.getMAX_TRADE_ROUTES() + GET_PLAYER(getOwner()).getMaxTradeRoutesAdjustment();
 
 	std::vector<int> paiBestValue(iMaxTradeRoutes, 0);
 
@@ -16302,7 +16094,7 @@ void CvCity::updateTradeRoutes()
 
 	if (!isDisorder() && !isPlundered() && !isQuarantined())
 	{
-		int iTradeRoutes = getTradeRoutes();
+		const int iTradeRoutes = getTradeRoutes();
 
 		FAssert(iTradeRoutes <= iMaxTradeRoutes);
 
@@ -16320,9 +16112,9 @@ void CvCity::updateTradeRoutes()
 							{
 								// BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
-								int iValue = calculateTradeProfitTimes100(pLoopCity);
+								const int iValue = calculateTradeProfitTimes100(pLoopCity);
 #else
-								int iValue = calculateTradeProfit(pLoopCity);
+								const int iValue = calculateTradeProfit(pLoopCity);
 #endif
 								// BUG - Fractional Trade Routes - end
 
@@ -16533,7 +16325,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		break;
 
 	default:
-		FAssertMsg(false, "iOrder did not match a valid option");
+		FErrorMsg("iOrder did not match a valid option");
 		break;
 	}
 
@@ -16980,7 +16772,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		break;
 
 	default:
-		FAssertMsg(false, "order.eOrderType is not a valid option");
+		FErrorMsg("order.eOrderType is not a valid option");
 		break;
 	}
 
@@ -19137,8 +18929,7 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 
 bool CvCity::isEventTriggerPossible(EventTriggerTypes eTrigger) const
 {
-	FAssert(eTrigger >= 0);
-	FAssert(eTrigger < GC.getNumEventTriggerInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventTriggerInfos(), eTrigger)
 
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
@@ -19309,19 +19100,14 @@ bool CvCity::isEventTriggerPossible(EventTriggerTypes eTrigger) const
 
 int CvCity::getTriggerValue(EventTriggerTypes eTrigger) const
 {
-	FAssert(eTrigger >= 0);
-	FAssert(eTrigger < GC.getNumEventTriggerInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventTriggerInfos(), eTrigger)
 
 	if (!isEventTriggerPossible(eTrigger))
 	{
 		return MIN_INT;
 	}
 
-	int iValue = 0;
-
-	iValue += getFood() * GC.getEventTriggerInfo(eTrigger).getCityFoodWeight();
-
-	return iValue;
+	return getFood() * GC.getEventTriggerInfo(eTrigger).getCityFoodWeight();
 }
 
 bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
@@ -19689,7 +19475,7 @@ void CvCity::invalidatePopulationRankCache()
 
 void CvCity::invalidateYieldRankCache(YieldTypes eYield)
 {
-	FAssertMsg(eYield >= NO_YIELD && eYield < NUM_YIELD_TYPES, "invalidateYieldRankCache passed bogus yield index");
+	FASSERT_BOUNDS(NO_YIELD, NUM_YIELD_TYPES, eYield)
 
 	if (eYield == NO_YIELD)
 	{
@@ -19708,7 +19494,7 @@ void CvCity::invalidateYieldRankCache(YieldTypes eYield)
 
 void CvCity::invalidateCommerceRankCache(CommerceTypes eCommerce)
 {
-	FAssertMsg(eCommerce >= NO_COMMERCE && eCommerce < NUM_COMMERCE_TYPES, "invalidateCommerceRankCache passed bogus commerce index");
+	FASSERT_BOUNDS(NO_COMMERCE, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (eCommerce == NO_COMMERCE)
 	{
@@ -20925,19 +20711,17 @@ void CvCity::setBuiltFoodProducedUnit(bool bNewValue)
 
 int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiBonusCommerceRateModifier[eIndex];
 }
 
 void CvCity::changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiBonusCommerceRateModifier[eIndex] = (m_aiBonusCommerceRateModifier[eIndex] + iChange);
+		m_aiBonusCommerceRateModifier[eIndex] += iChange;
 		FAssert(getCommerceRate(eIndex) >= 0);
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
@@ -20969,19 +20753,17 @@ int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus
 
 int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiBonusCommercePercentChanges[eIndex];
 }
 
 void CvCity::changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiBonusCommercePercentChanges[eIndex] = (m_aiBonusCommercePercentChanges[eIndex] + iChange);
+		m_aiBonusCommercePercentChanges[eIndex] += iChange;
 		FAssert(getCommerceRate(eIndex) >= 0);
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
@@ -21032,19 +20814,17 @@ int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes e
 
 int CvCity::getCommerceAttacks(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return std::min(getMaxCommerceAttacks(eIndex), m_aiCommerceAttacks[eIndex]);
 }
 
 void CvCity::changeCommerceAttacks(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceAttacks[eIndex] = (m_aiCommerceAttacks[eIndex] + iChange);
+		m_aiCommerceAttacks[eIndex] += iChange;
 		FAssert(getCommerceRate(eIndex) >= 0);
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
@@ -21060,76 +20840,66 @@ void CvCity::changeCommerceAttacks(CommerceTypes eIndex, int iChange)
 
 int CvCity::getMaxCommerceAttacks(CommerceTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	return m_aiMaxCommerceAttacks[eIndex];
 }
 
 void CvCity::changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiMaxCommerceAttacks[eIndex] = (m_aiMaxCommerceAttacks[eIndex] + iChange);
+		m_aiMaxCommerceAttacks[eIndex] += iChange;
 	}
 }
 
 
 int CvCity::getUnitProductionModifier(UnitTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return m_paiUnitProductionModifier[eIndex];
 }
 
 void CvCity::changeUnitProductionModifier(UnitTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
-	m_paiUnitProductionModifier[eIndex] = (m_paiUnitProductionModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	m_paiUnitProductionModifier[eIndex] += iChange;
 }
 
 int CvCity::getBuildingProductionModifier(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiBuildingProductionModifier[eIndex];
 }
 
 void CvCity::changeBuildingProductionModifier(BuildingTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
-	m_paiBuildingProductionModifier[eIndex] = (m_paiBuildingProductionModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	m_paiBuildingProductionModifier[eIndex] += iChange;
 }
 
 int CvCity::getBonusDefenseChanges(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiBonusDefenseChanges[eIndex];
 }
 
 void CvCity::changeBonusDefenseChanges(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
-	m_paiBonusDefenseChanges[eIndex] = (m_paiBonusDefenseChanges[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	m_paiBonusDefenseChanges[eIndex] += iChange;
 }
 
 bool CvCity::hadVicinityBonus(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_pabHadVicinityBonus[eIndex];
 }
 
 bool CvCity::hadRawVicinityBonus(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex expected to be < GC.getNumBonusInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_pabHadRawVicinityBonus[eIndex];
 }
 
@@ -21447,8 +21217,7 @@ void CvCity::setCivilizationType(int iCiv)
 
 int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	int iExtraRate = 0;
 	int iExtraBuildingRate = 0;
@@ -22019,8 +21788,6 @@ CultureLevelTypes CvCity::getMaxCultureLevelAmongPlayers() const
 			iMaxCulture = getCultureTimes100((PlayerTypes)iI);
 		}
 	}
-
-
 	return getCultureLevelForCulture(iMaxCulture);
 }
 
@@ -22033,18 +21800,16 @@ CultureLevelTypes CvCity::getCultureLevel(PlayerTypes eIndex) const
 
 CultureLevelTypes CvCity::getCultureLevelForCulture(int iCulture) const
 {
-	CultureLevelTypes eCultureLevel = ((CultureLevelTypes)0);
+	const int iGS = GC.getGame().getGameSpeedType();
 
-	for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
+	for (int iI = GC.getNumCultureLevelInfos()-1; iI > 0; iI--)
 	{
-		if (iCulture >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)iI).getSpeedThreshold(GC.getGame().getGameSpeedType()))
+		if (iCulture >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)iI).getSpeedThreshold(iGS))
 		{
-			eCultureLevel = ((CultureLevelTypes)iI);
-			break;
+			return (CultureLevelTypes) iI;
 		}
 	}
-
-	return eCultureLevel;
+	return (CultureLevelTypes) 0;
 }
 
 int CvCity::calculateBonusCommerceRateModifier(CommerceTypes eIndex) const
@@ -22065,8 +21830,7 @@ static bool bonusAvailableFromBuildings(BonusTypes eBonus)
 {
 	static bool* bBonusAvailability = NULL;
 
-	FAssert(0 <= eBonus);
-	FAssert(GC.getNumBonusInfos() > eBonus);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 
 	if (bBonusAvailability == NULL)
 	{
@@ -22350,8 +22114,7 @@ void CvCity::doVicinityBonus()
 
 bool CvCity::isDisabledBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_pabDisabledBuilding[eIndex];
 }
 
@@ -22359,8 +22122,7 @@ void CvCity::setDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
 {
 	//bool bOldValue = isDisabledBuilding(eIndex);
 
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (isDisabledBuilding(eIndex) != bNewValue)
 	{
@@ -22373,8 +22135,7 @@ void CvCity::setDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
 //Team Project (5)
 bool CvCity::isReligiouslyDisabledBuilding(BuildingTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	if (!GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 	{
 		return false;
@@ -22384,7 +22145,9 @@ bool CvCity::isReligiouslyDisabledBuilding(BuildingTypes eIndex) const
 
 void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
 {
-	bool bOldValue = isReligiouslyDisabledBuilding(eIndex);
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+
+	const bool bOldValue = isReligiouslyDisabledBuilding(eIndex);
 	ReligionTypes eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getReligionType();
 	if (eReligion == NO_RELIGION)
 	{
@@ -22392,8 +22155,6 @@ void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue
 	}
 
 	FAssert(eReligion != NO_RELIGION);
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex expected to be < GC.getNumBuildingInfos()");
 
 	if (bOldValue != bNewValue)
 	{
@@ -22426,17 +22187,15 @@ void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue
 
 int CvCity::getUnitCombatExtraStrength(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatExtraStrength[eIndex];
 }
 
 
 void CvCity::changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatExtraStrength[eIndex] = (m_paiUnitCombatExtraStrength[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatExtraStrength[eIndex] += iChange;
 }
 
 namespace {
@@ -24073,127 +23832,109 @@ int CvCity::getCityAidTotal(PromotionLineTypes ePromotionLineType) const
 
 int CvCity::getAidRate(PropertyTypes ePropertyType) const
 {
-	FAssertMsg(ePropertyType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePropertyType < GC.getNumPropertyInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPropertyInfos(), ePropertyType)
 	return std::max(0, m_paiAidRate[ePropertyType]);
 }
 
 void CvCity::changeAidRate(PropertyTypes ePropertyType, int iChange)
 {
-	FAssertMsg(ePropertyType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePropertyType < GC.getNumPropertyInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiAidRate[ePropertyType] = (m_paiAidRate[ePropertyType] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPropertyInfos(), ePropertyType)
+	m_paiAidRate[ePropertyType] += iChange;
 }
 
 void CvCity::setAidRate(PropertyTypes ePropertyType, int iChange)//may be unnecessary
 {
-	FAssertMsg(ePropertyType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePropertyType < GC.getNumPropertyInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPropertyInfos(), ePropertyType)
 	m_paiAidRate[ePropertyType] = iChange;
 }
 
 bool CvCity::hasAfflictionType(PromotionLineTypes ePromotionLineType) const
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	return (m_paiNewAfflictionTypeCount[ePromotionLineType] > 0);
 }
 
 void CvCity::changeAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiNewAfflictionTypeCount[ePromotionLineType] = (m_paiNewAfflictionTypeCount[ePromotionLineType] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
+	m_paiNewAfflictionTypeCount[ePromotionLineType] += iChange;
 }
 
 void CvCity::setAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange)
 {
-	FAssertMsg(ePromotionLineType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLineType < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType)
 	m_paiNewAfflictionTypeCount[ePromotionLineType] = iChange;
 }
 
 int CvCity::getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const
 {
-	FAssertMsg(eBonusType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonusType < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonusType)
 	return m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType];
 }
 
 void CvCity::changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange)
 {
-	FAssertMsg(eBonusType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonusType < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] = (m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonusType)
+	m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] += iChange;
 }
 
 void CvCity::setExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange)
 {
-	FAssertMsg(eBonusType >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonusType < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonusType)
 	m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] = iChange;
 }
 
 int CvCity::getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	return m_paiNewExtraAfflictionOutbreakLevelChange[ePromotionLine];
 }
 
 void CvCity::changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiNewExtraAfflictionOutbreakLevelChange[ePromotionLine] = (m_paiNewExtraAfflictionOutbreakLevelChange[ePromotionLine] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
+	m_paiNewExtraAfflictionOutbreakLevelChange[ePromotionLine] += iChange;
 }
 
 void CvCity::setExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	m_paiNewExtraAfflictionOutbreakLevelChange[ePromotionLine] = iChange;
 }
 
 int CvCity::getAfflictionToleranceChange(PromotionLineTypes ePromotionLine) const
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	return m_paiNewAfflictionToleranceChange[ePromotionLine];
 }
 
 void CvCity::changeAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	m_paiNewAfflictionToleranceChange[ePromotionLine] = std::max(0, (m_paiNewAfflictionToleranceChange[ePromotionLine] + iChange));
 }
 
 void CvCity::setAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	m_paiNewAfflictionToleranceChange[ePromotionLine] = iChange;
 }
 
 int CvCity::getCurrentOvercomeChange(PromotionLineTypes ePromotionLine) const
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	return m_paiNewCurrentOvercomeChange[ePromotionLine];
 }
 
 void CvCity::changeCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiNewCurrentOvercomeChange[ePromotionLine] = (m_paiNewCurrentOvercomeChange[ePromotionLine] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
+	m_paiNewCurrentOvercomeChange[ePromotionLine] += iChange;
 }
 
 void CvCity::setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange)
 {
-	FAssertMsg(ePromotionLine >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePromotionLine < GC.getNumPromotionLineInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine)
 	m_paiNewCurrentOvercomeChange[ePromotionLine] = iChange;
 }
 
@@ -24522,79 +24263,68 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 
 int CvCity::getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const
 {
-	FAssertMsg(eAffliction >= 0, "eAffliction expected to be >= 0");
-	FAssertMsg(eAffliction < GC.getNumPromotionLineInfos(), "eAffliction expected to be < GC.getNumPromotionLineInfos()");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAffliction)
 	return m_paiPromotionLineAfflictionAttackCommunicability[eAffliction];
 }
 
 void CvCity::changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange)
 {
-	FAssertMsg(eAffliction >= 0, "eAffliction expected to be >= 0");
-	FAssertMsg(eAffliction < GC.getNumPromotionLineInfos(), "eAffliction expected to be < GC.getNumPromotionLineInfos()");
-	m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] = (m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAffliction)
+	m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] += iChange;
 }
 
 void CvCity::setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue)
 {
-	FAssertMsg(eAffliction >= 0, "eAffliction expected to be >= 0");
-	FAssertMsg(eAffliction < GC.getNumPromotionLineInfos(), "eAffliction expected to be < GC.getNumPromotionLineInfos()");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAffliction)
 	m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] = iValue;
 }
 
 int CvCity::getUnitCombatProductionModifier(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatProductionModifier[eIndex];
 }
 
 void CvCity::changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatProductionModifier[eIndex] = (m_paiUnitCombatProductionModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatProductionModifier[eIndex] += iChange;
 }
 
 int CvCity::getUnitCombatRepelModifierTotal(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatRepelModifier[eIndex];
 }
 
 void CvCity::changeUnitCombatRepelModifierTotal(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatRepelModifier[eIndex] = (m_paiUnitCombatRepelModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatRepelModifier[eIndex] += iChange;
 }
 
 int CvCity::getUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatRepelAgainstModifier[eIndex];
 }
 
 void CvCity::changeUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatRepelAgainstModifier[eIndex] = (m_paiUnitCombatRepelAgainstModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatRepelAgainstModifier[eIndex] += iChange;
 }
 
 int CvCity::getUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatDefenseAgainstModifier[eIndex];
 }
 
 void CvCity::changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatDefenseAgainstModifier[eIndex] = (m_paiUnitCombatDefenseAgainstModifier[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatDefenseAgainstModifier[eIndex] += iChange;
 }
 
 int CvCity::getTotalFrontSupportPercentModifier() const
@@ -24654,29 +24384,25 @@ void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 
 int CvCity::getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatOngoingTrainingTimeCount[eIndex];
 }
 
 void CvCity::changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
-	m_paiUnitCombatOngoingTrainingTimeCount[eIndex] = (m_paiUnitCombatOngoingTrainingTimeCount[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	m_paiUnitCombatOngoingTrainingTimeCount[eIndex] += iChange;
 }
 
 int CvCity::getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	return m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex];
 }
 
 void CvCity::setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitCombatInfos(), "eIndex expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 	m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex] = iChange;
 }
 
@@ -24946,16 +24672,14 @@ int CvCity::cityDefenseRecoveryRate() const
 
 bool CvCity::canDamageAttackingUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat expected to be >= 0");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	return (m_paiDamageAttackingUnitCombatCount[eUnitCombat] > 0);
 }
 
 int CvCity::getDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat) const
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat expected to be >= 0");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	return m_paiDamageAttackingUnitCombatCount[eUnitCombat];
 }
@@ -24967,8 +24691,7 @@ void CvCity::setDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int 
 
 void CvCity::changeDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
 {
-	FAssertMsg(eUnitCombat >= 0, "eUnitCombat expected to be >= 0");
-	FAssertMsg(eUnitCombat < GC.getNumUnitCombatInfos(), "eUnitCombat expected to be < GC.getNumUnitCombatInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	m_paiDamageAttackingUnitCombatCount[eUnitCombat] += iChange;
 }
@@ -24980,8 +24703,7 @@ bool CvCity::canBuildingCostPopulation(BuildingTypes eBuilding) const
 
 int CvCity::getBuildingCostPopulation(BuildingTypes eBuilding) const
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	return m_paiBuildingCostPopulationCount[eBuilding];
 }
@@ -24993,8 +24715,7 @@ void CvCity::setBuildingCostPopulation(BuildingTypes eBuilding, int iValue)
 
 void CvCity::changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iChange)
 {
-	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
-	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	m_paiBuildingCostPopulationCount[eBuilding] += iChange;
 }
@@ -25002,24 +24723,20 @@ void CvCity::changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iCha
 //Team Project (1)
 int CvCity::getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 	return m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist];
 }
 
 
 void CvCity::changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	if (iChange != 0)
 	{
-		m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist] = (m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist] + iChange);
+		m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist] += iChange;
 
 		updateExtraTechSpecialistHappiness();
 
@@ -25029,20 +24746,18 @@ void CvCity::changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes
 
 int CvCity::getTechSpecialistHappiness(TechTypes eTech) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_paiTechSpecialistHappiness[eTech];
 }
 
 
 void CvCity::changeTechSpecialistHappiness(TechTypes eTech, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 
 	if (iChange != 0)
 	{
-		m_paiTechSpecialistHappiness[eTech] = (m_paiTechSpecialistHappiness[eTech] + iChange);
+		m_paiTechSpecialistHappiness[eTech] += iChange;
 
 		updateExtraTechSpecialistHappiness();
 
@@ -25095,20 +24810,18 @@ int CvCity::getExtraTechSpecialistHappiness() const
 
 int CvCity::getTechHappiness(TechTypes eTech) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_paiTechHappiness[eTech];
 }
 
 
 void CvCity::changeTechHappiness(TechTypes eTech, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 
 	if (iChange != 0)
 	{
-		m_paiTechHappiness[eTech] = (m_paiTechHappiness[eTech] + iChange);
+		m_paiTechHappiness[eTech] += iChange;
 
 		updateExtraTechHappiness();
 	}
@@ -25169,24 +24882,20 @@ void CvCity::updateTechHappinessandHealth()
 
 int CvCity::getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 	return m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist];
 }
 
 
 void CvCity::changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	if (iChange != 0)
 	{
-		m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist] = (m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist] + iChange);
+		m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist] += iChange;
 
 		updateExtraTechSpecialistHealth();
 
@@ -25196,20 +24905,18 @@ void CvCity::changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eS
 
 int CvCity::getTechSpecialistHealth(TechTypes eTech) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_paiTechSpecialistHealth[eTech];
 }
 
 
 void CvCity::changeTechSpecialistHealth(TechTypes eTech, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 
 	if (iChange != 0)
 	{
-		m_paiTechSpecialistHealth[eTech] = (m_paiTechSpecialistHealth[eTech] + iChange);
+		m_paiTechSpecialistHealth[eTech] += iChange;
 
 		updateExtraTechSpecialistHealth();
 
@@ -25263,20 +24970,18 @@ int CvCity::getExtraTechSpecialistHealth() const
 
 int CvCity::getTechHealth(TechTypes eTech) const
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_paiTechHealth[eTech];
 }
 
 
 void CvCity::changeTechHealth(TechTypes eTech, int iChange)
 {
-	FAssertMsg(eTech >= 0, "eTech expected to be >= 0");
-	FAssertMsg(eTech < GC.getNumTechInfos(), "eTech expected to be < GC.getNumTechInfos()");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 
 	if (iChange != 0)
 	{
-		m_paiTechHealth[eTech] = (m_paiTechHealth[eTech] + iChange);
+		m_paiTechHealth[eTech] += iChange;
 
 		updateExtraTechHealth();
 	}
@@ -25322,23 +25027,20 @@ int CvCity::getExtraTechUnHealthTotal() const
 
 int CvCity::getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eYield >= 0, "eYield expected to be >= 0");
-	FAssertMsg(eYield < NUM_YIELD_TYPES, "eYield expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	return m_ppaaiLocalSpecialistExtraYield[eSpecialist][eYield];
 }
 
 void CvCity::changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eYield >= 0, "eYield expected to be >= 0");
-	FAssertMsg(eYield < NUM_YIELD_TYPES, "eYield expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+
 	if (iChange != 0)
 	{
-		m_ppaaiLocalSpecialistExtraYield[eSpecialist][eYield] = (m_ppaaiLocalSpecialistExtraYield[eSpecialist][eYield] + iChange);
+		m_ppaaiLocalSpecialistExtraYield[eSpecialist][eYield] += iChange;
 	}
 
 	updateExtraSpecialistYield();
@@ -25348,20 +25050,17 @@ void CvCity::changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldT
 
 int CvCity::getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eCommerce >= 0, "eCommerce expected to be >= 0");
-	FAssertMsg(eCommerce < NUM_COMMERCE_TYPES, "eCommerce expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	return m_ppaaiLocalSpecialistExtraCommerce[eSpecialist][eCommerce];
 }
 
 void CvCity::changeLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce, int iChange)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eCommerce >= 0, "eCommerce expected to be >= 0");
-	FAssertMsg(eCommerce < NUM_COMMERCE_TYPES, "eYield expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+
 	if (iChange != 0)
 	{
 		m_ppaaiLocalSpecialistExtraCommerce[eSpecialist][eCommerce] = (m_ppaaiLocalSpecialistExtraCommerce[eSpecialist][eCommerce] + iChange);
@@ -25374,8 +25073,7 @@ void CvCity::changeLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, Com
 
 int CvCity::specialistCount(SpecialistTypes eSpecialist) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	int iTotal = getSpecialistCount(eSpecialist);
 	iTotal += getFreeSpecialistCount(eSpecialist);
@@ -25385,10 +25083,8 @@ int CvCity::specialistCount(SpecialistTypes eSpecialist) const
 
 int CvCity::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eYield >= 0, "eYield expected to be >= 0");
-	FAssertMsg(eYield < NUM_YIELD_TYPES, "eYield expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	int iTotal = GET_PLAYER(getOwner()).specialistYield(eSpecialist, eYield);
 	iTotal += getLocalSpecialistExtraYield(eSpecialist, eYield);
@@ -25398,10 +25094,8 @@ int CvCity::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) cons
 
 int CvCity::specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eCommerce >= 0, "eCommerce expected to be >= 0");
-	FAssertMsg(eCommerce < NUM_COMMERCE_TYPES, "eCommerce expected to be < NUM_COMMERCE_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	int iTotal = GET_PLAYER(getOwner()).specialistCommerce(eSpecialist, eCommerce);
 	iTotal += getLocalSpecialistExtraCommerce(eSpecialist, eCommerce);
@@ -25411,10 +25105,8 @@ int CvCity::specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eComme
 
 int CvCity::specialistYieldTotal(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
-	FAssertMsg(eYield >= 0, "eYield expected to be >= 0");
-	FAssertMsg(eYield < NUM_YIELD_TYPES, "eYield expected to be < NUM_YIELD_TYPES");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	return (specialistCount(eSpecialist) * specialistYield(eSpecialist, eYield));
 }
@@ -25426,8 +25118,7 @@ int CvCity::getPrioritorizedSpecialist() const
 
 void CvCity::setPrioritorizedSpecialist(SpecialistTypes eSpecialist)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	m_iPrioritySpecialist = (int)eSpecialist;
 	if (isSpecialistBanned(eSpecialist))
@@ -25438,16 +25129,14 @@ void CvCity::setPrioritorizedSpecialist(SpecialistTypes eSpecialist)
 
 bool CvCity::isSpecialistBanned(SpecialistTypes eSpecialist)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	return (m_paiSpecialistBannedCount[eSpecialist] > 0);
 }
 
 void CvCity::banSpecialist(SpecialistTypes eSpecialist)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	m_paiSpecialistBannedCount[eSpecialist] = 1;
 	if (m_iPrioritySpecialist == (int)eSpecialist)
@@ -25458,8 +25147,7 @@ void CvCity::banSpecialist(SpecialistTypes eSpecialist)
 
 void CvCity::removeSpecialistBan(SpecialistTypes eSpecialist)
 {
-	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
-	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
 	m_paiSpecialistBannedCount[eSpecialist] = 0;
 }
@@ -25626,8 +25314,7 @@ int CvCity::getNumPropertySpawns() const
 
 PropertySpawns& CvCity::getPropertySpawn(int iIndex)
 {
-	FAssert(iIndex >= 0);
-	FAssert(iIndex < getNumPropertySpawns());
+	FASSERT_BOUNDS(0, getNumPropertySpawns(), iIndex)
 	return m_aPropertySpawns[iIndex];
 }
 

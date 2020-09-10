@@ -318,7 +318,7 @@ bool CvUnitAI::AI_update()
 		case AUTOMATE_CANCEL_UPGRADING:
 		case AUTOMATE_PROMOTIONS:
 		case AUTOMATE_CANCEL_PROMOTIONS:
-			FAssertMsg(false, "SelectionGroup Should Not be Using These Automations!")
+			FErrorMsg("SelectionGroup Should Not be Using These Automations!")
 			break;
 		case AUTOMATE_SHADOW:
 			//	If we've lost the unit qwe should be shadowing (not sure how this can happen but empirically
@@ -1588,7 +1588,7 @@ UnitAITypes CvUnitAI::AI_getUnitAIType() const
 	//	has not yet been found) set it to its default AI
 	if ( m_eUnitAIType == NO_UNITAI )
 	{
-		FAssertMsg(false,"Unit has no UnitAI!");
+		FErrorMsg("Unit has no UnitAI!");
 
 		((CvUnitAI*)this)->m_eUnitAIType = (UnitAITypes)m_pUnitInfo->getDefaultUnitAIType();
 
@@ -24137,8 +24137,8 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 	if (AI_bestCityBuild(pCity, &pBestPlot, &eBestBuild, NULL, this))
 	{
 		FAssertMsg(pBestPlot != NULL, "BestPlot is not assigned a valid value");
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
+
 		if ((plot()->getWorkingCity() != pCity) || (GC.getBuildInfo(eBestBuild).getRoute() != NO_ROUTE))
 		{
 			eMission = MISSION_ROUTE_TO;
@@ -24265,8 +24265,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 	}
 	if (pBestPlot != NULL)
 	{
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
 		FAssert(pBestPlot->getWorkingCity() != NULL);
 
@@ -24421,8 +24420,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 
 	if (pBestPlot != NULL)
 	{
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
 		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
 
@@ -24583,8 +24581,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 	}
 	if (pBestPlot != NULL)
 	{
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
 		if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
 		{
@@ -24721,8 +24718,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 	}
 	if (pBestPlot != NULL)
 	{
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
 		if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
 		{
@@ -30947,8 +30943,7 @@ bool CvUnitAI::AI_StrategicForts()
 
 	if (pBestPlot != NULL)
 	{
-		FAssertMsg(eBestBuild != NO_BUILD, "BestBuild is not assigned a valid value");
-		FAssertMsg(eBestBuild < GC.getNumBuildInfos(), "BestBuild is assigned a corrupt value");
+		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
 		if (!atPlot(pBestPlot))
 		{

@@ -1311,6 +1311,7 @@
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_CHANGE</Tag>
 		<English>[ICON_BULLET]You can [LINK=CONCEPT_DRAFT]Draft[\LINK] %D1_Num [NUM1:Unit:Units]</English>
 		<French>[ICON_BULLET]Vous pouvez [LINK=CONCEPT_DRAFT]Recruter[\LINK] %D1_Num [NUM1:Unité:Unités]</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_DRAFT]Rekrutierung[\LINK]: %D1_Num [NUM1:Einheit:Einheiten]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_PEDIA</Tag>

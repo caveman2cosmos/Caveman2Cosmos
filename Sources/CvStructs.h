@@ -875,8 +875,6 @@ enum BattleUnitTypes
 	BATTLE_UNIT_COUNT		//!< The number of unit index references
 };
 
-void checkBattleUnitType(BattleUnitTypes unitType);
-
 //!< An enumeration for indexing times within the CvBattleDefinition
 enum BattleTimeTypes
 {
@@ -988,9 +986,6 @@ public:
 	void setBattleRound(int index, const CvBattleRound &round);
 
 private:
-	void checkBattleTimeType(BattleTimeTypes timeType) const;
-	void checkBattleRound(int index) const;
-
 	int					m_aDamage[BATTLE_UNIT_COUNT][BATTLE_TIME_COUNT];	//!< The beginning damage of the units
 	int					m_aFirstStrikes[BATTLE_UNIT_COUNT];		//!< The number of ranged first strikes the units made
 	int					m_iNumRangedRounds;				//!< The number of ranged rounds

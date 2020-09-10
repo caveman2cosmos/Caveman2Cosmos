@@ -108,8 +108,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FAssertMsg(iGroup < (int) m_aaiGroupedUnitList.size(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, (int)m_aaiGroupedUnitList.size(), iGroup)
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 
@@ -119,10 +118,8 @@ UnitTypes CvUnitList::getUnitType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FAssertMsg(iGroup < getGroupNum(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
-	FAssertMsg(iPos < getNumInGroup(iGroup), "Index out of bounds");
-	FAssertMsg(iPos > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
 	return (*m_aaiGroupedUnitList[iGroup])[iPos];
 }
 

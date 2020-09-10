@@ -4255,7 +4255,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 				GC.iStuckUnitCount++;
 				if (GC.iStuckUnitCount > 5)
 				{
-					FAssertMsg(false, "Unit Stuck in Loop!");
+					FErrorMsg("Unit Stuck in Loop!");
 					CvUnit* pHeadUnit = getHeadUnit();
 					if (NULL != pHeadUnit)
 					{
@@ -5822,17 +5822,8 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	FAssertNotInScope(CvSelectionGroup_CvUnit_LOOP);
 	if (getOwner() != NO_PLAYER)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*  Allow Automated Units to Stack Attack                                                       */
-/************************************************************************************************/
-/*
-		setAutomateType(NO_AUTOMATE);
-*/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		//setAutomateType(NO_AUTOMATE); // Afforess: Allow Automated Units to Stack Attack
+
 		clearMissionQueue();
 
 		switch (getActivityType())
@@ -5849,7 +5840,7 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	}
 
 	const CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
-	const int iVolume = pLoopUnit->getCargoVolume();
+	const int iVolume = pLoopUnit ? pLoopUnit->getCargoVolume() : 0;
 
 	CLLNode<IDInfo>* pNextUnitNode = m_units.deleteNode(pNode);
 
@@ -6113,7 +6104,7 @@ CvUnit* CvSelectionGroup::getUnitAt(int index) const
 {
 	if (index >= getNumUnits())
 	{
-		FAssertMsg(false, "[Jason] Selectiongroup unit index out of bounds.");
+		FErrorMsg("[Jason] Selectiongroup unit index out of bounds.");
 		return NULL;
 	}
 
@@ -6694,8 +6685,7 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 // BUG - All Units Actions - start
 bool CvSelectionGroup::allMatch(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnit >= 0, "eUnit expected to be >= 0");
-	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 
 	return algo::all_of(units(), CvUnit::fn::getUnitType() == eUnit);
 }
@@ -6816,7 +6806,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 		{
 			if ( bFixup )
 			{
-				FAssertMsg(false, "Group split in cargo state - fixing");
+				FErrorMsg("Group split in cargo state - fixing");
 
 				pLoopUnit->joinGroup(NULL);
 			}
@@ -6824,7 +6814,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if(!pLoopUnit->isHuman())
 				{
-					FAssertMsg(false, "Group split in cargo state");
+					FErrorMsg("Group split in cargo state");
 				}
 			}
 		}
@@ -6839,7 +6829,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if ( pPlot != pLoopUnit->plot() )
 				{
-					FAssertMsg(false, "Incorrect plot on unit of group - fixing");
+					FErrorMsg("Incorrect plot on unit of group - fixing");
 
 					//	Drop the errant unit from the group
 					pLoopUnit->joinGroup(NULL);
