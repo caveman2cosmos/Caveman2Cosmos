@@ -302,6 +302,7 @@ T* FFreeListTrashArray<T>::add()
 	{
 		if ((m_iNumSlots * FLTA_GROWTH_FACTOR) > FLTA_MAX_BUCKETS)
 		{
+			FErrorMsg("FFreeListTrashArray<T>::add - returning NULL");
 			return NULL;
 		}
 
@@ -387,10 +388,11 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 {
 	if ((iID == FFreeList::INVALID_INDEX) || (m_pArray == NULL))
 	{
+		FErrorMsg("FFreeListTrashArray<T>::getAt - returning NULL");
 		return NULL;
 	}
 
-	int iIndex = (iID & FLTA_INDEX_MASK);
+	const int iIndex = (iID & FLTA_INDEX_MASK);
 
 	assert(iIndex >= 0);
 
@@ -403,6 +405,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 		}
 	}
 
+	FErrorMsg("FFreeListTrashArray<T>::getAt - returning NULL");
 	return NULL;
 }
 
@@ -435,7 +438,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 		return false;
 	}
 
-	int iIndex = (iID & FLTA_INDEX_MASK);
+	const int iIndex = (iID & FLTA_INDEX_MASK);
 
 	FAssertMsg(iIndex >= 0, "FFreeListTrashArray::removeAt - index part of iID is not a valid index");
 
@@ -494,7 +497,7 @@ void FFreeListTrashArray<T>::load(T* pData)
 	//assert((pData->getID() & FLTA_ID_MASK) < m_iCurrentID);
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::load - not initialized");
 
-	int iIndex = (pData->getID() & FLTA_INDEX_MASK);
+	const int iIndex = (pData->getID() & FLTA_INDEX_MASK);
 
 	assert(iIndex < FLTA_MAX_BUCKETS);
 	assert(iIndex <= m_iLastIndex);
@@ -515,7 +518,7 @@ void FFreeListTrashArray<T>::growArray()
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;
-	int iOldNumSlots = m_iNumSlots;
+	const int iOldNumSlots = m_iNumSlots;
 
 	m_iNumSlots *= FLTA_GROWTH_FACTOR;
 
