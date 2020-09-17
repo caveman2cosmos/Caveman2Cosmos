@@ -75,10 +75,10 @@ public:
 	virtual ~CvPlayerAI();
 
 	// inlined for performance reasons
-	static CvPlayerAI& getPlayer(PlayerTypes ePlayer) 
+	static CvPlayerAI& getPlayer(PlayerTypes ePlayer)
 	{
 		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
-		return m_aPlayers[ePlayer]; 
+		return m_aPlayers[ePlayer];
 	}
 
 	DllExport static CvPlayerAI& getPlayerNonInl(PlayerTypes ePlayer);
@@ -112,15 +112,7 @@ public:
 
 	void AI_makeProductionDirty();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/08/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
 	void AI_doCentralizedProduction();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	void AI_conquerCity(CvCity* pCity);
 
@@ -143,20 +135,14 @@ public:
 	CvCity* AI_findTargetCity(const CvArea* pArea) const;
 
 	bool AI_isCommercePlot(const CvPlot* pPlot) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	bool AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
 	int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	//	Koshling - internal bypasses cache
 	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
 	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
 	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
@@ -168,17 +154,11 @@ public:
 	int AI_goldValueAssessmentModifier() const;
 
 	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/18/10                                jdog5000      */
-/*                                                                                              */
-/* Tech AI                                                                                      */
-/************************************************************************************************/
+
 	int AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder ) const;
 	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder ) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int  AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns = false) const;
 	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	void AI_chooseFreeTech();
@@ -256,14 +236,9 @@ public:
 	DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const;
 
 	int AI_unitImpassableCount(UnitTypes eUnit) const;
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
+
 	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const;
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
+
 	int AI_unitHealerValue(UnitTypes eUnit, UnitCombatTypes eUnitCombat = NO_UNITCOMBAT) const;
 	int AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty = NO_PROPERTY) const;
 	int AI_totalUnitAIs(UnitAITypes eUnitAI) const;
@@ -276,12 +251,12 @@ public:
 	int AI_neededWorkers(const CvArea* pArea) const;
 	int AI_neededMissionaries(const CvArea* pArea, ReligionTypes eReligion) const;
 	int AI_neededExecutives(const CvArea* pArea, CorporationTypes eCorporation) const;
-	
+
 	int AI_missionaryValue(const CvArea* pArea, ReligionTypes eReligion, PlayerTypes* peBestPlayer = NULL) const;
 	int AI_executiveValue(const CvArea* pArea, CorporationTypes eCorporation, PlayerTypes* peBestPlayer = NULL) const;
-	
+
 	int AI_corporationValue(CorporationTypes eCorporation, const CvCity* pCity = NULL) const;
-	
+
 	int AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCanMove = false) const;
 	//int AI_PotentialEnemyAttackers(CvPlot* pPlot, bool bTestCanMove = false, bool bTestVisible = true) const;
 	//int AI_PotentialDefenders(CvPlot* pPlot, bool bTestVisible = true) const;
@@ -297,46 +272,25 @@ public:
 	int AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_enemyTargetMissionAIs(MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_wakePlotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/26/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+
 	int AI_cityTargetUnitsByPath(const CvCity* pCity, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns) const;
 	int AI_enemyTargetMissions(TeamTypes eTargetTeam, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_enemyTargetMissionAIs(TeamTypes eTargetTeam, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns, bool bCargo = false) const;
 	CivicTypes AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestValue) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	CivicTypes AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestValue, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const;
 	CivicTypes AI_bestCivic(CivicOptionTypes eCivicOption) const;
 	int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const;
 	//	Provide a measure of overall happyness (weighted appropriately by city)
 	int AI_getOverallHappyness(int iExtraUnhappy = 0) const;
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         05/22/08                                jdog5000      */
-/*                                                                                              */
-/* Revolution AI                                                                                */
-/************************************************************************************************/
 	int AI_RevCalcCivicRelEffect(CivicTypes eCivic) const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	ReligionTypes AI_bestReligion() const;
 	int AI_religionValue(ReligionTypes eReligion) const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         05/22/08                                jdog5000      */
-/*                                                                                              */
-/* Revolution AI                                                                                */
-/************************************************************************************************/
+
 	ReligionTypes AI_findHighestHasReligion();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	EspionageMissionTypes AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerTypes& eTargetPlayer, CvPlot*& pPlot, int& iData) const;
 	int AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes eMission, const CvPlot* pPlot, int iData) const;
@@ -409,11 +363,6 @@ public:
 	virtual void AI_launch(VictoryTypes eVictory);
 
 	int AI_getCultureVictoryStage() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/17/10                                jdog5000      */
-/*                                                                                              */
-/* Victory Strategy AI                                                                          */
-/************************************************************************************************/
 	int AI_getSpaceVictoryStage() const;
 	int AI_getConquestVictoryStage() const;
 	int AI_getDominationVictoryStage() const;
@@ -425,37 +374,34 @@ public:
 	int AI_getVictoryStrategyHash() const;
 	int AI_getStrategyRand(int iShift) const;
 	void AI_calculateStrategyRand();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/		
-	
+
 	int AI_cultureVictoryTechValue(TechTypes eTech) const;
-	
+
 	bool AI_isDoStrategy(int iStrategy) const;
 	void AI_forceUpdateStrategies();
 
 	void AI_nowHasTech(TechTypes eTech);
-	
+
 	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
-	
+
 	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 
 	int AI_goldToUpgradeAllUnits(int iExpThreshold = 0) const;
 
 	int AI_goldTradeValuePercent() const;
-	
+
 	int AI_averageYieldMultiplier(YieldTypes eYield) const;
 	int AI_averageCommerceMultiplier(CommerceTypes eCommerce) const;
 	int AI_averageGreatPeopleMultiplier() const;
 	int AI_averageCommerceExchange(CommerceTypes eCommerce) const;
-	
+
 	int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance) const;
-	
+
 	int AI_getTotalCityThreat() const;
 	int AI_getTotalFloatingDefenseNeeded() const;
-	
-	
+
+
 	int AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat = NULL) const;
 	int AI_countNumAreaHostileUnits(const CvArea* pArea, bool bPlayer, bool bTeam, bool bNeutral, bool bHostile, const CvPlot* pPlot, int iMaxDistance) const;
 	int AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const;
@@ -464,18 +410,18 @@ public:
 	RouteTypes AI_bestAdvancedStartRoute(const CvPlot* pPlot, int* piYieldValue = NULL) const;
 	UnitTypes AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAITypes eUnitAI) const;
 	CvPlot* AI_advancedStartFindCapitalPlot() const;
-	
+
 	bool AI_advancedStartPlaceExploreUnits(bool bLand);
 	void AI_advancedStartRevealRadius(const CvPlot* pPlot, int iRadius);
 	bool AI_advancedStartPlaceCity(const CvPlot* pPlot);
 	bool AI_advancedStartDoRoute(const CvPlot* pFromPlot, const CvPlot* pToPlot);
 	void AI_advancedStartRouteTerritory();
 	void AI_doAdvancedStart(bool bNoExit = false);
-	
+
 	int AI_getMinFoundValue() const;
-	
+
 	void AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const;
-	
+
 	int AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const;
 	void AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const;
 	void calculateCitySites() const;
@@ -483,26 +429,26 @@ public:
 	bool AI_isPlotCitySite(const CvPlot* pPlot) const;
 	int AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const;
 	int AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeArea, int& iBestValue) const;
-	
+
 	int AI_getNumCitySites() const;
 	CvPlot* AI_getCitySite(int iIndex) const;
-	
+
 	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
 	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, const CvUnitSelectionCriteria* criteria = NULL) const;
-	
+
 	int AI_calculateTotalBombard(DomainTypes eDomain) const;
-	
+
 	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
-	
+
 	void AI_updateBonusValue();
 	void AI_updateBonusValue(BonusTypes eBonus);
-	
+
 	int AI_getAttitudeWeight(PlayerTypes ePlayer) const;
 
 	ReligionTypes AI_chooseReligion();
-	
+
 	int AI_getPlotAirbaseValue(const CvPlot* pPlot) const;
 	int AI_getPlotCanalValue(const CvPlot* pPlot) const;
 	// Super Forts *choke*
@@ -513,11 +459,6 @@ public:
 
 	bool AI_isFirstTech(TechTypes eTech) const;
 
-/************************************************************************************************/
-/* RevDCM	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
 	CvCity* getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const;
 	CvCity* getTeamInquisitionRevoltCity(const CvUnit *pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const;
 	CvCity* getReligiousVictoryTarget(const CvUnit* pUnit, const bool bNoUnit) const;
@@ -532,21 +473,13 @@ public:
 	void AI_setHasInquisitionTarget();
 
 	int countCityReligionRevolts() const;
-/************************************************************************************************/
-/* RevDCM	                     END                                                            */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
 	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
-	
+
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
 	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer);
 	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
@@ -554,7 +487,6 @@ public:
 	int AI_militaryBonusVal(BonusTypes eBonus);
 	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
-	bool AI_avoidIncreasingTaxes() const;
 	int AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI, bool bForBuildUp = false) const;
 	int AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI) const;
 	TechTypes AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const;
@@ -562,7 +494,7 @@ public:
 	int AI_ourCityValue(CvCity* pCity) const;
 
 	void AI_noteWarStatusChange(TeamTypes eTeam, bool bAtWar);
-	
+
 	void AI_doMilitaryProductionCity();
 	int AI_getMilitaryProductionCityCount() const;
 	int AI_getNavalMilitaryProductionCityCount() const;
@@ -570,26 +502,15 @@ public:
 	CvCity* findBestCoastalCity() const;
 	UnitTypes bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, const CvUnitSelectionCriteria* criteria = NULL) const;
 	int strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAIType) const;
-	
+
 	mutable int m_iMilitaryProductionCityCount;
 	mutable int m_iNavalMilitaryProductionCityCount;
 	mutable int* m_aiCivicValueCache;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
+
 	void AI_invalidateAttitudeCache(PlayerTypes ePlayer);
 	void AI_invalidateAttitudeCache();
 	void AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iChange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int	AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal) const;
 	void AI_changeNumBuildingsNeeded(BuildingTypes eBuilding, int iChange);
 
@@ -612,41 +533,28 @@ protected:
 	int m_iCivicTimer;
 	int m_iReligionTimer;
 	int m_iExtraGoldTarget;
-	
+
 	mutable int m_iStrategyHash;
 	mutable int m_iStrategyHashCacheTurn;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/18/10                                jdog5000      */
-/*                                                                                              */
-/* Victory Strategy AI                                                                          */
-/************************************************************************************************/
+
 	mutable int m_iStrategyRand;
 	mutable int m_iVictoryStrategyHash;
 	mutable int m_iVictoryStrategyHashCacheTurn;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/		
-/************************************************************************************************/
-/* RevDCM	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 	bool m_bPushReligiousVictory;
 	bool m_bConsiderReligiousVictory;
 	bool m_bHasInquisitionTarget;
-/************************************************************************************************/
-/* RevDCM	                     END                                                            */
-/************************************************************************************************/
-	mutable TechTypes m_eBestResearchTarget;	//	Koshling - retain beeling terget to minmimize need for recalculation
-	
+
+	mutable TechTypes m_eBestResearchTarget; // Koshling - retain beeline target to minmimize need for recalculation
+
 	mutable volatile int m_iAveragesCacheTurn;
-	
+
 	mutable int m_iAverageGreatPeopleMultiplier;
-	
+
 	mutable int *m_aiAverageYieldMultiplier;
 	mutable int *m_aiAverageCommerceMultiplier;
 	mutable int *m_aiAverageCommerceExchange;
-	
+
 	mutable int m_iUpgradeUnitsCacheTurn;
 	mutable int m_iUpgradeUnitsCachedExpThreshold;
 	mutable int m_iUpgradeUnitsCachedGold;
@@ -666,29 +574,19 @@ protected:
 	bool* m_abNonTradeBonusCalculated;
 	int* m_aiUnitWeights;
 	int* m_aiUnitCombatWeights;
-	
+
 	mutable int* m_aiCloseBordersAttitudeCache;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
 	mutable int* m_aiAttitudeCache;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	bool* m_abFirstContact;
 
 	int** m_aaiContactTimer;
 	int** m_aaiMemoryCount;
-	
+
 	mutable std::vector<int> m_aiAICitySites;
 	mutable bool m_bCitySitesNotCalculated;
-	
+
 	bool m_bWasFinancialTrouble;
 	int m_iTurnLastProductionDirty;
 
@@ -701,44 +599,28 @@ protected:
 	void AI_doReligion();
 	void AI_doDiplo();
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM - new diplomacy option
 	void AI_beginDiplomacy(CvDiploParameters* pDiploParams, PlayerTypes ePlayer);
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/************************************************************************************************/
-	
+
 	void AI_doSplit();
 	void AI_doCheckFinancialTrouble();
-	
+
 	bool AI_disbandUnit(int iExpThreshold, bool bObsolete);
-	
+
 	int AI_getStrategyHash() const;
 	void AI_calculateAverages() const;
 
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
 	bool AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION) const;
 	bool AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION) const;
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 	int AI_getHappinessWeight(int iHappy, int iExtraPop) const;
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
-	
+
 	void AI_convertUnitAITypesForCrush();
 	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
-		
+
 	void AI_doEnemyUnitData();
 	void AI_invalidateCloseBordersAttitudeCache();
-	
+
 	friend class CvGameTextMgr;
 
 #ifdef PLOT_DANGER_CACHING

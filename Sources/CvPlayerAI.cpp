@@ -15450,27 +15450,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iValue += iTempValue;
 	}
 
-	bool bFinancialTrouble = AI_isFinancialTrouble();
-	iTempValue = 0;
-
-	if (kCivic.isTaxationAnger())
-	{
-		const int64_t iNetIncome = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-		const int64_t iNetExpenses = 1 + calculateInflatedCosts() + std::min(0, getGoldPerTurn());
-
-		iTempValue += static_cast<int>(iNetIncome - iNetExpenses - 5*getNumCities());
-
-		if (bFinancialTrouble || GC.getGame().isOption(GAMEOPTION_REVOLUTION))
-		{
-			iTempValue *= 2;
-		}
-		if (gPlayerLogLevel > 2 && iTempValue != 0)
-		{
-			logBBAI("Civic %S taxation anger value %d", kCivic.getDescription(), iTempValue);
-		}
-		iValue += iTempValue;
-	}
-
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
@@ -15786,6 +15765,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 	}
 
+	bool bFinancialTrouble = AI_isFinancialTrouble();
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -19053,45 +19033,6 @@ void CvPlayerAI::AI_doCommerce()
 			}
 		}
 	}
-
-	// Afforess - Taxation Anger Check
-	if (AI_avoidIncreasingTaxes())
-	{
-		const int iMaxTaxRate =
-		(
-			std::min(
-				100,
-				getLastTurnTaxRate() + 10 + 10*(0 != GC.getDefineINT("TAXATION_ANGER_ROUND_DOWN"))
-			)
-		);
-		//This allows the AI still to adjust their taxes up by at least 10% each turn, so they have some leeway.
-
-		while (iMaxTaxRate <= getCommercePercent(COMMERCE_GOLD) && iMaxTaxRate != 100)
-		{
-			if (bFlexEspionage && getCommercePercent(COMMERCE_ESPIONAGE) > iIncrement)
-			{
-				changeCommercePercent(COMMERCE_ESPIONAGE, -iIncrement);
-			}
-
-			if (iMaxTaxRate < getCommercePercent(COMMERCE_GOLD))
-				break;
-
-			if (bFlexResearch && (getCommercePercent(COMMERCE_RESEARCH) > iIncrement))
-			{
-				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
-			}
-
-			if (iMaxTaxRate < getCommercePercent(COMMERCE_GOLD))
-				break;
-
-			if (bFlexCulture && getCommercePercent(COMMERCE_CULTURE) > iIncrement)
-			{
-				changeCommercePercent(COMMERCE_CULTURE, -iIncrement);
-			}
-		}
-	}
-	// ! Afforess
-
 	// this is called on doTurn, so make sure our gold is high enough keep us above zero gold.
 	verifyGoldCommercePercent();
 }
@@ -29761,17 +29702,6 @@ int CvPlayerAI::AI_getCivicAttitudeChange(PlayerTypes ePlayer) const
 	}
 
 	return iAttitude;
-}
-
-bool CvPlayerAI::AI_avoidIncreasingTaxes() const
-{
-
-	if ((getTaxationAnger() > 0) && !isGoldenAge())
-	{
-		return true;
-	}
-
-	return false;
 }
 
 int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const

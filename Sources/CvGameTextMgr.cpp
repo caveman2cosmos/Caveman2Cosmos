@@ -17158,11 +17158,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			}
 		}
 	}
-	if (kCivic.isTaxationAnger())
-	{
-		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_RAISING_TAXATION_ANGER"));
-	}
 
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{

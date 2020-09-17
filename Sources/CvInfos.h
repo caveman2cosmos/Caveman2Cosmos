@@ -3121,7 +3121,6 @@ public:
 	bool isNoNonStateReligionSpread() const; // Exposed to Python
 	bool IsFixedBorders() const;
 	bool isNoCapitalUnhappiness() const;
-	bool isTaxationAnger() const;
 	bool isNoLandmarkAnger() const;
 	bool isEnablesMAD() const;
 	bool isAllReligionsActive() const;
@@ -3287,7 +3286,6 @@ protected:
 
 	bool m_bFixedBorders;
 	bool m_bNoCapitalUnhappiness;
-	bool m_bTaxationAnger;
 	bool m_bNoLandmarkAnger;
 	bool m_bEnablesMAD;
 	bool m_bUpgradeAnywhere;
