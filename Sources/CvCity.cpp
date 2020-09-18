@@ -17819,7 +17819,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHealthCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHappinessCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWaterGoodHealth);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iFreshWaterBadHealth, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iFreshWaterBadHealth, SAVE_VALUE_ANY);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingGoodHealth);
