@@ -7136,10 +7136,6 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 
 void CvUnit::gift(bool bTestTransport)
 {
-	CvUnit* pGiftUnit;
-	CvWString szBuffer;
-	PlayerTypes eOwner;
-
 	if (!canGift(false, bTestTransport))
 	{
 		return;
@@ -7157,20 +7153,17 @@ void CvUnit::gift(bool bTestTransport)
 	}
 
 	FAssertMsg(plot()->getOwner() != NO_PLAYER, "plot()->getOwner() is not expected to be equal with NO_PLAYER");
-	pGiftUnit = GET_PLAYER(plot()->getOwner()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-	FAssertMsg(pGiftUnit != NULL, "GiftUnit is not assigned a valid value");
-
-	eOwner = getOwner();
+	CvUnit* pGiftUnit = GET_PLAYER(plot()->getOwner()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	if (pGiftUnit == NULL)
+	{
+		FErrorMsg("GiftUnit is not assigned a valid value");
+		return;
+	}
+	const PlayerTypes eOwner = getOwner();
 
 	pGiftUnit->convert(this);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/03/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-	//GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() / 5));
 	if( pGiftUnit->isCombat() )
 	{
 		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() * 3 * GC.getGame().AI_combatValue(pGiftUnit->getUnitType()))/100);
@@ -7179,14 +7172,11 @@ void CvUnit::gift(bool bTestTransport)
 	{
 		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost()));
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
 		AddDLLMessage(pGiftUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), CvColorInfo::white(), pGiftUnit->getX(), pGiftUnit->getY(), true, true);
 	}
 
@@ -13163,8 +13153,6 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 
 bool CvUnit::upgrade(UnitTypes eUnit)
 {
-	CvUnit* pUpgradeUnit;
-
 	if (!canUpgrade(eUnit))
 	{
 		return false;
@@ -13189,10 +13177,12 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 	//Set Unit to reload onto
 	CvUnit* pTransportUnit = getTransportUnit();
 
-	pUpgradeUnit = GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-	FAssertMsg(pUpgradeUnit != NULL, "UpgradeUnit is not assigned a valid value");
-
+	CvUnit* pUpgradeUnit = GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	if (pUpgradeUnit == NULL)
+	{
+		FErrorMsg("UpgradeUnit is not assigned a valid value");
+		return false;
+	}
 	pUpgradeUnit->joinGroup(getGroup());
 	if (pTransportUnit)
 	{
@@ -31158,19 +31148,21 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 			getUnitType(), pBestCity->getX(), pBestCity->getY(), AI_getUnitAIType(), NO_DIRECTION,
 			GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
 		);
-
-		pTradeUnit->convert(this);
+		if (pTradeUnit != NULL)
 		{
-			MEMORY_TRACK_EXEMPT();
-			AddDLLMessage(
-				pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText(
-					"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
-					GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
-				),
-				"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
-				CvColorInfo::white(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
-			);
+			pTradeUnit->convert(this);
+			{
+				MEMORY_TRACK_EXEMPT();
+				AddDLLMessage(
+					pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
+						GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
+					),
+					"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
+					CvColorInfo::white(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
+				);
+			}
 		}
 	 }
 }

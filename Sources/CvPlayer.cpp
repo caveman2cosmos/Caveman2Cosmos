@@ -18739,7 +18739,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				pTargetUnit->kill(false, getID());
 				CvUnit* acquiredWorker = initUnit(pTargetUnit->getUnitType(), iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				CvCity* pCapital = this->getCapitalCity();
-				if (NULL != pCapital)
+				if (NULL != pCapital && acquiredWorker != NULL)
 				{
 					iX = pCapital->getX();
 					iY = pCapital->getY();
@@ -25883,6 +25883,11 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 	foreach_(CvUnit* pLoopUnit, kPlayer.units())
 	{
 		CvUnit* pNewUnit = initUnit(pLoopUnit->getUnitType(), pLoopUnit->getX(), pLoopUnit->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+		if (pNewUnit == NULL)
+		{
+			FErrorMsg("CvPlayer::initUnit returned NULL");
+			break;
+		}
 		pNewUnit->convert(pLoopUnit);
 	}
 
