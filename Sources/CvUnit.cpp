@@ -16746,10 +16746,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 		}
 		else if (bRejoin)
 		{
-			int iSelectionRegroup = GET_PLAYER(getOwner()).getSelectionRegroup();
-			int iNumSelectionGroups = GET_PLAYER(getOwner()).getNumSelectionGroups();
-			//TB Note: the above is just a tracker to see how many a player can handle before the crash it gets when there's too many initiated.
-			//both proves the theory and shows how many can exist before crashing.
+			const int iSelectionRegroup = GET_PLAYER(getOwner()).getSelectionRegroup();
 
 			if (iSelectionRegroup != NULL)
 			{
