@@ -1253,7 +1253,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		}
 	}
 
-	algo::for_each(plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this),
+	for_each(plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this),
 		CvPlot::fn::setWorkingCityOverride(NULL)
 	);
 
@@ -1363,7 +1363,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		pPlot->updateCulture(true, false);
 
-		algo::for_each(pPlot->adjacent(), CvPlot::fn::updateCulture(true, false));
+		for_each(pPlot->adjacent(), CvPlot::fn::updateCulture(true, false));
 	}
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
