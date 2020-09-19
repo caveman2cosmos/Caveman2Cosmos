@@ -144,7 +144,7 @@ public:
 	int countHumanPlayersAlive() const; // Exposed to Python
 
 	int countTotalCivPower() const; // Exposed to Python
-	int countTotalNukeUnits()const; // Exposed to Python
+	int countTotalNukeUnits() const; // Exposed to Python
 	int countKnownTechNumTeams(TechTypes eTech) const; // Exposed to Python
 	int getNumFreeBonuses(BuildingTypes eBuilding) const; // Exposed to Python
 
@@ -480,7 +480,7 @@ public:
 	TeamTypes getRankTeam(int iRank) const; // Exposed to Python
 	void setRankTeam(int iRank, TeamTypes eTeam);
 
-	int getTeamRank(TeamTypes eTeam)const; // Exposed to Python
+	int getTeamRank(TeamTypes eTeam) const; // Exposed to Python
 	void setTeamRank(TeamTypes eTeam, int iRank);
 
 	DllExport int getTeamScore(TeamTypes eTeam) const; // Exposed to Python

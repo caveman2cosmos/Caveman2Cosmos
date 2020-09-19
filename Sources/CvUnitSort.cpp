@@ -134,8 +134,7 @@ UnitSortTypes UnitSortList::getActiveSort() const
 
 bool UnitSortList::setActiveSort(UnitSortTypes eActiveSort)
 {
-	FAssertMsg(eActiveSort < NUM_UNIT_SORT, "Index out of bounds");
-	FAssertMsg(eActiveSort > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_SORT, eActiveSort)
 	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;

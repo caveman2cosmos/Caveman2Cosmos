@@ -88,8 +88,8 @@ public:
 	virtual void write(FDataStreamBase* pStream) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FAssertMsg(false, "Override this"); return false; }
-	virtual bool readPass3() { FAssertMsg(false, "Override this"); return false; }
+	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FErrorMsg("Override this"); return false; }
+	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
 	virtual void copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
@@ -932,7 +932,7 @@ public:
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i)const;
+	bool isOnGameOption(int i) const;
 
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
@@ -2056,7 +2056,7 @@ public:
 
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
-	bool isTrapImmunityUnitCombatType(int i)const;
+	bool isTrapImmunityUnitCombatType(int i) const;
 
 	int getNumAfflictionFortitudeModifiers() const;
 	const PromotionLineModifier& getAfflictionFortitudeModifier(int iAffliction) const;
@@ -8393,7 +8393,7 @@ public:
 				if(m_aFeatureArtPieces[i].getConnectionMask() == connectionMask)
 					return m_aFeatureArtPieces[i];
 
-			FAssertMsg(false, "[Jason] Failed to find feature art piece with valid connection mask.");
+			FErrorMsg("[Jason] Failed to find feature art piece with valid connection mask.");
 			return m_aFeatureArtPieces[0];
 		}
 
@@ -8405,7 +8405,7 @@ public:
 					return m_aFeatureDummyNodes[i].getNodeName();
 			}
 
-			FAssertMsg(false, "[Jason] Failed to find dummy tag name.");
+			FErrorMsg("[Jason] Failed to find dummy tag name.");
 			return "";
 		}
 

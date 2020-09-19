@@ -8,6 +8,7 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import RevInstances
+import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -1195,7 +1196,7 @@ class CvMainInterface:
 				if dataTT[3]:
 					szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
 					self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
-				else:
+				elif not ParallelMaps.bIsSwitchingMap:
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
@@ -2163,7 +2164,7 @@ class CvMainInterface:
 				eWidGen = WidgetTypes.WIDGET_GENERAL
 				eFontGame = FontTypes.GAME_FONT
 				iCurrentResearch = CyPlayer.getCurrentResearch()
-				if iCurrentResearch != -1:
+				if iCurrentResearch != -1 or not bCityScreen:
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
 					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
 
@@ -2197,14 +2198,14 @@ class CvMainInterface:
 
 							screen.setLabel("CityPercentText" + str(i), "", szTxt, 1<<1, 252, 53 + dY, 0, eFontGame, WidgetTypes.WIDGET_COMMERCE_MOD_HELP, j, -1)
 						else:
-							if j == CommerceTypes.COMMERCE_RESEARCH:
-								if bTDDisplayOption:
-									commerceRate = 100 * iResearchRate / iResearchMod
-									techDiffusionHelp = iResearchRate - commerceRate
-								else:
-									commerceRate = iResearchRate
-							else:
+							if j != CommerceTypes.COMMERCE_RESEARCH:
 								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
+
+							elif bTDDisplayOption:
+								commerceRate = 100 * iResearchRate / iResearchMod
+								techDiffusionHelp = iResearchRate - commerceRate
+							else:
+								commerceRate = iResearchRate
 
 							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))

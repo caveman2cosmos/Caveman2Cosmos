@@ -31,12 +31,13 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	void enableMultiMaps() { GC.enableMultiMaps(); }
+	bool enableMultiMaps();
 	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
 	CyMap* getMapByIndex(int iIndex);
+	int getNumMaps() const;
 	void updateMaps();
 	void initializeMap(int iMap);
 	bool mapInitialized(int iMap) const;
@@ -47,10 +48,10 @@ public:
 	bool isShiftDown() const;
 	bool isAltDown() const;
 	bool isCtrlDown() const;
-	CyPlayer* getCyPlayer(int idx);
-	CyPlayer* getCyActivePlayer();
+	CyPlayer* getCyPlayer(int idx) const;
+	CyPlayer* getCyActivePlayer() const;
 	CvRandom& getCyASyncRand() const;
-	CyTeam* getCyTeam(int i);
+	CyTeam* getCyTeam(int i) const;
 
 	CvEffectInfo* getEffectInfo(int i) const;
 	CvTerrainInfo* getTerrainInfo(int i) const;

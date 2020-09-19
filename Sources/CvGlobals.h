@@ -209,8 +209,8 @@ public:
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex) const;
+	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
-	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;
 	void clearSigns();
@@ -822,10 +822,7 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-#ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
-#endif
-	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
+	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -2185,7 +2182,7 @@ public:
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return gGlobals->getDLLIFaceNonInl();
+		return g_DLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2513,10 +2510,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef FIXED_MISSION_NUMBER
-#define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
 
 #endif
 
