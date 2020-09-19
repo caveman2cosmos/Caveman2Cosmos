@@ -40097,14 +40097,12 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 	PROFILE_FUNC();
 
 	CvUnit*	pLoopUnit;
-	CvArea* pLoopArea;
-	int		iLoop;
 
 	for(int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
 		AI_changeNumAIUnits( (UnitAITypes)iI, -AI_getNumAIUnits((UnitAITypes)iI) );
 
-		for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+		foreach_(CvArea* pLoopArea, GC.getMap().areas())
 		{
 			pLoopArea->changeNumAIUnits(m_eID, (UnitAITypes)iI, -pLoopArea->getNumAIUnits(m_eID, (UnitAITypes)iI));
 		}

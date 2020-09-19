@@ -7721,7 +7721,7 @@ void CvGame::createBarbarianUnits()
 
 	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
-		UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
+		const UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
 
 		const int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
 
@@ -7808,7 +7808,7 @@ void CvGame::createBarbarianUnits()
 	//Kill off extra ships
 	int iRand = 10000;
 	int iBarbSeaUnits = 0;
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(CvArea* pLoopArea, GC.getMap().areas())
 	{
 		if (pLoopArea->isWater())
 		{
