@@ -20,6 +20,17 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
+#ifdef PARALLEL_MAPS
+void CyPlayer::updateMembers()
+{
+	m_pPlayer->updateMembers();
+}
+
+void CyPlayer::initMembers(int iIndex)
+{
+	m_pPlayer->initMembers(iIndex);
+}
+#endif
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */
@@ -925,7 +936,7 @@ int CyPlayer::getAveragePopulation()
 	return m_pPlayer ? m_pPlayer->getAveragePopulation() : -1;
 }
 
-long CyPlayer::getRealPopulation()
+int64_t CyPlayer::getRealPopulation() const
 {
 	return m_pPlayer ? m_pPlayer->getRealPopulation() : -1;
 }

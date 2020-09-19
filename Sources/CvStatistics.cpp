@@ -468,8 +468,7 @@ void CvStatistics::write(FDataStreamBase* pStream)
 //
 CvPlayerRecord *CvStatistics::getPlayerRecord(int iIndex)
 {
-	FAssert(iIndex >= 0);
-	FAssert(iIndex < MAX_PLAYERS);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, iIndex)
 
 	if ( iIndex >= (int)m_PlayerRecords.size() || m_PlayerRecords[iIndex] == NULL )
 	{

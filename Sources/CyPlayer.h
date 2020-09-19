@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -24,6 +21,10 @@ public:
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 	bool isNone() const { return m_pPlayer == NULL; }
 
+#ifdef PARALLEL_MAPS
+	void updateMembers();
+	void initMembers(int iIndex);
+#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -215,7 +216,7 @@ public:
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
 	int getAveragePopulation();
-	long getRealPopulation();
+	int64_t getRealPopulation() const;
 
 	int getTotalLand();
 	int getTotalLandScored();

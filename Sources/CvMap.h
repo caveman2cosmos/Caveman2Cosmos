@@ -44,12 +44,9 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
-
 	friend class CyMap;
 
 public:
-
-	CvMap();
 	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
 	virtual ~CvMap();
 
@@ -71,7 +68,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	MapTypes getType() const;
-	void setType(MapTypes eNewType);
 
 	void beforeSwitch();
 	void afterSwitch();
@@ -124,12 +120,10 @@ public:
 	int getMapFractalFlags() const;																												// Exposed to Python
 	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
-#ifdef _USRDLL
 	inline bool isPlot(int iX, int iY) const // Exposed to Python
 	{
 		return (iX >= 0 && iX < getGridWidth() && iY >= 0 && iY < getGridHeight());
 	}
-#endif
 
 	inline int numPlots() const { return getGridWidth() * getGridHeight(); } // Exposed to Python
 
@@ -270,7 +264,7 @@ protected:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	MapTypes m_eType;
+	const MapTypes m_eType;
 	std::vector<CvViewport*> m_viewports;
 	int m_iCurrentViewportIndex;
 /*******************************/

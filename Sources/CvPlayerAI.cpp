@@ -428,7 +428,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 				if ( iCount != pLoopArea->getNumAIUnits(getID(), (UnitAITypes)iI) )
 				{
-					FAssertMsg(false,"UnitAI miscount");
+					FErrorMsg("UnitAI miscount");
 				}
 			}
 		}
@@ -477,7 +477,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 	//	Mark previous yield data as stale
 #ifdef YIELD_VALUE_CACHING
-	algo::for_each(cities(), CvCity::fn::ClearYieldValueCache());
+	for_each(cities(), CvCity::fn::ClearYieldValueCache());
 #endif
 
 		AI_doResearch();
@@ -567,7 +567,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	PROFILE_FUNC();
 
 	//	Clear cached defensive status info on each city
-	algo::for_each(cities(), CvCity::fn::AI_preUnitTurn());
+	for_each(cities(), CvCity::fn::AI_preUnitTurn());
 
 #ifdef PLOT_DANGER_CACHING
 	//	Clear plot danger cache
@@ -1310,7 +1310,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 				GC.getMap().plotByIndex(iI)->clearFoundValue(getID());
 			}
 		}
-		algo::for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
+		for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
 	}
 	else
 	{
@@ -1633,17 +1633,21 @@ void CvPlayerAI::AI_unitUpdate()
 	}
 
 	//	Should have the same set of groups as is represented by m_selectionGroups
-	//	as (indirectly via their head units) by m_groupCycle.  These have been seen to
+	//	as (indirectly via their head units) by m_groupCycles.  These have been seen to
 	//	get out of step, which results in a WFoC so if they contain differing member
 	//	counts go through and fix it!
 	//	Note - this is fixing a symptom rather than a cause which is distasteful, but as
 	//	yet the cause remains elusive
+#ifdef PARALLEL_MAPS
+	if ( m_groupCycles[GC.getGame().getCurrentMap()]->getLength() != m_selectionGroups[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit == NULL ? 0 : 1) )
+#else
 	if ( m_groupCycle.getLength() != m_selectionGroups.getCount() - (m_pTempUnit == NULL ? 0 : 1) )
+#endif
 	{
 		if ( m_pTempUnit != NULL )
 		{
-			FAssert(m_pTempUnit->getGroup() != NULL);
-			OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
+			//FAssert(m_pTempUnit->getGroup() != NULL);
+			//OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
 		}
 		OutputDebugString("Group cycle:\n");
 		for(CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
@@ -1656,8 +1660,11 @@ void CvPlayerAI::AI_unitUpdate()
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY()).c_str());
 		}
 
+#ifdef PARALLEL_MAPS
+		FAssert(m_selectionGroups[GC.getGame().getCurrentMap()]->getCount() > m_groupCycles[GC.getGame().getCurrentMap()]->getLength());	//	Other way round not seen - not handled currently
+#else
 		FAssert(m_selectionGroups.getCount() > m_groupCycle.getLength());	//	Other way round not seen - not handled currently
-
+#endif
 		OutputDebugString("Selection groups:\n");
 		foreach_ (CvSelectionGroup* pLoopSelectionGroup, groups())
 		{
@@ -3970,7 +3977,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 			if ( realValue != entry->iResult )
 			{
-				FAssertMsg(false, "Plot danger cache verification failure");
+				FErrorMsg("Plot danger cache verification failure");
 			}
 #endif
 			return entry->iResult;
@@ -18161,110 +18168,97 @@ void CvPlayerAI::AI_setExtraGoldTarget(int iNewValue)
 
 int CvPlayerAI::AI_getNumTrainAIUnits(UnitAITypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	return m_aiNumTrainAIUnits[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeNumTrainAIUnits(UnitAITypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiNumTrainAIUnits[eIndex] = (m_aiNumTrainAIUnits[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
+	m_aiNumTrainAIUnits[eIndex] += iChange;
 	FAssert(AI_getNumTrainAIUnits(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getNumAIUnits(UnitAITypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	return m_aiNumAIUnits[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeNumAIUnits(UnitAITypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiNumAIUnits[eIndex] = (m_aiNumAIUnits[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
+	m_aiNumAIUnits[eIndex] += iChange;
 	FAssert(AI_getNumAIUnits(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getSameReligionCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiSameReligionCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeSameReligionCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiSameReligionCounter[eIndex] = (m_aiSameReligionCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiSameReligionCounter[eIndex] += iChange;
 	FAssert(AI_getSameReligionCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getDifferentReligionCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiDifferentReligionCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeDifferentReligionCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiDifferentReligionCounter[eIndex] = (m_aiDifferentReligionCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiDifferentReligionCounter[eIndex] += iChange;
 	FAssert(AI_getDifferentReligionCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getFavoriteCivicCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiFavoriteCivicCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeFavoriteCivicCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiFavoriteCivicCounter[eIndex] = (m_aiFavoriteCivicCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiFavoriteCivicCounter[eIndex] += iChange;
 	FAssert(AI_getFavoriteCivicCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getBonusTradeCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiBonusTradeCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeBonusTradeCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiBonusTradeCounter[eIndex] = (m_aiBonusTradeCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiBonusTradeCounter[eIndex] += iChange;
 	FAssert(AI_getBonusTradeCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getPeacetimeTradeValue(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiPeacetimeTradeValue[eIndex];
 }
 
@@ -18275,8 +18269,7 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 
 	int iI;
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (iChange != 0)
 	{
@@ -18338,8 +18331,7 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 
 int CvPlayerAI::AI_getPeacetimeGrantValue(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiPeacetimeGrantValue[eIndex];
 }
 
@@ -18350,12 +18342,11 @@ void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
 
 	int iI;
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiPeacetimeGrantValue[eIndex] = (m_aiPeacetimeGrantValue[eIndex] + iChange);
+		m_aiPeacetimeGrantValue[eIndex] += iChange;
 		FAssert(AI_getPeacetimeGrantValue(eIndex) >= 0);
 
 		FAssert(iChange > 0);
@@ -18400,33 +18391,29 @@ void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
 
 int CvPlayerAI::AI_getGoldTradedTo(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiGoldTradedTo[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiGoldTradedTo[eIndex] = (m_aiGoldTradedTo[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiGoldTradedTo[eIndex] += iChange;
 	FAssert(AI_getGoldTradedTo(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getAttitudeExtra(const PlayerTypes ePlayer) const
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 	return m_aiAttitudeExtra[ePlayer];
 }
 
 
 void CvPlayerAI::AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue)
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
 	if (m_aiAttitudeExtra[ePlayer] != iNewValue)
 	{
@@ -18444,36 +18431,30 @@ void CvPlayerAI::AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iCh
 
 bool CvPlayerAI::AI_isFirstContact(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_abFirstContact[eIndex];
 }
 
 
 void CvPlayerAI::AI_setFirstContact(PlayerTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_abFirstContact[eIndex] = bNewValue;
 }
 
 
 int CvPlayerAI::AI_getContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_CONTACT_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, eIndex2)
 	return m_aaiContactTimer[eIndex1][eIndex2];
 }
 
 
 void CvPlayerAI::AI_changeContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_CONTACT_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, eIndex2)
 /************************************************************************************************/
 /* Afforess					  Start		 09/15/10											   */
 /*																							  */
@@ -18494,20 +18475,17 @@ void CvPlayerAI::AI_changeContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2
 
 int CvPlayerAI::AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_MEMORY_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, eIndex2)
 	return m_aaiMemoryCount[eIndex1][eIndex2];
 }
 
 
 void CvPlayerAI::AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_MEMORY_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, eIndex2)
+
 	m_aaiMemoryCount[eIndex1][eIndex2] += iChange;
 // BUG - Update Attitude Icons - start
 	if (eIndex1 == GC.getGame().getActivePlayer())
@@ -19359,10 +19337,9 @@ void CvPlayerAI::AI_doCivics()
 	{
 		if ( canDoCivics((CivicTypes)iI) )
 		{
-			int	iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
+			const int iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
 
-			FAssert(iCivicOption >= 0);
-			FAssert(iCivicOption < GC.getNumCivicOptionInfos());
+			FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), iCivicOption)
 
 			paiAvailableChoices[iCivicOption]++;
 		}
@@ -22083,7 +22060,7 @@ void CvPlayerAI::AI_doDiplo()
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_FRIENDLY", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	default:
-																		FAssertMsg(false, "No Valid Attitude");
+																		FErrorMsg("No Valid Attitude");
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_CAUTIOUS", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	}
@@ -26128,8 +26105,7 @@ int CvPlayerAI::AI_goldTradeValuePercent() const
 
 int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 {
-	FAssert(eYield > -1);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26142,8 +26118,7 @@ int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 
 int CvPlayerAI::AI_averageCommerceMultiplier(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26165,8 +26140,7 @@ int CvPlayerAI::AI_averageGreatPeopleMultiplier() const
 //"100 eCommerce is worth (return) raw YIELD_COMMERCE
 int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26747,7 +26721,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 				}
 				else
 				{
-					FAssertMsg(false, "StartingPlot for a live player is NULL!");
+					FErrorMsg("StartingPlot for a live player is NULL!");
 				}
 			}
 		}
@@ -26758,7 +26732,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 		return pBestPlot;
 	}
 
-	FAssertMsg(false, "AS: Failed to find a starting plot for a player");
+	FErrorMsg("AS: Failed to find a starting plot for a player");
 
 	//Execution should almost never reach here.
 
@@ -26797,7 +26771,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 	}
 
 	//Commence panic.
-	FAssertMsg(false, "Failed to find an advanced start starting plot");
+	FErrorMsg("Failed to find an advanced start starting plot");
 	return NULL;
 }
 
@@ -26923,7 +26897,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 			//this should never happen since the cost for a city should be 0 if
 			//the city can't be placed.
 			//(It can happen if another player has placed a city in the fog)
-			FAssertMsg(false, "ADVANCEDSTARTACTION_CITY failed in unexpected way");
+			FErrorMsg("ADVANCEDSTARTACTION_CITY failed in unexpected way");
 			return false;
 		}
 	}
@@ -27320,7 +27294,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			{
 				if (!AI_advancedStartPlaceCity(pBestCapitalPlot))
 				{
-					FAssertMsg(false, "AS AI: Unexpected failure placing capital");
+					FErrorMsg("AS AI: Unexpected failure placing capital");
 				}
 				break;
 			}
@@ -27488,7 +27462,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		{
 			if (!AI_advancedStartPlaceCity(pBestFoundPlot))
 			{
-				FAssertMsg(false, "AS AI: Failed to place city (non-capital)");
+				FErrorMsg("AS AI: Failed to place city (non-capital)");
 				bDonePlacingCities = true;
 			}
 		}
@@ -39926,11 +39900,11 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	//invalidate cache
 	m_iMilitaryProductionCityCount = -1;
 
-	algo::for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
+	for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
 
 	m_iNavalMilitaryProductionCityCount = -1;
 
-	algo::for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
+	for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
 
 	if (getNumCities() < 4)
 	{
