@@ -40096,8 +40096,6 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-	CvUnit*	pLoopUnit;
-
 	for(int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
 		AI_changeNumAIUnits( (UnitAITypes)iI, -AI_getNumAIUnits((UnitAITypes)iI) );
@@ -40108,9 +40106,9 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 		}
 	}
 
-	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 		if ( NO_UNITAI != eAIType )
 		{

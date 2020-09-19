@@ -373,7 +373,7 @@ bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 {
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	foreach_(const CvArea* pLoopArea, GC.getMap().area())
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
 		if (AI_isPrimaryArea(pLoopArea) && GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
 		{
@@ -1459,7 +1459,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		}
 	}
 	int iTheirAttackers = 0;
-	foreach_(const CvArea* pLoopArea, GC.getMap().area())
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
@@ -5209,7 +5209,7 @@ void CvTeamAI::AI_doWar()
 						bAreaValid = false;
 						bShareValid = false;
 
-						foreach_(const CvArea* pLoopArea, GC.getMap().area())
+						foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 						{
 							if (AI_isPrimaryArea(pLoopArea))
 							{
