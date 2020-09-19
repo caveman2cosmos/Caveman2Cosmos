@@ -477,7 +477,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 	//	Mark previous yield data as stale
 #ifdef YIELD_VALUE_CACHING
-	algo::for_each(cities(), CvCity::fn::ClearYieldValueCache());
+	for_each(cities(), CvCity::fn::ClearYieldValueCache());
 #endif
 
 		AI_doResearch();
@@ -567,7 +567,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	PROFILE_FUNC();
 
 	//	Clear cached defensive status info on each city
-	algo::for_each(cities(), CvCity::fn::AI_preUnitTurn());
+	for_each(cities(), CvCity::fn::AI_preUnitTurn());
 
 #ifdef PLOT_DANGER_CACHING
 	//	Clear plot danger cache
@@ -1310,7 +1310,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 				GC.getMap().plotByIndex(iI)->clearFoundValue(getID());
 			}
 		}
-		algo::for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
+		for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
 	}
 	else
 	{
@@ -39926,11 +39926,11 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	//invalidate cache
 	m_iMilitaryProductionCityCount = -1;
 
-	algo::for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
+	for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
 
 	m_iNavalMilitaryProductionCityCount = -1;
 
-	algo::for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
+	for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
 
 	if (getNumCities() < 4)
 	{

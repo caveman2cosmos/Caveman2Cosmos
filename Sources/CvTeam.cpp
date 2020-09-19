@@ -6477,7 +6477,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			GET_PLAYER((PlayerTypes)iI).updateCorporation();
 
 			//	A new tech can effect best plot build decisions so mark stale in all cities
-			algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::AI_markBestBuildValuesStale());
+			for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::AI_markBestBuildValuesStale());
 		}
 	}
 
@@ -7334,7 +7334,7 @@ void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTy
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
 		{
-			algo::for_each(kLoopPlayer.cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
+			for_each(kLoopPlayer.cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
 				CvCity::fn::AI_setAssignWorkDirty(true)
 			);
 		}
@@ -7605,7 +7605,7 @@ void CvTeam::ObsoletePromotions(TechTypes eObsoleteTech)
 					const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 					if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
 					{
-						algo::for_each(kLoopPlayer.units(), CvUnit::fn::checkPromotionObsoletion());
+						for_each(kLoopPlayer.units(), CvUnit::fn::checkPromotionObsoletion());
 					}
 				}
 				break;
@@ -7730,7 +7730,7 @@ void CvTeam::changeCorporationRevenueModifier(int iChange)
 			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
 			{
-				algo::for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
+				for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
 			}
 		}
 	}
@@ -7752,7 +7752,7 @@ void CvTeam::changeCorporationMaintenanceModifier(int iChange)
 			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 			if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
 			{
-				algo::for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
+				for_each(kLoopPlayer.cities(), CvCity::fn::updateCorporation());
 			}
 		}
 	}

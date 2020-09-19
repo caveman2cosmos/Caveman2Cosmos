@@ -29123,7 +29123,7 @@ void CvPlayer::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
 		FAssert(getFreeSpecialistCount(eIndex) >= 0);
 
-		algo::for_each(cities(), CvCity::fn::changeFreeSpecialistCount(eIndex, iNewValue - iOldValue));
+		for_each(cities(), CvCity::fn::changeFreeSpecialistCount(eIndex, iNewValue - iOldValue));
 	}
 }
 
@@ -29706,7 +29706,7 @@ void CvPlayer::changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIn
 
 void CvPlayer::setCityCommerceModifierDirty(CommerceTypes eCommerce)
 {
-	algo::for_each(cities(), CvCity::fn::setCommerceModifierDirty(eCommerce));
+	for_each(cities(), CvCity::fn::setCommerceModifierDirty(eCommerce));
 }
 
 int CvPlayer::getLandmarkYield(YieldTypes eIndex) const
@@ -29766,7 +29766,7 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	GC.getInitCore().setColor( getID(), eColor );
 	gDLL->getInterfaceIFace()->makeInterfaceDirty();
 
-	algo::for_each(cities(), CvCity::fn::setLayoutDirty(true));
+	for_each(cities(), CvCity::fn::setLayoutDirty(true));
 
 // Forces update of units flags
 	EraTypes eEra = getCurrentEra();
@@ -30347,12 +30347,12 @@ void CvPlayer::clearCanConstructCache(BuildingTypes building, bool bIncludeCitie
 
 			if (bIncludeCities)
 			{
-				algo::for_each(cities(), CvCity::fn::FlushCanConstructCache(building));
+				for_each(cities(), CvCity::fn::FlushCanConstructCache(building));
 			}
 		}
 	}
 
-	algo::for_each(cities(), CvCity::fn::setBuildingListInvalid());
+	for_each(cities(), CvCity::fn::setBuildingListInvalid());
 }
 
 void CvPlayer::clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities) const
@@ -30373,12 +30373,12 @@ void CvPlayer::clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuild
 
 			if (bIncludeCities)
 			{
-				algo::for_each(cities(), CvCity::fn::FlushCanConstructCache((BuildingTypes)iI));
+				for_each(cities(), CvCity::fn::FlushCanConstructCache((BuildingTypes)iI));
 			}
 		}
 	}
 
-	algo::for_each(cities(), CvCity::fn::setBuildingListInvalid());
+	for_each(cities(), CvCity::fn::setBuildingListInvalid());
 }
 
 void CvPlayer::clearModifierTotals()
@@ -30386,7 +30386,7 @@ void CvPlayer::clearModifierTotals()
 	int iI, iJ;
 
 	//	Clear city-sourced modifiers
-	algo::for_each(cities(), CvCity::fn::clearModifierTotals());
+	for_each(cities(), CvCity::fn::clearModifierTotals());
 
 	//	Project stuff
 	m_iWorldHappiness = 0;
@@ -31040,7 +31040,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	}
 
 	//Run through Unit Promotion Changes
-	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(iChange > 0, eTrait));
+	for_each(units(), CvUnit::fn::doSetFreePromotions(iChange > 0, eTrait));
 }
 
 void CvPlayer::recalculateModifiers()
@@ -31150,7 +31150,7 @@ void CvPlayer::recalculateModifiers()
 	}
 
 	//Remove trait promos during recalc - it will add them back when processing in the traits.
-	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
+	for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
 
 	//	Owing to an old bug the home area may not know it is our home area
 	//	so set that up now if needed as well
@@ -31165,7 +31165,7 @@ void CvPlayer::recalculateModifiers()
 	}
 
 	//	Put back city-sourced modifiers
-	algo::for_each(cities(), CvCity::fn::recalculateModifiers());
+	for_each(cities(), CvCity::fn::recalculateModifiers());
 
 	//	Put back civic-sourced modifiers
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
@@ -31795,7 +31795,7 @@ void CvPlayer::changeExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTy
 
 void CvPlayer::updateExtraSpecialistCommerce()
 {
-	algo::for_each(cities(), CvCity::fn::updateExtraSpecialistCommerce());
+	for_each(cities(), CvCity::fn::updateExtraSpecialistCommerce());
 }
 
 int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
@@ -32869,14 +32869,14 @@ void CvPlayer::startDeferredPlotGroupBonusCalculation()
 {
 	PROFILE_FUNC();
 
-	algo::for_each(cities(), CvCity::fn::startDeferredBonusProcessing());
+	for_each(cities(), CvCity::fn::startDeferredBonusProcessing());
 }
 
 void CvPlayer::endDeferredPlotGroupBonusCalculation()
 {
 	PROFILE_FUNC();
 
-	algo::for_each(cities(), CvCity::fn::endDeferredBonusProcessing());
+	for_each(cities(), CvCity::fn::endDeferredBonusProcessing());
 }
 
 bool CvPlayer::hasFixedBorders() const
@@ -32965,14 +32965,14 @@ void CvPlayer::updateTechHappinessandHealth()
 {
 	PROFILE_FUNC()
 
-	algo::for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
+	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
 }
 
 void CvPlayer::checkReligiousDisablingAllBuildings()
 {
 	PROFILE_FUNC()
 
-	algo::for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
+	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }
 
 bool CvPlayer::isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const
@@ -33141,7 +33141,7 @@ UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 
 void CvPlayer::setSMValues()
 {
-	algo::for_each(units(), CvUnit::fn::setSMValues());
+	for_each(units(), CvUnit::fn::setSMValues());
 }
 
 void CvPlayer::upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY)

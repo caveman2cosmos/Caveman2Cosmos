@@ -6623,7 +6623,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (pNewCity != NULL)
 			{
-				algo::for_each(units() | filtered(CvUnit::fn::isEnemy(GET_PLAYER(eNewValue).getTeam())),
+				for_each(units() | filtered(CvUnit::fn::isEnemy(GET_PLAYER(eNewValue).getTeam())),
 					CvUnit::fn::jumpToNearestValidPlot(true)
 				);
 
@@ -9452,7 +9452,7 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 			{
 				setRevealed(eTeam, true, false, NO_TEAM, bUpdatePlotGroups);
 
-				algo::for_each(adjacent(), CvPlot::fn::updateRevealedOwner(eTeam));
+				for_each(adjacent(), CvPlot::fn::updateRevealedOwner(eTeam));
 
 				if (getTeam() != NO_TEAM)
 				{
@@ -10545,7 +10545,7 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 
 	if (bAdjacent)
 	{
-		algo::for_each(adjacent(), CvPlot::fn::updateRouteSymbol(bForce, false));
+		for_each(adjacent(), CvPlot::fn::updateRouteSymbol(bForce, false));
 	}
 
 	const RouteTypes eRoute = getRevealedRouteType(GC.getGame().getActiveTeam(), true);
@@ -10594,7 +10594,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 
 	if (bAdjacent)
 	{
-		algo::for_each(adjacent(), CvPlot::fn::updateRiverSymbol(bForce, false));
+		for_each(adjacent(), CvPlot::fn::updateRiverSymbol(bForce, false));
 	}
 
 	if (!isRiverMask() ||
