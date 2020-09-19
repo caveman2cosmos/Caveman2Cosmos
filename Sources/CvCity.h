@@ -2406,6 +2406,7 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setNavalMilitaryProductionCity, bool);
 		DECLARE_MAP_FUNCTOR_1(CvCity, void, kill, bool);
 
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setBuildingListFilterActive, BuildingFilterTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, updateCommerce, CommerceTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeAreaBuilding, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
