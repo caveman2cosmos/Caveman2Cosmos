@@ -495,9 +495,9 @@ bool CvTeam::isRebel() const
 {
 	bool bValid = false;
 
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
-		if (getMember(iI).isRebel())
+		if (teamMember->isRebel())
 		{
 			bValid = true;
 		}
@@ -511,14 +511,7 @@ bool CvTeam::isRebel() const
 
 bool CvTeam::isSingleCityTeam() const
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
-	{
-		if (getMember(iI).getNumCities() > 0)
-		{
-			return false;
-		}
-	}
-	return true;
+	return algo::none_of(members(), CvPlayer::fn::getNumCities() > 0);
 }
 
 bool CvTeam::isRebelAgainst(TeamTypes eTeam) const
@@ -1106,27 +1099,27 @@ void CvTeam::doTurn()
 
 void CvTeam::updateYield()
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(CvPlayer* teamMember, members())
 	{
-		getMember(iI).updateYield();
+		teamMember->updateYield();
 	}
 }
 
 
 void CvTeam::updatePowerHealth()
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(CvPlayer* teamMember, members())
 	{
-		getMember(iI).updatePowerHealth();
+		teamMember->updatePowerHealth();
 	}
 }
 
 
 void CvTeam::updateCommerce()
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(CvPlayer* teamMember, members())
 	{
-		getMember(iI).updateCommerce();
+		teamMember->updateCommerce();
 	}
 }
 
@@ -1457,9 +1450,9 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 			if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 			{
-				for (int iI = 0; iI < getNumMembers(); iI++)
+				foreach_(const CvPlayer* teamMember, members())
 				{
-					const PlayerTypes teamMember = getMember(iI).getID();
+					const PlayerTypes memberID = teamMember->getID();
 
 					//Calculate players we just backstabbed
 					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
@@ -1469,9 +1462,9 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 							//Player is on the team we are declaring war on
 							if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
 							{
-								if (GET_PLAYER((PlayerTypes)iJ).AI_getAttitude(teamMember) >= ATTITUDE_PLEASED)
+								if (GET_PLAYER((PlayerTypes)iJ).AI_getAttitude(memberID) >= ATTITUDE_PLEASED)
 								{
-									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(teamMember, MEMORY_BACKSTAB, 1);
+									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(memberID, MEMORY_BACKSTAB, 1);
 								}
 							}
 						}
@@ -1487,7 +1480,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 								//Friends with the leader of the team we declared war on
 								if (GET_PLAYER((PlayerTypes)iJ).AI_getAttitude(GET_TEAM(eTeam).getLeaderID()) >= ATTITUDE_PLEASED)
 								{
-									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(teamMember, MEMORY_BACKSTAB_FRIEND, 1);
+									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(memberID, MEMORY_BACKSTAB_FRIEND, 1);
 								}
 							}
 						}
@@ -1588,26 +1581,23 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 		{
-			if (bNewDiplo)
+			if (bNewDiplo && !isHuman())
 			{
-				if (!isHuman())
+				for (iI = 0; iI < MAX_PLAYERS; iI++)
 				{
-					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
 						{
-							if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+							if (GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI))
 							{
-								if (GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI))
+								if (GET_PLAYER((PlayerTypes)iI).isHuman())
 								{
-									if (GET_PLAYER((PlayerTypes)iI).isHuman())
-									{
-										pDiplo = new CvDiploParameters(getLeaderID());
-										FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
-										pDiplo->setDiploComment((DiploCommentTypes)GC.getInfoTypeForString("AI_DIPLOCOMMENT_DECLARE_WAR"));
-										pDiplo->setAIContact(true);
-										gDLL->beginDiplomacy(pDiplo, ((PlayerTypes)iI));
-									}
+									pDiplo = new CvDiploParameters(getLeaderID());
+									FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
+									pDiplo->setDiploComment((DiploCommentTypes)GC.getInfoTypeForString("AI_DIPLOCOMMENT_DECLARE_WAR"));
+									pDiplo->setAIContact(true);
+									gDLL->beginDiplomacy(pDiplo, ((PlayerTypes)iI));
 								}
 							}
 						}
@@ -1915,7 +1905,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 bool CvTeam::canContact(TeamTypes eTeam) const
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
 		for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 		{
@@ -1923,7 +1913,7 @@ bool CvTeam::canContact(TeamTypes eTeam) const
 			{
 				if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
 				{
-					if (getMember(iI).canContact((PlayerTypes)iJ))
+					if (teamMember->canContact((PlayerTypes)iJ))
 					{
 						return true;
 					}
