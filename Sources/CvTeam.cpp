@@ -6186,17 +6186,11 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		}
 	}
 
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
+	foreach_(CvPlayer* teamMember, members())
 	{
-		CvPlayer& kPlayer = getMember(iPlayer);
-
-		kPlayer.updateCorporation();
-
+		teamMember->updateCorporation();
 		//	A new tech can effect best plot build decisions so mark stale in all cities
-		foreach_(CvCity* city, kPlayer.cities())
-		{
-			city->AI_markBestBuildValuesStale();
-		}
+		for_each(teamMember->cities(), CvCity::fn::AI_markBestBuildValuesStale());
 	}
 
 	if ( iChange > 0 )
@@ -6379,14 +6373,12 @@ void CvTeam::verifySpyUnitsValidPlot()
 {
 	std::vector<CvUnit*> aUnits;
 
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
-		const CvPlayer& kPlayer = getMember(iPlayer);
-
-		foreach_(CvUnit* pUnit, kPlayer.units())
+		foreach_(CvUnit* pUnit, teamMember->units() | filtered(CvUnit::fn::plot() && CvUnit::fn::isSpy()))
 		{
 			const PlayerTypes eOwner = pUnit->plot()->getOwner();
-			if (NO_PLAYER != eOwner && pUnit->isSpy() && !kPlayer.canSpiesEnterBorders(eOwner))
+			if (NO_PLAYER != eOwner && !teamMember->canSpiesEnterBorders(eOwner))
 			{
 				aUnits.push_back(pUnit);
 			}
@@ -7017,15 +7009,11 @@ void CvTeam::changeTechExtraBuildingHealth(BuildingTypes eIndex, int iChange)
 
 void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTypes eBuilding)
 {
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
-		foreach_(CvCity* city, getMember(iI).cities())
-		{
-			if (city->getNumActiveBuilding(eBuilding) > 0)
-			{
-				city->AI_setAssignWorkDirty(true);
-			}
-		}
+		for_each(teamMember->cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
+			CvCity::fn::AI_setAssignWorkDirty(true)
+		);
 	}
 }
 /* Sets the happiness added to a single building type by all acquired techs.
@@ -7040,9 +7028,9 @@ void CvTeam::setTechExtraBuildingHappiness(BuildingTypes eIndex, int iNewValue)
 		const int iOldValue = m_paiTechExtraBuildingHappiness[eIndex];
 		m_paiTechExtraBuildingHappiness[eIndex] = iNewValue;
 
-		for (int iI = 0; iI < getNumMembers(); iI++)
+		foreach_(const CvPlayer* teamMember, members())
 		{
-			foreach_(CvCity* city, getMember(iI).cities())
+			foreach_(CvCity* city, teamMember->cities())
 			{
 				const int iNumBuildings = city->getNumActiveBuilding(eIndex);
 				if (iNumBuildings > 0 && !city->isReligiouslyDisabledBuilding(eIndex))
@@ -7271,12 +7259,9 @@ void CvTeam::ObsoletePromotions(TechTypes eObsoleteTech)
 		{
 			if (GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() == eObsoleteTech)
 			{
-				for (int iI = 0; iI < getNumMembers(); iI++)
+				foreach_(const CvPlayer* teamMember, members())
 				{
-					foreach_(CvUnit* unit, getMember(iI).units())
-					{
-						unit->checkPromotionObsoletion();
-					}
+					for_each(teamMember->units(), CvUnit::fn::checkPromotionObsoletion());
 				}
 				break;
 			}
@@ -7380,12 +7365,10 @@ void CvTeam::changeCorporationRevenueModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iCorporationRevenueModifier += iChange;
-		for (int iI = 0; iI < getNumMembers(); iI++)
+
+		foreach_(const CvPlayer* teamMember, members())
 		{
-			foreach_(CvCity* city, getMember(iI).cities())
-			{
-				city->updateCorporation();
-			}
+			for_each(teamMember->cities(), CvCity::fn::updateCorporation());
 		}
 	}
 }
@@ -7400,12 +7383,10 @@ void CvTeam::changeCorporationMaintenanceModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iCorporationMaintenanceModifier += iChange;
-		for (int iI = 0; iI < getNumMembers(); iI++)
+
+		foreach_(const CvPlayer* teamMember, members())
 		{
-			foreach_(CvCity* city, getMember(iI).cities())
-			{
-				city->updateCorporation();
-			}
+			for_each(teamMember->cities(), CvCity::fn::updateCorporation());
 		}
 	}
 }
