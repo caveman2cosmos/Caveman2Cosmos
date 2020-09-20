@@ -1741,6 +1741,8 @@ public:
 	virtual void AI_setExtraGoldTarget(int iNewValue) = 0;
 	virtual int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const = 0;
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
+	virtual bool AI_isDoStrategy(int iStrategy) const = 0;
+	virtual bool AI_isDoVictoryStrategy(int iVictoryStrategy) const = 0;
 protected:
 
 	int m_iStartingX;
@@ -2416,6 +2418,31 @@ public:
 	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
+
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, AI_makeAssignWorkDirty);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, updateTradeRoutes);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, verifyUnitStacksValid);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, clearModifierTotals);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, recalculateModifiers);
+
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, AI_updateBonusValue, BonusTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, addPropertiesAllCities, const CvProperties*);
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, subtractPropertiesAllCities, const CvProperties*);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, updateCitySight, bool, bool);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, bool, isHuman);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, int, getNumCities);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, int, AI_isDoStrategy, int);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, int, AI_isDoVictoryStrategy, int);
+	};
 };
 
 #endif

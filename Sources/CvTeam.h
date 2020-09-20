@@ -133,8 +133,7 @@ public:
 	//void changeNumMembers(int iChange);
 	void addMember(CvPlayerAI& player);
 	void removeMember(CvPlayerAI& player);
-	CvPlayerAI& getMember(int index);
-	const CvPlayerAI& getMember(int index) const;
+	CvPlayerAI& getMember(int index) const;
 
 	// team members iteration
 	DECLARE_INDEX_ITERATOR(const CvTeam, CvPlayer, team_member_iterator, firstMember, nextMember);
@@ -144,9 +143,9 @@ public:
 	team_member_range members() const { return team_member_range(beginMembers(), endMembers()); }
 
 	// deprecated, use team_member_iterator
-	CvPlayer* firstMember(int* pIterIdx, bool bRev = false) const;
+	CvPlayer* firstMember(int* pIterIdx, bool bRev = false) const { return !bRev ? m_aMembers.beginIter(pIterIdx) : m_aMembers.endIter(pIterIdx); }
 	// deprecated, use team_member_iterator
-	CvPlayer* nextMember(int* pIterIdx, bool bRev = false) const;
+	CvPlayer* nextMember(int* pIterIdx, bool bRev = false) const { return !bRev ? m_aMembers.nextIter(pIterIdx) : m_aMembers.prevIter(pIterIdx); }
 
 	int getAliveCount() const;
 	int isAlive() const; // Exposed to Python
