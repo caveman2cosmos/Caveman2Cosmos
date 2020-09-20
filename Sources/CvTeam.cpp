@@ -2817,11 +2817,10 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	{
 		return -1;
 	}
-	int64_t iCost = 100 * iInitialCost;
+	uint64_t iCost = 100 * iInitialCost;
 
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
-/*
 		int iPlayerEra = MIN_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -2834,8 +2833,6 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 		FAssertMsg(iPlayerEra != MIN_INT, "No player found on team!");
 
 		const int erasAheadOfTech = iPlayerEra - GC.getTechInfo(eTech).getEra();
-*/
-		const int erasAheadOfTech = (int)getCurrentEra() - GC.getTechInfo(eTech).getEra();
 		if (erasAheadOfTech > 0)
 		{
 			iCost *= 100 + erasAheadOfTech * GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
@@ -2873,7 +2870,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	iCost /= 100;
 
-	return (int)std::max<int64_t>(1, iCost);
+	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
 }
 
 
