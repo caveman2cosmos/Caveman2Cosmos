@@ -2817,13 +2817,12 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	{
 		return -1;
 	}
-	uint64_t iCost = 100 * iInitialCost;
+	int64_t iCost = 100 * iInitialCost;
 
-	int iBeelineStingsTechCostModifier = 0;
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
-		const int iTechEra = GC.getTechInfo(eTech).getEra();
-		int iPlayerEra = MAX_INT;
+/*
+		int iPlayerEra = MIN_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -2832,22 +2831,15 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				break;
 			}
 		}
-		FAssertMsg(iPlayerEra != MAX_INT, "No player found on team!");
+		FAssertMsg(iPlayerEra != MIN_INT, "No player found on team!");
 
-		if (iTechEra < iPlayerEra)
+		const int erasAheadOfTech = iPlayerEra - GC.getTechInfo(eTech).getEra();
+*/
+		const int erasAheadOfTech = (int)getCurrentEra() - GC.getTechInfo(eTech).getEra();
+		if (erasAheadOfTech > 0)
 		{
-			for (int iI = 0; iI < GC.getNumEraInfos(); iI++)
-			{
-				if (iI >= iTechEra && iI < iPlayerEra)
-				{
-					iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
-					//just need to add the tag iBeelineStingsModifier to Era Infos.
-				}
-				else if (iI >= iPlayerEra)
-				{
-					break;
-				}
-			}
+			iCost *= 100 + erasAheadOfTech * GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
+			iCost /= 100;
 		}
 	}
 	iCost *= GC.getTECH_COST_MODIFIER();
@@ -2863,9 +2855,6 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost /= 100;
 
 	iCost *= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
-	iCost /= 100;
-
-	iCost *= 100 + iBeelineStingsTechCostModifier;
 	iCost /= 100;
 
 	iCost *= std::max(0, GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * getNumMembers());
@@ -2884,7 +2873,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	iCost /= 100;
 
-	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
+	return (int)std::max<int64_t>(1, iCost);
 }
 
 
