@@ -2825,7 +2825,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 		int iPlayerEra = MIN_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && 4GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
 				iPlayerEra = (int)GET_PLAYER((PlayerTypes)iI).getCurrentEra();
 				break;
