@@ -2821,10 +2821,11 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
+		const int iTechEra = GC.getTechInfo(eTech).getEra();
 		int iPlayerEra = MIN_INT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && 4GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
 				iPlayerEra = (int)GET_PLAYER((PlayerTypes)iI).getCurrentEra();
 				break;
@@ -2832,10 +2833,15 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 		}
 		FAssertMsg(iPlayerEra != MIN_INT, "No player found on team!");
 
-		const int erasAheadOfTech = iPlayerEra - GC.getTechInfo(eTech).getEra();
-		if (erasAheadOfTech > 0)
+		if (iTechEra < iPlayerEra)
 		{
-			iCost *= 100 + erasAheadOfTech * GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
+			int iBeelineStingsTechCostModifier = 0;
+			for (int iI = iTechEra; iI < iPlayerEra; iI++)
+			{
+				iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
+				//just need to add the tag iBeelineStingsModifier to Era Infos.
+			}
+			iCost *= 100 + iBeelineStingsTechCostModifier;
 			iCost /= 100;
 		}
 	}
