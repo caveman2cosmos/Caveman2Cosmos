@@ -74,18 +74,26 @@ class MapConstants:
 		# It will become a lake if enough water flows into the depression.
 		self.fThrenchesPerPlot = 0.006
 
-		# ---The following values should all be between 0 and 1.
-		# fLakeSizeFactor sets the upper limit for how large a lake can become.
-		# 0.0 yields a max. size of 0, and 1 yields a max. size of LAKE_MAX_AREA_SIZE defined in the GlobalDefines.xml.
+		# --- Lakes
+		# fLakeSizeFactor sets the upper limit for how large a lake can become; can be >1.
+		# 0.0 yields a max. size of 0, and 1 yields yields a max size scaled based on map size ((1+size)^1.5).
+		# Note that (by default) lake size is frequently limited by landspace or altitude conditions rather than by fLakeSizeFactor.
 		self.fLakeSizeFactor = 1.0
+		# -- The following values should all be between 0 and 1!
 		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the fLakeSizeFactor.
 		self.fLakeSizeFactorChance = 1.0
 		# These are multiplied to fLakeSizeFactor when a lake begins in certain terrains.
 		self.fHeatLakeFactor = 0.5 # Desert, dunes & salt flats.
 		self.fColdLakeFactor = 0.1 # Tundra, Permafrost & Ice.
 
-		# This value sets the relative minimum altitude of lake depressions. It Should be between 0 and 1.
+		# fLakeEccentricity controls the shape of generated lakes. A value of 0.0 makes all lakes highly circular,
+		# while 1.0 tends to generate longer, thinner lakes (most apparent for lakes where number of tiles >= 10 or so).
+		# Using a value outside of the [0.0, 1.0] range (e.g. -1.0 by default) will give each individual lake a random value.
+		self.fLakeEccentricity = -1.0
+
+		# This value sets the relative minimum altitude of lake depressions. It should be between 0 and 1.
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
+		# A higher value will also increase the effective eccentricity of lakes, resulting in longer, thinner shapes.
 		self.fRelMinLakeAlt = 0.1
 
 		#The percent chance that a floodplain may appear on a valid riverside.
@@ -490,12 +498,18 @@ class MapConstants:
 			else:
 				self.fLandPercent = .55
 		print "Land percent = %f" % self.fLandPercent
+
 		# Lake size
-#		GC.getDefineINT("")
-		self.iMaxLakesize = GC.getLAKE_MAX_AREA_SIZE()
-#		self.iMaxLakesize = int((1 + iWorldSize) ** 1.5)
-#		GC.setDefineINT("LAKE_MAX_AREA_SIZE", self.iMaxLakesize)
-#		GC.setDefineINT("MIN_WATER_SIZE_FOR_OCEAN", self.iMaxLakesize + 1)
+		self.iDefaultMaxLakesize = int((1 + iWorldSize) ** 1.5)
+		self.iModifiedMaxLakesize = int(self.iDefaultMaxLakesize * self.fLakeSizeFactor)
+		self.iMaxLakesize = max(self.iModifiedMaxLakesize, self.iDefaultMaxLakesize)
+
+		print " iModifiedMaxLakesize: %d" % self.iModifiedMaxLakesize
+		print " iMaxLakesize: %d" % self.iMaxLakesize
+
+		# Unknown if needed?
+		GC.setDefineINT("LAKE_MAX_AREA_SIZE", self.iMaxLakesize)
+		GC.setDefineINT("MIN_WATER_SIZE_FOR_OCEAN", self.iMaxLakesize + 1)
 
 mc = None
 
@@ -2175,13 +2189,17 @@ class LakeMap:
 		shuffle(lakePitList)
 		lakeAreaMap	= AreaMap()
 		self.isLakeData = array('b', [0] * iArea)
+		iDefaultMaxLakesize = mc.iDefaultMaxLakesize
+		iModifiedMaxLakesize = mc.iModifiedMaxLakesize
 		iMaxLakesize = mc.iMaxLakesize
-		fLakeSizeMod = mc.fLakeSizeFactor
+		fLakeSizeFactor = mc.fLakeSizeFactor
 		fLakeSizeModChance = mc.fLakeSizeFactorChance
+		fLakeEccentricity = mc.fLakeEccentricity
 		fHeatMod = mc.fHeatLakeFactor
 		fColdMod = mc.fColdLakeFactor
 		tData = tm.terrData
-		iLakesLeft = em.iNumLakes
+		# If fLakeSizeFactor > 1, reduce number of lakes to account for more lake tiles being generated
+		iLakesLeft = int(round(em.iNumLakes / max(1.0, (fLakeSizeFactor + 1.0) / 2.0 )))
 		print "	Desired number of lakes: %d" % iLakesLeft
 		print "	Available lake pits: %d" % len(lakePitList)
 		for n in xrange(len(lakePitList)):
@@ -2196,16 +2214,29 @@ class LakeMap:
 						fTerrainMod = fColdMod
 					else:
 						fTerrainMod = 1.0
+					bLakeMaxModified = False
 					if random() < fLakeSizeModChance:
-						fSizeMod = fLakeSizeMod
+						iLakeSize = iModifiedMaxLakesize
+						bLakeMaxModified = True
 					else:
-						fSizeMod = 1.0
-					fModifier = 1.0 - avrRainMap[i] * fTerrainMod
-					iLakeSize = int(round((iMaxLakesize - iMaxLakesize * fModifier) * fSizeMod))
-					if iLakeSize > iMaxLakesize:
-						iLakeSize = iMaxLakesize
+						iLakeSize = iDefaultMaxLakesize
+					# fModifier may be >1 with low probability, due to avrRainMap[i] usually being less than 0.1
+					fModifier = 10.0 * avrRainMap[i] * fTerrainMod * uniform(0.60, 0.90)
+					iLakeSize = int(round(iLakeSize * fModifier))
+					# Lake should be reduced to appropriate max when using fLakeSizeModChance
+					if bLakeMaxModified and iLakeSize > iModifiedMaxLakesize:
+						print " Reduced modified lakesize %d to %d" % (iLakeSize, iModifiedMaxLakesize)
+						iLakeSize = iModifiedMaxLakesize
+					elif not bLakeMaxModified and iLakeSize > iDefaultMaxLakesize:
+						print " Reducing default  lakesize %d to %d" % (iLakeSize, iDefaultMaxLakesize)
+						iLakeSize = iDefaultMaxLakesize
+					if fLakeEccentricity < 0.0 or fLakeEccentricity > 1.0:
+						fLakeShape = random()
+						print " Random eccentricity: %f" % fLakeShape
+					else:
+						fLakeShape = fLakeEccentricity
 					lakeAreaMap.defineAreas(self.isLake)
-					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER)
+					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, fLakeShape, WATER)
 					iLakesLeft -= iLakeIncr
 			if iLakesLeft == 0:
 				print "	Desired number of lakes reached."
@@ -2220,7 +2251,7 @@ class LakeMap:
 		self.defineWaterTerrain(iWidth, iHeight, iArea, em.fLandHeight, WATER)
 
 
-	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER):
+	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, fLakeShape, WATER):
 		class LakePlot:
 			def __init__(self, x, y, i, fHeight, iMergeSize):
 				self.x = x
@@ -2250,7 +2281,10 @@ class LakeMap:
 		lakeNeighbors = []
 		thePlot = LakePlot(x, y, i, relAltMap[i], iMergeSize)
 		highestAvrRainfall = self.avrRainfallMap2x2[i]
+		tLakeOrigin = (x, y)
 		originalLakeSize = iLakeSize
+		
+		print " Expanding a lake from coordinates: %d, %d" % tLakeOrigin
 		while iLakeSize > 0:
 			iLakeSize -= 1 + thePlot.iMergeSize
 			i = thePlot.i
@@ -2272,6 +2306,7 @@ class LakeMap:
 							if ii == index:
 								ii = -1
 								break
+						# If water plot is not current lake, check validity.
 						if ii >= 0 and plotData[ii] == WATER:
 							if self.isLakeData[ii] == 0:
 								# This lake just turned into ocean as an harbor, mark it as such.
@@ -2292,8 +2327,19 @@ class LakeMap:
 								bValid = False
 					if bValid:
 						lakeNeighbors.append(LakePlot(x, y, i, relAltMap[i], iMergeSize))
+			# Sort potential neighboring tiles for which to expand the lake.
 			if len(lakeNeighbors) > 1:
-				lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
+				# Choose how to add next tile based on eccentricity; high value -> default height option, low -> adjacency
+				# Height tends to range in value from ~0.2 to 0.000x, radial distance can be as large as iMaxLakesize.
+				# A better implementation would be to calculate adjacency by distance to center-of-mass of current lake,
+				# and/or to hybridize the two approaches. Weigh height by (1-fLakeShape) and adjacency by (fLakeShape), for example.
+				if random() < fLakeShape:
+					lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
+				else:
+					lakeNeighbors.sort(lambda a, b:cmp(
+						plotDistance(a.x, a.y, *tLakeOrigin),
+						plotDistance(b.x, b.y, *tLakeOrigin)))
+
 			while True:
 				if len(lakeNeighbors) == 0:
 					return 1
@@ -2323,7 +2369,8 @@ class LakeMap:
 					break
 			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakesize >= len(thisLake) + iLakeSize:
 				iLakeSize += 1
-				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0				
+				print " Lakesize (%d) grown due to rainfall: %f < %f" % (iLakeSize, highestAvrRainfall, self.avrRainfallMap2x2[i])
+				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0
 		return 1
 
 
@@ -4641,7 +4688,7 @@ def addFeatures():
 							elif iTemperature > fTundraTemp:
 								plot.setFeatureType(featureForest, FORESTSNOWY)
 				# Goody Islands
-				elif tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP:
+				elif (tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP) or tData[i] == mc.LAKE_SHORE:
 					if bGoodyHuts and mapRand.get(19, 'GoodyIsland') == 0:
 						plot.setImprovementType(impGoodyIsland)
 	timer.log()
