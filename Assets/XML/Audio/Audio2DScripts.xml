@@ -32316,7 +32316,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_MICROLITH</ScriptID>
+		<ScriptID>AS2D_TECH_MICROLITH</ScriptID>
 		<SoundID>SND_TECH_MICROLITH</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32339,7 +32339,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_RAFT_BUILDING</ScriptID>
+		<ScriptID>AS2D_TECH_RAFT_BUILDING</ScriptID>
 		<SoundID>SND_TECH_RAFT_BUILDING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32362,7 +32362,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_PERSONAL_ADORNMENT</ScriptID>
+		<ScriptID>AS2D_TECH_PERSONAL_ADORNMENT</ScriptID>
 		<SoundID>SND_TECH_PERSONAL_ADORNMENTS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32385,7 +32385,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_COUNTING</ScriptID>
+		<ScriptID>AS2D_TECH_COUNTING</ScriptID>
 		<SoundID>SND_TECH_COUNTING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32408,7 +32408,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_DRYING</ScriptID>
+		<ScriptID>AS2D_TECH_DRYING</ScriptID>
 		<SoundID>SND_TECH_DRYING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32431,7 +32431,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_SIMPLE_WOOD_WORKING</ScriptID>
+		<ScriptID>AS2D_TECH_SIMPLE_WOOD_WORKING</ScriptID>
 		<SoundID>SND_TECH_SIMPLE_WOOD_WORKING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32454,7 +32454,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TOURISM</ScriptID>
+		<ScriptID>AS2D_TECH_TOURISM</ScriptID>
 		<SoundID>SND_TECH_TOURISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32477,7 +32477,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_GUERRILLA_WARFARE</ScriptID>
+		<ScriptID>AS2D_TECH_GUERRILLA_WARFARE</ScriptID>
 		<SoundID>SND_TECH_GUERRILLA_WARFARE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
@@ -32500,7 +32500,7 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_COMBAT_SPORTS</ScriptID>
+		<ScriptID>AS2D_TECH_COMBAT_SPORTS</ScriptID>
 		<SoundID>SND_TECH_COMBAT_SPORTS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
