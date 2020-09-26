@@ -30498,7 +30498,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NANO_DISASSEMBLY_QUOTE</Quote>
 			<Sound>AS2D_TECH_NANO_DISASSEMBLY</Sound>
-			<SoundMP>AS2D_TECH_NANDISASSEMBLY</SoundMP>
+			<SoundMP>AS2D_TECH_NANO_DISASSEMBLY</SoundMP>
 			<Button>Art/Buttons/Techs/TechNanodisassembly.dds</Button>
 		</TechInfo>
 		<TechInfo>
