@@ -1068,8 +1068,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iForceAllTradeRoutes = 0;
 	m_iWorldTradeRoutes = 0;
 	m_iNoCapitalUnhappiness = 0;
-	m_iTaxationAnger = 0;
-	m_iLastTurnTaxRate = 0;
 	m_iCivilizationHealth = 0;
 
 	m_bShowLandmarks = true;
@@ -4247,8 +4245,6 @@ void CvPlayer::doTurn()
     // New function to handle wonder construction in a centralized manner
 	GET_PLAYER(getID()).AI_doCentralizedProduction();
 #endif
-
-	doCheckForTaxationAnger();
 
 	//Clear the cache each turn.
 	recalculateAllResourceConsumption();
@@ -18550,7 +18546,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				pTargetUnit->kill(false, getID());
 				CvUnit* acquiredWorker = initUnit(pTargetUnit->getUnitType(), iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				CvCity* pCapital = this->getCapitalCity();
-				if (NULL != pCapital)
+				if (NULL != pCapital && acquiredWorker != NULL)
 				{
 					iX = pCapital->getX();
 					iY = pCapital->getY();
@@ -20452,7 +20448,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeExtraFreedomFighters(kCivic.getFreedomFighterChange() * iChange);
 		changeEnslavementChance(kCivic.getEnslavementChance() * iChange);
 		changeNoCapitalUnhappiness(kCivic.isNoCapitalUnhappiness() ? iChange : 0);
-		changeTaxationAnger(kCivic.isTaxationAnger() ? iChange : 0);
 		changeCivicInflation(kCivic.getInflationModifier() * iChange);
 		changeHurryCostModifier(kCivic.getHurryCostModifier() * iChange);
 		changeHurryInflationModifier(kCivic.getHurryInflationModifier() * iChange);
@@ -20829,8 +20824,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraCityDefense);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iEnslavementChance);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNoCapitalUnhappiness);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iTaxationAnger);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iLastTurnTaxRate);
+
+		// @SAVEBREAK DELETE Toffer
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iTaxationAnger, SAVE_VALUE_ANY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iLastTurnTaxRate, SAVE_VALUE_ANY);
+		// SAVEBREAK@
+
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLandmarkYield);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iWorldHealth);
@@ -22052,8 +22051,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraCityDefense);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iEnslavementChance);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoCapitalUnhappiness);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTaxationAnger);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iLastTurnTaxRate);
 
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLandmarkYield);
 
@@ -25687,6 +25684,11 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 	foreach_(CvUnit* pLoopUnit, kPlayer.units())
 	{
 		CvUnit* pNewUnit = initUnit(pLoopUnit->getUnitType(), pLoopUnit->getX(), pLoopUnit->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+		if (pNewUnit == NULL)
+		{
+			FErrorMsg("CvPlayer::initUnit returned NULL");
+			break;
+		}
 		pNewUnit->convert(pLoopUnit);
 	}
 
@@ -28103,51 +28105,6 @@ bool CvPlayer::hasSpaceshipArrived() const
 	return false;
 }
 
-void CvPlayer::doCheckForTaxationAnger()
-{
-	PROFILE_FUNC()
-
-	int iOldTaxRate, iCurrentTaxRate, iDifference, iAnarchyTurns, iModifier;
-	iOldTaxRate = getLastTurnTaxRate();
-	iCurrentTaxRate = getCommercePercent(COMMERCE_GOLD);
-
-	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
-	iModifier += GC.getEraInfo(GC.getGame().getStartEra()).getAnarchyPercent();
-	iModifier += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
-	iModifier /= 300;
-	iModifier = std::max(1, iModifier);
-
-	if (iOldTaxRate != iCurrentTaxRate)
-	{
-		if (getTaxationAnger() > 0 && !isGoldenAge() && (getAnarchyTurns() <= 0))
-		{
-			iDifference = iCurrentTaxRate - iOldTaxRate;
-			//Lowering Taxes will not cause anger
-			if (iDifference > 0)
-			{
-				iAnarchyTurns = iDifference / 10;
-				//Even if you only raised taxes by 5%, it's still bad.
-				if (!GC.getDefineINT("TAXATION_ANGER_ROUND_DOWN"))
-				{
-					if (iDifference % 10 > 0)
-						iAnarchyTurns++;
-				}
-
-				iAnarchyTurns *= iModifier;
-
-				changeAnarchyTurns((iAnarchyTurns), true);
-				//Inform the player of the situation
-				MEMORY_TRACK_EXEMPT();
-
-				AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_TAXATION_ANGER").GetCString(), "AS2D_REVOLTSTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
-			}
-		}
-		//Our Current Tax Rate is Now the Last Turns
-		m_iLastTurnTaxRate = 0;
-		changeLastTurnTaxRate(iCurrentTaxRate);
-	}
-}
-
 int CvPlayer::getEnslavementChance() const
 {
     return m_iEnslavementChance;
@@ -29116,32 +29073,6 @@ void CvPlayer::changeNoCapitalUnhappiness(int iChange)
 int CvPlayer::getNoCapitalUnhappiness() const
 {
 	return m_iNoCapitalUnhappiness;
-}
-
-void CvPlayer::changeTaxationAnger(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iTaxationAnger += iChange;
-	}
-}
-
-int CvPlayer::getTaxationAnger() const
-{
-	return m_iTaxationAnger;
-}
-
-void CvPlayer::changeLastTurnTaxRate(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iLastTurnTaxRate += iChange;
-	}
-}
-
-int CvPlayer::getLastTurnTaxRate() const
-{
-	return m_iLastTurnTaxRate;
 }
 
 int CvPlayer::getFreeSpecialistCount(SpecialistTypes eIndex) const
@@ -30404,7 +30335,6 @@ void CvPlayer::clearModifierTotals()
 
 	m_iForceAllTradeRoutes = 0;
 	m_iNoCapitalUnhappiness = 0;
-	m_iTaxationAnger = 0;
 	m_iCivilizationHealth = 0;
 
 	m_iForeignTradeRouteModifier = 0;

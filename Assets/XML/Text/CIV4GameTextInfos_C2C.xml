@@ -52,7 +52,7 @@
 		<Tag>TXT_KEY_BUILDING_FROM_IN_ALL_CITIES</Tag>
 		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
 		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
-		<German>[SPACE]per [LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK] in allen Städten</German>
+		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
 		<Italian>[SPACE]per [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian>
 		<Spanish>[SPACE]por [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] en todas las ciudades</Spanish>
 	</TEXT>

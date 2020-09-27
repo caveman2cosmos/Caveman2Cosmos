@@ -7761,7 +7761,7 @@ void CvGame::createBarbarianUnits()
 			if (eBestUnit != NO_UNIT)
 			{
 				CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX(), pPlot->getY(), eBarbUnitAI, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
-				if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA)
+				if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA && pUnit != NULL)
 				{
 					loadPirateShip(pUnit);
 				}
@@ -12601,8 +12601,11 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 		if (eBestUnit != NO_UNIT)
 		{
 			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->plot()->getX(), pUnit->plot()->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
-			pPirate->setTransportUnit(pUnit);
-			pUnit->AI_setUnitAIType(UNITAI_ASSAULT_SEA);
+			if (pPirate != NULL)
+			{
+				pPirate->setTransportUnit(pUnit);
+				pUnit->AI_setUnitAIType(UNITAI_ASSAULT_SEA);
+			}
 		}
 	}
 }

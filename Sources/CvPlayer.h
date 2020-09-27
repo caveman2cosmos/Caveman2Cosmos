@@ -1278,12 +1278,6 @@ public:
 	int getNoCapitalUnhappiness() const;
 	void changeNoCapitalUnhappiness(int iChange);
 
-	int getTaxationAnger() const;
-	void changeTaxationAnger(int iChange);
-
-	int getLastTurnTaxRate() const;
-	void changeLastTurnTaxRate(int iChange);
-
 	int getCivilizationHealth() const;
 	void changeCivilizationHealth(int iChange);
 
@@ -1346,7 +1340,6 @@ public:
 	void changeCivicHappiness(int iChange);
 
 	/*bool hasFixedBorders();*/
-	void doCheckForTaxationAnger();
 	bool hasEnemyDefenderUnit(const CvPlot* pPlot) const;
 
 	CvCity* getBestHQCity(CorporationTypes eCorporation) const;
@@ -1548,8 +1541,6 @@ protected:
 	int m_iReligionSpreadRate;
 	int m_iTaxRateUnhappiness;
 	int m_iCivilizationHealth;
-	int m_iLastTurnTaxRate;
-	int m_iTaxationAnger;
 	int m_iNoCapitalUnhappiness;
 	int m_iProjectHealth;
 	int m_iWorldTradeRoutes;

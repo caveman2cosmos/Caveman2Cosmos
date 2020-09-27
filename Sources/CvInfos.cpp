@@ -9458,7 +9458,6 @@ CvCivicInfo::CvCivicInfo()
 	, m_iCityOverLimitUnhappy(0)
 	, m_bFixedBorders(false)
 	, m_bNoCapitalUnhappiness(false)
-	, m_bTaxationAnger(false)
 	, m_bNoLandmarkAnger(false)
 	, m_bAnySpecialistYieldChanges(false)
 	, m_bAnySpecialistCommerceChanges(false)
@@ -9988,11 +9987,6 @@ bool CvCivicInfo::isNoCapitalUnhappiness() const
 	return m_bNoCapitalUnhappiness;
 }
 
-bool CvCivicInfo::isTaxationAnger() const
-{
-	return m_bTaxationAnger;
-}
-
 bool CvCivicInfo::isNoLandmarkAnger() const
 {
 	return m_bNoLandmarkAnger;
@@ -10420,7 +10414,6 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bNoNonStateReligionSpread);
 	CheckSum(iSum, m_bFixedBorders);
 	CheckSum(iSum, m_bNoCapitalUnhappiness);
-	CheckSum(iSum, m_bTaxationAnger);
 	CheckSum(iSum, m_bNoLandmarkAnger);
 	CheckSum(iSum, m_bEnablesMAD);
 	CheckSum(iSum, m_bAllReligionsActive);
@@ -10624,7 +10617,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bCanDoElection, L"bCanDoElection");
 	pXML->GetOptionalChildXmlValByName(&m_bFixedBorders, L"bFixedBorders");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCapitalUnhappiness, L"bNoCapitalUnhappiness");
-	pXML->GetOptionalChildXmlValByName(&m_bTaxationAnger, L"bTaxationAnger");
 	pXML->GetOptionalChildXmlValByName(&m_bNoLandmarkAnger, L"bNoLandmarkAnger");
 	pXML->GetOptionalChildXmlValByName(&m_bEnablesMAD, L"bEnablesMADNukes");
 	pXML->GetOptionalChildXmlValByName(&m_bAllReligionsActive, L"bAllReligionsActive");
@@ -11395,7 +11387,6 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getTaxRateUnhappiness() == iDefault) m_iTaxRateUnhappiness = pClassInfo->getTaxRateUnhappiness();
 	if (IsFixedBorders() == bDefault) m_bFixedBorders = pClassInfo->IsFixedBorders();
 	if (isNoCapitalUnhappiness() == bDefault) m_bNoCapitalUnhappiness = pClassInfo->isNoCapitalUnhappiness();
-	if (isTaxationAnger() == bDefault) m_bTaxationAnger = pClassInfo->isTaxationAnger();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
 	if (getHurryInflationModifier() == iDefault) m_iHurryInflationModifier = pClassInfo->getHurryInflationModifier();
 	if (getHurryCostModifier() == iDefault) m_iHurryCostModifier = pClassInfo->getHurryCostModifier();

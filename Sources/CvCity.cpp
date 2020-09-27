@@ -16464,7 +16464,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			m_iGoldFromLostProduction = iProductionGold;
 
 			CvUnit* pUnit = GET_PLAYER(getOwner()).initUnit(eTrainUnit, getX(), getY(), eTrainAIUnit, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
+			if (pUnit == NULL)
+			{
+				FErrorMsg("pUnit is expected to be assigned a valid unit object");
+				return;
+			}
 			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES))
 			{
 				if (!pUnit->canMoveInto(plot(), MoveCheck::IgnoreLocation))
@@ -20126,8 +20130,11 @@ void CvCity::emergencyConscript()
 	}
 
 	CvUnit* pUnit = GET_PLAYER(getOwner()).initUnit(eConscriptUnit, getX(), getY(), eCityAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-	FAssertMsg(pUnit != NULL, "pUnit expected to be assigned (not NULL)");
-
+	if (pUnit == NULL)
+	{
+		FErrorMsg("pUnit is expected to be assigned a valid unit object");
+		return;
+	}
 	addProductionExperience(pUnit, true);
 	pUnit->setMoves(0);
 	pUnit->setDamage((100 - GC.getIDW_EMERGENCY_DRAFT_STRENGTH()) * pUnit->maxHitPoints() / 100, getOwner());
@@ -25403,7 +25410,6 @@ void CvCity::doPropertyUnitSpawn()
 
 					if (pUnit != NULL)
 					{
-
 						FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 						if (pUnit->isExcile())
 						{
