@@ -16083,9 +16083,6 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 {
 	PROFILE_FUNC();
 
-	int iValue;
-	int iI;
-
 	if (getGroup()->getNumUnits() > 1)
 	{
 		return false;
@@ -16093,12 +16090,7 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 
 	const CvCity* pCity = plot()->getPlotCity();
 
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	if (pCity->getMaxAirlift() == 0)
+	if (pCity == NULL || pCity->getMaxAirlift() == 0)
 	{
 		return false;
 	}
@@ -16119,7 +16111,7 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 
 	if (eReligion == NO_RELIGION)
 	{
-		for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
 			//if (bCultureVictory || GET_TEAM(getTeam()).hasHolyCity((ReligionTypes)iI))
 			{
@@ -16140,54 +16132,42 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	foreach_(const CvPlayer* teamMember, GET_TEAM(getTeam()).members())
 	{
-		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (kLoopPlayer.isAlive() && (getTeam() == kLoopPlayer.getTeam()))
+		foreach_(const CvCity* pLoopCity, teamMember->cities())
 		{
-			foreach_(const CvCity* pLoopCity, kLoopPlayer.cities())
+			if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
 			{
-				if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
+				if (canSpread(pLoopCity->plot(), eReligion))
 				{
-					if (canSpread(pLoopCity->plot(), eReligion))
+					if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
 					{
-						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
+						// Don't airlift where there's already one of our unit types (probably just airlifted)
+						if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, NULL, getOwner()) > 0 )
 						{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   08/04/09								jdog5000	  */
-/*																							  */
-/* Unit AI																					  */
-/************************************************************************************************/
-							// Don't airlift where there's already one of our unit types (probably just airlifted)
-							if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, NULL, getOwner()) > 0 )
-							{
-								continue;
-							}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
-							iValue = (7 + (pLoopCity->getPopulation() * 4));
+							continue;
+						}
+						int iValue = (7 + (pLoopCity->getPopulation() * 4));
 
-							int iCityReligionCount = pLoopCity->getReligionCount();
-							int iReligionCountFactor = iCityReligionCount;
+						int iCityReligionCount = pLoopCity->getReligionCount();
+						int iReligionCountFactor = iCityReligionCount;
 
-							// count cities with no religion the same as cities with 2 religions
-							// prefer a city with exactly 1 religion already
-							if (iCityReligionCount == 0)
-							{
-								iReligionCountFactor = 2;
-							}
-							else if (iCityReligionCount == 1)
-							{
-								iValue *= 2;
-							}
+						// count cities with no religion the same as cities with 2 religions
+						// prefer a city with exactly 1 religion already
+						if (iCityReligionCount == 0)
+						{
+							iReligionCountFactor = 2;
+						}
+						else if (iCityReligionCount == 1)
+						{
+							iValue *= 2;
+						}
 
-							iValue /= iReligionCountFactor;
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = pLoopCity->plot();
-							}
+						iValue /= iReligionCountFactor;
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							pBestPlot = pLoopCity->plot();
 						}
 					}
 				}
@@ -16244,48 +16224,36 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	foreach_(const CvPlayer* teamMember, GET_TEAM(getTeam()).members())
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (kLoopPlayer.isAlive() && (getTeam() == kLoopPlayer.getTeam()))
+		foreach_(const CvCity* pLoopCity, teamMember->cities())
 		{
-			foreach_(const CvCity* pLoopCity, kLoopPlayer.cities())
+			if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
 			{
-				if (canAirliftAt(pCity->plot(), pLoopCity->getX(), pLoopCity->getY()))
+				if (canSpreadCorporation(pLoopCity->plot(), eCorporation))
 				{
-					if (canSpreadCorporation(pLoopCity->plot(), eCorporation))
+					if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD_CORPORATION, getGroup()) == 0)
 					{
-						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD_CORPORATION, getGroup()) == 0)
+						// Don't airlift where there's already one of our unit types (probably just airlifted)
+						if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, NULL, getOwner()) > 0 )
 						{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   08/04/09								jdog5000	  */
-/*																							  */
-/* Unit AI																					  */
-/************************************************************************************************/
-							// Don't airlift where there's already one of our unit types (probably just airlifted)
-							if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, NULL, getOwner()) > 0 )
-							{
-								continue;
-							}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
-							int iValue = (pLoopCity->getPopulation() * 4);
+							continue;
+						}
+						int iValue = (pLoopCity->getPopulation() * 4);
 
-							if (pLoopCity->getOwner() == getOwner())
-							{
-								iValue *= 4;
-							}
-							else
-							{
-								iValue *= 3;
-							}
+						if (pLoopCity->getOwner() == getOwner())
+						{
+							iValue *= 4;
+						}
+						else
+						{
+							iValue *= 3;
+						}
 
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = pLoopCity->plot();
-							}
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							pBestPlot = pLoopCity->plot();
 						}
 					}
 				}
@@ -22967,94 +22935,83 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		}
 	}
 
-	if ((pBestPlot == NULL) && (pBestAssaultPlot == NULL))
+	if (pBestPlot == NULL && pBestAssaultPlot == NULL && bCity && GET_TEAM(getTeam()).isAVassal())
 	{
-		if( bCity )
+		PROFILE("AI_assaultSeaReinforce.Vassal");
+
+		TeamTypes eMasterTeam = NO_TEAM;
+
+		for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
 		{
-			if( GET_TEAM(getTeam()).isAVassal() )
+			if( GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
 			{
-				PROFILE("AI_assaultSeaReinforce.Vassal");
+				eMasterTeam = (TeamTypes)iI;
+			}
+		}
 
-				TeamTypes eMasterTeam = NO_TEAM;
-
-				for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+		if( (eMasterTeam != NO_TEAM) && GET_TEAM(getTeam()).isOpenBorders(eMasterTeam) )
+		{
+			foreach_(const CvPlayer* teamMember, GET_TEAM(eMasterTeam).members())
+			{
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities()
+				| filtered(CvCity::fn::area() != area()))
 				{
-					if( GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
+					iValue = 0;
+					if(pLoopCity->area()->getAreaAIType(eMasterTeam) == AREAAI_OFFENSIVE)
 					{
-						eMasterTeam = (TeamTypes)iI;
+						iValue = 2;
 					}
-				}
-
-				if( (eMasterTeam != NO_TEAM) && GET_TEAM(getTeam()).isOpenBorders(eMasterTeam) )
-				{
-					for( int iI = 0; iI < MAX_PC_PLAYERS; iI++ )
+					else if(pLoopCity->area()->getAreaAIType(eMasterTeam) == AREAAI_MASSING)
 					{
-						if( GET_PLAYER((PlayerTypes)iI).getTeam() == eMasterTeam )
+						iValue = 1;
+					}
+
+					if( iValue > 0 )
+					{
+						if( bCanMoveAllTerrain || (pWaterArea != NULL && (pLoopCity->waterArea(true) == pWaterArea || pLoopCity->secondWaterArea() == pWaterArea)) )
 						{
-							foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+							int iOurPower = std::max(1, pLoopCity->area()->getPower(getOwner()));
+							iOurPower += GET_TEAM(eMasterTeam).countPowerByArea(pLoopCity->area());
+							// Enemy power includes barb power
+							int iEnemyPower = GET_TEAM(eMasterTeam).countEnemyPowerByArea(pLoopCity->area());
+
+							// Don't send troops to areas we are dominating already
+							// Don't require presence of enemy cities, just a dangerous force
+							if( iOurPower < (2*iEnemyPower) )
 							{
-								if( pLoopCity->area() != area() )
+								int iPathTurns;
+								if (generatePath(pLoopCity->plot(), MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns))
 								{
-									iValue = 0;
-									if(pLoopCity->area()->getAreaAIType(eMasterTeam) == AREAAI_OFFENSIVE)
+									iValue *= pLoopCity->AI_cityThreat();
+
+									iValue += 10 * GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_ASSAULT, getGroup());
+
+									iValue *= std::min(iEnemyPower, 3*iOurPower);
+									iValue /= iOurPower;
+
+									iValue *= 100;
+
+									// if more than 3 turns to get there, then put some randomness into our preference of distance
+									// +/- 33%
+									if (iPathTurns > 3)
 									{
-										iValue = 2;
-									}
-									else if(pLoopCity->area()->getAreaAIType(eMasterTeam) == AREAAI_MASSING)
-									{
-										iValue = 1;
+										int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
+
+										iPathTurns *= 66 + iPathAdjustment;
+										iPathTurns /= 100;
 									}
 
-									if( iValue > 0 )
+									iValue /= (iPathTurns + 1);
+
+									if (iValue > iBestValue)
 									{
-										if( bCanMoveAllTerrain || (pWaterArea != NULL && (pLoopCity->waterArea(true) == pWaterArea || pLoopCity->secondWaterArea() == pWaterArea)) )
+										endTurnPlot = getPathEndTurnPlot();
+
+										if ( endTurnPlot == pLoopCity->plot() || !exposedToDanger(endTurnPlot, 60) )
 										{
-											int iOurPower = std::max(1, pLoopCity->area()->getPower(getOwner()));
-											iOurPower += GET_TEAM(eMasterTeam).countPowerByArea(pLoopCity->area());
-											// Enemy power includes barb power
-											int iEnemyPower = GET_TEAM(eMasterTeam).countEnemyPowerByArea(pLoopCity->area());
-
-											// Don't send troops to areas we are dominating already
-											// Don't require presence of enemy cities, just a dangerous force
-											if( iOurPower < (2*iEnemyPower) )
-											{
-												int iPathTurns;
-												if (generatePath(pLoopCity->plot(), MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns))
-												{
-													iValue *= pLoopCity->AI_cityThreat();
-
-													iValue += 10 * GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_ASSAULT, getGroup());
-
-													iValue *= std::min(iEnemyPower, 3*iOurPower);
-													iValue /= iOurPower;
-
-													iValue *= 100;
-
-													// if more than 3 turns to get there, then put some randomness into our preference of distance
-													// +/- 33%
-													if (iPathTurns > 3)
-													{
-														int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
-
-														iPathTurns *= 66 + iPathAdjustment;
-														iPathTurns /= 100;
-													}
-
-													iValue /= (iPathTurns + 1);
-
-													if (iValue > iBestValue)
-													{
-														endTurnPlot = getPathEndTurnPlot();
-
-														if ( endTurnPlot == pLoopCity->plot() || !exposedToDanger(endTurnPlot, 60) )
-														{
-															iBestValue = iValue;
-															pBestPlot = endTurnPlot;
-															pBestAssaultPlot = pLoopCity->plot();
-														}
-													}
-												}
-											}
+											iBestValue = iValue;
+											pBestPlot = endTurnPlot;
+											pBestAssaultPlot = pLoopCity->plot();
 										}
 									}
 								}

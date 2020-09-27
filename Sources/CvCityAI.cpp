@@ -7886,25 +7886,22 @@ void CvCityAI::AI_updateRouteToCity() const
 		int iBestValue = MAX_INT;
 		pBestCity = NULL;
 
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		foreach_(const CvPlayer* teamMember, GET_TEAM(getTeam()).members())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
+			foreach_(CvCity* pLoopCity, teamMember->cities())
 			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				if (pLoopCity != this)
 				{
-					if (pLoopCity != this)
+					if (pLoopCity->area() == area())
 					{
-						if (pLoopCity->area() == area())
+						if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, getOwner(), true)))
 						{
-							if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, getOwner(), true)))
-							{
-								int iValue = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
+							const int iValue = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
-								if (iValue < iBestValue)
-								{
-									iBestValue = iValue;
-									pBestCity = pLoopCity;
-								}
+							if (iValue < iBestValue)
+							{
+								iBestValue = iValue;
+								pBestCity = pLoopCity;
 							}
 						}
 					}

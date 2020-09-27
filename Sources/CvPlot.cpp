@@ -1742,19 +1742,13 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+	foreach_(const CvPlayer* teamMember, GET_TEAM(eTeam).members())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (eIgnorePlayer == NO_PLAYER || teamMember->getID() != eIgnorePlayer)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+			if (isPlayerCityRadius(teamMember->getID())
 			{
-				if ((eIgnorePlayer == NO_PLAYER) || (((PlayerTypes)iI) != eIgnorePlayer))
-				{
-					if (isPlayerCityRadius((PlayerTypes)iI))
-					{
-						return true;
-					}
-				}
+				return true;
 			}
 		}
 	}
@@ -8691,15 +8685,9 @@ int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 {
 	int iTeamCulturePercent = 0;
 
-	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+	foreach_(const CvPlayer* teamMember, GET_TEAM(eIndex).members())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex)
-			{
-				iTeamCulturePercent += calculateCulturePercent((PlayerTypes)iI);
-			}
-		}
+		iTeamCulturePercent += calculateCulturePercent(teamMember->getID());
 	}
 
 	return iTeamCulturePercent;
@@ -9867,15 +9855,9 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 		if (bUpdatePlotGroup)
 		{
-			for (iI = 0; iI < MAX_PLAYERS; ++iI)
+			foreach_(const CvPlayer* teamMember, GET_TEAM(eTeam).members())
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
-				{
-					if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
-					{
-						updatePlotGroup((PlayerTypes)iI);
-					}
-				}
+				updatePlotGroup(teamMember->getID());
 			}
 		}
 
@@ -9929,54 +9911,41 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 		{
 			// ONEVENT - PlotRevealed
 			CvEventReporter::getInstance().plotRevealed(this, eTeam);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/32/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 			if (getLandmarkType() != NO_LANDMARK)
 			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; ++iJ)
+				foreach_(const CvPlayer* teamMember, members() | filtered(!CvPlayer::fn::isNPC()))
 				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && !GET_PLAYER((PlayerTypes)iJ).isNPC())
+					addSign(teamMember->getID(), getLandmarkMessage());
+					CvString szIcon;
+
+					bool bFirstToDiscover = true;
+					for (int iI = 0; iI < MAX_TEAMS; ++iI)
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
+						if(!GET_TEAM((TeamTypes)iI).isNPC() && GET_TEAM((TeamTypes)iI).isAlive())
 						{
-							addSign((PlayerTypes)iJ, getLandmarkMessage());
-							CvString szIcon;
-
-							bool bFirstToDiscover = true;
-							for (int iI = 0; iI < MAX_TEAMS; ++iI)
+							if (isRevealed((TeamTypes)iI, false))
 							{
-								if(!GET_TEAM((TeamTypes)iI).isNPC() && GET_TEAM((TeamTypes)iI).isAlive())
-								{
-									if (isRevealed((TeamTypes)iI, false))
-									{
-										bFirstToDiscover = false;
-										break;
-									}
-								}
-							}
-
-							if (bFirstToDiscover)
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
-									szIcon = GC.getFeatureInfo(getFeatureType()).getButton();
-								else if (getLandmarkType() == LANDMARK_MOUNTAIN_RANGE || getLandmarkType() == LANDMARK_PEAK)
-									szIcon = GC.getTerrainInfo((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
-								else
-									szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
-								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, CvColorInfo::white(), getX(), getY(), true, true);
+								bFirstToDiscover = false;
+								break;
 							}
 						}
 					}
+
+					if (bFirstToDiscover)
+					{
+						MEMORY_TRACK_EXEMPT();
+
+						if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
+							szIcon = GC.getFeatureInfo(getFeatureType()).getButton();
+						else if (getLandmarkType() == LANDMARK_MOUNTAIN_RANGE || getLandmarkType() == LANDMARK_PEAK)
+							szIcon = GC.getTerrainInfo((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
+						else
+							szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
+						AddDLLMessage(teamMember->getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, CvColorInfo::white(), getX(), getY(), true, true);
+					}
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
 

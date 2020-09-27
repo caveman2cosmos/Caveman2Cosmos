@@ -134,18 +134,7 @@ public:
 	void addMember(CvPlayerAI& player);
 	void removeMember(CvPlayerAI& player);
 	CvPlayerAI& getMember(int index) const;
-
-	// team members iteration
-	DECLARE_INDEX_ITERATOR(const CvTeam, CvPlayer, team_member_iterator, firstMember, nextMember);
-	team_member_iterator beginMembers() const { return team_member_iterator(this); }
-	team_member_iterator endMembers() const { return team_member_iterator(); }
-	typedef bst::iterator_range<team_member_iterator> team_member_range;
-	team_member_range members() const { return team_member_range(beginMembers(), endMembers()); }
-
-	// deprecated, use team_member_iterator
-	CvPlayer* firstMember(int* pIterIdx, bool bRev = false) const { return !bRev ? m_aMembers.beginIter(pIterIdx) : m_aMembers.endIter(pIterIdx); }
-	// deprecated, use team_member_iterator
-	CvPlayer* nextMember(int* pIterIdx, bool bRev = false) const { return !bRev ? m_aMembers.nextIter(pIterIdx) : m_aMembers.prevIter(pIterIdx); }
+	inline const std::vector<CvPlayerAI*> members() const { return m_TeamMembers; }
 
 	int getAliveCount() const;
 	int isAlive() const; // Exposed to Python
@@ -617,7 +606,7 @@ protected:
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;
 
-	FFreeListTrashArray<CvPlayerAI> m_aMembers;
+	std::vector<CvPlayerAI*> m_TeamMembers;
 
 	void doWarWeariness();
 	void updateTechShare(TechTypes eTech);
@@ -625,7 +614,7 @@ protected:
 	void testCircumnavigated();
 	void processTech(TechTypes eTech, int iChange, bool bAnnounce = false);
 	void cancelDefensivePacts();
-	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false);
+	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false) const;
 
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);

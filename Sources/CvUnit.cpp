@@ -8738,16 +8738,9 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 				{
 					if (abTeamsAffected[iI])
 					{
-						for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
-								{
-									GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwner(), true);
-								}
-							}
-						}
+						for_each(GET_TEAM((TeamTypes)iI).members(),
+							CvPlayer::fn::setMADTrigger(getOwner(), true)
+						);
 					}
 				}
 			}
@@ -8799,16 +8792,9 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 			{
 				if (abTeamsAffected[iI])
 				{
-					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
-					{
-						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
-							{
-								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
-							}
-						}
-					}
+					for_each(GET_TEAM((TeamTypes)iI).members(),
+						CvPlayer::fn::AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1)
+					);
 				}
 				else
 				{
@@ -8822,16 +8808,9 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 								{
 									if (GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
 									{
-										for (iK = 0; iK < MAX_PLAYERS; iK++)
-										{
-											if (GET_PLAYER((PlayerTypes)iK).isAlive())
-											{
-												if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
-												{
-													GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-												}
-											}
-										}
+										for_each(GET_TEAM((TeamTypes)iI).members(),
+											CvPlayer::fn::AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1)
+										);
 										break;
 									}
 								}
@@ -13066,7 +13045,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	}
 
 	// sea units must be built on the coast
-	bool bCoastalOnly = (getDomainType() == DOMAIN_SEA);
+	const bool bCoastalOnly = (getDomainType() == DOMAIN_SEA);
 
 	// results
 	int iBestValue = MAX_INT;
@@ -13076,59 +13055,52 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	if (bSearch)
 	{
 		// air units can travel any distance
-		bool bIgnoreDistance = (getDomainType() == DOMAIN_AIR);
+		const bool bIgnoreDistance = (getDomainType() == DOMAIN_AIR);
 
-		TeamTypes eTeam = getTeam();
-		int iArea = getArea();
-		int iX = getX(), iY = getY();
+		const int iArea = getArea();
+		const int iX = getX(), iY = getY();
 
 		// check every player on our team's cities
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		foreach_(const CvPlayer* teamMember, GET_TEAM(getTeam()).members())
 		{
-			// is this player on our team?
-			const CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == eTeam)
+			foreach_(CvCity* pLoopCity, teamMember->cities())
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
+				// if coastal only, then make sure we are coast
+				if (!bCoastalOnly || ((const CvArea* pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
 				{
-					// if coastal only, then make sure we are coast
-					CvArea* pWaterArea = NULL;
-					if (!bCoastalOnly || ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
+					// can this city tran this unit?
+					if (pLoopCity->canTrain(eUnit, false, false, true))
 					{
-						// can this city tran this unit?
-						if (pLoopCity->canTrain(eUnit, false, false, true))
+						// if we do not care about distance, then the first match will do
+						if (bIgnoreDistance)
 						{
-							// if we do not care about distance, then the first match will do
-							if (bIgnoreDistance)
+							// if we do not care about distance, then return 1 for value
+							if (iSearchValue != NULL)
 							{
-								// if we do not care about distance, then return 1 for value
-								if (iSearchValue != NULL)
-								{
-									*iSearchValue = 1;
-								}
-
-								return pLoopCity;
+								*iSearchValue = 1;
 							}
 
-							int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
+							return pLoopCity;
+						}
 
-							// if not same area, not as good (lower numbers are better)
-							if (iArea != pLoopCity->getArea() && (!bCoastalOnly || iArea != pWaterArea->getID()))
-							{
-								iValue *= 16;
-							}
+						int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
 
-							// if we cannot path there, not as good (lower numbers are better)
-							if (!generatePath(pLoopCity->plot(), 0, true))
-							{
-								iValue *= 16;
-							}
+						// if not same area, not as good (lower numbers are better)
+						if (iArea != pLoopCity->getArea() && (!bCoastalOnly || iArea != pWaterArea->getID()))
+						{
+							iValue *= 16;
+						}
 
-							if (iValue < iBestValue)
-							{
-								iBestValue = iValue;
-								pBestCity = pLoopCity;
-							}
+						// if we cannot path there, not as good (lower numbers are better)
+						if (!generatePath(pLoopCity->plot(), 0, true))
+						{
+							iValue *= 16;
+						}
+
+						if (iValue < iBestValue)
+						{
+							iBestValue = iValue;
+							pBestCity = pLoopCity;
 						}
 					}
 				}
@@ -31280,16 +31252,9 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 									{
 										if (GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
 										{
-											for (iK = 0; iK < MAX_PLAYERS; iK++)
-											{
-												if (GET_PLAYER((PlayerTypes)iK).isAlive())
-												{
-													if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
-													{
-														GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-													}
-												}
-											}
+											algo::for_each(GET_TEAM((TeamTypes)iI).members(),
+												CvPlayer::fn::AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1)
+											);
 											break;
 										}
 									}

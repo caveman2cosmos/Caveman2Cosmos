@@ -881,7 +881,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 		}
 	}
 
-	for_each(GET_TEAM(eTeam).members(), CvPlayer::fn::AI_updateBonusValue());
+	algo::for_each(GET_TEAM(eTeam).members(), CvPlayer::fn::AI_updateBonusValue());
 }
 
 
@@ -3137,9 +3137,9 @@ CvWString CvTeam::getName() const
 	CvWString szBuffer;
 	bool bFirst = true;
 
-	for (int iI = 0; iI < getNumMembers(); iI++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
-		setListHelp(szBuffer, L"", getMember(iI).getName(), L"/", bFirst);
+		setListHelp(szBuffer, L"", teamMember->getName(), L"/", bFirst);
 		bFirst = false;
 	}
 
@@ -4932,11 +4932,7 @@ int CvTeam::getTerrainTradeCount(TerrainTypes eIndex) const
 
 bool CvTeam::isTerrainTrade(TerrainTypes eIndex) const
 {
-	if (isNPC())
-	{
-		return false;
-	}
-	return (getTerrainTradeCount(eIndex) > 0);
+	return !isNPC() && getTerrainTradeCount(eIndex) > 0;
 }
 
 
@@ -4949,10 +4945,7 @@ void CvTeam::changeTerrainTradeCount(TerrainTypes eIndex, int iChange)
 		m_paiTerrainTradeCount[eIndex] += iChange;
 		FAssert(getTerrainTradeCount(eIndex) >= 0);
 
-		for (int iI = 0; iI < getNumMembers(); ++iI)
-		{
-			getMember(iI).updatePlotGroups();
-		}
+		algo::for_each(members(), CvPlayer::fn::updatePlotGroups());
 	}
 }
 
@@ -4976,10 +4969,7 @@ void CvTeam::changeRiverTradeCount(int iChange)
 		m_iRiverTradeCount += iChange;
 		FAssert(getRiverTradeCount() >= 0);
 
-		for (int iI = 0; iI < getNumMembers(); ++iI)
-		{
-			getMember(iI).updatePlotGroups();
-		}
+		algo::for_each(members(), CvPlayer::fn::updatePlotGroups());
 	}
 }
 
@@ -5144,17 +5134,17 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 	return m_pabHasTech[eIndex];
 }
 
-void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
+void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial) const
 {
 	const bool bSound = ((GC.getGame().isNetworkMultiPlayer() || gDLL->getInterfaceIFace()->noTechSplash()) && !bPartial);
 
-	for (int iI = 0; iI < getNumMembers(); ++iI)
+	foreach_(const CvPlayer* teamMember, members())
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		CvWString szBuffer = gDLL->getText((bPartial ? "TXT_KEY_MISC_PROGRESS_TOWARDS_TECH" : "TXT_KEY_MISC_YOU_DISCOVERED_TECH"), GC.getTechInfo(eIndex).getTextKeyWide());
+		const CvWString szBuffer = gDLL->getText((bPartial ? "TXT_KEY_MISC_PROGRESS_TOWARDS_TECH" : "TXT_KEY_MISC_YOU_DISCOVERED_TECH"), GC.getTechInfo(eIndex).getTextKeyWide());
 
-		AddDLLMessage(((PlayerTypes)iI), false, (bSound ? GC.getEVENT_MESSAGE_TIME() : -1), szBuffer, (bSound ? GC.getTechInfo(eIndex).getSoundMP() : NULL), MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_TECH_TEXT"));
+		AddDLLMessage(teamMember->getID(), false, (bSound ? GC.getEVENT_MESSAGE_TIME() : -1), szBuffer, (bSound ? GC.getTechInfo(eIndex).getSoundMP() : NULL), MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_TECH_TEXT"));
 	}
 }
 
@@ -5247,21 +5237,18 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				logBBAI("    Team %d (%S) acquires tech %S", getID(), GET_PLAYER(ePlayer).getCivilizationDescription(0), GC.getTechInfo(eIndex).getDescription() );
 			}
 
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			foreach_(CvPlayer* teamMember, members())
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				if (teamMember->getCurrentEra() < GC.getTechInfo(eIndex).getEra())
 				{
-					if (GET_PLAYER((PlayerTypes)iI).getCurrentEra() < GC.getTechInfo(eIndex).getEra())
-					{
-						GET_PLAYER((PlayerTypes)iI).setCurrentEra((EraTypes)(GC.getTechInfo(eIndex).getEra()));
-					}
-
-					//	Reconsider civics on acquiring tech
-					GET_PLAYER((PlayerTypes)iI).AI_setCivicTimer(0);
-
-					//	Recalculate bonus values on acquiring a new tech
-					GET_PLAYER((PlayerTypes)iI).AI_updateBonusValue();
+					teamMember->setCurrentEra((EraTypes)(GC.getTechInfo(eIndex).getEra()));
 				}
+
+				//	Reconsider civics on acquiring tech
+				static_cast<CvPlayerAI*>(teamMember)->AI_setCivicTimer(0);
+
+				//	Recalculate bonus values on acquiring a new tech
+				static_cast<CvPlayerAI*>(teamMember)->AI_updateBonusValue();
 			}
 
 			if (GC.getTechInfo(eIndex).isMapVisible())
@@ -5354,22 +5341,19 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 						{
 							int iBestValue = MAX_INT;
 
-							for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+							foreach_(const CvPlayer* teamMember, members())
 							{
-								if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == getID())
+								int iValue = 10 + GC.getGame().getSorenRandNum(10, "Found Corporation (Player)");
+
+								if (teamMember->getCurrentResearch() != eIndex)
 								{
-									int iValue = 10 + GC.getGame().getSorenRandNum(10, "Found Corporation (Player)");
+									iValue *= 10;
+								}
 
-									if (GET_PLAYER((PlayerTypes)iJ).getCurrentResearch() != eIndex)
-									{
-										iValue *= 10;
-									}
-
-									if (iValue < iBestValue)
-									{
-										iBestValue = iValue;
-										eBestPlayer = ((PlayerTypes)iJ);
-									}
+								if (iValue < iBestValue)
+								{
+									iBestValue = iValue;
+									eBestPlayer = ((PlayerTypes)iJ);
 								}
 							}
 						}
@@ -5507,7 +5491,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 								{
 									MEMORY_TRACK_EXEMPT();
 
-									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
+									const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
 									AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
 										GC.getBonusInfo(eBonus).getButton(), CvColorInfo::white(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 								}
@@ -5562,20 +5546,14 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				}
 			}
 
-			if (bNewValue)
+			if (bNewValue && bAnnounce && GC.getGame().isFinalInitialized() && !gDLL->GetWorldBuilderMode())
 			{
-				if (bAnnounce)
+				FAssert(ePlayer != NO_PLAYER);
+				if (GET_PLAYER(ePlayer).isResearch() && (GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH))
 				{
-					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+					if (ePlayer == GC.getGame().getActivePlayer())
 					{
-						FAssert(ePlayer != NO_PLAYER);
-						if (GET_PLAYER(ePlayer).isResearch() && (GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH))
-						{
-							if (ePlayer == GC.getGame().getActivePlayer())
-							{
-								GET_PLAYER(ePlayer).chooseTech(0, gDLL->getText("TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT"));
-							}
-						}
+						GET_PLAYER(ePlayer).chooseTech(0, gDLL->getText("TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT"));
 					}
 				}
 			}
@@ -5996,33 +5974,27 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		}
 	}
 
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
+	foreach_(const CvPlayer* teamMember, members())
 	{
-		CvPlayer& kPlayer = getMember(iPlayer);
-
-		kPlayer.changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
-		kPlayer.changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
-		kPlayer.changeTradeRoutes(GC.getTechInfo(eTech).getTradeRoutes() * iChange);
-		kPlayer.changeExtraHealth(GC.getTechInfo(eTech).getHealth() * iChange);
-		kPlayer.changeExtraHappiness(GC.getTechInfo(eTech).getHappiness() * iChange);
-
-		//DPII < Maintenance Modifiers >
-		kPlayer.changeDistanceMaintenanceModifier(GC.getTechInfo(eTech).getDistanceMaintenanceModifier() * iChange);
-		kPlayer.changeNumCitiesMaintenanceModifier(GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() * iChange);
-		kPlayer.changeMaintenanceModifier(GC.getTechInfo(eTech).getMaintenanceModifier() * iChange);
-		kPlayer.changeCoastalDistanceMaintenanceModifier(GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() * iChange);
-		//DPII < Maintenance Modifiers >
-
-		kPlayer.changeAssets(GC.getTechInfo(eTech).getAssetValue() * iChange);
-		kPlayer.changeTechPower(GC.getTechInfo(eTech).getPowerValue() * iChange);
-		kPlayer.changeTechScore(getTechScore(eTech) * iChange);
-		kPlayer.changeTechInflation(kTech.getInflationModifier() * iChange);
+		teamMember->changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
+		teamMember->changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
+		teamMember->changeTradeRoutes(GC.getTechInfo(eTech).getTradeRoutes() * iChange);
+		teamMember->changeExtraHealth(GC.getTechInfo(eTech).getHealth() * iChange);
+		teamMember->changeExtraHappiness(GC.getTechInfo(eTech).getHappiness() * iChange);
+		teamMember->changeDistanceMaintenanceModifier(GC.getTechInfo(eTech).getDistanceMaintenanceModifier() * iChange);
+		teamMember->changeNumCitiesMaintenanceModifier(GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() * iChange);
+		teamMember->changeMaintenanceModifier(GC.getTechInfo(eTech).getMaintenanceModifier() * iChange);
+		teamMember->changeCoastalDistanceMaintenanceModifier(GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() * iChange);
+		teamMember->changeAssets(GC.getTechInfo(eTech).getAssetValue() * iChange);
+		teamMember->changeTechPower(GC.getTechInfo(eTech).getPowerValue() * iChange);
+		teamMember->changeTechScore(getTechScore(eTech) * iChange);
+		teamMember->changeTechInflation(kTech.getInflationModifier() * iChange);
 		//ls612: Tech Commerce Modifiers (repositioned for optimal processing by TB)
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
-			kPlayer.changeCommerceRateModifier(((CommerceTypes)iJ), GC.getTechInfo(eTech).getCommerceModifier(iJ) * iChange);
+			teamMember->changeCommerceRateModifier(((CommerceTypes)iJ), GC.getTechInfo(eTech).getCommerceModifier(iJ) * iChange);
 		}
-		kPlayer.updateTechHappinessandHealth();
+		teamMember->updateTechHappinessandHealth();
 	}
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
@@ -6058,13 +6030,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			setLastRoundOfValidImprovementCacheUpdate();
 			if (GC.getBuildInfo((BuildTypes) iI).getRoute() != NO_ROUTE)
 			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					if (GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() && GET_PLAYER((PlayerTypes)iJ).isAlive())
-					{
-						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
-					}
-				}
+				for_each(members(), CvPlayer::fn::processNewRoutes());
 			}
 			break;
 		}
@@ -6367,44 +6333,21 @@ bool CvTeam::isForceRevealedBonus(BonusTypes eBonus) const
 
 int CvTeam::countNumHumanGameTurnActive() const
 {
-	int iCount = 0;
-
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
-	{
-		const CvPlayer& kLoopPlayer = getMember(iPlayer);
-
-		if (kLoopPlayer.isHuman() && kLoopPlayer.isTurnActive())
-		{
-			++iCount;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(members(), CvPlayer::fn::isHuman() && CvPlayer::fn::isTurnActive());
 }
 
 void CvTeam::setTurnActive(bool bNewValue, bool bDoTurn)
 {
 	FAssert(GC.getGame().isSimultaneousTeamTurns());
 
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
-	{
-		getMember(iPlayer).setTurnActive(bNewValue, bDoTurn);
-	}
+	for_each(members(), CvPlayer::fn::setTurnActive(bNewValue, bDoTurn));
 }
 
 bool CvTeam::isTurnActive() const
 {
 	FAssert(GC.getGame().isSimultaneousTeamTurns());
 
-	for (int iPlayer = 0; iPlayer < getNumMembers(); iPlayer++)
-	{
-		if (getMember(iPlayer).isTurnActive())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(members(), CvPlayer::fn::isTurnActive());
 }
 
 
@@ -6770,8 +6713,7 @@ int CvTeam::getProjectPartNumber(ProjectTypes eProject, bool bAssert) const
 	const int iNumBuilt = getProjectCount(eProject);
 	for (int i = 0; i < iNumBuilt; i++)
 	{
-		const int artType = getProjectArtType(eProject, i);
-		if (artType < 0)
+		if (getProjectArtType(eProject, i) < 0)
 		{
 			return i;
 		}
@@ -7904,21 +7846,21 @@ int CvTeam::getWinForLosingResearchModifier() const
 
 void CvTeam::addMember(CvPlayerAI& player)
 {
-	m_aMembers.load(&player);
+	m_TeamMembers.push_back(&player);
 }
 
 void CvTeam::removeMember(CvPlayerAI& player)
 {
-	m_aMembers.remove(&player);
+	m_TeamMembers.erase(&player);
 }
 
 int CvTeam::getNumMembers() const
 {
-	return m_aMembers.getCount();
+	return m_TeamMembers.size();
 }
 
 CvPlayerAI& CvTeam::getMember(int index) const
 {
 	FASSERT_BOUNDS(0, getNumMembers(), index)
-	return *m_aMembers[index];
+	return *m_TeamMembers[index];
 }

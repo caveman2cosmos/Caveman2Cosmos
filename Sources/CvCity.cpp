@@ -13789,12 +13789,9 @@ int CvCity::calculateTeamCulturePercent(TeamTypes eIndex) const
 {
 	int iTeamCulturePercent = 0;
 
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	foreach_(const CvPlayer* teamMember, GET_TEAM(eIndex).members())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex)
-		{
-			iTeamCulturePercent += calculateCulturePercent((PlayerTypes)iI);
-		}
+		iTeamCulturePercent += calculateCulturePercent(teamMember->getID());
 	}
 	return iTeamCulturePercent;
 }
@@ -13996,24 +13993,19 @@ void CvCity::updateEspionageVisibility(bool bUpdatePlotGroups)
 
 		if (iTeam != getTeam() && isRevealed((TeamTypes)iTeam, false))
 		{
-			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
+			foreach_(const CvPlayer* teamMember, GET_TEAM((TeamTypes)iTeam).members())
 			{
-				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-
-				if (kPlayer.isAlive() && kPlayer.getTeam() == iTeam)
+				for (std::vector<EspionageMissionTypes>::iterator it = aMission.begin(); it != aMission.end(); ++it)
 				{
-					for (std::vector<EspionageMissionTypes>::iterator it = aMission.begin(); it != aMission.end(); ++it)
+					if (teamMember->canDoEspionageMission(*it, getOwner(), plot(), -1, NULL))
 					{
-						if (kPlayer.canDoEspionageMission(*it, getOwner(), plot(), -1, NULL))
-						{
-							bVisibility = true;
-							break;
-						}
-					}
-					if (bVisibility)
-					{
+						bVisibility = true;
 						break;
 					}
+				}
+				if (bVisibility)
+				{
+					break;
 				}
 			}
 		}
@@ -15229,12 +15221,11 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 
 					if (GC.getBuildingInfo(eIndex).getGlobalPopulationChange() != 0)
 					{
-						for (int iI = 0; iI < MAX_PLAYERS; iI++)
+						foreach_(const CvPlayer* teamMember, GET_TEAM(getTeam()).members())
 						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam()
-							&& (GC.getBuildingInfo(eIndex).isTeamShare() || iI == getOwner()))
+							if (GC.getBuildingInfo(eIndex).isTeamShare() || teamMember->getID() == getOwner())
 							{
-								foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+								foreach_(CvCity* pLoopCity, teamMember->cities())
 								{
 									pLoopCity->setPopulation(std::max(1, (pLoopCity->getPopulation() + iChangeNumRealBuilding * GC.getBuildingInfo(eIndex).getGlobalPopulationChange())));
 									pLoopCity->AI_updateAssignWork();  // so subsequent cities don't starve with the extra citizen working nothing

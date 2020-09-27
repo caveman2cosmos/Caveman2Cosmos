@@ -2424,19 +2424,26 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, AI_makeProductionDirty);
 		DECLARE_MAP_FUNCTOR(CvPlayer, void, AI_makeAssignWorkDirty);
 		DECLARE_MAP_FUNCTOR(CvPlayer, void, updateTradeRoutes);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, updatePlotGroups );
 		DECLARE_MAP_FUNCTOR(CvPlayer, void, verifyUnitStacksValid);
 		DECLARE_MAP_FUNCTOR(CvPlayer, void, clearModifierTotals);
 		DECLARE_MAP_FUNCTOR(CvPlayer, void, recalculateModifiers);
+		DECLARE_MAP_FUNCTOR(CvPlayer, void, processNewRoutes);
 
 		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, AI_updateBonusValue, BonusTypes);
 		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, addPropertiesAllCities, const CvProperties*);
 		DECLARE_MAP_FUNCTOR_1(CvPlayer, void, subtractPropertiesAllCities, const CvProperties*);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, updateCitySight, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, setTurnActive, bool, bool);
+
+		DECLARE_MAP_FUNCTOR_3(CvPlayer, void, AI_changeMemoryCount, PlayerTypes, MemoryTypes, int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, bool, isHuman);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, bool, isTurnActive);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, int, getNumCities);
 
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, bool, hasBonus, BonusTypes);
