@@ -113,6 +113,11 @@ void CvMap::uninit()
 
 	m_areas.uninit();
 
+	for (int iI = 0; iI < numPlots(); iI++)
+	{
+		delete m_pMapPlots[iI];
+	}
+
 	for(int iI = 0; iI < (int)m_viewports.size(); iI++)
 	{
 		delete m_viewports[iI];
