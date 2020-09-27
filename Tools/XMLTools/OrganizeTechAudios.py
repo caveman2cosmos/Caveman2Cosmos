@@ -134,6 +134,7 @@ def mp3_missing_query(mp3_filepath, source, miss_list):
         miss_list.append(mp3_filepath)
         return
 
+need_changing = False
 # Sorted/human readable tech name from era, english tech name
 def rename_file(filename, era, techname, element, schema, child_element):
     techname_replaced = techname.replace(' ', '_')
@@ -146,6 +147,7 @@ def rename_file(filename, era, techname, element, schema, child_element):
         # rename file in xml
         print(f"{filename} should be: {target_filename}:")
         full_mp3_filename = f"{path_assets_folder}{filename}.mp3"
+        need_changing = True
         if actually_rename:
             print(f"Finding: {schema}{child_element} and making: {target_filename}")
             element.find(f"{schema}{child_element}").text = target_filename
@@ -309,12 +311,15 @@ for path in paths:
                 # check both singleplayer and multiplayer versions, can differ.
                 if v[0][1] == sound_ID:
                     rename_file(v[0][2], v[2], v[3][1], sound_data, schema, 'Filename')
-                    
                 if v[1][1] == sound_ID:
                     rename_file(v[1][2], v[2], v[3][1], sound_data, schema, 'Filename')
     tree.write(path)
             
 
-if actually_rename == False:
+if actually_rename == False and need_changing == True:
     print('!!!!!!!!!----------!!!!!!!!!!')
     print("To do these changes, run again with -rename ")
+elif need_changing == False:
+    print('Nothing to rename!')
+else:
+    print('Done organizing names!')

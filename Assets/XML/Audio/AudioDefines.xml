@@ -8430,21 +8430,21 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_POETRY</SoundID>
-			<Filename>Sounds/Tech/Tech_Poetry</Filename>
+			<Filename>Sounds/Tech/03_Poetry</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_WARFARE</SoundID>
-			<Filename>Sounds/Tech/Tech_Warfare</Filename>
+			<Filename>Sounds/Tech/01_Warfare</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ANDROIDS</SoundID>
-			<Filename>Sounds/Tech/Tech_Androids</Filename>
+			<Filename>Sounds/Tech/09_Androids</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -8479,21 +8479,21 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SEDENTARY_LIFESTYLE</SoundID>
-			<Filename>Sounds/Tech/Tech_Sedentary_Lifestyle</Filename>
+			<Filename>Sounds/Tech/02_Sedentary_Lifestyle</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ANCESTOR_WORSHIP</SoundID>
-			<Filename>Sounds/Tech/Tech_Ancestor_Worship</Filename>
+			<Filename>Sounds/Tech/02_Ancestor_Worship</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_WEAPONIZED_DISINTEGRATION</SoundID>
-			<Filename>Sounds/Tech/Tech_Weaponized_Disintegration</Filename>
+			<Filename>Sounds/Tech/11_Weaponized_Disintegration</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -8682,7 +8682,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ARCHEOLOGY</SoundID>
-			<Filename>Sounds/Tech/Tech_Archeology</Filename>
+			<Filename>Sounds/Tech/05_Archeology</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -9697,7 +9697,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_MP_ADVANCED_FLIGHT</SoundID>
-			<Filename>Sounds/Tech/Advanced_Flight</Filename>
+			<Filename>Sounds/Tech/Tech_MP_Advanced_Flight</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
