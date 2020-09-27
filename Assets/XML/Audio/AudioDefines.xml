@@ -17972,7 +17972,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_NANOTECH_LIFESTYLE</SoundID>
-			<Filename>Sounds/Tech/Nanotech_Lifestyle</Filename>
+			<Filename>Sounds/Tech/09_Nanotech_Lifestyle</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
