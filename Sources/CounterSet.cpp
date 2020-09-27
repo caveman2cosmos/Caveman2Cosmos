@@ -22,7 +22,7 @@ void CounterSet::init(const int iNumCounters)
 {
 	iSize = safeCoercion(iNumCounters);
 	iNext = 0;
-	iArrCounters = new unsigned short[iSize];
+	iArrCounters = new uint16_t[iSize];
 	iArrCurrentIDs = new int[iSize];
 
 	for (int iI = 0; iI < iSize; iI++)
@@ -32,7 +32,7 @@ void CounterSet::init(const int iNumCounters)
 	}
 }
 
-unsigned short CounterSet::getCount(const int ID)
+uint16_t CounterSet::getCount(const int ID)
 {
 	for (int iI = 0; iI < iSize; iI++)
 	{
@@ -58,18 +58,18 @@ void CounterSet::setCount(const int ID, const int iValue)
 	assign(ID, safeCoercion(iValue));
 }
 
-void CounterSet::assign(const int ID, const unsigned short iValue)
+void CounterSet::assign(const int ID, const uint16_t iValue)
 {
 	iArrCounters[iNext] = iValue;
 	iArrCurrentIDs[iNext] = ID;
 	if (++iNext == iSize) iNext = 0;
 }
 
-unsigned short CounterSet::safeCoercion(const int iValue)
+uint16_t CounterSet::safeCoercion(const int iValue)
 {
 	if (iValue > 0 || iValue <= 65535)
 	{
-		return static_cast<unsigned short>(iValue);
+		return static_cast<uint16_t>(iValue);
 	}
 	return 0;
 }

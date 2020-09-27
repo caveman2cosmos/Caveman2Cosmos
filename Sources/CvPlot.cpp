@@ -11676,7 +11676,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
 		if (cCount > 0)
 		{
-			unsigned short* tempFoundValue = new unsigned short[cCount];
+			uint16_t* tempFoundValue = new uint16_t[cCount];
 			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvPlot", cCount, (short*)tempFoundValue, "m_aiFoundValue");
 
 			//	Note - the m_aiFoundValue values were scaled by a factor of 10 to

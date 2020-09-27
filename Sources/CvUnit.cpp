@@ -13237,7 +13237,7 @@ CivilizationTypes CvUnit::getCivilizationType() const
 	return GET_PLAYER(getOwner()).getCivilizationType();
 }
 
-const wchar* CvUnit::getVisualCivAdjective(TeamTypes eForTeam) const
+const wchar_t* CvUnit::getVisualCivAdjective(TeamTypes eForTeam) const
 {
 	if (getVisualOwner(eForTeam) == getOwner())
 	{
@@ -21242,7 +21242,7 @@ bool CvUnit::isDescInName() const
 }
 
 
-const wchar* CvUnit::getNameKey() const
+const wchar_t* CvUnit::getNameKey() const
 {
 	if (m_szName.empty())
 	{
