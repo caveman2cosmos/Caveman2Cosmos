@@ -7862,7 +7862,7 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
 				algo::for_each(GET_PLAYER((PlayerTypes)iI).cities()
-					| filtered(CvCity::fn::getNumActiveBuilding(eIndex1) > 0 && CvCity::fn::isReligiouslyDisabledBuilding(eIndex1)),
+					| filtered(CvCity::fn::getNumActiveBuilding(eIndex1) > 0 && !CvCity::fn::isReligiouslyDisabledBuilding(eIndex1)),
 					CvCity::fn::changeBaseYieldRate(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
 				);
 			}
