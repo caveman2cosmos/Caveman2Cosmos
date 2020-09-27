@@ -25580,11 +25580,9 @@ bool CvUnitAI::AI_connectCity()
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-
 	// XXX how do we make sure that we can build roads???
 
-	pLoopCity = plot()->getWorkingCity();
+	const CvCity* pLoopCity = plot()->getWorkingCity();
 	if (pLoopCity != NULL)
 	{
 		if (AI_plotValid(pLoopCity->plot()))
@@ -25685,12 +25683,13 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 {
 	PROFILE_FUNC();
 
+	bool bValid;
+	int iPathTurns;
+
 	// XXX how do we make sure that we can build roads???
 
 	FAssert(canBuildRoute());
 
-	bool bValid = false;
-	int iPathTurns;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 

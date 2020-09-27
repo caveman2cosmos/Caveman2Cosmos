@@ -225,7 +225,6 @@ void CvMapGenerator::addLakes()
 	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
 		gDLL->callUpdater();
-		FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
 		if (!pLoopPlot->isWater() && !pLoopPlot->isCoastal() && !pLoopPlot->isRiver()
 		&& GC.getGame().getMapRandNum(GC.getDefineINT("LAKE_PLOT_RAND"), "addLakes") == 0)
@@ -267,7 +266,6 @@ void CvMapGenerator::addRivers()
 		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
 			gDLL->callUpdater();
-			FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
 			if (pLoopPlot->isWater())
 				continue;
@@ -560,8 +558,6 @@ void CvMapGenerator::addFeatures()
 
 	foreach_(CvPlot* pPlot, GC.getMap().plots())
 	{
-		FAssert(pPlot != NULL);
-
 		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 		{
 			if (pPlot->canHaveFeature((FeatureTypes)iJ))
@@ -727,8 +723,6 @@ void CvMapGenerator::placeBonusWithCluster(const BonusTypes eBonus, const int iG
 
 	foreach_(CvPlot* pPlot, GC.getMap().plots())
 	{
-		FAssertMsg(pPlot != NULL, "placeBonusWithCluster(): pPlot is null");
-
 		if ((pBestArea == NULL || pBestArea == pPlot->area())
 		&& canPlaceBonusAt(eBonus, pPlot->getX(), pPlot->getY(), bIgnoreLatitude))
 		{
@@ -793,7 +787,7 @@ void CvMapGenerator::addGoodies()
 			foreach_(CvPlot* pPlot, GC.getMap().plots())
 			{
 				gDLL->callUpdater();
-				FAssertMsg(pPlot, "pPlot is expected not to be NULL");
+
 				if (!pPlot->isWater())
 				{
 					const CvArea* pArea = GC.getMap().getArea(pPlot->getArea());
@@ -927,10 +921,10 @@ void CvMapGenerator::afterGeneration()
 
 void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
 {
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
 		gDLL->callUpdater();
-		GC.getMap().plotByIndex(iI)->setPlotType((PlotTypes)paiPlotTypes[iI], false, false);
+		pLoopPlot->setPlotType((PlotTypes)paiPlotTypes[iI], false, false);
 	}
 
 	GC.getMap().recalculateAreas();

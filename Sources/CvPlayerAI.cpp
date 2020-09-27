@@ -5186,8 +5186,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	{
 		foreach_(const CvPlot* pPlot, GC.getMap().plots())
 		{
-			if (pPlot->isPeak2(true) && pPlot->getOwner() != NO_PLAYER
-			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
+			if (pPlot->isPeak2(true) && pPlot->getOwner() == getID())
 			{
 				iTempValue += 35;
 			}

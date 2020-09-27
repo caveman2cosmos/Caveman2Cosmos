@@ -113,15 +113,8 @@ void CvMap::uninit()
 
 	m_areas.uninit();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		delete m_pMapPlots[iI];
-	}
-
-	for(int iI = 0; iI < (int)m_viewports.size(); iI++)
-	{
-		delete m_viewports[iI];
-	}
+	GC.deleteVectorContent(m_pMapPlots);
+	GC.deleteVectorContent(m_viewports);
 
 	m_viewports.clear();
 	m_iCurrentViewportIndex = -1;
@@ -475,12 +468,10 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 			foreach_(CvPlot* pLoopPlot, plots() | filtered(CvPlot::fn::area() == pArea))
 			{
 				const int iDist = stepDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-				if (iDist != -1)
+
+				if (iDist != -1 && (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist()))
 				{
-					if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
-					{
-						pLoopPlot->setMinOriginalStartDist(iDist);
-					}
+					pLoopPlot->setMinOriginalStartDist(iDist);
 				}
 			}
 		}
@@ -1088,12 +1079,12 @@ void CvMap::invalidateIsActivePlayerNoDangerCache()
 {
 	PROFILE_FUNC();
 
-	foreach_(CvPlot* pLoopPlot, plots())
+	foreach_(CvPlot* plot, plots())
 	{
-		pLoopPlot->setIsActivePlayerNoDangerCache(false);
-		pLoopPlot->setIsActivePlayerHasDangerCache(false);
-		pLoopPlot->CachePathValidityResult(NULL,false,false);
-		pLoopPlot->CachePathValidityResult(NULL,true,false);
+		plot->setIsActivePlayerNoDangerCache(false);
+		plot->setIsActivePlayerHasDangerCache(false);
+		plot->CachePathValidityResult(NULL,false,false);
+		plot->CachePathValidityResult(NULL,true,false);
 	}
 }
 
