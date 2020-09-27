@@ -1976,7 +1976,7 @@ Randomize Resources=0\nEndMap\n"
 				team.signDefensivePact(item)
 
 			for item in pWBTeam.bVassalOfTeamList:
-				GC.getTeam(item[0]).assignVassal(iTeamLoop, item[1])
+				GC.getTeam(item[0]).assignVassal(pWBTeam.iTeam, item[1])
 			if pWBTeam.iVassalPower > 0:
 				team.setVassalPower(pWBTeam.iVassalPower)
 			if pWBTeam.iMasterPower > 0:

@@ -2777,29 +2777,47 @@
 		<Tag>TXT_KEY_UNIT_ARCTICFOX</Tag>
 		<English>Arctic Fox</English>
 		<French>Renard arctique</French>
+		<German>
+			<Text>Polarfuchs:Polarfuchses:Polarfuchs:Polarfuchs:Polarfüchse:Polarfüchse:Polarfüchsen:Polarfüchse</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCTICFOX_PEDIA</Tag>
 		<English>The arctic fox, also known as the white fox, polar fox, or snow fox, is a small fox native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome. It is well adapted to living in cold environments.[PARAGRAPH:2]In C2C for game balance the Arctic Fox may appear in the Antarctic.</English>
+		<German>Der in den nördlichen Polarregionen beheimatete [COLOR_UNIT_TEXT]Polar- oder Eisfuchs[COLOR_REVERT] zeichnet sich dadurch aus, dass seine Pfoten - ähnlich wie beim Polarhasen - mit dichtem Fell bedeckt sind. Sein wissenschaftlicher Name Vulpes lagopus bedeutet daher "hasenfüßiger Fuchs". Er ist der einzige Wildhund, der temperaturbedingt sein Fell wechselt.[NEWLINE]Sein guter Geruchssinn hilft dem Polarfuchs dabei, seine Beute, die neben Vögeln und deren Eiern hauptsächlich aus Wühlmäusen und Lemmingen besteht, selbst durch dichten Schnee in ihrem Versteck aufzuspüren. Am Strand bedient er sich an angeschwemmten Kadavern und folgt auch anderen Raubtieren bei deren Beutezügen, um sich über die Reste herzumachen.[NEWLINE]Der größte natürliche Feind des Polarfuchses neben den Inuit, die bis heute mit seinem Fell handeln, ist der Polarwolf. Durch die Erderwärmung dringen auch zunehmend Rotfüchse in seine Heimat vor, die gelegentlich Jagd auf ihre kleineren Verwandten machen. Der Polarfuchs flieht in der Regel, kann sich aber auch heftig wehren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
 		<English>Nine-banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
+		<German>
+			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO_PEDIA</Tag>
 		<English>The nine-banded armadillo (Dasypus novemcinctus), or the nine-banded, long-nosed armadillo, is a medium-sized mammal found in North, Central, and South America, making it the most widespread of the armadillos.</English>
+		<German>Das [COLOR_UNIT_TEXT]Neunbinden-Gürteltier[COLOR_REVERT] (Dasypus novemcinctus) ist aufgrund seiner Anpassungsfähigkeit das einzige Gürteltier, das nicht nur in Süd-, sondern auch in Nordamerika verbreitet ist.[NEWLINE]Das nachtaktive Tier lebt tagsüber in Bauen, die es mit den Vorderfüßen gegraben hat. Diese Tunnel können bis zu 6 Meter lang werden. Manchmal wohnen darin mehrere Familienmitglieder (jedoch stets gleichen Geschlechts) und es kommt auch vor, dass sich das Neunbinden-Gürteltier seinen Bau mit Skunks, Beutelratten oder Schwarzleguanen teilt. Seine Kurzsichtigkeit macht das Neunbinden-Gürteltier durch seinen guten Geruchssinn wett. Während der Wachphase ist es fast ununterbrochen mit der Futtersuche beschäftigt, schnüffelt und schnaubt dabei vor sich hin. Es bevorzugt tierische Nahrung, vor allem Käfer und andere Insekten, aber auch kleine Wirbeltiere. Dazu kommen vereinzelt Früchte und Beeren. Bei Gefahr zieht sich das flinke Neunbinden-Gürteltier in seinen Bau zurück, wobei es den Eingang mit seinem Beckenpanzer verstopft und sich mit seinen Bändern in der Erde verhakt, was ein Herausziehen unmöglich macht. Zudem produziert es ein Sekret, das bei seinen Fressfeinden wie Pumas und Jaguaren Übelkeit hervorruft.[NEWLINE]Das Neunbinden-Gürteltier liefert dem Menschen Fleisch und wird als Insektenvertilger geschätzt. Es ist dafür bekannt, Lepra und die Chagas-Krankheit zu übertragen. Deshalb werden in der Medizin Impfstoffe und Behandlungsmethoden an ihm getestet.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BABIRUSA</Tag>
 		<English>Babirusa</English>
 		<French>Babiroussa</French>
+		<German>
+			<Text>Molukken-Hirscheber:Molukken-Hirschebers:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Molukken-Hirscheber:Molukken-Hirscheber:Molukken-Hirschebern:Molukken-Hirscheber</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BABIRUSA_PEDIA</Tag>
 		<English>Babirusa (Babirousa babyrussa), wild East Indian swine, family Suidae (order Artiodactyla), of Celebes and the Molucca islands.[PARAGRAPH:2]The stout-bodied, short-tailed babirusa stands 65-80 cm (25-30 inches) at the shoulder. It has a rough, grayish hide and is almost hairless. Its most notable feature is the exaggerated development of the upper and lower canine teeth, or tusks, of the male. Those of the upper jaw grow upward from their bases so that they pierce the skin of the muzzle and curve backward, eventually almost touching the forehead.[PARAGRAPH:2]The babirusa is a docile, retiring, night-hunting animal of dense jungle. It is a fast runner and swims readily. When foraging, it roots in soft soil near rivers and in swamps. The babirusa is considered good to eat and is often hunted locally.</English>
 		<French>Les babiroussas ou babyrousas forment un genre de suidé. Le nom provient du malais, babi (« porc ») et rusa (« cerf »).</French>
+		<German>Bei dem [COLOR_UNIT_TEXT]Molukken-Hirscheber[COLOR_REVERT] (Babyrousa babyrussa) handelt es sich um einen Hirscheber, der nur noch auf den indonesichen Sula-Inseln Mangole und Taliabu sowie auf Buru vorkommt. Auf Sulawesi ist er inzwischen ausgestorben. Von den anderen Hirschebern unterscheidet sich diese Art lediglich durch die dichtere Behaarung, die schwarz oder gold-cremefarben ist. Alle Hirschebermännchen besitzen nach oben gebogene Stoßzähne und am Unterkiefer zudem verlängerte Eckzähne.[NEWLINE]Über die Lebensweise der Molukken-Hirscheber ist wenig bekannt. Wahrscheinlich bilden sie kleine Gruppen. Im tropischen Regenwald finden sie ein reichhaltiges Nahrungsangebot vor. Dazu gehören Früchte und andere Pflanzenteile ebenso wie Würmer, Insekten und kleine Wirbeltiere.[NEWLINE]Die ohnehin schon geringen Bestände des Hirschebers gehen durch Abholzung des Lebensraums und Bejagung durch die nicht-muslimischen Teile der Bevölkerung noch weiter zurück.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADGER</Tag>
@@ -2811,7 +2829,7 @@
 		</French>
 		<German>
 			<Text>Dachs:Dachses:Dachs:Dachs:Dachse:Dachse:Dachsen:Dachse</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tasso</Italian>
@@ -2825,6 +2843,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADGER_PEDIA</Tag>
 		<English>Badgers have rather short, fat bodies, with short legs for digging. They have elongated weasel-like heads with small ears. Their tails vary in length depending on species; the stink badger has a very short tail, while the ferret badger's tail can be 4651 cm long, depending on age. They have black faces with distinctive white markings, gray bodies with a light-coloured stripe from head to tail, and dark legs with light coloured underbellies. They grow to around 90 centimetres in length including tail. The European badger is one of the largest; the American badger, the hog badger and the honey badger are generally a little smaller and lighter. The stink badgers are smaller still, and the ferret badgers are the smallest of all. They weigh around 911 kg on average, with some Eurasian badgers weighing in at around 18 kg.</English>
+		<German>[COLOR_UNIT_TEXT]Dachse[COLOR_REVERT] gehören zur Familie der Marder und galten lange als monospezifisch. Jedoch gibt es vier Arten, die sich über ganz Eurasien verbreiten. Der größte und bekannteste ist der Europäische Dachs (Meles meles). Der in Amerika heimische Silberdachs (Taxidea taxus) ist nach neuen Erkenntnissen nur ein sehr entfernter Verwandter.[NEWLINE]Dachse sind leicht an der schwarz-weißen Zeichnung ihres Kopfes zu erkennen. Die Vorderpfoten sind mit Krallen ausgestattet, die zum Graben von Behausungen und der Nahrungssuche dienen. Diese besteht hauptsächlich aus Regenwürmern, Insekten und kleinen Säugern. Dachse sind sogar in der Lage, Igel aufzurollen und zu verzehren. Im Sommer steht auch pflanzliche Nahrung auf dem Speiseplan. Wie alle Marder besitzen Dachse eine Drüse am hinteren Teil des Körpers, deren Sekret zur Markierung von Territoriumsgrenzen oder Artgenossen dient.[NEWLINE]Für den Menschen hatten Dachse einst eine große Bedeutung, sie wurden sogar gezähmt und ähnlich wie Hunde zur Jagd eingesetzt. Dachsfett diente im Mittelalter als Einreibung gegen Rheuma. Heute gibt es noch vereinzelt Rasier- oder Malerpinsel aus Dachshaar. Auf den britischen Inseln gelten die Tiere als Überträger der Rindertuberkulose. Der Dachs war das Wildtier des Jahres 2010.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACKBEAR</Tag>
@@ -2834,6 +2853,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Schwarzbär:Schwarzbären:Schwarzbären:Schwarzbären:Schwarzbären:Schwarzbären:Schwarzbären:Schwarzbären</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Orso nero</Italian>
 		<Spanish>
 			<Text>Oso negro</Text>
@@ -2845,17 +2869,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Tag>
 		<English>The American black bear or North American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent's smallest and most common bear species. Black bears are omnivores, with their diets varying greatly depending on season and location. They typically live in largely forested areas, but do leave forests in search of food. Sometimes they become attracted to human communities because of the immediate availability of food. The American black bear is listed by the IUCN as Least Concern, due to the species' widespread distribution and a large global population estimated to be twice that of all other bear species combined. American black bears often mark trees using their teeth and claws as a form of communication with other bears, a behavior common to many species of bears.</English>
+		<German>Der [COLOR_UNIT_TEXT]Amerikanische Schwarzbär[COLOR_REVERT] (Ursus americanus) oder auch Baribal lebt in Nordamerika und ist weniger gefährlich als der ebenfalls dort heimische Grizzly.[NEWLINE]Sein massiger Körperbau ist der eines typischen Bären: spitze Schnauze, kleine Augen und Ohren, Stummelschwanz und kräftige Pfoten. Die Fellfarbe variiert je nach Lebensraum von schwarz über silbergrau bis rötlichbraun. Wie alle Bären ist der Amerikanische Schwarzbär flink, kann auf Bäume klettern und gut schwimmen. Obwohl er ein Allesfresser ist, ernährt er sich vorwiegend von Pflanzen.[NEWLINE]Grizzlys und andere Raubtiere machen gelegentlich Jagd auf junge Schwarzbären. Der größte Feind ist jedoch der Mensch. Bis heute tragen Regimenter der Britischen Armee Mützen aus dem Fell kanadischer Schwarzbären. Der Legende nach ist der Teddybär nach dem früheren US-Präsidenten Theodor "Teddy" Roosevelt benannt, der sich bei der Jagd weigerte, ein Schwarzbärenjunges zu erschießen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_RHINO</Tag>
 		<English>Black Rhinoceros</English>
 		<French>Rhinocéros noir</French>
+		<German>
+			<Text>Spitzmaulnashorn:Spitzmaulnashorns:Spitzmaulnashorn:Spitzmaulnashorn:Spitzmaulnashörner:Spitzmaulnashörner:Spitzmaulnashörnern:Spitzmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Nosorożec Czarny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_RHINO_PEDIA</Tag>
 		<English>The black rhinoceros or hook-lipped rhinoceros (Diceros bicornis) is a species of rhinoceros, native to eastern and central Africa including Kenya, Tanzania, Cameroon, South Africa, Namibia, Zimbabwe, and Angola. Although the rhinoceros is referred to as black, its colors vary from brown to grey.[PARAGRAPH:2]The other African rhinoceros is the white rhinoceros (Ceratotherium simum). The word "white" in the name "white rhinoceros" is a misinterpretation of the Afrikaans word wyd, itself derived from the Dutch word wijd for wide, referring to its square upper lip, as opposed to the pointed or hooked lip of the black rhinoceros. These species are now sometimes referred to as the square-lipped (for white) or hook-lipped (for black) rhinoceros.[PARAGRAPH:2]The species overall is classified as critically endangered, and one subspecies, the western black rhinoceros, was declared extinct by the IUCN in 2011.</English>
 		<French>Le rhinocéros noir (Diceros bicornis), qui vit en Afrique, est la seule espèce du genre Diceros, l'un des quatre genres de rhinocéros. Le rhinocéros noir d'Afrique de l'Ouest, sous-espèce Diceros bicornis longipes, est déclarée éteinte le 11 novembre 2011 par l'UICN</French>
+		<German>Das [COLOR_UNIT_TEXT]Spitzmaulnashorn[COLOR_REVERT] oder Schwarze Nashorn (Diceros bicornis) ist das zweitgrößte Nashorn Afrikas. Der friedliche Savannenbewohner ist ein Einzelgänger, der leicht an seinen zwei Hörnern (auf der Nase und auf der Stirn) zu erkennen ist.[NEWLINE]Ein Bulle kann bis zu 1,4 Tonnen wiegen. Wie alle Nashörner sieht auch das Spitzmaulnashorn schlecht, verfügt aber über einen guten Hör- und Geruchssinn Seine Lieblingsspeise sind Akazien. Während der Paarungszeit sind Bullen sehr aggressiv, Rivalitätskämpfe enden teilweise sogar tödlich.[NEWLINE]In der freien Wildbahn haben Spitzmaulnashörner kaum Feinde. Die Bestände sind dennoch stark gefährdet, denn dem Horn werden in der traditionellen chinesischen Medizin Heilkräfte nachgesagt. In einigen Ländern glaubt man auch an dessen potenzsteigernde Wirkung, weshalb das Nashorn gern von Wilderern gejagt wird. In vielen Zoos gehören Spitzmaulnashörner zum Bestand. Der Berliner Zoo ist berühmt für seine regelmäßige Aufzucht.</German>
 		<Polish>Nosorożec czarny, nosorożec wąskopyski, nosorożec zwyczajny, (Diceros bicornis) - nosorożec występujący w południowej i wschodniej Afryce, na obszarze Angoli, Kenii, Mozambiku, Namibii, Republiki Południowej Afryki, Tanzanii i Zimbabwe; dodatkowo reintrodukowany w Botswanie, Malawi, Suazi i Zambii. Wymarły w Czadzie, Kamerunie, Rwandzie i prawdopodobnie w Etiopii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2866,6 +2897,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Wildschwein:Wildschweins:Wildschwein:Wildschwein:Wildschweine:Wildschweine:Wildschweinen:Wildschweine</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cinghiale</Italian>
 		<Spanish>
 			<Text>Jabalí</Text>
@@ -2877,6 +2913,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOAR_PEDIA</Tag>
 		<English>Wild boar, also known as wild pig, (Sus scrofa) is a species of the pig genus Sus, part of the biological family Suidae. The species includes many subspecies. It is the wild ancestor of the domestic pig, an animal with which it freely hybridises. Wild boar are native across much of Northern and Central Europe, the Mediterranean Region (including North Africa's Atlas Mountains) and much of Asia as far south as Indonesia. Populations have also been artificially introduced in some parts of the world, most notably the Americas and Australasia, principally for hunting. Elsewhere, populations have also become established after escapes of wild boar from captivity.</English>
+		<German>Das [COLOR_UNIT_TEXT]Wildschwein[COLOR_REVERT] (Sus scrofa) ist die Stammform des Hausschweins. Die Tiere sind sehr anpassungsfähig und heute nahezu weltweit verbreitet.[NEWLINE]Das Winterkleid der Wildschweine ist dunkelgrau bis schwarz-braun gefärbt, weshalb sie in der Jägersprache als Schwarzwild bezeichnet werden. Die Jungtiere (Frischlinge) besitzen gelblich-braune Längsstreifen auf dem Rücken, wogegen Schultern und Hinterbeine gefleckt sind. Die Kleinen werden besonders in den ersten Wochen von der Bache beschützt und wenn nötig aggressiv verteidigt. Wildschweine sind Allesfresser, vertilgen Farne, Früchte, Kleinsäuger und je nach Region auch Muscheln oder Kokosnüsse. Bei der Nahrungssuche durchwühlen sie auch den Boden, um an Würmer oder Wurzeln zu gelangen.[NEWLINE]Schon in der Steinzeit waren Wildschweine eine wichtige Jagdbeute. Auch heute ist Wildschweinfleisch sehr beliebt. In der Landwirtschaft können sie durch Umwühlen oder Verzehr der Feldfrüchte großen Schaden anrichten. Sie sind zudem Überträger der Schweinepest. In Frankreich werden Wildschweine zur Trüffelsuche eingesetzt.</German>
 		<Polish>Dzik (Sus scrofa) gatunek dużego, lądowego ssaka łożyskowego z rzędu parzystokopytnych. Sus scrofa jest jedynym przedstawicielem dziko żyjących świniowatych w Europie. Jest przodkiem świni domowej. Gatunek inwazyjny poza naturalnym zasięgiem występowania. Dzik jest popularnym zwierzęciem łownym i jako taki doczekał się w języku myśliwych wielu szczegółowych określeń, pozwalających w krótkich słowach opisać zwierzę i jego zachowanie. Z czasem część tej terminologii weszła do języka codziennego, a także języka zoologów. W Polsce dzik jest pospolitym przedstawicielem tzw. zwierzyny czarnej, podlega sezonowej ochronie. Samica dzika nazywana jest lochą, samiec odyńcem, a młode warchlakiem, warchlak o charakterystycznym paskowym umaszczeniu pasiakiem. Obecny, naturalny zasięg występowania dzika obejmuje tereny od północnych krańców Afryki przez środkową i południową Eurazję. Gatunek nie występuje na północy Półwyspu Skandynawskiego, Finlandii i północnej części Rosji. Na Sachalinie odkryto jedynie jego kopalne pozostałości. Nie występuje również w suchych pustyniach Mongolii, wysokich górach Azji Środkowej, jak i na Wyżynie Tybetańskiej. W Polsce bardzo licznie występuje na terenie całego kraju, w Tatrach nieliczny, dochodzi do górnej granicy lasu, powyżej 1400 m n.p.m.. Największe odnotowane przez inspekcje lasów państwowych skupisko dzików w Polsce znajduje się w Siecieborzycach. Dzik jest eurytopem, unika tylko terenów otwartych i górskich. Zasiedla głównie obszary o dużej lesistości, ponieważ w lasach znajduje pokarm oraz schronienie. Idealnym siedliskiem dla niego są lasy liściaste i lasy mieszane, gdzie znajduje się najwięcej typowego dla niego pokarmu. Optymalnym środowiskiem dla tego gatunku są prawdopodobnie lasy łęgowe. Dzik dzięki swej plastyczności ekologicznej jest jednym z najważniejszych i najliczniejszych dużych ssaków naszej strefy klimatycznej. Obserwuje się pojawianie dzików, w tym loch z warchlakami, na terenie miast (np. Świnoujście), gdzie przychodzą, aby żerować w śmietnikach i na wysypiskach. Zwierzę stadne, żyjące w grupach rodzinnych nazywanych watahami. W skład gromady wchodzi od kilku do dwudziestu osobników obu płci: stara locha przewodniczka oraz lochy z warchlakami (młode od dnia urodzenia do dnia 31 marca roku następnego). Pozostałe osobniki są słabiej związane ze stadem. Odyńce rzadko wiążą się z grupą, zwykle bytują samotnie. Watahy przebywające na wspólnych żerowiskach tworzą zgrupowanie liczące do 100 osobników. Dziki w ciągu dnia odpoczywają w barłogach lub tarzają się w błocie. Wieczorem osobniki wyruszają na żer i pod osłoną nocy wychodzą z lasu na pola. Mogą być szkodnikami upraw. Biegają kłusem, galopem lub skokami. W galop zrywają się rzadko i potrafią nim przebiec tylko kilkaset metrów. Dobrze pływają, dlatego występują na jeziornych i rzecznych wyspach. Dziki czyszczą skórę z pasożytów ocierając się (czochrając się) o pnie drzew. Dzik jest agresywnym zwierzęciem i w niektórych sytuacjach odważnie szarżuje na wroga. Lochy z potomstwem są szczególnie niebezpieczne.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2898,9 +2935,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Bär</Text>
+			<Text>Braunbär:Braunbären:Braunbären:Braunbären:Braunbären:Braunbären:Braunbären:Braunbären</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Orso:Orsi</Text>
@@ -2932,6 +2969,7 @@
 	[ICON_BULLET]Syrian Brown Bear (Ursus arctos syriacus)
 	[ICON_BULLET]Hokkaido Brown Bear (Ursus arctos yesoensis)
 [PARAGRAPH:2]Source: http://www.bearplanet.org</English>
+		<German>[COLOR_UNIT_TEXT]Braunbären[COLOR_REVERT] (Ursus arctos) sind Säugetiere, von denen mehrere Unterarten wie Europäischer Braunbär, Grizzly oder Kodiakbär existieren. Letztere sind aktuell die größten und schwersten bekannten Landraubtiere der Erde.[NEWLINE]Der Braunbär hat alle Merkmale eines Bären, sein Skelett ist jedoch stärker als das seiner Verwandten. Er besitzt zudem einen markanten Buckel über den Schultern. Braunbären geben nur wenige Laute von sich. Die Kommunikation erfolgt über Körperhaltung und Geruch. Sie sind Allesfresser, bevorzugen aber pflanzliche Nahrung und machen auch vor Honig nicht Halt. Ihren Fleischbedarf decken sie mit allem, was der Lebensraum zu bieten hat, auch Aas wird verwertet. Wenn im Winter das Nahrungsangebot zurückgeht, begeben sie sich in Winterruhe. In dieser Zeit werden die Jungtiere geboren. Während der Aufzucht verhält sich das Weibchen aggressiv, auch männlichen Artgenossen oder Menschen gegenüber.[NEWLINE]Durch Jagd und Zerstörung des Lebensraums ging die Verbreitung des Braunbären stark zurück. In Deutschland gilt er seit dem 19. Jahrhundert als ausgestorben. Kulturgeschichtlich spielt er eine große Rolle, er ist Bestandteil der Heraldik, taucht in Märchen und Mythen auf. So sind z.B. die Sternbilder Großer und Kleiner Bär auf die griechische Mythologie zurückzuführen.</German>
 		<Polish>Niedźwiedź brunatny (Ursus arctos) - gatunek drapieżnego ssaka z rodziny niedźwiedziowatych. Zamieszkuje Azję, Europę Północną i Amerykę Północną. Niezagrożony wyginięciem. Sierść niedźwiedzia brunatnego ma barwę ciemnobrązową, choć niektóre jego podgatunki mogą mieć futro jaśniejsze. W pozycji wyprostowanej Ursus arctos mierzy - w zależności od płci - od 1,8 m do 3 m. Masa ciała poszczególnych osobników waha się między 200 a 780 kg. Niedźwiedzica wydaje na świat co dwa lata dwoje-troje młodych. Ciąża trwa około 8 miesięcy. Poród następuje zwykle między grudniem a lutym.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3000,7 +3038,7 @@
 		</French>
 		<German>
 			<Text>Pfeilgiftfrosch:Pfeilgiftfroschs:Pfeilgiftfrosch:Pfeilgiftfrosch:Pfeilgiftfrösche:Pfeilgiftfrösche:Pfeilgiftfröschen:Pfeilgiftfrösche</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rana freccia</Italian>
@@ -3052,7 +3090,7 @@
 		</French>
 		<German>
 			<Text>Adler:Adlers:Adler:Adler:Adler:Adler:Adlern:Adler</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Aquila</Italian>
@@ -3181,7 +3219,7 @@
 		</French>
 		<German>
 			<Text>Gazelle:Gazelle:Gazelle:Gazelle:Gazellen:Gazellen:Gazellen:Gazellen</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gazzella</Italian>
@@ -3259,7 +3297,7 @@
 		</French>
 		<German>
 			<Text>Gavial:Gavials:Gavial:Gavial:Gaviale:Gaviale:Gavialen:Gaviale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gaviale</Italian>
@@ -3348,7 +3386,7 @@
 		</French>
 		<German>
 			<Text>Uhu:Uhus:Uhu:Uhu:Uhus:Uhus:Uhus:Uhus</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gufo della Virginia</Italian>
@@ -3407,7 +3445,7 @@
 		</French>
 		<German>
 			<Text>Steinbock:Steinbocks:Steinbock:Steinbock:Steinböcke:Steinböcke:Steinböcken:Steinböcke</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Stambecco</Italian>
@@ -3483,7 +3521,7 @@
 		</French>
 		<German>
 			<Text>Löwe:Löwen:Löwen:Löwen:Löwen:Löwen:Löwen:Löwen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -3546,7 +3584,7 @@
 		</French>
 		<German>
 			<Text>Nilkrokodil:Nilkrokodils:Nilkrokodil:Nilkrokodil:Nilkrokodile:Nilkrokodile:Nilkrokodilen:Nilkrokodile</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo del Nilo</Italian>
@@ -3593,7 +3631,7 @@
 		</French>
 		<German>
 			<Text>Taube:Taube:Taube:Taube:Tauben:Tauben:Tauben:Tauben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Piccione</Italian>
@@ -3619,7 +3657,7 @@
 		</French>
 		<German>
 			<Text>Schwein:Schweins:Schwein:Schwein:Schweine:Schweine:Schweinen:Schweine</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Maiale</Italian>
@@ -3670,7 +3708,7 @@
 		</French>
 		<German>
 			<Text>Puffotter:Puffotter:Puffotter:Puffotter:Puffottern:Puffottern:Puffottern:Puffottern</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Vipera soffiatrice</Italian>
@@ -3717,7 +3755,7 @@
 		</French>
 		<German>
 			<Text>Mantarochen:Mantarochens:Mantarochen:Mantarochen:Mantarochen:Mantarochen:Mantarochen:Mantarochen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Manta</Italian>
@@ -3746,7 +3784,7 @@
 		</French>
 		<German>
 			<Text>Krokodil (groß):Krokodils (groß):Krokodil (groß):Krokodil (groß):Krokodile (groß):Krokodile (groß):Krokodilen (groß):Krokodile (groß)</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo (Grande)</Italian>
@@ -3767,7 +3805,7 @@
 		</French>
 		<German>
 			<Text>Krokodil (klein):Krokodils (klein):Krokodil (klein):Krokodil (klein):Krokodile (klein):Krokodile (klein):Krokodilen (klein):Krokodile (klein)</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo (Piccolo)</Italian>
@@ -3798,7 +3836,7 @@
 		</French>
 		<German>
 			<Text>Saiga:Saiga:Saiga:Saiga:Saigas:Saigas:Saigas:Saigas</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -3873,7 +3911,7 @@
 		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Leone marino</Italian>
@@ -3898,7 +3936,7 @@
 		</French>
 		<German>
 			<Text>Seeotter:Seeotters:Seeotter:Seeotter:Seeotter:Seeotter:Seeottern:Seeotter</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Lontra</Italian>
@@ -4753,7 +4791,7 @@
 		</French>
 		<German>
 			<Text>Tapir:Tapirs:Tapir:Tapir:Tapire:Tapire:Tapiren:Tapire</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tapiro</Italian>
@@ -4803,7 +4841,7 @@
 		</French>
 		<German>
 			<Text>Otter:Otter:Otter:Otter:Ottern:Ottern:Ottern:Ottern</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Vipera</Italian>
@@ -4839,7 +4877,7 @@
 		</French>
 		<German>
 			<Text>Wallaby:Wallabys:Wallaby:Wallaby:Wallabys:Wallabys:Wallabys:Wallabys</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -4864,7 +4902,7 @@
 		</French>
 		<German>
 			<Text>Bergkänguru:Bergkängurus:Bergkänguru:Bergkänguru:Bergkängurus:Bergkängurus:Bergkängurus:Bergkängurus</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Canguro di montagna</Italian>
@@ -4890,7 +4928,7 @@
 		</French>
 		<German>
 			<Text>Walross:Walrosses:Walross:Walross:Walrosse:Walrosse:Walrossen:Walrosse</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tricheco</Italian>

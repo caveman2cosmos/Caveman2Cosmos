@@ -27,7 +27,7 @@ void CyArgsList::add(const char* s)
 }
 
 // add null-terminated string
-void CyArgsList::add(const wchar* s)
+void CyArgsList::add(const wchar_t* s)
 {
 	if (s)
 		push_back(PyUnicode_FromWideChar(s, wcslen(s)));
@@ -57,7 +57,7 @@ void CyArgsList::add(const float* buf, int iLength)
 }
 
 // add byte list
-void CyArgsList::add(const byte* buf, int iLength)
+void CyArgsList::add(const uint8_t* buf, int iLength)
 {
 	PyObject* pList = PyList_New(iLength);	// new ref
 	FAssertMsg(pList, "failed creating PyList");

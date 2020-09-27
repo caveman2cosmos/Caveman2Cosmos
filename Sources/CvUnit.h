@@ -825,7 +825,7 @@ public:
 
 	HandicapTypes getHandicapType() const; // Exposed to Python
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
-	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
+	const wchar_t* getVisualCivAdjective(TeamTypes eForTeam) const;
 	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python
 	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
@@ -1617,7 +1617,7 @@ public:
 // BUG - Unit Name - start
 	bool isDescInName() const;
 // BUG - Unit Name - end
-	const wchar* getNameKey() const; // Exposed to Python
+	const wchar_t* getNameKey() const; // Exposed to Python
 	const CvWString& getNameNoDesc() const; // Exposed to Python
 	void setName(const CvWString szNewValue); // Exposed to Python
 

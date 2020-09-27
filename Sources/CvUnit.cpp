@@ -7136,10 +7136,6 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 
 void CvUnit::gift(bool bTestTransport)
 {
-	CvUnit* pGiftUnit;
-	CvWString szBuffer;
-	PlayerTypes eOwner;
-
 	if (!canGift(false, bTestTransport))
 	{
 		return;
@@ -7157,20 +7153,17 @@ void CvUnit::gift(bool bTestTransport)
 	}
 
 	FAssertMsg(plot()->getOwner() != NO_PLAYER, "plot()->getOwner() is not expected to be equal with NO_PLAYER");
-	pGiftUnit = GET_PLAYER(plot()->getOwner()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-	FAssertMsg(pGiftUnit != NULL, "GiftUnit is not assigned a valid value");
-
-	eOwner = getOwner();
+	CvUnit* pGiftUnit = GET_PLAYER(plot()->getOwner()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	if (pGiftUnit == NULL)
+	{
+		FErrorMsg("GiftUnit is not assigned a valid value");
+		return;
+	}
+	const PlayerTypes eOwner = getOwner();
 
 	pGiftUnit->convert(this);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/03/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
-	//GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() / 5));
 	if( pGiftUnit->isCombat() )
 	{
 		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() * 3 * GC.getGame().AI_combatValue(pGiftUnit->getUnitType()))/100);
@@ -7179,14 +7172,11 @@ void CvUnit::gift(bool bTestTransport)
 	{
 		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost()));
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
 		AddDLLMessage(pGiftUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), CvColorInfo::white(), pGiftUnit->getX(), pGiftUnit->getY(), true, true);
 	}
 
@@ -10021,12 +10011,9 @@ bool CvUnit::canPlunder(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && pPlot->getTeam() == getTeam())
 	{
-		if (pPlot->getTeam() == getTeam())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	return true;
@@ -10035,9 +10022,7 @@ bool CvUnit::canPlunder(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::plunder()
 {
-	CvPlot* pPlot = plot();
-
-	if (!canPlunder(pPlot))
+	if (!canPlunder(plot()))
 	{
 		return false;
 	}
@@ -11691,9 +11676,7 @@ bool CvUnit::doOutcomeMission(MissionTypes eMission)
 
 int CvUnit::getEspionagePoints(const CvPlot* pPlot) const
 {
-	int iEspionagePoints;
-
-	iEspionagePoints = m_pUnitInfo->getEspionagePoints();
+	int iEspionagePoints = m_pUnitInfo->getEspionagePoints();
 
 	iEspionagePoints *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
 	iEspionagePoints /= 100;
@@ -11729,12 +11712,9 @@ bool CvUnit::canInfiltrate(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && pCity->getTeam() == getTeam())
 	{
-		if (NULL != pCity && pCity->getTeam() == getTeam())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (!isInvisible(pCity->getTeam(), false, true))
@@ -13135,8 +13115,6 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 
 bool CvUnit::upgrade(UnitTypes eUnit)
 {
-	CvUnit* pUpgradeUnit;
-
 	if (!canUpgrade(eUnit))
 	{
 		return false;
@@ -13161,10 +13139,12 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 	//Set Unit to reload onto
 	CvUnit* pTransportUnit = getTransportUnit();
 
-	pUpgradeUnit = GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-	FAssertMsg(pUpgradeUnit != NULL, "UpgradeUnit is not assigned a valid value");
-
+	CvUnit* pUpgradeUnit = GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	if (pUpgradeUnit == NULL)
+	{
+		FErrorMsg("UpgradeUnit is not assigned a valid value");
+		return false;
+	}
 	pUpgradeUnit->joinGroup(getGroup());
 	if (pTransportUnit)
 	{
@@ -13219,7 +13199,7 @@ CivilizationTypes CvUnit::getCivilizationType() const
 	return GET_PLAYER(getOwner()).getCivilizationType();
 }
 
-const wchar* CvUnit::getVisualCivAdjective(TeamTypes eForTeam) const
+const wchar_t* CvUnit::getVisualCivAdjective(TeamTypes eForTeam) const
 {
 	if (getVisualOwner(eForTeam) == getOwner())
 	{
@@ -13427,9 +13407,7 @@ int CvUnit::nukeRange() const
 // XXX should this test for coal?
 bool CvUnit::canBuildRoute() const
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		if (GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE)
 		{
@@ -15349,24 +15327,17 @@ bool CvUnit::canAirDefend(const CvPlot* pPlot) const
 
 int CvUnit::airCombatDamage(const CvUnit* pDefender) const
 {
-	CvCity* pCity;
-	CvPlot* pPlot;
-	int iOurStrength;
-	int iTheirStrength;
-	int iStrengthFactor;
-	int iDamage;
+	const CvPlot* pPlot = pDefender->plot();
 
-	pPlot = pDefender->plot();
-
-	iOurStrength = airCurrCombatStr(pDefender);
+	const int iOurStrength = airCurrCombatStr(pDefender);
 	FAssertMsg(iOurStrength > 0, "Air combat strength is expected to be greater than zero");
-	iTheirStrength = pDefender->maxCombatStr(pPlot, this);
+	const int iTheirStrength = pDefender->maxCombatStr(pPlot, this);
 
-	iStrengthFactor = ((iOurStrength + iTheirStrength + 1) / 2);
+	const int iStrengthFactor = ((iOurStrength + iTheirStrength + 1) / 2);
 
-	iDamage = std::max(1, ((GC.getDefineINT("AIR_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor)));
+	int iDamage = std::max(1, ((GC.getDefineINT("AIR_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor)));
 
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -15380,23 +15351,15 @@ int CvUnit::airCombatDamage(const CvUnit* pDefender) const
 
 int CvUnit::rangeCombatDamage(const CvUnit* pDefender) const
 {
-	CvPlot* pPlot;
-	int iOurStrength;
-	int iTheirStrength;
-	int iStrengthFactor;
-	int iDamage;
+	const CvPlot* pPlot = pDefender->plot();
 
-	pPlot = pDefender->plot();
-
-	iOurStrength = airCurrCombatStr(pDefender);
+	const int iOurStrength = airCurrCombatStr(pDefender);
 	FAssertMsg(iOurStrength > 0, "Combat strength is expected to be greater than zero");
-	iTheirStrength = pDefender->maxCombatStr(pPlot, this);
+	const int iTheirStrength = pDefender->maxCombatStr(pPlot, this);
 
-	iStrengthFactor = ((iOurStrength + iTheirStrength + 1) / 2);
+	const int iStrengthFactor = ((iOurStrength + iTheirStrength + 1) / 2);
 
-	iDamage = std::max(1, ((GC.getDefineINT("RANGE_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor)));
-
-	return iDamage;
+	return std::max(1, ((GC.getDefineINT("RANGE_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor)));
 }
 
 
@@ -16728,10 +16691,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 		}
 		else if (bRejoin)
 		{
-			int iSelectionRegroup = GET_PLAYER(getOwner()).getSelectionRegroup();
-			int iNumSelectionGroups = GET_PLAYER(getOwner()).getNumSelectionGroups();
-			//TB Note: the above is just a tracker to see how many a player can handle before the crash it gets when there's too many initiated.
-			//both proves the theory and shows how many can exist before crashing.
+			const int iSelectionRegroup = GET_PLAYER(getOwner()).getSelectionRegroup();
 
 			if (iSelectionRegroup != NULL)
 			{
@@ -17825,9 +17785,9 @@ void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, Player
 
 	if (iChange != 0)
 	{
-		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
+		const UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
 
-		int iNewValue = (info->m_iHealAsDamage + iChange);
+		const int iNewValue = (info->m_iHealAsDamage + iChange);
 
 		setHealAsDamage(eHealAsType, range(iNewValue, 0, maxHitPoints()), ePlayer);
 
@@ -17847,7 +17807,7 @@ void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerT
 	int iHighestDamage = 0;
 	for (int iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
 	{
-		UnitCombatKeyedInfo* info2 = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)m_pUnitInfo->getHealAsType(iI));
+		const UnitCombatKeyedInfo* info2 = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)m_pUnitInfo->getHealAsType(iI));
 		if (info2->m_iHealAsDamage > iHighestDamage)
 		{
 			iHighestDamage = info2->m_iHealAsDamage;
@@ -17877,9 +17837,7 @@ int CvUnit::getPreCombatDamage() const
 
 void CvUnit::setDamage(int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity, UnitCombatTypes eHealAsType, bool bSecondPass)
 {
-	int iOldValue;
-
-	iOldValue = getDamage();
+	const int iOldValue = getDamage();
 
 	if (eHealAsType == NO_UNITCOMBAT && !bSecondPass && m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
@@ -17965,11 +17923,9 @@ int CvUnit::getMoves() const
 
 void CvUnit::setMoves(int iNewValue)
 {
-	CvPlot* pPlot;
-
 	if (getMoves() != iNewValue)
 	{
-		pPlot = plot();
+		CvPlot* pPlot = plot();
 
 		m_iMoves = iNewValue;
 
@@ -21227,7 +21183,7 @@ bool CvUnit::isDescInName() const
 }
 
 
-const wchar* CvUnit::getNameKey() const
+const wchar_t* CvUnit::getNameKey() const
 {
 	if (m_szName.empty())
 	{
@@ -31130,19 +31086,21 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 			getUnitType(), pBestCity->getX(), pBestCity->getY(), AI_getUnitAIType(), NO_DIRECTION,
 			GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
 		);
-
-		pTradeUnit->convert(this);
+		if (pTradeUnit != NULL)
 		{
-			MEMORY_TRACK_EXEMPT();
-			AddDLLMessage(
-				pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText(
-					"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
-					GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
-				),
-				"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
-				CvColorInfo::white(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
-			);
+			pTradeUnit->convert(this);
+			{
+				MEMORY_TRACK_EXEMPT();
+				AddDLLMessage(
+					pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
+						GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
+					),
+					"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
+					CvColorInfo::white(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
+				);
+			}
 		}
 	 }
 }
