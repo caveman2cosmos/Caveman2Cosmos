@@ -12742,29 +12742,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_STORYTELLING</SoundID>
-			<Filename>Sounds/Tech/STORYTELLING</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_METALLORE</SoundID>
-			<Filename>Sounds/Tech/METALLORE</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_WOODWORKING</SoundID>
 			<Filename>Sounds/Tech/01_woodworking</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_STONECUTTING</SoundID>
-			<Filename>Sounds/Tech/STONECUTTING</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12786,20 +12765,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_SHIP_BUILDING</SoundID>
 			<Filename>Sounds/Tech/ShipBuilding</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_RITUAL</SoundID>
-			<Filename>Sounds/Tech/RITUAL</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_CITYPLANNING</SoundID>
-			<Filename>Sounds/Tech/CITYPLANNING</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12833,27 +12798,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_POLITICS</SoundID>
-			<Filename>Sounds/Tech/POLITICS</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_WATERPUMP</SoundID>
-			<Filename>Sounds/Tech/WATERPUMP</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_FORTIFICATION</SoundID>
-			<Filename>Sounds/Tech/FORTIFICATION</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_ARMORCRAFTING</SoundID>
 			<Filename>Sounds/Tech/ARMORCRAFTING</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -12870,34 +12814,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_SANITATION</SoundID>
 			<Filename>Sounds/Tech/Sanitation</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_SIEGEDRAFT</SoundID>
-			<Filename>Sounds/Tech/SIEGECRAFT</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_THEOCRACY</SoundID>
-			<Filename>Sounds/Tech/Theocracy</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MILITARYENGINEERING</SoundID>
-			<Filename>Sounds/Tech/Engineering</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_PEASANTSERVITUDE</SoundID>
-			<Filename>Sounds/Tech/Serfdom</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12931,29 +12847,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_CITYRIGHTS</SoundID>
-			<Filename>Sounds/Tech/CityRights</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_CHURCHARCHITECTURE</SoundID>
-			<Filename>Sounds/Tech/ChurchArchitecture</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_CRUCIBLESTEEL</SoundID>
 			<Filename>Sounds/Tech/CrucibleSteel</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MECHANICALWEAPONS</SoundID>
-			<Filename>Sounds/Tech/MechanicalWeapons</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12980,34 +12875,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_ARCHERYTRAINING</SoundID>
-			<Filename>Sounds/Tech/ArcheryTraining</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_PLATEARMOR</SoundID>
-			<Filename>Sounds/Tech/PlateArmor</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_UNIVERSITY</SoundID>
-			<Filename>Sounds/Tech/University</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_BLACKPOWDER</SoundID>
-			<Filename>Sounds/Tech/Blackpowder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_CLOCKWORKS</SoundID>
 			<Filename>Sounds/Tech/Clockworks</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13029,29 +12896,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_COALMINING</SoundID>
-			<Filename>Sounds/Tech/CoalMining</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_ASTROLABE</SoundID>
 			<Filename>Sounds/Tech/ASTROLABE</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_SHIPYARDS</SoundID>
-			<Filename>Sounds/Tech/SHIPYARDS</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_DIVINERIGHT</SoundID>
-			<Filename>Sounds/Tech/DIVINERIGHT</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13078,20 +12924,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_DRYDOCK</SoundID>
-			<Filename>Sounds/Tech/DRYDOCK</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MICROSCOPE</SoundID>
-			<Filename>Sounds/Tech/MICROSCOPE</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_MICROBIOLOGY</SoundID>
 			<Filename>Sounds/Tech/MICROBIOLOGY</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13113,43 +12945,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_LABORSPECIALIZATION</SoundID>
-			<Filename>Sounds/Tech/LABORSPECIALIZATION</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MIXEDSAILARMAMENT</SoundID>
-			<Filename>Sounds/Tech/MIXEDSAILARMAMENT</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_FLINTLOCKMUSKET</SoundID>
-			<Filename>Sounds/Tech/FLINTLOCKRIFLE</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ENLIGHTMENT</SoundID>
-			<Filename>Sounds/Tech/ELIGHTMENT</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_EXPLOSIVES</SoundID>
 			<Filename>Sounds/Tech/Explosives</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_TEXTILEMILL</SoundID>
-			<Filename>Sounds/Tech/TEXTILEMILL</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13162,50 +12959,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_HIGHSEASWARFARE</SoundID>
-			<Filename>Sounds/Tech/HIGHSEASWARFARE</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MILITARYTHOUGHT</SoundID>
-			<Filename>Sounds/Tech/MILITARYTHOUGHT</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_FOODPRESERVATION</SoundID>
-			<Filename>Sounds/Tech/FoodPreservation</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_IMPERIALISM</SoundID>
 			<Filename>Sounds/Tech/Imperialism</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_FARMINGMECHANIZATION</SoundID>
-			<Filename>Sounds/Tech/FarmingMechanization</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MARKETREGULATIONS</SoundID>
-			<Filename>Sounds/Tech/MarketRegulations</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MILITARYINDUSTRY</SoundID>
-			<Filename>Sounds/Tech/MilitaryIndustry</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13225,27 +12980,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_BESSEMERCONVERTER</SoundID>
-			<Filename>Sounds/Tech/BessemerConverter</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_FERTILIZERS</SoundID>
-			<Filename>Sounds/Tech/FERTILIZERS</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ARMORPLATING</SoundID>
-			<Filename>Sounds/Tech/ArmorPlating</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_MACHINETOOLS</SoundID>
 			<Filename>Sounds/Tech/MachineTools</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13253,43 +12987,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_OILEXTRACTION</SoundID>
-			<Filename>Sounds/Tech/OilExtraction</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_BATTLEFIELD_MEDICINE</SoundID>
 			<Filename>Sounds/Tech/battlefield_medicine</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MACHINEGUNS</SoundID>
-			<Filename>Sounds/Tech/MachineGuns</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_BARBEDWIRE</SoundID>
-			<Filename>Sounds/Tech/standard</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ENTERTAINMENTINDUSTRY</SoundID>
-			<Filename>Sounds/Tech/EntertainmentIndustry</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ALLSTEELHULL</SoundID>
-			<Filename>Sounds/Tech/SteelHull</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13309,29 +13008,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_NAVALBALLISTICS</SoundID>
-			<Filename>Sounds/Tech/NavalBallistics</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_REPEATINGRIFLE</SoundID>
-			<Filename>Sounds/Tech/RepeatingRifle</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_ARMORED_VEHICLES</SoundID>
 			<Filename>Sounds/Tech/ArmoredVehicles</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_MODERNPHYSICS</SoundID>
-			<Filename>Sounds/Tech/ModernPhysics</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13351,27 +13029,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_TARGETINGSYSTEM</SoundID>
-			<Filename>Sounds/Tech/TargetingSystem</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_AIRSUPERIORITY</SoundID>
-			<Filename>Sounds/Tech/AirSuperiority</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ARMOREDWARFARE</SoundID>
-			<Filename>Sounds/Tech/ArmoredWarfare</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_NUCLEARPHYSICS</SoundID>
 			<Filename>Sounds/Tech/NuclearPhysics</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13386,34 +13043,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_POWERPROJECTION</SoundID>
-			<Filename>Sounds/Tech/PowerProjection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ROCKETPROJECTILE</SoundID>
-			<Filename>Sounds/Tech/RocketProjectile</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_INFANTRYMOBILITY</SoundID>
-			<Filename>Sounds/Tech/InfantryMobility</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ROCKETSCIENCE</SoundID>
-			<Filename>Sounds/Tech/RocketScience</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_TELEVISION</SoundID>
 			<Filename>Sounds/Tech/Television</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13421,22 +13050,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_JETENGINE</SoundID>
-			<Filename>Sounds/Tech/JetEngine</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_TRANSISTORS</SoundID>
 			<Filename>Sounds/Tech/Transistors</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_HELICOPTERS</SoundID>
-			<Filename>Sounds/Tech/Helicopters</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13463,36 +13078,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_SPECIALOPERATIONS</SoundID>
-			<Filename>Sounds/Tech/SpecialOperations</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_SIEGE_WARFARE</SoundID>
 			<Filename>Sounds/Tech/Siege_Warfare</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_GUIDEDPROJECTILE</SoundID>
-			<Filename>Sounds/Tech/GuidedProjectile</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_WARHEADDELIVERY</SoundID>
-			<Filename>Sounds/Tech/NuclearWarhead</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_ALTERNATIVEPOWERSOURCE</SoundID>
-			<Filename>Sounds/Tech/AlternativePowerSource</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13514,20 +13101,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_ENVIRONMENTALISM</SoundID>
 			<Filename>Sounds/Tech/Environmentalism</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_SMARTPROJECTILE</SoundID>
-			<Filename>Sounds/Tech/SmartBombs</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_INFORMATIONNETWORKING</SoundID>
-			<Filename>Sounds/Tech/InformationNetworking</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15194,13 +14767,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_ION_BEAMS</SoundID>
 			<Filename>Sounds/Tech/IonBeams</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_NANOMORPHICS</SoundID>
-			<Filename>Sounds/Tech/Nanomorphics</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -17000,13 +16566,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_LUNAR_TERRAFORMING</SoundID>
 			<Filename>Sounds/Tech/lunar_terraforming</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_LUNAR_TOURISM</SoundID>
-			<Filename>Sounds/Tech/lunar_tourism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
