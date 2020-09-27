@@ -54,13 +54,13 @@ void CvFractal::fracInit(int iNewXs, int iNewYs, int iGrain, CvRandom& random, i
 // where minExp = std::min(iFracXExp, iFracYExp)
 // Note above that an extra value is required in a dimension in which the map does not wrap.
 
-void CvFractal::fracInitHinted(int iNewXs, int iNewYs, int iGrain, CvRandom& random, byte* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp/*=7*/, int iFracYExp/*=6*/)
+void CvFractal::fracInitHinted(int iNewXs, int iNewYs, int iGrain, CvRandom& random, uint8_t* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp/*=7*/, int iFracYExp/*=6*/)
 {
 	int iFlagsNonPolar = iFlags & (~FRAC_POLAR);
 	fracInitInternal(iNewXs, iNewYs, iGrain, random, pbyHints, iHintsLength, iFlagsNonPolar, pRifts, iFracXExp, iFracYExp);
 }
 
-void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& random, byte* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp, int iFracYExp)
+void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& random, uint8_t* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp, int iFracYExp)
 {
 	PROFILE("CvFractal::fracInit()");
 	int iSmooth;

@@ -362,18 +362,18 @@ struct OrderData // Exposed to Python
 			int iData2;
 		};
 		struct { // Untyped
-			word iData1_external;
-			word iData1_aux;
-			word iData2_external;
-			word iData2_aux;
+			uint16_t iData1_external;
+			uint16_t iData1_aux;
+			uint16_t iData2_external;
+			uint16_t iData2_aux;
 		} raw;
 		struct { // For units
-			/*UnitTypes*/word type;
-			word plotIndex; // aux, 0xFFFF for none
+			/*UnitTypes*/uint16_t type;
+			uint16_t plotIndex; // aux, 0xFFFF for none
 
-			/*UnitAITypes*/word AIType;
-			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
-			byte contractFlags; // aux
+			/*UnitAITypes*/uint16_t AIType;
+			/*UnitAITypes*/uint8_t contractedAIType; // aux, 0xFF for none
+			uint8_t contractFlags; // aux
 		} unit;
 		struct {
 			/*BuildingTypes*/int type;
@@ -404,35 +404,35 @@ struct OrderData // Exposed to Python
 		return eOrderType == other.eOrderType && iData1 == other.iData1 && iData2 == other.iData2 && bSave == other.bSave;
 	}
 
-	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, word plotIndex, byte contractFlags, UnitAITypes contractedAIType, bool bSave)
+	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, uint16_t plotIndex, uint8_t contractFlags, UnitAITypes contractedAIType, bool bSave)
 	{
 		OrderData order(ORDER_TRAIN);
-		order.unit.type = static_cast<word>(type);
-		order.unit.AIType = static_cast<word>(AIType);
+		order.unit.type = static_cast<uint16_t>(type);
+		order.unit.AIType = static_cast<uint16_t>(AIType);
 		order.unit.plotIndex = plotIndex;
 		order.unit.contractFlags = contractFlags;
-		order.unit.contractedAIType = static_cast<byte>(contractedAIType);
+		order.unit.contractedAIType = static_cast<uint8_t>(contractedAIType);
 		order.bSave = bSave;
 		return order;
 	}
 	static OrderData createBuildingOrder(BuildingTypes type, bool bSave)
 	{
 		OrderData order(ORDER_CONSTRUCT);
-		order.building.type = static_cast<word>(type);
+		order.building.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
 	static OrderData createProjectOrder(ProjectTypes type, bool bSave)
 	{
 		OrderData order(ORDER_CREATE);
-		order.project.type = static_cast<word>(type);
+		order.project.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
 	static OrderData createProcessOrder(ProcessTypes type, bool bSave)
 	{
 		OrderData order(ORDER_MAINTAIN);
-		order.process.type = static_cast<word>(type);
+		order.process.type = static_cast<uint16_t>(type);
 		order.bSave = bSave;
 		return order;
 	}
@@ -450,7 +450,7 @@ struct OrderData // Exposed to Python
 	}
 	void setUnitType(UnitTypes newUnitType) { 
 		FAssert(eOrderType == ORDER_TRAIN);
-		unit.type = static_cast<word>(newUnitType); 
+		unit.type = static_cast<uint16_t>(newUnitType);
 	}
 
 	UnitAITypes getUnitAIType() const { 
@@ -459,14 +459,14 @@ struct OrderData // Exposed to Python
 	}
 	void setUnitAIType(UnitAITypes newUnitAIType) { 
 		FAssert(eOrderType == ORDER_TRAIN);
-		unit.AIType = static_cast<word>(newUnitAIType);
+		unit.AIType = static_cast<uint16_t>(newUnitAIType);
 	}
 
-	word getUnitPlotIndex() const {
+	uint16_t getUnitPlotIndex() const {
 		FAssert(eOrderType == ORDER_TRAIN);
 		return unit.plotIndex;
 	}
-	byte getUnitContractFlags() const {
+	uint8_t getUnitContractFlags() const {
 		FAssert(eOrderType == ORDER_TRAIN);
 		return unit.contractedAIType;
 	}
@@ -1068,7 +1068,7 @@ struct DllExport CvGlobeLayerData
 
 struct DllExport CvFlyoutMenuData
 {
-	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar* strTitle) : m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) { }
+	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar_t* strTitle) : m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) { }
 	FlyoutTypes m_eFlyout;
 	int m_iID;
 	int m_iX;
@@ -1103,7 +1103,7 @@ struct CvStatFloat : public CvStatBase
 
 struct DllExport CvWBData
 {
-	CvWBData(int iId, const wchar* strHelp, const char* strButton) : m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) { }
+	CvWBData(int iId, const wchar_t* strHelp, const char* strButton) : m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) { }
 	int m_iId;
 	CvWString m_strHelp;
 	CvString m_strButton;

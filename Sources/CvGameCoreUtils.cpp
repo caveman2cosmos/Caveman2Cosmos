@@ -664,9 +664,9 @@ bool isLimitedProject(ProjectTypes eProject)
 // of k draws out of a population of n
 // Written by DeepO
 // Modified by Jason Winokur to keep the intermediate factorials small
-__int64 getBinomialCoefficient(int iN, int iK)
+int64_t getBinomialCoefficient(int iN, int iK)
 {
-	__int64 iTemp = 1;
+	int64_t iTemp = 1;
 	//take advantage of symmetry in combination, eg. 15C12 = 15C3
 	iK = std::min(iK, iN - iK);
 
@@ -1600,7 +1600,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 }
 
 
-void setListHelp(wchar* szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst)
+void setListHelp(wchar_t* szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst)
 {
 	if (bFirst)
 	{
@@ -1614,7 +1614,7 @@ void setListHelp(wchar* szBuffer, const wchar* szStart, const wchar* szItem, con
 	wcscat(szBuffer, szItem);
 }
 
-void setListHelp(CvWString& szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst)
+void setListHelp(CvWString& szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst)
 {
 	if (bFirst)
 	{
@@ -1628,7 +1628,7 @@ void setListHelp(CvWString& szBuffer, const wchar* szStart, const wchar* szItem,
 	szBuffer += szItem;
 }
 
-void setListHelp(CvWStringBuffer& szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst)
+void setListHelp(CvWStringBuffer& szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst)
 {
 	if (bFirst)
 	{
@@ -4881,7 +4881,7 @@ int getTreatyLength()
 
 void CvChecksum::add(int i)
 {
-	union { int value; byte bytes[4]; } data;
+	union { int value; uint8_t bytes[4]; } data;
 	data.value = i;
 	for(UINT i = 0; i < sizeof(data.bytes); i++)
 	{
@@ -4889,9 +4889,9 @@ void CvChecksum::add(int i)
 	}
 }
 
-void CvChecksum::add(byte b)
+void CvChecksum::add(uint8_t b)
 {
-	byte cipher = (b ^ (r >> 8));
+	uint8_t cipher = (b ^ (r >> 8));
 	r = (cipher + r) * c1 + c2;
 	sum = (sum << 8) + ((sum >> 24) ^ cipher);
 }

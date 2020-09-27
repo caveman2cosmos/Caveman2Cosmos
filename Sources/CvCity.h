@@ -315,8 +315,8 @@ public:
 	BuildingTypes getProductionBuilding() const; // Exposed to Python
 	ProjectTypes getProductionProject() const; // Exposed to Python
 	ProcessTypes getProductionProcess() const; // Exposed to Python
-	const wchar* getProductionName() const; // Exposed to Python
-	const wchar* getProductionNameKey() const; // Exposed to Python
+	const wchar_t* getProductionName() const; // Exposed to Python
+	const wchar_t* getProductionNameKey() const; // Exposed to Python
 	int getGeneralProductionTurnsLeft() const; // Exposed to Python
 
 	bool isFoodProduction() const; // Exposed to Python
@@ -1190,8 +1190,8 @@ public:
 	void updateEspionageVisibility(bool bUpdatePlotGroups);
 
 	DllExport const CvWString getName(uint uiForm = 0) const; // Exposed to Python
-	DllExport const wchar* getNameKey() const; // Exposed to Python
-	void setName(const wchar* szNewValue, bool bFound = false); // Exposed to Python
+	DllExport const wchar_t* getNameKey() const; // Exposed to Python
+	void setName(const wchar_t* szNewValue, bool bFound = false); // Exposed to Python
 	void doFoundMessage();
 
 	// Script data needs to be a narrow string for pickling in Python
@@ -1334,7 +1334,7 @@ public:
 	void updateTradeRoutes();
 
 	void clearOrderQueue(); // Exposed to Python
-	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, byte contractFlags = 0); // Exposed to Python
+	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0); // Exposed to Python
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true); // Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();

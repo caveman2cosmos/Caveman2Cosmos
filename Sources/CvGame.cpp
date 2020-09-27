@@ -8687,7 +8687,7 @@ CvRandom& CvGame::getSorenRand()
 	return m_sorenRand;
 }
 
-void CvGame::logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iResult)
+void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iResult)
 {
 	if (GC.isXMLLogging() || isNetworkMultiPlayer())
 	{
