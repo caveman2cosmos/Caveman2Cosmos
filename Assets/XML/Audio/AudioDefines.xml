@@ -9740,7 +9740,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_GENERIC</SoundID>
-			<Filename>Sounds/Tech/TechGeneric</Filename>
+			<Filename>Sounds/Tech/TECH_GENERIC</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

@@ -9331,8 +9331,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_WEATHER_LORE_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_WEATHER_LORE</Sound>
+			<SoundMP>AS2D_TECH_WEATHER_LORE</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/weather_lore.dds</Button>
 		</TechInfo>
 		<TechInfo>
