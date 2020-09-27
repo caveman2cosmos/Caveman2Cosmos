@@ -4054,7 +4054,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 							if( gDLL->shiftKey() )
 							{
 								//int iBestTargetValue = (pTargetCity != NULL ? GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pTargetCity,false,true) : 0);
-								int iTargetValue = 0;
 								szString.append(CvWString::format(L"\n\nTarget City values:\n"));
 								for( int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++ )
 								{
@@ -4062,16 +4061,13 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 									{
 										if( pPlot->area()->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0 )
 										{
-											foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iPlayer).cities())
+											foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iPlayer).cities()
+											| filtered(CvCity::fn::area() == pPlot->area()))
 											{
-												if( pLoopCity->area() == pPlot->area() )
+												if (GC.getMap().calculatePathDistance(pPlot, pLoopCity->plot()) < 20)
 												{
-													iTargetValue = GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pLoopCity,false,true);
-
-													if( (GC.getMap().calculatePathDistance(pPlot, pLoopCity->plot()) < 20))
-													{
-														szString.append(CvWString::format(L"\n%s : %d + rand %d", pLoopCity->getName().c_str(), iTargetValue, (pLoopCity->getPopulation() / 2)));
-													}
+													const int iTargetValue = GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pLoopCity,false,true);
+													szString.append(CvWString::format(L"\n%s : %d + rand %d", pLoopCity->getName().c_str(), iTargetValue, (pLoopCity->getPopulation() / 2)));
 												}
 											}
 										}
@@ -12858,12 +12854,12 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 //
 // Promotion Help
 //
-void CvGameTextMgr::parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline)
+void CvGameTextMgr::parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline)
 {
 	parsePromotionHelpInternal(szBuffer, ePromotion, pcNewline, true);
 }
 
-void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline, bool bAccrueLines)
+void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines)
 {
 	PROFILE_FUNC();
 
@@ -20473,8 +20469,8 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 	if (!bCivilopediaText && bTBUnitView3 && game.getActivePlayer() != NO_PLAYER)
 	{
-		const unsigned short iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
-		unsigned short iPotentialDisplays = 0;
+		const uint16_t iDisplayCount = inspectUnitCombatCounters->getCount(eUnit);
+		uint16_t iPotentialDisplays = 0;
 		if (kUnit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getUnitCombatType())))
@@ -35984,7 +35980,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		done = true;
 		if(!szBuffer.isEmpty())
 		{
-			const wchar* wideChar = szBuffer.getCString();
+			const wchar_t* wideChar = szBuffer.getCString();
 			if(wideChar[0] == L'\n')
 			{
 				CvWString tempString(&wideChar[1]);
@@ -37465,63 +37461,63 @@ void CvGameTextMgr::getTurnTimerText(CvWString& strText)
 }
 
 
-void CvGameTextMgr::getFontSymbols(std::vector< std::vector<wchar> >& aacSymbols, std::vector<int>& aiMaxNumRows)
+void CvGameTextMgr::getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows)
 {
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(1);
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getYieldInfo((YieldTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getYieldInfo((YieldTypes) iI).getChar());
 	}
 
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(2);
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getCommerceInfo((CommerceTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getCommerceInfo((CommerceTypes) iI).getChar());
 	}
 
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(8); // There are 26 rows of 25 icons each from the start of religions to the start of the generic symbols, 23 to the beginning of property symbols
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getReligionInfo((ReligionTypes) iI).getChar());
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getReligionInfo((ReligionTypes) iI).getHolyCityChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getReligionInfo((ReligionTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getReligionInfo((ReligionTypes) iI).getHolyCityChar());
 	}
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getCorporationInfo((CorporationTypes) iI).getChar());
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getCorporationInfo((CorporationTypes) iI).getHeadquarterChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getCorporationInfo((CorporationTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getCorporationInfo((CorporationTypes) iI).getHeadquarterChar());
 	}
 	// TB: Invisibility symbols
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(1); // There is 1 row of 25 icons each from the start of invisibility symbols to the start of the property symbols
 	for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getInvisibleInfo((InvisibleTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getInvisibleInfo((InvisibleTypes) iI).getChar());
 	}
 
 	// AIAndy: Property symbols
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(3); // There are 3 rows of 25 icons each from the start of property symbols to the start of the generic symbols
 	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) GC.getPropertyInfo((PropertyTypes) iI).getChar());
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) GC.getPropertyInfo((PropertyTypes) iI).getChar());
 	}
 
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(2);
 	for (int iI = 0; iI < MAX_NUM_SYMBOLS; iI++)
 	{
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) gDLL->getSymbolID(iI));
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) gDLL->getSymbolID(iI));
 	}
 
-	aacSymbols.push_back(std::vector<wchar>());
+	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back((GC.getNumBonusInfos() / 25) + 1);
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		int iChar = GC.getBonusInfo((BonusTypes) iI).getChar();
-		aacSymbols[aacSymbols.size() - 1].push_back((wchar) iChar);
+		aacSymbols[aacSymbols.size() - 1].push_back((wchar_t) iChar);
 	}
 
 }

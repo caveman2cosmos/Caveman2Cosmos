@@ -83,31 +83,31 @@ const TCHAR* CvInfoBase::getButton() const
 	return m_szButton;
 }
 
-const wchar* CvInfoBase::getCivilopediaKey() const
+const wchar_t* CvInfoBase::getCivilopediaKey() const
 {
 	return m_szCivilopediaKey;
 }
 
-const wchar* CvInfoBase::getHelpKey() const
+const wchar_t* CvInfoBase::getHelpKey() const
 {
 	return m_szHelpKey;
 }
 
-const wchar* CvInfoBase::getStrategyKey() const
+const wchar_t* CvInfoBase::getStrategyKey() const
 {
 	return m_szStrategyKey;
 }
 
-//const wchar* CvInfoBase::getGenericCategoryKey() const
+//const wchar_t* CvInfoBase::getGenericCategoryKey() const
 //{
 //	return m_szGenericCategoryKey;
 //}
-const wchar* CvInfoBase::getTextKeyWide() const
+const wchar_t* CvInfoBase::getTextKeyWide() const
 {
 	return m_szTextKey;
 }
 
-const wchar* CvInfoBase::getDescription(uint uiForm) const
+const wchar_t* CvInfoBase::getDescription(uint uiForm) const
 {
 	while(m_aCachedDescriptions.size() <= uiForm)
 	{
@@ -119,7 +119,7 @@ const wchar* CvInfoBase::getDescription(uint uiForm) const
 	return m_aCachedDescriptions[uiForm];
 }
 
-const wchar* CvInfoBase::getText() const
+const wchar_t* CvInfoBase::getText() const
 {
 	// used instead of getDescription for Info entries that are not objects
 	// so they do not have gender/plurality/forms defined in the Translator system
@@ -131,7 +131,7 @@ const wchar* CvInfoBase::getText() const
 	return m_szCachedText;
 }
 
-const wchar* CvInfoBase::getCivilopedia() const
+const wchar_t* CvInfoBase::getCivilopedia() const
 {
 	if(m_szCachedCivilopedia.empty())
 	{
@@ -141,7 +141,7 @@ const wchar* CvInfoBase::getCivilopedia() const
 	return m_szCachedCivilopedia;
 }
 
-const wchar*  CvInfoBase::getHelp() const
+const wchar_t*  CvInfoBase::getHelp() const
 {
 	if (m_szCachedHelp.empty())
 	{
@@ -151,7 +151,7 @@ const wchar*  CvInfoBase::getHelp() const
 	return m_szCachedHelp;
 }
 
-const wchar* CvInfoBase::getStrategy() const
+const wchar_t* CvInfoBase::getStrategy() const
 {
 	if (m_szCachedStrategy.empty())
 	{
@@ -161,7 +161,7 @@ const wchar* CvInfoBase::getStrategy() const
 	return m_szCachedStrategy;
 }
 
-//const wchar* CvInfoBase::getGenericCategory() const
+//const wchar_t* CvInfoBase::getGenericCategory() const
 //{
 //	if (m_szCachedGenericCategory.empty())
 //	{
@@ -546,7 +546,7 @@ const TCHAR* CvHotkeyInfo::getHotKey() const
 	return m_szHotKey;
 }
 
-const WCHAR* CvHotkeyInfo::getHotKeyDescriptionKey() const
+const wchar_t* CvHotkeyInfo::getHotKeyDescriptionKey() const
 {
 	return m_szHotKeyDescriptionKey;
 }
@@ -580,7 +580,7 @@ std::wstring CvHotkeyInfo::getHotKeyDescription() const
 	return szTemptext;
 }
 
-void CvHotkeyInfo::setHotKeyDescription(const wchar* szHotKeyDescKey, const wchar* szHotKeyAltDescKey, const wchar* szHotKeyString)
+void CvHotkeyInfo::setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString)
 {
 	m_szHotKeyDescriptionKey = szHotKeyDescKey;
 	m_szHotKeyAltDescriptionKey = szHotKeyAltDescKey;
@@ -3403,7 +3403,7 @@ bool CvPromotionInfo::isZoneOfControl() const
 }
 
 //TB Combat Mods Begin  TB SubCombat Mod begin
-const wchar* CvPromotionInfo::getRenamesUnitTo() const
+const wchar_t* CvPromotionInfo::getRenamesUnitTo() const
 {
 	return m_szRenamesUnitTo;
 }
@@ -8264,7 +8264,7 @@ const TCHAR* CvActionInfo::getType() const
 	return NULL;
 }
 
-const wchar* CvActionInfo::getDescription() const
+const wchar_t* CvActionInfo::getDescription() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8274,7 +8274,7 @@ const wchar* CvActionInfo::getDescription() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getCivilopedia() const
+const wchar_t* CvActionInfo::getCivilopedia() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8284,7 +8284,7 @@ const wchar* CvActionInfo::getCivilopedia() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getHelp() const
+const wchar_t* CvActionInfo::getHelp() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8294,7 +8294,7 @@ const wchar* CvActionInfo::getHelp() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getStrategy() const
+const wchar_t* CvActionInfo::getStrategy() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8304,7 +8304,7 @@ const wchar* CvActionInfo::getStrategy() const
 	return L"";
 }
 
-//const wchar* CvActionInfo::getGenericCategory() const
+//const wchar_t* CvActionInfo::getGenericCategory() const
 //{
 //	if (getHotkeyInfo())
 //	{
@@ -8324,7 +8324,7 @@ const TCHAR* CvActionInfo::getButton() const
 	return NULL;
 }
 
-const wchar* CvActionInfo::getTextKeyWide() const
+const wchar_t* CvActionInfo::getTextKeyWide() const
 {
 	if (getHotkeyInfo())
 	{
@@ -9530,12 +9530,12 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
 }
 
-const wchar* CvCivicInfo::getWeLoveTheKing() const
+const wchar_t* CvCivicInfo::getWeLoveTheKing() const
 {
 	return m_szWeLoveTheKingKey;
 }
 
-const wchar* CvCivicInfo::getWeLoveTheKingKey() const
+const wchar_t* CvCivicInfo::getWeLoveTheKingKey() const
 {
 	return m_szWeLoveTheKingKey;
 }
@@ -12492,7 +12492,7 @@ bool CvCivilizationInfo::isPlayable() const
 	return m_bPlayable;
 }
 
-const wchar* CvCivilizationInfo::getShortDescription(uint uiForm)
+const wchar_t* CvCivilizationInfo::getShortDescription(uint uiForm)
 {
 	while(m_aszShortDescription.size() <= uiForm)
 	{
@@ -12502,12 +12502,12 @@ const wchar* CvCivilizationInfo::getShortDescription(uint uiForm)
 	return m_aszShortDescription[uiForm];
 }
 
-const wchar* CvCivilizationInfo::getShortDescriptionKey() const
+const wchar_t* CvCivilizationInfo::getShortDescriptionKey() const
 {
 	return m_szShortDescriptionKey;
 }
 
-const wchar* CvCivilizationInfo::getAdjective(uint uiForm)
+const wchar_t* CvCivilizationInfo::getAdjective(uint uiForm)
 {
 	while(m_aszAdjective.size() <= uiForm)
 	{
@@ -12517,7 +12517,7 @@ const wchar* CvCivilizationInfo::getAdjective(uint uiForm)
 	return m_aszAdjective[uiForm];
 }
 
-const wchar* CvCivilizationInfo::getAdjectiveKey() const
+const wchar_t* CvCivilizationInfo::getAdjectiveKey() const
 {
 	return m_szAdjectiveKey;
 }
@@ -22466,7 +22466,7 @@ void CvReligionInfo::setAdjectiveKey(const TCHAR* szVal)
 	m_szAdjectiveKey = szVal;
 }
 
-const wchar* CvReligionInfo::getAdjectiveKey() const
+const wchar_t* CvReligionInfo::getAdjectiveKey() const
 {
 	return m_szAdjectiveKey;
 }
@@ -32076,12 +32076,12 @@ CvGameText::CvGameText() :
 {
 }
 
-const wchar* CvGameText::getText() const
+const wchar_t* CvGameText::getText() const
 {
 	return m_szText;
 }
 
-void CvGameText::setText(const wchar* szText)
+void CvGameText::setText(const wchar_t* szText)
 {
 	m_szText = szText;
 }
@@ -35046,22 +35046,22 @@ const char* CvEventInfo::getPythonHelp() const
 	return m_szPythonHelp;
 }
 
-const wchar* CvEventInfo::getUnitNameKey() const
+const wchar_t* CvEventInfo::getUnitNameKey() const
 {
 	return m_szUnitName;
 }
 
-const wchar* CvEventInfo::getQuestFailTextKey() const
+const wchar_t* CvEventInfo::getQuestFailTextKey() const
 {
 	return m_szQuestFailText;
 }
 
-const wchar* CvEventInfo::getLocalInfoTextKey() const
+const wchar_t* CvEventInfo::getLocalInfoTextKey() const
 {
 	return m_szLocalInfoText;
 }
 
-const wchar* CvEventInfo::getOtherPlayerPopup() const
+const wchar_t* CvEventInfo::getOtherPlayerPopup() const
 {
 	return m_szOtherPlayerPopup;
 }

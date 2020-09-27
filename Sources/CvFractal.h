@@ -31,7 +31,7 @@ public:
 	// iFracYExp should be one less than iFracXExp for Civ3 worlds
 
 	DllExport void fracInit(int iNewXs, int iNewYs, int iGrain, CvRandom& random, int iFlags, CvFractal* pRifts=NULL, int iFracXExp=DEFAULT_FRAC_X_EXP, int iFracYExp=DEFAULT_FRAC_Y_EXP);	// Exposed to Python
-	DllExport void fracInitHinted(int iNewXs, int iNewYs, int iGrain, CvRandom& random, byte* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp=DEFAULT_FRAC_X_EXP, int iFracYExp=DEFAULT_FRAC_Y_EXP); // Exposed to Python
+	DllExport void fracInitHinted(int iNewXs, int iNewYs, int iGrain, CvRandom& random, uint8_t* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp=DEFAULT_FRAC_X_EXP, int iFracYExp=DEFAULT_FRAC_Y_EXP); // Exposed to Python
 
 	DllExport int getHeight(int x, int y);																					// Exposed to Python
 	DllExport int getHeightFromPercent(int iPercent);																			// Exposed to Python
@@ -56,7 +56,7 @@ protected:
 	int m_iYInc;
 
 	int **m_aaiFrac; //[FRAC_X + 1][FRAC_Y + 1];
-	void fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& random, byte* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp, int iFracYExp);
+	void fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& random, uint8_t* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp, int iFracYExp);
 	void tectonicAction(CvFractal* pRifts);
 	int yieldX(int iBadX);
 

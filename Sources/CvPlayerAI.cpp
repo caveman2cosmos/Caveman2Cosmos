@@ -477,7 +477,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 	//	Mark previous yield data as stale
 #ifdef YIELD_VALUE_CACHING
-	for_each(cities(), CvCity::fn::ClearYieldValueCache());
+	algo::for_each(cities(), CvCity::fn::ClearYieldValueCache());
 #endif
 
 		AI_doResearch();
@@ -567,7 +567,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	PROFILE_FUNC();
 
 	//	Clear cached defensive status info on each city
-	for_each(cities(), CvCity::fn::AI_preUnitTurn());
+	algo::for_each(cities(), CvCity::fn::AI_preUnitTurn());
 
 #ifdef PLOT_DANGER_CACHING
 	//	Clear plot danger cache
@@ -1306,7 +1306,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 				pLoopPlot->clearFoundValue(getID());
 			}
 		}
-		for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
+		algo::for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
 	}
 	else
 	{
@@ -1754,7 +1754,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 void CvPlayerAI::AI_makeAssignWorkDirty()
 {
-	for_each(cities(), CvCity::fn::AI_setAssignWorkDirty(true));
+	algo::for_each(cities(), CvCity::fn::AI_setAssignWorkDirty(true));
 }
 
 
@@ -1766,13 +1766,13 @@ void CvPlayerAI::AI_assignWorkingPlots()
 	{
 		return;
 	}
-	for_each(cities(), CvCity::fn::AI_assignWorkingPlots());
+	algo::for_each(cities(), CvCity::fn::AI_assignWorkingPlots());
 }
 
 
 void CvPlayerAI::AI_updateAssignWork()
 {
-	for_each(cities(), CvCity::fn::AI_updateAssignWork());
+	algo::for_each(cities(), CvCity::fn::AI_updateAssignWork());
 }
 
 /************************************************************************************************/
@@ -1896,7 +1896,7 @@ void CvPlayerAI::AI_makeProductionDirty()
 {
 	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
 
-	for_each(cities(), CvCity::fn::AI_setChooseProductionDirty(true));
+	algo::for_each(cities(), CvCity::fn::AI_setChooseProductionDirty(true));
 }
 
 // BETTER_BTS_AI_MOD 07/05/10	jdog5000
@@ -39594,11 +39594,11 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	//invalidate cache
 	m_iMilitaryProductionCityCount = -1;
 
-	for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
+	algo::for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
 
 	m_iNavalMilitaryProductionCityCount = -1;
 
-	for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
+	algo::for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
 
 	if (getNumCities() < 4)
 	{
