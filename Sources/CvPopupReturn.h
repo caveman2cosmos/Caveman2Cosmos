@@ -74,7 +74,7 @@ public:
 	}
 
 	//	Will get the selected editbox string
-	const wchar *getEditBoxString( int iGroup = 0 ) const														// Exposed to Python
+	const wchar_t* getEditBoxString( int iGroup = 0 ) const														// Exposed to Python
 	{
 //		return ((uint)iGroup<m_aszEditBoxString.size()) ? m_aszEditBoxString[iGroup] : NULL;
 		if ((uint)iGroup<m_aszEditBoxString.size()) 

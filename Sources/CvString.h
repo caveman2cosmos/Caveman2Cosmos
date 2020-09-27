@@ -28,7 +28,7 @@ public:
 	// cppcheck-suppress noExplicitConstructor
 	CvWString(const char* s) { operator=(s); }
 	// cppcheck-suppress noExplicitConstructor
-	CvWString(const wchar* s) { operator=(s); }
+	CvWString(const wchar_t* s) { operator=(s); }
 //	CvWString(const __wchar_t* s) { if (s) *this = s; }
 	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::wstring& s) { assign(s.c_str()); }
@@ -49,16 +49,16 @@ public:
 	}
 
 	// FString compatibility
-	const wchar* GetCString() const 	{ return c_str(); }	
+	const wchar_t* GetCString() const 	{ return c_str(); }	
 
 	// implicit conversion
-	operator const wchar*() const 	{ return c_str(); }							
+	operator const wchar_t*() const 	{ return c_str(); }							
 
 	// operators
-	wchar& operator[](int i) { return std::wstring::operator[](i);	}
-	wchar& operator[](std::wstring::size_type i) { return std::wstring::operator[](i);	}
-	const wchar operator[](int i) const { return std::wstring::operator[](i);	}
-	CvWString& operator=( const wchar* s) { if (s) assign(s); else clear();	return *this; }	
+	wchar_t& operator[](int i) { return std::wstring::operator[](i);	}
+	wchar_t& operator[](std::wstring::size_type i) { return std::wstring::operator[](i);	}
+	const wchar_t operator[](int i) const { return std::wstring::operator[](i);	}
+	CvWString& operator=( const wchar_t* s) { if (s) assign(s); else clear();	return *this; }	
 	CvWString& operator=( const std::wstring& s) { assign(s.c_str());	return *this; }	
 	CvWString& operator=( const std::string& w) { Copy(w.c_str());	return *this; }	
 	CvWString& operator=( const CvWString& w) { assign(w.c_str());	return *this; }	
@@ -67,18 +67,18 @@ public:
 	void Format( LPCWSTR lpszFormat, ... );
 
 	// static helpers
-	static bool formatv(std::wstring& out, const wchar * fmt, va_list args);
-	static bool format(std::wstring & out, const wchar * fmt, ...);
-	static CvWString format(const wchar * fmt, ...);
-	static std::wstring formatv(const wchar * fmt, va_list args);
+	static bool formatv(std::wstring& out, const wchar_t* fmt, va_list args);
+	static bool format(std::wstring & out, const wchar_t* fmt, ...);
+	static CvWString format(const wchar_t* fmt, ...);
+	static std::wstring formatv(const wchar_t* fmt, va_list args);
 };
 
 
 //#define WIDEPTR(s) (s ? CvWString(s).c_str() : NULL)
 
 inline CvWString operator+( const CvWString& s, const CvWString& t) { return CvWString((std::wstring&)s + (std::wstring&)t); }
-inline CvWString operator+( const CvWString& s, const wchar* t) { return CvWString((std::wstring&)s + std::wstring(t)); }
-inline CvWString operator+( const wchar* s, const CvWString& t) { return CvWString(std::wstring(s) + std::wstring(t)); }
+inline CvWString operator+( const CvWString& s, const wchar_t* t) { return CvWString((std::wstring&)s + std::wstring(t)); }
+inline CvWString operator+( const wchar_t* s, const CvWString& t) { return CvWString(std::wstring(s) + std::wstring(t)); }
 //CvString operator+( const CvString& s, const CvString& t) { return (std::string&)s + (std::string&)t; }
 
 class CvWStringBuffer
@@ -96,7 +96,7 @@ public:
 		SAFE_DELETE_ARRAY(m_pBuffer);
 	}
 
-	void append(wchar character)
+	void append(wchar_t character)
 	{
 		int newLength = m_iLength + 1;
 		ensureCapacity(newLength + 1);
@@ -105,7 +105,7 @@ public:
 		m_iLength = newLength;
 	}
 
-	void append(const wchar *szCharacters)
+	void append(const wchar_t* szCharacters)
 	{
 		if(szCharacters == NULL)
 			return;
@@ -115,7 +115,7 @@ public:
 		ensureCapacity(newLength + 1);
 
 		//append data
-		memcpy(m_pBuffer + m_iLength, szCharacters, sizeof(wchar) * (inputLength + 1)); //null character
+		memcpy(m_pBuffer + m_iLength, szCharacters, sizeof(wchar_t) * (inputLength + 1)); //null character
 		m_iLength = newLength;
 	}
 	
@@ -134,7 +134,7 @@ public:
 		assign(szString.GetCString());
 	}
 
-	void assign(const wchar *szCharacters)
+	void assign(const wchar_t* szCharacters)
 	{
 		clear();
 		append(szCharacters);
@@ -157,7 +157,7 @@ public:
 			return false;
 	}
 
-	const wchar *getCString()
+	const wchar_t* getCString()
 	{
 		ensureCapacity(1);
 		return m_pBuffer;
@@ -169,12 +169,12 @@ private:
 		if(newCapacity > m_iCapacity)
 		{
 			m_iCapacity = 2 * newCapacity; //grow by %100
-			wchar *newBuffer = new wchar [m_iCapacity];
+			wchar_t* newBuffer = new wchar_t[m_iCapacity];
 			
 			//copy data
 			if(m_pBuffer != NULL)
 			{
-				memcpy(newBuffer, m_pBuffer, sizeof(wchar) * (m_iLength + 1)); //null character
+				memcpy(newBuffer, m_pBuffer, sizeof(wchar_t) * (m_iLength + 1)); //null character
 				//erase old memory
 				SAFE_DELETE_ARRAY(m_pBuffer);
 			}
@@ -187,7 +187,7 @@ private:
 		}
 	}
 
-	wchar *m_pBuffer;
+	wchar_t* m_pBuffer;
 	int m_iLength;
 	int m_iCapacity;
 };
@@ -209,7 +209,7 @@ public:
 	~CvString() {}
 
 	void Convert(const std::wstring& w) { Copy(w.c_str());	}
-	void Copy(const wchar* w)
+	void Copy(const wchar_t* w)
 	{
 		if (w == NULL || w[0] == '\0')
 		{
@@ -235,7 +235,7 @@ public:
 	const CvString& operator=( const char* s) { if (s) assign(s); else clear();	return *this; }	
 	const CvString& operator=( const std::string& s) { assign(s.c_str());	return *this; }	
 //	const CvString& operator=( const std::wstring& w) { Copy(w.c_str());	return *this; }		// don't want accidental conversions down to narrow strings
-//	const CvString& operator=( const wchar* w) { Copy(w);	return *this; }	
+//	const CvString& operator=( const wchar_t* w) { Copy(w);	return *this; }	
 
 	// FString compatibility
 	bool IsEmpty() const { return empty();	}
@@ -376,10 +376,10 @@ inline bool CvString::formatv(std::string & out, const char * fmt, va_list args)
 //
 // static
 //
-inline bool CvWString::formatv(std::wstring & out, const wchar * fmt, va_list args)
+inline bool CvWString::formatv(std::wstring& out, const wchar_t* fmt, va_list args)
 {
-	wchar buf[2048];
-	wchar * pbuf = buf;
+	wchar_t buf[2048];
+	wchar_t* pbuf = buf;
 	int attempts = 0;
 	bool success = false;
 	const int kMaxAttempts = 40;
@@ -394,7 +394,7 @@ inline bool CvWString::formatv(std::wstring & out, const wchar * fmt, va_list ar
 		{
 			if (pbuf!=buf)
 				delete [] pbuf;
-			pbuf = new wchar[2048+2048*attempts];
+			pbuf = new wchar_t[2048+2048*attempts];
 		}
 	}
 	while (!success && attempts<kMaxAttempts);
@@ -419,7 +419,7 @@ inline bool CvWString::formatv(std::wstring & out, const wchar * fmt, va_list ar
 //
 // static
 //
-inline std::wstring CvWString::formatv(const wchar * fmt, va_list args)
+inline std::wstring CvWString::formatv(const wchar_t* fmt, va_list args)
 {
 	std::wstring result;
 	formatv( result, fmt, args );
@@ -429,7 +429,7 @@ inline std::wstring CvWString::formatv(const wchar * fmt, va_list args)
 //
 // static
 //
-inline CvWString CvWString::format(const wchar * fmt, ...)
+inline CvWString CvWString::format(const wchar_t* fmt, ...)
 {
 	std::wstring result;
 	va_list args;
@@ -442,7 +442,7 @@ inline CvWString CvWString::format(const wchar * fmt, ...)
 //
 // static
 //
-inline bool CvWString::format(std::wstring & out, const wchar * fmt, ...)
+inline bool CvWString::format(std::wstring& out, const wchar_t* fmt, ...)
 {
 	va_list args;
 	va_start(args,fmt);

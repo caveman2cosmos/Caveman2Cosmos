@@ -2741,7 +2741,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 							if (pSelectedUnit->canHurry(pMissionPlot, true))
 							{
-								const wchar* pcKey = NULL;
+								const wchar_t* pcKey = NULL;
 								if (NO_PROJECT != pMissionCity->getProductionProject())
 								{
 									pcKey = GC.getProjectInfo(pMissionCity->getProductionProject()).getTextKeyWide();
@@ -2787,7 +2787,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 						if (pSelectedUnit->canHurryFood(pMissionPlot))
 						{
-							const wchar* pcKey = (pMissionCity->getNameKey());
+							const wchar_t* pcKey = (pMissionCity->getNameKey());
 							if (pSelectedUnit->getHurryFood(pMissionPlot) >= (pMissionCity->growthThreshold() - pMissionCity->getFood()))
 							{
 								szBuffer.append(NEWLINE);
@@ -5661,7 +5661,7 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 /************************************************************************************************/
 			if (iMaintenanceValue != 0)
 			{
-				wchar szTempBuffer[1024];
+				wchar_t szTempBuffer[1024];
 				swprintf(szTempBuffer, L" (%s%d%%)", ((iMaintenanceValue > 0) ? L"+" : L""), iMaintenanceValue);
 				szBuffer.append(szTempBuffer);
 			}
@@ -5712,7 +5712,7 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 
 				if (iCulturePercent > 0)
 				{
-					wchar szTempBuffer[1024];
+					wchar_t szTempBuffer[1024];
 					swprintf(szTempBuffer, L"\n%d%% " SETCOLR L"%s" ENDCOLR, iCulturePercent, GET_PLAYER((PlayerTypes)iI).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iI).getCivilizationAdjective());
 					szBuffer.append(szTempBuffer);
 				}

@@ -45,12 +45,12 @@ public:
 	DllExport void setOption1(bool bValue);
 	DllExport void setOption2(bool bValue);
 	DllExport void setButtonPopupType(ButtonPopupTypes eValue);
-	DllExport void setText(const wchar* pszText);
+	DllExport void setText(const wchar_t* pszText);
 	DllExport void setPendingDelete(bool bDelete);
 	DllExport void setOnFocusPythonCallback(const char* szOnFocus);
 	DllExport void setOnClickedPythonCallback(const char* szOnClicked);
 	DllExport void setPythonModule(const char* szModule);
-	DllExport void addPythonButton(const wchar* szText, const char* szArt);
+	DllExport void addPythonButton(const wchar_t* szText, const char* szArt);
 
 protected:
 	int m_iData1;
