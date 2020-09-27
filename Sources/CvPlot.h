@@ -1180,6 +1180,8 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, void, removeGoody);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, destroyGraphics);
 		DECLARE_MAP_FUNCTOR(CvPlot, void, erase);
 		DECLARE_MAP_FUNCTOR(CvPlot, void, updateFog);
 		DECLARE_MAP_FUNCTOR(CvPlot, void, updateVisibility);
@@ -1189,34 +1191,52 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, void, updateIrrigated);
 		DECLARE_MAP_FUNCTOR(CvPlot, void, updateWorkingCity);
 		DECLARE_MAP_FUNCTOR(CvPlot, void, updateCenterUnit);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, verifyUnitValidPlot);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, clearVisibilityCounts);
 
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, updateRevealedOwner, TeamTypes);
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setWorkingCityOverride, const CvCity*);
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setMinOriginalStartDist, int);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setArea, int);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, updatePlotGroupBonus, bool);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setFeatureType, FeatureTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setBonusType, BonusTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setCountedPlot, bool);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateCulture, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRouteSymbol, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateSight, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, setIsTeamBorderCache, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, changeStolenVisibilityCount, TeamTypes, int);
 
 		DECLARE_MAP_FUNCTOR_3(CvPlot, void, setPlotType, PlotTypes, bool, bool);
+		DECLARE_MAP_FUNCTOR_3(CvPlot, void, setPlotGroup, PlayerTypes, CvPlotGroup*, bool);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, LandmarkTypes, getLandmarkType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isGoody);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isPeak);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isCoastalLand);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isBattle);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, calculateTotalBestNatureYield, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isPlayerCityRadius, PlayerTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isCity, bool, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isRevealed, TeamTypes, bool);

@@ -258,7 +258,7 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLOT:
-			foreach_(CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == m_pTeam->getID()))
+			foreach_(CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == m_pPlayer->getTeam()))
 			{
 				func(plot->getGameObject());
 			}

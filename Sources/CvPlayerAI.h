@@ -401,7 +401,6 @@ public:
 	int AI_getTotalCityThreat() const;
 	int AI_getTotalFloatingDefenseNeeded() const;
 
-
 	int AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat = NULL) const;
 	int AI_countNumAreaHostileUnits(const CvArea* pArea, bool bPlayer, bool bTeam, bool bNeutral, bool bHostile, const CvPlot* pPlot, int iMaxDistance) const;
 	int AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const;

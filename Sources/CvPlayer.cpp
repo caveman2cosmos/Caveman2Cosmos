@@ -3128,9 +3128,10 @@ void CvPlayer::killCities()
 	algo::for_each(cities(), CvCity::fn::kill(false));
 
 	// Super Forts begin *culture* - Clears culture from forts when a player dies
-	algo::for_each(GC.getMap().plots() | filtered(CvPlot::fn::getOwner() == getID()),
-		CvPlot::fn::calculateCulturalOwner(), true, false)
-	);
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getOwner() == getID()))
+	{
+		pLoopPlot->setOwner(pLoopPlot->calculateCulturalOwner(), true, false);
+	}
 	// Super Forts end
 
 	GC.getGame().updatePlotGroups();
@@ -5158,8 +5159,6 @@ int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 {
 	PROFILE("CvPlayer::countOwnedBonuses");
-	CvPlot* pLoopPlot;
-	int iI, iJ;
 
 	if ( eBonus < 0 || eBonus >= GC.getNumBonusInfos() )
 	{
@@ -5179,7 +5178,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 	//	that's plenty good enough
 	if ( GC.getGame().getGameTurn() != m_cachedBonusCountGameTurn )
 	{
-		for(iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_cachedBonusCount[iI] = 0;
 		}
@@ -5205,7 +5204,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 		{
 			const bool bCommerceCulture = (pLoopCity->getCommerceRate(COMMERCE_CULTURE) > 0);
 
-			for(iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+			for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 			{
 				m_cachedBonusCount[iJ] += pLoopCity->AI_countNumBonuses((BonusTypes)iJ, true, bCommerceCulture, -1);
 			}
@@ -13526,7 +13525,10 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				//	Calculate plot danger values for this player
 
 				//	Decay danger count from the previous turn
-				algo::for_each(GC.getMap().plots(), CvPlot::fn::setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3));
+				foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
+				{
+					pLoopPlot->setDangerCount(m_eID, 2 * pLoopPlot->getDangerCount(m_eID) / 3);
+				}
 
 				foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isVisible(getTeam(), false)))
 				{
@@ -13965,8 +13967,7 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 			if (city->getOwner() == getID())
 			{
 				//TB Era Advance Free Specialist Type
-	//Team Project (6)
-				for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 				{
 					if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
 					{
@@ -25476,8 +25477,9 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	}
 
 	std::vector< std::pair<int, int> > aCultures;
-	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
+	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 		bool bTranferPlot = pLoopPlot->area() == pArea;
 
 		if (!bTranferPlot)
@@ -30005,7 +30007,10 @@ void CvPlayer::updateCache()
 
 void CvPlayer::clearTileCulture()
 {
-	algo::for_each(GC.getMap().plots(), CvPlot::fn::setCulture(getID(), 0, true, true));
+	foreach_(CvPlot* plot, GC.getMap().plots())
+	{
+		plot->setCulture(getID(), 0, true, true);
+	}
 }
 
 void CvPlayer::clearCityCulture()

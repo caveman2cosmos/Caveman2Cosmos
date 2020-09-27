@@ -27143,7 +27143,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		int iBestFoundValue = 0;
 		const CvPlot* pBestFoundPlot = NULL;
 
-		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
 			//if (pLoopPlot->area() == getStartingPlot()->area())
 			{
@@ -27361,7 +27361,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		int iBestFoundValue = 0;
 		const CvPlot* pBestFoundPlot = NULL;
 
-		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isRevealed(getTeam(), false)))
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isRevealed(getTeam(), false)))
 		{
 			int iValue = pLoopPlot->getFoundValue(getID());
 			if (iValue > iMinFoundValueThreshold && !AI_isPlotCitySite(pLoopPlot))

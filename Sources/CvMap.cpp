@@ -359,7 +359,6 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
@@ -535,18 +534,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 
 	while (iCount < iTimeout)
 	{
-/*************************************************************************************************/
-/**	Xienwolf Tweak							12/13/08											**/
-/**																								**/
-/**					Reduction in massive Random Spam in Logger files by using Map				**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-		pTestPlot = plotSorenINLINE(GC.getGame().getSorenRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getSorenRandNum(getGridHeight(), "Rand Plot Height"));
-/**								----  End Original Code  ----									**/
 		CvPlot* pTestPlot = plotSorenINLINE(GC.getGame().getMapRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getMapRandNum(getGridHeight(), "Rand Plot Height"));
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
 
 		FAssertMsg(pTestPlot != NULL, "TestPlot is not assigned a valid value");
 
@@ -1077,7 +1065,7 @@ int CvMap::calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, con
 // Super Forts begin *canal* *choke*
 void CvMap::calculateCanalAndChokePoints()
 {
-	foreach_(const CvPlot* plot, plots())
+	foreach_(CvPlot* plot, plots())
 	{
 		plot->calculateCanalValue();
 		plot->calculateChokeValue();
@@ -1095,11 +1083,6 @@ void CvMap::calculateCanalAndChokePoints()
 }
 // Super Forts end
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 // Plot danger cache
 void CvMap::invalidateIsActivePlayerNoDangerCache()
 {
@@ -1121,9 +1104,6 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 
 	algo::for_each(plots(), CvPlot::fn::setIsTeamBorderCache(eTeam, false));
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 
 //
@@ -1132,7 +1112,7 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	OutputDebugString("Reading Map: Start");
+	OutputDebugString("Reading Map: Start/n");
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1165,14 +1145,10 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	if (numPlots() > 0)
+	for (int i = 0; i < numPlots(); i++)
 	{
-		m_pMapPlots = new CvPlot[numPlots()];
-
-		foreach_(CvPlot* plot, plots())
-		{
-			plot->read(pStream);
-		}
+		m_pMapPlots.push_back(new CvPlot());
+		m_pMapPlots[i]->read(pStream);
 	}
 
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", &g_plotTypeZobristHashes, SAVE_VALUE_TYPE_INT_ARRAY);
@@ -1184,7 +1160,7 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	OutputDebugString("Reading Map: End");
+	OutputDebugString("Reading Map: End/n");
 }
 
 // save object to a stream
@@ -1279,7 +1255,7 @@ void CvMap::beforeSwitch()
 	
 	GC.clearSigns();
 
-	for_each(plots(), CvPlot::fn::destroyGraphics());
+	algo::for_each(plots(), CvPlot::fn::destroyGraphics());
 }
 
 void CvMap::afterSwitch()
@@ -1365,7 +1341,7 @@ void CvMap::afterSwitch()
 		gDLL->getEngineIFace()->RebuildAllPlots();
 	}
 
-	for (i = 0; i < MAX_PLAYERS; i++)
+	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{

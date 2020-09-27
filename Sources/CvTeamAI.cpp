@@ -2078,7 +2078,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		//we should check to see if their map covers the team(s) we are gearing for war with
 		else if (getAnyWarPlanCount(true) > 0)
 		{
-			for (iI = 0; iI < MAX_TEAMS; iI++)
+			for (int iI = 0; iI < MAX_TEAMS; iI++)
 			{
 				if (GET_TEAM((TeamTypes)iI).isAlive())
 				{

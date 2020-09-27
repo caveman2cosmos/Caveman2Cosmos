@@ -6586,7 +6586,7 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		CvPlot::fn::updatePlotGroupBonus(true)
 	);
 
-	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getBonusType() == eBonus))
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getBonusType() == eBonus))
 	{
 		pLoopPlot->updateYield();
 		pLoopPlot->setLayoutDirty(true);

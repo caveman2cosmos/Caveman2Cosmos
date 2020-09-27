@@ -784,7 +784,7 @@ void CvMapGenerator::addGoodies()
 		return;
 	}
 
-	int* piShuffle = shuffle(iNumPlots, GC.getGame().getMapRand());
+	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
@@ -927,10 +927,10 @@ void CvMapGenerator::afterGeneration()
 
 void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
 {
-	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		gDLL->callUpdater();
-		pLoopPlot->setPlotType((PlotTypes)paiPlotTypes[iI], false, false);
+		GC.getMap().plotByIndex(iI)->setPlotType((PlotTypes)paiPlotTypes[iI], false, false);
 	}
 
 	GC.getMap().recalculateAreas();

@@ -10927,9 +10927,9 @@ void CvGame::drawBattleEffects()
 {
 	if (GC.isDCM_BATTLE_EFFECTS())
 	{
-		foreach_(const CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::isBattle()))
+		foreach_(CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::isBattle()))
 		{
-			gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
+			gDLL->getEngineIFace()->TriggerEffect(plot->getBattleEffect(), plot->getPoint(), 0);
 		}
 	}
 }
@@ -11794,8 +11794,6 @@ void CvGame::addLandmarkSigns()
 	foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getLandmarkType() != NO_LANDMARK))
 	{
 		CvWString szTextKey = "TXT_KEY_LANDMARK";
-		szSign.clear();
-		szName.clear();
 		switch (pLoopPlot->getLandmarkType())
 		{
 			case LANDMARK_BAY:

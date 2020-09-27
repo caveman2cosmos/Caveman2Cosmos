@@ -221,8 +221,8 @@ void CvArea::setID(int iID)
 
 int CvArea::calculateTotalBestNatureYield() const
 {
-	return algo::accumulate(GC.getMap().plots(),
-		transformed(CvPlot::fn::calculateTotalBestNatureYield(NO_TEAM));
+	return algo::accumulate(GC.getMap().plots()
+		| transformed(CvPlot::fn::calculateTotalBestNatureYield(NO_TEAM)), 0);
 }
 
 
