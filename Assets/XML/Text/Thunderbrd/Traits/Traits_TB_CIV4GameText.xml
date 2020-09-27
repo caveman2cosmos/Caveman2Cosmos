@@ -6107,11 +6107,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE</Tag>
 		<English>Defensive</English>
 		<French>Défensif</French>
+		<German>Defensiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1</Tag>
 		<English>Defensive I</English>
 		<French>Défensif I</French>
+		<German>Defensiv I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1_PEDIA</Tag>
@@ -6147,6 +6149,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2</Tag>
 		<English>Defensive II</English>
 		<French>Défensif II</French>
+		<German>Defensiv II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2_PEDIA</Tag>
@@ -6182,6 +6185,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3</Tag>
 		<English>Defensive III</English>
 		<French>Défensif III</French>
+		<German>Defensiv III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3_PEDIA</Tag>
@@ -6247,6 +6251,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Tag>
 		<English>Military focused with a 'Hold your ground' ideal.</English>
 		<French>Militaire concentré avec un idéal «Tenez votre terrain».</French>
+		<German>Defensive Anführer haben kein großes Interesse an Angriffskriegen, sie nutzen ihr Militär hauptsächlich zur Sicherung ihrer eigenen Landesgrenzen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC</Tag>
@@ -10657,11 +10662,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_TIMID</Tag>
 		<English>Timid</English>
 		<French>Timide</French>
+		<German>Schüchtern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1</Tag>
 		<English>Timid I</English>
 		<French>Timidee I</French>
+		<German>Schüchtern I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1_PEDIA</Tag>
@@ -10694,11 +10701,41 @@ Benefits:
 	[ICON_BULLET]Slightly improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+	<German>Negative Charaktereigenschaft
+
+"Warum sollte ich angreifen und das Leben meiner Soldaten riskieren? Ein Krieg ist unmoralisch und birgt zu viele unkalkulierbare Risiken."
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern I
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Dein Volk hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2</Tag>
 		<English>Timid II</English>
 		<French>Timidee II</French>
+		<German>Schüchtern II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2_PEDIA</Tag>
@@ -10732,11 +10769,42 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+		<German>Negative Charaktereigenschaft
+
+"Warum sollte ich angreifen und das Leben meiner Soldaten riskieren? Ein Krieg ist unmoralisch und birgt zu viele unkalkulierbare Risiken."
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+	[ICON_BULELT]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern II
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren weniger [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Dein Volk hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3</Tag>
 		<English>Timid III</English>
 		<French>Timidee III</French>
+		<German>Schüchtern III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3_PEDIA</Tag>
@@ -10769,6 +10837,35 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+			<German>Negative Charaktereigenschaft
+
+"Warum sollte ich angreifen und das Leben meiner Soldaten riskieren? Ein Krieg ist unmoralisch und birgt zu viele unkalkulierbare Risiken."
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+	[ICON_BULELT]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern III
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Dein Volk hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_PEDIA</Tag>
@@ -10802,11 +10899,42 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Significant bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+		<German>Negative Charaktereigenschaft
+
+"Warum sollte ich angreifen und das Leben meiner Soldaten riskieren? Ein Krieg ist unmoralisch und birgt zu viele unkalkulierbare Risiken."
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren weniger [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Dein Volk hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_STRATEGY</Tag>
 		<English>Gains some diplomatic bonus at the cost of having weak units - particularly on the attack. A little bit stronger when backed into a corner though.</English>
 		<French>Gagne un bonus diplomatique au prix d'avoir des unités faibles - en particulier sur l'attaque. Un peu plus fort quand on est dans un coin cependant.</French>
+		<German>Schüchterne Anführer haben es bei diplomatischen Verhandlungen etwas leichter. Leider sorgt ihr zögerliches Verhalten aber für eine Schwächung des Militärs. Besonders im Angriff sind ihre Einheiten anderen deutlich unterlegen. In die Ecke gedrängt, können sie aber immer noch zu formidablen Gegnern werden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL</Tag>
