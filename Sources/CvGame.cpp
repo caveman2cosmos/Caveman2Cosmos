@@ -11140,10 +11140,8 @@ void CvGame::doIncreasingDifficulty()
 					{
 						GC.getInitCore().setHandicap((PlayerTypes)iI, (HandicapTypes)getHandicapType());
 						GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
-						foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-						{
-							pLoopCity->setInfoDirty(true);
-						}
+						algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::setInfoDirty(true));
+
 						MEMORY_TRACK_EXEMPT();
 
 						AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(), "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
@@ -11302,10 +11300,7 @@ void CvGame::doFlexibleDifficulty()
 
 						//Clean the interface
 						kPlayer.AI_makeAssignWorkDirty();
-						foreach_(CvCity* pLoopCity, kPlayer.cities())
-						{
-							pLoopCity->setInfoDirty(true);
-						}
+						algo::for_each(kPlayer.cities(), CvCity::fn::setInfoDirty(true));
 					}
 				}
 			}
@@ -12711,7 +12706,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
+	algo::for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
 	for(iI = 0; iI < MAX_TEAMS; iI++)
 	{

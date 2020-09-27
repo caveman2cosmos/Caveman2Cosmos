@@ -341,7 +341,7 @@ void CvSelectionGroup::resetHealing()
 {
 	PROFILE("CvSelectionGroup::resetHealing()")
 
-	for_each(units(), CvUnit::fn::setHealSupportUsed(0));
+	algo::for_each(units(), CvUnit::fn::setHealSupportUsed(0));
 }
 
 bool CvSelectionGroup::showMoves() const
@@ -3726,7 +3726,7 @@ bool CvSelectionGroup::canMoveAllTerrain() const
 
 void CvSelectionGroup::unloadAll()
 {
-	for_each(units(), CvUnit::fn::unloadAll());
+	algo::for_each(units(), CvUnit::fn::unloadAll());
 }
 
 bool CvSelectionGroup::alwaysInvisible() const
@@ -3761,19 +3761,19 @@ bool CvSelectionGroup::IsSelected() const
 
 void CvSelectionGroup::NotifyEntity(MissionTypes eMission)
 {
-	for_each(units(), CvUnit::fn::NotifyEntity(eMission));
+	algo::for_each(units(), CvUnit::fn::NotifyEntity(eMission));
 }
 
 
 void CvSelectionGroup::airCircle(bool bStart)
 {
-	for_each(units(), CvUnit::fn::airCircle(bStart));
+	algo::for_each(units(), CvUnit::fn::airCircle(bStart));
 }
 
 
 void CvSelectionGroup::setBlockading(bool bStart)
 {
-	for_each(units(), CvUnit::fn::setBlockading(bStart));
+	algo::for_each(units(), CvUnit::fn::setBlockading(bStart));
 }
 
 
@@ -4763,7 +4763,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 	else
 	{
 		// loop over all the units, unloading them
-		for_each(units(), CvUnit::fn::setTransportUnit(NULL));
+		algo::for_each(units(), CvUnit::fn::setTransportUnit(NULL));
 	}
 }
 
@@ -5737,7 +5737,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 	if (!bMinimalChange && getOwner() == NO_PLAYER && getNumUnits() > 0)
 	{
-		for_each(units(), CvUnit::fn::NotifyEntity(MISSION_MULTI_SELECT));
+		algo::for_each(units(), CvUnit::fn::NotifyEntity(MISSION_MULTI_SELECT));
 	}
 
 	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
@@ -6965,7 +6965,7 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 
 void CvSelectionGroup::releaseUnitAIs(UnitAITypes eUnitAI)
 {
-	for_each(units() | filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI),
+	algo::for_each(units() | filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI),
 		CvUnit::fn::joinGroup(NULL)
 	);
 }
