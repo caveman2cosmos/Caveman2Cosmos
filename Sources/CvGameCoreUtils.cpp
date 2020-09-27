@@ -2797,9 +2797,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 				foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 				{
-					CvCity* pAdjacentCity;
-
-					if((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity())
+					if((const CvCity* pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity())
 					{
 						if ( atWar(pAdjacentPlot->getTeam(), eTeam) )
 						{
@@ -3509,9 +3507,8 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 
 				foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 				{
-					CvCity* pAdjacentCity;
-
-					if((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity())
+					const CvCity* pAdjacentCity = pAdjacentPlot->getPlotCity();
+					if (pAdjacentCity != NULL || pAdjacentPlot->isActsAsCity())
 					{
 						if ( atWar(pAdjacentPlot->getTeam(), eTeam) )
 						{

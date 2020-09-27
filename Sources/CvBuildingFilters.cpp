@@ -363,10 +363,7 @@ void BuildingFilterList::setFilterActiveAll(BuildingFilterTypes eFilter, bool bA
 		{
 			kLoopPlayer.setBuildingListFilterActive(eFilter, bActive);
 
-			foreach_(CvCity* pCity, kLoopPlayer.cities())
-			{
-				pCity->setBuildingListFilterActive(eFilter, bActive);
-			}
+			algo::for_each(kLoopPlayer.cities(), CvCity::fn::setBuildingListFilterActive(eFilter, bActive));
 		}
 	}
 }
