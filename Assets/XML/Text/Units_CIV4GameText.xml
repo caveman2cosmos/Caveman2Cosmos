@@ -62,7 +62,7 @@
 		<French>Agent Top Secret</French>
 		<German>
 			<Text>Topagent:Topagenten:Topagenten:Topagenten:Topagenten:Topagenten:Topagenten:Topagenten</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -126,7 +126,7 @@
 		<French>Oryctérope</French>
 		<German>
 			<Text>Erdferkel:Erdferkels:Erdferkel:Erdferkel:Erdferkel:Erdferkel:Erdferkeln:Erdferkel</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Oritteropo</Italian>
@@ -428,7 +428,7 @@
 		<English>Agent</English>
 		<German>
 			<Text>Agent:Agenten:Agenten:Agenten:Agenten:Agenten:Agenten:Agenten</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -576,7 +576,7 @@
 		</French>
 		<German>
 			<Text>Luftschiff:Luftschiffes:Luftschiff:Luftschiff:Luftschiffe:Luftschiffe:Luftschiffen:Luftschiffe</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -879,7 +879,7 @@
 		<French>Soldat de la Navy SEAL</French>
 		<German>
 			<Text>Navy SEAL:Navy SEALs:Navy SEAL:Navy SEAL:Navy SEALs:Navy SEALs:Navy SEALs:Navy SEALs</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -1112,7 +1112,7 @@
 		<French>Fourmilier</French>
 		<German>
 			<Text>Ameisenbär:Ameisenbären:Ameisenbären:Ameisenbären:Ameisenbären:Ameisenbären:Ameisenbären:Ameisenbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Formichiere</Italian>
@@ -1292,7 +1292,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Archer méhariste</French>
 		<German>
 			<Text>Mamluk:Mamluks:Mamluk:Mamluk:Mamluken:Mamluken:Mamluken:Mamluken</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -1324,7 +1324,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Archer</English>
 		<German>
 			<Text>Bogenschütze:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -1597,7 +1597,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Artillerie:Artillerie:Artillerie:Artillerie:Artillerien:Artillerien:Artillerien:Artillerien</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -1618,7 +1618,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Artiste illustre</French>
 		<German>
 			<Text>Großer Künstler:Großen Künstlers:Großen Künstler:Großen Künstler:Große Künstler:Großen Künstler:Großen Künstlern:Großen Künstler</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -1705,7 +1705,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ours Lune</French>
 		<German>
 			<Text>Mondbär:Mondbären:Mondbären:Mondbären:Mondbären:Mondbären:Mondbären:Mondbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Orso dal collare</Italian>
@@ -1991,7 +1991,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Jagdunterseeboot:Jagdunterseebootes:Jagdunterseeboot:Jagdunterseeboot:Jagdunterseeboote:Jagdunterseeboote:Jagdunterseebooten:Jagdunterseeboote</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -2012,7 +2012,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Anti-char</French>
 		<German>
 			<Text>Panzerjäger:Panzerjägers:Panzerjäger:Panzerjäger:Panzerjäger:Panzerjäger:Panzerjägern:Panzerjäger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -2219,7 +2219,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Soldat avec hache</French>
 		<German>
 			<Text>Axtkämpfer:Axtkämpfers:Axtkämpfer:Axtkämpfer:Axtkämpfer:Axtkämpfer:Axtkämpfern:Axtkämpfer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -2295,7 +2295,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Guerrier Jaguar</French>
 		<German>
 			<Text>Jaguarkrieger:Jaguarkriegers:Jaguarkrieger:Jaguarkrieger:Jaguarkrieger:Jaguarkrieger:Jaguarkriegern:Jaguarkrieger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Guerriero giaguaro</Italian>
@@ -2371,7 +2371,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Kriegsbogenschütze:Kriegsbogenschützen:Kriegsbogenschützen:Kriegsbogenschützen:Kriegsbogenschützen:Kriegsbogenschützen:Kriegsbogenschützen:Kriegsbogenschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -2587,7 +2587,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Python royal</French>
 		<German>
 			<Text>Königspython:Königspythons:Königspython:Königspython:Königspythons:Königspythons:Königspythons:Königspythons</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Pitone reale</Italian>
@@ -2609,7 +2609,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Ancestral Band</English>
 		<German>
 			<Text>Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 	</TEXT>
@@ -2744,7 +2744,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Macaque berbère</French>
 		<German>
 			<Text>Berberaffe:Berberaffen:Berberaffen:Berberaffen:Berberaffen:Berberaffen:Berberaffen:Berberaffen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bertuccia</Italian>
@@ -2950,7 +2950,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Navire de Guerre Moderne</French>
 		<German>
 			<Text>Modernes Schlachtschiff:Modernen Schlachtschiffes:Modernen Schlachtschiff:Moderne Schlachtschiff:Moderne Schlachtschiffe:Modernen Schlachtschiffe:Modernen Schlachtschiffen:Modernen Schlachtschiffe</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nave da guerra moderna</Italian>
@@ -3068,7 +3068,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Castor</French>
 		<German>
 			<Text>Biber:Bibers:Biber:Biber:Biber:Biber:Bibern:Biber</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Castoro</Italian>
@@ -3104,7 +3104,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Beluga</English>
 		<German>
 			<Text>Weißwal:Weißwals:Weißwal:Weißwal:Weißwale:Weißwale:Weißwalen:Weißwale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -3518,7 +3518,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Bombardier à hélice</French>
 		<German>
 			<Text>Bomber:Bombers:Bomber:Bomber:Bomber:Bomber:Bombern:Bomber</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -3538,7 +3538,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Bongo</English>
 		<German>
 			<Text>Bongo:Bongos:Bongo:Bongo:Bongos:Bongos:Bongos:Bongos</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -3794,7 +3794,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missionnaire bouddhiste</French>
 		<German>
 			<Text>Bhikku:Bhikkus:Bhikku:Bhikku:Bhikkus:Bhikkus:Bhikkus:Bhikkus</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -3899,7 +3899,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Kataphrakt:Kataphrakts:Kataphrakt:Kataphrakt:Kataphrakte:Kataphrakten:Kataphrakten:Kataphrakte</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4279,7 +4279,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Singe Capucin</French>
 		<German>
 			<Text>Kapuzineraffe:Kapuzineraffen:Kapuzineraffen:Kapuzineraffen:Kapuzineraffen:Kapuzineraffen:Kapuzineraffen:Kapuzineraffen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Scimmia cappuccino</Italian>
@@ -4300,7 +4300,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>grand Cabiaï</French>
 		<German>
 			<Text>Wasserschwein:Wasserschweins:Wasserschwein:Wasserschwein:Wasserschweine:Wasserschweine:Wasserschweinen:Wasserschweine</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Capibara</Italian>
@@ -4374,7 +4374,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Karavelle:Karavelle:Karavelle:Karavelle:Karavellen:Karavellen:Karavellen:Karavellen</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4411,7 +4411,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Caribou</English>
 		<German>
 			<Text>Karibu:Karibus:Karibu:Karibu:Karibus:Karibus:Karibus:Karibus</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Caribù</Italian>
@@ -4473,7 +4473,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Porte-avions</French>
 		<German>
 			<Text>Flugzeugträger:Flugzeugträgers:Flugzeugträger:Flugzeugträger:Flugzeugträger:Flugzeugträger:Flugzeugträgern:Flugzeugträger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4546,7 +4546,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Casoar</French>
 		<German>
 			<Text>Kasuar:Kasuars:Kasuar:Kasuar:Kasuare:Kasuare:Kasuaren:Kasaure</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Casuario</Italian>
@@ -4586,7 +4586,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Kavallerie:Kavallerie:Kavallerie:Kavallerie:Kavallerien:Kavallerien:Kavallerien:Kavallerien</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4730,7 +4730,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Char équestre</French>
 		<German>
 			<Text>Streitwagen:Streitwagens:Streitwagen:Streitwagen:Streitwagen:Streitwagen:Streitwagen:Streitwagen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4905,7 +4905,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Chimpanzé</French>
 		<German>
 			<Text>Schimpanse:Schimpansen:Schimpansen:Schimpansen:Schimpansen:Schimpansen:Schimpansen:Schimpansen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Scimpanzè</Italian>
@@ -4925,7 +4925,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Cho-Ko-Nu</English>
 		<German>
 			<Text>Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nus:Cho-Ko-Nus:Cho-Ko-Nus:Cho-Ko-Nus</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -4971,7 +4971,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Prêtre</French>
 		<German>
 			<Text>Priester:Priesters:Priester:Priester:Priester:Priester:Priestern:Priester</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Prete</Italian>
@@ -5235,7 +5235,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Cobra</English>
 		<German>
 			<Text>Kobra:Kobra:Kobra:Kobra:Kobras:Kobras:Kobras:Kobras</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -5274,7 +5274,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Dorsch:Dorschs:Dorsch:Dorsch:Dorsche:Dorsche:Dorschen:Dorsche</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Merluzzo</Italian>
@@ -5453,7 +5453,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gentilhomme</French>
 		<German>
 			<Text>Junzi:Junzis:Junzi:Junzi:Junzis:Junzis:Junzis:Junzis</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gentiluomo</Italian>
@@ -5601,7 +5601,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Crabe</French>
 		<German>
 			<Text>Krabbe:Krabbe:Krabbe:Krabbe:Krabben:Krabben:Krabben:Krabben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Granchio</Italian>
@@ -5707,7 +5707,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Arbalétrier</French>
 		<German>
 			<Text>Armbrustschütze:Armbrustschützen:Armbrustschützen:Armbrustschützen:Armbrustschützen:Armbrustschützen:Armbrustschützen:Armbrustschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -5732,7 +5732,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Krähe:Krähe:Krähe:Krähe:Krähen:Krähen:Krähen:Krähen</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Corvo</Italian>
@@ -5842,7 +5842,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Kürassier:Kürassiers:Kürassier:Kürassier:Kürassiere:Kürassieren:Kürassieren:Kürassiere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -6238,7 +6238,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Gopherschildkröte:Gopherschildkröte:Gopherschildkröte:Gopherschildkröte:Gopherschildkröten:Gopherschildkröten:Gopherschildkröten:Gopherschildkröten</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga del deserto</Italian>
@@ -6261,7 +6261,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Contre-torpilleur Moderne</French>
 		<German>
 			<Text>Moderner Zerstörer:Modernen Zerstörers:Modernen Zerstörer:Modernen Zerstörer:Moderne Zerstörer:Modernen Zerstörer:Modernen Zerstörern:Modernen Zerstörer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Cacciatorpediniere moderno</Italian>
@@ -6485,7 +6485,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Dauphin</French>
 		<German>
 			<Text>Delfin:Delfins:Delfin:Delfin:Delfine:Delfine:Delfinen:Delfine</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Delfino</Italian>
@@ -6548,7 +6548,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Doctor</English>
 		<German>
 			<Text>Arzt:Arztes:Arzt:Arzt:Ärzte:Ärzte:Ärzten:Ärzte</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<French>Docteur en médecine</French>
@@ -6797,7 +6797,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Canard</French>
 		<German>
 			<Text>Ente:Ente:Ente:Ente:Enten:Enten:Enten:Enten</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Oca</Italian>
@@ -6813,7 +6813,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Dugong</English>
 		<German>
 			<Text>Dugong:Dugongs:Dugong:Dugong:Dugonge:Dugonge:Dugongen:Dugonge</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Dugongo</Italian>
@@ -7164,7 +7164,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Char de guerre</French>
 		<German>
 			<Text>Kriegswagen:Kriegswagens:Kriegswagen:Kriegswagen:Kriegswagen:Kriegswagen:Kriegswagen:Kriegswagen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7289,7 +7289,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Emeu</French>
 		<German>
 			<Text>Emu:Emus:Emu:Emu:Emus:Emus:Emus:Emus</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Emù</Italian>
@@ -7371,7 +7371,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Soldat anglais</French>
 		<German>
 			<Text>Rotrock:Rotrocks:Rotrock:Rotrock:Rotröcke:Rotröcke:Rotröcken:Rotröcke</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7511,7 +7511,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Oromokrieger:Oromokriegers:Oromokrieger:Oromokrieger:Oromokrieger:Oromokrieger:Oromokriegern:Oromokrieger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7583,7 +7583,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur des Grands moulins céréaliers</French>
 		<German>
 			<Text>Beauftragter der Cerealien AG:Beauftragten der Cerealien AG:Beauftragten der Cerealien AG:Beauftragten der Cerealien AG:Beauftragte der Cerealien AG:Beauftragten der Cerealien AG:Beauftragten der Cerealien AG: Beauftragten der Cerealien AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7604,7 +7604,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur d'Ethanol Inc.</French>
 		<German>
 			<Text>Beauftragter der Ecokraftstoff AG:Beauftragten der Ecokraftstoff AG:Beauftragten der Ecokraftstoff AG:Beauftragten der Ecokraftstoff AG:Beauftragte der Ecokraftstoff AG:Beauftragten der Ecokraftstoff AG:Beauftragten der Ecokraftstoff AG: Beauftragten der Ecokraftstoff AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7625,7 +7625,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur de Constructions créatives</French>
 		<German>
 			<Text>Beauftragter der Kreativbau AG:Beauftragten der Kreativbau AG:Beauftragten der Kreativbau AG:Beauftragten der Kreativbau AG:Beauftragte der Kreativbau AG:Beauftragten der Kreativbau AG:Beauftragten der Kreativbau AG: Beauftragten der Kreativbau AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7646,7 +7646,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur de la Compagnie d'exploitation minière</French>
 		<German>
 			<Text>Beauftragter der Montan AG:Beauftragten der Montan AG:Beauftragten der Montan AG:Beauftragten der Montan AG:Beauftragte der Montan AG:Beauftragten der Montan AG:Beauftragten der Montan AG: Beauftragten der Montan AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7667,7 +7667,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur d'Aluminium S.A.</French>
 		<German>
 			<Text>Beauftragter der Aluminiumwerke AG:Beauftragten der Aluminiumwerke AG:Beauftragten der Aluminiumwerke AG:Beauftragten der Aluminiumwerke AG:Beauftragte der Aluminiumwerke AG:Beauftragten der Aluminiumwerke AG:Beauftragten der Aluminiumwerke AG: Beauftragten der Aluminiumwerke AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7688,7 +7688,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Directeur des Bijoutiers associées</French>
 		<German>
 			<Text>Beauftragter der Kulturjuwelen AG:Beauftragten der Kulturjuwelen AG:Beauftragten der Kulturjuwelen AG:Beauftragten der Kulturjuwelen AG:Beauftragte der Kulturjuwelen AG:Beauftragten der Kulturjuwelen AG:Beauftragten der Kulturjuwelen AG: Beauftragten der Kulturjuwelen AG</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -7709,7 +7709,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gérant de Aventure Tours</French>
 		<German>
 			<Text>Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführers:Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführer:Adventure-Tours-Geschäftsführer</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Funzionario di Adventute Tours</Italian>
@@ -7954,7 +7954,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Pacificateur</French>
 		<German>
 			<Text>Friedensstifter:Friedensstifters:Friedensstifter:Friedensstifter:Friedensstifter:Friedensstifter:Friedensstiftern:Friedensstifter</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -7986,7 +7986,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Explorateur</French>
 		<German>
 			<Text>Kundschafter:Kundschafters:Kundschafter:Kundschafter:Kundschafter:Kundschafter:Kundschaftern:Kundschafter</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -8387,7 +8387,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Chasseur Aéronaval à Hélices</French>
 		<German>
 			<Text>Jagdflugzeug:Jagdflugzeuges:Jagdflugzeug:Jagdflugzeug:Jagdflugzeuge:Jagdflugzeuge:Jagdflugzeugen:Jagdflugzeuge</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -8501,7 +8501,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Flamant rose</French>
 		<German>
 			<Text>Flamingo:Flamingos:Flamingo:Flamingo:Flamingos:Flamingos:Flamingos:Flamingos</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Fenicottero rosa</Italian>
@@ -8850,7 +8850,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Mousquetaire</French>
 		<German>
 			<Text>Musketier:Musketiers:Musketier:Musketier:Musketiere:Musketiere:Musketieren:Musketiere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -8875,7 +8875,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Fregatte:Fregatte:Fregatte:Fregatte:Fregatten:Fregatten:Fregatten:Fregatten</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9052,7 +9052,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Nova-Fusionsbombe:Nova-Fusionsbombe:Nova-Fusionsbombe:Nova-Fusionsbombe:Nova-Fusionsbomben:Nova-Fusionsbomben:Nova-Fusionsbomben:Nova-Fusionsbomben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bomba a fusione Nova</Italian>
@@ -9088,7 +9088,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Taktische Fusionsbombe:Taktischer Fusionsbombe:Taktischer Fusionsbombe:Taktische Fusionsbombe:Taktische Fusionsbomben:Taktischen Fusionsbomben:Taktischen Fusionsbomben:Taktischen Fusionsbomben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bomba a fusione tattica</Italian>
@@ -9255,7 +9255,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Riesenschildkröte:Riesenschildkröte:Riesenschildkröte:Riesenschildkröte:Riesenschildkröten:Riesenschildkröten:Riesenschildkröten:Riesenschildkröten</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga delle Galapagos</Italian>
@@ -9320,7 +9320,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Galion</French>
 		<German>
 			<Text>Galeone:Galeone:Galeone:Galeone:Galeonen:Galeonen:Galeonen:Galeonen</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9345,7 +9345,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Galeere:Galeere:Galeere:Galeere:Galeeren:Galeeren:Galeeren:Galeeren</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9578,7 +9578,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Panzer</English>
 		<German>
 			<Text>Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther"</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9731,7 +9731,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Grand requin blanc</French>
 		<German>
 			<Text>Weißer Hai:Weißen Hais:Weißen Hai:Weißen Hai:Weiße Haie:Weißen Haie:Weißen Haien:Weißen Haie</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Grande squalo bianco</Italian>
@@ -9798,7 +9798,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ingénieur illustre</French>
 		<German>
 			<Text>Großer Konstrukteur:Großen Konstrukteurs:Großen Konstrukteur:Großen Konstrukteur:Große Konstrukteure:Großen Konstrukteure:Großen Konstrukteuren:Großen Konstrukteure</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9838,7 +9838,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Général illustre</French>
 		<German>
 			<Text>Großer General:Großen Generals:Großen General:Großen General:Große Generäle:Großen Generäle:Großen Generälen:Großen Generäle</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9894,7 +9894,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Großen Spione</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9927,7 +9927,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Phalanx:Phalanx:Phalanx:Phalanx:Phalangen:Phalangen:Phalangen:Phalangen</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9947,7 +9947,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Grenadier</English>
 		<German>
 			<Text>Grenadier:Grenadiers:Grenadier:Grenadier:Grenadiere:Grenadiere:Grenadieren:Grenadiere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -9989,7 +9989,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Grizzly</English>
 		<German>
 			<Text>Grizzly:Grizzlys:Grizzly:Grizzly:Grizzlys:Grizzlys:Grizzlys:Grizzlys</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -10459,7 +10459,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Guanaco</English>
 		<German>
 			<Text>Guanako:Guanakos:Guanako:Guanako:Guanakos:Guanakos:Guanakos:Guanakos</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Guanaco</Italian>
@@ -10622,7 +10622,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Marschflugkörper:Marschflugkörpers:Marschflugkörper:Marschflugkörper:Marschflugkörper:Marschflugkörpern:Marschflugkörpern:Marschflugkörper</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -10662,7 +10662,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Möwe:Möwe:Möwe:Möwe:Möwen:Möwen:Möwen:Möwen</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gabbiano</Italian>
@@ -10694,7 +10694,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Hélicoptère de combat</French>
 		<German>
 			<Text>Kampfhubschrauber:Kampfhubschraubers:Kampfhubschrauber:Kampfhubschrauber:Kampfhubschrauber:Kampfhubschrauber:Kampfhubschraubern:Kampfhubschrauber</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -10782,7 +10782,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Aigle de Haast</French>
 		<German>
 			<Text>Haastadler:Haastadlers:Haastadler:Haastadler:Haastadler:Haastadler:Haastadlern:Haastadler</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Aquila di Haast</Italian>
@@ -10928,7 +10928,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Requin marteau</French>
 		<German>
 			<Text>Hammerhai:Hammerhais:Hammerhai:Hammerhai:Hammerhaie:Hammerhaie:Hammerhaien:Hammerhaie</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Squalo martello</Italian>
@@ -11562,7 +11562,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missionnaire hindou</French>
 		<German>
 			<Text>Swami:Swamis:Swami:Swami:Swamis:Swamis:Swamis:Swamis</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -11587,7 +11587,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Hippopotame</French>
 		<German>
 			<Text>Flusspferd:Flusspferds:Flusspferd:Flusspferd:Flusspferde:Flusspferde:Flusspferden:Flusspferde</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Ippopotamo</Italian>
@@ -11684,7 +11684,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Landsknecht:Landsknechts:Landsknecht:Landsknecht:Landsknechte:Landsknechte:Landsknechten:Landsknechte</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -11742,7 +11742,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Archer monté</French>
 		<German>
 			<Text>Berittener Bogenschütze:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittene Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -11959,7 +11959,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Buckelwal:Buckelwals:Buckelwal:Buckelwal:Buckelwale:Buckelwale:Buckelwalen:Buckelwale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -12111,7 +12111,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Wasserstoffbombe:Wasserstoffbombe:Wasserstoffbombe:Wasserstoffbombe:Wasserstoffbomben:Wasserstoffbomben:Wasserstoffbomben:Wasserstoffbomben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bomba All'Idrogeno</Italian>
@@ -12185,7 +12185,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missile intercontinental</French>
 		<German>
 			<Text>Interkontinentalrakete:Interkontinentalrakete:Interkontinentrakete:Interkontinentalrakete:Interkontinentalraketen:Interkontinentalraketen:Interkontinentalraketen:Interkontinentalraketen</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -12241,7 +12241,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Iguane</French>
 		<German>
 			<Text>Leguan:Leguans:Leguan:Leguan:Leguane:Leguane:Leguanen:Leguane</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -12309,7 +12309,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Impala</English>
 		<German>
 			<Text>Impala:Impalas:Impala:Impala:Impalas:Impalas:Impalas:Impalas</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -12360,7 +12360,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Infanterie:Infanterie:Infanterie:Infanterie:Infanterien:Infanterien:Infanterien:Infanterien</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -12487,7 +12487,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missile Ballistique Intercontinental</French>
 		<German>
 			<Text>Mittelstreckenrakete Typ IRBM:Mittelstreckenrakete Typ IRBM:Mittelstreckenrakete Typ IRBM:Mittelstreckenrakete Typ IRBM:Mittelstreckenraketen Typ IRBM:Mittelstreckenraketen Typ IRBM:Mittelstreckenraketen Typ IRBM:Mittelstreckenraketen Typ IRBM</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 	</TEXT>
@@ -12497,7 +12497,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Cuirassé à vapeur</French>
 		<German>
 			<Text>Panzerschiff:Panzerschiffes:Panzerschiff:Panzerschiff:Panzerschiffe:Panzerschiffe:Panzerschiffen:Panzerschiffe</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -12590,7 +12590,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missionnaire musulman</French>
 		<German>
 			<Text>Imam:Imams:Imam:Imam:Imame:Imame:Imamen:Imame</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -12925,7 +12925,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Samouraï</French>
 		<German>
 			<Text>Samurai:Samurais:Samurai:Samurai:Samurais:Samurais:Samurais:Samurais</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -13059,7 +13059,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Chasseur moderne</French>
 		<German>
 			<Text>Kampfjet:Kampfjets:Kampfjet:Kampfjet:Kampfjets:Kampfjets:Kampfjets:Kampfjets</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -13097,7 +13097,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Rabbin</French>
 		<German>
 			<Text>Rabbi:Rabbis:Rabbi:Rabbi:Rabbis:Rabbis:Rabbis:Rabbis</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rabbino</Italian>
@@ -13503,7 +13503,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Kangourou gris</French>
 		<German>
 			<Text>Graues Riesenkänguru:Grauen Riesenkängurus:Grauen Riesenkänguru:Grauen Riesenkänguru:Graue Riesenkängurus:Roten Riesenkängurus:Grauen Riesenkängurus:Grauen Riesenkängurus</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Canguro grigio</Italian>
@@ -13526,7 +13526,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Kangourou roux</French>
 		<German>
 			<Text>Rotes Riesenkänguru:Roten Riesenkängurus:Roten Riesenkänguru:Roten Riesenkänguru:Rote Riesenkängurus:Roten Riesenkängurus:Roten Riesenkängurus:Roten Riesenkängurus</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Canguro rosso</Italian>
@@ -14012,7 +14012,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Chevalier</French>
 		<German>
 			<Text>Ritter:Ritters:Ritter:Ritter:Ritter:Ritter:Rittern:Ritter</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -14085,7 +14085,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Koala</English>
 		<German>
 			<Text>Koala:Koalas:Koala:Koala:Koalas:Koalas:Koalas:Koalas</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -14137,7 +14137,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Dragon de Komodo</French>
 		<German>
 			<Text>Komodowaran:Komodowarans:Komodowaran:Komodowaran:Komodowarane:Komodowarane:Komodowaranen:Komodowarane</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Drago di Komodo</Italian>
@@ -14167,7 +14167,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Kookaboura</French>
 		<German>
 			<Text>Lachender Hans:Lachenden Hans:Lachenden Hans:Lachenden Hans:Lachende Hänse:Lachenden Hänse:Lachenden Hänsen:Lachenden Hänse</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -14914,7 +14914,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Heuschreckenschwarm:Heuschreckenschwarms:Heuschreckenschwarm:Heuschreckenschwarm:Heuschreckenschwärme:Heuschreckenschwärme:Heuschreckenschwärmen:Heuschreckenschwärme</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nube di locuste</Italian>
@@ -14935,7 +14935,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Heuschreckenschwarm (riesig):Heuschreckenschwarms (riesig):Heuschreckenschwarm (riesig):Heuschreckenschwarm (riesig):Heuschreckenschwärme (riesig):Heuschreckenschwärme (riesig):Heuschreckenschwärmen (riesig):Heuschreckenschwärme (riesig)</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nube di locuste (Enorme)</Italian>
@@ -14956,7 +14956,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Heuschreckenschwarm (groß):Heuschreckenschwarms (groß):Heuschreckenschwarm (groß):Heuschreckenschwarm (groß):Heuschreckenschwärme (groß):Heuschreckenschwärme (groß):Heuschreckenschwärmen (groß):Heuschreckenschwärme (groß)</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nube di locuste (Grande)</Italian>
@@ -14982,7 +14982,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Heuschreckenschwarm (klein):Heuschreckenschwarms (klein):Heuschreckenschwarm (klein):Heuschreckenschwarm (klein):Heuschreckenschwärme (klein):Heuschreckenschwärme (klein):Heuschreckenschwärmen (klein):Heuschreckenschwärme (klein)</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nube di locuste (Piccola)</Italian>
@@ -15031,7 +15031,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Archer long</French>
 		<German>
 			<Text>Langbogenschütze:Langbogenschützen:Langbogenschützen:Langbogenschützen:Langbogenschützen:Langbogenschützen:Langbogenschützen:Langbogenschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -15073,7 +15073,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gavia</French>
 		<German>
 			<Text>Seetaucher:Seetauchers:Seetaucher:Seetaucher:Seetaucher:Seetaucher:Seetauchern:Seetaucher</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gavia</Italian>
@@ -15319,7 +15319,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Lynx</English>
 		<German>
 			<Text>Luchs:Luchses:Luchs:Luchs:Luchse:Luchse:Luchsen:Luchse</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Lince</Italian>
@@ -15340,7 +15340,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ara</French>
 		<German>
 			<Text>Ara:Aras:Ara:Ara:Aras:Aras:Aras:Aras</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Ara</Italian>
@@ -15407,7 +15407,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>MG-Schütze:MG-Schützen:MG-Schützen:MG-Schützen:MG-Schützen:MG-Schützen:MG-Schützen:MG-Schützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -15445,7 +15445,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Maquereau</French>
 		<German>
 			<Text>Makrele:Makrele:Makrele:Makrele:Makrelen:Makrelen:Makrelen:Makrelen</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Sgombro</Italian>
@@ -15720,7 +15720,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Mandrill</English>
 		<German>
 			<Text>Mandrill:Mandrills:Mandrill:Mandrill:Mandrille:Mandrille:Mandrillen:Mandrille</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Mandrillo</Italian>
@@ -15854,7 +15854,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Marineinfanterie:Marineinfanterie:Marineinfanterie:Marineinfanterie:Marineinfanterien:Marineinfanterien:Marineinfanterien:Marineinfanterien</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -15874,7 +15874,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Marlin</English>
 		<German>
 			<Text>Marlin:Marlins:Marlin:Marlin:Marline:Marline:Marlinen:Marline</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -16076,7 +16076,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Holkan:Holkans:Holkan:Holkan:Holkans:Holkans:Holkans:Holkans</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16130,7 +16130,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Schützenpanzer:Schützenpanzers:Schützenpanzer:Schützenpanzer:Schützenpanzer:Schützenpanzer:Schützenpanzern:Schützenpanzer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16337,7 +16337,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Marchand illustre</French>
 		<German>
 			<Text>Großer Händler:Großen Händlers:Großen Händler:Großen Händler:Große Händler:Großen Händler:Großen Händlern:Großen Händler</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16564,7 +16564,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Rorqual</French>
 		<German>
 			<Text>Zwergwal:Zwergwals:Zwergwal:Zwergwal:Zwergwale:Zwergwale:Zwergwalen:Zwergwale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Balena bianca</Italian>
@@ -16590,7 +16590,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Raketenkreuzer:Raketenkreuzers:Raketenkreuzer:Raketenkreuzer:Raketenkreuzer:Raketenkreuzer:Raketenkreuzern:Raketenkreuzer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16619,7 +16619,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Moa</English>
 		<German>
 			<Text>Moa:Moas:Moa:Moa:Moas:Moas:Moas:Moas</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -16639,7 +16639,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Mobile Artillerie:Mobilen Artillerie:Mobilen Artillerie:Mobile Artillerie:Mobile Artillerien:Mobilen Artillerien:Mobilen Artillerien:Mobilen Artillerien</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16664,7 +16664,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Raketenwerfer:Raketenwerfers:Raketenwerfer:Raketenwerfer:Raketenwerfer:Raketenwerfer:Raketenwerfern:Raketenwerfer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -16743,7 +16743,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Blindé moderne</French>
 		<German>
 			<Text>Kampfpanzer:Kampfpanzers:Kampfpanzer:Kampfpanzer:Kampfpanzer:Kampfpanzer:Kampfpanzern:Kampfpanzer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -17031,7 +17031,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Keshik</English>
 		<German>
 			<Text>Keschik:Keschiks:Keschik:Keschik:Keschiks:Keschiks:Keschiks:Keschiks</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -17052,7 +17052,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Varan du Nil</French>
 		<German>
 			<Text>Nilwaran:Nilwarans:Nilwaran:Nilwaran:Nilwarane:Nilwarane:Nilwaranen:Nilwarane</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Varano del Nilo</Italian>
@@ -17123,7 +17123,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Elan</French>
 		<German>
 			<Text>Elch:Elchs:Elch:Elch:Elche:Elche:Elchen:Elche</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Alce americano</Italian>
@@ -17220,7 +17220,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Mouflon</English>
 		<German>
 			<Text>Mufflon:Mufflons:Mufflon:Mufflon:Mufflons:Mufflons:Mufflons:Mufflons</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Muflone</Italian>
@@ -17301,7 +17301,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>MRBM</English>
 		<German>
 			<Text>Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 	</TEXT>
@@ -17431,7 +17431,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Soldat à Mousquet</French>
 		<German>
 			<Text>Musketier:Musketiers:Musketier:Musketier:Musketiere:Musketiere:Musketieren:Musketiere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -17452,7 +17452,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Boeuf musqué</French>
 		<German>
 			<Text>Moschusochse:Moschusochsen:Moschusochsen:Moschusochsen:Moschusochsen:Moschusochsen:Moschusochsen:Moschusochsen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bue muschiato</Italian>
@@ -17709,7 +17709,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Narval</French>
 		<German>
 			<Text>Narwal:Narwals:Narwal:Narwal:Narwale:Narwale:Narwalen:Narwale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Narvalo</Italian>
@@ -17734,7 +17734,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Hundekrieger:Hundekriegers:Hundekrieger:Hundekrieger:Hundekrieger:Hundekrieger:Hundekriegern:Hundekrieger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -18089,7 +18089,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Navire des Indes orientales</French>
 		<German>
 			<Text>Ostindienfahrer:Ostindienfahrers:Ostindienfahrer:Ostindienfahrer:Ostindienfahrer:Ostindienfahrer:Ostindienfahrern:Ostindienfahrer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -18628,7 +18628,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Okapi</English>
 		<German>
 			<Text>Okapi:Okapis:Okapi:Okapi:Okapis:Okapis:Okapis:Okapis</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -18781,7 +18781,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Orque</French>
 		<German>
 			<Text>Killerwal:Killerwals:Killerwal:Killerwal:Killerwale:Killerwale:Killerwalen:Killerwale</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -18892,7 +18892,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Strauß:Straußes:Strauß:Strauß:Strauße:Strauße:Straußen:Strauße</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Struzzo</Italian>
@@ -18999,7 +18999,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Piqueboeuf</French>
 		<German>
 			<Text>Madenhacker:Madenhackers:Madenhacker:Madenhacker:Madenhacker:Madenhacker:Madenhackern:Madenhacker</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Uccello-zecca</Italian>
@@ -19237,7 +19237,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Panther:Panthers:Panther:Panther:Panther:Panther:Panthern:Panther</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -19283,7 +19283,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Fallschirmjäger:Fallschirmjägers:Fallschirmjäger:Fallschirmjäger:Fallschirmjäger:Fallschirmjäger:Fallschirmjägern:Fallschirmjäger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -19458,7 +19458,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Paon</French>
 		<German>
 			<Text>Pfau:Pfaus:Pfau:Pfau:Pfauen:Pfauen:Pfauen:Pfauen</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Pavone</Italian>
@@ -19554,7 +19554,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Immortel</French>
 		<German>
 			<Text>Unsterblicher:Unsterblichen:Unsterblichen:Unsterblichen:Unsterbliche:Unsterblichen:Unsterblichen:Unsterblichen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -19672,7 +19672,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Faisan</French>
 		<German>
 			<Text>Fasan:Fasans:Fasan:Fasan:Fasane:Fasane:Fasanen:Fasane</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Fagiano</Italian>
@@ -19792,7 +19792,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Piquier</French>
 		<German>
 			<Text>Pikenier:Pikeniers:Pikenier:Pikenier:Pikeniere:Pikeniere:Pikenieren:Pikeniere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -19958,7 +19958,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missile Faucheur</French>
 		<German>
 			<Text>Pestbringer:Pestbringers:Pestbringer:Pestbringer:Pestbringer:Pestbringer:Pestbringern:Pestbringer</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Missile appestaore</Italian>
@@ -19985,7 +19985,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missile Ballistique Biologique</French>
 		<German>
 			<Text>BBM:BBM:BBM:BBM:BBMs:BBMs:BBMs:BBMs</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Missile biologico</Italian>
@@ -20225,7 +20225,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Karacke:Karacke:Karacke:Karacke:Karacken:Karacken:Karacken:Karacken</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -20504,7 +20504,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Freibeuter:Freibeuters:Freibeuter:Freibeuter:Freibeuter:Freibeuter:Freibeutern:Freibeuter</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -20524,7 +20524,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Procoptodon</English>
 		<German>
 			<Text>Procoptodon:Procoptodons:Procoptodon:Procoptodon:Procoptodonten:Procoptodonten:Procoptodonten:Procoptodonten</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Procoptodonte</Italian>
@@ -20562,7 +20562,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Prophète illustre</French>
 		<German>
 			<Text>Großer Prophet:Großen Propheten:Großen Propheten:Großen Propheten:Große Propheten:Großen Propheten:Großen Propheten:Großen Propheten</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -20877,7 +20877,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Chat marsupial</French>
 		<German>
 			<Text>Beutelmarder:Beutelmarders:Beutelmarder:Beutelmarder:Beutelmarder:Beutelmarder:Beutelmardern:Beutelmarder</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Quoll tigrato</Italian>
@@ -20899,7 +20899,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Raton laveur</French>
 		<German>
 			<Text>Waschbär:Waschbären:Waschbären:Waschbären:Waschbären:Waschbären:Waschbären:Waschbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Procione</Italian>
@@ -21074,7 +21074,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Ratel</English>
 		<German>
 			<Text>Honigdachs:Honigdachses:Honigdachs:Honigdachs:Honigdachse:Honigdachse:Honigdachsen:Honigdachse</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tasso del miele</Italian>
@@ -21188,7 +21188,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Renard roux</French>
 		<German>
 			<Text>Rotfuchs:Rotfuchses:Rotfuchs:Rotfuchs:Rotfüchse:Rotfüchse:Rotfüchsen:Rotfüchse</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Volpe rossa</Italian>
@@ -21209,7 +21209,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Panda roux</French>
 		<German>
 			<Text>Katzenbär:Katzenbären:Katzenbären:Katzenbären:Katzenbären:Katzenbären:Katzenbären:Katzenbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Panda rosso</Italian>
@@ -21271,7 +21271,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Requin des récifs</French>
 		<German>
 			<Text>Riffhai:Riffhais:Riffhai:Riffhai:Riffhaie:Riffhaie:Riffhaien:Riffhaie</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Squalo di barriera corallina</Italian>
@@ -21464,7 +21464,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Nandou</French>
 		<German>
 			<Text>Nandu:Nandus:Nandu:Nandu:Nandus:Nandus:Nandus:Nandus</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Nandù</Italian>
@@ -21516,7 +21516,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Fusilier</French>
 		<German>
 			<Text>Füsilier:Füsiliers:Füsilier:Füsilier:Füsiliere:Füsiliere:Füsilieren:Füsiliere</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -21690,7 +21690,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gorfou sauteur</French>
 		<German>
 			<Text>Felsenpinguin:Felsenpinguins:Felsenpinguin:Felsenpinguin:Felsenpinguine:Felsenpinguine:Felsenpinguinen:Felsenpinguine</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Pinguino Rockhopper</Italian>
@@ -21746,7 +21746,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Prétorien</French>
 		<German>
 			<Text>Prätorianer:Prätorianers:Prätorianer:Prätorianer:Prätorianer:Prätorianer:Prätorianern:Prätorianer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -21896,7 +21896,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Cosaque</French>
 		<German>
 			<Text>Kosak:Kosaken:Kosak:Kosak:Kosaken:Kosaken:Kosaken:Kosaken</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -22098,7 +22098,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Fliegerfaustschütze:Fliegerfaustschützen:Fliegerfaustschützen:Fliegerfaustschützen:Fliegerfaustschützen:Fliegerfaustschützen:Fliegerfaustschützen:Fliegerfaustschützen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -22263,7 +22263,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Savant illustre</French>
 		<German>
 			<Text>Großer Wissenschaftler:Großen Wissenschaftlers:Großen Wissenschaftler:Großen Wissenschaftler:Große Wissenschaftler:Großen Wissenschaftler:Großen Wissenschaftlern:Großen Wissenschaftler</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -22341,7 +22341,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Eclaireur</French>
 		<German>
 			<Text>Späher:Spähers:Späher:Späher:Späher:Späher:Spähern:Späher</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -22485,7 +22485,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Meeresschildkröte:Meeresschildkröte:Meeresschildkröte:Meeresschildkröte:Meeresschildkröten:Meeresschildkröten:Meeresschildkröten:Meeresschildkröten</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga marina</Italian>
@@ -22670,7 +22670,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Colon</French>
 		<German>
 			<Text>Siedler:Siedlers:Siedler:Siedler:Siedler:Siedler:Siedlern:Siedler</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -22996,7 +22996,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Linienschiff:Linienschiffes:Linienschiff:Linienschiff:Linienschiffe:Linienschiffe:Linienschiffen:Linienschiffe</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -23470,7 +23470,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Stinktier:Stinktiers:Stinktier:Stinktier:Stinktiere:Stinktiere:Stinktieren:Stinktiere</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Moffetta</Italian>
@@ -23578,7 +23578,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ours lippu</French>
 		<German>
 			<Text>Lippenbär:Lippenbären:Lippenbären:Lippenbären:Lippenbären:Lippenbären:Lippenbären:Lippenbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Orso giocoliere</Italian>
@@ -23622,7 +23622,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Léopard des neiges</French>
 		<German>
 			<Text>Schneeleopard:Schneeleoparden:Schneeleoparden:Schneeleoparden:Schneeleoparden:Schneeleoparden:Schneeleoparden:Schneeleoparden</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Leopardo delle nevi</Italian>
@@ -23846,7 +23846,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Conquistador</English>
 		<German>
 			<Text>Konquistador:Konquistadors:Konquistador:Konquistador:Konquistadoren:Konquistadoren:Konquistadoren:Konquistadoren</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -23935,7 +23935,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Lancier</French>
 		<German>
 			<Text>Speerkämpfer:Speerkämpfers:Speerkämpfer:Speerkämpfer:Speerkämpfer:Speerkämpfer:Speerkämpfern:Speerkämpfer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -24035,7 +24035,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ours à lunettes</French>
 		<German>
 			<Text>Brillenbär:Brillenbären:Brillenbären:Brillenbären:Brillenbären:Brillenbären:Brillenbären:Brillenbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Orso dagli occhiali</Italian>
@@ -24103,7 +24103,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Espion</French>
 		<German>
 			<Text>Spion:Spions:Spion:Spion:Spione:Spione:Spionen:Spione</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -24231,7 +24231,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Char Furtif</French>
 		<German>
 			<Text>Tarnkappenpanzer:Tarnkappenpanzers:Tarnkappenpanzer:Tarnkappenpanzer:Tarnkappenpanzer:Tarnkappenpanzer:Tarnkappenpanzern:Tarnkappenpanzer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Carro armato stealth</Italian>
@@ -24258,7 +24258,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Bombardier furtif</French>
 		<German>
 			<Text>Tarnkappenbomber:Tarnkappenbombers:Tarnkappenbomber:Tarnkappenbomber:Tarnkappenbomber:Tarnkappenbomber:Tarnkappenbombern:Tarnkappenbomber</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -24283,7 +24283,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Tarnkappenzerstörer:Tarnkappenzerstörers:Tarnkappenzerstörer:Tarnkappenzerstörer:Tarnkappenzerstörer:Tarnkappenzerstörer:Tarnkappenzerstörern:Tarnkappenzerstörer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25249,7 +25249,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Sous-marin</French>
 		<German>
 			<Text>Unterseeboot:Unterseebootes:Unterseeboot:Unterseeboot:Unterseeboote:Unterseeboote:Unterseebooten:Unterseeboote</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25338,7 +25338,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Geierkrieger:Geierkriegers:Geierkrieger:Geierkrieger:Geierkrieger:Geierkrieger:Geierkriegern:Geierkrieger</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25359,7 +25359,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ours malais</French>
 		<German>
 			<Text>Sonnenbär:Sonnenbären:Sonnenbären:Sonnenbären:Sonnenbären:Sonnenbären:Sonnenbären:Sonnenbären</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Orso malese</Italian>
@@ -25528,7 +25528,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Spadassin</French>
 		<German>
 			<Text>Schwertkämpfer:Schwertkämpfers:Schwertkämpfer:Schwertkämpfer:Schwertkämpfer:Schwertkämpfer:Schwertkämpfern:Schwertkämpfer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25570,7 +25570,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Taktische Atomrakete:Taktischen Atomrakete:Taktischen Atomrakete:Taktische Atomrakete:Taktische Atomraketen:Taktischen Atomraketen:Taktischen Atomraketen:Taktischen Atomraketen</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25733,7 +25733,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Char moyen</French>
 		<German>
 			<Text>Panzer:Panzers:Panzer:Panzer:Panzer:Panzer:Panzern:Panzer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -25835,7 +25835,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Diable de Tasmanie</French>
 		<German>
 			<Text>Tasmanischer Teufel:Tasmanischen Teufels:Tasmanischen Teufel:Tasmanischen Teufel:Tasmanische Teufel:Tasmanischen Teufel:Tasmanischen Teufeln:Tasmanischen Teufel</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Diavolo della Tasmania</Italian>
@@ -25972,7 +25972,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Küstenseeschwalbe:Küstenseeschwalbe:Küstenseeschwalbe:Küstenseeschwalbe:Küstenseeschwalben:Küstenseeschwalben:Küstenseeschwalben:Küstenseeschwalben</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Sterna artica</Italian>
@@ -26655,7 +26655,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Transport</English>
 		<German>
 			<Text>Transportschiff:Transportschiffes:Transportschiff:Transportschiff:Transportschiffe:Transportschiffe:Transportschiffen:Transportschiffe</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -26848,7 +26848,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gardien Tribal</French>
 		<German>
 			<Text>Stammeswächter:Stammeswächters:Stammeswächter:Stammeswächter:Stammeswächter:Stammeswächter:Stammeswächtern:Stammeswächter</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Guardiano tribale</Italian>
@@ -27091,7 +27091,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Thon</French>
 		<German>
 			<Text>Thunfisch:Thunfischs:Thunfisch:Thunfisch:Thunfische:Thunfische:Thunfischen:Thunfische</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tonno</Italian>
@@ -27172,7 +27172,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</French>
 		<German>
 			<Text>Truthuhn:Truthuhns:Truthuhn:Truthuhn:Truthühner:Truthühner:Truthühnern:Truthühner</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tacchino selvatico</Italian>
@@ -27216,7 +27216,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Missile de Contrôle Mental</French>
 		<German>
 			<Text>DIM:DIM:DIM:DIM:DIMs:DIMs:DIMs:DIMs</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
+			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Spanish>
@@ -27900,7 +27900,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Vautour</French>
 		<German>
 			<Text>Geier:Geiers:Geier:Geier:Geier:Geier:Geiern:Geier</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Avvoltoio</Italian>
@@ -27950,7 +27950,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Marcheur Mech</French>
 		<German>
 			<Text>Mechwalker:Mechwalkers:Mechwalker:Mechwalker:Mechwalker:Mechwalker:Mechwalkern:Mechwalker</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Mech bipede</Italian>
@@ -28453,7 +28453,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Phacochère</French>
 		<German>
 			<Text>Warzenschwein:Warzenschweins:Warzenschwein:Warzenschwein:Warzenschweine:Warzenschweine:Warzenschweinen:Warzenschweine</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Facocero</Italian>
@@ -28496,7 +28496,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Eléphant de guerre</French>
 		<German>
 			<Text>Kriegselefant:Kriegselefanten:Kriegselefanten:Kriegselefanten:Kriegselefanten:Kriegselefanten:Kriegselefanten:Kriegselefanten</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -28572,7 +28572,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Requin-baleine</French>
 		<German>
 			<Text>Walhai:Walhais:Walhai:Walhai:Walhaie:Walhaie:Walhaien:Walhaie</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Squalo balena</Italian>
@@ -28603,7 +28603,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Gnou</French>
 		<German>
 			<Text>Gnu:Gnus:Gnu:Gnu:Gnus:Gnus:Gnus:Gnus</Text>
-			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Gnu</Italian>
@@ -28737,7 +28737,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Loup</French>
 		<German>
 			<Text>Wolf:Wolfes:Wolf:Wolf:Wölfe:Wölfe:Wölfen:Wölfe</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -28762,7 +28762,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Carcajou</French>
 		<German>
 			<Text>Vielfraß:Vielfraßes:Vielfraß:Vielfraß:Vielfraße:Vielfraße:Vielfraßen:Vielfraße</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Ghiottone</Italian>
@@ -28812,7 +28812,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ouvrier avec Chiens</French>
 		<German>
 			<Text>Arbeiter mit Hund:Arbeiters mit Hund:Arbeiter mit Hund:Arbeiter mit Hund:Arbeiter mit Hunden:Arbeiter mit Hunden:Arbeitern mit Hunden:Arbeiter mit Hunden</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Cane da lavoro</Italian>
@@ -28834,7 +28834,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Bateau-atelier (Antique)</French>
 		<German>
 			<Text>Fischerboot:Fischerbootes:Fischerboot:Fischerboot:Fischerboote:Fischerboote:Fischerbooten:Fischerboote</Text>
-			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
+			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Chiatta (Antica)</Italian>
@@ -28914,7 +28914,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ouvrier avec Buffle</French>
 		<German>
 			<Text>Arbeiter mit Büffel:Arbeiters mit Büffel:Arbeiter mit Büffel:Arbeiter mit Büffel:Arbeiter mit Büffeln:Arbeiter mit Büffeln:Arbeitern mit Büffeln:Arbeiter mit Büffeln</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bufalo da lavoro</Italian>
@@ -28969,7 +28969,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Ouvrier</French>
 		<German>
 			<Text>Arbeiter:Arbeiters:Arbeiter:Arbeiter:Arbeiter:Arbeiter:Arbeitern:Arbeiter</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>

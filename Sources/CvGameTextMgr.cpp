@@ -4054,7 +4054,6 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 							if( gDLL->shiftKey() )
 							{
 								//int iBestTargetValue = (pTargetCity != NULL ? GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pTargetCity,false,true) : 0);
-								int iTargetValue = 0;
 								szString.append(CvWString::format(L"\n\nTarget City values:\n"));
 								for( int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++ )
 								{
@@ -4062,16 +4061,13 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 									{
 										if( pPlot->area()->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0 )
 										{
-											foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iPlayer).cities())
+											foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iPlayer).cities()
+											| filtered(CvCity::fn::area() == pPlot->area()))
 											{
-												if( pLoopCity->area() == pPlot->area() )
+												if (GC.getMap().calculatePathDistance(pPlot, pLoopCity->plot()) < 20)
 												{
-													iTargetValue = GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pLoopCity,false,true);
-
-													if( (GC.getMap().calculatePathDistance(pPlot, pLoopCity->plot()) < 20))
-													{
-														szString.append(CvWString::format(L"\n%s : %d + rand %d", pLoopCity->getName().c_str(), iTargetValue, (pLoopCity->getPopulation() / 2)));
-													}
+													const int iTargetValue = GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pLoopCity,false,true);
+													szString.append(CvWString::format(L"\n%s : %d + rand %d", pLoopCity->getName().c_str(), iTargetValue, (pLoopCity->getPopulation() / 2)));
 												}
 											}
 										}
