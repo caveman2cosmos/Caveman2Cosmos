@@ -3142,7 +3142,7 @@ class MapRegions:
 	def deleteNonBogPlots( self, plotList ):
 		for inx in range( len(plotList)-1,-1,-1 ):
 			pl = plotList[inx]
-			if not p1.isWater() and pl.isCoastal():
+			if not pl.isWater() and pl.isCoastal():
 				del plotList[inx]
 				continue
 

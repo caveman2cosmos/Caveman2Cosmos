@@ -392,8 +392,7 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 	}
 	else
 	{
-
-		//FAssertMsg(false, "Illegal direction type"); 
+		//FErrorMsg("Illegal direction type"); 
 		// River is starting here, set the direction in the next step
 		pRiverPlot = pStartPlot;
 
@@ -542,7 +541,7 @@ bool CvMapGenerator::addRiver(CvPlot* pFreshWaterPlot)
 				break;
 
 			default:
-				FAssertMsg(false, "invalid cardinal direction");
+				FErrorMsg("invalid cardinal direction");
 			}
 			
 			if (pRiverPlot != NULL && !pRiverPlot->hasCoastAtSECorner())

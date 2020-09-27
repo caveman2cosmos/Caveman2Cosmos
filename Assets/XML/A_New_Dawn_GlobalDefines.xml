@@ -61,11 +61,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Afforess: Don't round up for 5% tax increments with taxation anger, only round down. -->
-		<DefineName>TAXATION_ANGER_ROUND_DOWN</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: Disbanding units earn gold -->
 		<DefineName>DISBANDING_EARNS_GOLD</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>

@@ -428,7 +428,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 				if ( iCount != pLoopArea->getNumAIUnits(getID(), (UnitAITypes)iI) )
 				{
-					FAssertMsg(false,"UnitAI miscount");
+					FErrorMsg("UnitAI miscount");
 				}
 			}
 		}
@@ -4028,7 +4028,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 			if ( realValue != entry->iResult )
 			{
-				FAssertMsg(false, "Plot danger cache verification failure");
+				FErrorMsg("Plot danger cache verification failure");
 			}
 #endif
 			return entry->iResult;
@@ -15450,27 +15450,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iValue += iTempValue;
 	}
 
-	bool bFinancialTrouble = AI_isFinancialTrouble();
-	iTempValue = 0;
-
-	if (kCivic.isTaxationAnger())
-	{
-		const int64_t iNetIncome = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-		const int64_t iNetExpenses = 1 + calculateInflatedCosts() + std::min(0, getGoldPerTurn());
-
-		iTempValue += static_cast<int>(iNetIncome - iNetExpenses - 5*getNumCities());
-
-		if (bFinancialTrouble || GC.getGame().isOption(GAMEOPTION_REVOLUTION))
-		{
-			iTempValue *= 2;
-		}
-		if (gPlayerLogLevel > 2 && iTempValue != 0)
-		{
-			logBBAI("Civic %S taxation anger value %d", kCivic.getDescription(), iTempValue);
-		}
-		iValue += iTempValue;
-	}
-
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
@@ -15786,6 +15765,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 	}
 
+	bool bFinancialTrouble = AI_isFinancialTrouble();
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -18227,110 +18207,97 @@ void CvPlayerAI::AI_setExtraGoldTarget(int iNewValue)
 
 int CvPlayerAI::AI_getNumTrainAIUnits(UnitAITypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	return m_aiNumTrainAIUnits[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeNumTrainAIUnits(UnitAITypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiNumTrainAIUnits[eIndex] = (m_aiNumTrainAIUnits[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
+	m_aiNumTrainAIUnits[eIndex] += iChange;
 	FAssert(AI_getNumTrainAIUnits(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getNumAIUnits(UnitAITypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	return m_aiNumAIUnits[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeNumAIUnits(UnitAITypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < NUM_UNITAI_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiNumAIUnits[eIndex] = (m_aiNumAIUnits[eIndex] + iChange);
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
+	m_aiNumAIUnits[eIndex] += iChange;
 	FAssert(AI_getNumAIUnits(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getSameReligionCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiSameReligionCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeSameReligionCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiSameReligionCounter[eIndex] = (m_aiSameReligionCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiSameReligionCounter[eIndex] += iChange;
 	FAssert(AI_getSameReligionCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getDifferentReligionCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiDifferentReligionCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeDifferentReligionCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiDifferentReligionCounter[eIndex] = (m_aiDifferentReligionCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiDifferentReligionCounter[eIndex] += iChange;
 	FAssert(AI_getDifferentReligionCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getFavoriteCivicCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiFavoriteCivicCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeFavoriteCivicCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiFavoriteCivicCounter[eIndex] = (m_aiFavoriteCivicCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiFavoriteCivicCounter[eIndex] += iChange;
 	FAssert(AI_getFavoriteCivicCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getBonusTradeCounter(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiBonusTradeCounter[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeBonusTradeCounter(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiBonusTradeCounter[eIndex] = (m_aiBonusTradeCounter[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiBonusTradeCounter[eIndex] += iChange;
 	FAssert(AI_getBonusTradeCounter(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getPeacetimeTradeValue(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiPeacetimeTradeValue[eIndex];
 }
 
@@ -18338,63 +18305,37 @@ int CvPlayerAI::AI_getPeacetimeTradeValue(PlayerTypes eIndex) const
 void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 {
 	PROFILE_FUNC();
-
-	int iI;
-
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (iChange != 0)
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-		// From Sanguo Mod Performance, ie the CAR Mod
-		// Attitude cache
 		AI_invalidateAttitudeCache(eIndex);
 		GET_PLAYER(eIndex).AI_invalidateAttitudeCache(getID());
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 		m_aiPeacetimeTradeValue[eIndex] = (m_aiPeacetimeTradeValue[eIndex] + iChange);
 		FAssert(AI_getPeacetimeTradeValue(eIndex) >= 0);
 
-		FAssert(iChange > 0);
-
-		if (iChange > 0)
+		if (iChange < 0)
 		{
-			if (GET_PLAYER(eIndex).getTeam() != getTeam())
+			FErrorMsg("iChange is less than zero");
+			return;
+		}
+		const TeamTypes eTeamB = GET_PLAYER(eIndex).getTeam();
+
+		if (eTeamB != getTeam())
+		{
+			for (int iPlayerC = 0; iPlayerC < MAX_PC_TEAMS; iPlayerC++)
 			{
-				for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+				CvTeamAI& teamC = GET_TEAM((TeamTypes)iPlayerC);
+				/*
+				If A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
+					A = this
+					B = eIndex
+					C = iPlayerC
+				*/
+				if (teamC.isAlive() && teamC.isHasMet(eTeamB) && teamC.AI_getWorstEnemy() == getTeam())
 				{
-					if (GET_TEAM((TeamTypes)iI).isAlive())
-					{
-						if (GET_TEAM((TeamTypes)iI).AI_getWorstEnemy() == getTeam())
-						{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   03/02/10								Sephi		 */
-/*																							  */
-/* Bug fix																					  */
-/************************************************************************************************/
-/* orig bts code
-							GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeTradeValue(GET_PLAYER(eIndex).getTeam(), iChange);
-*/
-							//make sure that if A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
-							//A = this
-							//B = eIndex
-							//C = (TeamTypes)iI
-							if (GET_TEAM((TeamTypes)iI).isHasMet(GET_PLAYER(eIndex).getTeam()))
-							{
-								GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeTradeValue(GET_PLAYER(eIndex).getTeam(), iChange);
-							}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
-						}
-					}
+					teamC.AI_changeEnemyPeacetimeTradeValue(eTeamB, iChange);
 				}
 			}
 		}
@@ -18404,8 +18345,7 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 
 int CvPlayerAI::AI_getPeacetimeGrantValue(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiPeacetimeGrantValue[eIndex];
 }
 
@@ -18413,50 +18353,34 @@ int CvPlayerAI::AI_getPeacetimeGrantValue(PlayerTypes eIndex) const
 void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
 {
 	PROFILE_FUNC();
-
-	int iI;
-
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 
 	if (iChange != 0)
 	{
-		m_aiPeacetimeGrantValue[eIndex] = (m_aiPeacetimeGrantValue[eIndex] + iChange);
+		m_aiPeacetimeGrantValue[eIndex] += iChange;
 		FAssert(AI_getPeacetimeGrantValue(eIndex) >= 0);
 
-		FAssert(iChange > 0);
-
-		if (iChange > 0)
+		if (iChange < 0)
 		{
-			if (GET_PLAYER(eIndex).getTeam() != getTeam())
+			FErrorMsg("iChange is less than zero");
+			return;
+		}
+		const TeamTypes eTeamB = GET_PLAYER(eIndex).getTeam();
+
+		if (eTeamB != getTeam())
+		{
+			for (int iPlayerC = 0; iPlayerC < MAX_PC_TEAMS; iPlayerC++)
 			{
-				for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+				CvTeamAI& teamC = GET_TEAM((TeamTypes)iPlayerC);
+				/*
+				If A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
+					A = this
+					B = eIndex
+					C = iPlayerC
+				*/
+				if (teamC.isAlive() && teamC.isHasMet(eTeamB) && teamC.AI_getWorstEnemy() == getTeam())
 				{
-					if (GET_TEAM((TeamTypes)iI).isAlive())
-					{
-						if (GET_TEAM((TeamTypes)iI).AI_getWorstEnemy() == getTeam())
-						{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   03/02/10								Sephi		 */
-/*																							  */
-/* Bug fix																					  */
-/************************************************************************************************/
-/* orig bts code
-							GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeGrantValue(GET_PLAYER(eIndex).getTeam(), iChange);
-*/
-							//make sure that if A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
-							//A = this
-							//B = eIndex
-							//C = (TeamTypes)iI
-							if (GET_TEAM((TeamTypes)iI).isHasMet(GET_PLAYER(eIndex).getTeam()))
-							{
-								GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeGrantValue(GET_PLAYER(eIndex).getTeam(), iChange);
-							}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
-						}
-					}
+					teamC.AI_changeEnemyPeacetimeGrantValue(eTeamB, iChange);
 				}
 			}
 		}
@@ -18466,33 +18390,29 @@ void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
 
 int CvPlayerAI::AI_getGoldTradedTo(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_aiGoldTradedTo[eIndex];
 }
 
 
 void CvPlayerAI::AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_aiGoldTradedTo[eIndex] = (m_aiGoldTradedTo[eIndex] + iChange);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
+	m_aiGoldTradedTo[eIndex] += iChange;
 	FAssert(AI_getGoldTradedTo(eIndex) >= 0);
 }
 
 
 int CvPlayerAI::AI_getAttitudeExtra(const PlayerTypes ePlayer) const
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 	return m_aiAttitudeExtra[ePlayer];
 }
 
 
 void CvPlayerAI::AI_setAttitudeExtra(const PlayerTypes ePlayer, const int iNewValue)
 {
-	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
-	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 
 	if (m_aiAttitudeExtra[ePlayer] != iNewValue)
 	{
@@ -18510,77 +18430,64 @@ void CvPlayerAI::AI_changeAttitudeExtra(const PlayerTypes ePlayer, const int iCh
 
 bool CvPlayerAI::AI_isFirstContact(PlayerTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	return m_abFirstContact[eIndex];
 }
 
 
 void CvPlayerAI::AI_setFirstContact(PlayerTypes eIndex, bool bNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_abFirstContact[eIndex] = bNewValue;
 }
 
 
 int CvPlayerAI::AI_getContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_CONTACT_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, eIndex2)
 	return m_aaiContactTimer[eIndex1][eIndex2];
 }
 
 
 void CvPlayerAI::AI_changeContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_CONTACT_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
-/************************************************************************************************/
-/* Afforess					  Start		 09/15/10											   */
-/*																							  */
-/*  AI's trade with AI's much more often														*/
-/************************************************************************************************/
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, eIndex2)
+
 	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) && eIndex1 != NO_PLAYER && !GET_PLAYER(eIndex1).isHuman() && iChange > 0)
 	{
+		// Afforess - AI's trade with AI's much more often
 		m_aaiContactTimer[eIndex1][eIndex2] = (AI_getContactTimer(eIndex1, eIndex2) + (iChange / 3));
 	}
 	else
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	m_aaiContactTimer[eIndex1][eIndex2] = (AI_getContactTimer(eIndex1, eIndex2) + iChange);
+	{
+		m_aaiContactTimer[eIndex1][eIndex2] = (AI_getContactTimer(eIndex1, eIndex2) + iChange);
+	}
 	FAssert(AI_getContactTimer(eIndex1, eIndex2) >= 0);
 }
 
 
 int CvPlayerAI::AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_MEMORY_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, eIndex2)
 	return m_aaiMemoryCount[eIndex1][eIndex2];
 }
 
 
 void CvPlayerAI::AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange)
 {
-	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < MAX_PLAYERS, "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex2 < NUM_MEMORY_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1)
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, eIndex2)
+
 	m_aaiMemoryCount[eIndex1][eIndex2] += iChange;
-// BUG - Update Attitude Icons - start
+
 	if (eIndex1 == GC.getGame().getActivePlayer())
 	{
+		// BUG - Update Attitude Icons
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
-// BUG - Update Attitude Icons - end
 	FAssert(AI_getMemoryCount(eIndex1, eIndex2) >= 0);
 }
 
@@ -18801,156 +18708,100 @@ void CvPlayerAI::AI_doCommerce()
 {
 	PROFILE_FUNC();
 
-	int iIdealPercent;
-	int iGoldTarget;
-
 	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  07/20/09								jdog5000	  */
-/*																							  */
-/* Barbarian AI, efficiency																	 */
-/************************************************************************************************/
-	if( isNPC() || getAnarchyTurns() > 0)
+	if (isNPC() || getAnarchyTurns() > 0)
 	{
 		return;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+	const int iIncrement = GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS");
+	int iGoldTarget = AI_goldTarget();
 
-	iGoldTarget = AI_goldTarget();
-	int iTargetTurns = 4 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-	iTargetTurns /= 100;
-	iTargetTurns = std::max(3, iTargetTurns);
+	const int iTargetTurns =
+	(
+		std::max
+		(
+			3, 4 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100
+		)
+	);
 
-	if (isCommerceFlexible(COMMERCE_RESEARCH) && !AI_avoidScience())
+	const bool bFlexResearch	= isCommerceFlexible(COMMERCE_RESEARCH);
+	const bool bFlexCulture		= isCommerceFlexible(COMMERCE_CULTURE);
+	const bool bFlexEspionage	= isCommerceFlexible(COMMERCE_ESPIONAGE);
+
+	const TechTypes eCurrentResearch = getCurrentResearch();
+	if (bFlexResearch && eCurrentResearch != NO_TECH && !AI_avoidScience())
 	{
-		// set research rate to 100%
+		// Gold rate at 100% research
 		setCommercePercent(COMMERCE_RESEARCH, 100);
+		const int iGoldRate = calculateGoldRate();
 
-		// if the gold rate is under 0 at 90% research
-		int iGoldRate = calculateGoldRate();
-		if (iGoldRate < 0)
+		// If we can finish the current research without running out of gold, let us spend 2/3rds of our gold
+		if (iGoldRate < 0 && getGold() >= getResearchTurnsLeft(eCurrentResearch, true) * iGoldRate)
 		{
-			TechTypes eCurrentResearch = getCurrentResearch();
-			if (eCurrentResearch != NO_TECH)
-			{
-				int iResearchTurnsLeft = getResearchTurnsLeft(eCurrentResearch, true);
-
-				// if we can finish the current research without running out of gold, let us spend 2/3rds of our gold
-				if (getGold() >= iResearchTurnsLeft * iGoldRate)
-				{
-					iGoldTarget /= 3;
-				}
-			}
+			iGoldTarget /= 3;
 		}
 	}
 
 	bool bReset = false;
 
-	if (isCommerceFlexible(COMMERCE_CULTURE))
+	if (bFlexCulture && getCommercePercent(COMMERCE_CULTURE) > 0)
 	{
-		if (getCommercePercent(COMMERCE_CULTURE) > 0)
-		{
-			setCommercePercent(COMMERCE_CULTURE, 0);
-
-			bReset = true;
-		}
+		setCommercePercent(COMMERCE_CULTURE, 0);
+		bReset = true;
 	}
 
-	if (isCommerceFlexible(COMMERCE_ESPIONAGE))
+	if (bFlexEspionage)
 	{
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						9/6/08				jdog5000		*/
-/* 																				*/
-/* 	Espionage AI																*/
-/********************************************************************************/
-		/* original BTS code
-		if (getCommercePercent(COMMERCE_ESPIONAGE) > 0)
-		{
-			setCommercePercent(COMMERCE_ESPIONAGE, 0);
-
-			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
-			{
-				setEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, 0);
-			}
-
-			bReset = true;
-		}
-		*/
-
 		// Reset espionage spending always
 		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 		{
 			setEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, 0);
 		}
-
 		if (getCommercePercent(COMMERCE_ESPIONAGE) > 0)
 		{
 			setCommercePercent(COMMERCE_ESPIONAGE, 0);
-
 			bReset = true;
 		}
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END									*/
-/********************************************************************************/
 	}
 
 	if (bReset)
 	{
 		AI_assignWorkingPlots();
 	}
+	const bool bFirstTech = AI_isFirstTech(eCurrentResearch);
 
-	bool bFirstTech = AI_isFirstTech(getCurrentResearch());
-	if (isCommerceFlexible(COMMERCE_CULTURE))
+	if (bFlexCulture && getNumCities() > 0)
 	{
-		if (getNumCities() > 0)
-		{
-			iIdealPercent = 0;
+		int iIdealPercent = 0;
 
+		if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
+		{
+			iIdealPercent = 100;
+		}
+		else
+		{
 			foreach_(const CvCity* pLoopCity, cities())
 			{
 				if (pLoopCity->getCommerceHappinessPer(COMMERCE_CULTURE) > 0)
 				{
-					iIdealPercent += ((pLoopCity->angryPopulation() * 100) / pLoopCity->getCommerceHappinessPer(COMMERCE_CULTURE));
+					iIdealPercent += pLoopCity->angryPopulation() * 100 / pLoopCity->getCommerceHappinessPer(COMMERCE_CULTURE);
 				}
 			}
-
 			iIdealPercent /= getNumCities();
 
-			iIdealPercent -= (iIdealPercent % GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
+			iIdealPercent -= iIdealPercent % iIncrement;
 
 			iIdealPercent = std::min(iIdealPercent, 20);
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/08/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
-			if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-			{
-				iIdealPercent = 100;
-			}
-
-			setCommercePercent(COMMERCE_CULTURE, iIdealPercent);
 		}
+		setCommercePercent(COMMERCE_CULTURE, iIdealPercent);
 	}
+	const TeamTypes eTeam = getTeam();
+	const CvTeamAI& team = GET_TEAM(eTeam);
 
-	if (isCommerceFlexible(COMMERCE_RESEARCH))
+	if (bFlexResearch)
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/08/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
-		if ((isNoResearchAvailable() || AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4)) && !bFirstTech)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+		if (!bFirstTech && (isNoResearchAvailable() || AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4)))
 		{
 			setCommercePercent(COMMERCE_RESEARCH, 0);
 		}
@@ -18958,7 +18809,7 @@ void CvPlayerAI::AI_doCommerce()
 		{
 			while (calculateGoldRate() > 0)
 			{
-				changeCommercePercent(COMMERCE_RESEARCH, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
+				changeCommercePercent(COMMERCE_RESEARCH, iIncrement);
 
 				if (getCommercePercent(COMMERCE_RESEARCH) == 100)
 				{
@@ -18966,191 +18817,160 @@ void CvPlayerAI::AI_doCommerce()
 				}
 			}
 
-			if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget) //If gold RATE is getting too high, this could overflow
+			if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget)
 			{
 				while (getGold() + iTargetTurns * calculateGoldRate() <= iGoldTarget)
 				{
-					changeCommercePercent(COMMERCE_RESEARCH, -(GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")));
+					changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
 
-					if ((getCommercePercent(COMMERCE_RESEARCH) == 0))
+					if (getCommercePercent(COMMERCE_RESEARCH) == 0)
 					{
 						break;
 					}
 				}
 			}
-			else
+			else if (AI_avoidScience())
 			{
-				if (AI_avoidScience())
-				{
-					changeCommercePercent(COMMERCE_RESEARCH, -(GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")));
-				}
+				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
 			}
 
-			if ((GET_TEAM(getTeam()).getChosenWarCount(true) > 0) || (GET_TEAM(getTeam()).getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) > 0))
+			if (team.getChosenWarCount(true) > 0 || team.getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) > 0)
 			{
-				changeCommercePercent(COMMERCE_RESEARCH, -(GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")));
+				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
 			}
 
-			if ((getCommercePercent(COMMERCE_RESEARCH) == 0) && (calculateGoldRate() > 0))
+			if (getCommercePercent(COMMERCE_RESEARCH) == 0 && calculateGoldRate() > 0)
 			{
-				setCommercePercent(COMMERCE_RESEARCH, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
+				setCommercePercent(COMMERCE_RESEARCH, iIncrement);
 			}
 		}
 	}
 
-	if (isCommerceFlexible(COMMERCE_ESPIONAGE) && !bFirstTech)
+	if (bFlexEspionage && !bFirstTech)
 	{
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						9/7/08				jdog5000		*/
-/* 																				*/
-/* 	Espionage AI																*/
-/********************************************************************************/
-
 		int iEspionageTargetRate = 0;
 		int* piTarget = new int[MAX_PC_TEAMS];
 		int* piWeight = new int[MAX_PC_TEAMS];
 
-		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
+		for (int iTeamX = 0; iTeamX < MAX_PC_TEAMS; ++iTeamX)
 		{
-			piTarget[iTeam] = 0;
-			piWeight[iTeam] = 0;
+			piTarget[iTeamX] = 0;
+			piWeight[iTeamX] = 0;
 
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-			if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) && !GET_TEAM(getTeam()).isVassal((TeamTypes)iTeam))
+			const TeamTypes eTeamX = (TeamTypes)iTeamX;
+			if (eTeamX == eTeam || !team.isHasMet(eTeamX) || team.isVassal(eTeamX))
+				continue;
+
+			const CvTeam& teamX = GET_TEAM(eTeamX);
+			if (teamX.isAlive() && !teamX.isVassal(eTeam))
 			{
-				if( GET_TEAM(getTeam()).isHasMet((TeamTypes)iTeam) )
+				int iTheirEspPoints = teamX.getEspionagePointsAgainstTeam(eTeam);
+				int iDesiredMissionPoints = 0;
+
+				piWeight[iTeamX] = 10;
+				int iRateDivisor = 12;
+
+				if (team.AI_getWarPlan(eTeamX) != NO_WARPLAN)
 				{
-					int iTheirEspPoints = kLoopTeam.getEspionagePointsAgainstTeam(getTeam());
-					int iOurEspPoints = GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)iTeam);
-					int iDesiredMissionPoints = 0;
-					int iDesiredEspPoints = 0;
+					iTheirEspPoints *= 3;
+					iTheirEspPoints /= 2;
 
-					piWeight[iTeam] = 10;
-					int iRateDivisor = 12;
-
-					if( GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iTeam) != NO_WARPLAN )
+					for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
 					{
-						iTheirEspPoints *= 3;
-						iTheirEspPoints /= 2;
+						const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 
+						if (kMissionInfo.isPassive() && (kMissionInfo.isSeeDemographics() || kMissionInfo.isSeeResearch()))
+						{
+							const int iMissionCost = getEspionageMissionCost((EspionageMissionTypes)iMission, teamX.getLeaderID(), NULL, -1, NULL)*11/10;
+							if (iDesiredMissionPoints < iMissionCost)
+							{
+								iDesiredMissionPoints = iMissionCost;
+							}
+						}
+					}
+
+					iRateDivisor = 10;
+					piWeight[iTeamX] = 20;
+
+					if (team.AI_hasCitiesInPrimaryArea(eTeamX))
+					{
+						piWeight[iTeamX] = 30;
+						iRateDivisor = 8;
+					}
+				}
+				else
+				{
+					const int iAttitude = range(team.AI_getAttitudeVal(eTeamX), -12, 12);
+
+					iTheirEspPoints -= iTheirEspPoints * iAttitude / 24;
+
+					if (iAttitude <= -3)
+					{
 						for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
 						{
 							const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 
-							if( kMissionInfo.isPassive() )
+							if (kMissionInfo.isPassive() && (kMissionInfo.isSeeDemographics() || kMissionInfo.isSeeResearch()))
 							{
-								if( kMissionInfo.isSeeDemographics() || kMissionInfo.isSeeResearch() )
+								const int iMissionCost = getEspionageMissionCost((EspionageMissionTypes)iMission, teamX.getLeaderID(), NULL, -1, NULL)*11/10;
+								if (iDesiredMissionPoints < iMissionCost)
 								{
-									int iMissionCost = (11*getEspionageMissionCost((EspionageMissionTypes)iMission, GET_TEAM((TeamTypes)iTeam).getLeaderID(), NULL, -1, NULL))/10;
-									if( iDesiredMissionPoints < iMissionCost )
-									{
-										iDesiredMissionPoints = iMissionCost;
-									}
+									iDesiredMissionPoints = iMissionCost;
 								}
 							}
 						}
-
-						iRateDivisor = 10;
-						piWeight[iTeam] = 20;
-
-						if( GET_TEAM(getTeam()).AI_hasCitiesInPrimaryArea((TeamTypes)iTeam) )
-						{
-							piWeight[iTeam] = 30;
-							iRateDivisor = 8;
-						}
 					}
-					else
+					else if (iAttitude < 3)
 					{
-						int iAttitude = range(GET_TEAM(getTeam()).AI_getAttitudeVal((TeamTypes)iTeam), -12, 12);
-
-						iTheirEspPoints -= (iTheirEspPoints*iAttitude)/(2*12);
-
-						if( iAttitude <= -3 )
+						for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
 						{
-							for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
-							{
-								const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
+							const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 
-								if( kMissionInfo.isPassive() )
+							if (kMissionInfo.isPassive() && kMissionInfo.isSeeDemographics())
+							{
+								const int iMissionCost = getEspionageMissionCost((EspionageMissionTypes)iMission, teamX.getLeaderID(), NULL, -1, NULL)*11/10;
+								if (iDesiredMissionPoints < iMissionCost)
 								{
-									if( kMissionInfo.isSeeDemographics() || kMissionInfo.isSeeResearch() )
-									{
-										int iMissionCost = (11*getEspionageMissionCost((EspionageMissionTypes)iMission, GET_TEAM((TeamTypes)iTeam).getLeaderID(), NULL, -1, NULL))/10;
-										if( iDesiredMissionPoints < iMissionCost )
-										{
-											iDesiredMissionPoints = iMissionCost;
-										}
-									}
+									iDesiredMissionPoints = iMissionCost;
 								}
 							}
 						}
-						else if( iAttitude < 3 )
-						{
-							for (int iMission = 0; iMission < GC.getNumEspionageMissionInfos(); ++iMission)
-							{
-								const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
-
-								if( kMissionInfo.isPassive() )
-								{
-									if( kMissionInfo.isSeeDemographics() )
-									{
-										int iMissionCost = (11*getEspionageMissionCost((EspionageMissionTypes)iMission, GET_TEAM((TeamTypes)iTeam).getLeaderID(), NULL, -1, NULL))/10;
-										if( iDesiredMissionPoints < iMissionCost )
-										{
-											iDesiredMissionPoints = iMissionCost;
-										}
-									}
-								}
-							}
-						}
-
-						iRateDivisor += (iAttitude/5);
-						piWeight[iTeam] -= (iAttitude/2);
 					}
+					iRateDivisor += iAttitude / 5;
+					piWeight[iTeamX] -= iAttitude / 2;
+				}
 
-					iDesiredEspPoints = std::max(iTheirEspPoints,iDesiredMissionPoints);
+				const int iDesiredEspPoints = std::max(iTheirEspPoints, iDesiredMissionPoints);
+				const int iOurEspPoints = team.getEspionagePointsAgainstTeam(eTeamX);
 
-					piTarget[iTeam] = (iDesiredEspPoints - iOurEspPoints)/std::max(6,iRateDivisor);
+				piTarget[iTeamX] = (iDesiredEspPoints - iOurEspPoints) / std::max(6, iRateDivisor);
 
-					if( piTarget[iTeam] > 0 )
-					{
-						iEspionageTargetRate += piTarget[iTeam];
-					}
+				if (piTarget[iTeamX] > 0)
+				{
+					iEspionageTargetRate += piTarget[iTeamX];
 				}
 			}
 		}
 
-		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
+		for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 		{
-			if( piTarget[iTeam] > 0 )
+			if( piTarget[iI] > 0 )
 			{
-				piWeight[iTeam] += (150*piTarget[iTeam])/std::max(4,iEspionageTargetRate);
+				piWeight[iI] += (150*piTarget[iI])/std::max(4,iEspionageTargetRate);
 			}
-			else if( piTarget[iTeam] < 0 )
+			else if( piTarget[iI] < 0 )
 			{
-				piWeight[iTeam] += 2*piTarget[iTeam];
+				piWeight[iI] += 2*piTarget[iI];
 			}
-			setEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, std::max(0,piWeight[iTeam]));
+			setEspionageSpendingWeightAgainstTeam((TeamTypes)iI, std::max(0,piWeight[iI]));
 		}
 		SAFE_DELETE_ARRAY(piTarget);
 		SAFE_DELETE_ARRAY(piWeight);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END									*/
-/********************************************************************************/
 
-		//if economy is weak, neglect espionage spending.
-		//instead invest hammers into espionage via spies/builds
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/08/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
+		// If economy is weak, neglect espionage spending.
+		// Instead invest hammers into espionage via spies/builds
 		if (AI_isFinancialTrouble() || AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		{
-			//can still get trickle espionage income
 			iEspionageTargetRate = 0;
 		}
 		else
@@ -19161,57 +18981,36 @@ void CvPlayerAI::AI_doCommerce()
 			iEspionageTargetRate *= GC.getLeaderHeadInfo(getLeaderType()).getEspionageWeight();
 			iEspionageTargetRate /= 100;
 
-			int iInitialResearchPercent = getCommercePercent(COMMERCE_RESEARCH);
-/************************************************************************************************/
-/* Afforess					  Start		 06/28/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-			while (getCommerceRate(COMMERCE_ESPIONAGE) < iEspionageTargetRate && getCommercePercent(COMMERCE_ESPIONAGE) < 20)
-*/
-			int iMaxEspionage = 5;
-			int iRank = GC.getGame().getPlayerRank(getID());
-			if (iRank < 2)
+			int iMaxEspionage = AI_isFinancialTrouble() ? 0 : 5;
+
+			if (iMaxEspionage > 0 && team.getChosenWarCount(true) == 0 && team.getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) == 0)
 			{
-				iMaxEspionage = 15;
-			}
-			else if (iRank < 4)
-			{
-				iMaxEspionage = 10;
-			}
-			if ((GET_TEAM(getTeam()).getChosenWarCount(true) > 0) || (GET_TEAM(getTeam()).getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) > 0))
-			{
-				iMaxEspionage = std::min(iMaxEspionage, 5);
-			}
-			if (AI_isFinancialTrouble())
-			{
-				iMaxEspionage = 0;
+				const int iRank = GC.getGame().getPlayerRank(getID());
+
+				if (iRank < 2)
+				{
+					iMaxEspionage = 15;
+				}
+				else if (iRank < 4)
+				{
+					iMaxEspionage = 10;
+				}
 			}
 
 			while (getCommerceRate(COMMERCE_ESPIONAGE) < iEspionageTargetRate && getCommercePercent(COMMERCE_ESPIONAGE) < iMaxEspionage)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 			{
-				changeCommercePercent(COMMERCE_RESEARCH, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-				changeCommercePercent(COMMERCE_ESPIONAGE, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
+				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
+				changeCommercePercent(COMMERCE_ESPIONAGE, iIncrement);
 
 				if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget)
 				{
 					break;
 				}
-
-				if (!AI_avoidScience() && !isNoResearchAvailable())
+				if (!AI_avoidScience() && !isNoResearchAvailable()
+				// Keep Espionage percent somewhat lower than research percent
+				&& getCommercePercent(COMMERCE_RESEARCH) * 2 <= 3*(getCommercePercent(COMMERCE_ESPIONAGE) + iIncrement))
 				{
-	//				if (2 * getCommercePercent(COMMERCE_RESEARCH) < iInitialResearchPercent)
-	//				{
-	//					break;
-	//				}
-					if (getCommercePercent(COMMERCE_RESEARCH) * 2 <= (getCommercePercent(COMMERCE_ESPIONAGE) + GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")) * 3)
-					{
-						break;
-					}
+					break;
 				}
 			}
 		}
@@ -19219,71 +19018,21 @@ void CvPlayerAI::AI_doCommerce()
 
 	if (!bFirstTech && getGold() < iGoldTarget && getCommercePercent(COMMERCE_RESEARCH) > 40)
 	{
-		bool bHurryGold = false;
 		for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); iHurry++)
 		{
-			if ((GC.getHurryInfo((HurryTypes)iHurry).getGoldPerProduction() > 0) && canHurry((HurryTypes)iHurry))
+			if (GC.getHurryInfo((HurryTypes)iHurry).getGoldPerProduction() > 0 && canHurry((HurryTypes)iHurry))
 			{
-				bHurryGold = true;
+				(
+					(getCommercePercent(COMMERCE_ESPIONAGE) > 0)
+					?
+					changeCommercePercent(COMMERCE_ESPIONAGE, -iIncrement)
+					:
+					changeCommercePercent(COMMERCE_RESEARCH, -iIncrement)
+				);
 				break;
 			}
 		}
-		if (bHurryGold)
-		{
-			if (getCommercePercent(COMMERCE_ESPIONAGE) > 0)
-			{
-				changeCommercePercent(COMMERCE_ESPIONAGE, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-			}
-			else
-			{
-				changeCommercePercent(COMMERCE_RESEARCH, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-			}
-			//changeCommercePercent(COMMERCE_GOLD, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-		}
 	}
-
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*	Taxation Anger Check																	  */
-/************************************************************************************************/
-	int iMaxTaxRate = 100;
-	if (AI_avoidIncreasingTaxes())
-	{
-		iMaxTaxRate = getLastTurnTaxRate() + 10;
-		//if we round down instead, abuse our extra knowledge...
-		if (GC.getDefineINT("TAXATION_ANGER_ROUND_DOWN"))
-			iMaxTaxRate += 10;
-	}
-	//This allows the AI still to adjust their taxes up by at least 10% each turn, so they have some leeway.
-
-	while ((iMaxTaxRate <= getCommercePercent(COMMERCE_GOLD)) && iMaxTaxRate != 100)
-	{
-		if (isCommerceFlexible(COMMERCE_ESPIONAGE) && (getCommercePercent(COMMERCE_ESPIONAGE) > GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")))
-		{
-			changeCommercePercent(COMMERCE_ESPIONAGE, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-		}
-		//Check to see if we meet the target now
-		if (iMaxTaxRate < getCommercePercent(COMMERCE_GOLD))
-			break;
-
-		if (isCommerceFlexible(COMMERCE_RESEARCH) && (getCommercePercent(COMMERCE_RESEARCH) > GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")))
-		{
-			changeCommercePercent(COMMERCE_RESEARCH, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-		}
-		//Check to see if we meet the target now
-		if (iMaxTaxRate < getCommercePercent(COMMERCE_GOLD))
-			break;
-
-		if (isCommerceFlexible(COMMERCE_CULTURE) && (getCommercePercent(COMMERCE_CULTURE) > GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")))
-		{
-			changeCommercePercent(COMMERCE_CULTURE, -GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
-		}
-	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 	// this is called on doTurn, so make sure our gold is high enough keep us above zero gold.
 	verifyGoldCommercePercent();
 }
@@ -19425,10 +19174,9 @@ void CvPlayerAI::AI_doCivics()
 	{
 		if ( canDoCivics((CivicTypes)iI) )
 		{
-			int	iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
+			const int iCivicOption = GC.getCivicInfo((CivicTypes)iI).getCivicOptionType();
 
-			FAssert(iCivicOption >= 0);
-			FAssert(iCivicOption < GC.getNumCivicOptionInfos());
+			FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), iCivicOption)
 
 			paiAvailableChoices[iCivicOption]++;
 		}
@@ -22149,7 +21897,7 @@ void CvPlayerAI::AI_doDiplo()
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_FRIENDLY", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	default:
-																		FAssertMsg(false, "No Valid Attitude");
+																		FErrorMsg("No Valid Attitude");
 																		szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_CONTACT_CAUTIOUS", getCivilizationDescription(), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription());
 																		break;
 																	}
@@ -26194,8 +25942,7 @@ int CvPlayerAI::AI_goldTradeValuePercent() const
 
 int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 {
-	FAssert(eYield > -1);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26208,8 +25955,7 @@ int CvPlayerAI::AI_averageYieldMultiplier(YieldTypes eYield) const
 
 int CvPlayerAI::AI_averageCommerceMultiplier(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26231,8 +25977,7 @@ int CvPlayerAI::AI_averageGreatPeopleMultiplier() const
 //"100 eCommerce is worth (return) raw YIELD_COMMERCE
 int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 {
-	FAssert(eCommerce > -1);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
@@ -26816,7 +26561,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 				}
 				else
 				{
-					FAssertMsg(false, "StartingPlot for a live player is NULL!");
+					FErrorMsg("StartingPlot for a live player is NULL!");
 				}
 			}
 		}
@@ -26827,7 +26572,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 		return pBestPlot;
 	}
 
-	FAssertMsg(false, "AS: Failed to find a starting plot for a player");
+	FErrorMsg("AS: Failed to find a starting plot for a player");
 
 	//Execution should almost never reach here.
 
@@ -26866,7 +26611,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 	}
 
 	//Commence panic.
-	FAssertMsg(false, "Failed to find an advanced start starting plot");
+	FErrorMsg("Failed to find an advanced start starting plot");
 	return NULL;
 }
 
@@ -26992,7 +26737,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 			//this should never happen since the cost for a city should be 0 if
 			//the city can't be placed.
 			//(It can happen if another player has placed a city in the fog)
-			FAssertMsg(false, "ADVANCEDSTARTACTION_CITY failed in unexpected way");
+			FErrorMsg("ADVANCEDSTARTACTION_CITY failed in unexpected way");
 			return false;
 		}
 	}
@@ -27389,7 +27134,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			{
 				if (!AI_advancedStartPlaceCity(pBestCapitalPlot))
 				{
-					FAssertMsg(false, "AS AI: Unexpected failure placing capital");
+					FErrorMsg("AS AI: Unexpected failure placing capital");
 				}
 				break;
 			}
@@ -27557,7 +27302,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		{
 			if (!AI_advancedStartPlaceCity(pBestFoundPlot))
 			{
-				FAssertMsg(false, "AS AI: Failed to place city (non-capital)");
+				FErrorMsg("AS AI: Failed to place city (non-capital)");
 				bDonePlacingCities = true;
 			}
 		}
@@ -29957,17 +29702,6 @@ int CvPlayerAI::AI_getCivicAttitudeChange(PlayerTypes ePlayer) const
 	}
 
 	return iAttitude;
-}
-
-bool CvPlayerAI::AI_avoidIncreasingTaxes() const
-{
-
-	if ((getTaxationAnger() > 0) && !isGoldenAge())
-	{
-		return true;
-	}
-
-	return false;
 }
 
 int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const

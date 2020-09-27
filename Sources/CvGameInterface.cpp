@@ -1773,7 +1773,7 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		break;
 
 	default:
-		FAssertMsg(false, "eControl did not match any valid options");
+		FErrorMsg("eControl did not match any valid options");
 		break;
 	}
 	return false;
@@ -2280,7 +2280,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	default:
-		FAssertMsg(false, "eControl did not match any valid options");
+		FErrorMsg("eControl did not match any valid options");
 		break;
 	}
 }
