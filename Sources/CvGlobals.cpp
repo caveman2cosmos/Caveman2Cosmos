@@ -30,17 +30,6 @@ static char gVersionString[1024] = { 0 };
 	}
 
 template <class T>
-void deleteInfoArray(std::vector<T*>& array)
-{
-	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
-	{
-		SAFE_DELETE(*it);
-	}
-
-	array.clear();
-}
-
-template <class T>
 bool readInfoArray(FDataStreamBase* pStream, std::vector<T*>& array, const char* szClassName)
 {
 	GC.addToInfosVectors(&array);
@@ -52,7 +41,7 @@ bool readInfoArray(FDataStreamBase* pStream, std::vector<T*>& array, const char*
 		return false;
 	pStream->Read(&iSize);
 
-	deleteInfoArray(array);
+	GC.deleteVectorContent(array);
 
 	for (int i = 0; i < iSize; ++i)
 	{
@@ -564,18 +553,7 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
 
 	SAFE_DELETE(m_game);
-	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	for (std::vector<CvMap*>::iterator it = m_maps.begin(); it != m_maps.end(); ++it)
-	{
-		SAFE_DELETE(*it);
-	}
-	m_maps.clear();
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	deleteVectorContent(m_maps);
 
 	CvPlayerAI::freeStatics();
 	CvTeamAI::freeStatics();
@@ -609,6 +587,17 @@ void cvInternalGlobals::uninit()
 
 	m_typesMap.clear();
 	m_aInfoVectors.clear();
+}
+
+template <class T>
+void cvInternalGlobals::deleteVectorContent(std::vector<T*>& array)
+{
+	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
+	{
+		SAFE_DELETE(*it);
+	}
+
+	array.clear();
 }
 
 void cvInternalGlobals::clearTypesMap()
@@ -2928,17 +2917,17 @@ void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
 
 void cvInternalGlobals::deleteInfoArrays()
 {
-	deleteInfoArray(m_paBuildingInfo);
-	deleteInfoArray(m_paSpecialBuildingInfo);
+	deleteVectorContent(m_paBuildingInfo);
+	deleteVectorContent(m_paSpecialBuildingInfo);
 
-	deleteInfoArray(m_paLeaderHeadInfo);
-	deleteInfoArray(m_paTraitInfo);
-	deleteInfoArray(m_paCivilizationInfo);
-	deleteInfoArray(m_paUnitArtStyleTypeInfo);
+	deleteVectorContent(m_paLeaderHeadInfo);
+	deleteVectorContent(m_paTraitInfo);
+	deleteVectorContent(m_paCivilizationInfo);
+	deleteVectorContent(m_paUnitArtStyleTypeInfo);
 
-	deleteInfoArray(m_paVoteSourceInfo);
-	deleteInfoArray(m_paHints);
-	deleteInfoArray(m_paMainMenus);
+	deleteVectorContent(m_paVoteSourceInfo);
+	deleteVectorContent(m_paHints);
+	deleteVectorContent(m_paMainMenus);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/01/07                            MRGENIE          */
 /*                                                                                              */
@@ -2946,107 +2935,107 @@ void cvInternalGlobals::deleteInfoArrays()
 /************************************************************************************************/
 	// MLF loading
 	m_paModLoadControlVector.clear();
-	deleteInfoArray(m_paModLoadControls);
+	deleteVectorContent(m_paModLoadControls);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	deleteInfoArray(m_paGoodyInfo);
-	deleteInfoArray(m_paHandicapInfo);
-	deleteInfoArray(m_paGameSpeedInfo);
-	deleteInfoArray(m_paTurnTimerInfo);
-	deleteInfoArray(m_paVictoryInfo);
-	deleteInfoArray(m_paHurryInfo);
-	deleteInfoArray(m_paWorldInfo);
-	deleteInfoArray(m_paSeaLevelInfo);
-	deleteInfoArray(m_paClimateInfo);
-	deleteInfoArray(m_paProcessInfo);
-	deleteInfoArray(m_paVoteInfo);
-	deleteInfoArray(m_paProjectInfo);
-	deleteInfoArray(m_paReligionInfo);
-	deleteInfoArray(m_paCorporationInfo);
-	deleteInfoArray(m_paCommerceInfo);
-	deleteInfoArray(m_paEmphasizeInfo);
-	deleteInfoArray(m_paUpkeepInfo);
-	deleteInfoArray(m_paCultureLevelInfo);
+	deleteVectorContent(m_paGoodyInfo);
+	deleteVectorContent(m_paHandicapInfo);
+	deleteVectorContent(m_paGameSpeedInfo);
+	deleteVectorContent(m_paTurnTimerInfo);
+	deleteVectorContent(m_paVictoryInfo);
+	deleteVectorContent(m_paHurryInfo);
+	deleteVectorContent(m_paWorldInfo);
+	deleteVectorContent(m_paSeaLevelInfo);
+	deleteVectorContent(m_paClimateInfo);
+	deleteVectorContent(m_paProcessInfo);
+	deleteVectorContent(m_paVoteInfo);
+	deleteVectorContent(m_paProjectInfo);
+	deleteVectorContent(m_paReligionInfo);
+	deleteVectorContent(m_paCorporationInfo);
+	deleteVectorContent(m_paCommerceInfo);
+	deleteVectorContent(m_paEmphasizeInfo);
+	deleteVectorContent(m_paUpkeepInfo);
+	deleteVectorContent(m_paCultureLevelInfo);
 
-	deleteInfoArray(m_paColorInfo);
-	deleteInfoArray(m_paPlayerColorInfo);
-	deleteInfoArray(m_paInterfaceModeInfo);
-	deleteInfoArray(m_paAdvisorInfo);
-	deleteInfoArray(m_paThroneRoomCamera);
-	deleteInfoArray(m_paThroneRoomInfo);
-	deleteInfoArray(m_paThroneRoomStyleInfo);
-	deleteInfoArray(m_paSlideShowInfo);
-	deleteInfoArray(m_paSlideShowRandomInfo);
-	deleteInfoArray(m_paWorldPickerInfo);
-	deleteInfoArray(m_paSpaceShipInfo);
+	deleteVectorContent(m_paColorInfo);
+	deleteVectorContent(m_paPlayerColorInfo);
+	deleteVectorContent(m_paInterfaceModeInfo);
+	deleteVectorContent(m_paAdvisorInfo);
+	deleteVectorContent(m_paThroneRoomCamera);
+	deleteVectorContent(m_paThroneRoomInfo);
+	deleteVectorContent(m_paThroneRoomStyleInfo);
+	deleteVectorContent(m_paSlideShowInfo);
+	deleteVectorContent(m_paSlideShowRandomInfo);
+	deleteVectorContent(m_paWorldPickerInfo);
+	deleteVectorContent(m_paSpaceShipInfo);
 
-	deleteInfoArray(m_paCivicInfo);
-	deleteInfoArray(m_paImprovementInfo);
+	deleteVectorContent(m_paCivicInfo);
+	deleteVectorContent(m_paImprovementInfo);
 
-	deleteInfoArray(m_paRouteInfo);
-	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverModelInfo);
+	deleteVectorContent(m_paRouteInfo);
+	deleteVectorContent(m_paRouteModelInfo);
+	deleteVectorContent(m_paRiverModelInfo);
 
-	deleteInfoArray(m_paWaterPlaneInfo);
-	deleteInfoArray(m_paTerrainPlaneInfo);
-	deleteInfoArray(m_paCameraOverlayInfo);
+	deleteVectorContent(m_paWaterPlaneInfo);
+	deleteVectorContent(m_paTerrainPlaneInfo);
+	deleteVectorContent(m_paCameraOverlayInfo);
 
-	deleteInfoArray(m_aEraInfo);
-	deleteInfoArray(m_paEffectInfo);
-	deleteInfoArray(m_paAttachableInfo);
+	deleteVectorContent(m_aEraInfo);
+	deleteVectorContent(m_paEffectInfo);
+	deleteVectorContent(m_paAttachableInfo);
 
-	deleteInfoArray(m_paTechInfo);
-	deleteInfoArray(m_paDiplomacyInfo);
+	deleteVectorContent(m_paTechInfo);
+	deleteVectorContent(m_paDiplomacyInfo);
 
-	deleteInfoArray(m_paBuildInfo);
-	deleteInfoArray(m_paUnitInfo);
-	deleteInfoArray(m_paSpawnInfo);
-	deleteInfoArray(m_paSpecialUnitInfo);
-	deleteInfoArray(m_paSpecialistInfo);
-	deleteInfoArray(m_paActionInfo);
-	deleteInfoArray(m_paMissionInfo);
-	deleteInfoArray(m_paControlInfo);
-	deleteInfoArray(m_paCommandInfo);
-	deleteInfoArray(m_paAutomateInfo);
-	deleteInfoArray(m_paPromotionInfo);
+	deleteVectorContent(m_paBuildInfo);
+	deleteVectorContent(m_paUnitInfo);
+	deleteVectorContent(m_paSpawnInfo);
+	deleteVectorContent(m_paSpecialUnitInfo);
+	deleteVectorContent(m_paSpecialistInfo);
+	deleteVectorContent(m_paActionInfo);
+	deleteVectorContent(m_paMissionInfo);
+	deleteVectorContent(m_paControlInfo);
+	deleteVectorContent(m_paCommandInfo);
+	deleteVectorContent(m_paAutomateInfo);
+	deleteVectorContent(m_paPromotionInfo);
 
-	deleteInfoArray(m_paConceptInfo);
-	deleteInfoArray(m_paNewConceptInfo);
-	deleteInfoArray(m_paCityTabInfo);
-	deleteInfoArray(m_paCalendarInfo);
-	deleteInfoArray(m_paSeasonInfo);
-	deleteInfoArray(m_paMonthInfo);
-	deleteInfoArray(m_paDenialInfo);
-	deleteInfoArray(m_paInvisibleInfo);
-	deleteInfoArray(m_paUnitCombatInfo);
+	deleteVectorContent(m_paConceptInfo);
+	deleteVectorContent(m_paNewConceptInfo);
+	deleteVectorContent(m_paCityTabInfo);
+	deleteVectorContent(m_paCalendarInfo);
+	deleteVectorContent(m_paSeasonInfo);
+	deleteVectorContent(m_paMonthInfo);
+	deleteVectorContent(m_paDenialInfo);
+	deleteVectorContent(m_paInvisibleInfo);
+	deleteVectorContent(m_paUnitCombatInfo);
 	//TB Promotion Line mod begin
-	deleteInfoArray(m_paPromotionLineInfo);
+	deleteVectorContent(m_paPromotionLineInfo);
 	//TB Promotion Line mod end
-	deleteInfoArray(m_paMapCategoryInfo);
-	deleteInfoArray(m_paIdeaClassInfo);
-	deleteInfoArray(m_paIdeaInfo);
-	//deleteInfoArray(m_paTraitOptionEditsInfo);
-	deleteInfoArray(m_paDomainInfo);
-	deleteInfoArray(m_paUnitAIInfos);
-	deleteInfoArray(m_paAttitudeInfos);
-	deleteInfoArray(m_paMemoryInfos);
-	deleteInfoArray(m_paGameOptionInfos);
-	deleteInfoArray(m_paMPOptionInfos);
-	deleteInfoArray(m_paForceControlInfos);
-	deleteInfoArray(m_paPlayerOptionInfos);
-	deleteInfoArray(m_paGraphicOptionInfos);
+	deleteVectorContent(m_paMapCategoryInfo);
+	deleteVectorContent(m_paIdeaClassInfo);
+	deleteVectorContent(m_paIdeaInfo);
+	//deleteVectorContent(m_paTraitOptionEditsInfo);
+	deleteVectorContent(m_paDomainInfo);
+	deleteVectorContent(m_paUnitAIInfos);
+	deleteVectorContent(m_paAttitudeInfos);
+	deleteVectorContent(m_paMemoryInfos);
+	deleteVectorContent(m_paGameOptionInfos);
+	deleteVectorContent(m_paMPOptionInfos);
+	deleteVectorContent(m_paForceControlInfos);
+	deleteVectorContent(m_paPlayerOptionInfos);
+	deleteVectorContent(m_paGraphicOptionInfos);
 
-	deleteInfoArray(m_paYieldInfo);
-	deleteInfoArray(m_paTerrainInfo);
-	deleteInfoArray(m_paFeatureInfo);
-	deleteInfoArray(m_paBonusClassInfo);
-	deleteInfoArray(m_paBonusInfo);
-	deleteInfoArray(m_paLandscapeInfo);
+	deleteVectorContent(m_paYieldInfo);
+	deleteVectorContent(m_paTerrainInfo);
+	deleteVectorContent(m_paFeatureInfo);
+	deleteVectorContent(m_paBonusClassInfo);
+	deleteVectorContent(m_paBonusInfo);
+	deleteVectorContent(m_paLandscapeInfo);
 
-	deleteInfoArray(m_paUnitFormationInfo);
-	deleteInfoArray(m_paCivicOptionInfo);
-	deleteInfoArray(m_paCursorInfo);
+	deleteVectorContent(m_paUnitFormationInfo);
+	deleteVectorContent(m_paCivicOptionInfo);
+	deleteVectorContent(m_paCursorInfo);
 
 	SAFE_DELETE_ARRAY(GC.getEntityEventTypes());
 	SAFE_DELETE_ARRAY(GC.getAnimationOperatorTypes());
@@ -3060,17 +3049,17 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
-	deleteInfoArray(m_paQuestInfo);
-	deleteInfoArray(m_paTutorialInfo);
+	deleteVectorContent(m_paQuestInfo);
+	deleteVectorContent(m_paTutorialInfo);
 
-	deleteInfoArray(m_paEventInfo);
-	deleteInfoArray(m_paEventTriggerInfo);
-	deleteInfoArray(m_paEspionageMissionInfo);
+	deleteVectorContent(m_paEventInfo);
+	deleteVectorContent(m_paEventTriggerInfo);
+	deleteVectorContent(m_paEspionageMissionInfo);
 
-	deleteInfoArray(m_paEntityEventInfo);
-	deleteInfoArray(m_paAnimationCategoryInfo);
-	deleteInfoArray(m_paAnimationPathInfo);
-	deleteInfoArray(m_paPropertyInfo);
+	deleteVectorContent(m_paEntityEventInfo);
+	deleteVectorContent(m_paAnimationCategoryInfo);
+	deleteVectorContent(m_paAnimationPathInfo);
+	deleteVectorContent(m_paPropertyInfo);
 
 	clearTypesMap();
 	m_aInfoVectors.clear();
