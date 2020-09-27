@@ -1180,12 +1180,26 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, void, erase);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateFog);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateVisibility);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateSymbolVisibility);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateSymbols);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateMinimapColor);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateIrrigated);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateWorkingCity);
+		DECLARE_MAP_FUNCTOR(CvPlot, void, updateCenterUnit);
+
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, updateRevealedOwner, TeamTypes);
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setWorkingCityOverride, const CvCity*);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setMinOriginalStartDist, int);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateCulture, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRouteSymbol, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateSight, bool, bool);
+
+		DECLARE_MAP_FUNCTOR_3(CvPlot, void, setPlotType, PlotTypes, bool, bool);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);

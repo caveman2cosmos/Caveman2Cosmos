@@ -176,9 +176,11 @@ public:
 	int getNumBonusesOnLand(BonusTypes eIndex) const;														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
+	inline const std::vector<CvPlot*> plots() const { return m_pMapPlots; }
+
 	inline CvPlot* plotByIndex(int iIndex) const // Exposed to Python
 	{
-		return (iIndex >= 0 && iIndex < getGridWidth() * getGridHeight()) ? &(m_pMapPlots[iIndex]) : NULL;
+		return (iIndex >= 0 && iIndex < getGridWidth() * getGridHeight()) ? m_pMapPlots[iIndex] : NULL;
 	}
 
 	__forceinline CvPlot* plot(int iX, int iY) const // Exposed to Python
@@ -189,7 +191,7 @@ public:
 		}
 		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
 		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
-		return isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL;
+		return isPlot(iMapX, iMapY) ? m_pMapPlots[plotNum(iMapX, iMapY)] : NULL;
 	}
 
 	__forceinline CvPlot* plotSorenINLINE(int iX, int iY) const
@@ -198,7 +200,7 @@ public:
 		{
 			return NULL;
 		}
-		return &(m_pMapPlots[plotNum(iX, iY)]);
+		return m_pMapPlots[plotNum(iX, iY)];
 	}
 
 	CvPlot* pointToPlot(float fX, float fY) const;

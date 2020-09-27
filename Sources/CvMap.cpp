@@ -89,12 +89,13 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 	//--------------------------------
 	// Init other game data
 	gDLL->logMemState("CvMap before init plots");
-	m_pMapPlots = new CvPlot[numPlots()];
+	m_pMapPlots.resize(numPlots());
 	for (int iX = 0; iX < getGridWidth(); iX++)
 	{
 		gDLL->callUpdater();
 		for (int iY = 0; iY < getGridHeight(); iY++)
 		{
+			m_pMapPlots.push_back(new CvPlot());
 			plotSorenINLINE(iX, iY)->init(iX, iY);
 		}
 	}
@@ -311,7 +312,7 @@ void CvMap::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	PROFILE_FUNC();
 
-	foreach_(const CvPlot* plot, plots())
+	foreach_(CvPlot* plot, plots())
 	{
 		plot->setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false);
 	}
@@ -324,7 +325,7 @@ void CvMap::resetRevealedPlots(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	foreach_(const CvPlot* plot, plots() | filtered(!CvPlot::fn::isVisible(eTeam, false)))
+	foreach_(CvPlot* plot, plots() | filtered(!CvPlot::fn::isVisible(eTeam, false)))
 	{
 		plot->setRevealed(eTeam, false, false, NO_TEAM, false);
 	}
@@ -375,7 +376,7 @@ void CvMap::updateFlagSymbolsInternal(bool bForce)
 {
 	PROFILE_FUNC();
 
-	foreach_(const CvPlot* plot, plots())
+	foreach_(CvPlot* plot, plots())
 	{
 		if (bForce || plot->isFlagDirty())
 		{
@@ -467,7 +468,7 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 
 		if (pStartingPlot != NULL && pStartingPlot->area() == pArea)
 		{
-			foreach_(const CvPlot* pLoopPlot, plots() | filtered(CvPlot::fn::area() == pArea))
+			foreach_(CvPlot* pLoopPlot, plots() | filtered(CvPlot::fn::area() == pArea))
 			{
 				const int iDist = stepDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 				if (iDist != -1)
