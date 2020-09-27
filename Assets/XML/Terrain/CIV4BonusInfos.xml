@@ -4029,6 +4029,10 @@
 					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
@@ -4078,6 +4082,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -4152,6 +4164,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -4331,6 +4351,14 @@
 					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
@@ -4403,6 +4431,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -7008,6 +7044,10 @@
 					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
@@ -7083,6 +7123,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -7219,6 +7263,14 @@
 					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
@@ -7350,6 +7402,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
