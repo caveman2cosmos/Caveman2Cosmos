@@ -106,8 +106,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FAssertMsg(iGroup < (int) m_aaiGroupedBuildingList.size(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, (int)m_aaiGroupedBuildingList.size(), iGroup)
 	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
@@ -117,10 +116,8 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FAssertMsg(iGroup < getGroupNum(), "Index out of bounds");
-	FAssertMsg(iGroup > -1, "Index out of bounds");
-	FAssertMsg(iPos < getNumInGroup(iGroup), "Index out of bounds");
-	FAssertMsg(iPos > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
 	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 

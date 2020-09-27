@@ -392,7 +392,7 @@ inline void CLinkList< T >::Read( FDataStreamBase* pStream )
 		T* pData = new T;
 		for ( int i = 0; i < iLength; i++ )
 		{
-			WRAPPER_READ_ARRAY_DECORATED( wrapper, "CLinkList",  sizeof ( T ), ( byte* )pData, "pData" );
+			WRAPPER_READ_ARRAY_DECORATED( wrapper, "CLinkList",  sizeof ( T ), (uint8_t*)pData, "pData" );
 			insertAtEnd( *pData );
 		}
 		SAFE_DELETE( pData );
@@ -415,7 +415,7 @@ inline void CLinkList< T >::Write( FDataStreamBase* pStream ) const
 	CLLNode< T >* pNode = head();
 	while ( pNode )
 	{
-		WRAPPER_WRITE_ARRAY_DECORATED( wrapper, "CLinkList",  sizeof ( T ), ( byte* )&pNode->m_data, "pData" );
+		WRAPPER_WRITE_ARRAY_DECORATED( wrapper, "CLinkList",  sizeof ( T ), (uint8_t*)&pNode->m_data, "pData" );
 		pNode = next( pNode );
 	}
 
@@ -437,7 +437,7 @@ inline void CLinkList< T >::ReadNonWrapper( FDataStreamBase* pStream )
 		T* pData = new T;
 		for ( int i = 0; i < iLength; i++ )
 		{
-			pStream->Read( sizeof ( T ), ( byte* )pData );
+			pStream->Read( sizeof ( T ), (uint8_t*)pData );
 			insertAtEnd( *pData );
 		}
 		SAFE_DELETE( pData );
@@ -452,7 +452,7 @@ inline void CLinkList< T >::WriteNonWrapper( FDataStreamBase* pStream ) const
 	CLLNode< T >* pNode = head();
 	while ( pNode )
 	{
-		pStream->Write( sizeof ( T ), ( byte* )&pNode->m_data );
+		pStream->Write( sizeof ( T ), (uint8_t*)&pNode->m_data );
 		pNode = next( pNode );
 	}
 }
@@ -478,7 +478,7 @@ inline void CLinkList< T >::ReadNonWrapperSubset( FDataStreamBase* pStream)
 	CLLNode< T >* pNode = nodeNum(index);
 	for ( int i = index; i < index + iNum; i++ )
 	{
-		pStream->Read( sizeof ( T ), ( byte* )&(pNode->m_data) );
+		pStream->Read( sizeof ( T ), (uint8_t*)&(pNode->m_data) );
 	}
 }
 
@@ -498,7 +498,7 @@ inline void CLinkList< T >::WriteNonWrapperSubset( FDataStreamBase* pStream, int
 	CLLNode< T >* pNode = nodeNum(index);
 	for (int i=0; i<iNum; i++)
 	{
-		pStream->Write( sizeof ( T ), ( byte* )&pNode->m_data );
+		pStream->Write( sizeof ( T ), (uint8_t*)&pNode->m_data );
 		pNode = next( pNode );
 	}
 }

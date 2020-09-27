@@ -779,7 +779,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Tag>
-		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in coastal waters.</English>
+		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (lakeshore, coast, or sea).</English>
 		<German>[COLOR_BUILDING_TEXT]Unerforschte Inseln[COLOR_REVERT] sind das Meeresäquivalent zum Eingeborenendorf. Sie können nur in küstennahen Gewässern entdeckt werden und haben die gleichen Auswirkungen.</German>
 		<Spanish>Las Islas inexploradas son el equivalente marino a la Aldea tribal. Sólo se pueden encontrar en aguas costeras.</Spanish>
 	</TEXT>

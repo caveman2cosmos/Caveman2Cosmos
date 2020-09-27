@@ -77,8 +77,8 @@ CvOutcome::~CvOutcome()
 
 int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eYield);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+
 	if (m_aiYield[eYield])
 	{
 		return m_aiYield[eYield]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
@@ -91,8 +91,8 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eCommerce);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+
 	if (m_aiCommerce[eCommerce])
 	{
 		return m_aiCommerce[eCommerce]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
@@ -1030,11 +1030,13 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-		int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-		iDmg = (iDmg * pUnit->maxHitPoints())/100;
-		pUnit->setDamage(iDmg, NO_PLAYER, false);
-		pUnit->finishMoves();
-
+		if (pUnit != NULL)
+		{
+			int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
+			iDmg = (iDmg * pUnit->maxHitPoints())/100;
+			pUnit->setDamage(iDmg, NO_PLAYER, false);
+			pUnit->finishMoves();
+		}
 		if (!bFirst)
 		{
 			szBuffer.append(L", ");
@@ -1154,11 +1156,13 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			{
 				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-				int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-				iDmg = (iDmg * pUnit->maxHitPoints())/100;
-				pUnit->setDamage(iDmg, NO_PLAYER, false);
-				pUnit->finishMoves();
-
+				if (pUnit != NULL)
+				{
+					int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
+					iDmg = (iDmg * pUnit->maxHitPoints())/100;
+					pUnit->setDamage(iDmg, NO_PLAYER, false);
+					pUnit->finishMoves();
+				}
 				szBuffer.append(L" ");
 				szBuffer.append(GC.getUnitInfo(m_eUnitType).getDescription());
 			}

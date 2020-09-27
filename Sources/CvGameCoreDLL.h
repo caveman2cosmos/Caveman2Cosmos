@@ -73,14 +73,13 @@
 //
 // Basic types
 //
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
-typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef unsigned int        uint;
 
 typedef long long           int64_t;
+
+typedef unsigned char       uint8_t;
+typedef unsigned short      uint16_t;
+typedef unsigned int        uint32_t;
 typedef unsigned long long  uint64_t;
 
 //
@@ -119,7 +118,7 @@ typedef unsigned long long  uint64_t;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
+__forceinline float DWtoF( uint n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
