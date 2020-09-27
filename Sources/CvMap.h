@@ -280,7 +280,7 @@ protected:
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
 
-	CvPlot* m_pMapPlots;
+	std::vector<CvPlot*> m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
 

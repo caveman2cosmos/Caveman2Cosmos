@@ -6563,37 +6563,20 @@ void CvUnit::move(CvPlot* pPlot, bool bShow, bool bFree)
 }
 
 // false if unit is killed
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 bool CvUnit::jumpToNearestValidPlot(bool bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 {
-	CvCity* pNearestCity;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	int iValue;
-	int iBestValue;
-	int iI;
-
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
 	FAssertMsg(!isFighting(), "isFighting did not return false as expected");
 
 	//	If the jump is due to being in an incorrect doamin it implies there WILL be an area change, so the relevant nearest
 	//	city cannot possibly be in the same area, hence we need to search all
-	pNearestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
+	const CvCity* pNearestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
 
-	iBestValue = MAX_INT;
-	pBestPlot = NULL;
+	int iBestValue = MAX_INT;
+	const CvPlot* pBestPlot = NULL;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		if (pLoopPlot->isValidDomainForLocation(*this))
 		{
 			if (canMoveInto(pLoopPlot))
@@ -6606,7 +6589,7 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 					{
 						if (pLoopPlot->isRevealed(getTeam(), false))
 						{
-							iValue = (plotDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()) * 2);
+							int iValue = (plotDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()) * 2);
 
 							if (pNearestCity != NULL)
 							{
@@ -6626,22 +6609,12 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 									iValue *= 3;
 								}
 							}
-							else
+							else if (pLoopPlot->area() != area())
 							{
-								if (pLoopPlot->area() != area())
-								{
-									iValue *= 3;
-								}
+								iValue *= 3;
 							}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 							iValue *= std::max(1, ((pLoopPlot->getTotalTurnDamage(this)) / 2));
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 							if (iValue < iBestValue)
 							{
@@ -6661,31 +6634,15 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 		//GC.getGame().logOOSSpecial(17, getID(), pBestPlot->getX(), pBestPlot->getY());
 		setXY(pBestPlot->getX(), pBestPlot->getY());
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		kill(false);
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else
 	{
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return bValid;
 }

@@ -41,7 +41,6 @@ CvMap::CvMap(MapTypes eType) /* Parallel Maps */
 	, m_paiNumBonusOnLand(NULL)
 	, m_bCitiesDisplayed(true)
 	, m_bUnitsDisplayed(true)
-	, m_pMapPlots(NULL)
 {
 	OutputDebugString("Calling constructor for Map: Start\n");
 
@@ -110,8 +109,6 @@ void CvMap::uninit()
 {
 	SAFE_DELETE_ARRAY(m_paiNumBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonusOnLand);
-
-	SAFE_DELETE_ARRAY(m_pMapPlots);
 
 	m_areas.uninit();
 
@@ -290,7 +287,7 @@ void CvMap::setupGraphical()
 {
 	PROFILE_FUNC();
 
-	if (GC.IsGraphicsInitialized() && m_pMapPlots != NULL)
+	if (GC.IsGraphicsInitialized() && m_pMapPlots.size() > 0)
 	{
 		for (int iI = 0; iI < numPlots(); iI++)
 		{
@@ -306,10 +303,7 @@ void CvMap::setupGraphical()
 
 void CvMap::erasePlots()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->erase();
-	}
+	algo::for_each(plots(), CvPlot::fn::erase());
 }
 
 
@@ -317,9 +311,9 @@ void CvMap::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(const CvPlot* plot, plots())
 	{
-		plotByIndex(iI)->setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false);
+		plot->setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false);
 	}
 
 	GC.getGame().updatePlotGroups();
@@ -330,12 +324,9 @@ void CvMap::resetRevealedPlots(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(const CvPlot* plot, plots() | filtered(!CvPlot::fn::isVisible(eTeam, false)))
 	{
-		if (!plotByIndex(iI)->isVisible(eTeam, false))
-		{
-			plotByIndex(iI)->setRevealed(eTeam, false, false, NO_TEAM, false);
-		}
+		plot->setRevealed(eTeam, false, false, NO_TEAM, false);
 	}
 
 	GC.getGame().updatePlotGroups();
@@ -346,10 +337,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 {
 	//float startTime = (float) timeGetTime();
 
-	for(int i = 0; i < numPlots(); i++)
-	{
-		plotByIndex(i)->setPlotType(ePlotType, false, false);
-	}
+	algo::for_each(plots(), CvPlot::fn::setPlotType(ePlotType, false, false));
 
 	recalculateAreas();
 
@@ -371,9 +359,9 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(CvPlot* plot, plots())
 	{
-		plotByIndex(iI)->doTurn();
+		plot->doTurn();
 	}
 }
 
@@ -387,14 +375,12 @@ void CvMap::updateFlagSymbolsInternal(bool bForce)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(const CvPlot* plot, plots())
 	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
-
-		if (bForce || pLoopPlot->isFlagDirty())
+		if (bForce || plot->isFlagDirty())
 		{
-			pLoopPlot->updateFlagSymbol();
-			pLoopPlot->setFlagDirty(false);
+			plot->updateFlagSymbol();
+			plot->setFlagDirty(false);
 		}
 	}
 }
@@ -404,28 +390,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateFog();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateFog());
 }
 
 
 void CvMap::updateVisibility()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateVisibility();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateVisibility());
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSymbolVisibility();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateSymbolVisibility());
 }
 
 
@@ -435,10 +412,7 @@ void CvMap::updateSymbols()
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 	
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSymbols();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateSymbols());
 }
 
 
@@ -446,21 +420,15 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateMinimapColor();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateMinimapColor());
 }
 
 
 void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSight(bIncrement, false);
-	}
+	algo::for_each(plots(), CvPlot::fn::updateSight(bIncrement, false));
 
-	if ( bUpdatePlotGroups )
+	if (bUpdatePlotGroups)
 	{
 		GC.getGame().updatePlotGroups();
 	}
@@ -469,28 +437,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateIrrigated();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateIrrigated());
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateCenterUnit();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateCenterUnit());
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateWorkingCity();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateWorkingCity());
 }
 
 
@@ -498,39 +457,24 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
+	algo::for_each(plots() | filtered(CvPlot::fn::area() == pArea),
+		CvPlot::fn::setMinOriginalStartDist(-1)
+	);
 
-		if (pLoopPlot->area() == pArea)
-		{
-			pLoopPlot->setMinOriginalStartDist(-1);
-		}
-	}
-
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 		if (pStartingPlot != NULL && pStartingPlot->area() == pArea)
 		{
-			for (int iJ = 0; iJ < numPlots(); iJ++)
+			foreach_(const CvPlot* pLoopPlot, plots() | filtered(CvPlot::fn::area() == pArea))
 			{
-				CvPlot* pLoopPlot = plotByIndex(iJ);
-
-				if (pLoopPlot->area() == pArea)
+				const int iDist = stepDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+				if (iDist != -1)
 				{
-					//iDist = GC.getMap().calculatePathDistance(pStartingPlot, pLoopPlot);
-					const int iDist = stepDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-					if (iDist != -1)
+					if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
 					{
-					    //int iCrowDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					    //iDist = std::min(iDist,  iCrowDistance * 2);
-						if ((pLoopPlot->getMinOriginalStartDist() == -1) || (iDist < pLoopPlot->getMinOriginalStartDist()))
-						{
-							pLoopPlot->setMinOriginalStartDist(iDist);
-						}
+						pLoopPlot->setMinOriginalStartDist(iDist);
 					}
 				}
 			}
@@ -541,19 +485,13 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateYield();
-	}
+	algo::for_each(plots(), CvPlot::fn::updateYield());
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->verifyUnitValidPlot();
-	}
+	algo::for_each(plots(), CvPlot::fn::verifyUnitValidPlot());
 }
 
 
@@ -1086,10 +1024,7 @@ void CvMap::recalculateAreas()
 {
 	PROFILE("CvMap::recalculateAreas");
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->setArea(FFreeList::INVALID_INDEX);
-	}
+	algo::for_each(plots(), CvPlot::fn::setArea(FFreeList::INVALID_INDEX));
 
 	m_areas.removeAll();
 
@@ -1136,19 +1071,19 @@ int CvMap::calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, con
 // Super Forts begin *canal* *choke*
 void CvMap::calculateCanalAndChokePoints()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(const CvPlot* plot, plots())
 	{
-		plotByIndex(iI)->calculateCanalValue();
-		plotByIndex(iI)->calculateChokeValue();
+		plot->calculateCanalValue();
+		plot->calculateChokeValue();
 		// TEMPORARY HARD CODE for testing purposes
-		/*if((plotByIndex(iI)->getChokeValue() > 0) || (plotByIndex(iI)->getCanalValue() > 0))
+		/*if (plot->getChokeValue() > 0 || plot->getCanalValue() > 0)
 		{
-			ImprovementTypes eImprovement = (ImprovementTypes) (plotByIndex(iI)->isWater() ? GC.getInfoTypeForString("IMPROVEMENT_OFFSHORE_PLATFORM") : GC.getInfoTypeForString("IMPROVEMENT_FORT"));
-			plotByIndex(iI)->setImprovementType(eImprovement);
+			ImprovementTypes eImprovement = (ImprovementTypes) (plot->isWater() ? GC.getInfoTypeForString("IMPROVEMENT_OFFSHORE_PLATFORM") : GC.getInfoTypeForString("IMPROVEMENT_FORT"));
+			plot->setImprovementType(eImprovement);
 		}
 		else
 		{
-			plotByIndex(iI)->setImprovementType(NO_IMPROVEMENT);
+			plot->setImprovementType(NO_IMPROVEMENT);
 		}*/
 	}
 }
@@ -1164,17 +1099,12 @@ void CvMap::invalidateIsActivePlayerNoDangerCache()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->setIsActivePlayerNoDangerCache(false);
-			pLoopPlot->setIsActivePlayerHasDangerCache(false);
-			pLoopPlot->CachePathValidityResult(NULL,false,false);
-			pLoopPlot->CachePathValidityResult(NULL,true,false);
-		}
+		pLoopPlot->setIsActivePlayerNoDangerCache(false);
+		pLoopPlot->setIsActivePlayerHasDangerCache(false);
+		pLoopPlot->CachePathValidityResult(NULL,false,false);
+		pLoopPlot->CachePathValidityResult(NULL,true,false);
 	}
 }
 
@@ -1183,15 +1113,7 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->setIsTeamBorderCache(eTeam, false);
-		}
-	}
+	algo::for_each(plots(), CvPlot::fn::setIsTeamBorderCache(eTeam, false));
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -1241,9 +1163,9 @@ void CvMap::read(FDataStreamBase* pStream)
 	{
 		m_pMapPlots = new CvPlot[numPlots()];
 
-		for (int iI = 0; iI < numPlots(); iI++)
+		foreach_(CvPlot* plot, plots())
 		{
-			m_pMapPlots[iI].read(pStream);
+			plot->read(pStream);
 		}
 	}
 
@@ -1288,9 +1210,9 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(CvPlot* plot, plots())
 	{
-		m_pMapPlots[iI].write(pStream);
+		plot->write(pStream);
 	}
 
 	// call the read of the free list CvArea class allocations
@@ -1351,17 +1273,14 @@ void CvMap::beforeSwitch()
 	
 	GC.clearSigns();
 
-	for (i = 0; i < numPlots(); i++)
-	{
-		plotByIndex(i)->destroyGraphics();
-	}
+	for_each(plots(), CvPlot::fn::destroyGraphics());
 }
 
 void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (m_pMapPlots == NULL)		// if it hasn't been initialized yet...
+	if (m_pMapPlots.size() == 0)		// if it hasn't been initialized yet...
 	{
 		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
 		{
@@ -1420,17 +1339,17 @@ void CvMap::afterSwitch()
 		iHeight = MAX_INT;
 	}
 
-	for (int i = 0; i < numPlots(); i++)
+	foreach_(CvPlot* plot, plots())
 	{
 		//	Koshlimg - this is no longer necesary (or correct) with viewports enabled
-		if (!GC.viewportsEnabled() && (plotByIndex(i)->getX() > iWidth || plotByIndex(i)->getY() > iHeight))
+		if (!GC.viewportsEnabled() && (plot->getX() > iWidth || plot->getY() > iHeight))
 		{
-			plotByIndex(i)->setNull(true);
+			plot->setNull(true);
 		}
 		else
 		{
-			plotByIndex(i)->setLayoutDirty(true);
-			plotByIndex(i)->setFlagDirty(true);
+			plot->setLayoutDirty(true);
+			plot->setFlagDirty(true);
 		}
 	}
 	
@@ -1574,9 +1493,8 @@ void CvMap::calculateAreas()
 {
 	PROFILE("CvMap::calculateAreas");
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
 		gDLL->callUpdater();
 		FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
@@ -1599,9 +1517,8 @@ void CvMap::calculateAreas()
 //{
 //	int iNumTiles = 0;
 //	int iNumTilesValid = 0;
-//	for (int iI = 0; iI < numPlots(); iI++)
+//	foreach_(const CvPlot* pLoopPlot, plots())
 //	{
-//		const CvPlot* pLoopPlot = plotByIndex(iI);
 //		if (!pLoopPlot->isWater() || !bExcludeWater)
 //		{
 //			if (pArea == NULL || pLoopPlot->area() == pArea)

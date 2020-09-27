@@ -705,34 +705,29 @@ int CvTeamAI::AI_calculatePlotWarValue(TeamTypes eTeam) const
 
 	int iValue = 0;
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == eTeam))
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getTeam() == eTeam)
+		if (!pLoopPlot->isWater() && pLoopPlot->isAdjacentTeam(getID(), true))
 		{
-			if (!pLoopPlot->isWater() && pLoopPlot->isAdjacentTeam(getID(), true))
-			{
-				iValue += 4;
-			}
+			iValue += 4;
+		}
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      06/17/08                                jdog5000      */
 /*                                                                                              */
 /* Notes                                                                                        */
 /************************************************************************************************/
-			// This section of code does nothing without XML modding as AIObjective is 0 for all bonuses
-			// Left alone for mods to use
-			// Resource driven war in BBAI is done with CvTeamAI::AI_calculateBonusWarValue
-			// without using the XML variable AIObjective
+		// This section of code does nothing without XML modding as AIObjective is 0 for all bonuses
+		// Left alone for mods to use
+		// Resource driven war in BBAI is done with CvTeamAI::AI_calculateBonusWarValue
+		// without using the XML variable AIObjective
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-			BonusTypes eBonus = pLoopPlot->getBonusType(getID());
-			if (NO_BONUS != eBonus)
-			{
-				iValue += 40 * GC.getBonusInfo(eBonus).getAIObjective();
-			}
+		const BonusTypes eBonus = pLoopPlot->getBonusType(getID());
+		if (NO_BONUS != eBonus)
+		{
+			iValue += 40 * GC.getBonusInfo(eBonus).getAIObjective();
 		}
 	}
 
@@ -750,58 +745,53 @@ int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 
 	int iValue = 0;
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == eTeam))
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getTeam() == eTeam)
+		const BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getID());
+		if (NO_BONUS != eNonObsoleteBonus)
 		{
-			BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getID());
-			if (NO_BONUS != eNonObsoleteBonus)
+			int iThisValue = 0;
+			for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
 			{
-				int iThisValue = 0;
-				for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
+				if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
 				{
-					if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
-					{
-						// 10 seems like a typical value for a health/happiness resource the AI doesn't have
-						// Values for strategic resources can be 60 or higher
-						iThisValue += GET_PLAYER((PlayerTypes)iJ).AI_bonusVal(eNonObsoleteBonus);
-					}
+					// 10 seems like a typical value for a health/happiness resource the AI doesn't have
+					// Values for strategic resources can be 60 or higher
+					iThisValue += GET_PLAYER((PlayerTypes)iJ).AI_bonusVal(eNonObsoleteBonus);
 				}
-				iThisValue /= getAliveCount();
+			}
+			iThisValue /= getAliveCount();
 
-				if (!pLoopPlot->isWater())
+			if (!pLoopPlot->isWater())
+			{
+				if( pLoopPlot->isAdjacentTeam(getID(), true))
 				{
-					if( pLoopPlot->isAdjacentTeam(getID(), true))
+					iThisValue *= 3;
+				}
+				else
+				{
+					CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
+					if( pWorkingCity != NULL )
 					{
-						iThisValue *= 3;
-					}
-					else
-					{
-						CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
-						if( pWorkingCity != NULL )
+						for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
 						{
-							for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
+							if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
 							{
-								if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
+								if( pWorkingCity->AI_playerCloseness((PlayerTypes)iJ ) > 0 )
 								{
-									if( pWorkingCity->AI_playerCloseness((PlayerTypes)iJ ) > 0 )
-									{
-										iThisValue *= 2;
-										break;
-									}
+									iThisValue *= 2;
+									break;
 								}
 							}
 						}
 					}
 				}
-
-				iThisValue = std::max(0, iThisValue - 4);
-				iThisValue /= 5;
-
-				iValue += iThisValue;
 			}
+
+			iThisValue = std::max(0, iThisValue - 4);
+			iThisValue /= 5;
+
+			iValue += iThisValue;
 		}
 	}
 
@@ -2053,19 +2043,13 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 
 int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 {
-	CvPlot* pLoopPlot;
-	int iValue;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	iValue = 0;
+	int iValue = 0;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (!(pLoopPlot->isRevealed(getID(), false)) && pLoopPlot->isRevealed(eTeam, false))
+		if (!pLoopPlot->isRevealed(getID(), false) && pLoopPlot->isRevealed(eTeam, false))
 		{
 			if (pLoopPlot->isWater())
 			{
@@ -6485,21 +6469,13 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (!(pLoopPlot->isWater()))
+		if (!pLoopPlot->isWater() && pLoopPlot->getTeam() == eTeam && pLoopPlot->isAdjacentTeam(getID(), true))
 		{
-			if ((pLoopPlot->getTeam() == eTeam) && pLoopPlot->isAdjacentTeam(getID(), true))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 

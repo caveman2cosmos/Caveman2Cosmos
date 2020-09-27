@@ -176,9 +176,9 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* plot, GC.getMap().plots())
 			{
-				func(GC.getMap().plotByIndex(iI)->getGameObject());
+				func(plot->getGameObject());
 			}
 			break;
 
@@ -219,13 +219,9 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == m_pTeam->getID()))
 			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-				if (pLoopPlot->getTeam() == m_pTeam->getID())
-				{
-					func(pLoopPlot->getGameObject());
-				}
+				func(plot->getGameObject());
 			}
 			break;
 
@@ -262,13 +258,9 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* plot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == m_pTeam->getID()))
 			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-				if (pLoopPlot->getOwner() == m_pPlayer->getID())
-				{
-					func(pLoopPlot->getGameObject());
-				}
+				func(plot->getGameObject());
 			}
 			break;
 

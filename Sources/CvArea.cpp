@@ -221,18 +221,8 @@ void CvArea::setID(int iID)
 
 int CvArea::calculateTotalBestNatureYield() const
 {
-	int iCount = 0;
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		if (pLoopPlot->getArea() == getID())
-		{
-			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
-		}
-	}
-
-	return iCount;
+	return algo::accumulate(GC.getMap().plots(),
+		transformed(CvPlot::fn::calculateTotalBestNatureYield(NO_TEAM));
 }
 
 
@@ -242,19 +232,8 @@ int CvArea::countCoastalLand() const
 	{
 		return 0;
 	}
-
-	int iCount = 0;
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		if (pLoopPlot->getArea() == getID() && pLoopPlot->isCoastalLand())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(GC.getMap().plots(),
+		CvPlot::fn::getArea() == getID() && CvPlot::fn::isCoastalLand());
 }
 
 
@@ -729,11 +708,9 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pPlot, GC.getMap().plots())
 		{
-			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
-			if (pPlot != NULL &&
-				pPlot->area() == this &&
+			if (pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
 				pPlot->getFeatureType() == eFeature)
 			{
@@ -766,11 +743,9 @@ int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pPlot, GC.getMap().plots())
 		{
-			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
-			if (pPlot != NULL &&
-				pPlot->area() == this &&
+			if (pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
 				pPlot->getTerrainType() == eTerrain)
 			{

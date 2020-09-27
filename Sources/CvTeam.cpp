@@ -474,10 +474,8 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 //
 void CvTeam::resetPlotAndCityData()
 {
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		pLoopPlot->setRevealedOwner(getID(), NO_PLAYER);
 		pLoopPlot->setRevealedImprovementType(getID(), NO_IMPROVEMENT);
 		pLoopPlot->setRevealedRouteType(getID(), NO_ROUTE);
@@ -794,21 +792,20 @@ void CvTeam::addTeam(TeamTypes eTeam)
 		}
 	}
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		pLoopPlot->changeVisibilityCount(getID(), pLoopPlot->getVisibilityCount(eTeam), NO_INVISIBLE, false);
 
 		for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 		{
+			const InvisibleTypes eInvisible = (InvisibleTypes) iJ;
+
 			if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 			{
-				pLoopPlot->changeInvisibleVisibilityCount(getID(), ((InvisibleTypes)iJ), pLoopPlot->getInvisibleVisibilityCount(eTeam, (InvisibleTypes)iJ), 0);
+				pLoopPlot->changeInvisibleVisibilityCount(getID(), eInvisible, pLoopPlot->getInvisibleVisibilityCount(eTeam, eInvisible), 0);
 			}
 			else
 			{
-				InvisibleTypes eInvisible = (InvisibleTypes) iJ;
 				for (int iK = 0; iK < pLoopPlot->getNumPlotTeamVisibilityIntensity(); iK++)
 				{
 					if (pLoopPlot->getPlotTeamVisibilityIntensity(iK).eInvisibility == eInvisible &&
@@ -2793,11 +2790,9 @@ int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) c
 	PROFILE_FUNC();
 
 	int iCount = 0;
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getTeam() == getID())
+		if (pLoopPlot->area() == pArea && pLoopPlot->getTeam() == getID())
 		{
 			//	Koshling - don't count animals - they are not actively attacking us so they shouldn't trigger things like a defensive stance
 			iCount += pLoopPlot->plotCount(PUF_canDefendEnemyNoAnimal, getLeaderID(), 0, NULL, NO_PLAYER, eEnemyTeam, PUF_isVisible, getLeaderID());
@@ -3881,15 +3876,9 @@ void CvTeam::setStolenVisibilityTimer(TeamTypes eIndex, int iNewValue)
 
 		if (bOldStolenVisibility != isStolenVisibility(eIndex))
 		{
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-				if (pLoopPlot->isVisible(eIndex, false))
-				{
-					pLoopPlot->changeStolenVisibilityCount(getID(), ((isStolenVisibility(eIndex)) ? 1 : -1));
-				}
-			}
+			algo::for_each(GC.getMap().plots() | filtered(CvPlot::fn::isVisible(eIndex, false)),
+				CvPlot::fn::changeStolenVisibilityCount(getID(), isStolenVisibility(eIndex) ? 1 : -1)
+			);
 		}
 	}
 }
@@ -4408,14 +4397,10 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			}
 		}
 
-		for (int i = 0; i < GC.getMap().numPlots(); ++i)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(i);
-			if (pLoopPlot && (pLoopPlot->getTeam() == getID() || pLoopPlot->getTeam() == eIndex))
-			{
-				pLoopPlot->updateCulture(true, false);
-			}
-		}
+		algo::for_each(GC.getMap().plots()
+			| filtered(CvPlot::fn::getTeam() == getID() || CvPlot::fn::getTeam() == eIndex),
+			CvPlot::fn::updateCulture(true, false)
+		);
 
 		GC.getGame().updatePlotGroups();
 
@@ -5485,10 +5470,8 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 		}
 		else
 		{
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
 					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
@@ -5504,10 +5487,8 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			m_pabHasTech[eIndex] = bNewValue;
 
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 				if (pLoopPlot->getBonusType() != NO_BONUS && pLoopPlot->getTeam() == getID())
 				{
 					const CvBonusInfo& bonus = GC.getBonusInfo(pLoopPlot->getBonusType());
@@ -5776,26 +5757,21 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				{
 					announceTechToPlayers(eIndex);
 
-					for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+					foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getTeam() == getID()))
 					{
-						CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+						const BonusTypes eBonus = pLoopPlot->getBonusType();
 
-						if (pLoopPlot->getTeam() == getID())
+						if (eBonus != NO_BONUS && GC.getBonusInfo(eBonus).getTechReveal() == eIndex && !isForceRevealedBonus(eBonus))
 						{
-							const BonusTypes eBonus = pLoopPlot->getBonusType();
+							const CvCity* pCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
 
-							if (eBonus != NO_BONUS && GC.getBonusInfo(eBonus).getTechReveal() == eIndex && !isForceRevealedBonus(eBonus))
+							if (pCity != NULL)
 							{
-								const CvCity* pCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
+								MEMORY_TRACK_EXEMPT();
 
-								if (pCity != NULL)
-								{
-									MEMORY_TRACK_EXEMPT();
-
-									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
-									AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
-										GC.getBonusInfo(eBonus).getButton(), CvColorInfo::white(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
-								}
+								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
+								AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
+									GC.getBonusInfo(eBonus).getButton(), CvColorInfo::white(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 							}
 						}
 					}
@@ -6078,26 +6054,23 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	BonusTypes eBonus;
-	int iI, iJ;
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (kTech.isExtraWaterSeeFrom())
 	{
 		changeExtraWaterSeeFromCount(iChange);
 	}
 
-	if (iChange > 0 && GC.getTechInfo(eTech).isMapCentering())
+	if (iChange > 0 && kTech.isMapCentering())
 	{
 		setMapCentering(true);
 	}
 
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (kTech.isMapTrading())
 	{
 		changeMapTradingCount(iChange);
 	}
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	if (kTech.isCanPassPeaks())
 	{
 		changeCanPassPeaksCount(iChange);
@@ -6161,92 +6134,92 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading())
+	if (kTech.isTechTrading())
 	{
 		changeTechTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (kTech.isGoldTrading())
 	{
 		changeGoldTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (kTech.isOpenBordersTrading())
 	{
 		changeOpenBordersTradingCount(iChange);
 		changeLimitedBordersTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (kTech.isDefensivePactTrading())
 	{
 		changeDefensivePactTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading())
+	if (kTech.isPermanentAllianceTrading())
 	{
 		changePermanentAllianceTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading())
+	if (kTech.isVassalStateTrading())
 	{
 		changeVassalTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (kTech.isBridgeBuilding())
 	{
 		changeBridgeBuildingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (kTech.isIrrigation())
 	{
 		changeIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (kTech.isIgnoreIrrigation())
 	{
 		changeIgnoreIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (kTech.isWaterWork())
 	{
 		changeWaterWorkCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	for (iI = 0; iI < GC.getNumRouteInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumRouteInfos(); iI++)
 	{
 		changeRouteChange(((RouteTypes)iI), (GC.getRouteInfo((RouteTypes) iI).getTechMovementChange(eTech) * iChange));
 	}
 
-	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
+	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
-		changeExtraMoves(((DomainTypes)iI), (GC.getTechInfo(eTech).getDomainExtraMoves(iI) * iChange));
+		changeExtraMoves(((DomainTypes)iI), (kTech.getDomainExtraMoves(iI) * iChange));
 	}
 
-	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iI))
+		if (kTech.isCommerceFlexible(iI))
 		{
 			changeCommerceFlexibleCount(((CommerceTypes)iI), iChange);
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iI))
+		if (kTech.isTerrainTrade(iI))
 		{
 			changeTerrainTradeCount(((TerrainTypes)iI), iChange);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRiverTrade())
+	if (kTech.isRiverTrade())
 	{
 		changeRiverTradeCount(iChange);
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (GC.getBuildingInfo((BuildingTypes) iI).getObsoleteTech() == eTech)
 		{
@@ -6258,51 +6231,51 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			changeObsoleteBuildingCount((BuildingTypes)iI, iChange);
 		}
 
-		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			changeBuildingCommerceChange(((BuildingTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChange(eTech, iJ) * iChange));
 			changeBuildingCommerceModifier(((BuildingTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifier(eTech, iJ) * iChange));
 		}
 
-		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
 			changeBuildingYieldChange(((BuildingTypes)iI), ((YieldTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechYieldChange(eTech, iJ) * iChange));
 			changeBuildingYieldModifier(((BuildingTypes)iI), ((YieldTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechYieldModifier(eTech, iJ) * iChange));
 		}
 
-		for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 		{
 			changeBuildingSpecialistChange(((BuildingTypes)iI), ((SpecialistTypes)iJ), (GC.getBuildingInfo((BuildingTypes)iI).getTechSpecialistChange(eTech, iJ) * iChange));
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
 			changeImprovementYieldChange(((ImprovementTypes)iI), ((YieldTypes)iJ), (GC.getImprovementInfo((ImprovementTypes)iI).getTechYieldChanges(eTech, iJ) * iChange));
 		}
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			GET_PLAYER((PlayerTypes)iI).changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeTradeRoutes(GC.getTechInfo(eTech).getTradeRoutes() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeExtraHealth(GC.getTechInfo(eTech).getHealth() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeExtraHappiness(GC.getTechInfo(eTech).getHappiness() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeFeatureProductionModifier(kTech.getFeatureProductionModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeWorkerSpeedModifier(kTech.getWorkerSpeedModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeTradeRoutes(kTech.getTradeRoutes() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeExtraHealth(kTech.getHealth() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeExtraHappiness(kTech.getHappiness() * iChange);
 
 			//DPII < Maintenance Modifiers >
-			GET_PLAYER((PlayerTypes)iI).changeDistanceMaintenanceModifier(GC.getTechInfo(eTech).getDistanceMaintenanceModifier() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeNumCitiesMaintenanceModifier(GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeMaintenanceModifier(GC.getTechInfo(eTech).getMaintenanceModifier() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeCoastalDistanceMaintenanceModifier(GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeDistanceMaintenanceModifier(kTech.getDistanceMaintenanceModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeNumCitiesMaintenanceModifier(kTech.getNumCitiesMaintenanceModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeMaintenanceModifier(kTech.getMaintenanceModifier() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeCoastalDistanceMaintenanceModifier(kTech.getCoastalDistanceMaintenanceModifier() * iChange);
 			//DPII < Maintenance Modifiers >
 
-			GET_PLAYER((PlayerTypes)iI).changeAssets(GC.getTechInfo(eTech).getAssetValue() * iChange);
-			GET_PLAYER((PlayerTypes)iI).changeTechPower(GC.getTechInfo(eTech).getPowerValue() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeAssets(kTech.getAssetValue() * iChange);
+			GET_PLAYER((PlayerTypes)iI).changeTechPower(kTech.getPowerValue() * iChange);
 			GET_PLAYER((PlayerTypes)iI).changeTechScore(getTechScore(eTech) * iChange);
 
 			GET_PLAYER((PlayerTypes)iI).changeTechInflation(kTech.getInflationModifier() * iChange);
@@ -6310,39 +6283,34 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			//ls612: Tech Commerce Modifiers (repositioned for optimal processing by TB)
 			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 			{
-				GET_PLAYER((PlayerTypes)iI).changeCommerceRateModifier(((CommerceTypes)iJ), GC.getTechInfo(eTech).getCommerceModifier(iJ) * iChange);
+				GET_PLAYER((PlayerTypes)iI).changeCommerceRateModifier(((CommerceTypes)iJ), kTech.getCommerceModifier(iJ) * iChange);
 			}
 			GET_PLAYER((PlayerTypes)iI).updateTechHappinessandHealth();
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		changeTechExtraBuildingHappiness((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHappinessChanges(eTech) * iChange);
 		changeTechExtraBuildingHealth((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHealthChanges(eTech) * iChange);
 	}
-	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 	{
 		changeUnitStrengthChange((UnitTypes)iI, kTech.getUnitStrengthChange(iI) * iChange);
 	}
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		const BonusTypes eBonus = pLoopPlot->getBonusType();
 
-		eBonus = pLoopPlot->getBonusType();
-
-		if (eBonus != NO_BONUS)
+		if (eBonus != NO_BONUS && GC.getBonusInfo(eBonus).getTechReveal() == eTech)
 		{
-			if (GC.getBonusInfo(eBonus).getTechReveal() == eTech)
-			{
-				pLoopPlot->updateYield();
-				pLoopPlot->setLayoutDirty(true);
-			}
+			pLoopPlot->updateYield();
+			pLoopPlot->setLayoutDirty(true);
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		if (GC.getBuildInfo((BuildTypes) iI).getTechPrereq() == eTech)
 		{
@@ -6362,7 +6330,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	}
 	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())
 	{
-		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 		{
 			if (GC.getImprovementInfo((ImprovementTypes) iI).getPrereqTech() == eTech)
 			{
@@ -6372,7 +6340,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		}
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -6388,7 +6356,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	if ( iChange > 0 )
 	{
-		for (iI = 0; iI < GC.getNumSpecialBuildingInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumSpecialBuildingInfos(); ++iI)
 		{
 			if (eTech == GC.getSpecialBuildingInfo((SpecialBuildingTypes)iI).getTechPrereqAnyone())
 			{
@@ -6606,18 +6574,10 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		return;
 	}
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getBonusType() == eBonus)
-		{
-			if (pLoopPlot->getTeam() == getID())
-			{
-				pLoopPlot->updatePlotGroupBonus(false);
-			}
-		}
-	}
+	algo::for_each(GC.getMap().plots()
+		| filtered(CvPlot::fn::getBonusType() == eBonus && CvPlot::fn::getTeam() == getID()),
+		CvPlot::fn::updatePlotGroupBonus(false)
+	);
 
 	if (bRevealed)
 	{
@@ -6625,9 +6585,7 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 	}
 	else
 	{
-		std::vector<BonusTypes>::iterator it;
-
-		for (it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
+		for (std::vector<BonusTypes>::iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
 		{
 			if (*it == eBonus)
 			{
@@ -6637,36 +6595,21 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		}
 	}
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
+	algo::for_each(GC.getMap().plots()
+		| filtered(CvPlot::fn::getBonusType() == eBonus && CvPlot::fn::getTeam() == getID()),
+		CvPlot::fn::updatePlotGroupBonus(true)
+	);
+
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getBonusType() == eBonus))
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getBonusType() == eBonus)
-		{
-			if (pLoopPlot->getTeam() == getID())
-			{
-				pLoopPlot->updatePlotGroupBonus(true);
-			}
-		}
-	}
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getBonusType() == eBonus)
-		{
-			pLoopPlot->updateYield();
-			pLoopPlot->setLayoutDirty(true);
-		}
+		pLoopPlot->updateYield();
+		pLoopPlot->setLayoutDirty(true);
 	}
 }
 
 bool CvTeam::isForceRevealedBonus(BonusTypes eBonus) const
 {
-	std::vector<BonusTypes>::const_iterator it;
-
-	for (it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
+	for (std::vector<BonusTypes>::const_iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
 	{
 		if (*it == eBonus)
 		{

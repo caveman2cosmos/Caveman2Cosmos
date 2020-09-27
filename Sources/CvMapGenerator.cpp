@@ -130,8 +130,6 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 {
 	PROFILE_FUNC();
 
-	CvPlot* pPlot;
-
 	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(GC.getImprovementInfo(eImprovement).isGoody(), "ImprovementType eImprovement is expected to be a goody");
 
@@ -140,7 +138,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 		return false;
 	}
 
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	if (!(pPlot->canHaveImprovement(eImprovement, NO_TEAM))) 
 	{
@@ -170,18 +168,10 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (pPlot->isPeak()) 
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 
 	int iUniqueRange = GC.getImprovementInfo(eImprovement).getGoodyUniqueRange();
 	for (int iDX = -iUniqueRange; iDX <= iUniqueRange; iDX++) 
@@ -232,10 +222,9 @@ void CvMapGenerator::addLakes()
 	}
 	gDLL->NiTextOut("Adding Lakes...");
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
 		gDLL->callUpdater();
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
 		if (!pLoopPlot->isWater() && !pLoopPlot->isCoastal() && !pLoopPlot->isRiver()
@@ -275,10 +264,9 @@ void CvMapGenerator::addRivers()
 			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
 		}
 		iPPRE = std::max(1, iPPRE);
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
 			gDLL->callUpdater();
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
 			if (pLoopPlot->isWater())
@@ -422,8 +410,7 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 			{
 				if (getOppositeCardinalDirection((CardinalDirectionTypes)iI) != eLastCardinalDirection)
 				{
-					CvPlot* pAdjacentPlot;
-					pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), ((CardinalDirectionTypes)iI));
+					CvPlot* pAdjacentPlot = plotCardinalDirection(pRiverPlot->getX(), pRiverPlot->getY(), ((CardinalDirectionTypes)iI));
 					if (pAdjacentPlot != NULL)
 					{
 						int iValue = getRiverValueAtPlot(pAdjacentPlot);
@@ -571,9 +558,8 @@ void CvMapGenerator::addFeatures()
 		return;
 	}
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pPlot, GC.getMap().plots())
 	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 		FAssert(pPlot != NULL);
 
 		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
@@ -739,9 +725,8 @@ void CvMapGenerator::placeBonusWithCluster(const BonusTypes eBonus, const int iG
 {
 	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pPlot, GC.getMap().plots())
 	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(piShuffle[iI]);
 		FAssertMsg(pPlot != NULL, "placeBonusWithCluster(): pPlot is null");
 
 		if ((pBestArea == NULL || pBestArea == pPlot->area())
@@ -799,21 +784,19 @@ void CvMapGenerator::addGoodies()
 		return;
 	}
 
-	int iNumPlots = GC.getMap().numPlots();
 	int* piShuffle = shuffle(iNumPlots, GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		if (GC.getImprovementInfo((ImprovementTypes)iI).isGoody() && GC.getImprovementInfo((ImprovementTypes)iI).getTilesPerGoody() > 0)
 		{
-			for (int iJ = 0; iJ < iNumPlots; iJ++)
+			foreach_(CvPlot* pPlot, GC.getMap().plots())
 			{
 				gDLL->callUpdater();
-				CvPlot *pPlot = GC.getMap().plotByIndex(piShuffle[iJ]);
 				FAssertMsg(pPlot, "pPlot is expected not to be NULL");
-				if (!(pPlot->isWater()))
+				if (!pPlot->isWater())
 				{
-					CvArea *pArea = GC.getMap().getArea(pPlot->getArea());
+					const CvArea* pArea = GC.getMap().getArea(pPlot->getArea());
 					FAssertMsg(pArea, "pArea is expected not to be NULL");
 					if (pArea->getNumImprovements((ImprovementTypes)iI) < ((pArea->getNumTiles() + (GC.getImprovementInfo((ImprovementTypes)iI).getTilesPerGoody() / 2)) / GC.getImprovementInfo((ImprovementTypes) iI).getTilesPerGoody()))
 					{
@@ -833,11 +816,8 @@ void CvMapGenerator::addGoodies()
 
 void CvMapGenerator::eraseRivers()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
+	foreach_(CvPlot* pPlot, GC.getMap().plots())
 	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 		if (pPlot->isNOfRiver())
 		{
 			pPlot->setNOfRiver(false, NO_CARDINALDIRECTION);
@@ -851,38 +831,19 @@ void CvMapGenerator::eraseRivers()
 
 void CvMapGenerator::eraseFeatures()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
-	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(i);
-		pPlot->setFeatureType(NO_FEATURE);
-	}
+	algo::for_each(GC.getMap().plots(), CvPlot::fn::setFeatureType(NO_FEATURE));
 }
 
 void CvMapGenerator::eraseBonuses()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
-	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(i);
-		pPlot->setBonusType(NO_BONUS);
-	}
+	algo::for_each(GC.getMap().plots(), CvPlot::fn::setBonusType(NO_BONUS));
 }
 
 void CvMapGenerator::eraseGoodies()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
-	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(i);
-		if (pPlot->isGoody())
-		{
-			pPlot->removeGoody();
-		}
-	}
+	algo::for_each(GC.getMap().plots() | filtered(CvPlot::fn::isGoody()),
+		CvPlot::fn::removeGoody()
+	);
 }
 
 //------------------------------------------------------------------------------------------------
@@ -912,7 +873,7 @@ void CvMapGenerator::generatePlotTypes()
 {
 	int* paiPlotTypes = new int[GC.getMap().numPlots()];
 
-	int iNumPlots = GC.getMap().numPlots();
+	const int iNumPlots = GC.getMap().numPlots();
 
 	std::vector<int> plotTypesOut;
 	if (Cy::call_override(getMapScript(m_bUseDefaultMapScript), "generatePlotTypes", plotTypesOut))
@@ -966,23 +927,17 @@ void CvMapGenerator::afterGeneration()
 
 void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
 {
-	CvPlot* pLoopPlot;
-	int iNumPlots;
-
-	iNumPlots = GC.getMap().numPlots();
-
-	for (int iI = 0; iI < iNumPlots; iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
 		gDLL->callUpdater();
-		GC.getMap().plotByIndex(iI)->setPlotType(((PlotTypes)(paiPlotTypes[iI])), false, false);
+		pLoopPlot->setPlotType((PlotTypes)paiPlotTypes[iI], false, false);
 	}
 
 	GC.getMap().recalculateAreas();
 
-	for (int iI = 0; iI < iNumPlots; iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
 		gDLL->callUpdater();
-		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isWater())
 		{

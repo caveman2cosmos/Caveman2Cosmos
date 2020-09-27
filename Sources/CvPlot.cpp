@@ -14189,7 +14189,7 @@ void	CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 		{
 			CvPlotGroup::startBulkRecalculate();
 
-			for(int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(const CvPlot* pPlot, GC.getMap().plots())
 			{
 				CvPlot*	pPlot = GC.getMap().plotByIndex(iI);
 

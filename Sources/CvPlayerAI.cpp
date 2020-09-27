@@ -1298,22 +1298,18 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
 	int iValue;
-	int iI;
-	bool bSetup = (getNumCities() == 0);
+	const bool bSetup = (getNumCities() == 0);
 
 	if ( bClear )
 	{
 		m_bCitySitesNotCalculated = true;
 
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iI);
-
-			if ( bSetup || pLoopPlot->isRevealed(getTeam(), false) )
+			if (bSetup || pLoopPlot->isRevealed(getTeam(), false))
 			{
-				GC.getMap().plotByIndex(iI)->clearFoundValue(getID());
+				pLoopPlot->clearFoundValue(getID());
 			}
 		}
 
@@ -1328,10 +1324,8 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 
 		//logBBAI("Player %d (%S) Update Found Values ...", getID(), getCivilizationDescription(0));
 
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iI);
-
 			if ((area == NULL || pLoopPlot->area() == area) && (bSetup || pLoopPlot->isRevealed(getTeam(), false)))
 			{
 				bool bNeedsCalculating = false;
@@ -5087,7 +5081,6 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	PROFILE_FUNC();
 
-	CvCity* pCapitalCity;
 	ImprovementTypes eImprovement;
 	RouteTypes eRoute;
 
@@ -5098,17 +5091,19 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	int iBonusValue;
 	int iI, iJ;
 
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
+
 	if ( gPlayerLogLevel > 2 )
 	{
 		logBBAI("Player %d (%S) calculate value for tech %S",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription());
+				kTech.getDescription());
 	}
 
-	pCapitalCity = getCapitalCity();
+	const CvCity* pCapitalCity = getCapitalCity();
 
-	CvTeam& kTeam = GET_TEAM(getTeam());
+	const CvTeam& kTeam = GET_TEAM(getTeam());
 
 	//bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 	bool bCapitalAlone = (GC.getGame().getElapsedGameTurns() > 0) ? AI_isCapitalAreaAlone() : false;
@@ -5128,25 +5123,22 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//iValue += iRandomFactor;
 
 	// Map stuff
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (kTech.isExtraWaterSeeFrom() && iCoastalCities > 0)
 	{
-		if (iCoastalCities > 0)
-		{
-			iValue += 100;
+		iValue += 100;
 
-			if (bCapitalAlone)
-			{
-				iValue += 400;
-			}
+		if (bCapitalAlone)
+		{
+			iValue += 400;
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isMapCentering())
+	if (kTech.isMapCentering())
 	{
 		iValue += 100;
 	}
 
-	if (GC.getTechInfo(eTech).isMapVisible())
+	if (kTech.isMapVisible())
 	{
 		iValue += 100;
 
@@ -5157,7 +5149,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	}
 
 	// Expand trading options
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (kTech.isMapTrading())
 	{
 		iValue += 100;
 
@@ -5167,14 +5159,14 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
+	if (kTech.isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
 	{
 		iValue += 500;
 
 		iValue += 500 * iHasMetCount;
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (kTech.isGoldTrading())
 	{
 		iValue += 200;
 
@@ -5184,88 +5176,73 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (kTech.isOpenBordersTrading() &&iHasMetCount > 0)
 	{
-		if (iHasMetCount > 0)
-		{
-			iValue += 500;
+		iValue += 500;
 
-			if (iCoastalCities > 0)
-			{
-				iValue += 400;
-			}
+		if (iCoastalCities > 0)
+		{
+			iValue += 400;
+		}
 /************************************************************************************************/
 /* REVOLUTION_MOD						 05/30/08								jdog5000	  */
 /*																							  */
 /* Revolution AI																				*/
 /************************************************************************************************/
-			if( isMinorCiv() && GC.getGame().isOption(GAMEOPTION_START_AS_MINORS) )
-			{
-				iValue += 250 + 120*iHasMetCount;
-			}
+		if (isMinorCiv() && GC.getGame().isOption(GAMEOPTION_START_AS_MINORS))
+		{
+			iValue += 250 + 120*iHasMetCount;
+		}
 /************************************************************************************************/
 /* REVOLUTION_MOD						  END												  */
 /************************************************************************************************/
-		}
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (kTech.isDefensivePactTrading())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading() && (GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
+	if (kTech.isPermanentAllianceTrading() && GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES))
 	{
 		iValue += 200;
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading() && !(GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES)))
+	if (kTech.isVassalStateTrading() && !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		iValue += 200;
 	}
 
 	// Tile improvement abilities
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (kTech.isBridgeBuilding())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (kTech.isIrrigation())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (kTech.isIgnoreIrrigation())
 	{
 		iValue += 500;
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (kTech.isWaterWork())
 	{
 		iValue += (600 * iCoastalCities);
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 03/7/10												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
+
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
-		CvPlot* pPlot;
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pPlot, GC.getMap().plots())
 		{
-			pPlot = GC.getMap().plotByIndex(iI);
-			if (pPlot->isPeak2(true))
+			if (pPlot->isPeak2(true) && pPlot->getOwner() != NO_PLAYER
+			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
-				if (pPlot->getOwner() != NO_PLAYER)
-				{
-					if (GET_PLAYER(pPlot->getOwner()).getID() == getID())
-					{
-						iTempValue += 35;
-					}
-				}
+				iTempValue += 35;
 			}
 		}
 		iValue += iTempValue;
@@ -5352,20 +5329,18 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			iValue += 50 * getNumCities() * kTech.getFreeSpecialistCount(iI);
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	iValue += (GC.getTechInfo(eTech).getFeatureProductionModifier() * 2);
-	iValue += (GC.getTechInfo(eTech).getWorkerSpeedModifier() * 4);
-	iValue += (GC.getTechInfo(eTech).getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
+
+	iValue += (kTech.getFeatureProductionModifier() * 2);
+	iValue += (kTech.getWorkerSpeedModifier() * 4);
+	iValue += (kTech.getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
 
 	if ( AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION4) )
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 350);
+		iValue += (kTech.getHealth() * 350);
 	}
 	else
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 200);
+		iValue += (kTech.getHealth() * 200);
 	}
 
 	for (iJ = 0; iJ < GC.getNumRouteInfos(); iJ++)
@@ -5375,15 +5350,15 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < NUM_DOMAIN_TYPES; iJ++)
 	{
-		iValue += (GC.getTechInfo(eTech).getDomainExtraMoves(iJ) * 200);
+		iValue += (kTech.getDomainExtraMoves(iJ) * 200);
 	}
 
 	for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iJ))
+		if (kTech.isCommerceFlexible(iJ))
 		{
 			iValue += 100;
-			if ((iJ == COMMERCE_CULTURE) && (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2)))
+			if (iJ == COMMERCE_CULTURE && AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 			{
 				iValue += 1000;
 			}
@@ -5392,7 +5367,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iJ))
+		if (kTech.isTerrainTrade(iJ))
 		{
 			if (GC.getTerrainInfo((TerrainTypes)iJ).isWaterTerrain())
 			{
@@ -5415,7 +5390,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRiverTrade())
+	if (kTech.isRiverTrade())
 	{
 		iValue += 1000;
 	}
@@ -5453,13 +5428,13 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//ls612: Tech Commerce Modifiers
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		if (GC.getTechInfo(eTech).getCommerceModifier(iI) != 0)
+		if (kTech.getCommerceModifier(iI) != 0)
 		{
-			iValue += (GC.getTechInfo(eTech).getCommerceModifier(iI) * 100);
+			iValue += (kTech.getCommerceModifier(iI) * 100);
 		}
 
 		//Extra check for financially challenged AIs
-		if (iI == 0 && GC.getTechInfo(eTech).getCommerceModifier(iI) < 0)
+		if (iI == 0 && kTech.getCommerceModifier(iI) < 0)
 		{
 			if (AI_isFinancialTrouble())
 			{
@@ -6137,9 +6112,9 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			//	Free techs are REALLY valuable - as an estimate we assume they are at least as valuable as the enabling tech
 			//	since we'll be able to choose anything accessible once it is researched and up to twice as much as that on a
 			//	random scale
-			if ( GC.getTechInfo(eTech).getFirstFreeTechs() > 0 )
+			if (kTech.getFirstFreeTechs() > 0)
 			{
-				int	iPercentageMultiplier = GC.getTechInfo(eTech).getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
+				int	iPercentageMultiplier = kTech.getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
 
 				iFreeStuffValue += (iValue*iPercentageMultiplier)/100;
 			}
@@ -6159,17 +6134,17 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	iValue += GC.getTechInfo(eTech).getAIWeight();
+	iValue += kTech.getAIWeight();
 
 	if (!isHuman() && iValue > 0)
 	{
 		for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 		{
-			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * GC.getTechInfo(eTech).getFlavorValue(iJ) * 20);
+			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * kTech.getFlavorValue(iJ) * 20);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRepeat())
+	if (kTech.isRepeat())
 	{
 		iValue /= 10;
 	}
@@ -6179,7 +6154,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		logBBAI("Player %d (%S) raw value for tech %S is %d",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription(),
+				kTech.getDescription(),
 				iValue);
 	}
 
@@ -7923,19 +7898,8 @@ int CvPlayerAI::AI_calculateStolenCityRadiusPlots(PlayerTypes ePlayer) const
 
 	FAssert(ePlayer != getID());
 
-	int iCount = 0;
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->getOwner() == ePlayer && pLoopPlot->isPlayerCityRadius(getID()))
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(GC.getMap().plots(),
+		CvPlot::fn::getOwner() == ePlayer && CvPlot::fn::isPlayerCityRadius(getID()));
 }
 
 
@@ -26225,15 +26189,11 @@ int CvPlayerAI::AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThr
 int CvPlayerAI::AI_countNumAreaHostileUnits(const CvArea* pArea, bool bPlayer, bool bTeam, bool bNeutral, bool bHostile, const CvPlot* pPlot, int iMaxDistance) const
 {
 	PROFILE_FUNC();
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iI;
 
-	iCount = 0;
+	int iCount = 0;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
 		if ((pLoopPlot->area() == pArea) && pLoopPlot->isVisible(getTeam(), false) && stepDistance(pLoopPlot->getX(), pLoopPlot->getY(), pPlot->getX(), pPlot->getY()) <= iMaxDistance &&
 			((bPlayer && pLoopPlot->getOwner() == getID()) || (bTeam && pLoopPlot->getTeam() == getTeam())
 				|| (bNeutral && !pLoopPlot->isOwned()) || (bHostile && pLoopPlot->isOwned() && GET_TEAM(getTeam()).isAtWar(pLoopPlot->getTeam()))))
@@ -26529,8 +26489,8 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 				{
 					if (getAdvancedStartCityCost(true, pLoopPlot) > 0)
 					{
-					int iX = pLoopPlot->getX();
-					int iY = pLoopPlot->getY();
+						const int iX = pLoopPlot->getX();
+						const int iY = pLoopPlot->getY();
 
 						int iValue = 1000;
 						if (iPlayer == getID())
@@ -26584,23 +26544,13 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 
 	if (NULL != getStartingPlot())
 	{
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getArea() == getStartingPlot()->getArea()))
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-			if (pLoopPlot->getArea() == getStartingPlot()->getArea())
+			const int iValue = pLoopPlot->getFoundValue(getID());
+			if (iValue > 0 && iValue > iBestValue && getAdvancedStartCityCost(true, pLoopPlot) > 0)
 			{
-				int iValue = pLoopPlot->getFoundValue(getID());
-				if (iValue > 0)
-				{
-					if (getAdvancedStartCityCost(true, pLoopPlot) > 0)
-					{
-						if (iValue > iBestValue)
-						{
-							iBestValue = iValue;
-							pBestPlot = pLoopPlot;
-						}
-					}
-				}
+				iBestValue = iValue;
+				pBestPlot = pLoopPlot;
 			}
 		}
 	}
@@ -26914,7 +26864,6 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 //	//mimics that.
 //
 //
-//	CvPlot* pLoopPlot;
 //	CvPlot* pLoopPlot2;
 //	int iI, iJ;
 //	int iPass;
@@ -26923,10 +26872,9 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 //	std::vector<int> aiPlotGroups;
 //	for (iPass = 4; iPass > 1; --iPass)
 //	{
-//		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+//		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 //		{
-//			pLoopPlot = GC.getMap().plotByIndex(iI);
-//			if ((pLoopPlot != NULL) && (pLoopPlot->getOwner() == getID()) && (pLoopPlot->getRouteType() == NO_ROUTE))
+//			if (pLoopPlot->getOwner() == getID() && pLoopPlot->getRouteType() == NO_ROUTE)
 //			{
 //				aiPlotGroups.clear();
 //				if (pLoopPlot->getPlotGroup(getID()) != NULL)
@@ -26964,17 +26912,13 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 //	//that routes can't be built outside culture atm. I think workers
 //	//can do that just fine.
 
-	CvPlot* pLoopPlot;
-	int iI;
-
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-		if ((pLoopPlot != NULL) && (pLoopPlot->getOwner() == getID()) && (pLoopPlot->getRouteType() == NO_ROUTE))
+		if (pLoopPlot->getOwner() == getID() && pLoopPlot->getRouteType() == NO_ROUTE)
 		{
 			if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				BonusTypes eBonus = pLoopPlot->getBonusType(getTeam());
+				const BonusTypes eBonus = pLoopPlot->getBonusType(getTeam());
 				if (eBonus != NO_BONUS)
 				{
 					if (GC.getImprovementInfo(pLoopPlot->getImprovementType()).isImprovementBonusTrade(eBonus))
@@ -27144,13 +27088,11 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				//Find a new starting plot for this player
 				setStartingPlot(findStartingPlot(false), true);
 				//Redo Starting visibility
-				CvPlot* pStartingPlot = getStartingPlot();
+				const CvPlot* pStartingPlot = getStartingPlot();
 				if (NULL != pStartingPlot)
 				{
-					for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
+					foreach_(CvPlot* pPlot, GC.getMap().plots())
 					{
-						CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
-
 						if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
 						{
 							pPlot->setRevealed(getTeam(), true, false, NO_TEAM, false);
@@ -27176,9 +27118,8 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 	for (int iPass = 0; iPass < 6; iPass++)
 	{
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
 				if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
@@ -27189,7 +27130,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				{
 					for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
 					{
-						CvPlot* pLoopPlot2 = plotCardinalDirection(pLoopPlot->getX(), pLoopPlot->getY(), (CardinalDirectionTypes)iJ);
+						const CvPlot* pLoopPlot2 = plotCardinalDirection(pLoopPlot->getX(), pLoopPlot->getY(), (CardinalDirectionTypes)iJ);
 						if ((pLoopPlot2 != NULL) && (getAdvancedStartVisibilityCost(pLoopPlot2) > 0))
 						{
 							// Mildly maphackery but any smart human can see the terrain type of a tile.
@@ -27259,12 +27200,13 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				}
 			}
 		}
-		int iBestFoundValue = 0;
-		CvPlot* pBestFoundPlot = NULL;
 		AI_updateFoundValues(true);
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+
+		int iBestFoundValue = 0;
+		const CvPlot* pBestFoundPlot = NULL;
+
+		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			//if (pLoopPlot->area() == getStartingPlot()->area())
 			{
 				if (plotDistance(getStartingPlot()->getX(), getStartingPlot()->getY(), pLoopPlot->getX(), pLoopPlot->getY()) < 9)
@@ -27287,7 +27229,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		}
 		if (!bDonePlacingCities)
 		{
-			int iCost = getAdvancedStartCityCost(true, pBestFoundPlot);
+			const int iCost = getAdvancedStartCityCost(true, pBestFoundPlot);
 			if (iCost > getAdvancedStartPoints())
 			{
 				bDonePlacingCities = true;
@@ -27298,13 +27240,10 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			}
 		}
 
-		if (!bDonePlacingCities)
+		if (!bDonePlacingCities && !AI_advancedStartPlaceCity(pBestFoundPlot))
 		{
-			if (!AI_advancedStartPlaceCity(pBestFoundPlot))
-			{
-				FErrorMsg("AS AI: Failed to place city (non-capital)");
-				bDonePlacingCities = true;
-			}
+			FErrorMsg("AS AI: Failed to place city (non-capital)");
+			bDonePlacingCities = true;
 		}
 
 		if (bDonePlacingCities)
@@ -27312,7 +27251,6 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 			break;
 		}
 	}
-
 
 	bool bDoneWithTechs = false;
 	while (!bDoneWithTechs)
@@ -27476,9 +27414,6 @@ int CvPlayerAI::AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const
 
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
-	int iValue;
-	int iI;
-
 	logBBAI("Player %d (%S) begin Update City Sites ...", getID(), getCivilizationDescription(0));
 
 	int iPass = 0;
@@ -27486,27 +27421,20 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 	{
 		//Add a city to the list.
 		int iBestFoundValue = 0;
-		CvPlot* pBestFoundPlot = NULL;
+		const CvPlot* pBestFoundPlot = NULL;
 
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isRevealed(getTeam(), false)))
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-			if (pLoopPlot->isRevealed(getTeam(), false))
+			int iValue = pLoopPlot->getFoundValue(getID());
+			if (iValue > iMinFoundValueThreshold && !AI_isPlotCitySite(pLoopPlot))
 			{
-				iValue = pLoopPlot->getFoundValue(getID());
-				if (iValue > iMinFoundValueThreshold)
-				{
-					if (!AI_isPlotCitySite(pLoopPlot))
-					{
-						iValue = AI_bestCityValue(pLoopPlot, iValue);
+				iValue = AI_bestCityValue(pLoopPlot, iValue);
 
-						if (iValue > iBestFoundValue)
-						{
-							iBestFoundValue = iValue;
-							pBestFoundPlot = pLoopPlot;
-							logBBAI("  City found value at (%d, %d) is %d", pLoopPlot->getX(), pLoopPlot->getY(), iValue);
-						}
-					}
+				if (iValue > iBestFoundValue)
+				{
+					iBestFoundValue = iValue;
+					pBestFoundPlot = pLoopPlot;
+					logBBAI("  City found value at (%d, %d) is %d", pLoopPlot->getX(), pLoopPlot->getY(), iValue);
 				}
 			}
 		}
@@ -27801,9 +27729,8 @@ void CvPlayerAI::AI_doEnemyUnitData()
 	int iNewTotal = 0;
 
 	// Count enemy land and sea units visible to us
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		int iAdjacentAttackers = -1;
 		if (pLoopPlot->isVisible(getTeam(), false))
 		{

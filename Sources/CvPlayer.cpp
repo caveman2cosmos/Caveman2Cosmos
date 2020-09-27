@@ -659,19 +659,15 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 //
 // Reset all data for this player stored in plot and city objects
 //
-void CvPlayer::resetPlotAndCityData( )
+void CvPlayer::resetPlotAndCityData()
 {
-	CvPlot* pLoopPlot;
-	CvCity* pLoopCity;
-	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iPlot);
-
 		pLoopPlot->setCulture(getID(), 0, false, false);
 		pLoopPlot->setFoundValue(getID(), 0);
 
-		pLoopCity = pLoopPlot->getPlotCity();
-		if( pLoopCity != NULL )
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
+		if (pLoopCity != NULL)
 		{
 			pLoopCity->setCulture(getID(), 0, false, false);
 			pLoopCity->changeNumRevolts(getID(), -pLoopCity->getNumRevolts(getID()));
@@ -2064,10 +2060,8 @@ void CvPlayer::initFreeUnits()
 		const CvPlot* pStartingPlot = getStartingPlot();
 		if (NULL != pStartingPlot)
 		{
-			for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
+			foreach_(CvPlot* pPlot, GC.getMap().plots())
 			{
-				CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
-
 				if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getADVANCED_START_SIGHT_RANGE())
 				{
 					pPlot->setRevealed(getTeam(), true, false, NO_TEAM, false);
@@ -2352,12 +2346,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		}
 	}
 
-	CvPlot* pLoopPlot;
-	bool bValid;
 	int iBestArea = -1;
-	int iValue;
-	//int iRange;
-	int iI;
 
 	bool bNew = false;
 	if (getStartingPlot() != NULL)
@@ -2380,14 +2369,12 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		CvPlot *pBestPlot = NULL;
 		int iBestValue = 0;
 
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iI);
-
-			if ((iBestArea == -1) || (pLoopPlot->getArea() == iBestArea))
+			if (iBestArea == -1 || pLoopPlot->getArea() == iBestArea)
 			{
 				//the distance factor is now done inside foundValue
-				iValue = pLoopPlot->getFoundValue(getID());
+				int iValue = pLoopPlot->getFoundValue(getID());
 
 				if (bRandomize && iValue > 0)
 				{
@@ -2396,13 +2383,8 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 
 				if (iValue > iBestValue)
 				{
-					bValid = true;
-
-					if (bValid)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopPlot;
-					}
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
 		}
@@ -3164,15 +3146,9 @@ void CvPlayer::killCities()
 	}
 
 	// Super Forts begin *culture* - Clears culture from forts when a player dies
-	PlayerTypes ePlayer = getID();
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		if (pLoopPlot->getOwner() == ePlayer)
-		{
-			pLoopPlot->setOwner(pLoopPlot->calculateCulturalOwner(), true, false);
-		}
-	}
+	algo::for_each(GC.getMap().plots() | filtered(CvPlot::fn::getOwner() == getID()),
+		CvPlot::fn::calculateCulturalOwner(), true, false)
+	);
 	// Super Forts end
 
 	GC.getGame().updatePlotGroups();
@@ -4168,10 +4144,8 @@ void CvPlayer::doTurn()
 	PROFILE_FUNC();
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		if ( pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL )
 		{
 			::MessageBox(NULL, "Invalid plot group id found!", "CvGameCoreDLL", MB_OK);
@@ -4710,10 +4684,8 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 		if ( reInitialize )
 		{
 			//	Throw away all existing plot groups
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-			{
-				GC.getMap().plotByIndex(iI)->setPlotGroup(getID(), NULL, false);
-			}
+			algo::for_each(GC.getMap().plots(), CvPlot::fn::setPlotGroup(getID(), NULL, false));
+
 #ifdef PARALLEL_MAPS
 			m_plotGroups[GC.getGame().getCurrentMap()]->removeAll();
 #else
@@ -4729,10 +4701,8 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 		}
 	}
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		if ( possibleNewInAreaOnly == NULL || pLoopPlot->area() == possibleNewInAreaOnly )
 		{
 			if ( pLoopPlot->getPlotGroup(getID()) == NULL )
@@ -4744,10 +4714,8 @@ void CvPlayer::updatePlotGroups(const CvArea* possibleNewInAreaOnly, bool reInit
 	}
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		if ( pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL )
 		{
 			::MessageBox(NULL, "Invalid plot group id found after recalc!", "CvGameCoreDLL", MB_OK);
@@ -5343,14 +5311,12 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 		const bool bAdvancedStart = (getAdvancedStartPoints() >= 0) && (getCurrentEra() < 3);
 
 		//count bonuses outside city radius
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iI);
-
 			if ((pLoopPlot->getOwner() == getID() && !pLoopPlot->isCityRadius()) ||
 				(bAdvancedStart && pLoopPlot->isRevealed(getTeam(), false)))
 			{
-				BonusTypes ePlotBonus = pLoopPlot->getBonusType(getTeam());
+				const BonusTypes ePlotBonus = pLoopPlot->getBonusType(getTeam());
 				if ( NO_BONUS != ePlotBonus )
 				{
 					m_cachedBonusCount[ePlotBonus]++;
@@ -5380,54 +5346,37 @@ int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlo
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	ImprovementTypes eImprovement;
-	BuildTypes eBuild;
-	BonusTypes eNonObsoleteBonus;
-	int iCount;
-	int iI, iJ;
-
 	if ( pFromPlot != NULL )
 	{
 		gDLL->getFAStarIFace()->ForceReset(&GC.getBorderFinder());
 	}
 
-	iCount = 0;
+	int iCount = 0;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots()
+	| filtered(CvPlot::fn::area() == pArea && CvPlot::fn::getOwner() == getID() && !CvPlot::fn::isCity()))
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		const BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getTeam());
 
-		if (pLoopPlot->area() == pArea)
+		if (eNonObsoleteBonus != NO_BONUS)
 		{
-			if (pLoopPlot->getOwner() == getID())
+			const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+			if ((eImprovement == NO_IMPROVEMENT) || !(GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)))
 			{
-				if (!(pLoopPlot->isCity()))
+				if ((pFromPlot == NULL) || gDLL->getFAStarIFace()->GeneratePath(&GC.getBorderFinder(), pFromPlot->getX(), pFromPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY(), false, getID(), true))
 				{
-					eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getTeam());
-
-					if (eNonObsoleteBonus != NO_BONUS)
+					for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 					{
-						eImprovement = pLoopPlot->getImprovementType();
+						const BuildTypes eBuild = ((BuildTypes)iJ);
 
-						if ((eImprovement == NO_IMPROVEMENT) || !(GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)))
+						if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 						{
-							if ((pFromPlot == NULL) || gDLL->getFAStarIFace()->GeneratePath(&GC.getBorderFinder(), pFromPlot->getX(), pFromPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY(), false, getID(), true))
+							if (GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).isImprovementBonusTrade(eNonObsoleteBonus))
 							{
-								for (iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
+								if (canBuild(pLoopPlot, eBuild))
 								{
-									eBuild = ((BuildTypes)iJ);
-
-									if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
-									{
-										if (GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).isImprovementBonusTrade(eNonObsoleteBonus))
-										{
-											if (canBuild(pLoopPlot, eBuild))
-											{
-												iCount++;
-											}
-										}
-									}
+									iCount++;
 								}
 							}
 						}
@@ -13747,37 +13696,24 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
-
 				//	Calculate plot danger values for this player
-				CvPlot* pLoopPlot;
 
-				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+				//	Decay danger count from the previous turn
+				algo::for_each(GC.getMap().plots(), CvPlot::fn::setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3));
+
+				foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isVisible(getTeam(), false)))
 				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
+					//	Enemies are unconditionally dangerous, but any non-ally
+					//	might become an enemy so non-ally troop build ups are also
+					//	suspicious except in your own territory (where their
+					//	presence implies a treaty)
+					int	iDangerCount = pLoopPlot->getVisibleEnemyStrength(m_eID)*2;
 
-					//	Decay danger count from the previous turn
-					pLoopPlot->setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3);
-				}
-
-				for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-				{
-					pLoopPlot = GC.getMap().plotByIndex(iI);
-
-					//	Add in known dangers from visible enemy units
-					if (pLoopPlot->isVisible(getTeam(), false))
+					if (getTeam() != pLoopPlot->getTeam())
 					{
-						//	Enemies are unconditionally dangerous, but any non-ally
-						//	might become an enemy so non-ally troop build ups are also
-						//	suspicious except in your own territory (where their
-						//	presence implies a treaty)
-						int	iDangerCount = pLoopPlot->getVisibleEnemyStrength(m_eID)*2;
-
-						if (getTeam() != pLoopPlot->getTeam())
-						{
-							iDangerCount += pLoopPlot->getVisibleNonAllyStrength(m_eID);
-						}
-						addPlotDangerSource(pLoopPlot, iDangerCount/3);
+						iDangerCount += pLoopPlot->getVisibleNonAllyStrength(m_eID);
 					}
+					addPlotDangerSource(pLoopPlot, iDangerCount/3);
 				}
 			}
 
@@ -14178,9 +14114,6 @@ EraTypes CvPlayer::getCurrentEra() const
 
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
-	CvPlot* pLoopPlot;
-	int iI;
-
 	if (getCurrentEra() != eNewValue)
 	{
 		EraTypes eOldEra = m_eCurrentEra;
@@ -14188,9 +14121,8 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 
 		if (GC.getGame().getActiveTeam() != NO_TEAM)
 		{
-			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+			foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 			{
-				pLoopPlot = GC.getMap().plotByIndex(iI);
 				pLoopPlot->updateGraphicEra();
 
 				if (pLoopPlot->getRevealedImprovementType(GC.getGame().getActiveTeam(), true) != NO_IMPROVEMENT)
@@ -16855,10 +16787,8 @@ CvPlotGroup* CvPlayer::addPlotGroup()
 void CvPlayer::deletePlotGroup(int iID)
 {
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
 		if ( pLoopPlot->getPlotGroup(getID()) != NULL && pLoopPlot->getPlotGroup(getID())->getID() == iID )
 		{
 			::MessageBox(NULL, "Deleting in-use plot group!", "CvGameCoreDLL", MB_OK);
@@ -23268,10 +23198,8 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 		if (bPickPlot)
 		{
-			for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
+			foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 			{
-				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-
 				if (pLoopPlot->canTrigger(eEventTrigger, getID()))
 				{
 					apPlots.push_back(pLoopPlot);
@@ -24585,7 +24513,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 						{
 							MEMORY_TRACK_EXEMPT();
 
-							CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
 							AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), CvColorInfo::red(), pPlot->getX(), pPlot->getY(), true, true);
 							pPlot->setImprovementType(NO_IMPROVEMENT);
 							++iNumPillaged;
@@ -25747,10 +25675,8 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	}
 
 	std::vector< std::pair<int, int> > aCultures;
-	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-
 		bool bTranferPlot = pLoopPlot->area() == pArea;
 
 		if (!bTranferPlot)
@@ -25912,14 +25838,9 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 	}
 
 	// Share map
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::isRevealed(kTeam.getID(), false)))
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		if (pLoopPlot->isRevealed(kTeam.getID(), false))
-		{
-			pLoopPlot->setRevealed(getTeam(), true, false, kTeam.getID(), false);
-		}
+		pLoopPlot->setRevealed(getTeam(), true, false, kTeam.getID(), false);
 	}
 
 	// Diplomacy
@@ -25937,14 +25858,10 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 	kPlayer.killUnits();
 	kPlayer.killCities();
 
-	for (int i = 0; i < GC.getMap().numPlots(); ++i)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(i);
-		if (pLoopPlot && (pLoopPlot->getTeam() == getTeam() || pLoopPlot->getTeam() == kTeam.getID()))
-		{
-			pLoopPlot->updateCulture(true, false);
-		}
-	}
+	algo::for_each(GC.getMap().plots()
+		| filtered(CvPlot::fn::getTeam() == getTeam() || CvPlot::fn::getTeam() == kTeam.getID()),
+		CvPlot::fn::updateCulture(true, false)
+	);
 
 	GC.getGame().updatePlotGroups();
 	GC.getMap().verifyUnitValidPlot();
@@ -28034,11 +27951,9 @@ void CvPlayer::getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::v
 	int iDivisor = 1;
 	int iNumChokeValuedPlots = 0;
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		int iValue = pLoopPlot->getChokeValue();
+		const int iValue = pLoopPlot->getChokeValue();
 
 		if ( iValue > 0 )
 		{
@@ -28055,11 +27970,8 @@ void CvPlayer::getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::v
 
 	float fAvgValue = (iNumChokeValuedPlots == 0 ? 0.0f : (float)iDivisor*((float)iTotalValue/(float)iNumChokeValuedPlots));
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
-
 		// visibility query
 		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
 		{
@@ -28106,16 +28018,14 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	//PlayerColorTypes ePlayerColor = getPlayerColor();
 
 	CvWStringBuffer szBuffer;
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
 	{
-		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		const PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
-
 		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
 		{
 			const BonusTypes eCurType = pLoopPlot->getBonusType((GC.getGame().isDebugMode()) ? NO_TEAM : getTeam());
 			if (eCurType != NO_BONUS)
 			{
+				const PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
 				const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eCurType);
 
 				bool bOfInterest = false;
@@ -29452,27 +29362,19 @@ bool CvPlayer::isShowLandmarks() const
 
 void CvPlayer::setShowLandmarks(bool bNewVal)
 {
-	bool bOldVal = m_bShowLandmarks;
+	const bool bOldVal = m_bShowLandmarks;
 	if (bOldVal && !bNewVal)
 	{
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getLandmarkType() != NO_LANDMARK))
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
-			{
-				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << "");
-			}
+			Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << "");
 		}
 	}
 	else
 	{
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
+		foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getLandmarkType() != NO_LANDMARK))
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
-			{
-				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << pLoopPlot->getLandmarkMessage().GetCString());
-			}
+			Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << pLoopPlot->getLandmarkMessage().GetCString());
 		}
 	}
 	m_bShowLandmarks = bNewVal;
@@ -30346,13 +30248,7 @@ void CvPlayer::updateCache()
 
 void CvPlayer::clearTileCulture()
 {
-	int iI;
-	CvPlot* pLoopPlot;
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
-		pLoopPlot->setCulture(getID(), 0, true, true);
-	}
+	for_each(GC.getMap().plots(), CvPlot::fn::setCulture(getID(), 0, true, true));
 }
 
 void CvPlayer::clearCityCulture()
