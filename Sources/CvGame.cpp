@@ -12622,10 +12622,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	foreach_(CvArea * pLoopArea, GC.getMap().areas())
-	{
-		pLoopArea->clearModifierTotals();
-	}
+	for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
 	for(iI = 0; iI < MAX_TEAMS; iI++)
 	{

@@ -548,14 +548,6 @@ public:
 
 	static PlayerTypes			m_cachedPlayer;
 	static CvReachablePlotSet*	m_cachedMissionaryPlotset;
-
-public:
-
-	//
-	// Algorithm/range helpers
-	//
-	struct fn {
-	}; 
 };
 
 #endif

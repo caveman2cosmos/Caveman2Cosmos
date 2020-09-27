@@ -477,10 +477,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 	//	Mark previous yield data as stale
 #ifdef YIELD_VALUE_CACHING
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->ClearYieldValueCache();
-	}
+	for_each(cities(), CvCity::fn::ClearYieldValueCache());
 #endif
 
 		AI_doResearch();
@@ -570,10 +567,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	PROFILE_FUNC();
 
 	//	Clear cached defensive status info on each city
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_preUnitTurn();
-	}
+	for_each(cities(), CvCity::fn::AI_preUnitTurn());
 
 #ifdef PLOT_DANGER_CACHING
 	//	Clear plot danger cache
@@ -1312,11 +1306,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 				pLoopPlot->clearFoundValue(getID());
 			}
 		}
-
-		foreach_(CvArea * pLoopArea, GC.getMap().areas())
-		{
-			pLoopArea->setBestFoundValue(getID(), -1);
-		}
+		for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
 	}
 	else
 	{
@@ -1764,43 +1754,25 @@ void CvPlayerAI::AI_unitUpdate()
 
 void CvPlayerAI::AI_makeAssignWorkDirty()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_setAssignWorkDirty(true);
-	}
+	for_each(cities(), CvCity::fn::AI_setAssignWorkDirty(true));
 }
 
 
 void CvPlayerAI::AI_assignWorkingPlots()
 {
-/************************************************************************************************/
-/* Afforess					  Start		 6/22/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	//Who cares, plots return no yields anyway?
-	//Also fixes assert in cities, when they shuffle specialists with angry citizens from the anarchy
+	// Afforess 6/22/11 - Who cares, plots return no yields anyway?
+	// Also fixes assert in cities, when they shuffle specialists with angry citizens from the anarchy
 	if (isAnarchy())
 	{
 		return;
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_assignWorkingPlots();
-	}
+	for_each(cities(), CvCity::fn::AI_assignWorkingPlots());
 }
 
 
 void CvPlayerAI::AI_updateAssignWork()
 {
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_updateAssignWork();
-	}
+	for_each(cities(), CvCity::fn::AI_updateAssignWork());
 }
 
 /************************************************************************************************/
@@ -1924,10 +1896,7 @@ void CvPlayerAI::AI_makeProductionDirty()
 {
 	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_setChooseProductionDirty(true);
-	}
+	for_each(cities(), CvCity::fn::AI_setChooseProductionDirty(true));
 }
 
 // BETTER_BTS_AI_MOD 07/05/10	jdog5000
@@ -2591,7 +2560,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			}
 			for (int iJ = 0; iJ < AI_getNumCitySites(); iJ++)
 			{
-				CvPlot* pCitySitePlot = AI_getCitySite(iJ);
+				const CvPlot* pCitySitePlot = AI_getCitySite(iJ);
 				if (pCitySitePlot != pPlot && plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pCitySitePlot->getX(), pCitySitePlot->getY()) <= CITY_PLOTS_RADIUS)
 				{ // Plot is inside the radius of a city site
 					abCitySiteRadius[iI] = true;
@@ -3483,23 +3452,13 @@ bool CvPlayerAI::AI_isAreaAlone(const CvArea* pArea) const
 
 bool CvPlayerAI::AI_isCapitalAreaAlone() const
 {
-	CvCity* pCapitalCity;
-
-	pCapitalCity = getCapitalCity();
-
-	if (pCapitalCity != NULL)
-	{
-		return AI_isAreaAlone(pCapitalCity->area());
-	}
-
-	return false;
+	const CvCity* pCapitalCity = getCapitalCity();
+	return pCapitalCity ? AI_isAreaAlone(pCapitalCity->area()) : false;
 }
 
 
 bool CvPlayerAI::AI_isPrimaryArea(const CvArea* pArea) const
 {
-	CvCity* pCapitalCity;
-
 	if (pArea->isWater())
 	{
 		return false;
@@ -3510,17 +3469,8 @@ bool CvPlayerAI::AI_isPrimaryArea(const CvArea* pArea) const
 		return true;
 	}
 
-	pCapitalCity = getCapitalCity();
-
-	if (pCapitalCity != NULL)
-	{
-		if (pCapitalCity->area() == pArea)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	const CvCity* pCapitalCity = getCapitalCity();
+	return pCapitalCity ? pCapitalCity->area() == pArea : false;
 }
 
 
@@ -3536,12 +3486,11 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 
 	CvCity* pNearestCity;
 	CvPlot* pLoopPlot;
-	int iValue;
 	int iI;
 
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	iValue = 1;
+	int iValue = 1;
 
 	iValue += ((pCity->getPopulation() * (50 + pCity->calculateCulturePercent(getID()))) / 100);
 
@@ -4296,8 +4245,6 @@ int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMov
 	{
 		iRange = DANGER_RANGE;
 	}
-
-	CvArea* pWaterArea = pPlot->waterArea();
 
 	for (iDX = -(iRange); iDX <= iRange; iDX++)
 	{
@@ -14674,12 +14621,9 @@ int CvPlayerAI::AI_getOverallHappyness(int iExtraUnhappy) const
 {
 	int iHappyness = 0;
 
-	foreach_(const CvCity* pLoopCity, cities())
+	foreach_(const CvCity* pLoopCity, cities() | filtered(CvCity::fn::isNoUnhappiness()))
 	{
-		if ( !pLoopCity->isNoUnhappiness() )
-		{
-			iHappyness += (pLoopCity->happyLevel() - pLoopCity->unhappyLevel() - iExtraUnhappy)*50;
-		}
+		iHappyness += (pLoopCity->happyLevel() - pLoopCity->unhappyLevel() - iExtraUnhappy)*50;
 	}
 
 	return iHappyness;
@@ -15096,20 +15040,17 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			{
 				int iExtraCities = iWantToBuild - kCivic.getCityLimit(getID());
 
-				foreach_(const CvCity* pLoopCity, cities())
+				foreach_(const CvCity* pLoopCity, cities() | filtered(!CvCity::fn::isNoUnhappiness()))
 				{
-					if ( !pLoopCity->isNoUnhappiness() )
+					const int iHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel(3);	//	Allow for pop growth of 3
+
+					iCount++;
+
+					if ( iHappy < iExtraCities*kCivic.getCityOverLimitUnhappy() )
 					{
-						int iHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel(3);	//	Allow for pop growth of 3
-
-						iCount++;
-
-						if ( iHappy < iExtraCities*kCivic.getCityOverLimitUnhappy() )
-						{
-							//	Weight by city size as the happiness calculation does
-							//	[TBD - is this really right though - unhappy in smaller cities is arguably worse]
-							iCost += 50*(iExtraCities*kCivic.getCityOverLimitUnhappy() - iHappy);
-						}
+						//	Weight by city size as the happiness calculation does
+						//	[TBD - is this really right though - unhappy in smaller cities is arguably worse]
+						iCost += 50*(iExtraCities*kCivic.getCityOverLimitUnhappy() - iHappy);
 					}
 				}
 
@@ -26164,17 +26105,14 @@ int CvPlayerAI::AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThr
 	int iValue = 0;
 	int iLargestThreat = 0;
 
-	foreach_(CvCity* pLoopCity, cities())
+	foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::area() == pArea))
 	{
-		if (pLoopCity->getArea() == pArea->getID())
-		{
-			const int iThreat = pLoopCity->AI_cityThreat();
-			iValue += iThreat;
+		const int iThreat = pLoopCity->AI_cityThreat();
+		iValue += iThreat;
 
-			if ( iThreat > iLargestThreat )
-			{
-				iLargestThreat = iThreat;
-			}
+		if (iThreat > iLargestThreat)
+		{
+			iLargestThreat = iThreat;
 		}
 	}
 
@@ -28692,7 +28630,6 @@ CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNo
 	CvCity* pBestCity = NULL;
 	CvPlot* pUnitPlot = pUnit->plot();
 	int iBestRevoltIndex = 100;
-	int iTempCityValue = 0;
 
 	foreach_(CvCity* pLoopCity, cities())
 	{
@@ -28701,7 +28638,7 @@ CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNo
 			if( (pLoopCity->getRevTrend() > iTrendThreshold)
 			|| (pLoopCity->getRevolutionIndex() > 1000) )
 			{
-				iTempCityValue = pLoopCity->getRevolutionIndex() + 7*(pLoopCity->getRevTrend());
+				int iTempCityValue = pLoopCity->getRevolutionIndex() + 7*(pLoopCity->getRevTrend());
 				iTempCityValue -= 10*(pUnitPlot->calculatePathDistanceToPlot(getTeam(), pLoopCity->plot()));
 				if(iTempCityValue > iBestRevoltIndex)
 				{
@@ -28729,7 +28666,6 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(const CvUnit* pUnit, const bool
 	CvCity* pBestCity = NULL;
 	CvPlot* pUnitPlot = pUnit->plot();
 	int iBestRevoltIndex = 100;
-	int iTempCityValue = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -28746,7 +28682,7 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(const CvUnit* pUnit, const bool
 						if( (pLoopCity->getRevTrend() > iTrendThreshold)
 						|| (pLoopCity->getRevolutionIndex() > 1000) )
 						{
-							iTempCityValue = pLoopCity->getRevolutionIndex() + 7*(pLoopCity->getRevTrend());
+							int iTempCityValue = pLoopCity->getRevolutionIndex() + 7*(pLoopCity->getRevTrend());
 							iTempCityValue -= 10*(pUnitPlot->calculatePathDistanceToPlot(getTeam(), pLoopCity->plot()));
 							if(iTempCityValue > iBestRevoltIndex)
 							{
@@ -29134,10 +29070,9 @@ int CvPlayerAI::AI_getEmbassyAttitude(PlayerTypes ePlayer) const
 {
 	PROFILE_FUNC();
 
-	int iAttitude;
 	const bool bVictim = ((GET_TEAM(getTeam()).AI_getMemoryCount((GET_PLAYER(ePlayer).getTeam()), MEMORY_DECLARED_WAR) == 0) && (GET_TEAM(getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam())));
 
-	iAttitude = 0;
+	int iAttitude = 0;
 
 	if (GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(ePlayer).getTeam()))
 	{
@@ -29268,11 +29203,10 @@ int CvPlayerAI::strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAITyp
 	if (eBestUnit == NO_UNIT)
 	{
 		//	We cannot build any!  Take the average of any we already have
-		int iLoop;
 		int iTotal = 0;
 		int iCount = 0;
 
-		for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+		foreach_(const CvUnit* pLoopUnit, units())
 		{
 			if (eUnitAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == eUnitAIType)
 			{
@@ -29647,7 +29581,6 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 
 TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
 {
-	int iValue = 0;
 	int iBestValue = 0;
 	TeamTypes eWarTeam = NO_TEAM;
 
@@ -29669,7 +29602,7 @@ TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
 							{
 								if (GET_PLAYER((PlayerTypes)iI).getTeam() != GET_PLAYER(ePlayer).getTeam())
 								{
-									iValue = GET_TEAM(getTeam()).AI_declareWarTradeVal(GET_PLAYER((PlayerTypes)iI).getTeam(), GET_PLAYER(ePlayer).getTeam());
+									int iValue = GET_TEAM(getTeam()).AI_declareWarTradeVal(GET_PLAYER((PlayerTypes)iI).getTeam(), GET_PLAYER(ePlayer).getTeam());
 									//Favor teams we are already at war with
 									if (!atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam())) {
 										iValue *= 2;
@@ -29694,8 +29627,8 @@ TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
 TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
 {
 	//kWarTeam is the team that is at war with the player we want them to make peace with
-	CvTeamAI& kWarTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam());
-	int iTheirPower = kWarTeam.getPower(true);
+	const CvTeamAI& kWarTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam());
+	const int iTheirPower = kWarTeam.getPower(true);
 	int iBestValue = 250; //set a small threshold
 	TeamTypes eBestTeam = NO_TEAM;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -29703,7 +29636,7 @@ TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
 		if ((iI != ePlayer) && (iI != getID()))
 		{
 			//kPlayer is who we want kWarTeam to make peace with...
-			CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+			const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kPlayer.isAlive() && !kPlayer.isMinorCiv())
 			{
 				if (GET_TEAM(getTeam()).isHasMet(kPlayer.getTeam()))
@@ -29739,16 +29672,15 @@ TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
 
 TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes ePlayer)
 {
-	int iValue;
 	int iBestValue = 0;
 	TeamTypes eBestTeam = NO_TEAM;
 
-	TeamTypes eWorstEnemy = GET_TEAM(getTeam()).AI_getWorstEnemy();
+	const TeamTypes eWorstEnemy = GET_TEAM(getTeam()).AI_getWorstEnemy();
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		TeamTypes eTeam = ((TeamTypes)iI);
-		bool bAtWar = atWar(eTeam, getTeam());
+		const TeamTypes eTeam = ((TeamTypes)iI);
+		const bool bAtWar = atWar(eTeam, getTeam());
 		if ((getTeam() != eTeam) && (eTeam != GET_PLAYER(ePlayer).getTeam()))
 		{
 			if ((eWorstEnemy == eTeam) || bAtWar ||
@@ -29772,7 +29704,7 @@ TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes ePlayer)
 											if ((bAtWar && GET_PLAYER(ePlayer).isTradingMilitaryBonus(GET_TEAM(eTeam).getLeaderID()))
 												|| (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTeam) != ATTITUDE_FRIENDLY))
 											{
-												iValue = AI_stopTradingTradeVal(eTeam, ePlayer);
+												const int iValue = AI_stopTradingTradeVal(eTeam, ePlayer);
 												if ((iBestValue == 0) || (iValue < iBestValue))
 												{
 													iBestValue = iValue;
@@ -39562,10 +39494,8 @@ TechTypes CvPlayerAI::AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnore
 {
 	PROFILE("CvPlayerAI::AI_bestReligiousTech");
 
-	int iValue;
 	int iBestValue = 0;
 	TechTypes eBestTech = NO_TECH;
-	int iPathLength;
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -39579,11 +39509,11 @@ TechTypes CvPlayerAI::AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnore
 					{
 						if (GC.getTechInfo((TechTypes)iI).getEra() <= (getCurrentEra()))
 						{
-							iPathLength = findPathLength(((TechTypes)iI), false);
+							const int iPathLength = findPathLength(((TechTypes)iI), false);
 
 							if (iPathLength <= iMaxPathLength)
 							{
-								iValue = AI_religiousTechValue((TechTypes)iI);
+								int iValue = AI_religiousTechValue((TechTypes)iI);
 
 								iValue /= std::max(1, iPathLength);
 
@@ -39613,7 +39543,7 @@ int CvPlayerAI::AI_religiousTechValue(TechTypes eTech) const
 	{
 		for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 		{
-			TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+			const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 			if (eReligionTech == eTech)
 			{
 				if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iJ)))
@@ -39664,17 +39594,11 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	//invalidate cache
 	m_iMilitaryProductionCityCount = -1;
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_setMilitaryProductionCity(false);
-	}
+	for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
 
 	m_iNavalMilitaryProductionCityCount = -1;
 
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->AI_setNavalMilitaryProductionCity(false);
-	}
+	for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
 
 	if (getNumCities() < 4)
 	{
@@ -39790,21 +39714,17 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-	CvUnit*	pLoopUnit;
-	CvArea* pLoopArea;
-	int		iLoop;
-
-	for(int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
+	for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
 		AI_changeNumAIUnits( (UnitAITypes)iI, -AI_getNumAIUnits((UnitAITypes)iI) );
 
-		for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+		foreach_(CvArea* pLoopArea, GC.getMap().areas())
 		{
 			pLoopArea->changeNumAIUnits(m_eID, (UnitAITypes)iI, -pLoopArea->getNumAIUnits(m_eID, (UnitAITypes)iI));
 		}
 	}
 
-	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
