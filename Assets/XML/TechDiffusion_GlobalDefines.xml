@@ -12,8 +12,10 @@
 	</Define>
 	<Define>
 		<!-- Tech Diffusion: Power of research rate increase based on number of teams you know who already know the tech you're researching. -->
+		<!-- This is a additive percent value; 100 means doubling tech at maximum magnitude, 25 means adding 25%, etc. -->
+		<!-- "Maximum magnitude" means you've met every single civ, have open borders with all, and they all have the tech. -->
 		<DefineName>TECH_DIFFUSION_KNOWN_TEAM_MODIFIER</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Tech Diffusion: Threshold percentage of top known tech score at which extra tech welfare help begins. -->

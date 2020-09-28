@@ -9078,6 +9078,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	{
 		if ((int)getCurrentEra() > 0)
 		{
+			// iModifier += value in [0, 100](!) as result of f(your city num, your total city pop) vs largest city num, city pop
 			iModifier += GET_TEAM(getTeam()).getWinForLosingResearchModifier();
 		}
 	}
@@ -9088,10 +9089,14 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
+		double knownExpSmall = 0.5;
+		double knownExpLarge = 1.5;
+
 		// Tech flows better through open borders
 		int iTeams = 0;
 		int iMetTeams = 0;
 		int iTeamsHaveTech = 0;
+
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
 			if (GET_TEAM((TeamTypes)iI).isAlive())
@@ -9104,57 +9109,61 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 					{
 						iTeamsHaveTech++;
 
-						knownExp += 0.5;
+						knownExp += knownExpSmall;
 
 						if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
 						{
-							knownExp += 1.5;
+							knownExp += knownExpLarge;
 						}
 						else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
 						{
-							knownExp += 0.5;
+							knownExp += knownExpSmall;
 						}
+
+						// Many new weights can get added here! If trade routes, if have printingpress tech, espionage ratio, etc etc
+
 					}
 				}
 			}
 		}
 
+		// Maximum percent exp multiplier given for meeting all civs that also have all tech; 200=doubling, 300=tripling, etc.
+		int iGeneralSharing = 200;
+
 		if (knownExp > 0.0)
 		{
-			//If 1/3 the teams don't have the tech, diffusion is slow
-			if (iTeamsHaveTech * 3 < iTeams)
-			{
-				knownExp /= 100;
-			}
-			//If 2/3 the teams do have the tech, diffusion is fast
-			else if (iTeamsHaveTech * 3 > 2 * iTeams)
-			{
-				knownExp *= 3;
-			}
+			// Scale UP exp by percentage of civs met that owns tech of civs in entire world
+			// Sharing is [doubled] if all players in world have tech, linearly increasing from zero as f(met players w/tech)
+			knownExp *= (1 + (iGeneralSharing-100)/100.0 * (iTeamsHaveTech / iTeams));
 		}
-
-		//Scale diffusion based on the number of teams we know of
-		knownExp *= iMetTeams;
-		knownExp /= iTeams;
 
 		int techDiffMod = GC.getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
 		if (knownExp > 0.0)
 		{
-			//ensure tech diffusion can not hurt research, only help
-			int iTechDiffusion = std::max(0, techDiffMod - (int)(techDiffMod * pow(0.85, knownExp) + 0.5));
+			// Max possible knownExp is having open borders with every civ in game who all have the tech.
+			// Bonus normalized to this, to account for num players. Smaller worlds therefore have higher bonuses faster.
+			// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape bound set in GlobalDefines
+			int iMaxPossibleXP = (int)(iTeams * iGeneralSharing/100.0 * (knownExpSmall + knownExpLarge));
+
+			//ensure tech diffusion can not hurt research, only help. Old max value was in [0,5]. Compare vs WFL!
+			// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. pow 1 is linear
+			int iTechDiffusion = std::max(0, (int)(techDiffMod * pow(knownExp/iMaxPossibleXP, 0.5)));
 			iModifier += iTechDiffusion;
-			GC.getGame().logMsg("Tech Diffusion base amount for %S: %d", getCivilizationDescription(), iTechDiffusion);
+			GC.getGame().logMsg("Tech ONLY diffusion percentage bonus for %S: %d", getCivilizationDescription(), iTechDiffusion);
 		}
 
 		// Tech flows downhill to those who are far behind
+		// iTechScorePercent -> of era; prehistoric vs ancient (if met) is 50! Later eras, less impact; Atomic/Information -> 87.
 		int iTechScorePercent = GET_TEAM(getTeam()).getBestKnownTechScorePercent();
 		int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
 		if( iTechScorePercent < iWelfareThreshold )
 		{
+			// Shortcut for 'met civs with tech you don't have'
 			if( knownExp > 0.0 )
 			{
 				int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
 				//ensure tech diffusion can not hurt research, only help
+				// iWelfareTechDiffusion returns 27 (with default threshold 90, mod 50) if prehistoric/ancient diff, returns 2 if atomic/information.
 				int iWelfareTechDiffusion = std::max(0, (iWelfareMod - (int)(iWelfareMod * pow(0.98, iWelfareThreshold - iTechScorePercent) + 0.5)));
 				int iBestScore = 0;
 				int iOurScore = calculateScore(false);
@@ -9173,10 +9182,10 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				if (iOurScore < iBestScore)
 				{
 					float fRatio = iBestScore / ((float)iOurScore);
+					// Multiply the welfare value [0, 27] by score ratio; potentially massive impacts exiting prehistoric, but far less later.
 					GC.getGame().logMsg("Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
 					iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fRatio);
 					iModifier += iWelfareTechDiffusion;
-
 				}
 			}
 		}
