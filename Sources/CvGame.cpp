@@ -2574,11 +2574,16 @@ again:
 
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
-	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
-		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
+
+	if (getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
+	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves())
+	&& !kActivePlayer.hasBusyUnit()
+	&& !isGameMultiPlayer()
+	// Toffer - isAlive check is needed for the "you have been defeated" popups to appear as they should.
+	// Without it the game will just pass turns between the AI's without ever refreshing your screen, making it seem like the game freezed the moment you were defeated.
+	&& kActivePlayer.isAlive())
 	{
 		updateTimers();
-
 		goto again;
 	}
 
