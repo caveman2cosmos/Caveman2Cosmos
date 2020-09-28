@@ -175,7 +175,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	m_iMapHeight = GC.getMap().getGridHeight();
 	
 	SAFE_DELETE(m_pcMinimapPixels);	
-	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
+	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
 	
 	void *ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
 	if (ptexture)
@@ -459,7 +459,7 @@ int CvReplayInfo::getFinalTurn() const
 	return m_iFinalTurn;
 }
 
-const wchar* CvReplayInfo::getFinalDate() const
+const wchar_t* CvReplayInfo::getFinalDate() const
 {
 	return m_szFinalDate;
 }
@@ -541,7 +541,7 @@ int CvReplayInfo::getMapWidth() const
 	return m_iMapWidth;
 }
 
-const unsigned char* CvReplayInfo::getMinimapPixels() const
+const uint8_t* CvReplayInfo::getMinimapPixels() const
 {
 	return m_pcMinimapPixels;
 }
@@ -661,7 +661,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		stream.Read(&m_iMapWidth);
 		stream.Read(&m_iMapHeight);
 		SAFE_DELETE(m_pcMinimapPixels);
-		m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
+		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
 		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
 		stream.Read(&m_bMultiplayer);
 		if (iVersion > 2)

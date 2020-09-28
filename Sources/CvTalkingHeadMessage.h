@@ -13,7 +13,7 @@ public:
 	void write(FDataStreamBase& stream) const;
 
 	// Accessors
-	DllExport const wchar* getDescription() const;
+	DllExport const wchar_t* getDescription() const;
 	void setDescription(CvWString pszDescription);
 	DllExport const CvString& getSound() const;
 	//void setSound(LPCTSTR pszSound) { m_szSound = pszSound; }

@@ -315,8 +315,8 @@ public:
 	BuildingTypes getProductionBuilding() const; // Exposed to Python
 	ProjectTypes getProductionProject() const; // Exposed to Python
 	ProcessTypes getProductionProcess() const; // Exposed to Python
-	const wchar* getProductionName() const; // Exposed to Python
-	const wchar* getProductionNameKey() const; // Exposed to Python
+	const wchar_t* getProductionName() const; // Exposed to Python
+	const wchar_t* getProductionNameKey() const; // Exposed to Python
 	int getGeneralProductionTurnsLeft() const; // Exposed to Python
 
 	bool isFoodProduction() const; // Exposed to Python
@@ -1190,8 +1190,8 @@ public:
 	void updateEspionageVisibility(bool bUpdatePlotGroups);
 
 	DllExport const CvWString getName(uint uiForm = 0) const; // Exposed to Python
-	DllExport const wchar* getNameKey() const; // Exposed to Python
-	void setName(const wchar* szNewValue, bool bFound = false); // Exposed to Python
+	DllExport const wchar_t* getNameKey() const; // Exposed to Python
+	void setName(const wchar_t* szNewValue, bool bFound = false); // Exposed to Python
 	void doFoundMessage();
 
 	// Script data needs to be a narrow string for pickling in Python
@@ -1334,7 +1334,7 @@ public:
 	void updateTradeRoutes();
 
 	void clearOrderQueue(); // Exposed to Python
-	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, byte contractFlags = 0); // Exposed to Python
+	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0); // Exposed to Python
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true); // Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
@@ -2363,40 +2363,93 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR(CvCity, void, startDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, endDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, doTurn);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateBuildingCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
+		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
+		DECLARE_MAP_FUNCTOR(CvCity, void, recalculateModifiers);
+		DECLARE_MAP_FUNCTOR(CvCity, void, ClearYieldValueCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_preUnitTurn);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_assignWorkingPlots);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_updateAssignWork);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_markBestBuildValuesStale);
+		DECLARE_MAP_FUNCTOR(CvCity, void, setupGraphical);
+		DECLARE_MAP_FUNCTOR(CvCity, void, chooseProduction);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidatePopulationRankCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateYieldRankCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateCommerceRankCache);
 
-		DECLARE_MAP_FUNCTOR(CvCity, int, getID);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
-		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHealth, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateFeatureHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateReligionHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setCommerceModifierDirty, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setCommerceDirty, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setLayoutDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, FlushCanConstructCache, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setAssignWorkDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setChooseProductionDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setMilitaryProductionCity, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setNavalMilitaryProductionCity, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, kill, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setInfoDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, changeFood, int);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvWString, getName);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setBuildingListFilterActive, BuildingFilterTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, updateCommerce, CommerceTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeAreaBuilding, BuildingTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, hasOrbitalInfrastructure);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isConnectedToCapital);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isGovernmentCenter);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, calculateCorporateTaxes);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, unhappyLevel);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvWString, getName);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canConstruct, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canTrain, UnitTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasReligion, ReligionTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasCorporation, CorporationTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyDisabledBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasCorporation, CorporationTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumRealBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumActiveBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
-
-		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvCity, bool, isRevealed, TeamTypes, bool);
 	};
 };
 

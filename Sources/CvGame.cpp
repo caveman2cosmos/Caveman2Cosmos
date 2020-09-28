@@ -2574,11 +2574,16 @@ again:
 
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
-	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
-		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
+
+	if (getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
+	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves())
+	&& !kActivePlayer.hasBusyUnit()
+	&& !isGameMultiPlayer()
+	// Toffer - isAlive check is needed for the "you have been defeated" popups to appear as they should.
+	// Without it the game will just pass turns between the AI's without ever refreshing your screen, making it seem like the game freezed the moment you were defeated.
+	&& kActivePlayer.isAlive())
 	{
 		updateTimers();
-
 		goto again;
 	}
 
@@ -8687,7 +8692,7 @@ CvRandom& CvGame::getSorenRand()
 	return m_sorenRand;
 }
 
-void CvGame::logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iResult)
+void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iResult)
 {
 	if (GC.isXMLLogging() || isNetworkMultiPlayer())
 	{
@@ -10966,10 +10971,9 @@ void CvGame::drawBattleEffects()
 {
 	if (GC.isDCM_BATTLE_EFFECTS())
 	{
-		CvPlot* pLoopPlot;
 		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iPlot);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 			if (pLoopPlot->isBattle())
 			{
 				gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
@@ -11141,10 +11145,8 @@ void CvGame::doIncreasingDifficulty()
 					{
 						GC.getInitCore().setHandicap((PlayerTypes)iI, (HandicapTypes)getHandicapType());
 						GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
-						foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-						{
-							pLoopCity->setInfoDirty(true);
-						}
+						algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::setInfoDirty(true));
+
 						MEMORY_TRACK_EXEMPT();
 
 						AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(), "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
@@ -11303,10 +11305,7 @@ void CvGame::doFlexibleDifficulty()
 
 						//Clean the interface
 						kPlayer.AI_makeAssignWorkDirty();
-						foreach_(CvCity* pLoopCity, kPlayer.cities())
-						{
-							pLoopCity->setInfoDirty(true);
-						}
+						algo::for_each(kPlayer.cities(), CvCity::fn::setInfoDirty(true));
 					}
 				}
 			}
@@ -12715,10 +12714,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	foreach_(CvArea * pLoopArea, GC.getMap().areas())
-	{
-		pLoopArea->clearModifierTotals();
-	}
+	algo::for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
 	for(iI = 0; iI < MAX_TEAMS; iI++)
 	{

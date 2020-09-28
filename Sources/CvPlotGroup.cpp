@@ -486,7 +486,7 @@ int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 
 bool CvPlotGroup::hasBonus(const BonusTypes eBonus) const
 {
-	return(getNumBonuses(eBonus) > 0);
+	return getNumBonuses(eBonus) > 0;
 }
 
 

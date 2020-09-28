@@ -69,7 +69,7 @@ public:
 	virtual unsigned int memSize(void* a) = 0;
 
 	virtual void clearVector(std::vector<int>& vec) = 0;
-	virtual void clearVector(std::vector<byte>& vec) = 0;
+	virtual void clearVector(std::vector<uint8_t>& vec) = 0;
 	virtual void clearVector(std::vector<float>& vec) = 0;
 
 	virtual int getAssignedNetworkID(int iPlayerID) = 0;
@@ -142,8 +142,8 @@ public:
 
 	virtual void callUpdater() = 0;
 
-	virtual bool Uncompress(byte** bufIn, unsigned long* bufLenIn, unsigned long maxBufLenOut, int offset=0) = 0;
-	virtual bool Compress(byte** bufIn, unsigned long* bufLenIn, int offset=0) = 0;
+	virtual bool Uncompress(uint8_t** bufIn, unsigned long* bufLenIn, unsigned long maxBufLenOut, int offset=0) = 0;
+	virtual bool Compress(uint8_t** bufIn, unsigned long* bufLenIn, int offset=0) = 0;
 
 	virtual void NiTextOut(const TCHAR* szText) = 0;
 	virtual void MessageBox(const TCHAR* szText, const TCHAR* szCaption) = 0;
@@ -202,7 +202,7 @@ public:
 
 	virtual CvWString getText(CvWString szIDTag, ...) = 0;
 	virtual CvWString getObjectText(CvWString szIDTag, uint uiForm, bool bNoSubs = false) = 0;
-	virtual void addText(const TCHAR* szIDTag, const wchar* szString, const wchar* szGender = L"N", const wchar* szPlural = L"false") = 0;		
+	virtual void addText(const TCHAR* szIDTag, const wchar_t* szString, const wchar_t* szGender = L"N", const wchar_t* szPlural = L"false") = 0;		
 	virtual uint getNumForms(CvWString szIDTag) = 0;
 
 	virtual WorldSizeTypes getWorldSize() = 0;
