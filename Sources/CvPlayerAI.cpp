@@ -10067,31 +10067,31 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 	FAssert(ePlayer != getID());
 
-	if (isHuman() || (GET_PLAYER(ePlayer).getTeam() == getTeam()))
+	if (isHuman() || GET_PLAYER(ePlayer).getTeam() == getTeam())
 	{
 		iMaxGold = getGold();
 	}
 	else
 	{
-		iMaxGold = getTotalPopulation();
-
-		iMaxGold *= (GET_TEAM(getTeam()).AI_getHasMetCounter(GET_PLAYER(ePlayer).getTeam()) + 10);
+		const int64_t iGold = getGold();
+		iMaxGold = iGold;
 
 		iMaxGold *= GC.getLeaderHeadInfo(getPersonalityType()).getMaxGoldTradePercent();
 		iMaxGold /= 100;
 
-		iMaxGold -= AI_getGoldTradedTo(ePlayer);
+		const int iGoldRate = calculateGoldRate();
 
-		int iResearchBuffer = -calculateGoldRate() * 12;
-		iResearchBuffer *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-		iResearchBuffer /= 100;
-
-		iMaxGold *= (100 + calculateInflationRate());
+		if (iGoldRate < 0)
+		{
+			iMaxGold = std::min(
+				iMaxGold,
+				iGold + iGoldRate * 10 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100
+			);
+		}
+		iMaxGold *= 100 + calculateInflationRate();
 		iMaxGold /= 100;
 
-		iMaxGold = std::min(iMaxGold, getGold() - iResearchBuffer);
-
-		iMaxGold = std::min(iMaxGold, getGold());
+		iMaxGold = std::min(iMaxGold, iGold);
 
 		iMaxGold -= (iMaxGold % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
 	}
