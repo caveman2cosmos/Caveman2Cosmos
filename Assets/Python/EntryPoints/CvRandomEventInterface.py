@@ -7684,7 +7684,7 @@ def doVolcanoSleep(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = player.getTeam()
   doVolcanoAdjustFertility((pPlot, -1, team))
-  doVolcanoReport((pPlot, TRNSLTR.getText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT", ())))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
   iEvent = argsList[0]
