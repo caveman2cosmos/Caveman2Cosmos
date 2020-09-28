@@ -1402,7 +1402,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 		//isolated NPC war declarations as it happens now on each load process at a point when such validation cannot take place in the environment that isn't fully initialized yet.
 		if (!GET_TEAM(eTeam).isNPC())
 		{
-			for_each(members(), CvPlayer::fn::verifyUnitStacksValid());
+			algo::for_each(members(), CvPlayer::fn::verifyUnitStacksValid());
 		}
 
 		GC.getGame().AI_makeAssignWorkDirty();
@@ -4001,7 +4001,7 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for_each(members(), CvPlayer::fn::updateTradeRoutes());
+			algo::for_each(members(), CvPlayer::fn::updateTradeRoutes());
 		}
 	}
 }
@@ -5343,7 +5343,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 								if (iValue < iBestValue)
 								{
 									iBestValue = iValue;
-									eBestPlayer = ((PlayerTypes)iJ);
+									eBestPlayer = teamMember->getID();
 								}
 							}
 						}
@@ -5964,7 +5964,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		}
 	}
 
-	foreach_(const CvPlayer* teamMember, members())
+	foreach_(CvPlayer* teamMember, members())
 	{
 		teamMember->changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
 		teamMember->changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
@@ -6020,7 +6020,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 			setLastRoundOfValidImprovementCacheUpdate();
 			if (GC.getBuildInfo((BuildTypes) iI).getRoute() != NO_ROUTE)
 			{
-				for_each(members(), CvPlayer::fn::processNewRoutes());
+				algo::for_each(members(), CvPlayer::fn::processNewRoutes());
 			}
 			break;
 		}
@@ -6330,7 +6330,7 @@ void CvTeam::setTurnActive(bool bNewValue, bool bDoTurn)
 {
 	FAssert(GC.getGame().isSimultaneousTeamTurns());
 
-	for_each(members(), CvPlayer::fn::setTurnActive(bNewValue, bDoTurn));
+	algo::for_each(members(), CvPlayer::fn::setTurnActive(bNewValue, bDoTurn));
 }
 
 bool CvTeam::isTurnActive() const
@@ -7152,7 +7152,7 @@ void CvTeam::changeTradeModifier(int iChange)
 	{
 		m_iTradeModifier += iChange;
 
-		for_each(members(), CvPlayer::fn::updateTradeRoutes());
+		algo::for_each(members(), CvPlayer::fn::updateTradeRoutes());
 	}
 }
 
@@ -7167,7 +7167,7 @@ void CvTeam::changeForeignTradeModifier(int iChange)
 	{
 		m_iForeignTradeModifier += iChange;
 
-		for_each(members(), CvPlayer::fn::updateTradeRoutes());
+		algo::for_each(members(), CvPlayer::fn::updateTradeRoutes());
 	}
 }
 
@@ -7548,7 +7548,7 @@ void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for_each(members(), CvPlayer::fn::updateTradeRoutes());
+			algo::for_each(members(), CvPlayer::fn::updateTradeRoutes());
 		}
 	}
 }
@@ -7655,30 +7655,30 @@ void CvTeam::setFreeTradeAgreement(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for_each(members(), CvPlayer::fn::updateTradeRoutes());
+			algo::for_each(members(), CvPlayer::fn::updateTradeRoutes());
 		}
 	}
 }
 
 void CvTeam::AI_updateBonusValue(BonusTypes eBonus)
 {
-	for_each(members(), CvPlayer::fn::AI_updateBonusValue(eBonus));
+	algo::for_each(members(), CvPlayer::fn::AI_updateBonusValue(eBonus));
 }
 
 void CvTeam::addPropertiesAllCities(const CvProperties* pProp)
 {
-	for_each(members(), CvPlayer::fn::addPropertiesAllCities(pProp));
+	algo::for_each(members(), CvPlayer::fn::addPropertiesAllCities(pProp));
 }
 
 void CvTeam::subtractPropertiesAllCities(const CvProperties* pProp)
 {
-	for_each(members(), CvPlayer::fn::subtractPropertiesAllCities(pProp));
+	algo::for_each(members(), CvPlayer::fn::subtractPropertiesAllCities(pProp));
 }
 
 void CvTeam::recalculateModifiers()
 {
 	// Clear player modifiers
-	for_each(members(), CvPlayer::fn::clearModifierTotals());
+	algo::for_each(members(), CvPlayer::fn::clearModifierTotals());
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
@@ -7760,7 +7760,7 @@ void CvTeam::recalculateModifiers()
 		m_aiExtraMoves[iI] = 0;
 	}
 	// Recalculate player modifiers
-	for_each(members(), CvPlayer::fn::recalculateModifiers());
+	algo::for_each(members(), CvPlayer::fn::recalculateModifiers());
 
 	//	Reapply techs
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -7830,14 +7830,14 @@ int CvTeam::getWinForLosingResearchModifier() const
 	return iFinal;
 }
 
-void CvTeam::addMember(CvPlayerAI& player)
+void CvTeam::addMember(CvPlayer& player)
 {
 	m_TeamMembers.push_back(&player);
 }
 
-void CvTeam::removeMember(CvPlayerAI& player)
+void CvTeam::removeMember(CvPlayer& player)
 {
-	m_TeamMembers.erase(&player);
+	//m_TeamMembers.erase(player);
 }
 
 int CvTeam::getNumMembers() const
@@ -7845,7 +7845,7 @@ int CvTeam::getNumMembers() const
 	return m_TeamMembers.size();
 }
 
-CvPlayerAI& CvTeam::getMember(int index) const
+CvPlayer& CvTeam::getMember(int index) const
 {
 	FASSERT_BOUNDS(0, getNumMembers(), index)
 	return *m_TeamMembers[index];

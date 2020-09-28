@@ -8576,7 +8576,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	bool abTeamsAffected[MAX_TEAMS];
 	TeamTypes eBestTeam;
 	int iBestInterception;
-	int iI, iJ, iK;
+	int iI, iJ;
 /************************************************************************************************/
 /* Afforess	                  Start		 09/09/10                                               */
 /*                                                                                              */
@@ -8728,7 +8728,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 				{
 					if (abTeamsAffected[iI])
 					{
-						for_each(GET_TEAM((TeamTypes)iI).members(),
+						algo::for_each(GET_TEAM((TeamTypes)iI).members(),
 							CvPlayer::fn::setMADTrigger(getOwner(), true)
 						);
 					}
@@ -8782,7 +8782,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 			{
 				if (abTeamsAffected[iI])
 				{
-					for_each(GET_TEAM((TeamTypes)iI).members(),
+					algo::for_each(GET_TEAM((TeamTypes)iI).members(),
 						CvPlayer::fn::AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1)
 					);
 				}
@@ -8798,7 +8798,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 								{
 									if (GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
 									{
-										for_each(GET_TEAM((TeamTypes)iI).members(),
+										algo::for_each(GET_TEAM((TeamTypes)iI).members(),
 											CvPlayer::fn::AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1)
 										);
 										break;
@@ -13046,7 +13046,8 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 			foreach_(CvCity* pLoopCity, teamMember->cities())
 			{
 				// if coastal only, then make sure we are coast
-				if (!bCoastalOnly || ((const CvArea* pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
+				const CvArea* pWaterArea;
+				if (!bCoastalOnly || ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
 				{
 					// can this city tran this unit?
 					if (pLoopCity->canTrain(eUnit, false, false, true))
@@ -31138,7 +31139,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 	CvPlot* pPlot;
 	CvWString szBuffer;
 	bool abTeamsAffected[MAX_TEAMS];
-	int iI, iJ, iK;
+	int iI, iJ;
 
 	pPlot = GC.getMap().plot(iX, iY);
 

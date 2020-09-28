@@ -1746,7 +1746,7 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 	{
 		if (eIgnorePlayer == NO_PLAYER || teamMember->getID() != eIgnorePlayer)
 		{
-			if (isPlayerCityRadius(teamMember->getID())
+			if (isPlayerCityRadius(teamMember->getID()))
 			{
 				return true;
 			}
@@ -9820,8 +9820,6 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 
 void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, TeamTypes eFromTeam, bool bUpdatePlotGroup)
 {
-	int iI;
-
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 /*********************************/
@@ -9914,7 +9912,7 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 			if (getLandmarkType() != NO_LANDMARK)
 			{
-				foreach_(const CvPlayer* teamMember, members() | filtered(!CvPlayer::fn::isNPC()))
+				foreach_(const CvPlayer* teamMember, GET_TEAM(eTeam).members() | filtered(!CvPlayer::fn::isNPC()))
 				{
 					addSign(teamMember->getID(), getLandmarkMessage());
 					CvString szIcon;

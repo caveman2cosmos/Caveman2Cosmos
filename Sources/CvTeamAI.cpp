@@ -185,7 +185,7 @@ void CvTeamAI::AI_doTurnPost()
 
 void CvTeamAI::AI_makeAssignWorkDirty()
 {
-	for_each(members(), CvPlayer::fn::AI_makeAssignWorkDirty());
+	algo::for_each(members(), CvPlayer::fn::AI_makeAssignWorkDirty());
 }
 
 
@@ -827,7 +827,7 @@ bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 	{
 		foreach_(const CvPlayer* teamMember, members() | filtered(CvPlayer::fn::getNumCities() > 0))
 		{
-			const CvCity* pCapital = GET_PLAYER((PlayerTypes)iPlayer).getCapitalCity();
+			const CvCity* pCapital = teamMember->getCapitalCity();
 			if (pCapital != NULL && GET_TEAM(eTeam).AI_isPrimaryArea(pCapital->area()))
 			{
 				iModifier *= pCapital->area()->getNumOwnedTiles();
@@ -1220,7 +1220,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 				bDagger = true;
 			}
 
-			if (teamMember=>AI_isFinancialTrouble())
+			if (teamMember->AI_isFinancialTrouble())
 			{
 				bAnyFinancialTrouble = true;
 			}
@@ -2923,7 +2923,7 @@ void CvTeamAI::AI_getWarThresholds( int &iTotalWarThreshold, int &iLimitedWarThr
 	int iHighUnitSpendingPercent = 0;
 	bool bConq2 = false;
 	bool bDom3 = false;
-	const bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+	bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 
 	foreach_(const CvPlayer* teamMember, members())
 	{
@@ -3908,7 +3908,7 @@ int CvTeamAI::AI_teamCloseness(TeamTypes eIndex, int iMaxDistance) const
 	{
 		foreach_(const CvPlayer* otherTeamMember, GET_TEAM(eIndex).members())
 		{
-			iValue += teamMember->AI_playerCloseness(otherTeamMember->getID(), iMaxDistance);
+			iValue += static_cast<const CvPlayerAI*>(teamMember)->AI_playerCloseness(otherTeamMember->getID(), iMaxDistance);
 		}
 	}
 

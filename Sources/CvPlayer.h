@@ -2430,16 +2430,18 @@ public:
 
 		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, updateCitySight, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, setTurnActive, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlayer, void, setMADTrigger, PlayerTypes, bool);
 
 		DECLARE_MAP_FUNCTOR_3(CvPlayer, void, AI_changeMemoryCount, PlayerTypes, MemoryTypes, int);
 
-		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, bool, isHuman);
-		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, bool, isTurnActive);
-		DECLARE_MAP_FUNCTOR_CONST(CvPlayer, int, getNumCities);
+		DECLARE_MAP_FUNCTOR(CvPlayer, bool, isNPC);
+		DECLARE_MAP_FUNCTOR(CvPlayer, bool, isHuman);
+		DECLARE_MAP_FUNCTOR(CvPlayer, bool, isTurnActive);
+		DECLARE_MAP_FUNCTOR(CvPlayer, int, getNumCities);
 
-		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, bool, hasBonus, BonusTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, int, AI_isDoStrategy, int);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvPlayer, int, AI_isDoVictoryStrategy, int);
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, int, AI_isDoStrategy, int);
+		DECLARE_MAP_FUNCTOR_1(CvPlayer, int, AI_isDoVictoryStrategy, int);
 	};
 };
 

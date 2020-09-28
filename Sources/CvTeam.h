@@ -131,10 +131,10 @@ public:
 
 	DllExport int getNumMembers() const; // Exposed to Python
 	//void changeNumMembers(int iChange);
-	void addMember(CvPlayerAI& player);
-	void removeMember(CvPlayerAI& player);
-	CvPlayerAI& getMember(int index) const;
-	inline const std::vector<CvPlayerAI*> members() const { return m_TeamMembers; }
+	void addMember(CvPlayer& player);
+	void removeMember(CvPlayer& player);
+	CvPlayer& getMember(int index) const;
+	const std::vector<CvPlayer*> members() const { return m_TeamMembers; }
 
 	int getAliveCount() const;
 	int isAlive() const; // Exposed to Python
@@ -606,7 +606,7 @@ protected:
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;
 
-	std::vector<CvPlayerAI*> m_TeamMembers;
+	std::vector<CvPlayer*> m_TeamMembers;
 
 	void doWarWeariness();
 	void updateTechShare(TechTypes eTech);
