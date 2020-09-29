@@ -68,21 +68,21 @@ class MapConstants:
 
 		# This value controls the number of mid-altitude lake depressions per land map square.
 		# It will become a lake if enough water flows into the depression.
-		self.fLakesPerPlot = 0.008
+		self.fLakesPerPlot = 0.009
 
 		# This value controls the number of deep ocean threnches per ocean map square.
 		# It will become a lake if enough water flows into the depression.
 		self.fThrenchesPerPlot = 0.006
 
-		# ---The following values should all be between 0 and 1.
 		# iLakeSizeMinPercent sets the minimum percentage a lake is shrunk to when fLakeSizeFactorChance roll true.
 		# range from 0 to 100. Max size of lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
 		self.iLakeSizeMinPercent = 30
+		# ---The following values should all be between 0 and 1.
 		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the iLakeSizeMinPercent.
-		self.fLakeSizeFactorChance = 0.3
+		self.fLakeSizeFactorChance = 0.4
 		# These modify lake size based on underlying terrain.
-		self.fHeatLakeFactor = 0.5 # Desert, dunes & salt flats.
-		self.fColdLakeFactor = 0.1 # Tundra, Permafrost & Ice.
+		self.fHeatLakeFactor = 0.3 # Desert, dunes & salt flats.
+		self.fColdLakeFactor = 0.3 # Tundra, Permafrost & Ice.
 
 		# This value sets the relative minimum altitude of lake depressions. It Should be between 0 and 1.
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
@@ -169,8 +169,8 @@ class MapConstants:
 		##############################################################################
 		''' These are values that affect the elevation map,
 		higher numbers give greater chaos and smaller features.'''
-		self.fBaseFreq = 0.45
-		self.fLacunarity = 1.48
+		self.fBaseFreq = 0.46
+		self.fLacunarity = 1.58
 		# Roughness boundaries; range: 0-1.
 		self.fMinPersi = 0.6
 		self.fMaxPersi = 0.8
@@ -2142,6 +2142,8 @@ class LakeMap:
 		self.avrRainfallMap2x2 = avrRainMap = array('f', [0.0] * iArea)
 		lakePitList = []
 		relAltMap = em.relAltMap3x3
+		altitude = em.data
+		fLandHeight = em.fLandHeight
 		rainData = cm.RainfallMap.data
 		plotData = tm.plotData
 		WATER		= mc.WATER
@@ -2181,27 +2183,29 @@ class LakeMap:
 		print "	Available lake pits: %d" % len(lakePitList)
 		for n in xrange(len(lakePitList)):
 			x, y, i = lakePitList.pop()
-			if self.isLakeData[i] == 0:
-				bNoLake = True
-				if iLakesLeft > 0:
-					HERE = tData[i]
-					if HERE == DESERT or HERE == DUNES or HERE == SALT_FLATS:
-						fTerrainMod = fHeatMod
-					elif HERE == ICE or HERE == TUNDRA or HERE == FROST:
-						fTerrainMod = fColdMod
-					else:
-						fTerrainMod = 1.0
-					if random() < fLakeSizeModChance:
-						fSizeMod = (iLakeSizeMinPercent + randint(0, 100 - iLakeSizeMinPercent)) / 100.0
-					else:
-						fSizeMod = 1.0
-					fModifier = 1.0 - avrRainMap[i] * fTerrainMod
-					iLakeSize = int(round((iMaxLakeSize - iMaxLakeSize * fModifier) * fSizeMod))
+			if self.isLakeData[i] == 0 and iLakesLeft > 0:
+				HERE = tData[i]
+				if HERE == DESERT or HERE == DUNES or HERE == SALT_FLATS:
+					fTerrainMod = fHeatMod
+				elif HERE == ICE or HERE == TUNDRA or HERE == FROST:
+					fTerrainMod = fColdMod
+				else:
+					fTerrainMod = 1.0
+
+				# Altitude Mod Smaller lakes at higher altitudes.
+				iAltitudeMod = 0.25 + fLandHeight * 3 / (4*altitude[i])
+
+				if random() < fLakeSizeModChance:
+					fSizeMod = (iLakeSizeMinPercent + randint(0, 100 - iLakeSizeMinPercent)) / 100.0
+				else:
+					fSizeMod = 1.0
+
+				iLakeSize = int(round(iMaxLakeSize * avrRainMap[i] * fTerrainMod * iAltitudeMod * fSizeMod))
+				if iLakeSize > 0:
 					if iLakeSize > iMaxLakeSize:
 						iLakeSize = iMaxLakeSize
 					lakeAreaMap.defineAreas(self.isLake)
-					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER)
-					iLakesLeft -= iLakeIncr
+					iLakesLeft -= self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER)
 			if iLakesLeft == 0:
 				print "	Desired number of lakes reached."
 				break
@@ -2243,6 +2247,7 @@ class LakeMap:
 		relAltMap = em.relAltMap3x3
 		thisLake = []
 		lakeNeighbors = []
+		checkedPlots = []
 		thePlot = LakePlot(x, y, i, relAltMap[i], iMergeSize)
 		highestAvrRainfall = self.avrRainfallMap2x2[i]
 		originalLakeSize = iLakeSize
@@ -2258,16 +2263,17 @@ class LakeMap:
 				bValid = True
 				x, y = GetNeighbor(thePlot.x, thePlot.y, dir)
 				i = GetIndex(x, y)
+				if i in checkedPlots:
+					continue
+				checkedPlots.append(i)
 				if i >= 0 and plotData[i] != WATER:
 					# Look for water plots one step further out.
 					for dir2 in xrange(1, 5):
 						xx, yy = GetNeighbor(x, y, dir2)
 						ii = GetIndex(xx, yy)
-						for index in thisLake:
-							if ii == index:
-								ii = -1
-								break
-						if ii >= 0 and plotData[ii] == WATER:
+						if ii < 0 or ii in thisLake:
+							continue
+						if plotData[ii] == WATER:
 							if self.isLakeData[ii] == 0:
 								# This lake just turned into ocean as an harbor, mark it as such.
 								for index in thisLake:
@@ -2316,9 +2322,12 @@ class LakeMap:
 							if ii >= 0 and plotData[ii] == WATER:
 								thatLake.append((xx, yy, ii))
 					break
-			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakeSize >= len(thisLake) + iLakeSize:
+			if highestAvrRainfall * 4/5 < self.avrRainfallMap2x2[i] and iMaxLakeSize > len(thisLake) + iLakeSize:
 				iLakeSize += 1
-				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0
+				increment = (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2
+				if (increment < 0):
+					increment *= -1
+				highestAvrRainfall += increment
 		return 1
 
 
