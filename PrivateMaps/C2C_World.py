@@ -75,12 +75,12 @@ class MapConstants:
 		self.fThrenchesPerPlot = 0.006
 
 		# ---The following values should all be between 0 and 1.
-		# fLakeSizeFactor sets the upper limit for how large a lake can become.
-		# 0.0 yields a max. size of 0, and 1 yields a max. size of LAKE_MAX_AREA_SIZE defined in the GlobalDefines.xml.
-		self.fLakeSizeFactor = 1.0
-		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the fLakeSizeFactor.
-		self.fLakeSizeFactorChance = 1.0
-		# These are multiplied to fLakeSizeFactor when a lake begins in certain terrains.
+		# iLakeSizeMinPercent sets the minimum percentage a lake is shrunk to when fLakeSizeFactorChance roll true.
+		# range from 0 to 100. Max size of lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
+		self.iLakeSizeMinPercent = 30
+		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the iLakeSizeMinPercent.
+		self.fLakeSizeFactorChance = 0.3
+		# These modify lake size based on underlying terrain.
 		self.fHeatLakeFactor = 0.5 # Desert, dunes & salt flats.
 		self.fColdLakeFactor = 0.1 # Tundra, Permafrost & Ice.
 
@@ -385,6 +385,7 @@ class MapConstants:
 		self.iHeight	= MAP.getGridHeight()
 		self.iArea		= self.iWidth * self.iHeight
 		self.iWorldSize	= iWorldSize = MAP.getWorldSize()
+		self.iMaxLakeSize = GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1
 		# Too many meteors will simply destroy the Earth, it also prevent an endless loop if the pangea can't be broken.
 		self.iMaxMeteorCount = 15 + 5 * iWorldSize
 		# Minimum size for a meteor strike that attemps to break pangaeas.
@@ -490,13 +491,6 @@ class MapConstants:
 			else:
 				self.fLandPercent = .55
 		print "Land percent = %f" % self.fLandPercent
-
-		# Lake size
-#		GC.getDefineINT("")
-		self.iMaxLakesize = GC.getLAKE_MAX_AREA_SIZE()
-#		self.iMaxLakesize = int((1 + iWorldSize) ** 1.5)
-#		GC.setDefineINT("LAKE_MAX_AREA_SIZE", self.iMaxLakesize)
-#		GC.setDefineINT("MIN_WATER_SIZE_FOR_OCEAN", self.iMaxLakesize + 1)
 
 mc = None
 
@@ -1270,7 +1264,7 @@ class ElevationMap(FloatMap):
 					if self.data[i] < fLandHeightLoc: # If IsBelowSeaLevel().
 						# Check the size of this body of water, if lake-size, change to land.
 						for a in am.areaList:
-							if a.ID == am.areaID[i] and a.size <= mc.iMaxLakesize:
+							if a.ID == am.areaID[i] and a.size <= mc.iMaxLakeSize:
 								self.data[i] = (1 - fLandHeightLoc) * 0.1 + fLandHeightLoc
 								iCount += 1
 			if iCount == 0:
@@ -2176,8 +2170,8 @@ class LakeMap:
 		shuffle(lakePitList)
 		lakeAreaMap	= AreaMap()
 		self.isLakeData = array('b', [0] * iArea)
-		iMaxLakesize = mc.iMaxLakesize
-		fLakeSizeMod = mc.fLakeSizeFactor
+		iMaxLakeSize = mc.iMaxLakeSize
+		iLakeSizeMinPercent = mc.iLakeSizeMinPercent
 		fLakeSizeModChance = mc.fLakeSizeFactorChance
 		fHeatMod = mc.fHeatLakeFactor
 		fColdMod = mc.fColdLakeFactor
@@ -2198,15 +2192,15 @@ class LakeMap:
 					else:
 						fTerrainMod = 1.0
 					if random() < fLakeSizeModChance:
-						fSizeMod = fLakeSizeMod
+						fSizeMod = (iLakeSizeMinPercent + randint(0, 100 - iLakeSizeMinPercent)) / 100.0
 					else:
 						fSizeMod = 1.0
 					fModifier = 1.0 - avrRainMap[i] * fTerrainMod
-					iLakeSize = int(round((iMaxLakesize - iMaxLakesize * fModifier) * fSizeMod))
-					if iLakeSize > iMaxLakesize:
-						iLakeSize = iMaxLakesize
+					iLakeSize = int(round((iMaxLakeSize - iMaxLakeSize * fModifier) * fSizeMod))
+					if iLakeSize > iMaxLakeSize:
+						iLakeSize = iMaxLakeSize
 					lakeAreaMap.defineAreas(self.isLake)
-					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER)
+					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER)
 					iLakesLeft -= iLakeIncr
 			if iLakesLeft == 0:
 				print "	Desired number of lakes reached."
@@ -2216,12 +2210,12 @@ class LakeMap:
 				break
 		if mc.bWrapX:
 			# Avoid Water-plane graphical glitch at the map edges.
-			self.avoidWaterGlitch(iWidth, iHeight, WATER, iMaxLakesize, lakeAreaMap)
+			self.avoidWaterGlitch(iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap)
 		lakeAreaMap.defineAreas(self.isLake)
 		self.defineWaterTerrain(iWidth, iHeight, iArea, em.fLandHeight, WATER)
 
 
-	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER):
+	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER):
 		class LakePlot:
 			def __init__(self, x, y, i, fHeight, iMergeSize):
 				self.x = x
@@ -2239,7 +2233,7 @@ class LakeMap:
 				if self.isLakeData[ii] == 1:
 					if dir < 5: # N, S, E & W
 						iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-						if iMaxLakesize > iOtherLakeSize + iMergeSize:
+						if iMaxLakeSize > iOtherLakeSize + iMergeSize:
 							iMergeSize += iOtherLakeSize
 						else:
 							return 0
@@ -2285,7 +2279,7 @@ class LakeMap:
 							if self.isLakeData[ii] == 1:
 								# Check if this lake can merge with the neighbouring lake.
 								iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-								if iMaxLakesize > (len(thisLake) + iOtherLakeSize + iMergeSize):
+								if iMaxLakeSize > (len(thisLake) + iOtherLakeSize + iMergeSize):
 									iMergeSize += iOtherLakeSize
 								else:
 									bValid = False
@@ -2302,7 +2296,7 @@ class LakeMap:
 					thePlot = lakeNeighbors[0]
 					del lakeNeighbors[0]
 				# Does neighbour qualify for lake expansion?
-				if iMaxLakesize > (len(thisLake) + thePlot.iMergeSize):
+				if iMaxLakeSize > (len(thisLake) + thePlot.iMergeSize):
 					if thePlot.iMergeSize == 0:
 						break
 					# Lake merging - Convert that lake to this lake.
@@ -2322,7 +2316,7 @@ class LakeMap:
 							if ii >= 0 and plotData[ii] == WATER:
 								thatLake.append((xx, yy, ii))
 					break
-			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakesize >= len(thisLake) + iLakeSize:
+			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakeSize >= len(thisLake) + iLakeSize:
 				iLakeSize += 1
 				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0
 		return 1
@@ -2403,7 +2397,7 @@ class LakeMap:
 		return
 
 
-	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakesize, lakeAreaMap):
+	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap):
 		LAND	= mc.LAND
 		PLAINS	= mc.PLAINS
 		plotData = tm.plotData
@@ -2413,7 +2407,7 @@ class LakeMap:
 			if not plotData[xEastEdgeID] and plotData[xWestEdgeID]:
 				if self.isLakeData[xEastEdgeID] != 1:
 					plotData[xWestEdgeID] = WATER
-				elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
+				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
 					plotData[xWestEdgeID] = WATER
 					self.isLakeData[xWestEdgeID] = 1
 					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size += 1
@@ -2425,7 +2419,7 @@ class LakeMap:
 			elif plotData[xEastEdgeID] and not plotData[xWestEdgeID]:
 				if self.isLakeData[xWestEdgeID] != 1:
 					plotData[xEastEdgeID] = WATER
-				elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
+				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
 					plotData[xEastEdgeID] = WATER
 					self.isLakeData[xEastEdgeID] = 1
 					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size += 1
@@ -2441,7 +2435,7 @@ class LakeMap:
 				if plotData[southEdgeID] and not plotData[northEdgeID]:
 					if self.isLakeData[northEdgeID] != 1:
 						plotData[southEdgeID] = WATER
-					elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
+					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
 						plotData[southEdgeID] = WATER
 						self.isLakeData[southEdgeID] = 1
 						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size += 1
@@ -2453,7 +2447,7 @@ class LakeMap:
 				elif not plotData[southEdgeID] and plotData[northEdgeID]:
 					if self.isLakeData[southEdgeID] != 1:
 						plotData[northEdgeID] = WATER
-					elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
+					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
 						plotData[northEdgeID] = WATER
 						self.isLakeData[northEdgeID] = 1
 						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size += 1
