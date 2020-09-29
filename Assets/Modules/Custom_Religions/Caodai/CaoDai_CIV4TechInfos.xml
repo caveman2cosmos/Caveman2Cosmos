@@ -10,7 +10,7 @@
 			<Strategy>TXT_KEY_TECH_CAO_DAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Quote>TXT_KEY_TECH_CAO_DAI_QUOTE</Quote>
-			<Sound>AS2D_TECH_CAO_DAI</Sound>
+			<Sound>AS2D_TECH_GENERIC</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Caodai.dds</Button>
 			<!-- Main properties -->
