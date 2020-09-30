@@ -490,6 +490,7 @@ class MapConstants:
 			else:
 				self.fLandPercent = .55
 		print "Land percent = %f" % self.fLandPercent
+
 		# Lake size
 #		GC.getDefineINT("")
 		self.iMaxLakesize = GC.getLAKE_MAX_AREA_SIZE()
@@ -2323,7 +2324,7 @@ class LakeMap:
 					break
 			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakesize >= len(thisLake) + iLakeSize:
 				iLakeSize += 1
-				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0				
+				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0
 		return 1
 
 
@@ -4641,7 +4642,7 @@ def addFeatures():
 							elif iTemperature > fTundraTemp:
 								plot.setFeatureType(featureForest, FORESTSNOWY)
 				# Goody Islands
-				elif tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP:
+				elif (tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP) or tData[i] == mc.LAKE_SHORE:
 					if bGoodyHuts and mapRand.get(19, 'GoodyIsland') == 0:
 						plot.setImprovementType(impGoodyIsland)
 	timer.log()

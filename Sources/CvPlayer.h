@@ -154,25 +154,25 @@ public:
 	bool isAnimal() const;
 	bool isInvasionCapablePlayer() const;
 
-	DllExport const wchar* getName(uint uiForm = 0) const; // Exposed to Python
+	DllExport const wchar_t* getName(uint uiForm = 0) const; // Exposed to Python
 
 	void setName(std::wstring szNewValue); // Exposed to Python
 	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj); // Exposed to Python
 
-	DllExport const wchar* getNameKey() const; // Exposed to Python
-	DllExport const wchar* getCivilizationDescription(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationDescriptionKey() const; // Exposed to Python
-	const wchar* getCivilizationShortDescription(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationShortDescriptionKey() const; // Exposed to Python
-	const wchar* getCivilizationAdjective(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationAdjectiveKey() const; // Exposed to Python
+	DllExport const wchar_t* getNameKey() const; // Exposed to Python
+	DllExport const wchar_t* getCivilizationDescription(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationDescriptionKey() const; // Exposed to Python
+	const wchar_t* getCivilizationShortDescription(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationShortDescriptionKey() const; // Exposed to Python
+	const wchar_t* getCivilizationAdjective(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationAdjectiveKey() const; // Exposed to Python
 	DllExport CvWString getFlagDecal() const; // Exposed to Python
 	DllExport bool isWhiteFlag() const; // Exposed to Python
-	const wchar* getStateReligionName(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getStateReligionKey() const; // Exposed to Python
+	const wchar_t* getStateReligionName(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getStateReligionKey() const; // Exposed to Python
 	const CvWString getBestAttackUnitName(uint uiForm = 0) const; // Exposed to Python
 	const CvWString getWorstEnemyName() const; // Exposed to Python
-	const wchar* getBestAttackUnitKey() const; // Exposed to Python
+	const wchar_t* getBestAttackUnitKey() const; // Exposed to Python
 	DllExport ArtStyleTypes getArtStyleType() const; // Exposed to Python
 	const TCHAR* getUnitButton(UnitTypes eUnit) const; // Exposed to Python
 
@@ -1230,7 +1230,7 @@ public:
 
 	void launch(VictoryTypes victoryType);
 
-	bool hasShrine(ReligionTypes eReligion);
+	bool hasShrine(ReligionTypes eReligion) const;
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const; // Exposed to Python
 	void processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive);
 	bool canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const;
@@ -1277,12 +1277,6 @@ public:
 
 	int getNoCapitalUnhappiness() const;
 	void changeNoCapitalUnhappiness(int iChange);
-
-	int getTaxationAnger() const;
-	void changeTaxationAnger(int iChange);
-
-	int getLastTurnTaxRate() const;
-	void changeLastTurnTaxRate(int iChange);
 
 	int getCivilizationHealth() const;
 	void changeCivilizationHealth(int iChange);
@@ -1346,7 +1340,6 @@ public:
 	void changeCivicHappiness(int iChange);
 
 	/*bool hasFixedBorders();*/
-	void doCheckForTaxationAnger();
 	bool hasEnemyDefenderUnit(const CvPlot* pPlot) const;
 
 	CvCity* getBestHQCity(CorporationTypes eCorporation) const;
@@ -1548,8 +1541,6 @@ protected:
 	int m_iReligionSpreadRate;
 	int m_iTaxRateUnhappiness;
 	int m_iCivilizationHealth;
-	int m_iLastTurnTaxRate;
-	int m_iTaxationAnger;
 	int m_iNoCapitalUnhappiness;
 	int m_iProjectHealth;
 	int m_iWorldTradeRoutes;
@@ -2278,7 +2269,7 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding);
+	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end

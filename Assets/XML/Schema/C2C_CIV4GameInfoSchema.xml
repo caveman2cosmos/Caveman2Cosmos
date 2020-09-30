@@ -1100,7 +1100,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoCapitalUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTaxRateUnhappiness" content="textOnly" dt:type="int"/>
-	<ElementType name="bTaxationAnger" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iRealCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflation" content="textOnly" dt:type="int"/>
 	<ElementType name="bChooseCurrency" content="textOnly" dt:type="boolean"/>
@@ -1370,7 +1369,6 @@ DPII < Maintenance Modifiers >
 		<element type="iForeignTradeRouteModifier" minOccurs="0"/>
 		<element type="bNoCapitalUnhappiness" minOccurs="0"/>
 		<element type="iTaxRateUnhappiness" minOccurs="0"/>
-		<element type="bTaxationAnger" minOccurs="0"/>
 		<element type="iLandmarkHappiness" minOccurs="0"/>
 		<element type="iCityLimit" minOccurs="0"/>
 		<element type="iCityOverLimitUnhappy" minOccurs="0"/>
