@@ -1847,7 +1847,7 @@ void CvUnitAI::AI_settleMove()
 			{
 				//Don't give up coast or river, don't settle on bonus with food
 				if ( (plot()->isRiver() && !pBestPlot->isRiver())
-					|| (plot()->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) && !pBestPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+					|| (plot()->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) && !pBestPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 					|| (pBestPlot->getBonusType(NO_TEAM) != NO_BONUS && pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0) )
 				{
 					pBestPlot = NULL;
@@ -10232,7 +10232,7 @@ void CvUnitAI::AI_attackAirMove()
 	int iAttackAirCount = plot()->plotCount(PUF_canAirAttack, -1, -1, NULL, NO_PLAYER, getTeam());
 	iAttackAirCount += 2 * plot()->plotCount(PUF_isUnitAIType, UNITAI_ICBM, -1, NULL, NO_PLAYER, getTeam());
 
-	if( plot()->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+	if( plot()->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 	{
 		iDefenders -= 1;
 	}
@@ -15115,7 +15115,7 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	{
 		if (pCity->getOwner() == getOwner())
 		{
-			if (pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_ATTACK_SPY, pCity->plot());
 				return true;
@@ -15131,7 +15131,7 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
-			if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
 				{
@@ -21126,7 +21126,7 @@ bool CvUnitAI::AI_blockade()
 				continue;
 			}
 
-			if (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				continue;
 			}
@@ -26719,7 +26719,7 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 		iAttackAirCount += (nukeRange() >= 0) ? -2 : 0;
 	}
 
-	if( pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+	if( pPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 	{
 		iDefenders -= 1;
 	}

@@ -4994,7 +4994,7 @@ int CvPlayer::countCorporationSpreadUnits(const CvArea* pArea, CorporationTypes 
 
 int CvPlayer::countNumCoastalCities() const
 {
-	return algo::count_if(cities(), CvCity::fn::isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()));
+	return algo::count_if(cities(), CvCity::fn::isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()));
 }
 
 
@@ -5005,7 +5005,7 @@ int CvPlayer::countNumCoastalCitiesByArea(const CvArea* pArea) const
 	const int iAreaID = pArea->getID();
 	foreach_(const CvCity* pLoopCity, cities())
 	{
-		if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+		if (pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 		{
 			if ((pLoopCity->getArea() == iAreaID) || pLoopCity->plot()->isAdjacentToArea(iAreaID))
 			{
