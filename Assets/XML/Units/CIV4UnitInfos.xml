@@ -66139,6 +66139,9 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_MASTER_CHASER</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -66174,23 +66177,21 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<bAssassin>1</bAssassin>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<UnitUpgrades>
-				<UnitType>UNIT_MASTER_TRACKER</UnitType>
-			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
-			<SupersedingUnits>
-				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
-			</SupersedingUnits>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
 			</FreePromotions>
+			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_MASTER_TRACKER</UnitType>
+			</UnitUpgrades>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
