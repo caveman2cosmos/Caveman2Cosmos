@@ -4545,8 +4545,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 					int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-					int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
-					int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
+					int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
+					int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
 					int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal) / 100);
 					int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal) / 100);
 					int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor) / 100;
@@ -5709,12 +5709,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						else
 						{
 							iExperience = (pAttacker->attackXPValue() * iDefenderStrength) / iAttackerStrength;
-							iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+							iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 						}
 
 						int iDefExperienceKill;
 						iDefExperienceKill = (pDefender->defenseXPValue() * iAttackerStrength) / iDefenderStrength;
-						iDefExperienceKill = range(iDefExperienceKill, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+						iDefExperienceKill = range(iDefExperienceKill, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 
 						int iBonusAttackerXP = (iExperience * iAttackerExperienceModifier) / 100;
 						int iBonusDefenderXP = (iDefExperienceKill * iDefenderExperienceModifier) / 100;
@@ -6605,13 +6605,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 							if (pAttacker->combatLimit(pDefender) == (pDefender->maxHitPoints()))
 							{
-								FAssert(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") > GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT")); //ensuring the differences is at least 1
-								int size = GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT");
+								FAssert(GC.getMAX_EXPERIENCE_PER_COMBAT() > GC.getMIN_EXPERIENCE_PER_COMBAT()); //ensuring the differences is at least 1
+								int size = GC.getMAX_EXPERIENCE_PER_COMBAT() - GC.getMIN_EXPERIENCE_PER_COMBAT();
 								float* CombatRatioThresholds = new float[size];
 
 								for (int i = 0; i < size; i++) //setup the array
 								{
-									CombatRatioThresholds[i] = ((float)(pAttacker->attackXPValue())) / ((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i));
+									CombatRatioThresholds[i] = (float)pAttacker->attackXPValue() / (float)(GC.getMAX_EXPERIENCE_PER_COMBAT() - i);
 									//For standard game, this is the list created:
 									//  {4/10, 4/9, 4/8,
 									//   4/7, 4/6, 4/5,
@@ -6627,7 +6627,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT") + 1);
+												CombatRatioThresholds[i], GC.getMIN_EXPERIENCE_PER_COMBAT() + 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
@@ -6640,15 +6640,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i);
+												CombatRatioThresholds[i], GC.getMAX_EXPERIENCE_PER_COMBAT() - i);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 1));
+												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, GC.getMAX_EXPERIENCE_PER_COMBAT() - (i + 1));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (>%.2f:%d",
-												CombatRatioThresholds[i + 1], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 2));
+												CombatRatioThresholds[i + 1], GC.getMAX_EXPERIENCE_PER_COMBAT() - (i + 2));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -6662,11 +6662,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+												TEXT_COLOR("COLOR_POSITIVE_TEXT"), CombatRatio, GC.getMAX_EXPERIENCE_PER_COMBAT());
 											szString.append(szTempBuffer.GetCString());
 
 											szTempBuffer.Format(L"), (>%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - 1);
+												CombatRatioThresholds[i], GC.getMAX_EXPERIENCE_PER_COMBAT() - 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");

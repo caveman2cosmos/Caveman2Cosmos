@@ -736,7 +736,6 @@ public:
 	bool plunder();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 
-	int sabotageCost(const CvPlot* pPlot) const; // Exposed to Python
 	int sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle = PROBABILITY_REAL) const; // Exposed to Python
 	bool canSabotage(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool sabotage();
