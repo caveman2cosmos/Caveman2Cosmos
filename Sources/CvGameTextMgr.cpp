@@ -8248,6 +8248,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const bool bAlt = gDLL->altKey();
 	const bool bCtrl = gDLL->ctrlKey();
 
+	const TeamTypes eActiveTeam = GC.getGame().getActiveTeam();
+
 	if (bCtrl && (gDLL->getChtLvl() > 0 || bDebug))
 	{
 		if (pPlot->getOwner() != NO_PLAYER)
@@ -9208,14 +9210,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		}
 
 		// calc some bonus info
-		if (GC.getGame().isDebugMode())
-		{
+		if (bDebug)
 			eBonus = pPlot->getBonusType();
-		}
-		else
-		{
-			eBonus = pPlot->getBonusType(GC.getGame().getActiveTeam());
-		}
+		else eBonus = pPlot->getBonusType(eActiveTeam);
+
 		if (eBonus != NO_BONUS)
 		{
 			szString.append(CvWString::format(L"\n%s values:", GC.getBonusInfo(eBonus).getDescription()));
@@ -9240,7 +9238,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	}
 	else
 	{
-		const PlayerTypes eRevealOwner = pPlot->getRevealedOwner(GC.getGame().getActiveTeam(), true);
+		const PlayerTypes eRevealOwner = pPlot->getRevealedOwner(eActiveTeam, true);
 
 		if (eRevealOwner != NO_PLAYER)
 		{
@@ -9360,7 +9358,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER_LAKE"));
 		}
 
-		if (pPlot->isImpassable(GC.getGame().getActiveTeam()))
+		if (pPlot->isImpassable(eActiveTeam))
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_IMPASSABLE"));
@@ -9381,14 +9379,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 			if (pPlot->isPeak2(true))
 			{
-				if (!GET_TEAM(GC.getGame().getActiveTeam()).isMoveFastPeaks())
+				if (!GET_TEAM(eActiveTeam).isMoveFastPeaks())
 				{
 					iMovementCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else
-				{
-					iMovementCost += 1;
-				}
+				else iMovementCost += 1;
 			}
 
 			if (iMovementCost != 0)
@@ -9397,11 +9392,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (pPlot->getRevealedRouteType(GC.getGame().getActiveTeam(), true) != NO_ROUTE)
+		if (pPlot->getRevealedRouteType(eActiveTeam, true) != NO_ROUTE)
 		{
-			const RouteTypes eRouteType = pPlot->getRevealedRouteType(GC.getGame().getActiveTeam(), true);
+			const RouteTypes eRouteType = pPlot->getRevealedRouteType(eActiveTeam, true);
 			const CvRouteInfo& eRoute = GC.getRouteInfo(eRouteType);
-			const int iRouteCost = eRoute.getMovementCost() + GET_TEAM(GC.getGame().getActiveTeam()).getRouteChange(eRouteType);
+			const int iRouteCost = eRoute.getMovementCost() + GET_TEAM(eActiveTeam).getRouteChange(eRouteType);
 
 			szTempBuffer.clear();
 			szTempBuffer.Format(L"%.2f%c ", (float)iRouteCost / GC.getMOVE_DENOMINATOR(), gDLL->getSymbolID(MOVES_CHAR));
@@ -9409,14 +9404,9 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szString.append(gDLL->getText("TXT_KEY_PLOT_ROUTE_MOVEMENT_COST", szTempBuffer.GetCString(), eRoute.getDescription()));
 		}
 
-		if (GC.getGame().isDebugMode())
-		{
+		if (bDebug)
 			eBonus = pPlot->getBonusType();
-		}
-		else
-		{
-			eBonus = pPlot->getBonusType(GC.getGame().getActiveTeam());
-		}
+		else eBonus = pPlot->getBonusType(eActiveTeam);
 
 		if (eBonus != NO_BONUS)
 		{
@@ -9438,7 +9428,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 			}
 
-			if (!GET_TEAM(GC.getGame().getActiveTeam()).isHasTech((TechTypes)bonus.getTechCityTrade()))
+			if (!GET_TEAM(eActiveTeam).isHasTech((TechTypes)bonus.getTechCityTrade()))
 			{
 				szString.append(gDLL->getText("TXT_KEY_PLOT_RESEARCH", GC.getTechInfo((TechTypes)bonus.getTechCityTrade()).getTextKeyWide()));
 			}
@@ -9456,7 +9446,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
 
-					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, GC.getGame().getActiveTeam(), true))
+					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, eActiveTeam, true))
 					{
 						for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
 						{
@@ -9464,7 +9454,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							{
 								const TechTypes eObsoleteTech = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getObsoleteTech();
 
-								if (eObsoleteTech != NO_TECH && GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eObsoleteTech))
+								if (eObsoleteTech != NO_TECH && GET_TEAM(eActiveTeam).isHasTech(eObsoleteTech))
 								{
 									if (GC.getTechInfo(eObsoleteTech).getGridX() > iMostRecentX)
 									{
@@ -9475,7 +9465,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 								}
 								const TechTypes eTechPrereq = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
 
-								if (eTechPrereq == NO_TECH || GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTechPrereq))
+								if (eTechPrereq == NO_TECH || GET_TEAM(eActiveTeam).isHasTech(eTechPrereq))
 								{
 									if (!bKnowsValid)
 									{
@@ -9525,7 +9515,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					}
 				}
 			}
-			else if (!(pPlot->isBonusNetwork(GC.getGame().getActiveTeam())))
+			else if (!(pPlot->isBonusNetwork(eActiveTeam)))
 			{
 				szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES_ROUTE"));
 			}
@@ -9539,7 +9529,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		eImprovement = pPlot->getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
+		eImprovement = pPlot->getRevealedImprovementType(eActiveTeam, true);
 
 		if (eImprovement != NO_IMPROVEMENT)
 		{
@@ -9551,59 +9541,106 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			{
 				if (impInfo.getIrrigatedYieldChange(iI) != 0)
 				{
-					pPlot->isIrrigationAvailable() ?
+					(
+						pPlot->isIrrigationAvailable()
+						?
 						szString.append(gDLL->getText("TXT_KEY_PLOT_IRRIGATED"))
 						:
-						szString.append(gDLL->getText("TXT_KEY_PLOT_NOT_IRRIGATED"));
+						szString.append(gDLL->getText("TXT_KEY_PLOT_NOT_IRRIGATED"))
+					);
 					break;
 				}
 			}
+			const TeamTypes ePlotTeam = pPlot->getTeam();
 
-			if (pPlot->isImprovementUpgradable())
+			if (pPlot->isImprovementUpgradable()
+			&& (ePlotTeam == eActiveTeam || bDebug && ePlotTeam != NO_TEAM))
 			{
-				if (pPlot->getTeam() != NO_TEAM && GET_TEAM(pPlot->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
+				bool bOpenParenthesis = false;
+				bool bImpUpgList = false;
+				szTempBuffer.clear();
+				for (int iI = -1; iI < impInfo.getNumAlternativeImprovementUpgradeTypes(); iI++)
 				{
-					if (pPlot->getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(eImprovement))
+					const ImprovementTypes eUpgradeX =
+					(
+						iI == -1 ? (ImprovementTypes)impInfo.getImprovementUpgrade()
+						:
+						(ImprovementTypes)impInfo.getAlternativeImprovementUpgradeType(iI)
+					);
+					if (pPlot->canHaveImprovement(eUpgradeX, ePlotTeam, false, true))
 					{
-						szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN"));
-					}
-					else
-					{
-						if (pPlot->getUpgradeProgressHundredths() > 0 || pPlot->isBeingWorked() && !impInfo.isUpgradeRequiresFortify())
+						if (!bImpUpgList)
 						{
-							szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_UPGRADE", pPlot->getUpgradeTimeLeft(eImprovement, eRevealOwner),
-								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
-						}
-						else if (impInfo.isUpgradeRequiresFortify())
-						{
-							szString.append(gDLL->getText("TXT_KEY_PLOT_FORTIFY_TO_UPGRADE",
-								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
+							szTempBuffer.append(CvWString::format(L" (%s", GC.getImprovementInfo(eUpgradeX).getDescription()));
+							bImpUpgList = true;
 						}
 						else
 						{
-							szString.append(gDLL->getText("TXT_KEY_PLOT_WORK_TO_UPGRADE",
-								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
-						}
-						for (int iI = 0; iI < impInfo.getNumAlternativeImprovementUpgradeTypes(); iI++)
-						{
-							szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_ALTERNATIVE_UPGRADE",
-								GC.getImprovementInfo((ImprovementTypes)impInfo.getAlternativeImprovementUpgradeType(iI)).getTextKeyWide()));
+							szTempBuffer.append(CvWString::format(L", %s", GC.getImprovementInfo(eUpgradeX).getDescription()));
 						}
 					}
 				}
+				if (pPlot->getImprovementUpgradeProgress() >= 100*GC.getGame().getImprovementUpgradeTime(eImprovement))
+				{
+					szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN"));
+				}
+				else if (!bImpUpgList)
+				{
+					szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_BLOCKED"));
+				}
 				else
 				{
-					const TechTypes ePrereqTech = (TechTypes)GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getPrereqTech();
-					if (ePrereqTech != NO_TECH)
+					const bool bUpgrading = 
+					(
+						impInfo.isUpgradeRequiresFortify()
+						?
+						algo::any_of
+						(
+							pPlot->units(),
+							CvUnit::fn::getFortifyTurns() > 0
+							&&
+							CvUnit::fn::getTeam() == ePlotTeam
+							&&
+							CvUnit::fn::canDefend()
+						)
+						:
+						pPlot->isBeingWorked()
+					);
+
+					if (pPlot->getImprovementUpgradeProgress() > 0 || bUpgrading)
 					{
-						szString.append(gDLL->getText("TXT_KEY_PLOT_TECH_TO_UPGRADE", GC.getTechInfo(ePrereqTech).getTextKeyWide()));
+						bOpenParenthesis = true;
+						szString.append
+						(
+							gDLL->getText
+							(
+								"TXT_KEY_IMPROVEMENT_UPGRADE_TURNS",
+								pPlot->getUpgradeTimeLeft(eImprovement, eRevealOwner)
+							)
+						);
 					}
+					if (!bUpgrading)
+					{
+						if (impInfo.isUpgradeRequiresFortify())
+						{
+							szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_NEED_GARRISON"));
+						}
+						else if (pPlot->isWithinTeamCityRadius(ePlotTeam))
+						{
+							szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_NEED_WORK"));
+						}
+					}
+				}
+				if (bImpUpgList)
+				{
+					szString.append(szTempBuffer.append(L")"));
+					if (bOpenParenthesis) szString.append(L")");
 				}
 			}
 		}
 
-		if (GC.getGame().isDebugMode()
-		|| GET_TEAM(GC.getGame().getActiveTeam()).isMapCentering() && getBugOptionBOOL("MiscHover__LatLongCoords", true, "BUG_PLOT_HOVER_LAT_LONG"))
+		if (bDebug || GET_TEAM(eActiveTeam).isMapCentering()
+		&& getBugOptionBOOL("MiscHover__LatLongCoords", true, "BUG_PLOT_HOVER_LAT_LONG"))
 		{
 			bool bWest = false;
 			int iLong = pPlot->getLongitudeMinutes();
@@ -9614,11 +9651,13 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_LATLONG", iLong / 60, iLong % 60));
-			bWest ?
+			(
+				bWest
+				?
 				szString.append(gDLL->getText("TXT_KEY_LATLONG_WEST"))
 				:
-				szString.append(gDLL->getText("TXT_KEY_LATLONG_EAST"));
-
+				szString.append(gDLL->getText("TXT_KEY_LATLONG_EAST"))
+			);
 			bool bSouth = false;
 			int iLat = pPlot->getLatitudeMinutes();
 			if (iLat < 0)
@@ -9628,10 +9667,13 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 			szString.append(L", ");
 			szString.append(gDLL->getText("TXT_KEY_LATLONG", iLat / 60, iLat % 60));
-			bSouth ?
+			(
+				bSouth
+				?
 				szString.append(gDLL->getText("TXT_KEY_LATLONG_SOUTH"))
 				:
-				szString.append(gDLL->getText("TXT_KEY_LATLONG_NORTH"));
+				szString.append(gDLL->getText("TXT_KEY_LATLONG_NORTH"))
+			);
 		}
 
 		if (pPlot->getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
@@ -9695,13 +9737,12 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (GC.getGame().isDebugMode())
+		if (bDebug)
 		{
 			bool bFirst = true;
 			for (int iI = 0; iI < MAX_TEAMS; ++iI)
 			{
-				TeamTypes eTeam = (TeamTypes)iI;
-				if( pPlot->getBlockadedCount(eTeam) > 0 && GET_TEAM(eTeam).isAlive() )
+				if (pPlot->getBlockadedCount((TeamTypes)iI) > 0 && GET_TEAM((TeamTypes)iI).isAlive())
 				{
 					if (bFirst)
 					{
@@ -9713,11 +9754,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						szString.append(CvWString::format(L"Teams:"));
 						bFirst = false;
 					}
-					szString.append(CvWString::format(L" %s,", GET_TEAM(eTeam).getName().c_str()));
+					szString.append(CvWString::format(L" %s,", GET_TEAM((TeamTypes)iI).getName().c_str()));
 				}
 			}
 		}
-		else if (pPlot->getBlockadedCount(GC.getGame().getActiveTeam()) > 0)
+		else if (pPlot->getBlockadedCount(eActiveTeam) > 0)
 		{
 			szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT")));
 			szString.append(NEWLINE);
@@ -31604,7 +31645,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		{
 			for (int iI = 0; iI < info.getNumAlternativeImprovementUpgradeTypes(); iI++)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PLOT_IMP_ALTERNATIVE_UPGRADE", GC.getImprovementInfo((ImprovementTypes) info.getAlternativeImprovementUpgradeType(iI)).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADES", GC.getImprovementInfo((ImprovementTypes) info.getAlternativeImprovementUpgradeType(iI)).getTextKeyWide()));
 			}
 		}
 	}

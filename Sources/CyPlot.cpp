@@ -271,9 +271,9 @@ int CyPlot::getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*Play
 	return m_pPlot ? m_pPlot->getUpgradeTimeLeft((ImprovementTypes) eImprovement, (PlayerTypes) ePlayer) : -1;
 }
 
-void CyPlot::changeUpgradeProgress(int iChange)
+void CyPlot::changeImprovementUpgradeProgress(int iChange)
 {
-	if (m_pPlot) m_pPlot->changeUpgradeProgressHundredths(iChange*100);
+	if (m_pPlot) m_pPlot->changeImprovementUpgradeProgress(iChange*100);
 }
 
 bool CyPlot::isStartingPlot() const

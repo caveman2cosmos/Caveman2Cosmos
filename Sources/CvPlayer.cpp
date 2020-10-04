@@ -8324,9 +8324,14 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 }
 
 
-int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const
+int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const
 {
-	return std::max(1, 100 + getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement));
+	const int iMod = getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement);
+	if (iMod < 0)
+	{
+		return std::max(1, 10000 / (100 - iMod));
+	}
+	return 100 + iMod;
 }
 
 
