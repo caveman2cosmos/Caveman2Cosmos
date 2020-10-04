@@ -39799,7 +39799,7 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 		if ( NO_UNITAI != eAIType )
 		{
