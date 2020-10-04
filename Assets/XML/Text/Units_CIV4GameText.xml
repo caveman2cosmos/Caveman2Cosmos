@@ -15937,6 +15937,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[COLOR_UNIT_TEXT]Masinissa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_CHASER</Tag>
+		<English>Master Chaser</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_BRIGADE</Tag>
 		<English>Mata'afa Brigade</English>
 		<French>Brigade Mata'afa</French>

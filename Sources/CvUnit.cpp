@@ -17525,35 +17525,22 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		if (hasCargo())
 		{
-			pUnitNode = pOldPlot->headUnitNode();
-			std::vector<IDInfo> cargoUnits;
-			while (pUnitNode != NULL)
+			std::vector<CvUnit*> cargoUnits;
+			foreach_(CvUnit* pLoopUnit, pOldPlot->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pOldPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->getTransportUnit() == this)
 				{
 					//GC.getGame().logOOSSpecial(22, pLoopUnit->getID(), iX, iY);
-					cargoUnits.push_back(pLoopUnit->getIDInfo());
+					cargoUnits.push_back(pLoopUnit);
 				}
 			}
-			for(std::vector<IDInfo>::const_iterator it = cargoUnits.begin(), end = cargoUnits.end(); it != end; ++it)
+			foreach_(CvUnit* pLoopUnit, cargoUnits)
 			{
-				pLoopUnit = ::getUnit(*it);
-				if (pLoopUnit != NULL)
-				{
-					pLoopUnit->setXY(iX, iY, bGroup, false);
-				}
+				pLoopUnit->setXY(iX, iY, bGroup, false);
 			}
 #ifdef _DEBUG
-			pUnitNode = pOldPlot->headUnitNode();
-
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pOldPlot->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pOldPlot->nextUnitNode(pUnitNode);
-
 				if (pLoopUnit->getTransportUnit() == this)
 				{
 					pLoopUnit->getGroup()->validateLocations();
@@ -30410,20 +30397,10 @@ bool CvUnit::fighterEngage(int iX, int iY)
 	{
 		return true;
 	}
-	int iCount = 0;
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		if (pLoopUnit->getDomainType() == DOMAIN_AIR)
-		{
-			iCount++;
-		}
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-	}
+	int iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_AIR);
 	iCount = 1 + GC.getGame().getSorenRandNum(iCount, "Choose plane");
 	CvUnit* pDefender = NULL;
-	pUnitNode = pPlot->headUnitNode();
+	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 	while (iCount > 0)
 	{
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);

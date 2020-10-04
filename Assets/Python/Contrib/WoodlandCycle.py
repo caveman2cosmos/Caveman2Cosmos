@@ -133,7 +133,7 @@ class WoodlandCycle:
 							'Art/Terrain/Features/Forest_Burnt/ButtonBurntForest.dds', ColorTypes(4), plot.getX(), plot.getY(), True, True)
 				else: bActivePlayer = False
 
-				if plot.isActiveVisible(GAME.isDebugMode()):
+				if plot.isActiveVisible(GAME.isDebugMode()) and not GC.getActivePlayer().isHumanDisabled():
 					point = plot.getPoint()
 					CyEngine().triggerEffect(GC.getInfoTypeForString('EFFECT_FOREST_FIRE'), point)
 					CyAudioGame().Play3DSound("AS3D_FOREST_FIRE", point.x, point.y, point.z)

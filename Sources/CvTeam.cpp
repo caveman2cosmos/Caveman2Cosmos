@@ -2061,24 +2061,33 @@ void CvTeam::signDefensivePact(TeamTypes eTeam)
 	}
 }
 
-bool CvTeam::canSignDefensivePact(TeamTypes eTeam) const
+bool CvTeam::canSignDefensivePact(TeamTypes eTeamB) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeam))
+	if (!isDefensivePactTrading() || isAVassal() || getAtWarCount(true) > 0)
+	{
+		return false;
+	}
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeamB))
+	{
+		return false;
+	}
+	const CvTeam& teamB = GET_TEAM(eTeamB);
+	if (!teamB.isDefensivePactTrading() || teamB.isAVassal() || teamB.getAtWarCount(true) > 0)
 	{
 		return false;
 	}
 
-	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
+	for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 	{
-		if (iTeam != getID() && iTeam != eTeam)
+		if (iI != getID() && iI != eTeamB)
 		{
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-			if (kLoopTeam.isPermanentWarPeace(eTeam) != kLoopTeam.isPermanentWarPeace(getID()))
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+			if (kLoopTeam.isPermanentWarPeace(eTeamB) != kLoopTeam.isPermanentWarPeace(getID()))
 			{
 				return false;
 			}
 
-			if (isPermanentWarPeace((TeamTypes)iTeam) != GET_TEAM(eTeam).isPermanentWarPeace((TeamTypes)iTeam))
+			if (isPermanentWarPeace((TeamTypes)iI) != teamB.isPermanentWarPeace((TeamTypes)iI))
 			{
 				return false;
 			}
@@ -3646,12 +3655,7 @@ int CvTeam::getPermanentAllianceTradingCount() const
 
 bool CvTeam::isPermanentAllianceTrading() const
 {
-	if (!(GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
-	{
-		return false;
-	}
-
-	return (getPermanentAllianceTradingCount() > 0);
+	return GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES) && getPermanentAllianceTradingCount() > 0;
 }
 
 
@@ -3670,12 +3674,7 @@ int CvTeam::getVassalTradingCount() const
 
 bool CvTeam::isVassalStateTrading() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
-	{
-		return false;
-	}
-
-	return (getVassalTradingCount() > 0);
+	return !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES) && getVassalTradingCount() > 0;
 }
 
 
