@@ -675,7 +675,7 @@ void CvPlot::doTurn()
 	// Super Forts *bombard*
 	if (!isBombarded() && getDefenseDamage() > 0)
 	{
-		changeDefenseDamage(-(GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE")));
+		changeDefenseDamage(-GC.getCITY_DEFENSE_DAMAGE_HEAL_RATE());
 	}
 	setBombarded(false);
 	// ! Super Forts
@@ -1120,7 +1120,7 @@ bool CvPlot::updateSymbolsInternal()
 
 		if (maxYield)
 		{
-			int maxYieldStack = GC.getDefineINT("MAX_YIELD_STACK");
+			int maxYieldStack = GC.getMAX_YIELD_STACK();
 
 			CvSymbol *pSymbol5x = addSymbol();
 			CvSymbol *pSymbol= addSymbol();
@@ -2336,7 +2336,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 				{
 					if (GET_PLAYER(pHolyCity->getOwner()).getStateReligion() == iI)
 					{
-						changeAdjacentSight(pHolyCity->getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
+						changeAdjacentSight(pHolyCity->getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 					}
 				}
 			}
@@ -2347,7 +2347,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		{
 			if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 			{
-				changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
+				changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 			}
 		}
 
@@ -2357,7 +2357,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 			if (pCity->getEspionageVisibility((TeamTypes)iI))
 			{
 				// Passive Effect: enough EPs gives you visibility into someone's cities
-				changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
+				changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 			}
 		}
 
@@ -2375,7 +2375,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 			{
 				if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
 				{
-					changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
+					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
@@ -2387,7 +2387,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	// Owned
 	if (isOwned())
 	{
-		changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
+		changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 	}
 
 	pUnitNode = headUnitNode();
@@ -6653,7 +6653,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{
@@ -6708,7 +6708,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{
@@ -13159,11 +13159,11 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	{
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			iMaxUnits = GC.getDefineINT("CITY_AIR_UNIT_CAPACITY") * 50;
+			iMaxUnits = GC.getCITY_AIR_UNIT_CAPACITY() * 50;
 		}
 		else
 		{
-			iMaxUnits = GC.getDefineINT("CITY_AIR_UNIT_CAPACITY");
+			iMaxUnits = GC.getCITY_AIR_UNIT_CAPACITY();
 		}
 	}
 

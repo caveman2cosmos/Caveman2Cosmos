@@ -1084,7 +1084,7 @@ void CvTeam::doTurn()
 				{
 					FAssertMsg(iPossibleCount > 0, "iPossibleCount is expected to be greater than 0");
 
-					changeResearchProgress((TechTypes)iI, std::max((getResearchCost((TechTypes)iI) * GC.getDefineINT("BARBARIAN_FREE_TECH_PERCENT") * iCount) / (100 * iPossibleCount), 1), getLeaderID());
+					changeResearchProgress((TechTypes)iI, std::max((getResearchCost((TechTypes)iI) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount) / (100 * iPossibleCount), 1), getLeaderID());
 				}
 			}
 		}
@@ -2446,25 +2446,25 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 
 	if (isVassal(eMaster))
 	{
-		if (100 * getTotalLand(false) < GC.getDefineINT("VASSAL_REVOLT_OWN_LOSSES_FACTOR") * getVassalPower())
+		if (100 * getTotalLand(false) < GC.getVASSAL_REVOLT_OWN_LOSSES_FACTOR() * getVassalPower())
 		{
 			return true;
 		}
 
-		if (100 * kMaster.getTotalLand() < GC.getDefineINT("VASSAL_REVOLT_MASTER_LOSSES_FACTOR") * getMasterPower())
+		if (100 * kMaster.getTotalLand() < GC.getVASSAL_REVOLT_MASTER_LOSSES_FACTOR() * getMasterPower())
 		{
 			return true;
 		}
 	}
 
-	if (GC.getDefineINT("FREE_VASSAL_LAND_PERCENT") < 0 ||
-		100 * getTotalLand(false) < kMaster.getTotalLand(false) * GC.getDefineINT("FREE_VASSAL_LAND_PERCENT"))
+	if (GC.getFREE_VASSAL_LAND_PERCENT() < 0 ||
+		100 * getTotalLand(false) < kMaster.getTotalLand(false) * GC.getFREE_VASSAL_LAND_PERCENT())
 	{
 		return false;
 	}
 
-	if (GC.getDefineINT("FREE_VASSAL_POPULATION_PERCENT") < 0 ||
-		100 * getTotalPopulation(false) < kMaster.getTotalPopulation(false) * GC.getDefineINT("FREE_VASSAL_POPULATION_PERCENT"))
+	if (GC.getFREE_VASSAL_POPULATION_PERCENT() < 0 ||
+		100 * getTotalPopulation(false) < kMaster.getTotalPopulation(false) * GC.getFREE_VASSAL_POPULATION_PERCENT())
 	{
 		return false;
 	}

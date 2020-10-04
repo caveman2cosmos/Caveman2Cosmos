@@ -7847,7 +7847,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 
 	if (pPlot->isCity(true, getTeam()))
 	{
-		iTotalHeal += GC.getDefineINT("CITY_HEAL_RATE") + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -7859,16 +7859,16 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		{
 			if (isEnemy(pPlot->getTeam(), pPlot))
 			{
-				iTotalHeal += (GC.getDefineINT("ENEMY_HEAL_RATE") + getExtraEnemyHeal());
+				iTotalHeal += (GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal());
 			}
 			else
 			{
-				iTotalHeal += (GC.getDefineINT("NEUTRAL_HEAL_RATE") + getExtraNeutralHeal());
+				iTotalHeal += (GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal());
 			}
 		}
 		else
 		{
-			iTotalHeal += (GC.getDefineINT("FRIENDLY_HEAL_RATE") + getExtraFriendlyHeal());
+			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
 
@@ -7976,7 +7976,7 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 
 	if (pPlot->isCity(true, getTeam()))
 	{
-		iTotalHeal += GC.getDefineINT("CITY_HEAL_RATE") + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -7989,16 +7989,16 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 		{
 			if (isEnemy(pPlot->getTeam(), pPlot))
 			{
-				iTotalHeal += (GC.getDefineINT("ENEMY_HEAL_RATE") + getExtraEnemyHeal());
+				iTotalHeal += (GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal());
 			}
 			else
 			{
-				iTotalHeal += (GC.getDefineINT("NEUTRAL_HEAL_RATE") + getExtraNeutralHeal());
+				iTotalHeal += (GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal());
 			}
 		}
 		else
 		{
-			iTotalHeal += (GC.getDefineINT("FRIENDLY_HEAL_RATE") + getExtraFriendlyHeal());
+			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
 
