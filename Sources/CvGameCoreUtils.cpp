@@ -3223,7 +3223,7 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 
 			iInitialMovementRemaining = MAX_INT;
 
-			foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
+			foreach_(pLoopUnit, pSelectionGroup->units())
 			{
 				if ( bNeedMaxMovement || iMovementRemaining == 0 )
 				{
