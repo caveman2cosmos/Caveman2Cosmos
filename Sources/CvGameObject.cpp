@@ -358,8 +358,11 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_UNIT:
-			foreach_(CvUnit* pUnit, m_pPlot->units())
+			CLLNode<IDInfo>* pUnitNode = m_pPlot->headUnitNode();
+			while (pUnitNode != NULL)
 			{
+				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = m_pPlot->nextUnitNode(pUnitNode);
 				func(pUnit->getGameObject());
 			}
 			break;

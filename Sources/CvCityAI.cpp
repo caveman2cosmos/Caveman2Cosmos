@@ -7566,7 +7566,7 @@ int CvCityAI::AI_minDefenders() const
 		//TB testing:
 		iDefenders += (iEra/3);
 	}
-	if (((iEra - GC.getGame().getStartEra() / 2) >= GC.getNumEraInfos() / 2) && isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+	if (((iEra - GC.getGame().getStartEra() / 2) >= GC.getNumEraInfos() / 2) && isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 	{
 		iDefenders++;
 	}
@@ -7678,7 +7678,7 @@ int CvCityAI::AI_neededAirDefenders() const
 
 	if (iDefenders == 0)
 	{
-		if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+		if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 		{
 			iDefenders++;
 		}
@@ -14002,7 +14002,7 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 		}
 	}
 
-	if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+	if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 	{
 		int iCurrentEra = GET_PLAYER(getOwner()).getCurrentEra();
 		iValue += std::max(0, ((10 * iCurrentEra) / 3) - 6); //there are better ways to do this

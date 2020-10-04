@@ -2305,7 +2305,7 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 {
 	PROFILE_FUNC();
 
-	const CvSelectionGroup* pSelectionGroup = ((const CvSelectionGroup*)pointer);
+	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
 	FAssert(pSelectionGroup->getNumUnits() > 0);
 
 	int iTurns = 1;
@@ -2313,14 +2313,15 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 	if (data == ASNC_INITIALADD)
 	{
-		const bool bMaxMoves = (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_MAX_MOVES);
+		bool bMaxMoves = (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_MAX_MOVES);
 		if (bMaxMoves)
 		{
 			iMoves = 0;
 		}
 
-		foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
+		for (CLLNode<IDInfo>* pUnitNode = pSelectionGroup->headUnitNode(); pUnitNode != NULL; pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode))
 		{
+			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 			if (bMaxMoves)
 			{
 				iMoves = std::max(iMoves, pLoopUnit->maxMoves());
@@ -2333,12 +2334,12 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 	}
 	else
 	{
-		const CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
+		CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
 		FAssertMsg(pFromPlot != NULL, "FromPlot is not assigned a valid value");
-		const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
+		CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 		FAssertMsg(pToPlot != NULL, "ToPlot is not assigned a valid value");
 
-		const int iStartMoves = parent->m_iData1;
+		int iStartMoves = parent->m_iData1;
 		iTurns = parent->m_iData2;
 		if (iStartMoves == 0)
 		{
@@ -2388,10 +2389,12 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 	FAssert(pToPlot != NULL);
 
-	const CvSelectionGroup* pSelectionGroup = ((const CvSelectionGroup*)pointer);
+	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
 #ifdef USE_OLD_PATH_GENERATOR
 	PROFILE_FUNC();
 
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
 	int iCost;
 	int iMovesLeft;
 	int iMax;
@@ -2473,8 +2476,13 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 			}
 			else
 			{
-				foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
+				pUnitNode = pSelectionGroup->headUnitNode();
+
+				while (pUnitNode != NULL)
 				{
+					pLoopUnit = ::getUnit(pUnitNode->m_data);
+					pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
+
 					if (parent->m_iData1 > 0)
 					{
 						iMax = parent->m_iData1;
@@ -2563,8 +2571,13 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				gLastSelectionGroup = pSelectionGroup;
 			}
 
-			foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
+			pUnitNode = pSelectionGroup->headUnitNode();
+
+			while (pUnitNode != NULL)
 			{
+				pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
+
 				if (parent->m_iData1 > 0)
 				{
 					iMax = parent->m_iData1;
@@ -2982,11 +2995,18 @@ int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY,
 
 					iLimitCost = (iHeuristicCost*iRouteCost)/GC.getMOVE_DENOMINATOR();
 
+					CLLNode<IDInfo>* pUnitNode;
+					CvUnit* pLoopUnit;
 					int iMin = MAX_INT;
 
-					foreach_(const CvUnit* pLoopUnit, pGroup->units())
+					pUnitNode = pGroup->headUnitNode();
+
+					while (pUnitNode != NULL)
 					{
-						if (iMin > pLoopUnit->maxMoves())
+						pLoopUnit = ::getUnit(pUnitNode->m_data);
+						pUnitNode = pGroup->nextUnitNode(pUnitNode);
+
+						if ( iMin > pLoopUnit->maxMoves())
 						{
 							iMin = pLoopUnit->maxMoves();
 						}
@@ -3027,21 +3047,27 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 {
 	PROFILE_FUNC();
 
-	const CvUnit* pLoopUnit;
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
+	CvPlot* pFromPlot;
+	CvPlot* pToPlot;
+	int iWorstCost;
 	int iCost;
+	int iWorstMovesLeft;
 	int iMovesLeft;
+	int iWorstMax;
 	int iMax;
 
 	static const CvSelectionGroup* gLastSelectionGroup = NULL;
 
-	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(iFromX, iFromY);
+	pFromPlot = GC.getMap().plotSorenINLINE(iFromX, iFromY);
 	FAssert(pFromPlot != NULL);
-	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
+	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
-	int iWorstCost = MAX_INT;
-	int iWorstMovesLeft = MAX_INT;
-	int iWorstMax = MAX_INT;
+	iWorstCost = MAX_INT;
+	iWorstMovesLeft = MAX_INT;
+	iWorstMax = MAX_INT;
 
 	int iWorstMovement = MAX_INT;
 	int iLargestBaseCost = -1;
@@ -3120,8 +3146,13 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 			}
 			else
 			{
-				foreach_(pLoopUnit, pSelectionGroup->units())
+				pUnitNode = pSelectionGroup->headUnitNode();
+
+				while (pUnitNode != NULL)
 				{
+					pLoopUnit = ::getUnit(pUnitNode->m_data);
+					pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
+
 					iMax = pLoopUnit->maxMoves();
 
 					if ( iMax > iMaxMovesLeft )
@@ -3221,10 +3252,15 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				bNeedMaxMovement = true;
 			}
 
+			pUnitNode = pSelectionGroup->headUnitNode();
+
 			iInitialMovementRemaining = MAX_INT;
 
-			foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
+			while (pUnitNode != NULL)
 			{
+				pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
+
 				if ( bNeedMaxMovement || iMovementRemaining == 0 )
 				{
 					iMax = pLoopUnit->maxMoves();
@@ -3248,10 +3284,11 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				}
 
 				int unitMovementCharacteristics = pLoopUnit->getMovementCharacteristicsHash();
+				int iI;
 
 				//	If we've already considred a unit with these characteristics no need to
 				//	check this one too
-				for (int iI = 0; iI < numUniqueUnitCategories; iI++)
+				for(iI = 0; iI < numUniqueUnitCategories; iI++)
 				{
 					if ( unitMovementCharacteristics == unitCharacteristics[iI] )
 					{
@@ -3386,15 +3423,28 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, pToPlot->getFeatureTurnDamage())) / GC.getMAX_HIT_POINTS();
 				}
+	/************************************************************************************************/
+	/* Afforess	                  Start		 05/17/10                                                */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
 				}
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 				if (pToPlot->getExtraMovePathCost() > 0)
 				{
 					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
+	/*                                                                                              */
+	/* General AI                                                                                   */
+	/************************************************************************************************/
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
 			if (iFlags & MOVE_AVOID_ENEMY_WEIGHT_3)
 			{
@@ -3643,6 +3693,12 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 {
 	PROFILE_FUNC();
 
+	CLLNode<IDInfo>* pUnitNode1;
+	CLLNode<IDInfo>* pUnitNode2;
+	CvUnit* pLoopUnit1;
+	CvUnit* pLoopUnit2;
+	bool bValid;
+
 	bRequiresWar = false;
 
 	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
@@ -3703,14 +3759,24 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 	{
 		if (pSelectionGroup->isAmphibPlot(pToPlot))
 		{
-			bool bValid = false;
+			bValid = false;
 
-			foreach_(const CvUnit* pLoopUnit1, pSelectionGroup->units())
+			pUnitNode1 = pSelectionGroup->headUnitNode();
+
+			while (pUnitNode1 != NULL)
 			{
-				if (pLoopUnit1->hasCargo() && pLoopUnit1->domainCargo() == DOMAIN_LAND)
+				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
+				pUnitNode1 = pSelectionGroup->nextUnitNode(pUnitNode1);
+
+				if ((pLoopUnit1->hasCargo()) && (pLoopUnit1->domainCargo() == DOMAIN_LAND))
 				{
-					foreach_(const CvUnit* pLoopUnit2, pLoopUnit1->plot()->units())
+					pUnitNode2 = pLoopUnit1->plot()->headUnitNode();
+
+					while (pUnitNode2 != NULL)
 					{
+						pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
+						pUnitNode2 = pLoopUnit1->plot()->nextUnitNode(pUnitNode2);
+
 						if (pLoopUnit2->getTransportUnit() == pLoopUnit1)
 						{
 							if (pLoopUnit2->isGroupHead())

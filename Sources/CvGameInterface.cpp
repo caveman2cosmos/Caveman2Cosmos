@@ -751,17 +751,21 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 {
 	PROFILE_FUNC();
 
+	PlayerTypes activePlayer = getActivePlayer();
+	TeamTypes activeTeam = getActiveTeam();
+
 	if (pPlot != NULL)
 	{
-		const PlayerTypes activePlayer = getActivePlayer();
-		const TeamTypes activeTeam = getActiveTeam();
-
 		int iCount = 0;
 
 		for (int iPass = 0; iPass < 2; iPass++)
 		{
-			foreach_(CvUnit* pLoopUnit1, pPlot->units())
+			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
+
+			while (pUnitNode1 != NULL)
 			{
+				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
+
 				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
 					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
@@ -777,8 +781,12 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 						{
 							if (pLoopUnit1->hasCargo())
 							{
-								foreach_(CvUnit* pLoopUnit2, pPlot->units())
+								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
+
+								while (pUnitNode2 != NULL)
 								{
+									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
+
 									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 									{
 										if (iCount == iIndex)
@@ -788,11 +796,13 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 
 										iCount++;
 									}
+									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
 								}
 							}
 						}
 					}
 				}
+				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
 			}
 		}
 	}
@@ -805,15 +815,20 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 	PROFILE_FUNC();
 	plotUnits.erase(plotUnits.begin(), plotUnits.end());
 
+	PlayerTypes activePlayer = getActivePlayer();
+	TeamTypes activeTeam = getActiveTeam();
+
 	if (pPlot != NULL)
 	{
-		const PlayerTypes activePlayer = getActivePlayer();
-		const TeamTypes activeTeam = getActiveTeam();
-
 		for (int iPass = 0; iPass < 2; iPass++)
 		{
-			foreach_(CvUnit* pLoopUnit1, pPlot->units())
+			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
+
+			while (pUnitNode1 != NULL)
 			{
+				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
+				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
+
 				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
 					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
@@ -824,8 +839,13 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 						{
 							if (pLoopUnit1->hasCargo())
 							{
-								foreach_(CvUnit* pLoopUnit2, pPlot->units())
+								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
+
+								while (pUnitNode2 != NULL)
 								{
+									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
+									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
+
 									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 									{
 										plotUnits.push_back(pLoopUnit2);
@@ -2307,8 +2327,13 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 	bool bSleepUnit = false;
 	bool bWakeUnit = false;
 
-	foreach_(const CvUnit* pLoopUnit, pPlot->units())
+	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
+
+	while (pUnitNode != NULL)
 	{
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = pPlot->nextUnitNode(pUnitNode);
+
 		if (pLoopUnit->getOwner() == getActivePlayer())
 		{
 			bUnits = true;
@@ -2328,7 +2353,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		}
 	}
 	CvWString szBuffer;
-	const CvCity* pCity = pPlot->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity != NULL && pCity->getOwner() == getActivePlayer())
 	{
@@ -2408,7 +2433,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		}
 	}
 
-	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 	if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->atPlot(pPlot))
 	{
 		gDLL->getFAStarIFace()->SetData(&GC.getInterfacePathFinder(), gDLL->getInterfaceIFace()->getSelectionList());
@@ -2555,18 +2580,30 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 		}
 		case FLYOUT_WAKE_ALL:
 		{
-			foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::isGroupHead()))
+			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
+			while (pUnitNode != NULL)
 			{
-				CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), COMMAND_WAKE, -1, -1, false);
+				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+				if (pLoopUnit->isGroupHead())
+				{
+					CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), COMMAND_WAKE, -1, -1, false);
+				}
 			}
 			break;
 		}
 		case FLYOUR_FORTIFY_ALL:
 		case FLYOUR_SLEEP_ALL:
 		{
-			foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::isGroupHead()))
+			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
+			while (pUnitNode != NULL)
 			{
-				CvMessageControl::getInstance().sendPushMission(pLoopUnit->getID(), (pLoopUnit->isFortifyable() ? MISSION_FORTIFY : MISSION_SLEEP), -1, -1, 0, false);
+				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+				if (pLoopUnit->isGroupHead())
+				{
+					CvMessageControl::getInstance().sendPushMission(pLoopUnit->getID(), ((pLoopUnit->isFortifyable()) ? MISSION_FORTIFY : MISSION_SLEEP), -1, -1, 0, false);
+				}
 			}
 			break;
 		}

@@ -201,7 +201,6 @@ void CyInfoPythonInterface3()
 		.def("getFeatureGrainChange", &CvWorldInfo::getFeatureGrainChange, "int ()")
 		.def("getResearchPercent", &CvWorldInfo::getResearchPercent, "int ()")
 		.def("getCorporationMaintenancePercent", &CvWorldInfo::getCorporationMaintenancePercent, "int ()")
-		.def("getOceanMinAreaSize", &CvWorldInfo::getOceanMinAreaSize, "int ()")
 	;
 
 
