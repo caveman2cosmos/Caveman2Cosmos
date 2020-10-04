@@ -2574,11 +2574,16 @@ again:
 
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
-	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
-		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
+
+	if (getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
+	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves())
+	&& !kActivePlayer.hasBusyUnit()
+	&& !isGameMultiPlayer()
+	// Toffer - isAlive check is needed for the "you have been defeated" popups to appear as they should.
+	// Without it the game will just pass turns between the AI's without ever refreshing your screen, making it seem like the game freezed the moment you were defeated.
+	&& kActivePlayer.isAlive())
 	{
 		updateTimers();
-
 		goto again;
 	}
 
@@ -2769,8 +2774,6 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pEntityNode;
-	CvSelectionGroup* pSelectionGroup;
 	bool bSelectGroup;
 	bool bGroup;
 
@@ -2805,18 +2808,13 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 
 	if (bSelectGroup)
 	{
-		pSelectionGroup = pUnit->getGroup();
+		const CvSelectionGroup* pSelectionGroup = pUnit->getGroup();
 
 		gDLL->getInterfaceIFace()->selectionListPreChange();
 
-		pEntityNode = pSelectionGroup->headUnitNode();
-
-		while (pEntityNode != NULL)
+		foreach_(CvUnit* pLoopUnit, pSelectionGroup->units())
 		{
-			FAssertMsg(::getUnit(pEntityNode->m_data), "null entity in selection group");
-			gDLL->getInterfaceIFace()->insertIntoSelectionList(::getUnit(pEntityNode->m_data), false, bToggle, bGroup, bSound, true);
-
-			pEntityNode = pSelectionGroup->nextUnitNode(pEntityNode);
+			gDLL->getInterfaceIFace()->insertIntoSelectionList(pLoopUnit, false, bToggle, bGroup, bSound, true);
 		}
 
 		gDLL->getInterfaceIFace()->selectionListPostChange();
@@ -2852,7 +2850,7 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 			bGroup = gDLL->getInterfaceIFace()->mirrorsSelectionGroup();
 		}
 
-		CvPlot* pUnitPlot = pUnit->plot();
+		const CvPlot* pUnitPlot = pUnit->plot();
 
 		CLLNode<IDInfo>* pUnitNode = pUnitPlot->headUnitNode();
 
@@ -6743,32 +6741,15 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-		while (pUnitNode != NULL)
+		foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getOwner() == ePlayer))
 		{
-			const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			if (pLoopUnit != NULL)
+			if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
 			{
-				//	Only care about evaluated NPC
-				if ( pLoopUnit->getOwner() == ePlayer )
-				{
-					if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
-					{
-						areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
-					}
-					else
-					{
-						areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
-					}
-				}
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
 			}
 			else
 			{
-				pPlot->verifyUnitValidPlot();
-				pUnitNode = NULL;
+				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
 			}
 		}
 	}
@@ -7721,7 +7702,7 @@ void CvGame::createBarbarianUnits()
 
 	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
-		UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
+		const UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
 
 		const int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
 
@@ -7808,7 +7789,7 @@ void CvGame::createBarbarianUnits()
 	//Kill off extra ships
 	int iRand = 10000;
 	int iBarbSeaUnits = 0;
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(CvArea* pLoopArea, GC.getMap().areas())
 	{
 		if (pLoopArea->isWater())
 		{
