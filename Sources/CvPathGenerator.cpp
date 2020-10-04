@@ -692,9 +692,16 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
 {
 	iGroupMembershipChecksum = 0;
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
 
-	foreach_(const CvUnit* pLoopUnit, pGroup->units())
+	pUnitNode = pGroup->headUnitNode();
+
+	while (pUnitNode != NULL)
 	{
+		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = pGroup->nextUnitNode(pUnitNode);
+
 		CheckSum(iGroupMembershipChecksum, pLoopUnit->getID());
 	}
 

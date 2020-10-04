@@ -205,6 +205,7 @@ cvInternalGlobals::cvInternalGlobals()
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
+	, m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
 
 	// Tech Diffusion
 	, m_bTECH_DIFFUSION_ENABLE(false)
@@ -2600,6 +2601,7 @@ void cvInternalGlobals::cacheGlobals()
 // BBAI Options
 	m_bBBAI_AIR_COMBAT = !(getDefineINT("BBAI_AIR_COMBAT") == 0);
 	m_bBBAI_HUMAN_VASSAL_WAR_BUILD = !(getDefineINT("BBAI_HUMAN_VASSAL_WAR_BUILD") == 0);
+	m_bBBAI_HUMAN_AS_VASSAL_OPTION = !(getDefineINT("BBAI_HUMAN_AS_VASSAL_OPTION") == 0);
 
 // Tech Diffusion
 	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
@@ -3574,6 +3576,11 @@ bool cvInternalGlobals::getBBAI_AIR_COMBAT() const
 bool cvInternalGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD() const
 {
 	return m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
+}
+
+bool cvInternalGlobals::getBBAI_HUMAN_AS_VASSAL_OPTION() const
+{
+	return m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 }
 
 // Tech Diffusion

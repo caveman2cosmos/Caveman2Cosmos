@@ -45,7 +45,6 @@
 			<iGridHeight>8</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
-			<iOceanMinAreaSize>6</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
@@ -74,7 +73,6 @@
 			<iGridHeight>12</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
-			<iOceanMinAreaSize>8</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
@@ -102,7 +100,6 @@
 			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iGridWidth>21</iGridWidth>
 			<iGridHeight>14</iGridHeight>
-			<iOceanMinAreaSize>10</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
@@ -128,7 +125,6 @@
 			<iBuildingPrereqModifier>25</iBuildingPrereqModifier>
 			<iGridWidth>24</iGridWidth>
 			<iGridHeight>16</iGridHeight>
-			<iOceanMinAreaSize>14</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
@@ -156,7 +152,6 @@
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iGridWidth>27</iGridWidth>
 			<iGridHeight>18</iGridHeight>
-			<iOceanMinAreaSize>18</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
@@ -186,7 +181,6 @@
 			<iWarWearinessModifier>-20</iWarWearinessModifier>
 			<iGridWidth>30</iGridWidth>
 			<iGridHeight>20</iGridHeight>
-			<iOceanMinAreaSize>22</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
@@ -218,7 +212,6 @@
 			<iGridHeight>22</iGridHeight>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
-			<iOceanMinAreaSize>26</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
@@ -246,7 +239,6 @@
 			<iWarWearinessModifier>-40</iWarWearinessModifier>
 			<iGridWidth>36</iGridWidth>
 			<iGridHeight>24</iGridHeight>
-			<iOceanMinAreaSize>30</iOceanMinAreaSize>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>

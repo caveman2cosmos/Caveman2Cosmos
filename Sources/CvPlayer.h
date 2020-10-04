@@ -81,6 +81,7 @@ protected:
 
 public:
 
+
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
@@ -104,8 +105,7 @@ public:
 	void setStabilityIndexAverage(int iNewValue);
 	void updateStabilityIndexAverage();
 
-	bool haveSettlerUnit() const;
-
+	//protected:
 	void uninit();
 
 public:

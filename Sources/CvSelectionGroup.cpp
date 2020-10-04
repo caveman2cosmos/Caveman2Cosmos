@@ -737,9 +737,13 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	static const TechTypes sedentaryLifestyle = static_cast<TechTypes>(GC.getInfoTypeForString("TECH_SEDENTARY_LIFESTYLE"));
 #endif
 	CvUnit* pTargetUnit;
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
-	foreach_(CvUnit* pLoopUnit, units())
+	while (pUnitNode != NULL)
 	{
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = nextUnitNode(pUnitNode);
+
 		switch (iMission)
 		{
 // BUG - Sentry Actions - start
@@ -1515,7 +1519,18 @@ bool CvSelectionGroup::startMission()
 
 			foreach_(const CvUnit* pLoopUnit, units())
 			{
+/************************************************************************************************/
+/* Afforess	                  Start		 07/27/10                                               */
+/*                                                                                              */
+/* Infinite Loop Fix                                                                            */
+/************************************************************************************************/
+/*
+				if( pLoopUnit->canMove() && pLoopUnit->canPillage(plot()) )
+*/
 				if( pLoopUnit->canMove() && pLoopUnit->canPillage(pLoopUnit->plot()) )
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
 				{
 					int iMovesLeft = pLoopUnit->movesLeft();
 					if( pLoopUnit->getBombardRate() > 0 )
@@ -1534,15 +1549,32 @@ bool CvSelectionGroup::startMission()
 			while( iMaxMovesLeft > 0 && !bDidPillage )
 			{
 				int iNextMaxMovesLeft = 0;
+				//int iTries = getNumUnits() * 3;
 				foreach_(CvUnit* pLoopUnit, units())
 				{
+/************************************************************************************************/
+/* Afforess	                  Start		 07/27/10                                               */
+/*                                                                                              */
+/* Infinite Loop Fix                                                                            */
+/************************************************************************************************/
+/*
+					if( pLoopUnit->canMove() && pLoopUnit->canPillage(plot()) )
+*/
 					if( pLoopUnit->canMove() && pLoopUnit->canPillage(pLoopUnit->plot()) )
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
 					{
 						int iMovesLeft = pLoopUnit->movesLeft();
 						if( pLoopUnit->getBombardRate() > 0 )
 						{
 							iMovesLeft /= 2;
 						}
+						//int iCurrentHP = pLoopUnit->currHitPoints();
+						//iMovesLeft *= iCurrentHP;
+						//int iMaximumHP = pLoopUnit->maxHitPoints();
+						//int iDivisor = std::max(1, iMaximumHP);
+						//iMovesLeft /= iDivisor;
 						iMovesLeft /= 100;
 
 						iMovesLeft = std::max(iMaxMovesLeft, iMovesLeft);
@@ -1606,8 +1638,9 @@ bool CvSelectionGroup::startMission()
 			}
 
 			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+
 			while (pUnitNode != NULL)
-			{
+ 			{
 				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 				pUnitNode = nextUnitNode(pUnitNode);
 
@@ -4979,7 +5012,7 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	const ActivityTypes eOldActivity = getActivityType();
+	ActivityTypes eOldActivity = getActivityType();
 
 	if (eOldActivity != eNewValue)
 	{
@@ -4995,8 +5028,11 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 		//Clear Buildups
 		if ((eOldActivity == ACTIVITY_SLEEP || eOldActivity == ACTIVITY_HEAL) && eNewValue == ACTIVITY_AWAKE)
 		{
-			foreach_(CvUnit* pLoopUnit, units())
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+			while (pUnitNode != NULL)
 			{
+				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = nextUnitNode(pUnitNode);
 				if (pLoopUnit->isBuildUp())
 				{
 					pLoopUnit->setFortifyTurns(0);
@@ -5013,11 +5049,16 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 
 		if (getActivityType() != ACTIVITY_MISSION)
 		{
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+
 			if (getActivityType() != ACTIVITY_INTERCEPT)
 			{
 				//don't idle intercept animation
-				foreach_(CvUnit* pLoopUnit, units())
+				while (pUnitNode != NULL)
 				{
+					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+					pUnitNode = nextUnitNode(pUnitNode);
+
 					pLoopUnit->NotifyEntity(MISSION_IDLE);
 
 					//determine proper Sleep type
@@ -6723,12 +6764,17 @@ bool CvSelectionGroup::hasCommander() const
 
 void CvSelectionGroup::validateLocations(bool bFixup) const
 {
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
+	CvUnit* pLoopUnit;
 	CvPlot* pPlot = NULL;
 	CvUnit* pTransportUnit;
 	bool	bTransportUnitSet = false;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	while (pUnitNode != NULL)
 	{
+		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = nextUnitNode(pUnitNode);
+
 		if ( !bTransportUnitSet )
 		{
 			bTransportUnitSet = true;

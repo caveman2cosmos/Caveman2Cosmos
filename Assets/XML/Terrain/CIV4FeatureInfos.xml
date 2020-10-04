@@ -1887,7 +1887,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
-			<iPopDestroys>-1</iPopDestroys>
+			<iPopDestroys>6</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1985,7 +1985,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
-			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4407,7 +4406,7 @@
 			<iDefense>25</iDefense>
 			<iAppearance>80</iAppearance>
 			<iWarmingDefense>3</iWarmingDefense>
-			<iPopDestroys>-1</iPopDestroys>
+			<iPopDestroys>6</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<!-- GWMod new XML field M.A. -->

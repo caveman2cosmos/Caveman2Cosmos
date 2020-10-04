@@ -8417,7 +8417,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			iValue *= std::max(0, (kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier + 100));
 			iValue /= 100;
 
-			if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+			if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 			{
 				iValue *= std::max(0, (kOwner.getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier + 100));
 				iValue /= 100;
@@ -16049,7 +16049,7 @@ int CvCity::getTradeRoutes() const
 	iTradeRoutes += GET_PLAYER(getOwner()).getTradeRoutes();
 	iTradeRoutes += GET_PLAYER(getOwner()).getWorldTradeRoutes();
 
-	if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+	if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 	{
 		iTradeRoutes += GET_PLAYER(getOwner()).getCoastalTradeRoutes();
 	}

@@ -6455,8 +6455,8 @@ public:
 	int getCorporationMaintenancePercent() const; // Exposed to Python
 	int getNumCitiesAnarchyPercent() const; // Exposed to Python
 	int getAdvancedStartPointsMod() const; // Exposed to Python
-	int getCommandersLevelThresholdsPercent() const;
-	int getOceanMinAreaSize() const;
+
+	int getCommandersLevelThresholdsPercent() const; // Afforess 02/27/10
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -6488,8 +6488,8 @@ protected:
 	int m_iCorporationMaintenancePercent;
 	int m_iNumCitiesAnarchyPercent;
 	int m_iAdvancedStartPointsMod;
-	int m_iCommandersLevelThresholdsPercent;
-	int m_iOceanMinAreaSize;
+
+	int m_iCommandersLevelThresholdsPercent; // Afforess 02/27/10
 
 	IDValueMapPercent m_Percent;
 

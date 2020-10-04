@@ -20775,7 +20775,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iNumCitiesAnarchyPercent(0)
 ,m_iAdvancedStartPointsMod(0)
 ,m_iCommandersLevelThresholdsPercent(0)
-,m_iOceanMinAreaSize(0)
 ,m_Percent()
 { }
 
@@ -20890,11 +20889,6 @@ int CvWorldInfo::getCommandersLevelThresholdsPercent() const
 	return m_iCommandersLevelThresholdsPercent;
 }
 
-int CvWorldInfo::getOceanMinAreaSize() const
-{
-	return m_iOceanMinAreaSize;
-}
-
 int CvWorldInfo::getPercent(int iID) const
 {
 	return m_Percent.getValue(iID);
@@ -20929,7 +20923,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesAnarchyPercent, L"iNumCitiesAnarchyPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartPointsMod, L"iAdvancedStartPointsMod");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandersLevelThresholdsPercent, L"iCommandersLevelThresholdsPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iOceanMinAreaSize, L"iOceanMinAreaSize");
 
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
 	{
@@ -20972,7 +20965,6 @@ void CvWorldInfo::copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getNumCitiesAnarchyPercent() == iDefault) m_iNumCitiesAnarchyPercent = pClassInfo->getNumCitiesAnarchyPercent();
 	if (getAdvancedStartPointsMod() == iDefault) m_iAdvancedStartPointsMod = pClassInfo->getAdvancedStartPointsMod();
 	if (getCommandersLevelThresholdsPercent() == iDefault) m_iCommandersLevelThresholdsPercent = pClassInfo->getCommandersLevelThresholdsPercent();
-	if (m_iOceanMinAreaSize == iDefault) m_iOceanMinAreaSize = pClassInfo->getOceanMinAreaSize();
 
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
 }
@@ -20998,8 +20990,8 @@ void CvWorldInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iCorporationMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesAnarchyPercent);
 	CheckSum(iSum, m_iAdvancedStartPointsMod);
+
 	CheckSum(iSum, m_iCommandersLevelThresholdsPercent);
-	CheckSum(iSum, m_iOceanMinAreaSize);
 
 	m_Percent.getCheckSum(iSum);
 }

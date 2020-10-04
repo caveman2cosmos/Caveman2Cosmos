@@ -52,7 +52,7 @@ bool CyPlot::isAdjacentToArea(const CyArea& kArea) const
 
 bool CyPlot::isCoastal() const
 {
-	return m_pPlot ? m_pPlot->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) : false;
+	return m_pPlot ? m_pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) : false;
 }
 
 bool CyPlot::isLake() const

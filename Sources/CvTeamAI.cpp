@@ -241,12 +241,15 @@ int CvTeamAI::AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const
 
 void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 {
-	if (!GC.getGame().isFinalInitialized())
+	CvArea* pLoopArea;
+	int iLoop;
+
+	if (!(GC.getGame().isFinalInitialized()))
 	{
 		return;
 	}
 
-	foreach_(CvArea* pLoopArea, GC.getMap().areas())
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
 		pLoopArea->setAreaAIType(getID(), AI_calculateAreaAIType(pLoopArea));
 	}
@@ -255,9 +258,15 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 	{
 		AI_updateAreaTargets();
 	}
-
-	// Afforess	- 03/15/10
+/************************************************************************************************/
+/* Afforess	                  Start		 03/15/10                                               */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
 	AI_updateCache();
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
 }
 
 
@@ -371,13 +380,19 @@ bool CvTeamAI::AI_isPrimaryArea(const CvArea* pArea) const
 
 bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 {
+	CvArea* pLoopArea;
+	int iLoop;
+
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
-		if (AI_isPrimaryArea(pLoopArea) && GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
+		if (AI_isPrimaryArea(pLoopArea))
 		{
-			return true;
+			if (GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
+			{
+				return true;
+			}
 		}
 	}
 
@@ -1344,7 +1359,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	iValue *= iTheirPower + 10;
 	iValue /= std::max(1, iOurPower + iTheirPower + 10);
 
-	const WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
+	WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
 
 	// if we are not human, do we want to continue war for strategic reasons?
 	// only check if our power is at least 120% of theirs
@@ -1419,6 +1434,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 						iValue /= 10 * (iOurPower + (4 * iTheirPower));
 					}
 					break;
+
 			}
 		}
 	}
@@ -1436,6 +1452,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	{
 		iValue *= 2;
 	}
+
 
 	if ((!(isHuman()) && (eWarPlan == WARPLAN_TOTAL)) ||
 		  (!(GET_TEAM(eTeam).isHuman()) && (GET_TEAM(eTeam).AI_getWarPlan(getID()) == WARPLAN_TOTAL)))
@@ -1459,7 +1476,9 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		}
 	}
 	int iTheirAttackers = 0;
-	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
+	CvArea* pLoopArea = NULL;
+	int iLoop;
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
@@ -5043,6 +5062,7 @@ void CvTeamAI::AI_doWar()
 {
 	PROFILE_FUNC();
 
+	CvArea* pLoopArea;
 	TeamTypes eBestTeam;
 	bool bAreaValid;
 	bool bShareValid;
@@ -5052,6 +5072,7 @@ void CvTeamAI::AI_doWar()
 	int iValue;
 	int iBestValue;
 	int iPass;
+	int iLoop;
 	int iI, iJ;
 
 	FAssert(!isHuman());
@@ -5209,7 +5230,7 @@ void CvTeamAI::AI_doWar()
 						bAreaValid = false;
 						bShareValid = false;
 
-						foreach_(const CvArea* pLoopArea, GC.getMap().areas())
+						for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 						{
 							if (AI_isPrimaryArea(pLoopArea))
 							{
@@ -5217,7 +5238,7 @@ void CvTeamAI::AI_doWar()
 								{
 									bShareValid = true;
 
-									const AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
+									AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
 
 									if ( eAreaAI == AREAAI_DEFENSIVE)
 									{
