@@ -3778,83 +3778,71 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 
 	if ( !bResult )
 	{
-		CvPlot* pLoopPlot;
-		int iDistance;
-		int iDX, iDY;
 		const CvArea* pPlotArea = pPlot->area();
-		int iDangerRange;
 
-		for (iDX = -(iRange); iDX <= iRange && !bResult; iDX++)
+		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 		{
-			for (iDY = -(iRange); iDY <= iRange && !bResult; iDY++)
+			if (pLoopPlot->area() == pPlotArea)
 			{
-				pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-				if (pLoopPlot != NULL)
+				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+				if( bCheckBorder )
 				{
-					if (pLoopPlot->area() == pPlotArea)
+					if (atWar(pLoopPlot->getTeam(), eTeam))
 					{
-						iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-						if( bCheckBorder )
+						// Border cache is reversible, set for both team and enemy
+						if (iDistance == 1)
 						{
-							if (atWar(pLoopPlot->getTeam(), eTeam))
-							{
-								// Border cache is reversible, set for both team and enemy
-								if (iDistance == 1)
-								{
-									pPlot->setIsTeamBorderCache(eTeam, true);
-									pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-									pLoopPlot->setIsTeamBorderCache(eTeam, true);
-									pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-									bResult = true;
-									break;
-								}
-								else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-								{
-									pPlot->setIsTeamBorderCache(eTeam, true);
-									pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-									pLoopPlot->setIsTeamBorderCache(eTeam, true);
-									pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-									bResult = true;
-									break;
-								}
-							}
+							pPlot->setIsTeamBorderCache(eTeam, true);
+							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+							pLoopPlot->setIsTeamBorderCache(eTeam, true);
+							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+							bResult = true;
+							break;
 						}
-
-						foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
 						{
-							// No need to loop over tiles full of our own units
-							if( pLoopUnit->getTeam() == eTeam )
-							{
-								if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
-								{
-									break;
-								}
-							}
+							pPlot->setIsTeamBorderCache(eTeam, true);
+							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+							pLoopPlot->setIsTeamBorderCache(eTeam, true);
+							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+							bResult = true;
+							break;
+						}
+					}
+				}
 
-							if (pLoopUnit->isEnemy(eTeam))
+				foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+				{
+					// No need to loop over tiles full of our own units
+					if( pLoopUnit->getTeam() == eTeam )
+					{
+						if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
+						{
+							break;
+						}
+					}
+
+					if (pLoopUnit->isEnemy(eTeam))
+					{
+						if (pLoopUnit->canAttack())
+						{
+							if (!(pLoopUnit->isInvisible(eTeam, false)))
 							{
-								if (pLoopUnit->canAttack())
+								if (pLoopUnit->canMoveOrAttackInto(pPlot))
 								{
-									if (!(pLoopUnit->isInvisible(eTeam, false)))
+									if (!bTestMoves)
 									{
-										if (pLoopUnit->canMoveOrAttackInto(pPlot))
+										bResult = true;
+										break;
+									}
+									else
+									{
+										int iDangerRange = pLoopUnit->baseMoves();
+										iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
+										if (iDangerRange >= iDistance)
 										{
-											if (!bTestMoves)
-											{
-												bResult = true;
-												break;
-											}
-											else
-											{
-												iDangerRange = pLoopUnit->baseMoves();
-												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-												if (iDangerRange >= iDistance)
-												{
-													bResult = true;
-													break;
-												}
-											}
+											bResult = true;
+											break;
 										}
 									}
 								}
@@ -3981,78 +3969,64 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iDistance;
-	int iBorderDanger;
-	int iDX, iDY;
 	const CvArea* pPlotArea = pPlot->area();
-	int iDangerRange;
-	TeamTypes eTeam = getTeam();
+	const TeamTypes eTeam = getTeam();
 
-	iCount = 0;
-	iBorderDanger = 0;
+	int iCount = 0;
+	int iBorderDanger = 0;
 
 	OutputDebugString(CvString::format("AI_getPlotDanger for (%d,%d) at range %d (bTestMoves=%d)\n",
 									   pPlot->getX(), pPlot->getY(),
 									   iRange,
 									   bTestMoves).c_str());
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->area() == pPlotArea)
 		{
-			pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+			if (atWar(pLoopPlot->getTeam(), eTeam))
 			{
-				if (pLoopPlot->area() == pPlotArea)
+				if (iDistance == 1)
 				{
-					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					if (atWar(pLoopPlot->getTeam(), eTeam))
+					iBorderDanger++;
+				}
+				else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+				{
+					iBorderDanger++;
+				}
+			}
+
+			foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+			{
+				// No need to loop over tiles full of our own units
+				if( pLoopUnit->getTeam() == eTeam )
+				{
+					if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
 					{
-						if (iDistance == 1)
-						{
-							iBorderDanger++;
-						}
-						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-						{
-							iBorderDanger++;
-						}
+						break;
 					}
+				}
 
-					foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
+				if (pLoopUnit->isEnemy(eTeam))
+				{
+					if (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
 					{
-						// No need to loop over tiles full of our own units
-						if( pLoopUnit->getTeam() == eTeam )
+						if (!(pLoopUnit->isInvisible(eTeam, false)))
 						{
-							if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
+							if (pLoopUnit->canMoveOrAttackInto(pPlot) || pLoopUnit->plot() == pPlot)
 							{
-								break;
-							}
-						}
-
-						if (pLoopUnit->isEnemy(eTeam))
-						{
-							if (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
-							{
-								if (!(pLoopUnit->isInvisible(eTeam, false)))
+								if (!bTestMoves)
 								{
-									if (pLoopUnit->canMoveOrAttackInto(pPlot) || pLoopUnit->plot() == pPlot)
+									iCount++;
+								}
+								else
+								{
+									int iDangerRange = pLoopUnit->baseMoves();
+									iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
+									if (iDangerRange >= iDistance)
 									{
-										if (!bTestMoves)
-										{
-											iCount++;
-										}
-										else
-										{
-											iDangerRange = pLoopUnit->baseMoves();
-											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-											if (iDangerRange >= iDistance)
-											{
-												iCount++;
-											}
-										}
+										iCount++;
 									}
 								}
 							}
@@ -4063,12 +4037,9 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		}
 	}
 
-	if (iBorderDanger > 0)
+	if (iBorderDanger > 0 && !isHuman() && !pPlot->isCity())
 	{
-		if (!isHuman() && !pPlot->isCity())
-		{
-			iCount += iBorderDanger;
-		}
+		iCount += iBorderDanger;
 	}
 
 	return iCount;
@@ -4170,40 +4141,28 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iDX, iDY;
-
-	iCount = 0;
+	int iCount = 0;
 
 	if (iRange == -1)
 	{
 		iRange = DANGER_RANGE;
 	}
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->isWater() || pLoopPlot->getPlotCity() != NULL)
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			if (pPlot->area() == pLoopPlot->area() || pPlot->isAdjacentToArea(pLoopPlot->getArea()))
 			{
-				if (pLoopPlot->isWater() || pLoopPlot->getPlotCity() != NULL)
+				foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					if (pPlot->area() == pLoopPlot->area() || pPlot->isAdjacentToArea(pLoopPlot->getArea()))
-					{
-						foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
-						{
-							const UnitAITypes aiType = pLoopUnit->AI_getUnitAIType();
+					const UnitAITypes aiType = pLoopUnit->AI_getUnitAIType();
 
-							if ( aiType == UNITAI_ATTACK_SEA || aiType == UNITAI_PIRATE_SEA || aiType == UNITAI_RESERVE_SEA )
-							{
-								if (pLoopUnit->getTeam() == getTeam())
-								{
-									iCount++;
-								}
-							}
+					if (aiType == UNITAI_ATTACK_SEA || aiType == UNITAI_PIRATE_SEA || aiType == UNITAI_RESERVE_SEA)
+					{
+						if (pLoopUnit->getTeam() == getTeam())
+						{
+							iCount++;
 						}
 					}
 				}
@@ -4218,36 +4177,22 @@ int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMov
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iDX, iDY;
-
-	iCount = 0;
+	int iCount = 0;
 
 	if (iRange == -1)
 	{
 		iRange = DANGER_RANGE;
 	}
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->isWater() && pPlot->isAdjacentToArea(pLoopPlot->getArea()))
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->isWater())
-				{
-					if (pPlot->isAdjacentToArea(pLoopPlot->getArea()))
-					{
-						iCount += algo::count_if(pLoopPlot->units(),
-							CvUnit::fn::isEnemy(getTeam()) &&
-							CvUnit::fn::canAttack() &&
-							!CvUnit::fn::isInvisible(getTeam(), false));
-					}
-				}
-			}
+			iCount += algo::count_if(pLoopPlot->units(),
+				CvUnit::fn::isEnemy(getTeam()) &&
+				CvUnit::fn::canAttack() &&
+				!CvUnit::fn::isInvisible(getTeam(), false)
+			);
 		}
 	}
 
@@ -4415,11 +4360,7 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
 
-	if (!isNPC() && AI_costAsPercentIncome() < AI_safeCostAsPercentIncome())
-	{
-		return true;
-	}
-	return false;
+	return !isNPC() && AI_costAsPercentIncome() < AI_safeCostAsPercentIncome();
 }
 
 int CvPlayerAI::AI_goldTarget() const
@@ -11196,8 +11137,6 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 
 DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 {
-	CvCity* pNearestCity;
-
 	FAssert(pCity->getOwner() == getID());
 
 	if (pCity->getLiberationPlayer(false) == ePlayer)
@@ -11226,7 +11165,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 	if (!(GET_PLAYER(ePlayer).isHuman()))
 	{
-		pNearestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
+		const CvCity* pNearestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
 		if ((pNearestCity == NULL) || (plotDistance(pCity->getX(), pCity->getY(), pNearestCity->getX(), pNearestCity->getY()) > 18))
 		{
 			return DENIAL_NO_GAIN;
@@ -17893,7 +17832,6 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		if (NULL != pCity)
 		{
 			int iTempValue = 1;
-			int iRange = 1;
 
 			iTempValue += GC.getGame().getSorenRandNum((pCity->getPopulation() + 1), "AI Nuke City Value");
 			iTempValue += std::max(0, pCity->getPopulation() - 10);
@@ -17902,23 +17840,15 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 			iTempValue += AI_getAttitudeVal(pCity->getOwner()) / 3;
 
-			for (int iDX = -(iRange); iDX <= iRange; iDX++)
+			foreach_(const CvPlot* pLoopPlot, pCity->plot()->adjacent())
 			{
-				for (int iDY = -(iRange); iDY <= iRange; iDY++)
+				if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
-					CvPlot* pLoopPlot = plotXY(pCity->getX(), pCity->getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL)
-					{
-						if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-						{
-							iTempValue++;
-						}
-						if (pLoopPlot->getNonObsoleteBonusType(getTeam()) != NO_BONUS)
-						{
-							iTempValue++;
-						}
-					}
+					iTempValue++;
+				}
+				if (pLoopPlot->getNonObsoleteBonusType(getTeam()) != NO_BONUS)
+				{
+					iTempValue++;
 				}
 			}
 			if (!(pCity->isEverOwned(getID())))
@@ -25519,7 +25449,6 @@ void CvPlayerAI::AI_nowHasTech(TechTypes eTech)
 			m_iTurnLastProductionDirty = iGameTurn;
 		}
 	}
-
 }
 
 

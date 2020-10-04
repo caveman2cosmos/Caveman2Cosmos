@@ -833,16 +833,11 @@ bool CvMap::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
 	PROFILE("CvMap::findWater()");
 
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		if (bFreshWater ? pLoopPlot->isFreshWater() : pLoopPlot->isWater())
 		{
-			const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL && (bFreshWater ? pLoopPlot->isFreshWater() : pLoopPlot->isWater()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
