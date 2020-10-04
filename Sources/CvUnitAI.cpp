@@ -1847,7 +1847,7 @@ void CvUnitAI::AI_settleMove()
 			{
 				//Don't give up coast or river, don't settle on bonus with food
 				if ( (plot()->isRiver() && !pBestPlot->isRiver())
-					|| (plot()->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) && !pBestPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+					|| (plot()->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) && !pBestPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 					|| (pBestPlot->getBonusType(NO_TEAM) != NO_BONUS && pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0) )
 				{
 					pBestPlot = NULL;
@@ -3615,12 +3615,8 @@ void CvUnitAI::AI_attackCityMove()
 				if (plot()->getUnitCombatsUnsupportedByHealer(getOwner(), eHealType, getDomainType()) > 4)
 				{
 					iNeedSupportCount = -4;
-					CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, getGroup()->units())
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = getGroup()->nextUnitNode(pUnitNode);
-
 						if(pLoopUnit->isHasUnitCombat(eHealType))
 						{
 							iNeedSupportCount++;
@@ -4057,12 +4053,8 @@ void CvUnitAI::AI_attackCityMove()
 					// Check if stack has units which can upgrade
 					int iNeedUpgradeCount = 0;
 
-					CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, getGroup()->units())
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = getGroup()->nextUnitNode(pUnitNode);
-
 						if( pLoopUnit->getUpgradeCity(false) != NULL )
 						{
 							iNeedUpgradeCount++;
@@ -10232,7 +10224,7 @@ void CvUnitAI::AI_attackAirMove()
 	int iAttackAirCount = plot()->plotCount(PUF_canAirAttack, -1, -1, NULL, NO_PLAYER, getTeam());
 	iAttackAirCount += 2 * plot()->plotCount(PUF_isUnitAIType, UNITAI_ICBM, -1, NULL, NO_PLAYER, getTeam());
 
-	if( plot()->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+	if( plot()->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 	{
 		iDefenders -= 1;
 	}
@@ -13333,7 +13325,6 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 {
 	PROFILE_FUNC();
 
-
  	// if we are on a transport, then do not regroup
 	if (isCargo())
 	{
@@ -13361,12 +13352,11 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 		return false;
 	}
 
-	// cached values
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 	CvSelectionGroup* pGroup = getGroup();
 
 	// best match
-	CvUnit* pBestUnit = NULL;
+	const CvUnit* pBestUnit = NULL;
 	int iBestValue = MAX_INT;
 	// iterate over plots at each range
 	for (int iDX = -(iMaxRange); iDX <= iMaxRange; iDX++)
@@ -13377,13 +13367,9 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 
 			if (pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea() && AI_plotValid(pLoopPlot))
 			{
-				CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-				while (pUnitNode != NULL)
+				foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-					CvSelectionGroup* pLoopGroup = pLoopUnit->getGroup();
+					const CvSelectionGroup* pLoopGroup = pLoopUnit->getGroup();
 
 					if (AI_allowGroup(pLoopUnit, eUnitAI))
 					{
@@ -15109,7 +15095,7 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	{
 		if (pCity->getOwner() == getOwner())
 		{
-			if (pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_ATTACK_SPY, pCity->plot());
 				return true;
@@ -15125,7 +15111,7 @@ bool CvUnitAI::AI_pickupTargetSpy()
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
-			if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
 				{
@@ -15201,10 +15187,8 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pEntityNode;
 	std::vector<CvUnit*> aeDamagedUnits;
 	CvSelectionGroup* pGroup;
-	CvUnit* pLoopUnit;
 	int iTotalDamage;
 	int iTotalHitpoints;
 	int iHurtUnitCount;
@@ -15276,17 +15260,11 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 
 	iMaxPath = std::min(iMaxPath, 2);
 
-	pEntityNode = getGroup()->headUnitNode();
-
 	iTotalDamage = 0;
 	iTotalHitpoints = 0;
 	iHurtUnitCount = 0;
-	while (pEntityNode != NULL)
+	foreach_(CvUnit* pLoopUnit, getGroup()->units())
 	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		FAssert(pLoopUnit != NULL);
-		pEntityNode = pGroup->nextUnitNode(pEntityNode);
-
 		int iDamageThreshold = (pLoopUnit->maxHitPoints() * iDamagePercent) / 100;
 
 		if (NO_UNIT != getLeaderUnitType())
@@ -18566,8 +18544,6 @@ bool CvUnitAI::AI_hide()
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pHeadUnit;
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
@@ -18622,13 +18598,8 @@ bool CvUnitAI::AI_hide()
 							{
 								iCount = 1;
 
-								pUnitNode = pLoopPlot->headUnitNode();
-
-								while (pUnitNode != NULL)
+								foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 								{
-									pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
 									if (pLoopUnit->getOwner() == getOwner())
 									{
 										if (pLoopUnit->canDefend())
@@ -19456,7 +19427,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 
 //	Determine if there is a threatening unit at the spcified plot.
 //	Return a pointer to the unit if so (NULL with a detected threat means multiple units)
-bool	CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
+bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
 {
 	int iOdds = 0;
 	int iWorstOdds = 0;
@@ -19469,12 +19440,8 @@ bool	CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit
 		return false;
 	}
 
-	CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		//	Don't count animals if the target plot is owned since they cannot attack there
 		if (isEnemy(pLoopUnit->getTeam(), NULL, pLoopUnit) && pLoopUnit->canAttack() && (!pLoopUnit->isAnimal() || (pLoopUnit->isAnimal() && pLoopUnit->canAnimalIgnoresBorders()) || pAttackPlot->getOwner() == NO_PLAYER))
 		{
@@ -20382,20 +20349,7 @@ bool CvUnitAI::AI_bombardCity()
 			}
 
 			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
-			bool bHasWaited = false;
-			CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-			while (pUnitNode != NULL)
-			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-				if( pLoopUnit->getFortifyTurns() > 0 )
-				{
-					bHasWaited = true;
-					break;
-				}
-
-				pUnitNode = getGroup()->nextUnitNode(pUnitNode);
-			}
+			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
 
 			// Bombard at least one turn to allow bombers/ships to get some shots in too
 			if( bHasWaited && (pBombardCity->getDefenseDamage() > 0) )
@@ -21119,7 +21073,7 @@ bool CvUnitAI::AI_blockade()
 				continue;
 			}
 
-			if (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+			if (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
 				continue;
 			}
@@ -21232,11 +21186,8 @@ bool CvUnitAI::AI_pirateBlockade()
 			if (pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
 			{
 				int iBestHostileMoves = 0;
-				CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-				while (pUnitNode != NULL)
+				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
 					if (isEnemy(pLoopUnit->getTeam(), pLoopUnit->plot(), pLoopUnit))
 					{
 						if (pLoopUnit->getDomainType() == DOMAIN_SEA && !pLoopUnit->isInvisible(getTeam(), false))
@@ -21258,7 +21209,7 @@ bool CvUnitAI::AI_pirateBlockade()
 					{
 						for (int iY = -iBestHostileMoves; iY <= iBestHostileMoves; iY++)
 						{
-							CvPlot* pRangePlot = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
+							const CvPlot* pRangePlot = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
 							if (pRangePlot != NULL)
 							{
 								aiDeathZone[GC.getMap().plotNum(pRangePlot->getX(), pRangePlot->getY())]++;
@@ -22296,12 +22247,9 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 	}
 
 	std::vector<CvUnit*> aGroupCargo;
-	CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode();
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, plot()->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = plot()->nextUnitNode(pUnitNode);
-		CvUnit* pTransport = pLoopUnit->getTransportUnit();
+		const CvUnit* pTransport = pLoopUnit->getTransportUnit();
 		if (pTransport != NULL && pTransport->getGroup() == getGroup())
 		{
 			aGroupCargo.push_back(pLoopUnit);
@@ -22684,12 +22632,9 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 	}
 
 	std::vector<CvUnit*> aGroupCargo;
-	CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode();
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, plot()->units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = plot()->nextUnitNode(pUnitNode);
-		CvUnit* pTransport = pLoopUnit->getTransportUnit();
+		const CvUnit* pTransport = pLoopUnit->getTransportUnit();
 		if (pTransport != NULL && pTransport->getGroup() == getGroup())
 		{
 			aGroupCargo.push_back(pLoopUnit);
@@ -23090,12 +23035,8 @@ bool CvUnitAI::AI_settlerSeaTransport()
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pBestFoundPlot;
-	CvArea* pWaterArea;
 	CvPlot* endTurnPlot = NULL;
 	bool bValid;
 	int iValue;
@@ -23115,18 +23056,13 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	//and delivering settlers
 	//to inland sites
 
-	pWaterArea = plot()->waterArea();
+	const CvArea* pWaterArea = plot()->waterArea();
 	FAssertMsg(pWaterArea != NULL, "Ship out of water?");
 
 	CvUnit* pSettlerUnit = NULL;
-	pPlot = plot();
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	const CvPlot* pPlot = plot();
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTransportUnit() == this)
 		{
 			if (pLoopUnit->AI_getUnitAIType() == UNITAI_SETTLE)
@@ -23276,13 +23212,8 @@ bool CvUnitAI::AI_settlerSeaTransport()
 			{
 				bValid = false;
 
-				pUnitNode = pPlot->headUnitNode();
-
-				while (pUnitNode != NULL)
+				foreach_(const CvUnit* pLoopUnit, pPlot->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 					if (pLoopUnit->getTransportUnit() == this)
 					{
 						if (pLoopUnit->canFound(pLoopPlot))
@@ -23416,10 +23347,8 @@ bool CvUnitAI::AI_specialSeaTransportMissionary()
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
 	CvCity* pCity;
 	CvUnit* pMissionaryUnit;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	CvPlot* pPlot;
 	CvPlot* pBestPlot;
@@ -23443,13 +23372,8 @@ bool CvUnitAI::AI_specialSeaTransportMissionary()
 
 	pMissionaryUnit = NULL;
 
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 		if (pLoopUnit->getTransportUnit() == this)
 		{
 			if (pLoopUnit->AI_getUnitAIType() == UNITAI_MISSIONARY)
@@ -23901,19 +23825,15 @@ bool CvUnitAI::AI_carrierSeaTransport()
 		{
 			if (getGroup()->hasCargo())
 			{
-				CvPlot* pPlot = plot();
+				const CvPlot* pPlot = plot();
 
-				int iNumUnits = pPlot->getNumUnits();
+				const int iNumUnits = pPlot->getNumUnits();
 
 				for (int i = 0; i < iNumUnits; ++i)
 				{
 					bool bDone = true;
-					CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pCargoUnit, pPlot->units())
 					{
-						CvUnit* pCargoUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 						if (pCargoUnit->isCargo())
 						{
 							FAssert(pCargoUnit->getTransportUnit() != NULL);
@@ -25171,20 +25091,15 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		if (getGroup()->getNumUnits() > 1 && canDefend())
 		{
 			//	Also check we are not the ONLY unit that can defend - if we are we'll drag the rest along
-			CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-			CvUnit* pLoopUnit = NULL;
 			bool bHasOtherDefender = false;
 
-			while( pUnitNode != NULL )
+			foreach_(const CvUnit* pLoopUnit, getGroup()->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
 				if ( pLoopUnit != this && pLoopUnit->canDefend() )
 				{
 					bHasOtherDefender = true;
 					break;
 				}
-
-				pUnitNode = getGroup()->nextUnitNode(pUnitNode);
 			}
 
 			if ( bHasOtherDefender )
@@ -26636,7 +26551,7 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 		iAttackAirCount += (nukeRange() >= 0) ? -2 : 0;
 	}
 
-	if( pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+	if( pPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 	{
 		iDefenders -= 1;
 	}
@@ -27949,14 +27864,8 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 								int iNeutralCount = 0;
 								int iDamagedEnemyCount = 0;
 
-								CLLNode<IDInfo>* pUnitNode;
-								CvUnit* pLoopUnit;
-								pUnitNode = pLoopPlot2->headUnitNode();
-								while (pUnitNode != NULL)
+								foreach_(const CvUnit* pLoopUnit, pLoopPlot2->units())
 								{
-									pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot2->nextUnitNode(pUnitNode);
-
 									if (!pLoopUnit->isNukeImmune())
 									{
 										if (pLoopUnit->getTeam() == getTeam())
@@ -30589,7 +30498,6 @@ bool CvUnitAI::AI_FEngage()
 	int iDamage;
 	int iBestValue;
 	int iDX, iDY;
-	CLLNode<IDInfo>* pUnitNode;
 	int iCount;
 
 	if (!canFEngage())
@@ -30619,17 +30527,7 @@ bool CvUnitAI::AI_FEngage()
 					if (canFEngageAt(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
 					{
 						iValue = 0;
-						iCount = 0;
-						pUnitNode = pLoopPlot->headUnitNode();
-						while (pUnitNode != NULL)
-						{
-							pDefender = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-							if (pDefender->getDomainType() == DOMAIN_AIR)
-							{
-								iCount++;
-							}
-						}
+						iCount = algo::count_if(pLoopPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_AIR);
 						iPotentialAttackers = iCount;
 						iValue += iCount;
 						if (iPotentialAttackers > 0 || pLoopPlot->isAdjacentTeam(getTeam()))
@@ -34215,21 +34113,12 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 bool CvUnitAI::AI_groupSelectStatus()
 {
-	CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-	CvUnit* pLoopUnit = NULL;
-	bool bDelay = false;
-	while( pUnitNode != NULL )
+	foreach_(CvUnit* pLoopUnit, getGroup()->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
 		if (AI_selectStatus(false, pLoopUnit))
 		{
-			bDelay = true;
+			return true;
 		}
-		pUnitNode = getGroup()->nextUnitNode(pUnitNode);
-	}
-	if (bDelay)
-	{
-		return true;
 	}
 	return false;
 }

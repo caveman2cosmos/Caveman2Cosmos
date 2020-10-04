@@ -2523,7 +2523,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		return 0;
 	}
-	bIsCoastal = pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN());
+	bIsCoastal = pPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize());
 	pArea = pPlot->area();
 	iNumAreaCities = pArea->getCitiesPerPlayer(getID());
 
@@ -3508,7 +3508,7 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	}
 
 	// Significant amounting of borrowing/adapting from Mongoose AITargetCityValueFix
-	if (pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+	if (pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 	{
 		iValue += 2;
 	}
@@ -10030,31 +10030,31 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 	FAssert(ePlayer != getID());
 
-	if (isHuman() || (GET_PLAYER(ePlayer).getTeam() == getTeam()))
+	if (isHuman() || GET_PLAYER(ePlayer).getTeam() == getTeam())
 	{
 		iMaxGold = getGold();
 	}
 	else
 	{
-		iMaxGold = getTotalPopulation();
-
-		iMaxGold *= (GET_TEAM(getTeam()).AI_getHasMetCounter(GET_PLAYER(ePlayer).getTeam()) + 10);
+		const int64_t iGold = getGold();
+		iMaxGold = iGold;
 
 		iMaxGold *= GC.getLeaderHeadInfo(getPersonalityType()).getMaxGoldTradePercent();
 		iMaxGold /= 100;
 
-		iMaxGold -= AI_getGoldTradedTo(ePlayer);
+		const int iGoldRate = calculateGoldRate();
 
-		int iResearchBuffer = -calculateGoldRate() * 12;
-		iResearchBuffer *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-		iResearchBuffer /= 100;
-
-		iMaxGold *= (100 + calculateInflationRate());
+		if (iGoldRate < 0)
+		{
+			iMaxGold = std::min(
+				iMaxGold,
+				iGold + iGoldRate * 10 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100
+			);
+		}
+		iMaxGold *= 100 + calculateInflationRate();
 		iMaxGold /= 100;
 
-		iMaxGold = std::min(iMaxGold, getGold() - iResearchBuffer);
-
-		iMaxGold = std::min(iMaxGold, getGold());
+		iMaxGold = std::min(iMaxGold, iGold);
 
 		iMaxGold -= (iMaxGold % GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
@@ -28418,11 +28418,11 @@ void CvPlayerAI::AI_invalidateCloseBordersAttitudeCache()
 	}
 }
 
-bool CvPlayerAI::AI_isPlotThreatened(CvPlot* pPlot, int iRange, bool bTestMoves) const
+bool CvPlayerAI::AI_isPlotThreatened(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
-	CvArea *pPlotArea = pPlot->area();
+	const CvArea* pPlotArea = pPlot->area();
 
 	if (iRange == -1)
 	{
@@ -28433,7 +28433,7 @@ bool CvPlayerAI::AI_isPlotThreatened(CvPlot* pPlot, int iRange, bool bTestMoves)
 	{
 		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
 			{
@@ -28445,23 +28445,19 @@ bool CvPlayerAI::AI_isPlotThreatened(CvPlot* pPlot, int iRange, bool bTestMoves)
 					{
 						CvSelectionGroup* pNextGroup = NULL;
 
-						for (CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pLoopPlot->nextUnitNode(pUnitNode))
+						foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 						{
-							CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-							if (pLoopUnit != NULL)
+							if (pLoopUnit->isEnemy(getTeam()) && pLoopUnit->canAttack() && !pLoopUnit->isInvisible(getTeam(), false))
 							{
-								if (pLoopUnit->isEnemy(getTeam()) && pLoopUnit->canAttack() && !pLoopUnit->isInvisible(getTeam(), false))
+								if ( pLoopGroup == NULL ||
+									 pLoopUnit->getOwner() > pLoopGroup->getOwner() ||
+									 (pLoopUnit->getOwner() == pLoopGroup->getOwner() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
 								{
-									if ( pLoopGroup == NULL ||
-										 pLoopUnit->getOwner() > pLoopGroup->getOwner() ||
-										 (pLoopUnit->getOwner() == pLoopGroup->getOwner() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
+									if ( pNextGroup == NULL ||
+										 pLoopUnit->getOwner() < pNextGroup->getOwner() ||
+										 (pLoopUnit->getOwner() == pNextGroup->getOwner() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
 									{
-										if ( pNextGroup == NULL ||
-											 pLoopUnit->getOwner() < pNextGroup->getOwner() ||
-											 (pLoopUnit->getOwner() == pNextGroup->getOwner() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
-										{
-											pNextGroup = pLoopUnit->getGroup();
-										}
+										pNextGroup = pLoopUnit->getGroup();
 									}
 								}
 							}
@@ -29120,7 +29116,7 @@ CvCity* CvPlayerAI::findBestCoastalCity() const
 
 	foreach_(CvCity* pLoopCity, cities())
 	{
-		if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+		if (pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 		{
 			bool bValid = false;
 			const bool bConnected = pLoopCity->isConnectedToCapital(getID());
@@ -29206,13 +29202,13 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 		{
 		case NO_DOMAIN:
 			eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
-			if ( eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+			if ( eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 			{
 				break;
 			}
 			//	Drop through and check coastal
 		case DOMAIN_SEA:
-			if ( pCapitalCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) )
+			if ( pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
 			{
 				pCoastalCity = pCapitalCity;
 			}
@@ -29250,7 +29246,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 		int iI;
 		CvCity* pEvaluationCity = getCapitalCity();
 
-		if ( pEvaluationCity == NULL || (pUnit->getDomainType() == DOMAIN_SEA && !pEvaluationCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN())) )
+		if ( pEvaluationCity == NULL || (pUnit->getDomainType() == DOMAIN_SEA && !pEvaluationCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())) )
 		{
 			pEvaluationCity = findBestCoastalCity();
 		}
@@ -39638,7 +39634,7 @@ int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal)
 
 		foreach_(const CvCity* pLoopCity, cities())
 		{
-			if ( (!bCoastal || pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN())) && pLoopCity->getNumBuilding(eBuilding) == 0 )
+			if ( (!bCoastal || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())) && pLoopCity->getNumBuilding(eBuilding) == 0 )
 			{
 				result++;
 			}
@@ -39684,7 +39680,7 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 		if ( NO_UNITAI != eAIType )
 		{

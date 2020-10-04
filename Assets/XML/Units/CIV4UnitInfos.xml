@@ -55488,7 +55488,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_HHUNTINGBOW</BuildingType>
 			</Buildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_MASTER_TRACKER</UnitType>
+				<UnitType>UNIT_MASTER_CHASER</UnitType>
 			</UnitUpgrades>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -66135,6 +66135,90 @@ Base XP gained when defending
 					</ActionOutcomes>
 				</Action>
 			</Actions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_MASTER_CHASER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Combat>UNITCOMBAT_HUNTER</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<Description>TXT_KEY_UNIT_MASTER_CHASER</Description>
+			<Civilopedia>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_HUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<NotUnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_HUNTER_ESCORT</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</NotUnitAIs>
+			<bAssassin>1</bAssassin>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_MASTER_TRACKER</UnitType>
+			</UnitUpgrades>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<iCost>-1</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iCombat>2</iCombat>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iPursuit>20</iPursuit>
+			<iCityAttack>-75</iCityAttack>
+			<iAnimalCombat>200</iAnimalCombat>
+			<iAsset>1</iAsset>
+			<iPower>1</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_HUNTER_DOG</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_TRACKER</Type>
