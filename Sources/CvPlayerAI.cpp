@@ -5287,7 +5287,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	iTempValue = 0;
 
-	if (kTech.isRebaseAnywhere() && GC.getDefineINT("MAX_AIRLIFT_RANGE") > 0)
+	if (kTech.isRebaseAnywhere() && GC.getMAX_AIRLIFT_RANGE() > 0)
 	{
 		iValue += 300;
 	}
@@ -8546,8 +8546,8 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 				bool bWinningBig = false;
 				bool bThisPlayerWinning = false;
 
-				int iWinDeltaThreshold = 3*GC.getDefineINT("WAR_SUCCESS_ATTACKING");
-				int iLossAbsThreshold = std::max(3, getNumMilitaryUnits()/40)*GC.getDefineINT("WAR_SUCCESS_ATTACKING");
+				int iWinDeltaThreshold = 3*GC.getWAR_SUCCESS_ATTACKING();
+				int iLossAbsThreshold = std::max(3, getNumMilitaryUnits()/40)*GC.getWAR_SUCCESS_ATTACKING();
 
 				bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 				if( bAggressiveAI )
@@ -10093,7 +10093,7 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 		iMaxGold = std::min(iMaxGold, iGold);
 
-		iMaxGold -= (iMaxGold % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		iMaxGold -= (iMaxGold % GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 
 	return iMaxGold < MAX_INT ? std::max(0, (int)iMaxGold) : MAX_INT;
@@ -10997,19 +10997,11 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 {
-	int iValue;
 	int iI;
 
 	FAssert(pCity->getOwner() != getID());
-	/************************************************************************************************/
-	/* Afforess												 5/29/11								*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-	/*
-	iValue = 300;
-	 */
-	iValue = 500;
+
+	int iValue = 500;
 	//consider infrastructure
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -11055,10 +11047,6 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess								   END												  */
-	/************************************************************************************************/
-
 
 	iValue += (pCity->getPopulation() * 50);
 
@@ -11103,11 +11091,6 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 		iValue *= 3;
 		iValue /= 2;
 	}
-	/************************************************************************************************/
-	/* Afforess												 5/29/11								*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	//in danger
 	if (pCity->AI_isDanger() && !pCity->AI_isDefended(strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)))
 	{
@@ -11131,22 +11114,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	{
 		iValue /= 2;
 	}
-/*
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-
-	if (isHuman())
-	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-	}
-	else
-	{
-		return iValue;
-	}
-*/
 	return iValue * 15;
-	/************************************************************************************************/
-	/* Afforess								   END												  */
-	/************************************************************************************************/
 }
 
 /************************************************************************************************/
@@ -11157,10 +11125,9 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 {
 	CvPlot* pLoopPlot;
-	int iValue;
 	int iI;
 
-	iValue = 150;
+	int iValue = 150;
 	//consider infrastructure
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -11529,11 +11496,6 @@ int CvPlayerAI::AI_civicTradeVal(CivicTypes eCivic, PlayerTypes ePlayer) const
 
 DenialTypes CvPlayerAI::AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const
 {
-/************************************************************************************************/
-/* Afforess					  Start		 04/05/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
 		if (GET_TEAM(getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam()))
@@ -11541,9 +11503,6 @@ DenialTypes CvPlayerAI::AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) co
 			return NO_DENIAL;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	if (isHuman())
 	{
 		return NO_DENIAL;
@@ -11610,7 +11569,7 @@ int CvPlayerAI::AI_religionTradeVal(ReligionTypes eReligion, PlayerTypes ePlayer
 {
 	int iValue = (3 * (getTotalPopulation() + GET_PLAYER(ePlayer).getTotalPopulation())); // XXX
 
-	ReligionTypes eBestReligion = GET_PLAYER(ePlayer).AI_bestReligion();
+	const ReligionTypes eBestReligion = GET_PLAYER(ePlayer).AI_bestReligion();
 
 	if (eBestReligion != NO_RELIGION && eBestReligion != eReligion)
 	{
@@ -11622,11 +11581,11 @@ int CvPlayerAI::AI_religionTradeVal(ReligionTypes eReligion, PlayerTypes ePlayer
 		iValue /= 2;
 	}
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -12494,7 +12453,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				int iNumDefensiveUnits = AI_totalUnitAIs(UNITAI_CITY_DEFENSE) + AI_totalUnitAIs(UNITAI_RESERVE) + AI_totalUnitAIs(UNITAI_CITY_COUNTER)/2 + AI_totalUnitAIs(UNITAI_COLLATERAL)/2;
 				iSiegeUnits += (iSiegeImmune*iNumOffensiveUnits)/std::max(1,iNumOffensiveUnits+iNumDefensiveUnits);
 
-				int iMAX_HIT_POINTS = GC.getDefineINT("MAX_HIT_POINTS");
+				int iMAX_HIT_POINTS = GC.getMAX_HIT_POINTS();
 
 				int iCollateralDamageMaxUnitsWeight = (100 * (iNumOffensiveUnits - iSiegeUnits)) / std::max(1,iTotalSiegeMaxUnits);
 				iCollateralDamageMaxUnitsWeight = std::min(100, iCollateralDamageMaxUnitsWeight);
@@ -23087,7 +23046,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iValue += kEvent.getFoodPercent() / 4;
 		iValue += kEvent.getPopulationChange() * 30;
 		iValue -= kEvent.getRevoltTurns() * (12 + iCityPopulation * 16);
-		iValue -= (kEvent.getHurryAnger() * 6 * GC.getDefineINT("HURRY_ANGER_DIVISOR") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
+		iValue -= (kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
 		iValue += kEvent.getHappyTurns() * 10;
 		iValue += kEvent.getCulture() / 2;
 	}
@@ -23102,7 +23061,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iValue += (kEvent.getFood() * iNumCities);
 		iValue += (kEvent.getFoodPercent() * iNumCities) / 4;
 		iValue += (kEvent.getPopulationChange() * iNumCities * 40);
-		iValue -= (iNumCities * kEvent.getHurryAnger() * 6 * GC.getDefineINT("HURRY_ANGER_DIVISOR") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
+		iValue -= (iNumCities * kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
 		iValue += iNumCities * kEvent.getHappyTurns() * 10;
 		iValue += iNumCities * kEvent.getCulture() / 2;
 	}

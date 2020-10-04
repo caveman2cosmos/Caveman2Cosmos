@@ -4545,8 +4545,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 					int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-					int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
-					int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
+					int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
+					int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
 					int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal) / 100);
 					int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal) / 100);
 					int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor) / 100;
@@ -5665,8 +5665,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								{
 									//attacker is not barb and attacker player has free wins left
 									//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
-									iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
-									iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
+									iDefenderOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
+									iAttackerOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
 									szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
 										TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pAttacker->getOwner()).getWinsVsBarbs());
 									szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
@@ -5682,8 +5682,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 									if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 									{
 										//defender is not barbarian and defender has free wins left and attacker is barbarian
-										iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
-										iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+										iAttackerOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
+										iDefenderOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
 										szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
 											TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs());
 										szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
@@ -5709,12 +5709,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						else
 						{
 							iExperience = (pAttacker->attackXPValue() * iDefenderStrength) / iAttackerStrength;
-							iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+							iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 						}
 
 						int iDefExperienceKill;
 						iDefExperienceKill = (pDefender->defenseXPValue() * iAttackerStrength) / iDefenderStrength;
-						iDefExperienceKill = range(iDefExperienceKill, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+						iDefExperienceKill = range(iDefExperienceKill, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 
 						int iBonusAttackerXP = (iExperience * iAttackerExperienceModifier) / 100;
 						int iBonusDefenderXP = (iDefExperienceKill * iDefenderExperienceModifier) / 100;
@@ -5725,22 +5725,22 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						if (pDefender->isAnimal())
 						{
 							//animal
-							iExperience = range(iExperience, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							iExperience = range(iExperience, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience()));
 							if (iExperience < 0)
 							{
 								iExperience = 0;
 							}
-							iWithdrawXP = range(iWithdrawXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							iWithdrawXP = range(iWithdrawXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience()));
 							if (iWithdrawXP < 0)
 							{
 								iWithdrawXP = 0;
 							}
-							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience() + iExperience));
+							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience() + iExperience));
 							if (iBonusAttackerXP < 0)
 							{
 								iBonusAttackerXP = 0;
 							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience() + iWithdrawXP));
+							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience() + iWithdrawXP));
 							if (iBonusWithdrawXP < 0)
 							{
 								iBonusWithdrawXP = 0;
@@ -5749,22 +5749,22 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						if (pDefender->isHominid())
 						{
 							//normal barbarian
-							iExperience = range(iExperience, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - pAttacker->getExperience());
+							iExperience = range(iExperience, 0, GC.getBARBARIAN_MAX_XP_VALUE() - pAttacker->getExperience());
 							if (iExperience < 0)
 							{
 								iExperience = 0;
 							}
-							iWithdrawXP = range(iWithdrawXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							iWithdrawXP = range(iWithdrawXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience()));
 							if (iWithdrawXP < 0)
 							{
 								iWithdrawXP = 0;
 							}
-							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience() + iExperience));
+							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience() + iExperience));
 							if (iBonusAttackerXP < 0)
 							{
 								iBonusAttackerXP = 0;
 							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience() + iWithdrawXP));
+							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience() + iWithdrawXP));
 							if (iBonusWithdrawXP < 0)
 							{
 								iBonusWithdrawXP = 0;
@@ -6605,13 +6605,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 							if (pAttacker->combatLimit(pDefender) == (pDefender->maxHitPoints()))
 							{
-								FAssert(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") > GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT")); //ensuring the differences is at least 1
-								int size = GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT");
+								FAssert(GC.getMAX_EXPERIENCE_PER_COMBAT() > GC.getMIN_EXPERIENCE_PER_COMBAT()); //ensuring the differences is at least 1
+								int size = GC.getMAX_EXPERIENCE_PER_COMBAT() - GC.getMIN_EXPERIENCE_PER_COMBAT();
 								float* CombatRatioThresholds = new float[size];
 
 								for (int i = 0; i < size; i++) //setup the array
 								{
-									CombatRatioThresholds[i] = ((float)(pAttacker->attackXPValue())) / ((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i));
+									CombatRatioThresholds[i] = (float)pAttacker->attackXPValue() / (float)(GC.getMAX_EXPERIENCE_PER_COMBAT() - i);
 									//For standard game, this is the list created:
 									//  {4/10, 4/9, 4/8,
 									//   4/7, 4/6, 4/5,
@@ -6627,7 +6627,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT") + 1);
+												CombatRatioThresholds[i], GC.getMIN_EXPERIENCE_PER_COMBAT() + 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
@@ -6640,15 +6640,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i);
+												CombatRatioThresholds[i], GC.getMAX_EXPERIENCE_PER_COMBAT() - i);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 1));
+												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, GC.getMAX_EXPERIENCE_PER_COMBAT() - (i + 1));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (>%.2f:%d",
-												CombatRatioThresholds[i + 1], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 2));
+												CombatRatioThresholds[i + 1], GC.getMAX_EXPERIENCE_PER_COMBAT() - (i + 2));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -6662,11 +6662,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+												TEXT_COLOR("COLOR_POSITIVE_TEXT"), CombatRatio, GC.getMAX_EXPERIENCE_PER_COMBAT());
 											szString.append(szTempBuffer.GetCString());
 
 											szTempBuffer.Format(L"), (>%.2f:%d",
-												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - 1);
+												CombatRatioThresholds[i], GC.getMAX_EXPERIENCE_PER_COMBAT() - 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -22228,7 +22228,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		if (kBuilding.isDirtyPower() && (GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE") != 0))
 		{
-			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE")), ((GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE") > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
+			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDIRTY_POWER_HEALTH_CHANGE()), ((GC.getDIRTY_POWER_HEALTH_CHANGE() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
 			szBuffer.append(szTempBuffer);
 		}
 	}
@@ -23778,9 +23778,9 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_PROVIDES_POWER_WITH", CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPowerBonus()).getType()).GetCString(), GC.getBonusInfo((BonusTypes)kBuilding.getPowerBonus()).getTextKeyWide()));
 
-		if (kBuilding.isDirtyPower() && (GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE") != 0))
+		if (kBuilding.isDirtyPower() && (GC.getDIRTY_POWER_HEALTH_CHANGE() != 0))
 		{
-			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE")), ((GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE") > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
+			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDIRTY_POWER_HEALTH_CHANGE()), ((GC.getDIRTY_POWER_HEALTH_CHANGE() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
 			szBuffer.append(szTempBuffer);
 		}
 	}
@@ -26289,7 +26289,7 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 		if (city.getHappinessTimer() > 0)
 		{
-			iHappy = GC.getDefineINT("TEMP_HAPPY");
+			iHappy = GC.getTEMP_HAPPY();
 			iTotalHappy += iHappy;
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_TEMP", iHappy, city.getHappinessTimer()));
 			szBuffer.append(NEWLINE);
@@ -35558,12 +35558,12 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		if (kEvent.isCityEffect() || kEvent.isOtherPlayerCityEffect())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY_CITY", GC.getDefineINT("TEMP_HAPPY"), kEvent.getHappyTurns(), szCity.GetCString()));
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY_CITY", GC.getTEMP_HAPPY(), kEvent.getHappyTurns(), szCity.GetCString()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY", GC.getDefineINT("TEMP_HAPPY"), kEvent.getHappyTurns()));
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY", GC.getTEMP_HAPPY(), kEvent.getHappyTurns()));
 		}
 	}
 

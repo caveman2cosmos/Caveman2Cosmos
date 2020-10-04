@@ -1594,7 +1594,7 @@ void CvUnit::doTurn()
 
 	if (isSpy() && m_iSleepTimer > 0)
 	{
-		if (getFortifyTurns() == GC.getDefineINT("MAX_FORTIFY_TURNS"))
+		if (getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
 		{
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
 			m_iSleepTimer = 0;
@@ -1866,7 +1866,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		{
 			int iExperience = pInterceptor->defenseXPValue();
 			iExperience = (iExperience * iOurStrength) / std::max(1, iTheirStrength);
-			iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+			iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 			pInterceptor->changeExperience(iExperience, pInterceptor->maxXPValue(this), true, pPlot->getOwner() == pInterceptor->getOwner(), true);
 		}
 	}
@@ -1874,7 +1874,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 	{
 		int iExperience = attackXPValue();
 		iExperience = (iExperience * iTheirStrength) / std::max(1, iOurStrength);
-		iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+		iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 		changeExperience(iExperience, maxXPValue(pInterceptor), true, pPlot->getOwner() == getOwner(), true);
 	}
 	else if (iOurDamage > 0)
@@ -2300,19 +2300,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 			bBreakdown = false;
 		}
 		//TB Combat Mods (StrAdjperRnd) end
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Lead From Behind                                                                             */
-/************************************************************************************************/
-		// From Lead From Behind by UncutDragon
-/* original code
-		if (GC.getGame().getSorenRandNum(GC.getDefineINT("COMBAT_DIE_SIDES"), "Combat") < iDefenderOdds)
-*/		// modified
-		//if (GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Combat") < iDefenderOdds)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 		//TB Combat Mods begin
 		if (getCombatPowerShots() > 0)
 		{
@@ -2399,7 +2387,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 
 						int iExperience = defenseXPValue();
 						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
-						iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+						iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 						changeExperience100(iExperience * 10, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
 						pDefender->changeExperience100(10, MAX_INT, true, pPlot->getOwner() == pDefender->getOwner(), true);
 						bDoDynamic = false;
@@ -2540,7 +2528,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 
 						int iExperience = defenseXPValue();
 						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
-						iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+						iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 						changeExperience100(iExperience * 10, MAX_INT, true, pPlot->getOwner() == getOwner(), true);
 						pDefender->changeExperience100(10, MAX_INT, true, pPlot->getOwner() == pDefender->getOwner(), true);
 						bDoDynamic = false;
@@ -2763,7 +2751,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 			{
 				int iExperience = pDefender->defenseXPValue();
 				iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
-				iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+				iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 				if (!bDynamicXP)
 				{
 					pDefender->changeExperience(iExperience, pDefender->maxXPValue(this), true, pPlot->getOwner() == pDefender->getOwner(), true);
@@ -2778,7 +2766,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 
 				int iExperience = attackXPValue();
 				iExperience = ((iExperience * iInitialDefenderStrength) / std::max(1,iInitialAttackerStrength));
-				iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+				iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 
 				if (!bDynamicXP)
 				{
@@ -7046,26 +7034,18 @@ void CvUnit::scrap()
 		logBBAI("    %S scraps %S (%d) with %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getID(), szString.GetCString());
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/13/10                                               */
-/*                                                                                              */
-/*    Gold when Disbanding                                                                      */
-/************************************************************************************************/
 	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
 	{
 		int iCost = (getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
-		iCost /= GC.getDefineINT("UNIT_GOLD_DISBAND_DIVISOR");
+		iCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
 		iCost += (iCost * getUpgradeDiscount())/100;
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 		}
 		iCost = std::max(1, iCost);
 		GET_PLAYER(getOwner()).changeGold(iCost);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
@@ -7867,7 +7847,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 
 	if (pPlot->isCity(true, getTeam()))
 	{
-		iTotalHeal += GC.getDefineINT("CITY_HEAL_RATE") + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -7879,16 +7859,16 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		{
 			if (isEnemy(pPlot->getTeam(), pPlot))
 			{
-				iTotalHeal += (GC.getDefineINT("ENEMY_HEAL_RATE") + getExtraEnemyHeal());
+				iTotalHeal += (GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal());
 			}
 			else
 			{
-				iTotalHeal += (GC.getDefineINT("NEUTRAL_HEAL_RATE") + getExtraNeutralHeal());
+				iTotalHeal += (GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal());
 			}
 		}
 		else
 		{
-			iTotalHeal += (GC.getDefineINT("FRIENDLY_HEAL_RATE") + getExtraFriendlyHeal());
+			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
 
@@ -7996,7 +7976,7 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 
 	if (pPlot->isCity(true, getTeam()))
 	{
-		iTotalHeal += GC.getDefineINT("CITY_HEAL_RATE") + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -8009,16 +7989,16 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 		{
 			if (isEnemy(pPlot->getTeam(), pPlot))
 			{
-				iTotalHeal += (GC.getDefineINT("ENEMY_HEAL_RATE") + getExtraEnemyHeal());
+				iTotalHeal += (GC.getENEMY_HEAL_RATE() + getExtraEnemyHeal());
 			}
 			else
 			{
-				iTotalHeal += (GC.getDefineINT("NEUTRAL_HEAL_RATE") + getExtraNeutralHeal());
+				iTotalHeal += (GC.getNEUTRAL_HEAL_RATE() + getExtraNeutralHeal());
 			}
 		}
 		else
 		{
-			iTotalHeal += (GC.getDefineINT("FRIENDLY_HEAL_RATE") + getExtraFriendlyHeal());
+			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
 
@@ -10151,12 +10131,6 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 }
 
 
-int CvUnit::sabotageCost(const CvPlot* pPlot) const
-{
-	return GC.getDefineINT("BASE_SPY_SABOTAGE_COST");
-}
-
-
 // XXX compare with destroy prob...
 int CvUnit::sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
@@ -10219,7 +10193,7 @@ bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < sabotageCost(pPlot))
+	if (!bTestVisible && GET_PLAYER(getOwner()).getGold() < GC.getBASE_SPY_SABOTAGE_COST())
 	{
 		return false;
 	}
@@ -10230,21 +10204,18 @@ bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::sabotage()
 {
-	CvCity* pNearestCity;
-	CvPlot* pPlot;
 	CvWString szBuffer;
-	bool bCaught;
 
 	if (!canSabotage(plot()))
 	{
 		return false;
 	}
 
-	pPlot = plot();
+	CvPlot* pPlot = plot();
 
-	bCaught = (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") > sabotageProb(pPlot));
+	bool bCaught = (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") > sabotageProb(pPlot));
 
-	GET_PLAYER(getOwner()).changeGold(-(sabotageCost(pPlot)));
+	GET_PLAYER(getOwner()).changeGold(-GC.getBASE_SPY_SABOTAGE_COST());
 
 	if (!bCaught)
 	{
@@ -10252,7 +10223,7 @@ bool CvUnit::sabotage()
 
 		finishMoves();
 
-		pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
+		const CvCity* pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
 
 		if (pNearestCity != NULL)
 		{
@@ -12796,13 +12767,6 @@ int CvUnit::getStackExperienceToGive(int iNumUnits) const
 
 int CvUnit::upgradePrice(UnitTypes eUnit) const
 {
-	int iPrice;
-
-/************************************************************************************************/
-/* Afforess	                  Start		 12/21/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if(GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
 	{
 		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
@@ -12815,21 +12779,15 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 			return iResult;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	if (isNPC())
 	{
 		return 0;
 	}
 
 	int iBasePrice = GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType());
-	int iCostPerProduction = GC.getDefineINT("UNIT_UPGRADE_COST_PER_PRODUCTION");
-	iPrice = iBasePrice * iCostPerProduction;
+	int iPrice = iBasePrice * GC.getUNIT_UPGRADE_COST_PER_PRODUCTION();
 	iPrice /= 100;
-
-	int iMinimumPrice = GC.getBASE_UNIT_UPGRADE_COST();
-	int iBestPrice = std::max(iMinimumPrice, iPrice);
 
 	if (!isHuman() && !isNPC())
 	{
@@ -12852,7 +12810,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	}
 	return iPrice;
 }
@@ -14044,20 +14002,18 @@ int CvUnit::getSMStrength() const
 void CvUnit::setSMStrength()
 {
 	const int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
-	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FAssert(m_iSMStrength >= 0);
 }
 
 float CvUnit::fbaseCombatStr() const
 {
-	float fTotal = (float)baseCombatStr()/100;
-	return fTotal;
+	return (float)baseCombatStr()/100;
 }
 
 float CvUnit::fairBaseCombatStr() const
 {
-	float fTotal = (float)airBaseCombatStr()/100;
-	return fTotal;
+	return (float)airBaseCombatStr()/100;
 }
 
 struct CombatStrCacheEntry
@@ -16874,7 +16830,7 @@ void CvUnit::setHotKeyNumber(int iNewValue)
 
 int CvUnit::getViewportX() const
 {
-	CvViewport*	pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 
 	return pCurrentViewPort->getViewportXFromMapX(m_iX);
@@ -16883,7 +16839,7 @@ int CvUnit::getViewportX() const
 
 int CvUnit::getViewportY() const
 {
-	CvViewport*	pCurrentViewPort = GC.getCurrentViewport();
+	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
 
 	return pCurrentViewPort->getViewportYFromMapY(m_iY);
@@ -17744,7 +17700,7 @@ void CvUnit::setReconPlot(CvPlot* pNewValue)
 	{
 		if (pOldPlot != NULL)
 		{
-			pOldPlot->changeAdjacentSight(getTeam(), GC.getDefineINT("RECON_VISIBILITY_RANGE"), false, this, true);
+			pOldPlot->changeAdjacentSight(getTeam(), GC.getRECON_VISIBILITY_RANGE(), false, this, true);
 			pOldPlot->changeReconCount(-1); // changeAdjacentSight() tests for getReconCount()
 			changeDebugCount(-1);
 		}
@@ -17760,7 +17716,7 @@ void CvUnit::setReconPlot(CvPlot* pNewValue)
 			m_iReconY = pNewValue->getY();
 
 			pNewValue->changeReconCount(1); // changeAdjacentSight() tests for getReconCount()
-			pNewValue->changeAdjacentSight(getTeam(), GC.getDefineINT("RECON_VISIBILITY_RANGE"), true, this, true);
+			pNewValue->changeAdjacentSight(getTeam(), GC.getRECON_VISIBILITY_RANGE(), true, this, true);
 			changeDebugCount(1);
 		}
 	}
@@ -31679,7 +31635,7 @@ bool CvUnit::sleepForEspionage()
 		return false;
 	}
 
-	if (getFortifyTurns() == GC.getDefineINT("MAX_FORTIFY_TURNS"))
+	if (getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
 	{
 		return false;
 	}
@@ -32398,8 +32354,7 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 
 int CvUnit::getRandomMinExperienceTimes100() const
 {
-	int rand = GC.getGame().getSorenRandNum(26, "Random Min XP") + (GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT") * 25);
-	return rand;
+	return GC.getGame().getSorenRandNum(26, "Random Min XP") + (GC.getMIN_EXPERIENCE_PER_COMBAT() * 25);
 }
 
 bool CvUnit::isTerrainProtected(TerrainTypes eIndex) const
@@ -38199,11 +38154,9 @@ void CvUnit::changeRetrainsAvailable(int iChange)
 
 int CvUnit::getExperiencefromWithdrawal(const int iWithdrawalProbability) const
 {
-	const int iExpBase = GC.getDefineINT("EXPERIENCE_FROM_WITHDRAWL");
-
 	const int iInversePercentage = 100 - iWithdrawalProbability;
 
-	const int iExperienceTotal = (iExpBase * iInversePercentage)/100;
+	const int iExperienceTotal = (GC.getEXPERIENCE_FROM_WITHDRAWL() * iInversePercentage)/100;
 
 	return (std::max(1, iExperienceTotal));
 }
@@ -39409,26 +39362,26 @@ int CvUnit::SMcargoSpace() const
 		{
 			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange(),
 				getSizeMattersSpacialOffsetValue(),
-				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
+				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 		}
 		const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 		if (SMspecialCargo() == eMissile)
 		{
 			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange(),
 				getSizeMattersSpacialOffsetValue(),
-				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
+				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 		}
 	}
 	else
 	{
 		if (getDomainType() == DOMAIN_SEA)
 		{
-			iCargoCapacity += (GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange());
+			iCargoCapacity += GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange();
 		}
 		const SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 		if (SMspecialCargo() == eMissile)
 		{
-			iCargoCapacity += (GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange());
+			iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 		}
 	}
 	return iCargoCapacity;
@@ -39460,7 +39413,7 @@ int CvUnit::getSMCargoCapacity() const
 void CvUnit::setSMCargoCapacity()
 {
 	m_iSMCargoCapacity = applySMRank(
-		SMcargoCapacityPreCheck(), getSizeMattersSpacialOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER")
+		SMcargoCapacityPreCheck(), getSizeMattersSpacialOffsetValue(), GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER()
 		);
 	FAssert(m_iSMCargoCapacity >= 0);
 }
@@ -39511,7 +39464,7 @@ int CvUnit::getSMHPValue() const
 void CvUnit::setSMHPValue()
 {
 	const int newSMHPValue = applySMRank(
-		HPValueTotalPreCheck(), getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER")
+		HPValueTotalPreCheck(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		);
 	m_iSMHPValue = newSMHPValue;
 	FAssert(m_iSMHPValue >= 0);
@@ -39560,7 +39513,7 @@ void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
 	const int m_iSMPowerValue = applySMRank(
-		getSMPowerValueTotalBase(), getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER")
+		getSMPowerValueTotalBase(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		);
 	FAssert(m_iSMPowerValue >= 0);
 	if (!bForLoad)
@@ -39615,7 +39568,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
 		const int oldSMAssetValue = m_iSMAssetValue;
-		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(), offsetValue, GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(), offsetValue, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 		if (!bForLoad)
 		{
 			const int iChange = m_iSMAssetValue - oldSMAssetValue;
@@ -39696,7 +39649,7 @@ void CvUnit::setSMCargoVolume()
 			applySMRank(
 				getSMCargoVolumeBase(),
 				getSizeMattersSpacialOffsetValue(),
-				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER")
+				GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER()
 			)
 		)
 	);
@@ -39729,7 +39682,7 @@ int CvUnit::getCargoCapacitybyType(int iValue) const
 	{
 		rankChange = -1;
 	}
-	return applySMRank(iValue, rankChange, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
+	return applySMRank(iValue, rankChange, GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 }
 
 bool CvUnit::isCarrier() const
@@ -39831,7 +39784,7 @@ void CvUnit::setSMBombardRate()
 {
 	m_iSMBombardRate = applySMRank(getSMBombardRateTotalBase(),
 		getSizeMattersOffsetValue(),
-		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+		GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 
 	// optional but most of these should be above or equal to 0.
 	FAssert(m_iSMBombardRate >= 0);
@@ -39877,7 +39830,7 @@ void CvUnit::setSMAirBombBaseRate()
 		(
 			getSMAirBombBaseRateTotalBase(),
 			getSizeMattersOffsetValue(),
-			GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER")
+			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		)
 	);
 	//optional but most of these should be above or equal to 0.
@@ -39994,7 +39947,7 @@ void CvUnit::setSMBaseWorkRate()
 		(
 			baseWorkRatePreCheck(),
 			getSizeMattersSpacialOffsetValue(),
-			GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER")
+			GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER()
 		)
 	);
 	//optional but most of these should be above or equal to 0.
@@ -40060,7 +40013,7 @@ void CvUnit::setSMRevoltProtection()
 		(
 			revoltProtectionTotalPreCheck(),
 			getSizeMattersOffsetValue(),
-			GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER")
+			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		)
 	);
 	// optional but most of these should be above or equal to 0.

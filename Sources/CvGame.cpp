@@ -12827,14 +12827,14 @@ void CvGame::ensureChokePointsEvaluated()
 
 int CvGame::getBaseAirUnitIncrementsbyCargoVolume() const
 {
-	const int multiplier = std::max(1, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER", 1));
+	const int multiplier = std::max(1, GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 	int iBase = 10000 / multiplier;
 	return iBase;
 }
 
 int CvGame::getBaseMissileUnitIncrementsbyCargoVolume() const
 {
-	const int multiplier = std::max(1, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER", 1));
+	const int multiplier = std::max(1, GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER());
 	int iBase = 10000 / (multiplier * multiplier * multiplier);
 	return std::max(1, iBase);
 }

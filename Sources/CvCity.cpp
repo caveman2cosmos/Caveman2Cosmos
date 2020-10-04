@@ -6655,7 +6655,7 @@ float CvCity::foodWastage(int surplass) const
 	static float calculatedWaste[MAX_SURPLASS];
 	static int calculatedTo = -1;
 	const int startWasteAtConsumptionPercent = GC.getWASTAGE_START_CONSUMPTION_PERCENT();
-	float wastageGrowthFactor = GC.getDefineFLOAT("WASTAGE_GROWTH_FACTOR");
+	float wastageGrowthFactor = GC.getWASTAGE_GROWTH_FACTOR();
 
 	if (wastageGrowthFactor == 0)
 	{
