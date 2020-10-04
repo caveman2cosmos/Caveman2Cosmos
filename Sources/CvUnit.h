@@ -3253,78 +3253,6 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
-/*
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isNukeImmune);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBuildUp);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canAttack);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isZoneOfControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isMADEnabled);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isSpy);
-
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasBuild, BuildTypes);
-
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
-
-		DECLARE_MAP_FUNCTOR(CvUnit, int, cargoSpace);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getFortifyTurns);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getBombardRate);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
-		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
-		DECLARE_MAP_FUNCTOR(CvUnit, PlayerTypes, getOwner);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
-		DECLARE_MAP_FUNCTOR(CvUnit, DomainTypes, getDomainType);
-
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnit*, getTransportUnit);
-		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
-		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, revoltProtectionTotal);
-
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, isEnemy, TeamTypes);
-
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, isInvisible, TeamTypes, bool);
-
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes, const CvPlot*, bool);
-*/
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
@@ -3347,6 +3275,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isNukeImmune);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
