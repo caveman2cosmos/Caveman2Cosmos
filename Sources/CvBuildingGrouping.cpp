@@ -91,8 +91,7 @@ void BuildingGroupingList::setPlayer(CvPlayer *pPlayer)
 
 bool BuildingGroupingList::setActiveGrouping(BuildingGroupingTypes eActiveGrouping)
 {
-	FAssertMsg(eActiveGrouping < NUM_BUILDING_GROUPING, "Index out of bounds");
-	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_GROUPING, eActiveGrouping)
 	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;

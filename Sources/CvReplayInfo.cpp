@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
@@ -42,17 +43,11 @@ CvReplayInfo::~CvReplayInfo()
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
 	CvGame& game = GC.getGame();
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (!game.isFinalInitialized())
 		return;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	CvMap& map = GC.getMap();
+
+	const CvMap& map = GC.getMap();
 	
 	if (ePlayer == NO_PLAYER)
 	{
@@ -60,7 +55,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	}
 	if (NO_PLAYER != ePlayer)
 	{
-		CvPlayer& player = GET_PLAYER(ePlayer);
+		const CvPlayer& player = GET_PLAYER(ePlayer);
 
 		m_eDifficulty = player.getHandicapType();
 		m_szLeaderName = player.getName();
@@ -77,7 +72,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_listGameOptions.clear();
 		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 		{
-			GameOptionTypes eOption = (GameOptionTypes)i;
+			const GameOptionTypes eOption = (GameOptionTypes)i;
 			if (game.isOption(eOption))
 			{
 				m_listGameOptions.push_back(eOption);
@@ -121,7 +116,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	int iPlayerIndex = 0;
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
-		CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
 		if (player.isEverAlive())
 		{
 			mapPlayers[(PlayerTypes)iPlayer] = iPlayerIndex;
@@ -180,7 +175,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	m_iMapHeight = GC.getMap().getGridHeight();
 	
 	SAFE_DELETE(m_pcMinimapPixels);	
-	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
+	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
 	
 	void *ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
 	if (ptexture)
@@ -464,7 +459,7 @@ int CvReplayInfo::getFinalTurn() const
 	return m_iFinalTurn;
 }
 
-const wchar* CvReplayInfo::getFinalDate() const
+const wchar_t* CvReplayInfo::getFinalDate() const
 {
 	return m_szFinalDate;
 }
@@ -475,7 +470,7 @@ CalendarTypes CvReplayInfo::getCalendar() const
 }
 
 
-int CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -484,7 +479,7 @@ int CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -493,7 +488,7 @@ int CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -502,7 +497,7 @@ int CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
+int64_t CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
@@ -511,22 +506,22 @@ int CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 	return 0;
 }
 
-int CvReplayInfo::getFinalScore() const
+int64_t CvReplayInfo::getFinalScore() const
 {
 	return getPlayerScore(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalEconomy() const
+int64_t CvReplayInfo::getFinalEconomy() const
 {
 	return getPlayerEconomy(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalIndustry() const
+int64_t CvReplayInfo::getFinalIndustry() const
 {
 	return getPlayerIndustry(m_iActivePlayer, m_iFinalTurn);
 }
 
-int CvReplayInfo::getFinalAgriculture() const
+int64_t CvReplayInfo::getFinalAgriculture() const
 {
 	return getPlayerAgriculture(m_iActivePlayer, m_iFinalTurn);
 }
@@ -546,7 +541,7 @@ int CvReplayInfo::getMapWidth() const
 	return m_iMapWidth;
 }
 
-const unsigned char* CvReplayInfo::getMinimapPixels() const
+const uint8_t* CvReplayInfo::getMinimapPixels() const
 {
 	return m_pcMinimapPixels;
 }
@@ -642,10 +637,23 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 			for (int j = 0; j < jNumTypes; j++)
 			{
 				TurnData data;
-				stream.Read(&(data.m_iScore));
-				stream.Read(&(data.m_iEconomy));
-				stream.Read(&(data.m_iIndustry));
-				stream.Read(&(data.m_iAgriculture));
+
+				double fScore;
+				stream.Read(&fScore);
+				data.m_iScore = static_cast<int64_t>(fScore);
+
+				double fEconomy;
+				stream.Read(&fEconomy);
+				data.m_iEconomy = static_cast<int64_t>(fEconomy);
+
+				double fIndustry;
+				stream.Read(&fIndustry);
+				data.m_iIndustry = static_cast<int64_t>(fIndustry);
+
+				double fAgriculture;
+				stream.Read(&fAgriculture);
+				data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
+
 				info.m_listScore.push_back(data);
 			}
 			m_listPlayerScoreHistory.push_back(info);
@@ -653,7 +661,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		stream.Read(&m_iMapWidth);
 		stream.Read(&m_iMapHeight);
 		SAFE_DELETE(m_pcMinimapPixels);
-		m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
+		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
 		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
 		stream.Read(&m_bMultiplayer);
 		if (iVersion > 2)
@@ -718,10 +726,10 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 		stream.Write((int)info.m_listScore.size());
 		for (uint j = 0; j < info.m_listScore.size(); j++)
 		{
-			stream.Write(info.m_listScore[j].m_iScore);
-			stream.Write(info.m_listScore[j].m_iEconomy);
-			stream.Write(info.m_listScore[j].m_iIndustry);
-			stream.Write(info.m_listScore[j].m_iAgriculture);
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iScore));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iEconomy));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iIndustry));
+			stream.Write(static_cast<double>(info.m_listScore[j].m_iAgriculture));
 		}
 	}
 	stream.Write(m_iMapWidth);

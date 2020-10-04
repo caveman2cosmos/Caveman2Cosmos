@@ -812,8 +812,8 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 	if (getNumUnits() == 0)
 		return 0;
 
-	unsigned long long strSum = 0;
-	static const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+	uint64_t strSum = 0;
+	const int COLLATERAL_COMBAT_DAMAGE = GC.getCOLLATERAL_COMBAT_DAMAGE(); // K-Mod. (currently this number is "10")
 
 	const bool bCheckCanAttack = flags & StackCompare::CheckCanAttack;
 	const bool bCheckCanMove = flags & StackCompare::CheckCanMove;
@@ -834,9 +834,9 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			&& (eDomainType == NO_DOMAIN || unit->getDomainType() == eDomainType)
 			)
 		{
-			//strSum += (unsigned long long)unit->currEffectiveStr(pAttackedPlot, pLoopUnit);
+			//strSum += (uint64_t)unit->currEffectiveStr(pAttackedPlot, pLoopUnit);
 			//TB Simplify for speed:
-			strSum += (unsigned long long)unit->currCombatStr(NULL,NULL);
+			strSum += (uint64_t)unit->currCombatStr(NULL,NULL);
 			// K-Mod estimate the attack power of collateral units
 			if (!bFastMode && unit->collateralDamage() > 0 && pAttackedPlot != plot())
 			{ 
@@ -845,7 +845,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 				if (iPossibleTargets > 0) 
 				{ 
 					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-					strSum += (unsigned long long)unit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit->collateralDamage() * iPossibleTargets / 100;
+					strSum += (uint64_t)unit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit->collateralDamage() * iPossibleTargets / 100;
 				} 
 			} 
 
@@ -854,7 +854,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			// K-Mod end 
 		}
 	}
-	return static_cast<int>(std::min<unsigned long long>(MAX_INT, strSum));
+	return static_cast<int>(std::min<uint64_t>(MAX_INT, strSum));
 }
 
 void CvSelectionGroupAI::AI_queueGroupAttack(int iX, int iY)

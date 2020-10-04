@@ -106,15 +106,7 @@
 	</Define>
 	<!--Afforess Additions-->
 	<Define>
-		<DefineName>USE_CAN_CREATE_PROJECT_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_CAN_DO_MELTDOWN_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CAN_MAINTAIN_PROCESS_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>

@@ -16,8 +16,7 @@ CvOutcomeList::~CvOutcomeList()
 
 CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_aOutcome.size());
+	FASSERT_BOUNDS(0, getNumOutcomes(), index)
 	return m_aOutcome[index];
 }
 
@@ -246,7 +245,7 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtilit
 	}
 }
 
-void CvOutcomeList::getCheckSum(unsigned int& iSum)
+void CvOutcomeList::getCheckSum(unsigned int& iSum) const
 {
 	int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)

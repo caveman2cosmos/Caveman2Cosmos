@@ -605,31 +605,16 @@ void stopProfilingDLL(bool longLived)
 }
 
 // Toffer - Square root with integer math, OOS safe.
-int intSqrt(const int iValue, const bool bTreatNegAsPos)
+int intSqrt(unsigned int iValue, const bool bTreatNegAsPos)
 {
-	unsigned int iVal;
-	if (iValue < 0)
-	{
-		if (!bTreatNegAsPos)
-		{
-			return -1;
-		}
-		iVal = static_cast<unsigned int>(-iValue);
-	}
-	else if (iValue < 2)
-	{
-		return iValue;
-	}
-	else iVal = static_cast<unsigned int>(iValue);
-
-	int iRem = 0;
-	int iRoot = 0;
+	unsigned int iRem = 0;
+	unsigned int iRoot = 0;
 	for (int iI = 0; iI < 16; iI++)
 	{
 		iRoot <<= 1;
 		iRem <<= 2;
-		iRem += iVal >> 30;
-		iVal <<= 2;
+		iRem += iValue >> 30;
+		iValue <<= 2;
 
 		if (iRoot < iRem)
 		{
@@ -638,6 +623,30 @@ int intSqrt(const int iValue, const bool bTreatNegAsPos)
 			iRoot++;
 		}
 	}
-	return iRoot >> 1;
+	return static_cast<int>(iRoot >> 1);
+}
+
+// Testing alternate version; should compare to see which one is fastest.
+int64_t intSqrt64(uint64_t iValue)
+{
+	uint64_t min = 0;
+	uint64_t max = ((uint64_t) 1) << 32;
+	while(true)
+	{
+		if (max <= 1 + min)
+		{
+			return static_cast<int64_t>(min);
+		}
+		const uint64_t sqt = min + (max - min)/2;
+		const uint64_t sq = sqt*sqt;
+
+		if (sq == iValue)
+		{
+			return static_cast<int64_t>(sqt);
+		}
+		if (sq > iValue)
+			max = sqt;
+		else min = sqt;
+	}
 }
 // ! Toffer

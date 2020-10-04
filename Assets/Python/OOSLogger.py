@@ -46,7 +46,7 @@ def writeLog():
 			pFile.write("Player %d Score: %d\n" % (iPlayer, GAME.getPlayerScore(iPlayer)))
 			pFile.write("Player %d Population: %d\n" % (iPlayer, pPlayer.getTotalPopulation()))
 			pFile.write("Player %d Total Land: %d\n" % (iPlayer, pPlayer.getTotalLand()))
-			pFile.write("Player %d Greater Gold: %d Gold: %d\n" % (iPlayer, pPlayer.getGreaterGold(), pPlayer.getGold()))
+			pFile.write("Player %d Gold: %d\n" % (iPlayer, pPlayer.getGold()))
 			pFile.write("Player %d Assets: %d\n" % (iPlayer, pPlayer.getAssets()))
 			pFile.write("Player %d Power: %d\n" % (iPlayer, pPlayer.getPower()))
 			pFile.write("Player %d Num Cities: %d\n" % (iPlayer, pPlayer.getNumCities()))

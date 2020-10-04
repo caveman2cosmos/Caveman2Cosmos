@@ -306,7 +306,7 @@ def canDoWeddingFeud3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   # do not use this event in multiplayer
@@ -455,7 +455,7 @@ def canApplyBardTale3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   return True
@@ -587,7 +587,7 @@ def canTriggerHurricaneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -656,7 +656,7 @@ def canTriggerCycloneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -678,7 +678,7 @@ def canTriggerTsunamiCity(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   return True
@@ -753,7 +753,7 @@ def canTriggerMonsoonCity(argsList):
   if city.isNone():
     return False
 
-  if city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getInfoTypeForString("FEATURE_JUNGLE")
@@ -961,7 +961,7 @@ def applyGreatDepression(argsList):
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
     if loopPlayer.isAlive():
-      loopPlayer.changeGold(-loopPlayer.getEffectiveGold()/4)
+      loopPlayer.changeGold(-loopPlayer.getGold()/4)
 
       if iPlayer != kTriggeredData.ePlayer:
         szText = TRNSLTR.getText("TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION", (player.getCivilizationAdjectiveKey(), u"", u"", u"", u"", corporation.getTextKey()))
@@ -4601,7 +4601,7 @@ def canTriggerMoreFiatMoney(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.getEffectiveGold() > 5000:
+  if pPlayer.getGold() > 5000:
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_BARTER")):
     return False
@@ -6003,7 +6003,7 @@ def canTriggerSailingFounded(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   if city.plot().getLatitude() <= 0:
@@ -6960,7 +6960,7 @@ def canTriggerUnlimitedPower2(argsList):
     return False
   if (eventCity.area().isCleanPower(player.getTeam())):
     return False
-  if (player.getEffectiveGold() < (eventCity.area().getNumCities() * 100)):
+  if (player.getGold() < (eventCity.area().getNumCities() * 100)):
     return False
   return True
 
@@ -6977,7 +6977,7 @@ def getHelpUnlimitedPower2(argsList):
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 	iGold = CyPlayer.getCity(kTriggeredData.iCityId).area().getNumCities() * 100
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szGold = "\n<color=255,76,76>"
 	else: szGold = "\n"
 	szGold += TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
@@ -7071,7 +7071,7 @@ def getHelpSuperVirus2(argsList):
 	szHelp += TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (1, CyPlayer.getCity(kTriggeredData.iCityId).getNameKey()))
 
 	iGold = 100 + CyPlayer.getNumCities() * 35
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>"
 	else: szHelp += "\n"
 
@@ -7081,7 +7081,7 @@ def canTriggerSuperVirus2(argsList):
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-	if CyPlayer.getEffectiveGold() < 100 + CyPlayer.getNumCities() * 35:
+	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 35:
 		return False
 	return True
 
@@ -7112,7 +7112,7 @@ def getHelpSuperVirus3(argsList):
 
 	iGold = 100 + CyPlayer.getNumCities() * 65
 
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
 	else: szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
 
@@ -7135,7 +7135,7 @@ def canTriggerSuperVirus3(argsList):
   team = GC.getTeam(player.getTeam())
 
   iRequireGold = 100 + player.getNumCities() * 65
-  if (player.getEffectiveGold() < (iRequireGold)):
+  if (player.getGold() < iRequireGold):
     return False
   iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
   iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")

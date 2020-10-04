@@ -293,7 +293,7 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 		m_eFogType = FOG_TYPE_PROJECTED;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown fog type.");
+		FErrorMsg("[Jason] Unknown fog type.");
 		m_eFogType = FOG_TYPE_NONE;
 	}
 
@@ -400,7 +400,7 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 		m_eCameraOverlayType = CAMERA_OVERLAY_ADDITIVE;
 	else
 	{
-		FAssertMsg(false, "[Jason] Unknown camera overlay type.");
+		FErrorMsg("[Jason] Unknown camera overlay type.");
 		m_eCameraOverlayType = CAMERA_OVERLAY_DECAL;
 	}
 

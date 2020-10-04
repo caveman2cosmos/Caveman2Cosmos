@@ -54,5 +54,5 @@ public:
 	static void setMode(Mode mode, bool on);
 
 private:
-	static unsigned __int64 m_mode;
+	static uint64_t m_mode;
 };

@@ -44,12 +44,13 @@ public:
 	void setID(int iID);
 
 	int getNumTiles() const;																									// Exposed to Python
-	bool isLake() const;																											// Exposed to Python
 	void changeNumTiles(int iChange);
 
 	int getNumOwnedTiles() const;																							// Exposed to Python
 	int getNumUnownedTiles() const;																						// Exposed to Python
 	void changeNumOwnedTiles(int iChange);
+
+	bool isLake() const;																											// Exposed to Python
 
 	int getNumRiverEdges() const;																							// Exposed to Python
 	void changeNumRiverEdges(int iChange);
@@ -234,10 +235,15 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+		DECLARE_MAP_FUNCTOR(CvArea, void, clearModifierTotals);
+
+		DECLARE_MAP_FUNCTOR_2(CvArea, void, setBestFoundValue, PlayerTypes, int);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, int, getNumTiles);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
 	};
 };
 

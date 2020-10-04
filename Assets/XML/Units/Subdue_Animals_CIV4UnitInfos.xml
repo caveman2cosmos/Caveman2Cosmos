@@ -13037,10 +13037,12 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
-				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>
+				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
+				<BuildingType>BUILDING_BUG_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
+				<BuildingType>BUILDING_BUG_STORIES</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ENTOMOLOGY_LAB</BuildingType>

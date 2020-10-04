@@ -417,11 +417,6 @@ void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 
 
-void checkBattleUnitType(BattleUnitTypes unitType)
-{
-	FAssertMsg((unitType >= 0) && (unitType < BATTLE_UNIT_COUNT), "[Jason] Invalid battle unit type.");
-}
-
 CvBattleRound::CvBattleRound() :
 	m_iWaveSize(0),
 	m_bRangedRound(false) 
@@ -463,31 +458,31 @@ void CvBattleRound::setWaveSize(int size)
 
 int CvBattleRound::getNumKilled(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aNumKilled[unitType];
 }
 
 void CvBattleRound::setNumKilled(BattleUnitTypes unitType, int value)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumKilled[unitType] = value;
 }
 
 void CvBattleRound::addNumKilled(BattleUnitTypes unitType, int increment)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumKilled[unitType] += increment;
 }
 
 int CvBattleRound::getNumAlive(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aNumAlive[unitType];
 }
 
 void CvBattleRound::setNumAlive(BattleUnitTypes unitType, int value)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aNumAlive[unitType] = value;
 }
 
@@ -528,13 +523,13 @@ void CvMissionDefinition::setMissionTime(float time)
 
 CvUnit *CvMissionDefinition::getUnit(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aUnits[unitType];
 }
 
 void CvMissionDefinition::setUnit(BattleUnitTypes unitType, CvUnit *unit)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aUnits[unitType] = unit;
 }
 
@@ -622,40 +617,40 @@ CvBattleDefinition::~CvBattleDefinition() {}
 
 int CvBattleDefinition::getDamage(BattleUnitTypes unitType, BattleTimeTypes timeType) const
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	return m_aDamage[unitType][timeType];
 }
 
 void CvBattleDefinition::setDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int damage)
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	m_aDamage[unitType][timeType] = damage;
 }
 
 void CvBattleDefinition::addDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int increment)
 {
-	checkBattleUnitType(unitType);
-	checkBattleTimeType(timeType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
+	FASSERT_BOUNDS(0, BATTLE_TIME_COUNT, timeType)
 	m_aDamage[unitType][timeType] += increment;
 }
 
 int CvBattleDefinition::getFirstStrikes(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aFirstStrikes[unitType];
 }
 
 void CvBattleDefinition::setFirstStrikes(BattleUnitTypes unitType, int firstStrikes)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aFirstStrikes[unitType] = firstStrikes;
 }
 
 void CvBattleDefinition::addFirstStrikes(BattleUnitTypes unitType, int increment)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aFirstStrikes[unitType] += increment;
 }
 
@@ -711,13 +706,13 @@ void CvBattleDefinition::clearBattleRounds()
 
 CvBattleRound &CvBattleDefinition::getBattleRound(int index)
 {
-	checkBattleRound(index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index)
 	return m_aBattleRounds[index];
 }
 
 const CvBattleRound &CvBattleDefinition::getBattleRound(int index) const
 {
-	checkBattleRound(index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index)
 	return m_aBattleRounds[index];
 }
 
@@ -729,16 +724,6 @@ void CvBattleDefinition::addBattleRound(const CvBattleRound &round)
 void CvBattleDefinition::setBattleRound(int index, const CvBattleRound &round)
 {
 	m_aBattleRounds.assign(index, round);
-}
-
-void CvBattleDefinition::checkBattleTimeType(BattleTimeTypes timeType) const
-{
-	FAssertMsg((timeType >= 0) && (timeType < BATTLE_TIME_COUNT), "[Jason] Invalid battle time type.");
-}
-
-void CvBattleDefinition::checkBattleRound(int index) const
-{
-	FAssertMsg((index >= 0) && (index < (int)m_aBattleRounds.size()), "[Jason] Invalid battle round index.");
 }
 
 //------------------------------------------------------------------------------------------------
@@ -773,24 +758,21 @@ CvAirMissionDefinition::CvAirMissionDefinition( const CvAirMissionDefinition & k
 
 int CvAirMissionDefinition::getDamage(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	return m_aDamage[unitType];
 }
 
 void CvAirMissionDefinition::setDamage(BattleUnitTypes unitType, int damage)
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	m_aDamage[unitType] = damage;
 }
 
 bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 {
-	checkBattleUnitType(unitType);
+	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	FAssertMsg(getUnit(unitType) != NULL, "[Jason] Invalid battle unit type.");
-	if(getDamage(unitType) >= getUnit(unitType)->maxHitPoints())
-		return true;
-	else
-		return false;
+	return getDamage(unitType) >= getUnit(unitType)->maxHitPoints();
 }
 
 PBGameSetupData::PBGameSetupData()

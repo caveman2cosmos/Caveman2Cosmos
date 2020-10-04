@@ -37,7 +37,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"PropertyManipulators");
 	void copyNonDefaults(CvPropertyManipulators* pProp, CvXMLLoadUtility* pXML );
 
-	void getCheckSum(unsigned int& iSum);
+	void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	std::vector<CvPropertySource*> m_apSources;

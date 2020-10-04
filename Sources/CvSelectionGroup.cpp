@@ -292,7 +292,7 @@ void CvSelectionGroup::doTurn()
 
 		if (isHuman() && GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 		{
-			const int iMinTimerDoubleMoves = GC.getDefineINT("MIN_TIMER_UNIT_DOUBLE_MOVES");
+			const int iMinTimerDoubleMoves = GC.getMIN_TIMER_UNIT_DOUBLE_MOVES();
 
 			int iBestWaitTurns = 0;
 			foreach_(const CvUnit* pLoopUnit, units())
@@ -325,10 +325,7 @@ void CvSelectionGroup::resetHealing()
 {
 	PROFILE("CvSelectionGroup::resetHealing()")
 
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->setHealSupportUsed(0);
-	}
+	algo::for_each(units(), CvUnit::fn::setHealSupportUsed(0));
 }
 
 bool CvSelectionGroup::showMoves() const
@@ -724,13 +721,9 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	static const TechTypes sedentaryLifestyle = static_cast<TechTypes>(GC.getInfoTypeForString("TECH_SEDENTARY_LIFESTYLE"));
 #endif
 	CvUnit* pTargetUnit;
-	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, units())
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
 		switch (iMission)
 		{
 // BUG - Sentry Actions - start
@@ -1190,7 +1183,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			break;
 		case MISSION_ESPIONAGE_SLEEP:
-			if (pLoopUnit->plot()->isCity() && pLoopUnit->canSleep(pPlot) && pLoopUnit->canEspionage(pPlot, true) && pLoopUnit->getFortifyTurns() != GC.getDefineINT("MAX_FORTIFY_TURNS"))
+			if (pLoopUnit->plot()->isCity() && pLoopUnit->canSleep(pPlot) && pLoopUnit->canEspionage(pPlot, true) && pLoopUnit->getFortifyTurns() != GC.getMAX_FORTIFY_TURNS())
 			{
 				return true;
 			}
@@ -1506,18 +1499,7 @@ bool CvSelectionGroup::startMission()
 
 			foreach_(const CvUnit* pLoopUnit, units())
 			{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/27/10                                               */
-/*                                                                                              */
-/* Infinite Loop Fix                                                                            */
-/************************************************************************************************/
-/*
-				if( pLoopUnit->canMove() && pLoopUnit->canPillage(plot()) )
-*/
 				if( pLoopUnit->canMove() && pLoopUnit->canPillage(pLoopUnit->plot()) )
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 				{
 					int iMovesLeft = pLoopUnit->movesLeft();
 					if( pLoopUnit->getBombardRate() > 0 )
@@ -1536,32 +1518,15 @@ bool CvSelectionGroup::startMission()
 			while( iMaxMovesLeft > 0 && !bDidPillage )
 			{
 				int iNextMaxMovesLeft = 0;
-				//int iTries = getNumUnits() * 3;
 				foreach_(CvUnit* pLoopUnit, units())
 				{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/27/10                                               */
-/*                                                                                              */
-/* Infinite Loop Fix                                                                            */
-/************************************************************************************************/
-/*
-					if( pLoopUnit->canMove() && pLoopUnit->canPillage(plot()) )
-*/
 					if( pLoopUnit->canMove() && pLoopUnit->canPillage(pLoopUnit->plot()) )
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 					{
 						int iMovesLeft = pLoopUnit->movesLeft();
 						if( pLoopUnit->getBombardRate() > 0 )
 						{
 							iMovesLeft /= 2;
 						}
-						//int iCurrentHP = pLoopUnit->currHitPoints();
-						//iMovesLeft *= iCurrentHP;
-						//int iMaximumHP = pLoopUnit->maxHitPoints();
-						//int iDivisor = std::max(1, iMaximumHP);
-						//iMovesLeft /= iDivisor;
 						iMovesLeft /= 100;
 
 						iMovesLeft = std::max(iMaxMovesLeft, iMovesLeft);
@@ -1625,9 +1590,8 @@ bool CvSelectionGroup::startMission()
 			}
 
 			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-
 			while (pUnitNode != NULL)
- 			{
+			{
 				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 				pUnitNode = nextUnitNode(pUnitNode);
 
@@ -3713,10 +3677,7 @@ bool CvSelectionGroup::canMoveAllTerrain() const
 
 void CvSelectionGroup::unloadAll()
 {
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->unloadAll();
-	}
+	algo::for_each(units(), CvUnit::fn::unloadAll());
 }
 
 bool CvSelectionGroup::alwaysInvisible() const
@@ -3751,28 +3712,19 @@ bool CvSelectionGroup::IsSelected() const
 
 void CvSelectionGroup::NotifyEntity(MissionTypes eMission)
 {
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->NotifyEntity(eMission);
-	}
+	algo::for_each(units(), CvUnit::fn::NotifyEntity(eMission));
 }
 
 
 void CvSelectionGroup::airCircle(bool bStart)
 {
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->airCircle(bStart);
-	}
+	algo::for_each(units(), CvUnit::fn::airCircle(bStart));
 }
 
 
 void CvSelectionGroup::setBlockading(bool bStart)
 {
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		pLoopUnit->setBlockading(bStart);
-	}
+	algo::for_each(units(), CvUnit::fn::setBlockading(bStart));
 }
 
 
@@ -4239,7 +4191,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 				GC.iStuckUnitCount++;
 				if (GC.iStuckUnitCount > 5)
 				{
-					FAssertMsg(false, "Unit Stuck in Loop!");
+					FErrorMsg("Unit Stuck in Loop!");
 					CvUnit* pHeadUnit = getHeadUnit();
 					if (NULL != pHeadUnit)
 					{
@@ -4762,10 +4714,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 	else
 	{
 		// loop over all the units, unloading them
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			pLoopUnit->setTransportUnit(NULL);
-		}
+		algo::for_each(units(), CvUnit::fn::setTransportUnit(NULL));
 	}
 }
 
@@ -5014,7 +4963,7 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	ActivityTypes eOldActivity = getActivityType();
+	const ActivityTypes eOldActivity = getActivityType();
 
 	if (eOldActivity != eNewValue)
 	{
@@ -5030,11 +4979,8 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 		//Clear Buildups
 		if ((eOldActivity == ACTIVITY_SLEEP || eOldActivity == ACTIVITY_HEAL) && eNewValue == ACTIVITY_AWAKE)
 		{
-			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pLoopUnit, units())
 			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = nextUnitNode(pUnitNode);
 				if (pLoopUnit->isBuildUp())
 				{
 					pLoopUnit->setFortifyTurns(0);
@@ -5051,16 +4997,11 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 
 		if (getActivityType() != ACTIVITY_MISSION)
 		{
-			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-
 			if (getActivityType() != ACTIVITY_INTERCEPT)
 			{
 				//don't idle intercept animation
-				while (pUnitNode != NULL)
+				foreach_(CvUnit* pLoopUnit, units())
 				{
-					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = nextUnitNode(pUnitNode);
-
 					pLoopUnit->NotifyEntity(MISSION_IDLE);
 
 					//determine proper Sleep type
@@ -5739,10 +5680,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 	if (!bMinimalChange && getOwner() == NO_PLAYER && getNumUnits() > 0)
 	{
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			pLoopUnit->NotifyEntity(MISSION_MULTI_SELECT);
-		}
+		algo::for_each(units(), CvUnit::fn::NotifyEntity(MISSION_MULTI_SELECT));
 	}
 
 	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
@@ -5806,17 +5744,8 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	FAssertNotInScope(CvSelectionGroup_CvUnit_LOOP);
 	if (getOwner() != NO_PLAYER)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*  Allow Automated Units to Stack Attack                                                       */
-/************************************************************************************************/
-/*
-		setAutomateType(NO_AUTOMATE);
-*/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		//setAutomateType(NO_AUTOMATE); // Afforess: Allow Automated Units to Stack Attack
+
 		clearMissionQueue();
 
 		switch (getActivityType())
@@ -5833,7 +5762,7 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	}
 
 	const CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
-	const int iVolume = pLoopUnit->getCargoVolume();
+	const int iVolume = pLoopUnit ? pLoopUnit->getCargoVolume() : 0;
 
 	CLLNode<IDInfo>* pNextUnitNode = m_units.deleteNode(pNode);
 
@@ -6097,7 +6026,7 @@ CvUnit* CvSelectionGroup::getUnitAt(int index) const
 {
 	if (index >= getNumUnits())
 	{
-		FAssertMsg(false, "[Jason] Selectiongroup unit index out of bounds.");
+		FErrorMsg("[Jason] Selectiongroup unit index out of bounds.");
 		return NULL;
 	}
 
@@ -6678,8 +6607,7 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 // BUG - All Units Actions - start
 bool CvSelectionGroup::allMatch(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnit >= 0, "eUnit expected to be >= 0");
-	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit expected to be < GC.getNumUnitInfos()");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 
 	return algo::all_of(units(), CvUnit::fn::getUnitType() == eUnit);
 }
@@ -6779,17 +6707,12 @@ bool CvSelectionGroup::hasCommander() const
 
 void CvSelectionGroup::validateLocations(bool bFixup) const
 {
-	CLLNode<IDInfo>* pUnitNode = headUnitNode();
-	CvUnit* pLoopUnit;
 	CvPlot* pPlot = NULL;
 	CvUnit* pTransportUnit;
 	bool	bTransportUnitSet = false;
 
-	while (pUnitNode != NULL)
+	foreach_(CvUnit* pLoopUnit, units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
 		if ( !bTransportUnitSet )
 		{
 			bTransportUnitSet = true;
@@ -6800,7 +6723,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 		{
 			if ( bFixup )
 			{
-				FAssertMsg(false, "Group split in cargo state - fixing");
+				FErrorMsg("Group split in cargo state - fixing");
 
 				pLoopUnit->joinGroup(NULL);
 			}
@@ -6808,7 +6731,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if(!pLoopUnit->isHuman())
 				{
-					FAssertMsg(false, "Group split in cargo state");
+					FErrorMsg("Group split in cargo state");
 				}
 			}
 		}
@@ -6823,7 +6746,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			{
 				if ( pPlot != pLoopUnit->plot() )
 				{
-					FAssertMsg(false, "Incorrect plot on unit of group - fixing");
+					FErrorMsg("Incorrect plot on unit of group - fixing");
 
 					//	Drop the errant unit from the group
 					pLoopUnit->joinGroup(NULL);
@@ -6980,14 +6903,9 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 
 void CvSelectionGroup::releaseUnitAIs(UnitAITypes eUnitAI)
 {
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		if (eUnitAI == pLoopUnit->AI_getUnitAIType())
-		{
-			pLoopUnit->joinGroup(NULL);
-		}
-	}
-	return;
+	algo::for_each(units() | filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI),
+		CvUnit::fn::joinGroup(NULL)
+	);
 }
 
 CvUnit* CvSelectionGroup::unit_iterator::resolve(const IDInfo& info) const

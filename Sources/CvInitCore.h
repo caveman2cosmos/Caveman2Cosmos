@@ -7,20 +7,6 @@
 
 //#include "CvEnums.h"
 
-#define FASSERT_BOUNDS(lower,upper,index,fnString)\
-	if (index < lower)\
-	{\
-		char acOut[256];\
-		sprintf(acOut, "Index in %s expected to be >= %d", fnString, lower);\
-		FAssertMsg(index >= lower, acOut);\
-	}\
-	else if (index >= upper)\
-	{\
-		char acOut[256];\
-		sprintf(acOut, "Index in %s expected to be < %d", fnString, upper);\
-		FAssertMsg(index < upper, acOut);\
-	}
-
 class CvInitCore
 {
 

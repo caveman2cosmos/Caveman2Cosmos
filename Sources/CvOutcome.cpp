@@ -77,8 +77,8 @@ CvOutcome::~CvOutcome()
 
 int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eYield);
-	FAssert(eYield < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+
 	if (m_aiYield[eYield])
 	{
 		return m_aiYield[eYield]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
@@ -91,8 +91,8 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 {
-	FAssert(0 <= eCommerce);
-	FAssert(eCommerce < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+
 	if (m_aiCommerce[eCommerce])
 	{
 		return m_aiCommerce[eCommerce]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
@@ -1030,11 +1030,13 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-		int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-		iDmg = (iDmg * pUnit->maxHitPoints())/100;
-		pUnit->setDamage(iDmg, NO_PLAYER, false);
-		pUnit->finishMoves();
-
+		if (pUnit != NULL)
+		{
+			int iDmg = GC.getANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE();
+			iDmg = (iDmg * pUnit->maxHitPoints())/100;
+			pUnit->setDamage(iDmg, NO_PLAYER, false);
+			pUnit->finishMoves();
+		}
 		if (!bFirst)
 		{
 			szBuffer.append(L", ");
@@ -1125,9 +1127,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (m_iHappinessTimer)
 			{
 				pCity->changeHappinessTimer(m_iHappinessTimer);
-				int iHappy = GC.getDefineINT("TEMP_HAPPY");
 				szBuffer.append(L" ");
-				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
+				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", GC.getTEMP_HAPPY(), m_iHappinessTimer));
 			}
 
 			if (m_iPopulationBoost)
@@ -1154,11 +1155,13 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			{
 				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-				int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-				iDmg = (iDmg * pUnit->maxHitPoints())/100;
-				pUnit->setDamage(iDmg, NO_PLAYER, false);
-				pUnit->finishMoves();
-
+				if (pUnit != NULL)
+				{
+					int iDmg = GC.getANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE();
+					iDmg = (iDmg * pUnit->maxHitPoints())/100;
+					pUnit->setDamage(iDmg, NO_PLAYER, false);
+					pUnit->finishMoves();
+				}
 				szBuffer.append(L" ");
 				szBuffer.append(GC.getUnitInfo(m_eUnitType).getDescription());
 			}
@@ -1396,7 +1399,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	{
 		// short circuit plot city as this method will be called for city plots most of the time
 		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
-		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))))
+		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))))
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
@@ -1804,7 +1807,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 		if (m_iHappinessTimer)
 		{
-			const int iHappy = GC.getDefineINT("TEMP_HAPPY");
+			const int iHappy = GC.getTEMP_HAPPY();
 			szBuffer.append(L" ");
 			szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
 		}
@@ -1960,7 +1963,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum)
+void CvOutcome::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);
