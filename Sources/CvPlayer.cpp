@@ -8324,9 +8324,14 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 }
 
 
-int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const
+int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const
 {
-	return std::max(1, 100 + getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement));
+	const int iMod = getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement);
+	if (iMod < 0)
+	{
+		return std::max(1, 10000 / (100 - iMod));
+	}
+	return 100 + iMod;
 }
 
 
@@ -20484,16 +20489,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		foreach_(CvSelectionGroup* pLoopGroup, groups())
 		{
-			CLLNode<IDInfo>* pUnitNode;
-
 			OutputDebugString(CvString::format("Check group %d:\n", pLoopGroup->getID()).c_str());
 			unitsPresent.clear();
-			pUnitNode = pLoopGroup->headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pUnit, pLoopGroup->units())
 			{
-				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
 				CvSelectionGroup* putativeGroup = pUnit->getGroup();
-				pUnitNode = pLoopGroup->nextUnitNode(pUnitNode);
 
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
 				if(putativeGroup != pLoopGroup)

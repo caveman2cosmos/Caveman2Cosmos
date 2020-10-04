@@ -239,14 +239,6 @@
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_EVOLVES</Tag>
-		<English>[ICON_BULLET]Becomes a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] in %d3_Num [NUM2:Turn:Turns]</English>
-		<French>[ICON_BULLET]Se transforme en : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] après %d3_Num [NUM2:tour:tours]</French>
-		<German>[ICON_BULLET]Modernisierung in %d3_Num [NUM3:Runde:Runden]: [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Diventa [NUM1:un:una] [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] in %d3_Num [NUM2:Turno:Turni]</Italian>
-		<Spanish>[ICON_BULLET]Se convierte en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] en %d3_Num [NUM2:turno:turnos]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
 		<English>Pedia</English>
 		<French>Pédia</French>
@@ -701,5 +693,13 @@
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad de retirarse: %d1_Amount%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
+		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADES</Tag>
+		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
 	</TEXT>
 </Civ4GameText>

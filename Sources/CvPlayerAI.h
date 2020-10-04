@@ -455,7 +455,7 @@ public:
 	int AI_getPlotChokeValue(const CvPlot* pPlot) const;
 	// Super Forts end
 
-	bool AI_isPlotThreatened(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_isPlotThreatened(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 
 	bool AI_isFirstTech(TechTypes eTech) const;
 
