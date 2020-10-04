@@ -2774,8 +2774,6 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pEntityNode;
-	CvSelectionGroup* pSelectionGroup;
 	bool bSelectGroup;
 	bool bGroup;
 
@@ -2810,18 +2808,13 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 
 	if (bSelectGroup)
 	{
-		pSelectionGroup = pUnit->getGroup();
+		const CvSelectionGroup* pSelectionGroup = pUnit->getGroup();
 
 		gDLL->getInterfaceIFace()->selectionListPreChange();
 
-		pEntityNode = pSelectionGroup->headUnitNode();
-
-		while (pEntityNode != NULL)
+		foreach_(CvUnit* pLoopUnit, pSelectionGroup->units())
 		{
-			FAssertMsg(::getUnit(pEntityNode->m_data), "null entity in selection group");
-			gDLL->getInterfaceIFace()->insertIntoSelectionList(::getUnit(pEntityNode->m_data), false, bToggle, bGroup, bSound, true);
-
-			pEntityNode = pSelectionGroup->nextUnitNode(pEntityNode);
+			gDLL->getInterfaceIFace()->insertIntoSelectionList(pLoopUnit, false, bToggle, bGroup, bSound, true);
 		}
 
 		gDLL->getInterfaceIFace()->selectionListPostChange();
@@ -2857,7 +2850,7 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 			bGroup = gDLL->getInterfaceIFace()->mirrorsSelectionGroup();
 		}
 
-		CvPlot* pUnitPlot = pUnit->plot();
+		const CvPlot* pUnitPlot = pUnit->plot();
 
 		CLLNode<IDInfo>* pUnitNode = pUnitPlot->headUnitNode();
 
@@ -6748,32 +6741,15 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-		while (pUnitNode != NULL)
+		foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getOwner() == ePlayer))
 		{
-			const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			if (pLoopUnit != NULL)
+			if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
 			{
-				//	Only care about evaluated NPC
-				if ( pLoopUnit->getOwner() == ePlayer )
-				{
-					if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
-					{
-						areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
-					}
-					else
-					{
-						areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
-					}
-				}
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
 			}
 			else
 			{
-				pPlot->verifyUnitValidPlot();
-				pUnitNode = NULL;
+				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
 			}
 		}
 	}

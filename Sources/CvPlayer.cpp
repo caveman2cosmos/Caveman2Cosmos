@@ -20484,16 +20484,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		foreach_(CvSelectionGroup* pLoopGroup, groups())
 		{
-			CLLNode<IDInfo>* pUnitNode;
-
 			OutputDebugString(CvString::format("Check group %d:\n", pLoopGroup->getID()).c_str());
 			unitsPresent.clear();
-			pUnitNode = pLoopGroup->headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pUnit, pLoopGroup->units())
 			{
-				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
 				CvSelectionGroup* putativeGroup = pUnit->getGroup();
-				pUnitNode = pLoopGroup->nextUnitNode(pUnitNode);
 
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
 				if(putativeGroup != pLoopGroup)
