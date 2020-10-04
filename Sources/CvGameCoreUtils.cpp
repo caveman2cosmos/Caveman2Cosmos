@@ -768,13 +768,6 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 		return 1000;
 	}
 
-	// UncutDragon
-/* original code
-	iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
-*/	// modified
-	//iAttackerOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderOdds;
-	// /UncutDragon
-
 	if (iAttackerOdds == 0)
 	{
 		return 0;
@@ -803,8 +796,8 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-	int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
 	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
 	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
 	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
@@ -1079,8 +1072,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-	int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
 	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
 	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
 	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
@@ -1124,8 +1117,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 				//attacker is not barb and attacker player has free wins left
 				//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
 
-				iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
-				iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
+				iDefenderOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
+				iAttackerOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
 			}
 		}
 		else if (pAttacker->isHominid())
@@ -1134,8 +1127,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 			if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 			{
 				//defender is not barbarian and defender has free wins left and attacker is barbarian
-				iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
-				iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+				iAttackerOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
+				iDefenderOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
 			}
 		}
 	}
@@ -3252,15 +3245,10 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				bNeedMaxMovement = true;
 			}
 
-			pUnitNode = pSelectionGroup->headUnitNode();
-
 			iInitialMovementRemaining = MAX_INT;
 
-			while (pUnitNode != NULL)
+			foreach_(pLoopUnit, pSelectionGroup->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-
 				if ( bNeedMaxMovement || iMovementRemaining == 0 )
 				{
 					iMax = pLoopUnit->maxMoves();

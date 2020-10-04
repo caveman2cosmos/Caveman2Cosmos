@@ -8727,9 +8727,14 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 }
 
 
-int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const
+int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const
 {
-	return std::max(1, 100 + getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement));
+	const int iMod = getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement);
+	if (iMod < 0)
+	{
+		return std::max(1, 10000 / (100 - iMod));
+	}
+	return 100 + iMod;
 }
 
 
@@ -12667,11 +12672,11 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 			{
 				if (pOldCapitalCity != NULL)
 				{
-					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, bUpdatePlotGroups);
+					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroups);
 				}
 				if (pNewCapitalCity != NULL)
 				{
-					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, bUpdatePlotGroups);
+					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
@@ -26084,7 +26089,7 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 bool CvPlayer::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const
 {
-	CvTeam& kOurTeam = GET_TEAM(getTeam());
+	const CvTeam& kOurTeam = GET_TEAM(getTeam());
 
 	if (NO_PLAYER != kData.ePlayer)
 	{
@@ -26223,9 +26228,9 @@ bool CvPlayer::canDefyResolution(VoteSourceTypes eVoteSource, const VoteSelectio
 	{
 		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 		{
-			CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
 			if ((TeamTypes)iTeam != getTeam())
 			{
+				const CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
 				if (kTeam.isVotingMember(eVoteSource))
 				{
 					if (!kTeam.isOpenBorders(getTeam()))
@@ -26240,9 +26245,9 @@ bool CvPlayer::canDefyResolution(VoteSourceTypes eVoteSource, const VoteSelectio
 	{
 		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 		{
-			CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
 			if ((TeamTypes)iTeam != getTeam())
 			{
+				const CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
 				if (kTeam.isVotingMember(eVoteSource))
 				{
 					if (!kTeam.isDefensivePact(getTeam()))
@@ -26382,7 +26387,7 @@ PlayerTypes CvPlayer::pickConqueredCityOwner(const CvCity& kCity) const
 
 bool CvPlayer::canHaveTradeRoutesWith(PlayerTypes ePlayer) const
 {
-	CvPlayer& kOtherPlayer = GET_PLAYER(ePlayer);
+	const CvPlayer& kOtherPlayer = GET_PLAYER(ePlayer);
 
 	if (!kOtherPlayer.isAlive())
 	{
@@ -26598,7 +26603,7 @@ int CvPlayer::getNewCityProductionValue() const
 
 	iValue += (GC.getDefineINT("ADVANCED_START_CITY_COST") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 100;
 
-	const int iPopulation = GC.getDefineINT("INITIAL_CITY_POPULATION") + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation();
+	const int iPopulation = GC.getINITIAL_CITY_POPULATION() + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation();
 	for (int i = 1; i <= iPopulation; ++i)
 	{
 		iValue += (getGrowthThreshold(i) * GC.getDefineINT("ADVANCED_START_POPULATION_COST")) / 100;
@@ -29902,7 +29907,7 @@ void CvPlayer::doAdvancedEconomy()
 
 	if (getHurriedCount() > 0)
 	{
-		int iTurnIncrement = GC.getDefineINT("HURRY_INFLATION_DECAY_RATE");
+		int iTurnIncrement = GC.getHURRY_INFLATION_DECAY_RATE();
 		iTurnIncrement *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 		iTurnIncrement /= 100;
 		iTurnIncrement *= std::max(0, 100 + getHurryInflationModifier());
@@ -30891,13 +30896,13 @@ void CvPlayer::recalculateModifiers()
 	noteOrbitalInfrastructureCountDirty();
 
 	//	Put back starting defaults
-	changeBaseFreeUnitUpkeepCivilian(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_CIVILIAN"));
-	changeBaseFreeUnitUpkeepMilitary(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_MILITARY"));
-	changeFreeUnitUpkeepCivilianPopPercent(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP"));
-	changeFreeUnitUpkeepMilitaryPopPercent(GC.getDefineINT("BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP"));
-	changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
-	changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
-	changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
+	changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
+	changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
+	changeFreeUnitUpkeepCivilianPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP());
+	changeFreeUnitUpkeepMilitaryPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP());
+	changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
+	changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
+	changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{

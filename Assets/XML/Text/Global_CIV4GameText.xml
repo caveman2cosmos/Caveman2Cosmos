@@ -5375,6 +5375,10 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Spanish>O</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LINK</Tag>
+		<English>[LINK=%s1]%s2[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LISTSCREEN_BUTTON_ADD</Tag>
 		<English>ADD</English>
 		<French>AJOUTER</French>
@@ -12220,15 +12224,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Obrażenia Zadane na tym Polu są Obrażeniami od Zimna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_FORTIFY_TO_UPGRADE</Tag>
-		<English>[SPACE](Must garrison to become %s1_ImpName)</English>
-		<French>[SPACE](Doit fortifier pour devenir 1 %s1_ImpName)</French>
-		<German>[SPACE](Muss starken, um zur Modernisierung %s1_ImpName zu werden)</German>
-		<Italian>[SPACE](Deve fortificare per diventare %s1_ImpName)</Italian>
-		<Spanish>[SPACE](Se debe fortificar para convertirse en [NUM1:un:una:unos:unas] %s1_ImpName)</Spanish>
-		<Polish>[SPACE](Musi stacjonować, aby zostać %s1_ImpName)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
@@ -12265,13 +12260,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść na to pole ponieważ jest w zasięgu Strefy Kontroli jednostki. Zniszcz jednostkę by móc normalnie się poruszać.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_IMP_ALTERNATIVE_UPGRADE</Tag>
-		<English>[SPACE](Or %s1_ImpName)</English>
-		<French>[SPACE](Ou %s1_ImpName)</French>
-		<German>[SPACE]oder %s1_ImpName</German>
-		<Polish>[SPACE](Lub %s1_ImpName)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES</Tag>
 		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
@@ -12284,24 +12272,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>, or [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, ou [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
 		<Polish>, lub [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_TECH_TO_UPGRADE</Tag>
-		<English>[SPACE][COLOR_YELLOW](Must research %s1 to upgrade)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_YELLOW](Requiert la découverte de %s1 pour être amélioré)[COLOR_REVERT]</French>
-		<German>[SPACE][COLOR_YELLOW](%s1 muss für eine Verbesserung erforscht werden)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_YELLOW](Deve ricercare %s1 per migliorarsi)[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_YELLOW](Se debe investigar %s1 para que mejore)[COLOR_REVERT]</Spanish>
-		<Polish>[SPACE][COLOR_YELLOW](Wymaga %s1 do ulepszenia)[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_WORK_TO_UPGRADE</Tag>
-		<English>[SPACE](City must Work to Become %s1_ImpName)</English>
-		<French>[SPACE](La ville doit travailler pour devenir [NUM1:un:une:des:des] %s1_ImpName)</French>
-		<German>[SPACE](Stadt muss das Geländefeld bearbeiten, um zur Stufe %s1_ImpName zu gelangen)</German>
-		<Italian>[SPACE](La città deve lavorare per diventare %s1_ImpName)</Italian>
-		<Spanish>[SPACE](La ciudad debe trabajar para convertirse en [NUM1:un:una:unos:unas] %s1_ImpName)</Spanish>
-		<Polish>[SPACE](MIasto musi pracować na danym polu, aby ulepszyć do %s1_ImpName)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POSITIVE_COLOR</Tag>

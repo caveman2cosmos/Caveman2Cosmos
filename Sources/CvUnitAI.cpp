@@ -3735,7 +3735,7 @@ void CvUnitAI::AI_attackCityMove()
 				// or if defenses have crept up past half
 				if( (iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) )
 				{
-					if( (iComparePostBombard < std::max(150, GC.getDefineINT("BBAI_SKIP_BOMBARD_MIN_STACK_RATIO"))) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
+					if (iComparePostBombard < std::max(150, GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
 					{
 						// Move to good tile to attack from unless we're way more powerful
 						if( AI_goToTargetCity(0,1,pTargetCity) )
@@ -7236,7 +7236,7 @@ void CvUnitAI::AI_spyMove()
 			if( !bTargetCity )
 			{
 				// normal city handling
-				if (getFortifyTurns() >= GC.getDefineINT("MAX_FORTIFY_TURNS"))
+				if (getFortifyTurns() >= GC.getMAX_FORTIFY_TURNS())
 				{
 					if (AI_espionageSpy())
 					{
@@ -7829,7 +7829,7 @@ void CvUnitAI::AI_attackSeaMove()
 		{
 			PROFILE("CvUnitAI::AI_attackSeaMove.Blockaded");
 
-			int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
+			const int iBlockadeRange = GC.getSHIP_BLOCKADE_RANGE();
 			// City under blockade
 			// Attacker has low odds since anyAttack checks above passed, try to break if sufficient numbers
 
@@ -7846,7 +7846,7 @@ void CvUnitAI::AI_attackSeaMove()
 				{
 					for (int iDY = -(iMaxRange); iDY <= iMaxRange; iDY++)
 					{
-						CvPlot* pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
+						const CvPlot* pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
 
 						if (pLoopPlot != NULL && pLoopPlot->isWater())
 						{
@@ -17691,13 +17691,12 @@ namespace {
 /************************************************************************************************/
 bool CvUnitAI::AI_doInquisition()
 {
-	CvCity* pTargetCity = NULL;
 	int iPathTurns = 0;
 
-	pTargetCity = GET_PLAYER(getOwner()).getInquisitionRevoltCity(this, false, GC.getDefineINT("OC_MIN_REV_INDEX"), 0);
+	CvCity* pTargetCity = GET_PLAYER(getOwner()).getInquisitionRevoltCity(this, false, GC.getOC_MIN_REV_INDEX(), 0);
 	if (pTargetCity == NULL)
 	{
-		pTargetCity = GET_PLAYER(getOwner()).getTeamInquisitionRevoltCity(this, false, GC.getDefineINT("OC_MIN_REV_INDEX"), 0);
+		pTargetCity = GET_PLAYER(getOwner()).getTeamInquisitionRevoltCity(this, false, GC.getOC_MIN_REV_INDEX(), 0);
 		if (pTargetCity == NULL)
 		{
 			pTargetCity = getReligiousVictoryTarget(this);
@@ -21319,7 +21318,7 @@ bool CvUnitAI::AI_pirateBlockade()
 					{
 						int iBlockadedCount = 0;
 						int iPopulationValue = 0;
-						int iRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE") - 1;
+						int iRange = GC.getSHIP_BLOCKADE_RANGE() - 1;
 						for (int iX = -iRange; iX <= iRange; iX++)
 						{
 							for (int iY = -iRange; iY <= iRange; iY++)
@@ -24572,7 +24571,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 	if (!isHuman() || (getGroup()->getNumUnits() > 1 && getGroup()->canDefend()))
 	{
-		iMaxDistFromBorder = GC.getDefineINT("AI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS");
+		iMaxDistFromBorder = GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS();
 	}
 
 	const PlayerTypes ePlayer = getOwner();
@@ -24609,7 +24608,6 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 				{
 					BuildTypes eBuild = ((BuildTypes)iJ);
-					FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
 
 					if ((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 					{
@@ -24701,7 +24699,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 	if(getGroup()->getNumUnits() > 1 && getGroup()->canDefend())
 	{
-		iMaxDistFromBorder = GC.getDefineINT("AI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS");
+		iMaxDistFromBorder = GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS();
 	}
 	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 	const ImprovementTypes eRuins = CvImprovementInfo::getImprovementRuins();
@@ -29318,7 +29316,7 @@ int CvUnitAI::AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) con
 		&& pCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 3) / 4)
 		)
 	{
-		iFinalOddsThreshold += std::max(0, (pCity->getDefenseDamage() - pCity->getLastDefenseDamage() - (GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE") * 2)));
+		iFinalOddsThreshold += std::max(0, (pCity->getDefenseDamage() - pCity->getLastDefenseDamage() - (GC.getCITY_DEFENSE_DAMAGE_HEAL_RATE() * 2)));
 	}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  03/29/10								jdog5000	  */
@@ -33530,7 +33528,7 @@ namespace {
 	int scorePropertyControlNeed(const std::vector<PropertyAmount>& propertyScores, const CvUnit* unit, const CvCity* city)
 	{
 		const CvPlayer& player = GET_PLAYER(unit->getOwner());
-		static const int C2C_MIN_PROP_CONTROL = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
+		const int C2C_MIN_PROP_CONTROL = GC.getC2C_MIN_PROP_CONTROL();
 
 		int maxScore = 0;
 

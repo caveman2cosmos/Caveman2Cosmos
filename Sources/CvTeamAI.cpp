@@ -1489,11 +1489,11 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		iValue = std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		iValue = std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 
 	m_endWarValueCache[eTeam] = iValue;
@@ -1548,13 +1548,13 @@ int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 					iPower /= 3;
 				}
 
-				if( GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0 )
+				if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING() || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
 				{
 					if (GET_TEAM(eTeam).getDefensivePower() < ((iPower * AI_maxWarNearbyPowerRatio()) / 100))
 					{
 						int iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 						iNoWarRoll += (bAggressive ? 10 : 0);
-						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING")) ? 10 : 0);
+						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0);
 						iNoWarRoll -= (bIsGetBetterUnits ? 15 : 0);
 						iNoWarRoll = range(iNoWarRoll, 0, 99);
 
@@ -1786,33 +1786,11 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 
 		iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
 		iValue /= 100;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 6/7/11                                                 */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	//Stop treating humans special
-	/*
-		iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-
-		if (isHuman())
-		{
-			return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-		}
-		else
-		{
-			return iValue;
-		}
-	*/
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
 	}
 
 	return iValue;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 }
 
 
@@ -1863,7 +1841,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 			}
 		}
 	}
-
 
 	if (isHuman())
 	{
@@ -2107,11 +2084,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		iValue /= 2;
 	}
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -2592,33 +2569,16 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	}
 	else
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/07/09                                jdog5000      */
-/*                                                                                              */
-/* Diplomacy AI                                                                                 */
-/************************************************************************************************/
-/* original BTS code
-		if (AI_getWarSuccess(eTeam) + 4 * GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
-		{
-			return DENIAL_JOKING;
-		}
-*/
-		// Scale better for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
+		// Scale for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
 		if (AI_getWarSuccess(eTeam) + std::min(getNumCities(), 4) * GC.getWAR_SUCCESS_CITY_CAPTURING() > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
 		{
 			return DENIAL_JOKING;
 		}
 
-		if( !kMasterTeam.isHuman() )
+		if (!kMasterTeam.isHuman() && !GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID()))
 		{
-			if( !(GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID())) )
-			{
-				return DENIAL_JOKING;
-			}
+			return DENIAL_JOKING;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	}
 
 	return NO_DENIAL;
@@ -3001,7 +2961,7 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 			{
 				if (isAtWar((TeamTypes)iI))
 				{
-					if( GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
+					if (GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5 * GC.getWAR_SUCCESS_ATTACKING())
 					{
 						iWarCount++;
 					}
@@ -3274,11 +3234,11 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 	iValue *= 40;
 	iValue /= (GET_TEAM(eTeam).AI_getAtWarCounter(ePeaceTeam) + 10);
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -3451,11 +3411,11 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 	iValue *= 60 + (140 * GC.getGame().getGameTurn()) / std::max(1, GC.getGame().getEstimateEndTurn());
 	iValue /= 100;
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -4950,8 +4910,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 
 void CvTeamAI::AI_doCounter()
 {
-	int iI;
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
@@ -5327,7 +5286,7 @@ void CvTeamAI::AI_doWar()
 										if( AI_getAtWarCounter((TeamTypes)iI) > std::max(10, (14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
 										{
 											// If nothing is happening in war
-											if( AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
+											if (AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getWAR_SUCCESS_ATTACKING())
 											{
 												if( (GC.getGame().getSorenRandNum(8, "AI Make Peace 1") == 0) )
 												{
@@ -5837,7 +5796,6 @@ void CvTeamAI::AI_doWar()
 //returns true if war is veto'd by rolls.
 bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 {
-
 	if (GC.getGame().getSorenRandNum(100, "AI Declare War 1") > GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIDeclareWarProb())
 	{
 		return true;
@@ -5848,34 +5806,26 @@ bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 		return true;
 	}
 
-
-
 	return false;
 }
 
 int CvTeamAI::AI_getAttitudeWeight(const TeamTypes eTeam) const
 {
-	int iAttitudeWeight = 0;
 	switch (AI_getAttitude(eTeam))
 	{
 	case ATTITUDE_FURIOUS:
-		iAttitudeWeight = -100;
-		break;
+		return -100;
 	case ATTITUDE_ANNOYED:
-		iAttitudeWeight = -40;
-		break;
+		return -40;
 	case ATTITUDE_CAUTIOUS:
-		iAttitudeWeight = -5;
-		break;
+		return -5;
 	case ATTITUDE_PLEASED:
-		iAttitudeWeight = 50;
-		break;
+		return 50;
 	case ATTITUDE_FRIENDLY:
-		iAttitudeWeight = 100;
-		break;
+		return 100;
 	}
 
-	return iAttitudeWeight;
+	return 0;
 }
 
 int CvTeamAI::AI_getLowestVictoryCountdown() const

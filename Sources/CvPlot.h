@@ -647,10 +647,10 @@ public:
 	void setImprovementDuration(int iNewValue); // Exposed to Python
 	void changeImprovementDuration(int iChange); // Exposed to Python
 
-	int getUpgradeProgressHundredths() const; // Exposed to Python
+	int getImprovementUpgradeProgress() const; // Exposed to Python
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const; // Exposed to Python
-	void setUpgradeProgressHundredths(int iNewValue); // Exposed to Python
-	void changeUpgradeProgressHundredths(int iChange); // Exposed to Python
+	void setImprovementUpgradeProgress(int iNewValue); // Exposed to Python
+	void changeImprovementUpgradeProgress(int iChange); // Exposed to Python
 
 	int getForceUnownedTimer() const; // Exposed to Python
 	bool isForceUnowned() const; // Exposed to Python
@@ -1144,6 +1144,7 @@ public:
 
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
+	bool isImprovementUpgradeBlocked(const TeamTypes eTeam) const;
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
