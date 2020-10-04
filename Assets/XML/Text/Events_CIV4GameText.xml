@@ -7841,9 +7841,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
-		<English>A volcano that has not seen an eruption in our time has awoken and is now erupting. The countryside has been devastated.</English>
-		<French>Un volcan que l'on pensait endormi s'est soudain réveillé et est en éruption. La région a été dévastée.</French>
-		<Polish>Wulkan, który wydawał się wygasły nagle eksplodował niszcząc wszystko w pobliżu.</Polish>
+		<English>This formerly active volcano has shown no activity for some time, and is now considered dormant.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>

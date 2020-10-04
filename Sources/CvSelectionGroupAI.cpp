@@ -813,7 +813,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 		return 0;
 
 	uint64_t strSum = 0;
-	static const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+	const int COLLATERAL_COMBAT_DAMAGE = GC.getCOLLATERAL_COMBAT_DAMAGE(); // K-Mod. (currently this number is "10")
 
 	const bool bCheckCanAttack = flags & StackCompare::CheckCanAttack;
 	const bool bCheckCanMove = flags & StackCompare::CheckCanMove;

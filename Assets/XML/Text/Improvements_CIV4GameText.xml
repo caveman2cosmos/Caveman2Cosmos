@@ -1985,6 +1985,10 @@
 		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_BLOCKED</Tag>
+		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_DESTROYS_FEATURE</Tag>
 		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
@@ -1992,8 +1996,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT] Improvement denied upgrade.[NEWLINE]May attempt again by setting it unworked, then worked again.[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_WORK</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_GARRISON</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
@@ -2034,6 +2046,10 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_TURNS</Tag>
+		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Tag>

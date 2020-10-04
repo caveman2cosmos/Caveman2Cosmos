@@ -1032,7 +1032,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 		if (pUnit != NULL)
 		{
-			int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
+			int iDmg = GC.getANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE();
 			iDmg = (iDmg * pUnit->maxHitPoints())/100;
 			pUnit->setDamage(iDmg, NO_PLAYER, false);
 			pUnit->finishMoves();
@@ -1127,9 +1127,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (m_iHappinessTimer)
 			{
 				pCity->changeHappinessTimer(m_iHappinessTimer);
-				int iHappy = GC.getDefineINT("TEMP_HAPPY");
 				szBuffer.append(L" ");
-				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
+				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", GC.getTEMP_HAPPY(), m_iHappinessTimer));
 			}
 
 			if (m_iPopulationBoost)
@@ -1158,7 +1157,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 				if (pUnit != NULL)
 				{
-					int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
+					int iDmg = GC.getANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE();
 					iDmg = (iDmg * pUnit->maxHitPoints())/100;
 					pUnit->setDamage(iDmg, NO_PLAYER, false);
 					pUnit->finishMoves();
@@ -1400,7 +1399,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	{
 		// short circuit plot city as this method will be called for city plots most of the time
 		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
-		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))))
+		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))))
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
@@ -1808,7 +1807,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 		if (m_iHappinessTimer)
 		{
-			const int iHappy = GC.getDefineINT("TEMP_HAPPY");
+			const int iHappy = GC.getTEMP_HAPPY();
 			szBuffer.append(L" ");
 			szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
 		}

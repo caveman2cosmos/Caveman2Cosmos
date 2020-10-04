@@ -6599,7 +6599,7 @@ int CvUnitInfo::getCombatStrengthModifier() const
 int CvUnitInfo::getTotalModifiedCombatStrength100() const
 {
 	int iStr = m_iCombat + m_iTotalCombatStrengthChangeBase;
-	const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
+	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_MULTIPLIER();
 	const bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
 	const int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
 	int iI = 0;
@@ -6727,7 +6727,7 @@ void CvUnitInfo::setBaseCargoVolume()
 	m_iBaseGroupRank = iBaseGroup;
 
 	int iBase = 100;
-	const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
+	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER();
 	const bool bPositive = ((iOffset > 0) ? true : false);
 	iBase *= 100;
 	if (bPositive)
