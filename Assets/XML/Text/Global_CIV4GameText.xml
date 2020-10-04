@@ -5375,6 +5375,10 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Spanish>O</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LINK</Tag>
+		<English>[LINK=%s1]%s2[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LISTSCREEN_BUTTON_ADD</Tag>
 		<English>ADD</English>
 		<French>AJOUTER</French>
