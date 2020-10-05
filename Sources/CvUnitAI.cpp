@@ -22653,12 +22653,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 
 	FAssert(getGroup()->hasCargo());
 
-	if (!canCargoAllMove())
-	{
-		return false;
-	}
-
-	if( !(getGroup()->canAllMove()) )
+	if (!canCargoAllMove() || !getGroup()->canAllMove())
 	{
 		return false;
 	}
@@ -22685,61 +22680,47 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 	bool bCity = plot()->isCity(true,getTeam());
 	bool bCanMoveAllTerrain = getGroup()->canMoveAllTerrain();
 
-	int iTargetCities;
-	int iOurFightersHere;
 	int iValue;
 
 	// Loop over nearby plots for groups in enemy territory to reinforce
 	{
 		PROFILE("AI_assaultSeaReinforce.Nearby");
 
-		int iRange = 2*baseMoves();
-		int iDX, iDY;
-		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		const int iRange = 2*baseMoves();
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
 		{
-			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			if (pLoopPlot->isOwned() && isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 			{
-				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-				if( pLoopPlot != NULL )
+				if ( bCanMoveAllTerrain || (pWaterArea != NULL && pLoopPlot->isAdjacentToArea(pWaterArea)) )
 				{
-					if (pLoopPlot->isOwned())
+					const int iTargetCities = pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwner());
+
+					if (iTargetCities > 0)
 					{
-						if (isEnemy(pLoopPlot->getTeam(), pLoopPlot))
+						const int iOurFightersHere = pLoopPlot->getNumDefenders(getOwner());
+
+						if( iOurFightersHere > 2 )
 						{
-							if ( bCanMoveAllTerrain || (pWaterArea != NULL && pLoopPlot->isAdjacentToArea(pWaterArea)) )
+							int iPathTurns;
+							if (generatePath(pLoopPlot, MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns))
 							{
-								iTargetCities = pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwner());
-
-								if (iTargetCities > 0)
+								if( iPathTurns <= 2 )
 								{
-									iOurFightersHere = pLoopPlot->getNumDefenders(getOwner());
+									pEndTurnPlot = getPathEndTurnPlot();
 
-									if( iOurFightersHere > 2 )
+									iValue = 10*iTargetCities;
+									iValue += 8*iOurFightersHere;
+									iValue += 3*GET_PLAYER(getOwner()).AI_adjacentPotentialAttackers(pLoopPlot);
+
+									iValue *= 100;
+
+									iValue /= (iPathTurns + 1);
+
+									if (iValue > iBestValue)
 									{
-										int iPathTurns;
-										if (generatePath(pLoopPlot, MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns))
-										{
-											if( iPathTurns <= 2 )
-											{
-												pEndTurnPlot = getPathEndTurnPlot();
-
-												iValue = 10*iTargetCities;
-												iValue += 8*iOurFightersHere;
-												iValue += 3*GET_PLAYER(getOwner()).AI_adjacentPotentialAttackers(pLoopPlot);
-
-												iValue *= 100;
-
-												iValue /= (iPathTurns + 1);
-
-												if (iValue > iBestValue)
-												{
-													iBestValue = iValue;
-													pBestPlot = pEndTurnPlot;
-													pBestAssaultPlot = pLoopPlot;
-												}
-											}
-										}
+										iBestValue = iValue;
+										pBestPlot = pEndTurnPlot;
+										pBestAssaultPlot = pLoopPlot;
 									}
 								}
 							}
@@ -22773,10 +22754,10 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 								{
 									if ( bCanMoveAllTerrain || (pWaterArea != NULL && pLoopPlot->isAdjacentToArea(pWaterArea)) )
 									{
-										iTargetCities = pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwner());
+										const int iTargetCities = pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwner());
 										if (iTargetCities > 0)
 										{
-											int iAssaultsHere = pLoopSelectionGroup->getCargo();//A count but flirting with the need to look deeper
+											const int iAssaultsHere = pLoopSelectionGroup->getCargo();//A count but flirting with the need to look deeper
 
 											if ( iAssaultsHere > 2 )
 											{
@@ -24131,51 +24112,47 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 	CvPlot* pBestPlot = NULL;
 	BuildTypes eBestBuild = NO_BUILD;
 
-	for (int iX = -iRange; iX <= iRange; iX++)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
 	{
-		for (int iY = -iRange; iY <= iRange; iY++)
+		if (pLoopPlot->isCityRadius()
+		&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
 		{
-			CvPlot* pLoopPlot = plotXY(getX(), getY(), iX, iY);
-			if (pLoopPlot != NULL && pLoopPlot->isCityRadius()
-			&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
+			CvCity* pCity = pLoopPlot->getWorkingCity();
+			if (NULL != pCity && pCity->getOwner() == getOwner() && (NULL == pIgnoreCity || pCity != pIgnoreCity) && AI_plotValid(pLoopPlot))
 			{
-				CvCity* pCity = pLoopPlot->getWorkingCity();
-				if (NULL != pCity && pCity->getOwner() == getOwner() && (NULL == pIgnoreCity || pCity != pIgnoreCity) && AI_plotValid(pLoopPlot))
+				const int iIndex = pCity->getCityPlotIndex(pLoopPlot);
+
+				if (iIndex != CITY_HOME_PLOT && pCity->AI_getBestBuild(iIndex) != NO_BUILD
+				&& (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() == NO_IMPROVEMENT)
+				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->AI_getWorkersHave() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
+				&& canBuild(pLoopPlot, pCity->AI_getBestBuild(iIndex)) && generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
 				{
-					const int iIndex = pCity->getCityPlotIndex(pLoopPlot);
-
-					if (iIndex != CITY_HOME_PLOT && pCity->AI_getBestBuild(iIndex) != NO_BUILD
-					&& (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() == NO_IMPROVEMENT)
-					&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->AI_getWorkersHave() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
-					&& canBuild(pLoopPlot, pCity->AI_getBestBuild(iIndex)) && generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
+					int iValue = pCity->AI_getBestBuildValue(iIndex);
+					int iMaxWorkers = 1;
+					if (plot() == pLoopPlot)
 					{
-						int iValue = pCity->AI_getBestBuildValue(iIndex);
-						int iMaxWorkers = 1;
-						if (plot() == pLoopPlot)
-						{
-							iValue *= 3;
-							iValue /= 2;
-						}
-						else if (getPathMovementRemaining() == 0)
-						{
-							iPathTurns++;
-						}
-						else if (iPathTurns <= 1)
-						{
-							iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, pCity->AI_getBestBuild(iIndex));
-						}
+						iValue *= 3;
+						iValue /= 2;
+					}
+					else if (getPathMovementRemaining() == 0)
+					{
+						iPathTurns++;
+					}
+					else if (iPathTurns <= 1)
+					{
+						iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, pCity->AI_getBestBuild(iIndex));
+					}
 
-						if (kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
-						{
-							iValue *= 1000;
-							iValue /= 1 + iPathTurns;
+					if (kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
+					{
+						iValue *= 1000;
+						iValue /= 1 + iPathTurns;
 
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = pLoopPlot;
-								eBestBuild = pCity->AI_getBestBuild(iIndex);
-							}
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							pBestPlot = pLoopPlot;
+							eBestBuild = pCity->AI_getBestBuild(iIndex);
 						}
 					}
 				}
@@ -24227,7 +24204,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 		}
 		eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
 
-		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
+		const CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
 
 		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL && getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
 		{
@@ -26611,7 +26588,6 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 	}
 
 	CvCity* pNearestEnemyCity = NULL;
-	int iRange = 0;
 	int iTempValue = 0;
 	int iOurDefense = 0;
 	int iOurOffense = 0;
@@ -26619,7 +26595,6 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 	int iEnemyDefense = 0;
 	int iDistance = 0;
 
-	CvPlot* pLoopPlot = NULL;
 	CvCity* pCity = pPlot->getPlotCity();
 
 	int iDefenders = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, pPlot->getOwner());
@@ -26637,7 +26612,7 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 		iDefenders -= 1;
 	}
 
-	if( pCity != NULL )
+	if ( pCity != NULL )
 	{
 		if( pCity->getDefenseModifier(true) < 40 )
 		{
@@ -26651,38 +26626,29 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 	}
 
 	// Consider threat from nearby enemy territory
-	iRange = 1;
 	int iBorderDanger = 0;
 
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->area() == pPlot->area() && pLoopPlot->isOwned())
 		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+			if (pLoopPlot->getTeam() != getTeam() && !GET_TEAM(pLoopPlot->getTeam()).isVassal(getTeam()))
 			{
-				if (pLoopPlot->area() == pPlot->area() && pLoopPlot->isOwned())
+				if (iDistance == 1)
 				{
-					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					if( pLoopPlot->getTeam() != getTeam() && !(GET_TEAM(pLoopPlot->getTeam()).isVassal(getTeam())) )
-					{
-						if( iDistance == 1 )
-						{
-							iBorderDanger++;
-						}
+					iBorderDanger++;
+				}
 
-						if (atWar(pLoopPlot->getTeam(), getTeam()))
-						{
-							if (iDistance == 1)
-							{
-								iBorderDanger += 2;
-							}
-							else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-							{
-								iBorderDanger += 2;
-							}
-						}
+				if (atWar(pLoopPlot->getTeam(), getTeam()))
+				{
+					if (iDistance == 1)
+					{
+						iBorderDanger += 2;
+					}
+					else if (iDistance == 2 && pLoopPlot->isRoute())
+					{
+						iBorderDanger += 2;
 					}
 				}
 			}
@@ -26707,164 +26673,159 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 		bool bAssault = (pPlot->area()->getAreaAIType(getTeam()) == AREAAI_ASSAULT) || (pPlot->area()->getAreaAIType(getTeam()) == AREAAI_ASSAULT_MASSING);
 
 		// Loop over operational range
-		iRange = airRange();
+		const int iRange = airRange();
 
-		for (int iDX = -(iRange); iDX <= iRange; iDX++)
+		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 		{
-			for (int iDY = -(iRange); iDY <= iRange; iDY++)
+			if (pLoopPlot->area() != NULL)
 			{
-				pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+				iDistance = plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
-				if ((pLoopPlot != NULL && pLoopPlot->area() != NULL))
+				if( iDistance <= iRange )
 				{
-					iDistance = plotDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+					bool bDefensive = pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
+					bool bOffensive = pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE;
 
-					if( iDistance <= iRange )
+					// Value system is based around 1 enemy military unit in our territory = 10 pts
+					iTempValue = 0;
+
+					if( pLoopPlot->isWater() )
 					{
-						bool bDefensive = pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
-						bool bOffensive = pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE;
-
-						// Value system is based around 1 enemy military unit in our territory = 10 pts
-						iTempValue = 0;
-
-						if( pLoopPlot->isWater() )
+						if( pLoopPlot->isVisible(getTeam(),false) && !pLoopPlot->area()->isLake()  )
 						{
-							if( pLoopPlot->isVisible(getTeam(),false) && !pLoopPlot->area()->isLake()  )
+							// Defend ocean
+							iTempValue = 1;
+
+							if( pLoopPlot->isOwned() )
 							{
-								// Defend ocean
-								iTempValue = 1;
-
-								if( pLoopPlot->isOwned() )
+								if( pLoopPlot->getTeam() == getTeam() )
 								{
-									if( pLoopPlot->getTeam() == getTeam() )
-									{
-										iTempValue += 1;
-									}
-									else if ((pLoopPlot->getTeam() != getTeam()) && GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
-									{
-										iTempValue += 1;
-									}
+									iTempValue += 1;
 								}
-
-								// Low weight for visible ships cause they will probably move
-								iTempValue += 2*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
-
-								if( bAssault )
+								else if ((pLoopPlot->getTeam() != getTeam()) && GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 								{
-									iTempValue *= 2;
+									iTempValue += 1;
 								}
+							}
+
+							// Low weight for visible ships cause they will probably move
+							iTempValue += 2*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
+
+							if( bAssault )
+							{
+								iTempValue *= 2;
 							}
 						}
-						else
+					}
+					else
+					{
+						if( !(pLoopPlot->isOwned()) )
 						{
-							if( !(pLoopPlot->isOwned()) )
+							if( iDistance < (iRange - 2) )
 							{
-								if( iDistance < (iRange - 2) )
-								{
-									// Target enemy troops in neutral territory
-									iTempValue += 4*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
-								}
+								// Target enemy troops in neutral territory
+								iTempValue += 4*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
 							}
-							else if( pLoopPlot->getTeam() == getTeam() )
+						}
+						else if( pLoopPlot->getTeam() == getTeam() )
+						{
+							iTempValue = 0;
+
+							if( iDistance < (iRange - 2) )
 							{
-								iTempValue = 0;
+								// Target enemy troops in our territory
+								iTempValue += 5*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
 
-								if( iDistance < (iRange - 2) )
+								if( pLoopPlot->getOwner() == getOwner() )
 								{
-									// Target enemy troops in our territory
-									iTempValue += 5*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
-
-									if( pLoopPlot->getOwner() == getOwner() )
+									if( GET_PLAYER(getOwner()).AI_isPrimaryArea(pLoopPlot->area()) )
 									{
-										if( GET_PLAYER(getOwner()).AI_isPrimaryArea(pLoopPlot->area()) )
-										{
-											iTempValue *= 3;
-										}
-										else
-										{
-											iTempValue *= 2;
-										}
-									}
-
-									if( bDefensive )
-									{
-										iTempValue *= 2;
-									}
-								}
-							}
-							else if ((pLoopPlot->getTeam() != getTeam()) && GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
-							{
-								// Attack opponents land territory
-								iTempValue = 3;
-
-								CvCity* pLoopCity = pLoopPlot->getPlotCity();
-
-								if (pLoopCity != NULL)
-								{
-									// Target enemy cities
-									iTempValue += (3*pLoopCity->getPopulation() + 30);
-
-									if( canAirBomb(pPlot) && pLoopCity->isBombardable(this) )
-									{
-										iTempValue *= 2;
-									}
-
-									if( pLoopPlot->area()->getTargetCity(getOwner()) == pLoopCity )
-									{
-										iTempValue *= 2;
-									}
-
-									if( pLoopCity->AI_isDanger() )
-									{
-										// Multiplier for nearby troops, ours, teammate's, and any other enemy of city
 										iTempValue *= 3;
 									}
-								}
-								else
-								{
-									if( iDistance < (iRange - 2) )
+									else
 									{
-										// Support our troops in enemy territory
-										iTempValue += 15*pLoopPlot->getNumDefenders(getOwner());
-
-										// Target enemy troops adjacent to our territory
-										if( pLoopPlot->isAdjacentTeam(getTeam(),true) )
-										{
-											iTempValue += 7*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
-										}
-									}
-
-									// Weight resources
-									if (canAirBombAt(pPlot, pLoopPlot->getX(), pLoopPlot->getY()))
-									{
-										if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
-										{
-											iTempValue += 8*std::max(2, GET_PLAYER(pLoopPlot->getOwner()).AI_bonusVal(pLoopPlot->getBonusType(getTeam()))/10);
-										}
+										iTempValue *= 2;
 									}
 								}
 
-								if( (pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) )
+								if( bDefensive )
 								{
-									// Extra weight for enemy territory in offensive areas
 									iTempValue *= 2;
-								}
-
-								if( GET_PLAYER(getOwner()).AI_isPrimaryArea(pLoopPlot->area()) )
-								{
-									iTempValue *= 3;
-									iTempValue /= 2;
-								}
-
-								if( pLoopPlot->isNPC() )
-								{
-									iTempValue /= 2;
 								}
 							}
 						}
+						else if ((pLoopPlot->getTeam() != getTeam()) && GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+						{
+							// Attack opponents land territory
+							iTempValue = 3;
 
-						iValue += iTempValue;
+							const CvCity* pLoopCity = pLoopPlot->getPlotCity();
+
+							if (pLoopCity != NULL)
+							{
+								// Target enemy cities
+								iTempValue += (3*pLoopCity->getPopulation() + 30);
+
+								if (canAirBomb(pPlot) && pLoopCity->isBombardable(this))
+								{
+									iTempValue *= 2;
+								}
+
+								if (pLoopPlot->area()->getTargetCity(getOwner()) == pLoopCity)
+								{
+									iTempValue *= 2;
+								}
+
+								if (pLoopCity->AI_isDanger())
+								{
+									// Multiplier for nearby troops, ours, teammate's, and any other enemy of city
+									iTempValue *= 3;
+								}
+							}
+							else
+							{
+								if (iDistance < iRange - 2)
+								{
+									// Support our troops in enemy territory
+									iTempValue += 15*pLoopPlot->getNumDefenders(getOwner());
+
+									// Target enemy troops adjacent to our territory
+									if (pLoopPlot->isAdjacentTeam(getTeam(), true))
+									{
+										iTempValue += 7*pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
+									}
+								}
+
+								// Weight resources
+								if (canAirBombAt(pPlot, pLoopPlot->getX(), pLoopPlot->getY()))
+								{
+									if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
+									{
+										iTempValue += 8*std::max(2, GET_PLAYER(pLoopPlot->getOwner()).AI_bonusVal(pLoopPlot->getBonusType(getTeam()))/10);
+									}
+								}
+							}
+
+							if (pLoopPlot->area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE)
+							{
+								// Extra weight for enemy territory in offensive areas
+								iTempValue *= 2;
+							}
+
+							if (GET_PLAYER(getOwner()).AI_isPrimaryArea(pLoopPlot->area()))
+							{
+								iTempValue *= 3;
+								iTempValue /= 2;
+							}
+
+							if (pLoopPlot->isNPC())
+							{
+								iTempValue /= 2;
+							}
+						}
 					}
+
+					iValue += iTempValue;
 				}
 			}
 		}
