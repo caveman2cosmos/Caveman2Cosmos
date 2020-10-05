@@ -28984,7 +28984,7 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 		return false;
 	}
 
-	const bool bHasTerrainDamage = (plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0);
+	const bool bHasTerrainDamage = (pPlot->getTotalTurnDamage(getGroup()) > 0 || pPlot->getFeatureTurnDamage() > 0);
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
@@ -28995,12 +28995,9 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 
 	if (pCity != NULL)
 	{
-		if (pCity->getOwner() == getOwner())
+		if (pCity->getOwner() == getOwner() && pCity->AI_isDanger())
 		{
-			if (pCity->AI_isDanger())
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	else

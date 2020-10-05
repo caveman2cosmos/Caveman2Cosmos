@@ -3515,40 +3515,49 @@ int CvSelectionGroup::getBombardTurns(const CvCity* pCity) const
 	return iBombardTurns;
 }
 
-bool CvSelectionGroup::isHasPathToAreaPlayerCity(PlayerTypes ePlayer, int iFlags, bool bGo)
+bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, const int iFlags, const bool bGo)
 {
 	PROFILE_FUNC();
 
 	CvReachablePlotSet plotSet(this, iFlags, MAX_INT, false);
 
-	foreach_(const CvCity* pLoopCity, GET_PLAYER(ePlayer).cities())
+	const CvUnit* headUnit = getHeadUnit();
+	const CvPlot* plot = headUnit->plot();
+
+	const bool bIgnoreDanger =
+	(
+		(iFlags & MOVE_IGNORE_DANGER) != 0
+		||
+		headUnit->canAttack()
+		||
+		headUnit->isBlendIntoCity()
+	);
+	foreach_(const CvCity* cityX, GET_PLAYER(ePlayer).cities())
 	{
-		if (pLoopCity->area() == area() && plotSet.find(pLoopCity->plot()) != plotSet.end())
+		if (cityX->area() == area() && plotSet.find(cityX->plot()) != plotSet.end())
 		{
-			if ((iFlags & MOVE_IGNORE_DANGER) != 0 || getHeadUnit()->canAttack() || getHeadUnit()->isBlendIntoCity())
+			if (generatePath(plot, cityX->plot(), iFlags, true))
 			{
-				if (generatePath(plot(), pLoopCity->plot(), iFlags, true))
+				if (bIgnoreDanger && bGo)
 				{
-					if (!bGo)
-					{
-						return true;
-					}
-					return pushMissionInternal(MISSION_MOVE_TO, pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), iFlags);
+					return pushMissionInternal(MISSION_MOVE_TO, cityX->plot()->getX(), cityX->plot()->getY(), iFlags);
 				}
-			}
-			else if (generatePath(plot(), pLoopCity->plot(), iFlags, true))
-			{
 				return true;
 			}
-			FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> failed to supposedly reachable city %S at <%d, %d>",
-				plot()->getX(), plot()->getY(), pLoopCity->getName().c_str(), pLoopCity->getX(), pLoopCity->getY()).c_str()
+			FErrorMsg
+			(
+				CvString::format
+				(
+					"Pathing of player %d units (%S) from plot <%d, %d> to supposedly reachable city %S at <%d, %d> failed",
+					(int)ePlayer, headUnit->getDescription().c_str(), plot->getX(), plot->getY(), cityX->getName().c_str(), cityX->getX(), cityX->getY()
+				).c_str()
 			);
 		}
 	}
 	return false;
 }
 
-bool CvSelectionGroup::isHasPathToAreaEnemyCity(int iFlags, bool bGo)
+bool CvSelectionGroup::isHasPathToAreaEnemyCity(const int iFlags, const bool bGo)
 {
 	PROFILE_FUNC();
 
@@ -3568,12 +3577,11 @@ bool CvSelectionGroup::isStranded()
 {
 	PROFILE_FUNC();
 
-	if( !(m_bIsStrandedCacheValid) )
+	if (!m_bIsStrandedCacheValid)
 	{
 		m_bIsStrandedCache = calculateIsStranded();
 		m_bIsStrandedCacheValid = true;
 	}
-
 	return m_bIsStrandedCache;
 }
 
@@ -3586,85 +3594,83 @@ bool CvSelectionGroup::calculateIsStranded()
 {
 	PROFILE_FUNC();
 
-	if( getNumUnits() <= 0 )
+	if (getNumUnits() <= 0)
 	{
 		return false;
 	}
 
-	if( plot() == NULL )
+	if (plot() == NULL)
 	{
 		return false;
 	}
 
-	if( getDomainType() != DOMAIN_LAND )
+	if (getDomainType() != DOMAIN_LAND)
 	{
 		return false;
 	}
 
-	if( (getActivityType() != ACTIVITY_AWAKE) && (getActivityType() != ACTIVITY_HOLD) )
+	if (getActivityType() != ACTIVITY_AWAKE && getActivityType() != ACTIVITY_HOLD)
 	{
 		return false;
 	}
 
-	if( AI_getMissionAIType() != NO_MISSIONAI )
+	if (AI_getMissionAIType() != NO_MISSIONAI)
 	{
 		return false;
 	}
 
-	if( getLengthMissionQueue() > 0 )
+	if (getLengthMissionQueue() > 0)
 	{
 		return false;
 	}
 
-	if( !canAllMove() )
+	if (!canAllMove())
 	{
 		return false;
 	}
 
-	if( getHeadUnit()->isCargo() )
+	if (getHeadUnit()->isCargo())
 	{
 		return false;
 	}
 
-	if( plot()->area()->getNumUnrevealedTiles(getTeam()) > 0 )
-	{
-		if( (getHeadUnitAI() == UNITAI_ATTACK) || (getHeadUnitAI() == UNITAI_EXPLORE) )
-		{
-			return false;
-		}
-	}
-
-	int iBestValue;
-	if( (getHeadUnitAI() == UNITAI_SETTLE) && (GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0) )
+	if (plot()->area()->getNumUnrevealedTiles(getTeam()) > 0
+	&& (getHeadUnitAI() == UNITAI_ATTACK || getHeadUnitAI() == UNITAI_EXPLORE))
 	{
 		return false;
 	}
 
-	if( plot()->area()->getCitiesPerPlayer(getOwner()) == 0 )
 	{
 		int iBestValue;
-		if( (plot()->area()->getNumAIUnits(getOwner(),UNITAI_SETTLE) > 0) && (GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0) )
+		if (getHeadUnitAI() == UNITAI_SETTLE
+		&& GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0)
+		{
+			return false;
+		}
+
+		if (plot()->area()->getCitiesPerPlayer(getOwner()) == 0
+		&& plot()->area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) > 0
+		&& GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0)
 		{
 			return false;
 		}
 	}
 
-	if( plot()->area()->getNumCities() > 0 )
+	if (plot()->area()->getNumCities() > 0)
 	{
-		if( getHeadUnit()->AI_getUnitAIType() == UNITAI_SPY )
+		if (getHeadUnit()->AI_getUnitAIType() == UNITAI_SPY)
 		{
 			return false;
 		}
 
-		if( plot()->getImprovementType() != NO_IMPROVEMENT )
+		if (plot()->getImprovementType() != NO_IMPROVEMENT
+		&& GC.getImprovementInfo(plot()->getImprovementType()).isActsAsCity()
+		&& canDefend())
 		{
-			if( GC.getImprovementInfo(plot()->getImprovementType()).isActsAsCity() && canDefend() )
-			{
-				return false;
-			}
+			return false;
 		}
 
-		if( plot()->isCity() && (plot()->getOwner() == getOwner()) )
+		if (plot()->isCity() && plot()->getOwner() == getOwner())
 		{
 			return false;
 		}
@@ -3672,12 +3678,12 @@ bool CvSelectionGroup::calculateIsStranded()
 		//	Since we are considering a reachable enemy city as not stranded it follows
 		//	that we expect situations where we can only attack are not considered stranded,
 		//	so include the MOVE_THROUGH_ENEMY flag for consistency
-		if( isHasPathToAreaPlayerCity(getOwner(), MOVE_THROUGH_ENEMY) )
+		if (isHasPathToAreaPlayerCity(getOwner(), MOVE_THROUGH_ENEMY))
 		{
 			return false;
 		}
 
-		if( isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY) )
+		if (isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY))
 		{
 			return false;
 		}
@@ -5328,23 +5334,18 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 }
 
 //TB OOS Debug: Actually... adding the bAsync here has only been implemented so as to set myself up for some conditional tracking here.
-bool CvSelectionGroup::generatePath( const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags, bool bReuse, int* piPathTurns, int iMaxPathLen, int iOptimizationLimit, bool bAsync) const
+bool CvSelectionGroup::generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags, bool bReuse, int* piPathTurns, int iMaxPathLen, int iOptimizationLimit, bool bAsync) const
 {
 	bool bSuccess;
 
 	PROFILE("CvSelectionGroup::generatePath()")
 
 #ifdef USE_OLD_PATH_GENERATOR
-	FAStarNode* pNode;
-/************************************************************************************************/
-/* Afforess	                  Start		 04/09/10                                               */
-/*                                                                                              */
-/* CTD Fix                                                                                      */
-/************************************************************************************************/
-	if (pFromPlot == NULL || pToPlot == NULL) return false;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	if (pFromPlot == NULL || pToPlot == NULL)
+	{
+		return false;
+	}
 
 	gDLL->getFAStarIFace()->SetData(&GC.getPathFinder(), this);
 
@@ -5386,7 +5387,7 @@ bool CvSelectionGroup::generatePath( const CvPlot* pFromPlot, const CvPlot* pToP
 
 		if (bSuccess)
 		{
-			pNode = getPathLastNode();
+			FAStarNode* pNode = getPathLastNode();
 
 			if (pNode != NULL)
 			{

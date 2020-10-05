@@ -1144,7 +1144,6 @@ public:
 
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
-	bool isImprovementUpgradeBlocked(const TeamTypes eTeam) const;
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
