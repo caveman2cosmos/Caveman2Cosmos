@@ -3540,8 +3540,8 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(PlayerTypes ePlayer, int iFlags
 			{
 				return true;
 			}
-			FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> failed to supposedly reachable city %S at <%d, %d>",
-				plot()->getX(), plot()->getY(), pLoopCity->getName().c_str(), pLoopCity->getX(), pLoopCity->getY()).c_str()
+			FErrorMsg(CvString::format("Pathing of player %d units from plot <%d, %d> to supposedly reachable city %S at <%d, %d> failed",
+				(int)ePlayer, plot()->getX(), plot()->getY(), pLoopCity->getName().c_str(), pLoopCity->getX(), pLoopCity->getY()).c_str()
 			);
 		}
 	}

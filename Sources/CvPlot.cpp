@@ -824,7 +824,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	const TeamTypes eTeam = GET_PLAYER(getOwner()).getTeam();
 
 	// Has the situation changed?
-	if (isImprovementUpgradeBlocked(eTeam))
+	if (GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate() == m_iCurrentRoundofUpgradeCache)
 	{
 		return; // Nope
 	}
@@ -11485,9 +11485,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvPlot", &m_iFeatureVariety);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iOwnershipDuration);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementDuration);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
-	m_iUpgradeProgress *= 100;	//	Convert legacy granularity to hundredths
+	// @SAVEBREAK REPLACE
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &m_iUpgradeProgress, "m_iUpdateProgressHundredths");
+	// REPLACE WITH
+	//WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iRiverID);
@@ -11990,7 +11992,11 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementDuration);
+	// @SAVEBREAK REPLACE
 	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", m_iUpgradeProgress, "m_iUpdateProgressHundredths");
+	// REPLACE WITH
+	//WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
+	// SAVEBREAK@
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iRiverID);
@@ -14154,11 +14160,6 @@ void CvPlot::setImprovementUpgradeCache(const int iNewValue)
 	{
 		m_iImprovementUpgradeHash = 0;
 	}
-}
-
-bool CvPlot::isImprovementUpgradeBlocked(const TeamTypes eTeam) const
-{
-	return GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate() == m_iCurrentRoundofUpgradeCache;
 }
 
 int CvPlot::getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const
