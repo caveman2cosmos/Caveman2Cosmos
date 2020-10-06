@@ -7968,10 +7968,7 @@ void CvGame::updateMoves()
 							player.AI_unitUpdate();
 						}
 
-						foreach_(CvSelectionGroup* pLoopSelectionGroup, player.groups())
-						{
-							pLoopSelectionGroup->autoMission();
-						}
+						algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 						if (!(player.hasBusyUnit()))
 						{
@@ -7999,11 +7996,7 @@ void CvGame::updateMoves()
 					CvPathGenerator::EnableMaxPerformance(true);
 
 					//	Always try to do automations first for the AI
-					foreach_(CvSelectionGroup* pLoopSelectionGroup, player.groups())
-					{
-						FAssert(pLoopSelectionGroup != NULL);
-						pLoopSelectionGroup->autoMission();
-					}
+					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 					CvPathGenerator::EnableMaxPerformance(false);
 
