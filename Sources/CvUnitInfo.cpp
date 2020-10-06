@@ -2653,12 +2653,12 @@ bool CvUnitInfo::isTriggerBeforeAttack() const
 
 bool CvUnitInfo::isAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_ANIMAL());
 }
 
 bool CvUnitInfo::isWildAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatWildAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_WILD());
 }
 
 bool CvUnitInfo::canAnimalIgnoresBorders() const

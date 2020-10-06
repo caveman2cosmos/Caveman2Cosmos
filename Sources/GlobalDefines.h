@@ -334,7 +334,11 @@
 	DO(ColorTypes, COLOR_ALT_HIGHLIGHT_TEXT) \
 	DO(ColorTypes, COLOR_BUILDING_TEXT) \
 	DO(ColorTypes, COLOR_BLACK) \
+	DO(ColorTypes, COLOR_RED) \
+	DO(ColorTypes, COLOR_YELLOW) \
+	DO(ColorTypes, COLOR_WHITE) \
 	DO(ColorTypes, COLOR_CLEAR) \
+	DO(ColorTypes, COLOR_GREEN) \
 	DO(ColorTypes, COLOR_GREY) \
 	DO(ColorTypes, COLOR_HIGHLIGHT_TEXT) \
 	DO(ColorTypes, COLOR_TECH_TEXT) \
@@ -346,6 +350,8 @@
 	DO(FeatureTypes, FEATURE_FLOOD_PLAINS) \
 	DO(FeatureTypes, FEATURE_FOREST) \
 	DO(FeatureTypes, FEATURE_JUNGLE) \
+	DO(ImprovementTypes, IMPROVEMENT_CITY) \
+	DO(ImprovementTypes, IMPROVEMENT_CITY_RUINS) \
 	DO(MapCategoryTypes, MAPCATEGORY_EARTH) \
 	DO(PromotionTypes, PROMOTION_ANIMAL_HUNTER) \
 	DO(PromotionTypes, PROMOTION_BARBARIAN_HUNTER) \
@@ -364,6 +370,7 @@
 	DO(TechTypes, TECH_SEDENTARY_LIFESTYLE) \
 	DO(TechTypes, TECH_TRIBALISM) \
 	DO(TerrainTypes, TERRAIN_DESERT) \
+	DO(TerrainTypes, TERRAIN_HILL) \
 	DO(TerrainTypes, TERRAIN_PEAK) \
 	DO(UnitCombatTypes, UNITCOMBAT_ANIMAL) \
 	DO(UnitCombatTypes, UNITCOMBAT_EXPLORER) \

@@ -3138,8 +3138,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
 						if (eTerrain == pMissionPlot->getTerrainType() || 
-							(eTerrain == CvTerrainInfo::getTerrainPeak() && pMissionPlot->isPeak2(true)) ||
-							(eTerrain == CvTerrainInfo::getTerrainHill() && pMissionPlot->isHills()))
+							(eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isPeak2(true)) ||
+							(eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills()))
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{
