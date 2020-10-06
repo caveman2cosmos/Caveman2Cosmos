@@ -1,5 +1,6 @@
 // playerAI.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -19,8 +20,7 @@
 #define CIVIC_CHANGE_DELAY			(25)
 #define RELIGION_CHANGE_DELAY		(15)
 
-//	Koshling - save flag indicating this player has no data in the save as they have never
-//	been alive
+//	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYERAI_UI_FLAG_OMITTED 4
 
 //	Koshling - to try to normalize the new tech building evaluation to the same magnitude as the old

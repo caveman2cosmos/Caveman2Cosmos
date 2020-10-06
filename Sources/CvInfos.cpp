@@ -6,8 +6,8 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"

@@ -1,7 +1,7 @@
 // game.cpp
 
-#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvInitCore.h"
 #include "CvMapGenerator.h"

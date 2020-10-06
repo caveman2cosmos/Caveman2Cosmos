@@ -1,5 +1,6 @@
 // cityAI.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"

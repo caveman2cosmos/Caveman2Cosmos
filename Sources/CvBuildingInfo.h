@@ -10,13 +10,18 @@
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
+class CvHotkeyInfo;
+class CvProperties;
+class FDataStreamBase;
+class CvXMLLoadUtility;
+#include "CvInfos.h"
+
 class CvBuildingInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
@@ -178,8 +183,6 @@ public:
 	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; } // Exposed to Python
 	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; } // Exposed to Python
 
-	// Arrays
-
 	int getYieldChange(int i) const; // Exposed to Python
 	int* getYieldChangeArray() const;
 	int getYieldPerPopChange(int i) const; // Exposed to Python
@@ -240,7 +243,6 @@ public:
 	int getNumPrereqInCityBuildings() const;
 	bool isPrereqInCityBuilding(int i) const; // Exposed to Python
 
-
 	int getSpecialistYieldChange(int i, int j) const; // Exposed to Python
 	int* getSpecialistYieldChangeArray(int i) const;
 
@@ -253,8 +255,6 @@ public:
 	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
 	int getNumGlobalBuildingCommerceChanges() const;
 
-	// Other
-
 	const CvArtInfoBuilding* getArtInfo() const;
 	const CvArtInfoMovie* getMovieInfo() const;
 	const TCHAR* getButton() const;
@@ -263,6 +263,7 @@ public:
 	// serialization
 	void read(FDataStreamBase*) {}
 	void write(FDataStreamBase*) {}
+
 	bool read(CvXMLLoadUtility* pXML);
 
 	// Afforess 12/9/09
@@ -469,7 +470,6 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	//Team Project (1)
 	int getNumTechHappinessTypes() const;
 	int getTechHappinessType(int iTech) const;
 	const TechModifierArray& getTechHappinessTypeArray() const { return m_aTechHappinessTypes; }
@@ -478,7 +478,6 @@ public:
 	int getTechHealthType(int iTech) const;
 	const TechModifierArray& getTechHealthTypeArray() const { return m_aTechHealthTypes; }
 
-	//Arrays
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
 
@@ -523,7 +522,7 @@ public:
 
 	bool readPass3();
 
-	void getCheckSum(unsigned int& iSum);
+	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -635,7 +634,6 @@ public:
 	int getNumPrereqOrBonuses() const; // Exposed to Python
 	BonusTypes getPrereqOrBonuses(int i) const; // Exposed to Python
 
-	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
 	int m_iVictoryPrereq;
 	int m_iFreeStartEra;
@@ -784,8 +782,6 @@ protected:
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	// Arrays
-
 	int* m_piPrereqAndTechs;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
@@ -845,7 +841,7 @@ protected:
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
 	//TechTypes m_eFreeSpecialTech;
-	//integers
+
 	int m_iLinePriority;
 	int m_iOutbreakBase;
 	int m_iOvercomeBase;
@@ -855,7 +851,6 @@ protected:
 	int m_iMediumRangeSupportPercentModifier;
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
-	//Team Project (3)
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;
@@ -874,7 +869,7 @@ protected:
 	int m_iInvestigation;
 	int m_iPopulationChange;
 	int m_iOneTimePopulationPercentLoss;
-	//Booleans
+
 	bool m_bDamageToAttackerIgnoresArmor;
 	bool m_bDamageAllAttackers;
 	bool m_bDamageAttackerCapable;
@@ -892,10 +887,9 @@ protected:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
-	//Team Project (1)
 	TechModifierArray m_aTechHappinessTypes;
 	TechModifierArray m_aTechHealthTypes;
-	//arrays
+
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 	//Alberts2 PrereqBonuses

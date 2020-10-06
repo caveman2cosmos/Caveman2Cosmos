@@ -1,7 +1,7 @@
 // unit.cpp
 
-#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
