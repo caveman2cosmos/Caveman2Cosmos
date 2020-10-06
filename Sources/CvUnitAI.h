@@ -381,7 +381,7 @@ protected:
 /*                                                                                              */
 /* Player Interface                                                                             */
 /************************************************************************************************/
-	int AI_exploreAirPlotValue( CvPlot* pPlot );
+	int AI_exploreAirPlotValue(const CvPlot* pPlot) const;
 	bool AI_exploreAir2();
 	void AI_exploreAirMove();
 /************************************************************************************************/
@@ -548,14 +548,6 @@ public:
 
 	static PlayerTypes			m_cachedPlayer;
 	static CvReachablePlotSet*	m_cachedMissionaryPlotset;
-
-public:
-
-	//
-	// Algorithm/range helpers
-	//
-	struct fn {
-	}; 
 };
 
 #endif

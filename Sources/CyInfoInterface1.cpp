@@ -33,27 +33,21 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo")
+
 		.def("getGreatPeopleUnitType", &CvSpecialistInfo::getGreatPeopleUnitType, "int ()")
 		.def("getGreatPeopleRateChange", &CvSpecialistInfo::getGreatPeopleRateChange, "int ()")
 		.def("getMissionType", &CvSpecialistInfo::getMissionType, "int ()")
 
 		.def("isVisible", &CvSpecialistInfo::isVisible, "bool ()")
-		
+		.def("isSlave", &CvSpecialistInfo::isSlave, "bool ()")
+
 		.def("getYieldChange", &CvSpecialistInfo::getYieldChange, "int (int i)")
 		.def("getCommerceChange", &CvSpecialistInfo::getCommerceChange, "int (int i)")
 		.def("getExperience", &CvSpecialistInfo::getExperience, "int ()")
 		.def("getFlavorValue", &CvSpecialistInfo::getFlavorValue, "int (int i)")
 
 		.def("getTexture", &CvSpecialistInfo::getTexture, "string ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		;
+	;
 
 	python::class_<CvTechInfo, python::bases<CvInfoBase> >("CvTechInfo")
 		.def("getAdvisorType", &CvTechInfo::getAdvisorType, "int ()")
@@ -239,7 +233,6 @@ void CyInfoPythonInterface1()
 
 		.def("getCargoSpace", &CvUnitInfo::getCargoSpace, "int ()")
 		.def("getConscriptionValue", &CvUnitInfo::getConscriptionValue, "int ()")
-		.def("getExtraCost", &CvUnitInfo::getExtraCost, "int ()")
 		.def("getPowerValue", &CvUnitInfo::getPowerValue, "int ()")
 		.def("getSpecialUnitType", &CvUnitInfo::getSpecialUnitType, "int ()")
 		.def("getUnitCaptureType", &CvUnitInfo::getUnitCaptureType, "int ()")

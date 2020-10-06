@@ -15,7 +15,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>

@@ -411,7 +411,7 @@ int BoolExprConstant::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprConstant::getCheckSum(unsigned int &iSum)
+void BoolExprConstant::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_bValue);
 }
@@ -500,7 +500,7 @@ int BoolExprHas::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprHas::getCheckSum(unsigned int &iSum)
+void BoolExprHas::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, (int)m_eGOM);
 	CheckSum(iSum, m_iID);
@@ -552,7 +552,7 @@ int BoolExprIs::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprIs::getCheckSum(unsigned int &iSum)
+void BoolExprIs::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, (int)m_eTag);
 }
@@ -581,7 +581,7 @@ int BoolExprNot::getBindingStrength() const
 	return 40;
 }
 
-void BoolExprNot::getCheckSum(unsigned int &iSum)
+void BoolExprNot::getCheckSum(unsigned int &iSum) const
 {
 	m_pExpr->getCheckSum(iSum);
 }
@@ -624,7 +624,7 @@ int BoolExprAnd::getBindingStrength() const
 	return 20;
 }
 
-void BoolExprAnd::getCheckSum(unsigned int &iSum)
+void BoolExprAnd::getCheckSum(unsigned int &iSum) const
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -669,7 +669,7 @@ int BoolExprOr::getBindingStrength() const
 	return 10;
 }
 
-void BoolExprOr::getCheckSum(unsigned int &iSum)
+void BoolExprOr::getCheckSum(unsigned int &iSum) const
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -713,7 +713,7 @@ int BoolExprBEqual::getBindingStrength() const
 	return 30;
 }
 
-void BoolExprBEqual::getCheckSum(unsigned int &iSum)
+void BoolExprBEqual::getCheckSum(unsigned int &iSum) const
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -768,7 +768,7 @@ int BoolExprIf::getBindingStrength() const
 	return 25;
 }
 
-void BoolExprIf::getCheckSum(unsigned int &iSum)
+void BoolExprIf::getCheckSum(unsigned int &iSum) const
 {
 	m_pExprIf->getCheckSum(iSum);
 	m_pExprThen->getCheckSum(iSum);
@@ -805,7 +805,7 @@ int BoolExprIntegrateOr::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void BoolExprIntegrateOr::getCheckSum(unsigned int &iSum)
+void BoolExprIntegrateOr::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, (int)m_eRelation);
 	CheckSum(iSum, m_iData);
@@ -848,7 +848,7 @@ int BoolExprComp::getBindingStrength() const
 	return 5;
 }
 
-void BoolExprComp::getCheckSum(unsigned int &iSum)
+void BoolExprComp::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, (int)getType());
 	m_pExpr1->getCheckSum(iSum);

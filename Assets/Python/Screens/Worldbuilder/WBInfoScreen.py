@@ -5,10 +5,8 @@ import WBUnitScreen
 import WBCityEditScreen
 import WBPromotionScreen
 import WBPlayerScreen
-import WBTechScreen
 import WBProjectScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
+
 GC = CyGlobalContext()
 
 iMode = 0
@@ -19,7 +17,8 @@ lSelectedItem = [-1, -1]
 
 class WBInfoScreen:
 
-	def __init__(self):
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 80
 		self.iMinColWidth = 120
 		self.iColorA = "COLOR_YELLOW"
@@ -49,7 +48,7 @@ class WBInfoScreen:
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel("MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		screen.setText("WBInfoExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iX = 20
@@ -71,7 +70,7 @@ class WBInfoScreen:
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ()), 11, 11, 11 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_TECH", ()), 12, 12, 12 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ()), 13, 13, 13 == iMode)
-		
+
 		screen.addDropDownBoxGFC("CurrentPlayer", iX + iWidth/2, iY, iWidth/2, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		for i in xrange(GC.getMAX_PLAYERS()):
 			pPlayerX = GC.getPlayer(i)
@@ -101,7 +100,7 @@ class WBInfoScreen:
 			pCity = GC.getPlayer(iPlayer).getCity(iCity)
 			if pCity:
 				sText += pCity.getName()
-				sText += u" (%d,%d)" %(pCity.getX(), pCity.getY())			
+				sText += u" (%d,%d)" %(pCity.getX(), pCity.getY())
 		elif iMode < 11:
 			sText += CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ())
 			if lSelectedItem[0] > -1 and lSelectedItem[1] > -1:
@@ -114,7 +113,7 @@ class WBInfoScreen:
 			iTeam = lSelectedItem[0]
 			pTeam = GC.getTeam(iTeam)
 			sText += pTeam.getName()
-			
+
 		sText += "</color></font>"
 		screen.setText("PlotData", "Background", sText, 1<<2, iX, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
@@ -124,7 +123,7 @@ class WBInfoScreen:
 		iY = self.iTable_Y
 		iWidth = screen.getXResolution() * 2/3 - 40
 		iMaxHeight = screen.getYResolution() * 2/3 - iY
-		
+
 		iHeight = iWidth * CyMap().getGridHeight() / CyMap().getGridWidth()
 		if iHeight > iMaxHeight:
 			iWidth = iMaxHeight * CyMap().getGridWidth() / CyMap().getGridHeight()
@@ -228,7 +227,7 @@ class WBInfoScreen:
 				screen.setTableText("PlotTable", iColumn, iRow, "<font=3>" + sText + "</color></font>", sButton, WidgetTypes.WIDGET_PYTHON, 7200 + iPlayer, iCity, 1<<0)
 				screen.minimapFlashPlot(iX, iY, iColorB, -1)
 				if lSelectedItem == lPlots:
-					screen.minimapFlashPlot(iX, iY, iColorA, -1)			
+					screen.minimapFlashPlot(iX, iY, iColorA, -1)
 		elif iMode < 11:
 			for lPlots in lItems[iItem][5]:
 				iX = lPlots[0]
@@ -529,7 +528,7 @@ class WBInfoScreen:
 			screen.setTableText("InfoTable", 0, iRow, "<font=3>" + item[0] + "</font>", item[4], WidgetTypes.WIDGET_PYTHON, iData1, item[3], 1<<0)
 			screen.setTableInt("InfoTable", 1, iRow, "<font=3>" + str(item[1]) + "</font>", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
 			screen.setTableInt("InfoTable", 2, iRow, "<font=3>" + str(item[2]) + "</font>", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
-			
+
 	def handleInput(self, inputClass):
 		screen = CyGInterfaceScreen("WBInfoScreen", CvScreenEnums.WB_INFO)
 		global iSelectedPlayer
@@ -541,25 +540,25 @@ class WBInfoScreen:
 			if iMode == 0:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pUnit)
+					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
 			elif iMode == 1:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:
-					WBPromotionScreen.WBPromotionScreen().interfaceScreen(pUnit)
+					WBPromotionScreen.WBPromotionScreen(self.WB).interfaceScreen(pUnit)
 			elif iMode < 6:
 				pCity = GC.getPlayer(lSelectedItem[0]).getCity(lSelectedItem[1])
 				if pCity:
-					WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).interfaceScreen(pCity)				
+					WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pCity)
 			elif iMode < 11:
 				pPlot = CyMap().plot(lSelectedItem[0], lSelectedItem[1])
 				if not pPlot.isNone():
-					WBPlotScreen.WBPlotScreen().interfaceScreen(pPlot)
+					WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pPlot)
 			elif iMode == 11:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(lSelectedItem[0])
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(lSelectedItem[0])
 			elif iMode == 12:
-				WBTechScreen.WBTechScreen().interfaceScreen(lSelectedItem[0])
+				self.WB.goToSubScreen("TechScreen")
 			elif iMode == 13:
-				WBProjectScreen.WBProjectScreen().interfaceScreen(lSelectedItem[0])
+				WBProjectScreen.WBProjectScreen(self.WB).interfaceScreen(lSelectedItem[0])
 
 		if inputClass.getFunctionName() == "ItemType":
 			iMode = screen.getPullDownData("ItemType", screen.getSelectedPullDownID("ItemType"))

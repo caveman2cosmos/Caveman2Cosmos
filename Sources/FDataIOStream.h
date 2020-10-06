@@ -23,33 +23,33 @@ public:
 	virtual unsigned int			GetSizeLeft() const;
 	virtual void	CopyToMem(void* mem);
 	
-	virtual unsigned int	WriteString(const wchar *szName);
-	virtual unsigned int	WriteString(const char *szName);
+	virtual unsigned int	WriteString(const wchar_t* szName);
+	virtual unsigned int	WriteString(const char* szName);
 	virtual unsigned int	WriteString(const std::string& szName);
 	virtual unsigned int	WriteString(const std::wstring& szName);
 	virtual unsigned int	WriteString(int count, std::string values[]);
 	virtual unsigned int	WriteString(int count, std::wstring values[]);
 	
-	virtual unsigned int	ReadString(char *szName);
-	virtual unsigned int	ReadString(wchar *szName);
+	virtual unsigned int	ReadString(char* szName);
+	virtual unsigned int	ReadString(wchar_t* szName);
 	virtual unsigned int	ReadString(std::string& szName);
 	virtual unsigned int	ReadString(std::wstring& szName);
 	virtual unsigned int	ReadString(int count, std::string values[]);
 	virtual unsigned int	ReadString(int count, std::wstring values[]);
 	
-	virtual char *			ReadString();		// allocates memory 
-	virtual wchar *		ReadWideString();	// allocates memory 
+	virtual char*		ReadString();		// allocates memory 
+	virtual wchar_t*	ReadWideString();	// allocates memory 
 
 	virtual void		Read(char *);
-	virtual void		Read(byte *);
+	virtual void		Read(uint8_t*);
 	virtual void		Read(int count, char values[]);
-	virtual void		Read(int count, byte values[]);
+	virtual void		Read(int count, uint8_t values[]);
 	virtual void		Read(bool *);
 	virtual void		Read(int count, bool values[]);
-	virtual void		Read(short	*s);
-	virtual void		Read(unsigned short	*s);
+	virtual void		Read(short* s);
+	virtual void		Read(uint16_t* s);
 	virtual void		Read(int count, short values[]);
-	virtual void		Read(int count, unsigned short values[]);
+	virtual void		Read(int count, uint16_t values[]);
 	virtual void		Read(int* i);
 	virtual void		Read(unsigned int* i);
 	virtual void 		Read(int count, int values[]);
@@ -69,18 +69,18 @@ public:
 	virtual bool		TryRead(int* i);
 	virtual bool		TryRead(unsigned long* l);
 
-	virtual void		Write( char value);
-	virtual void		Write(byte value);
-	virtual void		Write(int count, const  char values[]);
-	virtual void		Write(int count, const  byte values[]);
+	virtual void		Write(char value);
+	virtual void		Write(uint8_t value);
+	virtual void		Write(int count, const char values[]);
+	virtual void		Write(int count, const uint8_t values[]);
 
 	virtual void		Write(bool value);
 	virtual void		Write(int count, const bool values[]);
 
 	virtual void		Write(short value);
-	virtual void		Write(unsigned short value);
+	virtual void		Write(uint16_t value);
 	virtual void		Write(int count, const short values[]);
-	virtual void		Write(int count, const unsigned short values[]);
+	virtual void		Write(int count, const uint16_t values[]);
 
 	virtual void		Write(int value);
 	virtual void		Write(unsigned int value);

@@ -8,6 +8,7 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import RevInstances
+import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -148,6 +149,8 @@ class CvMainInterface:
 			FONT_CENTER_JUSTIFY	= 1<<2
 			FONT_RIGHT_JUSTIFY	= 1<<1
 			FONT_LEFT_JUSTIFY	= 1<<0
+			// Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
+			//			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
 			'''
 			# Cache Icons
 			self.iconStrength			= u'%c' % GAME.getSymbolID(FontSymbols.STRENGTH_CHAR)
@@ -1193,7 +1196,7 @@ class CvMainInterface:
 				if dataTT[3]:
 					szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
 					self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
-				else:
+				elif not ParallelMaps.bIsSwitchingMap:
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
@@ -2162,55 +2165,66 @@ class CvMainInterface:
 				eFontGame = FontTypes.GAME_FONT
 				iCurrentResearch = CyPlayer.getCurrentResearch()
 				if iCurrentResearch != -1 or not bCityScreen:
-					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
-					if not bCityScreen:
-						bTDDisplayOption = self.GO_WIN_FOR_LOSING or self.GO_TECH_DIFFUSION
+					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
+
+				if bCityScreen:
+					iconHappy = self.iconHappy
+					iconUnhappy = self.iconUnhappy
+				else:
+					bTDDisplayOption = self.GO_WIN_FOR_LOSING or self.GO_TECH_DIFFUSION
+
 				iconCommerceList = self.iconCommerceList
 				dY = 0
 				for i in xrange(iRange):
 					j = (i + 1) % iRange # 1, 2, 3, 0 (Research, Culture, Espionage, Gold)
-					if CyPlayer.isCommerceFlexible(j) or (bCityScreen and j == CommerceTypes.COMMERCE_GOLD):
-						szOutText = uFont2 + iconCommerceList[j] + uFont1b + " " + str(CyPlayer.getCommercePercent(j)) + "%"
-						label = "PercentText" + str(i)
-						screen.setLabel(label, "", szOutText, 1<<0, 6, 53 + dY, 0, eFontGame, eWidGen, 0, 0)
-						if not bCityScreen:
-							if j == CommerceTypes.COMMERCE_RESEARCH:
-								if bTDDisplayOption:
-									commerceRate = 100 * iResearchRate / iResearchMod
-									techDiffusionHelp = iResearchRate - commerceRate
-								else:
-									commerceRate = iResearchRate
-							else:
+
+					if bCityScreen or CyPlayer.isCommerceFlexible(j):
+						szTxt = uFont2 + iconCommerceList[j] + uFont1b + " " + str(CyPlayer.getCommercePercent(j)) + "%"
+						screen.setLabel("PercentText" + str(i), "", szTxt, 1<<0, 6, 53 + dY, 0, eFontGame, eWidGen, 0, 0)
+
+						if bCityScreen:
+							CyCity = InCity.CyCity
+							iHappiness = CyCity.getCommerceHappinessByType(j)
+							if iHappiness:
+								if iHappiness < 0:
+									icon = iconUnhappy
+								else: icon = iconHappy
+
+								szTxt = "<font=1>%d<font=2>%s, " %(iHappiness, icon)
+							else: szTxt = ""
+
+							szTxt += "<font=1>%.2f<font=2>" %(CyCity.getCommerceRateTimes100(j)/100.0) + iconCommerceList[j]
+
+							screen.setLabel("CityPercentText" + str(i), "", szTxt, 1<<1, 252, 53 + dY, 0, eFontGame, WidgetTypes.WIDGET_COMMERCE_MOD_HELP, j, -1)
+						else:
+							if j != CommerceTypes.COMMERCE_RESEARCH:
 								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
-							label = "RateText" + str(i)
-							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
-								szOutText = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
+
+							elif bTDDisplayOption:
+								commerceRate = 100 * iResearchRate / iResearchMod
+								techDiffusionHelp = iResearchRate - commerceRate
 							else:
-								szOutText = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (commerceRate,))
-							screen.setLabel(label, "", uFont1b + szOutText, 1<<0, 108, 53 + dY, 0, eFontGame, eWidGen, 0, 0)
+								commerceRate = iResearchRate
+
+							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
+								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
+							else:
+								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (commerceRate,))
+							screen.setLabel("RateText" + str(i), "", uFont1b + szTxt, 1<<0, 108, 53 + dY, 0, eFontGame, eWidGen, 0, 0)
 						dY += 18
 				# Treasury and income info.
 				iGold = CyPlayer.getGold()
-				iGreaterGold = CyPlayer.getGreaterGold()
-				iEffectiveGold = iGreaterGold * 1000000 + iGold
 				iGoldRate = CyPlayer.calculateGoldRate()
 				szTxt = "<font=3>"
-				if iEffectiveGold < 0:
+				if iGold < 0:
 					szTxt += "<color=255,0,0,255>"
-				if iGold > 99999:
-					if iGreaterGold:
-						szTxt += str(iGreaterGold)
-					szTxt += str(iGold/1000) + "K"
-				else:
-					if iGreaterGold:
-						szTxt += str(iGreaterGold) + "M "
-					szTxt += str(iGold)
+				szTxt += str(iGold)
 				if iGoldRate:
 					szTxt += " <color="
-					if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+					if iGoldRate > 0 and iGold + iGoldRate >= 0:
 						szTxt += "127,255,0,255>"
-					elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+					elif iGoldRate < 0 and iGold + iGoldRate < 0:
 						szTxt += "255,124,0,255>"
 					else:
 						szTxt += "255,227,0,255>"
@@ -2285,10 +2299,10 @@ class CvMainInterface:
 
 				# Great People Bar
 				if not bCityScreen:
-					CyCity, iTurns = GPUtil.getDisplayCity()
+					city, iTurns = GPUtil.getDisplayCity()
 					x, y, w, h = self.xywhGPBar
 					screen.setImageButton("GreatPersonBar0", "", x, y, w, h, eWidGen, 0, 0)
-					szTxt = GPUtil.getGreatPeopleText(CyCity, iTurns, w - 32, MainOpt.isGPBarTypesNone(), MainOpt.isGPBarTypesOne(), True, uFont2)
+					szTxt = GPUtil.getGreatPeopleText(city, iTurns, w - 32, MainOpt.isGPBarTypesNone(), MainOpt.isGPBarTypesOne(), True, uFont2)
 					if not self.iResID:	# Two rows
 						y += 1
 					else:
@@ -2296,10 +2310,10 @@ class CvMainInterface:
 					x += w / 2
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
 					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
-					if CyCity:
-						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThresholdNonMilitary())
-						fRate = float(CyCity.getGreatPeopleRate())
-						fFirst = float(CyCity.getGreatPeopleProgress()) / fThreshold
+					if city:
+						fThreshold = float(GC.getPlayer(city.getOwner()).greatPeopleThresholdNonMilitary())
+						fRate = float(city.getGreatPeopleRate())
+						fFirst = float(city.getGreatPeopleProgress()) / fThreshold
 
 						screen.setBarPercentage("GreatPersonBar", InfoBarTypes.INFOBAR_STORED, fFirst)
 						if fFirst == 1:
@@ -2516,8 +2530,6 @@ class CvMainInterface:
 			uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 			xPopProgBar = self.xPopProgBar
 			iPopProgBarWidth = self.iPopProgBarWidth
-			iconHappy = self.iconHappy
-			iconUnhappy = self.iconUnhappy
 			iconYieldList = self.iconYieldList
 			iconCommerceList = self.iconCommerceList
 			halfX = xRes / 2
@@ -2590,24 +2602,6 @@ class CvMainInterface:
 			iMaintenance = CyCity.getMaintenanceTimes100()
 			szTxt = "<font=1>-%d.%02d" %(iMaintenance/100, iMaintenance%100) + uFont2 + iconCommerceList[0]
 			screen.setLabel("MaintenanceAmountText", "", szTxt, 1<<1, 252, y, 0, eFontSmall, WidgetTypes.WIDGET_HELP_MAINTENANCE, 0, 0)
-			y += 19
-			iRange = CommerceTypes.NUM_COMMERCE_TYPES
-			for i in xrange(iRange):
-				j = (i + 1) % iRange
-				if CyPlayer.isCommerceFlexible(j) or (j == CommerceTypes.COMMERCE_GOLD):
-					szTxt = ""
-					iHappiness = CyCity.getCommerceHappinessByType(j)
-					if iHappiness:
-						if iHappiness < 0:
-							icon = iconUnhappy
-						else:
-							icon = iconHappy
-						szTxt = "<font=1>%d<font=2>%s, " %(iHappiness, icon)
-					szTxt += "<font=1>%.2f<font=2>" %(CyCity.getCommerceRateTimes100(j)/100.0) + iconCommerceList[j]
-
-					szName = "CityPercentText" + str(i)
-					screen.setLabel(szName, "", szTxt, 1<<1, 252, y, 0, eFontSmall, WidgetTypes.WIDGET_COMMERCE_MOD_HELP, j, -1)
-					y += 18
 
 			a4thX = xRes / 4
 			iWidth = a4thX - 16
@@ -4749,14 +4743,14 @@ class CvMainInterface:
 				iRange = CommerceTypes.NUM_COMMERCE_TYPES
 				for i in xrange(iRange):
 					iType = (i + 1) % iRange # 1, 2, 3, 0 (Research, Culture, Espionage, Gold)
-					bEnable = CyPlayer.isCommerceFlexible(iType)
-					if bEnable:
+
+					if CyPlayer.isCommerceFlexible(iType):
 						szBut = "ComPercent|Inc" + str(iType)
 						screen.setButtonGFC(szBut, "", "", x1, y, iSize, iSize, eWidGen, 1, 1, eAddBtn)
-						#screen.enable(szBut, bEnable)
 						szBut = "ComPercent|Dec" + str(iType)
 						screen.setButtonGFC(szBut, "", "", x2, y, iSize, iSize, eWidGen, 1, 1, eSubBtn)
-						#screen.enable(szBut, bEnable)
+						y += iSize - 2
+					elif bCityScreen:
 						y += iSize - 2
 
 	def buildCitizenPanel(self, screen, CyCity):
@@ -5027,27 +5021,34 @@ class CvMainInterface:
 		self.updateTooltip(screen, szTxt)
 
 	def treasuryHelp(self, screen, szTxt):
+		player = self.CyPlayer
 		iconCommerceGold = self.iconCommerceList[0]
-		CyPlayer = self.CyPlayer
-		szTxt += "\n%s: %d" % (iconCommerceGold, CyPlayer.getGreaterGold() * 1000000 + CyPlayer.getGold())
-		iSum = 0
+		szTxt += "\n%s: %d" % (iconCommerceGold, player.getGold())
+		if player.isAnarchy():
+			self.updateTooltip(screen, szTxt)
+			return
+		# Treasury Upkeep
+		iValue = player.getTreasuryUpkeep()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()) + str(iValue) + iconCommerceGold
 		# Civics
+		iSum = 0
 		szTemp = ""
 		for i in xrange(GC.getNumCivicOptionInfos()):
-			iCivic = CyPlayer.getCivics(i)
-			iUpkeep = CyPlayer.getSingleCivicUpkeep(iCivic, True)
-			if iUpkeep:
-				szTemp += "\n	" + str(iUpkeep) + iconCommerceGold + " "+ TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_FROM", ())+ " " + GC.getCivicInfo(iCivic).getDescription()
-				iSum += iUpkeep
+			iCivic = player.getCivics(i)
+			iValue = player.getSingleCivicUpkeep(iCivic, True)
+			if iValue:
+				szTemp += "\n\t" + str(iValue) + iconCommerceGold + " "+ TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_FROM", ())+ " " + GC.getCivicInfo(iCivic).getDescription()
+				iSum += iValue
 		if iSum:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
 		# Maintenance
-		iMaintenance = CyPlayer.getTotalMaintenance()
-		if iMaintenance:
-			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iMaintenance) + iconCommerceGold
+		iValue = player.getTotalMaintenance()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
 		# Unit upkeep
-		iUnitUpkeep = CyPlayer.calculateUnitCost()
-		iUnitSupply = CyPlayer.calculateUnitSupply()
+		iUnitUpkeep = player.getFinalUnitUpkeep()
+		iUnitSupply = player.calculateUnitSupply()
 		if iUnitUpkeep or iUnitSupply:
 			szTxt += "\n"
 			if iUnitUpkeep:
@@ -5057,14 +5058,14 @@ class CvMainInterface:
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
 		# Trade
-		iTradeGoPerT = CyPlayer.getGoldPerTurn()
-		if iTradeGoPerT:
+		iValue = player.getGoldPerTurn()
+		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_TRADE", ()) +" <color="
-			if iTradeGoPerT < 0:
+			if iValue < 0:
 				szTxt += "255,0,0>"
 			else:
 				szTxt += "0,255,0>"
-			szTxt += str(iTradeGoPerT) + "</color>" + iconCommerceGold
+			szTxt += str(iValue) + "</color>" + iconCommerceGold
 		self.updateTooltip(screen, szTxt)
 
 	def showRevStatusInfoPane(self, screen):

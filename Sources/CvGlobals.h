@@ -209,8 +209,8 @@ public:
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex) const;
+	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
-	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;
 	void clearSigns();
@@ -822,10 +822,7 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-#ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
-#endif
-	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
+	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -997,7 +994,7 @@ protected:
 		static const size_t Seed = 0x811C9DC5;  // 2166136261
 
 		// hash a single byte
-		static inline size_t fnv1a(unsigned char oneByte, size_t hash = Seed)
+		static inline size_t fnv1a(uint8_t oneByte, size_t hash = Seed)
 		{
 			return (oneByte ^ hash) * Prime;
 		}
@@ -1006,7 +1003,7 @@ protected:
 		static inline size_t fnv1a(const void* data, size_t numBytes, size_t hash = Seed)
 		{
 			assert(data);
-			const unsigned char* ptr = (const unsigned char*)data;
+			const uint8_t* ptr = (const uint8_t*)data;
 			while (numBytes--)
 				hash = fnv1a(*ptr++, hash);
 			return hash;
@@ -1272,12 +1269,10 @@ public:
 public:
 	bool getBBAI_AIR_COMBAT() const;
 	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
 	bool m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-	bool m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 
 // Tech Diffusion
 public:
@@ -2185,7 +2180,7 @@ public:
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return gGlobals->getDLLIFaceNonInl();
+		return g_DLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2513,10 +2508,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef FIXED_MISSION_NUMBER
-#define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
 
 #endif
 

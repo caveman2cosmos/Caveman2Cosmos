@@ -176,13 +176,13 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		//	Parallel maps
 		if (!ReadGlobalDefines("xml\\ParallelMaps_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"ParallelMaps_GlobalDefines Failed to load!");
+			FErrorMsg("ParallelMaps_GlobalDefines Failed to load!");
 		}
 
 		//Affores
 		if (!ReadGlobalDefines("xml\\A_New_Dawn_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"A_New_Dawn_GlobalDefines Failed to load!");
+			FErrorMsg("A_New_Dawn_GlobalDefines Failed to load!");
 		}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -191,17 +191,17 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 		if (!ReadGlobalDefines("xml\\BBAI_Game_Options_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"BBAI_Game_Options_GlobalDefines Failed to load!");
+			FErrorMsg("BBAI_Game_Options_GlobalDefines Failed to load!");
 		}
 
 		if (!ReadGlobalDefines("xml\\BBAI_AI_Variables_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"BBAI_AI_Variables_GlobalDefines Failed to load!");
+			FErrorMsg("BBAI_AI_Variables_GlobalDefines Failed to load!");
 		}
 
 		if (!ReadGlobalDefines("xml\\TechDiffusion_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"TechDiffusion_GlobalDefines Failed to load!");
+			FErrorMsg("TechDiffusion_GlobalDefines Failed to load!");
 		}
 
 	/************************************************************************************************/
@@ -214,7 +214,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 		if (!ReadGlobalDefines("res\\Fonts\\GameFont_GlobalDefines.xml", cache))
 		{
-			FAssertMsg(false,"The \"GameFont_GlobalDefines.xml\" must reside in the \"Mods\\World of Civilization\\Assets\\res\\Fonts\" directory next to the 2 GameFont.tga files");
+			FErrorMsg("The \"GameFont_GlobalDefines.xml\" must reside in the \"Mods\\World of Civilization\\Assets\\res\\Fonts\" directory next to the 2 GameFont.tga files");
 		}
 	/************************************************************************************************/
 	/* TGA_INDEXATION                          END                                                  */
@@ -641,7 +641,7 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals)
 {
-	FAssertMsg(false, "should never get here");
+	FErrorMsg("should never get here");
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -1406,10 +1406,10 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		sprintf( szMessage, "NUM_COMMAND_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(NUM_MISSION_TYPES > 0) )
+	if(!(GC.getNumMissionInfos() > 0) )
 	{
 		char	szMessage[1024];
-		sprintf( szMessage, "NUM_MISSION_TYPES is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+		sprintf( szMessage, "GC.getNumMissionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 
@@ -1429,7 +1429,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		NUM_CONTROL_TYPES +
 		NUM_COMMAND_TYPES +
 		GC.getNumAutomateInfos() +
-		NUM_MISSION_TYPES;
+		GC.getNumMissionInfos();
 
 	int* piIndexList = new int[iNumActionInfos];
 	int* piPriorityList = new int[iNumActionInfos];
@@ -1526,7 +1526,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	for (i=0;i<NUM_MISSION_TYPES;i++)
+	for (i=0;i<GC.getNumMissionInfos();i++)
 	{
 		piIndexList[iTotalActionInfoCount] = i;
 		piPriorityList[iTotalActionInfoCount] = GC.getMissionInfo((MissionTypes)i).getOrderPriority();
@@ -2100,7 +2100,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 //			}
 //			//else
 //			//{
-//			//	FAssertMsg(false, xercesc::XMLString::transcode(szTagName));
+//			//	FErrorMsg(xercesc::XMLString::transcode(szTagName));
 //			//	// FATAL : memory escape
 //			//}
 //			
@@ -2330,12 +2330,12 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 				CvString errorMsg = CvString::format("Missing Element, %s, %s", tmp, tmp2);
 				xercesc::XMLString::release(&tmp);
 				xercesc::XMLString::release(&tmp2);
-				FAssertMsg(false, errorMsg)
+				FErrorMsg(errorMsg)
 				continue;
 			}
 			// (1) Check if an object of the name exists already. If not, skip it.
 			if (GC.getInfoTypeForString(szTypeName, true) == -1) {
-				FAssertMsg(false, CvString::format("Item %s not found to do a ReadPass2", szTypeName.c_str()))
+				FErrorMsg(CvString::format("Item %s not found to do a ReadPass2", szTypeName.c_str()))
 				continue;
 			}
 			// (2) Check dependencies. If not satisfied, skip altogether

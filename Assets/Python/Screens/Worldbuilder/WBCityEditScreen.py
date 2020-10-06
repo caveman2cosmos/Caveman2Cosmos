@@ -10,8 +10,7 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import CvWorldBuilderScreen
-import CvScreensInterface
+import WorldBuilder
 import Popup
 GC = CyGlobalContext()
 
@@ -21,8 +20,8 @@ iPlotType = 2
 
 class WBCityEditScreen:
 
-	def __init__(self, main):
-		self.top = main
+	def __init__(self, WB):
+		self.WB = WB
 		self.lCities = []
 
 	def interfaceScreen(self, pCityX):
@@ -167,7 +166,7 @@ class WBCityEditScreen:
 		iY += 30
 		screen.setButtonGFC("CityChangeCulturePlus", "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("CityChangeCultureMinus", "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-		sText = u"<font=3>%s %s/%s%c</font>" %(CyTranslator().getText("TXT_KEY_WB_CULTURE",()), CvScreensInterface.worldBuilderScreen.addComma(pCity.getCulture(iPlayer)), CvScreensInterface.worldBuilderScreen.addComma(pCity.getCultureThreshold()), GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar())
+		sText = u"<font=3>%s %s/%s%c</font>" %(CyTranslator().getText("TXT_KEY_WB_CULTURE",()), self.WB.addComma(pCity.getCulture(iPlayer)), self.WB.addComma(pCity.getCultureThreshold()), GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar())
 		screen.setLabel("CityChangeCultureText", "Background", sText, 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
@@ -367,25 +366,25 @@ class WBCityEditScreen:
 		elif inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 1:
-				WBCityDataScreen.WBCityDataScreen().interfaceScreen(pCity)
+				WBCityDataScreen.WBCityDataScreen(self.WB).interfaceScreen(pCity)
 			elif iIndex == 2:
-				WBBuildingScreen.WBBuildingScreen().interfaceScreen(pCity)
+				WBBuildingScreen.WBBuildingScreen(self.WB).interfaceScreen(pCity)
 			elif iIndex == 3:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(iPlayer)
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 4:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pCity.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pCity.getTeam())
 			elif iIndex == 5:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(iPlayer)
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 6:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pCity.plot())
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pCity.plot())
 			elif iIndex == 7:
-				WBEventScreen.WBEventScreen().interfaceScreen(pCity.plot())
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pCity.plot())
 			elif iIndex == 8:
-				WBReligionScreen.WBReligionScreen().interfaceScreen(iPlayer)
+				WBReligionScreen.WBReligionScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 9:
-				WBCorporationScreen.WBCorporationScreen().interfaceScreen(iPlayer)
+				WBCorporationScreen.WBCorporationScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(iPlayer)
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "OwnerType":
 			iOwnerType = screen.getPullDownData("OwnerType", screen.getSelectedPullDownID("OwnerType"))
@@ -549,26 +548,26 @@ class WBCityEditScreen:
 			if iIndex == 5:
 				pCity.kill()
 			else:
-				self.top.iMoveCity = pCity.getID()
-				self.top.iCurrentPlayer = iPlayer
+				self.WB.iMoveCity = pCity.getID()
+				self.WB.iCurrentPlayer = iPlayer
 				if iIndex == 1:
-					self.top.iPlayerAddMode = "MoveCity"
+					self.WB.iPlayerAddMode = "MoveCity"
 				elif iIndex == 2:
-					self.top.iPlayerAddMode = "DuplicateCity"
+					self.WB.iPlayerAddMode = "DuplicateCity"
 				elif iIndex == 3:
-					self.top.iPlayerAddMode = "MoveCityPlus"
-					self.top.lMoveUnit = []
+					self.WB.iPlayerAddMode = "MoveCityPlus"
+					self.WB.lMoveUnit = []
 					for i in xrange(pPlot.getNumUnits()):
 						pUnitX = pPlot.getUnit(i)
 						if pUnitX.getOwner() == iPlayer:
-							self.top.lMoveUnit.append([iPlayer, pUnitX.getID()])
+							self.WB.lMoveUnit.append([iPlayer, pUnitX.getID()])
 				elif iIndex == 4:
-					self.top.iPlayerAddMode = "DuplicateCityPlus"
-					self.top.lMoveUnit = []
+					self.WB.iPlayerAddMode = "DuplicateCityPlus"
+					self.WB.lMoveUnit = []
 					for i in xrange(pPlot.getNumUnits()):
 						pUnitX = pPlot.getUnit(i)
 						if pUnitX.getOwner() == iPlayer:
-							self.top.lMoveUnit.append([iPlayer, pUnitX.getID()])
+							self.WB.lMoveUnit.append([iPlayer, pUnitX.getID()])
 			screen.hideScreen()
 		return 1
 

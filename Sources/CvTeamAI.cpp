@@ -242,15 +242,12 @@ int CvTeamAI::AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const
 
 void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 {
-	CvArea* pLoopArea;
-	int iLoop;
-
-	if (!(GC.getGame().isFinalInitialized()))
+	if (!GC.getGame().isFinalInitialized())
 	{
 		return;
 	}
 
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(CvArea* pLoopArea, GC.getMap().areas())
 	{
 		pLoopArea->setAreaAIType(getID(), AI_calculateAreaAIType(pLoopArea));
 	}
@@ -259,15 +256,9 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 	{
 		AI_updateAreaTargets();
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+	// Afforess	- 03/15/10
 	AI_updateCache();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 
@@ -381,19 +372,13 @@ bool CvTeamAI::AI_isPrimaryArea(const CvArea* pArea) const
 
 bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 {
-	CvArea* pLoopArea;
-	int iLoop;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
-		if (AI_isPrimaryArea(pLoopArea))
+		if (AI_isPrimaryArea(pLoopArea) && GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
 		{
-			if (GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -1360,7 +1345,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	iValue *= iTheirPower + 10;
 	iValue /= std::max(1, iOurPower + iTheirPower + 10);
 
-	WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
+	const WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
 
 	// if we are not human, do we want to continue war for strategic reasons?
 	// only check if our power is at least 120% of theirs
@@ -1435,7 +1420,6 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 						iValue /= 10 * (iOurPower + (4 * iTheirPower));
 					}
 					break;
-
 			}
 		}
 	}
@@ -1453,7 +1437,6 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	{
 		iValue *= 2;
 	}
-
 
 	if ((!(isHuman()) && (eWarPlan == WARPLAN_TOTAL)) ||
 		  (!(GET_TEAM(eTeam).isHuman()) && (GET_TEAM(eTeam).AI_getWarPlan(getID()) == WARPLAN_TOTAL)))
@@ -1477,9 +1460,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		}
 	}
 	int iTheirAttackers = 0;
-	CvArea* pLoopArea = NULL;
-	int iLoop;
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
@@ -1500,11 +1481,11 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		iValue = std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		iValue = std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 
 	m_endWarValueCache[eTeam] = iValue;
@@ -1559,13 +1540,13 @@ int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 					iPower /= 3;
 				}
 
-				if( GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0 )
+				if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING() || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
 				{
 					if (GET_TEAM(eTeam).getDefensivePower() < ((iPower * AI_maxWarNearbyPowerRatio()) / 100))
 					{
 						int iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 						iNoWarRoll += (bAggressive ? 10 : 0);
-						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING")) ? 10 : 0);
+						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0);
 						iNoWarRoll -= (bIsGetBetterUnits ? 15 : 0);
 						iNoWarRoll = range(iNoWarRoll, 0, 99);
 
@@ -1797,33 +1778,11 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 
 		iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
 		iValue /= 100;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 6/7/11                                                 */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	//Stop treating humans special
-	/*
-		iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-
-		if (isHuman())
-		{
-			return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-		}
-		else
-		{
-			return iValue;
-		}
-	*/
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
 	}
 
 	return iValue;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 }
 
 
@@ -1874,7 +1833,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 			}
 		}
 	}
-
 
 	if (isHuman())
 	{
@@ -2124,11 +2082,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		iValue /= 2;
 	}
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -2609,33 +2567,16 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	}
 	else
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/07/09                                jdog5000      */
-/*                                                                                              */
-/* Diplomacy AI                                                                                 */
-/************************************************************************************************/
-/* original BTS code
-		if (AI_getWarSuccess(eTeam) + 4 * GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
-		{
-			return DENIAL_JOKING;
-		}
-*/
-		// Scale better for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
+		// Scale for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
 		if (AI_getWarSuccess(eTeam) + std::min(getNumCities(), 4) * GC.getWAR_SUCCESS_CITY_CAPTURING() > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
 		{
 			return DENIAL_JOKING;
 		}
 
-		if( !kMasterTeam.isHuman() )
+		if (!kMasterTeam.isHuman() && !GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID()))
 		{
-			if( !(GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID())) )
-			{
-				return DENIAL_JOKING;
-			}
+			return DENIAL_JOKING;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	}
 
 	return NO_DENIAL;
@@ -3018,7 +2959,7 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 			{
 				if (isAtWar((TeamTypes)iI))
 				{
-					if( GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
+					if (GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5 * GC.getWAR_SUCCESS_ATTACKING())
 					{
 						iWarCount++;
 					}
@@ -3172,8 +3113,8 @@ void CvTeamAI::AI_getWarThresholds( int &iTotalWarThreshold, int &iLimitedWarThr
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).calculateUnitCost() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
-				iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
+				const int iUnitSpendingPercent = static_cast<int>(GET_PLAYER((PlayerTypes)iI).getFinalUnitUpkeep() * 100 / std::max<int64_t>(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts()));
+				iHighUnitSpendingPercent += std::max(0, iUnitSpendingPercent - 7) / 2;
 
 				if( GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER))
 				{
@@ -3291,11 +3232,11 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 	iValue *= 40;
 	iValue /= (GET_TEAM(eTeam).AI_getAtWarCounter(ePeaceTeam) + 10);
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -3468,11 +3409,11 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 	iValue *= 60 + (140 * GC.getGame().getGameTurn()) / std::max(1, GC.getGame().getEstimateEndTurn());
 	iValue /= 100;
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -3927,16 +3868,14 @@ void CvTeamAI::AI_updateWorstEnemy()
 
 int CvTeamAI::AI_getWarPlanStateCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiWarPlanStateCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setWarPlanStateCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiWarPlanStateCounter[eIndex] = iNewValue;
 	FAssert(AI_getWarPlanStateCounter(eIndex) >= 0);
 }
@@ -3950,16 +3889,14 @@ void CvTeamAI::AI_changeWarPlanStateCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getAtWarCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiAtWarCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setAtWarCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	//	Koshling - trying to increment your own atWar (with self) counter should never
 	//	happen, but as a fallback we trap it here
@@ -3970,7 +3907,7 @@ void CvTeamAI::AI_setAtWarCounter(TeamTypes eIndex, int iNewValue)
 	}
 	else
 	{
-		FAssertMsg(false, "Team attempting to incremnt it's own atWar counter (wuith itself)");
+		FErrorMsg("Team attempting to incremnt it's own atWar counter (wuith itself)");
 	}
 }
 
@@ -3983,16 +3920,14 @@ void CvTeamAI::AI_changeAtWarCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getAtPeaceCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiAtPeaceCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setAtPeaceCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiAtPeaceCounter[eIndex] = iNewValue;
 	FAssert(AI_getAtPeaceCounter(eIndex) >= 0);
 }
@@ -4006,16 +3941,14 @@ void CvTeamAI::AI_changeAtPeaceCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getHasMetCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiHasMetCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setHasMetCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiHasMetCounter[eIndex] = iNewValue;
 	FAssert(AI_getHasMetCounter(eIndex) >= 0);
 }
@@ -4029,16 +3962,14 @@ void CvTeamAI::AI_changeHasMetCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getOpenBordersCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiOpenBordersCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setOpenBordersCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiOpenBordersCounter[eIndex] = iNewValue;
 	FAssert(AI_getOpenBordersCounter(eIndex) >= 0);
 }
@@ -4052,16 +3983,14 @@ void CvTeamAI::AI_changeOpenBordersCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getDefensivePactCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiDefensivePactCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setDefensivePactCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiDefensivePactCounter[eIndex] = iNewValue;
 	FAssert(AI_getDefensivePactCounter(eIndex) >= 0);
 }
@@ -4075,16 +4004,14 @@ void CvTeamAI::AI_changeDefensivePactCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getShareWarCounter(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiShareWarCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setShareWarCounter(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiShareWarCounter[eIndex] = iNewValue;
 	FAssert(AI_getShareWarCounter(eIndex) >= 0);
 }
@@ -4098,16 +4025,14 @@ void CvTeamAI::AI_changeShareWarCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getWarSuccess(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiWarSuccess[eIndex];
 }
 
 
 void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
 /*                                                                                              */
@@ -4170,16 +4095,14 @@ void CvTeamAI::AI_changeWarSuccess(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getEnemyPeacetimeTradeValue(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiEnemyPeacetimeTradeValue[eIndex];
 }
 
 
 void CvTeamAI::AI_setEnemyPeacetimeTradeValue(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiEnemyPeacetimeTradeValue[eIndex] = iNewValue;
 	FAssert(AI_getEnemyPeacetimeTradeValue(eIndex) >= 0);
 }
@@ -4193,16 +4116,14 @@ void CvTeamAI::AI_changeEnemyPeacetimeTradeValue(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getEnemyPeacetimeGrantValue(TeamTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_aiEnemyPeacetimeGrantValue[eIndex];
 }
 
 
 void CvTeamAI::AI_setEnemyPeacetimeGrantValue(TeamTypes eIndex, int iNewValue)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiEnemyPeacetimeGrantValue[eIndex] = iNewValue;
 	FAssert(AI_getEnemyPeacetimeGrantValue(eIndex) >= 0);
 }
@@ -4216,8 +4137,7 @@ void CvTeamAI::AI_changeEnemyPeacetimeGrantValue(TeamTypes eIndex, int iChange)
 
 WarPlanTypes CvTeamAI::AI_getWarPlan(TeamTypes eIndex) const
 {
-	FAssert(eIndex >= 0);
-	FAssert(eIndex < MAX_TEAMS);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	FAssert(eIndex != getID() || m_aeWarPlan[eIndex] == NO_WARPLAN);
 	return m_aeWarPlan[eIndex];
 }
@@ -4260,8 +4180,7 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 {
 	int iI;
 
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	if (AI_getWarPlan(eIndex) != eNewValue)
 	{
@@ -4366,13 +4285,13 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	{
 		m_aeWarPlan[getID()] = NO_WARPLAN;
 
-		FAssertMsg(false, "Team apparently planning war with itself! (corrected)");
+		FErrorMsg("Team apparently planning war with itself! (corrected)");
 	}
 	if ( m_eWorstEnemy == getID() )
 	{
 		m_eWorstEnemy = NO_TEAM;
 
-		FAssertMsg(false, "Team apparently its own worst enemy! (corrected)");
+		FErrorMsg("Team apparently its own worst enemy! (corrected)");
 	}
 
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iNoTechTradeThreshold);
@@ -4433,7 +4352,7 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 	{
 		m_eWorstEnemy = NO_TEAM;
 
-		FAssertMsg(false, "Team apparently its own worst enemy! (corrected)");
+		FErrorMsg("Team apparently its own worst enemy! (corrected)");
 	}
 	WRAPPER_WRITE(wrapper, "CvTeamAI", (int)m_eWorstEnemy);
 	WRAPPER_WRITE(wrapper, "CvTeamAI", m_iNoTechTradeThreshold);
@@ -4989,8 +4908,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 
 void CvTeamAI::AI_doCounter()
 {
-	int iI;
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
@@ -5085,7 +5003,6 @@ void CvTeamAI::AI_doWar()
 {
 	PROFILE_FUNC();
 
-	CvArea* pLoopArea;
 	TeamTypes eBestTeam;
 	bool bAreaValid;
 	bool bShareValid;
@@ -5095,7 +5012,6 @@ void CvTeamAI::AI_doWar()
 	int iValue;
 	int iBestValue;
 	int iPass;
-	int iLoop;
 	int iI, iJ;
 
 	FAssert(!isHuman());
@@ -5253,7 +5169,7 @@ void CvTeamAI::AI_doWar()
 						bAreaValid = false;
 						bShareValid = false;
 
-						for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+						foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 						{
 							if (AI_isPrimaryArea(pLoopArea))
 							{
@@ -5261,7 +5177,7 @@ void CvTeamAI::AI_doWar()
 								{
 									bShareValid = true;
 
-									AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
+									const AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
 
 									if ( eAreaAI == AREAAI_DEFENSIVE)
 									{
@@ -5342,25 +5258,6 @@ void CvTeamAI::AI_doWar()
 
 	int iNumMembers = getNumMembers();
 
-	// AIAndy: This calculation does not seem to be used. Deactivating it. This might also be a bug.
-	/*
-	int iHighUnitSpendingPercent = 0;
-	int iLowUnitSpendingPercent = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).calculateUnitCost() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
-				iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
-				iLowUnitSpendingPercent += iUnitSpendingPercent;
-			}
-		}
-	}*/
-
-
 	// if at war, check for making peace
 	if (getAtWarCount(true) > 0) // XXX
 	{
@@ -5385,7 +5282,7 @@ void CvTeamAI::AI_doWar()
 										if( AI_getAtWarCounter((TeamTypes)iI) > std::max(10, (14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
 										{
 											// If nothing is happening in war
-											if( AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
+											if (AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getWAR_SUCCESS_ATTACKING())
 											{
 												if( (GC.getGame().getSorenRandNum(8, "AI Make Peace 1") == 0) )
 												{
@@ -5895,7 +5792,6 @@ void CvTeamAI::AI_doWar()
 //returns true if war is veto'd by rolls.
 bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 {
-
 	if (GC.getGame().getSorenRandNum(100, "AI Declare War 1") > GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIDeclareWarProb())
 	{
 		return true;
@@ -5906,34 +5802,26 @@ bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 		return true;
 	}
 
-
-
 	return false;
 }
 
 int CvTeamAI::AI_getAttitudeWeight(const TeamTypes eTeam) const
 {
-	int iAttitudeWeight = 0;
 	switch (AI_getAttitude(eTeam))
 	{
 	case ATTITUDE_FURIOUS:
-		iAttitudeWeight = -100;
-		break;
+		return -100;
 	case ATTITUDE_ANNOYED:
-		iAttitudeWeight = -40;
-		break;
+		return -40;
 	case ATTITUDE_CAUTIOUS:
-		iAttitudeWeight = -5;
-		break;
+		return -5;
 	case ATTITUDE_PLEASED:
-		iAttitudeWeight = 50;
-		break;
+		return 50;
 	case ATTITUDE_FRIENDLY:
-		iAttitudeWeight = 100;
-		break;
+		return 100;
 	}
 
-	return iAttitudeWeight;
+	return 0;
 }
 
 int CvTeamAI::AI_getLowestVictoryCountdown() const

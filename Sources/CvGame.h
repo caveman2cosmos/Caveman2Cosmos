@@ -144,7 +144,7 @@ public:
 	int countHumanPlayersAlive() const; // Exposed to Python
 
 	int countTotalCivPower() const; // Exposed to Python
-	int countTotalNukeUnits()const; // Exposed to Python
+	int countTotalNukeUnits() const; // Exposed to Python
 	int countKnownTechNumTeams(TechTypes eTech) const; // Exposed to Python
 	int getNumFreeBonuses(BuildingTypes eBuilding) const; // Exposed to Python
 
@@ -320,13 +320,13 @@ public:
 	void changeMercyRuleCounter(int iChange);
 	void setMercyRuleCounter(int iNewVal);
 
-	int countPeaks(CvPlot* pPlot, bool bCountHill = false);
-	void markBayPlots(CvPlot* pPlot);
-	int countForest(CvPlot* pPlot, int iForest);
+	int countPeaks(const CvPlot* pPlot, bool bCountHill = false);
+	void markBayPlots(const CvPlot* pPlot);
+	int countForest(const CvPlot* pPlot, int iForest);
 	void addLandmarkSigns();
-	int countDesert(CvPlot* pPlot);
-	void markLakePlots(CvPlot* pPlot);
-	int countJungle(CvPlot* pPlot, int iJungle);
+	int countDesert(const CvPlot* pPlot);
+	void markLakePlots(const CvPlot* pPlot);
+	int countJungle(const CvPlot* pPlot, int iJungle);
 	char getRandomVowel();
 	char getRandomConsonant();
 	bool isValidName(CvWString szName) const;
@@ -349,7 +349,7 @@ public:
 	void findDeserts();
 	void findLakes();
 	void pruneLandmarks();
-	void removeAdjacentLandmarks(CvPlot* pCenterPlot, CvPlot* pExceptionPlot = NULL, int iRadius = 1);
+	void removeAdjacentLandmarks(const CvPlot* pCenterPlot, const CvPlot* pExceptionPlot = NULL, int iRadius = 1);
 	void clearLandmarks(bool bClear = true);
 	void updateInitialSigns();
 
@@ -480,7 +480,7 @@ public:
 	TeamTypes getRankTeam(int iRank) const; // Exposed to Python
 	void setRankTeam(int iRank, TeamTypes eTeam);
 
-	int getTeamRank(TeamTypes eTeam)const; // Exposed to Python
+	int getTeamRank(TeamTypes eTeam) const; // Exposed to Python
 	void setTeamRank(TeamTypes eTeam, int iRank);
 
 	DllExport int getTeamScore(TeamTypes eTeam) const; // Exposed to Python
@@ -609,7 +609,7 @@ public:
 		CvString logMsg;
 	};
 
-	void logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iNum);
+	void logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iNum);
 
 	DllExport int calculateSyncChecksum(); // Exposed to Python
 	DllExport int calculateOptionsChecksum(); // Exposed to Python
@@ -935,6 +935,8 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 };
 
 #endif

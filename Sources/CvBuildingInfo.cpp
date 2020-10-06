@@ -471,22 +471,19 @@ CvBuildingInfo::~CvBuildingInfo()
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
 {
-	FAssertMsg(i < GC.getNumVictoryInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i)
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
 }
 
 BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
 {
-	FAssertMsg(i < (int)m_aExtraFreeBonuses.size(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i)
 	return m_aExtraFreeBonuses[i].first;
 }
 
 int CvBuildingInfo::getExtraFreeBonusNum(int i) const
 {
-	FAssertMsg(i < (int)m_aExtraFreeBonuses.size(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i)
 	return m_aExtraFreeBonuses[i].second;
 }
 
@@ -520,8 +517,7 @@ int CvBuildingInfo::getPowerValue(bool bForLoad) const
 
 int CvBuildingInfo::getYieldChange(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -532,8 +528,7 @@ int* CvBuildingInfo::getYieldChangeArray() const
 
 int CvBuildingInfo::getYieldPerPopChange(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piYieldPerPopChange ? m_piYieldPerPopChange[i] : 0;
 }
 
@@ -544,8 +539,7 @@ int* CvBuildingInfo::getYieldPerPopChangeArray() const
 
 int CvBuildingInfo::getYieldModifier(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piYieldModifier ? m_piYieldModifier[i] : 0;
 }
 
@@ -556,8 +550,7 @@ int* CvBuildingInfo::getYieldModifierArray() const
 
 int CvBuildingInfo::getPowerYieldModifier(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piPowerYieldModifier ? m_piPowerYieldModifier[i] : 0;
 }
 
@@ -568,8 +561,7 @@ int* CvBuildingInfo::getPowerYieldModifierArray() const
 
 int CvBuildingInfo::getAreaYieldModifier(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piAreaYieldModifier ? m_piAreaYieldModifier[i] : 0;
 }
 
@@ -580,8 +572,7 @@ int* CvBuildingInfo::getAreaYieldModifierArray() const
 
 int CvBuildingInfo::getGlobalYieldModifier(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piGlobalYieldModifier ? m_piGlobalYieldModifier[i] : 0;
 }
 
@@ -592,8 +583,7 @@ int* CvBuildingInfo::getGlobalYieldModifierArray() const
 
 int CvBuildingInfo::getSeaPlotYieldChange(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piSeaPlotYieldChange ? m_piSeaPlotYieldChange[i] : 0;
 }
 
@@ -604,8 +594,7 @@ int* CvBuildingInfo::getSeaPlotYieldChangeArray() const
 
 int CvBuildingInfo::getRiverPlotYieldChange(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piRiverPlotYieldChange ? m_piRiverPlotYieldChange[i] : 0;
 }
 
@@ -616,8 +605,7 @@ int* CvBuildingInfo::getRiverPlotYieldChangeArray() const
 
 int CvBuildingInfo::getGlobalSeaPlotYieldChange(int i) const
 {
-	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piGlobalSeaPlotYieldChange ? m_piGlobalSeaPlotYieldChange[i] : 0;
 }
 
@@ -628,8 +616,7 @@ int* CvBuildingInfo::getGlobalSeaPlotYieldChangeArray() const
 
 int CvBuildingInfo::getCommerceChange(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piCommerceChange ? m_piCommerceChange[i] : 0;
 }
 
@@ -640,8 +627,7 @@ int* CvBuildingInfo::getCommerceChangeArray() const
 
 int CvBuildingInfo::getCommercePerPopChange(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piCommercePerPopChange ? m_piCommercePerPopChange[i] : 0;
 }
 
@@ -652,8 +638,7 @@ int* CvBuildingInfo::getCommercePerPopChangeArray() const
 
 int CvBuildingInfo::getObsoleteSafeCommerceChange(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piObsoleteSafeCommerceChange ? m_piObsoleteSafeCommerceChange[i] : 0;
 }
 
@@ -664,15 +649,13 @@ int* CvBuildingInfo::getObsoleteSafeCommerceChangeArray() const
 
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 0;
 }
 
 int CvBuildingInfo::getCommerceModifier(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
@@ -683,8 +666,7 @@ int* CvBuildingInfo::getCommerceModifierArray() const
 
 int CvBuildingInfo::getGlobalCommerceModifier(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piGlobalCommerceModifier ? m_piGlobalCommerceModifier[i] : 0;
 }
 
@@ -695,8 +677,7 @@ int* CvBuildingInfo::getGlobalCommerceModifierArray() const
 
 int CvBuildingInfo::getSpecialistExtraCommerce(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piSpecialistExtraCommerce ? m_piSpecialistExtraCommerce[i] : 0;
 }
 
@@ -707,8 +688,7 @@ int* CvBuildingInfo::getSpecialistExtraCommerceArray() const
 
 int CvBuildingInfo::getStateReligionCommerce(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piStateReligionCommerce ? m_piStateReligionCommerce[i] : 0;
 }
 
@@ -719,10 +699,9 @@ int* CvBuildingInfo::getStateReligionCommerceArray() const
 
 int CvBuildingInfo::getCommerceHappiness(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_COMMERCE, NUM_COMMERCE_TYPES, i)
 
-	if ( i == -1 )
+	if (i == NO_COMMERCE)
 	{
 		return m_piCommerceHappiness ? 1 : 0;
 	}
@@ -734,17 +713,15 @@ int CvBuildingInfo::getCommerceHappiness(int i) const
 
 int CvBuildingInfo::getReligionChange(int i) const
 {
-	FAssertMsg(i < GC.getNumReligionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), i)
 	return m_piReligionChange ? m_piReligionChange[i] : 0;
 }
 
 int CvBuildingInfo::getSpecialistCount(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_SPECIALIST)
 	{
 		return m_piSpecialistCount ? 1 : 0;
 	}
@@ -756,10 +733,9 @@ int CvBuildingInfo::getSpecialistCount(int i) const
 
 int CvBuildingInfo::getFreeSpecialistCount(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_SPECIALIST)
 	{
 		return m_piFreeSpecialistCount ? 1 : 0;
 	}
@@ -771,10 +747,9 @@ int CvBuildingInfo::getFreeSpecialistCount(int i) const
 
 int CvBuildingInfo::getBonusHealthChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BONUS)
 	{
 		return m_piBonusHealthChanges ? 1 : 0;
 	}
@@ -786,10 +761,9 @@ int CvBuildingInfo::getBonusHealthChanges(int i) const
 
 int CvBuildingInfo::getBonusHappinessChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BONUS)
 	{
 		return m_piBonusHappinessChanges ? 1 : 0;
 	}
@@ -801,17 +775,15 @@ int CvBuildingInfo::getBonusHappinessChanges(int i) const
 
 int CvBuildingInfo::getBonusProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusProductionModifier ? m_piBonusProductionModifier[i] : 0;
 }
 
 int CvBuildingInfo::getUnitCombatFreeExperience(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_UNIT, GC.getNumUnitCombatInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_UNIT)
 	{
 		return m_piUnitCombatFreeExperience ? 1 : 0;
 	}
@@ -823,10 +795,9 @@ int CvBuildingInfo::getUnitCombatFreeExperience(int i) const
 
 int CvBuildingInfo::getDomainFreeExperience(int i) const
 {
-	FAssertMsg(i < NUM_DOMAIN_TYPES, "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i)
 
-	if ( i == -1 )
+	if (i == NO_DOMAIN)
 	{
 		return m_piDomainFreeExperience ? 1 : 0;
 	}
@@ -848,10 +819,9 @@ bool CvBuildingInfo::isAnyDomainFreeExperience() const
 
 int CvBuildingInfo::getDomainProductionModifier(int i) const
 {
-	FAssertMsg(i < NUM_DOMAIN_TYPES, "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i)
 
-	if ( i == -1 )
+	if (i == NO_DOMAIN)
 	{
 		return m_piDomainProductionModifier ? 1 : 0;
 	}
@@ -863,18 +833,16 @@ int CvBuildingInfo::getDomainProductionModifier(int i) const
 
 int CvBuildingInfo::getPrereqAndTechs(int i) const
 {
-	FAssertMsg(i < GC.getNUM_BUILDING_AND_TECH_PREREQS(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_AND_TECH_PREREQS(), i)
 	return m_piPrereqAndTechs ? m_piPrereqAndTechs[i] : -1;
 }
 
 
 int CvBuildingInfo::getBuildingHappinessChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BUILDING)
 	{
 		return m_piBuildingHappinessChanges ? 1 : 0;
 	}
@@ -886,9 +854,9 @@ int CvBuildingInfo::getBuildingHappinessChanges(int i) const
 
 int CvBuildingInfo::getPrereqNumOfBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if ( NO_BUILDING == i )
+	if (i == NO_BUILDING)
 	{
 		return m_piPrereqNumOfBuilding ? 1 : 0;
 	}
@@ -900,17 +868,15 @@ int CvBuildingInfo::getPrereqNumOfBuilding(int i) const
 
 int CvBuildingInfo::getFlavorValue(int i) const
 {
-	FAssertMsg(i < GC.getNumFlavorTypes(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 int CvBuildingInfo::getImprovementFreeSpecialist(int i) const
 {
-	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_IMPROVEMENT, GC.getNumImprovementInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_IMPROVEMENT)
 	{
 		return m_piImprovementFreeSpecialist ? 1 : 0;
 	}
@@ -922,15 +888,13 @@ int CvBuildingInfo::getImprovementFreeSpecialist(int i) const
 
 bool CvBuildingInfo::isCommerceFlexible(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
 
 bool CvBuildingInfo::isCommerceChangeOriginalOwner(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_pbCommerceChangeOriginalOwner ? m_pbCommerceChangeOriginalOwner[i] : false;
 }
 
@@ -957,94 +921,76 @@ bool CvBuildingInfo::isPrereqInCityBuilding(int i) const
 
 int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 
 	return (m_ppaiSpecialistYieldChange && m_ppaiSpecialistYieldChange[i]) ? m_ppaiSpecialistYieldChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getSpecialistYieldChangeArray(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
 	return m_ppaiSpecialistYieldChange[i];
 }
 
 int CvBuildingInfo::getSpecialistCommerceChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 
 	return (m_ppaiSpecialistCommerceChange && m_ppaiSpecialistCommerceChange[i]) ? m_ppaiSpecialistCommerceChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getSpecialistCommerceChangeArray(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
 	return m_ppaiSpecialistCommerceChange[i];
 }
 
 //Team Project (1)
 int CvBuildingInfo::getLocalSpecialistYieldChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 
 	return (m_ppaiLocalSpecialistYieldChange && m_ppaiLocalSpecialistYieldChange[i]) ? m_ppaiLocalSpecialistYieldChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getLocalSpecialistYieldChangeArray(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
 	return m_ppaiLocalSpecialistYieldChange[i];
 }
 
 int CvBuildingInfo::getLocalSpecialistCommerceChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 
 	return (m_ppaiLocalSpecialistCommerceChange && m_ppaiLocalSpecialistCommerceChange[i]) ? m_ppaiLocalSpecialistCommerceChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getLocalSpecialistCommerceChangeArray(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
 	return m_ppaiLocalSpecialistCommerceChange[i];
 }
 
 int CvBuildingInfo::getBonusYieldModifier(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BONUS)
 	{
 		return m_ppaiBonusYieldModifier ? 1 : 0;
 	}
-	else
-	{
-		FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
-		return (m_ppaiBonusYieldModifier && m_ppaiBonusYieldModifier[i]) ? m_ppaiBonusYieldModifier[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	return (m_ppaiBonusYieldModifier && m_ppaiBonusYieldModifier[i]) ? m_ppaiBonusYieldModifier[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiBonusYieldModifier == NULL ? NULL : m_ppaiBonusYieldModifier[i];
 }
 
@@ -1119,10 +1065,9 @@ int CvBuildingInfo::getNoEntryDefenseLevel(bool bForLoad) const
 
 bool CvBuildingInfo::isPrereqOrBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BUILDING)
 	{
 		return (m_pbPrereqOrBuilding != NULL);
 	}
@@ -1134,22 +1079,19 @@ bool CvBuildingInfo::isPrereqOrBuilding(int i) const
 
 bool CvBuildingInfo::isPrereqOrGameSpeed(int i) const
 {
-	FAssertMsg(i < GC.getNumGameSpeedInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumGameSpeedInfos(), i)
 	return m_pbPrereqOrGameSpeed ? m_pbPrereqOrGameSpeed[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqOrCivics(int i) const
 {
-	FAssertMsg(i < GC.getNumCivicInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqAndCivics(int i) const
 {
-	FAssertMsg(i < GC.getNumCivicInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
 	return m_pbPrereqAndCivics ? m_pbPrereqAndCivics[i] : false;
 }
 
@@ -1163,38 +1105,33 @@ int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(int i) const		{return m
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_pbPrereqOrTerrain ? m_pbPrereqOrTerrain[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqAndTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_pbPrereqAndTerrain ? m_pbPrereqAndTerrain[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqOrImprovement(int i) const
 {
-	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
 	return m_pbPrereqOrImprovement ? m_pbPrereqOrImprovement[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqOrFeature(int i) const
 {
-	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pbPrereqOrFeature ? m_pbPrereqOrFeature[i] : false;
 }
 
 bool CvBuildingInfo::isReplaceBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BUILDING)
 	{
 		return (m_pbReplaceBuilding != NULL);
 	}
@@ -1206,10 +1143,9 @@ bool CvBuildingInfo::isReplaceBuilding(int i) const
 
 bool CvBuildingInfo::isPrereqNotBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BUILDING)
 	{
 		return (m_pbPrereqNotBuilding != NULL);
 	}
@@ -1221,31 +1157,27 @@ bool CvBuildingInfo::isPrereqNotBuilding(int i) const
 
 int CvBuildingInfo::getPrereqOrVicinityBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrVicinityBonuses ? m_piPrereqOrVicinityBonuses[i] : -1;
 }
 
 int CvBuildingInfo::getPrereqOrRawVicinityBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrRawVicinityBonuses ? m_piPrereqOrRawVicinityBonuses[i] : -1;
 }
 
 int CvBuildingInfo::getBonusDefenseChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
 }
 
 int CvBuildingInfo::getUnitProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_UNIT, GC.getNumUnitInfos(), i)
 
-	if (i == -1)
+	if (i == NO_UNIT)
 	{
 		return (m_piUnitProductionModifier == NULL) ? 0 : 1;
 	}
@@ -1257,10 +1189,9 @@ int CvBuildingInfo::getUnitProductionModifier(int i) const
 
 int CvBuildingInfo::getBuildingProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if (i == -1)
+	if (i == NO_BUILDING)
 	{
 		return (m_piBuildingProductionModifier == NULL) ? 0 : 1;
 	}
@@ -1272,10 +1203,9 @@ int CvBuildingInfo::getBuildingProductionModifier(int i) const
 
 int CvBuildingInfo::getGlobalBuildingProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if (i == -1)
+	if (i == NO_BUILDING)
 	{
 		return (m_piGlobalBuildingProductionModifier == NULL) ? 0 : 1;
 	}
@@ -1287,10 +1217,9 @@ int CvBuildingInfo::getGlobalBuildingProductionModifier(int i) const
 
 int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
 
-	if (i == -1)
+	if (i == NO_BUILDING)
 	{
 		return (m_piGlobalBuildingCostModifier == NULL) ? 0 : 1;
 	}
@@ -1302,10 +1231,9 @@ int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
 
 int CvBuildingInfo::getTechHappinessChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return (m_piTechHappinessChanges == NULL) ? 0 : 1;
 	}
@@ -1317,10 +1245,9 @@ int CvBuildingInfo::getTechHappinessChanges(int i) const
 
 int CvBuildingInfo::getTechHealthChanges(int i) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return m_piTechHealthChanges ? 1 : 0;
 	}
@@ -1332,8 +1259,7 @@ int CvBuildingInfo::getTechHealthChanges(int i) const
 
 int CvBuildingInfo::getCommerceAttacks(int i) const
 {
-	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
 	return m_piCommerceAttacks ? m_piCommerceAttacks[i] : 0;
 }
 
@@ -1344,97 +1270,83 @@ int* CvBuildingInfo::getCommerceAttacksArray() const
 
 int CvBuildingInfo::getBonusCommerceModifier(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 	return (m_ppaiBonusCommerceModifier && m_ppaiBonusCommerceModifier[i]) ? m_ppaiBonusCommerceModifier[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusCommerceModifierArray(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiBonusCommerceModifier[i];
 }
 
 int CvBuildingInfo::getBonusYieldChanges(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BONUS)
 	{
 		return (m_ppaiBonusYieldChanges ? 1 : 0);
 	}
 	else
 	{
-		FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 		return (m_ppaiBonusYieldChanges && m_ppaiBonusYieldChanges[i]) ? m_ppaiBonusYieldChanges[i][j] : 0;
 	}
 }
 
 int* CvBuildingInfo::getBonusYieldChangesArray(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiBonusYieldChanges[i];
 }
 
 int CvBuildingInfo::getBonusCommercePercentChanges(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 	return (m_ppaiBonusCommercePercentChanges && m_ppaiBonusCommercePercentChanges[i]) ? m_ppaiBonusCommercePercentChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusCommercePercentChangesArray(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiBonusCommercePercentChanges[i];
 }
 
 int CvBuildingInfo::getVicinityBonusYieldChanges(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_BONUS)
 	{
 		return m_ppaiVicinityBonusYieldChanges ? 1 : 0;
 	}
 	else
 	{
-		FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 		return (m_ppaiVicinityBonusYieldChanges && m_ppaiVicinityBonusYieldChanges[i]) ? m_ppaiVicinityBonusYieldChanges[i][j] : 0;
 	}
 }
 
 int* CvBuildingInfo::getVicinityBonusYieldChangesArray(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_ppaiVicinityBonusYieldChanges[i];
 }
 
 int CvBuildingInfo::getTechCommerceChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return m_ppaiTechCommerceChange ? 1 : 0;
 	}
 	else
 	{
-		FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 		return (m_ppaiTechCommerceChange && m_ppaiTechCommerceChange[i]) ? m_ppaiTechCommerceChange[i][j] : 0;
 	}
 }
@@ -1446,17 +1358,15 @@ int* CvBuildingInfo::getTechCommerceChangeArray(int i) const
 
 int CvBuildingInfo::getTechYieldChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return (m_ppaiTechYieldChange ? 1 : 0);
 	}
 	else
 	{
-		FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 		return (m_ppaiTechYieldChange && m_ppaiTechYieldChange[i]) ? m_ppaiTechYieldChange[i][j] : 0;
 	}
 }
@@ -1468,17 +1378,15 @@ int* CvBuildingInfo::getTechYieldChangeArray(int i) const
 
 int CvBuildingInfo::getTechSpecialistChange(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return (m_ppaiTechSpecialistChange ? 1 : 0);
 	}
 	else
 	{
-		FAssertMsg(j < GC.getNumSpecialistInfos(), "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), j)
 		return (m_ppaiTechSpecialistChange && m_ppaiTechSpecialistChange[i]) ? m_ppaiTechSpecialistChange[i][j] : 0;
 	}
 }
@@ -1490,17 +1398,15 @@ int* CvBuildingInfo::getTechSpecialistChangeArray(int i) const
 
 int CvBuildingInfo::getTechCommerceModifier(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_TECH)
 	{
 		return (m_ppaiTechCommerceModifier ? 1 : 0);
 	}
 	else
 	{
-		FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
-		FAssertMsg(j > -1, "Index out of bounds");
+		FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
 		return (m_ppaiTechCommerceModifier && m_ppaiTechCommerceModifier[i]) ? m_ppaiTechCommerceModifier[i][j] : 0;
 	}
 }
@@ -1512,10 +1418,8 @@ int* CvBuildingInfo::getTechCommerceModifierArray(int i) const
 
 int CvBuildingInfo::getTechYieldModifier(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 	return (m_ppaiTechYieldModifier && m_ppaiTechYieldModifier[i]) ? m_ppaiTechYieldModifier[i][j] : 0;
 }
 
@@ -1526,19 +1430,16 @@ int* CvBuildingInfo::getTechYieldModifierArray(int i) const
 
 int CvBuildingInfo::getImprovementYieldChanges(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 	return (m_ppiImprovementYieldChanges && m_ppiImprovementYieldChanges[i]) ? m_ppiImprovementYieldChanges[i][j] : 0;
 }
 
 int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), i)
 
-	if ( i == -1 )
+	if (i == NO_UNITCOMBAT)
 	{
 		return m_piUnitCombatExtraStrength ? 1 : 0;
 	}
@@ -1743,18 +1644,10 @@ int CvBuildingInfo::getNumFreePromoTypes() const
 {
 	return (int)m_aFreePromoTypes.size();
 }
-/*
-FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion)
-{
-	FAssertMsg(iPromotion < (int)m_aFreePromoTypes.size(), "Index out of bounds");
-	FAssertMsg(iPromotion > -1, "Index out of bounds");
-	return m_aFreePromoTypes[iPromotion];
-}
-*/
+
 const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
 {
-	FAssertMsg(iPromotion < (int)m_aFreePromoTypes.size(), "Index out of bounds");
-	FAssertMsg(iPromotion > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumFreePromoTypes(), iPromotion)
 	return m_aFreePromoTypes[iPromotion];
 }
 
@@ -1765,8 +1658,7 @@ int CvBuildingInfo::getNumFreeTraitTypes() const
 
 int CvBuildingInfo::getFreeTraitType(int iIndex) const
 {
-	FAssertMsg(iIndex < (int)m_aiFreeTraitTypes.size(), "Index out of bounds");
-	FAssertMsg(iIndex > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumFreeTraitTypes(), iIndex)
 	return m_aiFreeTraitTypes[iIndex];
 }
 
@@ -1777,8 +1669,7 @@ int CvBuildingInfo::getNumHealUnitCombatTypes() const
 
 const HealUnitCombat& CvBuildingInfo::getHealUnitCombatType(int iUnitCombat) const
 {
-	FAssertMsg(iUnitCombat < (int)m_aHealUnitCombatTypes.size(), "Index out of bounds");
-	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat)
 	return m_aHealUnitCombatTypes[iUnitCombat];
 }
 
@@ -2078,8 +1969,7 @@ bool CvBuildingInfo::isAnyLocalSpecialistCommerceChanges() const
 
 bool CvBuildingInfo::isHurry(int i) const
 {
-	FAssertMsg(i < GC.getNumHurryInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), i)
 	return m_pabHurry ? m_pabHurry[i] : false;
 }
 //TB Combat Mods (Buildings) end
@@ -2219,7 +2109,7 @@ bool CvBuildingInfo::EnablesUnits() const
 	return m_bEnablesUnits;
 }
 
-void CvBuildingInfo::getCheckSum(unsigned int& iSum)
+void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
@@ -2669,7 +2559,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	for (std::vector<BuildingCommerceChange>::iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
+	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
 	{
 		CheckSum(iSum, (*it).eBuilding);
 		CheckSum(iSum, (*it).eCommerce);
@@ -6133,7 +6023,6 @@ int CvBuildingInfo::getNumPrereqOrBonuses() const
 
 BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
 {
-	FAssertMsg(i < getNumPrereqOrBonuses(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumPrereqOrBonuses(), i)
 	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
 }

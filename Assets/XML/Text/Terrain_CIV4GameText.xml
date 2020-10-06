@@ -52,7 +52,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BARREN_PEDIA</Tag>
 		<English>The term Barren vegetation, or just barren, describes an area where plant growth is sparse, stunted, or possesses little biodiversity. Poor growth may occur due to high winds, climate, salt spray, infertile or toxic soil, or heavy exploitation by man.</English>
-		<French>Le terme végétation stérile, ou simplement stérile, décrit une zone où la croissance des plantes est clairsemée, rabougrie ou possède peu de biodiversité. Une croissance médiocre peut se produire en raison de vents violents, du climat, des embruns salés, d'un sol stérile ou toxique ou d'une exploitation intensive par l'homme. </French>
+		<French>Le terme végétation stérile, ou simplement stérile, décrit une zone où la croissance des plantes est clairsemée, rabougrie ou possède peu de biodiversité. Une croissance médiocre peut se produire en raison de vents violents, du climat, des embruns salés, d'un sol stérile ou toxique ou d'une exploitation intensive par l'homme.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Karge Vegetation[COLOR_REVERT] bedeutet nur spärlichen Pflanzenwuchs oder eine sehr geringe Pflanzenvielfalt in einem bestimmten Gebiet, meist aufgrund von unfruchtbarem Boden. Diese Unfruchtbarkeit kann durch starke Winde, extremes Klima, natürliche Versalzung oder vulkanische Aktivitäten entstehen. Sie wird aber häufig auch vom Menschen durch Überdüngung, Verseuchung, übermäßige Nutzung der natürlichen Ressourcen und Überwirtschaftung verursacht oder zumindest beschleunigt.</German>
 		<Italian>Il termine sterile descrive un'area dove la crescita delle piante è scarsa, stentata, oppure possiede poca biodiversità. Una scarsa crsita può derivare da forti venti, clima, ammassi salini, suolo tossico o non fertile, oppure un intenso sfruttamento da parte dell'uomo.</Italian>
 	</TEXT>
@@ -111,8 +111,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
-		<English>The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs. Both the terms coast and coastal are often used to describe a geographic location or region; for example, New Zealand's West Coast, or the East and West Coasts of the United States. Wikipedia</English>
-		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis. Wikipédia</French>
+		<English>The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs. Both the terms coast and coastal are often used to describe a geographic location or region; for example, New Zealand's West Coast, or the East and West Coasts of the United States.</English>
+		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis.</French>
 		<German>Mit [COLOR_HIGHLIGHT_TEXT]Küste[COLOR_REVERT] bezeichnet man das Gebiet, in dem sich Landmasse und Ozean treffen. Eine genaue Küstenlinie ist meist durch den dynamischen Gezeitenwechsel schlecht festzulegen, man richtet sich hier nach dem Stand des mittleren Hochwassers. Küsten sind durch Gezeiten-, Brandungs- und Windeinwirkungen einem ständigen Wandel unterworfen.</German>
 	</TEXT>
 	<TEXT>
@@ -172,8 +172,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
-		<English>A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are defined as areas with an average annual precipitation of less than 250 millimetres (10 in) per year, or as areas where more water is lost by evapotranspiration than falls as precipitation. In the K0ppen climate classification system, deserts are classed as BWh (hot desert) or BWk (temperate desert). In the Thornthwaite climate classification system, deserts would be classified as arid megathermal climates. Wikipedia</English>
-		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides. Wikipédia</French>
+		<English>A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are defined as areas with an average annual precipitation of less than 250 millimetres (10 in) per year, or as areas where more water is lost by evapotranspiration than falls as precipitation. In the K0ppen climate classification system, deserts are classed as BWh (hot desert) or BWk (temperate desert). In the Thornthwaite climate classification system, deserts would be classified as arid megathermal climates.</English>
+		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides.</French>
 		<German>Unter [COLOR_HIGHLIGHT_TEXT]Wüsten[COLOR_REVERT] versteht man vegetationslose oder -arme Landschaften, die größtenteils durch Wassermangel entstehen. Trotz ihrer vermeintlichen Lebensfeindlichkeit sind in vielen Wüsten zahlreiche angepasste Tierarten anzutreffen. Typisch für Hitzewüsten sind starke Temperaturschwankungen zwischen Tag und Nacht. Insbesondere durch Überweidung, Übernutzung, Abholzung und falsche Bewässerungsmethoden wird die natürliche Wüstenbildung (Desertifikation) durch den Menschen zusätzlich verstärkt und beschleunigt.</German>
 	</TEXT>
 	<TEXT>
@@ -223,8 +223,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND_PEDIA</Tag>
-		<English>Grasslands are areas where the vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants (forbs). However, sedge (Cyperaceae) and rush (Juncaceae) families can also be found. Grasslands occur naturally on all continents except Antarctica. In temperate latitudes, such as northwest Europe and the Great Plains and California in North America, native grasslands are dominated by perennial bunch grass species, whereas in warmer climates annual species form a greater component of the vegetation. Wikipedia</English>
-		<French>Les prairies sont des zones où la végétation est dominée par les graminées (Poaceae) et d'autres plantes herbacées (non ligneuses) (forbs). Cependant, des familles de carex (Cyperaceae) et de jonc (Juncaceae) peuvent également être trouvées. Les prairies se trouvent naturellement sur tous les continents, sauf en Antarctique. Dans les latitudes tempérées, comme le nord-ouest de l'Europe et les grandes plaines et la Californie en Amérique du Nord, les prairies indigènes sont dominées par des espèces de graminées vivaces, tandis que dans les climats plus chauds, les espèces annuelles forment une plus grande composante de la végétation. Wikipedia</French>
+		<English>Grasslands are areas where the vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants (forbs). However, sedge (Cyperaceae) and rush (Juncaceae) families can also be found. Grasslands occur naturally on all continents except Antarctica. In temperate latitudes, such as northwest Europe and the Great Plains and California in North America, native grasslands are dominated by perennial bunch grass species, whereas in warmer climates annual species form a greater component of the vegetation.</English>
+		<French>Les prairies sont des zones où la végétation est dominée par les graminées (Poaceae) et d'autres plantes herbacées (non ligneuses) (forbs). Cependant, des familles de carex (Cyperaceae) et de jonc (Juncaceae) peuvent également être trouvées. Les prairies se trouvent naturellement sur tous les continents, sauf en Antarctique. Dans les latitudes tempérées, comme le nord-ouest de l'Europe et les grandes plaines et la Californie en Amérique du Nord, les prairies indigènes sont dominées par des espèces de graminées vivaces, tandis que dans les climats plus chauds, les espèces annuelles forment une plus grande composante de la végétation.</French>
 		<German>Unter dem Überbegriff [COLOR_HIGHLIGHT_TEXT]Grasland[COLOR_REVERT] werden alle Landschaften zusammengefasst, in denen Gräser vorherrschen und in denen es nur wenig bis gar keinen Baumbestand gibt, wie z.B. die verschiedenen Steppen, Savannen und Prärien, aber auch vom Menschen geprägtes Kulturgrasland mit Weiden und Wiesen. Grasländer gibt es auf allen Kontinenten mit Ausnahme der Arktis.</German>
 	</TEXT>
 	<TEXT>
@@ -250,8 +250,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_HILL_PEDIA</Tag>
-		<English>A hill is a landform that extends above the surrounding terrain. Hills often have a distinct summit, although in areas with scarp/dip topography a hill may refer to a particular section of flat terrain without a massive summit (e.g. Box Hill). Wikipedia</English>
-		<French>Une colline est un relief qui s'étend au-dessus du terrain environnant. Les collines ont souvent un sommet distinct, bien que dans les zones à topographie escarpée / pendante, une colline puisse se référer à une section particulière de terrain plat sans sommet massif (e.g. Box Hill). Wikipedia</French>
+		<English>A hill is a landform that extends above the surrounding terrain. Hills often have a distinct summit, although in areas with scarp/dip topography a hill may refer to a particular section of flat terrain without a massive summit (e.g. Box Hill).</English>
+		<French>Une colline est un relief qui s'étend au-dessus du terrain environnant. Les collines ont souvent un sommet distinct, bien que dans les zones à topographie escarpée / pendante, une colline puisse se référer à une section particulière de terrain plat sans sommet massif (e.g. Box Hill).</French>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Hügel[COLOR_REVERT] bezeichnet man mittelgroße Erhebungen in der Landschaft, die kleiner als Berge aber größer als einzelne Felsen oder leichte Bodenwellen sind. Hügel sind meist abgerundet und mit Pflanzen bewachsen. Natürliche Hügelformationen entstehen hauptsächlich durch Erosion von Gebirgen, Ablagerungen oder geologische Aktivitäten.</German>
 	</TEXT>
 	<TEXT>
@@ -277,8 +277,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ICE_PEDIA</Tag>
-		<English>Ice is water frozen into the solid state. Usually ice is the phase known as ice Ih, which is the most abundant of the varying solid phases on the Earth's surface. It can appear transparent or opaque bluish-white color, depending on the presence of impurities or air inclusions. The addition of other materials such as soil may further alter the appearance. Wikipedia</English>
-		<French>La glace est de l'eau gelée à l'état solide. Habituellement, la glace est la phase connue sous le nom de glace Ih, qui est la plus abondante des différentes phases solides à la surface de la Terre. Il peut apparaître de couleur blanc bleuâtre transparent ou opaque, selon la présence d'impuretés ou d'inclusions d'air. L'ajout d'autres matériaux tels que le sol peut altérer davantage. Wikipedia</French>
+		<English>Ice is water frozen into the solid state. Usually ice is the phase known as ice Ih, which is the most abundant of the varying solid phases on the Earth's surface. It can appear transparent or opaque bluish-white color, depending on the presence of impurities or air inclusions. The addition of other materials such as soil may further alter the appearance.</English>
+		<French>La glace est de l'eau gelée à l'état solide. Habituellement, la glace est la phase connue sous le nom de glace Ih, qui est la plus abondante des différentes phases solides à la surface de la Terre. Il peut apparaître de couleur blanc bleuâtre transparent ou opaque, selon la présence d'impuretés ou d'inclusions d'air. L'ajout d'autres matériaux tels que le sol peut altérer davantage.</French>
 		<German>Bei Eis handelt es sich um Wasser, dass bei Temperaturen unter 0 °C vom flüssigen in den festen Aggregatzustand übergeht. Unter der Landschaftsform Eis verstehen wir die sogenannten Eisschilde (Inlandeis), ausgedehnte Gletscher in Polnähe, die das Relief der betreffenden Gegend vollständig unter sich verbergen, (Grönland, Antarktis) aber auch kleinere Eiskappen (Plateaugletscher) wie in Kanada, Island oder Patagonien.</German>
 	</TEXT>
 	<TEXT>
@@ -689,7 +689,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
-		<English>An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface (~3.6 x 10 8 km 2) is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas. Wikipedia</English>
+		<English>An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface (~3.6 x 10 8 km 2) is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
 		<German>Die Ozeane sind große zusammenhängende Wasserflächen, die zwischen den Kontinenten liegen und einen Großteil (ca. 71%) der Erdoberfläche bedecken. Sie unterscheiden sich untereinander u.a. in Volumen, Salzgehalt, Seegang und Meeresströmungen.</German>
 	</TEXT>
 	<TEXT>
@@ -765,8 +765,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
-		<English>Peak may refer to:A mountain peak, In topography, a summit is a point on a surface that is higher in elevation than all points immediately adjacent to it. Mathematically, a summit is a local maximum in elevation. The topographic terms "acme", "apex", "peak", and "zenith" are synonyms. Wikipedia</English>
-		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes. Wikipédia</French>
+		<English>Peak may refer to:A mountain peak, In topography, a summit is a point on a surface that is higher in elevation than all points immediately adjacent to it. Mathematically, a summit is a local maximum in elevation. The topographic terms "acme", "apex", "peak", and "zenith" are synonyms.</English>
+		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes.</French>
 		<German>Berge sind Erhebungen in der Landschaft, die höher und steiler als Hügel sind und in der Regel über einen oder mehrere Gipfel verfügen. Sie entstehen größtenteils durch Plattentektonik und Vulkanismus. Viele zusammengehörige Berge bilden ein [COLOR_HIGHLIGHT_TEXT]Gebirge[COLOR_REVERT] oder einen Gebirgszug. Hierbei unterscheidet man zwischen Mittelgebirgen und Hochgebirgen.</German>
 	</TEXT>
 	<TEXT>
@@ -828,8 +828,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
-		<English>Plains is the plural of plain, a geographical feature. It is a big flat area of a land. Wikipedia</English>
-		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat. Wikipédia</French>
+		<English>Plains is the plural of plain, a geographical feature. It is a big flat area of a land.</English>
+		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat.</French>
 		<German>Eine [COLOR_HIGHLIGHT_TEXT]Ebene[COLOR_REVERT] ist eine weitgehend flache Landschaft ohne größere Erhebungen (Hügel, Berge). Sie kann aber durchaus sichtbare Höhenunterschiede aufweisen.</German>
 	</TEXT>
 	<TEXT>
@@ -952,8 +952,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA_PEDIA</Tag>
-		<English>Taiga is a subarctic biome adjacent to the treeless tundra biome, it is characterized by coniferous forests consisting mostly of pines, spruces and larches. The taiga is the world's largest terrestrial biome.[NEWLINE]	-Wikipedia
-		[NEWLINE]This terrain represent the typical soil types found in the taiga biome, those that are fertile and not too wet.</English>
+		<English>Taiga is a subarctic biome adjacent to the treeless tundra biome, it is characterized by coniferous forests consisting mostly of pines, spruces and larches. The taiga is the world's largest terrestrial biome. This terrain represent the typical soil types found in the taiga biome, those that are fertile and not too wet.</English>
 		<German>Boreale (nördliche Nadelwälder) werden auch verallgemeinernd als [COLOR_HIGHLIGHT_TEXT]Taiga[COLOR_REVERT] bezeichnet. Die Taiga ist charakterisiert durch relativ gleichförmige Nadelwaldgebiete, die nur von baumlosen Moorgebieten und Flussauen unterbrochen werden. Sie existiert nur auf der Nordhalbkugel, da auf der Südhalbkugel die entsprechenden zusammenhängenden großen Landmassen fehlen.</German>
 	</TEXT>
 	<TEXT>
@@ -964,7 +963,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH_PEDIA</Tag>
-		<English>The oceanic trenches are hemispheric-scale long but narrow topographic depressions of the sea floor. They are also the deepest parts of the ocean floor. Oceanic trenches are a distinctive morphological feature of convergent plate boundaries, along which lithospheric plates move towards each other at rates that vary from a few mm to over ten cm per year. A trench marks the position at which the flexed, subducting slab begins to descend beneath another lithospheric slab. Trenches are generally parallel to a volcanic island arc, and about 200 km (120 mi) from a volcanic arc. Oceanic trenches typically extend 3 to 4 km (1.9 to 2.5 mi) below the level of the surrounding oceanic floor. The greatest ocean depth to be sounded is in the Challenger Deep of the Mariana Trench, at a depth of 11,034 m (36,201 ft) below sea level. Oceanic lithosphere moves into trenches at a global rate of about 3 km2/yr. Wikipedia</English>
+		<English>The oceanic trenches are hemispheric-scale long but narrow topographic depressions of the sea floor. They are also the deepest parts of the ocean floor. Oceanic trenches are a distinctive morphological feature of convergent plate boundaries, along which lithospheric plates move towards each other at rates that vary from a few mm to over ten cm per year. A trench marks the position at which the flexed, subducting slab begins to descend beneath another lithospheric slab. Trenches are generally parallel to a volcanic island arc, and about 200 km (120 mi) from a volcanic arc. Oceanic trenches typically extend 3 to 4 km (1.9 to 2.5 mi) below the level of the surrounding oceanic floor. The greatest ocean depth to be sounded is in the Challenger Deep of the Mariana Trench, at a depth of 11,034 m (36,201 ft) below sea level. Oceanic lithosphere moves into trenches at a global rate of about 3 km2/yr.</English>
 		<German>Bei Tiefseegräben handelt es sich um Rinnen im Meeresboden, die durch Plattentektonik entstehen. In diesen Rinnen befinden sich die am tiefsten gelegenen Punkte der Erdoberfläche, die noch bis zu 3000 bis 4000 m unter dem Niveau des Ozeanbodens liegen können.</German>
 	</TEXT>
 	<TEXT>

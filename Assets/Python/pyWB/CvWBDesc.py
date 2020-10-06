@@ -4,7 +4,7 @@ import os
 GC = CyGlobalContext()
 GAME = GC.getGame()
 VERSION = "C2C_1"
-fEncode = 'utf-8'
+fEncode = "utf-8"
 
 ############
 # parser functions for WB desc
@@ -1976,7 +1976,7 @@ Randomize Resources=0\nEndMap\n"
 				team.signDefensivePact(item)
 
 			for item in pWBTeam.bVassalOfTeamList:
-				GC.getTeam(item[0]).assignVassal(iTeamLoop, item[1])
+				GC.getTeam(item[0]).assignVassal(pWBTeam.iTeam, item[1])
 			if pWBTeam.iVassalPower > 0:
 				team.setVassalPower(pWBTeam.iVassalPower)
 			if pWBTeam.iMasterPower > 0:

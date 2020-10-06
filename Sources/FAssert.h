@@ -150,6 +150,20 @@ enum AssertScopeTypes
 #define FAssertInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth != 0, "Expected to be in a " #_id_ " scope!")
 #define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
+#define FASSERT_BOUNDS(lower, upper, index) \
+	if (index < lower) \
+	{ \
+		char acOut[256]; \
+		sprintf(acOut, "Index value (%d) is expected to be >= %d", index, lower); \
+		FAssertMsg(index >= lower, acOut); \
+	} \
+	else if (index >= upper) \
+	{ \
+		char acOut[256]; \
+		sprintf(acOut, "Index value (%d) is expected to be < %d", index, upper); \
+		FAssertMsg(index < upper, acOut); \
+	}
+
 #else
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
@@ -164,6 +178,8 @@ enum AssertScopeTypes
 #define FAssertDeclareScope(_id_)
 #define FAssertInScope(_id_)
 #define FAssertNotInScope(_id_)
+
+#define FASSERT_BOUNDS(lower, upper, index)
 
 #endif
 

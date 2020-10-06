@@ -29,14 +29,6 @@
 		<English>Add Units</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WB_AI_AUTOPLAY</Tag>
-		<English>AI AutoPlay: %d1</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WB_AI_AUTOPLAY_WARNING</Tag>
-		<English>AI AutoPlay can be stopped with [COLOR_POSITIVE_TEXT]SPACE[COLOR_REVERT] or [COLOR_POSITIVE_TEXT]ESCAPE[COLOR_REVERT]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLAYERS</Tag>
 		<English>All players</English>
 	</TEXT>
@@ -79,6 +71,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_CARGO_SPACE</Tag>
 		<English>Cargo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE</Tag>
+		<English>Circumnavigated globe: team </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CITY</Tag>
@@ -146,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ESTIMATED_END_TURN</Tag>
-		<English>Estimated End Turn: %d1</English>
+		<English>[COLOR_LIGHT_GREY]Estimated End Turn: %s[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EVER</Tag>
@@ -180,11 +176,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GAME_TURN</Tag>
-		<English>Game Turn: %d1</English>
+		<English>Game Turn: </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GAME_YEAR</Tag>
-		<English>Game Year: %s1</English>
+		<English>[COLOR_LIGHT_GREY]Game Year: %s1[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GOLDEN_AGE_UNITS</Tag>
@@ -212,6 +208,10 @@
 		<French>Eligibilité garantie</French>
 		<Spanish>Elegibilidad garantizada</Spanish>
 		<Polish>Gwarantowane Uprawnienia</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_HIDDEN</Tag>
+		<English>(Hidden)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_HIDE_DEAD</Tag>
@@ -288,11 +288,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAX_CITY_ELIMINATION</Tag>
-		<English>Max City Elimination: %d1</English>
+		<English>Max City Elimination: </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAX_TURNS</Tag>
-		<English>Max Turns: %d1</English>
+		<English>Max Turns: </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MEMORY</Tag>
@@ -332,7 +332,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_NUKES_EXPLODED</Tag>
-		<English>Nukes Exploded: %d1</English>
+		<English>Nukes Exploded: </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_NUKE_INTERCEPTION</Tag>
@@ -441,7 +441,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TARGET_SCORE</Tag>
-		<English>Target Score: %d1</English>
+		<English>Target Score: </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TEAM_DATA</Tag>
