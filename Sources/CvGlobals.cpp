@@ -3342,7 +3342,7 @@ void cvInternalGlobals::cacheInfoTypes()
 #define CACHE_INFO_TYPE(type, VAR) \
 	m_##VAR = (type)getInfoTypeForString(#VAR);
 
-	DO_FOR_EACH_INFO_TYPE(CACHE_INFO_TYPE);
+	DO_FOR_EACH_INFO_TYPE(CACHE_INFO_TYPE)
 }
 
 /*********************************/
