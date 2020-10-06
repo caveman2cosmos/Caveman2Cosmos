@@ -690,7 +690,7 @@ int CvUnitInfo::getWithdrawalProbability(bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
 	{
-		if (hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD")))
+		if (hasUnitCombat(GC.getUNITCOMBAT_WILD()))
 		{
 			return 0;
 		}
@@ -2653,12 +2653,12 @@ bool CvUnitInfo::isTriggerBeforeAttack() const
 
 bool CvUnitInfo::isAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_ANIMAL());
 }
 
 bool CvUnitInfo::isWildAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatWildAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_WILD());
 }
 
 bool CvUnitInfo::canAnimalIgnoresBorders() const

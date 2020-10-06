@@ -5455,12 +5455,6 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	static ImprovementTypes getImprovementCity();
-	static void setImprovementCity(ImprovementTypes eIndex);
-
-	static ImprovementTypes getImprovementRuins();
-	static void setImprovementRuins(ImprovementTypes eIndex);
-
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -5543,8 +5537,6 @@ protected:
 
 	//Post Load Functions
 	int m_iHighestCost;
-	static ImprovementTypes m_ImprovementCity;
-	static ImprovementTypes m_ImprovementRuins;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6036,11 +6028,6 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	static TerrainTypes getTerrainPeak()	{ return m_TerrainPeak; }
-	static void setTerrainPeak(TerrainTypes eIndex)	{ m_TerrainPeak = eIndex; }
-	static TerrainTypes getTerrainHill()	{ return m_TerrainHill; }
-	static void setTerrainHill(TerrainTypes eIndex) { m_TerrainHill = eIndex; }
-
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int getZobristValue() const { return m_zobristValue; }
@@ -6084,9 +6071,6 @@ protected:
 	std::vector<int> m_aiMapCategoryTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
-
-	static TerrainTypes m_TerrainPeak;
-	static TerrainTypes m_TerrainHill;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8708,23 +8692,8 @@ public:
 
 	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	static ColorTypes green()    { return m_eGreen; }
-	static ColorTypes red()      { return m_eRed; }
-	static ColorTypes yellow()   { return m_eYellow; }
-	static ColorTypes white()    { return m_eWhite; }
-
-	static void setGreen(ColorTypes eIndex)  { m_eGreen = eIndex; }
-	static void setRed(ColorTypes eIndex)    { m_eRed = eIndex; }
-	static void setYellow(ColorTypes eIndex) { m_eYellow = eIndex; }
-	static void setWhite(ColorTypes eIndex)  { m_eWhite = eIndex; }
-
 protected:
 	NiColorA m_Color;
-
-	static ColorTypes m_eGreen;
-	static ColorTypes m_eRed;
-	static ColorTypes m_eYellow;
-	static ColorTypes m_eWhite;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10345,11 +10314,6 @@ public:
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
 
-	static UnitCombatTypes getUnitCombatAnimal()	{ return m_UnitCombatAnimal; }
-	static void setUnitCombatAnimal(UnitCombatTypes eIndex) { m_UnitCombatAnimal = eIndex; }
-	static UnitCombatTypes getUnitCombatWildAnimal()	{ return m_UnitCombatWildAnimal; }
-	static void setUnitCombatWildAnimal(UnitCombatTypes eIndex) { m_UnitCombatWildAnimal = eIndex; }
-
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
 	const CvOutcomeList* getActionOutcomeList(int index) const;
@@ -10359,10 +10323,6 @@ public:
 	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
-
-	static UnitCombatTypes m_UnitCombatAnimal;
-	static UnitCombatTypes m_UnitCombatWildAnimal;
-
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
 

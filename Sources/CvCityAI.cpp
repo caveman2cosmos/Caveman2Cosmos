@@ -7047,7 +7047,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 		iTempValue += 4 * iOurNumCities * iWorldHealth;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != GET_PLAYER(getOwner()).getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != getOwner())
 			{
 				int iNumCities = GET_PLAYER((PlayerTypes)iI).getNumCities();
 				int iAttitude = GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI);
@@ -7634,39 +7634,24 @@ int CvCityAI::AI_neededAirDefenders() const
 
 	int iDefenders = 0;
 
-	int iRange = 5;
-
 	int iOtherTeam = 0;
 	int iEnemyTeam = 0;
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 5, 5))
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{
-			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-			if ((pLoopPlot != NULL) && pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
+			iOtherTeam++;
+			if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 			{
-				iOtherTeam++;
-				if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+				// If enemy has no bombers, don't need to defend as much
+				if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
 				{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
-/*                                                                                              */
-/* Air AI                                                                                       */
-/************************************************************************************************/
-					// If enemy has no bombers, don't need to defend as much
-					if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
-					{
-						continue;
-					}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-					iEnemyTeam += 2;
-					if (pLoopPlot->isCity())
-					{
-						iEnemyTeam += 6;
-					}
+					continue;
+				}
+				iEnemyTeam += 2;
+				if (pLoopPlot->isCity())
+				{
+					iEnemyTeam += 6;
 				}
 			}
 		}
@@ -8075,7 +8060,7 @@ int CvCityAI::AI_totalBestBuildValue(const CvArea* pArea) const
 			{
 				if (pLoopPlot->area() == pArea)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != CvImprovementInfo::getImprovementRuins()))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != GC.getIMPROVEMENT_CITY_RUINS()))
 					{
 						iTotalValue += AI_getBestBuildValue(iI);
 					}
@@ -9516,7 +9501,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			//			}
 			//			//else
 			//			//{
-			//			//	PropertyTypes pProperty = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME");
+			//			//	PropertyTypes pProperty = GC.getPROPERTY_CRIME();
 			//			//	if ( !AI_choosePropertyControlUnit(10, pProperty) )
 			//			//	{
 			//			//		if (AI_getHappyFromHurry((HurryTypes)iI) > 0)
