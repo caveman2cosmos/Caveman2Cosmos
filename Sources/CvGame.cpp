@@ -247,6 +247,7 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	// Alberts2: cache higly used Types
 	cacheInfoTypeEnums();
+	GC.cacheInfoTypes();
 
 	//TB: Set Statuses
 	setStatusPromotions();
@@ -2491,6 +2492,7 @@ void CvGame::update()
 
 		// Alberts2: cache higly used Types
 		cacheInfoTypeEnums();
+		GC.cacheInfoTypes();
 
 		//TB: Set Statuses
 		setStatusPromotions();
