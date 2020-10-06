@@ -661,7 +661,7 @@ void CvUnitAI::AI_killed()
 		{
 			if (getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD && getArea() == pMissionPlot->getArea())
 			{
-				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", plot()->getX(), plot()->getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
+				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
 				pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
 			}
 		}
@@ -672,7 +672,7 @@ void CvUnitAI::AI_killed()
 		//	Logging of death location and some mission info
 		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
 
-		logBBAI("%S's %S (%d) died at (%d,%d), mission was %d",GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), m_iID,plot()->getX(),plot()->getY(),getGroup()->getMissionType(0));
+		logBBAI("%S's %S (%d) died at (%d,%d), mission was %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), m_iID, getX(), getY(), getGroup()->getMissionType(0));
 		if (pMissionPlot != NULL )
 		{
 			logBBAI("	Mission plot was (%d,%d)", pMissionPlot->getX(), pMissionPlot->getY());
@@ -797,7 +797,7 @@ bool CvUnitAI::AI_upgrade()
 	{
 		if( gUnitLogLevel >= 2 )
 		{
-			logBBAI("	%S at (%d,%d) upgrading to %S", getName(0).GetCString(), plot()->getX(), plot()->getY(), GC.getUnitInfo(eBestUnit).getDescription());
+			logBBAI("	%S at (%d,%d) upgrading to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eBestUnit).getDescription());
 		}
 		return upgrade(eBestUnit);
 	}
@@ -1858,7 +1858,7 @@ void CvUnitAI::AI_settleMove()
 			{
 				if( gUnitLogLevel >= 2 )
 				{
-					logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - plot()->getX()), (pBestPlot->getY() - plot()->getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
+					logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - getX()), (pBestPlot->getY() - getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
 				}
 				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestPlot);
 				return;
@@ -2056,7 +2056,7 @@ void CvUnitAI::AI_settleMove()
 						logBBAI("	Settler (%d) for player %d (%S) at (%d,%d) requesting defensive escort, current group strength (%d)\n",
 							getID(), getOwner(),
 							GET_PLAYER(getOwner()).getCivilizationDescription(0),
-							plot()->getX(), plot()->getY(),
+							getX(), getY(),
 							getGroup()->getStrength()
 						);
 					}
@@ -2068,7 +2068,7 @@ void CvUnitAI::AI_settleMove()
 
 						HIGHEST_PRIORITY_ESCORT_PRIORITY,
 						DEFENSIVE_UNITCAPABILITIES,
-						plot()->getX(), plot()->getY(), this,
+						getX(), getY(), this,
 						UNITAI_CITY_DEFENSE,
 						AI_minSettlerDefense()
 					);
@@ -6311,11 +6311,11 @@ void CvUnitAI::AI_generalMove()
 			logBBAI("	Great General for player %d (%S) at (%d,%d) requesting an escort",
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
-					plot()->getX(),
-					plot()->getY());
+					getX(),
+					getY());
 		}
 
-		GET_PLAYER(getOwner()).getContractBroker().advertiseWork(LOW_PRIORITY_ESCORT_PRIORITY, (unitCapabilities)(DEFENSIVE_UNITCAPABILITIES | OFFENSIVE_UNITCAPABILITIES), plot()->getX(), plot()->getY(), this);
+		GET_PLAYER(getOwner()).getContractBroker().advertiseWork(LOW_PRIORITY_ESCORT_PRIORITY, (unitCapabilities)(DEFENSIVE_UNITCAPABILITIES | OFFENSIVE_UNITCAPABILITIES), getX(), getY(), this);
 
 		m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
@@ -6347,8 +6347,8 @@ void CvUnitAI::AI_generalMove()
 					logBBAI("	Great General for player %d (%S) at (%d,%d) found contractual work",
 							getOwner(),
 							GET_PLAYER(getOwner()).getCivilizationDescription(0),
-							plot()->getX(),
-							plot()->getY());
+							getX(),
+							getY());
 				}
 				return;
 			}
@@ -6358,8 +6358,8 @@ void CvUnitAI::AI_generalMove()
 				logBBAI("	Great General for player %d (%S) at (%d,%d) found no urgent contractual work",
 						getOwner(),
 						GET_PLAYER(getOwner()).getCivilizationDescription(0),
-						plot()->getX(),
-						plot()->getY());
+						getX(),
+						getY());
 			}
 		}
 
@@ -7553,7 +7553,7 @@ void CvUnitAI::AI_barbAttackSeaMove()
 			{
 				if( bScrap )
 				{
-					CvPlot* pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
+					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 					if (pLoopPlot != NULL && AI_plotValid(pLoopPlot))
 					{
@@ -7838,7 +7838,7 @@ void CvUnitAI::AI_attackSeaMove()
 				{
 					for (int iDY = -(iMaxRange); iDY <= iMaxRange; iDY++)
 					{
-						const CvPlot* pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
+						const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 						if (pLoopPlot != NULL && pLoopPlot->isWater())
 						{
@@ -11468,7 +11468,7 @@ void CvUnitAI::AI_InvestigatorMove()
 		return;
 	}
 
-	getGroup()->pushMission(MISSION_SKIP, plot()->getX(), plot()->getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plot());
+	getGroup()->pushMission(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plot());
 	return;
 }
 
@@ -11633,7 +11633,7 @@ void CvUnitAI::AI_InfiltratorMove()
 		}
 
 		//Otherwise sit there and cause crime rot.  Simple for now.
-		getGroup()->pushMission(MISSION_SKIP, plot()->getX(), plot()->getY(), 0, false, false, MISSIONAI_INFILTRATOR_MAINTAIN, plot());
+		getGroup()->pushMission(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INFILTRATOR_MAINTAIN, plot());
 		return;
 	}
 
@@ -11741,7 +11741,7 @@ void CvUnitAI::AI_SeeInvisibleMove()
 		}
 	}
 
-	getGroup()->pushMission(MISSION_SKIP, plot()->getX(), plot()->getY(), 0, false, false, MISSIONAI_SEE_INVISIBLE_MAINTAIN, plot());
+	getGroup()->pushMission(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_SEE_INVISIBLE_MAINTAIN, plot());
 	return;
 
 }
@@ -13857,7 +13857,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 	//	first
 	for(int iPlotIndex = 0; iPlotIndex < NUM_CITY_PLOTS_2; iPlotIndex++)
 	{
-		pPlot = plotCity(plot()->getX(),plot()->getY(),iPlotIndex);
+		pPlot = plotCity(getX(), getY(), iPlotIndex);
 
 		if (pPlot != NULL && pPlot->getOwner() == getOwner())
 		{
@@ -15527,7 +15527,7 @@ bool CvUnitAI::AI_spreadReligion()
 
 		CvCity* pLoopCity = pPlot->getPlotCity();
 
-		//logBBAI("Missionary %d at (%d,%d) already targeting city at (%d,%d)\n", getID(), plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY());
+		//logBBAI("Missionary %d at (%d,%d) already targeting city at (%d,%d)\n", getID(), getX(), getY(), pPlot->getX(), pPlot->getY());
 
 		if ( pLoopCity != NULL
 		&& m_cachedMissionaryPlotset->find(pLoopCity->plot()) != m_cachedMissionaryPlotset->end()
@@ -15749,7 +15749,7 @@ bool CvUnitAI::AI_spreadReligion()
 
 	if (pBestPlot != NULL && pBestSpreadPlot != NULL)
 	{
-		//logBBAI("Missionary %d at (%d,%d) targeting spread in city at (%d,%d)\n", getID(), plot()->getX(), plot()->getY(), pBestSpreadPlot->getX(), pBestSpreadPlot->getY());
+		//logBBAI("Missionary %d at (%d,%d) targeting spread in city at (%d,%d)\n", getID(), getX(), getY(), pBestSpreadPlot->getX(), pBestSpreadPlot->getY());
 		if (atPlot(pBestSpreadPlot))
 		{
 			getGroup()->pushMission(MISSION_SPREAD, eReligion);
@@ -15829,7 +15829,7 @@ bool CvUnitAI::AI_spreadCorporation()
 
 		const CvCity* pLoopCity = pPlot->getPlotCity();
 
-		//OutputDebugString(CvString::format("Missionary at (%d,%d) already targeting city at (%d,%d)\n", plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY()).c_str());
+		//OutputDebugString(CvString::format("Missionary at (%d,%d) already targeting city at (%d,%d)\n", getX(), getY(), pPlot->getX(), pPlot->getY()).c_str());
 
 		if ( pLoopCity != NULL &&
 			 m_cachedMissionaryPlotset->find(pLoopCity->plot()) != m_cachedMissionaryPlotset->end() &&
@@ -17125,7 +17125,7 @@ bool CvUnitAI::AI_construct(int iMaxCount, int iMaxSingleBuildingCount, int iThr
 	{
 		if( gUnitLogLevel >= 2 )
 		{
-			logBBAI("	%S at (%d,%d) going to construct %S at (%d,%d)", getName(0).GetCString(), plot()->getX(), plot()->getY(), GC.getBuildingInfo(eBestBuilding).getDescription(), pBestConstructPlot->getX(), pBestConstructPlot->getY());
+			logBBAI("	%S at (%d,%d) going to construct %S at (%d,%d)", getName(0).GetCString(), getX(), getY(), GC.getBuildingInfo(eBestBuilding).getDescription(), pBestConstructPlot->getX(), pBestConstructPlot->getY());
 		}
 
 		return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
@@ -17232,7 +17232,7 @@ bool CvUnitAI::AI_outcomeMission()
 	{
 		if( gUnitLogLevel >= 2 )
 		{
-			logBBAI("	%S at (%d,%d) going to enact mission %S at (%d,%d)", getName(0).GetCString(), plot()->getX(), plot()->getY(), GC.getMissionInfo(eBestMission).getDescription(), pBestMissionPlot->getX(), pBestMissionPlot->getY());
+			logBBAI("	%S at (%d,%d) going to enact mission %S at (%d,%d)", getName(0).GetCString(), getX(), getY(), GC.getMissionInfo(eBestMission).getDescription(), pBestMissionPlot->getX(), pBestMissionPlot->getY());
 		}
 
 		if (atPlot(pBestMissionPlot))
@@ -17693,7 +17693,7 @@ bool CvUnitAI::AI_doInquisition()
 		{
 			if (generateSafePathforVulnerable(pTargetCity->plot(), &iPathTurns))
 			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->plot()->getX(), pTargetCity->plot()->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->getX(), pTargetCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
 			}
 			else
 			{
@@ -19135,7 +19135,7 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 						iValue /= 5;
 					}
 
-					iValue /= (1 + stepDistance(plot()->getX(), plot()->getY(), pLoopPlot->getX(), pLoopPlot->getY()));
+					iValue /= (1 + stepDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()));
 
 					plotValue thisPlotValue;
 
@@ -19786,7 +19786,7 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 							info.iValue = iValue;
 							info.pCity = pLoopCity;
 
-							const int iDistanceEstimate = (stepDistance(plot()->getX(), plot()->getY(), pLoopCity->getX(), pLoopCity->getY()) + 2)/2;
+							const int iDistanceEstimate = (stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()) + 2)/2;
 							const int iOrderingValue = -iValue / (iDistanceEstimate*iDistanceEstimate);
 
 							possibleTargets.insert(std::make_pair(iOrderingValue, info));
@@ -24231,18 +24231,18 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 
 		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL && getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", plot()->getX(), plot()->getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
 			pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
 		}
 		else if (plot()->getWorkingCity() != NULL)
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", plot()->getX(), plot()->getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
 			plot()->getWorkingCity()->AI_changeWorkersHave(-1);
 		}
 
 		if (NULL != pBestPlot->getWorkingCity())
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", plot()->getX(), plot()->getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", getX(), getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
 			pBestPlot->getWorkingCity()->AI_changeWorkersHave(+1);
 		}
 		if (getGroup()->pushMissionInternal(eMission, pBestPlot->getX(), pBestPlot->getY(), (isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, pBestPlot))
@@ -24345,19 +24345,19 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 
 		if (pMissionPlot != NULL && pMissionPlot->getWorkingCity() != NULL && getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD )
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", plot()->getX(), plot()->getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", getX(), getY(), pMissionPlot->getWorkingCity()->getName().GetCString()).c_str());
 			pMissionPlot->getWorkingCity()->AI_changeWorkersHave(-1);
 		}
 		else if (plot()->getWorkingCity() != NULL)
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", plot()->getX(), plot()->getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) detaching from local city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
 			plot()->getWorkingCity()->AI_changeWorkersHave(-1);
 		}
 
 		FAssert(pBestPlot->getWorkingCity() != NULL || GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT);
 		if (NULL != pBestPlot->getWorkingCity())
 		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", plot()->getX(), plot()->getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
+			OutputDebugString(CvString::format("Worker at (%d,%d) attaching mission for city %S\n", getX(), getY(), pBestPlot->getWorkingCity()->getName().GetCString()).c_str());
 			pBestPlot->getWorkingCity()->AI_changeWorkersHave(+1);
 		}
 
@@ -25087,8 +25087,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					getID(),
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
-					plot()->getX(),
-					plot()->getY());
+					getX(),
+					getY());
 		}
 	}
 	//TB OOS fix: Giving these a default seems to repair numerous OOS errors
@@ -25106,8 +25106,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					getID(),
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
-					plot()->getX(),
-					plot()->getY(),
+					getX(),
+					getY(),
 					iAtX,
 					iAtY,
 					(pJoinUnit == NULL ? -1 : pJoinUnit->getID()));
@@ -25225,8 +25225,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					getID(),
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
-					plot()->getX(),
-					plot()->getY());
+					getX(),
+					getY());
 		}
 
 		return false;
@@ -25294,8 +25294,8 @@ bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 					logBBAI("	Worker for player %d (%S) at (%d,%d) releasing escort",
 							getOwner(),
 							GET_PLAYER(getOwner()).getCivilizationDescription(0),
-							plot()->getX(),
-							plot()->getY());
+							getX(),
+							getY());
 				}
 
 				getGroup()->AI_makeForceSeparate();
@@ -26468,7 +26468,7 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 						{
 							//	If we can move into the target plot in one turn take account of whetehr an enemy unit is
 							//	there (if it takes longer it might have moved away)
-							if ( stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), plot()->getX(), plot()->getY()) <= getMoves() || !pAdjacentPlot->isVisibleEnemyUnit(this) )
+							if ( stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), getX(), getY()) <= getMoves() || !pAdjacentPlot->isVisibleEnemyUnit(this) )
 							{
 								pPickupPlot = pAdjacentPlot;
 								break;
@@ -27496,7 +27496,7 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 							iValue /= 2000;
 
 							// Weight towards adjacent stacks
-							if( plotDistance(plot()->getX(), plot()->getY(), pLoopPlot->getX(), pLoopPlot->getY()) == 1 )
+							if( plotDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()) == 1 )
 							{
 								iValue *= 5;
 								iValue /= 4;
@@ -28745,7 +28745,7 @@ bool CvUnitAI::AI_moveToStagingCity()
 
 		if ( isNPC() )
 		{
-			iMinPath = std::max(1,stepDistance(m_iX, m_iY, pLoopCity->plot()->getX(), pLoopCity->plot()->getY())/baseMoves());
+			iMinPath = std::max(1,stepDistance(m_iX, m_iY, pLoopCity->getX(), pLoopCity->getY())/baseMoves());
 		}
 		else
 		{
@@ -31347,8 +31347,8 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 					logBBAI("	Hunter for player %d (%S) at (%d,%d) found contractual work",
 						getOwner(),
 						GET_PLAYER(getOwner()).getCivilizationDescription(0),
-						plot()->getX(),
-						plot()->getY());
+						getX(),
+						getY());
 				}
 				return;
 			}
@@ -31357,8 +31357,8 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 				logBBAI("	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
-					plot()->getX(),
-					plot()->getY());
+					getX(),
+					getY());
 			}
 		}
 		if (AI_goody(4))
@@ -31720,8 +31720,8 @@ bool	CvUnitAI::AI_moveToBorders()
 		{
 			for( int iSide = 0; iSide < 4; iSide++ )
 			{
-				int iX = plot()->getX();
-				int iY = plot()->getY();
+				int iX = getX();
+				int iY = getY();
 
 				switch(iSide)
 				{
@@ -32387,7 +32387,7 @@ bool CvUnitAI::AI_protectTarget(CvUnit* pTarget)
 		}
 		else if (!isWaitingOnUnitAIAny() && generatePath(pTarget->plot(), 0, true, &iPathTurns))
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTarget->plot()->getX(), pTarget->plot()->getY());
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTarget->getX(), pTarget->getY());
 		}
 		else
 		{
@@ -33058,8 +33058,8 @@ void CvUnitAI::AI_setAsGarrison(const CvCity* pCity)
 							getGroup()->getNumUnits(),
 							getOwner(),
 							GET_PLAYER(getOwner()).getCivilizationDescription(0),
-							plot()->getX(),
-							plot()->getY(),
+							getX(),
+							getY(),
 							pCity->getName().GetCString());
 				}
 			}
@@ -33072,8 +33072,8 @@ void CvUnitAI::AI_setAsGarrison(const CvCity* pCity)
 						getGroup()->getNumUnits(),
 						getOwner(),
 						GET_PLAYER(getOwner()).getCivilizationDescription(0),
-						plot()->getX(),
-						plot()->getY(),
+						getX(),
+						getY(),
 						pCity->getName().GetCString());
 			}
 		}
@@ -33495,7 +33495,7 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->plot()->getX(), bestCity->plot()->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
 		}
 	}
 
@@ -33630,7 +33630,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->plot()->getX(), bestCity->plot()->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
 		}
 	}
 
@@ -34274,7 +34274,7 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 
 	if (bDedicate)
 	{
-		return getGroup()->pushMissionInternal(MISSION_SKIP, plot()->getX(), plot()->getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plot());
+		return getGroup()->pushMissionInternal(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plot());
 	}
 	if (pBestPlot != NULL)
 	{

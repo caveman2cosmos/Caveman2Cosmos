@@ -12565,7 +12565,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 		}
 		if (eBestUnit != NO_UNIT)
 		{
-			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->plot()->getX(), pUnit->plot()->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->getX(), pUnit->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 			if (pPirate != NULL)
 			{
 				pPirate->setTransportUnit(pUnit);

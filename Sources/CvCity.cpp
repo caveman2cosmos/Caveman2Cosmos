@@ -8342,7 +8342,7 @@ int CvCity::getMaintenanceTimes100() const
 
 int CvCity::getEffectiveMaintenanceModifier() const
 {
-	int iModifier = getMaintenanceModifier() + GET_PLAYER(getOwner()).getMaintenanceModifier() + area()->getTotalAreaMaintenanceModifier(GET_PLAYER(getOwner()).getID());
+	int iModifier = getMaintenanceModifier() + GET_PLAYER(getOwner()).getMaintenanceModifier() + area()->getTotalAreaMaintenanceModifier(getOwner());
 
 	if (isConnectedToCapital() && !(isCapital()))
 	{
@@ -16492,7 +16492,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					logBBAI("    New unit %S at (%d,%d) headed to contractual delivery plot (%d,%d)",
 						pUnit->getUnitInfo().getDescription(),
-						plot()->getX(), plot()->getY(),
+						getX(), getY(),
 						pRallyPlot->getX(), pRallyPlot->getY());
 				}
 			}
@@ -19980,7 +19980,7 @@ bool CvCity::isAutoRaze() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE) && isHominid()
 	//Insectoids always raze
-	|| GET_PLAYER(getOwner()).getID() == INSECT_PLAYER)
+	|| getOwner() == INSECT_PLAYER)
 	{
 		return true;
 	}
@@ -24166,7 +24166,7 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_OUTBREAK", getNameKey(), GC.getBuildingInfo(eBuilding).getDescription());
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 		setNumRealBuilding(eBuilding, 1);
 	}
 
@@ -24211,7 +24211,7 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_CITY", getNameKey(), GC.getBuildingInfo(eBuilding).getDescription());
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 		setNumRealBuilding(eBuilding, 0);
 	}
 	//PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
@@ -24253,7 +24253,7 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 	//							MEMORY_TRACK_EXEMPT();
 
 	//							szBuffer = DLL_SERIALIZE(gDLL->getText("TXT_KEY_MISC_OVERCOME_CITY", getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription()));
-	//							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+	//							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 	//							setNumRealBuilding(kBuilding.eBuilding, 0);
 	//						}
 	//					}

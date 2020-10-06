@@ -3540,7 +3540,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 			{
 				if (bIgnoreDanger && bGo)
 				{
-					return pushMissionInternal(MISSION_MOVE_TO, cityX->plot()->getX(), cityX->plot()->getY(), iFlags);
+					return pushMissionInternal(MISSION_MOVE_TO, cityX->getX(), cityX->getY(), iFlags);
 				}
 				return true;
 			}
@@ -3549,7 +3549,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 				CvString::format
 				(
 					"Pathing of player %d units (%S) from plot <%d, %d> to supposedly reachable city %S at <%d, %d> failed",
-					(int)ePlayer, headUnit->getDescription().c_str(), plot->getX(), plot->getY(), cityX->getName().c_str(), cityX->getX(), cityX->getY()
+					(int)ePlayer, headUnit->getDescription().c_str(), getX(), getY(), cityX->getName().c_str(), cityX->getX(), cityX->getY()
 				).c_str()
 			);
 		}

@@ -1656,8 +1656,8 @@ void CvPlayerAI::AI_unitUpdate()
 			OutputDebugString(CvString::format("	%d with %d units at (%d,%d)\n",
 				pLoopSelectionGroup->getID(),
 				pLoopSelectionGroup->getNumUnits(),
-				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getX(),
-				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY()).c_str());
+				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getX(),
+				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getY()).c_str());
 		}
 
 #ifdef PARALLEL_MAPS
@@ -1671,8 +1671,8 @@ void CvPlayerAI::AI_unitUpdate()
 			OutputDebugString(CvString::format("	%d with %d units at (%d,%d)\n",
 												pLoopSelectionGroup->getID(),
 												pLoopSelectionGroup->getNumUnits(),
-												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getX(),
-												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY()).c_str());
+												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getX(),
+												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getY()).c_str());
 			if ( pLoopSelectionGroup->getHeadUnit() != m_pTempUnit )
 			{
 				updateGroupCycle(pLoopSelectionGroup->getHeadUnit(), true);
@@ -34058,7 +34058,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
 			(eUnitAI == UNITAI_INVESTIGATOR))
 		{
-			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->plot()->getX() != INVALID_PLOT_COORD)
+			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD)
 			{
 				PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
 				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())
@@ -38881,7 +38881,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
 			(eUnitAI == UNITAI_INVESTIGATOR))
 		{
-			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->plot()->getX() != INVALID_PLOT_COORD)
+			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD)
 			{
 				PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
 				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())

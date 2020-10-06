@@ -7047,7 +7047,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 		iTempValue += 4 * iOurNumCities * iWorldHealth;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != GET_PLAYER(getOwner()).getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != getOwner())
 			{
 				int iNumCities = GET_PLAYER((PlayerTypes)iI).getNumCities();
 				int iAttitude = GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI);

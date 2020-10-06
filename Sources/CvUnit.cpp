@@ -1235,7 +1235,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
-					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					bMessaged = true;
 					pLoopUnit->kill(false, ePlayer, bMessaged);
 
@@ -1257,7 +1257,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey());
-						AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+						AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY());
 						bMessaged = true;
 					}
 				}
@@ -1269,7 +1269,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DEATH", getNameKey());
-			AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+			AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			m_combatResult.bDeathMessaged = false;
 			bMessaged = true;
 		}
@@ -8446,7 +8446,7 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 	/* DCM                                     04/19/09                                Johny Smith  */
 	/************************************************************************************************/
 			// Dale - NB: A-Bomb START
-			if (!((TeamTypes)iI == GET_TEAM(getTeam()).getID()))
+			if ((TeamTypes)iI != getTeam())
 			{
 				if (isNukeVictim(pTargetPlot, ((TeamTypes)iI)))
 				{
@@ -8623,7 +8623,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 /* DCM                                     04/19/09                                Johny Smith  */
 /************************************************************************************************/
 				// Dale - NB: A-Bomb START
-				if (!((TeamTypes)iI == GET_TEAM(getTeam()).getID()))
+				if ((TeamTypes)iI != getTeam())
 				{
 					GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
 				}
@@ -9293,7 +9293,7 @@ bool CvUnit::airBomb(int iX, int iY)
 					{
 						for (int iDY = 2; iDY <= 2; iDY++)
 						{
-							pLoopPlot = plotXY(plot()->getX(), plot()->getY(), iDX, iDY);
+							pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 							if (pLoopPlot != NULL)
 							{
 								iCount += algo::count_if(pLoopPlot->units(), CvUnit::fn::getOwner() == getOwner());
@@ -10791,17 +10791,14 @@ bool CvUnit::spread(ReligionTypes eReligion)
 	if (pCity != NULL)
 	{
 		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
-//Team Project (6)
-		if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
+
+		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
 		{
-			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
-			{
-				iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
-			}
-			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
-			{
-				iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
-			}
+			iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
+		}
+		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
+		{
+			iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
 		}
 
 		if (pCity->getTeam() != getTeam())
@@ -12379,7 +12376,7 @@ bool CvUnit::build(BuildTypes eBuild)
 	//			MEMORY_TRACK_EXEMPT();
 
 	//			szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_CANT_FINISH_BUILD", getNameKey(), GC.getBuildInfo(eBuild).getTextKeyWide());
-	//			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), plot()->getX(), plot()->getY());
+	//			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY());
 	//		}
 	//		return false;
 	//	}
@@ -12439,7 +12436,7 @@ bool CvUnit::build(BuildTypes eBuild)
 		{
 			if ( plot()->getWorkingCity() != NULL )
 			{
-				OutputDebugString(CvString::format("Worker at (%d,%d) consumed by build for city %S\n", plot()->getX(), plot()->getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
+				OutputDebugString(CvString::format("Worker at (%d,%d) consumed by build for city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
 				//plot()->getWorkingCity()->AI_changeWorkersHave(-1);
 			}
 			kill(true, NO_PLAYER, true);
@@ -15083,7 +15080,7 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getID() == PREY_PLAYER)
+	if (getOwner() == PREY_PLAYER)
 	{
 		return false;
 	}
@@ -29926,7 +29923,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 				pCity->getDefenseModifier(false) / std::max(1, pCity->getTotalDefense(false))
 			);
 			// standard odds made worse if greater than one tile out
-			const int odds = 100 + iBombardDefense + (plotDistance(plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY()) - 1) * 30;
+			const int odds = 100 + iBombardDefense + (plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()) - 1) * 30;
 
 			// RevolutionDCM - change proposal to ranged bombardment. Only collateral damage can be issued.
 			if (GC.getGame().getSorenRandNum(odds, "Bombard Accuracy") <= getDCMBombAccuracy())
@@ -29961,7 +29958,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 		if (pLoopUnit != NULL)
 		{
 			// standard odds made worse if greater than one tile out
-			const int odds = 100 + 30*(plotDistance(plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY()) - 1);
+			const int odds = 100 + 30*(plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()) - 1);
 
 			//RevolutionDCM - change proposal to ranged bombardment. Only collateral damage can be issued.
 			if (GC.getGame().getSorenRandNum(odds, "Bombard Accuracy") <= getDCMBombAccuracy())
@@ -30140,7 +30137,7 @@ void CvUnit::doOpportunityFire()
 	{
 		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			pLoopPlot = plotDirection(plot()->getX(), plot()->getY(), ((DirectionTypes)iI));
+			pLoopPlot = plotDirection(getX(), getY(), (DirectionTypes)iI);
 			if (pLoopPlot != NULL)
 			{
 				iVolumeDefenders = pLoopPlot->getNumUnits();
@@ -31104,7 +31101,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 			{
 				if (!isEnemy((TeamTypes)iI))
 				{
-					if (!((TeamTypes)iI == GET_TEAM(getTeam()).getID()))
+					if ((TeamTypes)iI != getTeam())
 					{
 						GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
 					}
@@ -31289,7 +31286,7 @@ bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 
 bool CvUnit::claimTerritory()
 {
-	//logMsg("%S claims territory from %S at (%d, %d)", GET_PLAYER(getOwner()).getCivilizationShortDescription(), GET_PLAYER(plot()->getOwner()).getCivilizationShortDescription(), plot()->getX(), plot()->getY());
+	//logMsg("%S claims territory from %S at (%d, %d)", GET_PLAYER(getOwner()).getCivilizationShortDescription(), GET_PLAYER(plot()->getOwner()).getCivilizationShortDescription(), getX(), getY());
 
 	CvPlot* pPlot = plot();
 	bool bWasOwned = false;
@@ -31536,16 +31533,14 @@ void CvUnit::combatWon(CvUnit* pLoser, bool bAttacking)
 		//|| GC.getUnitInfo((UnitTypes)pLoser->getUnitType()).getEquipmentPromotion() != NO_PROMOTION
 		)
         {
-            pUnit = GET_PLAYER(getOwner()).initUnit((UnitTypes)iUnit, plot()->getX(), plot()->getY());
+            pUnit = GET_PLAYER(getOwner()).initUnit((UnitTypes)iUnit, getX(), getY());
         }
     }*/
 }
 
 int CvUnit::getMaxHurryFood(CvCity* pCity) const
 {
-	int iFood;
-
-	iFood = (m_pUnitInfo->getBaseFoodChange());
+	int iFood = m_pUnitInfo->getBaseFoodChange();
 
 	iFood *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitHurryPercent();
 	iFood /= 100;
@@ -31652,7 +31647,7 @@ CvUnit* CvUnit::getCommander() const
 	{
 		if (pBestCommander->plot() != NULL)//Recently destroyed commanders could cause a crash here without this protection.
 		{
-			int iDistance = plotDistance(pBestCommander->plot()->getX(), pBestCommander->plot()->getY(), plot()->getX(), plot()->getY());
+			int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
 
 			if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
 			{
@@ -31679,7 +31674,7 @@ CvUnit* CvUnit::getCommander() const
 			//	Guard against this being called during the death of said GC!
 			if ( pBestCommander->plot() != NULL )
 			{
-				int iDistance = plotDistance(pBestCommander->plot()->getX(), pBestCommander->plot()->getY(), plot()->getX(), plot()->getY());
+				int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
 
 				if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
 				{
@@ -31711,7 +31706,7 @@ CvUnit* CvUnit::getCommander() const
 				FErrorMsg("Commander Should Exist!");
 				continue;
 			}
-			int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), plot()->getX(), plot()->getY());
+			int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
 
 			if (pCommander->controlPointsLeft() <= 0 || iDistance > pCommander->commandRange())
 			{
@@ -32236,11 +32231,12 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
 				AddDLLMessage(
 					getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
 					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
-					GC.getCOLOR_GREEN(), this->plot()->getX(), this->plot()->getY());
+					GC.getCOLOR_GREEN(), getX(), getY()
+				);
 			}
 		}
 	}
@@ -32562,7 +32558,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 			int iBestValue = 0;
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != GET_PLAYER(getOwner()).getID())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getOwner())
 				{
 					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwner()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
 					{
@@ -32570,7 +32566,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 						{
 							if (pLoopCity->isRevealed(getTeam(), false))
 							{
-								if (canNukeAt(plot(), pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), false))
+								if (canNukeAt(plot(), pLoopCity->getX(), pLoopCity->getY(), false))
 								{
 									const int iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
 									if (iValue > iBestValue)
@@ -35165,7 +35161,6 @@ void CvUnit::checkForCritical(int iDamage, CvUnit* pOpponent)
 void CvUnit::assignCritical(CvUnit* pOpponent)
 {
 	std::vector<PromotionTypes> aAvailableCriticals;
-	CvWString szBuffer;
 	PromotionLineTypes eAfflictionLine = NO_PROMOTIONLINE;
 	int iLinePriority = 0;
 	int iLowestLinePriority = MAX_INT;
@@ -35187,7 +35182,7 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 					eCurrentAffliction = eAffliction;
 				}
 
-				CvPromotionInfo &kCritical = GC.getPromotionInfo(eCurrentAffliction);
+				const CvPromotionInfo& kCritical = GC.getPromotionInfo(eCurrentAffliction);
 				PromotionTypes eCritical = (eCurrentAffliction);
 				if (kCritical.isAffliction() && kCritical.isCritical())
 				{
@@ -35212,10 +35207,10 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_SUFFERED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-		szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
-		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_SUFFERED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
+		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 	}
 }
 
@@ -35224,7 +35219,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	PROFILE_FUNC();
 
 	int iI;
-	CvWString szBuffer;
 	bool bPromo = false;
 
 	bool bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
@@ -35257,8 +35251,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		else
@@ -35267,8 +35261,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
 		}
 		return false;
@@ -35282,8 +35276,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		else
@@ -35292,8 +35286,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
 		}
 		return false;
@@ -35307,8 +35301,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		else
@@ -35317,8 +35311,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
 		}
 		return false;
@@ -35332,8 +35326,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		else
@@ -35342,8 +35336,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
 		}
 		return false;
@@ -35406,8 +35400,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 					}
 				}
 				else
@@ -35416,8 +35410,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
 				}
 				return false;
@@ -35488,8 +35482,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 							{
 								MEMORY_TRACK_EXEMPT();
 
-								szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 							}
 						}
 						else
@@ -35498,8 +35492,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 							{
 								MEMORY_TRACK_EXEMPT();
 
-								szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 							}
 						}
 						return false;
@@ -35538,8 +35532,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35548,8 +35542,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 		}
@@ -35566,8 +35560,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35576,8 +35570,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35593,8 +35587,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		else
@@ -35603,8 +35597,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
 		}
 		return false;
@@ -35675,8 +35669,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35685,8 +35679,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35705,8 +35699,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 					}
 				}
 				else
@@ -35715,8 +35709,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
 				}
 				return false;
@@ -35737,8 +35731,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35747,8 +35741,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35807,8 +35801,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35817,8 +35811,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35847,8 +35841,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35857,8 +35851,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35910,8 +35904,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35920,8 +35914,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
@@ -35951,8 +35945,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 			else
@@ -35961,20 +35955,20 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
 			}
 			return false;
 		}
 	}
 
-	if ((GC.getPromotionInfo(ePromotion).isEquipment()) && !bEquip)
+	if (GC.getPromotionInfo(ePromotion).isEquipment() && !bEquip)
 	{
 		return false;
 	}
 
-	if ((GC.getPromotionInfo(ePromotion).isAffliction()) && !bAfflict)
+	if (GC.getPromotionInfo(ePromotion).isAffliction() && !bAfflict)
 	{
 		return false;
 	}
@@ -37120,13 +37114,12 @@ void CvUnit::checkForStun(int iDamage, CvUnit* pOpponent)
 	}
 	if (iStunVolume > 0)
 	{
-		CvWString szBuffer;
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText("TXT_KEY_MISC_STUN_SUFFERED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-		szBuffer = gDLL->getText("TXT_KEY_MISC_STUN_INFLICTED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
-		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_STUN_SUFFERED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+		const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_STUN_INFLICTED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
+		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 	}
 }
 
@@ -37399,20 +37392,20 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							//messages that introduce the affliction from battle as a poisoning
 							MEMORY_TRACK_EXEMPT();
 
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+							const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 						}
 						else
 						{
 							//messages that introduce the affliction from battle as a disease
 							MEMORY_TRACK_EXEMPT();
 
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_FIRST", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
-							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+							const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_FIRST", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 						}
 					}
 					else
@@ -37420,8 +37413,8 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 						//message that introduces the disease affliction to the unit (only to the owner)
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
 				}
 			}
@@ -37436,20 +37429,20 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							//messages that worsen the affliction from battle as a poisoning
 							MEMORY_TRACK_EXEMPT();
 
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+							const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 						}
 						else
 						{
 							//messages that worsen the affliction from battle as a disease
 							MEMORY_TRACK_EXEMPT();
 
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_ADDITIONAL", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
-							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+							const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_ADDITIONAL", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 						}
 					}
 					else
@@ -37457,8 +37450,8 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 						//message that states the affliction to the unit has worsened (only to the owner)
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionHad).getTextKeyWide(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionHad).getTextKeyWide(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
 				}
 			}
@@ -37468,19 +37461,19 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+					const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 				else
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+					const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
+					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
 			}
 		}
@@ -37516,8 +37509,8 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_IMPROVE", getNameKey(), eAfflictionHad, eAfflictionGained);
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_IMPROVE", getNameKey(), eAfflictionHad, eAfflictionGained);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				break;
 			}
 		}
@@ -37527,8 +37520,8 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 		GET_PLAYER(getOwner()).changePlayerWideAfflictionCount(eAfflictionLine, -1);
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_COMPLETE", getNameKey(), eAfflictionHad);
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_COMPLETE", getNameKey(), eAfflictionHad);
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 	}
 }
 
@@ -38157,16 +38150,11 @@ int CvUnit::captureProbabilityTotal() const
 {
 	int iData = m_pUnitInfo->getCaptureProbabilityModifier();
 	iData += getExtraCaptureProbabilityModifier();
-	if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
-	{
-		iData += GET_PLAYER(getOwner()).getExtraNationalCaptureProbabilityModifier();
-	}
-
-	const CvCity* pCity = plot()->getPlotCity();
+	iData += GET_PLAYER(getOwner()).getExtraNationalCaptureProbabilityModifier();
 
 	if (plot()->isCity(false, getTeam()))
 	{
-		iData += pCity->getExtraLocalCaptureProbabilityModifier();
+		iData += plot()->getPlotCity()->getExtraLocalCaptureProbabilityModifier();
 	}
 
 	return std::max(0, iData);
@@ -38194,16 +38182,11 @@ int CvUnit::captureResistanceTotal() const
 {
 	int iData = m_pUnitInfo->getCaptureResistanceModifier();
 	iData += getExtraCaptureResistanceModifier();
-	if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
-	{
-		iData += GET_PLAYER(getOwner()).getExtraNationalCaptureResistanceModifier();
-	}
-
-	const CvCity* pCity = plot()->getPlotCity();
+	iData += GET_PLAYER(getOwner()).getExtraNationalCaptureResistanceModifier();
 
 	if (plot()->isCity(false, getTeam()))
 	{
-		iData += pCity->getExtraLocalCaptureResistanceModifier();
+		iData += plot()->getPlotCity()->getExtraLocalCaptureResistanceModifier();
 	}
 
 	return std::max(0, iData);
@@ -38896,8 +38879,8 @@ void CvUnit::doMerge()
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_MERGE_UNIT);
 		pInfo->setData1(getID());
-		pInfo->setData2(plot()->getX());
-		pInfo->setData3(plot()->getY());
+		pInfo->setData2(getX());
+		pInfo->setData3(getY());
 		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
@@ -39079,8 +39062,8 @@ void CvUnit::doSplit()
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_SPLIT_UNIT);
 		pInfo->setData1(getID());
-		pInfo->setData2(plot()->getX());
-		pInfo->setData3(plot()->getY());
+		pInfo->setData2(getX());
+		pInfo->setData3(getY());
 		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
@@ -42010,8 +41993,8 @@ void CvUnit::doArrest()
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_ARREST_UNIT);
 		pInfo->setData1(getID());
-		pInfo->setData2(plot()->getX());
-		pInfo->setData3(plot()->getY());
+		pInfo->setData2(getX());
+		pInfo->setData3(getY());
 		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
@@ -42133,8 +42116,8 @@ bool CvUnit::doAmbush(bool bAssassinate)
 			GET_PLAYER(getOwner()).setAmbushingUnit(getID(), bAssassinate);
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_AMBUSH);
 			pInfo->setData1(getID());
-			pInfo->setData2(plot()->getX());
-			pInfo->setData3(plot()->getY());
+			pInfo->setData2(getX());
+			pInfo->setData3(getY());
 			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 		else
@@ -42782,10 +42765,10 @@ void CvUnit::doTrapTrigger(CvUnit* pUnit, bool bImmune)
 				//message
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_SUFFERED", pUnit->getNameKey(), getNameKey(), iTrapDmg);
-				AddDLLMessage(pUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), plot()->getX(), plot()->getY());
-				szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_INFLICTED", getNameKey(), pUnit->getNameKey(), iTrapDmg);
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), plot()->getX(), plot()->getY());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_SUFFERED", pUnit->getNameKey(), getNameKey(), iTrapDmg);
+				AddDLLMessage(pUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
+				const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_INFLICTED", getNameKey(), pUnit->getNameKey(), iTrapDmg);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
 		}
 		//afflict
@@ -42811,7 +42794,7 @@ void CvUnit::doTrapTrigger(CvUnit* pUnit, bool bImmune)
 		//nuclear
 		if (nukeRange() == 0 && plot() != NULL)
 		{
-			nuke(plot()->getX(), plot()->getY(), true);
+			nuke(getX(), getY(), true);
 		}
 	}
 
