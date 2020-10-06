@@ -15,10 +15,8 @@ import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
 
-import CvWorldBuilderScreen
 import WBUnitScreen
 import WBPlayerScreen
-import WBGameDataScreen
 import WBPlotScreen
 
 # globals
@@ -132,27 +130,28 @@ class CvEventManager:
 		# Dictionary of Events, indexed by EventID (also used at popup context id)
 		#	entries have name, beginFunction, applyFunction [, randomization weight...]
 		#
-		# Enums values less than 1000 are reserved for popup events
-		# Enum values greater than 5049 are reserved for CvUtil.getNewEventID().
+		# Enum values less than 1000 are reserved for dll popup events
+		# Enum values greater than 9999 are reserved for CvUtil.getNewEventID().
+		# Enums 9998-9999 are reserved for worldbuilder
 		#
 		self.OverrideEventApply = {}
 		import CvMainInterface
-		debugUtils = DebugUtils.debugUtils
 		self.Events = {
-			5	 : ('EffectViewer', debugUtils.applyEffectViewer, debugUtils.initEffectViewer),
+			1000 : ('EffectViewer', DebugUtils.applyEffectViewer, None),
+			1001 : ('ShowWonder', DebugUtils.applyWonderMovie, None),
+			1002 : ('AwardTechsAndGold', DebugUtils.applyTechCheat, None),
+			1003 : ('EditCity', DebugUtils.applyEditCity, None),
+			1050 : ('PlaceObject', DebugUtils.debugUtils.applyUnitPicker, None),
+
 			4999 : ('CityTabOptions', CvMainInterface.applyCityTabOptions, None),
 			5000 : ('EditCityName', self.__eventEditCityNameApply, self.__eventEditCityNameBegin),
-			5002 : ('PlaceObject', debugUtils.applyUnitPicker, debugUtils.initUnitPicker),
-			5003 : ('AwardTechsAndGold', debugUtils.applyTechCheat, debugUtils.initTechsCheat),
 			5006 : ('EditUnitName', self.__eventEditUnitNameApply, self.__eventEditUnitNameBegin),
-			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, self.__eventWBScriptPopupBegin),
-			5012 : ('ShowWonder', debugUtils.applyWonderMovie, debugUtils.initWonderMovie),
+			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, None),
 
-			1111 : ('WBPlayerScript', self.__eventWBPlayerScriptPopupApply, self.__eventWBScriptPopupBegin),
-			2222 : ('WBCityScript', self.__eventWBCityScriptPopupApply, self.__eventWBScriptPopupBegin),
-			3333 : ('WBUnitScript', self.__eventWBUnitScriptPopupApply, self.__eventWBScriptPopupBegin),
-			4444 : ('WBGameScript', self.__eventWBGameScriptPopupApply, self.__eventWBScriptPopupBegin),
-			5555 : ('WBPlotScript', self.__eventWBPlotScriptPopupApply, self.__eventWBScriptPopupBegin),
+			1111 : ('WBPlayerScript', self.__eventWBPlayerScriptPopupApply, None),
+			2222 : ('WBCityScript', self.__eventWBCityScriptPopupApply, None),
+			3333 : ('WBUnitScript', self.__eventWBUnitScriptPopupApply, None),
+			5555 : ('WBPlotScript', self.__eventWBPlotScriptPopupApply, None),
 		}
 	###****************###
 	### EVENT STARTERS ###
@@ -173,12 +172,16 @@ class CvEventManager:
 	### EVENT APPLY ###
 	def beginEvent(self, iD, argsList = -1):
 		entry = self.Events[iD]
-		if entry and entry[2]:
-			if DebugUtils.bDebugMode:
-				print "Begin event " + entry[0]
-			return entry[2](argsList)
-		elif DebugUtils.bDebugMode:
-			print "EventBegin - Unknown event ID " + str(iD)
+		if entry:
+			if entry[-1] is None:
+				print "[WARNING]CvEventManager.beginEvent\n\tEvent '%s' with ID '%d' does not have a generic begin function" + str(iD)
+
+			else:
+				if DebugUtils.bDebugMode:
+					print "Begin event " + entry[0]
+				entry[2](argsList)
+		else:
+			print "[WARNING]CvEventManager.beginEvent\n\tUnknown event ID: " + str(iD)
 
 	def applyEvent(self, argsList):
 		iD, iPlayer, netUserData, popupReturn = argsList
@@ -214,6 +217,8 @@ class CvEventManager:
 		if bActive:
 			if self.bNotReady:
 				CvScreensInterface.lateInit()
+				import BugCore
+				self.RoMOpt = BugCore.game.RoMSettings
 				# Cache game constants.
 				self.MAX_PLAYERS	= GC.getMAX_PLAYERS()
 				self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
@@ -350,8 +355,8 @@ class CvEventManager:
 					GC.getInfoTypeForString('C2C_ERA_ATOMIC')		: iModern,
 					GC.getInfoTypeForString('C2C_ERA_INFORMATION')	: iModern
 				}
-				# Only needs to be done once.
-				self.bNotReady = False
+
+				self.bNotReady = False # Only needs to be done once.
 
 
 	def onMouseEvent(self, argsList):
@@ -362,11 +367,11 @@ class CvEventManager:
 			if eventType == 1 and px != -1 and py != -1 and self.bCtrl:
 				if self.bAlt and GC.getMap().plot(px, py).isCity():
 					# Launch Edit City Event
-					self.beginEvent(5001, (px,py))
+					DebugUtils.initEditCity(px, py)
 					return 1
 				elif self.bShift:
 					# Launch Place Object Event
-					self.beginEvent(5002, (px, py))
+					DebugUtils.debugUtils.initUnitPicker(px, py)
 					return 1
 
 		if eventType == 4:
@@ -379,19 +384,32 @@ class CvEventManager:
 	def onKbdEvent(self, argsList):
 		'keypress handler - return 1 if the event was consumed'
 		eventType, key, mx, my, px, py = argsList
-		bAlt = self.bAlt
-		bCtrl = self.bCtrl
-		bShift = self.bShift
 
 		# Screen specific input handlers
 		iCode = eventType + 10
-		if iCode in (16, 17) \
-		and CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0]):
+		if (
+			iCode in (16, 17)
+		and
+			CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
+		):
 			return 1
 
+		bAlt = self.bAlt
+		bCtrl = self.bCtrl
+		bShift = self.bShift
 		iModifiers = bAlt + bCtrl + bShift
 
-		if eventType == 6: # Key down
+		if eventType == 7: # Key up
+
+			if iModifiers == 3:
+
+				# key up is more reliably reported than key down for some keys when three modifiers are pressed
+				# key down event for the 'D' in 'ctrl+shift+alt+D' seems to be consumed by the exe in some cases
+				if key == 16: # D
+					DebugUtils.toggleDebugMode()
+					return 1
+
+		elif eventType == 6: # Key down
 
 			if iModifiers == 1:
 				if bCtrl:
@@ -424,17 +442,17 @@ class CvEventManager:
 
 					elif bShift:
 						if key == InputTypes.KB_T:
-							self.beginEvent(5003)
+							DebugUtils.initTechsCheat()
 							return 1
 						elif key == InputTypes.KB_W:
-							self.beginEvent(5012)
+							DebugUtils.initWonderMovie()
 							return 1
 						elif key == InputTypes.KB_Z:
 							CyInterface().addImmediateMessage("Dll Debug Mode: %s" %(not GAME.isDebugMode()), "AS2D_GOODY_MAP")
 							GAME.toggleDebugMode()
 							return 1
 						elif key == InputTypes.KB_E:
-							self.beginEvent(5, (px, py))
+							DebugUtils.initEffectViewer(px, py)
 							return 1
 
 			elif iModifiers == 2:
@@ -463,10 +481,6 @@ class CvEventManager:
 							CvScreensInterface.screenMap[CvScreenEnums.EVENTTRIGGER_SCREEN] = EventTriggerScreen.EventTriggerScreen(CvScreenEnums.EVENTTRIGGER_SCREEN)
 
 			elif iModifiers == 3:
-
-				if key == 16: # D
-					DebugUtils.toggleDebugMode()
-					return 1
 
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
@@ -771,20 +785,20 @@ class CvEventManager:
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
 						iTeam = CyPlayer.getTeam()
-						Value = iGameTurn * 2
+						iDiv = iGameTurn * 2
 						for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 							CyTeamX = GC.getTeam(iTeamX)
 							if CyTeamX.isAlive() and CyTeamX.isVassal(iTeam):
-								Value -= Value / 8
-						iGGP = int(GAME.getPlayerScore(iPlayer) / Value)
-						CyPlayer.changeCombatExperience(iGGP)
+								iDiv -= intSqrt(iDiv)
+
+						CyPlayer.changeCombatExperience(GAME.getPlayerScore(iPlayer) / iDiv)
 				elif KEY == "TOPKAPI_PALACE":
 					iTeam = CyPlayer.getTeam()
 					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 						if iPlayerX == iPlayer: continue
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and GC.getTeam(CyPlayerX.getTeam()).isVassal(iTeam):
-							iGold = int(((1000000 * CyPlayerX.getGreaterGold() + CyPlayerX.getGold()) ** 0.5)/2500)
+							iGold = (intSqrt(CyPlayerX.getGold())/2500)
 							if iGold:
 								CyPlayerX.changeGold(iGold)
 							CyPlayerX.changeCombatExperience(1)
@@ -982,7 +996,7 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				fHandicapFactor = 1
+				iHandicapFactor = 100
 				if CyPlayerW.isHuman():
 					if CyPlayerL.isHuman():
 						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
@@ -992,7 +1006,7 @@ class CvEventManager:
 						iHandicapFactorL = 100
 
 					if iHandicapFactorW > iHandicapFactorL:
-						fHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100) / 100.0
+						iHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100)
 				# Message
 				if iPlayerAct is None:
 					iPlayerAct = GAME.getActivePlayer()
@@ -1011,9 +1025,9 @@ class CvEventManager:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
 				if bSneak:
-					iStolen = (CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL))
+					iStolen = CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
 					if iStolen > 1:
-						iStolen = int((iStolen ** 0.5) / fHandicapFactor)
+						iStolen = intSqrt(iStolen * 100) * 10 / iHandicapFactor
 					if iStolen > 0:
 						CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
 						CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
@@ -1032,7 +1046,10 @@ class CvEventManager:
 							)
 				# Marauder promo
 				if bMarauder:
-					iStolen = int((((1000000 * CyPlayerL.getGreaterGold() + CyPlayerL.getGold()) / (CyPlayerL.getNumUnits() + 1)) ** .3) / fHandicapFactor)
+					iStolen = 100 * CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
+					if iStolen > 1:
+						# intSqrt(intSqrt(x)) = x ** 0.25 = pow(x, 0.25)
+						iStolen = intSqrt(intSqrt(iStolen) * 1000) / iHandicapFactor
 					if iStolen > 0:
 						CyPlayerL.changeGold(-iStolen)
 						CyPlayerW.changeGold(iStolen)
@@ -1056,7 +1073,7 @@ class CvEventManager:
 
 					if CyTeamL.isHasTech(iTechW) or not CyTeamW.isHasTech(iTechL):
 
-						iStolen = int((CyPlayerL.calculateBaseNetResearch() ** 0.5)/fHandicapFactor)
+						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 100) * 10 / iHandicapFactor
 						if iStolen:
 							CyTeamW.changeResearchProgress(iTechW, iStolen, iPlayerW)
 							CyTeamL.changeResearchProgress(iTechL,-iStolen, iPlayerL)
@@ -1080,7 +1097,7 @@ class CvEventManager:
 					if iPlayer != iPlayerW: continue
 					KEY = aWonderTuple[0][i]
 					if KEY == "PERGAMON":
-						iGGP = int(CyUnitL.getExperience() ** 0.5)
+						iGGP = intSqrt(CyUnitL.getExperience())
 						if iGGP:
 							CyPlayerW.changeCombatExperience(iGGP)
 					elif KEY == "GREAT_JAGUAR_TEMPLE":
@@ -1525,21 +1542,19 @@ class CvEventManager:
 				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_DJENNE_PYTHON",()), iPlayer, 16, 'Art/Interface/Buttons/Great_Wonders/great_mosque_of_djenne.dds', ColorTypes(44), iX, iY, True, True)
 		# Lotus Temple
 		elif iBuilding == mapBuildingType["LOTUS_TEMPLE"]:
-			iTeam = CyPlayer.getTeam()
 			bHuman = CyPlayer.isHuman()
-			iAttitude = GC.getInfoTypeForString("ATTITUDE_CAUTIOUS")
+			iCautious = GC.getInfoTypeForString("ATTITUDE_CAUTIOUS")
 			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-				if iPlayer == iPlayerX:
+				if iPlayerX == iPlayer:
 					continue
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
 					if not bHuman:
-						iTeamX = CyPlayerX.getTeam()
-						while CyPlayer.AI_getAttitudeExtra(iPlayerX) < iAttitude:
-							CyPlayer.AI_changeAttitudeExtra(iTeamX, 1)
+						while CyPlayer.AI_getAttitude(iPlayerX) < iCautious:
+							CyPlayer.AI_changeAttitudeExtra(iPlayerX, 1)
 					if not CyPlayerX.isHuman():
-						while CyPlayerX.AI_getAttitudeExtra(iPlayer) < iAttitude:
-							CyPlayerX.AI_changeAttitudeExtra(iTeam, 1)
+						while CyPlayerX.AI_getAttitude(iPlayer) < iCautious:
+							CyPlayerX.AI_changeAttitudeExtra(iPlayer, 1)
 		# Cleopatra's Needle
 		elif iBuilding == mapBuildingType["CLEOPATRA_NEEDLE"]:
 			from operator import itemgetter
@@ -1923,7 +1938,7 @@ class CvEventManager:
 				iYParam1 = 100000
 				iYParam2 = 100000
 				iYParam3 = 100000
-				iOffset = int(iGridWidth / 4)
+				iOffset = iGridWidth / 4
 				iXOff1 = iX - 3 * iOffset
 				if iXOff1 < 0:
 					iXOff1 = iX + iOffset
@@ -2457,18 +2472,19 @@ class CvEventManager:
 			popupInfo.setData3(1)
 			popupInfo.setText('showWonderMovie')
 			popupInfo.addPopup(iPlayer)
-		# Favorite religion
-		for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-			if iPlayerX == iPlayer: continue
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
-				CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
-				if CyPlayerX.isHuman():
-					strReligionName = GC.getReligionInfo(iReligion).getText()
-					popup = PyPopup.PyPopup(-1)
-					popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
-					popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
-					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
+		if self.RoMOpt.isTelepathicReligion():
+			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
+				if iPlayerX == iPlayer: continue
+				CyPlayerX = GC.getPlayer(iPlayerX)
+				if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
+					CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
+					if CyPlayerX.isHuman():
+						strReligionName = GC.getReligionInfo(iReligion).getText()
+						popup = PyPopup.PyPopup(-1)
+						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
+						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
+						popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
 	'''
@@ -2948,26 +2964,20 @@ class CvEventManager:
 			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeStats()
 			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeCurrentUnit()
 
-	def __eventWBScriptPopupBegin(self): return
-
 	def __eventWBPlayerScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBPlayerScreen.WBPlayerScreen().placeScript()
+		WBPlayerScreen.WBPlayerScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBCityScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getCity(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
 
 		if GAME.GetWorldBuilderMode() and not GAME.isInAdvancedStart():
 			import WBCityEditScreen
-			WBCityEditScreen.WBCityEditScreen().placeScript()
+			WBCityEditScreen.WBCityEditScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
 		WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeScript()
-
-	def __eventWBGameScriptPopupApply(self, playerID, userData, popupReturn):
-		GAME.setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBGameDataScreen.WBGameDataScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBPlotScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getMap().plot(userData[0], userData[1]).setScriptData(CvUtil.convertToStr(popupReturn.getEditBoxString(0)))

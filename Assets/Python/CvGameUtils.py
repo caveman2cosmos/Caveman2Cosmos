@@ -41,20 +41,9 @@ class CvGameUtils:
 	def isVictoryTest(self):
 		return GAME.getElapsedGameTurns() > 10
 
-	def isVictory(self, argsList):
-		eVictory = argsList[0]
-		return True
-
 	def isPlayerResearch(self, argsList):
 		ePlayer = argsList[0]
 		return True
-
-	def getExtraCost(self, argsList):
-		ePlayer = argsList[0]
-		return 0
-
-	def createBarbarianCities(self):
-		return False
 
 	def createBarbarianUnits(self):
 		return False
@@ -101,11 +90,6 @@ class CvGameUtils:
 		return BuildingTypes.NO_BUILDING
 
 	def updateColoredPlots(self):
-		return False
-
-	def isActionRecommended(self, argsList):
-		pUnit = argsList[0]
-		iAction = argsList[1]
 		return False
 
 	def unitCannotMoveInto(self, argsList):
@@ -206,21 +190,11 @@ class CvGameUtils:
 		bIgnoreCost = argsList[4]
 		return False
 
-	def canCreate(self, argsList):
-		pCity = argsList[0]
-		eProject = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		return False
-
 	def cannotCreate(self, argsList):
 		pCity = argsList[0]
 		eProject = argsList[1]
 		bContinue = argsList[2]
 		bTestVisible = argsList[3]
-		return False
-
-	def canMaintain(self, argsList):
 		return False
 
 	def cannotMaintain(self, argsList):
@@ -511,8 +485,6 @@ class CvGameUtils:
 		elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
 			if iData1 == 1027:
 				return CyTranslator().getText("TXT_KEY_WB_PLOT_DATA",())
-			elif iData1 == 1028:
-				return GC.getGameOptionInfo(iData2).getHelp()
 			elif iData1 == 1029:
 				if iData2 == 0:
 					sText = CyTranslator().getText("TXT_KEY_WB_PYTHON", ())
@@ -841,18 +813,3 @@ class CvGameUtils:
 				return 0
 			return int(price/2.0)
 		return -1
-
-	# Returns the experience a unit needs to level up.
-	def getExperienceNeeded(self, argsList):
-		iLevel, iOwner = argsList
-
-		iExperienceNeeded = 1
-
-		# regular epic game experience
-		iExperienceNeeded += iLevel * iLevel
-
-		iModifier = GC.getPlayer(iOwner).getLevelExperienceModifier()
-		if iModifier:
-			iExperienceNeeded += (iExperienceNeeded * iModifier + 99) / 100   # ROUND UP
-
-		return iExperienceNeeded

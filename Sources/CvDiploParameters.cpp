@@ -32,13 +32,13 @@ PlayerTypes CvDiploParameters::getWhoTalkingTo() const
 	return m_eWhoTalkingTo;
 }
 
-void addVar(std::vector<FVariable>& argsList, const wchar *arg)
+void addVar(std::vector<FVariable>& argsList, const wchar_t* arg)
 {
 	if (arg)
 	{
 		FVariable var;
 		var.m_eType = FVARTYPE_WSTRING;
-		var.m_wszValue = new wchar[wcslen(arg)+1];
+		var.m_wszValue = new wchar_t[wcslen(arg)+1];
 		wcscpy(var.m_wszValue, arg);
 		argsList.push_back(var);
 	}
@@ -206,12 +206,12 @@ bool CvDiploParameters::getTheirOffering() const
 	return m_bTheirOffering;
 }
 
-void CvDiploParameters::setChatText(const wchar* szText)
+void CvDiploParameters::setChatText(const wchar_t* szText)
 {
 	m_szChatText = szText;
 }
 
-const wchar* CvDiploParameters::getChatText() const
+const wchar_t* CvDiploParameters::getChatText() const
 {
 	return m_szChatText;
 }

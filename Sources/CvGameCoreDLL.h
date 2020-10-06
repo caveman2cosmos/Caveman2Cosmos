@@ -73,12 +73,14 @@
 //
 // Basic types
 //
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
-typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef unsigned int        uint;
+
+typedef long long           int64_t;
+
+typedef unsigned char       uint8_t;
+typedef unsigned short      uint16_t;
+typedef unsigned int        uint32_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits
@@ -116,7 +118,7 @@ typedef wchar_t          wchar;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
+__forceinline float DWtoF( uint n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
@@ -138,6 +140,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
+// #define PARALLEL_MAPS
+// #define NOMADIC_START
 
 //
 // Cache feature macros
@@ -171,6 +175,9 @@ void dumpProfileStack();
 void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
+
+int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()

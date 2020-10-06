@@ -512,7 +512,8 @@ public:
 
 	bool isActionRecommended(int iAction) const;
 
-	bool isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const; // Exposed to Python
+	int defenderValue(const CvUnit* pAttacker) const;
+	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 
 	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const; // Exposed to Python
 	void doCommand(CommandTypes eCommand, int iData1, int iData2); // Exposed to Python
@@ -550,26 +551,15 @@ public:
 	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
 	void move(CvPlot* pPlot, bool bShow, bool bFree = false);
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool jumpToNearestValidPlot(bool bKill = true); // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	bool canAutomate(AutomateTypes eAutomate) const; // Exposed to Python
 	void automate(AutomateTypes eAutomate);
 
 	bool canScrap() const; // Exposed to Python
 	void scrap();
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
 
 	void tradeUnit(PlayerTypes eReceivingPlayer);
@@ -655,16 +645,13 @@ public:
 
 	bool canShadow() const;
 	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
-	
+
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
 	TechTypes getDesiredDiscoveryTech() const;
 	void setDesiredDiscoveryTech(TechTypes eTech);
 	void waitForTech(int iFlag, int eTech);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const; // Exposed to Python
 	void gift(bool bTestTransport = true);
@@ -708,15 +695,7 @@ public:
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const; // Exposed to Python
 	bool canNuke(const CvPlot* pPlot) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 09/09/10                                               */
-/*                                                                                              */
-/*  M.A.D Nukes                                                                                 */
-/************************************************************************************************/
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar = true) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	bool nuke(int iX, int iY, bool bTrap = false);
 
 	bool canRecon(const CvPlot* pPlot) const; // Exposed to Python
@@ -757,7 +736,6 @@ public:
 	bool plunder();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 
-	int sabotageCost(const CvPlot* pPlot) const; // Exposed to Python
 	int sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle = PROBABILITY_REAL) const; // Exposed to Python
 	bool canSabotage(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool sabotage();
@@ -846,8 +824,8 @@ public:
 
 	HandicapTypes getHandicapType() const; // Exposed to Python
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
-	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
-	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
+	const wchar_t* getVisualCivAdjective(TeamTypes eForTeam) const;
+	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python
 	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
@@ -871,7 +849,7 @@ public:
 	DllExport bool hasMoved() const; // Exposed to Python
 
 	int airRange() const; // Exposed to Python
-	int nukeRange() const; // Exposed to Python			
+	int nukeRange() const; // Exposed to Python
 
 	bool canBuildRoute() const; // Exposed to Python
 	DllExport BuildTypes getBuildType() const; // Exposed to Python
@@ -885,26 +863,15 @@ public:
 	int getRBombardForceAbilityCount() const;
 	void changeRBombardForceAbilityCount(int iChange);
 
-	bool isNoCapture() const; // Exposed to Python
-	bool isRivalTerritory() const; // Exposed to Python
-	bool isMilitaryHappiness() const; // Exposed to Python
+	bool isNoCapture() const;
+	bool isRivalTerritory() const;
+	bool isMilitaryHappiness() const;
+	bool isMilitaryBranch() const;
 	bool isInvestigate() const; // Exposed to Python
-	bool isCounterSpy() const; // Exposed to Python
+	bool isCounterSpy() const;
 	bool isSpy() const;
 	bool isFound() const; // Exposed to Python
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				DPII		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-	/*bool isCanBeRebel() const;
-	bool isCanRebelCapture() const;
-	bool isCannotDefect() const;
-	bool isCanQuellRebellion() const;
-	*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
+
 	bool isGoldenAge() const; // Exposed to Python
 
 	// Can this unit always coexist with all other units anywhere?
@@ -1370,10 +1337,15 @@ public:
 	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraDamageModifier (int iChange);
 
-	int getExtraCostModifier () const;
-	void changeExtraCostModifier (int iChange);
-
-	int getExtraUnitCost100 () const;
+	void changeExtraUpkeep100(const int iChange);
+	void changeUpkeepModifier(const int iChange);
+	void calcUpkeepMultiplierSM(const int iGroupOffset);
+	void calcUpkeep100();
+	void recalculateUnitUpkeep();
+	int getExtraUpkeep100() const;
+	int getUpkeepModifier() const;
+	int getUpkeepMultiplierSM() const;
+	int getUpkeep100() const;
 
 	int getExtraOverrun (bool bIgnoreCommanders = false) const;
 	void changeExtraOverrun (int iChange);
@@ -1644,7 +1616,7 @@ public:
 // BUG - Unit Name - start
 	bool isDescInName() const;
 // BUG - Unit Name - end
-	const wchar* getNameKey() const; // Exposed to Python
+	const wchar_t* getNameKey() const; // Exposed to Python
 	const CvWString& getNameNoDesc() const; // Exposed to Python
 	void setName(const CvWString szNewValue); // Exposed to Python
 
@@ -2141,6 +2113,12 @@ protected:
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
 	int m_iExtraCostModifier;
+
+	int m_iExtraUpkeep100;
+	int m_iUpkeepModifier;
+	int m_iUpkeepMultiplierSM;
+	int m_iUpkeep100;
+
 	int m_iExtraPowerValue;
 	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
@@ -2291,23 +2269,11 @@ protected:
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
-	void influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, float fLocationMultiplier);
+	void influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier);
 	float doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Lead From Behind                                                                             */
-/************************************************************************************************/
-// From Lead From Behind by UncutDragon
-public:
-	int defenderValue(const CvUnit* pAttacker) const;
-	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 protected:
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	const PromotionKeyedInfo*	findPromotionKeyedInfo(PromotionTypes ePromotion) const;
 	PromotionKeyedInfo*	findOrCreatePromotionKeyedInfo(PromotionTypes ePromotion, bool bCreate = true);
 	const PromotionLineKeyedInfo*	findPromotionLineKeyedInfo(PromotionLineTypes ePromotionLine) const;
@@ -3287,75 +3253,96 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBuildUp);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canAttack);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isZoneOfControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isMADEnabled);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isSpy);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, checkPromotionObsoletion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, reloadEntity);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, defineReligion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, unloadAll);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, verifyStackValid);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasBuild, BuildTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, jumpToNearestValidPlot, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, kill, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, NotifyEntity, MissionTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, airCircle, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setBlockading, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setTransportUnit, CvUnit*);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setHealSupportUsed, int);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, joinGroup, CvSelectionGroup*);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
-		DECLARE_MAP_FUNCTOR(CvUnit, int, cargoSpace);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getFortifyTurns);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getBombardRate);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
-		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
-		DECLARE_MAP_FUNCTOR(CvUnit, PlayerTypes, getOwner);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
-		DECLARE_MAP_FUNCTOR(CvUnit, DomainTypes, getDomainType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttack);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isDead);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isFull);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canMoveAllTerrain);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isZoneOfControl);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canIgnoreZoneofControl);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAutoUpgrading);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isReadyForUpgrade);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAnimal);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canDefend);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, alwaysInvisible);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, IsSelected);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, visibilityRange);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, collateralDamage);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getBombardRate);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getDamage);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitTypes, getUnitType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitCombatTypes, getUnitCombatType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitAITypes, AI_getUnitAIType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, DomainTypes, getDomainType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getArea);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvUnitInfo&, getUnitInfo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvUnit*, getTransportUnit);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, BuildTypes, getBuildType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, ImprovementTypes, getBuildTypeImprovement);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMgetCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMCargoVolume);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, revoltProtectionTotal);
 
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnit*, getTransportUnit);
-		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
-		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, revoltProtectionTotal);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canClaimTerritory, const CvPlot*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, aidTotal, PropertyTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, isEnemy, TeamTypes);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, isEnemy, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, isInvisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, isInvisible, TeamTypes, bool);
-
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 	};
 };
 

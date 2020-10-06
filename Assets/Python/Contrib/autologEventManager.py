@@ -17,8 +17,8 @@ import BugCore
 import BugUtil
 import TradeUtil
 
-OPEN_LOG_EVENT_ID = CvUtil.getNewEventID("Autolog.OpenLog")
-CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID("Autolog.CustomEntry")
+OPEN_LOG_EVENT_ID = CvUtil.getNewEventID()
+CUSTOM_ENTRY_EVENT_ID = CvUtil.getNewEventID()
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -1632,7 +1632,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if (eCommerce == CommerceTypes.COMMERCE_GOLD):
 				zPercent = pPlayer.getCommercePercent(eCommerce)
 				zRate = pPlayer.calculateGoldRate()
-				zTotal = pPlayer.getEffectiveGold()
+				zTotal = pPlayer.getGold()
 
 				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_COMMERCE_GOLD_SLIDERS", (zPercent, zDesc, zRate, zTotal))
 				Logger.writeLog(message, vColor="Blue")
@@ -1640,7 +1640,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				if pPlayer.isCommerceFlexible(eCommerce):
 					zPercent = pPlayer.getCommercePercent(eCommerce)
 					zRate = pPlayer.getCommerceRate(CommerceTypes(eCommerce))
-					zTotal = pPlayer.getEffectiveGold()
+					zTotal = pPlayer.getGold()
 
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_COMMERCE_OTHER_SLIDERS", (zPercent, zDesc, zRate))
 					Logger.writeLog(message, vColor="Blue")

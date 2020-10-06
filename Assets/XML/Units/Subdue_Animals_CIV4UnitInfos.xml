@@ -11,7 +11,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -66,7 +65,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -121,7 +119,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -181,7 +178,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -254,7 +250,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -312,7 +307,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -366,7 +360,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -462,7 +455,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -556,7 +548,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -629,7 +620,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -689,7 +679,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -745,7 +734,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -808,7 +796,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -871,7 +858,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -966,7 +952,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1024,7 +1009,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -1082,7 +1066,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1174,7 +1157,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1269,7 +1251,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1364,7 +1345,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1458,7 +1438,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1552,7 +1531,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1613,7 +1591,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1671,7 +1648,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1767,7 +1743,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1862,7 +1837,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1953,7 +1927,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2012,7 +1985,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2068,7 +2040,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2165,7 +2136,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2264,7 +2234,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2285,6 +2254,8 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_LION_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_MYTH</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_STORY</BuildingType>
 				<BuildingType>BUILDING_CAVE_LION_STORIES</BuildingType>
@@ -2359,7 +2330,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2455,7 +2425,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2547,7 +2516,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2640,7 +2608,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2701,7 +2668,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -2759,7 +2725,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2878,7 +2843,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -2932,7 +2896,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2991,7 +2954,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3046,7 +3008,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3107,7 +3068,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3163,7 +3123,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3226,7 +3185,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3284,7 +3242,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3386,7 +3343,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -3445,7 +3401,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3536,7 +3491,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3597,7 +3551,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -3650,7 +3603,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3716,7 +3668,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3785,7 +3736,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3881,7 +3831,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3977,7 +3926,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4078,7 +4026,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4178,7 +4125,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4234,7 +4180,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4331,7 +4276,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4404,7 +4348,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4461,7 +4404,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4558,7 +4500,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4654,7 +4595,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4710,7 +4650,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4804,7 +4743,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4898,7 +4836,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4958,7 +4895,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5054,7 +4990,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -5113,7 +5048,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5194,7 +5128,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5251,7 +5184,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5347,7 +5279,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -5409,7 +5340,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5505,7 +5435,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5561,7 +5490,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5619,7 +5547,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5688,7 +5615,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -5750,7 +5676,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5814,7 +5739,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5879,7 +5803,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5975,7 +5898,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6070,7 +5992,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6127,7 +6048,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6223,7 +6143,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6319,7 +6238,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6382,7 +6300,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6501,7 +6418,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -6562,7 +6478,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6653,7 +6568,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6774,7 +6688,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6830,7 +6743,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6924,7 +6836,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7016,7 +6927,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7111,7 +7021,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7207,7 +7116,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7264,7 +7172,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7320,7 +7227,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7379,7 +7285,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7432,7 +7337,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7489,7 +7393,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7545,7 +7448,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7636,7 +7538,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7695,7 +7596,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7787,7 +7687,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7847,7 +7746,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -7906,7 +7804,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7965,7 +7862,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
@@ -8061,7 +7957,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8161,7 +8056,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8257,7 +8151,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -8316,7 +8209,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -8373,7 +8265,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -8433,7 +8324,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8538,7 +8428,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8635,7 +8524,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8691,7 +8579,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8777,7 +8664,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8835,7 +8721,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8931,7 +8816,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -8992,7 +8876,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9088,7 +8971,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9143,7 +9025,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9237,7 +9118,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9292,7 +9172,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -9352,7 +9231,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9444,7 +9322,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9545,7 +9422,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9604,7 +9480,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9696,7 +9571,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9756,7 +9630,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9816,7 +9689,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9884,7 +9756,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9961,7 +9832,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10021,7 +9891,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10081,7 +9950,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10136,7 +10004,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10156,6 +10023,8 @@
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
@@ -10233,7 +10102,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10294,7 +10162,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10349,7 +10216,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10406,7 +10272,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10490,7 +10355,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10550,7 +10414,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -10609,7 +10472,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10671,7 +10533,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10729,7 +10590,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10825,7 +10685,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10920,7 +10779,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11020,7 +10878,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -11082,7 +10939,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11163,7 +11019,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11222,7 +11077,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11280,7 +11134,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11338,7 +11191,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11396,7 +11248,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11455,7 +11306,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11552,7 +11402,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11647,7 +11496,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11717,7 +11565,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11811,7 +11658,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11905,7 +11751,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -12003,7 +11848,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -12100,7 +11944,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12167,7 +12010,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12224,7 +12066,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -12282,7 +12123,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -12340,7 +12180,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -12398,7 +12237,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12457,7 +12295,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12549,7 +12386,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12605,7 +12441,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12701,7 +12536,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12793,7 +12627,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12888,7 +12721,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12981,7 +12813,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13077,7 +12908,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13135,7 +12965,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13192,7 +13021,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13209,10 +13037,12 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
-				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>
+				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
+				<BuildingType>BUILDING_BUG_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
+				<BuildingType>BUILDING_BUG_STORIES</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ENTOMOLOGY_LAB</BuildingType>
@@ -13247,7 +13077,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13317,7 +13146,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13379,7 +13207,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13436,7 +13263,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13496,7 +13322,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13550,7 +13375,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -13608,7 +13432,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13685,7 +13508,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13746,7 +13568,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13805,7 +13626,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13860,7 +13680,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13918,7 +13737,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13976,7 +13794,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<MapCategoryTypes>
@@ -14039,7 +13856,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14134,7 +13950,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14226,7 +14041,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15260,7 +15074,6 @@
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>

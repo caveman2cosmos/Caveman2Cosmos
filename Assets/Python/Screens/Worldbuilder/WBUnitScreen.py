@@ -6,9 +6,10 @@ import WBTeamScreen
 import WBPlotScreen
 import WBEventScreen
 import WBPlayerUnits
-import CvWorldBuilderScreen
+import WorldBuilder
 import WBInfoScreen
 import Popup
+
 GC = CyGlobalContext()
 
 iChange = 1
@@ -25,8 +26,8 @@ bUnitType = True
 
 class WBUnitScreen:
 
-	def __init__(self, main):
-		self.top = main
+	def __init__(self, WB):
+		self.WB = WB
 		self.iTable_Y = 110
 		self.iScriptH = 90
 		self.lSelectableMissions = {	"MISSION_SPREAD":		[GC.getReligionInfo, 7869],
@@ -45,9 +46,9 @@ class WBUnitScreen:
 		pPlot = pUnitX.plot()
 		iWidth = screen.getXResolution()/5 - 20
 
-		if self.top.iTargetPlotX == -1 or self.top.iTargetPlotY == -1:
-			self.top.iTargetPlotX = pPlot.getX()
-			self.top.iTargetPlotY = pPlot.getY()
+		if self.WB.iTargetPlotX == -1 or self.WB.iTargetPlotY == -1:
+			self.WB.iTargetPlotX = pPlot.getX()
+			self.WB.iTargetPlotY = pPlot.getY()
 		
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
@@ -144,7 +145,7 @@ class WBUnitScreen:
 		global iMissionData1
 
 		screen.setText("PushMission", "Background", "<font=3b>" + CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + CyTranslator().getText("TXT_KEY_WB_PUSH_MISSION", ()) + "</color></font>", 1<<2, screen.getXResolution() *7/10, iY - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		sText = (CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=3>" + CyTranslator().getText("TXT_KEY_WB_TARGET_PLOT", ()) + ": " + "(%d,%d)" + "</color></font>") % (self.top.iTargetPlotX, self.top.iTargetPlotY)
+		sText = (CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=3>" + CyTranslator().getText("TXT_KEY_WB_TARGET_PLOT", ()) + ": " + "(%d,%d)" + "</color></font>") % (self.WB.iTargetPlotX, self.WB.iTargetPlotY)
 		screen.setText("TargetPlot", "Background", sText, 1<<2, screen.getXResolution() *7/10, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		
 		iY += 30
@@ -183,8 +184,8 @@ class WBUnitScreen:
 			elif sType == "MISSION_GOLDEN_AGE":
 				lData1 = [-1]
 			else:
-				lData1 = [self.top.iTargetPlotX]
-				iData2 = self.top.iTargetPlotY
+				lData1 = [self.WB.iTargetPlotX]
+				iData2 = self.WB.iTargetPlotY
 				pTargetPlot = CyMap().plot(lData1[0], iData2)
 				if pTargetPlot.isNone():
 					lData1 = [pPlot.getX()]
@@ -359,8 +360,8 @@ class WBUnitScreen:
 		iY += 30
 		sText = ""
 		iActivity = pUnit.getGroup().getActivityType()
-		if iActivity > -1 and iActivity < len(CvWorldBuilderScreen.Activities):
-			sText = "<font=3>" + CvWorldBuilderScreen.Activities[iActivity] + "</font>"
+		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
+			sText = "<font=3>" + WorldBuilder.Activities[iActivity] + "</font>"
 		screen.setLabel("UnitActivity", "Background", sText, 1<<2, screen.getXResolution()/2, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 	def placeScript(self):
@@ -664,19 +665,19 @@ class WBUnitScreen:
 		elif sName == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 1:
-				WBPromotionScreen.WBPromotionScreen().interfaceScreen(pUnit)
+				WBPromotionScreen.WBPromotionScreen(self.WB).interfaceScreen(pUnit)
 			elif iIndex == 2:
-				WBPlayerScreen.WBPlayerScreen().interfaceScreen(pUnit.getOwner())
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pUnit.getOwner())
 			elif iIndex == 3:
-				WBTeamScreen.WBTeamScreen().interfaceScreen(pUnit.getTeam())
+				WBTeamScreen.WBTeamScreen(self.WB).interfaceScreen(pUnit.getTeam())
 			elif iIndex == 4:
-				WBPlotScreen.WBPlotScreen().interfaceScreen(pPlot)
+				WBPlotScreen.WBPlotScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 5:
-				WBEventScreen.WBEventScreen().interfaceScreen(pPlot)
+				WBEventScreen.WBEventScreen(self.WB).interfaceScreen(pPlot)
 			elif iIndex == 6:
-				WBPlayerUnits.WBPlayerUnits().interfaceScreen(pUnit.getOwner())
+				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(pUnit.getOwner())
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(pUnit.getOwner())
+				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(pUnit.getOwner())
 
 		elif sName == "CargoType":
 			bCargo = not bCargo
@@ -699,7 +700,7 @@ class WBUnitScreen:
 
 		elif sName == "UnitScreenHeader":
 			popup = Popup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setUserData((pUnit.getID(), pUnit.getOwner()))
+			popup.setUserData((pUnit.getOwner(), pUnit.getID()))
 			popup.setBodyString(CyTranslator().getText("TXT_KEY_RENAME_UNIT", ()))
 			popup.createEditBox(pUnit.getNameNoDesc())
 			popup.setEditBoxMaxCharCount(25)
@@ -827,7 +828,7 @@ class WBUnitScreen:
 		elif sName == "Commands":
 			iIndex = screen.getPullDownData("Commands", screen.getSelectedPullDownID("Commands"))
 			lUnits = []
-			self.top.lMoveUnit = []
+			self.WB.lMoveUnit = []
 			if iCommandUnitType == 0:
 				lUnits.append(pUnit)
 			else:
@@ -866,17 +867,17 @@ class WBUnitScreen:
 			self.doMission()
 
 		elif sName == "TargetPlot":
-			self.top.iPlayerAddMode = "TargetPlot"
-			self.top.TempInfo = [pUnit.getOwner(), pUnit.getID()]
+			self.WB.iPlayerAddMode = "TargetPlot"
+			self.WB.TempInfo = [pUnit.getOwner(), pUnit.getID()]
 			screen.hideScreen()
 
 		elif sName == "UnitExit":
-			self.top.iTargetPlotX = -1
-			self.top.iTargetPlotY = -1
+			self.WB.iTargetPlotX = -1
+			self.WB.iTargetPlotY = -1
 
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CHARACTER) and inputClass.getData() == int(InputTypes.KB_ESCAPE):
-			self.top.iTargetPlotX = -1
-			self.top.iTargetPlotY = -1
+			self.WB.iTargetPlotX = -1
+			self.WB.iTargetPlotY = -1
 		return 1
 
 	def doAllCommands(self, pUnitX, iIndex):
@@ -895,8 +896,8 @@ class WBUnitScreen:
 			pUnitX.setScriptData("")
 			return 2
 		elif iIndex == 2:
-			self.top.iPlayerAddMode = "MoveUnits"
-			self.top.lMoveUnit.append([pUnitX.getOwner(), pUnitX.getID()])
+			self.WB.iPlayerAddMode = "MoveUnits"
+			self.WB.lMoveUnit.append([pUnitX.getOwner(), pUnitX.getID()])
 			return 0
 		elif iIndex == 3:
 			for i in xrange(iChange + 1):
@@ -926,9 +927,9 @@ class WBUnitScreen:
 		elif sType == "MISSION_GOLDEN_AGE":
 			iData1 = -1
 		else:
-			iData1 = self.top.iTargetPlotX
-			iData2 = self.top.iTargetPlotY
-		pTargetPlot = CyMap().plot(self.top.iTargetPlotX, self.top.iTargetPlotY)
+			iData1 = self.WB.iTargetPlotX
+			iData2 = self.WB.iTargetPlotY
+		pTargetPlot = CyMap().plot(self.WB.iTargetPlotX, self.WB.iTargetPlotY)
 		pUnit.getGroup().pushMission(MissionTypes(iMissionType), iData1, iData2, 0, False, True, MissionAITypes.NO_MISSIONAI, pTargetPlot, pUnit)
 		self.interfaceScreen(pUnit)
 

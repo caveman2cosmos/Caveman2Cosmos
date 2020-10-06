@@ -68,6 +68,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -153,6 +154,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -235,6 +237,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>270</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -333,13 +336,13 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>430</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iFirstStrikes>1</iFirstStrikes>
 			<iPursuit>5</iPursuit>
 			<iCityDefense>50</iCityDefense>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -420,6 +423,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>270</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -527,6 +531,7 @@
 				</Or>
 			</TrainCondition>
 			<iCost>325</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>13</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

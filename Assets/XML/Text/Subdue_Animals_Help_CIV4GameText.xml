@@ -305,7 +305,7 @@
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Goat Herd and Myth, Master Hunter, Exotic Herbivore Cage</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Goat Herd and Myth, Maître de Chasse, Exotic Herbivore Cage</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Branco - capre, Mito della capra[NEWLINE][ICON_BULLET]Mastro cacciatore[NEWLINE][ICON_BULLET]Gabbia - Erbivori esotici</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Stado Kóz [NEWLINE][ICON_BULLET]Wybitny Łowca[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Stado Kóz[NEWLINE][ICON_BULLET]Wybitny Łowca[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA_HELP</Tag>
@@ -518,7 +518,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of sea animals, convert into science and culture in a city</English>
 		<French>[ICON_BULLET][Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes des animaux marins, qui sont convertis en science et culture dans la ville</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] i miti degli animali marini [NEWLINE][ICON_BULLET]Converti in ricerca o cultura</Italian>
-		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Zwierząt Morskich [NEWLINE][ICON_BULLET]Zamień na naukę i kulturę w mieście</Polish>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] i miti degli animali marini[NEWLINE][ICON_BULLET]Converti in ricerca o cultura</Italian>
+		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Zwierząt Morskich[NEWLINE][ICON_BULLET]Zamień na naukę i kulturę w mieście</Polish>
 	</TEXT>
 </Civ4GameText>

@@ -667,7 +667,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -1331,7 +1331,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>15</iCultureVictoryWeight>
@@ -2010,7 +2010,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>55</iCultureVictoryWeight>
@@ -2680,7 +2680,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>70</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>20</iCultureVictoryWeight>
@@ -3352,7 +3352,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -4028,7 +4028,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iSpaceVictoryWeight>30</iSpaceVictoryWeight>
@@ -4711,7 +4711,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -5379,7 +5379,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>45</iCultureVictoryWeight>
@@ -6048,7 +6048,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>35</iCultureVictoryWeight>
@@ -6728,7 +6728,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>65</iCultureVictoryWeight>
@@ -7413,7 +7413,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -8095,7 +8095,7 @@
 			<iRefuseToTalkWarThreshold>5</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>15</iCultureVictoryWeight>
@@ -8773,7 +8773,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -9453,7 +9453,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -10123,7 +10123,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>45</iCultureVictoryWeight>
@@ -10757,7 +10757,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -11435,7 +11435,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>55</iCultureVictoryWeight>
@@ -12104,7 +12104,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>50</iCultureVictoryWeight>
@@ -12778,7 +12778,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>10</iCultureVictoryWeight>
@@ -13460,7 +13460,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>70</iCultureVictoryWeight>
@@ -14135,7 +14135,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -14819,7 +14819,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>60</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -15512,7 +15512,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -16194,7 +16194,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -16865,7 +16865,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -17539,7 +17539,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>50</iCultureVictoryWeight>
@@ -18219,7 +18219,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>15</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>10</iCultureVictoryWeight>
@@ -18900,7 +18900,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>50</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>60</iCultureVictoryWeight>
@@ -19569,7 +19569,7 @@
 			<iEspionageWeight>60</iEspionageWeight>
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>20</iNoTechTradeThreshold>
-			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>50</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>45</iCultureVictoryWeight>
@@ -20244,7 +20244,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iSpaceVictoryWeight>50</iSpaceVictoryWeight>
@@ -20921,7 +20921,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -21606,7 +21606,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -22284,7 +22284,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>60</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -22964,7 +22964,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>15</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>40</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>15</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>45</iCultureVictoryWeight>
@@ -23643,7 +23643,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>10</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>35</iCultureVictoryWeight>
@@ -24320,7 +24320,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>10</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -25018,7 +25018,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>40</iCultureVictoryWeight>
@@ -25682,7 +25682,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>60</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>15</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>40</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -26365,7 +26365,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>10</iCultureVictoryWeight>
@@ -27034,7 +27034,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -27705,7 +27705,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>10</iCultureVictoryWeight>
@@ -28386,7 +28386,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -29053,7 +29053,7 @@
 			<iRefuseToTalkWarThreshold>12</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>80</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -29726,7 +29726,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>80</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>10</iCultureVictoryWeight>
@@ -30422,7 +30422,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>55</iCultureVictoryWeight>
@@ -31125,7 +31125,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>15</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -31811,7 +31811,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>100</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -32497,7 +32497,7 @@
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>35</iCultureVictoryWeight>
@@ -33183,7 +33183,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>15</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>40</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -33879,7 +33879,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>40</iCultureVictoryWeight>
@@ -34590,7 +34590,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>15</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -35285,7 +35285,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>50</iCultureVictoryWeight>
@@ -35971,7 +35971,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>15</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>40</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -36653,7 +36653,7 @@
 			<iEspionageWeight>80</iEspionageWeight>
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>20</iNoTechTradeThreshold>
-			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>50</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>40</iCultureVictoryWeight>
@@ -37335,7 +37335,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>60</iCultureVictoryWeight>
@@ -38026,7 +38026,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>50</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>60</iCultureVictoryWeight>
@@ -38708,7 +38708,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>30</iCultureVictoryWeight>
@@ -39383,7 +39383,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>12</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>15</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>40</iCultureVictoryWeight>
@@ -40089,7 +40089,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>40</iCultureVictoryWeight>
@@ -40757,7 +40757,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -41436,7 +41436,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>10</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -42104,7 +42104,7 @@
 			<iRefuseToTalkWarThreshold>12</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>80</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>25</iCultureVictoryWeight>
@@ -42777,7 +42777,7 @@
 			<iRefuseToTalkWarThreshold>6</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>20</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -43445,7 +43445,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -44110,7 +44110,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>15</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -44776,7 +44776,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>20</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>
@@ -45459,7 +45459,7 @@
 			<iRefuseToTalkWarThreshold>8</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
-			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
+			<iMaxGoldTradePercent>30</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
 			<!-- BBAI Victory Strategy -->
 			<iCultureVictoryWeight>5</iCultureVictoryWeight>

@@ -1,6 +1,8 @@
 // random.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvRandom.h"
 
 #define RANDOM_A      (1103515245)
 #define RANDOM_C      (12345)
@@ -46,7 +48,7 @@ void CvRandom::reset(unsigned long ulSeed)
 }
 
 
-unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
+uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
 {
 
 /*************************************************************************************************/
@@ -76,7 +78,7 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 /*************************************************************************************************/
 	m_ulRandomSeed = ((RANDOM_A * m_ulRandomSeed) + RANDOM_C);
 
-	unsigned short us = ((unsigned short)((((m_ulRandomSeed >> RANDOM_SHIFT) & MAX_UNSIGNED_SHORT) * ((unsigned long)usNum)) / (MAX_UNSIGNED_SHORT + 1)));
+	uint16_t us = ((uint16_t)((((m_ulRandomSeed >> RANDOM_SHIFT) & MAX_UNSIGNED_SHORT) * ((unsigned long)usNum)) / (MAX_UNSIGNED_SHORT + 1)));
 
 	return us;
 }

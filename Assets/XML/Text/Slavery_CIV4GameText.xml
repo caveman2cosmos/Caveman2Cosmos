@@ -145,7 +145,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>
-			<Text>Baracca degli schiavi - Inddustria</Text>
+			<Text>Baracca degli schiavi - Industria</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -203,10 +203,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Tag>
-		<English>Slavery....</English>
-		<French>Esclavage....</French>
-		<Italian>Schiavismo....</Italian>
-		<Polish>Niewolnictwo....</Polish>
+		<English>Slavery...</English>
+		<French>Esclavage...</French>
+		<Italian>Schiavismo...</Italian>
+		<Polish>Niewolnictwo...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Tag>
@@ -239,7 +239,6 @@
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
 		<English>Join city as a crime prevention slave.</English>
 		<French>Rejoindre la ville en tant que force de l'ordre.</French>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</Tag>
@@ -601,9 +600,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Tag>
-		<English>Captives can join a city as a Settled Slave specialits if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality. [NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
-		<Italian>I prigionieri possono unirsi alla città come schiavi sedentari se la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione. [NEWLINE][ICON_BULLET]Gli schiavi sedentari legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti primitivi[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigratu - uno per goni 3 slavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]Prigionieri - Schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
-		<Polish>Jeńcy moga dołączyć do miasto jako Osiadli Niewolnicy (specjaliści) jeśli [LINK=CONCEPT_WORLD_VIEW]Swiatopogląd - Niewolnictwo[\LINK] jest aktywny. Jeśli zakończysz działanie tego Swiatopoglądu to Ci specjaliśc zamienią się w jednostki (w zależności od typu specjalizacji). [NEWLINE][ICON_BULLET]Osiadły Niewolnik (Rozrywka) zostają [LINK=UNIT_STORY_TELLER]Opowiadaczami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Żywność) zostaje Kawananą Żywności lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Zdrowie) zostają [LINK=UNIT_HEALER]Uzdrowicielami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Produkcja) zostają [LINK=UNIT_EARLY_MERCHANT_C2C]Wczesnymi Kupcami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik, Osiadły Niewolnik (Bogactwo i Nauczanie) zwiększają populację lub zostają immigrantami. [LINK=UNIT_FREED_SLAVE]Wyzwoleni Niewolnicy[\LINK] - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
+		<English>Captives can join a city as a Settled Slave specialits if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
+		<Italian>I prigionieri possono unirsi alla città come schiavi sedentari se la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti primitivi[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigratu - uno per goni 3 slavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]Prigionieri - Schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
+		<Polish>Jeńcy moga dołączyć do miasto jako Osiadli Niewolnicy (specjaliści) jeśli [LINK=CONCEPT_WORLD_VIEW]Swiatopogląd - Niewolnictwo[\LINK] jest aktywny. Jeśli zakończysz działanie tego Swiatopoglądu to Ci specjaliśc zamienią się w jednostki (w zależności od typu specjalizacji).[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Rozrywka) zostają [LINK=UNIT_STORY_TELLER]Opowiadaczami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Żywność) zostaje Kawananą Żywności lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Zdrowie) zostają [LINK=UNIT_HEALER]Uzdrowicielami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Produkcja) zostają [LINK=UNIT_EARLY_MERCHANT_C2C]Wczesnymi Kupcami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik, Osiadły Niewolnik (Bogactwo i Nauczanie) zwiększają populację lub zostają immigrantami. [LINK=UNIT_FREED_SLAVE]Wyzwoleni Niewolnicy[\LINK] - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PRODUCTION</Tag>

@@ -104,6 +104,7 @@
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>5000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -167,6 +168,7 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>5000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -277,12 +279,12 @@
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>5000</iCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>30</iPower>
 			<UnitMeshGroups>
@@ -421,9 +423,9 @@
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -516,9 +518,9 @@
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -621,9 +623,9 @@
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -745,9 +747,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -837,9 +839,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -944,9 +946,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1067,9 +1069,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1171,9 +1173,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1280,9 +1282,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1369,9 +1371,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>10</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>180</iCombat>
@@ -1425,9 +1427,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>120</iCombat>
@@ -1481,9 +1483,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>240</iCombat>
@@ -1537,9 +1539,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>360</iCombat>
@@ -1608,9 +1610,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>480</iCombat>
@@ -1690,6 +1692,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>80</iCombat>
@@ -1704,7 +1707,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -1773,6 +1775,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>150</iCombat>
@@ -1787,7 +1790,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -1862,6 +1864,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
@@ -1876,7 +1879,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -1950,6 +1952,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>90</iCombat>
@@ -1964,7 +1967,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -2038,6 +2040,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
@@ -2052,7 +2055,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -2126,6 +2128,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
@@ -2140,7 +2143,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -2211,6 +2213,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
@@ -2225,7 +2228,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -2297,6 +2299,7 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>170</iCombat>
@@ -2311,7 +2314,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>500</iPower>
 			<UnitMeshGroups>
@@ -2416,6 +2418,7 @@
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -2489,6 +2492,7 @@
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -2551,6 +2555,7 @@
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -2617,6 +2622,7 @@
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -2673,9 +2679,9 @@
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2728,9 +2734,9 @@
 			<iCost>3000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
-			<iExtraCost>10</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2853,6 +2859,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -3028,6 +3035,7 @@
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -3204,6 +3212,7 @@
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
@@ -3498,6 +3507,7 @@
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
@@ -3641,6 +3651,7 @@
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
@@ -3701,6 +3712,7 @@
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>100</iBaseHurry>
@@ -3766,6 +3778,7 @@
 			<iCost>5500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>150</iBaseHurry>
@@ -3833,6 +3846,7 @@
 			<iCost>6000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>200</iBaseHurry>
@@ -3902,6 +3916,7 @@
 			<iCost>6500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>250</iBaseHurry>
@@ -3972,6 +3987,7 @@
 			<iCost>7000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>300</iBaseHurry>
@@ -4043,6 +4059,7 @@
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
@@ -4117,6 +4134,7 @@
 			<iCost>8000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>400</iBaseHurry>
@@ -4202,6 +4220,7 @@
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
@@ -4294,6 +4313,7 @@
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
@@ -4351,6 +4371,7 @@
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
@@ -4491,6 +4512,7 @@
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -4558,6 +4580,7 @@
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -5355,6 +5378,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -5559,6 +5583,7 @@
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -5718,6 +5743,7 @@
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -5845,6 +5871,7 @@
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -5939,6 +5966,7 @@
 			<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6066,6 +6094,7 @@
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6127,6 +6156,7 @@
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
@@ -6470,6 +6500,7 @@
 				<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6548,6 +6579,7 @@
 				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
@@ -6684,6 +6716,7 @@
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6762,6 +6795,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6836,6 +6870,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6912,6 +6947,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -6990,6 +7026,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7068,6 +7105,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7145,6 +7183,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7224,6 +7263,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7298,6 +7338,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7368,6 +7409,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7448,6 +7490,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7529,6 +7572,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7610,6 +7654,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7684,6 +7729,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7757,6 +7803,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7831,6 +7878,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7904,6 +7952,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -7977,6 +8026,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8051,6 +8101,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8124,6 +8175,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8197,6 +8249,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8271,6 +8324,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8345,6 +8399,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8419,6 +8474,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8494,6 +8550,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8565,6 +8622,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8636,6 +8694,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8707,6 +8766,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8778,6 +8838,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8849,6 +8910,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8920,6 +8982,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -8991,6 +9054,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -9062,6 +9126,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -9143,6 +9208,7 @@
 			</Actions>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
@@ -9215,6 +9281,7 @@
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
@@ -9277,6 +9344,7 @@
 			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
@@ -9335,6 +9403,7 @@
 			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
@@ -9407,6 +9476,7 @@
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<iCost>3000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>90</iCombat>
@@ -9437,7 +9507,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iBombardRate>20</iBombardRate>
-			<iExtraCost>15</iExtraCost>
 			<iAsset>15</iAsset>
 			<iPower>60</iPower>
 			<UnitMeshGroups>
@@ -9527,6 +9596,7 @@
 			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>120</iCombat>
@@ -9557,7 +9627,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iBombardRate>20</iBombardRate>
-			<iExtraCost>15</iExtraCost>
 			<iAsset>15</iAsset>
 			<iPower>60</iPower>
 			<UnitMeshGroups>
@@ -9643,6 +9712,7 @@
 			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
 			<iCost>9800</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>160</iCombat>
@@ -9673,7 +9743,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iBombardRate>20</iBombardRate>
-			<iExtraCost>15</iExtraCost>
 			<iAsset>15</iAsset>
 			<iPower>60</iPower>
 			<UnitMeshGroups>
@@ -9835,10 +9904,10 @@
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>1700</iCost>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>400</iWorkRate>
 			<iCombat>20</iCombat>
-			<iExtraCost>4</iExtraCost>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -9942,6 +10011,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<iCost>2000</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>

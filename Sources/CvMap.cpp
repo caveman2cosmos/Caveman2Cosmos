@@ -9,6 +9,7 @@
 
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
 #include "CvPlayerAI.h"
@@ -23,26 +24,6 @@
 /*******************************/
 
 // Public Functions...
-
-CvMap::CvMap()
-	: m_iGridWidth(0)
-	, m_iGridHeight(0)
-	, m_iLandPlots(0)
-	, m_iOwnedPlots(0)
-	, m_iTopLatitude(0)
-	, m_iBottomLatitude(0)
-	, m_iNextRiverID(0)
-	, m_eType(NO_MAP)
-	, m_iCurrentViewportIndex(0)
-	, m_bWrapX(false)
-	, m_bWrapY(false)
-	, m_paiNumBonus(NULL)
-	, m_paiNumBonusOnLand(NULL)
-	, m_bCitiesDisplayed(true)
-	, m_bUnitsDisplayed(true)
-	, m_pMapPlots(NULL)
-{
-}
 
 CvMap::CvMap(MapTypes eType) /* Parallel Maps */
 	: m_iGridWidth(0)
@@ -62,12 +43,12 @@ CvMap::CvMap(MapTypes eType) /* Parallel Maps */
 	, m_bUnitsDisplayed(true)
 	, m_pMapPlots(NULL)
 {
-	OutputDebugString("Calling constructor for Map: Start");
+	OutputDebugString("Calling constructor for Map: Start\n");
 
 	CvMapInitData defaultMapData;
 	reset(&defaultMapData);
 
-	OutputDebugString("Calling constructor for Map: End");
+	OutputDebugString("Calling constructor for Map: End\n");
 }
 
 
@@ -84,7 +65,7 @@ CvMap::~CvMap()
 //	nothing.
 void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
-	OutputDebugString("Initializing Map: Start");
+	OutputDebugString("Initializing Map: Start\n");
 	PROFILE("CvMap::init");
 	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6", 
 		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(), 
@@ -121,7 +102,7 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 	calculateAreas();
 	gDLL->logMemState("CvMap after init plots");
 
-	OutputDebugString("Initializing Map: End");
+	OutputDebugString("Initializing Map: End\n");
 }
 
 
@@ -756,7 +737,7 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 				{
 					if (!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || (bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area()))
 					{
-						if (!bCoastalOnly || pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+						if (!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 						{
 							if (eTeamAtWarWith == NO_TEAM || atWar(kLoopPlayer.getTeam(), eTeamAtWarWith))
 							{
@@ -945,7 +926,7 @@ int CvMap::getLandPlots() const
 
 void CvMap::changeLandPlots(int iChange)
 {
-	m_iLandPlots = (m_iLandPlots + iChange);
+	m_iLandPlots += iChange;
 	FAssert(getLandPlots() >= 0);
 }
 
@@ -958,7 +939,7 @@ int CvMap::getOwnedPlots() const
 
 void CvMap::changeOwnedPlots(int iChange)
 {
-	m_iOwnedPlots = (m_iOwnedPlots + iChange);
+	m_iOwnedPlots += iChange;
 	FAssert(getOwnedPlots() >= 0);
 }
 
@@ -1019,16 +1000,14 @@ CustomMapOptionTypes CvMap::getCustomMapOption(int iOption) const
 
 int CvMap::getNumBonuses(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNumBonus[eIndex];
 }
 
 
 void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonus[eIndex] += iChange;
 	FAssertMsg(m_paiNumBonus[eIndex] >= 0, "Negative bonus occurance on the map!");
 }
@@ -1036,17 +1015,15 @@ void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 
 int CvMap::getNumBonusesOnLand(BonusTypes eIndex) const
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	return m_paiNumBonusOnLand[eIndex];
 }
 
 
 void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiNumBonusOnLand[eIndex] = (m_paiNumBonusOnLand[eIndex] + iChange);
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
+	m_paiNumBonusOnLand[eIndex] += iChange;
 	FAssert(getNumBonusesOnLand(eIndex) >= 0);
 }
 
@@ -1510,7 +1487,7 @@ int	CvMap::getNumViewports() const
 
 CvViewport* CvMap::getViewport(int iIndex) const
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	return m_viewports[iIndex];
 }
@@ -1530,7 +1507,7 @@ int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Re
 
 void CvMap::deleteViewport(int iIndex)
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	if (m_iCurrentViewportIndex == iIndex)
 	{
@@ -1549,7 +1526,7 @@ void CvMap::deleteViewport(int iIndex)
 
 void CvMap::setCurrentViewport(int iIndex)
 {
-	FAssert(iIndex >= 0 && iIndex < (int)m_viewports.size());
+	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
 
 	m_iCurrentViewportIndex = iIndex;
 }
@@ -1564,11 +1541,6 @@ CvViewport* CvMap::getCurrentViewport() const
 MapTypes CvMap::getType() const
 {
 	return m_eType;
-}
-
-void CvMap::setType(MapTypes eNewType)
-{
-	m_eType = eNewType;
 }
 
 /*******************************/

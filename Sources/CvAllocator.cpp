@@ -879,7 +879,7 @@ namespace MemTrack
 			% "" 
 			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str() 
 			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks)) 
-			% convertSize(static_cast<int>(static_cast<long long>(grandTotalSize) - static_cast<long long>(totalLastTurnSize))).c_str();
+			% convertSize(static_cast<int>(static_cast<int64_t>(grandTotalSize) - static_cast<int64_t>(totalLastTurnSize))).c_str();
 
 		totalLastTurnBlocks = grandTotalNumBlocks;
 		totalLastTurnSize = grandTotalSize;
