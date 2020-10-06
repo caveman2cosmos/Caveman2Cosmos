@@ -3,6 +3,8 @@
 #ifndef CV_BUILDING_INFO_H
 #define CV_BUILDING_INFO_H
 
+#include "CvInfos.h"
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvBuildingInfo
@@ -15,9 +17,9 @@ class CvArtInfoBuilding;
 class CvArtInfoMovie;
 class CvHotkeyInfo;
 class CvProperties;
-class FDataStreamBase;
+class CvPropertyManipulators;
 class CvXMLLoadUtility;
-#include "CvInfos.h"
+class FDataStreamBase;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
