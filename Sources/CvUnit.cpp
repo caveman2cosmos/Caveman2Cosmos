@@ -35136,8 +35136,8 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 
 		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_SUFFERED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
-		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
+		const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
+		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 	}
 }
 
