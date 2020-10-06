@@ -285,7 +285,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	}
 
 	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY))
-	&& pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != (FeatureTypes)GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
+	&& pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != GC.getFEATURE_FLOOD_PLAINS()
 	&& (GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 0 || GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 1))
 	{
 		pPlot->setFeatureType(NO_FEATURE);
@@ -11618,12 +11618,12 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 							if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
 								CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CULTURE_LEVEL", getNameKey(), GC.getCultureLevelInfo(getCultureLevel()).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, GC.getCommerceInfo(COMMERCE_CULTURE).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX(), getY(), true, true);
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, GC.getCommerceInfo(COMMERCE_CULTURE).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
 							}
 							else
 							{
 								CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CULTURE_LEVEL_UNKNOWN", GC.getCultureLevelInfo(getCultureLevel()).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, GC.getCommerceInfo(COMMERCE_CULTURE).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, GC.getCommerceInfo(COMMERCE_CULTURE).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT());
 							}
 						}
 					}
@@ -14067,7 +14067,7 @@ void CvCity::doFoundMessage()
 	AddDLLMessage(getOwner(), false, -1, szBuffer, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_MAJOR_EVENT, NULL, NO_COLOR, getX(), getY());
 
 	szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_IS_FOUNDED", getNameKey());
-	GC.getGame().addReplayMessage(REPLAY_MESSAGE_CITY_FOUNDED, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_ALT_HIGHLIGHT_TEXT"));
+	GC.getGame().addReplayMessage(REPLAY_MESSAGE_CITY_FOUNDED, getOwner(), szBuffer, getX(), getY(), GC.getCOLOR_ALT_HIGHLIGHT_TEXT());
 }
 
 
@@ -15273,7 +15273,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 					{
 						{
 							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(eIndex).getTextKeyWide());
-							GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_BUILDING_TEXT"));
+							GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), GC.getCOLOR_BUILDING_TEXT());
 						}
 
 						for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -15285,12 +15285,12 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 								if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 								{
 									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(eIndex).getTextKeyWide());
-									AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT, GC.getBuildingInfo(eIndex).getArtInfo()->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_BUILDING_TEXT"), getX(), getY(), true, true);
+									AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT, GC.getBuildingInfo(eIndex).getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT(), getX(), getY(), true, true);
 								}
 								else
 								{
 									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN", GC.getBuildingInfo(eIndex).getTextKeyWide());
-									AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT, GC.getBuildingInfo(eIndex).getArtInfo()->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_BUILDING_TEXT"));
+									AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT, GC.getBuildingInfo(eIndex).getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT());
 								}
 							}
 						}
@@ -15562,7 +15562,7 @@ void CvCity::checkReligiousDisablingAllBuildings()
 										MEMORY_TRACK_EXEMPT();
 
 										CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eBuilding).getDescription());
-										AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eBuilding).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
+										AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eBuilding).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 										bChangeMade = true;
 									}
 
@@ -15650,7 +15650,7 @@ void CvCity::checkReligiousDisabling(BuildingTypes eBuilding)
 									MEMORY_TRACK_EXEMPT();
 
 									CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eBuilding).getDescription());
-									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eBuilding).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
+									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eBuilding).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 								}
 
 								if (isReligiouslyDisabledBuilding(eBuilding))
@@ -19789,7 +19789,7 @@ void CvCity::liberate(bool bConquest)
 			iOldVassalLand = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTotalLand(false);
 		}
 
-		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_LIBERATED", getNameKey(), GET_PLAYER(eOwner).getNameKey(), GET_PLAYER(ePlayer).getCivilizationAdjectiveKey());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_LIBERATED", getNameKey(), GET_PLAYER(eOwner).getNameKey(), GET_PLAYER(ePlayer).getCivilizationAdjectiveKey());
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -19798,11 +19798,11 @@ void CvCity::liberate(bool bConquest)
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_REVOLTEND", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX(), getY(), true, true);
+					AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_REVOLTEND", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
 				}
 			}
 		}
-		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, eOwner, szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, eOwner, szBuffer, getX(), getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
 
 		GET_PLAYER(ePlayer).acquireCity(this, false, true, true);
 		GET_PLAYER(ePlayer).AI_changeMemoryCount(eOwner, MEMORY_LIBERATED_CITIES, 1);
@@ -21587,7 +21587,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, kBuilding.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, kBuilding.getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 					}
 				}
 			}
@@ -22182,7 +22182,7 @@ void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue
 				MEMORY_TRACK_EXEMPT();
 
 				CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 			}
 		}
 	}
@@ -24214,7 +24214,7 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, CvColorInfo::green(), plot()->getX(), plot()->getY());
 		setNumRealBuilding(eBuilding, 0);
 	}
-	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
+	//PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 	//PropertyTypes eProperty;
 	//PromotionLineTypes eCityDisease;
 	//CvPropertyInfo& kInfo = GC.getPropertyInfo(eDiseaseType);
@@ -25421,25 +25421,20 @@ void CvCity::doPropertyUnitSpawn()
 
 						if (!bPositiveProperty)
 						{
-							CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-
 							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 							{
 								MEMORY_TRACK_EXEMPT();
 
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
+								const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
+								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 							}
 						}
-						else
+						else if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 						{
-							CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
+							MEMORY_TRACK_EXEMPT();
 
-							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX(), getY(), true, true);
-							}
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
+							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
 						}
 					}
 				}

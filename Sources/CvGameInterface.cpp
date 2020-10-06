@@ -102,7 +102,7 @@ void CvGame::updateColoredPlots()
 				{
 					gDLL->getEngineIFace()->addColoredPlot(
 						pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
-						GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(),
+						GC.getColorInfo(GC.getCOLOR_WARNING_TEXT()).getColor(),
 						PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
 					);
 				}
@@ -110,7 +110,7 @@ void CvGame::updateColoredPlots()
 				{
 					gDLL->getEngineIFace()->addColoredPlot(
 						pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
-						GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
+						GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
 						PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
 					);
 				}
@@ -434,7 +434,7 @@ void CvGame::updateColoredPlots()
 
 				if (pLoopPlot->getOwner() == pHeadSelectedUnit->getOwner() && pLoopPlot->getWorkingCity() != NULL)
 				{
-					NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor());
+					NiColorA color(GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor());
 					color.a = 1.0f;
 					gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
@@ -547,12 +547,12 @@ void CvGame::updateColoredPlots()
 				if (pCity != NULL && pHeadSelectedUnit->AI_bestCityBuild(pCity, &pBestPlot))
 				{
 					FAssert(pBestPlot != NULL);
-					gDLL->getEngineIFace()->addColoredPlot(pBestPlot->getViewportX(), pBestPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
+					gDLL->getEngineIFace()->addColoredPlot(pBestPlot->getViewportX(), pBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 
 					if (pHeadSelectedUnit->AI_bestCityBuild(pCity, &pNextBestPlot, NULL, pBestPlot))
 					{
 						FAssert(pNextBestPlot != NULL);
-						gDLL->getEngineIFace()->addColoredPlot(pNextBestPlot->getViewportX(), pNextBestPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
+						gDLL->getEngineIFace()->addColoredPlot(pNextBestPlot->getViewportX(), pNextBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 					}
 				}
 			}
@@ -571,7 +571,7 @@ void CvGame::updateColoredPlots()
 						{
 							gDLL->getEngineIFace()->addColoredPlot(
 								pLoopPlot->getX(), pLoopPlot->getY(),
-								GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
+								GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
 								PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
 							);
 						}
@@ -581,7 +581,7 @@ void CvGame::updateColoredPlots()
 						{
 							gDLL->getEngineIFace()->addColoredPlot(
 								pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
-								GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(),
+								GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(),
 								PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
 							);
 						}
@@ -650,13 +650,12 @@ void CvGame::updateBlockadedPlots()
 
 		if (pLoopPlot->getBlockadedCount(getActiveTeam()) > 0 && pLoopPlot->isRevealed(getActiveTeam(), false))
 		{
-			NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLACK")).getColor());
+			NiColorA color(GC.getColorInfo(GC.getCOLOR_BLACK()).getColor());
 			color.a = 0.35f;
 			gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_BLOCKADED);
 		}
 	}
 }
-
 
 
 void CvGame::updateSelectionList()

@@ -9516,7 +9516,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			//			}
 			//			//else
 			//			//{
-			//			//	PropertyTypes pProperty = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME");
+			//			//	PropertyTypes pProperty = GC.getPROPERTY_CRIME();
 			//			//	if ( !AI_choosePropertyControlUnit(10, pProperty) )
 			//			//	{
 			//			//		if (AI_getHappyFromHurry((HurryTypes)iI) > 0)

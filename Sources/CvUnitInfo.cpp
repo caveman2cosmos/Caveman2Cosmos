@@ -690,7 +690,7 @@ int CvUnitInfo::getWithdrawalProbability(bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
 	{
-		if (hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD")))
+		if (hasUnitCombat(GC.getUNITCOMBAT_WILD()))
 		{
 			return 0;
 		}

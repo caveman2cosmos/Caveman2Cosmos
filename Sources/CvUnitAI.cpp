@@ -2149,7 +2149,7 @@ int CvUnitAI::AI_minSettlerDefense() const
 		defenders++;
 	}
 
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getInfoTypeForString("TECH_TRIBALISM")))
+	if (GET_TEAM(getTeam()).isHasTech(GC.getTECH_TRIBALISM()))
 	{
 		defenders++;
 	}
@@ -25771,8 +25771,8 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 			if (isHuman())
 			{
 				// Wake up and notify player!
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_UPGRADE_READY", getNameKey(), pUpgradeCity->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREY"), getX(), getY(), true, true);
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_UPGRADE_READY", getNameKey(), pUpgradeCity->getNameKey());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_GREY(), getX(), getY(), true, true);
 
 				getGroup()->clearMissionQueue();
 				getGroup()->setActivityType(ACTIVITY_AWAKE);
@@ -31239,7 +31239,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		getGroup()->AI_separateAI(UNITAI_SUBDUED_ANIMAL);
 	}
 
-	UnitCombatTypes eIgnoreUnitCombat = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED");
+	const UnitCombatTypes eIgnoreUnitCombat = GC.getUNITCOMBAT_SUBDUED();
 	if (getGroup()->getWorstDamagePercent(eIgnoreUnitCombat) > 0)
 	{
 		OutputDebugString(CvString::format("%S (%d) damaged at (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
@@ -33791,17 +33791,17 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 		return false;
 	}
 
-	const PromotionLineTypes promotionLineStandout = (PromotionLineTypes)GC.getInfoTypeForString("PROMOTIONLINE_STANDOUT");
+	const PromotionLineTypes promotionLineStandout = GC.getPROMOTIONLINE_STANDOUT();
 
 	for (int iI = 0; iI < GC.getGame().getNumStatusPromotions(); iI++)
 	{
 		iValue = 0;
 		iStatus = GC.getGame().getStatusPromotion(iI);
 		eStatus = (PromotionTypes)iStatus;
-		CvPromotionInfo &kPromotion = GC.getPromotionInfo(eStatus);
+		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
 		for (int iJ = 0; iJ < GC.getGame().getNumStatusPromotions(); iJ++)
 		{
-			if (GC.getPromotionInfo(eStatus).getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine())
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine())
 			{
 				if (GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
 				{

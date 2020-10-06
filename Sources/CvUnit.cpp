@@ -480,7 +480,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
 							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
-							(ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true
+							GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
 						);
 					}
 					else
@@ -489,7 +489,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_MISC_UNKNOWN_CREATED_UNIT", getNameKey()),
 							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
-							(ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT")
+							GC.getCOLOR_UNIT_TEXT()
 						);
 					}
 				}
@@ -497,7 +497,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GC.getGame().addReplayMessage(
 				REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
 				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
-				getX(), getY(), (ColorTypes) GC.getInfoTypeForString("COLOR_UNIT_TEXT")
+				getX(), getY(), GC.getCOLOR_UNIT_TEXT()
 			);
 		}
 		setGGExperienceEarnedTowardsType();
@@ -2925,10 +2925,10 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK_OWNER", getNameKey(), GET_PLAYER(eDefender).getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+				AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 			}
 			bool bStealthDefense = false;
 			if (bStealthAttack || bStealth)
@@ -2941,10 +2941,10 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT_OWNER", pDefender->getNameKey(), GET_PLAYER(getOwner()).getNameKey(), getNameKey());
-					AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+					AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 				}
 			}
 			m_combatResult.bStealthDefense = bStealthDefense && !(pDefender->plot() == plot());//Note this information is transferred to bStealthDefense during bFinish routine to help define whether units should lose movement or not.
@@ -13359,16 +13359,7 @@ bool CvUnit::hasMoved()	const
 
 int CvUnit::airRange() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 08/5/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	return (m_pUnitInfo->getAirRange() + getExtraAirRange());
-*/
-//Team Project (6)
-	SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
+	const SpecialUnitTypes eMissile = GC.getSPECIALUNIT_MISSILE();
 	if (getDomainType() == DOMAIN_AIR && nukeRange() == -1 && getSpecialUnitType() != eMissile)
 	{
 		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwner()).getNationalFlightOperationRangeChange());
@@ -13378,9 +13369,6 @@ int CvUnit::airRange() const
 		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwner()).getNationalMissileRangeChange());
 	}
 	return (m_pUnitInfo->getAirRange() + getExtraAirRange());
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 
@@ -15561,31 +15549,31 @@ int CvUnit::maxXPValue(const CvUnit* pVictim, bool bBarb) const
 
 	if (pVictim != NULL && pVictim->isAnimal())
 	{
-		if (!isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_EXPLORER"))
-		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_ANIMAL_HUNTER")))
+		if (!isHasUnitCombat(GC.getUNITCOMBAT_EXPLORER())
+		&& !isHasPromotion(GC.getPROMOTION_ANIMAL_HUNTER()))
 		{
-			iMaxValue = GC.getDefineINT("ANIMAL_MAX_XP_VALUE");
+			iMaxValue = GC.getANIMAL_MAX_XP_VALUE();
 		}
 	}
 	else if (pVictim != NULL && pVictim->isHominid() || bBarb)
 	{
-		if (!isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_RECON"))
-		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER")))
+		if (!isHasUnitCombat(GC.getUNITCOMBAT_RECON())
+		&& !isHasPromotion(GC.getPROMOTION_BARBARIAN_HUNTER()))
 		{
-			iMaxValue = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE");
+			iMaxValue = GC.getBARBARIAN_MAX_XP_VALUE();
 		}
 	}
-	else if (pVictim != NULL && getUnitCombatType() == (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HUNTER"))
+	else if (pVictim != NULL && getUnitCombatType() == GC.getUNITCOMBAT_HUNTER())
 	{
-		if (!isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER"))
-		&& pVictim->getUnitCombatType() != (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"))
+		if (!isHasPromotion(GC.getPROMOTION_BARBARIAN_HUNTER())
+		&& pVictim->getUnitCombatType() != GC.getUNITCOMBAT_ANIMAL())
 		{
-			iMaxValue = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE");
+			iMaxValue = GC.getBARBARIAN_MAX_XP_VALUE();
 		}
 	}
 	if (iMaxValue > 0 && GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
 	{
-		iMaxValue *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
+		iMaxValue *= GC.getMORE_XP_TO_LEVEL_MODIFIER();
 		iMaxValue /= 100;
 	}
 	return iMaxValue;
@@ -16442,7 +16430,7 @@ int CvUnit::cargoSpace() const
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange();
 	}
-	if (specialCargo() == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE"))
+	if (specialCargo() == GC.getSPECIALUNIT_MISSILE())
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 	}
@@ -32757,35 +32745,20 @@ void CvUnit::addMission(const CvMissionDefinition& mission)
 		gDLL->getEntityIFace()->AddMission(&mission);
 	}
 }
-//TB Archery Bombard Fix (with Koshling's professional assistance ;) )
+
 bool CvUnit::isArcher() const
 {
-	UnitCombatTypes eArcherType = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ARCHER");
-
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (isHasUnitCombat((UnitCombatTypes)iI))
-		{
-			if ( eArcherType == ((UnitCombatTypes)iI) )
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return isHasUnitCombat(GC.getUNITCOMBAT_ARCHER());
 }
-//TB Archery Bombard Fix end
+
 //TB Combat Mods begin
 bool CvUnit::isPromotionOverriden(PromotionTypes ePromotionType) const
 {
-	int iI;
-
 	if (isHasPromotion(ePromotionType))
 	{
-		for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			PromotionTypes ePromotion = ((PromotionTypes)iI);
+			const PromotionTypes ePromotion = ((PromotionTypes)iI);
 			if (isHasPromotion(ePromotion))
 			{
 				if (GC.getPromotionInfo(ePromotionType).getPromotionLine() != NO_PROMOTIONLINE)
@@ -39248,7 +39221,7 @@ void CvUnit::setGGExperienceEarnedTowardsType()
 	}
 	if (!bIsSet)
 	{
-		m_eGGExperienceEarnedTowardsType = (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL");
+		m_eGGExperienceEarnedTowardsType = GC.getUNIT_GREAT_GENERAL();
 	}
 	//TB notes: This has been setup to allow the UnitCombat tag to take multiple entries but has not been setup to manage this in CvUnit.
 	//It paves the way for future potential but leaves the design where it is for now where only the first definition the unit finds will be established.
@@ -39671,14 +39644,14 @@ int CvUnit::getCargoCapacitybyType(int iValue) const
 	const SpecialUnitTypes eSpecialUnitDefinedNot = getSMNotSpecialCargo();
 
 	int rankChange = 0;
-	if (eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_PEOPLE")
-	|| eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE"))
+	if (eSpecialUnitDefined == GC.getSPECIALUNIT_PEOPLE()
+	|| eSpecialUnitDefined == GC.getSPECIALUNIT_MISSILE())
 	{
 		rankChange = -3;
 	}
-	else if (eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
-		|| eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_SEAPLANE")
-		|| eSpecialUnitDefinedNot == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE"))
+	else if (eSpecialUnitDefined == GC.getSPECIALUNIT_FIGHTER()
+		|| eSpecialUnitDefined == GC.getSPECIALUNIT_SEAPLANE()
+		|| eSpecialUnitDefinedNot == GC.getSPECIALUNIT_MISSILE())
 	{
 		rankChange = -1;
 	}
@@ -42889,20 +42862,19 @@ void CvUnit::makeWanted(const CvCity* pCity)
 	//Is now Wanted
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnInvestigated())
+		const PromotionTypes ePromotion = ((PromotionTypes)iI);
+		if (GC.getPromotionInfo(ePromotion).isSetOnInvestigated())
 		{
-			const PromotionTypes ePromotion = ((PromotionTypes)iI);
 			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
 			{
 				setHasPromotion(ePromotion, true, true, false, false);
-				const PlayerTypes ePlayer = pCity->getOwner();
-				m_pPlayerInvestigated = ePlayer;
+				m_pPlayerInvestigated = pCity->getOwner();
 				//do message
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pCity->getX(), pCity->getY(), true, true);
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT", pCity->getNameKey());
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pCity->getX(), pCity->getY(), true, true);
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED", getNameKey(), pCity->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCity->getX(), pCity->getY(), true, true);
+				const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED", getNameKey(), pCity->getNameKey());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), CvColorInfo::red(), pCity->getX(), pCity->getY(), true, true);
 				return;
 			}
 		}

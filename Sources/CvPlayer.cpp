@@ -10052,23 +10052,19 @@ bool CvPlayer::isGoldenAge() const
 
 void CvPlayer::reportGoldenAgeStart()
 {
-	CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
-	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
+	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
 
 	CvEventReporter::getInstance().goldenAge(getID());
 }
 
 void CvPlayer::changeGoldenAgeTurns(int iChange)
 {
-	CvWString szBuffer;
-	bool bOldGoldenAge;
-	int iI;
-
 	if (iChange != 0)
 	{
-		bOldGoldenAge = isGoldenAge();
+		const bool bOldGoldenAge = isGoldenAge();
 
-		m_iGoldenAgeTurns = (m_iGoldenAgeTurns + iChange);
+		m_iGoldenAgeTurns += iChange;
 		FAssert(getGoldenAgeTurns() >= 0);
 
 		if (bOldGoldenAge != isGoldenAge())
@@ -10097,7 +10093,7 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 				CvEventReporter::getInstance().endGoldenAge(getID());
 			}
 
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
@@ -10107,13 +10103,13 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 
 						if (isGoldenAge())
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN", getNameKey());
-							AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getID()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN", getNameKey());
+							AddDLLMessage((PlayerTypes)iI, ((PlayerTypes)iI == getID()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 						else
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED", getNameKey());
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGEEND", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED", getNameKey());
+							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGEEND", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 					}
 				}
@@ -22202,7 +22198,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 /* Silence replay messages for events ... too crowded by late game							  */
 /************************************************************************************************/
 /* original code
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), kTriggeredData.m_szGlobalText, kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), kTriggeredData.m_szGlobalText, kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, GC.getCOLOR_HIGHLIGHT_TEXT());
 */
 /************************************************************************************************/
 /* REVOLUTION_MOD						  END												  */
@@ -23457,7 +23453,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 	/* Silence replay messages for events ... too crowded by late game							  */
 	/************************************************************************************************/
 	/*
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szGlobalText, pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szGlobalText, pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY, GC.getCOLOR_HIGHLIGHT_TEXT());
 	*/
 	/************************************************************************************************/
 	/* REVOLUTION_MOD						  END												  */
@@ -24852,7 +24848,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 				}
 			}
 		}
-		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szMessage, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
 
 		GC.getGame().addPlayer(eNewPlayer, eBestLeader, eBestCiv);
 		GET_PLAYER(eNewPlayer).setParent(getID());
@@ -25004,8 +25000,8 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			CvWString szBuffer = gDLL->getText("TXT_KEY_REV_MESS_ASSIMILATE", kPlayer.getCivilizationDescription(), getCivilizationDescription());
-			AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			const CvWString szBuffer = gDLL->getText("TXT_KEY_REV_MESS_ASSIMILATE", kPlayer.getCivilizationDescription(), getCivilizationDescription());
+			AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 		}
 	}
 
@@ -25236,7 +25232,7 @@ void CvPlayer::launch(VictoryTypes eVictory)
 
 			MEMORY_TRACK_EXEMPT();
 
-			AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getMiscArtInfo("SPACE_SHIP_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), plotX, plotY, true, true);
+			AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTURELEVEL", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getMiscArtInfo("SPACE_SHIP_BUTTON")->getPath(), GC.getCOLOR_HIGHLIGHT_TEXT(), plotX, plotY, true, true);
 		}
 	}
 }
@@ -31115,8 +31111,6 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 
 		if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
 		{
-			CvWString szBuffer;
-
 			if ((GC.getTraitInfo(eIndex).isNegativeTrait() && iChange == -1) || (!GC.getTraitInfo(eIndex).isNegativeTrait() && iChange == 1))
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -31129,13 +31123,13 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 						MEMORY_TRACK_EXEMPT();
 						if (GC.getTraitInfo(eIndex).isNegativeTrait())
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
+							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 						else
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
+							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 					}
 				}
@@ -31152,13 +31146,13 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 						MEMORY_TRACK_EXEMPT();
 						if (GC.getTraitInfo(eIndex).isNegativeTrait())
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
+							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 						else
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
+							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 					}
 				}
@@ -32351,7 +32345,7 @@ void CvPlayer::setGreatGeneralTypetoAssign()
 {
 	if (m_eGreatGeneralTypetoAssign == NO_UNIT)
 	{
-		m_eGreatGeneralTypetoAssign = (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL");
+		m_eGreatGeneralTypetoAssign = GC.getUNIT_GREAT_GENERAL();
 	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
@@ -32367,7 +32361,7 @@ UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 {
 	if (m_eGreatGeneralTypetoAssign == NO_UNIT)
 	{
-		return (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL");
+		return GC.getUNIT_GREAT_GENERAL();
 	}
 	return m_eGreatGeneralTypetoAssign;
 }

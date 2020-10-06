@@ -1031,9 +1031,9 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		&&
 		GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS)
 		&& (
-			GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED"))
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED())
 			||
-			GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())
 		)
 	);
 
@@ -1708,8 +1708,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	bool bUnitToCity = getUnitToCity(kUnit);
 	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
 		m_eUnitType > NO_UNIT && 
-		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
+		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
+		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))
 	{
 		bUnitToCity = true;
 	}

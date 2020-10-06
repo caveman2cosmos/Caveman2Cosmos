@@ -2688,7 +2688,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	\*---------------*/
 	// Special desert validator
 	bool bIgnoreNatureYields = false;
-	if (pInfo.isRequiresIrrigation() && getTerrainType() == GC.getInfoTypeForString("TERRAIN_DESERT")
+	if (pInfo.isRequiresIrrigation() && getTerrainType() == GC.getTERRAIN_DESERT()
 	&& (eTeam != NO_TEAM && GET_TEAM(eTeam).isCanFarmDesert() || getTeam() != NO_TEAM && GET_TEAM(getTeam()).isCanFarmDesert()))
 	{
 		bValid = true;
@@ -6569,7 +6569,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			}
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTS_JOINS", pOldCity->getNameKey(), GET_PLAYER(eNewValue).getCivilizationDescriptionKey());
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_ALT_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), GC.getCOLOR_ALT_HIGHLIGHT_TEXT());
 
 			FAssertMsg(pOldCity->getOwner() != eNewValue, "pOldCity->getOwner() is not expected to be equal with eNewValue");
 			GET_PLAYER(eNewValue).acquireCity(pOldCity, false, false, bUpdatePlotGroup); // will delete the pointer
@@ -6887,7 +6887,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 #ifdef EXPERIMENTAL_FEATURE_ON_PEAK
 				if ( eNewValue == PLOT_PEAK )
 				{
-					TerrainTypes eTerrainPeak = (TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK");
+					const TerrainTypes eTerrainPeak = GC.getTERRAIN_PEAK();
 					if ( eTerrainPeak != -1 )
 					{
 						eTerrain = eTerrainPeak;
@@ -9921,7 +9921,7 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 								if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
 									szIcon = GC.getFeatureInfo(getFeatureType()).getButton();
 								else if (getLandmarkType() == LANDMARK_MOUNTAIN_RANGE || getLandmarkType() == LANDMARK_PEAK)
-									szIcon = GC.getTerrainInfo((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
+									szIcon = GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getButton();
 								else
 									szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
 								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, CvColorInfo::white(), getX(), getY(), true, true);
@@ -13486,10 +13486,10 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_DEFENSE_OWNER", pBestUnit->getNameKey(), GET_PLAYER(eAttackingPlayer).getNameKey(), pAttacker->getNameKey());
-		AddDLLMessage(pBestUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+		AddDLLMessage(pBestUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_DEFENSE", GET_PLAYER(eVisualDefender).getNameKey(), pBestUnit->getNameKey(), pAttacker->getNameKey());
-		AddDLLMessage(eAttackingPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+		AddDLLMessage(eAttackingPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
 	}
 }
 

@@ -1104,10 +1104,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_TRADE", GC.getCorporationInfo((CorporationTypes)trade.m_iData).getDescription(),
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_TRADE", GC.getCorporationInfo((CorporationTypes)trade.m_iData).getDescription(),
 							GET_PLAYER(eFromPlayer).getCivilizationDescriptionKey(), GET_PLAYER(eToPlayer).getCivilizationDescriptionKey()).GetCString();
 
-						AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+						AddDLLMessage((PlayerTypes)i, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 					}
 				}
 			}

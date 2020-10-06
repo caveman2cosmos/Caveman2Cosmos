@@ -5289,7 +5289,7 @@ void CvGame::setWinner(TeamTypes eNewWinner, VictoryTypes eNewVictory)
 			if (getWinner() != NO_TEAM)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_GAME_WON", GET_TEAM(getWinner()).getName().GetCString(), GC.getVictoryInfo(getVictory()).getTextKeyWide());
-				addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, GET_TEAM(getWinner()).getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, GET_TEAM(getWinner()).getLeaderID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
 			}
 /************************************************************************************************/
 /* REVOLUTION_MOD                                                                 lemmy101      */
@@ -5939,7 +5939,7 @@ void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounc
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PROJECT_COMPLETED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PROJECT_COMPLETED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 				}
 			}
 		}
@@ -6037,7 +6037,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 				if (isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwner(), szBuffer, pHolyCity->getX(), pHolyCity->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwner(), szBuffer, pHolyCity->getX(), pHolyCity->getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
 
 					for (iI = 0; iI < MAX_PLAYERS; iI++)
 					{
@@ -6048,12 +6048,12 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 							if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
 								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHolyCity->getX(), pHolyCity->getY());
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pHolyCity->getX(), pHolyCity->getY());
 							}
 							else
 							{
 								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED_UNKNOWN", GC.getReligionInfo(eIndex).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT());
 							}
 						}
 					}
@@ -6157,7 +6157,7 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 				if (isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED", GC.getCorporationInfo(eIndex).getTextKeyWide(), pHeadquarters->getNameKey());
-					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHeadquarters->getOwner(), szBuffer, pHeadquarters->getX(), pHeadquarters->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHeadquarters->getOwner(), szBuffer, pHeadquarters->getX(), pHeadquarters->getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
 
 					for (int iI = 0; iI < MAX_PLAYERS; iI++)
 					{
@@ -6167,12 +6167,12 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 
 							if (pHeadquarters->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHeadquarters->getX(), pHeadquarters->getY());
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pHeadquarters->getX(), pHeadquarters->getY());
 							}
 							else
 							{
 								CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED_UNKNOWN", GC.getCorporationInfo(eIndex).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer2, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer2, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT());
 							}
 						}
 					}
@@ -7548,7 +7548,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 
 	// Find plot
-	static const MapCategoryTypes earth = static_cast<MapCategoryTypes>(GC.getInfoTypeForString("MAPCATEGORY_EARTH"));
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
 	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 	int iBestValue = 0;
@@ -8341,7 +8341,7 @@ void CvGame::testVictory()
 										if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 											AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_WINNER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(), "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, CvColorInfo::green());
 										else
-											AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(), "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
+											AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_LOSER_MERCY_RULE_TURNS", getMercyRuleCounter()).GetCString(), "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT());
 									}
 								}
 							}
@@ -10067,7 +10067,7 @@ void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eR
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getReligionInfo(eReligion).getSound(), MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getReligionInfo(eReligion).getSound(), MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 			}
 		}
 	}
@@ -10460,7 +10460,7 @@ void CvGame::doVoteResults()
 
 					CvWString szMessage;
 					szMessage.Format(L"%s: %s", gDLL->getText("TXT_KEY_ELECTION_CANCELLED").GetCString(), GC.getVoteInfo(eVote).getDescription());
-					AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 				}
 			}
 		}
@@ -10647,8 +10647,8 @@ void CvGame::doVoteResults()
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						CvWString szMessage = gDLL->getText("TXT_KEY_VOTE_RESULTS", GC.getVoteSourceInfo(eVoteSource).getTextKeyWide(), pVoteTriggered->kVoteOption.szText.GetCString());
-						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+						const CvWString szMessage = gDLL->getText("TXT_KEY_VOTE_RESULTS", GC.getVoteSourceInfo(eVoteSource).getTextKeyWide(), pVoteTriggered->kVoteOption.szText.GetCString());
+						AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 					}
 
 				}
@@ -11075,7 +11075,7 @@ void CvGame::doFinalFive()
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_LOW_PLAYER_DROPPED").GetCString(), "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
+					AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_LOW_PLAYER_DROPPED").GetCString(), "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT());
 				}
 			}
 		}
@@ -11127,7 +11127,7 @@ void CvGame::doIncreasingDifficulty()
 
 						MEMORY_TRACK_EXEMPT();
 
-						AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(), "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
+						AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(), "AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT());
 					}
 				}
 			}
@@ -11273,7 +11273,7 @@ void CvGame::doFlexibleDifficulty()
 								else
 								{
 									MEMORY_TRACK_EXEMPT();
-									AddDLLMessage((PlayerTypes)iJ, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(TXT_KEY_DIFFICULTY_PLAYER_ID, kPlayer.getCivilizationDescriptionKey()).GetCString(), AS2D_ID, MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
+									AddDLLMessage((PlayerTypes)iJ, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText(TXT_KEY_DIFFICULTY_PLAYER_ID, kPlayer.getCivilizationDescriptionKey()).GetCString(), AS2D_ID, MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT());
 								}
 							}
 						}
@@ -11490,8 +11490,8 @@ void CvGame::findBays()
 
 void CvGame::findForests()
 {
-	const FeatureTypes eForest = (FeatureTypes)GC.getInfoTypeForString("FEATURE_FOREST");
-	int iMinimumForestSize = GC.getDefineINT("MINIMUM_FOREST_SIZE");
+	const FeatureTypes eForest = GC.getFEATURE_FOREST();
+	int iMinimumForestSize = GC.getMINIMUM_FOREST_SIZE();
 	iMinimumForestSize += (int)GC.getMap().getWorldSize() * 2;
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
@@ -11517,8 +11517,8 @@ void CvGame::findForests()
 
 void CvGame::findJungles()
 {
-	const FeatureTypes eJungle = (FeatureTypes)GC.getInfoTypeForString("FEATURE_JUNGLE");
-	int iMinimumJungleSize = GC.getDefineINT("MINIMUM_JUNGLE_SIZE");
+	const FeatureTypes eJungle = GC.getFEATURE_JUNGLE();
+	int iMinimumJungleSize = GC.getMINIMUM_JUNGLE_SIZE();
 	iMinimumJungleSize += (int)GC.getMap().getWorldSize() * 2;
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
@@ -11545,8 +11545,8 @@ void CvGame::findJungles()
 
 void CvGame::findDeserts()
 {
-	const TerrainTypes eDesert = (TerrainTypes)GC.getInfoTypeForString("TERRAIN_DESERT");
-	int iMinimumDesertSize = GC.getDefineINT("MINIMUM_DESERT_SIZE");
+	const TerrainTypes eDesert = GC.getTERRAIN_DESERT();
+	int iMinimumDesertSize = GC.getMINIMUM_DESERT_SIZE();
 	iMinimumDesertSize += (int)GC.getMap().getWorldSize() * 2;
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
@@ -11800,7 +11800,7 @@ int CvGame::countDesert(const CvPlot* pPlot)
 	{
 		if (!pAdjacentPlot->isCountedPlot())
 		{
-			if (pAdjacentPlot->getTerrainType() == (TerrainTypes)GC.getInfoTypeForString("TERRAIN_DESERT") && !pAdjacentPlot->isHills() && !pAdjacentPlot->isPeak())
+			if (pAdjacentPlot->getTerrainType() == GC.getTERRAIN_DESERT() && !pAdjacentPlot->isHills() && !pAdjacentPlot->isPeak())
 			{
 				pAdjacentPlot->setCountedPlot(true);
 				iDesert++;
@@ -11814,13 +11814,13 @@ int CvGame::countDesert(const CvPlot* pPlot)
 int CvGame::countJungle(const CvPlot* pPlot, int iJungle)
 {
 	//This is a big jungle
-	if (iJungle > GC.getDefineINT("MINIMUM_JUNGLE_SIZE") * 2)
+	if (iJungle > GC.getMINIMUM_JUNGLE_SIZE() * 2)
 		return iJungle;
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
 		if (!pAdjacentPlot->isCountedPlot())
 		{
-			if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_JUNGLE"))
+			if (pAdjacentPlot->getFeatureType() == GC.getFEATURE_JUNGLE())
 			{
 				iJungle++;
 				pAdjacentPlot->setCountedPlot(true);
@@ -11834,13 +11834,13 @@ int CvGame::countJungle(const CvPlot* pPlot, int iJungle)
 int CvGame::countForest(const CvPlot* pPlot, int iForest)
 {
 	//This is a big forest
-	if (iForest > GC.getDefineINT("MINIMUM_FOREST_SIZE") * 2)
+	if (iForest > GC.getMINIMUM_FOREST_SIZE() * 2)
 		return iForest;
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
 		if (!pAdjacentPlot->isCountedPlot())
 		{
-			if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_FOREST"))
+			if (pAdjacentPlot->getFeatureType() == GC.getFEATURE_FOREST())
 			{
 				iForest++;
 				pAdjacentPlot->setCountedPlot(true);
@@ -12229,7 +12229,7 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 {
 	if (isOption(GAMEOPTION_NO_FUTURE))
 	{
-		if (GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("C2C_ERA_ATOMIC"))
+		if ((EraTypes)GC.getTechInfo(eTech).getEra() > GC.getC2C_ERA_ATOMIC())
 		{
 			if (!GC.getTechInfo(eTech).isRepeat())
 			{
