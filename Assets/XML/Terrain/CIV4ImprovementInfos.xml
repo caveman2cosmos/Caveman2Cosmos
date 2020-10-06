@@ -10434,6 +10434,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iVisibilityChange>1</iVisibilityChange>
+			<iUnique>0</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10524,6 +10525,7 @@
 			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
+			<iUnique>0</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10614,7 +10616,7 @@
 			<iCulture>10</iCulture>
 			<iVisibilityChange>3</iVisibilityChange>
 			<iSeeFrom>2</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUnique>0</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10704,7 +10706,7 @@
 			<iCulture>10</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>3</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUnique>0</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
