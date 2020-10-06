@@ -5670,17 +5670,12 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
 	const int iRange = visibilityRange(pPlot) + 1;
-
-	for (int i = -iRange; i <= iRange; ++i)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (int j = -iRange; j <= iRange; ++j)
+		if (!pLoopPlot->isRevealed(getTeam(), false)
+		&& pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
 		{
-			CvPlot* pLoopPlot = ::plotXY(pPlot->getX(), pPlot->getY(), i, j);
-			if (NULL != pLoopPlot && !pLoopPlot->isRevealed(getTeam(), false)
-			&& pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;
@@ -7409,13 +7404,12 @@ void CvUnit::load()
 
 bool CvUnit::canUnload() const
 {
-	CvPlot& kPlot = *(plot());
-
 	if (getTransportUnit() == NULL)
 	{
 		return false;
 	}
 
+	const CvPlot& kPlot = *(plot());
 	if (!kPlot.isValidDomainForLocation(*this))
 	{
 		return false;
@@ -8358,9 +8352,6 @@ bool CvUnit::airlift(int iX, int iY)
 
 bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
 	if (!(GET_TEAM(eTeam).isAlive()))
 	{
 		return false;
@@ -8371,24 +8362,16 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 		return false;
 	}
 
-	for (iDX = -(nukeRange()); iDX <= nukeRange(); iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), nukeRange(), nukeRange()))
 	{
-		for (iDY = -(nukeRange()); iDY <= nukeRange(); iDY++)
+		if (pLoopPlot->getTeam() == eTeam)
 		{
-			pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+			return true;
+		}
 
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->getTeam() == eTeam)
-				{
-					return true;
-				}
-
-				if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
-				{
-					return true;
-				}
-			}
+		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
+		{
+			return true;
 		}
 	}
 
@@ -9178,7 +9161,6 @@ bool CvUnit::airBomb(int iX, int iY)
 	iMis0 = iMis1 = iMis2 = iMis3 = iMis4 = iMis5 = 0;
 	int iI, iCount = 0;
 	CvUnit* pUnit = NULL;
-	CvPlot* pLoopPlot;
 	// ! Dale
 
 	if (!canAirBombAt(plot(), iX, iY))
@@ -9289,16 +9271,9 @@ bool CvUnit::airBomb(int iX, int iY)
 				{
 					iMis1 = 10;
 					iCount = 0;
-					for (int iDX = -2; iDX <= 2; iDX++)
+					foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 2, 2))
 					{
-						for (int iDY = 2; iDY <= 2; iDY++)
-						{
-							pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-							if (pLoopPlot != NULL)
-							{
-								iCount += algo::count_if(pLoopPlot->units(), CvUnit::fn::getOwner() == getOwner());
-							}
-						}
+						iCount += algo::count_if(pLoopPlot->units(), CvUnit::fn::getOwner() == getOwner());
 					}
 					iMis1 *= (iCount * 2);
 				}
@@ -10058,54 +10033,49 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 		CvPlot::setDeferredPlotGroupRecalculationMode(true);
 	}
 
-	for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange))
 	{
-		for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
+		if (pLoopPlot->isWater() && pLoopPlot->area() == area())
 		{
-			CvPlot* pLoopPlot = ::plotXY(getX(), getY(), i, j);
 
-			if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
+			const int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
+
+			// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
+			// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable
+			// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which
+			// would appear randomly, it should cause extra blockade clearing only very rarely.
+			/*
+			if( iPathDist > iBlockadeRange )
 			{
+				// No blockading on other side of an isthmus
+				continue;
+			}
+			*/
 
-				int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
-
-				// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
-				// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable
-				// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which
-				// would appear randomly, it should cause extra blockade clearing only very rarely.
-				/*
-				if( iPathDist > iBlockadeRange )
+			if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
+			{
+				for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
 				{
-					// No blockading on other side of an isthmus
-					continue;
-				}
-				*/
-
-				if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
-				{
-					for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
+					if (isEnemy((TeamTypes)iTeam))
 					{
-						if (isEnemy((TeamTypes)iTeam))
+						bValid = (iPathDist <= iBlockadeRange);
+						if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0) )
 						{
-							bValid = (iPathDist <= iBlockadeRange);
-							if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0) )
+							bValid = true;
+						}
+
+						if( bValid )
+						{
+							bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
+
+							pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
+
+							if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
 							{
-								bValid = true;
-							}
-
-							if( bValid )
-							{
-								bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
-
-								pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
-
-								if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
+								bChanged = true;
+								if (bUpdatePlotGroups)
 								{
-									bChanged = true;
-									if (bUpdatePlotGroups)
-									{
-										pLoopPlot->updatePlotGroup();
-									}
+									pLoopPlot->updatePlotGroup();
 								}
 							}
 						}
@@ -10468,9 +10438,7 @@ bool CvUnit::destroy()
 
 int CvUnit::stealPlansCost(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -15379,33 +15347,25 @@ CvUnit* CvUnit::bestInterceptor(const CvPlot* pPlot) const
 }
 
 
-CvUnit* CvUnit::bestSeaPillageInterceptor(CvUnit* pPillager, int iMinOdds) const
+CvUnit* CvUnit::bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const
 {
 	CvUnit* pBestUnit = NULL;
 
 	int pBestUnitRank = -1;
 
-	for (int iDX = -1; iDX <= 1; ++iDX)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPillager->getX(), pPillager->getY(), 1, 1))
 	{
-		for (int iDY = -1; iDY <= 1; ++iDY)
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 		{
-			const CvPlot* pLoopPlot = plotXY(pPillager->getX(), pPillager->getY(), iDX, iDY);
-
-			if (NULL != pLoopPlot)
+			if (pLoopUnit->area() == pPillager->plot()->area()
+			&& !pLoopUnit->isInvisible(getTeam(), false)
+			&& isEnemy(pLoopUnit->getTeam())
+			&& DOMAIN_SEA == pLoopUnit->getDomainType()
+			&& ACTIVITY_PATROL == pLoopUnit->getGroup()->getActivityType()
+			&& (NULL == pBestUnit || pLoopUnit->isBetterDefenderThan(pBestUnit, this, &pBestUnitRank))
+			&& getCombatOdds(pPillager, pLoopUnit) < iMinOdds)
 			{
-				foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-				{
-					if (pLoopUnit->area() == pPillager->plot()->area()
-					&& !pLoopUnit->isInvisible(getTeam(), false)
-					&& isEnemy(pLoopUnit->getTeam())
-					&& DOMAIN_SEA == pLoopUnit->getDomainType()
-					&& ACTIVITY_PATROL == pLoopUnit->getGroup()->getActivityType()
-					&& (NULL == pBestUnit || pLoopUnit->isBetterDefenderThan(pBestUnit, this, &pBestUnitRank))
-					&& getCombatOdds(pPillager, pLoopUnit) < iMinOdds)
-					{
-						pBestUnit = pLoopUnit;
-					}
-				}
+				pBestUnit = pLoopUnit;
 			}
 		}
 	}
@@ -20674,48 +20634,33 @@ void CvUnit::collectBlockadeGold()
 		return;
 	}
 
-	int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
+	const int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
 
-	for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange)
+	| filtered(CvPlot::fn::isRevealed(getTeam(), false)))
 	{
-		for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
+		CvCity* pCity = pLoopPlot->getPlotCity();
+
+		if (NULL != pCity && !pCity->isPlundered() && isEnemy(pCity->getTeam()) && !atWar(pCity->getTeam(), getTeam()))
 		{
-			CvPlot* pLoopPlot = ::plotXY(getX(), getY(), i, j);
-
-			if (NULL != pLoopPlot && pLoopPlot->isRevealed(getTeam(), false))
+			if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
 			{
-				CvCity* pCity = pLoopPlot->getPlotCity();
-
-				if (NULL != pCity && !pCity->isPlundered() && isEnemy(pCity->getTeam()) && !atWar(pCity->getTeam(), getTeam()))
+				int iGold = pCity->calculateTradeProfit(pCity) * pCity->getTradeRoutes();
+				iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
+				iGold /= 100;
+				if (iGold > 0)
 				{
-					if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
-					{
-						int iGold = pCity->calculateTradeProfit(pCity) * pCity->getTradeRoutes();
-/************************************************************************************************/
-/* Afforess	                  Start		 06/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-						iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
-						iGold /= 100;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-						if (iGold > 0)
-						{
-							pCity->setPlundered(true);
-							GET_PLAYER(getOwner()).changeGold(iGold);
-							GET_PLAYER(pCity->getOwner()).changeGold(-iGold);
+					pCity->setPlundered(true);
+					GET_PLAYER(getOwner()).changeGold(iGold);
+					GET_PLAYER(pCity->getOwner()).changeGold(-iGold);
 
-							MEMORY_TRACK_EXEMPT();
+					MEMORY_TRACK_EXEMPT();
 
-							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDERED", getNameKey(), pCity->getNameKey(), iGold);
-							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDERED", getNameKey(), pCity->getNameKey(), iGold);
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
 
-							szBuffer = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDER", getNameKey(), pCity->getNameKey(), iGold);
-							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
-						}
-					}
+					const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDER", getNameKey(), pCity->getNameKey(), iGold);
+					AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
 				}
 			}
 		}
@@ -29793,7 +29738,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 // Dale - RB: Field Bombard
 bool CvUnit::canRBombard(bool bEver) const
 {
-
 	if (!GC.isDCM_RANGE_BOMBARD())
 	{
 		return false;
@@ -30198,8 +30142,7 @@ void CvUnit::doOpportunityFire()
 // Dale - SA: Active Defense
 void CvUnit::doActiveDefense()
 {
-	int iDamage, iUnitDamage, iSearchRange, iDX, iDY;
-	CvPlot* pLoopPlot;
+	int iDamage, iUnitDamage;
 	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvCity* pCity = NULL;
@@ -30213,92 +30156,84 @@ void CvUnit::doActiveDefense()
 	{
 		return;
 	}
-	iSearchRange = 2;
-	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 2, 2))
 	{
-		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		if (pLoopPlot->getNumUnits() > 0)
 		{
-			pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-			if (pLoopPlot != NULL)
+			pDefender = airStrikeTarget(pLoopPlot);
+			if (pDefender != NULL)
 			{
-				if (pLoopPlot->getNumUnits() > 0)
+				setBattlePlot(pLoopPlot, pDefender);
+
+				iDamage = airCombatDamage(pDefender);
+				iUnitDamage = std::max(pDefender->getDamage(), std::min((pDefender->getDamage() + iDamage), airCombatLimit(pDefender)));
+
 				{
-					pDefender = airStrikeTarget(pLoopPlot);
-					if (pDefender != NULL)
-					{
-						setBattlePlot(pLoopPlot, pDefender);
+					MEMORY_TRACK_EXEMPT();
 
-						iDamage = airCombatDamage(pDefender);
-						iUnitDamage = std::max(pDefender->getDamage(), std::min((pDefender->getDamage() + iDamage), airCombatLimit(pDefender)));
-
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pDefender->getNameKey(), getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-							AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pDefender->getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), GC.getCOLOR_GREEN(), pLoopPlot->getX(), pLoopPlot->getY());
-						}
-						collateralCombat(pLoopPlot, pDefender);
-						pDefender->setDamage(iUnitDamage, getOwner());
-						bSuccess = true;
-						//TB Combat Mod begin
-						if (dealsColdDamage())
-						{
-							pDefender->setColdDamage(iUnitDamage);
-						}
-						//TB Combat mod end
-						if (pLoopPlot->isActiveVisible(false) && (!pDefender->isUsingDummyEntities() && pDefender->isInViewport()))
-						{
-							setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
-							GC.getGame().incrementTurnTimer(getCombatTimer());
-
-							addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pLoopPlot, this, pDefender));
-						}
-					}
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pDefender->getNameKey(), getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
+					AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pDefender->getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), GC.getCOLOR_GREEN(), pLoopPlot->getX(), pLoopPlot->getY());
 				}
-				if (bSuccess)
+				collateralCombat(pLoopPlot, pDefender);
+				pDefender->setDamage(iUnitDamage, getOwner());
+				bSuccess = true;
+				//TB Combat Mod begin
+				if (dealsColdDamage())
 				{
-					//Afflict
-					int iDistanceAttackCommunicability = 0;
-					bool bAffliction = false;
-					if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
-					{
-						for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-						{
-							if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
-							{
-								//Distance Communicability
-								iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
-								bool bDistAttComm = iDistanceAttackCommunicability > 0;
-								PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
-								bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
-								if (bDistAttComm || bAffonAtt)
-								{
-									bAffliction = true;
-									foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-									{
-										if (bDistAttComm)
-										{
-											if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
-											{
-												pLoopUnit->afflict(eAfflictionLine);
-											}
-											pCity = pLoopPlot->getPlotCity();
-											if (pCity != NULL)
-											{
-												pCity->changePromotionLineAfflictionAttackCommunicability(eAfflictionLine, iDistanceAttackCommunicability);
-											}
-										}
-										if (bAffonAtt)
-										{
-											int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
+					pDefender->setColdDamage(iUnitDamage);
+				}
+				//TB Combat mod end
+				if (pLoopPlot->isActiveVisible(false) && (!pDefender->isUsingDummyEntities() && pDefender->isInViewport()))
+				{
+					setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
+					GC.getGame().incrementTurnTimer(getCombatTimer());
 
-											if (GC.getGame().getSorenRandNum(100, "AttackersPoisonRoll") < iAttackersPoisonChance)
-											{
-												pLoopUnit->afflict(eAfflictionLine, true, this);
-											}
-										}
+					addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pLoopPlot, this, pDefender));
+				}
+			}
+		}
+		if (bSuccess)
+		{
+			//Afflict
+			int iDistanceAttackCommunicability = 0;
+			bool bAffliction = false;
+			if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+			{
+				for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+				{
+					if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
+					{
+						//Distance Communicability
+						iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
+						bool bDistAttComm = iDistanceAttackCommunicability > 0;
+						PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
+						bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
+						if (bDistAttComm || bAffonAtt)
+						{
+							bAffliction = true;
+							foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+							{
+								if (bDistAttComm)
+								{
+									if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
+									{
+										pLoopUnit->afflict(eAfflictionLine);
+									}
+									pCity = pLoopPlot->getPlotCity();
+									if (pCity != NULL)
+									{
+										pCity->changePromotionLineAfflictionAttackCommunicability(eAfflictionLine, iDistanceAttackCommunicability);
+									}
+								}
+								if (bAffonAtt)
+								{
+									int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
+
+									if (GC.getGame().getSorenRandNum(100, "AttackersPoisonRoll") < iAttackersPoisonChance)
+									{
+										pLoopUnit->afflict(eAfflictionLine, true, this);
 									}
 								}
 							}
@@ -31057,23 +30992,15 @@ bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) c
 	{
 		return false;
 	}
-	for (int iDX = -iRange; iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 	{
-		for (int iDY = -iRange; iDY <= iRange; iDY++)
+		if (pLoopPlot->getTeam() == eTeam)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->getTeam() == eTeam)
-				{
-					return true;
-				}
-				if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
-				{
-					return true;
-				}
-			}
+			return true;
+		}
+		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
+		{
+			return true;
 		}
 	}
 	return false;

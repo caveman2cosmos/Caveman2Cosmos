@@ -122,21 +122,12 @@ bool CvSelectionGroup::sentryAlert() const
 
 	if (NULL != pHeadUnit)
 	{
-		for (int iX = -iMaxRange; iX <= iMaxRange; ++iX)
+		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
 		{
-			for (int iY = -iMaxRange; iY <= iMaxRange; ++iY)
+			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
+			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
 			{
-				CvPlot* pPlot = ::plotXY(pHeadUnit->getX(), pHeadUnit->getY(), iX, iY);
-				if (NULL != pPlot)
-				{
-					if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
-					{
-						if (pPlot->isVisibleEnemyUnit(pHeadUnit))
-						{
-							return true;
-						}
-					}
-				}
+				return true;
 			}
 		}
 	}
@@ -167,22 +158,15 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 	const CvUnit* pHeadUnit = ((iIndex == -1) ? NULL : getUnitAt(iIndex));
 	if (NULL != pHeadUnit)
 	{
-		for (int iX = -iMaxRange; iX <= iMaxRange; ++iX)
+		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
 		{
-			for (int iY = -iMaxRange; iY <= iMaxRange; ++iY)
+			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
 			{
-				CvPlot* pPlot = ::plotXY(pHeadUnit->getX(), pHeadUnit->getY(), iX, iY);
-				if (NULL != pPlot)
+				if (pPlot->isVisibleEnemyUnit(pHeadUnit))
 				{
-					if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
+					if (pPlot->isWater() ? (getDomainType() == DOMAIN_SEA) : (getDomainType() == DOMAIN_LAND))
 					{
-						if (pPlot->isVisibleEnemyUnit(pHeadUnit))
-						{
-							if (pPlot->isWater() ? (getDomainType() == DOMAIN_SEA) : (getDomainType() == DOMAIN_LAND))
-							{
-								return true;
-							}
-						}
+						return true;
 					}
 				}
 			}

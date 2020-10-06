@@ -7634,39 +7634,24 @@ int CvCityAI::AI_neededAirDefenders() const
 
 	int iDefenders = 0;
 
-	int iRange = 5;
-
 	int iOtherTeam = 0;
 	int iEnemyTeam = 0;
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 5, 5))
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{
-			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-			if ((pLoopPlot != NULL) && pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
+			iOtherTeam++;
+			if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 			{
-				iOtherTeam++;
-				if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+				// If enemy has no bombers, don't need to defend as much
+				if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
 				{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
-/*                                                                                              */
-/* Air AI                                                                                       */
-/************************************************************************************************/
-					// If enemy has no bombers, don't need to defend as much
-					if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
-					{
-						continue;
-					}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-					iEnemyTeam += 2;
-					if (pLoopPlot->isCity())
-					{
-						iEnemyTeam += 6;
-					}
+					continue;
+				}
+				iEnemyTeam += 2;
+				if (pLoopPlot->isCity())
+				{
+					iEnemyTeam += 6;
 				}
 			}
 		}
