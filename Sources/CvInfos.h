@@ -59,10 +59,10 @@ public:
 	DllExport const TCHAR* getType() const; // Exposed to Python
 	virtual const TCHAR* getButton() const; // Exposed to Python
 
-	const wchar* getCivilopediaKey() const;
-	const wchar* getHelpKey() const;
-	const wchar* getStrategyKey() const;
-	//const wchar* getGenericCategoryKey() const;
+	const wchar_t* getCivilopediaKey() const;
+	const wchar_t* getHelpKey() const;
+	const wchar_t* getStrategyKey() const;
+	//const wchar_t* getGenericCategoryKey() const;
 
 	// for python wide string handling
 	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); } // Exposed to Python
@@ -74,13 +74,13 @@ public:
 	std::wstring pyGetStrategy() const		{ return getStrategy(); } // Exposed to Python
 //	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); } // Exposed to Python
 
-	DllExport const wchar* getTextKeyWide() const;
-	DllExport const wchar* getDescription(uint uiForm = 0) const;
-	DllExport const wchar* getText() const;
-	const wchar* getCivilopedia() const;
-	DllExport const wchar* getHelp() const;
-	const wchar* getStrategy() const;
-/*	const wchar* getGenericCategory() const;*/
+	DllExport const wchar_t* getTextKeyWide() const;
+	DllExport const wchar_t* getDescription(uint uiForm = 0) const;
+	DllExport const wchar_t* getText() const;
+	const wchar_t* getCivilopedia() const;
+	DllExport const wchar_t* getHelp() const;
+	const wchar_t* getStrategy() const;
+/*	const wchar_t* getGenericCategory() const;*/
 
 	bool isMatchForLink(const std::wstring szLink, bool bKeysOnly) const;
 
@@ -88,13 +88,13 @@ public:
 	virtual void write(FDataStreamBase* pStream) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FAssertMsg(false, "Override this"); return false; }
-	virtual bool readPass3() { FAssertMsg(false, "Override this"); return false; }
+	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FErrorMsg("Override this"); return false; }
+	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
 	virtual void copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(unsigned int& iSum) const { };
-	virtual const wchar* getExtraHoverText() const { return L""; };
+	virtual const wchar_t* getExtraHoverText() const { return L""; };
 
 protected:
 
@@ -184,7 +184,7 @@ public:
 	const WCHAR* getHotKeyString() const;
 
 	std::wstring getHotKeyDescription() const;
-	void setHotKeyDescription(const wchar* szHotKeyDescKey, const wchar* szHotKeyAltDescKey, const wchar* szHotKeyString);
+	void setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString);
 
 protected:
 
@@ -762,7 +762,7 @@ public:
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	//Text Strings
-	const wchar* getRenamesUnitTo() const;
+	const wchar_t* getRenamesUnitTo() const;
 	// Textual References
 	PromotionLineTypes getPromotionLine() const;
 	UnitCombatTypes getReplacesUnitCombat() const;
@@ -932,7 +932,7 @@ public:
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i)const;
+	bool isOnGameOption(int i) const;
 
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
@@ -1691,13 +1691,13 @@ public:
 
 	// functions to replace the CvInfoBase calls
 	const TCHAR* getType() const;
-	const wchar* getDescription() const;
-	const wchar* getCivilopedia() const;
-	const wchar* getHelp() const;
-	const wchar* getStrategy() const;/*
-	const wchar* getGenericCategory() const;*/
+	const wchar_t* getDescription() const;
+	const wchar_t* getCivilopedia() const;
+	const wchar_t* getHelp() const;
+	const wchar_t* getStrategy() const;/*
+	const wchar_t* getGenericCategory() const;*/
 	virtual const TCHAR* getButton() const;
-	const wchar* getTextKeyWide() const;
+	const wchar_t* getTextKeyWide() const;
 
 	// functions to replace the CvHotkey calls
 	int getActionInfoIndex() const;
@@ -2056,7 +2056,7 @@ public:
 
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
-	bool isTrapImmunityUnitCombatType(int i)const;
+	bool isTrapImmunityUnitCombatType(int i) const;
 
 	int getNumAfflictionFortitudeModifiers() const;
 	const PromotionLineModifier& getAfflictionFortitudeModifier(int iAffliction) const;
@@ -2235,7 +2235,7 @@ public:
 	void setQualifiedPromotionTypes();
 	void setCanAnimalIgnores();
 
-	virtual const wchar* getExtraHoverText() const;
+	virtual const wchar_t* getExtraHoverText() const;
 
 	void getCheckSum(unsigned int& iSum) const;
 
@@ -3027,8 +3027,8 @@ public:
 	virtual ~CvCivicInfo();
 
 	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
-	const wchar* getWeLoveTheKing() const;
-	const wchar* getWeLoveTheKingKey() const;
+	const wchar_t* getWeLoveTheKing() const;
+	const wchar_t* getWeLoveTheKingKey() const;
 
 	int getCivicOptionType() const; // Exposed to Python
 	int getAnarchyLength() const; // Exposed to Python
@@ -3121,7 +3121,6 @@ public:
 	bool isNoNonStateReligionSpread() const; // Exposed to Python
 	bool IsFixedBorders() const;
 	bool isNoCapitalUnhappiness() const;
-	bool isTaxationAnger() const;
 	bool isNoLandmarkAnger() const;
 	bool isEnablesMAD() const;
 	bool isAllReligionsActive() const;
@@ -3287,7 +3286,6 @@ protected:
 
 	bool m_bFixedBorders;
 	bool m_bNoCapitalUnhappiness;
-	bool m_bTaxationAnger;
 	bool m_bNoLandmarkAnger;
 	bool m_bEnablesMAD;
 	bool m_bUpgradeAnywhere;
@@ -4488,13 +4486,13 @@ public:
 	DllExport bool isPlayable() const; // Exposed to Python
 
 	std::wstring pyGetShortDescription(uint uiForm) { return getShortDescription(uiForm); } // Exposed to Python
-	DllExport const wchar* getShortDescription(uint uiForm = 0);
-	const wchar* getShortDescriptionKey() const; // Exposed to Python
+	DllExport const wchar_t* getShortDescription(uint uiForm = 0);
+	const wchar_t* getShortDescriptionKey() const; // Exposed to Python
 	const std::wstring pyGetShortDescriptionKey() const { return getShortDescriptionKey(); } // Exposed to Python
 
 	std::wstring pyGetAdjective(uint uiForm) { return getAdjective(uiForm); } // Exposed to Python
-	DllExport const wchar* getAdjective(uint uiForm = 0);
-	const wchar* getAdjectiveKey() const; // Exposed to Python
+	DllExport const wchar_t* getAdjective(uint uiForm = 0);
+	const wchar_t* getAdjectiveKey() const; // Exposed to Python
 	const std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
 
 	DllExport const TCHAR* getFlagTexture() const;
@@ -6457,8 +6455,8 @@ public:
 	int getCorporationMaintenancePercent() const; // Exposed to Python
 	int getNumCitiesAnarchyPercent() const; // Exposed to Python
 	int getAdvancedStartPointsMod() const; // Exposed to Python
-
-	int getCommandersLevelThresholdsPercent() const; // Afforess 02/27/10
+	int getCommandersLevelThresholdsPercent() const;
+	int getOceanMinAreaSize() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -6490,8 +6488,8 @@ protected:
 	int m_iCorporationMaintenancePercent;
 	int m_iNumCitiesAnarchyPercent;
 	int m_iAdvancedStartPointsMod;
-
-	int m_iCommandersLevelThresholdsPercent; // Afforess 02/27/10
+	int m_iCommandersLevelThresholdsPercent;
+	int m_iOceanMinAreaSize;
 
 	IDValueMapPercent m_Percent;
 
@@ -6884,7 +6882,7 @@ public:
 	const TCHAR* getButtonDisabled() const;		//	Exposed to Python
 
 	void setAdjectiveKey(const TCHAR* szVal);
-	const wchar* getAdjectiveKey() const; // Exposed to Python
+	const wchar_t* getAdjectiveKey() const; // Exposed to Python
 	std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
 
 	// Arrays
@@ -8393,7 +8391,7 @@ public:
 				if(m_aFeatureArtPieces[i].getConnectionMask() == connectionMask)
 					return m_aFeatureArtPieces[i];
 
-			FAssertMsg(false, "[Jason] Failed to find feature art piece with valid connection mask.");
+			FErrorMsg("[Jason] Failed to find feature art piece with valid connection mask.");
 			return m_aFeatureArtPieces[0];
 		}
 
@@ -8405,7 +8403,7 @@ public:
 					return m_aFeatureDummyNodes[i].getNodeName();
 			}
 
-			FAssertMsg(false, "[Jason] Failed to find dummy tag name.");
+			FErrorMsg("[Jason] Failed to find dummy tag name.");
 			return "";
 		}
 
@@ -8860,17 +8858,17 @@ class CvGameText : public CvInfoBase
 public:
 	DllExport CvGameText();
 
-	const wchar* getText() const;
-	void setText(const wchar* szText);
+	const wchar_t* getText() const;
+	void setText(const wchar_t* szText);
 
 	// for Python
 	std::wstring pyGetText() const { return getText(); }
 
-	void setGender(const wchar* szGender) { m_szGender = szGender;	}
-	const wchar* getGender() const { return m_szGender; }
+	void setGender(const wchar_t* szGender) { m_szGender = szGender;	}
+	const wchar_t* getGender() const { return m_szGender; }
 
-	void setPlural(const wchar* szPlural) { m_szPlural = szPlural; }
-	const wchar* getPlural() const { return m_szPlural; }
+	void setPlural(const wchar_t* szPlural) { m_szPlural = szPlural; }
+	const wchar_t* getPlural() const { return m_szPlural; }
 
 	DllExport int getNumLanguages() const; // not static for Python access
 	DllExport void setNumLanguages(int iNum); // not static for Python access
@@ -9623,10 +9621,10 @@ public:
 	const char* getPythonExpireCheck() const;
 	const char* getPythonCanDo() const;
 	const char* getPythonHelp() const;
-	const wchar* getUnitNameKey() const;
-	const wchar* getQuestFailTextKey() const;
-	const wchar* getOtherPlayerPopup() const;
-	const wchar* getLocalInfoTextKey() const;
+	const wchar_t* getUnitNameKey() const;
+	const wchar_t* getQuestFailTextKey() const;
+	const wchar_t* getOtherPlayerPopup() const;
+	const wchar_t* getLocalInfoTextKey() const;
 
 	int getPrereqGameOption() const;
 	int getRevolutionIndexChange() const;

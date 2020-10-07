@@ -200,8 +200,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iXSize);
+				FASSERT_BOUNDS(0, m_iXSize, iResult)
 
 				return iResult;
 			}
@@ -216,7 +215,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -237,8 +236,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FAssert(0 <= iResult);
-				FAssert(iResult < m_iYSize);
+				FASSERT_BOUNDS(0, m_iYSize, iResult)
 
 				return iResult;
 			}
@@ -253,7 +251,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -280,7 +278,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -307,7 +305,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return -1;
 		}
 	}
@@ -336,7 +334,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}
@@ -365,7 +363,7 @@ public:
 		}
 		else
 		{
-			FAssertMsg(false, "Invalid viewport transform type");
+			FErrorMsg("Invalid viewport transform type");
 			return false;
 		}
 	}

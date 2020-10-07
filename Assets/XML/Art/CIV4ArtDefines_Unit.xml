@@ -6783,6 +6783,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/stone_thrower/stone_thrower.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/stone_thrower/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -18429,6 +18446,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Native_american_Sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/Native_american_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER_NATIVE_AMERICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -22282,6 +22316,23 @@
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/South_American_Sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/South_American_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
 			</ShadowDef>
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
@@ -28022,6 +28073,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_ASIAN</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/asian_sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/asian_sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER_ASIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -32457,6 +32525,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/African_Sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/African_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER_AFRICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -36095,6 +36180,23 @@
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_MEAST</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Middle_Eastern_Sparth/chaser/stone_thrower.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/Middle_Eastern_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
 			</ShadowDef>
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
@@ -41632,6 +41734,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_EGYPTIAN</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/egyptian_sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/egyptian_sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER_EGYPTIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -44609,6 +44728,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_INDIA</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Indian_Sparth/chaser/stone_thrower_FX.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/Indian_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MASTER_TRACKER_INDIA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/master_tracker.dds</Button>
 			<fScale>0.44</fScale>
@@ -47319,6 +47455,23 @@
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MASTER_CHASER_GREEK</Type>
+			<Button>Art/Interface/Buttons/Units/MasterChaser.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Greek_Sparth/chaser/stone_thrower.nif</NIF>
+			<KFM>Art/Units/stone_Thrower/anim/stone_thrower.kfm</KFM>
+			<SHADERNIF>Art/Units/Greek_Sparth/chaser/stone_thrower_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
 			</ShadowDef>
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>

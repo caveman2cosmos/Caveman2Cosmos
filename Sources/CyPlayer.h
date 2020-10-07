@@ -148,7 +148,6 @@ public:
 	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
-	int getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
@@ -216,7 +215,7 @@ public:
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
 	int getAveragePopulation();
-	long getRealPopulation();
+	int64_t getRealPopulation() const;
 
 	int getTotalLand();
 	int getTotalLandScored();

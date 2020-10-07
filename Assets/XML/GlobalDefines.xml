@@ -652,10 +652,6 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
 		<iDefineIntVal>28</iDefineIntVal>
 	</Define>
@@ -1547,10 +1543,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>
 		<iDefineIntVal>-1</iDefineIntVal>
 	</Define>
@@ -1854,10 +1846,6 @@
 	<Define>
 		<DefineName>C2C_ROUGH_BOMBARD_VALUE_MODIFIER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<!-- Minimum number of property control units per property for the AI -->
 	<Define>

@@ -566,7 +566,7 @@ def applySaltpeter(argsList):
 		iY = plot[1].getY()
 		GAME.setPlotExtraYield(iX, iY, YieldTypes.YIELD_COMMERCE, 1)
 		szTxt = TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED",())
-		CvUtil.sendMessage(msg, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
+		CvUtil.sendMessage(szTxt, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
 		# Add landmark for other plots too.
 		placeLandmark(plot[1], sEventType, iFood, iProd, iComm, True, -1)
 

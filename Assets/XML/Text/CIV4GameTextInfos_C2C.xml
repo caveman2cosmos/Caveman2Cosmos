@@ -52,7 +52,7 @@
 		<Tag>TXT_KEY_BUILDING_FROM_IN_ALL_CITIES</Tag>
 		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
 		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
-		<German>[SPACE]per [LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK] in allen Städten</German>
+		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
 		<Italian>[SPACE]per [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian>
 		<Spanish>[SPACE]por [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] en todas las ciudades</Spanish>
 	</TEXT>
@@ -237,14 +237,6 @@
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_EVOLVES</Tag>
-		<English>[ICON_BULLET]Becomes a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] in %d3_Num [NUM2:Turn:Turns]</English>
-		<French>[ICON_BULLET]Se transforme en : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] après %d3_Num [NUM2:tour:tours]</French>
-		<German>[ICON_BULLET]Modernisierung in %d3_Num [NUM3:Runde:Runden]: [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Diventa [NUM1:un:una] [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] in %d3_Num [NUM2:Turno:Turni]</Italian>
-		<Spanish>[ICON_BULLET]Se convierte en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT] en %d3_Num [NUM2:turno:turnos]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
@@ -701,5 +693,13 @@
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad de retirarse: %d1_Amount%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
+		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADES</Tag>
+		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
 	</TEXT>
 </Civ4GameText>

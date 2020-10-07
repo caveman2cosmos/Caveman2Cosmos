@@ -119,7 +119,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		// means we are loading something which is not the deepest in directory structure that has been found valid to load...
 		if (GC.getModLoadControlInfos(iInfosLoad).getDirDepth() != iDirDepthTemp)
 		{
-			FAssertMsg(false, "Something ain't right with the parental MLF disabling function, put a bug report on http://www.worldofcivilization.net/bugtracker/bugtracker.htm, please supply your MLF configuration. All of them!");
+			FErrorMsg("Something ain't right with the parental MLF disabling function, put a bug report on http://www.worldofcivilization.net/bugtracker/bugtracker.htm, please supply your MLF configuration. All of them!");
 			break;
 		}
 
@@ -347,7 +347,7 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 		//DWORD dwError = ::GetLastError();
 		//if(dwError != ERROR_NO_MORE_FILES)
 		//{
-		//	FAssertMsg(false, "something wrong");
+		//	FErrorMsg("something wrong");
 		//	return;
 		//}
 	}
@@ -439,7 +439,7 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 		DWORD dwError = ::GetLastError();
 		if (!bValid && dwError != ERROR_NO_MORE_FILES)
 		{
-			FAssertMsg(false, "something wrong");
+			FErrorMsg("something wrong");
 			return false;
 		}
 

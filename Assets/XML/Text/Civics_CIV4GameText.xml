@@ -1311,6 +1311,7 @@
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_CHANGE</Tag>
 		<English>[ICON_BULLET]You can [LINK=CONCEPT_DRAFT]Draft[\LINK] %D1_Num [NUM1:Unit:Units]</English>
 		<French>[ICON_BULLET]Vous pouvez [LINK=CONCEPT_DRAFT]Recruter[\LINK] %D1_Num [NUM1:Unité:Unités]</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_DRAFT]Rekrutierung[\LINK]: %D1_Num [NUM1:Einheit:Einheiten]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_PEDIA</Tag>
@@ -3594,15 +3595,6 @@
 		<Tag>TXT_KEY_CIVIC_PUBLIC_WORKS_STRATEGY</Tag>
 		<English>Anyone in need can earn a living wage by applying to be part of the government-sponsored workforce responsible for constructing infrastructures that benefit the community.</English>
 		<French>Toute personne dans le besoin peut gagner un salaire décent en postulant pour faire partie de la main-d'oeuvre parrainée par le gouvernement et responsable de la construction d'infrastructures bénéficiant à la communauté.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RAISING_TAXATION_ANGER</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Raising Taxes will cause Civil Disorder![COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Augmenter les Taxes va engendrer du Désordre Civil![COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]Erhöhung der Steuern bewirkt Bürgerunruhen![COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Alzare le tasse causerà disordini civili![COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_WARNING_TEXT]¡Subir los impuestos causará desórdenes civiles![COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Podniesienie podatków może wywołać niezadowolenie![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RECYCLED</Tag>

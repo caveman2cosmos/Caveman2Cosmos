@@ -145,7 +145,7 @@ public:
 	int countHumanPlayersAlive() const; // Exposed to Python
 
 	int countTotalCivPower() const; // Exposed to Python
-	int countTotalNukeUnits()const; // Exposed to Python
+	int countTotalNukeUnits() const; // Exposed to Python
 	int countKnownTechNumTeams(TechTypes eTech) const; // Exposed to Python
 	int getNumFreeBonuses(BuildingTypes eBuilding) const; // Exposed to Python
 
@@ -481,7 +481,7 @@ public:
 	TeamTypes getRankTeam(int iRank) const; // Exposed to Python
 	void setRankTeam(int iRank, TeamTypes eTeam);
 
-	int getTeamRank(TeamTypes eTeam)const; // Exposed to Python
+	int getTeamRank(TeamTypes eTeam) const; // Exposed to Python
 	void setTeamRank(TeamTypes eTeam, int iRank);
 
 	DllExport int getTeamScore(TeamTypes eTeam) const; // Exposed to Python
@@ -610,7 +610,7 @@ public:
 		CvString logMsg;
 	};
 
-	void logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iNum);
+	void logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iNum);
 
 	DllExport int calculateSyncChecksum(); // Exposed to Python
 	DllExport int calculateOptionsChecksum(); // Exposed to Python

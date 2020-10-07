@@ -106,7 +106,7 @@ void PopupReturn::read(FDataStreamBase* pStream)
 	int iSize;
 	int iValue;
 	int i;
-	wchar szValue[1024];
+	wchar_t szValue[1024];
 
 	pStream->Read( &iSize );
 	for (i = 0; i < iSize; i++)
