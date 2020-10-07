@@ -65236,6 +65236,11 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+			</Buildings>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iCost>200</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
