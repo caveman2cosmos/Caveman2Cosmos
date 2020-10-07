@@ -6,6 +6,7 @@
 //  PURPOSE: Sorting classes for buildings
 //
 //------------------------------------------------------------------------------------------------
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 
 bool BuildingSortBase::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
@@ -213,8 +214,8 @@ void BuildingSortList::init()
 	m_apBuildingSort[BUILDING_SORT_PRODUCTION] = new BuildingSortYield(YIELD_PRODUCTION);
 	m_apBuildingSort[BUILDING_SORT_HAPPINESS] = new BuildingSortHappiness();
 	m_apBuildingSort[BUILDING_SORT_HEALTH] = new BuildingSortHealth();
-	m_apBuildingSort[BUILDING_SORT_CRIME] = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME"), true);
-	m_apBuildingSort[BUILDING_SORT_FLAMMABILITY] = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"), true);
+	m_apBuildingSort[BUILDING_SORT_CRIME] = new BuildingSortProperty(GC.getPROPERTY_CRIME(), true);
+	m_apBuildingSort[BUILDING_SORT_FLAMMABILITY] = new BuildingSortProperty(GC.getPROPERTY_FLAMMABILITY(), true);
 }
 
 BuildingSortTypes BuildingSortList::getActiveSort() const
@@ -224,8 +225,7 @@ BuildingSortTypes BuildingSortList::getActiveSort() const
 
 bool BuildingSortList::setActiveSort(BuildingSortTypes eActiveSort)
 {
-	FAssertMsg(eActiveSort < NUM_BUILDING_SORT, "Index out of bounds");
-	FAssertMsg(eActiveSort > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_SORT, eActiveSort)
 	const bool bChanged = m_eActiveSort != eActiveSort;
 	m_eActiveSort = eActiveSort;
 	return bChanged;

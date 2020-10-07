@@ -85,7 +85,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("getUpgradeTimeLeft", &CyPlot::getUpgradeTimeLeft, "int (int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer)")
 
-		.def("changeUpgradeProgress", &CyPlot::changeUpgradeProgress, "void (int iChange)")
+		.def("changeImprovementUpgradeProgress", &CyPlot::changeImprovementUpgradeProgress, "void (int iChange)")
 
 
 

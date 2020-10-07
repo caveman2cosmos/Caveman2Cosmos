@@ -587,7 +587,7 @@ def canTriggerHurricaneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -656,7 +656,7 @@ def canTriggerCycloneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -678,7 +678,7 @@ def canTriggerTsunamiCity(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   return True
@@ -753,7 +753,7 @@ def canTriggerMonsoonCity(argsList):
   if city.isNone():
     return False
 
-  if city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getInfoTypeForString("FEATURE_JUNGLE")
@@ -6003,7 +6003,7 @@ def canTriggerSailingFounded(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   if city.plot().getLatitude() <= 0:

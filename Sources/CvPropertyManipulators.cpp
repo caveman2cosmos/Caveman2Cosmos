@@ -32,8 +32,7 @@ int CvPropertyManipulators::getNumSources() const
 
 CvPropertySource* CvPropertyManipulators::getSource(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_apSources.size());
+	FASSERT_BOUNDS(0, getNumSources(), index)
 	return m_apSources[index];
 }
 
@@ -68,8 +67,7 @@ int CvPropertyManipulators::getNumInteractions() const
 
 CvPropertyInteraction* CvPropertyManipulators::getInteraction(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_apInteractions.size());
+	FASSERT_BOUNDS(0, getNumInteractions(), index)
 	return m_apInteractions[index];
 }
 
@@ -102,8 +100,7 @@ int CvPropertyManipulators::getNumPropagators() const
 
 CvPropertyPropagator* CvPropertyManipulators::getPropagator(int index) const
 {
-	FAssert(0 <= index);
-	FAssert(index < (int)m_apPropagators.size());
+	FASSERT_BOUNDS(0, getNumPropagators(), index)
 	return m_apPropagators[index];
 }
 
@@ -240,7 +237,7 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 	}
 }
 
-void CvPropertyManipulators::getCheckSum(unsigned int &iSum)
+void CvPropertyManipulators::getCheckSum(unsigned int &iSum) const
 {
 	for(int i=0;i<(int)m_apSources.size();i++)
 	{

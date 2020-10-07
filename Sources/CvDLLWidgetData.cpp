@@ -1,3 +1,4 @@
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -2023,10 +2024,9 @@ void CvDLLWidgetData::parseLiberateCityHelp(CvWidgetDataStruct &widgetDataStruct
 
 void CvDLLWidgetData::parseCityNameHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	CvCity* pHeadSelectedCity;
 	CvWString szTempBuffer;
 
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
 	{
@@ -2396,19 +2396,19 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					pSelectedUnitNode != NULL;
 					pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
 				{
-					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+					const CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
 					if (pSelectedUnit->canSabotage(pMissionPlot, true)) // XXX if queuing up this action, use the current plot along the goto...
 					{
-						int iPrice = pSelectedUnit->sabotageCost(pMissionPlot);
+						const int iPrice = GC.getBASE_SPY_SABOTAGE_COST();
 						if (iPrice > 0)
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(CvWString::format(L"%d %c", iPrice, GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 						}
 
-						int iLow = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_LOW);
-						int iHigh = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_HIGH);
+						const int iLow = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_LOW);
+						const int iHigh = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_HIGH);
 
 						if (iLow == iHigh)
 						{
@@ -2742,7 +2742,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 							if (pSelectedUnit->canHurry(pMissionPlot, true))
 							{
-								const wchar* pcKey = NULL;
+								const wchar_t* pcKey = NULL;
 								if (NO_PROJECT != pMissionCity->getProductionProject())
 								{
 									pcKey = GC.getProjectInfo(pMissionCity->getProductionProject()).getTextKeyWide();
@@ -2788,7 +2788,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 						if (pSelectedUnit->canHurryFood(pMissionPlot))
 						{
-							const wchar* pcKey = (pMissionCity->getNameKey());
+							const wchar_t* pcKey = (pMissionCity->getNameKey());
 							if (pSelectedUnit->getHurryFood(pMissionPlot) >= (pMissionCity->growthThreshold() - pMissionCity->getFood()))
 							{
 								szBuffer.append(NEWLINE);
@@ -3139,8 +3139,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
 						if (eTerrain == pMissionPlot->getTerrainType() || 
-							(eTerrain == CvTerrainInfo::getTerrainPeak() && pMissionPlot->isPeak2(true)) ||
-							(eTerrain == CvTerrainInfo::getTerrainHill() && pMissionPlot->isHills()))
+							(eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isPeak2(true)) ||
+							(eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills()))
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{
@@ -3746,33 +3746,30 @@ void CvDLLWidgetData::parseCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
 	{
-		if (widgetDataStruct.m_iData1 != NO_SPECIALIST)
+		GAMETEXT.parseSpecialistHelp(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity);
+
+		if (widgetDataStruct.m_iData2 != -1)
 		{
-			GAMETEXT.parseSpecialistHelp(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity);
+			int iCount = 0;
 
-			if (widgetDataStruct.m_iData2 != -1)
+			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 			{
-				int iCount = 0;
-
-				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				if (iI < widgetDataStruct.m_iData1)
 				{
-					if (iI < widgetDataStruct.m_iData1)
-					{
-						iCount += pHeadSelectedCity->getSpecialistCount((SpecialistTypes)iI);
-					}
-					else if (iI == widgetDataStruct.m_iData1)
-					{
-						iCount += widgetDataStruct.m_iData2;
-					}
+					iCount += pHeadSelectedCity->getSpecialistCount((SpecialistTypes)iI);
 				}
-
-				if (iCount < pHeadSelectedCity->totalFreeSpecialists())
+				else if (iI == widgetDataStruct.m_iData1)
 				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_FREE_SPECIALIST"));
+					iCount += widgetDataStruct.m_iData2;
 				}
+			}
+
+			if (iCount < pHeadSelectedCity->totalFreeSpecialists())
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_FREE_SPECIALIST"));
 			}
 		}
 	}
@@ -5665,7 +5662,7 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 /************************************************************************************************/
 			if (iMaintenanceValue != 0)
 			{
-				wchar szTempBuffer[1024];
+				wchar_t szTempBuffer[1024];
 				swprintf(szTempBuffer, L" (%s%d%%)", ((iMaintenanceValue > 0) ? L"+" : L""), iMaintenanceValue);
 				szBuffer.append(szTempBuffer);
 			}
@@ -5716,7 +5713,7 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 
 				if (iCulturePercent > 0)
 				{
-					wchar szTempBuffer[1024];
+					wchar_t szTempBuffer[1024];
 					swprintf(szTempBuffer, L"\n%d%% " SETCOLR L"%s" ENDCOLR, iCulturePercent, GET_PLAYER((PlayerTypes)iI).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iI).getCivilizationAdjective());
 					szBuffer.append(szTempBuffer);
 				}
@@ -5873,7 +5870,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 			break;
 
 		default:
-			FAssertMsg(false, "eOrderType did not match valid options");
+			FErrorMsg("eOrderType did not match valid options");
 			break;
 		}
 	}
@@ -5904,7 +5901,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 				break;
 
 			default:
-				FAssertMsg(false, "eOrderType did not match valid options");
+				FErrorMsg("eOrderType did not match valid options");
 				break;
 			}
 		}

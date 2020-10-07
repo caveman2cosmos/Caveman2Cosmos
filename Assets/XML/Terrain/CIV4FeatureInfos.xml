@@ -1103,6 +1103,10 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -1372,6 +1376,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1879,7 +1887,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1977,6 +1985,7 @@
 			<iDefense>15</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
+			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4398,7 +4407,7 @@
 			<iDefense>25</iDefense>
 			<iAppearance>80</iAppearance>
 			<iWarmingDefense>3</iWarmingDefense>
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<!-- GWMod new XML field M.A. -->
@@ -4520,6 +4529,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -5245,6 +5258,14 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -5610,6 +5631,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>

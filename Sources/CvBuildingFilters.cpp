@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()
@@ -304,13 +305,13 @@ void BuildingFilterList::init()
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_CITY_DEFENSE] = new BuildingFilterIsCityDefense();
 	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNHAPPINESS] = new BuildingFilterIsUnhappiness(true);
 	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNHEALTHINESS] = new BuildingFilterIsUnhealthiness(true);
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_CRIME] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_FLAMMABILITY] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_EDUCATION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_EDUCATION"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_DISEASE] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_AIR_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_AIR_POLLUTION"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_WATER_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_WATER_POLLUTION"));
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_TOURISM] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_TOURISM"));
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_CRIME] = new BuildingFilterIsProperty(GC.getPROPERTY_CRIME());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_FLAMMABILITY] = new BuildingFilterIsProperty(GC.getPROPERTY_FLAMMABILITY());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_EDUCATION] = new BuildingFilterIsProperty(GC.getPROPERTY_EDUCATION());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_DISEASE] = new BuildingFilterIsProperty(GC.getPROPERTY_DISEASE());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_AIR_POLLUTION] = new BuildingFilterIsProperty(GC.getPROPERTY_AIR_POLLUTION());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_WATER_POLLUTION] = new BuildingFilterIsProperty(GC.getPROPERTY_WATER_POLLUTION());
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_TOURISM] = new BuildingFilterIsProperty(GC.getPROPERTY_TOURISM());
 	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
 }
 
@@ -324,8 +325,7 @@ BuildingFilterList::~BuildingFilterList()
 
 bool BuildingFilterList::isFilterActive(BuildingFilterTypes i) const
 {
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->isActive();
 }
 
@@ -341,8 +341,7 @@ void BuildingFilterList::setPlayer(CvPlayer *pPlayer)
 
 bool BuildingFilterList::setFilterActive(BuildingFilterTypes i, bool bActive)
 {
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->setActive(bActive);
 }
 
@@ -365,10 +364,7 @@ void BuildingFilterList::setFilterActiveAll(BuildingFilterTypes eFilter, bool bA
 		{
 			kLoopPlayer.setBuildingListFilterActive(eFilter, bActive);
 
-			foreach_(CvCity* pCity, kLoopPlayer.cities())
-			{
-				pCity->setBuildingListFilterActive(eFilter, bActive);
-			}
+			algo::for_each(kLoopPlayer.cities(), CvCity::fn::setBuildingListFilterActive(eFilter, bActive));
 		}
 	}
 }

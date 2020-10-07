@@ -98,7 +98,7 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 	case GAMEMESSAGE_CONFIRM_AMBUSH: 
 		return new CvNetConfirmAmbush();
 	default:
-		FAssertMsg(false, "Unknown message type");
+		FErrorMsg("Unknown message type");
 	}
 	return NULL;
 }
