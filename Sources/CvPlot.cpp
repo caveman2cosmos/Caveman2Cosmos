@@ -3410,9 +3410,6 @@ namespace {
 			)
 		{
 			iValue = pLoopUnit->defenderValue(pAttacker);
-			iValue += pLoopUnit->tauntTotal() * iValue / 100;
-			// It should be greater than 0 as this target is at least valid as per the checks above
-			iValue = std::max(1, iValue);
 		}
 
 		if (cacheAccess & ECacheAccess::Write)

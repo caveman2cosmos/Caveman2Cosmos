@@ -4973,6 +4973,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	}
 
 	int iValue = 0;
+	bool bTargetOverride = false;
 
 	TeamTypes eAttackerTeam = NO_TEAM;
 	if (NULL != pAttacker)
@@ -4992,14 +4993,14 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 			return 0;
 		}
 
-		if (isTargetOf(*pAttacker))
-		{
-			iValue += 10000;
-		}
-
 		if (!pAttacker->canAttack(*this))
 		{
 			return 2;
+		}
+
+		if (isTargetOf(*pAttacker))
+		{
+			bTargetOverride = true;
 		}
 	}
 
@@ -5050,6 +5051,15 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	if (NO_UNIT == getLeaderUnitType())
 	{
 		++iValue;
+	}
+
+	iValue += tauntTotal() * iValue / 100;
+	// It should be greater than 0 as this target is at least valid as per the checks above
+	iValue = std::max(1, iValue);
+
+	if (bTargetOverride)
+	{
+		iValue += 1000000;
 	}
 
 	return iValue + 3;
