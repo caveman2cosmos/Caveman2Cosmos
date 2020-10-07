@@ -3,6 +3,7 @@
 // Author - Mustafa Thamer
 //
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"

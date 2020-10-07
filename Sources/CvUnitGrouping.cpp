@@ -85,7 +85,7 @@ void UnitGroupingList::init()
 		m_apUnitGrouping[UNIT_GROUPING_COMBAT] = new UnitGroupingCombat();
 		m_apUnitGrouping[UNIT_GROUPING_DOMAIN] = new UnitGroupingDomain();
 		UnitGroupingFilters* pGrouping = new UnitGroupingFilters();
-		pGrouping->addGroupingFilter(new UnitFilterIsCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")));
+		pGrouping->addGroupingFilter(new UnitFilterIsCombat(GC.getUNITCOMBAT_HERO()));
 		pGrouping->addGroupingFilter(new UnitFilterIsLimited());
 		m_apUnitGrouping[UNIT_GROUPING_HERO] = pGrouping;
 

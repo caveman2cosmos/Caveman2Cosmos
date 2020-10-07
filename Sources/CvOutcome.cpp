@@ -1031,15 +1031,15 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		&&
 		GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS)
 		&& (
-			GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED"))
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED())
 			||
-			GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())
 		)
 	);
 
 	if (m_eUnitType > NO_UNIT && !bUnitToCity)
 	{
-		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 		if (pUnit != NULL)
 		{
@@ -1077,9 +1077,9 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (aiYield[YIELD_PRODUCTION] || aiYield[YIELD_FOOD] || aiCommerce[COMMERCE_CULTURE] || m_iGPP || (bUnitToCity && m_eUnitType > NO_UNIT) || m_iHappinessTimer || m_iPopulationBoost || m_iReduceAnarchyLength)
 	{
-		CvCity* pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
+		CvCity* pCity = GC.getMap().findCity(kUnit.getX(), kUnit.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
-			pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
+			pCity = GC.getMap().findCity(kUnit.getX(), kUnit.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
 
 		if (pCity)
 		{
@@ -1278,7 +1278,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		AddDLLMessage(kUnit.getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer.getCString(), NULL, MESSAGE_TYPE_INFO, pUnitInfo->getButton(), NO_COLOR, kUnit.plot()->getX(), kUnit.plot()->getY(), true, true);
+		AddDLLMessage(kUnit.getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer.getCString(), NULL, MESSAGE_TYPE_INFO, pUnitInfo->getButton(), NO_COLOR, kUnit.getX(), kUnit.getY(), true, true);
 	}
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
@@ -1290,7 +1290,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		}
 		else
 		{
-			kPlayer.initTriggeredData(m_eEventTrigger, true, -1, kUnit.plot()->getX(), kUnit.plot()->getY());
+			kPlayer.initTriggeredData(m_eEventTrigger, true, -1, kUnit.getX(), kUnit.getY());
 		}
 	}
 
@@ -1708,8 +1708,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	bool bUnitToCity = getUnitToCity(kUnit);
 	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
 		m_eUnitType > NO_UNIT && 
-		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
+		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
+		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))
 	{
 		bUnitToCity = true;
 	}

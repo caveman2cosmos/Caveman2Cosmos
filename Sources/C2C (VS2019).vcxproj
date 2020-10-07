@@ -365,6 +365,7 @@
     <ClInclude Include="CvBugOptions.h" />
     <ClInclude Include="CvBuildingFilters.h" />
     <ClInclude Include="CvBuildingGrouping.h" />
+    <ClInclude Include="CvBuildingInfo.h" />
     <ClInclude Include="CvBuildingList.h" />
     <ClInclude Include="CvBuildingSort.h" />
     <ClInclude Include="CvBuildLists.h" />

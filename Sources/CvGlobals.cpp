@@ -238,15 +238,11 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 
-#define ADD_INT_TO_CONSTRUCTOR(dataType, VAR) \
-	, m_##VAR(0)
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
+#define ADD_TO_CONSTRUCTOR(dataType, VAR) \
+	, m_##VAR((dataType)0)
 
-#define ADD_BOOL_TO_CONSTRUCTOR(dataType, VAR) \
-	, m_##VAR(false)
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(ADD_BOOL_TO_CONSTRUCTOR)
+	DO_FOR_EACH_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
+	DO_FOR_EACH_INFO_TYPE(ADD_TO_CONSTRUCTOR)
 {
 }
 
@@ -3340,6 +3336,15 @@ void cvInternalGlobals::infosReset()
 			infoBaseVector->at(j)->reset();
 	}
 }
+
+void cvInternalGlobals::cacheInfoTypes()
+{
+#define CACHE_INFO_TYPE(type, VAR) \
+	m_##VAR = (type)getInfoTypeForString(#VAR);
+
+	DO_FOR_EACH_INFO_TYPE(CACHE_INFO_TYPE)
+}
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/

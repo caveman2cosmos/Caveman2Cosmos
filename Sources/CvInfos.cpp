@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -15672,9 +15673,6 @@ void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum) const
 //					CvImprovementInfo
 //======================================================================================================
 
-ImprovementTypes CvImprovementInfo::m_ImprovementCity = NO_IMPROVEMENT;
-ImprovementTypes CvImprovementInfo::m_ImprovementRuins = NO_IMPROVEMENT;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvImprovementInfo()
@@ -16955,26 +16953,6 @@ void CvImprovementInfo::copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, 
 	if (bOver || m_iImprovementPillage == iTextDefault) m_iImprovementPillage = pClassInfo->getImprovementPillage();
 	if (bOver || m_iImprovementUpgrade == iTextDefault) m_iImprovementUpgrade = pClassInfo->getImprovementUpgrade();
 	if (bOver || m_iBonusChange == iTextDefault) m_iBonusChange = pClassInfo->getBonusChange();
-}
-
-ImprovementTypes CvImprovementInfo::getImprovementCity()
-{
-	return m_ImprovementCity;
-}
-
-void CvImprovementInfo::setImprovementCity(ImprovementTypes eIndex)
-{
-	m_ImprovementCity = eIndex;
-}
-
-ImprovementTypes CvImprovementInfo::getImprovementRuins()
-{
-	return m_ImprovementRuins;
-}
-
-void CvImprovementInfo::setImprovementRuins(ImprovementTypes eIndex)
-{
-	m_ImprovementRuins = eIndex;
 }
 
 //======================================================================================================
@@ -18657,9 +18635,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 //======================================================================================================
 //					CvTerrainInfo
 //======================================================================================================
-
-TerrainTypes CvTerrainInfo::m_TerrainPeak = NO_TERRAIN;
-TerrainTypes CvTerrainInfo::m_TerrainHill = NO_TERRAIN;
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -31642,11 +31617,6 @@ void CvEraInfo::getCheckSum(unsigned int& iSum) const
 //					CvColorInfo
 //======================================================================================================
 
-ColorTypes CvColorInfo::m_eGreen = NO_COLOR;
-ColorTypes CvColorInfo::m_eRed = NO_COLOR;
-ColorTypes CvColorInfo::m_eYellow = NO_COLOR;
-ColorTypes CvColorInfo::m_eWhite = NO_COLOR;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvColorInfo()
@@ -38625,8 +38595,6 @@ void CvPromotionLineInfo::setBuildings()
 //  DESC:   Contains unit combat types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-UnitCombatTypes CvUnitCombatInfo::m_UnitCombatAnimal = NO_UNITCOMBAT;
-UnitCombatTypes CvUnitCombatInfo::m_UnitCombatWildAnimal = NO_UNITCOMBAT;
 
 CvUnitCombatInfo::CvUnitCombatInfo() 
 	//Textual References

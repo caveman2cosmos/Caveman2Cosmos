@@ -1,5 +1,6 @@
 // CvTaggedSaveFormatWrapper.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 
 #ifdef _DEBUG

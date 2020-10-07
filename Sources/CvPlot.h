@@ -1194,12 +1194,15 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);
