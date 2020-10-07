@@ -4279,15 +4279,10 @@ int CvGame::getInitWonders() const
 void CvGame::initScoreCalculation()
 {
 	// initialize score calculation
-	int iMaxFood = 0;
-	for (int i = 0; i < GC.getMap().numPlots(); i++)
-	{
-		const CvPlot* pPlot = GC.getMap().plotByIndex(i);
-		if (!pPlot->isWater() || pPlot->isAdjacentToLand())
-		{
-			iMaxFood += pPlot->calculateBestNatureYield(YIELD_FOOD, NO_TEAM);
-		}
-	}
+	const int iMaxFood = algo::accumulate(GC.getMap().plots()
+		| filtered(!CvPlot::fn::isWater() || CvPlot::fn::isAdjacentToLand())
+		| transformed(CvPlot::fn::calculateBestNatureYield(YIELD_FOOD, NO_TEAM)), 0);
+
 	m_iMaxPopulation = getPopulationScore(iMaxFood / std::max(1, GC.getFOOD_CONSUMPTION_PER_POPULATION()));
 	m_iMaxLand = getLandPlotsScore(GC.getMap().getLandPlots());
 	m_iMaxTech = 0;
