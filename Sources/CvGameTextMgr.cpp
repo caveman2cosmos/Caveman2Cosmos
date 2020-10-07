@@ -10,6 +10,7 @@
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CounterSet.h"
 #include "CvGameAI.h"
@@ -3801,7 +3802,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 									if (!pMissionPlot->isCity())
 									{
-										DirectionTypes eDirection = estimateDirection(dxWrap(pMissionPlot->getX() - pCity->plot()->getX()), dyWrap(pMissionPlot->getY() - pCity->plot()->getY()));
+										DirectionTypes eDirection = estimateDirection(dxWrap(pMissionPlot->getX() - pCity->getX()), dyWrap(pMissionPlot->getY() - pCity->getY()));
 
 										getDirectionTypeString(szTempString, eDirection);
 										szString.append(CvWString::format(L"%s of ", szTempString.GetCString()));

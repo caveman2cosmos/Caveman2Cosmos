@@ -1144,7 +1144,6 @@ public:
 
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
-	bool isImprovementUpgradeBlocked(const TeamTypes eTeam) const;
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
@@ -1225,6 +1224,8 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isPeak);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isCoastalLand);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
@@ -1233,6 +1234,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, calculateTotalBestNatureYield, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);

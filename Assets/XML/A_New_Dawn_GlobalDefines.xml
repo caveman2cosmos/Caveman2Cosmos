@@ -296,10 +296,6 @@ We default to all of them (1+2+128 = 131)
 if set to 0 you will need to escort subdued animals back to your lands.
 if set to 1 they will "teleport" to the nearest city when captured. -->
 	<Define>
-		<DefineName>DONT_ESCORT_SUBDUED_LAND_ANIMAL</DefineName>
-		<bDefineBoolVal>1</bDefineBoolVal>
-	</Define>
-	<Define>
 		<DefineName>DONT_ESCORT_SUBDUED_SEA_ANIMAL</DefineName>
 		<bDefineBoolVal>1</bDefineBoolVal>
 	</Define>

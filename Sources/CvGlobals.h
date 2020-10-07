@@ -298,6 +298,7 @@ public:
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
+	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
@@ -496,16 +497,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-
-#define DECLARE_GET_METHOD(dataType, VAR) \
-	dataType get##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-
-#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
-	dataType is##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
@@ -761,6 +752,20 @@ public:
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheEnumGlobals();
 	void cacheGlobals();
+
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+
+	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD)
+
+#define DECLARE_IS_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
@@ -1243,7 +1248,9 @@ protected:
 
 #define DECLARE_MEMBER_VAR(dataType, VAR) \
 	dataType m_##VAR;
+
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
+	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
 

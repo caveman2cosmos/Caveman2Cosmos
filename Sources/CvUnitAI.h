@@ -489,7 +489,7 @@ public:
 	bool AI_airBombCities();
 	bool AI_moveToTarget(CvUnit* pTarget);
 	void AI_shadowMove();
-	bool AI_protectTarget(CvUnit* pTarget);
+	bool AI_protectTarget(const CvUnit* pTarget);
 	bool AI_joinMilitaryCity(bool bNaval = false);
 	bool AI_isPlotWellDefended(CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
 /************************************************************************************************/
@@ -514,9 +514,9 @@ public:
 	//	joing one lead by a unit with an override, but reset if we join another group
 	virtual void AI_setLeaderPriority(int iPriority);	//	 -1 means reset to default
 
-	bool AI_fulfillHealerNeed(CvPlot* pPlot);
-	bool AI_fulfillImmediateHealerNeed(CvPlot* pPlot);
-	bool AI_fulfillCityHealerNeed(CvPlot* pPlot);
+	bool AI_fulfillHealerNeed(const CvPlot* pPlot);
+	bool AI_fulfillImmediateHealerNeed(const CvPlot* pPlot);
+	bool AI_fulfillCityHealerNeed(const CvPlot* pPlot);
 
 	bool AI_fulfillPropertyControlNeed();
 

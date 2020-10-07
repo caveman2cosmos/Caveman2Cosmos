@@ -1,3 +1,4 @@
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
@@ -460,9 +461,7 @@ ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCou
 
 int getWorldSizeMaxConscript(CivicTypes eCivic)
 {
-	int iMaxConscript;
-
-	iMaxConscript = GC.getCivicInfo(eCivic).getMaxConscript();
+	int iMaxConscript = GC.getCivicInfo(eCivic).getMaxConscript();
 
 	iMaxConscript *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getMaxConscriptModifier() + 100));
 	iMaxConscript /= 100;
@@ -472,9 +471,7 @@ int getWorldSizeMaxConscript(CivicTypes eCivic)
 
 bool isReligionTech(TechTypes eTech)
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
 		{
@@ -487,9 +484,7 @@ bool isReligionTech(TechTypes eTech)
 
 bool isCorporationTech(TechTypes eTech)
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (GC.getCorporationInfo((CorporationTypes)iI).getTechPrereq() == eTech)
 		{
@@ -502,7 +497,6 @@ bool isCorporationTech(TechTypes eTech)
 
 bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 {
-	int iI;
 	const CvUnitInfo& info = GC.getUnitInfo(eUnit);
 
 	if (info.getPrereqAndTech() == eTech)
@@ -510,7 +504,7 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 		return true;
 	}
 
-	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
 	{
 		if (info.getPrereqAndTechs(iI) == eTech)
 		{
@@ -523,7 +517,6 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
-	int iI;
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
 	if (info.getPrereqAndTech() == eTech)
@@ -531,7 +524,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	for (iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
 	{
 		if (info.getPrereqAndTechs(iI) == eTech)
 		{

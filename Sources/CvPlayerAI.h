@@ -382,7 +382,7 @@ public:
 
 	void AI_nowHasTech(TechTypes eTech);
 
-	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
+	int AI_countDeadlockedBonuses(const CvPlot* pPlot) const;
 
 	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;

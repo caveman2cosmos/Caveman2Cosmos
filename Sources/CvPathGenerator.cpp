@@ -1854,7 +1854,7 @@ void CvPathGenerator::SelfTest()
 
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
-	UnitTypes eLandUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_WORKER");
+	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
 
 	EnableMaxPerformance(true);
 

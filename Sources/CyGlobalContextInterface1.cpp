@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvRandom.h"
 #include "CyGame.h"
 #include "CyGlobalContext.h"
