@@ -2,6 +2,7 @@
 // XML Set functions
 //
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvXMLLoadUtilitySetMod.h"

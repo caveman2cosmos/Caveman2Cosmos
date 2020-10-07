@@ -1,5 +1,6 @@
 // player.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvDiploParameters.h"
