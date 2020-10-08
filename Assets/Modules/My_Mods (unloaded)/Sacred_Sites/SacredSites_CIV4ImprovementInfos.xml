@@ -92,7 +92,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -181,7 +181,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -266,7 +266,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -347,7 +347,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -444,7 +444,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>

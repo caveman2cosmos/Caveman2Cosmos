@@ -16487,7 +16487,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
 	pXML->GetOptionalChildXmlValByName(&m_iVisibilityChange, L"iVisibilityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iSeeFrom, L"iSeeFrom");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_bBombardable, L"bBombardable");
 	pXML->GetOptionalChildXmlValByName(&m_bUpgradeRequiresFortify, L"bUpgradeRequiresFortify");
 	// Super Forts end
@@ -16994,7 +16994,7 @@ bool CvBonusClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 
 	return true;
 }
@@ -17460,7 +17460,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPercentPerPlayer, L"iPlayer");
 	pXML->GetOptionalChildXmlValByName(&m_iTilesPer, L"iTilesPer");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLandPercent, L"iMinLandPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRange, L"iGroupRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRand, L"iGroupRand");
 	pXML->GetOptionalChildXmlValByName(&m_bOneArea, L"bArea");
