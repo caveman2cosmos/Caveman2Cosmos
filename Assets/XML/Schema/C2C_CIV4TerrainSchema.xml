@@ -209,8 +209,6 @@
 		<element type="bFoundCoast" minOccurs="0"/>
 		<element type="bFoundFreshWater" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
-		<element type="iSeeFrom" minOccurs="0"/>
-		<element type="iSeeThrough" minOccurs="0"/>
 		<element type="iBuildModifier" minOccurs="0"/>
 		<element type="iDefense" minOccurs="0"/>
 		<element type="Button" minOccurs="0"/>
