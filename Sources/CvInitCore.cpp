@@ -2100,11 +2100,6 @@ CvString CvInitCore::getSaveGameVector(int i)
 	FASSERT_BOUNDS(0, getNumSaveGameVector(), i)
 	return m_aszSaveGameVector[i];
 }
-
-void CvInitCore::doReloadInfoClasses()
-{
-	GC.doResetInfoClasses((int)m_aszSaveGameVector.size(), m_aszSaveGameVector);
-}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
