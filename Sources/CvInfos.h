@@ -5057,8 +5057,6 @@ public:
 	virtual ~CvTerrainInfo();
 
 	int getMovementCost() const; // Exposed to Python
-	int getSeeFromLevel() const; // Exposed to Python
-	int getSeeThroughLevel() const; // Exposed to Python
 	int getBuildModifier() const; // Exposed to Python
 	int getDefenseModifier() const; // Exposed to Python
 
@@ -5124,8 +5122,6 @@ protected:
 	bool m_bColdDamage; // TB Combat Mods
 
 	int m_iMovementCost;
-	int m_iSeeFromLevel;
-	int m_iSeeThroughLevel;
 	int m_iBuildModifier;
 	int m_iDefenseModifier;
 	int m_iWorldSoundscapeScriptId;

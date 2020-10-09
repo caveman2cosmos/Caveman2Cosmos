@@ -1991,31 +1991,29 @@ CvPlot* CvPlot::getNearestLandPlot() const
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
-	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
-
-	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
+	int iLevel = 0;
 
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
 		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
 	}
 
-	if (isPeak2(true))
+	if (!isWater())
 	{
-		iLevel += GC.getPEAK_SEE_FROM_CHANGE();
-	}
-	else if (isHills())
-	{
-		iLevel += GC.getHILLS_SEE_FROM_CHANGE();
-	}
-	else if (isWater())
-	{
-		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
+		iLevel++;
 
-		if (GET_TEAM(eTeam).isExtraWaterSeeFrom())
+		if (isPeak2(true))
 		{
-			iLevel++;
+			iLevel += GC.getPEAK_SEE_FROM_CHANGE();
 		}
+		else if (isHills())
+		{
+			iLevel += GC.getHILLS_SEE_FROM_CHANGE();
+		}
+	}
+	else if (GET_TEAM(eTeam).isExtraWaterSeeFrom())
+	{
+		iLevel++;
 	}
 	return iLevel;
 }
@@ -2023,26 +2021,25 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
-
-	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
+	int iLevel = 0;
 
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iLevel += GC.getFeatureInfo(getFeatureType()).getSeeThroughChange();
 	}
 
-	if (isPeak2(true))
+	if (!isWater())
 	{
-		iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
-	}
-	else if (isHills())
-	{
-		iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
-	}
-	else if (isWater())
-	{
-		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
+		iLevel++;
+
+		if (isPeak2(true))
+		{
+			iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
+		}
+		else if (isHills())
+		{
+			iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
+		}
 	}
 	return iLevel;
 }
@@ -2272,72 +2269,44 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-//	CvCity* pHolyCity;
-	CvUnit* pLoopUnit;
-	int iI;
-
-	CvCity* pCity = getPlotCity();
-
-	if (pCity != NULL)
+	// City
 	{
-		// Religion - Disabled with new Espionage System
-/*		for (iI = 0; iI < GC.getNumReligionInfos(); ++iI)
-		{
-			if (pCity->isHasReligion((ReligionTypes)iI))
-			{
-				pHolyCity = GC.getGame().getHolyCity((ReligionTypes)iI);
+		CvCity* pCity = getPlotCity();
 
-				if (pHolyCity != NULL)
-				{
-					if (GET_PLAYER(pHolyCity->getOwner()).getStateReligion() == iI)
-					{
-						changeAdjacentSight(pHolyCity->getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-					}
-				}
-			}
-		}*/
-
-		// Vassal
-		for (iI = 0; iI < MAX_TEAMS; ++iI)
+		if (pCity != NULL)
 		{
-			if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
+			// Vassal
+			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 			{
-				changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-			}
-		}
-
-		// EspionageEffect
-		for (iI = 0; iI < MAX_PC_TEAMS; ++iI)
-		{
-			if (pCity->getEspionageVisibility((TeamTypes)iI))
-			{
-				// Passive Effect: enough EPs gives you visibility into someone's cities
-				changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-			}
-		}
-
-		/************************************************************************************************/
-		/* Afforess	                  Start		 02/03/10                                              */
-		/*                                                                                              */
-		/* Embassy Allows Players to See Capitals                                                       */
-		/************************************************************************************************/
-		//Removed 3/7/10 due to bugs
-		//fixed 12/5/12 by damgo and reinstated by ls612
-		if (pCity->isCapital())
-		{
-			TeamTypes pTeam = pCity->getTeam();
-			for (iI = 0; iI < MAX_PC_TEAMS; ++iI)
-			{
-				if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
+				if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 				{
 					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 				}
 			}
+
+			// EspionageEffect
+			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
+			{
+				if (pCity->getEspionageVisibility((TeamTypes)iI))
+				{
+					// Passive Effect: enough EPs gives you visibility into someone's cities
+					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
+				}
+			}
+
+			// Afforess - Embassy Allows Players to See Capitals
+			if (pCity->isCapital())
+			{
+				TeamTypes pTeam = pCity->getTeam();
+				for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
+				{
+					if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
+					{
+						changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
+					}
+				}
+			}
 		}
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
 	}
 
 	// Owned
@@ -2346,51 +2315,45 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
 	}
 
-	pUnitNode = headUnitNode();
-
 	// Unit
-	while (pUnitNode != NULL)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
+		CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
-		if (pLoopUnit != NULL)
+		while (pUnitNode != NULL)
 		{
-			if (bIncrement)
+			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			pUnitNode = nextUnitNode(pUnitNode);
+
+			if (pLoopUnit != NULL)
 			{
-				pLoopUnit->changeDebugCount(1);
+				if (bIncrement)
+					pLoopUnit->changeDebugCount(1);
+				else pLoopUnit->changeDebugCount(-1);
+
+				changeAdjacentSight(pLoopUnit->getTeam(), pLoopUnit->visibilityRange(), bIncrement, pLoopUnit, bUpdatePlotGroups);
 			}
 			else
 			{
-				pLoopUnit->changeDebugCount(-1);
+				verifyUnitValidPlot();
+				pUnitNode = NULL;
 			}
-
-			changeAdjacentSight(pLoopUnit->getTeam(), pLoopUnit->visibilityRange(), bIncrement, pLoopUnit, bUpdatePlotGroups);
-		}
-		else
-		{
-			verifyUnitValidPlot();
-			pUnitNode = NULL;
 		}
 	}
 
+	// Recon
 	if (getReconCount() > 0)
 	{
 		const int iRange = GC.getDefineINT("RECON_VISIBILITY_RANGE");
-		for (iI = 0; iI < MAX_PLAYERS; ++iI)
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 		{
 			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 			{
 				if (pLoopUnit->getReconPlot() == this)
 				{
 					if (bIncrement)
-					{
 						pLoopUnit->changeDebugCount(1);
-					}
-					else
-					{
-						pLoopUnit->changeDebugCount(-1);
-					}
+					else pLoopUnit->changeDebugCount(-1);
+
 					changeAdjacentSight(pLoopUnit->getTeam(), iRange, bIncrement, pLoopUnit, bUpdatePlotGroups);
 				}
 			}
@@ -6978,28 +6941,22 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 TerrainTypes CvPlot::getTerrainTypeExternal() const
 {
 #ifdef EXTREME_PAGING
-	if ( !shouldHaveFullGraphics() )
+	if (!shouldHaveFullGraphics())
 	{
-		if ( isWater() )
+		if (isWater())
 		{
 			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_OCEAN");
 		}
-		else
-		{
-			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASSLAND");
-		}
+		return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASSLAND");
 	}
 	else
 #endif
 	{
-		if ( !GC.viewportsEnabled() || isRevealed(GC.getGame().getActiveTeam(), true) )
+		if (!GC.viewportsEnabled() || isRevealed(GC.getGame().getActiveTeam(), true))
 		{
-			return (TerrainTypes)m_eTerrainType;
+			return getTerrainType();
 		}
-		else
-		{
-			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_NONE");
-		}
+		return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_NONE");
 	}
 }
 
@@ -7011,59 +6968,30 @@ TerrainTypes CvPlot::getTerrainType() const
 
 void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
 {
-	bool bUpdateSight;
-	TerrainTypes eOldTerrain = getTerrainType();
+	const TerrainTypes eOldTerrain = getTerrainType();
 
-	if ( eOldTerrain != eNewValue)
+	if (eOldTerrain != eNewValue)
 	{
-		if ((getTerrainType() != NO_TERRAIN) &&
-			  (eNewValue != NO_TERRAIN) &&
-			  ((GC.getTerrainInfo(getTerrainType()).getSeeFromLevel() != GC.getTerrainInfo(eNewValue).getSeeFromLevel()) ||
-				 (GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel() != GC.getTerrainInfo(eNewValue).getSeeThroughLevel())))
-		{
-			bUpdateSight = true;
-		}
-		else
-		{
-			bUpdateSight = false;
-		}
+		m_eTerrainType = eNewValue;
 
-		if (bUpdateSight)
-		{
-			updateSeeFromSight(false, true);
-		}
-
-		if ( eOldTerrain != NO_TERRAIN )
+		if (eOldTerrain != NO_TERRAIN)
 		{
 			m_movementCharacteristicsHash ^= GC.getTerrainInfo(eOldTerrain).getZobristValue();
 		}
-		if ( eNewValue != NO_TERRAIN )
+		if (eNewValue != NO_TERRAIN)
 		{
 			m_movementCharacteristicsHash ^= GC.getTerrainInfo(eNewValue).getZobristValue();
 		}
-
-		m_eTerrainType = eNewValue;
-
 		updateYield();
 		updatePlotGroup();
 
-		if (bUpdateSight)
+		if (bRebuildGraphics && shouldHaveGraphics())
 		{
-			updateSeeFromSight(true, true);
+			// Update terrain graphics
+			gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),false,true);
 		}
 
-		if (bRebuildGraphics)
-		{
-			if ( shouldHaveGraphics() )
-			{
-				//Update terrain graphics
-				gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),false,true);
-				//gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true); //minimap does a partial update
-				//gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-			}
-		}
-
-		if (GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != isWater())
+		if (GC.getTerrainInfo(eNewValue).isWaterTerrain() != isWater())
 		{
 			setPlotType(isWater() ? PLOT_LAND : PLOT_OCEAN, bRecalculate, bRebuildGraphics);
 		}

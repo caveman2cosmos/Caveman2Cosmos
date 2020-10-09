@@ -3532,8 +3532,8 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 			(
 				CvString::format
 				(
-					"Pathing of player %d units (%S) from plot <%d, %d> to supposedly reachable city %S at <%d, %d> failed",
-					(int)ePlayer, headUnit->getDescription().c_str(), getX(), getY(), cityX->getName().c_str(), cityX->getX(), cityX->getY()
+					"Pathing of player %d unit-group of %d (led by %S) from plot <%d, %d> to supposedly reachable city %S, owned by player %d at <%d, %d>, failed.",
+					getOwner(), getNumUnits(), headUnit->getDescription().c_str(), getX(), getY(), cityX->getName().c_str(), ePlayer, cityX->getX(), cityX->getY()
 				).c_str()
 			);
 		}

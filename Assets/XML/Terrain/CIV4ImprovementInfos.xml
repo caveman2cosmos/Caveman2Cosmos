@@ -9591,7 +9591,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -9684,7 +9684,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
@@ -9923,6 +9923,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_WOODEN_PALISADE</ImprovementUpgrade>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10011,6 +10012,7 @@
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>5</iCulture>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10034,6 +10036,7 @@
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10059,6 +10062,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iCultureRange>1</iCultureRange>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10150,7 +10154,7 @@
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>1</iVisibilityChange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10245,7 +10249,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10337,7 +10341,7 @@
 			<iCultureRange>2</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10430,6 +10434,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iVisibilityChange>1</iVisibilityChange>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10520,6 +10525,7 @@
 			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10610,7 +10616,7 @@
 			<iCulture>10</iCulture>
 			<iVisibilityChange>3</iVisibilityChange>
 			<iSeeFrom>2</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10700,7 +10706,7 @@
 			<iCulture>10</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>3</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
