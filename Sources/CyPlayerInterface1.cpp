@@ -51,6 +51,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("isHominid", &CyPlayer::isHominid, "bool () - returns True if player is a Hominid")
 		.def("getName", &CyPlayer::getName, "str ()")
 
+		.def("setCivName", &CyPlayer::setCivName)
 		.def("setName", &CyPlayer::setName, "void(std::wstring szNewValue)" ) // Exposed to Python
 		.def("getNameForm", &CyPlayer::getNameForm, "str ()")
 		.def("getNameKey", &CyPlayer::getNameKey, "str ()")

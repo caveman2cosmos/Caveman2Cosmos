@@ -32,10 +32,8 @@ public:
 	bool isRebel();
 
 	int getStabilityIndex( );
-	void setStabilityIndex( int iNewValue );
 	void changeStabilityIndex( int iChange );
 	int getStabilityIndexAverage( );
-	void setStabilityIndexAverage( int iNewValue );
 	void updateStabilityIndexAverage( );
 
 	bool isDoNotBotherStatus(int /*PlayerTypes*/ playerID);
@@ -52,7 +50,6 @@ public:
 	std::wstring getNewCityName();
 
 	CyUnit* initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection);
-	void disbandUnit(bool bAnnounce);
 
 	void killUnits();
 	bool hasTrait(int /*TraitTypes*/ iIndex);
@@ -82,26 +79,15 @@ public:
 	std::wstring getStateReligionKey();
 	std::wstring getBestAttackUnitName(int iForm);
 	std::wstring getWorstEnemyName();
-	std::wstring getBestAttackUnitKey();
 	int /*ArtStyleTypes*/ getArtStyleType();
 	std::string getUnitButton(int eUnit);
-
-	int findBestFoundValue();
 
 	int countReligionSpreadUnits(CyArea* pArea, int /*ReligionTypes*/ eReligion);
 
 	int countNumCoastalCities();
-	int countNumCoastalCitiesByArea(CyArea* pArea);
-
-	int getCurrentInflationCostModifier();
-	int getEquilibriumInflationCostModifier();
 
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
-	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
-	int countCityFeatures(int /*FeatureTypes*/ eFeature);
 	int countNumBuildings(int /*BuildingTypes*/ eBuilding);
-	int countPotentialForeignTradeCities(CyArea* pIgnoreArea);
-	int countPotentialForeignTradeCitiesConnected();
 	int countNumCitiesConnectedToCapital();
 
 	bool canContact(int /*PlayerTypes*/ ePlayer);
@@ -112,20 +98,10 @@ public:
 	bool canTradeNetworkWith(int /*PlayerTypes*/ iPlayer);
 	int getNumAvailableBonuses(int /*BonusTypes*/ eBonus);
 	int getNumTradeableBonuses(int /*BonusTypes*/ eBonus);
-	int getNumTradeBonusImports(int /*PlayerTypes*/ ePlayer);
 	bool hasBonus(int /*BonusTypes*/ eBonus);
 
-	bool canStopTradingWithTeam(int /*TeamTypes*/ eTeam);
-	void stopTradingWithTeam(int /*TeamTypes*/ eTeam);
-	void killAllDeals();
-	bool isTurnActive( void );
+	bool isTurnActive();
 
-	void findNewCapital();
-	int getNumGovernmentCenters();
-	bool canRaze(CyCity* pCity);
-	void raze(CyCity* pCity);
-	void disband(CyCity* pCity);
-	bool canReceiveGoody(CyPlot* pPlot, int /*GoodyTypes*/ eGoody, CyUnit* pUnit);
 	void receiveGoody(CyPlot* pPlot, int /*GoodyTypes*/ eGoody, CyUnit* pUnit);
 	void doGoody(CyPlot* pPlot, CyUnit* pUnit);
 	bool canFound(int iX, int iY);
@@ -134,18 +110,10 @@ public:
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible);
 	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);
-	bool isProductionMaxedBuilding(int /*BuildingTypes*/ eBuilding, bool bAcquireCity);
-	bool isProductionMaxedUnit(int /*UnitTypes*/ eUnit);
-	bool isProductionMaxedProject(int /*ProjectTypes*/ eProject);
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex);
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex);
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex);
 
-	void chooseTech(int iDiscover, std::wstring szText, bool bFront);
-
-	int getBuildingPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra);
-
-	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
 
@@ -162,7 +130,6 @@ public:
 	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
 	int64_t calculatePreInflatedCosts();
-	int calculateInflationRate();
 	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
@@ -170,55 +137,38 @@ public:
 	int calculateResearchRate(int /*TechTypes*/ eTech);
 	int calculateResearchModifier(int /*TechTypes*/ eTech);
 	int calculateBaseNetResearch();
-	bool isResearch();
 	bool canEverResearch(int /*TechTypes*/ eTech);
 	bool canResearch(int /*TechTypes*/ eTech);
 	int /* TechTypes */ getCurrentResearch();
 	bool isCurrentResearchRepeat();
-	bool isNoResearchAvailable();
 	int getResearchTurnsLeft(int /*TechTypes*/ eTech, bool bOverflow);
 
 	bool isCivic(int /*CivicTypes*/ eCivic);
 	bool canDoCivics(int /*CivicTypes*/ eCivic);
 	bool canRevolution(int /*CivicTypes**/ paeNewCivics);
-	void revolution(int /*CivicTypes**/ paeNewCivics, bool bForce);
-	int getCivicPercentAnger(int /*CivicTypes*/ eCivic);
 
-	bool canDoReligion(int /*ReligionTypes*/ eReligion);
 	bool canChangeReligion();
 	bool canConvert(int /*ReligionTypes*/ iIndex);
 	void convert(int /*ReligionTypes*/ iIndex);
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion);
-	bool hasAnyHolyCity();
-	bool hasStateReligionHolyCity();
-	bool hasStateReligionShrine();
 	int countHolyCities();
 
-	void foundReligion(int /*ReligionTypes*/ eReligion, int /*ReligionTypes*/ iSlotReligion, bool bAward);
 	int getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics);
 	int getReligionAnarchyLength();
 
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation);
-	int countHeadquarters();
-	int countCorporations(int /*CorporationTypes*/ eCorporation);
-	void foundCorporation(int /*CorporationTypes*/ eCorporation);
 
 	int unitsRequiredForGoldenAge();
-	int unitsGoldenAgeCapable();
-	int unitsGoldenAgeReady();
 	int greatPeopleThresholdMilitary();
 	int greatPeopleThresholdNonMilitary();
 	int specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce);
-	int specialistCommerce(int /*SpecialistTypes*/ eSpecialist, int /*CommerceTypes*/ eCommerce);
 
 	CyPlot* getStartingPlot();
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
-	int getAveragePopulation();
 	int64_t getRealPopulation() const;
 
 	int getTotalLand();
-	int getTotalLandScored();
 
 	int64_t getGold() const;
 	void setGold(int64_t iNewValue);
@@ -286,7 +236,6 @@ public:
 	int getBestUnitType(int /*UnitAITypes*/ eUnitAI) const;
 
 	bool isNonStateReligionCommerce() const;
-	bool isUpgradeAnywhere() const;
 	int getRevIdxLocal();
 	int getRevIdxNational();
 	int getRevIdxDistanceModifier();
@@ -522,7 +471,6 @@ public:
 	int getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger);
 
 	void AI_updateFoundValues(bool bStartingLoc);
-	int AI_foundValue(int iX, int iY, int iMinUnitRange/* = -1*/, bool bStartingLoc/* = false*/);
 	bool AI_isFinancialTrouble();
 	bool AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer);
 	AttitudeTypes AI_getAttitude(int /*PlayerTypes*/ ePlayer);
@@ -530,15 +478,12 @@ public:
 	int AI_civicValue(int /*CivicTypes*/ eCivic);
 	int AI_totalUnitAIs(int /*UnitAITypes*/ eUnitAI);
 	int AI_totalAreaUnitAIs(CyArea* pArea, int /*UnitAITypes*/ eUnitAI);
-	int AI_totalWaterAreaUnitAIs(CyArea* pArea, int /*UnitAITypes*/ eUnitAI);
 	int AI_getNumAIUnits(int /*UnitAITypes*/ eIndex);
 	int AI_getAttitudeExtra(int /*PlayerTypes*/ eIndex);
 	void AI_setAttitudeExtra(int /*PlayerTypes*/ eIndex, int iNewValue);
 	void AI_changeAttitudeExtra(int /*PlayerTypes*/ eIndex, int iChange);
 	int AI_getMemoryCount(int /*PlayerTypes*/ eIndex1, int /*MemoryTypes*/ eIndex2);
 	void AI_changeMemoryCount(int /*PlayerTypes*/ eIndex1, int /*MemoryTypes*/ eIndex2, int iChange);
-	int AI_getExtraGoldTarget() const;
-	void AI_setExtraGoldTarget(int iNewValue);
 
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 
@@ -557,7 +502,6 @@ public:
 	int AI_maxGoldTrade(int iPlayer);
 	int AI_maxGoldPerTurnTrade(int iPlayer);
 
-	bool splitEmpire(int iAreaId);
 	bool canSplitEmpire() const;
 	bool canSplitArea(int iAreaId) const;
 	bool assimilatePlayer( int iPlayer );
@@ -576,25 +520,17 @@ public:
 	int getDarkAgePointsFinal();
 
 	bool canHaveSlaves();
-	bool hasValidBuildings(int /*TechTypes*/ iTech);
 
-	int getBonusCommerceModifier(int /*BonusType*/ i, int /*CommerceType*/ j) const;
-
-	void setShowLandmarks(bool bNewVal);
-	bool isShowLandmarks() const;
 	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
 	void setHandicap(int iNewVal);
 
-	bool isModderOption(int /*ModderOptionTypes*/ eIndex);
-	int getModderOption(int /*ModderOptionTypes*/ eIndex);
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
 
 	void doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce);
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex);
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
-	void setTeam(int /*TeamTypes*/ eIndex);
 
 	int64_t getCulture() const;
 	void setCulture(int64_t iNewValue);
@@ -602,7 +538,6 @@ public:
 
 	CvProperties* getProperties();
 
-	void setBuildingListInvalid();
 	bool getBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter);
 	void setBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter, bool bActive);
 	int /*BuildingGroupingTypes*/ getBuildingListGrouping();
@@ -612,12 +547,6 @@ public:
 	int getBuildingListGroupNum();
 	int getBuildingListNumInGroup(int iGroup);
 	int /*BuildingTypes*/ getBuildingListType(int iGroup, int iPos);
-	int getBuildingListSelectedBuildingRow();
-	int getBuildingListSelectedWonderRow();
-	void setBuildingListSelectedBuilding(int /*BuildingTypes*/ eBuilding);
-	void setBuildingListSelectedWonder(int /*BuildingTypes*/ eWonder);
-	int /*BuildingTypes*/ getBuildingListSelectedBuilding();
-	int /*BuildingTypes*/ getBuildingListSelectedWonder();
 
 	void setUnitListInvalid();
 	bool getUnitListFilterActive(int /*UnitFilterTypes*/ eFilter);
@@ -629,47 +558,7 @@ public:
 	int getUnitListGroupNum();
 	int getUnitListNumInGroup(int iGroup);
 	int /*UnitTypes*/ getUnitListType(int iGroup, int iPos);
-	int getUnitListSelectedRow();
-	void setUnitListSelected(int /*UnitTypes*/ eUnit);
-	int /*UnitTypes*/ getUnitListSelected();
-	//TB Nukefix
-	bool isNukesValid();
 	void makeNukesValid(bool bValid);
-
-	//TB Combat Mod begin
-	int getPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType);
-	void changePlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange);
-	void setPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange);
-	int countAfflictedUnits (int /*PromotionLineTypes*/ eAfflictionLine);
-	void recalculateAfflictedUnitCount();
-	//TB Combat Mod end
-
-	//TB Traits begin
-	int getCivicAnarchyModifier( ) const;
-	void setCivicAnarchyModifier( int iNewValue );
-	void changeCivicAnarchyModifier( int iChange );
-	int getReligiousAnarchyModifier( ) const;
-	void setReligiousAnarchyModifier( int iNewValue );
-	void changeReligiousAnarchyModifier( int iChange );
-	int getImprovementUpgradeRateModifierSpecific(int /*PromotionLineTypes*/ eImprovement) const;
-	void changeImprovementUpgradeRateModifierSpecific(int /*PromotionLineTypes*/ eImprovement, int iChange);
-	int getBuildWorkerSpeedModifierSpecific(int /*BuildTypes*/ eBuild) const;
-	void changeBuildWorkerSpeedModifierSpecific(int /*BuildTypes*/ eBuild, int iChange);
-	int getAIAttitudeModifier( ) const;
-	void setAIAttitudeModifier( int iNewValue );
-	void changeAIAttitudeModifier( int iChange );
-	int getExtraSpecialistCommerce(int /*SpecialistTypes*/ eIndex1, int /*CommerceTypes*/ eIndex2) const;
-	void changeExtraSpecialistCommerce(int /*SpecialistTypes*/ eIndex1, int /*CommerceTypes*/ eIndex2, int iChange);
-	void updateExtraSpecialistCommerce();
-	int getSpecialistExtraYield(int /*YieldTypes*/ eIndex) const;
-	void changeSpecialistExtraYield(int /*YieldTypes*/ eIndex, int iChange);
-	int getFreeCityYield(int /*YieldTypes*/ eIndex) const;
-	void changeFreeCityYield(int /*YieldTypes*/ eIndex, int iChange);
-	int getTraitExtraCityDefense() const;
-	void setTraitExtraCityDefense(int iValue);
-	void changeTraitExtraCityDefense(int iChange);
-	void setHasTrait(int /*TraitTypes*/ eIndex, bool bNewValue);
-	bool canLearnTrait(int /*TraitTypes*/ eIndex);
 
 	// AIAndy: Build Lists
 	int getBLNumLists();
@@ -680,7 +569,6 @@ public:
 	const OrderData* getBLOrder(int index, int iQIndex) const;
 	void writeBLToFile();
 	int getBLCurrentList();
-	void setBLCurrentList(int iID);
 	void addBLList();
 	void renameBLList(int iID);
 	void removeBLList(int iID);
