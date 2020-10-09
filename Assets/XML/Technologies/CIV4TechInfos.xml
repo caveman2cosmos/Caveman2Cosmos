@@ -4410,8 +4410,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_POTTERY</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_MINING_QUOTE</Quote>
-			<Sound>AS2D_TECH_MINING2</Sound>
-			<SoundMP>AS2D_TECH_MINING2</SoundMP>
+			<Sound>AS2D_TECH_MINING</Sound>
+			<SoundMP>AS2D_TECH_MINING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Mining.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,5</Button>
 		</TechInfo>
 		<TechInfo>
@@ -4915,8 +4915,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EXPLORATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_NEGOTIATION_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_NEGOTIATION</Sound>
+			<SoundMP>AS2D_TECH_NEGOTIATION</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Negotiation.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -5889,8 +5889,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ORATORY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_ORATORY</Sound>
+			<SoundMP>AS2D_TECH_ORATORY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/oratory2.dds</Button>
 		</TechInfo>
 		<TechInfo>
