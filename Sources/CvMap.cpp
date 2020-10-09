@@ -87,19 +87,20 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 
 	//--------------------------------
 	// Init other game data
-	gDLL->logMemState("CvMap before init plots");
 	m_pMapPlots.resize(numPlots());
+	for (int iI = 0; iI < numPlots(); iI++)
+	{
+		m_pMapPlots[iI] = new CvPlot();
+	}
 	for (int iX = 0; iX < getGridWidth(); iX++)
 	{
 		gDLL->callUpdater();
 		for (int iY = 0; iY < getGridHeight(); iY++)
 		{
-			m_pMapPlots.push_back(new CvPlot());
 			plotSorenINLINE(iX, iY)->init(iX, iY);
 		}
 	}
 	calculateAreas();
-	gDLL->logMemState("CvMap after init plots");
 
 	OutputDebugString("Initializing Map: End\n");
 }
@@ -453,6 +454,13 @@ void CvMap::updateWorkingCity()
 void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 {
 	PROFILE_FUNC();
+
+	FAssert((int)m_pMapPlots.size() == numPlots());
+	for (int i = 0; i < numPlots(); i++)
+		FAssert(plotByIndex(i));
+
+	foreach_(CvPlot* pLoopPlot, plots())
+		FAssert(pLoopPlot);
 
 	algo::for_each(plots() | filtered(CvPlot::fn::area() == pArea),
 		CvPlot::fn::setMinOriginalStartDist(-1)

@@ -83,6 +83,8 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 
+	const std::vector<CvPlot*>& plots() const { return m_pMapPlots; }
+
 	void erasePlots();																			// Exposed to Python
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
 	void resetRevealedPlots(TeamTypes eTeam);
@@ -175,8 +177,6 @@ public:
 
 	int getNumBonusesOnLand(BonusTypes eIndex) const;														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
-
-	inline const std::vector<CvPlot*> plots() const { return m_pMapPlots; }
 
 	inline CvPlot* plotByIndex(int iIndex) const // Exposed to Python
 	{
