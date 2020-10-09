@@ -8,7 +8,7 @@
 	<BonusClassInfos>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_EXTINCTION</Type>
-			<iUnique>1</iUnique>
+			<iUniqueRange>1</iUniqueRange>
 		</BonusClassInfo>
 	</BonusClassInfos>
 </Civ4BonusClassInfos>

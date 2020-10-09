@@ -209,8 +209,6 @@
 		<element type="bFoundCoast" minOccurs="0"/>
 		<element type="bFoundFreshWater" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
-		<element type="iSeeFrom" minOccurs="0"/>
-		<element type="iSeeThrough" minOccurs="0"/>
 		<element type="iBuildModifier" minOccurs="0"/>
 		<element type="iDefense" minOccurs="0"/>
 		<element type="Button" minOccurs="0"/>
@@ -385,7 +383,7 @@
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
-		<element type="iUnique" minOccurs="0"/>
+		<element type="iUniqueRange" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="BonusClassInfos" content="eltOnly">
 		<element type="BonusClassInfo" maxOccurs="*"/>
@@ -418,7 +416,7 @@
 	<ElementType name="iPlayer" content="textOnly" dt:type="int"/>
 	<ElementType name="iTilesPer" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinLandPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnique" content="textOnly" dt:type="int"/>
+	<ElementType name="iUniqueRange" content="textOnly" dt:type="int"/>
 	<ElementType name="iGroupRange" content="textOnly" dt:type="int"/>
 	<ElementType name="iGroupRand" content="textOnly" dt:type="int"/>
 	<ElementType name="bArea" content="textOnly" dt:type="boolean"/>
@@ -477,7 +475,7 @@
 		<element type="iPlayer" minOccurs="0"/>
 		<element type="iTilesPer" minOccurs="0"/>
 		<element type="iMinLandPercent" minOccurs="0"/>
-		<element type="iUnique" minOccurs="0"/>
+		<element type="iUniqueRange" minOccurs="0"/>
 		<element type="iGroupRange" minOccurs="0"/>
 		<element type="iGroupRand" minOccurs="0"/>
 		<element type="bArea" minOccurs="0"/>
@@ -756,7 +754,7 @@
 		<element type="iCultureRange" minOccurs="0"/>
 		<element type="iVisibilityChange" minOccurs="0"/>
 		<element type="iSeeFrom" minOccurs="0"/>
-		<element type="iUnique" minOccurs="0"/>
+		<element type="iUniqueRange" minOccurs="0"/>
 		<element type="bBombardable" minOccurs="0"/>
 		<element type="bUpgradeRequiresFortify" minOccurs="0"/>
 <!-- Super Forts end -->

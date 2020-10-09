@@ -159,7 +159,6 @@ bool CvUnitAI::AI_update()
 		return false;
 	}
 
-	CvUnit* pTransportUnit;
 	CvReachablePlotSet::ClearCache();
 
 	if (getDomainType() == DOMAIN_LAND)
@@ -169,15 +168,12 @@ bool CvUnitAI::AI_update()
 			getGroup()->pushMission(MISSION_SKIP);
 			return false;
 		}
-		else
-		{
-			pTransportUnit = getTransportUnit();
+		const CvUnit* pTransportUnit = getTransportUnit();
 
-			if (pTransportUnit != NULL && (pTransportUnit->getGroup()->hasMoved() || (pTransportUnit->getGroup()->headMissionQueueNode() != NULL)))
-			{
-				getGroup()->pushMission(MISSION_SKIP);
-				return false;
-			}
+		if (pTransportUnit != NULL && (pTransportUnit->getGroup()->hasMoved() || pTransportUnit->getGroup()->headMissionQueueNode() != NULL))
+		{
+			getGroup()->pushMission(MISSION_SKIP);
+			return false;
 		}
 	}
 
@@ -189,93 +185,94 @@ bool CvUnitAI::AI_update()
 	{
 		switch (getGroup()->getAutomateType())
 		{
-		case AUTOMATE_BUILD:
-			if (AI_getUnitAIType() == UNITAI_WORKER)
+			case AUTOMATE_BUILD:
 			{
-				AI_workerMove();
-			}
-			else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
-			{
-				AI_workerSeaMove();
-			}
-			else
-			{
-				FAssert(false);
-			}
-			break;
-
-		case AUTOMATE_NETWORK:
-			AI_networkAutomated();
-			// XXX else wake up???
-			break;
-
-		case AUTOMATE_CITY:
-			AI_cityAutomated();
-			// XXX else wake up???
-			break;
-
-		case AUTOMATE_EXPLORE:
-			switch (getDomainType())
-			{
-			case DOMAIN_SEA:
-				AI_exploreSeaMove();
-				break;
-
-			case DOMAIN_AIR:
-				// if we are cargo (on a carrier), hold if the carrier is not done moving yet
-				pTransportUnit = getTransportUnit();
-				if (pTransportUnit != NULL)
+				if (AI_getUnitAIType() == UNITAI_WORKER)
 				{
-					if (pTransportUnit->isAutomated() && pTransportUnit->canMove() && pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+					AI_workerMove();
+				}
+				else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
+				{
+					AI_workerSeaMove();
+				}
+				else
+				{
+					FAssert(false);
+				}
+				break;
+			}
+			case AUTOMATE_NETWORK:
+				AI_networkAutomated();
+				// XXX else wake up???
+				break;
+			case AUTOMATE_CITY:
+				AI_cityAutomated();
+				// XXX else wake up???
+				break;
+			case AUTOMATE_EXPLORE:
+			{
+				switch (getDomainType())
+				{
+					case DOMAIN_SEA:
 					{
-						getGroup()->pushMission(MISSION_SKIP);
+						AI_exploreSeaMove();
+						break;
+					}
+					case DOMAIN_AIR:
+					{
+						// if we are cargo (on a carrier), hold if the carrier is not done moving yet
+						const CvUnit* pTransportUnit = getTransportUnit();
+						if (pTransportUnit != NULL
+						&& pTransportUnit->isAutomated()
+						&& pTransportUnit->canMove()
+						&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+						{
+							getGroup()->pushMission(MISSION_SKIP);
+							break;
+						}
+						AI_exploreAirMove(); // Have air units explore like AI units do
+						break;
+					}
+					case DOMAIN_LAND:
+					{
+						AI_exploreMove();
+						break;
+					}
+					default:
+					{
+						FAssert(false);
 						break;
 					}
 				}
-				AI_exploreAirMove(); // Have air units explore like AI units do
-				break;
-
-			case DOMAIN_LAND:
-				AI_exploreMove();
-				break;
-
-			default:
-				FAssert(false);
-				break;
-			}
-
-			// if we have air cargo (we are a carrier), and we done moving, explore with the aircraft as well
-			if (hasCargo() && domainCargo() == DOMAIN_AIR && (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
-			{
-				std::vector<CvUnit*> aCargoUnits;
-				getCargoUnits(aCargoUnits);
-				if (aCargoUnits.size() > 0)
+				// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
+				if (hasCargo() && domainCargo() == DOMAIN_AIR
+				&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
 				{
-					validateCargoUnits();
-				}
-				for (uint i = 0; i < aCargoUnits.size() && isAutomated(); i++)
-				{
-					CvUnit* pCargoUnit = aCargoUnits[i];
-					if (pCargoUnit->getDomainType() == DOMAIN_AIR)
+					std::vector<CvUnit*> aCargoUnits;
+					getCargoUnits(aCargoUnits);
+					if (aCargoUnits.size() > 0)
 					{
-						if (pCargoUnit->canMove())
+						validateCargoUnits();
+					}
+					for (uint i = 0; i < aCargoUnits.size() && isAutomated(); i++)
+					{
+						CvUnit* pCargoUnit = aCargoUnits[i];
+						if (pCargoUnit->getDomainType() == DOMAIN_AIR && pCargoUnit->canMove())
 						{
 							pCargoUnit->getGroup()->setAutomateType(AUTOMATE_EXPLORE);
 							pCargoUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 						}
 					}
 				}
+				break;
 			}
-			break;
-
-		case AUTOMATE_RELIGION:
-			if (AI_getUnitAIType() == UNITAI_MISSIONARY)
+			case AUTOMATE_RELIGION:
 			{
-				AI_missionaryMove();
-			}
-			else
-			{
-				if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
+				if (AI_getUnitAIType() == UNITAI_MISSIONARY)
+				{
+					AI_missionaryMove();
+				}
+				else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
 				{
 					CvSelectionGroup* pGroup = getGroup();
 					joinGroup(NULL);
@@ -286,68 +283,70 @@ bool CvUnitAI::AI_update()
 				{
 					getGroup()->setAutomateType(NO_AUTOMATE);
 				}
+				break;
 			}
-			break;
-
-		case AUTOMATE_PILLAGE:
-			AI_AutomatedpillageMove();
-			break;
-		case AUTOMATE_HUNT:
-			AI_SearchAndDestroyMove();
-			break;
-		case AUTOMATE_CITY_DEFENSE:
-			AI_cityDefense();
-			break;
-		case AUTOMATE_BORDER_PATROL:
-			AI_borderPatrol();
-			break;
-		case AUTOMATE_PIRATE:
-			AI_pirateSeaMove();
-			break;
-		case AUTOMATE_HURRY:
-			AI_merchantMove();
-			break;
-		//Yes, these automations do the same thing, but they act differently for different units.
-		case AUTOMATE_AIRSTRIKE:
-		case AUTOMATE_AIRBOMB:
-			AI_autoAirStrike();
-			break;
-		case AUTOMATE_AIR_RECON:
-			AI_exploreAirMove();
-			break;
-		case AUTOMATE_UPGRADING:
-		case AUTOMATE_CANCEL_UPGRADING:
-		case AUTOMATE_PROMOTIONS:
-		case AUTOMATE_CANCEL_PROMOTIONS:
-			FErrorMsg("SelectionGroup Should Not be Using These Automations!")
-			break;
-		case AUTOMATE_SHADOW:
-			//	If we've lost the unit qwe should be shadowing (not sure how this can happen but empirically
-			//	it's been seen) then lose the automation
-			if( getShadowUnit() == NULL )
+			case AUTOMATE_PILLAGE:
+				AI_AutomatedpillageMove();
+				break;
+			case AUTOMATE_HUNT:
+				AI_SearchAndDestroyMove();
+				break;
+			case AUTOMATE_CITY_DEFENSE:
+				AI_cityDefense();
+				break;
+			case AUTOMATE_BORDER_PATROL:
+				AI_borderPatrol();
+				break;
+			case AUTOMATE_PIRATE:
+				AI_pirateSeaMove();
+				break;
+			case AUTOMATE_HURRY:
+				AI_merchantMove();
+				break;
+			//Yes, these automations do the same thing, but they act differently for different units.
+			case AUTOMATE_AIRSTRIKE:
+			case AUTOMATE_AIRBOMB:
+				AI_autoAirStrike();
+				break;
+			case AUTOMATE_AIR_RECON:
+				AI_exploreAirMove();
+				break;
+			case AUTOMATE_UPGRADING:
+			case AUTOMATE_CANCEL_UPGRADING:
+			case AUTOMATE_PROMOTIONS:
+			case AUTOMATE_CANCEL_PROMOTIONS:
+				FErrorMsg("SelectionGroup Should Not be Using These Automations!")
+				break;
+			case AUTOMATE_SHADOW:
 			{
-				getGroup()->setAutomateType(NO_AUTOMATE);
+				// If we've lost the unit we're shadowing,
+				// not sure how this can happen but empirically it's been seen,
+				// then lose the automation.
+				if (getShadowUnit() == NULL)
+				{
+					getGroup()->setAutomateType(NO_AUTOMATE);
+				}
+				else
+				{
+					AI_shadowMove();
+				}
+				break;
 			}
-			else
+			default:
 			{
-				AI_shadowMove();
+				FAssert(false);
+				break;
 			}
-			break;
-
-		default:
-			FAssert(false);
-			break;
 		}
-
 		// if no longer automated, then we want to bail
-		return (!isDelayedDeath() && !getGroup()->isAutomated());
+		return !isDelayedDeath() && !getGroup()->isAutomated();
 	}
 	else
 	{
-		//	No confirmed garrison city until we reaffirm it with another set
+		// No confirmed garrison city until we reaffirm it with another set
 		m_iAffirmedGarrisonCity = -1;
 
-		if ( isNPC() )
+		if (isNPC())
 		{
 			PROFILE("CvUnitAI::AI_Update.NPC");
 
@@ -360,26 +359,24 @@ bool CvUnitAI::AI_update()
 			doUnitAIMove();
 		}
 
-		if ( NULL != getGroup() && !isDelayedDeath() )
+		if (NULL != getGroup() && !isDelayedDeath()
+		&& m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1)
 		{
-			if ( m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1 )
-			{
-				//	This group has done something else (presumably of higher priority)
-				//	so should no longer be considered part of the city's garrison
-				AI_setAsGarrison();
-				//TB DEBUG NOTE: Unit must have been dying after taking its move?
-			}
+			// This group has done something else (presumably of higher priority)
+			//	so should no longer be considered part of the city's garrison
+			AI_setAsGarrison();
+			//TB DEBUG NOTE: Unit must have been dying after taking its move?
 		}
 	}
 
 #ifdef _DEBUG
-	if ( NULL != getGroup() && !isDelayedDeath() )
+	if (NULL != getGroup() && !isDelayedDeath())
 	{
 		getGroup()->validateLocations(true);
 	}
 #endif
 
-	return (!isDelayedDeath() && AI_isAwaitingContract());
+	return !isDelayedDeath() && AI_isAwaitingContract();
 }
 
 void CvUnitAI::doUnitAIMove()

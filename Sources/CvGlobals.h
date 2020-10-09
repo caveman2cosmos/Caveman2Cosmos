@@ -910,20 +910,8 @@ public:
 	unsigned int getAssetCheckSum();
 
 	void deleteInfoArrays();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	void doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector);
-	void StoreExeSettings();
-	void LoadExeSettings();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 protected:
-
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
@@ -1292,19 +1280,6 @@ protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	int* m_iStoreExeSettingsCommerceInfo;
-	int* m_iStoreExeSettingsYieldInfo;
-	int* m_iStoreExeSettingsReligionInfo;
-	int* m_iStoreExeSettingsCorporationInfo;
-	int* m_iStoreExeSettingsBonusInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
 	bool m_bSignsCleared;

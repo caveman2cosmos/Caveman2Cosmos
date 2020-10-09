@@ -16487,7 +16487,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
 	pXML->GetOptionalChildXmlValByName(&m_iVisibilityChange, L"iVisibilityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iSeeFrom, L"iSeeFrom");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_bBombardable, L"bBombardable");
 	pXML->GetOptionalChildXmlValByName(&m_bUpgradeRequiresFortify, L"bUpgradeRequiresFortify");
 	// Super Forts end
@@ -16994,7 +16994,7 @@ bool CvBonusClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 
 	return true;
 }
@@ -17460,7 +17460,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPercentPerPlayer, L"iPlayer");
 	pXML->GetOptionalChildXmlValByName(&m_iTilesPer, L"iTilesPer");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLandPercent, L"iMinLandPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRange, L"iGroupRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRand, L"iGroupRand");
 	pXML->GetOptionalChildXmlValByName(&m_bOneArea, L"bArea");
@@ -18645,8 +18645,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 //------------------------------------------------------------------------------------------------------
 CvTerrainInfo::CvTerrainInfo() :
 m_iMovementCost(0),
-m_iSeeFromLevel(0),
-m_iSeeThroughLevel(0),
 m_iBuildModifier(0),
 m_iDefenseModifier(0),
 m_bWaterTerrain(false),
@@ -18688,16 +18686,6 @@ CvTerrainInfo::~CvTerrainInfo()
 int CvTerrainInfo::getMovementCost() const
 {
 	return m_iMovementCost;
-}
-
-int CvTerrainInfo::getSeeFromLevel() const
-{
-	return m_iSeeFromLevel;
-}
-
-int CvTerrainInfo::getSeeThroughLevel() const
-{
-	return m_iSeeThroughLevel;
 }
 
 int CvTerrainInfo::getBuildModifier() const
@@ -18871,8 +18859,6 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFoundFreshWater, L"bFoundFreshWater");
 
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
-	pXML->GetOptionalChildXmlValByName(&m_iSeeFromLevel, L"iSeeFrom");
-	pXML->GetOptionalChildXmlValByName(&m_iSeeThroughLevel, L"iSeeThrough");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildModifier, L"iBuildModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iDefenseModifier, L"iDefense");
 
@@ -18982,8 +18968,6 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
 	if (isFoundFreshWater() == bDefault) m_bFoundFreshWater = pClassInfo->isFoundFreshWater();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
-	if (getSeeFromLevel() == iDefault) m_iSeeFromLevel = pClassInfo->getSeeFromLevel();
-	if (getSeeThroughLevel() == iDefault) m_iSeeThroughLevel = pClassInfo->getSeeThroughLevel();
 	if (getBuildModifier() == iDefault) m_iBuildModifier = pClassInfo->getBuildModifier();
 	if (getDefenseModifier() == iDefault) m_iDefenseModifier = pClassInfo->getDefenseModifier();
 
@@ -19023,8 +19007,6 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iMovementCost);
-	CheckSum(iSum, m_iSeeFromLevel);
-	CheckSum(iSum, m_iSeeThroughLevel);
 	CheckSum(iSum, m_iBuildModifier);
 	CheckSum(iSum, m_iDefenseModifier);
 
