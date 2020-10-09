@@ -2,6 +2,7 @@
 // XML Set functions
 //
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvXMLLoadUtilitySetMod.h"
@@ -4483,42 +4484,6 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 //}
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-bool CvXMLLoadUtility::doResetGlobalInfoClasses()
-{
-	// PlayerOptions reloaded seperatly because of the MLF Array initialization
-	if (!CreateFXml())
-		return false;
-
-	LoadGlobalClassInfo(GC.m_paPlayerOptionInfos, "CIV4PlayerOptionInfos", "GameInfo", L"/CIV4PlayerOptionInfos/PlayerOptionInfos/PlayerOptionInfo", false);
-	FAssert(static_cast<int>(GC.m_paPlayerOptionInfos.size()) == NUM_PLAYEROPTION_TYPES);
-
-	DestroyFXml();
-
-	LoadGraphicOptions();
-	SetGlobalDefines();
-//	LoadGlobalText();   //Thus far everything loaded anyway, it's just text
-	SetGlobalTypes();
-
-	return true;
-}
-bool CvXMLLoadUtility::doResetInfoClasses()
-{
-	LoadBasicInfos();
-	LoadPreMenuGlobals();
-	SetPostGlobalsGlobalDefines();
-	SetupGlobalLandscapeInfo();
-	LoadPostMenuGlobals();
-
-	return true;
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
 /*************************************************************************************************/

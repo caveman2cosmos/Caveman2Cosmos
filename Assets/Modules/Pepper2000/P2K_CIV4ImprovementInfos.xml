@@ -43,7 +43,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV2</ImprovementUpgrade>
@@ -93,7 +93,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
@@ -143,7 +143,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
@@ -1241,7 +1241,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1300,7 +1300,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1361,7 +1361,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1422,7 +1422,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1515,7 +1515,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1607,7 +1607,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1656,7 +1656,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1705,7 +1705,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1772,7 +1772,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1831,7 +1831,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1880,7 +1880,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -1929,7 +1929,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -2004,7 +2004,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
 			<iUpgradeTime>0</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
@@ -3533,7 +3533,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -3570,7 +3570,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -3607,7 +3607,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -3652,7 +3652,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -3693,7 +3693,7 @@
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -4867,7 +4867,7 @@
 			<iCulture>10</iCulture>
 			<iVisibilityChange>5</iVisibilityChange>
 			<iSeeFrom>4</iSeeFrom>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>

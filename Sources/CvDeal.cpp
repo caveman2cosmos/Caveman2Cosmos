@@ -1,5 +1,6 @@
 // CvDeal.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -976,7 +977,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						MEMORY_TRACK_EXEMPT();
 						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_HIRED_WAR_ALLY", GET_PLAYER(eToPlayer).getCivilizationAdjectiveKey(), GET_PLAYER(eFromPlayer).getCivilizationAdjectiveKey());
-						AddDLLMessage(GET_PLAYER((PlayerTypes)iI).getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_MAJOR_EVENT, NULL, CvColorInfo::red());
+						AddDLLMessage(GET_PLAYER((PlayerTypes)iI).getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED());
 
 						GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(eToPlayer, MEMORY_HIRED_WAR_ALLY, 1);
 					}
@@ -1104,10 +1105,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_TRADE", GC.getCorporationInfo((CorporationTypes)trade.m_iData).getDescription(),
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_TRADE", GC.getCorporationInfo((CorporationTypes)trade.m_iData).getDescription(),
 							GET_PLAYER(eFromPlayer).getCivilizationDescriptionKey(), GET_PLAYER(eToPlayer).getCivilizationDescriptionKey()).GetCString();
 
-						AddDLLMessage(((PlayerTypes)i), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+						AddDLLMessage((PlayerTypes)i, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 					}
 				}
 			}

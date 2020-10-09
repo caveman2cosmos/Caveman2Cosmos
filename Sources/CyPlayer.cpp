@@ -623,11 +623,6 @@ int /*RouteTypes*/ CyPlayer::getBestRoute(CyPlot* pPlot) const
 	return m_pPlayer ? (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
-int CyPlayer::getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const
-{
-	return m_pPlayer ? m_pPlayer->getImprovementUpgradeRateTimes100((ImprovementTypes)eImprovement)/100 : -1;
-}
-
 int CyPlayer::calculateTotalYield(int /*YieldTypes*/ eYield)
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalYield((YieldTypes)eYield) : -1;
