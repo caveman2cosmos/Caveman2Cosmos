@@ -518,6 +518,9 @@
     <ClInclude Include="CvBuildingGrouping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvBuildingInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CvBuildingList.h">
       <Filter>Header Files</Filter>
     </ClInclude>

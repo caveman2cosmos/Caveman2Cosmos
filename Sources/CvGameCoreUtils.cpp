@@ -1,3 +1,4 @@
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
@@ -460,9 +461,7 @@ ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCou
 
 int getWorldSizeMaxConscript(CivicTypes eCivic)
 {
-	int iMaxConscript;
-
-	iMaxConscript = GC.getCivicInfo(eCivic).getMaxConscript();
+	int iMaxConscript = GC.getCivicInfo(eCivic).getMaxConscript();
 
 	iMaxConscript *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getMaxConscriptModifier() + 100));
 	iMaxConscript /= 100;
@@ -472,9 +471,7 @@ int getWorldSizeMaxConscript(CivicTypes eCivic)
 
 bool isReligionTech(TechTypes eTech)
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
 		{
@@ -487,9 +484,7 @@ bool isReligionTech(TechTypes eTech)
 
 bool isCorporationTech(TechTypes eTech)
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (GC.getCorporationInfo((CorporationTypes)iI).getTechPrereq() == eTech)
 		{
@@ -502,7 +497,6 @@ bool isCorporationTech(TechTypes eTech)
 
 bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 {
-	int iI;
 	const CvUnitInfo& info = GC.getUnitInfo(eUnit);
 
 	if (info.getPrereqAndTech() == eTech)
@@ -510,7 +504,7 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 		return true;
 	}
 
-	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
 	{
 		if (info.getPrereqAndTechs(iI) == eTech)
 		{
@@ -523,7 +517,6 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
-	int iI;
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
 	if (info.getPrereqAndTech() == eTech)
@@ -531,7 +524,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	for (iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
 	{
 		if (info.getPrereqAndTechs(iI) == eTech)
 		{
@@ -768,13 +761,6 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 		return 1000;
 	}
 
-	// UncutDragon
-/* original code
-	iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
-*/	// modified
-	//iAttackerOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderOdds;
-	// /UncutDragon
-
 	if (iAttackerOdds == 0)
 	{
 		return 0;
@@ -803,8 +789,8 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-	int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
 	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
 	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
 	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
@@ -1079,8 +1065,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-	int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
 	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
 	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
 	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
@@ -1124,8 +1110,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 				//attacker is not barb and attacker player has free wins left
 				//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
 
-				iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
-				iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
+				iDefenderOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
+				iAttackerOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
 			}
 		}
 		else if (pAttacker->isHominid())
@@ -1134,8 +1120,8 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 			if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 			{
 				//defender is not barbarian and defender has free wins left and attacker is barbarian
-				iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
-				iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+				iAttackerOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
+				iDefenderOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
 			}
 		}
 	}
@@ -2305,7 +2291,7 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
+	const CvSelectionGroup* pSelectionGroup = ((const CvSelectionGroup*)pointer);
 	FAssert(pSelectionGroup->getNumUnits() > 0);
 
 	int iTurns = 1;
@@ -2313,15 +2299,14 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 	if (data == ASNC_INITIALADD)
 	{
-		bool bMaxMoves = (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_MAX_MOVES);
+		const bool bMaxMoves = (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_MAX_MOVES);
 		if (bMaxMoves)
 		{
 			iMoves = 0;
 		}
 
-		for (CLLNode<IDInfo>* pUnitNode = pSelectionGroup->headUnitNode(); pUnitNode != NULL; pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode))
+		foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 			if (bMaxMoves)
 			{
 				iMoves = std::max(iMoves, pLoopUnit->maxMoves());
@@ -2334,12 +2319,12 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 	}
 	else
 	{
-		CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
+		const CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
 		FAssertMsg(pFromPlot != NULL, "FromPlot is not assigned a valid value");
-		CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
+		const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 		FAssertMsg(pToPlot != NULL, "ToPlot is not assigned a valid value");
 
-		int iStartMoves = parent->m_iData1;
+		const int iStartMoves = parent->m_iData1;
 		iTurns = parent->m_iData2;
 		if (iStartMoves == 0)
 		{
@@ -2389,12 +2374,10 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 	FAssert(pToPlot != NULL);
 
-	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
+	const CvSelectionGroup* pSelectionGroup = ((const CvSelectionGroup*)pointer);
 #ifdef USE_OLD_PATH_GENERATOR
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	int iCost;
 	int iMovesLeft;
 	int iMax;
@@ -2476,13 +2459,8 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 			}
 			else
 			{
-				pUnitNode = pSelectionGroup->headUnitNode();
-
-				while (pUnitNode != NULL)
+				foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-
 					if (parent->m_iData1 > 0)
 					{
 						iMax = parent->m_iData1;
@@ -2571,13 +2549,8 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				gLastSelectionGroup = pSelectionGroup;
 			}
 
-			pUnitNode = pSelectionGroup->headUnitNode();
-
-			while (pUnitNode != NULL)
+			foreach_(const CvUnit* pLoopUnit, pSelectionGroup->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-
 				if (parent->m_iData1 > 0)
 				{
 					iMax = parent->m_iData1;
@@ -2995,18 +2968,11 @@ int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY,
 
 					iLimitCost = (iHeuristicCost*iRouteCost)/GC.getMOVE_DENOMINATOR();
 
-					CLLNode<IDInfo>* pUnitNode;
-					CvUnit* pLoopUnit;
 					int iMin = MAX_INT;
 
-					pUnitNode = pGroup->headUnitNode();
-
-					while (pUnitNode != NULL)
+					foreach_(const CvUnit* pLoopUnit, pGroup->units())
 					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pGroup->nextUnitNode(pUnitNode);
-
-						if ( iMin > pLoopUnit->maxMoves())
+						if (iMin > pLoopUnit->maxMoves())
 						{
 							iMin = pLoopUnit->maxMoves();
 						}
@@ -3047,27 +3013,21 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pFromPlot;
-	CvPlot* pToPlot;
-	int iWorstCost;
+	const CvUnit* pLoopUnit;
 	int iCost;
-	int iWorstMovesLeft;
 	int iMovesLeft;
-	int iWorstMax;
 	int iMax;
 
 	static const CvSelectionGroup* gLastSelectionGroup = NULL;
 
-	pFromPlot = GC.getMap().plotSorenINLINE(iFromX, iFromY);
+	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(iFromX, iFromY);
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
+	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
-	iWorstCost = MAX_INT;
-	iWorstMovesLeft = MAX_INT;
-	iWorstMax = MAX_INT;
+	int iWorstCost = MAX_INT;
+	int iWorstMovesLeft = MAX_INT;
+	int iWorstMax = MAX_INT;
 
 	int iWorstMovement = MAX_INT;
 	int iLargestBaseCost = -1;
@@ -3146,13 +3106,8 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 			}
 			else
 			{
-				pUnitNode = pSelectionGroup->headUnitNode();
-
-				while (pUnitNode != NULL)
+				foreach_(pLoopUnit, pSelectionGroup->units())
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-
 					iMax = pLoopUnit->maxMoves();
 
 					if ( iMax > iMaxMovesLeft )
@@ -3252,15 +3207,10 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				bNeedMaxMovement = true;
 			}
 
-			pUnitNode = pSelectionGroup->headUnitNode();
-
 			iInitialMovementRemaining = MAX_INT;
 
-			while (pUnitNode != NULL)
+			foreach_(pLoopUnit, pSelectionGroup->units())
 			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-
 				if ( bNeedMaxMovement || iMovementRemaining == 0 )
 				{
 					iMax = pLoopUnit->maxMoves();
@@ -3284,11 +3234,10 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				}
 
 				int unitMovementCharacteristics = pLoopUnit->getMovementCharacteristicsHash();
-				int iI;
 
 				//	If we've already considred a unit with these characteristics no need to
 				//	check this one too
-				for(iI = 0; iI < numUniqueUnitCategories; iI++)
+				for (int iI = 0; iI < numUniqueUnitCategories; iI++)
 				{
 					if ( unitMovementCharacteristics == unitCharacteristics[iI] )
 					{
@@ -3423,28 +3372,15 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, pToPlot->getFeatureTurnDamage())) / GC.getMAX_HIT_POINTS();
 				}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 05/17/10                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
 				}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 				if (pToPlot->getExtraMovePathCost() > 0)
 				{
 					iExtraNodeCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 				}
 			}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
-	/*                                                                                              */
-	/* General AI                                                                                   */
-	/************************************************************************************************/
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
 			if (iFlags & MOVE_AVOID_ENEMY_WEIGHT_3)
 			{
@@ -3693,12 +3629,6 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode1;
-	CLLNode<IDInfo>* pUnitNode2;
-	CvUnit* pLoopUnit1;
-	CvUnit* pLoopUnit2;
-	bool bValid;
-
 	bRequiresWar = false;
 
 	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
@@ -3759,24 +3689,14 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 	{
 		if (pSelectionGroup->isAmphibPlot(pToPlot))
 		{
-			bValid = false;
+			bool bValid = false;
 
-			pUnitNode1 = pSelectionGroup->headUnitNode();
-
-			while (pUnitNode1 != NULL)
+			foreach_(const CvUnit* pLoopUnit1, pSelectionGroup->units())
 			{
-				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
-				pUnitNode1 = pSelectionGroup->nextUnitNode(pUnitNode1);
-
-				if ((pLoopUnit1->hasCargo()) && (pLoopUnit1->domainCargo() == DOMAIN_LAND))
+				if (pLoopUnit1->hasCargo() && pLoopUnit1->domainCargo() == DOMAIN_LAND)
 				{
-					pUnitNode2 = pLoopUnit1->plot()->headUnitNode();
-
-					while (pUnitNode2 != NULL)
+					foreach_(const CvUnit* pLoopUnit2, pLoopUnit1->plot()->units())
 					{
-						pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
-						pUnitNode2 = pLoopUnit1->plot()->nextUnitNode(pUnitNode2);
-
 						if (pLoopUnit2->getTransportUnit() == pLoopUnit1)
 						{
 							if (pLoopUnit2->isGroupHead())

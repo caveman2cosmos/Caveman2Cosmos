@@ -1,3 +1,4 @@
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -2395,19 +2396,19 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					pSelectedUnitNode != NULL;
 					pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
 				{
-					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+					const CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
 					if (pSelectedUnit->canSabotage(pMissionPlot, true)) // XXX if queuing up this action, use the current plot along the goto...
 					{
-						int iPrice = pSelectedUnit->sabotageCost(pMissionPlot);
+						const int iPrice = GC.getBASE_SPY_SABOTAGE_COST();
 						if (iPrice > 0)
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(CvWString::format(L"%d %c", iPrice, GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 						}
 
-						int iLow = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_LOW);
-						int iHigh = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_HIGH);
+						const int iLow = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_LOW);
+						const int iHigh = pSelectedUnit->sabotageProb(pMissionPlot, PROBABILITY_HIGH);
 
 						if (iLow == iHigh)
 						{
@@ -3138,8 +3139,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
 						if (eTerrain == pMissionPlot->getTerrainType() || 
-							(eTerrain == CvTerrainInfo::getTerrainPeak() && pMissionPlot->isPeak2(true)) ||
-							(eTerrain == CvTerrainInfo::getTerrainHill() && pMissionPlot->isHills()))
+							(eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isPeak2(true)) ||
+							(eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills()))
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{

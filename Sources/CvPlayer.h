@@ -81,7 +81,6 @@ protected:
 
 public:
 
-
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
@@ -105,7 +104,8 @@ public:
 	void setStabilityIndexAverage(int iNewValue);
 	void updateStabilityIndexAverage();
 
-	//protected:
+	bool haveSettlerUnit() const;
+
 	void uninit();
 
 public:
@@ -304,7 +304,7 @@ public:
 
 	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const; // Exposed to Python
 
-	int getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const; // Exposed to Python
+	int getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const; // Exposed to Python
 
 	int calculateTotalYield(YieldTypes eYield) const; // Exposed to Python
 	int calculateTotalExports(YieldTypes eYield) const; // Exposed to Python

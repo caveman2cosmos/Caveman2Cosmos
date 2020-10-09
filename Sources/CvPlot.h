@@ -647,10 +647,10 @@ public:
 	void setImprovementDuration(int iNewValue); // Exposed to Python
 	void changeImprovementDuration(int iChange); // Exposed to Python
 
-	int getUpgradeProgressHundredths() const; // Exposed to Python
+	int getImprovementUpgradeProgress() const; // Exposed to Python
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const; // Exposed to Python
-	void setUpgradeProgressHundredths(int iNewValue); // Exposed to Python
-	void changeUpgradeProgressHundredths(int iChange); // Exposed to Python
+	void setImprovementUpgradeProgress(int iNewValue); // Exposed to Python
+	void changeImprovementUpgradeProgress(int iChange); // Exposed to Python
 
 	int getForceUnownedTimer() const; // Exposed to Python
 	bool isForceUnowned() const; // Exposed to Python
@@ -1194,12 +1194,15 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);

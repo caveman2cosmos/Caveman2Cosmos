@@ -736,7 +736,6 @@ public:
 	bool plunder();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 
-	int sabotageCost(const CvPlot* pPlot) const; // Exposed to Python
 	int sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle = PROBABILITY_REAL) const; // Exposed to Python
 	bool canSabotage(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool sabotage();
@@ -938,7 +937,7 @@ public:
 	int airCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	int rangeCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	CvUnit* bestInterceptor(const CvPlot* pPlot) const; // Exposed to Python
-	CvUnit* bestSeaPillageInterceptor(CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
+	CvUnit* bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
 
 	bool isAutomated() const; // Exposed to Python
 	DllExport bool isWaiting() const; // Exposed to Python
@@ -3271,12 +3270,13 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setBlockading, bool);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setTransportUnit, CvUnit*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setHealSupportUsed, int);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, joinGroup, CvSelectionGroup*);
 
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, void, joinGroup, CvSelectionGroup*);
-
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isNukeImmune);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttack);
@@ -3328,6 +3328,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMCargoVolume);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, revoltProtectionTotal);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canClaimTerritory, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);

@@ -322,9 +322,9 @@ int CvArea::getNumTiles() const
 }
 
 
-bool CvArea::isLake() const							
+bool CvArea::isLake() const
 {
-	return isWater() && getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE();
+	return isWater() && getNumTiles() < GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize();
 }
 
 

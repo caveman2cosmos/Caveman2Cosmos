@@ -52,11 +52,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allows human player to offer themselves as vassal to an AI.  The AI has been taught to value this appropriately.  (Def: 0) -->
-		<DefineName>BBAI_HUMAN_AS_VASSAL_OPTION</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Fuyu: Changes behavior of unit capturing for AI players (Def: 1) :
 			0 : Default BTS: Workers are mostly destroyed if an AI player captures them.
 			1 : Workers are only destroyed if an AI player captures them from a human player,
