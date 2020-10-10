@@ -24,20 +24,15 @@ class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
 class CvDLLInterfaceIFaceBase;
-class CvPlayerAI;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
-class CMainMenu;
-class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
 class CvMapExternal;
 class CvViewport;
-class CvPlayerAI;
-class CvTeamAI;
 class CvInterfaceModeInfo;
 class CvWorldInfo;
 class CvClimateInfo;
@@ -195,26 +190,27 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	inline CvMap& getMap() const;
-	CvViewport* getCurrentViewport();
+	CvViewport* getCurrentViewport() const;
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
 	int getViewportSelectionBorder() const;
 	int getViewportCenteringBorder() const;
-	CvMapExternal& getMapExternal();
+	CvMapExternal& getMapExternal() const;
 
 	bool bugInitCalled() const;
+	void enableMultiMaps() { m_bMultimapsEnabled = true; }
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	int getNumMapSwitchInfos() const;
-	CvMapInfo& getMapInfo(const MapTypes eMap) const;
-	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
+	CvMapInfo& getMapInfo(MapTypes eMap) const;
+	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch) const;
 
 	void switchMap(MapTypes eMap);
-	CvMap& getMapByIndex(MapTypes eIndex);
+	CvMap& getMapByIndex(MapTypes eIndex) const;
+	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
-	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;
 	void clearSigns();
@@ -238,12 +234,9 @@ public:
 	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
 	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
 	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
-	NiPoint3& getPt3Origin()	 				{ return m_pt3Origin; }
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
-	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e);
-
-	NiPoint3& getPt3CameraDir()		 			{ return m_pt3CameraDir; }
+	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;
 
 	bool& getLogging() 							{ return m_bLogging; }
 	bool& getRandLogging() 						{ return m_bRandLogging; }
@@ -260,12 +253,12 @@ public:
 	int* getCityPlotX() const;
 	int* getCityPlotY() const;
 	int* getCityPlotPriority() const;
-	int getXYCityPlot(const int i, const int j) const;
+	int getXYCityPlot(int i, int j) const;
 	DirectionTypes* getTurnLeftDirection() const;
-	DirectionTypes getTurnLeftDirection(const int i) const;
+	DirectionTypes getTurnLeftDirection(int i) const;
 	DirectionTypes* getTurnRightDirection() const;
 	DirectionTypes getTurnRightDirection(int i) const;
-	DirectionTypes getXYDirection(const int i, const int j) const;
+	DirectionTypes getXYDirection(int i, int j) const;
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
@@ -302,6 +295,7 @@ public:
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
+	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
@@ -431,7 +425,7 @@ public:
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
 
 	int getNumBonusInfos() const;
-	std::vector<CvBonusInfo*>& getBonusInfos();
+	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 
 	int getNumFeatureInfos() const;
@@ -496,23 +490,10 @@ public:
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
-	bool isLoadedPlayerOptions() const;
-	void setLoadedPlayerOptions(bool bNewVal);
-
 	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-
-#define DECLARE_GET_METHOD(dataType, VAR) \
-	dataType get##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-
-#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
-	dataType is##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
@@ -752,12 +733,12 @@ public:
 	int& getNumFootstepAudioTypes();
 	CvString*& getFootstepAudioTypes();
 	CvString& getFootstepAudioTypes(int i);
-	int getFootstepAudioTypeByTag(CvString strTag);
+	int getFootstepAudioTypeByTag(const CvString strTag) const;
 
 	CvString*& getFootstepAudioTags();
-	CvString& getFootstepAudioTags(int i);
+	CvString& getFootstepAudioTags(int i) const;
 
-	CvString& getCurrentXMLFile();
+	const CvString& getCurrentXMLFile() const;
 	void setCurrentXMLFile(const TCHAR* szFileName);
 
 	//
@@ -768,6 +749,20 @@ public:
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheEnumGlobals();
 	void cacheGlobals();
+
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+
+	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD)
+
+#define DECLARE_IS_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
@@ -782,7 +777,7 @@ public:
 
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
 	bool getGraphicalDetailPagingEnabled() const;
-	int getGraphicalDetailPageInRange();
+	int getGraphicalDetailPageInRange() const;
 
 	int getDefineINT( const char * szName ) const;
 	float getDefineFLOAT( const char * szName ) const;
@@ -832,10 +827,7 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-#ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
-#endif
-	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
+	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -915,36 +907,16 @@ public:
 	unsigned int getAssetCheckSum();
 
 	void deleteInfoArrays();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	void doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector);
-	void StoreExeSettings();
-	void LoadExeSettings();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 protected:
-
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
 	bool m_bRandLogging;
 	bool m_bSynchLogging;
 	bool m_bOverwriteLogs;
-	NiPoint3  m_pt3CameraDir;
-	int m_iNewPlayers;
 
-	CMainMenu* m_pkMainMenu;
-
-	bool m_bZoomOut;
-	bool m_bZoomIn;
-	bool m_bLoadGameFromFile;
-
-	FMPIManager * m_pFMPMgr;
+	FMPIManager* m_pFMPMgr;
 
 	CvRandom* m_asyncRand;
 
@@ -962,8 +934,6 @@ protected:
 	CvPortal* m_portal;
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
-
-//	CvArtFileMgr* m_pArtFileMgr; (unused)
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -985,8 +955,6 @@ protected:
 	FAStar* m_areaFinder;
 	FAStar* m_plotGroupFinder;
 
-	NiPoint3 m_pt3Origin;
-
 	int* m_aiPlotDirectionX;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotDirectionY;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotCardinalDirectionX;	// [NUM_CARDINALDIRECTION_TYPES];
@@ -1000,7 +968,6 @@ protected:
 	DirectionTypes* m_aeTurnRightDirection;	// [NUM_DIRECTION_TYPES];
 	DirectionTypes m_aaeXYDirection[DIRECTION_DIAMETER][DIRECTION_DIAMETER];
 
-	//InterfaceModeInfo m_aInterfaceModeInfo[NUM_INTERFACEMODE_TYPES] =
 	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
 
 	/***********************************************************************************************************************
@@ -1020,7 +987,7 @@ protected:
 		static const size_t Seed = 0x811C9DC5;  // 2166136261
 
 		// hash a single byte
-		static inline size_t fnv1a(unsigned char oneByte, size_t hash = Seed)
+		static inline size_t fnv1a(uint8_t oneByte, size_t hash = Seed)
 		{
 			return (oneByte ^ hash) * Prime;
 		}
@@ -1029,7 +996,7 @@ protected:
 		static inline size_t fnv1a(const void* data, size_t numBytes, size_t hash = Seed)
 		{
 			assert(data);
-			const unsigned char* ptr = (const unsigned char*)data;
+			const uint8_t* ptr = (const uint8_t*)data;
 			while (numBytes--)
 				hash = fnv1a(*ptr++, hash);
 			return hash;
@@ -1226,7 +1193,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes2;
 	CvString *m_paszEntityEventTypes;
 	int m_iNumEntityEventTypes;
 
@@ -1267,10 +1233,11 @@ protected:
 
 #define DECLARE_MEMBER_VAR(dataType, VAR) \
 	dataType m_##VAR;
+
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
+	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
-	bool m_bLoadedPlayerOptions;
 
 	float m_fPLOT_SIZE;
 
@@ -1297,12 +1264,10 @@ public:
 public:
 	bool getBBAI_AIR_COMBAT() const;
 	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
 	bool m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-	bool m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 
 // Tech Diffusion
 public:
@@ -1312,19 +1277,6 @@ protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	int* m_iStoreExeSettingsCommerceInfo;
-	int* m_iStoreExeSettingsYieldInfo;
-	int* m_iStoreExeSettingsReligionInfo;
-	int* m_iStoreExeSettingsCorporationInfo;
-	int* m_iStoreExeSettingsBonusInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
 	bool m_bSignsCleared;
@@ -2210,7 +2162,7 @@ public:
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return gGlobals->getDLLIFaceNonInl();
+		return g_DLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2538,10 +2490,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef FIXED_MISSION_NUMBER
-#define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
 
 #endif
 

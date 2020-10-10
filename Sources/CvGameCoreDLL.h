@@ -73,12 +73,14 @@
 //
 // Basic types
 //
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
-typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef unsigned int        uint;
+
+typedef long long           int64_t;
+
+typedef unsigned char       uint8_t;
+typedef unsigned short      uint16_t;
+typedef unsigned int        uint32_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits
@@ -116,7 +118,7 @@ typedef wchar_t          wchar;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
+__forceinline float DWtoF( uint n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
@@ -138,6 +140,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
+// #define PARALLEL_MAPS
+// #define NOMADIC_START
 
 //
 // Cache feature macros
@@ -171,6 +175,9 @@ void dumpProfileStack();
 void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
+
+int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
@@ -252,22 +259,6 @@ namespace python = boost::python;
 //#include <boost155/range/adaptor/filtered.hpp>
 //#include <boost155/range/adaptor/transformed.hpp>
 
-//
-// xercesc for XML loading
-// 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
 
@@ -300,49 +291,36 @@ namespace python = boost::python;
 #include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
+#include "CvGameCoreDLLUnDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "CvString.h"
+
 #include "CvEnums.h"
 #include "CvStructs.h"
+
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
+#include "CvDLLFlagEntityIFaceBase.h"
 
+#include "CvBuildingInfo.h"
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvXMLLoadUtility.h"
-#include "CvInitCore.h"
-#include "CvArtFileMgr.h"
-#include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
 #include "CvPopupInfo.h"
 #include "CvEventReporter.h"
 #include "CvMessageControl.h"
-#include "CvDiploParameters.h"
 #include "CvDeal.h"
 #include "CvInfoWater.h"
-#include "CvMap.h"
 #include "CvViewport.h"
-#include "CvGlobals.h"
-#include "CvGameAI.h"
-#include "CvTeamAI.h"
-#include "CvPlayerAI.h"
-#include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
-#include "CvPlot.h"
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPathGenerator.h"
-#include "CvBugOptions.h"
 #include "CvPython.h"
 
 #include "SCvDebug.h"

@@ -1,5 +1,6 @@
 // CvTaggedSaveFormatWrapper.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 
 #ifdef _DEBUG
@@ -39,32 +40,32 @@ public:
 	virtual unsigned int			GetSizeLeft() const { return m_wrapped->GetSizeLeft(); }
 	virtual void	CopyToMem(void* mem) { m_wrapped->CopyToMem(mem); }
 	
-	virtual unsigned int	WriteString(const wchar *szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(const char *szName) { return m_wrapped->WriteString(szName); }
+	virtual unsigned int	WriteString(const wchar_t* szName) { return m_wrapped->WriteString(szName); }
+	virtual unsigned int	WriteString(const char* szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(const std::string& szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(const std::wstring& szName) { return m_wrapped->WriteString(szName); }
 	virtual unsigned int	WriteString(int count, std::string values[]) { return m_wrapped->WriteString(count,values); }
 	virtual unsigned int	WriteString(int count, std::wstring values[]) { return m_wrapped->WriteString(count,values); }
 	
-	virtual unsigned int	ReadString(char *szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
-	virtual unsigned int	ReadString(wchar *szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
+	virtual unsigned int	ReadString(char* szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
+	virtual unsigned int	ReadString(wchar_t* szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
 	virtual unsigned int	ReadString(std::string& szName) { return m_wrapped->ReadString(szName); m_lenRead += szName.length(); }
 	virtual unsigned int	ReadString(std::wstring& szName) { return m_wrapped->ReadString(szName); m_lenRead += 2*szName.length(); }
 	virtual unsigned int	ReadString(int count, std::string values[]) { return m_wrapped->ReadString(count,values); m_lenRead += count*values[0].length(); }
 	virtual unsigned int	ReadString(int count, std::wstring values[]) { return m_wrapped->ReadString(count,values); m_lenRead += 2*count*values[0].length(); }
 	
-	virtual char *			ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
-	virtual wchar *		ReadWideString() { wchar* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
+	virtual char*		ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
+	virtual wchar_t*	ReadWideString() { wchar_t* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
 	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(byte *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(int count, char values[]){ m_wrapped->Read(count, values); m_lenRead += count;}
 	virtual void		Read(int count, byte values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
 	virtual void		Read(bool *arg) { m_wrapped->Read(arg); m_lenRead++;}
 	virtual void		Read(int count, bool values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
-	virtual void		Read(short	*s) { m_wrapped->Read(s); m_lenRead += 2;}
-	virtual void		Read(unsigned short	*s)  { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(short* s) { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(uint16_t* s)  { m_wrapped->Read(s); m_lenRead += 2;}
 	virtual void		Read(int count, short values[]){ m_wrapped->Read(count, values); m_lenRead += count*2;}
-	virtual void		Read(int count, unsigned short values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
+	virtual void		Read(int count, uint16_t values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
 	virtual void		Read(int* i){ m_wrapped->Read(i); m_lenRead += 4;}
 	virtual void		Read(unsigned int* i) { m_wrapped->Read(i); m_lenRead += 4;}
 	virtual void 		Read(int count, int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
@@ -90,9 +91,9 @@ public:
 	virtual void		Write(int count, const bool values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(short value) { m_wrapped->Write(value); }
-	virtual void		Write(unsigned short value){ m_wrapped->Write(value); }
+	virtual void		Write(uint16_t value){ m_wrapped->Write(value); }
 	virtual void		Write(int count, const short values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count, const unsigned short values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const uint16_t values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(int value) { m_wrapped->Write(value); }
 	virtual void		Write(unsigned int value) { m_wrapped->Write(value); }
@@ -143,7 +144,7 @@ typedef struct id_mapping_entry
 	int				escapeId;	//	Always SAVE_ELEMENT_ID_DICTIONARY_ENTRY
 	int				id;
 	SaveValueType	type;
-	byte			nameLen;
+	uint8_t			nameLen;
 	char			name[VAR];
 } id_mapping_entry;
 #define ID_MAPPING_ENTRY_LEN(nameLen) (sizeof(id_mapping_entry) + ((int)sizeof(char))*(nameLen-VAR))
@@ -154,7 +155,7 @@ typedef struct id_mapping_entry_maximal
 	int				escapeId;	//	Always SAVE_ELEMENT_ID_DICTIONARY_ENTRY
 	int				id;
 	SaveValueType	type;
-	byte			nameLen;
+	uint8_t			nameLen;
 	char			name[256];
 } id_mapping_entry_maximal;
 
@@ -163,7 +164,7 @@ typedef struct object_delimiter_entry
 {
 	int				escapeId;	//	Always SAVE_ELEMENT_ID_OBJECT_DELIMITER
 	bool			bStart;		//	true for object start, false for end
-	byte			nameLen;
+	uint8_t			nameLen;
 	char			name[VAR];
 } object_delimiter_entry;
 #define OBJECT_DELIMITER_ENTRY_LEN(nameLen) (sizeof(object_delimiter_entry) + ((int)sizeof(char))*(nameLen-VAR))
@@ -173,7 +174,7 @@ typedef struct object_delimiter_entry_maximal
 {
 	int				escapeId;	//	Always SAVE_ELEMENT_ID_OBJECT_DELIMITER
 	bool			bStart;		//	true for object start, false for end
-	byte			nameLen;
+	uint8_t			nameLen;
 	char			name[256];
 } object_delimiter_entry_maximal;
 
@@ -200,7 +201,7 @@ typedef struct value_entry_char
 typedef struct value_entry_byte
 {
 	int id;
-	byte value;
+	uint8_t value;
 } value_entry_byte;
 
 //	Value entry for type char array
@@ -217,9 +218,9 @@ typedef struct value_entry_byte_array
 {
 	int id;
 	int numBytes;
-	byte value[VAR];
+	uint8_t value[VAR];
 } value_entry_byte_array;
-#define VALUE_ENTRY_BYTE_ARRAY_SIZE_FROM_NUM(numBytes)	((int)sizeof(value_entry_byte_array)+((int)sizeof(byte))*(numBytes-VAR))
+#define VALUE_ENTRY_BYTE_ARRAY_SIZE_FROM_NUM(numBytes)	((int)sizeof(value_entry_byte_array)+((int)sizeof(uint8_t))*(numBytes-VAR))
 
 //	Value entry for type bool
 typedef struct value_entry_bool
@@ -248,7 +249,7 @@ typedef struct value_entry_short
 typedef struct value_entry_unsigned_short
 {
 	int id;
-	unsigned short value;
+	uint16_t value;
 } value_entry_unsigned_short;
 
 //	Value entry for type short array
@@ -265,7 +266,7 @@ typedef struct value_entry_unsigned_short_array
 {
 	int id;
 	int numShorts;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_short_array;
 
 //	Value entry for type int
@@ -296,7 +297,7 @@ typedef struct value_entry_unsigned_int_array
 {
 	int id;
 	int numInts;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_int_array;
 
 //	Value entry for type long
@@ -326,7 +327,7 @@ typedef struct value_entry_unsigned_long_array
 {
 	int id;
 	int numLongs;
-	unsigned short value[VAR];
+	uint16_t value[VAR];
 } value_entry_unsigned_long_array;
 
 //	Value entry for type float
@@ -540,10 +541,10 @@ CvTaggedSaveFormatWrapper::WriteObjectDelimiter(const char* name, int& idHint, i
 		entry.bStart = bStart;
 		entry.nameLen = (name == NULL ? 0 : strlen(name));
 
-		m_stream->Write((int)(sizeof(entry) - sizeof(entry.name)), (const byte*)&entry);
+		m_stream->Write((int)(sizeof(entry) - sizeof(entry.name)), (const uint8_t*)&entry);
 		if ( name != NULL )
 		{
-			m_stream->Write(entry.nameLen, (const byte*)name);
+			m_stream->Write(entry.nameLen, (const uint8_t*)name);
 		}
 	}
 }
@@ -566,10 +567,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 	{
 	case REMAPPED_CLASS_TYPE_BUILDINGS:
 		entry.numClasses = GC.getNumBuildingInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes)i);
+			const CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -577,10 +578,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_UNITS:
 		entry.numClasses = GC.getNumUnitInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUnitInfo& info = GC.getUnitInfo((UnitTypes)i);
+			const CvUnitInfo& info = GC.getUnitInfo((UnitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -588,10 +589,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_PROJECTS:
 		entry.numClasses = GC.getNumProjectInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvProjectInfo& info = GC.getProjectInfo((ProjectTypes)i);
+			const CvProjectInfo& info = GC.getProjectInfo((ProjectTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -599,10 +600,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_BONUSES:
 		entry.numClasses = GC.getNumBonusInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBonusInfo& info = GC.getBonusInfo((BonusTypes)i);
+			const CvBonusInfo& info = GC.getBonusInfo((BonusTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -610,10 +611,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_SPECIALISTS:
 		entry.numClasses = GC.getNumSpecialistInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialistInfo& info = GC.getSpecialistInfo((SpecialistTypes)i);
+			const CvSpecialistInfo& info = GC.getSpecialistInfo((SpecialistTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -621,10 +622,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_IMPROVEMENTS:
 		entry.numClasses = GC.getNumImprovementInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvImprovementInfo& info = GC.getImprovementInfo((ImprovementTypes)i);
+			const CvImprovementInfo& info = GC.getImprovementInfo((ImprovementTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -632,10 +633,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_RELIGIONS:
 		entry.numClasses = GC.getNumReligionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvReligionInfo& info = GC.getReligionInfo((ReligionTypes)i);
+			const CvReligionInfo& info = GC.getReligionInfo((ReligionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -643,10 +644,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_COMBATINFOS:
 		entry.numClasses = GC.getNumUnitCombatInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUnitCombatInfo& info = GC.getUnitCombatInfo((UnitCombatTypes)i);
+			const CvUnitCombatInfo& info = GC.getUnitCombatInfo((UnitCombatTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -655,10 +656,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		//TB Promotion Line Mod begin
 	case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 		entry.numClasses = GC.getNumPromotionLineInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPromotionLineInfo& info = GC.getPromotionLineInfo((PromotionLineTypes)i);
+			const CvPromotionLineInfo& info = GC.getPromotionLineInfo((PromotionLineTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -667,10 +668,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		//TB Promotion Line Mod end
 	case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
 		entry.numClasses = GC.getNumMapCategoryInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
+			const CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -678,10 +679,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_IDEACLASSES:
 		entry.numClasses = GC.getNumIdeaClassInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvIdeaClassInfo& info = GC.getIdeaClassInfo((IdeaClassTypes)i);
+			const CvIdeaClassInfo& info = GC.getIdeaClassInfo((IdeaClassTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -689,10 +690,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_IDEAS:
 		entry.numClasses = GC.getNumIdeaInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvIdeaInfo& info = GC.getIdeaInfo((IdeaTypes)i);
+			const CvIdeaInfo& info = GC.getIdeaInfo((IdeaTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -711,10 +712,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 	//	break;
 	case REMAPPED_CLASS_TYPE_PROMOTIONS:
 		entry.numClasses = GC.getNumPromotionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPromotionInfo& info = GC.getPromotionInfo((PromotionTypes)i);
+			const CvPromotionInfo& info = GC.getPromotionInfo((PromotionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -722,10 +723,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_CORPORATIONS:
 		entry.numClasses = GC.getNumCorporationInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCorporationInfo& info = GC.getCorporationInfo((CorporationTypes)i);
+			const CvCorporationInfo& info = GC.getCorporationInfo((CorporationTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -733,10 +734,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_TECHS:
 		entry.numClasses = GC.getNumTechInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTechInfo& info = GC.getTechInfo((TechTypes)i);
+			const CvTechInfo& info = GC.getTechInfo((TechTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -744,10 +745,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_CIVICS:
 		entry.numClasses = GC.getNumCivicInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivicInfo& info = GC.getCivicInfo((CivicTypes)i);
+			const CvCivicInfo& info = GC.getCivicInfo((CivicTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -755,10 +756,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_VOTES:
 		entry.numClasses = GC.getNumVoteInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVoteInfo& info = GC.getVoteInfo((VoteTypes)i);
+			const CvVoteInfo& info = GC.getVoteInfo((VoteTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -766,10 +767,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_VOTE_SOURCES:
 		entry.numClasses = GC.getNumVoteSourceInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVoteSourceInfo& info = GC.getVoteSourceInfo((VoteSourceTypes)i);
+			const CvVoteSourceInfo& info = GC.getVoteSourceInfo((VoteSourceTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -777,10 +778,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_SPECIAL_UNITS:
 		entry.numClasses = GC.getNumSpecialUnitInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialUnitInfo& info = GC.getSpecialUnitInfo((SpecialUnitTypes)i);
+			const CvSpecialUnitInfo& info = GC.getSpecialUnitInfo((SpecialUnitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -788,10 +789,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS:
 		entry.numClasses = GC.getNumSpecialBuildingInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvSpecialBuildingInfo& info = GC.getSpecialBuildingInfo((SpecialBuildingTypes)i);
+			const CvSpecialBuildingInfo& info = GC.getSpecialBuildingInfo((SpecialBuildingTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -799,10 +800,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_UPKEEPS:
 		entry.numClasses = GC.getNumUpkeepInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvUpkeepInfo& info = GC.getUpkeepInfo((UpkeepTypes)i);
+			const CvUpkeepInfo& info = GC.getUpkeepInfo((UpkeepTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -810,10 +811,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_HURRIES:
 		entry.numClasses = GC.getNumHurryInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvHurryInfo& info = GC.getHurryInfo((HurryTypes)i);
+			const CvHurryInfo& info = GC.getHurryInfo((HurryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -821,10 +822,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_FEATURES:
 		entry.numClasses = GC.getNumFeatureInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvFeatureInfo& info = GC.getFeatureInfo((FeatureTypes)i);
+			const CvFeatureInfo& info = GC.getFeatureInfo((FeatureTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -832,10 +833,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_CIVIC_OPTIONS:
 		entry.numClasses = GC.getNumCivicOptionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivicOptionInfo& info = GC.getCivicOptionInfo((CivicOptionTypes)i);
+			const CvCivicOptionInfo& info = GC.getCivicOptionInfo((CivicOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -843,10 +844,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_BUILDS:
 		entry.numClasses = GC.getNumBuildInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvBuildInfo& info = GC.getBuildInfo((BuildTypes)i);
+			const CvBuildInfo& info = GC.getBuildInfo((BuildTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -854,10 +855,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_TERRAINS:
 		entry.numClasses = GC.getNumTerrainInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTerrainInfo& info = GC.getTerrainInfo((TerrainTypes)i);
+			const CvTerrainInfo& info = GC.getTerrainInfo((TerrainTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -865,10 +866,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_ROUTES:
 		entry.numClasses = GC.getNumRouteInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvRouteInfo& info = GC.getRouteInfo((RouteTypes)i);
+			const CvRouteInfo& info = GC.getRouteInfo((RouteTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -876,10 +877,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_VICTORIES:
 		entry.numClasses = GC.getNumVictoryInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvVictoryInfo& info = GC.getVictoryInfo((VictoryTypes)i);
+			const CvVictoryInfo& info = GC.getVictoryInfo((VictoryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -887,10 +888,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_LEADERHEADS:
 		entry.numClasses = GC.getNumLeaderHeadInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvLeaderHeadInfo& info = GC.getLeaderHeadInfo((LeaderHeadTypes)i);
+			const CvLeaderHeadInfo& info = GC.getLeaderHeadInfo((LeaderHeadTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -898,10 +899,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_CIVILIZATIONS:
 		entry.numClasses = GC.getNumCivilizationInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvCivilizationInfo& info = GC.getCivilizationInfo((CivilizationTypes)i);
+			const CvCivilizationInfo& info = GC.getCivilizationInfo((CivilizationTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -909,10 +910,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_GAMEOPTIONS:
 		entry.numClasses = GC.getNumGameOptionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvGameOptionInfo& info = GC.getGameOptionInfo((GameOptionTypes)i);
+			const CvGameOptionInfo& info = GC.getGameOptionInfo((GameOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -920,10 +921,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_MPOPTIONS:
 		entry.numClasses = GC.getNumMPOptionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvMPOptionInfo& info = GC.getMPOptionInfo((MultiplayerOptionTypes)i);
+			const CvMPOptionInfo& info = GC.getMPOptionInfo((MultiplayerOptionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -931,10 +932,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_UNITAIS:
 		entry.numClasses = NUM_UNITAI_TYPES;
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvInfoBase& info = GC.getUnitAIInfo((UnitAITypes)i);
+			const CvInfoBase& info = GC.getUnitAIInfo((UnitAITypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -942,10 +943,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_EVENTS:
 		entry.numClasses = GC.getNumEventInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvEventInfo& info = GC.getEventInfo((EventTypes)i);
+			const CvEventInfo& info = GC.getEventInfo((EventTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -953,10 +954,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_EVENT_TRIGGERS:
 		entry.numClasses = GC.getNumEventTriggerInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvEventTriggerInfo& info = GC.getEventTriggerInfo((EventTriggerTypes)i);
+			const CvEventTriggerInfo& info = GC.getEventTriggerInfo((EventTriggerTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -964,10 +965,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_GAMESPEEDS:
 		entry.numClasses = GC.getNumGameSpeedInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvGameSpeedInfo& info = GC.getGameSpeedInfo((GameSpeedTypes)i);
+			const CvGameSpeedInfo& info = GC.getGameSpeedInfo((GameSpeedTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -975,10 +976,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_PROPERTIES:
 		entry.numClasses = GC.getNumPropertyInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvPropertyInfo& info = GC.getPropertyInfo((PropertyTypes)i);
+			const CvPropertyInfo& info = GC.getPropertyInfo((PropertyTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -986,10 +987,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_TRAITS:
 		entry.numClasses = GC.getNumTraitInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTraitInfo& info = GC.getTraitInfo((TraitTypes)i);
+			const CvTraitInfo& info = GC.getTraitInfo((TraitTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -997,10 +998,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_INVISIBLES:
 		entry.numClasses = GC.getNumInvisibleInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvInvisibleInfo& info = GC.getInvisibleInfo((InvisibleTypes)i);
+			const CvInvisibleInfo& info = GC.getInvisibleInfo((InvisibleTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1008,10 +1009,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_MISSIONS:
 		entry.numClasses = GC.getNumMissionInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvMissionInfo& info = GC.getMissionInfo((MissionTypes)i);
+			const CvMissionInfo& info = GC.getMissionInfo((MissionTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1019,10 +1020,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_YIELDS:
 		entry.numClasses = NUM_YIELD_TYPES;
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
+			const CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1030,10 +1031,10 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_COMMERCES:
 		entry.numClasses = NUM_COMMERCE_TYPES;
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
+			const CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1041,17 +1042,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		break;
 	case REMAPPED_CLASS_TYPE_DOMAINS:
 		entry.numClasses = NUM_DOMAIN_TYPES;
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for (int i = 0; i < entry.numClasses; i++)
 		{
-			CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
+			const CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
 		}
 		break;
 	default:
-		FAssertMsg(false, "Unexpected RemappedClassType");
+		FErrorMsg("Unexpected RemappedClassType");
 		break;
 	}
 }
@@ -1249,7 +1250,7 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			result = NUM_DOMAIN_TYPES;
 			break;
 		default:
-			FAssertMsg(false, "Unexpected RemappedClassType");
+			FErrorMsg("Unexpected RemappedClassType");
 			break;
 		}
 
@@ -1355,7 +1356,7 @@ CvTaggedSaveFormatWrapper::WriteClassEnum(const char* name, int& idHint, int& id
 		entry.classType = classType;
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1381,7 +1382,7 @@ CvTaggedSaveFormatWrapper::WriteClassEnum(const char* name, int& idHint, int& id
 		entry.classType = classType;
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1407,7 +1408,7 @@ CvTaggedSaveFormatWrapper::WriteClassArray(const char* name, int& idHint, int& i
 		entry.classType = classType;
 		entry.numInts = count;
 
-		m_stream->Write(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1434,7 +1435,7 @@ CvTaggedSaveFormatWrapper::WriteClassArray(const char* name, int& idHint, int& i
 		entry.classType = classType;
 		entry.numBools = count;
 
-		m_stream->Write(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1462,7 +1463,7 @@ CvTaggedSaveFormatWrapper::WriteClassArrayOfClassEnum(const char* name, int& idH
 		entry.valueClassType = valueClassType;
 		entry.numValues = count;
 
-		m_stream->Write(VALUE_ENTRY_CLASS_CLASS_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_CLASS_CLASS_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1489,7 +1490,7 @@ CvTaggedSaveFormatWrapper::WriteClassEnumArray(const char* name, int& idHint, in
 		entry.classType = classType;
 		entry.count = count;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1516,7 +1517,7 @@ CvTaggedSaveFormatWrapper::WriteClassEnumArray(const char* name, int& idHint, in
 		entry.classType = classType;
 		entry.count = count;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1544,7 +1545,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, char
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_CHAR, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1553,7 +1554,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, char
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, byte value)
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint8_t value)
 {
 	PROFILE_FUNC();
 
@@ -1568,7 +1569,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, byte
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_BYTE, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1592,7 +1593,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_CHAR_ARRAY, true);
 		entry.numChars = count;
 
-		m_stream->Write(VALUE_ENTRY_CHAR_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_CHAR_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1602,7 +1603,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const  byte values[])
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint8_t values[])
 {
 	PROFILE_FUNC();
 
@@ -1617,7 +1618,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_BYTE_ARRAY, true);
 		entry.numBytes = count;
 
-		m_stream->Write(VALUE_ENTRY_BYTE_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_BYTE_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1643,7 +1644,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, bool
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1667,7 +1668,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY, true);
 		entry.numBools = count;
 
-		m_stream->Write(VALUE_ENTRY_BOOL_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_BOOL_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1693,7 +1694,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, shor
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_SHORT, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1702,7 +1703,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, shor
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned short value)
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint16_t value)
 {
 	PROFILE_FUNC();
 
@@ -1717,7 +1718,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsi
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_SHORT, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1741,7 +1742,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_SHORT_ARRAY, true);
 		entry.numShorts = count;
 
-		m_stream->Write(VALUE_ENTRY_SHORT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_SHORT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1751,7 +1752,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const unsigned short values[])
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -1766,7 +1767,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_SHORT_ARRAY, true);
 		entry.numShorts = count;
 
-		m_stream->Write(VALUE_ENTRY_SHORT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_SHORT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1792,7 +1793,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_INT, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1816,7 +1817,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsi
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_INT, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1840,7 +1841,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_INT_ARRAY, true);
 		entry.numInts = count;
 
-		m_stream->Write(VALUE_ENTRY_INT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_INT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1865,7 +1866,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_INT_ARRAY, true);
 		entry.numInts = count;
 
-		m_stream->Write(VALUE_ENTRY_INT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_INT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1891,7 +1892,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, long
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1915,7 +1916,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsi
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -1939,7 +1940,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_ARRAY, true);
 		entry.numLongs = count;
 
-		m_stream->Write(VALUE_ENTRY_LONG_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1964,7 +1965,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY, true);
 		entry.numLongs = count;
 
-		m_stream->Write(VALUE_ENTRY_LONG_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -1990,7 +1991,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, floa
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_FLOAT, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -2014,7 +2015,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_FLOAT_ARRAY, true);
 		entry.numFloats = count;
 
-		m_stream->Write(VALUE_ENTRY_FLOAT_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_FLOAT_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -2040,7 +2041,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, doub
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_DOUBLE, true);
 		entry.value = value;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 	}
 	else
 	{
@@ -2064,7 +2065,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_DOUBLE_ARRAY, true);
 		entry.numDoubles = count;
 
-		m_stream->Write(VALUE_ENTRY_DOUBLE_ARRAY_SIZE_FROM_NUM(0), (const byte*)&entry);
+		m_stream->Write(VALUE_ENTRY_DOUBLE_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
 		m_stream->Write(count, values);
 	}
 	else
@@ -2074,7 +2075,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 	
 void
-CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq, const wchar *szName)
+CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq, const wchar_t* szName)
 {
 	PROFILE_FUNC();
 
@@ -2087,7 +2088,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		DEBUG_TRACE3("Write string %s: %S\n", name, szName)
 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_WSTRING, true);
-		m_stream->Write(sizeof(entry), (const byte*)&entry);
+		m_stream->Write(sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(szName);
 	}
 	else
@@ -2110,7 +2111,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		DEBUG_TRACE3("Write string %s: %s\n", name, szName)
 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_STRING, true);
-		m_stream->Write(sizeof(entry), (const byte*)&entry);
+		m_stream->Write(sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(szName);
 	}
 	else
@@ -2133,7 +2134,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		DEBUG_TRACE3("Write string %s: %s\n", name, szName)
 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_STD_STRING, true);
-		m_stream->Write(sizeof(entry), (const byte*)&entry);
+		m_stream->Write(sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(szName);
 	}
 	else
@@ -2156,7 +2157,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		DEBUG_TRACE3("Write string %s: %s\n", name, szName)
 
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_STD_WSTRING, true);
-		m_stream->Write(sizeof(entry), (const byte*)&entry);
+		m_stream->Write(sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(szName);
 	}
 	else
@@ -2179,7 +2180,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_STRING_ARRAY, true);
 		entry.numStrings = count;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(count, values);
 	}
 	else
@@ -2202,7 +2203,7 @@ CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq
 		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_WSTRING_ARRAY, true);
 		entry.numStrings = count;
 
-		m_stream->Write((int)sizeof(entry), (const byte*)&entry);
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
 		m_stream->WriteString(count, values);
 	}
 	else
@@ -2257,7 +2258,7 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 			newEntry.nameLen = std::min(255,(int)normalizedName.length());
 			memcpy(newEntry.name, normalizedName.c_str(), newEntry.nameLen);
 
-			m_stream->Write(ID_MAPPING_ENTRY_LEN(newEntry.nameLen), (const byte*)&newEntry);
+			m_stream->Write(ID_MAPPING_ENTRY_LEN(newEntry.nameLen), (const uint8_t*)&newEntry);
 		}
 	}
 	else
@@ -2296,7 +2297,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, wchar **szName)
+CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName)
 {
 	PROFILE_FUNC();
 
@@ -2462,7 +2463,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, char 
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, byte *pByte)
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint8_t* pByte)
 {
 	PROFILE_FUNC();
 
@@ -2517,7 +2518,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, byte values[])
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2638,7 +2639,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsigned short	*s) 
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint16_t* s) 
 {
 	PROFILE_FUNC();
 
@@ -2693,7 +2694,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, unsigned short values[])
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -3073,7 +3074,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 		{
 			value_class_enum	entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
@@ -3108,7 +3109,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 		{
 			value_class_enum entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
@@ -3147,7 +3148,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		{
 			value_entry_class_int_array	entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)&entry.classType);
 			m_stream->Read(&entry.numInts);
 
 			bst::scoped_array<int> arrayBuffer(new int[entry.numInts]);
@@ -3225,7 +3226,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		{
 			value_entry_class_bool_array	entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.numBools);
 
 			FAssert (classType == entry.classType);
@@ -3303,8 +3304,8 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 		{
 			value_entry_class_class_array	entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
-			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.valueClassType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)&entry.valueClassType);
 			m_stream->Read(&entry.numValues);
 
 			FAssert ( indexClassType == entry.classType && valueClassType == entry.valueClassType );
@@ -3358,7 +3359,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 		{
 			value_class_enum_array entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.count);
 
 			if ( entry.count != count )
@@ -3402,7 +3403,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 		{
 			value_class_enum_array	entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.count);
 
 			if ( entry.count != count )
@@ -3580,7 +3581,7 @@ CvTaggedSaveFormatWrapper::ConsumeBytes(int numBytes)
 {
 	PROFILE_FUNC();
 
-	byte	buffer[512];
+	uint8_t	buffer[512];
 	int		readSize;
 
 	while(numBytes > 0)
@@ -3644,7 +3645,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_BYTE_ARRAY:
 		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(byte)*arraySize);
+		ConsumeBytes(sizeof(uint8_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_BOOL:
 		ConsumeBytes(sizeof(value_entry_bool)-sizeof(int));
@@ -3665,7 +3666,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_UNSIGNED_SHORT_ARRAY:
 		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(unsigned short)*arraySize);
+		ConsumeBytes(sizeof(uint16_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_INT:
 		ConsumeBytes(sizeof(value_entry_int)-sizeof(int));
@@ -3711,7 +3712,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_WSTRING:
 		{
-			wchar* dummy = m_stream->ReadWideString();
+			wchar_t* dummy = m_stream->ReadWideString();
 
 			SAFE_DELETE(dummy);
 		}
@@ -3758,7 +3759,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_int_array entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)&entry.classType);
 			m_stream->Read(&entry.numInts);
 
 			ConsumeBytes(sizeof(int)*entry.numInts);
@@ -3768,7 +3769,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_bool_array entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.numBools);
 
 			ConsumeBytes(sizeof(bool)*entry.numBools);
@@ -3778,7 +3779,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_class_enum_array entry;
 
-			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
 			m_stream->Read(&entry.count);
 
 			ConsumeBytes(sizeof(int)*entry.count);
@@ -3801,8 +3802,8 @@ CvTaggedSaveFormatWrapper::ReadDictionaryElement()
 
 	id_mapping_entry_maximal	newEntry;
 
-	m_stream->Read(sizeof(id_mapping_entry_maximal) - sizeof(int) - sizeof(newEntry.name), ((byte*)&newEntry) + sizeof(int));
-	m_stream->Read(newEntry.nameLen, (byte*)&newEntry.name);
+	m_stream->Read(sizeof(id_mapping_entry_maximal) - sizeof(int) - sizeof(newEntry.name), ((uint8_t*)&newEntry) + sizeof(int));
+	m_stream->Read(newEntry.nameLen, (uint8_t*)&newEntry.name);
 	newEntry.name[newEntry.nameLen] = '\0';
 
 #ifdef TEMP_DEBUGGING_SUPPORT
@@ -3827,7 +3828,7 @@ CvTaggedSaveFormatWrapper::ReadClassMap()
 
 	class_mapping_table_entry entry;
 
-	m_stream->Read(sizeof(class_mapping_table_entry) - sizeof(int), ((byte*)&entry) + sizeof(int));
+	m_stream->Read(sizeof(class_mapping_table_entry) - sizeof(int), ((uint8_t*)&entry) + sizeof(int));
 
 	FAssert(entry.classType < NUM_REMAPPED_TYPES);
 
@@ -3852,7 +3853,7 @@ CvTaggedSaveFormatWrapper::ReadObjectDelimiter()
 
 	m_stream->Read(&entry.bStart);
 	m_stream->Read(&entry.nameLen);
-	m_stream->Read(entry.nameLen, (byte*)&entry.name);
+	m_stream->Read(entry.nameLen, (uint8_t*)&entry.name);
 
 	FAssert(entry.nameLen <= 255);
 	entry.name[entry.nameLen] = '\0';

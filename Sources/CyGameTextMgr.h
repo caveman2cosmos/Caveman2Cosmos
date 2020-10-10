@@ -17,7 +17,7 @@ class CyGameTextMgr
 public:
 	CyGameTextMgr();
 	CyGameTextMgr(CvGameTextMgr* m_pGameTextMgr);			// Call from C++
-	bool isNone() { return (m_pGameTextMgr==NULL); }
+	bool isNone() const { return m_pGameTextMgr == NULL; }
 
 	void Reset();
 
@@ -59,6 +59,7 @@ public:
 	std::wstring setVassalRevoltHelp(int iMaster, int iVassal);
 	std::wstring getActiveDealsString(int iThisPlayer, int iOtherPlayer);
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
+	std::wstring getFinanceUnitUpkeepString(int iPlayer);
 
 
 protected:

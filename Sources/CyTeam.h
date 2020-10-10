@@ -15,10 +15,8 @@ class CyTeam
 public:
 	CyTeam();
 	explicit CyTeam(CvTeam* pTeam);		// Call from C++
-
-	CvTeam* getTeam() { return m_pTeam;	}	// Call from C++
-
-	bool isNone() { return (m_pTeam==NULL); }
+	const CvTeam* getTeam() const { return m_pTeam;	}	// Call from C++
+	bool isNone() const	{ return m_pTeam == NULL; }
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -49,7 +47,7 @@ public:
 	int getDefensivePower();
 	int getNumNukeUnits();
 //Sevo Begin--VCM
-	int getTotalVictoryScore();
+	int64_t getTotalVictoryScore() const;
 //Sevo End VCM
 
 	int getAtWarCount(bool bIgnoreMinors);
@@ -68,7 +66,7 @@ public:
 	int getHasReligionCount(int /*ReligionTypes*/ eReligion);
 	int getHasCorporationCount(int /*CorporationTypes*/ eCorporation);
 
-	int countTotalCulture();
+	int64_t countTotalCulture() const;
 
 	int countNumUnitsByArea(CyArea* pArea);
 	int countNumCitiesByArea(CyArea* pArea);

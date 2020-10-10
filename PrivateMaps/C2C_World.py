@@ -38,7 +38,7 @@ class MapConstants:
 		self.HillPercent = 0.26
 
 		# Percentage of land squares to be Peaks.
-		self.PeakPercent = 0.08
+		self.PeakPercent = 0.07
 
 		#Hotter than this temperature will be considered deciduous forest, colder will
 		#be evergreen forest.Temperatures range from coldest 0.0 to hottest 1.0.
@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.BonusBonus = 1.0
+		self.fBonusMult = 1.0
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
@@ -68,21 +68,21 @@ class MapConstants:
 
 		# This value controls the number of mid-altitude lake depressions per land map square.
 		# It will become a lake if enough water flows into the depression.
-		self.fLakesPerPlot = 0.008
+		self.fLakesPerPlot = 0.009
 
 		# This value controls the number of deep ocean threnches per ocean map square.
 		# It will become a lake if enough water flows into the depression.
 		self.fThrenchesPerPlot = 0.006
 
+		# iLakeSizeMinPercent sets the minimum percentage a lake is shrunk to when fLakeSizeFactorChance roll true.
+		# range from 0 to 100. Max size of lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
+		self.iLakeSizeMinPercent = 30
 		# ---The following values should all be between 0 and 1.
-		# fLakeSizeFactor sets the upper limit for how large a lake can become.
-		# 0.0 yields a max. size of 0, and 1 yields a max. size of LAKE_MAX_AREA_SIZE defined in the GlobalDefines.xml.
-		self.fLakeSizeFactor = 1.0
-		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the fLakeSizeFactor.
-		self.fLakeSizeFactorChance = 1.0
-		# These are multiplied to fLakeSizeFactor when a lake begins in certain terrains.
-		self.fHeatLakeFactor = 0.5 # Desert, dunes & salt flats.
-		self.fColdLakeFactor = 0.1 # Tundra, Permafrost & Ice.
+		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the iLakeSizeMinPercent.
+		self.fLakeSizeFactorChance = 0.4
+		# These modify lake size based on underlying terrain.
+		self.fHeatLakeFactor = 0.3 # Desert, dunes & salt flats.
+		self.fColdLakeFactor = 0.3 # Tundra, Permafrost & Ice.
 
 		# This value sets the relative minimum altitude of lake depressions. It Should be between 0 and 1.
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
@@ -169,8 +169,8 @@ class MapConstants:
 		##############################################################################
 		''' These are values that affect the elevation map,
 		higher numbers give greater chaos and smaller features.'''
-		self.fBaseFreq = 0.4444
-		self.fLacunarity = 1.48
+		self.fBaseFreq = 0.46
+		self.fLacunarity = 1.58
 		# Roughness boundaries; range: 0-1.
 		self.fMinPersi = 0.6
 		self.fMaxPersi = 0.8
@@ -228,18 +228,17 @@ class MapConstants:
 		#How many land squares will be below desert rainfall threshold. In this case,
 		#rain levels close to zero are very likely to be desert, while rain levels close
 		#to the desert threshold will more likely be plains.
-		self.SaltFlatsPercent	= 0.02
-		self.DunesPercent		= 0.05
-		self.DesertPercent		= 0.10
-		self.ScrubPercent		= 0.15
+		self.SaltFlatsPercent	= 0.03
+		self.DunesPercent		= 0.09
+		self.DesertPercent		= 0.18
+		self.ScrubPercent		= 0.25
 		#Affects the amount of rocky terrain. Proportional, Range 0-1.
 		self.fRockyPercent = 0.05
 
 		#How many land squares will be below plains rainfall threshold. Rain levels close
 		#to the desert threshold are likely to be plains, while those close to the plains
 		#threshold are likely to be grassland.
-		self.BarrenPercent		= 0.20
-		self.PlainsPercent		= 0.36
+		self.PlainsPercent		= 0.44
 		self.GrasslandPercent	= 0.68
 		self.LushPercent		= 0.84
 		self.MuddyPercent		= 0.92
@@ -348,17 +347,17 @@ class MapConstants:
 		# Bonuses
 		selectionID = MAP.getCustomMapOption(6)
 		if not selectionID:
-			self.BonusBonus = 0.0
+			self.fBonusMult = 0.0
 		elif selectionID == 1:
-			self.BonusBonus *= 0.50
+			self.fBonusMult *= 0.50
 		elif selectionID == 2:
-			self.BonusBonus *= 0.75
+			self.fBonusMult *= 0.75
 		elif selectionID == 4:
-			self.BonusBonus *= 1.25
+			self.fBonusMult *= 1.25
 		elif selectionID == 5:
-			self.BonusBonus *= 1.50
+			self.fBonusMult *= 1.50
 		elif selectionID == 6:
-			self.BonusBonus *= 1.75
+			self.fBonusMult *= 1.75
 		# Pangea Breaker
 		selectionID = MAP.getCustomMapOption(7)
 		if selectionID or self.bDryland or self.bPangea:
@@ -386,6 +385,7 @@ class MapConstants:
 		self.iHeight	= MAP.getGridHeight()
 		self.iArea		= self.iWidth * self.iHeight
 		self.iWorldSize	= iWorldSize = MAP.getWorldSize()
+		self.iMaxLakeSize = GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1
 		# Too many meteors will simply destroy the Earth, it also prevent an endless loop if the pangea can't be broken.
 		self.iMaxMeteorCount = 15 + 5 * iWorldSize
 		# Minimum size for a meteor strike that attemps to break pangaeas.
@@ -419,11 +419,11 @@ class MapConstants:
 			self.upLiftExponent  = 5
 
 		elif iClimate == 2: # Arid, more desert, less wet plots.
-			self.SaltFlatsPercent	= 0.06
-			self.DunesPercent		= 0.14
-			self.DesertPercent		= 0.20
-			self.ScrubPercent		= 0.28
-			self.PlainsPercent		= 0.7
+			self.SaltFlatsPercent	= 0.10
+			self.DunesPercent		= 0.20
+			self.DesertPercent		= 0.35
+			self.ScrubPercent		= 0.50
+			self.PlainsPercent		= 0.8
 			self.GrasslandPercent	= 0.9
 			self.LushPercent		= 0.95
 			self.MuddyPercent		= 0.98
@@ -491,12 +491,6 @@ class MapConstants:
 			else:
 				self.fLandPercent = .55
 		print "Land percent = %f" % self.fLandPercent
-		# Lake size
-#		GC.getDefineINT("")
-		self.iMaxLakesize = GC.getLAKE_MAX_AREA_SIZE()
-#		self.iMaxLakesize = int((1 + iWorldSize) ** 1.5)
-#		GC.setDefineINT("LAKE_MAX_AREA_SIZE", self.iMaxLakesize)
-#		GC.setDefineINT("MIN_WATER_SIZE_FOR_OCEAN", self.iMaxLakesize + 1)
 
 mc = None
 
@@ -1270,7 +1264,7 @@ class ElevationMap(FloatMap):
 					if self.data[i] < fLandHeightLoc: # If IsBelowSeaLevel().
 						# Check the size of this body of water, if lake-size, change to land.
 						for a in am.areaList:
-							if a.ID == am.areaID[i] and a.size <= mc.iMaxLakesize:
+							if a.ID == am.areaID[i] and a.size <= mc.iMaxLakeSize:
 								self.data[i] = (1 - fLandHeightLoc) * 0.1 + fLandHeightLoc
 								iCount += 1
 			if iCount == 0:
@@ -1422,7 +1416,7 @@ class ClimateMap:
 		W	= mc.W
 		geoIndex = 0
 		for zone in xrange(6):
-			topY    = em.GetYFromZone(zone, True)
+			topY	= em.GetYFromZone(zone, True)
 			bottomY = em.GetYFromZone(zone, False)
 			if not (topY == -1 and bottomY == -1):
 				if topY == -1:
@@ -1662,15 +1656,16 @@ class TerrainMap:
 			if self.plotData[i]:
 				if Rainfall[i] < minRain:
 					minRain = Rainfall[i]
-		#Normalize terrain rainfall thresholds
+		# Normalize terrain rainfall thresholds
 		self.desertThreshold	= desertThreshoLoc = FindValueFromPercent(Rainfall, mc.DesertPercent)
 		self.saltflatsThreshold = saltFlatThresLoc = FindValueFromPercent(Rainfall, mc.SaltFlatsPercent)
-		self.dunesThreshold		= dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
 		self.scrubThreshold		= scrubThresholLoc = FindValueFromPercent(Rainfall, mc.ScrubPercent)
 		self.plainsThreshold	= plainThresholLoc = FindValueFromPercent(Rainfall, mc.PlainsPercent)
-		self.grasslandThreshold	= grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
 		self.lushThreshold		= lushThresholdLoc = FindValueFromPercent(Rainfall, mc.LushPercent)
-		self.muddyThreshold		= muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
+
+		dunesThresholLoc = FindValueFromPercent(Rainfall, mc.DunesPercent)
+		grassThresholLoc = FindValueFromPercent(Rainfall, mc.GrasslandPercent)
+		muddyThresholLoc = FindValueFromPercent(Rainfall, mc.MuddyPercent)
 		#################################################
 		## Terrain Picker
 		#################################################
@@ -1952,7 +1947,7 @@ class PangaeaBreaker:
 
 
 	def createContinentList(self, ID):
-		C        = []
+		C		= []
 		indexMap = []
 		gap = int(round(2 + mc.iWorldSize / (1.5 + mc.bArchipelago)))
 		n = 0
@@ -2147,6 +2142,8 @@ class LakeMap:
 		self.avrRainfallMap2x2 = avrRainMap = array('f', [0.0] * iArea)
 		lakePitList = []
 		relAltMap = em.relAltMap3x3
+		altitude = em.data
+		fLandHeight = em.fLandHeight
 		rainData = cm.RainfallMap.data
 		plotData = tm.plotData
 		WATER		= mc.WATER
@@ -2175,8 +2172,8 @@ class LakeMap:
 		shuffle(lakePitList)
 		lakeAreaMap	= AreaMap()
 		self.isLakeData = array('b', [0] * iArea)
-		iMaxLakesize = mc.iMaxLakesize
-		fLakeSizeMod = mc.fLakeSizeFactor
+		iMaxLakeSize = mc.iMaxLakeSize
+		iLakeSizeMinPercent = mc.iLakeSizeMinPercent
 		fLakeSizeModChance = mc.fLakeSizeFactorChance
 		fHeatMod = mc.fHeatLakeFactor
 		fColdMod = mc.fColdLakeFactor
@@ -2186,27 +2183,29 @@ class LakeMap:
 		print "	Available lake pits: %d" % len(lakePitList)
 		for n in xrange(len(lakePitList)):
 			x, y, i = lakePitList.pop()
-			if self.isLakeData[i] == 0:
-				bNoLake = True
-				if iLakesLeft > 0:
-					HERE = tData[i]
-					if HERE == DESERT or HERE == DUNES or HERE == SALT_FLATS:
-						fTerrainMod = fHeatMod
-					elif HERE == ICE or HERE == TUNDRA or HERE == FROST:
-						fTerrainMod = fColdMod
-					else:
-						fTerrainMod = 1.0
-					if random() < fLakeSizeModChance:
-						fSizeMod = fLakeSizeMod
-					else:
-						fSizeMod = 1.0
-					fModifier = 1.0 - avrRainMap[i] * fTerrainMod
-					iLakeSize = int(round((iMaxLakesize - iMaxLakesize * fModifier) * fSizeMod))
-					if iLakeSize > iMaxLakesize:
-						iLakeSize = iMaxLakesize
+			if self.isLakeData[i] == 0 and iLakesLeft > 0:
+				HERE = tData[i]
+				if HERE == DESERT or HERE == DUNES or HERE == SALT_FLATS:
+					fTerrainMod = fHeatMod
+				elif HERE == ICE or HERE == TUNDRA or HERE == FROST:
+					fTerrainMod = fColdMod
+				else:
+					fTerrainMod = 1.0
+
+				# Altitude Mod Smaller lakes at higher altitudes.
+				iAltitudeMod = 0.25 + fLandHeight * 3 / (4*altitude[i])
+
+				if random() < fLakeSizeModChance:
+					fSizeMod = (iLakeSizeMinPercent + randint(0, 100 - iLakeSizeMinPercent)) / 100.0
+				else:
+					fSizeMod = 1.0
+
+				iLakeSize = int(round(iMaxLakeSize * avrRainMap[i] * fTerrainMod * iAltitudeMod * fSizeMod))
+				if iLakeSize > 0:
+					if iLakeSize > iMaxLakeSize:
+						iLakeSize = iMaxLakeSize
 					lakeAreaMap.defineAreas(self.isLake)
-					iLakeIncr = self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER)
-					iLakesLeft -= iLakeIncr
+					iLakesLeft -= self.expandLake(x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER)
 			if iLakesLeft == 0:
 				print "	Desired number of lakes reached."
 				break
@@ -2215,12 +2214,12 @@ class LakeMap:
 				break
 		if mc.bWrapX:
 			# Avoid Water-plane graphical glitch at the map edges.
-			self.avoidWaterGlitch(iWidth, iHeight, WATER, iMaxLakesize, lakeAreaMap)
+			self.avoidWaterGlitch(iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap)
 		lakeAreaMap.defineAreas(self.isLake)
 		self.defineWaterTerrain(iWidth, iHeight, iArea, em.fLandHeight, WATER)
 
 
-	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakesize, WATER):
+	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER):
 		class LakePlot:
 			def __init__(self, x, y, i, fHeight, iMergeSize):
 				self.x = x
@@ -2238,7 +2237,7 @@ class LakeMap:
 				if self.isLakeData[ii] == 1:
 					if dir < 5: # N, S, E & W
 						iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-						if iMaxLakesize > iOtherLakeSize + iMergeSize:
+						if iMaxLakeSize > iOtherLakeSize + iMergeSize:
 							iMergeSize += iOtherLakeSize
 						else:
 							return 0
@@ -2248,6 +2247,7 @@ class LakeMap:
 		relAltMap = em.relAltMap3x3
 		thisLake = []
 		lakeNeighbors = []
+		checkedPlots = []
 		thePlot = LakePlot(x, y, i, relAltMap[i], iMergeSize)
 		highestAvrRainfall = self.avrRainfallMap2x2[i]
 		originalLakeSize = iLakeSize
@@ -2263,16 +2263,17 @@ class LakeMap:
 				bValid = True
 				x, y = GetNeighbor(thePlot.x, thePlot.y, dir)
 				i = GetIndex(x, y)
+				if i in checkedPlots:
+					continue
+				checkedPlots.append(i)
 				if i >= 0 and plotData[i] != WATER:
 					# Look for water plots one step further out.
 					for dir2 in xrange(1, 5):
 						xx, yy = GetNeighbor(x, y, dir2)
 						ii = GetIndex(xx, yy)
-						for index in thisLake:
-							if ii == index:
-								ii = -1
-								break
-						if ii >= 0 and plotData[ii] == WATER:
+						if ii < 0 or ii in thisLake:
+							continue
+						if plotData[ii] == WATER:
 							if self.isLakeData[ii] == 0:
 								# This lake just turned into ocean as an harbor, mark it as such.
 								for index in thisLake:
@@ -2284,7 +2285,7 @@ class LakeMap:
 							if self.isLakeData[ii] == 1:
 								# Check if this lake can merge with the neighbouring lake.
 								iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-								if iMaxLakesize > (len(thisLake) + iOtherLakeSize + iMergeSize):
+								if iMaxLakeSize > (len(thisLake) + iOtherLakeSize + iMergeSize):
 									iMergeSize += iOtherLakeSize
 								else:
 									bValid = False
@@ -2301,7 +2302,7 @@ class LakeMap:
 					thePlot = lakeNeighbors[0]
 					del lakeNeighbors[0]
 				# Does neighbour qualify for lake expansion?
-				if iMaxLakesize > (len(thisLake) + thePlot.iMergeSize):
+				if iMaxLakeSize > (len(thisLake) + thePlot.iMergeSize):
 					if thePlot.iMergeSize == 0:
 						break
 					# Lake merging - Convert that lake to this lake.
@@ -2321,9 +2322,12 @@ class LakeMap:
 							if ii >= 0 and plotData[ii] == WATER:
 								thatLake.append((xx, yy, ii))
 					break
-			if highestAvrRainfall < self.avrRainfallMap2x2[i] and iMaxLakesize >= len(thisLake) + iLakeSize:
+			if highestAvrRainfall * 4/5 < self.avrRainfallMap2x2[i] and iMaxLakeSize > len(thisLake) + iLakeSize:
 				iLakeSize += 1
-				highestAvrRainfall += (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2.0				
+				increment = (self.avrRainfallMap2x2[i] - highestAvrRainfall) / 2
+				if (increment < 0):
+					increment *= -1
+				highestAvrRainfall += increment
 		return 1
 
 
@@ -2402,7 +2406,7 @@ class LakeMap:
 		return
 
 
-	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakesize, lakeAreaMap):
+	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap):
 		LAND	= mc.LAND
 		PLAINS	= mc.PLAINS
 		plotData = tm.plotData
@@ -2412,7 +2416,7 @@ class LakeMap:
 			if not plotData[xEastEdgeID] and plotData[xWestEdgeID]:
 				if self.isLakeData[xEastEdgeID] != 1:
 					plotData[xWestEdgeID] = WATER
-				elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
+				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
 					plotData[xWestEdgeID] = WATER
 					self.isLakeData[xWestEdgeID] = 1
 					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size += 1
@@ -2424,7 +2428,7 @@ class LakeMap:
 			elif plotData[xEastEdgeID] and not plotData[xWestEdgeID]:
 				if self.isLakeData[xWestEdgeID] != 1:
 					plotData[xEastEdgeID] = WATER
-				elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
+				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
 					plotData[xEastEdgeID] = WATER
 					self.isLakeData[xEastEdgeID] = 1
 					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size += 1
@@ -2440,7 +2444,7 @@ class LakeMap:
 				if plotData[southEdgeID] and not plotData[northEdgeID]:
 					if self.isLakeData[northEdgeID] != 1:
 						plotData[southEdgeID] = WATER
-					elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
+					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
 						plotData[southEdgeID] = WATER
 						self.isLakeData[southEdgeID] = 1
 						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size += 1
@@ -2452,7 +2456,7 @@ class LakeMap:
 				elif not plotData[southEdgeID] and plotData[northEdgeID]:
 					if self.isLakeData[southEdgeID] != 1:
 						plotData[northEdgeID] = WATER
-					elif iMaxLakesize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
+					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
 						plotData[northEdgeID] = WATER
 						self.isLakeData[northEdgeID] = 1
 						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size += 1
@@ -3017,7 +3021,7 @@ class BonusPlacer:
 		MAP = GC.getMap()
 		MAP.recalculateAreas()
 		iWorldSize = mc.iWorldSize
-		BonusBonus = mc.BonusBonus
+		fBonusMult = mc.fBonusMult
 		self.aBonusList = bonusList = []
 		# Create and shuffle the bonus list.
 		n = 0
@@ -3029,7 +3033,7 @@ class BonusPlacer:
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			iPlaceOrder = CvBonusInfo.getPlacementOrder()
 			# Filter out bonuses with iPlacementOrder at -1 or below.
-			if iPlaceOrder < 0:
+			if iPlaceOrder < 1:
 				n += 1
 				continue
 			bonus = BonusArea()
@@ -3037,12 +3041,13 @@ class BonusPlacer:
 			# Calculate desired amount
 			fBaseCount = (
 				(
-					randint(0, CvBonusInfo.getRandAppearance1()) + randint(0, CvBonusInfo.getRandAppearance2()) +
-					randint(0, CvBonusInfo.getRandAppearance3()) + randint(0, CvBonusInfo.getRandAppearance4()) + CvBonusInfo.getConstAppearance()
+					CvBonusInfo.getConstAppearance() +
+					randint(0, CvBonusInfo.getRandAppearance1()) +
+					randint(0, CvBonusInfo.getRandAppearance2()) +
+					randint(0, CvBonusInfo.getRandAppearance3()) +
+					randint(0, CvBonusInfo.getRandAppearance4())
 				) / 100.0
 			)
-			if iWorldSize:
-				fBaseCount += fBaseCount * iWorldSize / 4.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
@@ -3052,10 +3057,10 @@ class BonusPlacer:
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
-			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
-			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
+			iBonusCount = int(fBonusMult * (fBaseCount + fDensityCount))
 			if iBonusCount < 1:
 				iBonusCount = 1
+			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tDesired amount = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, fBonusMult, iBonusCount)
 			bonus.desiredBonusCount = iBonusCount
 
 			bonusList.append(bonus)
@@ -3121,38 +3126,45 @@ class BonusPlacer:
 			lastI = i
 			if i >= plotListLength:
 				index = plotIndexList[i - plotListLength]
-			else:
-				index = plotIndexList[i]
+			else: index = plotIndexList[i]
+
 			CyPlot = MAP.plotByIndex(index)
-			if not self.CanPlaceBonus(CyPlot, indeXML, False): continue
-			# Place bonus.
+			if not self.CanPlaceBonus(CyPlot, indeXML, False):
+				continue
+			# Place bonus
 			CyPlot.setBonusType(indeXML)
 			bonus.currentBonusCount += 1
 			# Clustering
-			groupRange = bonusInfo.getGroupRange()
-			if 1 > groupRange: break
+			iGroupRange = bonusInfo.getGroupRange()
+			if iGroupRange < 1: break
 			iRand = bonusInfo.getGroupRand()
-			if 1 > iRand: break
-			groupRange += iWorldSize / 3
-			maxAdd = groupRange + (iWorldSize + 1) / 2
+			if iRand < 1: break
+			# Scale by worldsize
+			if iWorldSize / 3 > 0:
+				iGroupRange += iWorldSize / 3 # increase range
+				iRand -= iRand * iGroupRange / (iGroupRange + 4) # decrease chance
+
+			if iRand < 1: iRand = 1
+			iMaxCluster = iGroupRange + (iWorldSize + 1) / 2
 			iDeficit = iDesired - bonus.currentBonusCount
-			if maxAdd > iDeficit:
-				maxAdd = iDeficit
-			added = 0
-			szType = bonusInfo.getType()
+			if iMaxCluster > iDeficit:
+				iMaxCluster = iDeficit
+			iCluster = 0
 			x = CyPlot.getX()
 			y = CyPlot.getY()
-			for dx in xrange(-groupRange, groupRange + 1):
-				for dy in xrange(-groupRange, groupRange + 1):
+			for dx in xrange(-iGroupRange, iGroupRange + 1):
+				for dy in xrange(-iGroupRange, iGroupRange + 1):
 					CyPlotX = self.plotXY(x, y, dx, dy)
-					if CyPlotX and self.PlotCanHaveBonus(CyPlotX, indeXML, False) and GAME.getSorenRandNum(100, "0-99") < iRand:
+					if CyPlotX and GAME.getSorenRandNum(100, "0-99") < iRand and self.PlotCanHaveBonus(CyPlotX, indeXML, False):
 						#place bonus
 						CyPlotX.setBonusType(indeXML)
-						print "Group Placed: " + szType
 						bonus.currentBonusCount += 1
-						added += 1
-						if added == maxAdd:
+						iCluster += 1
+						if iCluster == iMaxCluster:
+							print ("Group Placed %d " % iCluster) + bonusInfo.getType()
 							return (lastI + 1) % plotListLength
+			if iCluster:
+				print ("Group Placed %d " % iCluster) + bonusInfo.getType()
 			break
 		return (lastI + 1) % plotListLength
 
@@ -3173,8 +3185,7 @@ class BonusPlacer:
 			else:
 				index = plotIndexList[i]
 			plot = MAP.plotByIndex(index)
-			x = plot.getX()
-			y = plot.getY()
+
 			if ignoreClass and self.PlotCanHaveBonus(plot, bonus.indeXML, True) or self.CanPlaceBonus(plot, bonus.indeXML, True):
 				#temporarily remove any feature
 				featureEnum = plot.getFeatureType()
@@ -3316,8 +3327,11 @@ class BonusPlacer:
 				if iFeature == ICE and not bonusInfo.isFeature(ICE):
 					# Special case, ice block bonuses, mostly because it looks graphically glitchy.
 					return False
-			elif not (iFeature > -1 and bonusInfo.isFeature(iFeature) and bonusInfo.isFeatureTerrain(iTerrain)):
+			elif iFeature == -1 or not bonusInfo.isFeature(iFeature) or not bonusInfo.isFeatureTerrain(iTerrain):
 				return False
+
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
 
 		if bonusInfo.isNoRiverSide() and plot.isRiverSide():
 			return False
@@ -3382,7 +3396,7 @@ class BonusPlacer:
 
 	def CalculateAreaSuitability(self, area, indeXML):
 		MAP = CyGlobalContext().getMap()
-		uniqueTypesInArea    = self.GetUniqueBonusTypeCountInArea(area)
+		uniqueTypesInArea	= self.GetUniqueBonusTypeCountInArea(area)
 		sameClassTypesInArea = self.GetSameClassTypeCountInArea(area, indeXML)
 		#Get the raw number of suitable tiles
 		areaID = area.getID()
@@ -3626,7 +3640,7 @@ class StartingPlotFinder:
 			if not self.plotList[i].vacant:
 				currentTotalValue = self.plotList[i].fTotalValue
 				percentLacking = 1.0 - currentTotalValue / bestTotalValue
-				if percentLacking > .0 and mc.BonusBonus:
+				if percentLacking > .0 and mc.fBonusMult:
 					value1 = int(percentLacking / 0.2)
 					if 5 > value1:
 						bonuses = value1
@@ -3851,7 +3865,7 @@ class StartingArea:
 				sPlot = MAP.plot(self.plotList[m].x, self.plotList[m].y)
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
-				sPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
+				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)
@@ -4631,14 +4645,14 @@ def addFeatures():
 							elif iTemperature > fTundraTemp:
 								plot.setFeatureType(featureForest, FORESTSNOWY)
 				# Goody Islands
-				elif tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP:
+				elif (tData[i] >= mc.SEA and tData[i] <= mc.COAST_TROP) or tData[i] == mc.LAKE_SHORE:
 					if bGoodyHuts and mapRand.get(19, 'GoodyIsland') == 0:
 						plot.setImprovementType(impGoodyIsland)
 	timer.log()
 
 
 def addBonuses():
-	if mc.BonusBonus:
+	if mc.fBonusMult:
 		print "Bonus generation"
 		timer = BugUtil.Timer('Bonus generation')
 		bp.AddBonuses()
@@ -4789,7 +4803,7 @@ def FindValueFromPercent(map, percent):
 			if maxV < map[i]:
 				maxV = map[i]
 	mid = (maxV - minV) / 2.0 + minV
-	threshold       = mid
+	threshold	   = mid
 	thresholdChange = mid
 	lastAdded	= False
 	inTolerance = False

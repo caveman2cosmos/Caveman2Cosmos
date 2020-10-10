@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+	iUpkeepModifier - Applied directly on the unit's base upkeep value.
+	iExtraUpkeep100 - 100 = 1 gold; Its value is added to the upkeep before iBaseUpkeepModifier is applied.
+-->
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>
 		<UnitCombatInfo>
@@ -243,15 +247,6 @@
 			<iDefenseOnlyChange>-1</iDefenseOnlyChange>
 			<iAnimalIgnoresBordersChange>-1</iAnimalIgnoresBordersChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_pounce.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_COSTLESS</Type>
-			<Description>TXT_KEY_UNITCOMBAT_COSTLESS</Description>
-			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</NotOnGameOptions>
-			<iCostModifierChange>-100</iCostModifierChange>
-			<Button>Art/Interface/Buttons/units/sparth/categories/idea.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_PIRATE</Type>
@@ -6654,7 +6649,6 @@
 			<Description>TXT_KEY_UNITCOMBAT_IDEA</Description>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
 			<bInvisible>1</bInvisible>
-			<iCostModifierChange>-100</iCostModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/idea.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6688,7 +6682,6 @@
 			<iExperiencePercent>140</iExperiencePercent>
 			<iSelfHealModifier>18</iSelfHealModifier>
 			<iGroupBase>1</iGroupBase>
-			<iCostModifierChange>-75</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6706,7 +6699,6 @@
 			<iExperiencePercent>90</iExperiencePercent>
 			<iSelfHealModifier>12</iSelfHealModifier>
 			<iGroupBase>2</iGroupBase>
-			<iCostModifierChange>-65</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6724,7 +6716,6 @@
 			<iExperiencePercent>50</iExperiencePercent>
 			<iSelfHealModifier>7</iSelfHealModifier>
 			<iGroupBase>3</iGroupBase>
-			<iCostModifierChange>-50</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6742,7 +6733,6 @@
 			<iExperiencePercent>20</iExperiencePercent>
 			<iSelfHealModifier>3</iSelfHealModifier>
 			<iGroupBase>4</iGroupBase>
-			<iCostModifierChange>-30</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6775,7 +6765,6 @@
 			<iExperiencePercent>-20</iExperiencePercent>
 			<iSelfHealModifier>-3</iSelfHealModifier>
 			<iGroupBase>6</iGroupBase>
-			<iCostModifierChange>50</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6797,7 +6786,6 @@
 			<iExperiencePercent>-50</iExperiencePercent>
 			<iSelfHealModifier>-7</iSelfHealModifier>
 			<iGroupBase>7</iGroupBase>
-			<iCostModifierChange>100</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6819,7 +6807,6 @@
 			<iExperiencePercent>-90</iExperiencePercent>
 			<iSelfHealModifier>-12</iSelfHealModifier>
 			<iGroupBase>8</iGroupBase>
-			<iCostModifierChange>150</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6840,7 +6827,6 @@
 			<Description>TXT_KEY_UNITCOMBAT_GROUP_MULTITUDES</Description>
 			<iExperiencePercent>-140</iExperiencePercent>
 			<iSelfHealModifier>-18</iSelfHealModifier>
-			<iCostModifierChange>200</iCostModifierChange>
 			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
@@ -6863,7 +6849,6 @@
 			<iExperiencePercent>-200</iExperiencePercent>
 			<iSelfHealModifier>-25</iSelfHealModifier>
 			<iGroupBase>10</iGroupBase>
-			<iCostModifierChange>250</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6885,7 +6870,6 @@
 			<iExperiencePercent>-270</iExperiencePercent>
 			<iSelfHealModifier>-33</iSelfHealModifier>
 			<iGroupBase>11</iGroupBase>
-			<iCostModifierChange>300</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6907,7 +6891,6 @@
 			<iExperiencePercent>-350</iExperiencePercent>
 			<iSelfHealModifier>-42</iSelfHealModifier>
 			<iGroupBase>12</iGroupBase>
-			<iCostModifierChange>350</iCostModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6922,6 +6905,23 @@
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_trillions.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_GROUP_COUNTLESS</Type>
+			<Description>TXT_KEY_UNITCOMBAT_GROUP_COUNTLESS</Description>
+			<iExperiencePercent>-440</iExperiencePercent>
+			<iSelfHealModifier>-52</iSelfHealModifier>
+			<iGroupBase>13</iGroupBase>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<InvisibilityIntensityChangeTypes>
+				<InvisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-8</iIntensity>
+				</InvisibilityIntensityChangeType>
+			</InvisibilityIntensityChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/group_countless.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ARMOR_TYPE_PADDED</Type>
@@ -7174,11 +7174,22 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_material.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_INCAPABLE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INCAPABLE</Description>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<iExperiencePercent>150</iExperiencePercent>
+			<iQualityBase>0</iQualityBase>
+			<iUpkeepModifier>-200</iUpkeepModifier>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_QUALITY_PATHETIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_PATHETIC</Description>
 			<iExperiencePercent>120</iExperiencePercent>
 			<iQualityBase>1</iQualityBase>
-			<iCostModifierChange>-20</iCostModifierChange>
+			<iUpkeepModifier>-140</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7195,7 +7206,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INFERIOR</Description>
 			<iExperiencePercent>90</iExperiencePercent>
 			<iQualityBase>2</iQualityBase>
-			<iCostModifierChange>-15</iCostModifierChange>
+			<iUpkeepModifier>-90</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7218,7 +7229,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_POOR</Description>
 			<iExperiencePercent>60</iExperiencePercent>
 			<iQualityBase>3</iQualityBase>
-			<iCostModifierChange>-10</iCostModifierChange>
+			<iUpkeepModifier>-50</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7241,7 +7252,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_MEDIOCRE</Description>
 			<iExperiencePercent>30</iExperiencePercent>
 			<iQualityBase>4</iQualityBase>
-			<iCostModifierChange>-5</iCostModifierChange>
+			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7285,7 +7296,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_SUPERIOR</Description>
 			<iExperiencePercent>-30</iExperiencePercent>
 			<iQualityBase>6</iQualityBase>
-			<iCostModifierChange>20</iCostModifierChange>
+			<iUpkeepModifier>20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7308,7 +7319,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EXCEPTIONAL</Description>
 			<iExperiencePercent>-60</iExperiencePercent>
 			<iQualityBase>7</iQualityBase>
-			<iCostModifierChange>50</iCostModifierChange>
+			<iUpkeepModifier>50</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7331,7 +7342,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_ELITE</Description>
 			<iExperiencePercent>-90</iExperiencePercent>
 			<iQualityBase>8</iQualityBase>
-			<iCostModifierChange>90</iCostModifierChange>
+			<iUpkeepModifier>90</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7354,7 +7365,7 @@
 			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EPIC</Description>
 			<iExperiencePercent>-120</iExperiencePercent>
 			<iQualityBase>9</iQualityBase>
-			<iCostModifierChange>140</iCostModifierChange>
+			<iUpkeepModifier>140</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -7371,6 +7382,29 @@
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_epic.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_DIVINE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_DIVINE</Description>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<iExperiencePercent>-150</iExperiencePercent>
+			<iQualityBase>10</iQualityBase>
+			<iUpkeepModifier>200</iUpkeepModifier>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>9</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_divine.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_PROMOTED_CAUTIOUS</Type>
@@ -7391,58 +7425,6 @@
 			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_INCAPABLE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INCAPABLE</Description>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<iExperiencePercent>150</iExperiencePercent>
-			<iQualityBase>0</iQualityBase>
-			<iCostModifierChange>-25</iCostModifierChange>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_DIVINE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_DIVINE</Description>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<iExperiencePercent>-150</iExperiencePercent>
-			<iQualityBase>10</iQualityBase>
-			<iCostModifierChange>200</iCostModifierChange>
-			<VisibilityIntensityChangeTypes>
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>9</iIntensity>
-				</VisibilityIntensityChangeType>
-			</VisibilityIntensityChangeTypes>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_divine.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_GROUP_COUNTLESS</Type>
-			<Description>TXT_KEY_UNITCOMBAT_GROUP_COUNTLESS</Description>
-			<iExperiencePercent>-440</iExperiencePercent>
-			<iSelfHealModifier>-52</iSelfHealModifier>
-			<iGroupBase>13</iGroupBase>
-			<iCostModifierChange>400</iCostModifierChange>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<InvisibilityIntensityChangeTypes>
-				<InvisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-8</iIntensity>
-				</InvisibilityIntensityChangeType>
-			</InvisibilityIntensityChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/group_countless.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_TAMED</Type>

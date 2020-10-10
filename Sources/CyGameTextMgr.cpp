@@ -2,7 +2,11 @@
 // Python wrapper class for CyGameTextMgr 
 // 
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
+#include "CyCity.h"
+#include "CyDeal.h"
 #include "CyGameTextMgr.h"
+#include "CyUnit.h"
 
 CyGameTextMgr::CyGameTextMgr() : 
 m_pGameTextMgr(NULL)
@@ -292,5 +296,12 @@ std::wstring CyGameTextMgr::getDealString(CyDeal* pDeal, int iPlayerPerspective)
 	{
 		GAMETEXT.getDealString(szBuffer, *(pDeal->getDeal()), (PlayerTypes)iPlayerPerspective);
 	}
+	return szBuffer.getCString();
+}
+
+std::wstring CyGameTextMgr::getFinanceUnitUpkeepString(int iPlayer)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.buildFinanceUnitUpkeepString(szBuffer, (PlayerTypes) iPlayer);
 	return szBuffer.getCString();
 }

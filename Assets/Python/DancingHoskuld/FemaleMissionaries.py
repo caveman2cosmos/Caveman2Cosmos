@@ -14,7 +14,7 @@ def onUnitBuilt(argsList):
 	# Female Missionaries
 	if UnitInfo.getDefaultUnitAIType() == GC.getInfoTypeForString('UNITAI_MISSIONARY'):
 		sFemaleUnitType = 'UNIT_FEMALE'+sUnitType[4:]
-		iFemaleUnitType = GC.getInfoTypeForString(sFemaleUnitType)
+		iFemaleUnitType = GC.getInfoTypeForStringWithHiddenAssert(sFemaleUnitType)
 
 		if iFemaleUnitType > -1:
 			CyPlayer = GC.getPlayer(CyCity.getOwner())

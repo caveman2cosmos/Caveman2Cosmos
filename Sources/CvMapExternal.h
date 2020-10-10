@@ -9,15 +9,7 @@
 //	PURPOSE: Game map externals class
 //
 
-
-#include "CvArea.h"
-#include "CvPlot.h"
 #include "CvMapInterfaceBase.h"
-
-
-class FAStar;
-class CvPlotGroup;
-
 
 //
 // CvMap
@@ -25,8 +17,6 @@ class CvPlotGroup;
 class CvSelectionGroup;
 class CvMapExternal
 {
-	friend class CyMap;
-
 public:
 	CvMapExternal(CvMapInterfaceBase* proxiedMap);
 
@@ -73,7 +63,7 @@ public:
 	DllExport CvPlot* plot(int iX, int iY) const;													// Exposed to Python
 	DllExport CvPlot* pointToPlot(float fX, float fY);
 	int getNumAreas() const;														// Exposed to Python
-	int getNumLandAreas()const;
+	int getNumLandAreas() const;
 	// Serialization:
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);

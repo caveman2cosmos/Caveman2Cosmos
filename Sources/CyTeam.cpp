@@ -3,6 +3,10 @@
 // updated 6-5
 //
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeam.h"
+#include "CyArea.h"
+#include "CyTeam.h"
 
 CyTeam::CyTeam() : m_pTeam(NULL)
 {
@@ -123,7 +127,7 @@ int CyTeam::getNumNukeUnits()
 }
 
 //Sevo Begin--VCM
-int CyTeam::getTotalVictoryScore()
+int64_t CyTeam::getTotalVictoryScore() const
 {
 	return m_pTeam ? m_pTeam->getTotalVictoryScore() : -1;
 }
@@ -193,13 +197,15 @@ int CyTeam::getHasReligionCount(int /*ReligionTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasReligionCount((ReligionTypes)eReligion) : -1;
 }
+
 int CyTeam::getHasCorporationCount(int /*CorporationTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->getHasCorporationCount((CorporationTypes)eReligion) : -1;
 }
-int CyTeam::countTotalCulture()
+
+int64_t CyTeam::countTotalCulture() const
 {
-	return m_pTeam ? m_pTeam->processedTeamCulture() : -1;
+	return m_pTeam ? m_pTeam->countTotalCulture() : -1;
 }
 
 int CyTeam::countNumUnitsByArea(CyArea* pArea)
@@ -296,7 +302,7 @@ void CyTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 			{
 				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 				{
-					FAssertMsg(false, "GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
+					FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 #ifdef _DEBUG
 					throw new std::exception();
 #endif
@@ -703,8 +709,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index) (Python)");
-	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index) (Python)");
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG

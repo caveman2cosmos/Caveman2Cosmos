@@ -15,10 +15,6 @@
 					<bLoad>0</bLoad>
 				</Module>
 				<Module> <!-- Not Available -->
-					<Directory>Locusts_Very_Bad</Directory>
-					<bLoad>0</bLoad>
-				</Module>
-				<Module> <!-- Not Available -->
 					<Directory>Fantasy</Directory>
 					<bLoad>0</bLoad>
 				</Module>
@@ -33,6 +29,11 @@
 				<Module> <!-- Not Available -->
 					<Directory>War_Of_The_Worlds</Directory>
 					<bLoad>0</bLoad>
+				</Module>
+				 <!-- For buildings, that can ruin cities and countryside -->
+				<Module>
+					<Directory>Building_Meltdown</Directory>
+					<bLoad>1</bLoad>
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

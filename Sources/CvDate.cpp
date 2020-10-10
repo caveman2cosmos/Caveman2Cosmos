@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvDate.h"
 
 CvDate::CvDate()
@@ -46,7 +47,7 @@ int CvDate::getWeek() const
 
 SeasonTypes CvDate::getSeason() const
 {
-	int month = getMonth();
+	const int month = getMonth();
 
 	if (month <= 1 || month >= 11)
 	{
@@ -75,13 +76,13 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 		eActualGameSpeed = GC.getGame().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
-	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
 		calculateEndDates(eActualGameSpeed);
 	}
 
-	for (std::vector<CvDateIncrement>::iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
+	for (std::vector<CvDateIncrement>::const_iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
 	{
 		if (*this < it->m_endDate)
 		{
@@ -93,7 +94,7 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 
 void CvDate::increment(GameSpeedTypes eGameSpeed)
 {
-	CvDateIncrement inc = getIncrement(eGameSpeed);
+	const CvDateIncrement inc = getIncrement(eGameSpeed);
 	m_iTick += inc.m_iIncrementDay;
 	m_iTick += (inc.m_iIncrementMonth * 30);
 }
@@ -152,7 +153,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 		eActualGameSpeed = GC.getGame().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
-	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
 		calculateEndDates(eActualGameSpeed);

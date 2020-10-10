@@ -3,7 +3,7 @@
 #ifndef CvArea_h__
 #define CvArea_h__
 
-#include "CvGameCoreDLL.h"
+#include "CvEnums.h"
 
 class CvCity;
 class CvPlot;
@@ -44,12 +44,13 @@ public:
 	void setID(int iID);
 
 	int getNumTiles() const;																									// Exposed to Python
-	bool isLake() const;																											// Exposed to Python
 	void changeNumTiles(int iChange);
 
 	int getNumOwnedTiles() const;																							// Exposed to Python
 	int getNumUnownedTiles() const;																						// Exposed to Python
 	void changeNumOwnedTiles(int iChange);
+
+	bool isLake() const;																											// Exposed to Python
 
 	int getNumRiverEdges() const;																							// Exposed to Python
 	void changeNumRiverEdges(int iChange);
@@ -132,7 +133,7 @@ public:
 	void setAreaAIType(TeamTypes eIndex, AreaAITypes eNewValue);
 
 	CvCity* getTargetCity(PlayerTypes eIndex) const;													// Exposed to Python
-	void setTargetCity(PlayerTypes eIndex, CvCity* pNewValue);
+	void setTargetCity(PlayerTypes eIndex, const CvCity* pNewValue);
 
 	int getYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2) const;	// Exposed to Python
 	void changeYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -234,10 +235,15 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+		DECLARE_MAP_FUNCTOR(CvArea, void, clearModifierTotals);
+
+		DECLARE_MAP_FUNCTOR_2(CvArea, void, setBestFoundValue, PlayerTypes, int);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvArea, int, getNumTiles);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
 	};
 };
 

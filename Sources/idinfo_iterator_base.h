@@ -3,7 +3,7 @@
 #ifndef idinfo_iterator_h__
 #define idinfo_iterator_h__
 
-#include "LinkedList.h"
+//#include "LinkedList.h"
 
 struct IDInfo;
 

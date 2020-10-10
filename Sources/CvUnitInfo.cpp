@@ -9,6 +9,8 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvXMLLoadUtility.h"
 
 //======================================================================================================
 //					CvUnitInfo
@@ -87,7 +89,7 @@ m_iSMCargoSpace(0),
 m_iSMCargoVolume(0),
 m_iConscriptionValue(0),
 m_iCultureGarrisonValue(0),
-m_iExtraCost(0),
+m_iBaseUpkeep(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
 m_iSpecialUnitType(NO_SPECIALUNIT),
@@ -265,7 +267,6 @@ m_iBreakdownDamage(0),
 m_iTaunt(0),
 m_iMaxHP(100),
 m_iDamageModifier(0),
-m_iCostModifier(0),
 m_iTotalCombatStrengthModifierBase(0),
 m_iTotalCombatStrengthChangeBase(0),
 m_iBaseCargoVolume(0),
@@ -406,7 +407,7 @@ CvUnitInfo::~CvUnitInfo()
 	}
 }
 
-const wchar* CvUnitInfo::getExtraHoverText() const
+const wchar_t* CvUnitInfo::getExtraHoverText() const
 {
 	if (!m_szExtraHoverTextKey.empty())
 	{
@@ -689,7 +690,7 @@ int CvUnitInfo::getWithdrawalProbability(bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
 	{
-		if (hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD")))
+		if (hasUnitCombat(GC.getUNITCOMBAT_WILD()))
 		{
 			return 0;
 		}
@@ -799,9 +800,9 @@ int CvUnitInfo::getCultureGarrisonValue() const
 	return m_iCultureGarrisonValue;
 }
 
-int CvUnitInfo::getExtraCost() const
+int CvUnitInfo::getBaseUpkeep() const
 {
-	return m_iExtraCost;
+	return m_iBaseUpkeep;
 }
 
 int CvUnitInfo::getAssetValue(bool bForLoad) const
@@ -854,7 +855,7 @@ int CvUnitInfo::getInvisibleType() const
 
 int CvUnitInfo::getSeeInvisibleType(int i) const
 {
-	FAssert(i < (int)m_aiSeeInvisibleTypes.size());
+	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
 
 	return m_aiSeeInvisibleTypes[i];
 }
@@ -934,8 +935,7 @@ int CvUnitInfo::getPrereqOrBuildingsNum() const
 
 BuildingTypes CvUnitInfo::getPrereqOrBuilding(int i) const
 {
-	FAssertMsg(i < getPrereqOrBuildingsNum(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getPrereqOrBuildingsNum(), i)
 	return (BuildingTypes)m_aiPrereqOrBuildings[i];
 }
 
@@ -1234,7 +1234,7 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
-BoolExpr* CvUnitInfo::getTrainCondition()
+BoolExpr* CvUnitInfo::getTrainCondition() const
 {
 	return m_pExprTrainCondition;
 }
@@ -1265,8 +1265,8 @@ bool CvUnitInfo::canAcquireExperience() const
 
 bool CvUnitInfo::isPrereqOrCivics(int i) const
 {
-	FAssertMsg(i < GC.getNumCivicInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
+	FASSERT_BOUNDS(NO_CIVIC, GC.getNumCivicInfos(), i)
+
 	if (i == NO_CIVIC)
 	{
 		return m_pbPrereqOrCivics != NULL;
@@ -1380,169 +1380,145 @@ void CvUnitInfo::addUnitToUpgradeChain(int i)
 
 int CvUnitInfo::getPrereqAndTechs(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_AND_TECH_PREREQS(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_AND_TECH_PREREQS(), i)
 	return m_piPrereqAndTechs ? m_piPrereqAndTechs[i] : -1;
 }
 
 int CvUnitInfo::getPrereqOrBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrBonuses ? m_piPrereqOrBonuses[i] : -1;
 }
 
 int CvUnitInfo::getFlavorValue(int i) const
 {
-	FAssertMsg(i < GC.getNumFlavorTypes(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 int CvUnitInfo::getTerrainAttackModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_piTerrainAttackModifier ? m_piTerrainAttackModifier[i] : 0;
 }
 
 int CvUnitInfo::getTerrainDefenseModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_piTerrainDefenseModifier ? m_piTerrainDefenseModifier[i] : 0;
 }
 
 int CvUnitInfo::getFeatureAttackModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_piFeatureAttackModifier ? m_piFeatureAttackModifier[i] : 0;
 }
 
 int CvUnitInfo::getFeatureDefenseModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_piFeatureDefenseModifier ? m_piFeatureDefenseModifier[i] : 0;
 }
 
 int CvUnitInfo::getUnitAttackModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
 	return m_piUnitAttackModifier ? m_piUnitAttackModifier[i] : 0;
 }
 
 int CvUnitInfo::getUnitDefenseModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
 	return m_piUnitDefenseModifier ? m_piUnitDefenseModifier[i] : 0;
 }
 
 int CvUnitInfo::getUnitCombatModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
 	return m_piUnitCombatModifier ? m_piUnitCombatModifier[i] : 0;
 }
 
 int CvUnitInfo::getUnitCombatCollateralImmune(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
 	return m_piUnitCombatCollateralImmune ? m_piUnitCombatCollateralImmune[i] : 0;
 }
 
 int CvUnitInfo::getDomainModifier(int i) const
 {
-	FAssertMsg(i < NUM_DOMAIN_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, i)
 	return m_piDomainModifier ? m_piDomainModifier[i] : 0;
 }
 
 int CvUnitInfo::getBonusProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusProductionModifier ? m_piBonusProductionModifier[i] : 0;
 }
 
 int CvUnitInfo::getUnitGroupRequired(int i) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	return m_piUnitGroupRequired ? m_piUnitGroupRequired[i] : NULL;
 }
 
 bool CvUnitInfo::getTargetUnitCombat(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
 	return m_pbTargetUnitCombat ? m_pbTargetUnitCombat[i] : false;
 }
 
 bool CvUnitInfo::getDefenderUnitCombat(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i)
 	return m_pbDefenderUnitCombat ? m_pbDefenderUnitCombat[i] : false;
 }
 
 int CvUnitInfo::getFlankingStrikeUnit(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
 	return m_piFlankingStrikeUnit ? m_piFlankingStrikeUnit[i] : -1;
 }
 
 bool CvUnitInfo::getUnitAIType(int i) const
 {
-	FAssertMsg(i < NUM_UNITAI_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i)
 	return m_pbUnitAIType ? m_pbUnitAIType[i] : false;
 }
 
 bool CvUnitInfo::getNotUnitAIType(int i) const
 {
-	FAssertMsg(i < NUM_UNITAI_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i)
 	return m_pbNotUnitAIType ? m_pbNotUnitAIType[i] : false;
 }
 
 bool CvUnitInfo::getBuilds(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), i)
 	return m_pbBuilds ? m_pbBuilds[i] : false;
 }
 
 int CvUnitInfo::getReligionSpreads(int i) const
 {
-	FAssertMsg(i < GC.getNumReligionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), i)
 	return m_piReligionSpreads ? m_piReligionSpreads[i] : -1;
 }
 
 int CvUnitInfo::getCorporationSpreads(int i) const
 {
-	FAssertMsg(i < GC.getNumCorporationInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), i)
 	return m_piCorporationSpreads ? m_piCorporationSpreads[i] : -1;
 }
 
 int CvUnitInfo::getTerrainPassableTech(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_piTerrainPassableTech ? m_piTerrainPassableTech[i] : -1;
 }
 
 int CvUnitInfo::getFeaturePassableTech(int i) const
 {
-	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_piFeaturePassableTech ? m_piFeaturePassableTech[i] : -1;
 }
 
@@ -1555,15 +1531,13 @@ bool CvUnitInfo::getGreatPeoples(int i) const
 
 int CvUnitInfo::getBuildings(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
 	return m_pbBuildings[i];
 }
 
 bool CvUnitInfo::getHasBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
 	return std::find(m_pbBuildings.begin(), m_pbBuildings.end(), i) != m_pbBuildings.end();
 }
 
@@ -1575,36 +1549,31 @@ int CvUnitInfo::getNumBuildings() const
 //
 //bool CvUnitInfo::getTerrainImpassable(int i) const
 //{
-//	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
+//	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 //	return m_pbTerrainImpassable ? m_pbTerrainImpassable[i] : false;
 //}
 //
 //bool CvUnitInfo::getFeatureImpassable(int i) const
 //{
-//	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
+//	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 //	return m_pbFeatureImpassable ? m_pbFeatureImpassable[i] : false;
 //}
 
 bool CvUnitInfo::getTerrainNative(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
 	return m_pbTerrainNative ? m_pbTerrainNative[i] : false;
 }
 
 bool CvUnitInfo::getFeatureNative(int i) const
 {
-	FAssertMsg(i < GC.getNumFeatureInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pbFeatureNative ? m_pbFeatureNative[i] : false;
 }
 
 bool CvUnitInfo::getFreePromotions(int i) const
 {
-	FAssertMsg(i < GC.getNumPromotionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i)
 	return m_pbFreePromotions ? m_pbFreePromotions[i] : false;
 }
 
@@ -1618,7 +1587,7 @@ int CvUnitInfo::getLeaderExperience() const
 	return m_iLeaderExperience;
 }
 
-CvOutcomeList* CvUnitInfo::getKillOutcomeList()
+const CvOutcomeList* CvUnitInfo::getKillOutcomeList() const
 {
 	return &m_KillOutcomeList;
 }
@@ -1628,17 +1597,17 @@ int CvUnitInfo::getNumActionOutcomes() const
 	return m_aOutcomeMissions.size();
 }
 
-MissionTypes CvUnitInfo::getActionOutcomeMission(const int index) const
+MissionTypes CvUnitInfo::getActionOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index]->getMission();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeList(const int index) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
 {
 	return m_aOutcomeMissions[index]->getOutcomeList();
 }
 
-CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMission) const
+const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1650,12 +1619,12 @@ CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(const MissionTypes eMis
 	return NULL;
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMission(const int index) const
+const CvOutcomeMission* CvUnitInfo::getOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index];
 }
 
-CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(const MissionTypes eMission) const
+CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -1669,8 +1638,7 @@ CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(const MissionTypes eMis
 
 const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1690,15 +1658,13 @@ const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) c
 
 void CvUnitInfo::setEarlyArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszEarlyArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1719,15 +1685,13 @@ const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 void CvUnitInfo::setLateArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszLateArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1747,15 +1711,13 @@ const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 void CvUnitInfo::setMiddleArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszMiddleArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getUnitNames(int i) const
 {
-	FAssertMsg(i < getNumUnitNames(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumUnitNames(), i)
 	return (m_paszUnitNames) ? m_paszUnitNames[i] : NULL;
 }
 
@@ -1776,8 +1738,7 @@ void CvUnitInfo::updateArtDefineButton()
 
 const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1798,15 +1759,13 @@ const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyl
 
 void CvUnitInfo::setClassicalArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszClassicalArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1827,15 +1786,13 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 void CvUnitInfo::setRennArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszRennArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1856,15 +1813,13 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 
 void CvUnitInfo::setIndustrialArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszIndustrialArtDefineTags[i] = szVal;
 }
 
 const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
@@ -1885,8 +1840,7 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 void CvUnitInfo::setFutureArtDefineTag(int i, const TCHAR* szVal)
 {
-	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getGroupDefinitions(), i)
 	m_paszFutureArtDefineTags[i] = szVal;
 }
 
@@ -1925,11 +1879,6 @@ const CvArtInfoUnit* CvUnitInfo::getArtInfo(int i, EraTypes eEra, UnitArtStyleTy
 void CvUnitInfo::setPowerValue(int iNewValue)
 {
 	m_iPowerValue = iNewValue;
-}
-
-CvPropertyManipulators* CvUnitInfo::getPropertyManipulators()
-{
-	return &m_PropertyManipulators;
 }
 
 int CvUnitInfo::getPrereqVicinityBonus() const
@@ -1984,28 +1933,25 @@ bool CvUnitInfo::isRequiresStateReligionInCity() const
 
 bool CvUnitInfo::getPassableRouteNeeded(int i) const
 {
-	FAssertMsg(i < GC.getNumRouteInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i)
 	return m_pbPassableRouteNeeded ? m_pbPassableRouteNeeded[i] : false;
 }
 
 int CvUnitInfo::getPrereqOrVicinityBonuses(int i) const
 {
-	FAssertMsg(i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrVicinityBonuses ? m_piPrereqOrVicinityBonuses[i] : -1;
 }
 
 CvWString CvUnitInfo::getCivilizationName(int i) const
 {
-	FAssertMsg(i < GC.getNumCivilizationInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i)
 	return m_paszCivilizationNames[i];
 }
 
 int CvUnitInfo::getCivilizationNamesVectorSize() const					{return m_aszCivilizationNamesforPass3.size();}
-CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(const int i) const	{return m_aszCivilizationNamesforPass3[i];}
-CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(const int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(int i) const	{return m_aszCivilizationNamesforPass3[i];}
+CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
 
 
 //TB Combat Mods Start  TB SubCombat Mod begin
@@ -2476,11 +2422,6 @@ int CvUnitInfo::getDamageModifier() const
 	return m_iDamageModifier;
 }
 
-int CvUnitInfo::getCostModifier() const
-{
-	return m_iCostModifier;
-}
-
 int CvUnitInfo::getRBombardDamage() const
 {
 	return m_iRBombardDamage;
@@ -2712,12 +2653,12 @@ bool CvUnitInfo::isTriggerBeforeAttack() const
 
 bool CvUnitInfo::isAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_ANIMAL());
 }
 
 bool CvUnitInfo::isWildAnimal() const
 {
-	return hasUnitCombat(CvUnitCombatInfo::getUnitCombatWildAnimal());
+	return hasUnitCombat(GC.getUNITCOMBAT_WILD());
 }
 
 bool CvUnitInfo::canAnimalIgnoresBorders() const
@@ -2870,7 +2811,7 @@ int CvUnitInfo::getNumMapCategoryTypes() const
 	return (int)m_aiMapCategoryTypes.size();
 }
 
-bool CvUnitInfo::isMapCategoryType(int i)
+bool CvUnitInfo::isMapCategoryType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
@@ -2927,8 +2868,7 @@ int CvUnitInfo::getNumAfflictionFortitudeModifiers() const
 
 const PromotionLineModifier& CvUnitInfo::getAfflictionFortitudeModifier(int iAffliction) const
 {
-	FAssertMsg(iAffliction < (int)m_aAfflictionFortitudeModifiers.size(), "Index out of bounds");
-	FAssertMsg(iAffliction > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumAfflictionFortitudeModifiers(), iAffliction)
 	return m_aAfflictionFortitudeModifiers[iAffliction];
 }
 
@@ -2939,8 +2879,7 @@ int CvUnitInfo::getNumAfflictOnAttackTypes() const
 
 const AfflictOnAttack& CvUnitInfo::getAfflictOnAttackType(int iAfflictionLine) const
 {
-	FAssertMsg(iAfflictionLine < (int)m_aAfflictOnAttackTypes.size(), "Index out of bounds");
-	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumAfflictOnAttackTypes(), iAfflictionLine)
 	return m_aAfflictOnAttackTypes[iAfflictionLine];
 }
 
@@ -2951,8 +2890,7 @@ int CvUnitInfo::getNumHealUnitCombatTypes() const
 
 const HealUnitCombat& CvUnitInfo::getHealUnitCombatType(int iUnitCombat) const
 {
-	FAssertMsg(iUnitCombat < (int)m_aHealUnitCombatTypes.size(), "Index out of bounds");
-	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat)
 	return m_aHealUnitCombatTypes[iUnitCombat];
 }
 
@@ -3828,7 +3766,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 }
 //TB Combat Mods End  TB SubCombat Mod end
 
-void CvUnitInfo::getCheckSum(unsigned int &iSum)
+void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
@@ -3896,7 +3834,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iSMCargoVolume);
 	CheckSum(iSum, m_iConscriptionValue);
 	CheckSum(iSum, m_iCultureGarrisonValue);
-	CheckSum(iSum, m_iExtraCost);
+	CheckSum(iSum, m_iBaseUpkeep);
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
 	CheckSum(iSum, m_iSpecialUnitType);
@@ -4040,7 +3978,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
-	getKillOutcomeList()->getCheckSum(iSum);
+	m_KillOutcomeList.getCheckSum(iSum);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
 	{
@@ -4107,7 +4045,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iTaunt);
 	CheckSum(iSum, m_iMaxHP);
 	CheckSum(iSum, m_iDamageModifier);
-	CheckSum(iSum, m_iCostModifier);
 	CheckSum(iSum, m_iTotalCombatStrengthModifierBase);
 	CheckSum(iSum, m_iTotalCombatStrengthChangeBase);
 	CheckSum(iSum, m_iBaseCargoVolume);
@@ -4660,7 +4597,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iSMCargoVolume, L"iSMCargoVolume");
 	pXML->GetOptionalChildXmlValByName(&m_iConscriptionValue, L"iConscription");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureGarrisonValue, L"iCultureGarrison");
-	pXML->GetOptionalChildXmlValByName(&m_iExtraCost, L"iExtraCost");
+	pXML->GetOptionalChildXmlValByName(&m_iBaseUpkeep, L"iBaseUpkeep");
+	if (m_iBaseUpkeep < 0) m_iBaseUpkeep = 0;
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
 
@@ -4889,7 +4827,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTaunt, L"iTaunt");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxHP, L"iMaxHP", 100);
 	pXML->GetOptionalChildXmlValByName(&m_iDamageModifier, L"iDamageModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iCostModifier, L"iCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamage, L"iRBombardDamage");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageLimit, L"iRBombardDamageLimit");
 	pXML->GetOptionalChildXmlValByName(&m_iRBombardDamageMaxUnits, L"iRBombardDamageMaxUnits");
@@ -5351,7 +5288,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	//TB Combat Mods End  TB SubCombat Mod end
 
-	getKillOutcomeList()->read(pXML, L"KillOutcomes");
+	m_KillOutcomeList.read(pXML, L"KillOutcomes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"Actions"))
 	{
@@ -5393,7 +5330,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	// Alberts2 Commented this out to allow Animals with a different AI
 	//if ( isAnimal() && getDefaultUnitAIType() != UNITAI_ANIMAL )
 	//{
-	//	FAssertMsg(false, CvString::format("Auto-corrected: UnitAI not set to UNITAI_ANIMAL for animal unit %s", m_szType.c_str()).c_str());
+	//	FErrorMsg(CvString::format("Auto-corrected: UnitAI not set to UNITAI_ANIMAL for animal unit %s", m_szType.c_str()).c_str());
 	//	m_iDefaultUnitAIType = UNITAI_ANIMAL;
 	//}
 
@@ -5872,7 +5809,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iSMCargoVolume == iDefault ) m_iSMCargoVolume = pClassInfo->getSMCargoVolume();
 	if ( m_iConscriptionValue == iDefault ) m_iConscriptionValue = pClassInfo->getConscriptionValue();
 	if ( m_iCultureGarrisonValue == iDefault ) m_iCultureGarrisonValue = pClassInfo->getCultureGarrisonValue();
-	if ( m_iExtraCost == iDefault ) m_iExtraCost = pClassInfo->getExtraCost();
+	if ( m_iBaseUpkeep == iDefault ) m_iBaseUpkeep = pClassInfo->getBaseUpkeep();
 	if ( m_iAssetValue == iDefault ) m_iAssetValue = pClassInfo->getAssetValue(true);
 	if ( m_iPowerValue == iDefault ) m_iPowerValue = pClassInfo->getPowerValue(true);
 
@@ -5914,7 +5851,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(),pXML);
+	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 
 	if (!m_pExprTrainCondition)
 	{
@@ -5984,7 +5921,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iTaunt == iDefault ) m_iTaunt = pClassInfo->getTaunt(true);
 	if ( m_iMaxHP == 100 ) m_iMaxHP = pClassInfo->getMaxHP(true);
 	if ( m_iDamageModifier == iDefault ) m_iDamageModifier = pClassInfo->getDamageModifier();
-	if ( m_iCostModifier == iDefault ) m_iCostModifier = pClassInfo->getCostModifier();
 	if ( m_iRBombardDamage == iDefault ) m_iRBombardDamage = pClassInfo->getRBombardDamage();
 	if ( m_iRBombardDamageLimit == iDefault ) m_iRBombardDamageLimit = pClassInfo->getRBombardDamageLimit();
 	if ( m_iRBombardDamageMaxUnits == iDefault ) m_iRBombardDamageMaxUnits = pClassInfo->getRBombardDamageMaxUnits();
@@ -6396,7 +6332,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	//TB Combat Mods End  TB SubCombat Mod end
 	//setTotalModifiedCombatStrengthDetails();
 
-	getKillOutcomeList()->copyNonDefaults(pClassInfo->getKillOutcomeList(), pXML);
+	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList, pXML);
 
 	if (m_aOutcomeMissions.empty())
 	{
@@ -6495,31 +6431,67 @@ bool CvUnitInfo::readPass2(CvXMLLoadUtility* pXML)
 
 void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
-	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
+	if (pClassInfo->m_piFlankingStrikeUnit != NULL)
 	{
-		if (bOver || getFlankingStrikeUnit(i) == -1 && pClassInfo->getFlankingStrikeUnit(i) != -1)
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
 		{
-			if (m_piFlankingStrikeUnit == NULL)
+			if (bOver || getFlankingStrikeUnit(i) == -1 && pClassInfo->getFlankingStrikeUnit(i) != -1)
 			{
-				CvXMLLoadUtility::InitList(&m_piFlankingStrikeUnit, GC.getNumUnitInfos(), -1);
+				if (m_piFlankingStrikeUnit == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piFlankingStrikeUnit, GC.getNumUnitInfos(), -1);
+				}
+				m_piFlankingStrikeUnit[i] = pClassInfo->getFlankingStrikeUnit(i);
 			}
-			m_piFlankingStrikeUnit[i] = pClassInfo->getFlankingStrikeUnit(i);
 		}
-		if (bOver || getUnitAttackModifier(i) == -1 && pClassInfo->getUnitAttackModifier(i) != -1)
+	}
+	else
+	{
+		if (bOver && m_piFlankingStrikeUnit != NULL)
 		{
-			if (m_piUnitAttackModifier == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitAttackModifier, GC.getNumUnitInfos(), -1);
-			}
-			m_piUnitAttackModifier[i] = pClassInfo->getUnitAttackModifier(i);
+			SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
 		}
-		if (bOver || getUnitDefenseModifier(i) == -1 && pClassInfo->getUnitDefenseModifier(i) != -1)
+	}
+	if (pClassInfo->m_piUnitAttackModifier != NULL)
+	{
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
 		{
-			if (m_piUnitDefenseModifier == NULL)
+			if (bOver || getUnitAttackModifier(i) == -1 && pClassInfo->getUnitAttackModifier(i) != -1)
 			{
-				CvXMLLoadUtility::InitList(&m_piUnitDefenseModifier, GC.getNumUnitInfos(), -1);
+				if (m_piUnitAttackModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piUnitAttackModifier, GC.getNumUnitInfos(), -1);
+				}
+				m_piUnitAttackModifier[i] = pClassInfo->getUnitAttackModifier(i);
 			}
-			m_piUnitDefenseModifier[i] = pClassInfo->getUnitDefenseModifier(i);
+		}
+	}
+	else
+	{
+		if (bOver && m_piUnitAttackModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piUnitAttackModifier);
+		}
+	}
+	if (pClassInfo->m_piUnitDefenseModifier != NULL)
+	{
+		for (int i = 0; i < GC.getNumUnitInfos(); i++)
+		{
+			if (bOver || getUnitDefenseModifier(i) == -1 && pClassInfo->getUnitDefenseModifier(i) != -1)
+			{
+				if (m_piUnitDefenseModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piUnitDefenseModifier, GC.getNumUnitInfos(), -1);
+				}
+				m_piUnitDefenseModifier[i] = pClassInfo->getUnitDefenseModifier(i);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piUnitDefenseModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piUnitDefenseModifier);
 		}
 	}
 	if (bOver || m_iUnitCaptureType == -1 && pClassInfo->getUnitCaptureType() != -1)
@@ -6553,7 +6525,7 @@ bool CvUnitInfo::readPass3()
 
 bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 {
-	FAssert(0 <= eUnitCombat && eUnitCombat < GC.getNumUnitCombatInfos());
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
 	if ( m_abHasCombatType == NULL )
 	{
@@ -6586,27 +6558,36 @@ void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
 {
 	m_iTotalCombatStrengthChangeBase = 0;
 	m_iTotalCombatStrengthModifierBase = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
-		if (hasUnitCombat(eUnitCombat))
+		if (iI > -1)
 		{
-			m_iTotalCombatStrengthChangeBase += GC.getUnitCombatInfo(eUnitCombat).getStrengthChange();
-			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
-			{
-				if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() - 5);
-				}
-				if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() - 5);
-				}
-				if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
-				{
-						m_iTotalCombatStrengthModifierBase += (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() - 5);
-				}
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
+
+		m_iTotalCombatStrengthChangeBase += info.getStrengthChange();
+
+		if (info.getQualityBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
+		}
+		if (info.getSizeBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
+		}
+		if (info.getGroupBase() > -10)
+		{
+			m_iTotalCombatStrengthModifierBase += info.getGroupBase() - 5;
 		}
 	}
 }
@@ -6618,7 +6599,7 @@ int CvUnitInfo::getCombatStrengthModifier() const
 int CvUnitInfo::getTotalModifiedCombatStrength100() const
 {
 	int iStr = m_iCombat + m_iTotalCombatStrengthChangeBase;
-	const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
+	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_MULTIPLIER();
 	const bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
 	const int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
 	int iI = 0;
@@ -6719,25 +6700,34 @@ void CvUnitInfo::setBaseCargoVolume()
 {
 	int iOffset = 0;
 	int iBaseGroup = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI))
+		if (iI > -1)
 		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() > -10)
-			{
-				iOffset += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-				iBaseGroup += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase() > -10)
-			{
-				iOffset += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
+		{
+			iOffset += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+			iBaseGroup += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
+		{
+			iOffset += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
 		}
 	}
 	m_iBaseGroupRank = iBaseGroup;
 
 	int iBase = 100;
-	const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
+	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER();
 	const bool bPositive = ((iOffset > 0) ? true : false);
 	iBase *= 100;
 	if (bPositive)
@@ -6769,24 +6759,33 @@ void CvUnitInfo::setBaseSizeMattersZeroPoints()
 {
 	int iFullTotal = 0;
 	int iVolumetricTotal = 0;
-	for(int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+
+	UnitCombatTypes eUnitCombat;
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI))
+		if (iI > -1)
 		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-				iVolumetricTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-				iVolumetricTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getSizeBase();
-			}
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase() > -10)
-			{
-				iFullTotal += GC.getUnitCombatInfo((UnitCombatTypes)iI).getQualityBase();
-			}
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
+		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
+			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
+		}
+		if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
+		{
+			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getQualityBase();
 		}
 	}
 	m_iBaseSMRankTotal = iFullTotal;
@@ -6877,12 +6876,21 @@ void CvUnitInfo::setQualifiedPromotionTypes()
 void CvUnitInfo::setCanAnimalIgnores()
 {
 	int iCount = getAnimalIgnoresBorders();
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	UnitCombatTypes eUnitCombat;
+
+	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 	{
-		if (hasUnitCombat((UnitCombatTypes)iI) && GC.getUnitCombatInfo((UnitCombatTypes)iI).getAnimalIgnoresBordersChange() != 0)
+		if (iI > -1)
 		{
-			iCount += GC.getUnitCombatInfo((UnitCombatTypes)iI).getAnimalIgnoresBordersChange();
+			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
 		}
+		else
+		{
+			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
+
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+		}
+		iCount += GC.getUnitCombatInfo(eUnitCombat).getAnimalIgnoresBordersChange();
 	}
 	m_bCanAnimalIgnoresBorders = (iCount > 0);
 	m_bCanAnimalIgnoresImprovements = (iCount > 1);

@@ -5,10 +5,7 @@
 #ifndef CIV4_PLOT_GROUP_H
 #define CIV4_PLOT_GROUP_H
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
-#include "CvGame.h"
-#include "CvGameAI.h"
 
 typedef struct
 {
@@ -94,6 +91,14 @@ public:
 	int m_numPlots;
 	mutable int m_numCities;
 	//CLinkList<XYCoords> m_plots;
+
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, recalculatePlots);
+		DECLARE_MAP_FUNCTOR(CvPlotGroup, void, RecalculateHashes);
+	};
 };
 
 #endif

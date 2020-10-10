@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 
 CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
 	m_iTurn(iMessageTurn),
@@ -65,7 +66,7 @@ void CvTalkingHeadMessage::write(FDataStreamBase& stream) const
 	stream.Write(m_bShown);
 }
 
-const wchar* CvTalkingHeadMessage::getDescription() const
+const wchar_t* CvTalkingHeadMessage::getDescription() const
 {
 	return (m_szDescription);
 }
@@ -78,11 +79,6 @@ void CvTalkingHeadMessage::setDescription(CvWString pszDescription)
 const CvString& CvTalkingHeadMessage::getSound() const
 {
 	return (m_szSound);
-}
-
-void CvTalkingHeadMessage::setSound(LPCTSTR pszSound)
-{
-	m_szSound = pszSound;
 }
 
 const CvString& CvTalkingHeadMessage::getIcon() const

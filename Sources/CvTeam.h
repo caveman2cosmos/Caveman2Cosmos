@@ -60,7 +60,7 @@ public:
 
 	bool isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses=false) const;
 
-	int getTotalVictoryScore() const; // Exposed to Python
+	int64_t getTotalVictoryScore() const; // Exposed to Python
 
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
 	bool isVotingMember(VoteSourceTypes eVoteSource) const;
@@ -68,7 +68,7 @@ public:
 
 	int getCurrentMasterPower(bool bIncludeVassals) const;
 	bool isMasterPlanningLandWar(const CvArea* pArea) const;
-	bool isMasterPlanningSeaWar(const CvArea* pArea)const;
+	bool isMasterPlanningSeaWar(const CvArea* pArea) const;
 	int getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals = false) const; // Exposed to Python
 
 	int getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const; // Exposed to Python
@@ -88,8 +88,7 @@ public:
 	int getHasReligionCount(ReligionTypes eReligion) const; // Exposed to Python
 	int getHasCorporationCount(CorporationTypes eCorporation) const; // Exposed to Python
 
-	int processedTeamCulture() const;
-	unsigned long long countTotalCulture() const; // Exposed to Python
+	uint64_t countTotalCulture() const; // Exposed to Python
 
 	int countNumUnitsByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesByArea(const CvArea* pArea) const; // Exposed to Python
@@ -422,8 +421,8 @@ public:
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange); // Exposed to Python
 
-	void addPropertiesAllCities(CvProperties* pProp);
-	void subtractPropertiesAllCities(CvProperties* pProp);
+	void addPropertiesAllCities(const CvProperties* pProp);
+	void subtractPropertiesAllCities(const CvProperties* pProp);
 
 	bool isFriendlyTerritory(TeamTypes eTeam) const;
 
@@ -455,6 +454,8 @@ public:
 	void changeCounterespionageModAgainstTeam(TeamTypes eIndex, int iChange); // Exposed to Python
 
 	void verifySpyUnitsValidPlot();
+
+	void setCircumnavigated(bool bNewValue);
 
 	void setForceRevealedBonus(BonusTypes eBonus, bool bRevealed);
 	bool isForceRevealedBonus(BonusTypes eBonus) const;

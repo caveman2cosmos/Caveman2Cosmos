@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -21,10 +18,13 @@ class CyPlayer
 public:
 	CyPlayer();
 	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
+	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
+	bool isNone() const { return m_pPlayer == NULL; }
 
-	CvPlayer* getPlayer() { return m_pPlayer; } // Call from C++
-	bool isNone() { return (m_pPlayer==NULL); }
-
+#ifdef PARALLEL_MAPS
+	void updateMembers();
+	void initMembers(int iIndex);
+#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -96,7 +96,6 @@ public:
 	int getCurrentInflationCostModifier();
 	int getEquilibriumInflationCostModifier();
 
-	int countTotalCulture();
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
@@ -149,7 +148,6 @@ public:
 	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
-	int getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
@@ -161,14 +159,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	int calculateUnitCost();
+	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
-	int calculatePreInflatedCosts();
+	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int calculateInflatedCosts();
-
-	int getFreeUnitCountdown();
-	void setFreeUnitCountdown( int iValue );
+	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -220,20 +215,15 @@ public:
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
 	int getAveragePopulation();
-	long getRealPopulation();
+	int64_t getRealPopulation() const;
 
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	int64_t getGold() const;
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
-
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);
@@ -246,7 +236,7 @@ public:
 	int getAdvancedStartImprovementCost(int /*ImprovementTypes*/ eImprovement, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd);
-	int getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot);
+	int getAdvancedStartVisibilityCost(CyPlot* pPlot);
 
 	int getEspionageSpending(int /*PlayerTypes*/ ePlayer);
 	bool canDoEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData);
@@ -276,6 +266,7 @@ public:
 	int getGreatGeneralsCreated();
 	int getGreatPeopleThresholdModifier();
 	int getGreatGeneralsThresholdModifier();
+	void changeGreatGeneralsThresholdModifier(int iChange);
 	int getGreatPeopleRateModifier();
 	int getGreatGeneralRateModifier();
 	int getDomesticGreatGeneralRateModifier();
@@ -310,14 +301,7 @@ public:
 
 	int getNumNukeUnits();
 	int getNumOutsideUnits();
-	int getBaseFreeUnits();
-	int getBaseFreeMilitaryUnits();
 
-	int getFreeUnitsPopulationPercent();
-	int getFreeMilitaryUnitsPopulationPercent();
-	int getGoldPerUnit();
-	int getGoldPerMilitaryUnit();
-	int getExtraUnitCost();
 	int getNumMilitaryUnits();
 	int getHappyPerMilitaryUnit();
 	bool isMilitaryFoodProduction();
@@ -336,6 +320,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
@@ -557,15 +542,14 @@ public:
 
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 
-	int getScoreHistory(int iTurn) const;
-	int getEconomyHistory(int iTurn) const;
-	int getIndustryHistory(int iTurn) const;
-	int getAgricultureHistory(int iTurn) const;
-	int getPowerHistory(int iTurn) const;
-	int getCultureHistory(int iTurn) const;
-	int getEspionageHistory(int iTurn) const;
-
-	int getRevolutionStabilityHistory(int iTurn) const;
+	int64_t getScoreHistory(int iTurn) const;
+	int64_t getEconomyHistory(int iTurn) const;
+	int64_t getIndustryHistory(int iTurn) const;
+	int64_t getAgricultureHistory(int iTurn) const;
+	int64_t getPowerHistory(int iTurn) const;
+	int64_t getCultureHistory(int iTurn) const;
+	int64_t getEspionageHistory(int iTurn) const;
+	int64_t getRevolutionStabilityHistory(int iTurn) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -612,9 +596,9 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
 
-	int getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
+	int64_t getCulture() const;
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties();
 
@@ -693,7 +677,7 @@ public:
 	int getBLID(int index);
 	std::wstring getBLListName(int index);
 	int getBLListLength(int index);
-	OrderData* getBLOrder(int index, int iQIndex);
+	const OrderData* getBLOrder(int index, int iQIndex) const;
 	void writeBLToFile();
 	int getBLCurrentList();
 	void setBLCurrentList(int iID);

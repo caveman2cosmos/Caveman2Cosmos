@@ -11,11 +11,7 @@
 #ifndef CV_PROPERTIES_H
 #define CV_PROPERTIES_H
 
-#include "CvXMLLoadUtilityModTools.h"
-//#include "CvGameObject.h"
-
-//#include "CvProperty.h"
-
+class CvXMLLoadUtility;
 class CvGame;
 class CvTeam;
 class CvPlayer;
@@ -100,7 +96,7 @@ public:
 	void write(FDataStreamBase* pStream);
 	void writeWrapper(FDataStreamBase* pStream);
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Properties");
-	void copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;
 

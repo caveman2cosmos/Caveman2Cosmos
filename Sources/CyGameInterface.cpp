@@ -1,5 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvRandom.h"
+#include "CyCity.h"
+#include "CyDeal.h"
+#include "CyGame.h"
+#include "CyPlot.h"
 #include "CyReplayInfo.h"
+
 //
 // published python interface for CyGame
 //
@@ -10,7 +16,9 @@ void CyGamePythonInterface()
 
 	python::class_<CyGame>("CyGame")
 
-		.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
+		//.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
+
+		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
 
@@ -150,7 +158,8 @@ void CyGamePythonInterface()
 
 		.def("isScoreDirty", &CyGame::isScoreDirty, "bool ()")
 		.def("setScoreDirty", &CyGame::setScoreDirty)
-		.def("isCircumnavigated", &CyGame::isCircumnavigated, "bool () - is the globe circumnavigated?")
+		.def("getCircumnavigatedTeam", &CyGame::getCircumnavigatedTeam, "int ()")
+		.def("setCircumnavigatedTeam", &CyGame::setCircumnavigatedTeam, "void (int iTeamType)")
 		.def("isDiploVote", &CyGame::isDiploVote, "bool (VoteSourceTypes)")
 		.def("changeDiploVote", &CyGame::changeDiploVote, "void (VoteSourceTypes, int)")
 		.def("isDebugMode", &CyGame::isDebugMode, "bool () - is the game in Debug Mode?")

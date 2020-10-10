@@ -25,7 +25,7 @@ def getDescription():
 
 def getNumCustomMapOptions():
 	return 5
-	
+
 def getNumHiddenCustomMapOptions():
 	return 2
 
@@ -40,7 +40,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -51,7 +51,7 @@ def getNumCustomMapOptionValues(argsList):
 		4:  2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -83,7 +83,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -109,11 +109,11 @@ def isRandomCustomMapOption(argsList):
 def isAdvancedMap():
 	"This map should not show up in simple mode"
 	return 1
-	
+
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(3) == 1 or map.getCustomMapOption(3) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(3) == 2)
@@ -131,7 +131,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(4) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def getGridSize(argsList):
@@ -160,7 +160,7 @@ class GHFractalWorld(CvMapGeneratorUtil.FractalWorld):
 	def generatePlotTypes(self, water_percent=78, shift_plot_types=True, grain_amount=3):
 		# Check for changes to User Input variances.
 		self.checkForOverrideDefaultUserInputVariances()
-		
+
 		self.hillsFrac.fracInit(self.iNumPlotsX, self.iNumPlotsY, grain_amount, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
 		self.peaksFrac.fracInit(self.iNumPlotsX, self.iNumPlotsY, grain_amount+1, self.mapRand, self.iFlags, self.fracXExp, self.fracYExp)
 
@@ -200,14 +200,14 @@ def generatePlotTypes():
 	iH = map.getGridHeight()
 	plotTypes = [PlotTypes.PLOT_OCEAN] * (iW*iH)
 	terrainFrac = CyFractal()
-	
+
 	# Get custom map user inputs.
 	userInputGrain = map.getCustomMapOption(0)
 	userInputPeaks = map.getCustomMapOption(1)
 	userInputLandmass = map.getCustomMapOption(2)
 
 	fractal_world = GHFractalWorld()
-	
+
 	if userInputLandmass == 3: #Random landmass sizes
 		grainRoll = 1 + dice.get(7, "Fractal Grain - Global Highlands PYTHON")
 		if grainRoll > 4: grainRoll -= 4
@@ -225,34 +225,34 @@ def generatePlotTypes():
 	# Varying grains for hills/peaks per map size and Mountain Ranges setting.
 	# [clustered_grain, ridgelines_grain, scattered_grain]
 	worldsizes = {
-		WorldSizeTypes.WORLDSIZE_DUEL:      [3,4,5],
-		WorldSizeTypes.WORLDSIZE_TINY:      [3,4,5],
-		WorldSizeTypes.WORLDSIZE_SMALL:     [4,5,6],
-		WorldSizeTypes.WORLDSIZE_STANDARD:  [4,5,6],
-		WorldSizeTypes.WORLDSIZE_LARGE:     [4,5,6],
-		WorldSizeTypes.WORLDSIZE_HUGE:      [4,5,6],
-		6: 														      [5,6,7],
-		7: 														      [5,6,7],
-		}
-# Rise of Mankind 2.53		
+		WorldSizeTypes.WORLDSIZE_DUEL:		[3,4,5],
+		WorldSizeTypes.WORLDSIZE_TINY:		[3,4,5],
+		WorldSizeTypes.WORLDSIZE_SMALL:		[4,5,6],
+		WorldSizeTypes.WORLDSIZE_STANDARD:	[4,5,6],
+		WorldSizeTypes.WORLDSIZE_LARGE:		[4,5,6],
+		WorldSizeTypes.WORLDSIZE_HUGE:		[4,5,6],
+		6: 									[5,6,7],
+		7: 									[5,6,7]
+	}
+# Rise of Mankind 2.53
 	map_size = map.getWorldSize()
-	#print "    map_size",map_size
+	#print "	map_size",map_size
 	if ( not map_size in worldsizes ):
 		grain_list = [4,5,6]
-		#print "    grain_list",grain_list
+		#print "	grain_list",grain_list
 	else:
 		grain_list = worldsizes[map_size]
-		#print "    grain_list",grain_list
-# Rise of Mankind 2.53		
+		#print "	grain_list",grain_list
+# Rise of Mankind 2.53
 	grain_list.reverse()
 	grain = grain_list[userInputGrain]
-	
+
 	# Peak density
 	peak_list = [65, 70, 77]
 	hill_list = [35, 40, 45]
 	peaks = peak_list[userInputPeaks]
 	hills = hill_list[userInputPeaks]
-	
+
 	terrainFrac.fracInit(iW, iH, grain, dice, 0, -1, -1)
 
 	iHillsThreshold = terrainFrac.getHeightFromPercent(hills)
@@ -287,10 +287,10 @@ def addFeatures():
 	iH = map.getGridHeight()
 	for plotIndex in range(iW * iH):
 		pPlot = map.plotByIndex(plotIndex)
-		if pPlot.isPeak() and pPlot.isCoastalLand():
+		if pPlot.isPeak() and pPlot.isCoastal():
 			# If a peak is along the coast, change to hills and recalc.
 			pPlot.setPlotType(PlotTypes.PLOT_HILLS, true, true)
-	
+
 	# Now add Features.
 	NiTextOut("Adding Features (Python Global Highlands) ...")
 	featuregen = FeatureGenerator()

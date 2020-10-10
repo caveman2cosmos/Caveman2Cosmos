@@ -130,11 +130,8 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // Returns the distance between plots according to the pattern above...
 inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
 {
-	int iDX;
-	int iDY;
-
-	iDX = xDistance(iX1, iX2);
-	iDY = yDistance(iY1, iY2);
+	const int iDX = xDistance(iX1, iX2);
+	const int iDY = yDistance(iY1, iY2);
 
 	return (std::max(iDX, iDY) + (std::min(iDX, iDY) / 2));
 }
@@ -171,7 +168,7 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 	}
 }
 
-inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
+inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 {
 	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
@@ -269,13 +266,13 @@ bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
 bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
 bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
 
-__int64 getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender);							// Exposed to Python
+int64_t getBinomialCoefficient(int iN, int iK);
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
 /////////////////////////////////////////////////////////////////
-float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D);
+float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // END                                                         //
@@ -289,9 +286,9 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger);
 
 TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer);
 
-void setListHelp(wchar* szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst);
-void setListHelp(CvWString& szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst);
-void setListHelp(CvWStringBuffer& szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst);
+void setListHelp(wchar_t* szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);
+void setListHelp(CvWString& szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);
+void setListHelp(CvWStringBuffer& szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);
 
 // PlotUnitFunc's...
 bool PUF_isGroupHead( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
@@ -416,23 +413,11 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType);
 void getMissionAIString(CvWString& szString, MissionAITypes eMissionAI);
 void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI);
 
-// BUG - Unit Experience - start
-/*
- * Calculates the experience needed to reach the next level after the given level.
- */
-int calculateExperience(int iLevel, PlayerTypes ePlayer);								// Exposed to Python
-int calculateLevel(int iExperience, PlayerTypes ePlayer);								// Exposed to Python
-// BUG - Unit Experience - end
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer);
+int calculateLevel(const int iExperience, const PlayerTypes ePlayer);
+
 DirectionTypes getOppositeDirection(DirectionTypes eDirection);
 bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherDirection);
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/	
 
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();
@@ -448,7 +433,7 @@ public:
 	CvChecksum() { clear(); }
 	void clear() { sum = 0; r = 55665; c1 = 52845; c2 = 22719;}
 	void add(int i);
-	void add(byte b);
+	void add(uint8_t b);
 	int get() { return (int)sum; }
 protected:
 	WORD r;

@@ -70,6 +70,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_AGGRESSIVE</Tag>
 		<English>Aggressive Promotion Line</English>
 		<French>Spécialisation Aggressivité</French>
+		<German>Aggressiv</German>
 		<Italian>Aggressivo</Italian>
 		<Polish>Linia Promocji: Agresywny</Polish>
 	</TEXT>
@@ -140,6 +141,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Tag>
 		<English>Armed Guard Promotionline</English>
 		<French>Spécialisation Garde Armé</French>
+		<German>Bewaffneter Wächter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMOR_UPGRADE</Tag>
@@ -178,6 +180,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BACK_DOWN</Tag>
 		<English>Back Down Promotionline</English>
 		<French>Spécialisation Repli</French>
+		<German>Rückzug</German>
 		<Italian>Ritirata</Italian>
 		<Polish>Linia Promocji: Wycofać się</Polish>
 	</TEXT>
@@ -199,6 +202,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BARD</Tag>
 		<English>Bard Promotion Line</English>
 		<French>Spécialisation Barde</French>
+		<German>Barde</German>
 		<Italian>Bardo</Italian>
 		<Polish>Linia Promocji: Bard</Polish>
 	</TEXT>
@@ -213,6 +217,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BERZERKER</Tag>
 		<English>Berzerker Promotion Line</English>
 		<French>Spécialisation Rage</French>
+		<German>Berserker</German>
 		<Italian>Berserker</Italian>
 		<Polish>Linia Promocji: Berserker</Polish>
 	</TEXT>
@@ -248,6 +253,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BOUNTY_HUNTER</Tag>
 		<English>Bounty Hunter Promotion Line</English>
 		<French>Spécialisation Chasseur de primes</French>
+		<German>Kopfgeldjäger</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ANTI_AIR</Tag>
@@ -594,7 +600,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUSHWHACK</Tag>
 		<English>Bushwhack Promotionline</English>
-		<French>Spécialisation Débroussaillage </French>
+		<French>Spécialisation Débroussaillage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CAUTIOUS</Tag>
@@ -608,6 +614,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_CHARGE</Tag>
 		<English>Charge Promotion Line</English>
 		<French>Spécialisation Charge</French>
+		<German>Ausfall</German>
 		<Italian>Carica</Italian>
 		<Polish>Linia Promocji: Szarża</Polish>
 	</TEXT>
@@ -645,6 +652,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_CITYRAIDER</Tag>
 		<English>City Raider Promotion Line</English>
 		<French>Spécialisation Assaillant</French>
+		<German>Stadtangriff</German>
 		<Italian>Razziatore</Italian>
 		<Polish>Linia Promocji: Szturm Miasta</Polish>
 	</TEXT>
@@ -672,6 +680,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COASTAL_GUARD</Tag>
 		<English>Coastal Guard Promotion Line</English>
 		<French>Spécialisation Garde-côtes</French>
+		<German>Küstenwache</German>
 		<Italian>Guardia costiera</Italian>
 		<Polish>Linia Promocji: Obrona na Wybrzeżu</Polish>
 	</TEXT>
@@ -679,6 +688,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COLD</Tag>
 		<English>Cold Promotion Line</English>
 		<French>Spécialisation Arctique</French>
+		<German>Kälte</German>
 		<Italian>Combattente artico</Italian>
 		<Polish>Linia Promocji: Walka Arktyczna</Polish>
 	</TEXT>
@@ -718,6 +728,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COVER</Tag>
 		<English>Cover Promotion Line</English>
 		<French>Spécialisation Couverture</French>
+		<German>Deckung</German>
 		<Italian>Copertura</Italian>
 		<Polish>Linia Promocji: Osłona</Polish>
 	</TEXT>
@@ -725,6 +736,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COVERT_OPERATIONS</Tag>
 		<English>Covert Operations Promotion Line</English>
 		<French>Spécialisation Opérations sous couverture</French>
+		<German>Verdeckte Operationen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CRACKDOWN</Tag>
@@ -741,7 +753,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CROWS_NEST</Tag>
 		<English>Crow's Nest Promotion Line</English>
-		<French>Spécialisation Nid de </French>
+		<French>Spécialisation Nid de</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CRUEL</Tag>
@@ -774,6 +786,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
 		<English>Decoys Promotionline</English>
 		<French>Spécialisation Leurre</French>
+		<German>Lockvogel</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE_PROTOCOLS</Tag>
@@ -851,6 +864,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ENCLOSE</Tag>
 		<English>Enclose Promotionline</English>
 		<French>Spécialisation Enclave</French>
+		<German>Einschließen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENGINEERCORPS</Tag>
@@ -954,6 +968,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FIELD</Tag>
 		<English>Field Promotion Line</English>
 		<French>Spécialisation Terrain</French>
+		<German>Kämpe</German>
 		<Italian>Combattimento in pianura</Italian>
 		<Polish>Linia Promocji: Walka Równinna</Polish>
 	</TEXT>
@@ -987,12 +1002,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_ANIMALS</Tag>
 		<English>First Aid (Animals) Promotionline</English>
 		<French>Spécialisation Premiers secours (Animaux)</French>
+		<German>Erste Hilfe (Tiere)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (zwierzęta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_PEOPLE</Tag>
 		<English>First Aid (People) Promotionline</English>
 		<French>Spécialisation Premiers secours (Humains)</French>
+		<German>Erste Hilfe (Menschen)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (ludzie)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1033,6 +1050,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FORMATION</Tag>
 		<English>Formation Promotion Line</English>
 		<French>Spécialisation Formation</French>
+		<German>Formation</German>
 		<Italian>Formazione</Italian>
 		<Polish>Linia Promocji: Formacja</Polish>
 	</TEXT>
@@ -1143,6 +1161,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_HUNTER</Tag>
 		<English>Hunter Promotion Line</English>
 		<French>Spécialisation Chasseur</French>
+		<German>Jäger</German>
 		<Italian>Cacciatore</Italian>
 		<Polish>Linia Promocji: Łowca</Polish>
 	</TEXT>
@@ -1197,6 +1216,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_IMPERIAL</Tag>
 		<English>Imperial Promotion Line</English>
 		<French>Spécialisation Imperial</French>
+		<German>Ruhm</German>
 		<Italian>Guardia imperiale</Italian>
 		<Spanish>Imperial</Spanish>
 		<Polish>Linia Promocji: Cesarski</Polish>
@@ -1341,6 +1361,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_MARTIAL_ARTS</Tag>
 		<English>Martial Arts Promotion Line</English>
 		<French>Spécialisation Arts martiaux</French>
+		<German>Kampfsport</German>
 		<Italian>Arti marziali</Italian>
 		<Polish>Linia Promocji: Sztuka Wojskowa</Polish>
 	</TEXT>
@@ -1424,6 +1445,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_NON_LETHAL_FORCE</Tag>
 		<English>Non-Lethal Force Promotionline</English>
 		<French>Spécialisation Armes non-léthales</French>
+		<German>Am Leben lassen</German>
 		<Polish>Linia Promocji: Nie-Śmiercionośny</Polish>
 	</TEXT>
 	<TEXT>
@@ -1476,6 +1498,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_PATROL</Tag>
 		<English>Patrol Promotion Line</English>
 		<French>Spécialisation Patrouille</French>
+		<German>Patrouillieren</German>
 		<Italian>Pattuglia</Italian>
 		<Polish>Linia Promocji: Patrol</Polish>
 	</TEXT>
@@ -1617,6 +1640,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_RECOVER_TECH</Tag>
 		<English>Recover (Tech) Promotionline</English>
 		<French>Spécialisation Récupération (Tech)</French>
+		<German>Instandsetzung (Technologie)</German>
 		<Polish>Linia Promocji: Odzyskaj (tech)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1628,6 +1652,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIRS</Tag>
 		<English>Repairs Promotion Line</English>
 		<French>Spécialisation Reparation</French>
+		<German>Reparatur</German>
 		<Italian>Riparazioni automatiche</Italian>
 		<Polish>Linia Promocji: Automatyczne Naprawy</Polish>
 	</TEXT>
@@ -1635,18 +1660,21 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_AIRCRAFT</Tag>
 		<English>Repair (Aircraft) Promotionline</English>
 		<French>Spécialisation Réparation (Avions)</French>
+		<German>Reparatur (Flugzeuge)</German>
 		<Polish>Linia Promocji: Naprawa (samoloty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_MECHANICAL</Tag>
 		<English>Repair (Mechanical) Promotionline</English>
 		<French>Spécialisation Réparation (Véhicules)</French>
+		<German>Reparatur (Maschinen)</German>
 		<Polish>Linia Promocji: Naprawa (mechaniczne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_NAVAL</Tag>
 		<English>Repair (Naval) Promotionline</English>
 		<French>Spécialisation Réparation (Navires)</French>
+		<German>Reparatur (Schiffe)</German>
 		<Polish>Linia Promocji: Naprawa (okręty)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1674,6 +1702,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_RUGGED</Tag>
 		<English>Rugged Promotion Line</English>
 		<French>Spécialisation Terrain désolé</French>
+		<German>Unwegsam</German>
 		<Italian>Combattente del terreno aspro</Italian>
 		<Polish>Linia Promocji: Walka na Pustkowiach</Polish>
 	</TEXT>
@@ -1792,6 +1821,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SHOCK</Tag>
 		<English>Shock Promotion Line</English>
 		<French>Spécialisation Choc</French>
+		<German>Schock</German>
 		<Italian>Shock</Italian>
 		<Polish>Linia Promocji: Szturm</Polish>
 	</TEXT>
@@ -1852,6 +1882,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SOPHISTICATION</Tag>
 		<English>Sophistication Promotionline</English>
 		<French>Spécialisation Sophistication</French>
+		<German>Kultiviertheit</German>
 		<Polish>Linia Promocji: Dzika Bestia</Polish>
 	</TEXT>
 	<TEXT>
@@ -1926,6 +1957,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_STREET_FIGHTER</Tag>
 		<English>Street Fighter Promotionline</English>
 		<French>Spécialisation Combat urbain</French>
+		<German>Straßenkämpfer</German>
 		<Italian>Combattente di strada</Italian>
 		<Polish>Linia Promocji: Uliczny Wojownik</Polish>
 	</TEXT>
@@ -1986,6 +2018,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Tag>
 		<English>To The Death Promotionline</English>
 		<French>Spécialisation A Mort</French>
+		<German>Bis zum Tode</German>
 		<Polish>Linia Promocji: Aż Do Śmierci</Polish>
 	</TEXT>
 	<TEXT>
@@ -2037,6 +2070,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_TRENCH</Tag>
 		<English>Trench Promotion Line</English>
 		<French>Spécialisation Retranchement</French>
+		<German>Graben</German>
 		<Italian>Trincea</Italian>
 		<Polish>Linia Promocji: Okop</Polish>
 	</TEXT>
@@ -2062,6 +2096,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMTH</Tag>
 		<English>Warmth Promotion Line</English>
 		<French>Spécialisation Chaleur</French>
+		<German>Hitze</German>
 		<Italian>Combattente del deserto</Italian>
 		<Polish>Linia Promocji: Walka Pustynna</Polish>
 	</TEXT>
@@ -2069,6 +2104,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARRIORS_INTUITION</Tag>
 		<English>Warrior's Intuition Promotion Line</English>
 		<French>Spécialisation Intuition du Guerrier</French>
+		<German>Kriegerintuition</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WATERWAYS</Tag>
@@ -2081,6 +2117,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WAYLAY</Tag>
 		<English>Waylay Promotionline</English>
 		<French>Spécialisation Détournement</French>
+		<German>Wegelagerer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WEAPON_UPGRADE</Tag>
@@ -2093,6 +2130,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WETLAND</Tag>
 		<English>Wetland Promotion Line</English>
 		<French>Spécialisation Zone humide</French>
+		<German>Morast</German>
 		<Italian>Combattente delle paludi</Italian>
 		<Polish>Linia Promocji: Walka na Bagnach</Polish>
 	</TEXT>
@@ -2145,11 +2183,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Treffsicherheit I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Treffsicherheit I</German>
 		<Italian>
 			<Text>Precisione I</Text>
 			<Gender>Female</Gender>
@@ -2170,11 +2204,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Treffsicherheit II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Treffsicherheit II</German>
 		<Italian>
 			<Text>Precisione II</Text>
 			<Gender>Female</Gender>
@@ -2195,11 +2225,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Treffsicherheit III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Treffsicherheit III</German>
 		<Italian>
 			<Text>Precisione III</Text>
 			<Gender>Female</Gender>
@@ -2220,11 +2246,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fliegerass</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Fliegerass</German>
 		<Italian>
 			<Text>Asso</Text>
 			<Gender>Male</Gender>
@@ -2259,6 +2281,7 @@
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
 		<English>Adherent</English>
 		<French>Partisan</French>
+		<German>Treuer Anhänger</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADVANCED_AIRBORNE_COMBAT_TRAINING</Tag>
@@ -2326,11 +2349,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Aggressive</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Aggressiv</German>
 		<Italian>
 			<Text>Aggressivo</Text>
 			<Gender>Male</Gender>
@@ -2505,11 +2524,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hinterhalt I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hinterhalt I</German>
 		<Italian>
 			<Text>Imboscata I</Text>
 			<Gender>Female</Gender>
@@ -2530,11 +2545,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hinterhalt II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hinterhalt II</German>
 		<Italian>
 			<Text>Imboscata II</Text>
 			<Gender>Female</Gender>
@@ -2555,11 +2566,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hinterhalt III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hinterhalt III</German>
 		<Italian>
 			<Text>Imboscata III</Text>
 			<Gender>Female</Gender>
@@ -2580,11 +2587,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Amphibienangriff</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Amphibienangriff</German>
 		<Italian>
 			<Text>Anfibio</Text>
 			<Gender>Male</Gender>
@@ -2601,7 +2604,7 @@
  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
-		<German>Animal Jaeger</German>
+		<German>Großwildjäger</German>
 		<Italian>Cacciatore di animali</Italian>
 		<Polish>Łowca Zwierząt</Polish>
 	</TEXT>
@@ -2609,7 +2612,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
 		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<German>[ICON_BULLET]EP für Kämpfe gegen Tiere über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
@@ -2626,11 +2629,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Antibiologische Kriegsführung</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Antibiologische Kriegsführung</German>
 		<Italian>
 			<Text>Guerra antibatteriologica</Text>
 			<Gender>Female</Gender>
@@ -2685,11 +2684,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Fernhilfe I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Fernhilfe I</German>
 		<Italian>
 			<Text>Aiuto mirato I</Text>
 			<Gender>Female</Gender>
@@ -2710,11 +2705,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Fernhilfe II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Fernhilfe II</German>
 		<Italian>
 			<Text>Aiuto mirato II</Text>
 			<Gender>Female</Gender>
@@ -2735,11 +2726,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Fernhilfe III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Fernhilfe III</German>
 		<Italian>
 			<Text>Aiuto mirato III</Text>
 			<Gender>Female</Gender>
@@ -2762,26 +2749,31 @@
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD1</Tag>
 		<English>Armed Guard I</English>
 		<French>Garde armée I</French>
+		<German>Bewaffneter Wächter I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD2</Tag>
 		<English>Armed Guard II</English>
 		<French>Garde armée II</French>
+		<German>Bewaffneter Wächter II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD3</Tag>
 		<English>Armed Guard III</English>
 		<French>Garde armée III</French>
+		<German>Bewaffneter Wächter III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD4</Tag>
 		<English>Armed Guard IV</English>
 		<French>Garde armée IV</French>
+		<German>Bewaffneter Wächter IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD5</Tag>
 		<English>Armed Guard V</English>
 		<French>Garde armée V</French>
+		<German>Bewaffneter Wächter V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMOR_TEXT</Tag>
@@ -2834,21 +2826,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Arrow Barrage I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arrow Barrage I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arrow Barrage I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Strzał I</Polish>
 	</TEXT>
 	<TEXT>
@@ -2859,21 +2836,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Arrow Barrage II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arrow Barrage II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arrow Barrage II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Strzał II</Polish>
 	</TEXT>
 	<TEXT>
@@ -2884,21 +2846,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Arrow Barrage III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arrow Barrage III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arrow Barrage III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Strzał III</Polish>
 	</TEXT>
 	<TEXT>
@@ -2909,11 +2856,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Panzerbrechende Geschosse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Panzerbrechende Geschosse</German>
 		<Italian>
 			<Text>Munizioni perforanti</Text>
 			<Gender>Male</Gender>
@@ -2934,11 +2877,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Gegenbeschuß</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Artillerieduell</German>
 		<Italian>
 			<Text>Fuoco contraereo</Text>
 			<Gender>Male</Gender>
@@ -2959,11 +2898,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sperrfeuer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Unterstützungsfeuer</German>
 		<Italian>
 			<Text>Fuoco di soppressione</Text>
 			<Gender>Male</Gender>
@@ -2989,21 +2924,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Astonishing Accumen)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Astonishing Accumen)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Astonishing Accumen)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Niesamowita Kumulacja)</Polish>
 	</TEXT>
 	<TEXT>
@@ -3021,11 +2941,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Angriff I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Angriff I</German>
 		<Italian>
 			<Text>Attacco I</Text>
 			<Gender>Male</Gender>
@@ -3046,11 +2962,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Angriff II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Angriff II</German>
 		<Italian>
 			<Text>Attacco II</Text>
 			<Gender>Male</Gender>
@@ -3071,11 +2983,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Angriff III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Angriff III</German>
 		<Italian>
 			<Text>Attacco III</Text>
 			<Gender>Male</Gender>
@@ -3096,11 +3004,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Angriff IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Angriff IV</German>
 		<Italian>
 			<Text>Attacco IV</Text>
 			<Gender>Male</Gender>
@@ -3143,11 +3047,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Plünderer I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Plünderer I</German>
 		<Italian>
 			<Text>Raid I</Text>
 			<Gender>Male</Gender>
@@ -3168,11 +3068,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Plünderer II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Plünderer II</German>
 		<Italian>
 			<Text>Raid II</Text>
 			<Gender>Male</Gender>
@@ -3193,11 +3089,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Plünderer III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Plünderer III</German>
 		<Italian>
 			<Text>Raid III</Text>
 			<Gender>Male</Gender>
@@ -3277,6 +3169,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug I</German>
 		<Italian>
 			<Text>Ritirata I</Text>
 			<Gender>Male</Gender>
@@ -3292,6 +3185,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug II</German>
 		<Italian>
 			<Text>Ritirata II</Text>
 			<Gender>Male</Gender>
@@ -3307,6 +3201,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug III</German>
 		<Italian>
 			<Text>Ritirata III</Text>
 			<Gender>Male</Gender>
@@ -3322,6 +3217,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug IV</German>
 		<Italian>
 			<Text>Ritirata IV</Text>
 			<Gender>Male</Gender>
@@ -3337,6 +3233,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Rückzug V</German>
 		<Italian>
 			<Text>Ritirata V</Text>
 			<Gender>Male</Gender>
@@ -3348,6 +3245,7 @@
 		<Tag>TXT_KEY_PROMOTION_BAMBOO_ARMOR</Tag>
 		<English>Bamboo Armor</English>
 		<French>Armure de Bambou</French>
+		<German>Bambusrüstung</German>
 		<Italian>Armatura in bambù</Italian>
 		<Polish>Bambusowy Pancerz</Polish>
 	</TEXT>
@@ -3355,7 +3253,7 @@
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
 		<English>Barbarian Hunter</English>
 		<French>Chasseur de Barbares</French>
-		<German>Barbaren-Jaeger</German>
+		<German>Barbarenjäger</German>
 		<Italian>Cacciatore di barbari</Italian>
 		<Polish>Łowca Barbarzyńców</Polish>
 	</TEXT>
@@ -3363,7 +3261,7 @@
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
 		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Barbaren geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<German>[ICON_BULLET]EP für Kämpfe gegen Barbaren über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
@@ -3385,6 +3283,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde I</German>
 		<Italian>
 			<Text>Bardo I</Text>
 			<Gender>Male</Gender>
@@ -3404,6 +3303,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde II</German>
 		<Italian>
 			<Text>Bardo II</Text>
 			<Gender>Male</Gender>
@@ -3423,6 +3323,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Barde III</German>
 		<Italian>
 			<Text>Bardo III</Text>
 			<Gender>Male</Gender>
@@ -3442,21 +3343,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Meilleure Qualité(Barely Capable)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Barely Capable)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Barely Capable)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Ledwo Wystarczający)</Polish>
 	</TEXT>
 	<TEXT>
@@ -3467,11 +3353,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Abbaiatore</Text>
 			<Gender>Male</Gender>
@@ -3492,11 +3373,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sperrfeuer I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sperrfeuer I</German>
 		<Italian>
 			<Text>Fuoco di fila I</Text>
 			<Gender>Female</Gender>
@@ -3517,11 +3394,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sperrfeuer II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sperrfeuer II</German>
 		<Italian>
 			<Text>Fuoco di fila II</Text>
 			<Gender>Male</Gender>
@@ -3542,11 +3415,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sperrfeuer III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sperrfeuer III</German>
 		<Italian>
 			<Text>Fuoco di fila III</Text>
 			<Gender>Male</Gender>
@@ -3567,11 +3436,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Berserker I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Berserker I</German>
 		<Italian>
 			<Text>Berzerker I</Text>
 			<Gender>Male</Gender>
@@ -3592,11 +3457,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Berserker II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Berserker II</German>
 		<Italian>
 			<Text>Berzerker II</Text>
 			<Gender>Male</Gender>
@@ -3617,11 +3478,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Berserker III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Berserker III</German>
 		<Italian>
 			<Text>Berzerker III</Text>
 			<Gender>Male</Gender>
@@ -3642,11 +3499,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Berserker IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Berserker IV</German>
 		<Italian>
 			<Text>Berzerker IV</Text>
 			<Gender>Male</Gender>
@@ -3667,21 +3520,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Better Skill)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Better Skill)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Better Skill)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Lepsze Umiejętności)</Polish>
 	</TEXT>
 	<TEXT>
@@ -3702,11 +3540,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Blitzangriff</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Blitzangriff</German>
 		<Italian>
 			<Text>Incursione</Text>
 			<Gender>Female</Gender>
@@ -3727,11 +3561,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bloodhound I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Segugio I</Text>
 			<Gender>Male</Gender>
@@ -3752,11 +3581,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bloodhound II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Segugio II</Text>
 			<Gender>Male</Gender>
@@ -3777,11 +3601,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bloodhound III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Segugio III</Text>
 			<Gender>Male</Gender>
@@ -3802,21 +3621,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bolt Punch I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Bolt Punch I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bolt Punch I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Bełty Przebijające I</Polish>
 	</TEXT>
 	<TEXT>
@@ -3827,21 +3631,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bolt Punch II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Bolt Punch II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bolt Punch II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Bełty Przebijające II</Polish>
 	</TEXT>
 	<TEXT>
@@ -3852,21 +3641,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bolt Punch III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Bolt Punch III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bolt Punch III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Bełty Przebijające III</Polish>
 	</TEXT>
 	<TEXT>
@@ -3928,11 +3702,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bone Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armatura di ossa</Text>
 			<Gender>Male</Gender>
@@ -4038,16 +3807,19 @@
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER1</Tag>
 		<English>Bounty Hunter I</English>
 		<French>Chasseur de Primes I</French>
+		<German>Kopfgeldjäger I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER2</Tag>
 		<English>Bounty Hunter II</English>
 		<French>Chasseur de Primes II</French>
+		<German>Kopfgeldjäger II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER3</Tag>
 		<English>Bounty Hunter III</English>
 		<French>Chasseur de Primes III</French>
+		<German>Kopfgeldjäger III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER_HELP</Tag>
@@ -4062,11 +3834,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bronze Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in bronzo</Text>
 			<Gender>Male</Gender>
@@ -4087,11 +3854,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bronze Chainmail</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cotta di maglia in bronzo</Text>
 			<Gender>Male</Gender>
@@ -4112,11 +3874,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bronze-Tipped Ammunition</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Punte di bronzo</Text>
 			<Gender>Male</Gender>
@@ -4137,11 +3894,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bronze Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi di bronzo</Text>
 			<Gender>Male</Gender>
@@ -5089,6 +4841,7 @@
 		<Tag>TXT_KEY_PROMOTION_BY_THE_HORNS</Tag>
 		<English>By the Horns</English>
 		<French>Par les cornes</French>
+		<German>Bei den Hörnern packen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAMOUFLAGE</Tag>
@@ -5098,11 +4851,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Tarnung</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Tarnung</German>
 		<Italian>
 			<Text>Mimetica</Text>
 			<Gender>Male</Gender>
@@ -5126,13 +4875,14 @@
 		<English>[ICON_BULLET]Makes the unit unable to merge or split.</English>
 		<French>[ICON_BULLET]Ne peut être groupée ou divisée.</French>
 		<German>[ICON_BULLET]kann weder aufgeteilt noch zusammengeführt werden</German>
-		<Italian>[ICON_BULLET]Makes the unit unable to merge or split..</Italian>
+		<Italian>[ICON_BULLET]Makes the unit unable to merge or split.</Italian>
 		<Polish>[ICON_BULLET]Zakazuje podziału/łączenia jednostki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT</Tag>
 		<English>[ICON_BULLET]Can lead units through Peaks</English>
 		<French>[ICON_BULLET]Peut mener les unités à travers les montagnes</French>
+		<German>[ICON_BULLET]kann andere Einheiten durchs Gebirge führen</German>
 		<Italian>[ICON_BULLET]Può condurre unità attraverso le montagne</Italian>
 		<Spanish>[ICON_BULLET]Puede acompañar a unidades a través de Picos</Spanish>
 		<Polish>[ICON_BULLET]Przeprowadza jednostki przez góry</Polish>
@@ -5141,7 +4891,7 @@
 		<Tag>TXT_KEY_PROMOTION_CAN_MOVE_PEAKS_TEXT</Tag>
 		<English>[ICON_BULLET]Can Pass through Peaks</English>
 		<French>[ICON_BULLET]Peut passer les Sommets</French>
-		<German>[ICON_BULLET]Kann über Gipfel gehen</German>
+		<German>[ICON_BULLET]kann Gebirge überqueren</German>
 		<Italian>[ICON_BULLET]Può attraversare le montagne</Italian>
 		<Spanish>[ICON_BULLET]Puede atravesar Picos</Spanish>
 		<Polish>[ICON_BULLET]Może przekraczać góry</Polish>
@@ -5313,11 +5063,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ausfall I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ausfall I</German>
 		<Italian>
 			<Text>Carica I</Text>
 			<Gender>Female</Gender>
@@ -5338,11 +5084,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ausfall II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ausfall II</German>
 		<Italian>
 			<Text>Carica II</Text>
 			<Gender>Female</Gender>
@@ -5363,11 +5105,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ausfall III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ausfall III</German>
 		<Italian>
 			<Text>Carica III</Text>
 			<Gender>Female</Gender>
@@ -5520,11 +5258,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ritterlichkeit I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ritterlichkeit I</German>
 		<Italian>
 			<Text>Codice cavalleresco I</Text>
 			<Gender>Male</Gender>
@@ -5545,11 +5279,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ritterlichkeit II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ritterlichkeit II</German>
 		<Italian>
 			<Text>Codice cavalleresco II</Text>
 			<Gender>Male</Gender>
@@ -5570,11 +5300,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ritterlichkeit III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ritterlichkeit III</German>
 		<Italian>
 			<Text>Codice cavalleresco III</Text>
 			<Gender>Male</Gender>
@@ -5595,11 +5321,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtangriff I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtangriff I</German>
 		<Italian>
 			<Text>Razziatore I</Text>
 			<Gender>Male</Gender>
@@ -5620,11 +5342,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtangriff II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtangriff II</German>
 		<Italian>
 			<Text>Razziatore II</Text>
 			<Gender>Male</Gender>
@@ -5645,11 +5363,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtangriff III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtangriff III</German>
 		<Italian>
 			<Text>Razziatore III</Text>
 			<Gender>Male</Gender>
@@ -5666,7 +5380,7 @@
 		<Tag>TXT_KEY_PROMOTION_CITYRAIDER4</Tag>
 		<English>City Raider IV</English>
 		<French>Pillard IV</French>
-		<German>Häuserkampf IV</German>
+		<German>Stadtangriff IV</German>
 		<Italian>Razziatore IV</Italian>
 		<Spanish>Asalto de ciudades IV</Spanish>
 		<Polish>Szturm Miasta IV</Polish>
@@ -5700,11 +5414,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>City Raider V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtangriff V</German>
 		<Italian>
 			<Text>Razziatore V</Text>
 			<Gender>Male</Gender>
@@ -5749,11 +5459,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Clovis Point Ammunition</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Punte di Clovis</Text>
 			<Gender>Male</Gender>
@@ -5774,11 +5479,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pirat I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Pirat I</German>
 		<Italian>
 			<Text>Pirata I</Text>
 			<Gender>Male</Gender>
@@ -5799,11 +5500,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pirat II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Pirat II</German>
 		<Italian>
 			<Text>Pirata II</Text>
 			<Gender>Male</Gender>
@@ -5824,11 +5521,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pirat III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Pirat III</German>
 		<Italian>
 			<Text>Pirata III</Text>
 			<Gender>Male</Gender>
@@ -5899,6 +5592,7 @@
 		<Tag>TXT_KEY_PROMOTION_COLD1</Tag>
 		<English>Arctic I</English>
 		<French>Arctique I</French>
+		<German>Kälte I</German>
 		<Italian>Combattente artico I</Italian>
 		<Spanish>Combate ártico I</Spanish>
 		<Polish>Walka Arktyczna I</Polish>
@@ -5907,6 +5601,7 @@
 		<Tag>TXT_KEY_PROMOTION_COLD2</Tag>
 		<English>Arctic II</English>
 		<French>Arctique II</French>
+		<German>Kälte II</German>
 		<Italian>Combattente artico II</Italian>
 		<Spanish>Combate ártico II</Spanish>
 		<Polish>Walka Arktyczna II</Polish>
@@ -5915,6 +5610,7 @@
 		<Tag>TXT_KEY_PROMOTION_COLD3</Tag>
 		<English>Arctic III</English>
 		<French>Arctique III</French>
+		<German>Kälte III</German>
 		<Italian>Combattente artico III</Italian>
 		<Spanish>Combate ártico III</Spanish>
 		<Polish>Walka Arktyczna III</Polish>
@@ -5923,6 +5619,7 @@
 		<Tag>TXT_KEY_PROMOTION_COLD4</Tag>
 		<English>Arctic IV</English>
 		<French>Arctique IV</French>
+		<German>Kälte IV</German>
 		<Italian>Combattente artico IV</Italian>
 		<Spanish>Combate ártico IV</Spanish>
 		<Polish>Walka Arktyczna IV</Polish>
@@ -5943,11 +5640,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang I - Leutnant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang I - Leutnant</German>
 		<Italian>
 			<Text>Combattimento I</Text>
 			<Gender>Male</Gender>
@@ -5968,11 +5661,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang II - Oberleutnant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang II - Oberleutnant</German>
 		<Italian>
 			<Text>Combattimento II</Text>
 			<Gender>Male</Gender>
@@ -5993,11 +5682,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang III - Hauptmann</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang III - Hauptmann</German>
 		<Italian>
 			<Text>Combattimento III</Text>
 			<Gender>Male</Gender>
@@ -6018,11 +5703,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang IV - Major</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang IV - Major</German>
 		<Italian>
 			<Text>Combattimento IV</Text>
 			<Gender>Male</Gender>
@@ -6043,11 +5724,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang V - Oberstleutnant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang V - Oberstleutnant</German>
 		<Italian>
 			<Text>Combattimento V</Text>
 			<Gender>Male</Gender>
@@ -6068,11 +5745,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rang VI - Oberst</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Rang VI - Oberst</German>
 		<Italian>
 			<Text>Combattimento VI</Text>
 			<Gender>Male</Gender>
@@ -6207,11 +5880,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Kommando</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Kommando</German>
 		<Italian>
 			<Text>Commando</Text>
 			<Gender>Male</Gender>
@@ -6246,21 +5915,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Completely Incapacitated)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Completely Incapacitated)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Completely Incapacitated)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Kompletnie Niesprawny)</Polish>
 	</TEXT>
 	<TEXT>
@@ -6334,11 +5988,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Copper Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in rame</Text>
 			<Gender>Male</Gender>
@@ -6368,11 +6017,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Copper-Tipped Ammunition</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Punte di rame</Text>
 			<Gender>Male</Gender>
@@ -6393,11 +6037,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Copper Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi di rame</Text>
 			<Gender>Male</Gender>
@@ -6461,13 +6100,6 @@
 		<French>Corruption IX</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COST_MODIFIER_TEXT</Tag>
-		<English>[ICON_BULLET]Unit Support Cost: %D1_Change%</English>
-		<French>[ICON_BULLET]%D1_Change% Modif. du coût d'entretien</French>
-		<German>[ICON_BULLET]laufende Kosten: %D1_Change%</German>
-		<Polish>[ICON_BULLET]%D1_Change% Modyfikator Kosztów Utrzymania</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVER</Tag>
 		<English>Cover I</English>
 		<French>
@@ -6475,11 +6107,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Deckung I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Deckung I</German>
 		<Italian>
 			<Text>Copertura I</Text>
 			<Gender>Female</Gender>
@@ -6500,11 +6128,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Deckung II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Deckung II</German>
 		<Italian>
 			<Text>Copertura II</Text>
 			<Gender>Female</Gender>
@@ -6525,11 +6149,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Deckung III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Deckung III</German>
 		<Italian>
 			<Text>Copertura III</Text>
 			<Gender>Female</Gender>
@@ -6546,16 +6166,19 @@
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS1</Tag>
 		<English>Covert Operations I</English>
 		<French>Opérations sous couverture I</French>
+		<German>Verdeckte Operationen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS2</Tag>
 		<English>Covert Operations II</English>
 		<French>Opérations sous couverture II</French>
+		<German>Verdeckte Operationen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVERT_OPERATIONS3</Tag>
 		<English>Covert Operations III</English>
 		<French>Opérations sous couverture III</French>
+		<German>Verdeckte Operationen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN1</Tag>
@@ -6613,11 +6236,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Gedrängt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Gedrängt</German>
 		<Italian>
 			<Text>Affollato</Text>
 			<Gender>Female</Gender>
@@ -6828,16 +6447,19 @@
 		<Tag>TXT_KEY_PROMOTION_DECOYS1</Tag>
 		<English>Decoys I</English>
 		<French>Leurre I</French>
+		<German>Lockvogel I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS2</Tag>
 		<English>Decoys II</English>
 		<French>Leurre II</French>
+		<German>Lockvogel II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS3</Tag>
 		<English>Decoys III</English>
 		<French>Leurre III</French>
+		<German>Lockvogel III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEDICATION</Tag>
@@ -6847,6 +6469,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Hingabe</German>
 		<Italian>
 			<Text>Dedizione</Text>
 			<Gender>Male</Gender>
@@ -6867,11 +6490,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Verteidigung I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Verteidigung I</German>
 		<Italian>
 			<Text>Difesa I</Text>
 			<Gender>Male</Gender>
@@ -6892,11 +6511,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Verteidigung II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Verteidigung II</German>
 		<Italian>
 			<Text>Difesa II</Text>
 			<Gender>Male</Gender>
@@ -6917,11 +6532,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Verteidigung III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Verteidigung III</German>
 		<Italian>
 			<Text>Difesa III</Text>
 			<Gender>Male</Gender>
@@ -6942,11 +6553,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Verteidigung IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Verteidigung IV</German>
 		<Italian>
 			<Text>Difesa IV</Text>
 			<Gender>Male</Gender>
@@ -6971,6 +6578,7 @@
 		<Tag>TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Defense only: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense uniquement: %D1_Change</French>
+		<German>[ICON_BULLET]Reine Verteidigung: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS1</Tag>
@@ -7027,11 +6635,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Wasserbombe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Wasserbombe</German>
 		<Italian>
 			<Text>Bombe di profondità</Text>
 			<Gender>Male</Gender>
@@ -7096,11 +6700,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie I</Text>
 			<Gender>Male</Gender>
@@ -7121,11 +6720,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control X</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie X</Text>
 			<Gender>Male</Gender>
@@ -7146,11 +6740,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie II</Text>
 			<Gender>Male</Gender>
@@ -7171,11 +6760,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie III</Text>
 			<Gender>Male</Gender>
@@ -7196,11 +6780,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie IV</Text>
 			<Gender>Male</Gender>
@@ -7221,11 +6800,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie V</Text>
 			<Gender>Male</Gender>
@@ -7246,11 +6820,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control VI</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie VI</Text>
 			<Gender>Male</Gender>
@@ -7271,11 +6840,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control VII</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie VII</Text>
 			<Gender>Male</Gender>
@@ -7296,11 +6860,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control VIII</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie VIII</Text>
 			<Gender>Male</Gender>
@@ -7321,11 +6880,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Disease Control IX</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Controllo malattie IX</Text>
 			<Gender>Male</Gender>
@@ -7422,6 +6976,7 @@
 		<Tag>TXT_KEY_PROMOTION_DOMAIN_CARGO_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER domains!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<German>[ICON_BULLET]ermöglicht den Transport von %s1_Change</German>
 		<Polish>[ICON_BULLET]Przystosowuje jednostkę do transportu %s1_Change innych jednostek</Polish>
 	</TEXT>
 	<TEXT>
@@ -7432,11 +6987,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Erstschlag I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Erstschlag I</German>
 		<Italian>
 			<Text>Addestramento I</Text>
 			<Gender>Male</Gender>
@@ -7457,11 +7008,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Erstschlag II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Erstschlag II</German>
 		<Italian>
 			<Text>Addestramento II</Text>
 			<Gender>Male</Gender>
@@ -7482,11 +7029,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Erstschlag III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Erstschlag III</German>
 		<Italian>
 			<Text>Addestramento III</Text>
 			<Gender>Male</Gender>
@@ -7507,11 +7050,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Erstschlag IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Erstschlag IV</German>
 		<Italian>
 			<Text>Addestramento IV</Text>
 			<Gender>Male</Gender>
@@ -7532,11 +7071,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Erstschlag V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Erstschlag V</German>
 		<Italian>
 			<Text>Addestramento V</Text>
 			<Gender>Male</Gender>
@@ -7743,37 +7278,25 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Emerging Competence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Emerging Competence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Emerging Competence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Wzrastające Kompetencje)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE1</Tag>
 		<English>Enclose I</English>
 		<French>Enclave I</French>
+		<German>Einschließen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE2</Tag>
 		<English>Enclose II</English>
 		<French>Enclave II</French>
+		<German>Einschließen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE3</Tag>
 		<English>Enclose III</English>
 		<French>Enclave III</French>
+		<German>Einschließen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE_TEXT</Tag>
@@ -7796,11 +7319,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Belagerungstechnik I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungstechnik I</German>
 		<Italian>
 			<Text>Tecniche d'assedio I</Text>
 			<Gender>Male</Gender>
@@ -7821,11 +7340,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Belagerungstechnik II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungstechnik II</German>
 		<Italian>
 			<Text>Tecniche d'assedio II</Text>
 			<Gender>Male</Gender>
@@ -7846,11 +7361,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Belagerungstechnik III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungstechnik III</German>
 		<Italian>
 			<Text>Tecniche d'assedio III</Text>
 			<Gender>Male</Gender>
@@ -7964,21 +7475,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Eroded Superiority)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Eroded Superiority)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Eroded Superiority)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Zerodowana Przewaga)</Polish>
 	</TEXT>
 	<TEXT>
@@ -8093,11 +7589,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Expansionist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Expansionist</German>
 		<Italian>
 			<Text>Espansionista</Text>
 			<Gender>Male</Gender>
@@ -8145,21 +7637,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Fallen Grace)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Fallen Grace)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Fallen Grace)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Utrata Łaski)</Polish>
 	</TEXT>
 	<TEXT>
@@ -8221,11 +7698,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Feld I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Kämpe I</German>
 		<Italian>
 			<Text>Combattimento in pianura I</Text>
 			<Gender>Male</Gender>
@@ -8246,11 +7719,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Feld II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Kämpe II</German>
 		<Italian>
 			<Text>Combattimento in pianura II</Text>
 			<Gender>Male</Gender>
@@ -8271,11 +7740,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Feld III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Kämpe III</German>
 		<Italian>
 			<Text>Combattimento in pianura III</Text>
 			<Gender>Male</Gender>
@@ -8359,11 +7824,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fire Ship</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Barca incendiaria</Text>
 			<Gender>Male</Gender>
@@ -8380,96 +7840,112 @@
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS</Tag>
 		<English>First Aid (Animals)</English>
 		<French>Premiers Secours (Animaux)</French>
+		<German>Erste Hilfe (Tiere)</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS1</Tag>
 		<English>First Aid (Animals) I</English>
 		<French>Premiers Secours (Animaux) I</French>
+		<German>Erste Hilfe (Tiere) I</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS2</Tag>
 		<English>First Aid (Animals) II</English>
 		<French>Premiers Secours (Animaux) II</French>
+		<German>Erste Hilfe (Tiere) II</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS3</Tag>
 		<English>First Aid (Animals) III</English>
 		<French>Premiers Secours (Animaux) III</French>
+		<German>Erste Hilfe (Tiere) III</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS4</Tag>
 		<English>First Aid (Animals) IV</English>
 		<French>Premiers Secours (Animaux) IV</French>
+		<German>Erste Hilfe (Tiere) IV</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS5</Tag>
 		<English>First Aid (Animals) V</English>
 		<French>Premiers Secours (Animaux) V</French>
+		<German>Erste Hilfe (Tiere) V</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS6</Tag>
 		<English>First Aid (Animals) VI</English>
 		<French>Premiers Secours (Animaux) VI</French>
+		<German>Erste Hilfe (Tiere) VI</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS7</Tag>
 		<English>First Aid (Animals) VII</English>
 		<French>Premiers Secours (Animaux) VII</French>
+		<German>Erste Hilfe (Tiere) VII</German>
 		<Polish>Pierwsza Pomoc (Zwierzęta) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE</Tag>
 		<English>First Aid (People)</English>
 		<French>Premiers Secours (Humains)</French>
+		<German>Erste Hilfe (Menschen)</German>
 		<Polish>Pierwsza Pomoc (Ludzie)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE1</Tag>
 		<English>First Aid (People) I</English>
 		<French>Premiers Secours (Humains) I</French>
+		<German>Erste Hilfe (Menschen) I</German>
 		<Polish>Pierwsza Pomoc (Ludzie) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE2</Tag>
 		<English>First Aid (People) II</English>
 		<French>Premiers Secours (Humains) II</French>
+		<German>Erste Hilfe (Menschen) II</German>
 		<Polish>Pierwsza Pomoc (Ludzie) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE3</Tag>
 		<English>First Aid (People) III</English>
 		<French>Premiers Secours (Humains) III</French>
+		<German>Erste Hilfe (Menschen) III</German>
 		<Polish>Pierwsza Pomoc (Ludzie) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE4</Tag>
 		<English>First Aid (People) IV</English>
 		<French>Premiers Secours (Humains) IV</French>
+		<German>Erste Hilfe (Menschen) IV</German>
 		<Polish>Pierwsza Pomoc (Ludzie) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE5</Tag>
 		<English>First Aid (People) V</English>
 		<French>Premiers Secours (Humains) V</French>
+		<German>Erste Hilfe (Menschen) V</German>
 		<Polish>Pierwsza Pomoc (Ludzie) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE6</Tag>
 		<English>First Aid (People) VI</English>
 		<French>Premiers Secours (Humains) VI</French>
+		<German>Erste Hilfe (Menschen) VI</German>
 		<Polish>Pierwsza Pomoc (Ludzie) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE7</Tag>
 		<English>First Aid (People) VII</English>
 		<French>Premiers Secours (Humains) VII</French>
+		<German>Erste Hilfe (Menschen) VII</German>
 		<Polish>Pierwsza Pomoc (Ludzie) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -8480,11 +7956,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Brennende Pfeile I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Brennende Pfeile I</German>
 		<Italian>
 			<Text>Frecce incendiarie I</Text>
 			<Gender>Male</Gender>
@@ -8505,11 +7977,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Brennende Pfeile II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Brennende Pfeile II</German>
 		<Italian>
 			<Text>Frecce incendiarie II</Text>
 			<Gender>Male</Gender>
@@ -8530,11 +7998,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Brennende Pfeile III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Brennende Pfeile III</German>
 		<Italian>
 			<Text>Frecce incendiarie III</Text>
 			<Gender>Male</Gender>
@@ -8555,11 +8019,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Flankenangriff I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flankenangriff I</German>
 		<Italian>
 			<Text>Attacco laterale I</Text>
 			<Gender>Male</Gender>
@@ -8580,11 +8040,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Flankenangriff II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flankenangriff II</German>
 		<Italian>
 			<Text>Attacco laterale II</Text>
 			<Gender>Male</Gender>
@@ -8605,11 +8061,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Flankenangriff III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flankenangriff III</German>
 		<Italian>
 			<Text>Attacco laterale III</Text>
 			<Gender>Male</Gender>
@@ -8725,11 +8177,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Forestry</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Waldläufer</German>
 		<Italian>
 			<Text>Guerriero della foresta</Text>
 			<Gender>Male</Gender>
@@ -8771,11 +8219,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Formation I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Formazione I</Text>
 			<Gender>Female</Gender>
@@ -8796,11 +8239,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Formation II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Formazione II</Text>
 			<Gender>Female</Gender>
@@ -8821,11 +8259,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Formation III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Formazione III</Text>
 			<Gender>Female</Gender>
@@ -8846,11 +8279,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fort Bonus I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Bonus Fortezza I</Text>
 			<Gender>Female</Gender>
@@ -8871,11 +8299,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fort Bonus II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Bonus Fortezza II</Text>
 			<Gender>Female</Gender>
@@ -8896,11 +8319,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fort Bonus III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Bonus Fortezza III</Text>
 			<Gender>Female</Gender>
@@ -8921,11 +8339,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fort Bonus IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Bonus Fortezza IV</Text>
 			<Gender>Female</Gender>
@@ -8946,11 +8359,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Fort Bonus V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Bonus Fortezza V</Text>
 			<Gender>Female</Gender>
@@ -9198,6 +8606,7 @@
 		<Tag>TXT_KEY_PROMOTION_GENTLEMEN</Tag>
 		<English>Gentlemen</English>
 		<French>Gentilhomme</French>
+		<German>Junzi</German>
 		<Spanish>Gentilhombre</Spanish>
 		<Polish>Dżentelmen</Polish>
 	</TEXT>
@@ -9317,7 +8726,7 @@
 		<Tag>TXT_KEY_PROMOTION_GREEN_WARDEN</Tag>
 		<English>Green Warden</English>
 		<French>Gardien vert</French>
-		<German>Waldläufer</German>
+		<German>Förster</German>
 		<Italian>Pollice verde</Italian>
 		<Spanish>Guarda forestal</Spanish>
 		<Polish>Zielony Opiekun</Polish>
@@ -9436,11 +8845,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Partisanenkampf I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Partisanenkampf I</German>
 		<Italian>
 			<Text>Partigiano I</Text>
 			<Gender>Male</Gender>
@@ -9461,11 +8866,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Partisanenkampf II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Partisanenkampf II</German>
 		<Italian>
 			<Text>Partigiano II</Text>
 			<Gender>Male</Gender>
@@ -9486,11 +8887,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Partisanenkampf III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Partisanenkampf III</German>
 		<Italian>
 			<Text>Partigiano III</Text>
 			<Gender>Male</Gender>
@@ -9511,11 +8908,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hail of Stones I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Hail of Stones I</Text>
 			<Gender>Male</Gender>
@@ -9536,11 +8928,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hail of Stones II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Hail of Stones II</Text>
 			<Gender>Male</Gender>
@@ -9561,11 +8948,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hail of Stones III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Hail of Stones III</Text>
 			<Gender>Male</Gender>
@@ -9664,11 +9046,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Heiler</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Heiler</German>
 		<Italian>
 			<Text>Guaritore</Text>
 			<Gender>Male</Gender>
@@ -9715,18 +9093,21 @@
 		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Adjacent Tiles %D2_Heals%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT des cases adjacentes %D2_Heals%%[SPACE]</French>
+		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf angrenzenden Feldern um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na sąsiednich polach %D2_Heals%%[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Same Tile %D2_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT de la même case %D2_Amount%%[SPACE]</French>
+		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf dem gleichen Feld um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na tym samym polu %D2_Amount%%[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT</Tag>
 		<English>[ICON_BULLET]Can heal %D1_Amount unit(s)/turn</English>
 		<French>[ICON_BULLET]Peut soigner %D1_Amount unité(s)/tour</French>
+		<German>[ICON_BULLET]kann %D1_Amount Einheiten pro Runde heilen</German>
 		<Polish>[ICON_BULLET]Jednostka może pomóc w leczeniu: %D1_Amount jednostek na turę.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9746,11 +9127,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Schwer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schwer</German>
 		<Italian>
 			<Text>Pesante</Text>
 			<Gender>Male</Gender>
@@ -9801,11 +9178,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Außergew#246;hnlich</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Außergewöhnlich</German>
 		<Italian>
 			<Text>Eccezionale</Text>
 			<Gender>Male</Gender>
@@ -9826,11 +9199,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Außerordentlich</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Außerordentlich</German>
 		<Italian>
 			<Text>Straordinario</Text>
 			<Gender>Male</Gender>
@@ -9851,11 +9220,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Held</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Held</German>
 		<Italian>
 			<Text>Eroe</Text>
 			<Gender>Male</Gender>
@@ -9876,11 +9241,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Legendärer Held</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Legendärer Held</German>
 		<Italian>
 			<Text>Eroe leggendario</Text>
 			<Gender>Male</Gender>
@@ -9901,11 +9262,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Avatar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Avatar</Text>
 			<Gender>Male</Gender>
@@ -9931,6 +9287,7 @@
 		<Tag>TXT_KEY_PROMOTION_HEROIC2</Tag>
 		<English>Heroic II</English>
 		<French>Héroique II</French>
+		<German>Heldenhaft II</German>
 		<Italian>Eroe II</Italian>
 		<Spanish>Heroico II</Spanish>
 		<Polish>Bohater II</Polish>
@@ -10052,11 +9409,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Blitzüberfall</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Überfall</German>
 		<Italian>
 			<Text>Mordi e fuggi</Text>
 			<Gender>Male</Gender>
@@ -10098,7 +9451,7 @@
 		<Tag>TXT_KEY_PROMOTION_HOLY_TRINITY</Tag>
 		<English>Holy Trinity</English>
 		<French>Sainte Trinité</French>
-		<German>Heilige Dreifaltigkeit</German>
+		<German>Trimurti</German>
 		<Italian>Santa trinità</Italian>
 		<Spanish>Santa Trinidad</Spanish>
 		<Polish>Trójca Święta</Polish>
@@ -10111,16 +9464,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Whippet MKA Horde-Bonus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Whippet MKA Horde bonus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
 		<Spanish>
 			<Text>Bonificación por horda de "Whippet MKA"</Text>
 			<Gender>Male</Gender>
@@ -10136,11 +9479,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ululato</Text>
 			<Gender>Male</Gender>
@@ -10157,6 +9495,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER1</Tag>
 		<English>Hunter I</English>
 		<French>Chasseur I</French>
+		<German>Jäger I</German>
 		<Spanish>Cazador I</Spanish>
 		<Polish>Łowca I</Polish>
 	</TEXT>
@@ -10164,6 +9503,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER2</Tag>
 		<English>Hunter II</English>
 		<French>Chasseur II</French>
+		<German>Jäger II</German>
 		<Spanish>Cazador II</Spanish>
 		<Polish>Łowca II</Polish>
 	</TEXT>
@@ -10171,6 +9511,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER3</Tag>
 		<English>Hunter III</English>
 		<French>Chasseur III</French>
+		<German>Jäger III</German>
 		<Spanish>Cazador III</Spanish>
 		<Polish>Łowca III</Polish>
 	</TEXT>
@@ -10178,6 +9519,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER4</Tag>
 		<English>Hunter IV</English>
 		<French>Chasseur IV</French>
+		<German>Jäger IV</German>
 		<Spanish>Cazador IV</Spanish>
 		<Polish>Łowca IV</Polish>
 	</TEXT>
@@ -10185,6 +9527,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER5</Tag>
 		<English>Hunter V</English>
 		<French>Chasseur V</French>
+		<German>Jäger V</German>
 		<Spanish>Cazador V</Spanish>
 		<Polish>Łowca V</Polish>
 	</TEXT>
@@ -10192,6 +9535,7 @@
 		<Tag>TXT_KEY_PROMOTION_HUNTER_GREAT</Tag>
 		<English>Hunter IV</English>
 		<French>Chasseur IV</French>
+		<German>Jäger IV</German>
 		<Spanish>Cazador IV</Spanish>
 		<Polish>Łowca IV</Polish>
 	</TEXT>
@@ -10203,11 +9547,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunting Dog</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da caccia I</Text>
 			<Gender>Male</Gender>
@@ -10228,11 +9567,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lose Formation</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da caccia II</Text>
 			<Gender>Male</Gender>
@@ -10253,11 +9587,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da caccia III</Text>
 			<Gender>Male</Gender>
@@ -10303,11 +9632,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunt Down I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stanatore I</Text>
 			<Gender>Male</Gender>
@@ -10328,11 +9652,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunt Down II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stanatore II</Text>
 			<Gender>Male</Gender>
@@ -10353,11 +9672,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunt Down III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stanatore III</Text>
 			<Gender>Male</Gender>
@@ -10378,11 +9692,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunt Down IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stanatore IV</Text>
 			<Gender>Male</Gender>
@@ -10403,11 +9712,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Hunt Down V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stanatore V</Text>
 			<Gender>Male</Gender>
@@ -10480,11 +9784,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ruhm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ruhm I</German>
 		<Italian>
 			<Text>Glorioso I</Text>
 			<Gender>Male</Gender>
@@ -10505,11 +9805,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ruhm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ruhm II</German>
 		<Italian>
 			<Text>Glorioso II</Text>
 			<Gender>Male</Gender>
@@ -10530,11 +9826,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ruhm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Ruhm III</German>
 		<Italian>
 			<Text>Glorioso III</Text>
 			<Gender>Male</Gender>
@@ -10555,11 +9847,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Imperial Guard</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Guardia imperiale</Text>
 			<Gender>Male</Gender>
@@ -10635,7 +9922,7 @@
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
 		<English>Industry Espionage</English>
 		<French>Espionnage Industriel</French>
-		<German>Industrie-Spion</German>
+		<German>Industriespionage</German>
 		<Italian>Spionaggio industriale</Italian>
 		<Polish>Szpiegostwo Przemysłowe</Polish>
 	</TEXT>
@@ -10643,7 +9930,7 @@
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]Plündert 4% der feindlichen [ICON_RESEARCH] nach einem Sieg im Kampf</German>
+		<German>[ICON_BULLET]erbeutet 4% der feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 	</TEXT>
@@ -10816,11 +10103,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Abfangen I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Abfangen I</German>
 		<Italian>
 			<Text>Intercettazione I</Text>
 			<Gender>Female</Gender>
@@ -10841,11 +10124,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Abfangen II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Abfangen II</German>
 		<Italian>
 			<Text>Intercettazione II</Text>
 			<Gender>Female</Gender>
@@ -10866,11 +10145,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Abfangen III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Abfangen III</German>
 		<Italian>
 			<Text>Intercettazione III</Text>
 			<Gender>Female</Gender>
@@ -10913,11 +10188,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Iron Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in ferro</Text>
 			<Gender>Male</Gender>
@@ -10938,11 +10208,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Iron Chainmail</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cotta di maglia in ferro</Text>
 			<Gender>Male</Gender>
@@ -10963,11 +10228,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Iron-Tipped Ammunition</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Punte di ferro</Text>
 			<Gender>Male</Gender>
@@ -10988,11 +10248,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Iron Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi di ferro</Text>
 			<Gender>Male</Gender>
@@ -11018,21 +10273,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Jaded Decadence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Jaded Decadence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Jaded Decadence)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Dekadencja)</Polish>
 	</TEXT>
 	<TEXT>
@@ -11133,21 +10373,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lead Storm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lead Storm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lead Storm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Grad Ołowiu I</Polish>
 	</TEXT>
 	<TEXT>
@@ -11158,21 +10383,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lead Storm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lead Storm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lead Storm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Grad Ołowiu II</Polish>
 	</TEXT>
 	<TEXT>
@@ -11183,21 +10393,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lead Storm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lead Storm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lead Storm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Grad Ołowiu III</Polish>
 	</TEXT>
 	<TEXT>
@@ -11208,21 +10403,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lead Storm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lead Storm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lead Storm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Grad Ołowiu IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -11233,21 +10413,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Learned Aggression)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Learned Aggression)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Learned Aggression)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Wyuczona Agresja)</Polish>
 	</TEXT>
 	<TEXT>
@@ -11258,11 +10423,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Leather Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in pelle</Text>
 			<Gender>Male</Gender>
@@ -11283,21 +10443,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Legendary Prowess)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Legendary Prowess)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Legendary Prowess)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Legendarna Sprawność)</Polish>
 	</TEXT>
 	<TEXT>
@@ -11310,7 +10455,7 @@
 		<Tag>TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT</Tag>
 		<English>[ICON_BULLET]Level Prerequisite: %d1_Change</English>
 		<French>[ICON_BULLET]Niveau pré-requis: %d1_Change</French>
-		<German>[ICON_BULLET]Erforderliche Stufe: %d1_Change</German>
+		<German>[ICON_BULLET]erforderliche Stufe: %d1_Change</German>
 		<Polish>[ICON_BULLET]Wymagany poziom: %d1_Change</Polish>
 	</TEXT>
 	<TEXT>
@@ -11321,11 +10466,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Leviathan I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Leviatano I</Text>
 			<Gender>Male</Gender>
@@ -11346,11 +10486,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Leviathan II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Leviatano II</Text>
 			<Gender>Male</Gender>
@@ -11371,11 +10506,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Leviathan III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Leviatano III</Text>
 			<Gender>Male</Gender>
@@ -11402,11 +10532,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Leicht</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Leicht</German>
 		<Italian>
 			<Text>Luce</Text>
 			<Gender>Male</Gender>
@@ -11445,11 +10571,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE1_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
@@ -11462,11 +10588,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE2_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life [NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
-		<French>[ICON_BULLET]+1 Vie [NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
-		<German>[ICON_BULLET]+1 Leben [NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
-		<Italian>[ICON_BULLET]+1 Vita [NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
-		<Spanish>[ICON_BULLET]+1 vida [NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
+		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
+		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
+		<Spanish>[ICON_BULLET]+1 vida[NEWLINE][ICON_BULLET]La unidad perderá el ascenso cuando muera</Spanish>
 		<Polish>[ICON_BULLET]+1 do życia[NEWLINE][ICON_BULLET]Jednostka utraci promocję przy przegranej walce</Polish>
 	</TEXT>
 	<TEXT>
@@ -11477,6 +10603,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Freiherr</German>
 		<Italian>
 			<Text>Signorotto locale</Text>
 			<Gender>Male</Gender>
@@ -11546,11 +10673,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lose Formation</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Lockere Formation</German>
 		<Italian>
 			<Text>Formazione sparsa</Text>
 			<Gender>Male</Gender>
@@ -11699,6 +10822,7 @@
 		<Tag>TXT_KEY_PROMOTION_MARAUDER</Tag>
 		<English>Marauder</English>
 		<French>Maraudeur</French>
+		<German>Marodeur</German>
 		<Italian>Predone</Italian>
 		<Polish>Maruder</Polish>
 	</TEXT>
@@ -11706,6 +10830,7 @@
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
+		<German>[ICON_BULLET]erbeutet 4% des feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
 	</TEXT>
@@ -11724,11 +10849,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Marsch</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Marsch</German>
 		<Italian>
 			<Text>Marcia</Text>
 			<Gender>Female</Gender>
@@ -11749,11 +10870,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scharfschütze I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Scharfschütze I</German>
 		<Italian>
 			<Text>Tiratore scelto I</Text>
 			<Gender>Male</Gender>
@@ -11774,11 +10891,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scharfschütze II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Scharfschütze II</German>
 		<Italian>
 			<Text>Tiratore scelto II</Text>
 			<Gender>Male</Gender>
@@ -11799,11 +10912,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scharfschütze III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Scharfschütze III</German>
 		<Italian>
 			<Text>Tiratore scelto III</Text>
 			<Gender>Male</Gender>
@@ -11884,11 +10993,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sanitäter I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter I</German>
 		<Italian>
 			<Text>Medico I</Text>
 			<Gender>Male</Gender>
@@ -11909,11 +11014,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sanitäter II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter II</German>
 		<Italian>
 			<Text>Medico II</Text>
 			<Gender>Male</Gender>
@@ -11934,11 +11035,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sanitäter III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter III</German>
 		<Italian>
 			<Text>Medico III</Text>
 			<Gender>Male</Gender>
@@ -11966,21 +11063,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Mega Beam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mega Beam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mega Beam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Mega Promień</Polish>
 	</TEXT>
 	<TEXT>
@@ -11991,11 +11073,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Schwere Hilfstruppe I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schwere Hilfstruppe I</German>
 		<Italian>
 			<Text>Sussidio Pesante I</Text>
 			<Gender>Female</Gender>
@@ -12016,11 +11094,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Schwere Hilfstruppe II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schwere Hilfstruppe II</German>
 		<Italian>
 			<Text>Sussidio Pesante II</Text>
 			<Gender>Female</Gender>
@@ -12041,11 +11115,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Schwere Hilfstruppe III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schwere Hilfstruppe III</German>
 		<Italian>
 			<Text>Sussidio Pesante III</Text>
 			<Gender>Female</Gender>
@@ -12066,11 +11136,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Söldner</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Söldner</German>
 		<Italian>
 			<Text>Mercenario</Text>
 			<Gender>Male</Gender>
@@ -12091,21 +11157,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Battalion)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Battalion)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Battalion)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zum Bataillon</German>
 		<Polish>Zgrupowanie (do Batalionu)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12116,21 +11168,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Billions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Billions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Billions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zu Milliarden</German>
 		<Polish>Zgrupowanie (do Miliardów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12141,21 +11179,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Clan)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Clan)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Clan)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zur Division</German>
 		<Polish>Zgrupowanie (do Klanu)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12166,21 +11190,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Company)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Company)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Company)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zur Kompanie</German>
 		<Polish>Zgrupowanie (do Kompanii)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12191,21 +11201,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Countless)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Countless)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Countless)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zu unzählig vielen</German>
 		<Polish>Zgrupowanie (do Niezliczonych)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12216,21 +11212,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Forces)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Forces)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Forces)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zum Regiment</German>
 		<Polish>Zgrupowanie (do Sił)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12241,21 +11223,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Horde)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Horde)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Horde)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zum Korps</German>
 		<Polish>Zgrupowanie (do Hordy)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12266,21 +11234,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Millions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Millions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Millions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zum Oberkommando</German>
 		<Polish>Zgrupowanie (do Milionów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12291,21 +11245,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Multitudes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Multitudes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Multitudes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zur Armee</German>
 		<Polish>Zgrupowanie (do Mnóstwa)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12316,21 +11256,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Party)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Party)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Party)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zur Gruppe</German>
 		<Polish>Zgrupowanie (do Grupy)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12341,21 +11267,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Squad)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Squad)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Squad)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zum Zug</German>
 		<Polish>Zgrupowanie (do Drużyny)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12366,21 +11278,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Size Up(Merged Into Trillions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Size Up(Merged Into Trillions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Up(Merged Into Trillions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Zusammenführen zu Trillionen</German>
 		<Polish>Zgrupowanie (do Trilionów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12469,11 +11367,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Mobilität</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Mobilität</German>
 		<Italian>
 			<Text>Mobilità</Text>
 			<Gender>Female</Gender>
@@ -12534,7 +11428,7 @@
 		<Tag>TXT_KEY_PROMOTION_MOUNTAIN_LEADER</Tag>
 		<English>Mountain Leader</English>
 		<French>Montagnard</French>
-		<German>Bergsteiger</German>
+		<German>Bergführer</German>
 		<Italian>Condottiero alpino</Italian>
 		<Spanish>Montañero experto</Spanish>
 		<Polish>Wielki Alpinista</Polish>
@@ -12547,11 +11441,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Mobile Hilfe I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Mobile Hilfe I</German>
 		<Italian>
 			<Text>Sussidio Di Mobilit_ I</Text>
 			<Gender>Female</Gender>
@@ -12572,11 +11462,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Mobile Hilfe II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Mobile Hilfe II</German>
 		<Italian>
 			<Text>Sussidio Di Mobilit_ II</Text>
 			<Gender>Female</Gender>
@@ -12597,11 +11483,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Mobile Hilfe III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Mobile Hilfe III</German>
 		<Italian>
 			<Text>Sussidio Di Mobilit_ III</Text>
 			<Gender>Female</Gender>
@@ -12634,6 +11516,7 @@
 		<Tag>TXT_KEY_PROMOTION_MUJAHID</Tag>
 		<English>Mujahid</English>
 		<French>Mujahidin</French>
+		<German>Mudschahed</German>
 		<Spanish>Muyahidín</Spanish>
 		<Polish>Mudżahedin</Polish>
 	</TEXT>
@@ -12676,11 +11559,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Naniten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Naniten</German>
 		<Italian>
 			<Text>Nanoidi</Text>
 			<Gender>Male</Gender>
@@ -12710,11 +11589,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Nationalist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Nazionalista</Text>
 			<Gender>Male</Gender>
@@ -12735,21 +11609,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Natural Talent)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Natural Talent)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Natural Talent)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Naturalny talent)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12760,11 +11619,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Navigation I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Navigazione I</Text>
 			<Gender>Female</Gender>
@@ -12785,11 +11639,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Navigation II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Navigazione II</Text>
 			<Gender>Female</Gender>
@@ -12832,6 +11681,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen I</German>
 		<Polish>Środki Nie-Śmiercionośne I</Polish>
 	</TEXT>
 	<TEXT>
@@ -12842,6 +11692,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen II</German>
 		<Polish>Środki Nie-Śmiercionośne II</Polish>
 	</TEXT>
 	<TEXT>
@@ -12852,6 +11703,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen III</German>
 		<Polish>Środki Nie-Śmiercionośne III</Polish>
 	</TEXT>
 	<TEXT>
@@ -12862,6 +11714,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen IV</German>
 		<Polish>Środki Nie-Śmiercionośne IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -12872,6 +11725,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Am Leben lassen V</German>
 		<Polish>Środki Nie-Śmiercionośne V</Polish>
 	</TEXT>
 	<TEXT>
@@ -12934,11 +11788,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Aufklärer</German>
 		<Italian>
 			<Text>Osservatori d'avanscoperta</Text>
 			<Gender>Male</Gender>
@@ -12959,11 +11809,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Obsidian Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi di ossidiana</Text>
 			<Gender>Male</Gender>
@@ -13011,6 +11856,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Spezialauftrag</German>
 		<Italian>
 			<Text>Commissione degli ufficiali</Text>
 			<Gender>Male</Gender>
@@ -13031,21 +11877,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Once Great)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Once Great)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Once Great)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Miniona Chwała)</Polish>
 	</TEXT>
 	<TEXT>
@@ -13105,7 +11936,7 @@
 		<Tag>TXT_KEY_PROMOTION_ORDER_OF_ORMAZD</Tag>
 		<English>Order of Ormazd</English>
 		<French>Ordre de Ormazd</French>
-		<German>Orden von Ormazd</German>
+		<German>Orden von Ormusd</German>
 		<Italian>Ordine di Ormazd</Italian>
 		<Spanish>Orden de Ormazd</Spanish>
 		<Polish>Zakon Ormuzda</Polish>
@@ -13141,6 +11972,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Überwältigen</German>
 		<Italian>
 			<Text>Sopraffazione</Text>
 			<Gender>Male</Gender>
@@ -13187,11 +12019,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pack Hunter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Branco da caccia I</Text>
 			<Gender>Male</Gender>
@@ -13212,11 +12039,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lose Formation</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Branco da caccia II</Text>
 			<Gender>Male</Gender>
@@ -13237,11 +12059,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Branco da caccia III</Text>
 			<Gender>Male</Gender>
@@ -13268,21 +12085,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Paralytic Personality)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Paralytic Personality)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Paralytic Personality)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Paralityczna Osobowość)</Polish>
 	</TEXT>
 	<TEXT>
@@ -13373,11 +12175,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vaterland I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Patriot I</German>
 		<Italian>
 			<Text>Patriota I</Text>
 			<Gender>Male</Gender>
@@ -13398,11 +12196,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vaterland II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Patriot II</German>
 		<Italian>
 			<Text>Patriota II</Text>
 			<Gender>Male</Gender>
@@ -13423,11 +12217,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vaterland III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Patriot III</German>
 		<Italian>
 			<Text>Patriota III</Text>
 			<Gender>Male</Gender>
@@ -13444,7 +12234,7 @@
 		<Tag>TXT_KEY_PROMOTION_PATROL</Tag>
 		<English>Patrol I</English>
 		<French>Patrouille I</French>
-		<German>Patroullieren I</German>
+		<German>Patrouillieren I</German>
 		<Italian>Pattuglia I</Italian>
 		<Spanish>Patrulla I</Spanish>
 	</TEXT>
@@ -13452,7 +12242,7 @@
 		<Tag>TXT_KEY_PROMOTION_PATROL2</Tag>
 		<English>Patrol II</English>
 		<French>Patrouille II</French>
-		<German>Patroullieren II</German>
+		<German>Patrouillieren II</German>
 		<Italian>Pattuglia II</Italian>
 		<Spanish>Patrulla II</Spanish>
 	</TEXT>
@@ -13460,7 +12250,7 @@
 		<Tag>TXT_KEY_PROMOTION_PATROL3</Tag>
 		<English>Patrol III</English>
 		<French>Patrouille III</French>
-		<German>Patroullieren III</German>
+		<German>Patrouillieren III</German>
 		<Italian>Pattuglia III</Italian>
 		<Spanish>Patrulla III</Spanish>
 	</TEXT>
@@ -13475,7 +12265,7 @@
 		<Tag>TXT_KEY_PROMOTION_PHARAOH</Tag>
 		<English>Pharaoh's Propaganda</English>
 		<French>Propagande du Pharaon</French>
-		<German>Pharaohs Propaganda</German>
+		<German>Sachmets Zorn</German>
 		<Italian>Propaganda del faraone</Italian>
 		<Spanish>Propaganda del faraón</Spanish>
 		<Polish>Błogosławieństwo Faraona</Polish>
@@ -13488,11 +12278,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Zangenangriff I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Zangenangriff I</German>
 		<Italian>
 			<Text>Accerchiamento I</Text>
 			<Gender>Male</Gender>
@@ -13513,11 +12299,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Zangenangriff II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Zangenangriff II</German>
 		<Italian>
 			<Text>Accerchiamento II</Text>
 			<Gender>Male</Gender>
@@ -13538,11 +12320,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Zangenangriff III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Zangenangriff III</German>
 		<Italian>
 			<Text>Accerchiamento III</Text>
 			<Gender>Male</Gender>
@@ -13591,6 +12369,7 @@
 		<Tag>TXT_KEY_PROMOTION_POISON_TIPS</Tag>
 		<English>Poison Tips</English>
 		<French>Pointes empoisonnées</French>
+		<German>Gift</German>
 		<Italian>Punte avvelenate</Italian>
 		<Polish>Zatrute Groty</Polish>
 	</TEXT>
@@ -13728,21 +12507,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Power Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Power Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Power Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Promień Mocy I</Polish>
 	</TEXT>
 	<TEXT>
@@ -13753,21 +12517,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Power Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Power Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Power Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Promień Mocy II</Polish>
 	</TEXT>
 	<TEXT>
@@ -13883,6 +12632,7 @@
 		<Tag>TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT</Tag>
 		<English>[ICON_BULLET]Requires some invisibility to use</English>
 		<French>[ICON_BULLET]Requiert une capacité d'invisibilité</French>
+		<German>[ICON_BULLET]benötigt Unsichtbarkeit</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PRIME_TIMBER_ARMOR</Tag>
@@ -13892,11 +12642,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Wooden Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in legno</Text>
 			<Gender>Male</Gender>
@@ -13917,11 +12662,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Prime Timber Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi di legno pregiato</Text>
 			<Gender>Male</Gender>
@@ -13949,11 +12689,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Globale Operation I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Globale Operation I</German>
 		<Italian>
 			<Text>GPS I</Text>
 			<Gender>Male</Gender>
@@ -13974,11 +12710,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Globale Operation II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Globale Operation II</German>
 		<Italian>
 			<Text>GPS II</Text>
 			<Gender>Male</Gender>
@@ -13999,11 +12731,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Globale Operation III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Globale Operation III</German>
 		<Italian>
 			<Text>GPS III</Text>
 			<Gender>Male</Gender>
@@ -14063,21 +12791,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pyrotechnics I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pyrotechnics I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pyrotechnics I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pirotechnika I</Polish>
 	</TEXT>
 	<TEXT>
@@ -14088,21 +12801,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pyrotechnics II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pyrotechnics II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pyrotechnics II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pirotechnika II</Polish>
 	</TEXT>
 	<TEXT>
@@ -14113,21 +12811,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Pyrotechnics III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pyrotechnics III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pyrotechnics III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pirotechnika III</Polish>
 	</TEXT>
 	<TEXT>
@@ -14159,11 +12842,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Racing Dog</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da corsa I</Text>
 			<Gender>Male</Gender>
@@ -14184,11 +12862,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lose Formation</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da corsa II</Text>
 			<Gender>Male</Gender>
@@ -14209,11 +12882,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da corsa III</Text>
 			<Gender>Male</Gender>
@@ -14258,21 +12926,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rain of Bolts I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rain of Bolts I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rain of Bolts I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Bełtów I</Polish>
 	</TEXT>
 	<TEXT>
@@ -14283,21 +12936,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rain of Bolts II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rain of Bolts II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rain of Bolts II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Bełtów II</Polish>
 	</TEXT>
 	<TEXT>
@@ -14308,21 +12946,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rain of Bolts III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rain of Bolts III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rain of Bolts III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Bełtów III</Polish>
 	</TEXT>
 	<TEXT>
@@ -14340,21 +12963,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Smash I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Smash I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Smash I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Uderzenie Tarana I</Polish>
 	</TEXT>
 	<TEXT>
@@ -14365,21 +12973,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Smash II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Smash II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Smash II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Uderzenie Tarana II</Polish>
 	</TEXT>
 	<TEXT>
@@ -14390,21 +12983,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Smash III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Smash III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Smash III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Uderzenie Tarana III</Polish>
 	</TEXT>
 	<TEXT>
@@ -14415,21 +12993,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Smash IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Smash IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Smash IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Uderzenie Tarana IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -14440,21 +13003,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Smash V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Smash V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Smash V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Uderzenie Tarana V</Polish>
 	</TEXT>
 	<TEXT>
@@ -14465,21 +13013,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Thrust I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Thrust I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Thrust I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pchnięcie Tarana I</Polish>
 	</TEXT>
 	<TEXT>
@@ -14490,21 +13023,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Thrust II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Thrust II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Thrust II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pchnięcie Tarana II</Polish>
 	</TEXT>
 	<TEXT>
@@ -14515,21 +13033,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Thrust III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Thrust III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Thrust III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pchnięcie Tarana III</Polish>
 	</TEXT>
 	<TEXT>
@@ -14540,21 +13043,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Thrust IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Thrust IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Thrust IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pchnięcie Tarana IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -14565,21 +13053,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Ram Thrust V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ram Thrust V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ram Thrust V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Pchnięcie Tarana V</Polish>
 	</TEXT>
 	<TEXT>
@@ -14590,11 +13063,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Reichweite I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Reichweite I</German>
 		<Italian>
 			<Text>Raggio d'azione I</Text>
 			<Gender>Male</Gender>
@@ -14615,11 +13084,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Reichweite II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Reichweite II</German>
 		<Italian>
 			<Text>Raggio d'azione II</Text>
 			<Gender>Male</Gender>
@@ -14668,48 +13133,56 @@
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH</Tag>
 		<English>Recover (Tech)</English>
 		<French>Récupération (Tech)</French>
+		<German>Instandsetzung (Technologie)</German>
 		<Polish>Odzyskać (Tech)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH1</Tag>
 		<English>Recover (Tech) I</English>
 		<French>Récupération (Tech) I</French>
+		<German>Instandsetzung (Technologie) I</German>
 		<Polish>Odzyskać (Tech) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH2</Tag>
 		<English>Recover (Tech) II</English>
 		<French>Récupération (Tech) II</French>
+		<German>Instandsetzung (Technologie) II</German>
 		<Polish>Odzyskać (Tech) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH3</Tag>
 		<English>Recover (Tech) III</English>
 		<French>Récupération (Tech) III</French>
+		<German>Instandsetzung (Technologie) III</German>
 		<Polish>Odzyskać (Tech) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH4</Tag>
 		<English>Recover (Tech) IV</English>
 		<French>Récupération (Tech) IV</French>
+		<German>Instandsetzung (Technologie) IV</German>
 		<Polish>Odzyskać (Tech) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH5</Tag>
 		<English>Recover (Tech) V</English>
 		<French>Récupération (Tech) V</French>
+		<German>Instandsetzung (Technologie) V</German>
 		<Polish>Odzyskać (Tech) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH6</Tag>
 		<English>Recover (Tech) VI</English>
 		<French>Récupération (Tech) VI</French>
+		<German>Instandsetzung (Technologie) VI</German>
 		<Polish>Odzyskać (Tech) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RECOVER_TECH7</Tag>
 		<English>Recover (Tech) VII</English>
 		<French>Récupération (Tech) VII</French>
+		<German>Instandsetzung (Technologie) VII</German>
 		<Polish>Odzyskać (Tech) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -14799,7 +13272,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR1</Tag>
 		<English>Repair I</English>
 		<French>Réparation I</French>
-		<German>Reparieren I</German>
+		<German>Reparatur I</German>
 		<Italian>Riparazioni I</Italian>
 		<Spanish>Reparación I</Spanish>
 		<Polish>Naprawa I</Polish>
@@ -14808,7 +13281,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR2</Tag>
 		<English>Repair II</English>
 		<French>Réparation II</French>
-		<German>Reparieren II</German>
+		<German>Reparatur II</German>
 		<Italian>Riparazioni II</Italian>
 		<Spanish>Reparación II</Spanish>
 		<Polish>Naprawa II</Polish>
@@ -14817,7 +13290,7 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR3</Tag>
 		<English>Repair III</English>
 		<French>Réparation III</French>
-		<German>Reparieren III</German>
+		<German>Reparatur III</German>
 		<Italian>Riparazioni III</Italian>
 		<Spanish>Reparación III</Spanish>
 		<Polish>Naprawa III</Polish>
@@ -14826,144 +13299,168 @@
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT</Tag>
 		<English>Repair (Aircraft)</English>
 		<French>Réparation (Avions)</French>
+		<German>Reparatur (Flugzeuge)</German>
 		<Polish>Naprawa (Samoloty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT1</Tag>
 		<English>Repair (Aircraft) I</English>
 		<French>Réparation (Avions) I</French>
+		<German>Reparatur (Flugzeuge) I</German>
 		<Polish>Naprawa (Samoloty) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT2</Tag>
 		<English>Repair (Aircraft) II</English>
 		<French>Réparation (Avions) II</French>
+		<German>Reparatur (Flugzeuge) II</German>
 		<Polish>Naprawa (Samoloty) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT3</Tag>
 		<English>Repair (Aircraft) III</English>
 		<French>Réparation (Avions) III</French>
+		<German>Reparatur (Flugzeuge) III</German>
 		<Polish>Naprawa (Samoloty) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT4</Tag>
 		<English>Repair (Aircraft) IV</English>
 		<French>Réparation (Avions) IV</French>
+		<German>Reparatur (Flugzeuge) IV</German>
 		<Polish>Naprawa (Samoloty) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT5</Tag>
 		<English>Repair (Aircraft) V</English>
 		<French>Réparation (Avions) V</French>
+		<German>Reparatur (Flugzeuge) V</German>
 		<Polish>Naprawa (Samoloty) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT6</Tag>
 		<English>Repair (Aircraft) VI</English>
 		<French>Réparation (Avions) VI</French>
+		<German>Reparatur (Flugzeuge) VI</German>
 		<Polish>Naprawa (Samoloty) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT7</Tag>
 		<English>Repair (Aircraft) VII</English>
 		<French>Réparation (Avions) VII</French>
+		<German>Reparatur (Flugzeuge) VII</German>
 		<Polish>Naprawa (Samoloty) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL</Tag>
 		<English>Repair (Mechanical)</English>
 		<French>Réparation (Véhicule)</French>
+		<German>Reparatur (Maschinen)</German>
 		<Polish>Naprawa (Pojazdy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL1</Tag>
 		<English>Repair (Mechanical) I</English>
 		<French>Réparation (Véhicule) I</French>
+		<German>Reparatur (Maschinen) I</German>
 		<Polish>Naprawa (Pojazdy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL2</Tag>
 		<English>Repair (Mechanical) II</English>
 		<French>Réparation (Véhicule) II</French>
+		<German>Reparatur (Maschinen) II</German>
 		<Polish>Naprawa (Pojazdy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL3</Tag>
 		<English>Repair (Mechanical) III</English>
 		<French>Réparation (Véhicule) III</French>
+		<German>Reparatur (Maschinen) III</German>
 		<Polish>Naprawa (Pojazdy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL4</Tag>
 		<English>Repair (Mechanical) IV</English>
 		<French>Réparation (Véhicule) IV</French>
+		<German>Reparatur (Maschinen) IV</German>
 		<Polish>Naprawa (Pojazdy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL5</Tag>
 		<English>Repair (Mechanical) V</English>
 		<French>Réparation (Véhicule) V</French>
+		<German>Reparatur (Maschinen) V</German>
 		<Polish>Naprawa (Pojazdy) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL6</Tag>
 		<English>Repair (Mechanical) VI</English>
 		<French>Réparation (Véhicule) VI</French>
+		<German>Reparatur (Maschinen) VI</German>
 		<Polish>Naprawa (Pojazdy) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_MECHANICAL7</Tag>
 		<English>Repair (Mechanical) VII</English>
 		<French>Réparation (Véhicule) VII</French>
+		<German>Reparatur (Maschinen) VII</German>
 		<Polish>Naprawa (Pojazdy) VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL</Tag>
 		<English>Repair (Naval)</English>
 		<French>Réparation (Navire)</French>
+		<German>Reparatur (Schiffe)</German>
 		<Polish>Naprawa (Okręty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL1</Tag>
 		<English>Repair (Naval) I</English>
 		<French>Réparation (Navire) I</French>
+		<German>Reparatur (Schiffe) I</German>
 		<Polish>Naprawa (Okręty) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL2</Tag>
 		<English>Repair (Naval) II</English>
 		<French>Réparation (Navire) II</French>
+		<German>Reparatur (Schiffe) II</German>
 		<Polish>Naprawa (Okręty) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL3</Tag>
 		<English>Repair (Naval) III</English>
 		<French>Réparation (Navire) III</French>
+		<German>Reparatur (Schiffe) III</German>
 		<Polish>Naprawa (Okręty) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL4</Tag>
 		<English>Repair (Naval) IV</English>
 		<French>Réparation (Navire) IV</French>
+		<German>Reparatur (Schiffe) IV</German>
 		<Polish>Naprawa (Okręty) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL5</Tag>
 		<English>Repair (Naval) V</English>
 		<French>Réparation (Navire) V</French>
+		<German>Reparatur (Schiffe) V</German>
 		<Polish>Naprawa (Okręty) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL6</Tag>
 		<English>Repair (Naval) VI</English>
 		<French>Réparation (Navire) VI</French>
+		<German>Reparatur (Schiffe) VI</German>
 		<Polish>Naprawa (Okręty) VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL7</Tag>
 		<English>Repair (Naval) VII</English>
 		<French>Réparation (Navire) VII</French>
+		<German>Reparatur (Schiffe) VII</German>
 		<Polish>Naprawa (Okręty) VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -14997,11 +13494,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da soccorso I</Text>
 			<Gender>Male</Gender>
@@ -15022,11 +13514,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da soccorso II</Text>
 			<Gender>Male</Gender>
@@ -15047,11 +13534,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cane da soccorso III</Text>
 			<Gender>Male</Gender>
@@ -15262,11 +13744,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rhino Hide Armor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Corazza in pelle di rinoceronte</Text>
 			<Gender>Male</Gender>
@@ -15287,11 +13764,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>T72 Flusskampf-Bonus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>T72 Flusskampf-Bonus</German>
 		<Italian>
 			<Text>Bonus di combattimento T72 sui fiumi</Text>
 			<Gender>Male</Gender>
@@ -15319,21 +13792,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rolling Thunder I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rolling Thunder I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rolling Thunder I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Piorun Kulisty I</Polish>
 	</TEXT>
 	<TEXT>
@@ -15344,21 +13802,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rolling Thunder II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rolling Thunder II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rolling Thunder II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Piorun Kulisty II</Polish>
 	</TEXT>
 	<TEXT>
@@ -15369,21 +13812,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Rolling Thunder III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rolling Thunder III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rolling Thunder III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Piorun Kulisty III</Polish>
 	</TEXT>
 	<TEXT>
@@ -15415,6 +13843,7 @@
 		<Tag>TXT_KEY_PROMOTION_RUGGED1_DESC</Tag>
 		<English>Rugged Combat I</English>
 		<French>Terrain Désolé I</French>
+		<German>Über Stock und Stein I</German>
 		<Italian>Combattente del terreno aspro I</Italian>
 		<Spanish>Combate en terreno escabroso I</Spanish>
 		<Polish>Walka na Pustkowiach I</Polish>
@@ -15423,6 +13852,7 @@
 		<Tag>TXT_KEY_PROMOTION_RUGGED2_DESC</Tag>
 		<English>Rugged Combat II</English>
 		<French>Terrain Désolé II</French>
+		<German>Über Stock und Stein II</German>
 		<Italian>Combattente del terreno aspro II</Italian>
 		<Spanish>Combate en terreno escabroso II</Spanish>
 		<Polish>Walka na Pustkowiach II</Polish>
@@ -15431,6 +13861,7 @@
 		<Tag>TXT_KEY_PROMOTION_RUGGED3_DESC</Tag>
 		<English>Rugged Combat III</English>
 		<French>Terrain Désolé III</French>
+		<German>Über Stock und Stein III</German>
 		<Italian>Combattente del terreno aspro III</Italian>
 		<Spanish>Combate en terreno escabroso III</Spanish>
 		<Polish>Walka na Pustkowiach III</Polish>
@@ -15459,21 +13890,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Savage Beast I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Savage Beast I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Savage Beast I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Dzika Bestia I</Polish>
 	</TEXT>
 	<TEXT>
@@ -15484,21 +13900,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Savage Beast II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Savage Beast II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Savage Beast II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Dzika Bestia II</Polish>
 	</TEXT>
 	<TEXT>
@@ -15509,21 +13910,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Savage Beast III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Savage Beast III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Savage Beast III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Dzika Bestia III</Polish>
 	</TEXT>
 	<TEXT>
@@ -15534,21 +13920,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Savage Beast IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Savage Beast IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Savage Beast IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Dzika Bestia IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -15559,21 +13930,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Savage Beast V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Savage Beast V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Savage Beast V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Dzika Bestia V</Polish>
 	</TEXT>
 	<TEXT>
@@ -15584,21 +13940,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scorched Earth I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Scorched Earth I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Scorched Earth I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Spalona Ziemia I</Polish>
 	</TEXT>
 	<TEXT>
@@ -15609,21 +13950,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scorched Earth II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Scorched Earth II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Scorched Earth II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Spalona Ziemia II</Polish>
 	</TEXT>
 	<TEXT>
@@ -15634,21 +13960,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Scorched Earth III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Scorched Earth III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Scorched Earth III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Spalona Ziemia III</Polish>
 	</TEXT>
 	<TEXT>
@@ -15666,11 +13977,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hilfsspäher I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hilfsspäher I</German>
 		<Italian>
 			<Text>Sussidio Dell'Esploratore I</Text>
 			<Gender>Female</Gender>
@@ -15691,11 +13998,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hilfsspäher II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hilfsspäher II</German>
 		<Italian>
 			<Text>Sussidio Dell'Esploratore II</Text>
 			<Gender>Female</Gender>
@@ -15716,11 +14019,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hilfsspäher III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Hilfsspäher III</German>
 		<Italian>
 			<Text>Sussidio Dell'Esploratore III</Text>
 			<Gender>Female</Gender>
@@ -15741,11 +14040,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Seemannschaft I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Seefahrtskunst I</German>
 		<Italian>
 			<Text>Marinaio I</Text>
 			<Gender>Male</Gender>
@@ -15766,11 +14061,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Seemannschaft II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Seefahrtskunst II</German>
 		<Italian>
 			<Text>Marinaio II</Text>
 			<Gender>Male</Gender>
@@ -15791,11 +14082,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Seemannschaft III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Seefahrtskunst III</German>
 		<Italian>
 			<Text>Marinaio III</Text>
 			<Gender>Male</Gender>
@@ -15816,11 +14103,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Meereskreatur I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Meereskreatur I</German>
 		<Italian>
 			<Text>Creatura marina I</Text>
 			<Gender>Male</Gender>
@@ -15841,11 +14124,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Meereskreatur II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Meereskreatur II</German>
 		<Italian>
 			<Text>Creatura marina II</Text>
 			<Gender>Male</Gender>
@@ -16130,11 +14409,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shadowstalker I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cacciatore di ombre I</Text>
 			<Gender>Male</Gender>
@@ -16155,11 +14429,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shadowstalker II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cacciatore di ombre II</Text>
 			<Gender>Male</Gender>
@@ -16180,11 +14449,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shadowstalker III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Cacciatore di ombre III</Text>
 			<Gender>Male</Gender>
@@ -16232,11 +14496,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Schock I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schock I</German>
 		<Italian>
 			<Text>Shock I</Text>
 			<Gender>Male</Gender>
@@ -16257,11 +14517,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Schock II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schock II</German>
 		<Italian>
 			<Text>Shock II</Text>
 			<Gender>Male</Gender>
@@ -16282,11 +14538,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Schock III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Schock III</German>
 		<Italian>
 			<Text>Shock III</Text>
 			<Gender>Male</Gender>
@@ -16314,21 +14566,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shrapnel Shower I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Shrapnel Shower I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Shrapnel Shower I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Odłamków I</Polish>
 	</TEXT>
 	<TEXT>
@@ -16339,21 +14576,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shrapnel Shower II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Shrapnel Shower II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Shrapnel Shower II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Odłamków II</Polish>
 	</TEXT>
 	<TEXT>
@@ -16364,21 +14586,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Shrapnel Shower III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Shrapnel Shower III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Shrapnel Shower III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Deszcz Odłamków III</Polish>
 	</TEXT>
 	<TEXT>
@@ -16413,11 +14620,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Belagerung-Hilfe I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungshilfe I</German>
 		<Italian>
 			<Text>Sussidio Di Assedio I</Text>
 			<Gender>Female</Gender>
@@ -16438,11 +14641,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Belagerung-Hilfe II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungshilfe II</German>
 		<Italian>
 			<Text>Sussidio Di Assedio II</Text>
 			<Gender>Female</Gender>
@@ -16463,11 +14662,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Belagerung-Hilfe III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Belagerungshilfe III</German>
 		<Italian>
 			<Text>Sussidio Di Assedio III</Text>
 			<Gender>Female</Gender>
@@ -16488,11 +14683,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Silver Tongue I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Lingua d'argento I</Text>
 			<Gender>Male</Gender>
@@ -16513,11 +14703,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Silver Tongue II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Lingua d'argento II</Text>
 			<Gender>Male</Gender>
@@ -16538,11 +14723,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Silver Tongue III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Lingua d'argento III</Text>
 			<Gender>Male</Gender>
@@ -16563,21 +14743,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Simply Average)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Simply Average)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Simply Average)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Poprostu Przeciętny)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16691,21 +14856,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Slightly Entropic)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Slightly Entropic)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Slightly Entropic)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Z lekka chaotyczny)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16757,21 +14907,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sniper Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sniper Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sniper Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Snajper</Polish>
 	</TEXT>
 	<TEXT>
@@ -16782,21 +14917,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Sniper Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sniper Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sniper Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Promień Snajperski II</Polish>
 	</TEXT>
 	<TEXT>
@@ -16806,27 +14926,32 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION1</Tag>
 		<English>Sophistication I</English>
+		<German>Kultiviertheit I</German>
 		<Polish>Wyrafinowany I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION2</Tag>
 		<English>Sophistication II</English>
+		<German>Kultiviertheit II</German>
 		<Polish>Wyrafinowany II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION3</Tag>
 		<English>Sophistication III</English>
+		<German>Kultiviertheit III</German>
 		<Polish>Wyrafinowany III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION4</Tag>
 		<English>Sophistication IV</English>
+		<German>Kultiviertheit IV</German>
 		<Polish>Wyrafinowany IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPECIAL_CARGO_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<German>[ICON_BULLET]ermöglicht den Transport von %s1:4_Change</German>
 		<Polish>[ICON_BULLET]Przygotowuje jednostkę do transportu innych jednostek %s1_Change</Polish>
 	</TEXT>
 	<TEXT>
@@ -16837,11 +14962,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Geschwindigkeit</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Geschwindigkeit</German>
 		<Italian>
 			<Text>Velocità</Text>
 			<Gender>Female</Gender>
@@ -16869,17 +14990,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Bataillone</German>
-		<Italian>
-			<Text>Size Down(Split Into Battalions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Battalions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Bataillone</German>
 		<Polish>Rozgrupowanie (do Batalionu)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16890,17 +15001,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Milliarden</German>
-		<Italian>
-			<Text>Size Down(Split Into Billions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Billions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Milliarden</German>
 		<Polish>Rozgrupowanie (do Miliardów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16911,17 +15012,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Divisionen</German>
-		<Italian>
-			<Text>Size Down(Split Into Clans)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Clans)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Divisionen</German>
 		<Polish>Rozgrupowanie (do Klanu)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16932,17 +15023,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Kompanien</German>
-		<Italian>
-			<Text>Size Down(Split Into Companies)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Companies)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Kompanien</German>
 		<Polish>Rozgrupowanie (do Kompanii)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16953,17 +15034,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Regimente</German>
-		<Italian>
-			<Text>Size Down(Split Into Forces)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Forces)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Regimenter</German>
 		<Polish>Rozgrupowanie (do Sił)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16974,17 +15045,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Korps</German>
-		<Italian>
-			<Text>Size Down(Split Into Hordes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Hordes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Korps</German>
 		<Polish>Rozgrupowanie (do Hordy)</Polish>
 	</TEXT>
 	<TEXT>
@@ -16995,17 +15056,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Oberkommandos</German>
-		<Italian>
-			<Text>Size Down(Split Into Millions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Millions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Oberkommandos</German>
 		<Polish>Rozgrupowanie (do Milionów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17016,17 +15067,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Armeen</German>
-		<Italian>
-			<Text>Size Down(Split Into Multitudes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Multitudes)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Armeen</German>
 		<Polish>Rozgrupowanie (do Mnóstwa)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17037,17 +15078,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Gruppen</German>
-		<Italian>
-			<Text>Size Down(Split Into Parties)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Parties)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Gruppen</German>
 		<Polish>Rozgrupowanie (do Grupy)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17058,17 +15089,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Einzelpersonen</German>
-		<Italian>
-			<Text>Size Down(Split Into Solos)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Solos)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Einzelpersonen</German>
 		<Polish>Rozgrupowanie (do Pojedynczych)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17079,17 +15100,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Züge</German>
-		<Italian>
-			<Text>Size Down(Split Into Squads)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Squads)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Züge</German>
 		<Polish>Rozgrupowanie (do Drużyn)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17100,17 +15111,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Aufgeteilt in Trillionen</German>
-		<Italian>
-			<Text>Size Down(Split Into Trillions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Size Down(Split Into Trillions)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Aufteilen in Trillionen</German>
 		<Polish>Rozgrupowanie (do Trilionów)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17162,11 +15163,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Inseguitore di prede</Text>
 			<Gender>Male</Gender>
@@ -17187,11 +15183,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stall I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stallo I</Text>
 			<Gender>Male</Gender>
@@ -17212,11 +15203,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stall II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stallo II</Text>
 			<Gender>Male</Gender>
@@ -17237,11 +15223,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stall III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stallo III</Text>
 			<Gender>Male</Gender>
@@ -17262,11 +15243,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stall IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stallo IV</Text>
 			<Gender>Male</Gender>
@@ -17287,11 +15263,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stall V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Stallo V</Text>
 			<Gender>Male</Gender>
@@ -17312,11 +15283,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Tapfer I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Tapfer I</German>
 		<Italian>
 			<Text>Vigoroso I</Text>
 			<Gender>Male</Gender>
@@ -17337,11 +15304,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Tapfer II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Tapfer II</German>
 		<Italian>
 			<Text>Vigoroso II</Text>
 			<Gender>Male</Gender>
@@ -17362,11 +15325,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Tapfer III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Tapfer III</German>
 		<Italian>
 			<Text>Vigoroso III</Text>
 			<Gender>Male</Gender>
@@ -17655,6 +15614,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer I</German>
 		<Italian>
 			<Text>Combattente di strada I</Text>
 			<Gender>Male</Gender>
@@ -17670,6 +15630,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer II</German>
 		<Italian>
 			<Text>Combattente di strada II</Text>
 			<Gender>Male</Gender>
@@ -17685,6 +15646,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer III</German>
 		<Italian>
 			<Text>Combattente di strada III</Text>
 			<Gender>Male</Gender>
@@ -17700,6 +15662,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Straßenkämpfer IV</German>
 		<Italian>
 			<Text>Combattente di strada IV</Text>
 			<Gender>Male</Gender>
@@ -17739,7 +15702,7 @@
 		<Tag>TXT_KEY_PROMOTION_SUB_COMBAT_TEXT</Tag>
 		<English>[ICON_BULLET]Adds %s1_SubCombatClass to the list of the unit's combat classes.</English>
 		<French>[ICON_BULLET]Ajoute %s1_SubCombatClass à la liste des Classes de combat de l'unité.</French>
-		<German>[ICON_BULLET]zu Kategorie %s1_SubCombatClass hinzufügen</German>
+		<German>[ICON_BULLET]zu Kategorie "%s1_SubCombatClass" hinzufügen</German>
 		<Italian>[ICON_BULLET]Aggiunge %s1_SubCombatClass alla lista delle classi di combattimento dell'unità.</Italian>
 		<Polish>[ICON_BULLET]Dodaje %s1_SubCombatClass do listy jednostek danej klasy bitewnej.</Polish>
 	</TEXT>
@@ -17804,11 +15767,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Unterstützungsfeuer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Unterstützungsfeuer</German>
 		<Italian>
 			<Text>Fuoco di copertura</Text>
 			<Gender>Male</Gender>
@@ -17867,21 +15826,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Swarm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Swarm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Swarm I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Rój I</Polish>
 	</TEXT>
 	<TEXT>
@@ -17892,21 +15836,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Swarm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Swarm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Swarm II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Rój II</Polish>
 	</TEXT>
 	<TEXT>
@@ -17917,21 +15846,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Swarm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Swarm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Swarm III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Rój III</Polish>
 	</TEXT>
 	<TEXT>
@@ -17942,21 +15856,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Swarm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Swarm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Swarm IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Rój IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -17967,6 +15866,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Taktiker</German>
 		<Italian>
 			<Text>Tattico</Text>
 			<Gender>Male</Gender>
@@ -18078,27 +15978,13 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Tarnished Supremacy)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Tarnished Supremacy)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Tarnished Supremacy)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Zmarnowana Przewaga)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TATTOO</Tag>
 		<English>Tattoo</English>
 		<French>Tatouages</French>
+		<German>Tätowierung</German>
 		<Italian>Tatuaggi</Italian>
 		<Polish>Tatuaże</Polish>
 	</TEXT>
@@ -18145,11 +16031,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Tempered Iron Weapons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Armi in ferro temprato</Text>
 			<Gender>Male</Gender>
@@ -18262,6 +16143,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode I</German>
 		<Polish>Do Śmierci I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18272,6 +16154,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode II</German>
 		<Polish>Do Śmierci II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18282,6 +16165,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode III</German>
 		<Polish>Do Śmierci III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18292,6 +16176,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Bis zum Tode IV</German>
 		<Polish>Do Śmierci IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -18311,11 +16196,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Track Scent</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Fiutatore di tracce I</Text>
 			<Gender>Male</Gender>
@@ -18336,11 +16216,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Lose Formation</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Fiutatore di tracce II</Text>
 			<Gender>Male</Gender>
@@ -18361,11 +16236,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Vorgezogene Beobachter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Fiutatore di tracce III</Text>
 			<Gender>Male</Gender>
@@ -18404,21 +16274,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Fighters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Fighters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Fighters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Myśliwców</Polish>
 	</TEXT>
 	<TEXT>
@@ -18429,21 +16284,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Fighters I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Fighters I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Fighters I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Myśliwców I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18454,21 +16294,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Fighters II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Fighters II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Fighters II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Myśliwców II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18479,21 +16304,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Fighters III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Fighters III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Fighters III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Myśliwców III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18504,21 +16314,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Missiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Missiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Missiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Pocisków</Polish>
 	</TEXT>
 	<TEXT>
@@ -18529,21 +16324,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Missiles I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Missiles I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Missiles I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Pocisków I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18554,21 +16334,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Missiles II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Missiles II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Missiles II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Pocisków II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18579,21 +16344,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Missiles III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Missiles III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Missiles III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Pocisków III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18604,21 +16354,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport People</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport People</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport People</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Ludzi</Polish>
 	</TEXT>
 	<TEXT>
@@ -18629,21 +16364,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport People I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport People I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport People I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Ludzi I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18654,21 +16374,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport People II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport People II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport People II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Ludzi II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18679,21 +16384,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport People III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport People III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport People III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Ludzi III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18704,21 +16394,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Seaplanes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Seaplanes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Seaplanes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Hydroplanów</Polish>
 	</TEXT>
 	<TEXT>
@@ -18729,21 +16404,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Seaplanes I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Seaplanes I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Seaplanes I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Hydroplanów I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18754,21 +16414,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Seaplanes II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Seaplanes II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Seaplanes II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Hydroplanów II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18779,21 +16424,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Seaplanes III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Seaplanes III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Seaplanes III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Hydroplanów III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18804,21 +16434,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Troops</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Troops</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Troops</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Wojska</Polish>
 	</TEXT>
 	<TEXT>
@@ -18829,21 +16444,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Troops I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Troops I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Troops I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Wojska I</Polish>
 	</TEXT>
 	<TEXT>
@@ -18854,21 +16454,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Troops II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Troops II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Troops II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Wojska II</Polish>
 	</TEXT>
 	<TEXT>
@@ -18879,21 +16464,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Transport Troops III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Transport Troops III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Transport Troops III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Transport Wojska III</Polish>
 	</TEXT>
 	<TEXT>
@@ -18999,21 +16569,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Unbelievable Expertise)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Unbelievable Expertise)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Unbelievable Expertise)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Niespotykane Doświadczenie)</Polish>
 	</TEXT>
 	<TEXT>
@@ -19024,21 +16579,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Unearthly Ability)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Unearthly Ability)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Unearthly Ability)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Niesamowiete Umiejętności)</Polish>
 	</TEXT>
 	<TEXT>
@@ -19206,11 +16746,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Urangeschosse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Urangeschosse</German>
 		<Italian>
 			<Text>Munizioni all'uranio impoverito</Text>
 			<Gender>Male</Gender>
@@ -19401,7 +16937,7 @@
 		<Tag>TXT_KEY_PROMOTION_WARMTH1</Tag>
 		<English>Heat I</English>
 		<French>Chaleur I</French>
-		<German>Wüstenkampf I</German>
+		<German>Hitze I</German>
 		<Italian>Combattente del deserto I</Italian>
 		<Spanish>Combate en desierto I</Spanish>
 		<Polish>Walka Pustynna I</Polish>
@@ -19410,6 +16946,7 @@
 		<Tag>TXT_KEY_PROMOTION_WARMTH2</Tag>
 		<English>Heat II</English>
 		<French>Chaleur II</French>
+		<German>Hitze II</German>
 		<Italian>Combattente del deserto II</Italian>
 		<Spanish>Combate en desierto II</Spanish>
 		<Polish>Walka Pustynna II</Polish>
@@ -19418,6 +16955,7 @@
 		<Tag>TXT_KEY_PROMOTION_WARMTH3</Tag>
 		<English>Heat III</English>
 		<French>Chaleur III</French>
+		<German>Hitze III</German>
 		<Italian>Combattente del deserto III</Italian>
 		<Spanish>Combate en desierto III</Spanish>
 		<Polish>Walka Pustynna III</Polish>
@@ -19435,41 +16973,49 @@
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION1</Tag>
 		<English>Warrior's Intuition I</English>
 		<French>Intuition du Guerrier I</French>
+		<German>Kriegerintuition I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION2</Tag>
 		<English>Warrior's Intuition II</English>
 		<French>Intuition du Guerrier II</French>
+		<German>Kriegerintuition II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION3</Tag>
 		<English>Warrior's Intuition III</English>
 		<French>Intuition du Guerrier III</French>
+		<German>Kriegerintuition III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY1</Tag>
 		<English>Waylay I</English>
 		<French>Détournement I</French>
+		<German>Wegelagerer I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY2</Tag>
 		<English>Waylay II</English>
 		<French>Détournement II</French>
+		<German>Wegelagerer II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY3</Tag>
 		<English>Waylay III</English>
 		<French>Détournement III</French>
+		<German>Wegelagerer III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY4</Tag>
 		<English>Waylay IV</English>
 		<French>Détournement IV</French>
+		<German>Wegelagerer IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAYLAY5</Tag>
 		<English>Waylay V</English>
 		<French>Détournement V</French>
+		<German>Wegelagerer V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
@@ -19500,6 +17046,7 @@
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
 		<English>Way of the Warrior</English>
 		<French>Voie du Guerrier</French>
+		<German>Weg des Kriegers</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
@@ -19590,7 +17137,7 @@
 		<Tag>TXT_KEY_PROMOTION_WEATHER_FORECAST_LAND</Tag>
 		<English>Ground Weather Reports</English>
 		<French>Bulletins météo au sol</French>
-		<German>Festlands-Wettervorhersage</German>
+		<German>Wettervorhersage (Festland)</German>
 		<Italian>Previsioni meteo terrestri</Italian>
 		<Spanish>Informes meteorológicos en tierra</Spanish>
 		<Polish>Raporty Pogodowe</Polish>
@@ -19599,7 +17146,7 @@
 		<Tag>TXT_KEY_PROMOTION_WEATHER_FORECAST_NAVAL</Tag>
 		<English>Naval Weather Forecasts</English>
 		<French>Prévisions météo marine</French>
-		<German>Meeres-Wettervorhersage</German>
+		<German>Wettervorhersage (Meer)</German>
 		<Italian>Previsioni meteo navali</Italian>
 		<Spanish>Previsiones meteorológicas de la mar</Spanish>
 		<Polish>Morskie Prognozy Pogody</Polish>
@@ -19608,6 +17155,7 @@
 		<Tag>TXT_KEY_PROMOTION_WETLAND1_DESC</Tag>
 		<English>Wetland Combat I</English>
 		<French>Zone Humide I</French>
+		<German>Morastläufer I</German>
 		<Italian>Combattente delle paludi I</Italian>
 		<Spanish>Combate en humedal I</Spanish>
 		<Polish>Walka na Bagnach I</Polish>
@@ -19616,6 +17164,7 @@
 		<Tag>TXT_KEY_PROMOTION_WETLAND2_DESC</Tag>
 		<English>Wetland Combat II</English>
 		<French>Zone Humide II</French>
+		<German>Morastläufer II</German>
 		<Italian>Combattente delle paludi II</Italian>
 		<Spanish>Combate en humedal II</Spanish>
 		<Polish>Walka na Bagnach II</Polish>
@@ -19624,6 +17173,7 @@
 		<Tag>TXT_KEY_PROMOTION_WETLAND3_DESC</Tag>
 		<English>Wetland Combat III</English>
 		<French>Zone Humide III</French>
+		<German>Morastläufer III</German>
 		<Italian>Combattente delle paludi III</Italian>
 		<Spanish>Combate en humedal III</Spanish>
 		<Polish>Walka na Bagnach III</Polish>
@@ -19636,21 +17186,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Wide Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Wide Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Wide Beam I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Szeroki Promień I</Polish>
 	</TEXT>
 	<TEXT>
@@ -19661,21 +17196,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Wide Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Wide Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Wide Beam II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Szeroki Promień II</Polish>
 	</TEXT>
 	<TEXT>
@@ -19713,7 +17233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT</Tag>
-		<English>[ICON_BULLET]Withdraw vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%% </English>
+		<English>[ICON_BULLET]Withdraw vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Withdraw gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>

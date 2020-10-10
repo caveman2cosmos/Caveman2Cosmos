@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -16,6 +17,10 @@ class CvFinanceAdvisor:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
+		# Tool Tip
+		self.szTextTT = ""
+		self.iOffsetTT = []
+		self.bLockedTT = False
 		G = GC.getGame()
 		# Get screen resolution.
 		import ScreenResolution as SR
@@ -50,6 +55,8 @@ class CvFinanceAdvisor:
 		self.iPlayer = iPlayer = G.getActivePlayer()
 		self.nWidgetCount = 0
 
+		self.goldFromCivs = 0
+		self.yBuildingExpenses = 0
 		self.szTreasury = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_TREASURY", (0,))[:-3]
 
 		self.bStrike = bStrike = CyPlayer.isStrike()
@@ -235,21 +242,25 @@ class CvFinanceAdvisor:
 		screen.addScrollPanel(Pnl, "", x0, y0 + 32, dx, dy - 64, ePanelHudHelp)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
+		if CyPlayer.isAnarchy():
+			return
+
 		iExpenses = 0
-		totalUnitCost = CyPlayer.calculateUnitCost()
+		iFinalUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
+		iTreasuryUpkeep = CyPlayer.getTreasuryUpkeep()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
+
 		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
-		y = 0
-		if totalUnitCost:
-			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST", ())
-			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			screen.setLabelAt("", Pnl, uFont2 + str(totalUnitCost), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_UNIT_COST, iPlayer, 1)
-			iExpenses += totalUnitCost
-			y += 20
+		y = -2
+		szText = TRNSLTR.getText("TXT_KEY_UNIT_UPKEEP", ())
+		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + szText, 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
+		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iFinalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+		iExpenses += iFinalUnitUpkeep
+		y += 22
 
 		if totalUnitSupply:
 			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())
@@ -263,6 +274,13 @@ class CvFinanceAdvisor:
 		screen.setLabelAt("", Pnl, uFont2 + str(totalMaintenance), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, iPlayer, 1)
 		iExpenses += totalMaintenance
 		y += 20
+
+		if iTreasuryUpkeep:
+			szText = TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ())
+			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 2)
+			screen.setLabelAt("", Pnl, uFont2 + str(iTreasuryUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+			iExpenses += iTreasuryUpkeep
+			y += 20
 
 		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ())
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
@@ -297,40 +315,32 @@ class CvFinanceAdvisor:
 		self.deleteAllWidgets(screen, aName)
 		# Enumerators
 		eWidGen = WidgetTypes.WIDGET_GENERAL
-		ePanelHudHelp = PanelStyles.PANEL_STYLE_HUD_HELP
-		eTableEmpty = TableStyles.TABLE_STYLE_EMPTY
 		eGameFont = FontTypes.GAME_FONT
 		eComGold = CommerceTypes.COMMERCE_GOLD
 		# Variables
 		xRes = self.xRes
-		yRes = self.yRes
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
 		iconCommerceList = self.iconCommerceList
 		CyPlayer = self.CyPlayer
-		iPlayer = self.iPlayer
 
 		iIncome = CyPlayer.getCommerceRate(eComGold)
 		if not CyPlayer.isCommerceFlexible(CommerceTypes.COMMERCE_RESEARCH):
 			iIncome += CyPlayer.calculateBaseNetResearch()
 		goldFromCivs = self.goldFromCivs
 		iIncome += goldFromCivs
-		playerGoldModifier = CyPlayer.getCommerceRateModifier(eComGold)
-		playerCapitalGoldModifier = CyPlayer.getCapitalCommerceRateModifier(eComGold)
 
 		# Treasury footer
 		szTxt = self.szTreasury
 		iGold = CyPlayer.getGold()
-		iGreaterGold = CyPlayer.getGreaterGold()
-		iEffectiveGold = 1000000 * iGreaterGold + iGold
 		iGoldRate = CyPlayer.calculateGoldRate()
-		if iEffectiveGold < 0:
+		if iGold < 0:
 			szTxt += "<color=255,0,0,255>"
-		szTxt += "%d%s" %(iEffectiveGold, iconCommerceList[eComGold])
+		szTxt += "%d%s" %(iGold, iconCommerceList[eComGold])
 		if iGoldRate:
 			szTxt += " <color="
-			if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+			if iGoldRate > 0 and iGold + iGoldRate >= 0:
 				szTxt += "127,255,0,255>"
-			elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+			elif iGoldRate < 0 and iGold + iGoldRate < 0:
 				szTxt += "255,124,0,255>"
 			else:
 				szTxt += "255,227,0,255>"
@@ -391,6 +401,13 @@ class CvFinanceAdvisor:
 
 				szCommerce = uFont2b + str(iIncome) + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
+
+		if CyPlayer.isAnarchy():
+			return
+
+		iPlayer = self.iPlayer
+		playerGoldModifier = CyPlayer.getCommerceRateModifier(eComGold)
+		playerCapitalGoldModifier = CyPlayer.getCapitalCommerceRateModifier(eComGold)
 
 		# Income
 		iTaxRate = CyPlayer.getCommercePercent(eComGold)
@@ -594,27 +611,65 @@ class CvFinanceAdvisor:
 			i -= 1
 		self.nWidgetCount = 0
 
+	# Tooltip
+	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
+		if not szText:
+			return
+		if szText != self.szTextTT:
+			self.szTextTT = szText
+			if not uFont:
+				uFont = self.aFontList[6]
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = Win32.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
+		else:
+			if xPos == yPos == -1:
+				POINT = Win32.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
+			screen.moveToFront("Tooltip")
+			screen.show("Tooltip")
+		if xPos == yPos == -1:
+			self.bLockedTT = True
+
+	#--------------------------#
+	# Base operation functions #
+	#||||||||||||||||||||||||||#
+	def update(self, fDelta):
+		if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT):
+			CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
+			self.updateContents()
+		if self.bLockedTT:
+			POINT = Win32.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
-			import HandleInputUtil
-			HandleInputUtil.debugInput(inputClass)
-			screen = self.getScreen()
-			self.iPlayer = iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
-			self.CyPlayer = GC.getPlayer(iPlayer)
+
+		iCode	= inputClass.eNotifyCode
+		NAME	= inputClass.szFunctionName
+
+		screen = self.getScreen()
+		screen.hide("Tooltip") # Remove potential Help Text
+
+		if iCode == 4: # Mouse Enter
+
+			if NAME == "unitUpkeep":
+				self.updateTooltip(screen, CyGameTextMgr().getFinanceUnitUpkeepString(self.iPlayer))
+
+		elif iCode == 11: # List Select
+			self.iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
+			self.CyPlayer = GC.getPlayer(self.iPlayer)
 			self.drawBase()
 			self.updateContents()
 			return 1
 		return 0
 
-	def update(self, fDelta):
-		if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT):
-			CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
-			self.updateContents()
-
 	def onClose(self):
 		screen = self.getScreen()
 		screen.setDying(True)
-		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike
-		del self.aFontList, self.iconCommerceList
-		del self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses
+		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike, self.aFontList, self.iconCommerceList, \
+			self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses, self.szTextTT, self.iOffsetTT, self.bLockedTT

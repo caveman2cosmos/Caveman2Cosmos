@@ -306,7 +306,7 @@ def canDoWeddingFeud3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   # do not use this event in multiplayer
@@ -455,7 +455,7 @@ def canApplyBardTale3(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getEffectiveGold() - 10 * player.getNumCities() < 0:
+  if player.getGold() - 10 * player.getNumCities() < 0:
     return False
 
   return True
@@ -587,7 +587,7 @@ def canTriggerHurricaneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -656,7 +656,7 @@ def canTriggerCycloneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -678,7 +678,7 @@ def canTriggerTsunamiCity(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   return True
@@ -753,7 +753,7 @@ def canTriggerMonsoonCity(argsList):
   if city.isNone():
     return False
 
-  if city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getInfoTypeForString("FEATURE_JUNGLE")
@@ -961,7 +961,7 @@ def applyGreatDepression(argsList):
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
     if loopPlayer.isAlive():
-      loopPlayer.changeGold(-loopPlayer.getEffectiveGold()/4)
+      loopPlayer.changeGold(-loopPlayer.getGold()/4)
 
       if iPlayer != kTriggeredData.ePlayer:
         szText = TRNSLTR.getText("TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION", (player.getCivilizationAdjectiveKey(), u"", u"", u"", u"", corporation.getTextKey()))
@@ -1324,17 +1324,12 @@ def canTriggerIndependentFilms(argsList):
   return True
 
 def doIndependentFilms(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  city = player.getCity(kTriggeredData.iCityId)
-
-  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
-
-  city.changeFreeBonus(iBonus, 1)
-
-  return 1
+	GC.getPlayer(argsList[1].ePlayer).getCity(
+		argsList[1].iCityId
+		).changeFreeBonus(
+			GC.getInfoTypeForString("BONUS_HIT_MOVIES"), 1
+			)
+	return 1
 
 def getHelpIndependentFilms(argsList):
   iEvent = argsList[0]
@@ -3540,7 +3535,6 @@ def getHelpOverwhelm1(argsList):
   iNumCarriers = 3
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
-# iProject = GC.getInfoTypeForString("PROJECT_MANHATTAN_PROJECT")
   iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
 
 # szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getProjectInfo(iProject).getTextKey()))
@@ -3590,14 +3584,11 @@ def canApplyOverwhelmDone3(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
-# Rise of Mankind 2.9 start
-# iProject = GC.getInfoTypeForString("PROJECT_MANHATTAN_PROJECT")
   iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
-# Rise of Mankind 2.9 end
 
   return True
 
@@ -4538,17 +4529,12 @@ def getHelpSyntheticFuels4(argsList):
   return szHelp
 
 def doSyntheticFuels4(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  pCity = pPlayer.getCity(kTriggeredData.iCityId)
-
-  iBonus = GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS")
-
-  pCity.changeFreeBonus(iBonus, 1)
-
-  return 1
+	GC.getPlayer(argsList[1].ePlayer).getCity(
+		argsList[1].iCityId
+		).changeFreeBonus(
+			GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS"), 1
+			)
+	return 1
 
 
 ####### ALTERNATIVE_ENERGY ######
@@ -4615,7 +4601,7 @@ def canTriggerMoreFiatMoney(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.getEffectiveGold() > 5000:
+  if pPlayer.getGold() > 5000:
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_BARTER")):
     return False
@@ -6017,7 +6003,7 @@ def canTriggerSailingFounded(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   if city.plot().getLatitude() <= 0:
@@ -6974,7 +6960,7 @@ def canTriggerUnlimitedPower2(argsList):
     return False
   if (eventCity.area().isCleanPower(player.getTeam())):
     return False
-  if (player.getEffectiveGold() < (eventCity.area().getNumCities() * 100)):
+  if (player.getGold() < (eventCity.area().getNumCities() * 100)):
     return False
   return True
 
@@ -6991,7 +6977,7 @@ def getHelpUnlimitedPower2(argsList):
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 	iGold = CyPlayer.getCity(kTriggeredData.iCityId).area().getNumCities() * 100
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szGold = "\n<color=255,76,76>"
 	else: szGold = "\n"
 	szGold += TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
@@ -7085,7 +7071,7 @@ def getHelpSuperVirus2(argsList):
 	szHelp += TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (1, CyPlayer.getCity(kTriggeredData.iCityId).getNameKey()))
 
 	iGold = 100 + CyPlayer.getNumCities() * 35
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>"
 	else: szHelp += "\n"
 
@@ -7095,7 +7081,7 @@ def canTriggerSuperVirus2(argsList):
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-	if CyPlayer.getEffectiveGold() < 100 + CyPlayer.getNumCities() * 35:
+	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 35:
 		return False
 	return True
 
@@ -7126,7 +7112,7 @@ def getHelpSuperVirus3(argsList):
 
 	iGold = 100 + CyPlayer.getNumCities() * 65
 
-	if CyPlayer.getEffectiveGold() < iGold:
+	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
 	else: szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
 
@@ -7149,7 +7135,7 @@ def canTriggerSuperVirus3(argsList):
   team = GC.getTeam(player.getTeam())
 
   iRequireGold = 100 + player.getNumCities() * 65
-  if (player.getEffectiveGold() < (iRequireGold)):
+  if (player.getGold() < iRequireGold):
     return False
   iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
   iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
@@ -7202,30 +7188,23 @@ def getHelpSuperVirus4(argsList):
 
 
 def canDoNewWorldTrigger(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  #Room on the Map for 3 new cities
-  iNeededCities = 3
-  pBestPlots = []
-  while (iNeededCities > 0):
-    map = GC.getMap()
-    iBestValue = 0
-    pBestPlot = None
-    for i in xrange(map.numPlots()):
-      pLoopPlot = map.plotByIndex(i)
-      if (pBestPlots.count(pLoopPlot) == 0):
-        if (pLoopPlot.isCoastalLand()):
-          if (player.canFound(pLoopPlot.getX(), pLoopPlot.getY())):
-            if (pLoopPlot.getFoundValue(kTriggeredData.ePlayer) > iBestValue):
-              pBestPlot = pLoopPlot
-              iBestValue = pLoopPlot.getFoundValue(kTriggeredData.ePlayer)
-    if (pBestPlot == None):
-      return False
-    pBestPlots.append(pBestPlot)
-    iNeededCities -= 1
-
-  return True
+	kTriggeredData = argsList[0]
+	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	#Room on the Map for 3 new cities
+	MAP = GC.getMap()
+	iNumPlots = MAP.numPlots()
+	iNeededCities = 3
+	plotIndexes = []
+	while iNeededCities > 0:
+		for i in xrange(iNumPlots):
+			if i not in plotIndexes:
+				CyPlot = MAP.plotByIndex(i)
+				if not CyPlot.isWater() and CyPlot.isCoastal() and CyPlayer.canFound(CyPlot.getX(), CyPlot.getY()):
+					plotIndexes.append(i)
+					break
+		else: return False
+		iNeededCities -= 1
+	return True
 
 
 def triggerNewWorldCities(argsList):
@@ -7258,12 +7237,15 @@ def triggerNewWorldCities(argsList):
 		iBestValue = 0
 		pBestPlot = None
 		for i in xrange(iNumPlots):
-			pLoopPlot = MAP.plotByIndex(i)
-			if pLoopPlot.isCoastalLand():
-				if CyPlayer.canFound(pLoopPlot.getX(), pLoopPlot.getY()):
-					if pLoopPlot.getFoundValue(iPlayer) > iBestValue:
-						pBestPlot = pLoopPlot
-						iBestValue = pLoopPlot.getFoundValue(iPlayer)
+			CyPlot = MAP.plotByIndex(i)
+			if not CyPlot.isWater() and CyPlot.isCoastal() and CyPlayer.canFound(CyPlot.getX(), CyPlot.getY()):
+				iValue = CyPlot.getFoundValue(iPlayer)
+				if iValue > iBestValue:
+					pBestPlot = CyPlot
+					iBestValue = iValue
+		if pBestPlot is None:
+			raise "Error in TriggerNewWorldCities - No City Created!"
+			return
 
 		CyPlayer.found(pBestPlot.getX(), pBestPlot.getY())
 
@@ -7313,10 +7295,9 @@ def triggerNewWorldCities(argsList):
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
-			if CyCity.plot().isCoastalLand():
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
 		iNeededCities -= 1
 
 
@@ -7687,7 +7668,7 @@ def doVolcanoExtinction(argsList):
   if GAME.getSorenRandNum(100, 'Volcanic minerals chance') < 50:
     iBonus = GC.getInfoTypeForString('BONUS_OBSIDIAN')
     pPlot.setBonusType(iBonus)
-    itechresource = GC.getInfoTypeForString("TECH_STONE_TOOLS")
+    itechresource = GC.getInfoTypeForString("TECH_TOOL_MAKING")
   else:
     iBonus = GC.getInfoTypeForString('BONUS_SULPHUR')
     pPlot.setBonusType(iBonus)
@@ -7929,7 +7910,7 @@ def doGlobalWarming(argsList):
       iGW += 4
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_FACTORY"):
       iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_INDUSTRIAL_COMPLEX"):
+    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MANUFACTURING_COMPLEX"):
       iGW += 16
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MINE"):
       iGW += 1
@@ -7959,21 +7940,19 @@ def doGlobalWarming(argsList):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_TAIGA"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_TAIGA"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_POLAR_OUTCROP"):
-          iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_MUDDY"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_LUSH"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_LUSH"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASSLAND"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_GRASSLAND"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_PLAINS"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BOG"):
+        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_PEAT_BOG"):
           iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_PLAINS") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_BARREN") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_ROCKY"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SCRUB"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_SCRUB"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DESERT"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BAMBOO") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_TALL_GRASS"):
+        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BAMBOO") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VERY_TALL_GRASS"):
           iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_DESERT"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DUNES"), True, True)
@@ -7996,10 +7975,10 @@ def doGlobalWarming(argsList):
                   randFlood = GAME.getSorenRandNum(100, "Global Warming flooding chance")
                   if iIce > randFlood:
                     iDPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-                    iDPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-                    iDPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-                    iDPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-                    iDPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+                    iDPlot.setImprovementType(-1)
+                    iDPlot.setBonusType(-1)
+                    iDPlot.setImprovementType(-1)
+                    iDPlot.setRouteType(-1)
                     iDPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST"), True, True)
                     iDPlot.setPlotType(PlotTypes.PLOT_OCEAN, True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_OCEAN_POLAR"):
@@ -8008,18 +7987,18 @@ def doGlobalWarming(argsList):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iIce > 100 and not iPlot.isLake():
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+        iPlot.setImprovementType(-1)
+        iPlot.setBonusType(-1)
+        iPlot.setImprovementType(-1)
+        iPlot.setRouteType(-1)
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
         iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iPlot.isLake():
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setBonusType(GC.getInfoTypeForString("NO_BONUS"))
-        iPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
-        iPlot.setRouteType(GC.getInfoTypeForString("NO_ROUTE"))
+        iPlot.setImprovementType(-1)
+        iPlot.setBonusType(-1)
+        iPlot.setImprovementType(-1)
+        iPlot.setRouteType(-1)
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
         iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
 
@@ -8288,14 +8267,14 @@ def doEventLawyer(argsList):
 ## Captives and Slavery mod python ##
 
 def doRemoveWVSlavery(argsList):
-	CyUnit = argsList[0]
+	unit = argsList[0]
 
-	if not CyUnit: return # False call
+	if not unit: return # False call
 
-	iPlayer = CyUnit.getOwner()
-	CyPlayer = GC.getPlayer(iPlayer)
+	iPlayer = unit.getOwner()
+	player = GC.getPlayer(iPlayer)
 
-	if not CyPlayer.isAlive():
+	if not player.isAlive():
 		return
 
 	iWVSlavery = GC.getInfoTypeForString("BUILDING_WV_SLAVERY")
@@ -8305,7 +8284,6 @@ def doRemoveWVSlavery(argsList):
 		iSlaveMarket = GC.getInfoTypeForString("BUILDING_SLAVE_MARKET")
 		aiSlaveBuildings = [
 			GC.getInfoTypeForString("BUILDING_SLAVERY"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_I"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_I"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_II"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND"),
@@ -8316,41 +8294,38 @@ def doRemoveWVSlavery(argsList):
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_COMMERCE"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_SANITATION"),
 		]
-		iSlaveSettled = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE")
 		iSlaveFood = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_FOOD")
 		iSlaveProd = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_PRODUCTION")
-		iSlaveCom = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_COMMERCE")
 		iSlaveHealth = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_HEALTH")
 		iSlaveEntertain = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_ENTERTAINMENT")
-		iSlaveTutor = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_TUTOR")
-		iSlaveMilitary = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_MILITARY")
 
-		iUnitCaptiveSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
-		iUnitImmigrant = GC.getInfoTypeForString("UNIT_CAPTIVE_IMMIGRANT")
+		iUnitFreedSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
 		iUnitEntertain = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 		iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
+		iUnitFoodMerchant = GC.getInfoTypeForString("UNIT_EARLY_FOOD_MERCHANT_C2C")
 		iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
 
 		bMessage = iPlayer == GAME.getActivePlayer()
 		if bMessage:
 			msg = "Slavery worldview eradicated"
-			CvUtil.sendMessage(msg, iPlayer, 16, CyUnit.getButton(), ColorTypes(8), CyUnit.getX(), CyUnit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
+			CvUtil.sendMessage(msg, iPlayer, 16, unit.getButton(), ColorTypes(8), unit.getX(), unit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
 
-		iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
+		iCost = player.getBuildingProductionNeeded(iSlaveMarket)
 		iSum = 0
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
-			sCityName = CyCity.getName()
-			iCityX = CyCity.getX()
-			iCityY = CyCity.getY()
+		city, i = player.firstCity(False)
+		while city:
+			if bMessage:
+				sCityName = city.getName()
+			iCityX = city.getX()
+			iCityY = city.getY()
 			# Remove the main slavery building
-			if CyCity.getNumActiveBuilding(iWVSlavery) > 0:
-				CyCity.setNumRealBuilding(iWVSlavery, 0)
+			if city.getNumActiveBuilding(iWVSlavery) > 0:
+				city.setNumRealBuilding(iWVSlavery, 0)
 
 			# Sell the Slave market if one exists
-			if CyCity.getNumActiveBuilding(iSlaveMarket) > 0:
+			if city.getNumActiveBuilding(iSlaveMarket) > 0:
 
-				CyCity.setNumRealBuilding(iSlaveMarket, 0)
+				city.setNumRealBuilding(iSlaveMarket, 0)
 
 				iSum += iCost
 
@@ -8360,99 +8335,59 @@ def doRemoveWVSlavery(argsList):
 
 			# Remove all other Slavery Buildings if they exist
 			for ibuilding in aiSlaveBuildings:
-				if CyCity.getNumActiveBuilding(ibuilding) > 0:
-					CyCity.setNumRealBuilding(ibuilding, 0)
+				if city.getNumActiveBuilding(ibuilding) > 0:
+					city.setNumRealBuilding(ibuilding, 0)
 
-			# Free the Settled Slaves.
-			iCountSettled = CyCity.getFreeSpecialistCount(iSlaveSettled)
-			iCountFood = CyCity.getFreeSpecialistCount(iSlaveFood)
-			iCountProd = CyCity.getFreeSpecialistCount(iSlaveProd)
-			iCountCom = CyCity.getFreeSpecialistCount(iSlaveCom)
-			iCountHealth = CyCity.getFreeSpecialistCount(iSlaveHealth)
-			iCountEntertain = CyCity.getFreeSpecialistCount(iSlaveEntertain)
-			iCountTutor = CyCity.getFreeSpecialistCount(iSlaveTutor)
-			iCountMilitary = CyCity.getFreeSpecialistCount(iSlaveMilitary)
+			iFreeSlaves = 0
+			for i in xrange(GC.getNumSpecialistInfos()):
+				if GC.getSpecialistInfo(i).isSlave():
 
-			## Process those that can become population or immagrants
-			##	where 3 slaves = 1 pop or immigrant
-			##	and can only increase the city pop to 7
-			iCount = iCountSettled + iCountFood + iCountCom + iCountTutor + iCountMilitary
-			iCountNewPop = int(iCount/3)
-			iCount = iCount - 3*iCountNewPop
+					iCount = city.getFreeSpecialistCount(i)
+					if iCount < 1: continue
 
-			if iCount > 0:
-				for j in xrange(iCount):
-					CyPlayer.initUnit(iUnitCaptiveSlave, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iCount))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+					city.changeFreeSpecialistCount(i, -iCount)
 
-			if iCountNewPop > 0:
-				iCountImmigrants = iCountNewPop
-				iCityPop = CyCity.getPopulation()
-				if iCityPop < 7:
-					## fill up the local pop and left overs become immigrants
-					iMaxToAddPop = 7 - iCityPop
-					if iMaxToAddPop > iCountImmigrants:
-						CyCity.changePopulation(iCountImmigrants)
+					if i == iSlaveEntertain:
+						for j in xrange(iCount):
+							player.initUnit(iUnitEntertain, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION", (iCountImmigrants*3, sCityName, iCountImmigrants))
-							CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-						iCountImmigrants = 0
-					else:
-						CyCity.changePopulation(iMaxToAddPop)
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS", (sCityName, iCount, "Story Tellers"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveProd:
+						for j in xrange(iCount):
+							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION", (iMaxToAddPop*3, sCityName, iMaxToAddPop))
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Merchants"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveFood:
+						for j in xrange(iCount):
+							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						if bMessage:
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Food Merchants"))
+							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
+
+					elif i == iSlaveHealth:
+						for j in xrange(iCount):
+							player.initUnit(iUnitHealth, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						if bMessage:
+							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS", (sCityName, iCount, "Healers"))
 							CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-						iCountImmigrants = iCountImmigrants - iMaxToAddPop
-				if iCountImmigrants > 0:
-					for j in xrange(iCountImmigrants):
-						CyPlayer.initUnit(iUnitImmigrant, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					if bMessage:
-						msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_IMMIGRANTS", (iCountImmigrants*3, sCityName, iCountImmigrants))
-						CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
-			## Now remove those slaves
-			if  iCountSettled > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveSettled, -iCountSettled)
-			if  iCountFood > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveFood, -iCountFood)
-			if  iCountCom > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveCom, -iCountCom)
-			if  iCountTutor > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveTutor, -iCountTutor)
-			if  iCountMilitary > 0:
-				CyCity.changeFreeSpecialistCount(iSlaveMilitary, -iCountMilitary)
+					else: iFreeSlaves += iCount
 
-			## Now convert the other slaves
-			if iCountProd > 0:
-				for j in xrange(iCountProd):
-					CyPlayer.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveProd,-1)
+			if iFreeSlaves > 0:
+				for j in xrange(iFreeSlaves):
+					player.initUnit(iUnitFreedSlave, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCountProd, "Early Merchants"))
+					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iFreeSlaves))
 					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
-			if iCountHealth > 0:
-				for j in xrange(iCountHealth):
-					CyPlayer.initUnit(iUnitHealth, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveHealth,-1)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS", (sCityName, iCountHealth, "Healers"))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-
-			if iCountEntertain > 0:
-				for j in xrange(iCountEntertain):
-					CyPlayer.initUnit(iUnitEntertain, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyCity.changeFreeSpecialistCount(iSlaveEntertain,-1)
-				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS", (sCityName, iCountEntertain, "Story Tellers"))
-					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
-
-			CyCity, i = CyPlayer.nextCity(i, False)
+			city, i = player.nextCity(i, False)
 
 		if iSum > 0:
-			CyPlayer.changeGold(int(iSum * 0.2))
+			player.changeGold(int(iSum * 0.2))
 
 
 def doRemoveWVCannibalism(argsList):

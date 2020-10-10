@@ -6,7 +6,7 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include <bitset>
+//#include <bitset>
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
@@ -140,7 +140,8 @@ public:
 	CvPlot();
 	virtual ~CvPlot();
 
-	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+	CvGameObjectPlot* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlot* getGameObject() const { return &m_GameObject; };
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -228,13 +229,14 @@ public:
 	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
 	bool isAdjacentToLand() const; // Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
 
 	bool isVisibleWorked() const;
 	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater(bool bIgnoreJungle = false) const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python ?
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -253,7 +255,7 @@ public:
 	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python
 	int seeThroughLevel() const; // Exposed to Python
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
-	bool canSeePlot(CvPlot *plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
+	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
 	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
@@ -363,9 +365,9 @@ public:
 	bool isCanUseRouteLandUnits() const;
 	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
-	int getRevoltProtection();
-	int getAverageEnemyStrength(TeamTypes eTeam);
-	int getAverageEnemyDamage(TeamTypes eTeam);
+	int getRevoltProtection() const;
+	int getAverageEnemyStrength(TeamTypes eTeam) const;
+	int getAverageEnemyDamage(TeamTypes eTeam) const;
 	LandmarkTypes getLandmarkType() const;
 	void setLandmarkType(LandmarkTypes eLandmark);
 	CvWString getLandmarkName() const;
@@ -401,7 +403,6 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
-	bool m_bDepletedMine;
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
@@ -646,10 +647,10 @@ public:
 	void setImprovementDuration(int iNewValue); // Exposed to Python
 	void changeImprovementDuration(int iChange); // Exposed to Python
 
-	int getUpgradeProgressHundredths() const; // Exposed to Python
+	int getImprovementUpgradeProgress() const; // Exposed to Python
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const; // Exposed to Python
-	void setUpgradeProgressHundredths(int iNewValue); // Exposed to Python
-	void changeUpgradeProgressHundredths(int iChange); // Exposed to Python
+	void setImprovementUpgradeProgress(int iNewValue); // Exposed to Python
+	void changeImprovementUpgradeProgress(int iChange); // Exposed to Python
 
 	int getForceUnownedTimer() const; // Exposed to Python
 	bool isForceUnowned() const; // Exposed to Python
@@ -750,7 +751,7 @@ public:
 	int getRiverCrossingCount() const; // Exposed to Python
 	void changeRiverCrossingCount(int iChange);
 
-	short* getYield();
+	short* getYield() const;
 	DllExport int getYield(YieldTypes eIndex) const; // Exposed to Python
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const; // Exposed to Python
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const; // Exposed to Python
@@ -845,7 +846,7 @@ public:
 	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
 	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
 	bool shouldUsePlotBuilder();
-	CvPlotBuilder* getPlotBuilder() { return m_pPlotBuilder; }
+	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
 	void updateRouteSymbol(bool bForce = false, bool bAdjacent = false);
@@ -880,7 +881,7 @@ public:
 	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
-	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult);
+	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
 	int getNumUnits() const; // Exposed to Python
@@ -1087,7 +1088,7 @@ protected:
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);
 
-	ColorTypes plotMinimapColor();
+	ColorTypes plotMinimapColor() const;
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
@@ -1179,21 +1180,38 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
-		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
-		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
-		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, updateRevealedOwner, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setWorkingCityOverride, const CvCity*);
 
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateCulture, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRouteSymbol, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
 
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
+
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);
+
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isCity, bool, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isRevealed, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isVisible, TeamTypes, bool);
+
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
 	};
 };
 

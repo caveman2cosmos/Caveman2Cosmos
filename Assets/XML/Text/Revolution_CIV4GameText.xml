@@ -3,21 +3,21 @@
 	<!--TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_DYNAMIC_CIV_NAMES</Tag>
 		<English>
-			<Text>[NEWLINE][TAB]Dynamic Civ Names</Text>
+			<Text>[NEWLINE]Dynamic Civ Names</Text>
 		</English>
 		<French>
-			<Text>[NEWLINE][TAB]Nom des Civs dynamique</Text>
+			<Text>[NEWLINE]Nom des Civs dynamique</Text>
 		</French>
 		<German>
-			<Text>[NEWLINE][TAB]Dynamische Civ-Namen</Text>
+			<Text>[NEWLINE]Dynamische Civ-Namen</Text>
 		</German>
 		<Italian>
-			<Text>[NEWLINE][TAB]"Dynamic Civ Names"</Text>
+			<Text>[NEWLINE]"Dynamic Civ Names"</Text>
 		</Italian>
 		<Spanish>
-			<Text>[NEWLINE][TAB]Nombres de civilización dinámicos</Text>
+			<Text>[NEWLINE]Nombres de civilización dinámicos</Text>
 		</Spanish>
-		<Polish>[NEWLINE][TAB]Dynamiczne Nazwy Cywilizacji</Polish>
+		<Polish>[NEWLINE]Dynamiczne Nazwy Cywilizacji</Polish>
 	</TEXT-->
 	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS</Tag>
@@ -448,7 +448,7 @@
 		<English>Maybe later</English>
 		<French>Peut-être plus tard</French>
 		<German>Vielleicht später</German>
-		<Italian>Forse dopo..</Italian>
+		<Italian>Forse dopo</Italian>
 		<Spanish>Quizás más tarde</Spanish>
 		<Polish>Może później</Polish>
 	</TEXT>
@@ -518,9 +518,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_COM_BROTHER</Tag>
 		<English>They are imagining no possesions and a brotherhood of man![NEWLINE][NEWLINE]While</English>
-		<French>Ils imaginent la fin de la propriété et une confrérie de l'homme! [NEWLINE] [NEWLINE] tandis que</French>
-		<German>Sie träumen von einer Welt ohne Besitztümer in der alle Menschen Brüder sind! [NEWLINE] [NEWLINE] Während</German>
-		<Italian>Stanno sognando la fine della proprietà privata e la fratellanza tra gli uomini! [NEWLINE] [NEWLINE] mentre</Italian>
+		<French>Ils imaginent la fin de la propriété et une confrérie de l'homme![NEWLINE][NEWLINE]tandis que</French>
+		<German>Sie träumen von einer Welt ohne Besitztümer in der alle Menschen Brüder sind![NEWLINE][NEWLINE]Während</German>
+		<Italian>Stanno sognando la fine della proprietà privata e la fratellanza tra gli uomini![NEWLINE][NEWLINE]mentre</Italian>
 		<Spanish>¡Están imaginando un mundo sin posesiones, una hermandad de hombres![NEWLINE][NEWLINE]Mientras</Spanish>
 		<Polish>Marzą o równości i braterstwie![NEWLINE][NEWLINE]Dopóki</Polish>
 	</TEXT>
@@ -563,9 +563,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_LEAD_CONCLUSION</Tag>
 		<English>The protesters have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Like all good despots, you are of course the best hope for your people. You just need to remind them of the glory of your rule, either by improving their situation, vanquishing your enemies, or moving lots of soldiers into their towns. Erecting shiny statues of yourself will also quiet the dissenters.[NEWLINE][NEWLINE]However, if you cling to power now, you may face a civil war in the future! Honouring their request would bring only a temporary end to your rule, as there is every reason to believe your heirs will regain power in the future.</English>
-		<French>Les protestataires ne se sont pas encore tournés vers la violence, et il est encore temps pour apporter à cette situation une conclusion paisible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour vos personnes. Vous devez juste leur rappeler la gloire de votre règne, en améliorant leur situation, vainquant vos ennemis, ou en plaçant un bon nombre de soldats dans leurs villes. La construction des statues à votre effigie apaisera également les dissidents. [NEWLINE][NEWLINE]cependant, si vous vous accrochez au pouvoir maintenant, vous pourriez faire face à une guerre civile à l'avenir! Honorer leur demande apporterait seulement une fin provisoire de votre règne, car il y a tout lieu de croire que vos héritiers regagneront le pouvoir très rapidement.</French>
-		<German>Die Demonstranten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Wie alle guten Despoten sind Sie selbstverständlich die größte Hoffnung für Ihr Volk. Sie müssen sie lediglich an den Ruhm Ihrer Herrschaft erinnern, indem Sie entweder ihre Situation verbessern, Ihre Feinde vernichten oder Massen von Soldaten in ihre Städte schicken. Das Aufrichten von glänzenden Statuen Ihrer selbst wird die Abweichler ebenfalls ruhigstellen. [NEWLINE][NEWLINE]Wenn Sie jetzt allerdings zu sehr an der Macht hängen, könnten Sie sich in der Zukunft einem Bürgerkrieg gegenübersehen! Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, es gibt berechtigten Grund zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
-		<Italian>I dimostranti non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente. Ti occorre solo ricordar loro la gloria del tuo governo, sia con il miglioramento della loro condizione, sgominando i nemici, sia con il rafforzamento delle guarnigioni nelle loro città. Anche la costruzione di splendenti statue con la tua immagine calmerà i dissidenti. [NEWLINE][NEWLINE]Tuttavia, se ora ti aggrapperai al potere, potrai essere costretto ad affrontare una guerra civile in avvenire! Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poichè c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
+		<French>Les protestataires ne se sont pas encore tournés vers la violence, et il est encore temps pour apporter à cette situation une conclusion paisible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour vos personnes. Vous devez juste leur rappeler la gloire de votre règne, en améliorant leur situation, vainquant vos ennemis, ou en plaçant un bon nombre de soldats dans leurs villes. La construction des statues à votre effigie apaisera également les dissidents.[NEWLINE][NEWLINE]cependant, si vous vous accrochez au pouvoir maintenant, vous pourriez faire face à une guerre civile à l'avenir! Honorer leur demande apporterait seulement une fin provisoire de votre règne, car il y a tout lieu de croire que vos héritiers regagneront le pouvoir très rapidement.</French>
+		<German>Die Demonstranten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Wie alle guten Despoten sind Sie selbstverständlich die größte Hoffnung für Ihr Volk. Sie müssen sie lediglich an den Ruhm Ihrer Herrschaft erinnern, indem Sie entweder ihre Situation verbessern, Ihre Feinde vernichten oder Massen von Soldaten in ihre Städte schicken. Das Aufrichten von glänzenden Statuen Ihrer selbst wird die Abweichler ebenfalls ruhigstellen.[NEWLINE][NEWLINE]Wenn Sie jetzt allerdings zu sehr an der Macht hängen, könnten Sie sich in der Zukunft einem Bürgerkrieg gegenübersehen! Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, es gibt berechtigten Grund zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
+		<Italian>I dimostranti non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente. Ti occorre solo ricordar loro la gloria del tuo governo, sia con il miglioramento della loro condizione, sgominando i nemici, sia con il rafforzamento delle guarnigioni nelle loro città. Anche la costruzione di splendenti statue con la tua immagine calmerà i dissidenti.[NEWLINE][NEWLINE]Tuttavia, se ora ti aggrapperai al potere, potrai essere costretto ad affrontare una guerra civile in avvenire! Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poichè c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
 		<Spanish>Los manifestantes no han hecho uso de la violencia por ahora, y aún puede ser tiempo de concluir la situación de forma pacífica. Como todos los buenos déspotas, eres desde luego la mejor esperanza para tu gente. Solo necesitas recordarles la gloria de tu mandato, bien mejorando su situación, venciendo a tus enemigos, o trasladando grupos de soldados a sus ciudades. Erigir majestuosas estatuas de tu persona puede también calmar a los disidentes.[NEWLINE][NEWLINE]¡No obstante, si te apegas ahora al poder, puede que debas afrontar una guerra civil en el futuro! Aceptar sus demandas solo conllevará un final temporal de tu mandato, dado que hay muchas razones para creer que tus herederos podrán retornar al poder en el futuro.</Spanish>
 		<Polish>Protestanci nie uciekli się jeszcze do przemocy i ciągle jest czas na pokojowe rozwiązania tej sytuacji. Tak jak wszyscy wielcy despoci, jesteś największą nadzieją dla swoich ludzi. Musisz tylko im przypomnieć o swoich osiągnięciach, zarówno poprzez poprawę ich sytuacji, zmiecenie wrogów, czy przeniesienie wielu żołnierzy do miast. Wzniesienie połyskujących posągów twojej osoby powinno również uciszyć zamieszki.[NEWLINE][NEWLINE]Jednakże, pozostawienie sobie teraz całej władzy, może spowodować wybuch wojny domowej w przyszłości! Spełnienie ich żądań przyniesie tylko tymczasowy koniec twoich rządów, gdyż są powody do przypuszczenia, że twój spadkobierca odzyska władzę w przyszłości.</Polish>
 	</TEXT>
@@ -599,8 +599,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_RULE_BUYOFF</Tag>
 		<English>and fight. Your troops in these cities will be surrounded by a hostile population and will take heavy losses or even defect. The defenses of some of these cities may crumble immeadiately, others may be able to retain some semblence of control.[NEWLINE][NEWLINE]However, if you win a fair and open election, the riots will disappear and your power will not be questioned. It may also be possible to guarantee you 'victory', if you catch my drift, but it will be costly and the slight could be detected with very negative consequences.</English>
-		<French>et combattront. Vos troupes dans ces villes seront entourées par une population hostile et subiront de lourdes pertes ou même seront anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir. [NEWLINE][NEWLINE]cependant, si vous remportez une élection ouverte et juste, les émeutes disparaîtront et votre légitimité ne sera plus remise en cause. Il peut également être possible de vous garantir la victoire par des chemins détournés, mais ce sera coûteux et risqué: immaginez les conséquences si la fraude est découverte.</French>
-		<German>und kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. [NEWLINE][NEWLINE]Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen.</German>
+		<French>et combattront. Vos troupes dans ces villes seront entourées par une population hostile et subiront de lourdes pertes ou même seront anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir.[NEWLINE][NEWLINE]cependant, si vous remportez une élection ouverte et juste, les émeutes disparaîtront et votre légitimité ne sera plus remise en cause. Il peut également être possible de vous garantir la victoire par des chemins détournés, mais ce sera coûteux et risqué: immaginez les conséquences si la fraude est découverte.</French>
+		<German>und kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren.[NEWLINE][NEWLINE]Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen.</German>
 		<Italian>e combatteranno. Le tue truppe in queste città saranno circondate da una popolazione ostile e subiranno gravi perdite o potranno anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo.[NEWLINE][NEWLINE]Tuttavia, se vincerai libere ed oneste elezioni, i tumulti cesseranno ed il tuo potere non sarà contestato. È possibile anche "garantirsi la vittoria" - non so se mi spiego - ma ti costerà e l'imbroglio potrebbe essere scoperto, con conseguenze molto negative.</Italian>
 		<Spanish>y lucharán. En estas ciudades, tus tropas estarán cercadas por una población hostil y podrían sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían caer inmediatamente, es posible que otras ciudades puedan mantener cierto grado de control.[NEWLINE][NEWLINE]Sin embargo, si ganas unas elecciones justas y abiertas, los motines desaparecerán y tu poder dejará de ser cuestionado. También podría ser posible garantizar tu 'victoria', si sabes a lo que me refiero, pero será costoso y el amaño podría ser descubierto con nefastas consecuencias.</Spanish>
 		<Polish>i będą walczyć. Twoje wojsko zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli.[NEWLINE][NEWLINE]Jeżeli wygrasz uczciwe i wolne wybory, protestanci odejdą a twoja włądza będzie niekwestionowana. Możliwe jest także zagwarantowanie 'zwycięstwa', ale będzie to kosztowne i związane z ryzykiem wykrycia, które może mieć bardzo negatywne konsekwencje.</Polish>
@@ -635,9 +635,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_RULE_FIGHT</Tag>
 		<English>to fight. Your troops in these cities will be surrounded by a hostile population and may take heavy losses or even defect. The defenses of some of these cities may crumble immeadiately, others may be able to retain some semblence of control. If you then managed to reunite your country, the glory would be tremendous. But if you fail, you will long be vilified as your obstinance will have brought civil war into your homeland![NEWLINE][NEWLINE]There is no glory in surrendering to the will of the people, but it would preserve all that you have built. Honoring their request would bring only a temporary end to your rule, as there is every reason to believe your heirs will regain power in the future.</English>
-		<French>pour combattre. Vos troupes dans ces villes seront entourées par une population hostile et peuvent subir de lourdes pertes ou même être anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir. Si vous parveniez alors à réunifier votre pays, votre gloire serait énorme. Mais si vous échouez, vous serez longtemps haï car votre obstination aura introduit la guerre civile dans votre patrie! [NEWLINE][NEWLINE]il n'y a aucune gloire dans la reddition à la volonté du peuple, mais elle préserverait tous ce que vous avez construit. Honorer leur demande apporterait seulement un terme provisoire à votre règne, car il y a tout lieu de croire que vos héritiers retrouveront le pouvoir à l'avenir.</French>
-		<German>zu kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. Wenn es Ihnen dann gelingen würde, das Land wieder zu vereinen, so wäre der Ruhm gewaltig. Aber wenn Sie versagen, so würden Sie lange dafür geschmäht, dass Ihre Sturköpfigkeit den Bürgerkrieg in Ihr Vaterland gebracht hat! [NEWLINE][NEWLINE]Es liegt keine Ehre darin, sich dem Willen des Volkes zu beugen, aber es könnte all das erhalten, was Sie aufgebaut haben. Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, da es berechtigten Grund gibt zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
-		<Italian>per combattere. Le tue truppe in queste città saranno circondate da una popolazione ostile e potranno subire gravi perdite o anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo. Se allora riuscirai a riunire il paese, il trionfo sarà completo. Ma se fallirai, sarai disprezzato a lungo poichè la tua ostinazione avrà portato la guerra civile nella tua patria! [NEWLINE][NEWLINE]non c'è gloria nell'arrendersi alla volontà del popolo, ma manterresti ciò che hai costruito. Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poichè c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
+		<French>pour combattre. Vos troupes dans ces villes seront entourées par une population hostile et peuvent subir de lourdes pertes ou même être anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir. Si vous parveniez alors à réunifier votre pays, votre gloire serait énorme. Mais si vous échouez, vous serez longtemps haï car votre obstination aura introduit la guerre civile dans votre patrie![NEWLINE][NEWLINE]il n'y a aucune gloire dans la reddition à la volonté du peuple, mais elle préserverait tous ce que vous avez construit. Honorer leur demande apporterait seulement un terme provisoire à votre règne, car il y a tout lieu de croire que vos héritiers retrouveront le pouvoir à l'avenir.</French>
+		<German>zu kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. Wenn es Ihnen dann gelingen würde, das Land wieder zu vereinen, so wäre der Ruhm gewaltig. Aber wenn Sie versagen, so würden Sie lange dafür geschmäht, dass Ihre Sturköpfigkeit den Bürgerkrieg in Ihr Vaterland gebracht hat![NEWLINE][NEWLINE]Es liegt keine Ehre darin, sich dem Willen des Volkes zu beugen, aber es könnte all das erhalten, was Sie aufgebaut haben. Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, da es berechtigten Grund gibt zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
+		<Italian>per combattere. Le tue truppe in queste città saranno circondate da una popolazione ostile e potranno subire gravi perdite o anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo. Se allora riuscirai a riunire il paese, il trionfo sarà completo. Ma se fallirai, sarai disprezzato a lungo poichè la tua ostinazione avrà portato la guerra civile nella tua patria![NEWLINE][NEWLINE]non c'è gloria nell'arrendersi alla volontà del popolo, ma manterresti ciò che hai costruito. Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poichè c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
 		<Spanish>para luchar. Tus tropas en estas ciudades estarán cercadas por una población hostil y podrían sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían desmoronarse inmediatamente, es posible que otras ciudades puedan mantener un cierto grado de control. Si te las arreglaras para reunificar tu país, la gloria sería enorme. ¡Pero si fallas, serás vilipendiado, dado que tu obstinación habrá traido la guerra civil a tu tierra![NEWLINE][NEWLINE]No recibirás gloria ninguna por rendirte ante la voluntad de tu pueblo, pero ello preservará todo lo que has construido. Aceptar sus peticiones tan solo traerá un final temporal de tu mandato, pues todos los indicios apuntan a que tus herederos podrán retornar al poder en el futuro.</Spanish>
 		<Polish>do walki. Twoje wojsko w tych miastach zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli. Jeżeli uda ci się po tym ponownie połączyć państwo, spłynie na ciebie ogromna chwała. Jednakże jeśli zawiedziesz, będziesz długo nękany przez wojnę domową w swojej ojczyźnie![NEWLINE][NEWLINE]Nie zdobędziesz chwały oddając wszystko woli ludzi, ale może to ocalić wszystko co do tej pory zbudowałeś. Spełnienie ich żądań przyniesie tylko tymczasowy koniec twoich rządów, gdyż są powody do przypuszczenia, że twój spadkobierca odzyska władzę w przyszłości.</Polish>
 	</TEXT>
@@ -653,18 +653,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_RULE_TERRIBLE</Tag>
 		<English>This is truly a terrible situation. Like all good despots, you are of course the best hope for your people, but some how they simply cannot see the light. Now you must decide what legacy you will leave.[NEWLINE][NEWLINE]You could meet the challenge with force, and your cities would rise up as</English>
-		<French>C'est vraiment une situation terrible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour votre peuple, mais certaines ne semblent pas pouvoir voir la lumière. Maintenant vous devez décider quel legs vous laisserez. [NEWLINE][NEWLINE]Vous pourriez relever le défi par la force, et vos villes se soulèveront en tant que</French>
-		<German>Dies ist wirklich eine schreckliche Situation. Wie alle guten Despote sind Sie selbstverständlich die größte Hoffnung für Ihr Volk, aber irgendwie erkennen sie einfach das Licht nicht. Jetzt müssen Sie sich entscheiden, welches Vermächtnis Sie hinterlassen. [NEWLINE][NEWLINE]Sie können der Herausforderung mit Gewalt begegnen, und Ihre Städte würden sich erheben als</German>
-		<Italian>Questa; è veramente una situazione terribile. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente, ma per qualche motivo essi non vedono la luce. Ora devi decidere che eredità lascerai. [NEWLINE][NEWLINE]Puoi accettare la sfida con forza e le tue città si solleveranno come</Italian>
+		<French>C'est vraiment une situation terrible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour votre peuple, mais certaines ne semblent pas pouvoir voir la lumière. Maintenant vous devez décider quel legs vous laisserez.[NEWLINE][NEWLINE]Vous pourriez relever le défi par la force, et vos villes se soulèveront en tant que</French>
+		<German>Dies ist wirklich eine schreckliche Situation. Wie alle guten Despote sind Sie selbstverständlich die größte Hoffnung für Ihr Volk, aber irgendwie erkennen sie einfach das Licht nicht. Jetzt müssen Sie sich entscheiden, welches Vermächtnis Sie hinterlassen.[NEWLINE][NEWLINE]Sie können der Herausforderung mit Gewalt begegnen, und Ihre Städte würden sich erheben als</German>
+		<Italian>Questa; è veramente una situazione terribile. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente, ma per qualche motivo essi non vedono la luce. Ora devi decidere che eredità lascerai.[NEWLINE][NEWLINE]Puoi accettare la sfida con forza e le tue città si solleveranno come</Italian>
 		<Spanish>Esta es, sinceramente, una situación terrible. Como todos los buenos déspotas, eres por descontado la mejor esperanza para tu gente, pero algunos por su simpleza no son capaces de ver la luz. Ahora debes decidir qué legado dejarás.[NEWLINE][NEWLINE]Puedes plantarle cara al desafio por la fuerza, y tus ciudades se alzarán como</Spanish>
 		<Polish>To jest naprawdę trudna sytuacja. Tak jak wszyscy wielcy despoci, jesteś największą nadzieją dla swoich ludzi, ale kilku podważa twój autorytet. Musisz zadecydować, jakie dziedzictwo chcesz po sobie zostawić.[NEWLINE][NEWLINE]Może będziesz musiał stawić czoło wrogim siłom oraz twoim miastom, które powstaną jako</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_SPEECH_DENY</Tag>
 		<English>Young people speaking their minds, power to the people![NEWLINE][NEWLINE]The beatniks and journalists have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Honouring their request is by far the quickest and easiest path to keeping these cities in your empire for the foreseeable future. However, if you decide to keep your current practices, you may yet have time to improve other aspects of these cities so they would have nothing to complain about even if they could complain. You may also choose to bribe the agitators and they will drop their cause and say whatever you want them to.</English>
-		<French>Les jeunes expriment leur pensée, le Pouvoir aux peuple! [NEWLINE][NEWLINE]les beatniks et les journalistes ne se sont pas encore tournés vers la violence, et il est encore temps pour donner à la situation une conclusion paisible. Honorer leur demande est le chemin de loin le plus rapide et le plus facile pour maintenir ces villes dans votre empire. Cependant, si vous décidez de garder vos pratiques courantes, vous pouvez encore avoir le temps pour améliorer d'autres aspects de ces villes, et ainsi ils n'auraient plus de raisons de se plainder. Vous pouvez également choisir de soudoyer les agitateurs influents et ils abandonneront leur cause et déclareront ce que vous voulez qu'ils disent.</French>
-		<German>Junge Menschen äußern sich frei, alle Macht dem Volk! [NEWLINE][NEWLINE]Die Halbstarken und die Journalisten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Ihre Forderungen zu erfüllen ist jedoch der schnellste und einfachste Weg diese Städte in der absehbaren Zukunft in Ihrem Imperium zu behalten. Sollten Sie sich entscheiden, Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie sich über nichts beschweren können, selbst wenn sie dazu in der Lage wären. Sie können die Aufrürer auch bestechen und sie werden ihre Sache fallen lassen und sagen, was immer Sie von ihnen wollen.</German>
-		<Italian>Giovani che esprimono il proprio pensiero, potere alla gente! [NEWLINE][NEWLINE]I contestatori non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenere queste città nel tuo impero, per il prossimo futuro. Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo che non protestino ancora, anche se ne avrebbero motivo. Puoi anche scegliere di corrompere gli agitatori, essi cominceranno ad abbandonare la loro causa e diranno qualunque cosa tu vorrai.</Italian>
+		<French>Les jeunes expriment leur pensée, le Pouvoir aux peuple![NEWLINE][NEWLINE]les beatniks et les journalistes ne se sont pas encore tournés vers la violence, et il est encore temps pour donner à la situation une conclusion paisible. Honorer leur demande est le chemin de loin le plus rapide et le plus facile pour maintenir ces villes dans votre empire. Cependant, si vous décidez de garder vos pratiques courantes, vous pouvez encore avoir le temps pour améliorer d'autres aspects de ces villes, et ainsi ils n'auraient plus de raisons de se plainder. Vous pouvez également choisir de soudoyer les agitateurs influents et ils abandonneront leur cause et déclareront ce que vous voulez qu'ils disent.</French>
+		<German>Junge Menschen äußern sich frei, alle Macht dem Volk![NEWLINE][NEWLINE]Die Halbstarken und die Journalisten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Ihre Forderungen zu erfüllen ist jedoch der schnellste und einfachste Weg diese Städte in der absehbaren Zukunft in Ihrem Imperium zu behalten. Sollten Sie sich entscheiden, Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie sich über nichts beschweren können, selbst wenn sie dazu in der Lage wären. Sie können die Aufrürer auch bestechen und sie werden ihre Sache fallen lassen und sagen, was immer Sie von ihnen wollen.</German>
+		<Italian>Giovani che esprimono il proprio pensiero, potere alla gente![NEWLINE][NEWLINE]I contestatori non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenere queste città nel tuo impero, per il prossimo futuro. Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo che non protestino ancora, anche se ne avrebbero motivo. Puoi anche scegliere di corrompere gli agitatori, essi cominceranno ad abbandonare la loro causa e diranno qualunque cosa tu vorrai.</Italian>
 		<Spanish>¡Los jóvenes expresan sus ideales: el poder para el pueblo![NEWLINE][NEWLINE]Los agitadores y periodistas aún no han dado muestras de violencia, todavía hay tiempo para poder concluir la situación de forma pacífica. Aceptar sus demandas es de lejos el camino más rápido y fácil para mantener estas ciudades en tu imperio en un futuro próximo. No obstante, si decides mantener tus políticas actuales, puede que aún tengas tiempo de mejorar otros aspectos de estas ciudades, de modo que no tengan motivos para quejarse acerca de si se pueden quejar. También puedes sobornar a los agitadores, y dejarán a un lado su causa y dirán lo que tú quieras que digan.</Spanish>
 		<Polish>Młodzi ludzie pragną wolności słowa![NEWLINE][NEWLINE]Pisarze i dziennikarze nie uciekli się jeszcze do przemocy i ciągle jest czas na pokojowe rozwiązania tej sytuacji. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości. Jednakże, jeśli zadecydujesz zachować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach, dzięki czemu nie będą dłużej narzekać nawet jeśli będą mieli do tego powody. Możesz również przekupić agitatorów, co spowoduje, że wycofają swoje groźby i będą mówić tylko to, co będziesz chciał usłyszeć.</Polish>
 	</TEXT>
@@ -1022,8 +1022,8 @@
 		<Tag>TXT_KEY_REV_HELP_REVOLUTION_DESC</Tag>
 		<English>This is the main component of the mod and affects the internal stability of your and every other empire. Keeping the citizens of your empire content is now a bigger issue, as if a city feels they have been mistreated they may rebel against you! The new Revolution Watch screen can help you keep track of how your citizens are feeling and can be opened either by using the button below the advisor buttons or by pressing Ctrl+Shift+W. This screen shows which cities are feeling rebellious and why they do or don't like your current policies. This info can also be found in the city screen near the culture bar and moving your cursor over the new Revolution Status bar will bring up specific information about the city. There are many different reasons why your citizens can love or hate living in your empire and keeping them happy and patriotic adds a new dimension to managing your empire. One tool you have if you need to buy time or avoid a pending revolt is the ability to make a large cash 'donation' to a city, the options for this can be accessed either through the Revolution Watch screen or by clicking on the Revolt Status bar in the city screen.[NEWLINE][NEWLINE]If some of your citizens disagree with your policies or want to separate from your empire, you'll be presented with a popup offering you a choice on how to respond to their demands. There are many different kinds of demands your citizens may make, from changes to your civics to complete freedom on cultural or religious grounds, and for each type of revolt there are multiple ways you can respond. You can always avoid outright war or force the separatists to fight for their freedom. If you defeat them on the battle field, they will think twice before revolting again. However, you will eventually need to address the issues that cause them to revolt or potentially face a protracted civil war. Your allies and enemies will also face the possibilities of open revolts, which can present opportunities for you in many different ways and other leaders can also lose elections or be forced to cede power control of their empire to another leader.[NEWLINE][NEWLINE]Playing with Revolution may require you to adjust your strategies for building up your empire or conquering foreign territory. Some general guidelines are that building your culture and spreading your religion are now more important to help keep your empire cohesive. Strong defences and victory in war can also keep your empire doing well. Over expansion is more risky and an empire that spends too much commerce on taxes will not last for long. Picking civics that suit your empire is also important. Check the Revolution Watch screen and the status bars in your cities to see what issues your citizens have and head them off before they boil over into open revolt.</English>
 		<French>C'est l'élément central du mod. Il affecte la stabilité interne de votre empire et de tous les autres. Maintenir le bonheur de vos citoyens est maintenant un élément central, puisque si les habitants d'une ville pensent qu'ils ont été mal-taités, ils se rebelleront contre vous! Le nouvel écran de surveillance des révolutions peut vous aider à savoir comment se sentent vos citoyens. Il peut être activé en cliquant sur le bouton en dessous des boutons des conseillers ou en tapant Ctrl+Maj+W. Cet écran montre quelles villes sont en train de se rebeller et pourquoi. Ces infos s'affichent aussi dans l'écran de ville, près de la barre de culture. Il y a beaucoup de raisons qui peuvent conduire vos citoyens à aimer ou à détester vivre au sein de votre empire, et les maintenir heureux et patriotes ajoute une nouvelle dimension au jeu. Un outil que vous pouvez utiliser si vous voulez reculer ou annuler une révolte en gestation, c'est faire une grosse donation financière à la ville. Cette option peut s'activer à partir de l'écran de sureveillance des Révolutions, ou en cliquant sur la barre de Statut de révolte dans l'écran de ville.[NEWLINE][NEWLINE]Si certains de vos citoyens sont en désaccord avec votre politique ou veulent quitter votre empire, une fenêtre apparaîtra, vous affrant des choix de réponses à leurs attentes. Il ya beaucoup de demandes possibles de la part de vos citoyens, et pour chaque type de révolte, il y a plusieurs réponses possibles de votre part. Vous pouvez toujours éviter une guerre civile ou au contraire, forcer les séparatists à se battre pour leur liberté. Mais sachez que si vous les battez sur le champs de bataille, ils chercheront deux fois plus un moyen de se révolter. De toute façon, vous pourrez éventuellement trouver le moyen de calmer leur révolte ou vous pourrez choisir de vous engager dans une guerre civile durable. Vos alliés et ennemis devront aussi faire face à des révoltes qui pourront vous offrir d'intéressantes opportunités de différentes sortes. Les autres Leaders peuvent aussi perdre les élections ou ou être forcés de quitter le pouvoir.[NEWLINE][NEWLINE]Jouer à Révolution peut vous conduire à ajuster vos stratégies dans la construction de votre empire ou les conquêtes de territoires ennemis. Pour aller vite, disons que l'influence culturelle et religieuse sont maintenant plus importantes pour maintenir la cohésion de votre empire. Des défenses solides et des victoires militaires pourront aussi vous aider. Une trop grande expansion est risquée et trop de taxes risque aussi d'affaiblir votre empire. Bien choisir vos doctrines est aussi important. Consultez l'écran d'observation des révolutions et la barre de statut des revoltes de vos villes pour voir les problèmes qu'ont vos citoyens et les supprimer avant une révolte.</French>
-		<German>Dies ist der Hauptbestandteil des Mods und beeinflusst die innere Stabilität Deines und jedes anderen Imperiums. Es ist jetzt eine wichtigere Aufgabe, die Bürger Deines Imperiums zufrieden zu halten, denn eine Stadt, die sich schlecht behandelt fühlt kann gegen Dich rebellieren! Das neue Revolutions-Kontrollfenster kann dabei helfen, die Stimmung Deiner Bürger zu verfolgen. Es kann entweder durch den Schalter unterhalb der Beraterknöpfe oder mit Strg+Shift+W geöffnet werden. Dieses Fenster zeigt, welche Städte sich rebellisch fühlen und warum sie Deine aktuelle Politik mögen oder nicht mögen. Diese Info kann auch im Stadtfenster in der Nähe des Kulturbalkens gefunden werden. Durch die Bewegung des Mauszeigers über dem neuen Revolutions-Statusbalken erhält man spezifische Informationen über die Stadt. Es gibt viele verschiedene Gründe, wieso es Deine Bürger lieben oder hassen in Deinem Imperium zu leben, und die Aufgabe, sie glücklich und patriotisch zu halten fügt der Verwaltung Deines Reiches eine neue Dimension hinzu. Eine große Geld-'Spende' ist eine Möglichkeit, Zeit zu gewinnen oder eine drohende Revolte abzuwenden. Auf die Optionen dafür kann entweder über das Revolutions-Kontrollfenster oder durch Anklicken des Revolutions-Statusbalkens im Stadtfenster zugegriffen werden.[NEWLINE][NEWLINE]Wenn einige Deiner Bürger nicht mit Deiner Politik einverstanden sind oder sich von Deinem Imperium abspalten wollen, so erscheint ein Dialogfenster mit einer Auswahl möglicher Antworten auf die Forderungen. Deine Bürger können verschiedene Forderungen stellen, von einer Wandelung der Gesellschaftsform bis zu völliger Freiheit kultureller oder religiöser Art, und für jede Art der Revolte gibt es verschiedene Möglichkeiten zu reagieren. Du hast immer die Wahl, den sofortigen Krieg zu vermeiden oder die Separatisten dazu zu zwingen, für ihre Freiheit zu kämpfen. Wenn Du sie auf dem Schlachtfeld besiegst, so werden sie es sich gut überlegen, nochmals zu revoltieren. Dennoch wirst Du Dich letztlich um die Umstände, die sie zum Revoltieren zwingen, kümmern müssen, sonst siehst Du Dich einem andauerndem Bürgerkrieg gegenüber. Auch Deine Freunde und Feinde müssen mit der Möglichkeit einer offenen Revolte rechnen, daraus können sich für Dich ungeahnte Möglichkeiten ergeben. Auch andere Anführer können Wahlen verlieren oder dazu gezwungen werden, die Kontrolle über ihr Imperium einem anderen Anführer zu übergeben. [NEWLINE][NEWLINE]Wenn Du mit der Modifikation 'Revolution' spielst, so musst Du damit rechnen, Deine Strategie anzupassen, ein Imperium aufzubauen oder fremde Territorien zu erobern. Grundsätzlich gilt, dass der Aufbau Deiner Kultur und die Ausbreitung Deiner Religion jetzt wichtiger sind um Dein Imperium zusammenzuhalten. Starke Verteidigungskräfte und siegreiche Kriege können ebenfalls zum Wohlergehen Deines Imperiums beitragen. Große Expansion ist riskant, und ein Imperium, welches zu viel Wirtschaftsleistung für Steuern verwendet wird nicht lange bestehen. Die Auswahl der für Dein Imperium geeigneten Gesellschaftsform ist ebenfalls wichtig. Kontrolliere regelmäßig das Revolutions-Kontrollfenster und die Statusbalken Deiner Städte, um zu sehen, welche Sorgen Deine Bürger haben und kümmere Dich darum, bevor die Stimmung zu offener Revolte führt.</German>
-		<Italian>'Revolution' è il componente principale del Mod e influenza la stabilità interna del tuo impero (e degli altri). Rendere felici i cittadini dell'impero è ora un vero problema, se una città non si sente trattata bene può ribellarsi contro di te! La nuova Schermata del Consigliere Rivoluzionario può aiutarti a tenere sotto controllo l'umore dei cittadini; puoi accedere utilizzando uno dei pulsanti 'consigliere' o premendo Ctrl + Shift + W. Questo schermo mostra in quali città è presente un sentimento di rivolta e perché esse sono (o no) d'accordo con le tue scelte politiche. Queste informazioni si trovano anche nella schermata di città, vicino alla barra della produzione culturale; spostando il cursore sopra la nuova barra di Stato di Rivolta, appariranno informazioni specifiche sulla città. Ci sono molti diversi motivi per cui ai cittadini può piacere (o no) vivere nel tuo impero e rendere loro più soddisfatti o più patriottici aggiunge una nuova dimensione alla gestione del tuo impero. Uno possibilità che hai, se ti occorre guadagnare tempo o evitare una imminente rivolta è quello di fare consistenti 'donazioni' in oro ad una città; puoi accedere alle relative opzioni sia attraverso lo schermo Rivoluzioni che cliccando sulla barra di Stato di Rivolta, nella schermata città. [NEWLINE] [NEWLINE] Se alcuni dei cittadini non sono d'accordo con la tua politica o desiderano separarsi dal tuo impero, ti verrà presentato un popup per scegliere come rispondere alle loro richieste. Ci sono molti diversi tipi di richieste che i tuoi cittadini ti possono fare ( da modifiche alla forma di governo alla completa indipendenza per motivi culturali o religiosi ) e per ogni tipo di rivolta ci sono diversi modi con cui si può rispondere. è sempre possibile evitare la guerra aperta o forzare i separatisti a lottare per la loro libertà. Se li sconfiggerai sul campo di battaglia, ci penseranno due volte prima di rivoltarsi di nuovo. Tuttavia, ti troverai infine nella necessità di risolvere i veri problemi che causano le rivolte o rischierai di affrontare una lunga guerra civile. Anche i tuoi alleati e i tuoi nemici dovranno affrontare la possibilità di rivolte, e questo può rappresentare in vari modi una opportunità per te, addirittura un altro leader potrebbe perdere le elezioni e essere costretto a cedere il controllo del suo impero ad un altro leader. [NEWLINE] [NEWLINE] Giocare con 'Revolution' richiederà che tu perfezioni le strategie per costruire il tuo impero o conquistare territori nemici. La linea guida da seguire è che lo sviluppo della tua cultura e la diffusione della tua religione sono più importanti per mantenere il tuo impero coeso. Difese forti e vittorie militari possono essere una strategia vincente per mantenere il tuo impero. L'espansione è più rischiosa e per un impero che spende troppo i ricavi da commercio e tasse non dureranno per molto. Scegliere forme di governo adatte al tuo impero è altrettanto importante. Verifica la schermata 'Rivoluzioni' e la barra di stato delle città per controllare quali problemi affliggono i tuoi cittadini ed affrontarli prima che portino ad una aperta rivolta.</Italian>
+		<German>Dies ist der Hauptbestandteil des Mods und beeinflusst die innere Stabilität Deines und jedes anderen Imperiums. Es ist jetzt eine wichtigere Aufgabe, die Bürger Deines Imperiums zufrieden zu halten, denn eine Stadt, die sich schlecht behandelt fühlt kann gegen Dich rebellieren! Das neue Revolutions-Kontrollfenster kann dabei helfen, die Stimmung Deiner Bürger zu verfolgen. Es kann entweder durch den Schalter unterhalb der Beraterknöpfe oder mit Strg+Shift+W geöffnet werden. Dieses Fenster zeigt, welche Städte sich rebellisch fühlen und warum sie Deine aktuelle Politik mögen oder nicht mögen. Diese Info kann auch im Stadtfenster in der Nähe des Kulturbalkens gefunden werden. Durch die Bewegung des Mauszeigers über dem neuen Revolutions-Statusbalken erhält man spezifische Informationen über die Stadt. Es gibt viele verschiedene Gründe, wieso es Deine Bürger lieben oder hassen in Deinem Imperium zu leben, und die Aufgabe, sie glücklich und patriotisch zu halten fügt der Verwaltung Deines Reiches eine neue Dimension hinzu. Eine große Geld-'Spende' ist eine Möglichkeit, Zeit zu gewinnen oder eine drohende Revolte abzuwenden. Auf die Optionen dafür kann entweder über das Revolutions-Kontrollfenster oder durch Anklicken des Revolutions-Statusbalkens im Stadtfenster zugegriffen werden.[NEWLINE][NEWLINE]Wenn einige Deiner Bürger nicht mit Deiner Politik einverstanden sind oder sich von Deinem Imperium abspalten wollen, so erscheint ein Dialogfenster mit einer Auswahl möglicher Antworten auf die Forderungen. Deine Bürger können verschiedene Forderungen stellen, von einer Wandelung der Gesellschaftsform bis zu völliger Freiheit kultureller oder religiöser Art, und für jede Art der Revolte gibt es verschiedene Möglichkeiten zu reagieren. Du hast immer die Wahl, den sofortigen Krieg zu vermeiden oder die Separatisten dazu zu zwingen, für ihre Freiheit zu kämpfen. Wenn Du sie auf dem Schlachtfeld besiegst, so werden sie es sich gut überlegen, nochmals zu revoltieren. Dennoch wirst Du Dich letztlich um die Umstände, die sie zum Revoltieren zwingen, kümmern müssen, sonst siehst Du Dich einem andauerndem Bürgerkrieg gegenüber. Auch Deine Freunde und Feinde müssen mit der Möglichkeit einer offenen Revolte rechnen, daraus können sich für Dich ungeahnte Möglichkeiten ergeben. Auch andere Anführer können Wahlen verlieren oder dazu gezwungen werden, die Kontrolle über ihr Imperium einem anderen Anführer zu übergeben.[NEWLINE][NEWLINE]Wenn Du mit der Modifikation 'Revolution' spielst, so musst Du damit rechnen, Deine Strategie anzupassen, ein Imperium aufzubauen oder fremde Territorien zu erobern. Grundsätzlich gilt, dass der Aufbau Deiner Kultur und die Ausbreitung Deiner Religion jetzt wichtiger sind um Dein Imperium zusammenzuhalten. Starke Verteidigungskräfte und siegreiche Kriege können ebenfalls zum Wohlergehen Deines Imperiums beitragen. Große Expansion ist riskant, und ein Imperium, welches zu viel Wirtschaftsleistung für Steuern verwendet wird nicht lange bestehen. Die Auswahl der für Dein Imperium geeigneten Gesellschaftsform ist ebenfalls wichtig. Kontrolliere regelmäßig das Revolutions-Kontrollfenster und die Statusbalken Deiner Städte, um zu sehen, welche Sorgen Deine Bürger haben und kümmere Dich darum, bevor die Stimmung zu offener Revolte führt.</German>
+		<Italian>'Revolution' è il componente principale del Mod e influenza la stabilità interna del tuo impero (e degli altri). Rendere felici i cittadini dell'impero è ora un vero problema, se una città non si sente trattata bene può ribellarsi contro di te! La nuova Schermata del Consigliere Rivoluzionario può aiutarti a tenere sotto controllo l'umore dei cittadini; puoi accedere utilizzando uno dei pulsanti 'consigliere' o premendo Ctrl + Shift + W. Questo schermo mostra in quali città è presente un sentimento di rivolta e perché esse sono (o no) d'accordo con le tue scelte politiche. Queste informazioni si trovano anche nella schermata di città, vicino alla barra della produzione culturale; spostando il cursore sopra la nuova barra di Stato di Rivolta, appariranno informazioni specifiche sulla città. Ci sono molti diversi motivi per cui ai cittadini può piacere (o no) vivere nel tuo impero e rendere loro più soddisfatti o più patriottici aggiunge una nuova dimensione alla gestione del tuo impero. Uno possibilità che hai, se ti occorre guadagnare tempo o evitare una imminente rivolta è quello di fare consistenti 'donazioni' in oro ad una città; puoi accedere alle relative opzioni sia attraverso lo schermo Rivoluzioni che cliccando sulla barra di Stato di Rivolta, nella schermata città.[NEWLINE][NEWLINE]Se alcuni dei cittadini non sono d'accordo con la tua politica o desiderano separarsi dal tuo impero, ti verrà presentato un popup per scegliere come rispondere alle loro richieste. Ci sono molti diversi tipi di richieste che i tuoi cittadini ti possono fare ( da modifiche alla forma di governo alla completa indipendenza per motivi culturali o religiosi ) e per ogni tipo di rivolta ci sono diversi modi con cui si può rispondere. è sempre possibile evitare la guerra aperta o forzare i separatisti a lottare per la loro libertà. Se li sconfiggerai sul campo di battaglia, ci penseranno due volte prima di rivoltarsi di nuovo. Tuttavia, ti troverai infine nella necessità di risolvere i veri problemi che causano le rivolte o rischierai di affrontare una lunga guerra civile. Anche i tuoi alleati e i tuoi nemici dovranno affrontare la possibilità di rivolte, e questo può rappresentare in vari modi una opportunità per te, addirittura un altro leader potrebbe perdere le elezioni e essere costretto a cedere il controllo del suo impero ad un altro leader.[NEWLINE][NEWLINE]Giocare con 'Revolution' richiederà che tu perfezioni le strategie per costruire il tuo impero o conquistare territori nemici. La linea guida da seguire è che lo sviluppo della tua cultura e la diffusione della tua religione sono più importanti per mantenere il tuo impero coeso. Difese forti e vittorie militari possono essere una strategia vincente per mantenere il tuo impero. L'espansione è più rischiosa e per un impero che spende troppo i ricavi da commercio e tasse non dureranno per molto. Scegliere forme di governo adatte al tuo impero è altrettanto importante. Verifica la schermata 'Rivoluzioni' e la barra di stato delle città per controllare quali problemi affliggono i tuoi cittadini ed affrontarli prima che portino ad una aperta rivolta.</Italian>
 		<Spanish>Este es el componente principal del mod e influye en la estabilidad interna de cualquier imperio. ¡Mantener satisfechos a los ciudadanos de tu imperio es ahora una cuestión más importante, y si una ciudad siente que ha sido menospreciada puede que se rebele contra ti! El nuevo Consejero de Revolución te puede ayudar a mantenerte informado acerca de cómo se sienten tus ciudadanos; se puede abrir en cualquier momento usando el botón a la derecha de los botones de los consejeros o presionando [CTRL-SHIFT-W]. Esta pantalla muestra qué ciudades se sienten rebeldes y por qué les gusta o no tu política actual. Esta información también se puede encontrar en la Vista de la ciudad, debajo de la barra de cultura, y colocando el cursor sobre la nueva barra de Estado de la rebelión se te mostrará información específica sobre la ciudad. Hay muchas razones diferentes por las cuales tus ciudadanos pueden amar u odiar la vida en tu imperio, y el tener que mantenerlos felices y unidos bajo tu bandera añade una nueva dimensión a la gestión de tus dominios. Si necesitas comprar tiempo o evitar una rebelión pendiente cuentas con la habilidad de realizar una gran "donación" de dinero a una ciudad, puedes acceder a esta opción a través del Consejero de Revolución o pinchando en la barra de Estado de la rebelión en la Vista de la ciudad.[NEWLINE][NEWLINE]Si algunos de tus ciudadanos están en desacuerdo con tu política o quieren separarse de tu imperio, se te mostrará una ventana emergente ofreciéndote diferentes opciones para responder a sus demandas. Tus ciudadanos pueden realizar muchos tipos diferentes de demandas, desde cambios en tus principios hasta la completa libertad en el plano religioso y/o cultural, y para cada tipo de revuelta hay múltiples formas de responder. Siempre podrás evitar la guerra abierta o forzar a los separatistas a luchar por su libertad. Si los derrotas en el campo de batalla, se lo pensarán dos veces antes de volver a rebelarse. Sin embargo, en algún momento tendrás que afrontar las causas por las cuales los ciudadanos se quieren rebelar, o podrías encontrarte de repente frente a una larga guerra civil. Tus aliados y enemigos también se enfrentarán a la posibilidad de revueltas, lo que puede darte oportunidades de muchas y diversas formas, además, los otros líderes también pueden perder las elecciones o ser forzados a ceder el control de su imperio a otro líder.[NEWLINE][NEWLINE]Jugar con Revolution puede requerir que ajustes tus estrategias a la hora de construir tu imperio o conquistar territorio enemigo. En líneas generales, por ejemplo, fomentar la expansión de la cultura o expandir tu religión son ahora más importantes a la hora de mantener tu imperio sin fisuras. Las victorias militares y unas defensas sólidas pueden también ayudar a mantener a tu imperio en el buen camino. La expansión excesiva es mucho más peligrosa, y un imperio que destine demasiado comercio a mantener el balance en positivo, no durará mucho. Escoger los principios que rijan tu imperio también será importante. Comprueba el Consejero de Revolución y las barras de estado de tus ciudades para observar qué asuntos preocupan a tus ciudadanos y soluciónalos antes de que los ánimos se caldeen y estalle la revolución.</Spanish>
 		<Polish>Jest to główny element w modyfikacji i wpływa na wewnętrzną stabilność twojego, jak również konkurencyjnych imperiów. Utrzymanie twoich obywateli staje się teraz większym i trudniejszym zadaniem, ponieważ jeśli poczują się źle traktowani mogą zbuntować się przeciwko tobie i twoim rządom. Nowy ekran "Szczegóły rewolucji" umożliwia śledzenie zadowolenia obywateli. Możesz go otworzyć za pomocą przycisku znajdującego się pod przyciskami doradców lub poprzez kombinację klawiszy CTRL + SHIFT + W. Na tym ekranie znajdują się także informacje na temat miast, które wykazują przejawy buntu oraz opinie co im się w obecnym czasie nie podoba w twojej polityce oraz w innych sprawach narodowych. Informacje te można również znaleźć na ekranie każdego miasta. Znajdują się one nad paskiem kultury i paskiem określającym procentową ilość obywateli w mieście. Istnieje wiele powodów, dla których obywatele mogą cię chwalić, wielbić ale też i nienawidzić. Mod Rewolucja nadaje nowy wymiar zarządzania całym imperium. Jest możliwość zwiększenia czasu do chwili wzniecenia buntu - wystarczy podarować miastu sporą ilość złota jako darowiznę.[NEWLINE][NEWLINE]Jeżeli niektórzy twoi obywatele nie zgadzają się z twoją polityką, nie podoba im się jak sprawujesz rządy lub chcą odłączyć się od twojego narodu i stworzyć własną cywilizacje - zaprezentują ci swoje żądania. Obywatele mogą mieć różne rodzaje żądań - od zmiany w doktrynach politycznych na całkowitą swobodę i wolność kulturową czy religijną, a także istnieje wiele różnorodnych buntów na które istnieje sposobów reagowania. Zawsze można uniknąć wojny z separatystami walczącymi o wolność. Jeżeli pokonasz ich na polu bitwy, wtedy dwa razy pomyślą zanim znów zaczną się buntować. Jednak wcześniej czy później trzeba stawić czoło problemom i je rozwiązać. Twoi sojusznicy lub wrogowie również mogą wzmagać się z rewolucją. Mogą przegrać z buntownikami co spowoduje, że jakaś część imperium zostanie odłączona i połączona z innym narodem. Może się okazać to dla ciebie znakomitym sposobem rozwijania własnej cywilizacji.[NEWLINE][NEWLINE]Granie w tą modyfikację, może wymagać od gracza całkowitej zmiany strategii w rozwoju własnego imperium oraz podboju obcego terytorium. Nawet rozwijająca się kultura lub religia na granicy, mogą mieć duże znaczenie i przyczynić się do wybuchu buntu. Silna obrona i zwycięstwa w wojnach mogą również pomóc w utrzymaniu twojego imperium. Nie należy zapomnieć, że wysokość podatków jak i doktryny przyczyniają się do nastrojów w mieście. Sprawdzaj ekran Szczegóły Rewolucji jak również pasek stanu w twoich miastach, aby dowiedzieć się o wszystkich niedogodnościach i potrzebach obywateli, aby szybko na nie zareagować i nie dopuścić do wybuchu otwartej rewolucji.</Polish>
 	</TEXT>
@@ -1183,9 +1183,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_HL_SLAVE_DENY</Tag>
 		<English>or they will fight![NEWLINE][NEWLINE]If you deny their request, disorganized slave bands will rise up outside your cities! But if you end their servitude, you will put many whip makers out of business.</English>
-		<French>ou ils combattront! [NEWLINE] [NEWLINE] si vous ignorez leur demande, les bandes d'esclaves se rassembleront contre vous en dehors de vos villes! Mais si vous mettez un terme à leur servitude, vous vous mettrez beaucoup de fabricants de fouet à dos.</French>
-		<German>oder sie werden kämpfen! [NEWLINE] [NEWLINE] Wenn Sie ihre Forderung ablehnen, so werden unorganisierte Sklavenbanden vor den Toren Ihrer Städte auftauchen! Aber wenn Sie die Sklaverei beenden, so werden viele Peitschenhersteller arbeitslos.</German>
-		<Italian>o combatteranno! [NEWLINE] [NEWLINE] Se non accetti la loro richiesta, bande disorganizzate di schiavi si solleveranno nelle tue città! Ma se porrai fine alla schiavitù, lascerai i fabbricanti di fruste senza lavoro.</Italian>
+		<French>ou ils combattront![NEWLINE][NEWLINE]si vous ignorez leur demande, les bandes d'esclaves se rassembleront contre vous en dehors de vos villes! Mais si vous mettez un terme à leur servitude, vous vous mettrez beaucoup de fabricants de fouet à dos.</French>
+		<German>oder sie werden kämpfen![NEWLINE][NEWLINE]Wenn Sie ihre Forderung ablehnen, so werden unorganisierte Sklavenbanden vor den Toren Ihrer Städte auftauchen! Aber wenn Sie die Sklaverei beenden, so werden viele Peitschenhersteller arbeitslos.</German>
+		<Italian>o combatteranno![NEWLINE][NEWLINE]Se non accetti la loro richiesta, bande disorganizzate di schiavi si solleveranno nelle tue città! Ma se porrai fine alla schiavitù, lascerai i fabbricanti di fruste senza lavoro.</Italian>
 		<Spanish>o lucharán![NEWLINE][NEWLINE]¡Si deniegas sus peticiones, se levantarán bandas de esclavos desorganizadas en las afueras de tus ciudades! Pero si acabas con su servidumbre, dejarás a muchos esclavistas sin trabajo.</Spanish>
 		<Polish>albo będą walczyć![NEWLINE][NEWLINE]Jeżeli odrzucisz teraz ich żądania, to wzniecą oni bunt w twoich miastach! Ale jeżeli zdecydujesz się zakończyć trzymanie ich w niewoli, to zachwieje się cała twoja gospodarka.</Polish>
 	</TEXT>
@@ -1273,9 +1273,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_HUMAN_REGAIN</Tag>
 		<English>You can regain your lost territory without firing a shot![NEWLINE][NEWLINE]If you do not want them back, the revolutionaries will instead form</English>
-		<French>Vous pouvez regagner votre territoire perdu sans combat! [NEWLINE] [NEWLINE] si vous ne le souhaitez pas, les révolutionnaires formeront à la place</French>
-		<German>Sie können Ihr verlorenes Territorium wiedergewinnen, ohne einen einzigen Schuss abzufeuern! [NEWLINE] [NEWLINE] Wenn Sie sie nicht zurückbekommen mwöchten, so bilden die Revolutionäre stattdessen</German>
-		<Italian>Puoi riguadagnare il territorio perso senza sparare un colpo! [NEWLINE] [NEWLINE] se non li riaccogli, insorgeranno ribelli, per formare il/la</Italian>
+		<French>Vous pouvez regagner votre territoire perdu sans combat![NEWLINE][NEWLINE]si vous ne le souhaitez pas, les révolutionnaires formeront à la place</French>
+		<German>Sie können Ihr verlorenes Territorium wiedergewinnen, ohne einen einzigen Schuss abzufeuern![NEWLINE][NEWLINE]Wenn Sie sie nicht zurückbekommen mwöchten, so bilden die Revolutionäre stattdessen</German>
+		<Italian>Puoi riguadagnare il territorio perso senza sparare un colpo![NEWLINE][NEWLINE]se non li riaccogli, insorgeranno ribelli, per formare il/la</Italian>
 		<Spanish>¡Puedes recuperar tu territorio perdido sin pegar un tiro![NEWLINE][NEWLINE]Si no los quieres de vuelta, los revolucionarios formarán en su lugar el</Spanish>
 		<Polish>Możesz odzyskać utracone terytorium bez oddania strzału![NEWLINE][NEWLINE]Jeżeli nie chcesz go odzyskać, rewolucjoniści utworzą</Polish>
 	</TEXT>
@@ -1667,21 +1667,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ACTIVE_DEFENSE</Tag>
-		<English>[NEWLINE][TAB]Active Defense</English>
-		<French>[NEWLINE][TAB]Défense Active</French>
-		<German>[NEWLINE][TAB]Aktive Verteidigung</German>
-		<Italian>[NEWLINE][TAB]"Difesa Attiva"</Italian>
-		<Spanish>[NEWLINE][TAB]Defensa activa</Spanish>
-		<Polish>[NEWLINE][TAB]Aktywna Obrona</Polish>
+		<English>[NEWLINE]Active Defense</English>
+		<French>[NEWLINE]Défense Active</French>
+		<German>[NEWLINE]Aktive Verteidigung</German>
+		<Italian>[NEWLINE]"Difesa Attiva"</Italian>
+		<Spanish>[NEWLINE]Defensa activa</Spanish>
+		<Polish>[NEWLINE]Aktywna Obrona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AIR_BOMBING</Tag>
-		<English>[NEWLINE][TAB]Air Bombing</English>
-		<French>[NEWLINE][TAB]Bombardement Aérien</French>
-		<German>[NEWLINE][TAB]Luftbombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento aereo"</Italian>
-		<Spanish>[NEWLINE][TAB]Bombardeo aéreo</Spanish>
-		<Polish>[NEWLINE][TAB]Bombardowanie z Powietrza</Polish>
+		<English>[NEWLINE]Air Bombing</English>
+		<French>[NEWLINE]Bombardement Aérien</French>
+		<German>[NEWLINE]Luftbombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento aereo"</Italian>
+		<Spanish>[NEWLINE]Bombardeo aéreo</Spanish>
+		<Polish>[NEWLINE]Bombardowanie z Powietrza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
@@ -1772,36 +1772,36 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT</Tag>
-		<English>[NEWLINE][TAB]Attack Support</English>
-		<French>[NEWLINE][TAB]Support d'Attaque</French>
-		<German>[NEWLINE][TAB]Angriffsunterstützung</German>
-		<Italian>[NEWLINE][TAB]"Attack Support"</Italian>
-		<Spanish>[NEWLINE][TAB]Soporte al ataque</Spanish>
-		<Polish>[NEWLINE][TAB]Wspomaganie Ataku</Polish>
+		<English>[NEWLINE]Attack Support</English>
+		<French>[NEWLINE]Support d'Attaque</French>
+		<German>[NEWLINE]Angriffsunterstützung</German>
+		<Italian>[NEWLINE]"Attack Support"</Italian>
+		<Spanish>[NEWLINE]Soporte al ataque</Spanish>
+		<Polish>[NEWLINE]Wspomaganie Ataku</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BARBARIAN_CIV</Tag>
-		<English>[NEWLINE][TAB]BarbarianCiv</English>
-		<German>[NEWLINE][TAB]Barbarenzivilisation</German>
-		<Italian>[NEWLINE][TAB]"BarbarianCiv"</Italian>
-		<Spanish>[NEWLINE][TAB]Civilizaciones bárbaras</Spanish>
+		<English>[NEWLINE]BarbarianCiv</English>
+		<German>[NEWLINE]Barbarenzivilisation</German>
+		<Italian>[NEWLINE]"BarbarianCiv"</Italian>
+		<Spanish>[NEWLINE]Civilizaciones bárbaras</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BARBARIAN_WORLD</Tag>
-		<English>[NEWLINE][TAB]Barbarian World</English>
-		<German>[NEWLINE][TAB]Barbarenwelt</German>
-		<Italian>[NEWLINE][TAB]"Barbarian World"</Italian>
-		<Spanish>[NEWLINE][TAB]Mundo bárbaro</Spanish>
-		<Polish>[NEWLINE][TAB]Barbarzyński Swiat</Polish>
+		<English>[NEWLINE]Barbarian World</English>
+		<German>[NEWLINE]Barbarenwelt</German>
+		<Italian>[NEWLINE]"Barbarian World"</Italian>
+		<Spanish>[NEWLINE]Mundo bárbaro</Spanish>
+		<Polish>[NEWLINE]Barbarzyński Swiat</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS</Tag>
-		<English>[NEWLINE][TAB]Battle Effects</English>
-		<French>[NEWLINE][TAB]Effets de Combats</French>
-		<German>[NEWLINE][TAB]Kampfeffekte</German>
-		<Italian>[NEWLINE][TAB]"Effetti della battaglia"</Italian>
-		<Spanish>[NEWLINE][TAB]Efectos de batalla</Spanish>
-		<Polish>[NEWLINE][TAB]Efekty Bitwy</Polish>
+		<English>[NEWLINE]Battle Effects</English>
+		<French>[NEWLINE]Effets de Combats</French>
+		<German>[NEWLINE]Kampfeffekte</German>
+		<Italian>[NEWLINE]"Effetti della battaglia"</Italian>
+		<Spanish>[NEWLINE]Efectos de batalla</Spanish>
+		<Polish>[NEWLINE]Efekty Bitwy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
@@ -1814,12 +1814,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CHOOSE_RELIGION</Tag>
-		<English>[NEWLINE][TAB]Choose Religion</English>
-		<French>[NEWLINE][TAB]Choix des Religions</French>
-		<German>[NEWLINE][TAB]Religion auswählen</German>
-		<Italian>[NEWLINE][TAB]Scegli Religione</Italian>
-		<Spanish>[NEWLINE][TAB]Elegir religión</Spanish>
-		<Polish>[NEWLINE][TAB]Wybór Religii</Polish>
+		<English>[NEWLINE]Choose Religion</English>
+		<French>[NEWLINE]Choix des Religions</French>
+		<German>[NEWLINE]Religion auswählen</German>
+		<Italian>[NEWLINE]Scegli Religione</Italian>
+		<Spanish>[NEWLINE]Elegir religión</Spanish>
+		<Polish>[NEWLINE]Wybór Religii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>
@@ -1888,21 +1888,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
-		<English>[NEWLINE][TAB]Spawn Emergency Defenders</English>
-		<French>[NEWLINE][TAB]Défenseurs d'urgence</French>
-		<German>[NEWLINE][TAB]Erzeuge Notfallverteidiger</German>
-		<Italian>[NEWLINE][TAB]Crea Difensori di Emergenza</Italian>
-		<Spanish>[NEWLINE][TAB]Llamada a defensores de emergencia</Spanish>
-		<Polish>[NEWLINE][TAB]Pobór Podczas Zagrożenia</Polish>
+		<English>[NEWLINE]Spawn Emergency Defenders</English>
+		<French>[NEWLINE]Défenseurs d'urgence</French>
+		<German>[NEWLINE]Erzeuge Notfallverteidiger</German>
+		<Italian>[NEWLINE]Crea Difensori di Emergenza</Italian>
+		<Spanish>[NEWLINE]Llamada a defensores de emergencia</Spanish>
+		<Polish>[NEWLINE]Pobór Podczas Zagrożenia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_FIGHTER_ENGAGE</Tag>
-		<English>[NEWLINE][TAB]Fighter Engage</English>
-		<French>[NEWLINE][TAB]Engagement auto. des Chasseurs</French>
-		<German>[NEWLINE][TAB]Jägerangriff</German>
-		<Italian>[NEWLINE][TAB]"Ingaggio"</Italian>
-		<Spanish>[NEWLINE][TAB]Superioridad aérea</Spanish>
-		<Polish>[NEWLINE][TAB]Angażowanie Myśliwców</Polish>
+		<English>[NEWLINE]Fighter Engage</English>
+		<French>[NEWLINE]Engagement auto. des Chasseurs</French>
+		<German>[NEWLINE]Jägerangriff</German>
+		<Italian>[NEWLINE]"Ingaggio"</Italian>
+		<Spanish>[NEWLINE]Superioridad aérea</Spanish>
+		<Polish>[NEWLINE]Angażowanie Myśliwców</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS</Tag>
@@ -1915,12 +1915,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_ENABLED</Tag>
-		<English>[NEWLINE][TAB]IDW Influence</English>
-		<French>[NEWLINE][TAB]Influence 'IDW'</French>
-		<German>[NEWLINE][TAB]EbK-Beeinflussung</German>
-		<Italian>[NEWLINE][TAB]Influenza "IDW"</Italian>
-		<Spanish>[NEWLINE][TAB]Influencia de IDW</Spanish>
-		<Polish>[NEWLINE][TAB]Wpływ IDW</Polish>
+		<English>[NEWLINE]IDW Influence</English>
+		<French>[NEWLINE]Influence 'IDW'</French>
+		<German>[NEWLINE]EbK-Beeinflussung</German>
+		<Italian>[NEWLINE]Influenza "IDW"</Italian>
+		<Spanish>[NEWLINE]Influencia de IDW</Spanish>
+		<Polish>[NEWLINE]Wpływ IDW</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_IDW_OPTIONS</Tag>
@@ -1949,12 +1949,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED</Tag>
-		<English>[NEWLINE][TAB]Inquisitions Enabled</English>
-		<French>[NEWLINE][TAB]Inquisition activée</French>
-		<German>[NEWLINE][TAB]Inquisitionen Aktiviert</German>
-		<Italian>[NEWLINE][TAB]"Inquisizioni" attivato</Italian>
-		<Spanish>[NEWLINE][TAB]Inquisición activada</Spanish>
-		<Polish>[NEWLINE][TAB]Włączona Inkwizycja</Polish>
+		<English>[NEWLINE]Inquisitions Enabled</English>
+		<French>[NEWLINE]Inquisition activée</French>
+		<German>[NEWLINE]Inquisitionen Aktiviert</German>
+		<Italian>[NEWLINE]"Inquisizioni" attivato</Italian>
+		<Spanish>[NEWLINE]Inquisición activada</Spanish>
+		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS</Tag>
@@ -1967,75 +1967,75 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_LIMITED_RELIGIONS</Tag>
-		<English>[NEWLINE][TAB]Limited Religions</English>
-		<French>[NEWLINE][TAB]Religions Limitées</French>
-		<German>[NEWLINE][TAB]Begrenzte Religionen</German>
-		<Italian>[NEWLINE][TAB]Religioni Limitate</Italian>
-		<Spanish>[NEWLINE][TAB]Religiones limitadas</Spanish>
-		<Polish>[NEWLINE][TAB]Limit Religii</Polish>
+		<English>[NEWLINE]Limited Religions</English>
+		<French>[NEWLINE]Religions Limitées</French>
+		<German>[NEWLINE]Begrenzte Religionen</German>
+		<Italian>[NEWLINE]Religioni Limitate</Italian>
+		<Spanish>[NEWLINE]Religiones limitadas</Spanish>
+		<Polish>[NEWLINE]Limit Religii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NAVAL_BOMBARD</Tag>
-		<English>[NEWLINE][TAB]Naval Bombard</English>
-		<French>[NEWLINE][TAB]Bombardement Naval</French>
-		<German>[NEWLINE][TAB]Seebombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento Navale"</Italian>
-		<Spanish>[NEWLINE][TAB]Bombardeo naval</Spanish>
-		<Polish>[NEWLINE][TAB]Bombardowanie Marynarki</Polish>
+		<English>[NEWLINE]Naval Bombard</English>
+		<French>[NEWLINE]Bombardement Naval</French>
+		<German>[NEWLINE]Seebombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento Navale"</Italian>
+		<Spanish>[NEWLINE]Bombardeo naval</Spanish>
+		<Polish>[NEWLINE]Bombardowanie Marynarki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NONE</Tag>
-		<English>[NEWLINE][TAB]None</English>
-		<French>[NEWLINE][TAB]Aucun</French>
-		<German>[NEWLINE][TAB]Keine</German>
-		<Italian>[NEWLINE][TAB]"None"</Italian>
-		<Spanish>[NEWLINE][TAB]Ninguna</Spanish>
-		<Polish>[NEWLINE][TAB]Brak</Polish>
+		<English>[NEWLINE]None</English>
+		<French>[NEWLINE]Aucun</French>
+		<German>[NEWLINE]Keine</German>
+		<Italian>[NEWLINE]"None"</Italian>
+		<Spanish>[NEWLINE]Ninguna</Spanish>
+		<Polish>[NEWLINE]Brak</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_BARBARIAN_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]No Barbarian Influence</English>
-		<French>[NEWLINE][TAB]Pas d'Influence Barbare</French>
-		<German>[NEWLINE][TAB]Keine Beeinflussung bei Kampf mit Barbaren</German>
-		<Italian>[NEWLINE][TAB]Nessuna Influenza Barbarica</Italian>
-		<Spanish>[NEWLINE][TAB]Sin influencia bárbara</Spanish>
-		<Polish>[NEWLINE][TAB]Brak Wpływu Barbarzyńców</Polish>
+		<English>[NEWLINE]No Barbarian Influence</English>
+		<French>[NEWLINE]Pas d'Influence Barbare</French>
+		<German>[NEWLINE]Keine Beeinflussung bei Kampf mit Barbaren</German>
+		<Italian>[NEWLINE]Nessuna Influenza Barbarica</Italian>
+		<Spanish>[NEWLINE]Sin influencia bárbara</Spanish>
+		<Polish>[NEWLINE]Brak Wpływu Barbarzyńców</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_NO_NAVAL_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]No Naval Influence</English>
-		<French>[NEWLINE][TAB]Pas d'Influence Navale</French>
-		<German>[NEWLINE][TAB]Keine Beeinflussung auf Meeresfeldern</German>
-		<Italian>[NEWLINE][TAB]Nessuna Influenza Navale</Italian>
-		<Spanish>[NEWLINE][TAB]Sin influencia naval</Spanish>
-		<Polish>[NEWLINE][TAB]Brak Wpływu Marynarki</Polish>
+		<English>[NEWLINE]No Naval Influence</English>
+		<French>[NEWLINE]Pas d'Influence Navale</French>
+		<German>[NEWLINE]Keine Beeinflussung auf Meeresfeldern</German>
+		<Italian>[NEWLINE]Nessuna Influenza Navale</Italian>
+		<Spanish>[NEWLINE]Sin influencia naval</Spanish>
+		<Polish>[NEWLINE]Brak Wpływu Marynarki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_OPP_FIRE</Tag>
-		<English>[NEWLINE][TAB]Opportunity Fire</English>
-		<French>[NEWLINE][TAB]Opportunité de Feu</French>
-		<German>[NEWLINE][TAB]Gelegenheitstreffer</German>
-		<Italian>[NEWLINE][TAB]"Fuoco di Opportunità"</Italian>
-		<Spanish>[NEWLINE][TAB]Fuego de oportunidad</Spanish>
-		<Polish>[NEWLINE][TAB]Ogień Zaporowy</Polish>
+		<English>[NEWLINE]Opportunity Fire</English>
+		<French>[NEWLINE]Opportunité de Feu</French>
+		<German>[NEWLINE]Gelegenheitstreffer</German>
+		<Italian>[NEWLINE]"Fuoco di Opportunità"</Italian>
+		<Spanish>[NEWLINE]Fuego de oportunidad</Spanish>
+		<Polish>[NEWLINE]Ogień Zaporowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
-		<English>[NEWLINE][TAB]Pillage Influence</English>
-		<French>[NEWLINE][TAB]Influence du Pillage</French>
-		<German>[NEWLINE][TAB]Beeinflussung durch Plünderung</German>
-		<Italian>[NEWLINE][TAB]Influenza da Saccheggio</Italian>
-		<Spanish>[NEWLINE][TAB]Influencia por saqueos</Spanish>
-		<Polish>[NEWLINE][TAB]Wpływ Plądrowania</Polish>
+		<English>[NEWLINE]Pillage Influence</English>
+		<French>[NEWLINE]Influence du Pillage</French>
+		<German>[NEWLINE]Beeinflussung durch Plünderung</German>
+		<Italian>[NEWLINE]Influenza da Saccheggio</Italian>
+		<Spanish>[NEWLINE]Influencia por saqueos</Spanish>
+		<Polish>[NEWLINE]Wpływ Plądrowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RANGE_BOMBARD</Tag>
-		<English>[NEWLINE][TAB]Ranged Bombard</English>
-		<French>[NEWLINE][TAB]Bombardements à distance</French>
-		<German>[NEWLINE][TAB]Fernbombardierung</German>
-		<Italian>[NEWLINE][TAB]"Bombardamento ad Area"</Italian>
-		<Spanish>[NEWLINE][TAB]Cañoneo de alcance</Spanish>
-		<Polish>[NEWLINE][TAB]Zasięg Bombardowania</Polish>
+		<English>[NEWLINE]Ranged Bombard</English>
+		<French>[NEWLINE]Bombardements à distance</French>
+		<German>[NEWLINE]Fernbombardierung</German>
+		<Italian>[NEWLINE]"Bombardamento ad Area"</Italian>
+		<Spanish>[NEWLINE]Cañoneo de alcance</Spanish>
+		<Polish>[NEWLINE]Zasięg Bombardowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RELIGION_OPTIONS</Tag>
@@ -2048,19 +2048,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES</Tag>
-		<English>[NEWLINE][TAB]Holy City Relocation</English>
-		<French>[NEWLINE][TAB]Relocalisation des Villes Saintes</French>
-		<German>[NEWLINE][TAB]Heilige Stadt versetzen</German>
-		<Italian>[NEWLINE][TAB]Riposizionamento Città Santa</Italian>
-		<Spanish>[NEWLINE][TAB]Reubicación de Ciudad Santa</Spanish>
-		<Polish>[NEWLINE][TAB]Obradzanie Swiętego Miasta</Polish>
+		<English>[NEWLINE]Holy City Relocation</English>
+		<French>[NEWLINE]Relocalisation des Villes Saintes</French>
+		<German>[NEWLINE]Heilige Stadt versetzen</German>
+		<Italian>[NEWLINE]Riposizionamento Città Santa</Italian>
+		<Spanish>[NEWLINE]Reubicación de Ciudad Santa</Spanish>
+		<Polish>[NEWLINE]Obradzanie Swiętego Miasta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_REVOLUTION</Tag>
-		<English>[NEWLINE][TAB]Revolutions</English>
-		<Italian>[NEWLINE][TAB]"Revolutions"</Italian>
-		<Spanish>[NEWLINE][TAB]Revoluciones</Spanish>
-		<Polish>[NEWLINE][TAB]Rewolucje</Polish>
+		<English>[NEWLINE]Revolutions</English>
+		<Italian>[NEWLINE]"Revolutions"</Italian>
+		<Spanish>[NEWLINE]Revoluciones</Spanish>
+		<Polish>[NEWLINE]Rewolucje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT</Tag>
@@ -2078,30 +2078,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ASSASSINATE</Tag>
-		<English>[NEWLINE][TAB]Assassinate Mission</English>
-		<French>[NEWLINE][TAB]Missions d'Assassinat</French>
-		<German>[NEWLINE][TAB]Attentätermission</German>
-		<Italian>[NEWLINE][TAB]Missione "Assassinio"</Italian>
-		<Spanish>[NEWLINE][TAB]Misión de asesinato</Spanish>
-		<Polish>[NEWLINE][TAB]Misja Zabójstwa</Polish>
+		<English>[NEWLINE]Assassinate Mission</English>
+		<French>[NEWLINE]Missions d'Assassinat</French>
+		<German>[NEWLINE]Attentätermission</German>
+		<Italian>[NEWLINE]Missione "Assassinio"</Italian>
+		<Spanish>[NEWLINE]Misión de asesinato</Spanish>
+		<Polish>[NEWLINE]Misja Zabójstwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_BRIBE</Tag>
-		<English>[NEWLINE][TAB]Bribe Mission</English>
-		<French>[NEWLINE][TAB]Missions de Corruption</French>
-		<German>[NEWLINE][TAB]Bestechungsmission</German>
-		<Italian>[NEWLINE][TAB]Missione "Corruzione"</Italian>
-		<Spanish>[NEWLINE][TAB]Misión de soborno</Spanish>
-		<Polish>[NEWLINE][TAB]Misja Przekupstwa</Polish>
+		<English>[NEWLINE]Bribe Mission</English>
+		<French>[NEWLINE]Missions de Corruption</French>
+		<German>[NEWLINE]Bestechungsmission</German>
+		<Italian>[NEWLINE]Missione "Corruzione"</Italian>
+		<Spanish>[NEWLINE]Misión de soborno</Spanish>
+		<Polish>[NEWLINE]Misja Przekupstwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_ENABLED</Tag>
-		<English>[NEWLINE][TAB]Super Spies Enabled</English>
-		<French>[NEWLINE][TAB]'Super Spies' activé</French>
-		<German>[NEWLINE][TAB]Superspione Aktiviert</German>
-		<Italian>[NEWLINE][TAB]"Super Spie" attivato</Italian>
-		<Spanish>[NEWLINE][TAB]Activar Superespías</Spanish>
-		<Polish>[NEWLINE][TAB]Włączeni Super Szpiedzy</Polish>
+		<English>[NEWLINE]Super Spies Enabled</English>
+		<French>[NEWLINE]'Super Spies' activé</French>
+		<German>[NEWLINE]Superspione Aktiviert</German>
+		<Italian>[NEWLINE]"Super Spie" attivato</Italian>
+		<Spanish>[NEWLINE]Activar Superespías</Spanish>
+		<Polish>[NEWLINE]Włączeni Super Szpiedzy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SS_OPTIONS</Tag>
@@ -2114,21 +2114,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_START_AS_MINORS</Tag>
-		<English>[NEWLINE][TAB]Start As Minors</English>
-		<French>[NEWLINE][TAB]Démarrage Barbare</French>
-		<German>[NEWLINE][TAB]Als kleine Civ beginnen</German>
-		<Italian>[NEWLINE][TAB]"Start As Minors"</Italian>
-		<Spanish>[NEWLINE][TAB]Empezar como menores</Spanish>
-		<Polish>[NEWLINE][TAB]Podrzędne Cywilizacje</Polish>
+		<English>[NEWLINE]Start As Minors</English>
+		<French>[NEWLINE]Démarrage Barbare</French>
+		<German>[NEWLINE]Als kleine Civ beginnen</German>
+		<Italian>[NEWLINE]"Start As Minors"</Italian>
+		<Spanish>[NEWLINE]Empezar como menores</Spanish>
+		<Polish>[NEWLINE]Podrzędne Cywilizacje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_TECH_DIFFUSION</Tag>
-		<English>[NEWLINE][TAB]Tech Diffusion</English>
-		<French>[NEWLINE][TAB]Diffusion des Tech</French>
-		<German>[NEWLINE][TAB]Technologiediffusion</German>
-		<Italian>[NEWLINE][TAB]"Tech Diffusion"</Italian>
-		<Spanish>[NEWLINE][TAB]Difusión tecnológica</Spanish>
-		<Polish>[NEWLINE][TAB]Dyfuzja Technologii</Polish>
+		<English>[NEWLINE]Tech Diffusion</English>
+		<French>[NEWLINE]Diffusion des Tech</French>
+		<German>[NEWLINE]Technologiediffusion</German>
+		<Italian>[NEWLINE]"Tech Diffusion"</Italian>
+		<Spanish>[NEWLINE]Difusión tecnológica</Spanish>
+		<Polish>[NEWLINE]Dyfuzja Technologii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>
@@ -2236,9 +2236,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_REL_HONORING</Tag>
 		<English>While they have not yet begun preparations for war, if you deny their request they may soon become more fervent in their desire for change. Honoring their request is by far the quickest and easiest path to keeping them in your empire for the forseeable future, but may lead to some discontent in other cities.[NEWLINE][NEWLINE]Alternatively, a large donation to the religious leaders would cause them to settle down.</English>
-		<French>Tandis qu'ils n'ont pas encore commencé de préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir de changement pourrait devenir de plus en plus ardent. Honorer leurs demandes est de loin la voie la plus rapide et la plus facile pour les maintenir dans votre empire, mais peut entraîner également le mécontentement dans d'autres villes. [NEWLINE] [NEWLINE] alternativement, une grande donation aux chefs religieux les ferait se calmer.</French>
-		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Veränderung werden. Ihren Antrag zu beachten ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten, aber kann andererseits zu etwas Unzufriedenheit in anderen Städten führen. [NEWLINE] [NEWLINE] Als Alternative kann eine großzügige Spende an die religiösen Führer sie beruhigen.</German>
-		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta èla scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città. [NEWLINE] [NEWLINE] In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
+		<French>Tandis qu'ils n'ont pas encore commencé de préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir de changement pourrait devenir de plus en plus ardent. Honorer leurs demandes est de loin la voie la plus rapide et la plus facile pour les maintenir dans votre empire, mais peut entraîner également le mécontentement dans d'autres villes.[NEWLINE][NEWLINE]alternativement, une grande donation aux chefs religieux les ferait se calmer.</French>
+		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Veränderung werden. Ihren Antrag zu beachten ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten, aber kann andererseits zu etwas Unzufriedenheit in anderen Städten führen.[NEWLINE][NEWLINE]Als Alternative kann eine großzügige Spende an die religiösen Führer sie beruhigen.</German>
+		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta èla scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Aceptar sus solicitudes es, de lejos, la opción más rápida y fácil para mantenerlos en tu imperio en el futuro próximo, pero puede llevar a cierto descontento en otras ciudades.[NEWLINE][NEWLINE]Alternativamente, una gran donación a los líderes religiosos puede motivarles a sentar la cabeza.</Spanish>
 		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do zmian. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości, ale może spowodować niezadowolenie w pozostałych miastach.[NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do zmian.</Polish>
 	</TEXT>
@@ -2254,9 +2254,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_REL_PEACE</Tag>
 		<English>While they have not yet begun preparations for war, if you deny their request they may soon become more fervent in their desire for independence. If you choose not to let them walk away, you should spread your religion to the cities and take other action to improve their situation. Either that, or you may very well be faced with an uprising in the future![NEWLINE][NEWLINE]Alternatively, you could make a generous donation to the religions leaders. With this good faith gesture, they will drop their cause and quiet down.</English>
-		<French>Tandis qu'ils n'ont pas encore commencé des préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir d'indépedance pourrait devenir de plus en plus ardent. Si vous choisissez de ne pas les laisser partir, vous devriez propager votre religion aux Ville et mener des actions pour améliorer leur situation. Plutôt cela, ou alors vous pourriez très bien avoir à faire face à un soulèvement dans le futur! [NEWLINE] [NEWLINE] alternativement, une généreus donation aux chefs religieux pourrait suffir pour abandonner en partie leur cause et les calmer.</French>
-		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Unabhägigkeit werden. Wenn Sie beschließen, sie nicht gehen zu lassen, so sollten Sie Ihre Religion in Ihren Städten verbreiten und weitere Maßnahmen ergreifen, um ihre Situation zu verbessern. Tun Sie das oder Sie können in Zukunft mit Aufständen rechnen! [NEWLINE] [NEWLINE] Alternativ könnten Sie den religiösen Führern eine großzügige Spende übergeben. Mit dieser Geste des Vertrauens werden sie ihre Sache fallen lassen und sich beruhigen.</German>
-		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di indipendenza. Se sceglierai di non lasciarli andare, dovresti diffondere la religione di stato nelle città ed agire per migliorare la loro condizione. Fai qualcosa, altrimenti dovrai fronteggiare presto una rivolta! [NEWLINE] [NEWLINE] In alternativa, fai una generosa donazione ai capi religiosi: dopo questo gesto di buona fede, cominceranno ad abbandonare la loro causa e la situazione comincerà a calmarsi.</Italian>
+		<French>Tandis qu'ils n'ont pas encore commencé des préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir d'indépedance pourrait devenir de plus en plus ardent. Si vous choisissez de ne pas les laisser partir, vous devriez propager votre religion aux Ville et mener des actions pour améliorer leur situation. Plutôt cela, ou alors vous pourriez très bien avoir à faire face à un soulèvement dans le futur![NEWLINE][NEWLINE]alternativement, une généreus donation aux chefs religieux pourrait suffir pour abandonner en partie leur cause et les calmer.</French>
+		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Unabhägigkeit werden. Wenn Sie beschließen, sie nicht gehen zu lassen, so sollten Sie Ihre Religion in Ihren Städten verbreiten und weitere Maßnahmen ergreifen, um ihre Situation zu verbessern. Tun Sie das oder Sie können in Zukunft mit Aufständen rechnen![NEWLINE][NEWLINE]Alternativ könnten Sie den religiösen Führern eine großzügige Spende übergeben. Mit dieser Geste des Vertrauens werden sie ihre Sache fallen lassen und sich beruhigen.</German>
+		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di indipendenza. Se sceglierai di non lasciarli andare, dovresti diffondere la religione di stato nelle città ed agire per migliorare la loro condizione. Fai qualcosa, altrimenti dovrai fronteggiare presto una rivolta![NEWLINE][NEWLINE]In alternativa, fai una generosa donazione ai capi religiosi: dopo questo gesto di buona fede, cominceranno ad abbandonare la loro causa e la situazione comincerà a calmarsi.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Si decides impedir que se vayan, deberías extender tu religión a las otras ciudades y tomar otras medidas para mejorar su situación. ¡Haz una de las dos cosas, o puede que tengas que encarar una insurreción en el futuro![NEWLINE][NEWLINE]Alternativamente, puedes hacer una generosa donación a los líderes religiosos. Con este buen gesto de fé, dejarán a un lado su causa y se calmarán.</Spanish>
 		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do niepodległości. Jeżeli nie pozwolisz im odejść, będziesz musiał rozpowszechnić twoją religię do tych miast i podjąć inne działania, które poprawią ich sytuację. Jeśli tego nie zrobisz, w przyszłości będziesz musiał stawić czoło rewolucji![NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do niepodległości.</Polish>
 	</TEXT>

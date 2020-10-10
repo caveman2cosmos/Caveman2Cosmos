@@ -7,9 +7,6 @@
 // abstract class containing CvInterface functions that the DLL needs
 //
 
-//#include "CvStructs.h"
-#include "LinkedList.h"
-
 class CvUnit;
 class CvCity;
 class CvPlot;
@@ -136,7 +133,7 @@ public:
 	virtual bool isDiplomacyLocked() = 0;
 
 	virtual void setMinimapColor(MinimapModeTypes eMinimapMode, int iX, int iY, ColorTypes eColor, float fAlpha) = 0;
-	virtual unsigned char* getMinimapBaseTexture() const = 0;
+	virtual uint8_t* getMinimapBaseTexture() const = 0;
 	virtual void setEndTurnMessage(bool bNewValue) = 0;
 
 	virtual bool isHasMovedUnit() = 0;

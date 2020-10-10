@@ -518,6 +518,9 @@
     <ClInclude Include="CvBuildingGrouping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvBuildingInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CvBuildingList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -930,6 +933,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="idinfo_iterator_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

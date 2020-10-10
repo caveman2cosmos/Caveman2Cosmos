@@ -506,7 +506,7 @@
 					<iBuildingProductionModifier>10</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
-			<iBaseFreeUnits>30</iBaseFreeUnits>
+			<iFreeUnitUpkeepCivilian>30</iFreeUnitUpkeepCivilian>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1209,7 +1209,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>18</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -2083,7 +2083,7 @@
 			<iRevIdxNational>-1</iRevIdxNational>
 			<!-- Revolution Trait Effects End -->
 			<iCivicAnarchyTimeModifier>-25</iCivicAnarchyTimeModifier>
-			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>-10</iFreeUnitUpkeepMilitary>
 			<iHurryAngerModifier>-20</iHurryAngerModifier>
 			<iHurryCostModifier>-20</iHurryCostModifier>
 			<ReplacementCondition>
@@ -3369,7 +3369,7 @@
 					<iBuildingProductionModifier>10</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
-			<iBaseFreeUnits>30</iBaseFreeUnits>
+			<iFreeUnitUpkeepCivilian>30</iFreeUnitUpkeepCivilian>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4079,7 +4079,7 @@
 					<iUnitProductionModifier>50</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
-			<iFreeMilitaryUnitsPopulationPercent>6</iFreeMilitaryUnitsPopulationPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>18</iFreeUnitUpkeepMilitaryPopPercent>
 			<iLargestCityHappiness>6</iLargestCityHappiness>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
@@ -4961,7 +4961,7 @@
 			<iRevIdxNational>-1</iRevIdxNational>
 			<!-- Revolution Trait Effects End -->
 			<iCivicAnarchyTimeModifier>-25</iCivicAnarchyTimeModifier>
-			<iBaseFreeMilitaryUnits>-10</iBaseFreeMilitaryUnits>
+			<iFreeUnitUpkeepMilitary>-10</iFreeUnitUpkeepMilitary>
 			<iHurryAngerModifier>-20</iHurryAngerModifier>
 			<iHurryCostModifier>-20</iHurryCostModifier>
 			<ReplacementCondition>

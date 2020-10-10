@@ -249,17 +249,17 @@
 		<Tag>TXT_KEY_COMBAT_CLASS_NOT_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units on the %s1_Option Game Option being active.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Non disponible lorsque l'option de jeu %s1_Option est active.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar bei aktivierter Einstellung "%s1_Option".[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "%s1_Option" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è attiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units without the %s1_Option Game Option being active.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert l'option de jeu %s1_Option.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar ohne aktivierte Einstellung "%s1_Option".[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è inattiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DAMAGE_MODIFIER</Tag>
@@ -4271,12 +4271,6 @@
 		<Polish>Korwety</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_COSTLESS</Tag>
-		<English>Costless</English>
-		<French>Gratuit</French>
-		<German>Kostenlos</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CRIMINAL</Tag>
 		<English>Criminals</English>
 		<French>
@@ -8047,7 +8041,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Anzahl) unzählbar</German>
+		<German>(Anzahl) unzählig</German>
 		<Spanish>
 			<Text>Incontables:Unidades incontables</Text>
 			<Gender>Female</Gender>
@@ -9379,6 +9373,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_NAVAL_COMBATANT</Tag>
 		<English>Naval Combatant</English>
 		<French>Combattant naval</French>
+		<German>
+			<Text>Marineeinheiten:Marineeinheiten:Marineeinheiten:Marineeinheiten</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Polish>Walka Morska</Polish>
 	</TEXT>
 	<TEXT>
@@ -9465,6 +9464,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>(Beförderung) Bewaffneter Wächter</German>
 		<Spanish>
 			<Text>Ascendida para evasión:Unidades ascendidas para ARMED_GUARD</Text>
 			<Gender>Female</Gender>
@@ -9511,6 +9511,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Beförderung) Gefangene transportieren</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</Tag>
@@ -10273,6 +10274,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Gesetzlose:Gesetzlosen:Gesetzlosen:Gesetzlosen</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Spanish>
 			<Text>Rufián:Rufianes</Text>
 			<Gender>Male</Gender>
@@ -11093,6 +11099,11 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Eingreiftruppen:Eingreiftruppen:Eingreiftruppen:Eingreiftruppen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Spanish>
 			<Text>Fuerzas de asalto</Text>
 			<Gender>Female</Gender>

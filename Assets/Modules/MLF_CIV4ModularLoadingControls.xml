@@ -9,11 +9,7 @@
 		<ConfigurationInfo>
 			<Type>Modules_Main_1</Type>
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
-			<Modules>
-				<Module> <!-- Only Locust swarms are usable in this -->
-					<Directory>Bad_Karma</Directory>
-					<bLoad>0</bLoad>
-				</Module>
+			<Modules>				
 				<Module>
 					<Directory>Custom_Leaderheads</Directory>
 					<bLoad>1</bLoad>
@@ -76,6 +72,10 @@
 				</Module>
 				<Module>
 					<Directory>Pepper2000</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module> <!-- Only Locust swarms and building meltdown are usable in this -->
+					<Directory>Bad_Karma</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
