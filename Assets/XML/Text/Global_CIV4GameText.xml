@@ -4288,12 +4288,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with a Hunter!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un cacciatore!</Italian>
-		<Spanish>Los aldeanos os han dado un Cazador.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
+		<English>The villagers have provided you with their most skilled huntsman!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
