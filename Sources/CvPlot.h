@@ -1188,6 +1188,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TerrainTypes, getTerrainType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);

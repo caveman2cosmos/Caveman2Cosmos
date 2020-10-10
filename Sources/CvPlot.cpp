@@ -1770,7 +1770,18 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	return algo::any_of(rect(getX(), getY(), 1, 1), CvPlot::fn::isLake());
+	foreach_(const CvPlot* loopPlot, rect(getX(), getY(), 1, 1))
+	{
+		if (GC.getTerrainInfo(loopPlot->getTerrainType()).isFreshWaterTerrain())
+		{
+			return true;
+		}
+	}
+
+	return false;
+
+	//return algo::any_of(rect(getX(), getY(), 1, 1),
+	//	CvPlot::fn::isLake());
 }
 
 
