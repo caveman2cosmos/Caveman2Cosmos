@@ -163,6 +163,7 @@
 	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFoundCoast" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFoundFreshWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFreshWaterTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iMovement" content="textOnly" dt:type="int"/>
 	<ElementType name="iSeeFrom" content="textOnly" dt:type="int"/>
 	<ElementType name="iSeeThrough" content="textOnly" dt:type="int"/>
@@ -208,6 +209,7 @@
 		<element type="bFound" minOccurs="0"/>
 		<element type="bFoundCoast" minOccurs="0"/>
 		<element type="bFoundFreshWater" minOccurs="0"/>
+		<element type="bFreshWaterTerrain" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iBuildModifier" minOccurs="0"/>
 		<element type="iDefense" minOccurs="0"/>

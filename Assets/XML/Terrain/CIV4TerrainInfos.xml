@@ -5163,6 +5163,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE_SHORE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
@@ -5310,6 +5311,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>

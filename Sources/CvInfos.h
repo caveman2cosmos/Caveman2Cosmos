@@ -5065,6 +5065,7 @@ public:
 	bool isFound() const; // Exposed to Python
 	bool isFoundCoast() const; // Exposed to Python
 	bool isFoundFreshWater() const; // Exposed to Python
+	bool isFreshWaterTerrain() const; // Exposed to Python
 
 	DllExport const TCHAR* getArtDefineTag() const;
 
@@ -5119,6 +5120,7 @@ protected:
 	bool m_bFound;
 	bool m_bFoundCoast;
 	bool m_bFoundFreshWater;
+	bool m_bFreshWaterTerrain;
 	bool m_bColdDamage; // TB Combat Mods
 
 	int m_iMovementCost;
