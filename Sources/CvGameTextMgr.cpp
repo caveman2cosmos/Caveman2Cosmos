@@ -9347,16 +9347,15 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (pPlot->isFreshWater())
-		{
-			szString.append(NEWLINE);
-			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
-		}
-
-		if (pPlot->isLake())
+		if (pPlot->isFreshWater() && pPlot->isWater())
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER_LAKE"));
+		}
+		else if (pPlot->isFreshWater())
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
 		}
 
 		if (pPlot->isImpassable(eActiveTeam))
