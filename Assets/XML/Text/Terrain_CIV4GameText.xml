@@ -31,6 +31,10 @@
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOT_SALT_WATER_LAKE</Tag>
+		<English>Saltwater Lake</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
 		<French>Désert Calcaire</French>

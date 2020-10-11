@@ -9352,6 +9352,17 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER_LAKE"));
 		}
+		else if (pPlot->isLake())
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_KEY_PLOT_SALT_WATER_LAKE"));
+			// Edge case where saltwater lake tile has access to fresh water. Display because... reasons?
+			if (pPlot->isFreshWater())
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
+			}
+		}
 		else if (pPlot->isFreshWater())
 		{
 			szString.append(NEWLINE);
