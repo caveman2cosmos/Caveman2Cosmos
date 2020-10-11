@@ -39,22 +39,6 @@
 		<Spanish>Agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_FRESHWATER_LAKE</Tag>
-		<English>Freshwater Lake</English>
-		<French>Lac d'eau douce</French>
-		<German>Süßwassersee</German>
-		<Italian>Lago d'acqua dolce</Italian>
-		<Spanish>Lago de agua dulce</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_FRESHWATER_OCEAN</Tag>
-		<English>Freshwater Ocean</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_SALTWATER_LAKE</Tag>
-		<English>Saltwater Lake</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
 		<French>Désert Calcaire</French>

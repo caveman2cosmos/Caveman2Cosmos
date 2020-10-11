@@ -2464,10 +2464,7 @@ class LakeMap:
 
 
 	def isLake(self, x, y):
-		i = GetIndex(x, y)
-		if self.isLakeData[i] == 1:
-			return True
-		return False
+		return self.isLakeData[GetIndex(x, y)] == 1
 
 
 	def defineWaterTerrain(self, iWidth, iHeight, iArea, fLandHeight, WATER):
@@ -3914,18 +3911,12 @@ class StartPlot:
 		self.owner = None
 		self.avgDistance = 0
 
-
 	def isCoast(self):
-		plot = CyMap().plot(self.x, self.y)
-		waterArea = plot.waterArea()
-		if waterArea.isNone() or waterArea.isLake(): 
-			return False
-		return True
-
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return not waterArea.isNone() and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()
-
 
 	def plot(self):
 		return CyMap().plot(self.x, self.y)

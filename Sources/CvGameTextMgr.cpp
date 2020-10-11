@@ -9347,37 +9347,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-// Toffer - Possibly replace this:
-		if (pPlot->isLake())
-		{
-			// Toffer - Hmm, do we even need to inform the player that this is a lake?
-			// The lake flag is mostly useful for mapscripts and AI code.
-			szString.append(NEWLINE);
-
-			if (pPlot->isFreshWater())
-				szString.append(gDLL->getText("TXT_KEY_PLOT_FRESHWATER_LAKE"));
-			else szString.append(gDLL->getText("TXT_KEY_PLOT_SALTWATER_LAKE"));
-		}
-		else if (pPlot->isFreshWater())
-		{
-			szString.append(NEWLINE);
-
-			if (pPlot->isWater())
-			{
-				// Toffer - Again, informing the player that this is not a lake does give away a bit too much when exploring,
-				// the player will know it can go around it in either direction before actually discovering its size and form.
-				szString.append(gDLL->getText("TXT_KEY_PLOT_FRESHWATER_OCEAN"));
-			}
-			else szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
-		}
-/* with this:
 		if (pPlot->isFreshWater())
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
 		}
-	to keep it simple and orderly, without giving away more info than needed to the player.
-	! Toffer */
 
 		if (pPlot->isImpassable(eActiveTeam))
 		{
