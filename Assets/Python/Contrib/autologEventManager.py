@@ -546,18 +546,16 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		Y = CyUnit.getY()
 		CyPlot = CyMap().plot(X, Y)
 		iOwner = CyPlot.getOwner()
-		if iOwner == -1:
-			if CyPlot.isWater():
-				if CyPlot.isLake():
-					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_A_LAKE")
-				elif CyPlot.isCoastal():
-					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_JUST_OFF_SHORE")
-				else:
-					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")
-			else:
-				szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_IN_THE_WILD")
-		else:
+		if iOwner > -1:
 			szText = TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY", (GC.getPlayer(iOwner).getCivilizationAdjective(0),))
+		elif not CyPlot.isWater():
+			szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_IN_THE_WILD")
+		elif CyPlot.isLake():
+			szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_A_LAKE")
+		elif CyPlot.isCoastal():
+			szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_JUST_OFF_SHORE")
+		else:
+			szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")
 
 		for x in xrange(X-1, X+2):
 			for y in xrange(Y-1, Y+2):

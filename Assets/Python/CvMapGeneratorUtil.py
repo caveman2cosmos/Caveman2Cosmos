@@ -1742,7 +1742,7 @@ def placeC2CBonuses():
 		if plot.isLake():
 			if iTerrain == terrainCoast:
 				plot.setTerrainType(terrainShore, False, False)
-			elif iTerrain == terrainOcean:
+			elif iTerrain in (terrainSea, terrainOcean):
 				plot.setTerrainType(terrainLake, False, False)
 		elif plot.isWater():
 			## Figure out if it is Sea ie if it is ocean next to coast
