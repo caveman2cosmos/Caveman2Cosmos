@@ -4996,7 +4996,6 @@ public:
 	void setChar(int i);
 	int getHillsChange() const; // Exposed to Python
 	int getPeakChange() const; // Exposed to Python
-	int getLakeChange() const; // Exposed to Python
 	int getCityChange() const; // Exposed to Python
 	int getPopulationChangeOffset() const; // Exposed to Python
 	int getPopulationChangeDivisor() const; // Exposed to Python
@@ -5023,7 +5022,6 @@ protected:
 	int m_iChar;
 	int m_iHillsChange;
 	int m_iPeakChange;
-	int m_iLakeChange;
 	int m_iCityChange;
 	int m_iPopulationChangeOffset;
 	int m_iPopulationChangeDivisor;

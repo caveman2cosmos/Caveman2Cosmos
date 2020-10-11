@@ -18412,7 +18412,6 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
-m_iLakeChange(0),
 m_iCityChange(0),
 m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
@@ -18457,11 +18456,6 @@ int CvYieldInfo::getHillsChange() const
 int CvYieldInfo::getPeakChange() const
 {
 	return m_iPeakChange;
-}
-
-int CvYieldInfo::getLakeChange() const
-{
-	return m_iLakeChange;
 }
 
 int CvYieldInfo::getCityChange() const
@@ -18531,7 +18525,6 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
-	pXML->GetOptionalChildXmlValByName(&m_iLakeChange, L"iLakeChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
@@ -18597,7 +18590,6 @@ void CvYieldInfo::copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
-	if (getLakeChange() == iDefault) m_iLakeChange = pClassInfo->getLakeChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
 	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
@@ -18621,7 +18613,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
-	CheckSum(iSum, m_iLakeChange);
 	CheckSum(iSum, m_iCityChange);
 	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);

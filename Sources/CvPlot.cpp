@@ -1750,6 +1750,16 @@ bool CvPlot::isLake() const
 
 bool CvPlot::isFreshWater() const
 {
+	if (GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain())
+	{
+		return true;
+	}
+
+	if (isWater())
+	{
+		return false;
+	}
+
 	if (isRiver())
 	{
 		return true;
@@ -1772,16 +1782,18 @@ bool CvPlot::isFreshWater() const
 
 	foreach_(const CvPlot* loopPlot, rect(getX(), getY(), 1, 1))
 	{
-		if (GC.getTerrainInfo(loopPlot->getTerrainType()).isFreshWaterTerrain())
+		if (loopPlot->isWaterAndIsFresh())
 		{
 			return true;
 		}
 	}
 
 	return false;
+}
 
-	//return algo::any_of(rect(getX(), getY(), 1, 1),
-	//	CvPlot::fn::isLake());
+bool CvPlot::isWaterAndIsFresh() const
+{
+	return isWater() && GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain();
 }
 
 
@@ -8000,10 +8012,6 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 			iYield += GC.getYieldInfo(eYield).getHillsChange();
 			iYield += (bIgnoreFeature || getFeatureType() == NO_FEATURE) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield);
 		}
-		else if (GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain() && isWater())
-		{
-			iYield += GC.getYieldInfo(eYield).getLakeChange();
-		}
 	}
 
 	if (eTeam != NO_TEAM && getBonusType(eTeam) != NO_BONUS)
@@ -13041,20 +13049,16 @@ int CvPlot::get3DAudioScriptFootstepIndex(int iFootstepTag) const
 
 float CvPlot::getAqueductSourceWeight() const
 {
-	float fWeight = 0.0f;
-
-	if ((GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain() && isWater()) ||
-		 isPeak2(true) ||
-		 (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
+	if (isWaterAndIsFresh() || isPeak2(true)
+	|| getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater())
 	{
-		fWeight = 1.0f;
+		return 1.0f;
 	}
 	else if (isHills())
 	{
-		fWeight = 0.67f;
+		return 0.67f;
 	}
-
-	return fWeight;
+	return 0.0f;
 }
 
 bool CvPlot::shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const
