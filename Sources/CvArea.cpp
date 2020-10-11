@@ -332,17 +332,8 @@ void CvArea::changeNumTiles(int iChange)
 {
 	if (iChange != 0)
 	{
-		const bool bWasLake = isLake();
-
 		m_iNumTiles += iChange;
 		FAssert(getNumTiles() >= 0);
-
-		// cppcheck-suppress knownConditionTrueFalse
-		if (bWasLake != isLake())
-		{
-			GC.getMap().updateIrrigated();
-			GC.getMap().updateYield();
-		}
 	}
 }
 

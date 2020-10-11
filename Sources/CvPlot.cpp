@@ -8000,7 +8000,7 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 			iYield += GC.getYieldInfo(eYield).getHillsChange();
 			iYield += (bIgnoreFeature || getFeatureType() == NO_FEATURE) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield);
 		}
-		else if (isLake())
+		else if (GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain() && isWater())
 		{
 			iYield += GC.getYieldInfo(eYield).getLakeChange();
 		}
@@ -13043,7 +13043,9 @@ float CvPlot::getAqueductSourceWeight() const
 {
 	float fWeight = 0.0f;
 
-	if (isLake() || isPeak2(true) || (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
+	if ((GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain() && isWater()) ||
+		 isPeak2(true) ||
+		 (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
 	{
 		fWeight = 1.0f;
 	}

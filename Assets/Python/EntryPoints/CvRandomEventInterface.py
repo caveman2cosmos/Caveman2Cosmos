@@ -7993,7 +7993,8 @@ def doGlobalWarming(argsList):
         iPlot.setRouteType(-1)
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
         iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iPlot.isLake():
+      elif ((iPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") or
+             iPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_LAKE_SHORE")) and iPlot.isLake()):
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
         iPlot.setImprovementType(-1)
         iPlot.setBonusType(-1)
