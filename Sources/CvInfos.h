@@ -4996,7 +4996,6 @@ public:
 	void setChar(int i);
 	int getHillsChange() const; // Exposed to Python
 	int getPeakChange() const; // Exposed to Python
-	int getLakeChange() const; // Exposed to Python
 	int getCityChange() const; // Exposed to Python
 	int getPopulationChangeOffset() const; // Exposed to Python
 	int getPopulationChangeDivisor() const; // Exposed to Python
@@ -5023,7 +5022,6 @@ protected:
 	int m_iChar;
 	int m_iHillsChange;
 	int m_iPeakChange;
-	int m_iLakeChange;
 	int m_iCityChange;
 	int m_iPopulationChangeOffset;
 	int m_iPopulationChangeDivisor;
@@ -5065,6 +5063,7 @@ public:
 	bool isFound() const; // Exposed to Python
 	bool isFoundCoast() const; // Exposed to Python
 	bool isFoundFreshWater() const; // Exposed to Python
+	bool isFreshWaterTerrain() const; // Exposed to Python
 
 	DllExport const TCHAR* getArtDefineTag() const;
 
@@ -5119,6 +5118,7 @@ protected:
 	bool m_bFound;
 	bool m_bFoundCoast;
 	bool m_bFoundFreshWater;
+	bool m_bFreshWaterTerrain;
 	bool m_bColdDamage; // TB Combat Mods
 
 	int m_iMovementCost;

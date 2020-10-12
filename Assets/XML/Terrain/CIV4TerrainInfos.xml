@@ -5159,15 +5159,16 @@
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LAKE_SHORE</Type>
-			<Description>TXT_KEY_TERRAIN_LAKE_SHORE</Description>
+			<Description>TXT_KEY_TERRAIN_FRESHWATER_COAST</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE_SHORE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</Yields>
@@ -5306,14 +5307,15 @@
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LAKE</Type>
-			<Description>TXT_KEY_TERRAIN_LAKE</Description>
+			<Description>TXT_KEY_TERRAIN_FRESHWATER_SEA</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</Yields>

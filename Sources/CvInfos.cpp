@@ -18412,7 +18412,6 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
-m_iLakeChange(0),
 m_iCityChange(0),
 m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
@@ -18457,11 +18456,6 @@ int CvYieldInfo::getHillsChange() const
 int CvYieldInfo::getPeakChange() const
 {
 	return m_iPeakChange;
-}
-
-int CvYieldInfo::getLakeChange() const
-{
-	return m_iLakeChange;
 }
 
 int CvYieldInfo::getCityChange() const
@@ -18531,7 +18525,6 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
-	pXML->GetOptionalChildXmlValByName(&m_iLakeChange, L"iLakeChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
@@ -18597,7 +18590,6 @@ void CvYieldInfo::copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
-	if (getLakeChange() == iDefault) m_iLakeChange = pClassInfo->getLakeChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
 	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
@@ -18621,7 +18613,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
-	CheckSum(iSum, m_iLakeChange);
 	CheckSum(iSum, m_iCityChange);
 	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);
@@ -18652,6 +18643,7 @@ m_bImpassable(false),
 m_bFound(false),
 m_bFoundCoast(false),
 m_bFoundFreshWater(false),
+m_bFreshWaterTerrain(false),
 m_iWorldSoundscapeScriptId(0),
 m_piYields(NULL),
 m_piRiverYieldChange(NULL),
@@ -18721,6 +18713,11 @@ bool CvTerrainInfo::isFoundCoast() const
 bool CvTerrainInfo::isFoundFreshWater() const
 {
 	return m_bFoundFreshWater;
+}
+
+bool CvTerrainInfo::isFreshWaterTerrain() const
+{
+	return m_bFreshWaterTerrain;
 }
 
 const TCHAR* CvTerrainInfo::getArtDefineTag() const
@@ -18857,6 +18854,7 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFound, L"bFound");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundCoast, L"bFoundCoast");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundFreshWater, L"bFoundFreshWater");
+	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterTerrain, L"bFreshWaterTerrain");
 
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildModifier, L"iBuildModifier");
@@ -18967,6 +18965,7 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 	if (isFound() == bDefault) m_bFound = pClassInfo->isFound();
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
 	if (isFoundFreshWater() == bDefault) m_bFoundFreshWater = pClassInfo->isFoundFreshWater();
+	if (isFreshWaterTerrain() == bDefault) m_bFreshWaterTerrain = pClassInfo->isFreshWaterTerrain();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
 	if (getBuildModifier() == iDefault) m_iBuildModifier = pClassInfo->getBuildModifier();
 	if (getDefenseModifier() == iDefault) m_iDefenseModifier = pClassInfo->getDefenseModifier();
@@ -19015,6 +19014,7 @@ void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bFound);
 	CheckSum(iSum, m_bFoundCoast);
 	CheckSum(iSum, m_bFoundFreshWater);
+	CheckSum(iSum, m_bFreshWaterTerrain);
 
 	// Arrays
 

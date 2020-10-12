@@ -419,6 +419,7 @@
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_EXTRATERRESTRIAL_MICROBES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>

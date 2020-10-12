@@ -2827,15 +2827,18 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_PEDIA</Tag>
 		<English>C2C adds a water terrains to the game for the purposes of navigation, wild animal spawn and movement and combat improvements. The 8 base water terrains are:
-		[ICON_BULLET] Lake Shore - the bit of fresh water lakes nearest the land.
-		[ICON_BULLET] Lake - parts of fresh water lakes not adjcent to land.
-		[ICON_BULLET] Coast - the bit of the ocean next to land representing part of the continental shelf
-		[ICON_BULLET] Deep Coast - the bit next to land for when there is no continental shelf off shore
-		[ICON_BULLET] Sea - between coastal waters and ocean waters, represents part of the continental shelf
-		[ICON_BULLET] Deep Sea - ditto, not continental shelf
+		[ICON_BULLET] Coast - the bit of the ocean next to land representing part of the continental shelf, or a saltwater lake.
+		[ICON_BULLET] Deep Coast - the bit next to land for when there is no continental shelf off shore.
+		[ICON_BULLET] Freshwater Coast - the bit of fresh water lakes nearest the land. Provides fresh water to adjacent tiles.
+		[ICON_BULLET] Sea - between coastal waters and ocean waters, represents part of the continental shelf.
+		[ICON_BULLET] Deep Sea - ditto, not continental shelf.
+		[ICON_BULLET] Freshwater Sea - parts of fresh water lakes or seas not adjcent to land.
 		[ICON_BULLET] Ocean - dangerous and deep waters
 		[ICON_BULLET] Trench - as dangerous to sail as ocean but deeper.
-		For the purposes of navigation coasts and lake shore represent those areas your earliest boats can cross. Seas and Lakes require sails to cross and Ocean and Trench require sophisticated navigational tools. [BOLD]Wild animal spawns and movement[\BOLD] are controlled by the climate that prefixes the terrain name Polar, Tropical and if no prefix, temperate. [BOLD]Features, Bonuses and Improvements[\BOLD] New features are [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds have been added to coastal waters. The [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK] may also appear in coastal waters. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
+		For the purposes of navigation, coasts represent those areas your earliest boats can cross. Seas require sails to cross and Ocean and Trench require sophisticated navigational tools.
+		[BOLD]Wild animal spawns and movement[\BOLD] are controlled by a climate prefixing the terrain name: Polar, Tropical or if no prefix, temperate. Only saltwater terrains use these prefixes.
+		[BOLD]Features, Bonuses and Improvements:[\BOLD]
+		New features include [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds appearing in coastal waters, alongside the natural wonder the [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK]. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_TEXT</Tag>
