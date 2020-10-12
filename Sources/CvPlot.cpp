@@ -1692,7 +1692,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 	return false;
 }
 
-// Lake shore does not qualify as coast
+// Lakeshore tiles can qualify as coastal IF corresponding lake is greater in size than iMinWaterSize
 bool CvPlot::isCoastal(int iMinWaterSize) const
 {
 	PROFILE_FUNC();
@@ -1750,7 +1750,17 @@ bool CvPlot::isLake() const
 
 bool CvPlot::isFreshWater() const
 {
-	if (isLake() || isRiver())
+	if (GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain())
+	{
+		return true;
+	}
+
+	if (isWater())
+	{
+		return false;
+	}
+
+	if (isRiver())
 	{
 		return true;
 	}
@@ -1760,7 +1770,7 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	if (isWater() || isImpassable(getTeam()))
+	if (isImpassable(getTeam()))
 	{
 		return false;
 	}
@@ -1770,7 +1780,20 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	return algo::any_of(rect(getX(), getY(), 1, 1), CvPlot::fn::isLake());
+	foreach_(const CvPlot* loopPlot, rect(getX(), getY(), 1, 1))
+	{
+		if (loopPlot->isWaterAndIsFresh())
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool CvPlot::isWaterAndIsFresh() const
+{
+	return isWater() && GC.getTerrainInfo(getTerrainType()).isFreshWaterTerrain();
 }
 
 
@@ -5857,8 +5880,6 @@ void CvPlot::setArea(int iNewValue)
 {
 	if (getArea() != iNewValue)
 	{
-		const bool bOldLake = isLake();
-
 		if (area() != NULL)
 		{
 			processArea(area(), -1);
@@ -7985,10 +8006,6 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 		{
 			iYield += GC.getYieldInfo(eYield).getHillsChange();
 			iYield += (bIgnoreFeature || getFeatureType() == NO_FEATURE) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield);
-		}
-		else if (isLake())
-		{
-			iYield += GC.getYieldInfo(eYield).getLakeChange();
 		}
 	}
 
@@ -13027,18 +13044,16 @@ int CvPlot::get3DAudioScriptFootstepIndex(int iFootstepTag) const
 
 float CvPlot::getAqueductSourceWeight() const
 {
-	float fWeight = 0.0f;
-
-	if (isLake() || isPeak2(true) || (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
+	if (isWaterAndIsFresh() || isPeak2(true)
+	|| getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater())
 	{
-		fWeight = 1.0f;
+		return 1.0f;
 	}
 	else if (isHills())
 	{
-		fWeight = 0.67f;
+		return 0.67f;
 	}
-
-	return fWeight;
+	return 0.0f;
 }
 
 bool CvPlot::shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const
