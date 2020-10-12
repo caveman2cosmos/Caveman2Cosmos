@@ -9347,7 +9347,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (pPlot->isFreshWater())
+		if (pPlot->isFreshWater() && !pPlot->isWater())
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));

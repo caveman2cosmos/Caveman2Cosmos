@@ -1692,7 +1692,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 	return false;
 }
 
-// Lake shore does not qualify as coast
+// Lakeshore tiles can qualify as coastal IF corresponding lake is greater in size than iMinWaterSize
 bool CvPlot::isCoastal(int iMinWaterSize) const
 {
 	PROFILE_FUNC();
@@ -5883,8 +5883,6 @@ void CvPlot::setArea(int iNewValue)
 {
 	if (getArea() != iNewValue)
 	{
-		const bool bOldLake = isLake();
-
 		if (area() != NULL)
 		{
 			processArea(area(), -1);
