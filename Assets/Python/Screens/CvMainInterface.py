@@ -2217,13 +2217,15 @@ class CvMainInterface:
 									normRate = commerceRate
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH", (normRate,))
 
-								# Acquiring just effects from either option. 
+								# Acquiring effects from either option. 
 								if bWFLDisplayOption:
 									winForLosingHelp = commerceRate * iWFLResearchMod / 100
-									szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_WFL", (winForLosingHelp,))
+									if winForLosingHelp > 0:
+										szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_WFL", (winForLosingHelp,))
 								if bTDDisplayOption:
 									techDiffusionHelp = commerceRate * iTDResearchMod / 100
-									szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_TD", (techDiffusionHelp,))
+									if techDiffusionHelp > 0:
+										szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_TD", (techDiffusionHelp,))
 								szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_END", ())
 							
 							# Not research
