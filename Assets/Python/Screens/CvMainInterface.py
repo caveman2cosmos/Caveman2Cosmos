@@ -124,6 +124,7 @@ class CvMainInterface:
 				"TXT_KEY_RAW_YIELD_TILES_OWNED",
 				"TXT_KEY_RAW_YIELD_TILES_ALL")
 			# Cache Constants.
+			self.iBaseResearchRate		= GC.getDefineINT("BASE_RESEARCH_RATE")
 			self.iPlotListMaxRows		= GC.getMAX_PLOT_LIST_ROWS()
 			self.iMaxPlayers			= GC.getMAX_PLAYERS()
 			self.iMaxPcTeams			= GC.getMAX_PC_TEAMS()
@@ -2167,12 +2168,18 @@ class CvMainInterface:
 				if iCurrentResearch != -1 or not bCityScreen:
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
 					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
+					# WFL and TD return 105 as +5%, iNational returns 5 as +5%. Equalizing.
+					iWFLResearchMod = CyPlayer.calculateWFLResearchModifier(iCurrentResearch) - 100
+					iTDResearchMod = CyPlayer.calculateTDResearchModifier(iCurrentResearch) - 100
+					iNationalResearchMod = CyPlayer.getNationalTechResearchModifier(iCurrentResearch)
 
 				if bCityScreen:
 					iconHappy = self.iconHappy
 					iconUnhappy = self.iconUnhappy
 				else:
-					bTDDisplayOption = self.GO_WIN_FOR_LOSING or self.GO_TECH_DIFFUSION
+					bTDDisplayOption = self.GO_TECH_DIFFUSION
+					bWFLDisplayOption = self.GO_WIN_FOR_LOSING
+					iBaseResearchRate = self.iBaseResearchRate
 
 				iconCommerceList = self.iconCommerceList
 				dY = 0
@@ -2198,17 +2205,28 @@ class CvMainInterface:
 
 							screen.setLabel("CityPercentText" + str(i), "", szTxt, 1<<1, 252, 53 + dY, 0, eFontGame, WidgetTypes.WIDGET_COMMERCE_MOD_HELP, j, -1)
 						else:
-							if j != CommerceTypes.COMMERCE_RESEARCH:
-								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
+							commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
 
-							elif bTDDisplayOption:
-								commerceRate = 100 * iResearchRate / iResearchMod
-								techDiffusionHelp = iResearchRate - commerceRate
-							else:
-								commerceRate = iResearchRate
+							# Following structure of CvPlayer::calculateBaseNetResearch, but broken down by parts
+							if j == CommerceTypes.COMMERCE_RESEARCH:
+								commerceRate += iBaseResearchRate
+								if iCurrentResearch != -1:
+									# Regular rate without any TD/WFL effects, includes national multiplier for current tech
+									normRate = commerceRate * (100 + iNationalResearchMod) / 100
+								else:
+									normRate = commerceRate
+								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH", (normRate,))
 
-							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
-								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
+								# Acquiring just effects from either option. 
+								if bWFLDisplayOption:
+									winForLosingHelp = commerceRate * iWFLResearchMod / 100
+									szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_WFL", (winForLosingHelp,))
+								if bTDDisplayOption:
+									techDiffusionHelp = commerceRate * iTDResearchMod / 100
+									szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_TD", (techDiffusionHelp,))
+								szTxt += TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_END", ())
+							
+							# Not research
 							else:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (commerceRate,))
 							screen.setLabel("RateText" + str(i), "", uFont1b + szTxt, 1<<0, 108, 53 + dY, 0, eFontGame, eWidGen, 0, 0)

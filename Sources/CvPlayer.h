@@ -327,6 +327,8 @@ public:
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const; // Exposed to Python
+	int calculateWFLResearchModifier(TechTypes eTech) const; // Exposed to Python
+	int calculateTDResearchModifier(TechTypes eTech) const; // Exposed to Python	
 	int calculateResearchModifier(TechTypes eTech) const; // Exposed to Python
 	int calculateGoldRate() const; // Exposed to Python
 	int calculateResearchRate(TechTypes eTech = NO_TECH) const; // Exposed to Python
@@ -2167,7 +2169,7 @@ public:
 	void setNationalDomainProductionModifier(DomainTypes eIndex, int iNewValue);
 	void changeNationalDomainProductionModifier(DomainTypes eIndex, int iChange);
 
-	int getNationalTechResearchModifier(TechTypes eIndex) const;
+	int getNationalTechResearchModifier(TechTypes eIndex) const; // Exposed to python
 	void setNationalTechResearchModifier(TechTypes eIndex, int iNewValue);
 	void changeNationalTechResearchModifier(TechTypes eIndex, int iChange);
 

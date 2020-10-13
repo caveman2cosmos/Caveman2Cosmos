@@ -698,6 +698,21 @@ int CyPlayer::calculateResearchRate(int /*TechTypes*/ eTech)
 	return m_pPlayer ? m_pPlayer->calculateResearchRate((TechTypes)eTech) : -1;
 }
 
+int CyPlayer::calculateWFLResearchModifier(int /*TechTypes*/ eTech)
+{
+	return m_pPlayer ? m_pPlayer->calculateWFLResearchModifier((TechTypes)eTech) : -1;
+}
+
+int CyPlayer::calculateTDResearchModifier(int /*TechTypes*/ eTech)
+{
+	return m_pPlayer ? m_pPlayer->calculateTDResearchModifier((TechTypes)eTech) : -1;
+}
+
+int CyPlayer::getNationalTechResearchModifier(int /*TechTypes*/ eTech)
+{
+	return m_pPlayer ? m_pPlayer->getNationalTechResearchModifier((TechTypes)eTech) : -1;
+}
+
 int CyPlayer::calculateResearchModifier(int /*TechTypes*/ eTech)
 {
 	return m_pPlayer ? m_pPlayer->calculateResearchModifier((TechTypes)eTech) : -1;
