@@ -458,12 +458,14 @@ void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 
 CyCity* CyPlot::getPlotCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getPlotCity()) : NULL;
+	CvCity* city = m_pPlot->getPlotCity()
+	return m_pPlot && city ? new CyCity(city) : NULL;
 }
 
 CyCity* CyPlot::getWorkingCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getWorkingCity()) : NULL;
+	CvCity* city = m_pPlot->getPlotCity()
+	return m_pPlot && city ? new CyCity(m_pPlot->getWorkingCity()) : NULL;
 }
 
 int CyPlot::getRiverID() const
