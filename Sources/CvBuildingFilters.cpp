@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()

@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -759,7 +760,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
-	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
+	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 
 	//if (eProperty != eDiseaseType)
 	//{

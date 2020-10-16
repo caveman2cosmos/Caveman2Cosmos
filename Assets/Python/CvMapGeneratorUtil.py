@@ -1230,31 +1230,28 @@ class TerrainGenerator:
 		return terrainVal
 
 class FeatureGenerator:
-	def __init__(self, iJunglePercent=80, iForestPercent=60,
-	             jungle_grain=5, forest_grain=6,
-	             fracXExp=-1, fracYExp=-1):
+	def __init__(self, iJunglePercent=80, iForestPercent=60, jungle_grain=5, forest_grain=6,  fracXExp=-1, fracYExp=-1):
 
-		self.GC = CyGlobalContext()
-		self.map = CyMap()
-		self.mapRand = self.GC.getGame().getMapRand()
+		self.GC = GC = CyGlobalContext()
+		self.map = MAP = GC.getMap()
+		self.mapRand = GC.getGame().getMapRand()
 		self.jungles = CyFractal()
 		self.forests = CyFractal()
 
 		self.iFlags = 0  # Disallow FRAC_POLAR flag, to prevent "zero row" problems.
-		if self.map.isWrapX(): self.iFlags += CyFractal.FracVals.FRAC_WRAP_X
-		if self.map.isWrapY(): self.iFlags += CyFractal.FracVals.FRAC_WRAP_Y
+		if MAP.isWrapX(): self.iFlags += CyFractal.FracVals.FRAC_WRAP_X
+		if MAP.isWrapY(): self.iFlags += CyFractal.FracVals.FRAC_WRAP_Y
 
-		self.iGridW = self.map.getGridWidth()
-		self.iGridH = self.map.getGridHeight()
+		self.iGridW = MAP.getGridWidth()
+		self.iGridH = MAP.getGridHeight()
 
 		self.iJunglePercent = iJunglePercent
 		self.iForestPercent = iForestPercent
 
-		jungle_grain += self.GC.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
-		forest_grain += self.GC.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
+		iFeatureGrain = GC.getWorldInfo(MAP.getWorldSize()).getFeatureGrainChange()
 
-		self.jungle_grain = jungle_grain
-		self.forest_grain = forest_grain
+		self.jungle_grain = jungle_grain + iFeatureGrain
+		self.forest_grain = forest_grain + iFeatureGrain
 
 		self.fracXExp = fracXExp
 		self.fracYExp = fracYExp
@@ -1745,7 +1742,7 @@ def placeC2CBonuses():
 		if plot.isLake():
 			if iTerrain == terrainCoast:
 				plot.setTerrainType(terrainShore, False, False)
-			elif iTerrain == terrainOcean:
+			elif iTerrain in (terrainSea, terrainOcean):
 				plot.setTerrainType(terrainLake, False, False)
 		elif plot.isWater():
 			## Figure out if it is Sea ie if it is ocean next to coast

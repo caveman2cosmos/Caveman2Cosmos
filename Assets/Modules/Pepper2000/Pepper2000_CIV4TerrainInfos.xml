@@ -16,8 +16,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/mercury.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -35,8 +33,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -53,8 +49,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -71,8 +65,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/venus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -89,8 +81,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/asteroid_surface.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -108,8 +98,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/jupiter.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -183,8 +171,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/saturn.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -273,8 +259,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
 			<bFound>1</bFound>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/uranus.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -306,8 +290,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/neptune.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -339,8 +321,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/kuiper_belt_object.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -668,8 +648,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>1</iYield>
 			</Yields>
@@ -689,8 +667,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>1</iYield>
 			</Yields>
@@ -736,8 +712,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -758,8 +732,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -780,8 +752,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\lunarHighlands.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -798,8 +768,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\lunarbarren.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -817,8 +785,6 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\lunarRilles.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -836,8 +802,6 @@
 			<iCultureDistance>3</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>4</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -854,8 +818,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/DuneIce.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -874,8 +836,6 @@
 			<iDefense>-25</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/DuneGraben.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -893,8 +853,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>4</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Desert.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_DESERT_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -909,8 +867,6 @@
 			<bFound>1</bFound>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_GRASSLAND_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
@@ -925,8 +881,6 @@
 			<bFound>1</bFound>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -947,8 +901,6 @@
 			<iDefense>25</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>

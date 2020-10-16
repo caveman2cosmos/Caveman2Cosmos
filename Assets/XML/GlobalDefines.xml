@@ -314,14 +314,6 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>SEAWATER_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>SEAWATER_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_YIELD_STACK</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
@@ -1846,10 +1838,6 @@
 	<Define>
 		<DefineName>C2C_ROUGH_BOMBARD_VALUE_MODIFIER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<!-- Minimum number of property control units per property for the AI -->
 	<Define>

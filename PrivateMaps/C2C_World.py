@@ -71,7 +71,6 @@ class MapConstants:
 		self.fLakesPerPlot = 0.009
 
 		# This value controls the number of deep ocean threnches per ocean map square.
-		# It will become a lake if enough water flows into the depression.
 		self.fThrenchesPerPlot = 0.006
 
 		# iLakeSizeMinPercent sets the minimum percentage a lake is shrunk to when fLakeSizeFactorChance roll true.
@@ -2234,13 +2233,12 @@ class LakeMap:
 			xx, yy = GetNeighbor(x, y, dir)
 			ii = GetIndex(xx, yy)
 			if ii >= 0 and plotData[ii] == WATER:
+				# Don't make lake here if immediately merges
 				if self.isLakeData[ii] == 1:
 					if dir < 5: # N, S, E & W
-						iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-						if iMaxLakeSize > iOtherLakeSize + iMergeSize:
-							iMergeSize += iOtherLakeSize
-						else:
-							return 0
+						print "Skipping pit at (%d, %d): Immediate lake merge" % (x, y)
+						return 0
+				# Or if would be adjacent to ocean at all
 				else:
 					return 0
 		# Create the lake.
@@ -2250,7 +2248,6 @@ class LakeMap:
 		checkedPlots = []
 		thePlot = LakePlot(x, y, i, relAltMap[i], iMergeSize)
 		highestAvrRainfall = self.avrRainfallMap2x2[i]
-		originalLakeSize = iLakeSize
 		while iLakeSize > 0:
 			iLakeSize -= 1 + thePlot.iMergeSize
 			i = thePlot.i
@@ -2467,10 +2464,7 @@ class LakeMap:
 
 
 	def isLake(self, x, y):
-		i = GetIndex(x, y)
-		if self.isLakeData[i] == 1:
-			return True
-		return False
+		return self.isLakeData[GetIndex(x, y)] == 1
 
 
 	def defineWaterTerrain(self, iWidth, iHeight, iArea, fLandHeight, WATER):
@@ -3917,18 +3911,12 @@ class StartPlot:
 		self.owner = None
 		self.avgDistance = 0
 
-
 	def isCoast(self):
-		plot = CyMap().plot(self.x, self.y)
-		waterArea = plot.waterArea()
-		if waterArea.isNone() or waterArea.isLake(): 
-			return False
-		return True
-
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return not waterArea.isNone() and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()
-
 
 	def plot(self):
 		return CyMap().plot(self.x, self.y)

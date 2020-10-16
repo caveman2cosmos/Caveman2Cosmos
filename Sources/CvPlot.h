@@ -236,7 +236,8 @@ public:
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater() const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python
+	bool isWaterAndIsFresh() const;
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -1144,7 +1145,6 @@ public:
 
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
-	bool isImprovementUpgradeBlocked(const TeamTypes eTeam) const;
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
@@ -1189,18 +1189,22 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TerrainTypes, getTerrainType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);
