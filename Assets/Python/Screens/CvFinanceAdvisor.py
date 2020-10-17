@@ -149,7 +149,7 @@ class CvFinanceAdvisor:
 				# Trade
 				for j in range(CyCity.getTradeRoutes()):
 					CyCityX = CyCity.getTradeCity(j)
-					if not CyCityX or CyCityX.isNone(): continue
+					if not CyCityX: continue
 
 					trade = CyCity.calculateTradeYield(YieldTypes.YIELD_COMMERCE, CyCity.calculateTradeProfitTimes100(CyCityX))
 					if CyCityX.getTeam() == iTeam:

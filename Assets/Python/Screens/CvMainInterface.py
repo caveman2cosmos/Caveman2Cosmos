@@ -2635,7 +2635,7 @@ class CvMainInterface:
 			aList = []
 			for iRoute in xrange(self.iMaxTradeRoutes):
 				CyCityX = CyCity.getTradeCity(iRoute)
-				if not CyCityX or CyCityX.isNone(): continue
+				if not CyCityX: continue
 				iPlayerX = CyCityX.getOwner()
 				if iPlayerX > -1:
 					if bYieldView:
@@ -4552,7 +4552,7 @@ class CvMainInterface:
 										iCount = 0
 										CyCity, n = CyPlayer.firstCity(False)
 										while CyCity:
-											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
+											if CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
 											CyCity, n = CyPlayer.nextCity(n, False)
 										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):

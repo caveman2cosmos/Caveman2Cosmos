@@ -211,7 +211,7 @@ class WBInfoScreen:
 				iCity = lPlots[1]
 				pPlayer = GC.getPlayer(iPlayer)
 				pCity = pPlayer.getCity(iCity)
-				if pCity.isNone(): continue
+				if pCity is None: continue
 				pPlot = pCity.plot()
 				iX = pPlot.getX()
 				iY = pPlot.getY()
