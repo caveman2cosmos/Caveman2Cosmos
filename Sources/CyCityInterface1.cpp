@@ -12,7 +12,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
 
 	x
-		.def("isNone", &CyCity::isNone, "void () - is the instance valid?")
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
 		.def("getCityIndexPlot", &CyCity::getCityIndexPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* (int iIndex)")		
