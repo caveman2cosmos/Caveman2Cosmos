@@ -2392,8 +2392,6 @@ class LakeMap:
 
 
 	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap):
-		LAND	= mc.LAND
-		PLAINS	= mc.PLAINS
 		plotData = tm.plotData
 		terrData = tm.terrData
 
