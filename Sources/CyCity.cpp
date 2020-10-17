@@ -13,8 +13,10 @@ CyCity::CyCity() : m_pCity(NULL)
 	FErrorMsg("error");
 }
 
-CyCity::CyCity(CvCity* pCity) : m_pCity(pCity) {}
-
+CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
+{
+	FAssert(m_pCity);
+}
 
 void CyCity::kill()
 {
