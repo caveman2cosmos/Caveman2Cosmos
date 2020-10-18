@@ -2392,65 +2392,39 @@ class LakeMap:
 
 
 	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap):
-		LAND	= mc.LAND
-		PLAINS	= mc.PLAINS
 		plotData = tm.plotData
-		xWestEdgeID = 0
-		for y in xrange(iHeight):
-			xEastEdgeID = xWestEdgeID + iWidth - 1
-			if not plotData[xEastEdgeID] and plotData[xWestEdgeID]:
-				# East=Water - West=Land
-				if self.lakeData[xEastEdgeID] != 1:
-					plotData[xWestEdgeID] = WATER
-				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
-					plotData[xWestEdgeID] = WATER
-					self.lakeData[xWestEdgeID] = 1
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size += 1
-				else:
-					plotData[xEastEdgeID] = LAND
-					tm.terrData[xEastEdgeID] = PLAINS
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size -= 1
+		terrData = tm.terrData
 
-			elif plotData[xEastEdgeID] and not plotData[xWestEdgeID]:
-				# East=Land - West=Water
-				if self.lakeData[xWestEdgeID] != 1:
-					plotData[xEastEdgeID] = WATER
-				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
-					plotData[xEastEdgeID] = WATER
-					self.lakeData[xEastEdgeID] = 1
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size += 1
+		for y in xrange(iHeight):
+			xWestEdgeID = y * iWidth
+			xEastEdgeID = xWestEdgeID + iWidth - 1
+			if (
+				WATER in (plotData[xEastEdgeID], plotData[xWestEdgeID])
+				and
+				plotData[xEastEdgeID] != plotData[xWestEdgeID]
+			):
+				if plotData[xEastEdgeID]:
+					plotData[xWestEdgeID] = plotData[xEastEdgeID]
+					terrData[xWestEdgeID] = terrData[xEastEdgeID]
 				else:
-					plotData[xWestEdgeID] = LAND
-					tm.terrData[xWestEdgeID] = PLAINS
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size -= 1
-			xWestEdgeID += iWidth
+					plotData[xEastEdgeID] = plotData[xWestEdgeID]
+					terrData[xEastEdgeID] = terrData[xWestEdgeID]
+
 		if mc.bWrapY:
 			ICE = mc.ICE
 			for southEdgeID in xrange(iWidth):
 				northEdgeID = southEdgeID + (iHeight - 1) * iWidth
-				if plotData[southEdgeID] and not plotData[northEdgeID]:
-					if self.lakeData[northEdgeID] != 1:
-						plotData[southEdgeID] = WATER
-					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
-						plotData[southEdgeID] = WATER
-						self.lakeData[southEdgeID] = 1
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size += 1
+				if (
+					WATER in (plotData[southEdgeID], plotData[northEdgeID])
+					and
+					plotData[southEdgeID] != plotData[northEdgeID]
+				):
+					if plotData[southEdgeID]:
+						plotData[northEdgeID] = plotData[southEdgeID]
+						terrData[northEdgeID] = terrData[southEdgeID]
 					else:
-						plotData[northEdgeID] = LAND
-						tm.terrData[northEdgeID] = ICE
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size -= 1
-
-				elif not plotData[southEdgeID] and plotData[northEdgeID]:
-					if self.lakeData[southEdgeID] != 1:
-						plotData[northEdgeID] = WATER
-					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
-						plotData[northEdgeID] = WATER
-						self.lakeData[northEdgeID] = 1
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size += 1
-					else:
-						plotData[southEdgeID] = LAND
-						tm.terrData[southEdgeID] = ICE
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size -= 1
+						plotData[southEdgeID] = plotData[northEdgeID]
+						terrData[southEdgeID] = terrData[northEdgeID]
 
 
 	def isLake(self, x, y):
@@ -3918,16 +3892,17 @@ class StartPlot:
 class MapOptions:
 	def __init__(self):
 		self.bfirstRun = True
-		self.optionList = [ # Title, Default, Random, Choices)
-							["Hills:",			2,	True, 5],
-							["Peaks:",			2,	True, 5],
-							["Landform:",		2,	True, 5],
-							["World Wrap:",		0, False, 3],
-							["Start:",			1, False, 2],
-							["Rivers:",			4,	True, 9],
-							["Resources:",		3,	True, 7],
-							["Pangea Breaker:",	0, False, 2]
-						] # When dding/removing options: Update the return of getNumCustomMapOptions().
+		self.optionList = \
+		[	# Title, Default, Random, Choices
+			["Hills:",			2,	True, 5],
+			["Peaks:",			2,	True, 5],
+			["Landform:",		2,	True, 5],
+			["World Wrap:",		0, False, 3],
+			["Start:",			1, False, 2],
+			["Rivers:",			4,	True, 9],
+			["Resources:",		3,	True, 7],
+			["Pangea Breaker:",	0, False, 2]
+		] # When adding/removing options: Update the return of getNumCustomMapOptions().
 
 	def loadMapOptionDefaults(self):
 		self.bfirstRun = False
@@ -4445,7 +4420,7 @@ def generateTerrainTypes():
 			terrTypes[i] = terrPermaFrost
 		elif terrData[i] == mc.ICE:
 			terrTypes[i] = terrIce
-	timer.log()			
+	timer.log()
 	return terrTypes
 
 
@@ -4640,7 +4615,6 @@ def addBonuses():
 def afterGeneration():
 	#CvMapGeneratorUtil.placeC2CBonuses()
 	NaturalWonders.NaturalWonders().placeNaturalWonders()
-	return
 
 
 def assignStartingPlots():
