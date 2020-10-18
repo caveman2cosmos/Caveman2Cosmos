@@ -4501,8 +4501,8 @@ public:
 	bool isFeatureChangeType(int i) const;
 
 	//Post Load Functions
-	void setHighestCost();
-	int getHighestCost() const;
+	//void setHighestCost();
+	//int getHighestCost() const;
 
 protected:
 	bool m_bPeakMakesValid;
@@ -4606,7 +4606,7 @@ protected:
 	std::vector<int> m_aiFeatureChangeTypes;
 
 	//Post Load Functions
-	int m_iHighestCost;
+	//int m_iHighestCost;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
