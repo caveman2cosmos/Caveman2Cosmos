@@ -30372,12 +30372,12 @@ BuildTypes CvUnitAI::AI_findBestFort(CvPlot* pPlot) const
 		{
 			const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
 			// Is fort or tower
-			if (kImprovement.getCulture() > 0 && kImprovement.getDefenseModifier() > 0)
+			if (kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
 			{
 				if (canBuild(pPlot, eBuild))
 				{
 					// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
-					if (!(pPlot->isCityRadius() && !kImprovement.isActsAsCity() && kImprovement.getVisibilityChange() > 0))
+					if (!(pPlot->isCityRadius() && !kImprovement.isActsAsCity()))
 					{
 						int iValue = kImprovement.getDefenseModifier() * 100;
 						if (kImprovement.isActsAsCity())
