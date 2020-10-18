@@ -3860,26 +3860,17 @@ def canTriggerImmigrantCity(argsList):
 ####### Controversial Philosopher ######
 
 def canTriggerControversialPhilosopherCity(argsList):
-  ePlayer = argsList[1]
-  iCity = argsList[2]
 
-  player = GC.getPlayer(ePlayer)
-  city = player.getCity(iCity)
+	city = GC.getPlayer(argsList[1]).getCity(argsList[2])
 
-  if city is None:
-    return False
-  if (not city.isCapital()):
-    return False
-  if (city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) < 3500):
-    return False
+	return city and city.isCapital() and city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) >= 3500
 
-  return True
 
 ####### Spy Discovered #######
 
 
 def canDoSpyDiscovered3(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None:
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doSpyDiscovered3(argsList):
 	kTriggeredData = argsList[1]
@@ -3901,13 +3892,8 @@ def getHelpSpyDiscovered3(argsList):
 ####### Nuclear Protest #######
 
 def canTriggerNuclearProtest(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  if player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")) < 10:
-    return False
-
-  return True
+	player = GC.getPlayer(argsList[0].ePlayer)
+	return 10 <= player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE"))
 
 def doNuclearProtest1(argsList):
   kTriggeredData = argsList[1]
