@@ -15,8 +15,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	// set the docstring of the current module scope 
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
-		.def("isNone", &CyPlayer::isNone, "checks for a null player")
-
 #ifdef PARALLEL_MAPS
 		.def("updateMembers", &CyPlayer::updateMembers, "void ()")
 		.def("initMembers", &CyPlayer::initMembers, "void (int iIndex)")

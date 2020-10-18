@@ -2,6 +2,7 @@
 
 #ifndef CyPlayer_h
 #define CyPlayer_h
+
 //
 // Python wrapper class for CvPlayer
 //
@@ -13,13 +14,14 @@ class CyCity;
 class CyArea;
 class CyPlot;
 class CySelectionGroup;
+
 class CyPlayer
 {
 public:
 	CyPlayer();
 	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
+
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
-	bool isNone() const { return m_pPlayer == NULL; }
 
 #ifdef PARALLEL_MAPS
 	void updateMembers();
@@ -161,6 +163,7 @@ public:
 	int unitsRequiredForGoldenAge();
 	int greatPeopleThresholdMilitary();
 	int greatPeopleThresholdNonMilitary();
+	int getGreatGeneralsThresholdModifier() const;
 	int specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce);
 
 	CyPlot* getStartingPlot();
@@ -176,8 +179,6 @@ public:
 	int getGoldPerTurn();
 
 	int getAdvancedStartPoints();
-	void setAdvancedStartPoints(int iNewValue);
-	void changeAdvancedStartPoints(int iChange);
 	int getAdvancedStartUnitCost(int /*UnitTypes*/ eUnit, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartCityCost(bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartPopCost(bool bAdd, CyCity* pCity);
@@ -191,7 +192,6 @@ public:
 	int getEspionageSpending(int /*PlayerTypes*/ ePlayer);
 	bool canDoEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData);
 	int getEspionageMissionCost(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData);
-	void doEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData, CyUnit* pUnit);
 
 	int getEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex);
 	void setEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iValue);
@@ -201,37 +201,21 @@ public:
 	int getGoldenAgeLength();
 	bool isGoldenAge();
 	void changeGoldenAgeTurns(int iChange);
-	int getNumUnitGoldenAges();
 	void changeNumUnitGoldenAges(int iChange);
 	int getAnarchyTurns();
 	bool isAnarchy();
 	void changeAnarchyTurns(int iChange);
-	int getStrikeTurns();
-	int getMaxAnarchyTurns();
 	int getAnarchyModifier();
 	int getGoldenAgeModifier();
-	int getHurryModifier();
-	void createGreatPeople(int eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience, int iX, int iY);
-	int getGreatPeopleCreated();
-	int getGreatGeneralsCreated();
-	int getGreatPeopleThresholdModifier();
-	int getGreatGeneralsThresholdModifier();
 	void changeGreatGeneralsThresholdModifier(int iChange);
 	int getGreatPeopleRateModifier();
 	int getGreatGeneralRateModifier();
-	int getDomesticGreatGeneralRateModifier();
-	int getStateReligionGreatPeopleRateModifier();
 
-	int getMaxGlobalBuildingProductionModifier();
-	int getMaxTeamBuildingProductionModifier();
-	int getMaxPlayerBuildingProductionModifier();
 	int getFreeExperience();
 	int getFeatureProductionModifier();
 	int getWorkerSpeedModifier();
-	int getImprovementUpgradeRateModifier();
 	int getMilitaryProductionModifier();
 	int getSpaceProductionModifier();
-	int getCityDefenseModifier();
 
 	int getBestUnitType(int /*UnitAITypes*/ eUnitAI) const;
 
@@ -244,65 +228,34 @@ public:
 	float getRevIdxNationalityMod();
 	float getRevIdxBadReligionMod();
 	float getRevIdxGoodReligionMod();
-	bool isInquisitionConditions();
-	int getUnitUpgradePriceModifier();
 	bool canFoundReligion();
 
-	int getNumNukeUnits();
-	int getNumOutsideUnits();
-
 	int getNumMilitaryUnits();
-	int getHappyPerMilitaryUnit();
-	bool isMilitaryFoodProduction();
-	int getHighestUnitLevel();
 
-	int getConscriptCount();
-	void setConscriptCount(int iNewValue);
-	void changeConscriptCount(int iChange);
-
-	int getMaxConscript();
 	int getOverflowResearch();
-	bool isNoUnhealthyPopulation();
-	bool getExpInBorderModifier();
 	bool isBuildingOnlyHealthy();
 
-	int getDistanceMaintenanceModifier();
-	int getNumCitiesMaintenanceModifier();
-	int getCorporationMaintenanceModifier();
 	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
-	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
 
 	int getExtraHealth();
 	void changeExtraHealth(int iChange);
 
-	int getBuildingGoodHealth();
-	int getBuildingBadHealth();
-
 	int getExtraHappiness();
 	void changeExtraHappiness(int iChange);
 
 	int getBuildingHappiness();
-	int getLargestCityHappiness();
 	int getWarWearinessPercentAnger();
 	int getWarWearinessModifier();
-	int getFreeSpecialist();
-	bool isNoForeignTrade();
-	bool isNoCorporations();
-	bool isNoForeignCorporations();
 	int getCoastalTradeRoutes();
 	void changeCoastalTradeRoutes(int iChange);
 	int getTradeRoutes();
-	int getConversionTimer();
 	int getRevolutionTimer();
-	void setRevolutionTimer(int newTime);
 	void changeRevolutionTimer(int addTime);
 
 	bool isStateReligion();
-	bool isNoNonStateReligionSpread();
 	int getStateReligionHappiness();
-	int getNonStateReligionHappiness();
 	int getStateReligionUnitProductionModifier();
 	void changeStateReligionUnitProductionModifier(int iChange);
 	int getStateReligionBuildingProductionModifier();
@@ -311,10 +264,7 @@ public:
 	CyCity* getCapitalCity();
 	int getCitiesLost();
 
-	int getWinsVsBarbs();
-
 	int getAssets();
-	void changeAssets(int iChange);
 	int getPower();
 	int getUnitPower();
 	int getPopScore();
@@ -323,11 +273,9 @@ public:
 	int getSevoWondersScore(int mode);
 	int getWondersScore();
 	int getTechScore();
-	int getTotalTimePlayed();
 	bool isMinorCiv();
 	bool isAlive();
 	bool isEverAlive();
-	bool isExtendedGame();
 	bool isFoundedFirstCity();
 
 	void setFoundedFirstCity(bool bNewValue);
@@ -338,7 +286,6 @@ public:
 	bool isStrike();
 
 	bool isMADNukesEnabled() const;
-	void setMADNukesEnabled(bool bNewValue);
 
 	int getID();
 	int /* HandicapTypes */ getHandicapType();
@@ -362,45 +309,30 @@ public:
 
 	int getSeaPlotYield(YieldTypes eIndex);
 	int getYieldRateModifier(YieldTypes eIndex);
-	int getCapitalYieldRateModifier(YieldTypes eIndex);
-	int getExtraYieldThreshold(YieldTypes eIndex);
-	int getTradeYieldModifier(YieldTypes eIndex);
-	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);
-	void setCommercePercent(CommerceTypes eIndex, int iNewValue);
 	void changeCommercePercent(CommerceTypes eIndex, int iChange);
 	int getCommerceRate(CommerceTypes eIndex);
 	int getCommerceRateModifier(CommerceTypes eIndex);
 	int getCapitalCommerceRateModifier(CommerceTypes eIndex);
-	int getStateReligionBuildingCommerce(CommerceTypes eIndex);
 	int getSpecialistExtraCommerce(CommerceTypes eIndex);
 
 	bool isCommerceFlexible(int /*CommerceTypes*/ eIndex);
-	int getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex);
-	void setGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex, int iValue);
 
 	bool isFeatAccomplished(int /*FeatTypes*/ eIndex);
 	void setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue);
 	bool isOption(int /*PlayerOptionTypes*/ eIndex);
 	void setOption(int /*PlayerOptionTypes*/ eIndex, bool bNewValue);
-	bool isLoyalMember(int /*VoteSourceTypes*/ eIndex);
-	void setLoyalMember(int /*VoteSourceTypes*/ eIndex, bool bNewValue);
 	int getVotes(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource);
 	bool isFullMember(int /*VoteSourceTypes*/ eVoteSource) const;
 	bool isVotingMember(int /*VoteSourceTypes*/ eVoteSource) const;
 	bool isPlayable();
-	void setPlayable(bool bNewValue);
-	bool hasFreedomFighter();
-	int getExtraFreedomFighters();
 	int getBonusExport(int /*BonusTypes*/ iIndex);
 	int getBonusImport(int /*BonusTypes*/ iIndex);
 
 	int getImprovementCount(int /*ImprovementTypes*/ iIndex);
 
-	bool isBuildingFree(int /*BuildingTypes*/ iIndex);
 	int getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex);
 	int getExtraBuildingHealth(int /*BuildingTypes*/ iIndex);
-	int getFeatureHappiness(int /*FeatureTypes*/ iIndex);
 
 	int getUnitCount(int /*UnitTypes*/ eIndex);
 	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
@@ -409,22 +341,12 @@ public:
 
 	int getBuildingCount(int /*BuildingTypes*/ iIndex);
 	bool isBuildingMaxedOut(int /*BuildingTypes*/ iIndex, int iExtra);
-	int getBuildingMaking(int /*BuildingTypes*/ iIndex);
 	int getBuildingCountPlusMaking(int /*BuildingTypes*/ iIndex);
-	int getHurryCount(int /*HurryTypes*/ eIndex);
 	bool canHurry(int /*HurryTypes*/ eIndex);
-	int getSpecialBuildingNotRequiredCount(int /*SpecialBuildingTypes*/ eIndex);
-	bool isSpecialBuildingNotRequired(int /*SpecialBuildingTypes*/ eIndex);
 
-	bool isHasCivicOption(int /*CivicOptionTypes*/ eIndex);
-	bool isNoCivicUpkeep(int /*CivicOptionTypes*/ iIndex);
 	int getHasReligionCount(int /*ReligionTypes*/ eIndex);
-	int countTotalHasReligion();
-	int findHighestHasReligionCount();
 	int getHasCorporationCount(int /*CorporationTypes*/ eIndex);
-	int countTotalHasCorporation();
 
-	int getUpkeepCount(int /*UpkeepTypes*/ eIndex);
 	bool isSpecialistValid(int /*SpecialistTypes*/ iIndex);
 	bool isResearchingTech(int /*TechTypes*/ iIndex);
 	int /*CivicTypes*/ getCivics(int /*CivicOptionTypes*/ iIndex);
@@ -436,29 +358,21 @@ public:
 	void changeCombatExperience(int iChange);
 	void setCombatExperience(int iExperience);
 
-	int getExtraSpecialistYield(int /*SpecialistTypes*/ eIndex1, int /*YieldTypes*/ eIndex2);
-
-	int findPathLength(int /*TechTypes*/ eTech, bool bCost);
-
 	int getQueuePosition( int /*TechTypes*/ eTech );
 	void clearResearchQueue();
 	bool pushResearch(int /*TechTypes*/ iIndex, bool bClear);
-	void popResearch(int /*TechTypes*/ eTech);
 	int getLengthResearchQueue();
 	void addCityName(std::wstring szName);
 	int getNumCityNames();
 	std::wstring getCityName(int iIndex);
 	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
-	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
-	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
-	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();
 	CySelectionGroup* getSelectionGroup(int iID);
 
@@ -572,7 +486,6 @@ public:
 	void addBLList();
 	void renameBLList(int iID);
 	void removeBLList(int iID);
-	void doGoldenAgebyPercentage(int iPercent);
 
 private:
 	CvPlayer* m_pPlayer;
