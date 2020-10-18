@@ -12166,8 +12166,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		{
 			bValid = true;
 		}
-		//	Don't count forts - they have their own separate decision criteria
-		else if (!GC.getImprovementInfo(eImprovement).isActsAsCity())
+		//	Don't count forts or towers - they have their own separate decision criteria
+		else if (!(GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getVisibilityChange() != 0))
 		{
 			if (eForcedBuild != NO_BUILD)
 			{
