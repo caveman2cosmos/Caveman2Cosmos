@@ -2152,6 +2152,7 @@ int CvUnitAI::AI_minSettlerDefense() const
 		defenders++;
 	}
 
+	// TODO: Add correction here for later era starts, otherwise settlers won't head out to found new cities
 	if(GET_PLAYER(getOwner()).getCurrentEra() > 0)
 	{
 		defenders++;
@@ -24716,14 +24717,14 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 					{
 						bDoImprove = true;
 					}
-/*
+					/*
 					else if (!bCityRadius && (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)))
 					{
 						//TB Super Forts debug: I wanted to allow a civ to re-evaluate whether a fort should be or continue to be used on a given plot as the best way to gather this resource.
 						//The way this is programmed they won't remove forts when cities move in and they won't remove forts when war is over and they won't replace a plantation or whatever with a fort if war is afoot.
 						bDoImprove = true;
 					}
-*/
+					*/
 					else if (bCityRadius && (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)))
 					{
 						//TB Super Forts debug: I wanted to allow a civ to re-evaluate whether a fort should be or continue to be used on a given plot as the best way to gather this resource.
@@ -24828,8 +24829,8 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 										iValue += 10 * pLoopPlot->calculateNatureYield((YieldTypes)iK, getTeam(), eFeature == NO_FEATURE ? true : GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature));
 									}
 								}
-								//TB Super Forts AI fix: here we are evaluating the improvement but not previously giving any concession that a fort is a horrible thing to build within a city radius unless there's good cause.
-								if (GC.getImprovementInfo(eImprovementX).getCulture() > 0 || GC.getImprovementInfo(eImprovementX).isActsAsCity())
+								//TB Super Forts AI fix: here we are evaluating the improvement but not previously giving any concession that a *fort* is a horrible thing to build within a city radius unless there's good cause.
+								if (GC.getImprovementInfo(eImprovementX).isActsAsCity())
 								{
 									int iDefenseValue = GC.getImprovementInfo(eImprovementX).getAirBombDefense()/10;
 									iDefenseValue += GC.getImprovementInfo(eImprovementX).getDefenseModifier()/10;
@@ -24851,7 +24852,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 								if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 								{
-/*
+									/*
 									int iCountervalue = kOwner.AI_bonusVal(eNonObsoleteBonus);
 									if (bCityRadius)
 									{
@@ -24880,7 +24881,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 											iCountervalue += iCounterThreat;
 										}
 									}
-*/
+									*/
 									//TB Note:establishes countervalue in a much processing cheaper fashion.
 									//Value gets set once when improvement is built and that's that.
 									//Defensive values based on threats when built will linger but that's a little interesting and could help to keep those odd forts from being so quickly rebuilt over.
@@ -30369,18 +30370,21 @@ BuildTypes CvUnitAI::AI_findBestFort(CvPlot* pPlot) const
 
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).getCulture() > 0)
+			const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
+			// Is fort or tower
+			if (kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
 			{
-				if (GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).getDefenseModifier() > 0)
+				if (canBuild(pPlot, eBuild))
 				{
-					if (canBuild(pPlot, eBuild))
+					// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
+					if (!(pPlot->isCityRadius() && !kImprovement.isActsAsCity()))
 					{
-						int iValue = 100*GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).getDefenseModifier();
-						if ( GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).isActsAsCity())
+						int iValue = kImprovement.getDefenseModifier() * 100;
+						if (kImprovement.isActsAsCity())
 						{
 							iValue += 5000;
 						}
-						if ( GC.getImprovementInfo((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement())).isZOCSource())
+						if (kImprovement.isZOCSource())
 						{
 							iValue += 5000;
 						}
