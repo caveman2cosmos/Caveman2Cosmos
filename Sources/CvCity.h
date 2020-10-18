@@ -1321,7 +1321,7 @@ public:
 	void setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
 	//Team Project (5)
 	void checkReligiousDisablingAllBuildings();
-	void checkReligiousDisabling(BuildingTypes eBuilding);
+	void checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlayer& player);
 	void applyReligionModifiers(const ReligionTypes eIndex, const bool bValue);
 
 	bool isHasCorporation(CorporationTypes eIndex) const;
