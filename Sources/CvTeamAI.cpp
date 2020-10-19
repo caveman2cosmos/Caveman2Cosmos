@@ -879,7 +879,7 @@ bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 			}
 		}
 	}
-	return !AI_calculateAdjacentLandPlots(eTeam) < range(8 * (iMod - 40) / 40, 0, 8);
+	return AI_calculateAdjacentLandPlots(eTeam) >= range(8 * (iMod - 40) / 40, 0, 8);
 }
 
 // this determines if eTeam or any of its allies are land targets of us
