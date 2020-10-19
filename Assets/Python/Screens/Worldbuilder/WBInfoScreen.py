@@ -330,8 +330,7 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopCity, i) = pPlayerX.firstCity(False)
-					while(loopCity):
+					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumBuildingInfos()):
 							if loopCity.isHasBuilding(iItemX):
 								if iPlayerX == iSelectedPlayer:
@@ -339,7 +338,6 @@ class WBInfoScreen:
 								lItems[iItemX][2] += 1
 								if not [loopCity.getX(), loopCity.getY()] in lItems[iItemX][5]:
 									lItems[iItemX][5].append([iPlayerX, loopCity.getID()])
-						(loopCity, i) = pPlayerX.nextCity(i, False)
 		elif iMode == 3:
 			iData1 = 7879
 			pPlayer = GC.getPlayer(iSelectedPlayer)
@@ -349,8 +347,7 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopCity, i) = pPlayerX.firstCity(False)
-					while(loopCity):
+					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumSpecialistInfos()):
 							iCount = loopCity.getSpecialistCount(iItemX) + loopCity.getFreeSpecialistCount(iItemX)
 							if iCount > 0:
@@ -359,7 +356,6 @@ class WBInfoScreen:
 								lItems[iItemX][2] += iCount
 								if not [loopCity.getX(), loopCity.getY()] in lItems[iItemX][5]:
 									lItems[iItemX][5].append([iPlayerX, loopCity.getID()])
-						(loopCity, i) = pPlayerX.nextCity(i, False)
 		elif iMode == 4:
 			iData1 = 7869
 			pPlayer = GC.getPlayer(iSelectedPlayer)

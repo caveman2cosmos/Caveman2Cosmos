@@ -4550,11 +4550,9 @@ class CvMainInterface:
 										szTxt = str(CyPlayer.getNumCities())
 									else:
 										iCount = 0
-										CyCity, n = CyPlayer.firstCity(False)
-										while CyCity:
+										for CyCity in CyPlayer.cities():
 											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
-											CyCity, n = CyPlayer.nextCity(n, False)
 										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):
 											iCount += 1
 										szTxt = u"<color=0,255,255>%d" %iCount
