@@ -211,14 +211,12 @@ class CvForeignAdvisor:
 
 		# City trade list
 		self.tuCity = tuCity = []
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			liCity = []
 			for iCity in range(CyCity.getTradeRoutes()):
 				liCity.append(CyCity.getTradeCity(iCity))
 			if liCity:
 				tuCity.append([CyCity, liCity])
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		if not self.bNoTechTrade:
 			# Owned tech list

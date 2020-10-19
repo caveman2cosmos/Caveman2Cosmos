@@ -1436,8 +1436,7 @@ class CvVictoryScreen:
 				iThreshold = GAME.getCultureThreshold(CvVictoryInfo.getCityCulture())
 				aList = []
 
-				CyCity, i = CyPlayer.firstCity(False)
-				while CyCity:
+				for CyCity in CyPlayer.cities():
 					iRate = CyCity.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
 					if not iRate:
 						iTurns = -1
@@ -1445,7 +1444,6 @@ class CvVictoryScreen:
 						iCultureLeftTimes100 = 100 * iThreshold - CyCity.getCultureTimes100(CyCity.getOwner())
 						iTurns = int((iCultureLeftTimes100 + iRate - 1) / iRate)
 					aList.append((CyCity.getCulture(iPlayer), CyCity, iTurns))
-					CyCity, i = CyPlayer.nextCity(i, False)
 
 				aList.sort()
 				aList.reverse()
@@ -1459,10 +1457,8 @@ class CvVictoryScreen:
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			CyPlayerX = GC.getPlayer(iPlayerX)
 			if CyPlayerX.isAlive() and CyPlayerX.getTeam() == iTeam:
-				CyCity, i = CyPlayerX.firstCity(False)
-				while CyCity:
+				for CyCity in CyPlayerX.cities():
 					aList.append((CyCity.getCulture(iPlayerX), CyCity))
-					CyCity, i = CyPlayerX.nextCity(i, False)
 
 		if aList:
 			aList.sort()
@@ -1484,13 +1480,11 @@ class CvVictoryScreen:
 					bTeam = True
 				else:
 					bTeam = False
-				CyCity, i = CyPlayerX.firstCity(False)
-				while CyCity:
+				for CyCity in CyPlayerX.cities():
 					if CyCity.getCulture(iPlayerX) > iThreshold:
 						iLegendaryCities += 1
 						if bTeam:
 							iTeamCities += 1
-					CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return [iTeamCities, iLegendaryCities]
 

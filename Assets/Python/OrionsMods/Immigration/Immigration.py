@@ -29,13 +29,11 @@ def getLeastPopulatedCity(CyPlayer):
 	city = None
 	iMax = 0
 
-	CyCity, i = CyPlayer.firstCity(False)
-	while CyCity:
+	for CyCity in CyPlayer.cities():
 		iPop = CyCity.getPopulation()
 		if not iMax or iMax > iPop:
 			iMax = iPop
 			city = CyCity
-		CyCity, i = CyPlayer.nextCity(i, False)
 
 	return city
 
