@@ -176,8 +176,7 @@ def endTurnFeats(iPlayer):
 				popupInfo.addPopup(iPlayer)
 	# Trade Route
 	if not CyPlayer.isFeatAccomplished(FeatTypes.FEAT_TRADE_ROUTE):
-		CyCityX, i = CyPlayer.firstCity(False)
-		while CyCityX:
+		for CyCityX in CyPlayer.cities():
 			if not CyCityX.isCapital():
 				if CyCityX.isConnectedToCapital(iPlayer):
 					CyPlayer.setFeatAccomplished(FeatTypes.FEAT_TRADE_ROUTE, True)
@@ -193,7 +192,6 @@ def endTurnFeats(iPlayer):
 						popupInfo.addPythonButton(TRNSLTR.getText("TXT_KEY_FEAT_ACCOMPLISHED_MORE", ()), "")
 						popupInfo.addPopup(iPlayer)
 					break
-			CyCityX, i = CyPlayer.nextCity(i, False)
 	# First Bonuses Obtained
 	for item in lBonus:
 		if CyPlayer.isFeatAccomplished(item[0]): continue

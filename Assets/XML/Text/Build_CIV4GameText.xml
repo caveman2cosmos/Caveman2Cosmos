@@ -656,7 +656,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NOMADIC_HERD</Tag>
-		<English>Bulid [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>

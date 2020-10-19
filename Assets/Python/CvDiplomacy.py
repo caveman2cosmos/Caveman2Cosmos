@@ -262,11 +262,9 @@ class CvDiplomacy:
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive() and CyTeamAct.isAtWar(CyPlayerX.getTeam()):
-					CyCity, i = CyPlayerX.firstCity(False)
-					while CyCity:
+					for CyCity in CyPlayerX.cities():
 						if CyCity.isRevealed(iTeamAct):
 							self.addUserComment("USER_DIPLOCOMMENT_TARGET_CITY", iPlayerX, CyCity.getID(), CyCity.getNameKey())
-						CyCity, i = CyPlayerX.nextCity(i, False)
 
 			self.addUserComment("USER_DIPLOCOMMENT_SOMETHING_ELSE")
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")

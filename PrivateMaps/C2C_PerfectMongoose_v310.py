@@ -4714,12 +4714,8 @@ class StartPlot:
 
 
 	def isCoast(self):
-		gameMap = CyMap()
-		plot = gameMap.plot(self.x, self.y)
-		waterArea = plot.waterArea()
-		if waterArea.isNone() == True or waterArea.isLake() == True:
-			return False
-		return True
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return not waterArea.isNone() and not waterArea.isLake()
 
 
 	def isRiverSide(self):

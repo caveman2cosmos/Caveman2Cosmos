@@ -15745,7 +15745,7 @@ m_paImprovementBonus(NULL)
 ,m_bNotOnAnyBonus(false)
 ,m_bNational(false)
 ,m_bGlobal(false)
-,m_iHighestCost(0)
+//,m_iHighestCost(0)
 ,m_iBonusChange(NO_BONUS)
 {
 }
@@ -16263,29 +16263,30 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 	}
 	return true;
 }
-//Post Load functions
-void CvImprovementInfo::setHighestCost()
-{
-	BuildTypes eHighestCostBuild = NO_BUILD;
-	int iHighestCost = 0;
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
-		{
-			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
-			{
-				eHighestCostBuild = (BuildTypes)iI;
-				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
-			}
-		}
-	}
-	m_iHighestCost = iHighestCost;
-}
 
-int CvImprovementInfo::getHighestCost() const
-{
-	return m_iHighestCost;
-}
+//Post Load functions
+//void CvImprovementInfo::setHighestCost()
+//{
+//	BuildTypes eHighestCostBuild = NO_BUILD;
+//	int iHighestCost = 0;
+//	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+//	{
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		{
+//			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
+//			{
+//				eHighestCostBuild = (BuildTypes)iI;
+//				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
+//			}
+//		}
+//	}
+//	m_iHighestCost = iHighestCost;
+//}
+
+//int CvImprovementInfo::getHighestCost() const
+//{
+//	return m_iHighestCost;
+//}
 
 void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 {
@@ -18412,7 +18413,6 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
-m_iLakeChange(0),
 m_iCityChange(0),
 m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
@@ -18457,11 +18457,6 @@ int CvYieldInfo::getHillsChange() const
 int CvYieldInfo::getPeakChange() const
 {
 	return m_iPeakChange;
-}
-
-int CvYieldInfo::getLakeChange() const
-{
-	return m_iLakeChange;
 }
 
 int CvYieldInfo::getCityChange() const
@@ -18531,7 +18526,6 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
-	pXML->GetOptionalChildXmlValByName(&m_iLakeChange, L"iLakeChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
@@ -18597,7 +18591,6 @@ void CvYieldInfo::copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
-	if (getLakeChange() == iDefault) m_iLakeChange = pClassInfo->getLakeChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
 	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
@@ -18621,7 +18614,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
-	CheckSum(iSum, m_iLakeChange);
 	CheckSum(iSum, m_iCityChange);
 	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);
@@ -18652,6 +18644,7 @@ m_bImpassable(false),
 m_bFound(false),
 m_bFoundCoast(false),
 m_bFoundFreshWater(false),
+m_bFreshWaterTerrain(false),
 m_iWorldSoundscapeScriptId(0),
 m_piYields(NULL),
 m_piRiverYieldChange(NULL),
@@ -18721,6 +18714,11 @@ bool CvTerrainInfo::isFoundCoast() const
 bool CvTerrainInfo::isFoundFreshWater() const
 {
 	return m_bFoundFreshWater;
+}
+
+bool CvTerrainInfo::isFreshWaterTerrain() const
+{
+	return m_bFreshWaterTerrain;
 }
 
 const TCHAR* CvTerrainInfo::getArtDefineTag() const
@@ -18857,6 +18855,7 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFound, L"bFound");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundCoast, L"bFoundCoast");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundFreshWater, L"bFoundFreshWater");
+	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterTerrain, L"bFreshWaterTerrain");
 
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildModifier, L"iBuildModifier");
@@ -18967,6 +18966,7 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 	if (isFound() == bDefault) m_bFound = pClassInfo->isFound();
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
 	if (isFoundFreshWater() == bDefault) m_bFoundFreshWater = pClassInfo->isFoundFreshWater();
+	if (isFreshWaterTerrain() == bDefault) m_bFreshWaterTerrain = pClassInfo->isFreshWaterTerrain();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
 	if (getBuildModifier() == iDefault) m_iBuildModifier = pClassInfo->getBuildModifier();
 	if (getDefenseModifier() == iDefault) m_iDefenseModifier = pClassInfo->getDefenseModifier();
@@ -19015,6 +19015,7 @@ void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bFound);
 	CheckSum(iSum, m_bFoundCoast);
 	CheckSum(iSum, m_bFoundFreshWater);
+	CheckSum(iSum, m_bFreshWaterTerrain);
 
 	// Arrays
 
@@ -32324,15 +32325,9 @@ CvEffectInfo::CvEffectInfo() :
 ,m_bSticky(false)
 ,m_fProjectileSpeed(0.0f)
 ,m_fProjectileArc(0.0f)
-,m_bBattleEffect(false)
 { }
 
 CvEffectInfo::~CvEffectInfo() {}
-
-bool CvEffectInfo::isBattleEffect() const
-{
-	return m_bBattleEffect;
-}
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -32369,7 +32364,6 @@ bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileSpeed, L"fSpeed");
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileArc, L"fArcValue");
 	pXML->GetOptionalChildXmlValByName(&m_bSticky, L"bSticky");
-	pXML->GetOptionalChildXmlValByName(&m_bBattleEffect, L"bBattleEffect");
 
 	return true;
 }
@@ -32402,8 +32396,6 @@ void CvEffectInfo::copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* p
 	if (getProjectileArc() == fDefault) m_fProjectileArc = pClassInfo->getProjectileArc();
 
 	if (isSticky() == bDefault) m_bSticky = pClassInfo->isSticky();
-
-	if (isBattleEffect() == bDefault) m_bBattleEffect = pClassInfo->isBattleEffect();
 }
 
 

@@ -1795,15 +1795,6 @@
 		<Polish>[NEWLINE]Barbarzyński Swiat</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS</Tag>
-		<English>[NEWLINE]Battle Effects</English>
-		<French>[NEWLINE]Effets de Combats</French>
-		<German>[NEWLINE]Kampfeffekte</German>
-		<Italian>[NEWLINE]"Effetti della battaglia"</Italian>
-		<Spanish>[NEWLINE]Efectos de batalla</Spanish>
-		<Polish>[NEWLINE]Efekty Bitwy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-ALT-O = Game Options</English>
 		<French>[NEWLINE]CTRL-ALT-O = Options du Jeu</French>
