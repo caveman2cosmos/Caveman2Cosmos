@@ -38342,19 +38342,15 @@ void CvUnit::resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, cons
 
 	FAssertMsg(pCity != NULL, "Breakdown Target City is not assigned a valid value");
 
-	const int iChance = breakdownChanceTotal();
-	const int iTrueChance = std::max(5, (iChance - AdjustedRepel));
-
-	const int iBombardDefMod = std::max(0,(100 - pCity->getBuildingBombardDefense()));
 	const int iNormalDamage = breakdownDamageTotal();
-	int iTrueDamage = iNormalDamage + ((iNormalDamage * iBombardDefMod)/100);
-	if (breakdownDamageTotal() > 0)
+	int iTrueDamage = iNormalDamage + iNormalDamage * std::max(0, 100 - pCity->getBuildingBombardDefense()) / 100;
+
+	if (iNormalDamage > 0)
 	{
 		iTrueDamage = std::max(1, iTrueDamage);
 	}
-	const int iBreakdownAttackRoll = GC.getGame().getSorenRandNum(100, "BreakdownAttackRoll");
 
-	if (iBreakdownAttackRoll < iTrueChance)
+	if (std::max(5, breakdownChanceTotal() - AdjustedRepel) > GC.getGame().getSorenRandNum(100, "BreakdownAttackRoll"))
 	{
 		pCity->changeDefenseModifier(-iTrueDamage);
 
@@ -38366,31 +38362,27 @@ void CvUnit::resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, cons
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY());
 	}
-	return;
 }
 
 int CvUnit::getDiminishingReturn(int i) const
 {
-	int iA = 0;
-	int iB = 100;
-	int iC = 0;
 	if (i < 51)
 	{
 		return i;
 	}
-	else
+	int iA = 0;
+	int iB = 100;
+
+	for (int iC = i; iC > 0; iC /= 2)
 	{
-		for (iC = i; iC > 0; iC /= 2)
+		iB /= 2;
+		iA += iB;
+		i -= iB;
+		i /= 2;
+		if (i < iB/2 + 1)
 		{
-			iB /= 2;
-			iA += iB;
-			i -= iB;
-			i /= 2;
-			if (i < (iB/2 + 1))
-			{
-				i += iA;
-				return i;
-			}
+			i += iA;
+			return i;
 		}
 	}
 	return 0;
@@ -38402,41 +38394,37 @@ int CvUnit::getApproaching0Return(int i) const
 	{
 		return i;
 	}
-	else if (i > 0)
+	if (i > 0)
 	{
 		return 9;
 	}
-	else if (i > -10)
+	if (i > -10)
 	{
 		return 8;
 	}
-	else if (i > -20)
+	if (i > -20)
 	{
 		return 7;
 	}
-	else if (i > -40)
+	if (i > -40)
 	{
 		return 6;
 	}
-	else if (i > -80)
+	if (i > -80)
 	{
 		return 5;
 	}
-	else if (i > -160)
+	if (i > -160)
 	{
 		return 4;
 	}
-	else if (i > -320)
+	if (i > -320)
 	{
 		return 3;
 	}
-	else if (i > -640)
+	if (i > -640)
 	{
 		return 2;
-	}
-	else
-	{
-		return 1;
 	}
 	return 1;
 }
@@ -39291,10 +39279,14 @@ int CvUnit::getSMHPValue() const
 
 void CvUnit::setSMHPValue()
 {
-	const int newSMHPValue = applySMRank(
-		HPValueTotalPreCheck(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER()
-		);
-	m_iSMHPValue = newSMHPValue;
+	m_iSMHPValue =
+	(
+		applySMRank(
+			HPValueTotalPreCheck(),
+			getSizeMattersOffsetValue(),
+			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
+		)
+	);
 	FAssert(m_iSMHPValue >= 0);
 }
 
