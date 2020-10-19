@@ -15745,7 +15745,7 @@ m_paImprovementBonus(NULL)
 ,m_bNotOnAnyBonus(false)
 ,m_bNational(false)
 ,m_bGlobal(false)
-,m_iHighestCost(0)
+//,m_iHighestCost(0)
 ,m_iBonusChange(NO_BONUS)
 {
 }
@@ -16263,29 +16263,30 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 	}
 	return true;
 }
-//Post Load functions
-void CvImprovementInfo::setHighestCost()
-{
-	BuildTypes eHighestCostBuild = NO_BUILD;
-	int iHighestCost = 0;
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
-		{
-			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
-			{
-				eHighestCostBuild = (BuildTypes)iI;
-				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
-			}
-		}
-	}
-	m_iHighestCost = iHighestCost;
-}
 
-int CvImprovementInfo::getHighestCost() const
-{
-	return m_iHighestCost;
-}
+//Post Load functions
+//void CvImprovementInfo::setHighestCost()
+//{
+//	BuildTypes eHighestCostBuild = NO_BUILD;
+//	int iHighestCost = 0;
+//	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+//	{
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		{
+//			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
+//			{
+//				eHighestCostBuild = (BuildTypes)iI;
+//				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
+//			}
+//		}
+//	}
+//	m_iHighestCost = iHighestCost;
+//}
+
+//int CvImprovementInfo::getHighestCost() const
+//{
+//	return m_iHighestCost;
+//}
 
 void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 {
