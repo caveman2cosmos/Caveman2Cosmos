@@ -1349,9 +1349,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 	bool bInFull = ((!GET_TEAM(eTeam).isNPC() || GET_TEAM(eTeam).isBarbarian()) && (!isNPC() || isBarbarian()));
 	if (!isAtWar(eTeam))
 	{
-		//FAssertMsg((isHuman() || isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() || isBarbarian() || GET_TEAM(eTeam).isBarbarian() || AI_isSneakAttackReady(eTeam) || (GET_TEAM(eTeam).getAtWarCount(true) > 0) || !(GC.getGame().isFinalInitialized()) || gDLL->GetWorldBuilderMode() || getVassalCount() > 0  || isAVassal() || GET_TEAM(eTeam).getVassalCount() > 0  || GET_TEAM(eTeam).isAVassal() || getDefensivePactCount() > 0), "Possibly accidental AI war!!!");
-
-		if( gTeamLogLevel >= 1 )
+		if (gTeamLogLevel >= 1)
 		{
 			logBBAI("  Team %d (%S) declares war on team %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), eTeam);
 		}
@@ -2062,7 +2060,7 @@ void CvTeam::signDefensivePact(TeamTypes eTeam)
 
 bool CvTeam::canSignDefensivePact(TeamTypes eTeamB) const
 {
-	if (!isDefensivePactTrading() || isAVassal() || getAtWarCount(true) > 0)
+	if (!isDefensivePactTrading() || isAVassal() || isAtWar())
 	{
 		return false;
 	}
@@ -2071,7 +2069,7 @@ bool CvTeam::canSignDefensivePact(TeamTypes eTeamB) const
 		return false;
 	}
 	const CvTeam& teamB = GET_TEAM(eTeamB);
-	if (!teamB.isDefensivePactTrading() || teamB.isAVassal() || teamB.getAtWarCount(true) > 0)
+	if (!teamB.isDefensivePactTrading() || teamB.isAVassal() || teamB.isAtWar())
 	{
 		return false;
 	}
@@ -2266,23 +2264,16 @@ int CvTeam::getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals) const
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive()
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		&& (!bIgnoreVassals || !GET_TEAM((TeamTypes)iI).isAVassal())
+		&& isAtWar((TeamTypes)iI))
 		{
-			if (!bIgnoreMinors || !(GET_TEAM((TeamTypes)iI).isMinorCiv()))
-			{
-				if( !bIgnoreVassals || !(GET_TEAM((TeamTypes)iI).isAVassal()))
-				{
-					if (isAtWar((TeamTypes)iI))
-					{
-						FAssert(iI != getID());
-						FAssert(!(AI_isSneakAttackPreparing((TeamTypes)iI)));
-						iCount++;
-					}
-				}
-			}
+			FAssert(iI != getID());
+			FAssert(!AI_isSneakAttackPreparing((TeamTypes)iI));
+			iCount++;
 		}
 	}
-
 	return iCount;
 }
 
@@ -2306,26 +2297,18 @@ int CvTeam::getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const
 
 int CvTeam::getAnyWarPlanCount(bool bIgnoreMinors) const
 {
-	int iCount;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive()
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		&& AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
 		{
-			if (!bIgnoreMinors || !(GET_TEAM((TeamTypes)iI).isMinorCiv()))
-			{
-				if (AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
-				{
-					FAssert(iI != getID());
-					iCount++;
-				}
-			}
+			FAssert(iI != getID());
+			iCount++;
 		}
 	}
-
 	FAssert(iCount >= getAtWarCount(bIgnoreMinors));
 
 	return iCount;
@@ -4123,12 +4106,29 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 
 bool CvTeam::isAtWar(TeamTypes eIndex) const
 {
-	if ( eIndex == NO_TEAM )
+	if (eIndex == NO_TEAM)
 	{
 		return false;
 	}
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	return m_abAtWar[eIndex];
+}
+
+bool CvTeam::isAtWar(const bool bCountMinors) const
+{
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		const TeamTypes eTeamX = (TeamTypes)iI;
+
+		if (isAtWar(eTeamX) && GET_TEAM(eTeamX).isAlive()
+		&& (bCountMinors || !GET_TEAM(eTeamX).isMinorCiv()))
+		{
+			FAssert(eTeamX != getID());
+			FAssert(!AI_isSneakAttackPreparing(eTeamX));
+			return true;
+		}
+	}
+	return false;
 }
 
 

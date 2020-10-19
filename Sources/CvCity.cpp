@@ -21334,20 +21334,16 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			}
 
 			/* Check War Conditions */
-			if (bWar)
+			if (bWar && kBuilding.isPrereqWar())
 			{
-				//Not at war
-				if (kBuilding.isPrereqWar())
+				if (GET_TEAM(getTeam()).isAtWar())
 				{
-					if (GET_TEAM(getTeam()).getAtWarCount(true) > 0)
-					{
-						bRestoreBuildings = true;
-					}
-					else
-					{
-						bObsoleteBuildings = true;
-						bRequiresWar = true;
-					}
+					bRestoreBuildings = true;
+				}
+				else
+				{
+					bObsoleteBuildings = true;
+					bRequiresWar = true;
 				}
 			}
 
@@ -22203,7 +22199,7 @@ void CvCity::doAttack()
 
 	if (getAdjacentDamagePercent() > 0)
 	{
-		if (GET_TEAM(getTeam()).getAtWarCount(false) > 0)
+		if (GET_TEAM(getTeam()).isAtWar(true))
 		{
 			bool abInformPlayer[MAX_PLAYERS];
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
