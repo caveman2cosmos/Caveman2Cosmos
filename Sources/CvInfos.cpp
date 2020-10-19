@@ -32324,15 +32324,9 @@ CvEffectInfo::CvEffectInfo() :
 ,m_bSticky(false)
 ,m_fProjectileSpeed(0.0f)
 ,m_fProjectileArc(0.0f)
-,m_bBattleEffect(false)
 { }
 
 CvEffectInfo::~CvEffectInfo() {}
-
-bool CvEffectInfo::isBattleEffect() const
-{
-	return m_bBattleEffect;
-}
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -32369,7 +32363,6 @@ bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileSpeed, L"fSpeed");
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileArc, L"fArcValue");
 	pXML->GetOptionalChildXmlValByName(&m_bSticky, L"bSticky");
-	pXML->GetOptionalChildXmlValByName(&m_bBattleEffect, L"bBattleEffect");
 
 	return true;
 }
@@ -32402,8 +32395,6 @@ void CvEffectInfo::copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* p
 	if (getProjectileArc() == fDefault) m_fProjectileArc = pClassInfo->getProjectileArc();
 
 	if (isSticky() == bDefault) m_bSticky = pClassInfo->isSticky();
-
-	if (isBattleEffect() == bDefault) m_bBattleEffect = pClassInfo->isBattleEffect();
 }
 
 

@@ -9196,9 +9196,6 @@ bool CvUnit::airBomb(int iX, int iY)
 		return true;
 	}
 
-	// Battle Effects
-	setBattlePlot(pPlot);
-
 	pCity = pPlot->getPlotCity();
 	PlayerTypes eAttacker = getVisualOwner(getTeam());
 
@@ -27513,15 +27510,6 @@ bool CvUnit::airStrike(CvPlot* pPlot)//
 		return false;
 	}
 
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                        Johnny Smith               */
-/*                                                                   Afforess                   */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	setBattlePlot(pPlot, pDefender);
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	FAssert(pDefender != NULL);
 	FAssert(pDefender->canDefend());
 
@@ -27713,8 +27701,6 @@ bool CvUnit::rangeStrike(int iX, int iY)
 
 	FAssert(pDefender != NULL);
 	FAssert(pDefender->canDefend());
-
-	setBattlePlot(pDefender->plot(), pDefender);
 
 	if (GC.getDefineINT("RANGED_ATTACKS_USE_MOVES") == 0)
 	{
@@ -28707,9 +28693,6 @@ bool CvUnit::airBomb1(int iX, int iY)
 	}
 	CvWString szBuffer;
 
-	// Battle Effects
-	setBattlePlot(pPlot);
-
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity != NULL)
 	{
@@ -28880,15 +28863,6 @@ bool CvUnit::airBomb2(int iX, int iY)
 		return true;
 	}
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	setBattlePlot(pPlot);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
 	pCity = pPlot->getPlotCity();
 
 	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -29128,15 +29102,6 @@ bool CvUnit::airBomb3(int iX, int iY)
 		return true;
 	}
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	setBattlePlot(pPlot);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
 	pCity = pPlot->getPlotCity();
 
 	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -29404,15 +29369,6 @@ bool CvUnit::airBomb4(int iX, int iY)
 		return true;
 	}
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	setBattlePlot(pPlot);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
 	pCity = pPlot->getPlotCity();
 	iCount = algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA);
 	iCount = (GC.getGame().getSorenRandNum(iCount, "Choose ship") + 1);
@@ -29632,9 +29588,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 	{
 		return true;
 	}
-
-	// Battle Effects
-	setBattlePlot(pPlot);
 
 	pCity = pPlot->getPlotCity();
 
@@ -29904,7 +29857,6 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 				AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
 			}
 		}
-		setBattlePlot(pPlot);
 	}
 	else
 	{
@@ -29938,42 +29890,37 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
 				AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
 			}
-			setBattlePlot(pPlot);
 		}
-		else
+		// Plot bombardment
+		else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-			// Plot bombardment
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
+			if (
+				GC.getGame().getSorenRandNum(getBombardRate(), "Bomb - Offense")
+				>=
+				GC.getGame().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Bomb - Defense")
+			)
 			{
-				if (
-					GC.getGame().getSorenRandNum(getBombardRate(), "Bomb - Offense")
-					>=
-					GC.getGame().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Bomb - Defense")
-				)
-				{
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-						if (pPlot->isOwned())
-						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
-							AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-						}
-					}
-					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
-					changeExperience100(100, -1, true);
-				}
-				else
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
+					if (pPlot->isOwned())
+					{
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
+						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+					}
 				}
+				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				changeExperience100(100, -1, true);
 			}
-			setBattlePlot(pPlot);
+			else
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+			}
 		}
 	}
 
@@ -30124,7 +30071,6 @@ void CvUnit::doOpportunityFire()
 		}
 		if (pDefender != NULL)
 		{
-			setBattlePlot(pAttackPlot, pDefender);
 			iUnitDamage = (GC.getGame().getSorenRandNum(getBombardRate(), "Bombard damage") * 5);
 			pDefender->changeDamage(iUnitDamage, getOwner());
 			//TB Combat Mod begin
@@ -30174,8 +30120,6 @@ void CvUnit::doActiveDefense()
 			pDefender = airStrikeTarget(pLoopPlot);
 			if (pDefender != NULL)
 			{
-				setBattlePlot(pLoopPlot, pDefender);
-
 				iDamage = airCombatDamage(pDefender);
 				iUnitDamage = std::max(pDefender->getDamage(), std::min((pDefender->getDamage() + iDamage), airCombatLimit(pDefender)));
 
@@ -30921,16 +30865,6 @@ bool CvUnit::performInquisition()
 	}
 	kill(true, NO_PLAYER, true);
 	return true;
-}
-
-
-void CvUnit::setBattlePlot(CvPlot* pPlot, const CvUnit* pDefender)
-{
-	if (pPlot->canHaveBattleEffect(this, pDefender)
-	&& pPlot->getBattleCountdown() < GC.getMAX_BATTLE_TURNS())
-	{
-		pPlot->changeBattleCountdown(GC.getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS());
-	}
 }
 
 

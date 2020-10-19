@@ -38,11 +38,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_AUTO_BUILDINGS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_BATTLE_EFFECTS</Type>
-			<Description>TXT_KEY_CONCEPT_BATTLE_EFFECTS_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BATTLE_EFFECTS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_BUG_CITY_CYCLE_ARROWS</Type>
 			<Description>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_TEXT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_PEDIA</Civilopedia>

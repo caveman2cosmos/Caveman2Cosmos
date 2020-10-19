@@ -10893,22 +10893,6 @@ bool CvGame::foundBarbarianCity()
 	return false;
 }
 
-
-void CvGame::drawBattleEffects()
-{
-	if (GC.isDCM_BATTLE_EFFECTS())
-	{
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-			if (pLoopPlot->isBattle())
-			{
-				gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
-			}
-		}
-	}
-}
-
 int CvGame::getWaterAnimalSpawnChance() const
 {
 	return m_iWaterAnimalSpawnChance;

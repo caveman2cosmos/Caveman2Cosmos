@@ -288,8 +288,6 @@ void CyGamePythonInterface()
 		.def("log", &CyGame::log, "void log(str)")
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("drawBattleEffects", &CyGame::drawBattleEffects, "void ()")
-
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
 
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")

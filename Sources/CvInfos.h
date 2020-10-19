@@ -8025,8 +8025,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool isBattleEffect() const;
-
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -8037,8 +8035,6 @@ private:
 	bool m_bSticky;
 	float m_fProjectileSpeed;
 	float m_fProjectileArc;
-
-	bool m_bBattleEffect;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
