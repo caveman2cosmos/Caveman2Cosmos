@@ -220,11 +220,9 @@ class PyPlayer:
 	def getUnitList(self):
 		' UnitList - All of the players alive units '
 		lUnit = []
-		(loopUnit, iter) = self.player.firstUnit(False)
-		while( loopUnit ):
+		for loopUnit in self.player.units():
 			if ( not loopUnit.isDead() ): #is the unit alive and valid?
 				lUnit.append(loopUnit) #add unit instance to list
-			(loopUnit, iter) = self.player.nextUnit(iter, False)
 		return lUnit
 
 	def getNumUnits(self):

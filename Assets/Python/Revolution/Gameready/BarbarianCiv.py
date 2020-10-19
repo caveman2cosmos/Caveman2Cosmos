@@ -537,8 +537,7 @@ class BarbarianCiv:
 				CyPlotX.changeCulture(iPlayerBarb, -iCult, False)
 				CyPlotX.setCulture(iPlayer, iCult, True)
 			# Units
-			for i in xrange(CyPlotX.getNumUnits()):
-				CyUnit = CyPlotX.getUnit(i)
+			for CyUnit in CyPlotX.units():
 				if CyUnit.getOwner() == iPlayerBarb:
 					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
 					iUnit = CyUnit.getUnitType()

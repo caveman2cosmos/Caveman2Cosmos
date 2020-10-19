@@ -119,7 +119,7 @@ class WBPlayerUnits:
 			if unitX:
 				pUnit = unitX
 				iUnitID = unitX.getID()
-				iUnitOwner = unitX.getOwner()
+				iUnitOzwner = unitX.getOwner()
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if iOwnerType == 1 and iPlayerX != iPlayer:
@@ -127,8 +127,7 @@ class WBPlayerUnits:
 			playerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
 				continue
-			unitX, i = playerX.firstUnit(False)
-			while unitX:
+			for unitX in playerX.units():
 				bCopy = True
 				if iPlotType == 0:
 					if unitX.getX() != pUnit.getX() or unitX.getY() != pUnit.getY():
@@ -154,7 +153,6 @@ class WBPlayerUnits:
 						bCopy = False
 				if bCopy:
 					lUnits.append([unitX.getOwner(), unitX.getID()])
-				unitX, i = playerX.nextUnit(i, False)
 		lUnits.sort()
 		self.placeCurrentUnit()
 
