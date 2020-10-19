@@ -238,10 +238,10 @@ void CvGame::init(HandicapTypes eHandicap)
 	setStatusPromotions();
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 
 	if (getGameTurn() == 0)
 	{
@@ -9331,10 +9331,10 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 }
 
 #define TAGGED_SAVES 1
@@ -10891,22 +10891,6 @@ bool CvGame::foundBarbarianCity()
 		return true;
 	}
 	return false;
-}
-
-
-void CvGame::drawBattleEffects()
-{
-	if (GC.isDCM_BATTLE_EFFECTS())
-	{
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-			if (pLoopPlot->isBattle())
-			{
-				gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
-			}
-		}
-	}
 }
 
 int CvGame::getWaterAnimalSpawnChance() const
@@ -12552,15 +12536,15 @@ void CvGame::recalculateModifiers()
 	m_bRecalculatingModifiers = true;
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 
 	//	Inhibit plot group manipulation until we rebuild at the end of everything else
-	for(iI = 0; iI < MAX_PLAYERS; iI++ )
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			GET_PLAYER((PlayerTypes)iI).inhibitPlotGroupCalcsUntilFullRebuild();
 		}
@@ -12569,12 +12553,12 @@ void CvGame::recalculateModifiers()
 	// AIAndy: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	for (iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
 	{
 		m_aiDiploVote[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
 	{
 		m_pabSpecialUnitValid[iI] = false;
 		if (GC.getSpecialUnitInfo((SpecialUnitTypes)iI).isValid())
@@ -12583,7 +12567,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
 	{
 		m_pabSpecialBuildingValid[iI] = false;
 		if (GC.getSpecialBuildingInfo((SpecialBuildingTypes)iI).isValid())
@@ -12599,7 +12583,7 @@ void CvGame::recalculateModifiers()
 	// units are not supposed to have that kind of property (needs extra code if that changes)
 	getProperties()->clearForRecalculate();
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		pLoopPlot->getProperties()->clearForRecalculate();
@@ -12619,9 +12603,9 @@ void CvGame::recalculateModifiers()
 		pLoopPlot->resetBlockadedCounts();
 	}
 
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if ( GET_TEAM((TeamTypes)iI).isAlive() )
+		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			GET_TEAM((TeamTypes)iI).getProperties()->clearForRecalculate();
 		}
@@ -12643,15 +12627,15 @@ void CvGame::recalculateModifiers()
 
 	algo::for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for(int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if ( GET_TEAM((TeamTypes)iI).isAlive() )
+		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			GET_TEAM((TeamTypes)iI).recalculateModifiers();
 		}
 	}
 
-	for(iI = 0; iI < GC.getNumVoteSourceInfos(); iI++ )
+	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
 	{
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 		{
@@ -12668,7 +12652,7 @@ void CvGame::recalculateModifiers()
 	//	Recheck for disabled buildings everywhere (this has to be done after plot group establishment
 	//	or else resource dependencies will mean it gets the wrong answer, which will in turn force
 	//	(automatic) recalculation the following turn (which is very inefficient)
-	for (iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		if (kLoopPlayer.isAlive())
@@ -12695,7 +12679,7 @@ void CvGame::recalculateModifiers()
 
 	//	Force a one-time reclaculation of all city commerce after coming out
 	//	of the in-recalc section (which inhibits this doing any work)
-	for (iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		if (kLoopPlayer.isAlive())

@@ -350,11 +350,9 @@ class WBGameDataScreen:
 			for iPlayerX in xrange(self.GC.getMAX_PC_PLAYERS()):
 				pPlayerX = self.GC.getPlayer(iPlayerX)
 				if pPlayerX.isHuman():
-					cityX, i = pPlayerX.firstCity(False)
-					while cityX:
+					for cityX in pPlayerX.cities():
 						if not cityX.isCapital():
 							cityX.kill()
-						cityX, i = pPlayerX.nextCity(i, False)
 		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_BARBARIANS and self.GAME.isOption(iGameOption):
 			pPlayerBarb = self.GC.getPlayer(self.GC.getBARBARIAN_PLAYER())
 			pPlayerBarb.killCities()

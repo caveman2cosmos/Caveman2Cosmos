@@ -24565,7 +24565,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 		if (kBuilding.isPrereqWar())
 		{
-			if (pCity == NULL || GET_TEAM(pCity->getTeam()).getAtWarCount(true) == 0)
+			if (pCity == NULL || !GET_TEAM(pCity->getTeam()).isAtWar())
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_WARTIME"));

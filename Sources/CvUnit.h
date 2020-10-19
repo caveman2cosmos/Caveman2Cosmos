@@ -1749,9 +1749,6 @@ public:
 	DllExport void getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const;
 	DllExport int getSelectionSoundScript() const;
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
 // Dale - AB: Bombing START
 	bool canAirBomb1(const CvPlot* pPlot) const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
@@ -1768,38 +1765,27 @@ public:
 	bool canAirBomb5(const CvPlot* pPlot) const;
 	bool canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb5(int iX, int iY);
-// Dale - AB: Bombing END
+
 // Dale - RB: Field Bombard START
 	bool canRBombard(bool bEver = false) const;
 	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const;
 	bool bombardRanged(int iX, int iY, bool sAttack = false);
-	// RevolutionDCM - ranged bombard
+
+// RevolutionDCM - ranged bombard
 	bool isRbombardable(int iMinStack) const;
 	int getRbombardSeigeCount(const CvPlot* pPlot) const;
-	// RevolutionDCM - end
-// Dale - SA: Opp Fire START
+
+// Dale - SA: Opp Fire
 	void doOpportunityFire();
-// Dale - SA: Opp Fire END
-// Dale - SA: Active Defense START
+
+// Dale - SA: Active Defense
 	void doActiveDefense();
-// Dale - SA: Active Defense END
-// Dale - FE: Fighters START
+
+// Dale - FE: Fighters
 	bool canFEngage() const;
 	bool canFEngageAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool fighterEngage(int iX, int iY);
-// Dale - FE: Fighters END
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	void setBattlePlot(CvPlot* pPlot, const CvUnit* pDefender = NULL);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+// ! Dale
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1824,15 +1810,7 @@ public:
 	virtual bool AI_isAwaitingContract() const = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/05/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
 	virtual bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	virtual void AI_flushValueCache() = 0;
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;

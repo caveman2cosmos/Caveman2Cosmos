@@ -15745,7 +15745,7 @@ m_paImprovementBonus(NULL)
 ,m_bNotOnAnyBonus(false)
 ,m_bNational(false)
 ,m_bGlobal(false)
-,m_iHighestCost(0)
+//,m_iHighestCost(0)
 ,m_iBonusChange(NO_BONUS)
 {
 }
@@ -16263,29 +16263,30 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 	}
 	return true;
 }
-//Post Load functions
-void CvImprovementInfo::setHighestCost()
-{
-	BuildTypes eHighestCostBuild = NO_BUILD;
-	int iHighestCost = 0;
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
-		{
-			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
-			{
-				eHighestCostBuild = (BuildTypes)iI;
-				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
-			}
-		}
-	}
-	m_iHighestCost = iHighestCost;
-}
 
-int CvImprovementInfo::getHighestCost() const
-{
-	return m_iHighestCost;
-}
+//Post Load functions
+//void CvImprovementInfo::setHighestCost()
+//{
+//	BuildTypes eHighestCostBuild = NO_BUILD;
+//	int iHighestCost = 0;
+//	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+//	{
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		{
+//			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
+//			{
+//				eHighestCostBuild = (BuildTypes)iI;
+//				iHighestCost = GC.getBuildInfo((BuildTypes)iI).getCost();
+//			}
+//		}
+//	}
+//	m_iHighestCost = iHighestCost;
+//}
+
+//int CvImprovementInfo::getHighestCost() const
+//{
+//	return m_iHighestCost;
+//}
 
 void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 {
@@ -32324,15 +32325,9 @@ CvEffectInfo::CvEffectInfo() :
 ,m_bSticky(false)
 ,m_fProjectileSpeed(0.0f)
 ,m_fProjectileArc(0.0f)
-,m_bBattleEffect(false)
 { }
 
 CvEffectInfo::~CvEffectInfo() {}
-
-bool CvEffectInfo::isBattleEffect() const
-{
-	return m_bBattleEffect;
-}
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -32369,7 +32364,6 @@ bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileSpeed, L"fSpeed");
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileArc, L"fArcValue");
 	pXML->GetOptionalChildXmlValByName(&m_bSticky, L"bSticky");
-	pXML->GetOptionalChildXmlValByName(&m_bBattleEffect, L"bBattleEffect");
 
 	return true;
 }
@@ -32402,8 +32396,6 @@ void CvEffectInfo::copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* p
 	if (getProjectileArc() == fDefault) m_fProjectileArc = pClassInfo->getProjectileArc();
 
 	if (isSticky() == bDefault) m_bSticky = pClassInfo->isSticky();
-
-	if (isBattleEffect() == bDefault) m_bBattleEffect = pClassInfo->isBattleEffect();
 }
 
 
