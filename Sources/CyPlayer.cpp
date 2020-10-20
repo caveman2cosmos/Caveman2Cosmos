@@ -623,11 +623,6 @@ int /*RouteTypes*/ CyPlayer::getBestRoute(CyPlot* pPlot) const
 	return m_pPlayer ? (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
-int CyPlayer::getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const
-{
-	return m_pPlayer ? m_pPlayer->getImprovementUpgradeRateTimes100((ImprovementTypes)eImprovement)/100 : -1;
-}
-
 int CyPlayer::calculateTotalYield(int /*YieldTypes*/ eYield)
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalYield((YieldTypes)eYield) : -1;
@@ -2253,6 +2248,16 @@ int CyPlayer::getNumCityNames()
 std::wstring CyPlayer::getCityName(int iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getCityName(iIndex) : std::wstring();
+}
+
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
 }
 
 // returns tuple of (CyCity, iterOut)

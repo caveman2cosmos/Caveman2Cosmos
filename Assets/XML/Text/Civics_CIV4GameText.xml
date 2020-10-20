@@ -518,7 +518,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ATTITUDE_SEA_TRASH_TO_EVERYONE</Tag>
-		<English>%D1_AttitudeChange: "You're'polluting the ocean!"</English>
+		<English>%D1_AttitudeChange: "You're polluting the ocean!"</English>
 		<French>%D1_AttitudeChange: "Vous polluez les océans!"</French>
 		<German>%D1_AttitudeChange: "Du verschmutzt den Ozean!"</German>
 		<Italian>%D1_AttitudeChange: "You're polluting the ocean!"</Italian>

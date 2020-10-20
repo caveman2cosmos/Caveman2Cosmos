@@ -1,5 +1,6 @@
 // teamAI.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -241,15 +242,12 @@ int CvTeamAI::AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const
 
 void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 {
-	CvArea* pLoopArea;
-	int iLoop;
-
-	if (!(GC.getGame().isFinalInitialized()))
+	if (!GC.getGame().isFinalInitialized())
 	{
 		return;
 	}
 
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(CvArea* pLoopArea, GC.getMap().areas())
 	{
 		pLoopArea->setAreaAIType(getID(), AI_calculateAreaAIType(pLoopArea));
 	}
@@ -258,15 +256,9 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 	{
 		AI_updateAreaTargets();
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+	// Afforess	- 03/15/10
 	AI_updateCache();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 
@@ -380,19 +372,13 @@ bool CvTeamAI::AI_isPrimaryArea(const CvArea* pArea) const
 
 bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 {
-	CvArea* pLoopArea;
-	int iLoop;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
-		if (AI_isPrimaryArea(pLoopArea))
+		if (AI_isPrimaryArea(pLoopArea) && GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
 		{
-			if (GET_TEAM(eTeam).countNumCitiesByArea(pLoopArea))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -498,33 +484,20 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 			}
 		}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                         01/12/10                             jdog5000      */
-/*                                                                                              */
-/* War strategy AI                                                                              */
-/************************************************************************************************/
-		if( bTargets )
+		if (bTargets && iAreaCities > 0 && isAtWar())
 		{
-			if(iAreaCities > 0 && getAtWarCount(true) > 0)
+			if (AI_isPrimaryArea(pArea) && AI_getWarSuccessCapitulationRatio() < -50)
 			{
-				int iPower = countPowerByArea(pArea);
-				int iEnemyPower = countEnemyPowerByArea(pArea);
-				if( AI_isPrimaryArea(pArea) && AI_getWarSuccessCapitulationRatio() < -50 )
+				// Use defensive stance if enemy has strong presence, we've been losing badly
+				if (countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
 				{
-					// Use defensive stance if enemy has strong presence, we've been losing badly
-					if( iPower < iEnemyPower )
-					{
-						return AREAAI_DEFENSIVE;
-					}
+					return AREAAI_DEFENSIVE;
 				}
-				else
-				{
-					// Use defensive area AI right after invasions, to force vulnerable captured cities to be better defended
-					if( 2*iPower < iEnemyPower )
-					{
-						return AREAAI_DEFENSIVE;
-					}
-				}
+			}
+			// Use defensive area AI right after invasions, to force vulnerable captured cities to be better defended
+			else if (2*countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
+			{
+				return AREAAI_DEFENSIVE;
 			}
 		}
 
@@ -575,9 +548,6 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 				return AREAAI_OFFENSIVE;
 			}
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 		if (bTargets)
 		{
@@ -874,21 +844,15 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 }
 
 
+// Toffer - ToDo
+//	Investigate whether this function does what it should, its name and content doesn't seem to match.
+//	If its content is correct: remove this function and call isAtWar(true) instead of it wherever it's called.
 bool CvTeamAI::AI_isWarPossible() const
 {
-	if (getAtWarCount(false) > 0)
-	{
-		return true;
-	}
-
-	return false;
+	return isAtWar(true);
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/12/10                         Fuyu & jdog5000      */
-/*                                                                                              */
-/* War Strategy AI                                                                              */
-/************************************************************************************************/
+
 bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 {
 	if (!AI_hasCitiesInPrimaryArea(eTeam))
@@ -897,36 +861,25 @@ bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 	}
 
 	// If shared capital area is largely unclaimed, then we can reach over land
-	int iModifier = 100;
+	int iMod = 100;
 
-	if( !bNeighborsOnly )
+	if (!bNeighborsOnly)
 	{
-		for( int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++ )
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if( GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getID() && GET_PLAYER((PlayerTypes)iPlayer).getNumCities() > 0 )
+			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).getNumCities() > 0)
 			{
-				CvCity* pCapital = GET_PLAYER((PlayerTypes)iPlayer).getCapitalCity();
-				if( pCapital != NULL )
+				CvCity* pCapital = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+
+				if (pCapital != NULL && GET_TEAM(eTeam).AI_isPrimaryArea(pCapital->area()))
 				{
-					if( GET_TEAM(eTeam).AI_isPrimaryArea(pCapital->area()) )
-					{
-						iModifier *= pCapital->area()->getNumOwnedTiles();
-						iModifier /= pCapital->area()->getNumTiles();
-					}
+					iMod *= pCapital->area()->getNumOwnedTiles();
+					iMod /= pCapital->area()->getNumTiles();
 				}
 			}
 		}
 	}
-
-	if (AI_calculateAdjacentLandPlots(eTeam) < range((8 * (iModifier - 40))/40, 0, 8))
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
-	return true;
+	return AI_calculateAdjacentLandPlots(eTeam) >= range(8 * (iMod - 40) / 40, 0, 8);
 }
 
 // this determines if eTeam or any of its allies are land targets of us
@@ -1359,7 +1312,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	iValue *= iTheirPower + 10;
 	iValue /= std::max(1, iOurPower + iTheirPower + 10);
 
-	WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
+	const WarPlanTypes eWarPlan = AI_getWarPlan(eTeam);
 
 	// if we are not human, do we want to continue war for strategic reasons?
 	// only check if our power is at least 120% of theirs
@@ -1434,7 +1387,6 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 						iValue /= 10 * (iOurPower + (4 * iTheirPower));
 					}
 					break;
-
 			}
 		}
 	}
@@ -1452,7 +1404,6 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	{
 		iValue *= 2;
 	}
-
 
 	if ((!(isHuman()) && (eWarPlan == WARPLAN_TOTAL)) ||
 		  (!(GET_TEAM(eTeam).isHuman()) && (GET_TEAM(eTeam).AI_getWarPlan(getID()) == WARPLAN_TOTAL)))
@@ -1476,9 +1427,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		}
 	}
 	int iTheirAttackers = 0;
-	CvArea* pLoopArea = NULL;
-	int iLoop;
-	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
@@ -1499,11 +1448,11 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		iValue = std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		iValue = std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 
 	m_endWarValueCache[eTeam] = iValue;
@@ -1558,13 +1507,13 @@ int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 					iPower /= 3;
 				}
 
-				if( GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0 )
+				if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING() || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
 				{
 					if (GET_TEAM(eTeam).getDefensivePower() < ((iPower * AI_maxWarNearbyPowerRatio()) / 100))
 					{
 						int iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 						iNoWarRoll += (bAggressive ? 10 : 0);
-						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING")) ? 10 : 0);
+						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0);
 						iNoWarRoll -= (bIsGetBetterUnits ? 15 : 0);
 						iNoWarRoll = range(iNoWarRoll, 0, 99);
 
@@ -1796,33 +1745,11 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 
 		iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
 		iValue /= 100;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 6/7/11                                                 */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	//Stop treating humans special
-	/*
-		iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-
-		if (isHuman())
-		{
-			return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
-		}
-		else
-		{
-			return iValue;
-		}
-	*/
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
 	}
 
 	return iValue;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 }
 
 
@@ -1873,7 +1800,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 			}
 		}
 	}
-
 
 	if (isHuman())
 	{
@@ -2123,11 +2049,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		iValue /= 2;
 	}
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -2608,33 +2534,16 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	}
 	else
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/07/09                                jdog5000      */
-/*                                                                                              */
-/* Diplomacy AI                                                                                 */
-/************************************************************************************************/
-/* original BTS code
-		if (AI_getWarSuccess(eTeam) + 4 * GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
-		{
-			return DENIAL_JOKING;
-		}
-*/
-		// Scale better for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
+		// Scale for small empires, particularly necessary if WAR_SUCCESS_CITY_CAPTURING > 10
 		if (AI_getWarSuccess(eTeam) + std::min(getNumCities(), 4) * GC.getWAR_SUCCESS_CITY_CAPTURING() > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
 		{
 			return DENIAL_JOKING;
 		}
 
-		if( !kMasterTeam.isHuman() )
+		if (!kMasterTeam.isHuman() && !GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID()))
 		{
-			if( !(GET_TEAM(kMasterTeam.getID()).AI_acceptSurrender(getID())) )
-			{
-				return DENIAL_JOKING;
-			}
+			return DENIAL_JOKING;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	}
 
 	return NO_DENIAL;
@@ -3017,7 +2926,7 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 			{
 				if (isAtWar((TeamTypes)iI))
 				{
-					if( GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
+					if (GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > 5 * GC.getWAR_SUCCESS_ATTACKING())
 					{
 						iWarCount++;
 					}
@@ -3290,11 +3199,11 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 	iValue *= 40;
 	iValue /= (GET_TEAM(eTeam).AI_getAtWarCounter(ePeaceTeam) + 10);
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -3444,22 +3353,17 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 	iValue += GET_TEAM(eWarTeam).getNumNukeUnits() * 250;//Don't want to get nuked
 	iValue += GET_TEAM(eTeam).getNumNukeUnits() * 150;//Don't want to use nukes on another's behalf
 
-	if (GET_TEAM(eWarTeam).getAtWarCount(false) == 0)
+	if (!GET_TEAM(eWarTeam).isAtWar(true))
 	{
 		iValue *= 2;
 
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && iI != eWarTeam && iI != eTeam
+			&& GET_TEAM(eWarTeam).isDefensivePact((TeamTypes)iI))
 			{
-				if (iI != getID() && iI != eWarTeam && iI != eTeam)
-				{
-					if (GET_TEAM(eWarTeam).isDefensivePact((TeamTypes)iI))
-					{
-						iValue += (GET_TEAM((TeamTypes)iI).getNumCities() * 30);
-						iValue += (GET_TEAM((TeamTypes)iI).getTotalPopulation(true) * 20);
-					}
-				}
+				iValue += (GET_TEAM((TeamTypes)iI).getNumCities() * 30);
+				iValue += (GET_TEAM((TeamTypes)iI).getTotalPopulation(true) * 20);
 			}
 		}
 	}
@@ -3467,11 +3371,11 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 	iValue *= 60 + (140 * GC.getGame().getGameTurn()) / std::max(1, GC.getGame().getEstimateEndTurn());
 	iValue /= 100;
 
-	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+	iValue -= (iValue % GC.getDIPLOMACY_VALUE_REMAINDER());
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max(iValue, GC.getDIPLOMACY_VALUE_REMAINDER());
 	}
 	else
 	{
@@ -4966,8 +4870,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 
 void CvTeamAI::AI_doCounter()
 {
-	int iI;
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
@@ -5062,17 +4965,14 @@ void CvTeamAI::AI_doWar()
 {
 	PROFILE_FUNC();
 
-	CvArea* pLoopArea;
 	TeamTypes eBestTeam;
 	bool bAreaValid;
 	bool bShareValid;
 	int iNoWarRoll;
 	int iOurPower;
-	int iDogpilePower;
 	int iValue;
 	int iBestValue;
 	int iPass;
-	int iLoop;
 	int iI, iJ;
 
 	FAssert(!isHuman());
@@ -5208,16 +5108,18 @@ void CvTeamAI::AI_doWar()
 							}
 						}
 
-						if( AI_getWarPlan((TeamTypes)iI) == WARPLAN_DOGPILE )
+						if (AI_getWarPlan((TeamTypes)iI) == WARPLAN_DOGPILE && !GET_TEAM((TeamTypes)iI).isAtWar())
 						{
-							if( GET_TEAM((TeamTypes)iI).getAtWarCount(true) == 0 )
+							if (gTeamLogLevel >= 1)
 							{
-								if( gTeamLogLevel >= 1 )
-								{
-									logBBAI("      Team %d (%S) abandoning WARPLAN_DOGPILE against team %d (%S) after %d turns because enemy has no war with enemy power percent %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iI, GET_PLAYER(GET_TEAM((TeamTypes)iI).getLeaderID()).getCivilizationDescription(0), AI_getWarPlanStateCounter((TeamTypes)iI), iEnemyPowerPercent );
-								}
-								AI_setWarPlan(((TeamTypes)iI), NO_WARPLAN);
+								logBBAI(
+									"      Team %d (%S) abandoning WARPLAN_DOGPILE against team %d (%S) after %d turns because enemy has no war with enemy power percent %d",
+									getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iI,
+									GET_PLAYER(GET_TEAM((TeamTypes)iI).getLeaderID()).getCivilizationDescription(0),
+									AI_getWarPlanStateCounter((TeamTypes)iI), iEnemyPowerPercent
+								);
 							}
+							AI_setWarPlan(((TeamTypes)iI), NO_WARPLAN);
 						}
 					}
 				}
@@ -5230,7 +5132,7 @@ void CvTeamAI::AI_doWar()
 						bAreaValid = false;
 						bShareValid = false;
 
-						for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
+						foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 						{
 							if (AI_isPrimaryArea(pLoopArea))
 							{
@@ -5238,7 +5140,7 @@ void CvTeamAI::AI_doWar()
 								{
 									bShareValid = true;
 
-									AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
+									const AreaAITypes eAreaAI = AI_calculateAreaAIType(pLoopArea, true);
 
 									if ( eAreaAI == AREAAI_DEFENSIVE)
 									{
@@ -5317,118 +5219,88 @@ void CvTeamAI::AI_doWar()
 		}
 	}
 
-	int iNumMembers = getNumMembers();
-
 	// if at war, check for making peace
-	if (getAtWarCount(true) > 0) // XXX
+	if (isAtWar() && GC.getGame().getSorenRandNum(AI_makePeaceRand(), "AI Make Peace") == 0)
 	{
-		if (GC.getGame().getSorenRandNum(AI_makePeaceRand(), "AI Make Peace") == 0)
+		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID()
+			&& !GET_TEAM((TeamTypes)iI).isHuman() && canContact((TeamTypes)iI))
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				FAssert(!GET_TEAM((TeamTypes)iI).isMinorCiv());
+
+				if (isAtWar((TeamTypes)iI) && AI_isChosenWar((TeamTypes)iI)
+				&& AI_getAtWarCounter((TeamTypes)iI) > std::max(10, 14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent()/100))
 				{
-					if (iI != getID())
+					// If nothing is happening in war
+					if (AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getWAR_SUCCESS_ATTACKING()
+					&& GC.getGame().getSorenRandNum(8, "AI Make Peace 1") == 0)
 					{
-						if (!(GET_TEAM((TeamTypes)iI).isHuman()))
+						bool bValid = true;
+
+						for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 						{
-							if (canContact((TeamTypes)iI))
+							if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getID())
 							{
-								FAssert(!(GET_TEAM((TeamTypes)iI).isMinorCiv()));
-
-								if (isAtWar((TeamTypes)iI))
+								if (GET_PLAYER((PlayerTypes)iPlayer).AI_enemyTargetMissions((TeamTypes)iI) > 0)
 								{
-									if (AI_isChosenWar((TeamTypes)iI))
-									{
-										if( AI_getAtWarCounter((TeamTypes)iI) > std::max(10, (14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
-										{
-											// If nothing is happening in war
-											if( AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
-											{
-												if( (GC.getGame().getSorenRandNum(8, "AI Make Peace 1") == 0) )
-												{
-													bool bValid = true;
-
-													for( int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++ )
-													{
-														if( GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getID() )
-														{
-															if( GET_PLAYER((PlayerTypes)iPlayer).AI_enemyTargetMissions((TeamTypes)iI) > 0 )
-															{
-																bValid = false;
-																break;
-															}
-														}
-
-														if( GET_PLAYER((PlayerTypes)iPlayer).getTeam() == iI )
-														{
-															//MissionAITypes eMissionAI = MISSIONAI_ASSAULT;
-															if( GET_PLAYER((PlayerTypes)iPlayer).AI_enemyTargetMissions(getID()) > 0 )
-															{
-																bValid = false;
-																break;
-															}
-														}
-													}
-
-													if( bValid )
-													{
-														makePeace((TeamTypes)iI);
-
-														if( gTeamLogLevel >= 1 )
-														{
-															logBBAI("  Team %d (%S) making peace due to time and no fighting", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0) );
-														}
-
-														break;
-													}
-												}
-											}
-
-											// Fought to a long draw
-											if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
-											{
-												int iOurValue = AI_endWarVal((TeamTypes)iI);
-												int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
-												if ((iOurValue > (iTheirValue / 2)) && (iTheirValue > (iOurValue / 2)))
-												{
-													if( gTeamLogLevel >= 1 )
-													{
-														logBBAI("  Team %d (%S) making peace due to time and endWarVal %d vs their %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0) , iOurValue, iTheirValue );
-													}
-													makePeace((TeamTypes)iI);
-													break;
-												}
-											}
-
-											// All alone in what we thought was a dogpile
-											if (AI_getWarPlan((TeamTypes)iI) == WARPLAN_DOGPILE)
-											{
-												if (GET_TEAM((TeamTypes)iI).getAtWarCount(true) == 1)
-												{
-													int iOurValue = AI_endWarVal((TeamTypes)iI);
-													int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
-													if ((iTheirValue > (iOurValue / 2)))
-													{
-														if( gTeamLogLevel >= 1 )
-														{
-															logBBAI("  Team %d (%S) making peace due to being only dog-piler left", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0) );
-														}
-														makePeace((TeamTypes)iI);
-														break;
-													}
-												}
-											}
-										}
-									}
+									bValid = false;
+									break;
 								}
 							}
+							else if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == iI
+							&& GET_PLAYER((PlayerTypes)iPlayer).AI_enemyTargetMissions(getID()) > 0)
+							{
+								bValid = false;
+								break;
+							}
 						}
+
+						if (bValid)
+						{
+							makePeace((TeamTypes)iI);
+
+							if (gTeamLogLevel >= 1)
+							{
+								logBBAI("  Team %d (%S) making peace due to time and no fighting", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0));
+							}
+							break;
+						}
+					}
+
+					// Fought to a long draw
+					if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
+					{
+						int iOurValue = AI_endWarVal((TeamTypes)iI);
+						int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
+						if ((iOurValue > (iTheirValue / 2)) && (iTheirValue > (iOurValue / 2)))
+						{
+							if( gTeamLogLevel >= 1 )
+							{
+								logBBAI("  Team %d (%S) making peace due to time and endWarVal %d vs their %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0) , iOurValue, iTheirValue );
+							}
+							makePeace((TeamTypes)iI);
+							break;
+						}
+					}
+
+					// All alone in what we thought was a dogpile
+					if (AI_getWarPlan((TeamTypes)iI) == WARPLAN_DOGPILE
+					&& GET_TEAM((TeamTypes)iI).getAtWarCount(true) == 1
+					&& GET_TEAM((TeamTypes)iI).AI_endWarVal(getID()) > AI_endWarVal((TeamTypes)iI) / 2)
+					{
+						if( gTeamLogLevel >= 1 )
+						{
+							logBBAI("  Team %d (%S) making peace due to being only dog-piler left", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0) );
+						}
+						makePeace((TeamTypes)iI);
+						break;
 					}
 				}
 			}
 		}
 	}
+	const int iNumMembers = getNumMembers();
 
 	// if no war plans, consider starting one!
 	if (getAnyWarPlanCount(true) == 0 || iEnemyPowerPercent < 45)
@@ -5760,8 +5632,8 @@ void CvTeamAI::AI_doWar()
 					AI_setWarPlan(eBestTeam, (iDaggerCount > 0) ? WARPLAN_LIMITED : WARPLAN_PREPARING_LIMITED);
 				}
 			}
-			else if ((bFinancesProDogpileWar || !bFinancesOpposeWar) &&
-				(GC.getGame().getSorenRandNum(iDogpileWarRand, "AI Dogpile War") <= iDogpileWarThreshold))
+			else if ((bFinancesProDogpileWar || !bFinancesOpposeWar)
+			&& GC.getGame().getSorenRandNum(iDogpileWarRand, "AI Dogpile War") <= iDogpileWarThreshold)
 			{
 				iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 				iNoWarRoll = range(iNoWarRoll + (bAggressive ? 10 : 0) + (bFinancesProDogpileWar ? 10 : 0), 0, 99);
@@ -5771,62 +5643,42 @@ void CvTeamAI::AI_doWar()
 
 				for (iI = 0; iI < MAX_PC_TEAMS; iI++)
 				{
-					if (GET_TEAM((TeamTypes)iI).isAlive())
+					if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI) && canDeclareWar((TeamTypes)iI))
 					{
-						if (iI != getID())
+						if (GET_TEAM((TeamTypes)iI).isAVassal() && !AI_isOkayVassalTarget((TeamTypes)iI))
 						{
-							if (isHasMet((TeamTypes)iI))
+							continue;
+						}
+
+						if (iNoWarRoll >= AI_noWarAttitudeProb(AI_getAttitude((TeamTypes)iI)) && GET_TEAM((TeamTypes)iI).isAtWar()
+						&& (AI_isLandTarget((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).AI_isAnyMemberDoVictoryStrategyLevel4()))
+						{
+							int iDogpilePower = iOurPower;
+
+							for (iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 							{
-								if (canDeclareWar((TeamTypes)iI))
+								if (GET_TEAM((TeamTypes)iJ).isAlive() && iJ != iI && atWar((TeamTypes)iJ, (TeamTypes)iI))
 								{
-									if( GET_TEAM((TeamTypes)iI).isAVassal() && !AI_isOkayVassalTarget((TeamTypes)iI) )
-									{
-										continue;
-									}
+									iDogpilePower += GET_TEAM((TeamTypes)iJ).getPower(false);
+								}
+							}
 
-									if (iNoWarRoll >= AI_noWarAttitudeProb(AI_getAttitude((TeamTypes)iI)))
-									{
-										if (GET_TEAM((TeamTypes)iI).getAtWarCount(true) > 0)
-										{
-											if (AI_isLandTarget((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).AI_isAnyMemberDoVictoryStrategyLevel4())
-											{
-												iDogpilePower = iOurPower;
+							FAssert(GET_TEAM((TeamTypes)iI).getPower(true) == GET_TEAM((TeamTypes)iI).getDefensivePower() || GET_TEAM((TeamTypes)iI).isAVassal());
 
-												for (iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
-												{
-													if (GET_TEAM((TeamTypes)iJ).isAlive())
-													{
-														if (iJ != iI)
-														{
-															if (atWar(((TeamTypes)iJ), ((TeamTypes)iI)))
-															{
-																iDogpilePower += GET_TEAM((TeamTypes)iJ).getPower(false);
-															}
-														}
-													}
-												}
+							if (GET_TEAM((TeamTypes)iI).getDefensivePower() * 3 / 2 < iDogpilePower)
+							{
+								iValue = AI_startWarVal((TeamTypes)iI);
 
-												FAssert(GET_TEAM((TeamTypes)iI).getPower(true) == GET_TEAM((TeamTypes)iI).getDefensivePower() || GET_TEAM((TeamTypes)iI).isAVassal());
+								if( iValue > 0 && gTeamLogLevel >= 2 )
+								{
+									logBBAI("      Team %d (%S) considering starting DOGPILE warplan with team %d with value %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iI, iValue );
+								}
 
-												if (((GET_TEAM((TeamTypes)iI).getDefensivePower() * 3) / 2) < iDogpilePower)
-												{
-													iValue = AI_startWarVal((TeamTypes)iI);
-
-													if( iValue > 0 && gTeamLogLevel >= 2 )
-													{
-														logBBAI("      Team %d (%S) considering starting DOGPILE warplan with team %d with value %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iI, iValue );
-													}
-
-													if (iValue > iBestValue)
-													{
-														FAssert(!AI_shareWar((TeamTypes)iI));
-														iBestValue = iValue;
-														eBestTeam = ((TeamTypes)iI);
-													}
-												}
-											}
-										}
-									}
+								if (iValue > iBestValue)
+								{
+									FAssert(!AI_shareWar((TeamTypes)iI));
+									iBestValue = iValue;
+									eBestTeam = ((TeamTypes)iI);
 								}
 							}
 						}
@@ -5853,7 +5705,6 @@ void CvTeamAI::AI_doWar()
 //returns true if war is veto'd by rolls.
 bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 {
-
 	if (GC.getGame().getSorenRandNum(100, "AI Declare War 1") > GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIDeclareWarProb())
 	{
 		return true;
@@ -5864,34 +5715,26 @@ bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 		return true;
 	}
 
-
-
 	return false;
 }
 
 int CvTeamAI::AI_getAttitudeWeight(const TeamTypes eTeam) const
 {
-	int iAttitudeWeight = 0;
 	switch (AI_getAttitude(eTeam))
 	{
 	case ATTITUDE_FURIOUS:
-		iAttitudeWeight = -100;
-		break;
+		return -100;
 	case ATTITUDE_ANNOYED:
-		iAttitudeWeight = -40;
-		break;
+		return -40;
 	case ATTITUDE_CAUTIOUS:
-		iAttitudeWeight = -5;
-		break;
+		return -5;
 	case ATTITUDE_PLEASED:
-		iAttitudeWeight = 50;
-		break;
+		return 50;
 	case ATTITUDE_FRIENDLY:
-		iAttitudeWeight = 100;
-		break;
+		return 100;
 	}
 
-	return iAttitudeWeight;
+	return 0;
 }
 
 int CvTeamAI::AI_getLowestVictoryCountdown() const

@@ -89,20 +89,13 @@ def applyBlessedSea2(argsList):
           iBuilding = i
           break
 
-
   if (iBuilding == -1):
     return
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  (loopCity, iter) = player.firstCity(False)
-
-  while(loopCity):
-
-    if (loopCity.getPopulation() >= 5):
-      if (loopCity.canConstruct(iBuilding, False, False, True)):
+  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
+    if loopCity.getPopulation() >= 5:
+      if loopCity.canConstruct(iBuilding, False, False, True):
         loopCity.setNumRealBuilding(iBuilding, 1)
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
 
 def canApplyBlessedSea2(argsList):
@@ -122,20 +115,12 @@ def canApplyBlessedSea2(argsList):
   if (iBuilding == -1):
     return False
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  (loopCity, iter) = player.firstCity(False)
-  bFound = False
+  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
+    if loopCity.getPopulation() >= 5:
+      if loopCity.canConstruct(iBuilding, False, False, True):
+        return True
 
-  while(loopCity):
-
-    if (loopCity.getPopulation() >= 5):
-      if (loopCity.canConstruct(iBuilding, False, False, True)):
-        bFound = True
-        break
-
-    (loopCity, iter) = player.nextCity(iter, False)
-
-  return bFound
+  return False
 
 
 ######## HOLY MOUNTAIN ###########
@@ -280,13 +265,9 @@ def doWeddingFeud2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  (loopCity, iter) = player.firstCity(False)
-
-  while(loopCity):
+  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
     if loopCity.isHasReligion(kTriggeredData.eReligion):
       loopCity.changeHappinessTimer(30)
-    (loopCity, iter) = player.nextCity(iter, False)
 
   return 1
 
@@ -587,7 +568,7 @@ def canTriggerHurricaneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -656,7 +637,7 @@ def canTriggerCycloneCity(argsList):
 	if CyCity.isNone():
 		return False
 
-	if not CyCity.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
 		return False
 
 	iLat = CyCity.plot().getLatitude()
@@ -678,7 +659,7 @@ def canTriggerTsunamiCity(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   return True
@@ -753,7 +734,7 @@ def canTriggerMonsoonCity(argsList):
   if city.isNone():
     return False
 
-  if city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getInfoTypeForString("FEATURE_JUNGLE")
@@ -1044,18 +1025,9 @@ def getHelpChampion(argsList):
 def canTriggerElectricCompany(argsList):
   kTriggeredData = argsList[0]
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  (loopCity, iter) = player.firstCity(False)
-
-  while(loopCity):
-
+  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
     if (loopCity.angryPopulation(0) > 0):
       return False
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
   return True
 
@@ -1104,13 +1076,11 @@ def applyInfluenza2(argsList):
   iNumCities = 2 + GAME.getSorenRandNum(3, "Influenza event number of cities")
 
   listCities = []
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     if loopCity.getPopulation() > 2:
       iDistance = plotDistance(eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY())
       if iDistance > 0:
         listCities.append((iDistance, loopCity))
-    (loopCity, iter) = player.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -1542,13 +1512,11 @@ def canApplyFreedomConcert2(argsList):
 
   for iReligion in xrange(GC.getNumReligionInfos()):
     if eventCity.isHasReligion(iReligion):
-      (loopCity, iter) = player.firstCity(False)
-      while(loopCity):
+      for loopCity in player.cities():
         if not loopCity.isHasReligion(iReligion):
           for jReligion in xrange(GC.getNumReligionInfos()):
             if loopCity.isHasReligion(jReligion):
               return True
-        (loopCity, iter) = player.nextCity(iter, False)
 
   return False
 
@@ -1563,8 +1531,7 @@ def applyFreedomConcert2(argsList):
 
       bestCity = None
       iBestDistance = 0
-      (loopCity, iter) = player.firstCity(False)
-      while(loopCity):
+      for loopCity in player.cities():
         if not loopCity.isHasReligion(iReligion):
           bValid = False
           for jReligion in xrange(GC.getNumReligionInfos()):
@@ -1578,9 +1545,6 @@ def applyFreedomConcert2(argsList):
             if iDistance < iBestDistance or bestCity == None:
               bestCity = loopCity
               iBestDistance = iDistance
-
-        (loopCity, iter) = player.nextCity(iter, False)
-
 
       if bestCity != None:
         bestCity.setHasReligion(iReligion, True, True, True)
@@ -2486,13 +2450,10 @@ def getHelpClassicLiteratureDone3(argsList):
   iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
   szCityName = u""
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     if (loopCity.isHasBuilding(iGreatLibrary)):
       szCityName = loopCity.getNameKey()
       break
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(iSpecialist).getTextKey(), szCityName))
 
@@ -2522,13 +2483,10 @@ def applyClassicLiteratureDone3(argsList):
   iSpecialist = GC.getInfoTypeForString("SPECIALIST_SCIENTIST")
   iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iGreatLibrary)):
+  for loopCity in player.cities():
+    if loopCity.isHasBuilding(iGreatLibrary):
       loopCity.changeFreeSpecialistCount(iSpecialist, 1)
       return
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
 ######## MASTER BLACKSMITH ###########
 
@@ -2689,12 +2647,9 @@ def canApplyBestDefenseDone3(argsList):
 
   iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
 
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iGreatWall)):
+  for loopCity in player.cities():
+    if loopCity.isHasBuilding(iGreatWall):
       return True
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
   return False
 
@@ -2738,12 +2693,9 @@ def canApplySportsLeagueDone3(argsList):
 
   iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
 
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iZeus)):
+  for loopCity in player.cities():
+    if loopCity.isHasBuilding(iZeus):
       return True
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
   return False
 
@@ -2924,14 +2876,10 @@ def applyCrusadeDone3(argsList):
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
     if loopPlayer.isAlive():
-      (loopCity, iter) = loopPlayer.firstCity(False)
-
-      while(loopCity):
-        if (not loopCity.isHasReligion(kTriggeredData.eReligion)):
+      for loopCity in loopPlayer.cities():
+        if not loopCity.isHasReligion(kTriggeredData.eReligion):
           iDistance = plotDistance(holyCity.getX(), holyCity.getY(), loopCity.getX(), loopCity.getY())
           listCities.append((iDistance, loopCity))
-
-        (loopCity, iter) = loopPlayer.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -3483,15 +3431,12 @@ def canTriggerNobleKnightsDone(argsList):
 
   iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
 
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iBuilding)):
+  for loopCity in player.cities():
+    if loopCity.isHasBuilding(iBuilding):
       kActualTriggeredDataObject.iPlotX = loopCity.getX()
       kActualTriggeredDataObject.iPlotY = loopCity.getY()
       kActualTriggeredDataObject.iCityId = loopCity.getID()
       break
-
-    (loopCity, iter) = player.nextCity(iter, False)
 
   return True
 
@@ -3812,13 +3757,9 @@ def applyHostileTakeoverDone1(argsList):
 def doGreatBeast3(argsList):
   kTriggeredData = argsList[1]
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  (loopCity, iter) = player.firstCity(False)
-
-  while(loopCity):
+  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
     if loopCity.isHasReligion(kTriggeredData.eReligion):
       loopCity.changeHappinessTimer(40)
-    (loopCity, iter) = player.nextCity(iter, False)
 
 def getHelpGreatBeast3(argsList):
   kTriggeredData = argsList[1]
@@ -4811,141 +4752,89 @@ def applyTheBuccaneers1(argsList):
 ######## BLACKBEARD ###########
 
 def canTriggerBlackbeard(argsList):
+	# If Barbarians are disabled in this game, this event will not occur.
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+		return False
 
-  kTriggeredData = argsList[0]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  map = GC.getMap()
+	iPlayer = argsList[0].ePlayer
+	player = GC.getPlayer(iPlayer)
+	# iPlayer must have less than a variable number of combat ships based on map size.
+	# Triremes, Galleys, Caravels/Carracks, Galleons/East Indiamen, Transports don't count.
+	# I've included the modern ships just to prevent anomalous triggering.
+	pPlayerPT = player.getUnitCount(GC.getInfoTypeForString("UNIT_PRIVATEER"))
+	pPlayerDD = player.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
+	pPlayerBB = player.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
+	pPlayerCV = player.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
+	pPlayerFF = player.getUnitCount(GC.getInfoTypeForString("UNIT_FRIGATE"))
+	pPlayerSoL = player.getUnitCount(GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE"))
+	pPlayerIC = player.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
+	pPlayerSDD = player.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
+	pPlayerMC = player.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
+	pPlayerSSN = player.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
+	pPlayerSSBN = player.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
+	pAggregate = pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
-#   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
-    return False
+	MAP = GC.getMap()
+	iWorldSize = MAP.getWorldSize() + 1
+	if pAggregate > 5 + iWorldSize*iWorldSize - iWorldSize:
+		return False
 
-###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size.
-###     Triremes, Galleys, Caravels/Carracks, Galleons/East Indiamen, Transports don't count.
-###     I've included the modern ships just to prevent anomalous triggering.
+	iMaxPlayers = GC.getMAX_PC_PLAYERS()
+	# At least one civ on the board must know Chemistry.
+	iTech = GC.getInfoTypeForString("TECH_CHEMISTRY")
+	for iPlayerX in xrange(iMaxPlayers):
+		playerX = GC.getPlayer(iPlayerX)
+		if playerX.isAlive() and GC.getTeam(playerX.getTeam()).isHasTech(iTech):
+			break
+	else: return False
 
-  pPlayerPT = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_PRIVATEER"))
-  pPlayerDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
-  pPlayerBB = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
-  pPlayerCV = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
-  pPlayerFF = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_FRIGATE"))
-  pPlayerSoL = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE"))
-  pPlayerIC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
-  pPlayerSDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
-  pPlayerMC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
-  pPlayerSSN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
-  pPlayerSSBN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
-  pAggregate = pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
+	# At least one civ on the board must know Astronomy.
+	iTech = GC.getInfoTypeForString("TECH_ASTRONOMY")
+	for iPlayerX in xrange(iMaxPlayers):
+		playerX = GC.getPlayer(iPlayerX)
+		if playerX.isAlive() and GC.getTeam(playerX.getTeam()).isHasTech(iTech):
+			break
+	else: return False
 
-  if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
-    if pAggregate > 4:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_TINY"):
-    if pAggregate > 5:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_SMALL"):
-    if pAggregate > 6:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_STANDARD"):
-    if pAggregate > 7:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
-    if pAggregate > 8:
-      return False
-  else:
-    if pAggregate > 9:
-      return False
+	# Find an eligible plot
+	for i in xrange(MAP.numPlots()):
+		plot = MAP.plotByIndex(i)
+		if plot.getOwner() == -1 and plot.isWater() and not plot.isLake() \
+		and not plot.isImpassable() and plot.getNumUnits() == 0 \
+		and plot.isAdjacentPlayer(iPlayer, True):
+			return True
 
-
-#   At least one civ on the board must know Chemistry.
-  bFoundValid = False
-  iTech = GC.getInfoTypeForString("TECH_CHEMISTRY")
-  for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-    loopPlayer = GC.getPlayer(iPlayer)
-    if loopPlayer.isAlive():
-      if GC.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-        bFoundValid = True
-        break
-
-  if not bFoundValid:
-    return False
-
-#   At least one civ on the board must know Astronomy.
-  bFoundValid = False
-  iTech = GC.getInfoTypeForString("TECH_ASTRONOMY")
-  for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-    loopPlayer = GC.getPlayer(iPlayer)
-    if loopPlayer.isAlive():
-      if GC.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-        bFoundValid = True
-        break
-
-  if not bFoundValid:
-    return False
-
-# Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-    if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
-      return True
-
-  return False
-
+	return False
 
 def getHelpBlackbeard1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_BLACKBEARD_HELP_1", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_BLACKBEARD_HELP_1", ())
 
 def applyBlackbeard1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	iPlayer = argsList[1].ePlayer
 
-  listPlots = []
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-    if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
-      listPlots.append(i)
+	plots = []
+	MAP = GC.getMap()
+	for i in xrange(MAP.numPlots()):
+		plot = MAP.plotByIndex(i)
+		if plot.getOwner() == -1 and plot.isWater() and not plot.isLake() \
+		and not plot.isImpassable() and plot.getNumUnits() == 0 \
+		and plot.isAdjacentPlayer(iPlayer, True):
+			plots.append(i)
 
-  if 0 == len(listPlots):
-    return
+	if not plots:
+		return
 
-  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Blackbeard event location")])
+	plot = MAP.plotByIndex(plots[GAME.getSorenRandNum(len(plots), "Blackbeard event location")])
 
-  if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
-    iNumUnit1  = 1
-    iNumUnit2  = 1
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_TINY"):
-    iNumUnit1  = 2
-    iNumUnit2  = 1
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_SMALL"):
-    iNumUnit1  = 3
-    iNumUnit2  = 1
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_STANDARD"):
-    iNumUnit1  = 4
-    iNumUnit2  = 2
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
-    iNumUnit1  = 5
-    iNumUnit2  = 2
-  else:
-    iNumUnit1  = 6
-    iNumUnit2  = 2
+	barb = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+	iWorldSize = MAP.getWorldSize() + 1
+	iUnitType1 = GC.getInfoTypeForString("UNIT_PRIVATEER")
+	iUnitType2 = GC.getInfoTypeForString("UNIT_FRIGATE")
 
-  iUnitType1 = GC.getInfoTypeForString("UNIT_PRIVATEER")
-  iUnitType2 = GC.getInfoTypeForString("UNIT_FRIGATE")
-
-  barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
-  for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
-  for i in xrange(iNumUnit2):
-    barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
-
+	for i in xrange(iWorldSize):
+		barb.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+	for i in xrange(iWorldSize / 2):
+		barb.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
 
 
 ######## PIRATES_OF_THE_NEUTRAL_ZONES ###########
@@ -6003,7 +5892,7 @@ def canTriggerSailingFounded(argsList):
   if city.isNone():
     return False
 
-  if not city.isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()):
+  if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   if city.plot().getLatitude() <= 0:
@@ -6419,13 +6308,11 @@ def applyBlackDeath2(argsList):
   iNumCities = 2 + GAME.getSorenRandNum(3, "Black Death event number of cities")
 
   listCities = []
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     if loopCity.getPopulation() > 2:
       iDistance = plotDistance(eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY())
       if iDistance > 0:
         listCities.append((iDistance, loopCity))
-    (loopCity, iter) = player.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -6477,13 +6364,11 @@ def applySmallpox2(argsList):
   iNumCities = 1 + GAME.getSorenRandNum(3, "Smallpox event number of cities")
 
   listCities = []
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     if loopCity.getPopulation() > 2:
       iDistance = plotDistance(eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY())
       if iDistance > 0:
         listCities.append((iDistance, loopCity))
-    (loopCity, iter) = player.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -6639,14 +6524,12 @@ def applySilverRain3(argsList):
 	# Can we build the counter unit?
 	iCounterUnit1 = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
 	iCounterUnit2 = GC.getInfoTypeForString("UNIT_ICBM")
-	CyCity, i = player.firstCity(False)
-	while CyCity:
+	for CyCity in player.cities():
 		if CyCity.canTrain(iCounterUnit1, False, False, False, False) or CyCity.canTrain(iCounterUnit2, False, False, False, False):
 			iNukeUnit = GC.getPlayer(GC.getBARBARIAN_PLAYER()).initUnit(GC.getInfoTypeForString("UNIT_NANITE_CLOUD"), x, y, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 			plot.nukeExplosion(1, iNukeUnit)
 			iNukeUnit.kill(False, -1)
 			break
-		CyCity, i = player.nextCity(i, False)
 	else:
 		iUnit = GC.getInfoTypeForString("UNIT_NANITE_CLOUD")
 		barb = GC.getPlayer(GC.getBARBARIAN_PLAYER())
@@ -6838,15 +6721,12 @@ def TriggerHarryPotter2(argsList):
 
 	iLibrary = GC.getInfoTypeForString("BUILDING_LIBRARY")
 	iStateReligion = CyPlayer.getStateReligion()
-	CyCity, i = CyPlayer.firstCity(False)
-	while CyCity:
+	for CyCity in CyPlayer.cities():
 		if CyCity.canConstruct(iLibrary, False, False, True):
 			CyCity.setNumRealBuilding(iLibrary, 1)
 
 		if CyCity.isHasReligion(iStateReligion):
 			CyCity.changeHurryAngerTimer(CyCity.flatHurryAngerLength())
-
-		CyCity, i = CyPlayer.nextCity(i, False)
 
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
@@ -6881,10 +6761,8 @@ def TriggerLessDictator1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     loopCity.setWeLoveTheKingDay(True)
-    (loopCity, iter) = player.nextCity(iter, False)
 
 def getHelpLessDictator1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_NATIONAL_HOLIDAY",())
@@ -6992,14 +6870,12 @@ def TriggerSuperVirus1(argsList):
   iNumCities = 4 + GAME.getSorenRandNum(5, "Super Virus event number of cities")
 
   listCities = []
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     loopCity.changeEventAnger(3)
     if loopCity.getPopulation() > 4:
       iDistance = plotDistance(eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY())
       if iDistance > 0:
         listCities.append((iDistance, loopCity))
-    (loopCity, iter) = player.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -7037,14 +6913,12 @@ def TriggerSuperVirus2(argsList):
   player.changeGold(-iRequireGold)
 
   listCities = []
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
+  for loopCity in player.cities():
     loopCity.changeEventAnger(1)
     if loopCity.getPopulation() > 4:
       iDistance = plotDistance(eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY())
       if iDistance > 0:
         listCities.append((iDistance, loopCity))
-    (loopCity, iter) = player.nextCity(iter, False)
 
   listCities.sort(key=itemgetter(0))
 
@@ -7218,8 +7092,7 @@ def triggerNewWorldCities(argsList):
 	else:
 		iNeededCities = 3
 
-	CyCity, i = CyPlayer.firstCity(False)
-	while CyCity:
+	for CyCity in CyPlayer.cities():
 		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
 			if CyCity.getPopulation() > 4:
 				CyCity.changePopulation(-1)
@@ -7228,7 +7101,6 @@ def triggerNewWorldCities(argsList):
 				CyCity.changePopulation(-2)
 			elif CyCity.getPopulation() > 4:
 				CyCity.changePopulation(-1)
-		CyCity, i = CyPlayer.nextCity(i, False)
 
 	iNumUnits = GC.getNumUnitInfos()
 	MAP = GC.getMap()
@@ -7858,149 +7730,223 @@ def canTriggerBlarneyVisit(argsList):
 	return False
 
 def doGlobalWarming(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-  maxRand = GAME.getEstimateEndTurn() * GC.getMap().numPlots()
+	# ToDo - Preallocate all these type indexes
+	FEATURE_ICE = GC.getInfoTypeForString("FEATURE_ICE")
+	TERRAIN_ICE = GC.getInfoTypeForString("TERRAIN_ICE")
+	TERRAIN_PERMAFROST = GC.getInfoTypeForString("TERRAIN_PERMAFROST")
+	TERRAIN_TUNDRA = GC.getInfoTypeForString("TERRAIN_TUNDRA")
+	TERRAIN_TAIGA = GC.getInfoTypeForString("TERRAIN_TAIGA")
 
-  iGW = 0
-  countIce = 1
+	PLOT_LAND = GC.getInfoTypeForString("PLOT_LAND")
 
-  for j in xrange(GC.getMap().numPlots()):
-    jPlot = GC.getMap().plotByIndex(j)
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_ICE"):
-      iGW += -5
-      countIce += 2
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST"):
-      iGW += -2
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE"):
-      iGW += -2
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA"):
-      iGW += -1
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE"):
-      iGW += -5
-    if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_TUNDRA"):
-      iGW += -5
-      countIce += 2
-    if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_ICE"):
-      iGW += -10
-      countIce += 2
-    if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_TAIGA"):
-      iGW += -4
-      countIce += 1
-    if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_DUNES"):
-      iGW += -1
-    if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_SALT_FLATS"):
-      iGW += -1
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_FARM"):
-      iGW += 2
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_PASTURE"):
-      iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"):
-      iGW += 1
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_HAMLET"):
-      iGW += 2
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"):
-      iGW += 4
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_TOWN"):
-      iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_EXTRACTION_FACILITY"):
-      iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_WORKSHOP"):
-      iGW += 4
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_FACTORY"):
-      iGW += 8
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MANUFACTURING_COMPLEX"):
-      iGW += 16
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MINE"):
-      iGW += 1
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE"):
-      iGW += 2
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MODERN_MINE"):
-      iGW += 4
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_HYDROCARBON_WELL"):
-      iGW += 8
-    if jPlot.isCity():
-      icityGW = jPlot.getPlotCity()
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100)
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000)
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000)
+	iNumPlots = GC.getMap().numPlots()
+	countIce = 1
+	iGW = 0
+	for i in xrange(iNumPlots):
+		plot = GC.getMap().plotByIndex(i)
+		iFeature = plot.getFeatureType()
+		if iFeature == FEATURE_ICE:
+			iGW -= 5
+			countIce += 2
+		elif iFeature in (
+			GC.getInfoTypeForString("FEATURE_FOREST_YOUNG"),
+			GC.getInfoTypeForString("FEATURE_SAVANNA")
+		): 
+			iGW -= 1
+		elif iFeature in (
+			GC.getInfoTypeForString("FEATURE_FOREST"),
+			GC.getInfoTypeForString("FEATURE_BAMBOO")
+		):
+			iGW -= 2
+		elif iFeature == GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"):
+			iGW -= 3
+		elif iFeature == GC.getInfoTypeForString("FEATURE_JUNGLE"):
+			iGW -= 4
+		elif iFeature == GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE"):
+			iGW += 5
 
-  iIce = (2* GC.getMap().numPlots()) / countIce
+		iTerrain = plot.getTerrainType()
+		if iTerrain == TERRAIN_TAIGA:
+			iGW -= 2
+			countIce += 1
+		elif iTerrain == TERRAIN_TUNDRA:
+			iGW -= 4
+			countIce += 2
+		elif iTerrain == TERRAIN_PERMAFROST:
+			iGW -= 6
+			countIce += 2
+		elif iTerrain == TERRAIN_ICE:
+			iGW -= 10
+			countIce += 3
+		elif iTerrain in (
+			GC.getInfoTypeForString("TERRAIN_DUNES"),
+			GC.getInfoTypeForString("TERRAIN_SALT_FLATS")
+		):
+			iGW += 1
 
-  for i in xrange(GC.getMap().numPlots()):
-    iPlot = GC.getMap().plotByIndex(i)
-    randGW = GAME.getSorenRandNum(maxRand, "Global Warming index of plot affected")
-    if (iGW > randGW) and ((iPlot.getFeatureType()) == GC.getInfoTypeForString("FEATURE_ICE")):
-        iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-    elif iGW > randGW:
-      if (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_ICE"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_TUNDRA"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_TUNDRA"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_TAIGA"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_TAIGA"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_MUDDY"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_LUSH"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_LUSH"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASSLAND"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_GRASSLAND"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_PLAINS"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_PEAT_BOG"):
-          iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_PLAINS") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_BARREN") or (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_ROCKY"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SCRUB"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_SCRUB"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DESERT"), True, True)
-        if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_FOREST") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_JUNGLE") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BAMBOO") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VERY_TALL_GRASS"):
-          iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_DESERT"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DUNES"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_POLAR"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iIce < 100 and not iPlot.isLake():
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN"), True, True)
-        iDX = iPlot.getX()
-        iDY = iPlot.getY()
-        for iDX in xrange(-1, 2):
-          for iDY in xrange(-1, 2):
-            if not iPlot.isNone():
-              if (iDX != 0 or iDY != 0):
-                iDPlot = CyMap().plot(iDX, iDY)
-                if iDPlot.getPlotType() == GC.getInfoTypeForString("PLOT_LAND") and not iDPlot.isCity():
-                  randFlood = GAME.getSorenRandNum(100, "Global Warming flooding chance")
-                  if iIce > randFlood:
-                    iDPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-                    iDPlot.setImprovementType(-1)
-                    iDPlot.setBonusType(-1)
-                    iDPlot.setImprovementType(-1)
-                    iDPlot.setRouteType(-1)
-                    iDPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST"), True, True)
-                    iDPlot.setPlotType(PlotTypes.PLOT_OCEAN, True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_OCEAN_POLAR"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_OCEAN"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iIce > 100 and not iPlot.isLake():
-        iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(-1)
-        iPlot.setBonusType(-1)
-        iPlot.setImprovementType(-1)
-        iPlot.setRouteType(-1)
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
-        iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and iPlot.isLake():
-        iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
-        iPlot.setImprovementType(-1)
-        iPlot.setBonusType(-1)
-        iPlot.setImprovementType(-1)
-        iPlot.setRouteType(-1)
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-        iPlot.setPlotType(PlotTypes.PLOT_LAND, True, True)
+		iImprovement = plot.getImprovementType()
+		if iImprovement in (
+			GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
+			GC.getInfoTypeForString("IMPROVEMENT_MINE")
+		):
+			iGW += 1
+		elif iImprovement in (
+			GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
+			GC.getInfoTypeForString("IMPROVEMENT_FARM"),
+			GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE")
+		):
+			iGW += 2
+		elif iImprovement in (
+			GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
+			GC.getInfoTypeForString("IMPROVEMENT_WORKSHOP"),
+			GC.getInfoTypeForString("IMPROVEMENT_MODERN_MINE")
+		):
+			iGW += 4
+		elif iImprovement in (
+			GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
+			GC.getInfoTypeForString("IMPROVEMENT_PASTURE"),
+			GC.getInfoTypeForString("IMPROVEMENT_EXTRACTION_FACILITY"),
+			GC.getInfoTypeForString("IMPROVEMENT_FACTORY"),
+			GC.getInfoTypeForString("IMPROVEMENT_HYDROCARBON_WELL")
+		):
+			iGW += 8
+		elif iImprovement == GC.getInfoTypeForString("IMPROVEMENT_MANUFACTURING_COMPLEX"):
+			iGW += 16
+
+		if plot.isCity():
+			city = plot.getPlotCity()
+			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100
+			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000
+			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000
+
+	maxRand = GAME.getEstimateEndTurn() * iNumPlots
+	iIce = 2*iNumPlots / countIce
+
+	for i in xrange(iNumPlots):
+		plot = GC.getMap().plotByIndex(i)
+		randGW = GAME.getSorenRandNum(maxRand, "Global Warming index of plot affected")
+		if iGW <= randGW:
+			continue
+		# First melt glacier
+		if plot.getFeatureType() == FEATURE_ICE:
+			plot.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+			continue
+		# Then change terrain
+		iTerrain = plot.getTerrainType()
+		if iTerrain == TERRAIN_ICE:
+			plot.setTerrainType(TERRAIN_PERMAFROST, True, True)
+
+		elif iTerrain == TERRAIN_PERMAFROST:
+			plot.setTerrainType(TERRAIN_TUNDRA, True, True)
+
+		elif iTerrain == TERRAIN_TUNDRA:
+			plot.setTerrainType(TERRAIN_TAIGA, True, True)
+
+		elif iTerrain == TERRAIN_TAIGA:
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_MUDDY"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_LUSH"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_LUSH"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASSLAND"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_GRASSLAND"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_PLAINS"), True, True)
+			iFeature = plot.getFeatureType()
+			if iFeature in (GC.getInfoTypeForString("FEATURE_SWAMP"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")):
+				plot.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+
+		elif iTerrain in (
+			GC.getInfoTypeForString("TERRAIN_PLAINS"),
+			GC.getInfoTypeForString("TERRAIN_BARREN"),
+			GC.getInfoTypeForString("TERRAIN_ROCKY")
+		):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SCRUB"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_SCRUB"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DESERT"), True, True)
+			iFeature = plot.getFeatureType()
+			if iFeature in (
+				GC.getInfoTypeForString("FEATURE_FOREST_YOUNG"),
+				GC.getInfoTypeForString("FEATURE_FOREST"),
+				GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"),
+				GC.getInfoTypeForString("FEATURE_JUNGLE"),
+				GC.getInfoTypeForString("FEATURE_BAMBOO"),
+				GC.getInfoTypeForString("FEATURE_SAVANNA"),
+				GC.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
+			):
+				plot.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_DESERT"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_DUNES"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_COAST_POLAR"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_COAST"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and not plot.isLake():
+			if iIce < 100:
+				bCoastShift = True
+				iDX = plot.getX()
+				iDY = plot.getY()
+				for iDX in xrange(-1, 2):
+					for iDY in xrange(-1, 2):
+						if plot.isNone() or iDX == 0 and iDY == 0:
+							continue
+						plotX = CyMap().plot(iDX, iDY)
+						if plotX.getPlotType() == PLOT_LAND:
+							if plotX.isCity():
+								bCoastShift = False
+								continue
+							randFlood = GAME.getSorenRandNum(100, "Global Warming flooding chance")
+							if iIce > randFlood:
+								plotX.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+								plotX.setImprovementType(-1)
+								plotX.setBonusType(-1)
+								plotX.setImprovementType(-1)
+								plotX.setRouteType(-1)
+								plotX.setTerrainType(GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL"), True, True)
+								plotX.setPlotType(PlotTypes.PLOT_OCEAN, True, True)
+							else:
+								bCoastShift = False
+				if bCoastShift:
+					plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL"), True, True)
+			else:
+				plot.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+				plot.setImprovementType(-1)
+				plot.setBonusType(-1)
+				plot.setImprovementType(-1)
+				plot.setRouteType(-1)
+				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
+				plot.setPlotType(PlotTypes.PLOT_LAND, True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_OCEAN_POLAR"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN"), True, True)
+
+		elif iTerrain == GC.getInfoTypeForString("TERRAIN_OCEAN"):
+			plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL"), True, True)
+
+		elif plot.isLake() and iTerrain in (
+			GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL"),
+			GC.getInfoTypeForString("TERRAIN_LAKE_SHORE")
+		):
+			plot.setFeatureType(FeatureTypes.NO_FEATURE, -1)
+			plot.setImprovementType(-1)
+			plot.setBonusType(-1)
+			plot.setImprovementType(-1)
+			plot.setRouteType(-1)
+			if GC.getInfoTypeForString("TERRAIN_LAKE_SHORE"):
+				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
+			else: 
+				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
+			plot.setPlotType(PlotTypes.PLOT_LAND, True, True)
+
 
 def getHelpGlobalWarming(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP",())
@@ -8126,13 +8072,11 @@ def ApplyNativegood2(argsList):
 				iHighest = iValue
 				eBestUnit = iUnit
 
-	CyCity, i = CyPlayer.firstCity(False)
-	while CyCity:
+	for CyCity in CyPlayer.cities():
 		x = CyCity.getX()
 		y = CyCity.getY()
 		for j in xrange(3):
 			CyPlayer.initUnit(eBestUnit, x, y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-		CyCity, i = GC.getPlayer(self.iActiveLeader).nextCity(i, False)
 
 ######## Native Good 3 -- gold ###########
 
@@ -8312,8 +8256,7 @@ def doRemoveWVSlavery(argsList):
 
 		iCost = player.getBuildingProductionNeeded(iSlaveMarket)
 		iSum = 0
-		city, i = player.firstCity(False)
-		while city:
+		for city in player.cites():
 			if bMessage:
 				sCityName = city.getName()
 			iCityX = city.getX()
@@ -8384,8 +8327,6 @@ def doRemoveWVSlavery(argsList):
 					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iFreeSlaves))
 					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
-			city, i = player.nextCity(i, False)
-
 		if iSum > 0:
 			player.changeGold(int(iSum * 0.2))
 
@@ -8409,8 +8350,7 @@ def doRemoveWVCannibalism(argsList):
 			iType1 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_I")
 			iType2 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_II")
 			iType3 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_III")
-			CyCity, i = CyPlayer.firstCity(False)
-			while CyCity:
+			for CyCity in CyPlayer.cities():
 				CyCity.setNumRealBuilding(iType, 0)
 				if iType0 > -1:
 					CyCity.setNumRealBuilding(iType0, 0)
@@ -8420,7 +8360,6 @@ def doRemoveWVCannibalism(argsList):
 					CyCity.setNumRealBuilding(iType2, 0)
 				if iType3 > -1:
 					CyCity.setNumRealBuilding(iType3, 0)
-				CyCity, i = CyPlayer.nextCity(i, False)
 
 			if iPlayer == GC.getGame().getActivePlayer():
 				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_NO_CANNIBALISM", ()))
@@ -8438,8 +8377,7 @@ def doRemoveWVHumanSacrifice(argsList):
 		iToken = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE")
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			# Remove the main worldview building
 			if CyCity.getNumActiveBuilding(iWVSacrifice) > 0:
 				CyCity.setNumRealBuilding(iWVSacrifice, 0)
@@ -8453,8 +8391,6 @@ def doRemoveWVHumanSacrifice(argsList):
 			# Remove the human sacrifice altar
 			if CyCity.getNumActiveBuilding(iAltar) > 0:
 				CyCity.setNumRealBuilding(iAltar, 0)
-
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 def getNumNonSpecialistSlaves(argsList):
 	# Returns the number of non specialist slave specialists more than the number of specialist slave specialists

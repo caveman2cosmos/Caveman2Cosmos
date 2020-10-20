@@ -148,23 +148,6 @@ public:
 	friend bool operator==(const CvPlot& lhs, const CvPlot& rhs) { return &lhs == &rhs; }
 	friend bool operator!=(const CvPlot& lhs, const CvPlot& rhs) { return &lhs != &rhs; }
 
-protected:
-	CvGameObjectPlot m_GameObject;
-
-public:
-	// Dale - Battle Effect
-	void changeBattleCountdown(int iValue);
-	void setBattleCountdown(int iValue);
-	int getBattleCountdown() const;
-	bool isBattle() const;
-	bool canHaveBattleEffect(const CvUnit* pAttacker = NULL, const CvUnit* pDefender = NULL) const;
-	EffectTypes getBattleEffect();
-	void setBattleEffect();
-protected:
-	int m_iBattleCountdown;
-	EffectTypes m_eBattleEffect;
-	// ! Dale
-public:
 	void init(int iX, int iY);
 	void uninit();
 	void reset(int iX = 0, int iY = 0, bool bConstructorCall=false);
@@ -236,7 +219,8 @@ public:
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater() const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python
+	bool isWaterAndIsFresh() const;
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -403,6 +387,8 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
+	CvGameObjectPlot m_GameObject;
+
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
@@ -647,10 +633,10 @@ public:
 	void setImprovementDuration(int iNewValue); // Exposed to Python
 	void changeImprovementDuration(int iChange); // Exposed to Python
 
-	int getUpgradeProgressHundredths() const; // Exposed to Python
+	int getImprovementUpgradeProgress() const; // Exposed to Python
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const; // Exposed to Python
-	void setUpgradeProgressHundredths(int iNewValue); // Exposed to Python
-	void changeUpgradeProgressHundredths(int iChange); // Exposed to Python
+	void setImprovementUpgradeProgress(int iNewValue); // Exposed to Python
+	void changeImprovementUpgradeProgress(int iChange); // Exposed to Python
 
 	int getForceUnownedTimer() const; // Exposed to Python
 	bool isForceUnowned() const; // Exposed to Python
@@ -1180,27 +1166,39 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvPlot, ImprovementTypes, getImprovementType);
-		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
-		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
-		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
-		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
-		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
-		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, updateRevealedOwner, TeamTypes);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setWorkingCityOverride, const CvCity*);
 
-		DECLARE_MAP_FUNCTOR_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
-		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
-		DECLARE_MAP_FUNCTOR_1(CvPlot, bool, isBombardable, const CvUnit*);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateCulture, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRouteSymbol, bool, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRiverSymbol, bool, bool);
 
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isCity, bool, TeamTypes);
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TerrainTypes, getTerrainType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isImpassable);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isFreshWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isLake);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvCity*, getWorkingCityOverride);
 
-		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isConnectedToCapital, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, BonusTypes, getBonusType, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, int, getBlockadedCount, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvPlot, bool, isBombardable, const CvUnit*);
+
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isCity, bool, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isRevealed, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isVisible, TeamTypes, bool);
+
+		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
 	};
 };
 

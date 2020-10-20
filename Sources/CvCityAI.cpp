@@ -1,5 +1,6 @@
 // cityAI.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
@@ -5502,11 +5503,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					int iWarWearinessModifer = kBuilding.getWarWearinessModifier();
 					if (iWarWearinessModifer != 0)
 					{
-						if ( kTeam.getAtWarCount(true) == 0 )
+						if (!kTeam.isAtWar())
 						{
 							iWarWearinessModifer /= 2;
 						}
-						iValue += (-iWarWearinessModifer * iHappyModifier) / 16;
+						iValue -= iWarWearinessModifer * iHappyModifier / 16;
 					}
 
 					iValue += (kBuilding.getAreaHappiness() * (iNumCitiesInArea - 1) * 8);
@@ -6329,16 +6330,16 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						int globalGrowthValue = 0;
 						foreach_(const CvCity* pLoopCity, kOwner.cities())
 						{
-							int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
-							int iCurrentFoodToGrow = pLoopCity->growthThreshold();
-							int iFoodPerTurn = pLoopCity->foodDifference();
+							const int iFoodPerTurn = pLoopCity->foodDifference();
 
 							iCityCount++;
 
 							if ( iFoodPerTurn > 0 )
 							{
+								const int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 								if ( iCityHappy >= 0 )
 								{
+									const int iCurrentFoodToGrow = pLoopCity->growthThreshold();
 									globalGrowthValue -= (std::min(3,iCityHappy+1)*iCurrentFoodToGrow)/iFoodPerTurn;
 								}
 							}
@@ -6396,16 +6397,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 									if (iModifier > -100)
 									{
-										int iCount = 0;
-
-										foreach_(const CvCity* pLoopCity, kOwner.cities())
-										{
-											if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
-											{
-												iCount++;
-											}
-										}
-
+										const int iCount = count_if(kOwner.cities(),
+											CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+										);
 										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 										globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
 									}
@@ -6454,14 +6448,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 										iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 									}
 
-									int iCount = 0;
-									foreach_(const CvCity* pLoopCity, kOwner.cities())
-									{
-										if (pLoopCity->getNumBuilding(eLoopBuilding) == 0)
-										{
-											iCount++;
-										}
-									}
+									const int iCount = count_if(kOwner.cities(),
+										CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+									);
+
 									iValue += (iOriginalCost - iNewCost) * iCount / 10;
 								}
 							}
@@ -7058,7 +7048,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject) const
 		iTempValue += 4 * iOurNumCities * iWorldHealth;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != GET_PLAYER(getOwner()).getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != getOwner())
 			{
 				int iNumCities = GET_PLAYER((PlayerTypes)iI).getNumCities();
 				int iAttitude = GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI);
@@ -7577,7 +7567,7 @@ int CvCityAI::AI_minDefenders() const
 		//TB testing:
 		iDefenders += (iEra/3);
 	}
-	if (((iEra - GC.getGame().getStartEra() / 2) >= GC.getNumEraInfos() / 2) && isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+	if (((iEra - GC.getGame().getStartEra() / 2) >= GC.getNumEraInfos() / 2) && isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 	{
 		iDefenders++;
 	}
@@ -7645,39 +7635,24 @@ int CvCityAI::AI_neededAirDefenders() const
 
 	int iDefenders = 0;
 
-	int iRange = 5;
-
 	int iOtherTeam = 0;
 	int iEnemyTeam = 0;
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 5, 5))
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{
-			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-			if ((pLoopPlot != NULL) && pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
+			iOtherTeam++;
+			if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 			{
-				iOtherTeam++;
-				if (GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+				// If enemy has no bombers, don't need to defend as much
+				if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
 				{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
-/*                                                                                              */
-/* Air AI                                                                                       */
-/************************************************************************************************/
-					// If enemy has no bombers, don't need to defend as much
-					if( GET_PLAYER(pLoopPlot->getOwner()).AI_totalUnitAIs(UNITAI_ATTACK_AIR) == 0 )
-					{
-						continue;
-					}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-					iEnemyTeam += 2;
-					if (pLoopPlot->isCity())
-					{
-						iEnemyTeam += 6;
-					}
+					continue;
+				}
+				iEnemyTeam += 2;
+				if (pLoopPlot->isCity())
+				{
+					iEnemyTeam += 6;
 				}
 			}
 		}
@@ -7689,7 +7664,7 @@ int CvCityAI::AI_neededAirDefenders() const
 
 	if (iDefenders == 0)
 	{
-		if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+		if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 		{
 			iDefenders++;
 		}
@@ -8086,7 +8061,7 @@ int CvCityAI::AI_totalBestBuildValue(const CvArea* pArea) const
 			{
 				if (pLoopPlot->area() == pArea)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != CvImprovementInfo::getImprovementRuins()))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != GC.getIMPROVEMENT_CITY_RUINS()))
 					{
 						iTotalValue += AI_getBestBuildValue(iI);
 					}
@@ -9527,7 +9502,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			//			}
 			//			//else
 			//			//{
-			//			//	PropertyTypes pProperty = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME");
+			//			//	PropertyTypes pProperty = GC.getPROPERTY_CRIME();
 			//			//	if ( !AI_choosePropertyControlUnit(10, pProperty) )
 			//			//	{
 			//			//		if (AI_getHappyFromHurry((HurryTypes)iI) > 0)
@@ -12191,8 +12166,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		{
 			bValid = true;
 		}
-		//	Don't count forts - they have their own separate decision criteria
-		else if (!GC.getImprovementInfo(eImprovement).isActsAsCity())
+		//	Don't count forts or towers - they have their own separate decision criteria
+		else if (!(GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getVisibilityChange() != 0))
 		{
 			if (eForcedBuild != NO_BUILD)
 			{
@@ -12654,7 +12629,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					}
 					if (GET_TEAM(getTeam()).getImprovementUpgrade(pPlot->getImprovementType()) != NO_IMPROVEMENT)
 					{
-						iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGame().getImprovementUpgradeTime(pPlot->getImprovementType()));
+						iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getImprovementUpgradeProgress())) / std::max(1, 100*GC.getGame().getImprovementUpgradeTime(pPlot->getImprovementType()));
 					}
 
 					if (eNonObsoleteBonus == NO_BONUS)
@@ -14013,7 +13988,7 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 		}
 	}
 
-	if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+	if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 	{
 		int iCurrentEra = GET_PLAYER(getOwner()).getCurrentEra();
 		iValue += std::max(0, ((10 * iCurrentEra) / 3) - 6); //there are better ways to do this
@@ -16172,12 +16147,12 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							int iWarWearinessModifer = kBuilding.getWarWearinessModifier();
 							if (iWarWearinessModifer != 0)
 							{
-								if ( GET_TEAM(getTeam()).getAtWarCount(true) == 0 )
+								if (!GET_TEAM(getTeam()).isAtWar())
 								{
 									iWarWearinessModifer /= 2;
 								}
 
-								iValue += (-iWarWearinessModifer * iHappyModifier) / 16;
+								iValue -= iWarWearinessModifer * iHappyModifier / 16;
 							}
 
 							iValue += (kBuilding.getAreaHappiness() * (iNumCitiesInArea - 1) * 8);
@@ -17062,16 +17037,16 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								int popGrowthRateGlobalValue = 0;
 								foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 								{
-									int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
-									int iCurrentFoodToGrow = pLoopCity->growthThreshold();
-									int iFoodPerTurn = pLoopCity->foodDifference();
+									const int iFoodPerTurn = pLoopCity->foodDifference();
 
 									iCityCount++;
 
 									if ( iFoodPerTurn > 0 )
 									{
+										const int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 										if ( iCityHappy >= 0 )
 										{
+											const int iCurrentFoodToGrow = pLoopCity->growthThreshold();
 											popGrowthRateGlobalValue -= (std::min(3,iCityHappy+1)*iCurrentFoodToGrow)/iFoodPerTurn;
 										}
 									}
@@ -17125,16 +17100,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 											if (iModifier > -100)
 											{
-												int iCount = 0;
-
-												foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
-												{
-													if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
-													{
-														iCount++;
-													}
-												}
-
+												const int iCount = count_if(kOwner.cities(),
+													CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+												);
 												const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 												globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
 											}
@@ -17183,14 +17151,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 												iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 											}
 
-											int iCount = 0;
-											foreach_(const CvCity* pLoopCity, kOwner.cities())
-											{
-												if (pLoopCity->getNumBuilding(eLoopBuilding) == 0)
-												{
-													iCount++;
-												}
-											}
+											const int iCount = count_if(kOwner.cities(),
+												CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+											);
 											iValue += (iOriginalCost - iNewCost) * iCount / 10;
 										}
 									}

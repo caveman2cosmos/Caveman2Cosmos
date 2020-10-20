@@ -485,8 +485,7 @@ class TheScreen:
 
 		iCityActID = self.iCityActID
 		iCount = 0
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if CyCity.isRevealed(iTeamAct, False):
 				szText = uFont2 + CyCity.getName()
 				screen.appendListBoxStringNoUpdate(LIST, szText, iWidGen, CyCity.getID(), 0, 1<<0)
@@ -509,7 +508,6 @@ class TheScreen:
 					iRow = screen.appendTableRow(TABLE)
 					screen.setTableText(TABLE, 0, iRow, szText, "", iWidGen, 0, 0, 1<<0)
 					screen.setTableText(TABLE, 1, iRow, szCost, "", iWidGen, 0, 0, 1<<1)
-			CyCity, i = CyPlayer.nextCity(i, False)
 		screen.updateListBox(LIST)
 		if bMissionList:
 			screen.hide(LIST)

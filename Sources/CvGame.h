@@ -175,8 +175,6 @@ public:
 	DllExport void reviveActivePlayer(); // Exposed to Python
 	void reviveActivePlayer(PlayerTypes iPlayer); // Exposed to Python
 
-	void drawBattleEffects();
-
 	DllExport int getNumHumanPlayers(); // Exposed to Python
 
 	DllExport int getGameTurn(); // Exposed to Python

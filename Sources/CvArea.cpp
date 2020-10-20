@@ -322,9 +322,9 @@ int CvArea::getNumTiles() const
 }
 
 
-bool CvArea::isLake() const							
+bool CvArea::isLake() const
 {
-	return (isWater() && getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE());
+	return isWater() && getNumTiles() < GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize();
 }
 
 
@@ -332,17 +332,8 @@ void CvArea::changeNumTiles(int iChange)
 {
 	if (iChange != 0)
 	{
-		const bool bWasLake = isLake();
-
-		m_iNumTiles = (m_iNumTiles + iChange);
+		m_iNumTiles += iChange;
 		FAssert(getNumTiles() >= 0);
-
-		// cppcheck-suppress knownConditionTrueFalse
-		if (bWasLake != isLake())
-		{
-			GC.getMap().updateIrrigated();
-			GC.getMap().updateYield();
-		}
 	}
 }
 
@@ -361,7 +352,7 @@ int CvArea::getNumUnownedTiles() const
 
 void CvArea::changeNumOwnedTiles(int iChange)									
 {
-	m_iNumOwnedTiles = (m_iNumOwnedTiles + iChange);
+	m_iNumOwnedTiles += iChange;
 	FAssert(getNumOwnedTiles() >= 0);
 	FAssert(getNumUnownedTiles() >= 0);
 }
@@ -375,7 +366,7 @@ int CvArea::getNumRiverEdges() const
 
 void CvArea::changeNumRiverEdges(int iChange)									
 {
-	m_iNumRiverEdges = (m_iNumRiverEdges + iChange);
+	m_iNumRiverEdges += iChange;
 	FAssert(getNumRiverEdges() >= 0);
 }
 
@@ -406,7 +397,7 @@ int CvArea::getNumStartingPlots() const
 
 void CvArea::changeNumStartingPlots(int iChange)
 {
-	m_iNumStartingPlots = m_iNumStartingPlots + iChange;
+	m_iNumStartingPlots += iChange;
 	FAssert(getNumStartingPlots() >= 0);
 }
 

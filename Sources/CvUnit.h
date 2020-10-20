@@ -736,7 +736,6 @@ public:
 	bool plunder();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 
-	int sabotageCost(const CvPlot* pPlot) const; // Exposed to Python
 	int sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle = PROBABILITY_REAL) const; // Exposed to Python
 	bool canSabotage(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool sabotage();
@@ -938,7 +937,7 @@ public:
 	int airCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	int rangeCombatDamage(const CvUnit* pDefender) const; // Exposed to Python
 	CvUnit* bestInterceptor(const CvPlot* pPlot) const; // Exposed to Python
-	CvUnit* bestSeaPillageInterceptor(CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
+	CvUnit* bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const; // Exposed to Python
 
 	bool isAutomated() const; // Exposed to Python
 	DllExport bool isWaiting() const; // Exposed to Python
@@ -1750,9 +1749,6 @@ public:
 	DllExport void getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const;
 	DllExport int getSelectionSoundScript() const;
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
 // Dale - AB: Bombing START
 	bool canAirBomb1(const CvPlot* pPlot) const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
@@ -1769,38 +1765,27 @@ public:
 	bool canAirBomb5(const CvPlot* pPlot) const;
 	bool canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb5(int iX, int iY);
-// Dale - AB: Bombing END
+
 // Dale - RB: Field Bombard START
 	bool canRBombard(bool bEver = false) const;
 	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const;
 	bool bombardRanged(int iX, int iY, bool sAttack = false);
-	// RevolutionDCM - ranged bombard
+
+// RevolutionDCM - ranged bombard
 	bool isRbombardable(int iMinStack) const;
 	int getRbombardSeigeCount(const CvPlot* pPlot) const;
-	// RevolutionDCM - end
-// Dale - SA: Opp Fire START
+
+// Dale - SA: Opp Fire
 	void doOpportunityFire();
-// Dale - SA: Opp Fire END
-// Dale - SA: Active Defense START
+
+// Dale - SA: Active Defense
 	void doActiveDefense();
-// Dale - SA: Active Defense END
-// Dale - FE: Fighters START
+
+// Dale - FE: Fighters
 	bool canFEngage() const;
 	bool canFEngageAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool fighterEngage(int iX, int iY);
-// Dale - FE: Fighters END
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	void setBattlePlot(CvPlot* pPlot, const CvUnit* pDefender = NULL);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+// ! Dale
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1825,15 +1810,7 @@ public:
 	virtual bool AI_isAwaitingContract() const = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/05/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
 	virtual bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	virtual void AI_flushValueCache() = 0;
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
@@ -3254,75 +3231,97 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBuildUp);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canAttack);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isZoneOfControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isMADEnabled);
-		DECLARE_MAP_FUNCTOR(CvUnit, bool, isSpy);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, checkPromotionObsoletion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, reloadEntity);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, defineReligion);
+		DECLARE_MAP_FUNCTOR(CvUnit, void, unloadAll);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, verifyStackValid);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasBuild, BuildTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, jumpToNearestValidPlot, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, kill, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, NotifyEntity, MissionTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, airCircle, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setBlockading, bool);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setTransportUnit, CvUnit*);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, setHealSupportUsed, int);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, void, joinGroup, CvSelectionGroup*);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
-		DECLARE_MAP_FUNCTOR(CvUnit, int, cargoSpace);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getFortifyTurns);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getBombardRate);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
-		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
-		DECLARE_MAP_FUNCTOR(CvUnit, PlayerTypes, getOwner);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
-		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
-		DECLARE_MAP_FUNCTOR(CvUnit, DomainTypes, getDomainType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isNukeImmune);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBuildUp);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttack);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isDead);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isFull);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canMoveAllTerrain);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isZoneOfControl);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canIgnoreZoneofControl);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAutoUpgrading);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isReadyForUpgrade);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAnimal);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canDefend);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, alwaysInvisible);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, IsSelected);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, visibilityRange);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, collateralDamage);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getBombardRate);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getDamage);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitTypes, getUnitType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitCombatTypes, getUnitCombatType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitAITypes, AI_getUnitAIType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, DomainTypes, getDomainType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getArea);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvUnitInfo&, getUnitInfo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvUnit*, getTransportUnit);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, BuildTypes, getBuildType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, ImprovementTypes, getBuildTypeImprovement);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMgetCargo);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, SMCargoVolume);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, revoltProtectionTotal);
 
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
-		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnit*, getTransportUnit);
-		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
-		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, revoltProtectionTotal);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canClaimTerritory, const CvPlot*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, aidTotal, PropertyTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, isEnemy, TeamTypes);
 
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
-		DECLARE_MAP_FUNCTOR_1(CvUnit, int, isEnemy, TeamTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, isInvisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
-		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, isInvisible, TeamTypes, bool);
-
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
-		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canEnterArea, TeamTypes, const CvArea*, bool);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
+		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 	};
 };
 

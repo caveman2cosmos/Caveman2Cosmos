@@ -299,8 +299,6 @@ public:
 	void log(TCHAR* str);
 	void logw(std::wstring str);
 
-	void drawBattleEffects();
-
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel) const;
 
 	void setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield);

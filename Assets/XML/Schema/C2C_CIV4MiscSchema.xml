@@ -229,9 +229,6 @@
 	<ElementType name="bSticky" content="textOnly" dt:type="boolean"/>
 	<ElementType name="fSpeed" content="textOnly"/>
 	<ElementType name="fArcValue" content="textOnly"/>
-	<!--Afforess Battle Effects -->
-	<ElementType name="bBattleEffect" content="textOnly" dt:type="boolean"/>
-	<!--Afforess Battle Effects -->
 	<ElementType name="DiffuseMaterialColor" content="eltOnly">
 		<element type="r"/>
 		<element type="g"/>
@@ -313,9 +310,6 @@
 		<element type="bIsProjectile" minOccurs="0"/>
 		<element type="fSpeed" minOccurs="0"/>
 		<element type="fArcValue" minOccurs="0"/>
-		<!--Afforess Battle Effects -->
-		<element type="bBattleEffect" minOccurs="0"/>
-		<!--Afforess Battle Effects -->
 	</ElementType>
 	<ElementType name="AttachableInfo" content="eltOnly">
 		<element type="Type"/>

@@ -200,20 +200,6 @@
 		<Spanish>Modificadores (%D1%%)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BATTLE_EFFECTS_PEDIA</Tag>
-		<English>Battle Effects are effects that occur on the map due to combat. When combat occurs on a plot, a Battle Effect will begin. This effect will be retained for a few turns and affects how much gold and food a plot can produce. The Battle Effect disipates after a couple of turns, but subsequent combats will increase the time before the effects disappear.</English>
-		<German>Kampfeffekte sind Effekte, die auf der Karte aufgrund von Gefechten entstehen. Sobald ein Kampf abläuft, beginnen die Kampfeffekte. Der Effekt hält einige wenige Runden an verändert die Menge Gold und Nahrung die ein Geländefeld produziert. Der Effekt läßt nach ein paar Runden nach, aber weitere Kämpfe verlängern im folgenden die Erholung der Geländefelder.</German>
-		<Italian>Gli effetti della battaglia sono quelli che interessano la mappa a seguito del combattimento. Quando un combattimento si svolge su una casella, su questa si applica un 'effetto': questo resterà per alcuni turni e modificherà la produzione di cibo e oro della casella. Gli "Effetti della Battaglia" scompaiono in un paio di turni, ma ulteriori combattimenti ne aumenteranno la durata.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BATTLE_EFFECTS_TEXT</Tag>
-		<English>Battle Effects</English>
-		<French>Effets de Bataille</French>
-		<German>Kampfeffekte</German>
-		<Italian>Effetti della battaglia</Italian>
-		<Spanish>Efectos de batalla</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BONUS_GOLD_MODIFIERS</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>
@@ -2827,15 +2813,18 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_PEDIA</Tag>
 		<English>C2C adds a water terrains to the game for the purposes of navigation, wild animal spawn and movement and combat improvements. The 8 base water terrains are:
-		[ICON_BULLET] Lake Shore - the bit of fresh water lakes nearest the land.
-		[ICON_BULLET] Lake - parts of fresh water lakes not adjcent to land.
-		[ICON_BULLET] Coast - the bit of the ocean next to land representing part of the continental shelf
-		[ICON_BULLET] Deep Coast - the bit next to land for when there is no continental shelf off shore
-		[ICON_BULLET] Sea - between coastal waters and ocean waters, represents part of the continental shelf
-		[ICON_BULLET] Deep Sea - ditto, not continental shelf
+		[ICON_BULLET] Coast - the bit of the ocean next to land representing part of the continental shelf, or a saltwater lake.
+		[ICON_BULLET] Deep Coast - the bit next to land for when there is no continental shelf off shore.
+		[ICON_BULLET] Freshwater Coast - the bit of fresh water lakes nearest the land. Provides fresh water to adjacent tiles.
+		[ICON_BULLET] Sea - between coastal waters and ocean waters, represents part of the continental shelf.
+		[ICON_BULLET] Deep Sea - ditto, not continental shelf.
+		[ICON_BULLET] Freshwater Sea - parts of fresh water lakes or seas not adjcent to land.
 		[ICON_BULLET] Ocean - dangerous and deep waters
 		[ICON_BULLET] Trench - as dangerous to sail as ocean but deeper.
-		For the purposes of navigation coasts and lake shore represent those areas your earliest boats can cross. Seas and Lakes require sails to cross and Ocean and Trench require sophisticated navigational tools. [BOLD]Wild animal spawns and movement[\BOLD] are controlled by the climate that prefixes the terrain name Polar, Tropical and if no prefix, temperate. [BOLD]Features, Bonuses and Improvements[\BOLD] New features are [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds have been added to coastal waters. The [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK] may also appear in coastal waters. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
+		For the purposes of navigation, coasts represent those areas your earliest boats can cross. Seas require sails to cross and Ocean and Trench require sophisticated navigational tools.
+		[BOLD]Wild animal spawns and movement[\BOLD] are controlled by a climate prefixing the terrain name: Polar, Tropical or if no prefix, temperate. Only saltwater terrains use these prefixes.
+		[BOLD]Features, Bonuses and Improvements:[\BOLD]
+		New features include [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds appearing in coastal waters, alongside the natural wonder the [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK]. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_TEXT</Tag>

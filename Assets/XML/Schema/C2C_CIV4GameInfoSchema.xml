@@ -167,12 +167,10 @@
 		<element type="MapCategoryType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!-- TB's Tags end -->
-	<!-- @MOD Commanders -->
 	<ElementType name="iCommandersLevelThresholdsPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bAllowSlaves" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqGameOption" content="textOnly"/>
 	<ElementType name="iInitialCityMaintenancePercent" content="textOnly" dt:type="int"/>
-	<!-- end MOD Commanders -->
 	<!-- Parallel Maps XML info classes begin -->
 	<!-- MapInfos -->
 	<ElementType name="Map" content="textOnly"/>
@@ -238,8 +236,8 @@
 	<ElementType name="iGridHeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iTerrainGrainChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iFeatureGrainChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iOceanMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iResearchPercent" content="textOnly" dt:type="int"/>
-	<!-- BBAI end -->
 	<ElementType name="iTradeProfitPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistanceMaintenancePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumCitiesMaintenancePercent" content="textOnly" dt:type="int"/>
@@ -260,13 +258,11 @@
 	<ElementType name="iAdvancedStartPointsMod" content="textOnly" dt:type="int"/>
 	<ElementType name="ClimateInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iDesertPercentChange" minOccurs="0"/>
 		<element type="iJungleLatitude" minOccurs="0"/>
@@ -283,25 +279,21 @@
 	<ElementType name="iSeaLevelChange" content="textOnly" dt:type="int"/>
 	<ElementType name="SeaLevelInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iSeaLevelChange" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="WorldInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="iDefaultPlayers" minOccurs="0"/>
@@ -323,9 +315,8 @@
 		<element type="iCorporationMaintenancePercent" minOccurs="0"/>
 		<element type="iNumCitiesAnarchyPercent" minOccurs="0"/>
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
-		<!-- @MOD Commanders -->
 		<element type="iCommandersLevelThresholdsPercent" minOccurs="0"/>
-		<!-- end MOD Commanders -->
+		<element type="iOceanMinAreaSize" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="WorldInfos" content="eltOnly">
 		<element type="WorldInfo" maxOccurs="*"/>
@@ -351,13 +342,11 @@
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="ProcessInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
@@ -399,13 +388,11 @@
 	</ElementType>
 	<ElementType name="VoteInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iPopulationThreshold" minOccurs="0"/>
 		<element type="bCityVoting" minOccurs="0"/>
@@ -433,7 +420,6 @@
 		<element type="VoteInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
-	<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
@@ -444,14 +430,11 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-	<!-- XMLCOPY				END					MRGENIE		-->
 	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="iSpreadFactor" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpreadCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaintenance" content="textOnly" dt:type="int"/>
-	<!-- TGA_INDEXATION			01/21/2008			MRGENIE		-->
 	<ElementType name="iTGAIndex" content="textOnly" dt:type="int"/>
-	<!-- TGA_INDEXATION			END					MRGENIE		-->
 	<ElementType name="iGlobalReligionCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="GlobalReligionCommerces" content="eltOnly">
 		<element type="iGlobalReligionCommerce" maxOccurs="*"/>
@@ -484,13 +467,11 @@
 	<ElementType name="Sound" content="textOnly"/>
 	<ElementType name="ReligionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Adjective" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
@@ -498,9 +479,7 @@
 		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iFreeUnits" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
-		<!-- TGA_INDEXATION			01/21/2008			MRGENIE		-->
 		<element type="iTGAIndex" minOccurs="0"/>
-		<!-- TGA_INDEXATION			END					MRGENIE		-->
 		<element type="GlobalReligionCommerces" minOccurs="0"/>
 		<element type="HolyCityCommerces" minOccurs="0"/>
 		<element type="StateReligionCommerces" minOccurs="0"/>
@@ -516,7 +495,6 @@
 	<ElementType name="ReligionInfos" content="eltOnly">
 		<element type="ReligionInfo" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">
@@ -546,20 +524,16 @@
 	<ElementType name="iMilitaryProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeXP" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpread" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="CorporationInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="PrereqBuildings" minOccurs="0"/>
 		<element type="CompetingCorporations" minOccurs="0"/>
@@ -569,14 +543,11 @@
 		<element type="iFreeXP" minOccurs="0"/>
 		<element type="iSpread" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
 		<element type="iSpreadCost" minOccurs="0"/>
 		<element type="iMaintenance" minOccurs="0"/>
-		<!-- TGA_INDEXATION			01/21/2008			MRGENIE		-->
 		<element type="iTGAIndex" minOccurs="0"/>
-		<!-- TGA_INDEXATION			END					MRGENIE		-->
 		<element type="PrereqBonuses" minOccurs="0"/>
 		<element type="HeadquarterCommerces" minOccurs="0"/>
 		<element type="BonusProduced" minOccurs="0"/>
@@ -629,13 +600,11 @@
 	<ElementType name="NotEraType" content="textOnly"/>
 	<ElementType name="GoodyInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Sound" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
@@ -679,9 +648,7 @@
 	<ElementType name="iHurryPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryConscriptAngerPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
-	<!-- REVOLUTION 09/25/09 by DPII -->
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
-	<!-- REVOLUTION END -->
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iAttitudeChange" content="textOnly" dt:type="int"/>
@@ -741,13 +708,11 @@
 	</ElementType>
 	<ElementType name="HandicapInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="iFreeWinsVsBarbs" minOccurs="0"/>
@@ -766,9 +731,7 @@
 		<element type="iCorporationMaintenancePercent" minOccurs="0"/>
 		<element type="iCivicUpkeepPercent" minOccurs="0"/>
 		<element type="iInflationPercent" minOccurs="0"/>
-		<!-- REVOLUTION 09/25/09 by DPII -->
 		<element type="iRevolutionIndexPercent" minOccurs="0"/>
-		<!-- REVOLUTION END -->
 		<element type="iHealthBonus" minOccurs="0"/>
 		<element type="iHappyBonus" minOccurs="0"/>
 		<element type="iAttitudeChange" minOccurs="0"/>
@@ -833,13 +796,11 @@
 	<ElementType name="VictoryMovie" content="textOnly"/>
 	<ElementType name="VictoryInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="bTargetScore" minOccurs="0"/>
@@ -868,14 +829,8 @@
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iNukeInterception" content="textOnly" dt:type="int"/>
 	<ElementType name="iTechShare" content="textOnly" dt:type="int"/>
-	<!--
-DPII < Maintenance Modifiers >
-	-->
 	<ElementType name="iGlobalMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iConnectedCityMaintenanceModifier" content="textOnly" dt:type="int"/>
-	<!--
-DPII < Maintenance Modifiers >
-	-->
 	<ElementType name="EveryoneSpecialUnit" content="textOnly"/>
 	<ElementType name="EveryoneSpecialBuilding" content="textOnly"/>
 	<ElementType name="bSpaceship" content="textOnly" dt:type="boolean"/>
@@ -922,22 +877,18 @@ DPII < Maintenance Modifiers >
 	</ElementType>
 	<ElementType name="CreateSound" content="textOnly"/>
 	<ElementType name="MovieDefineTag" content="textOnly"/>
-	<!--Afforess -->
 	<ElementType name="iGlobalHealth" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorldHealth" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorldHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorldTradeRoutes" content="textOnly" dt:type="int"/>
-	<!--Afforess -->
 	<ElementType name="ProjectInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
@@ -949,16 +900,10 @@ DPII < Maintenance Modifiers >
 		<element type="iCost" minOccurs="0"/>
 		<element type="iNukeInterception" minOccurs="0"/>
 		<element type="iTechShare" minOccurs="0"/>
-		<!--
-DPII < Maintenance Modifiers >
-		-->
 		<element type="iGlobalMaintenanceModifier" minOccurs="0"/>
 		<element type="iDistanceMaintenanceModifier" minOccurs="0"/>
 		<element type="iNumCitiesMaintenanceModifier" minOccurs="0"/>
 		<element type="iConnectedCityMaintenanceModifier" minOccurs="0"/>
-		<!--
-DPII < Maintenance Modifiers >
-		-->
 		<element type="EveryoneSpecialUnit" minOccurs="0"/>
 		<element type="EveryoneSpecialBuilding" minOccurs="0"/>
 		<element type="bSpaceship" minOccurs="0"/>
@@ -972,7 +917,6 @@ DPII < Maintenance Modifiers >
 		<element type="BonusProductionModifiers" minOccurs="0"/>
 		<element type="CreateSound" minOccurs="0"/>
 		<element type="MovieDefineTag" minOccurs="0"/>
-		<!--Afforess -->
 		<element type="iGlobalHealth" minOccurs="0"/>
 		<element type="iGlobalHappiness" minOccurs="0"/>
 		<element type="iWorldHappiness" minOccurs="0"/>
@@ -980,7 +924,6 @@ DPII < Maintenance Modifiers >
 		<element type="iWorldTradeRoutes" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
-		<!-- Afforess -->
 	</ElementType>
 	<ElementType name="ProjectInfos" content="eltOnly">
 		<element type="ProjectInfo" minOccurs="0" maxOccurs="*"/>
@@ -990,13 +933,11 @@ DPII < Maintenance Modifiers >
 	<ElementType name="bAnger" content="textOnly" dt:type="boolean"/>
 	<ElementType name="HurryInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iGoldPerProduction" minOccurs="0"/>
 		<element type="iProductionPerPopulation" minOccurs="0"/>
@@ -1012,13 +953,11 @@ DPII < Maintenance Modifiers >
 	<ElementType name="bFlexiblePercent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CommerceInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iInitialPercent" minOccurs="0"/>
 		<element type="iInitialHappiness" minOccurs="0"/>
@@ -1042,14 +981,12 @@ DPII < Maintenance Modifiers >
 	</ElementType>
 	<ElementType name="CivicOptionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="bPolicy" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="TraitNoUpkeeps" minOccurs="0"/>
 	</ElementType>
@@ -1064,14 +1001,8 @@ DPII < Maintenance Modifiers >
 	<ElementType name="iStateReligionGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistanceMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumCitiesMaintenanceModifier" content="textOnly" dt:type="int"/>
-	<!--
-DPII < Maintenance Modifiers >
-	-->
 	<ElementType name="iHomeAreaMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iOtherAreaMaintenanceModifier" content="textOnly" dt:type="int"/>
-	<!--
-DPII < Maintenance Modifiers >
-	-->
 	<ElementType name="iCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iExtraHealth" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeExperience" content="textOnly" dt:type="int"/>
@@ -1090,7 +1021,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="iExpInBorderModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBuildingOnlyHealthy" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iLargestCityHappiness" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="iCivicHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iReligionSpreadRate" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnitPercent" content="textOnly" dt:type="int"/>
@@ -1112,7 +1042,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="iForeignerUnhappyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLandmarkAnger" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bEnablesMADNukes" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoForeignTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCorporations" content="textOnly" dt:type="boolean"/>
@@ -1207,7 +1136,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="ImprovementYieldChanges" content="eltOnly">
 		<element type="ImprovementYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="iYieldPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="SpecialistYieldPercents" content="eltOnly">
 		<element type="iYieldPercent" minOccurs="0" maxOccurs="*"/>
@@ -1266,10 +1194,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="LandmarkYieldChanges" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- Afforess -->
-	<!--
-DPII < Revolution Mod Start >
-	-->
 	<ElementType name="bUpgradeAnywhere" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowInquisitions" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bDisallowInquisitions" content="textOnly" dt:type="boolean"/>
@@ -1291,31 +1215,20 @@ DPII < Revolution Mod Start >
 	<ElementType name="bCommunism" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFreeSpeech" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanDoElection" content="textOnly" dt:type="boolean"/>
-	<!--
-DPII < Revolution Mod End >
-	-->
-	<!-- Dexy - Dark Ages START -->
 	<ElementType name="iContemporaryFactor" content="textOnly" dt:type="int"/>
-	<!-- Dexy - Dark Ages  END  -->
-	<!-- Dexy - Fixed Borders START -->
 	<ElementType name="bFixedBorders" content="textOnly" dt:type="boolean"/>
-	<!-- Dexy - Fixed Borders  END  -->
 	<ElementType name="WeLoveTheKing" content="textOnly"/>
-	<!-- JOOYO_ADDON							START	-->
 	<ElementType name="iAttitudeShareMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iEnslavementChance" content="textOnly" dt:type="int"/>
 	<ElementType name="iFoodConsumptionPerPopulation" content="textOnly" dt:type="int"/>
-	<!-- JOOYO_ADDON							END		-->
 	<ElementType name="CivicInfo" content="eltOnly">
 		<element type="CivicOptionType" minOccurs="0"/>
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
@@ -1332,14 +1245,8 @@ DPII < Revolution Mod End >
 		<element type="iStateReligionGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iDistanceMaintenanceModifier" minOccurs="0"/>
 		<element type="iNumCitiesMaintenanceModifier" minOccurs="0"/>
-		<!--
-DPII < Maintenance Modifiers >
-		-->
 		<element type="iHomeAreaMaintenanceModifier" minOccurs="0"/>
 		<element type="iOtherAreaMaintenanceModifier" minOccurs="0"/>
-		<!--
-DPII < Maintenance Modifiers >
-		-->
 		<element type="iCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iExtraHealth" minOccurs="0"/>
 		<element type="iFreeExperience" minOccurs="0"/>
@@ -1359,7 +1266,6 @@ DPII < Maintenance Modifiers >
 		<element type="iExpInBorderModifier" minOccurs="0"/>
 		<element type="bBuildingOnlyHealthy" minOccurs="0"/>
 		<element type="iLargestCityHappiness" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="iCivicHappiness" minOccurs="0"/>
 		<element type="iReligionSpreadRate" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnitPercent" minOccurs="0"/>
@@ -1386,7 +1292,6 @@ DPII < Maintenance Modifiers >
 		<element type="iSharedCivicTradeRouteModifier" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
 		<element type="bEnablesMADNukes" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
 		<element type="iTradeRoutes" minOccurs="0"/>
@@ -1415,9 +1320,6 @@ DPII < Maintenance Modifiers >
 		<element type="FeatureHappinessChanges" minOccurs="0"/>
 		<element type="ImprovementYieldChanges" minOccurs="0"/>
 		<element type="TerrainYieldChanges" minOccurs="0"/>
-		<!--
- DPII < Revolution Mod Start >
-		-->
 		<element type="bUpgradeAnywhere" minOccurs="0"/>
 		<element type="bAllowInquisitions" minOccurs="0"/>
 		<element type="bDisallowInquisitions" minOccurs="0"/>
@@ -1439,33 +1341,19 @@ DPII < Maintenance Modifiers >
 		<element type="bCommunism" minOccurs="0"/>
 		<element type="bFreeSpeech" minOccurs="0"/>
 		<element type="bCanDoElection" minOccurs="0"/>
-		<!--
-DPII < Revolution Mod End >
-		-->
-		<!-- Dexy - Dark Ages START -->
 		<element type="iContemporaryFactor" minOccurs="0"/>
-		<!-- Dexy - Dark Ages  END  -->
-		<!-- Dexy - Fixed Borders START -->
 		<element type="bFixedBorders" minOccurs="0"/>
-		<!-- Dexy - Fixed Borders  END  -->
 		<element type="WeLoveTheKing" minOccurs="0"/>
-		<!-- JOOYO_ADDON							START	-->
 		<element type="iAttitudeShareMod" minOccurs="0"/>
 		<element type="iEnslavementChance" minOccurs="0"/>
 		<element type="iFoodConsumptionPerPopulation" minOccurs="0"/>
-		<!-- JOOYO_ADDON							END		-->
-		<!-- Grave's Civic Flavor Mod -->
 		<element type="Flavors" minOccurs="0"/>
-		<!-- Grave's Civic Flavor Mod -->
-		<!-- TB's Tags Civics -->
 		<element type="iNationalCaptureProbabilityModifier" minOccurs="0"/>
 		<element type="iNationalCaptureResistanceModifier" minOccurs="0"/>
 		<element type="bAllReligionsActive" minOccurs="0"/>
 		<element type="bBansNonStateReligions" minOccurs="0"/>
-		<!-- TB's Tags Civics -->
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="iProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingProductionModifier" content="eltOnly">
 		<element type="BuildingType"/>
@@ -1522,7 +1410,6 @@ DPII < Revolution Mod End >
 	<ElementType name="ImprovementHealthPercentChanges" content="eltOnly">
 		<element type="ImprovementHealthPercentChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="CivicInfos" content="eltOnly">
 		<element type="CivicInfo" maxOccurs="*"/>
 	</ElementType>
@@ -1540,13 +1427,11 @@ DPII < Revolution Mod End >
 	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="iGrowthPercent" minOccurs="0"/>
@@ -1572,9 +1457,7 @@ DPII < Revolution Mod End >
 		<element type="iInflationOffset" minOccurs="0"/>
 		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
 		<element type="iVictoryDelayPercent" minOccurs="0"/>
-		<!-- TB GameSpeed tags begin -->
 		<element type="iTraitGainPercent" minOccurs="0"/>
-		<!-- TB GameSpeed tags end -->
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">
@@ -1586,13 +1469,11 @@ DPII < Revolution Mod End >
 	<ElementType name="iFirstTurnMultiplier" content="textOnly" dt:type="int"/>
 	<ElementType name="TurnTimerInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iBaseTime" minOccurs="0"/>
 		<element type="iCityBonus" minOccurs="0"/>
@@ -1605,13 +1486,11 @@ DPII < Revolution Mod End >
 	<ElementType name="CursorPath" content="textOnly"/>
 	<ElementType name="CursorInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="CursorPath" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="CursorInfos" content="eltOnly">
@@ -1619,28 +1498,22 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="bAvoidGrowth" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGreatPeople" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="bAvoidAngryCitizens" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAvoidUnhealthyCitizens" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="EmphasizeInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Button" minOccurs="0"/>
 		<element type="bAvoidGrowth" minOccurs="0"/>
 		<element type="bGreatPeople" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bAvoidAngryCitizens" minOccurs="0"/>
 		<element type="bAvoidUnhealthyCitizens" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="YieldModifiers" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 	</ElementType>
@@ -1651,13 +1524,11 @@ DPII < Revolution Mod End >
 	<ElementType name="iCityPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="UpkeepInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="iPopulationPercent" minOccurs="0"/>
@@ -1667,13 +1538,11 @@ DPII < Revolution Mod End >
 		<element type="UpkeepInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iCityDefenseModifier" content="textOnly" dt:type="int"/>
-	<!-- JOOYO_ADDON							START	-->
 	<ElementType name="iCityRadius" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxWorldWonders" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxTeamWonders" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxNationalWonders" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxNationalWondersOCC" content="textOnly" dt:type="int"/>
-	<!-- JOOYO_ADDON							END		-->
 	<ElementType name="GameSpeedType" content="textOnly"/>
 	<ElementType name="SpeedThreshold" content="eltOnly">
 		<element type="GameSpeedType"/>
@@ -1684,23 +1553,19 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="CultureLevelInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iCityDefenseModifier" minOccurs="0"/>
-		<!-- JOOYO_ADDON							START	-->
 		<element type="iCityRadius" minOccurs="0"/>
 		<element type="iMaxWorldWonders" minOccurs="0"/>
 		<element type="iMaxTeamWonders" minOccurs="0"/>
 		<element type="iMaxNationalWonders" minOccurs="0"/>
 		<element type="iMaxNationalWondersOCC" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
-		<!-- JOOYO_ADDON							END		-->
 	</ElementType>
 	<ElementType name="CultureLevelInfos" content="eltOnly">
 		<element type="CultureLevelInfo" maxOccurs="*"/>
@@ -1736,18 +1601,14 @@ DPII < Revolution Mod End >
 	<ElementType name="iOrderPriority" content="textOnly" dt:type="int"/>
 	<ElementType name="bVisible" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iGreatPeopleRateChange" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="iHappinessPercent" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="SpecialistInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
@@ -1832,13 +1693,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="DiplomacyInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Responses" minOccurs="1" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="DiplomacyInfos" content="eltOnly">
@@ -1872,13 +1731,11 @@ DPII < Revolution Mod End >
 	<ElementType name="iAdvancedStartPoints" content="textOnly" dt:type="int"/>
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="bNoGoodies" minOccurs="0"/>
@@ -1899,7 +1756,6 @@ DPII < Revolution Mod End >
 		<element type="iCreatePercent" minOccurs="0"/>
 		<element type="iResearchPercent" minOccurs="0"/>
 		<element type="iInitialCityMaintenancePercent" minOccurs="0"/>
-		<!-- BBAI end -->
 		<element type="iBuildPercent" minOccurs="0"/>
 		<element type="iImprovementPercent" minOccurs="0"/>
 		<element type="iGreatPeoplePercent" minOccurs="0"/>
@@ -2030,13 +1886,11 @@ DPII < Revolution Mod End >
 	<ElementType name="bDefault" content="textOnly" dt:type="boolean"/>
 	<ElementType name="GameOptionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="GenericCategory" minOccurs="0"/>
@@ -2050,13 +1904,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="MPOptionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
@@ -2066,13 +1918,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="ForceControlInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
@@ -2082,13 +1932,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="PlayerOptionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
@@ -2098,13 +1946,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="GraphicOptionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
@@ -2138,7 +1984,6 @@ DPII < Revolution Mod End >
 	<ElementType name="iPlayerAnarchyCounter" content="textOnly" dt:type="int"/>
 	<ElementType name="iCounterespionageNumTurns" content="textOnly" dt:type="int"/>
 	<ElementType name="iCounterespionageMod" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="bNuke" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRevolt" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bDisablePower" content="textOnly" dt:type="boolean"/>
@@ -2146,16 +1991,13 @@ DPII < Revolution Mod End >
 	<ElementType name="iSabatogeResearchCostFactor" content="textOnly" dt:type="int"/>
 	<ElementType name="iRemoveReligionsCostFactor" content="textOnly" dt:type="int"/>
 	<ElementType name="iRemoveCorporationsCostFactor" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="EspionageMissionInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
 		<element type="bIsPassive" minOccurs="0"/>
@@ -2188,7 +2030,6 @@ DPII < Revolution Mod End >
 		<element type="iPlayerAnarchyCounter" minOccurs="0"/>
 		<element type="iCounterespionageNumTurns" minOccurs="0"/>
 		<element type="iCounterespionageMod" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="bNuke" minOccurs="0"/>
 		<element type="bRevolt" minOccurs="0"/>
@@ -2197,7 +2038,6 @@ DPII < Revolution Mod End >
 		<element type="iSabatogeResearchCostFactor" minOccurs="0"/>
 		<element type="iRemoveReligionsCostFactor" minOccurs="0"/>
 		<element type="iRemoveCorporationsCostFactor" minOccurs="0"/>
-		<!--Afforess-->
 	</ElementType>
 	<ElementType name="EspionageMissionInfos" content="eltOnly">
 		<element type="EspionageMissionInfo" maxOccurs="*"/>
@@ -2218,13 +2058,11 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="VoteSourceInfo" content="eltOnly">
 		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="PopupText" minOccurs="0"/>
 		<element type="SecretaryGeneralText" minOccurs="0"/>

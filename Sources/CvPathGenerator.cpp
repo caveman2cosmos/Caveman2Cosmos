@@ -692,16 +692,9 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
 {
 	iGroupMembershipChecksum = 0;
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 
-	pUnitNode = pGroup->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_(const CvUnit* pLoopUnit, pGroup->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pGroup->nextUnitNode(pUnitNode);
-
 		CheckSum(iGroupMembershipChecksum, pLoopUnit->getID());
 	}
 
@@ -1861,7 +1854,7 @@ void CvPathGenerator::SelfTest()
 
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
-	UnitTypes eLandUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_WORKER");
+	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
 
 	EnableMaxPerformance(true);
 

@@ -26,7 +26,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -94,7 +94,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -142,7 +142,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -186,7 +186,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -258,7 +258,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -318,7 +318,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -386,7 +386,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -454,7 +454,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -522,7 +522,7 @@
 			</Rands>
 			<iPlayer>0</iPlayer>
 			<iTilesPer>32</iTilesPer>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>

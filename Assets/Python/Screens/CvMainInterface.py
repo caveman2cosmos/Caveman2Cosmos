@@ -86,7 +86,6 @@ class CvMainInterface:
 		self.szPlotHelp = ""
 
 		self.iField_View_Prev = -1
-		self.iBattleTimer = 0
 		self.iWaitingCounter = 0
 		self.bShowTimeTextAlt = False
 		self.iTimeTextCounter = 0
@@ -1175,12 +1174,6 @@ class CvMainInterface:
 
 	# Will update the screen (every 250 ms)
 	def updateScreen(self):
-		# Battle Effects
-		self.iBattleTimer += 1
-		if self.iBattleTimer > 22:
-			GAME.drawBattleEffects()
-			self.iBattleTimer = 0
-
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 		IFT = self.iInterfaceType
 
@@ -4550,11 +4543,9 @@ class CvMainInterface:
 										szTxt = str(CyPlayer.getNumCities())
 									else:
 										iCount = 0
-										CyCity, n = CyPlayer.firstCity(False)
-										while CyCity:
+										for CyCity in CyPlayer.cities():
 											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
-											CyCity, n = CyPlayer.nextCity(n, False)
 										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):
 											iCount += 1
 										szTxt = u"<color=0,255,255>%d" %iCount
