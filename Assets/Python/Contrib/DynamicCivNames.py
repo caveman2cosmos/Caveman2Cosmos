@@ -375,10 +375,10 @@ class DynamicCivNames:
 
     eGovCivic = pPlayer.getCivics(gc.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
     ePowerCivic = pPlayer.getCivics(gc.getInfoTypeForString("CIVICOPTION_POWER"))
-    bNoRealElections = (gc.getInfoTypeForString("CIVIC_HEREDITARY_RULE") == eGovCivic or gc.getInfoTypeForString("CIVIC_HEREDITARY_RULE") == eGovCivic or gc.getInfoTypeForString("CIVIC_DESPOTISM") == eGovCivic or gc.getInfoTypeForString("CIVIC_FASCIST") == eGovCivic)
+    bNoRealElections = (gc.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or gc.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or gc.getInfoTypeForString("CIVIC_DESPOTISM") == eGovCivic or gc.getInfoTypeForString("CIVIC_TOTALITARIANISM") == eGovCivic)
 
-    bFederal = (gc.getInfoTypeForString("CIVIC_FEDERAL") == eGovCivic and (ePowerCivic == gc.getInfoTypeForString("CIVIC_SENATE") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PARLIAMENT") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PRESIDENT")))
-    bConfederation = (not bFederal and (gc.getInfoTypeForString("CIVIC_FEDERAL") == eGovCivic))
+    bFederal = (gc.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic and (ePowerCivic == gc.getInfoTypeForString("CIVIC_SENATE") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PARLIAMENT") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PRESIDENT")))
+    bConfederation = (not bFederal and (gc.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic))
 
     bPacifist = (pPlayer.getCivics(gc.getInfoTypeForString("CIVICOPTION_MILITARY")) == gc.getInfoTypeForString("CIVIC_PACIFISM"))
 
@@ -453,7 +453,7 @@ class DynamicCivNames:
       return [newName, curShort, curAdj]
     
     if (not pPlayer.isAnarchy or pPlayer.getAnarchyTurns() < 2) and "Provisional" in curDesc:
-      if gc.getInfoTypeForString("CIVIC_HEREDITARY_RULE") == eGovCivic:
+      if gc.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic:
         newName = curAdj + ' ' + localText.getText("TXT_KEY_MOD_DCN_KINGDOM", ())
       elif (gc.getInfoTypeForString("CIVIC_REPUBLIC") == eGovCivic):
         newName = localText.getText("TXT_KEY_MOD_DCN_REPUBLIC", ())%(curAdj)
@@ -461,12 +461,6 @@ class DynamicCivNames:
         newName = curAdj + ' Nation'
       return [newName, curShort, curAdj]
 
-    # AIAndy: New XML based Civ naming  
-    if gc.getDefineBOOL("USE_XML_BASED_CIV_NAMING"):
-      newName = pPlayer.getNewCivName()
-      if len(newName) > 0:
-        return [newName, curShort, curAdj]
-    
     # Main naming conditions
     if RevUtils.isCommunism(iPlayer):
       if RevUtils.isCanDoElections(iPlayer) and not bNoRealElections:
