@@ -5497,18 +5497,15 @@ void CvPromotionInfo::setQualifiedUnitCombatTypes()
 			m_aiQualifiedUnitCombatTypes.push_back(iI);
 		}
 	}
-	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	const PromotionLineTypes ePromotionLine = getPromotionLine();
+	if (ePromotionLine != NO_PROMOTIONLINE)
 	{
-		const PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
-		if (getPromotionLine() == ePromotionLine)
+		for (int iJ = 0; iJ < GC.getPromotionLineInfo(ePromotionLine).getNumUnitCombatPrereqTypes(); iJ++)
 		{
-			for (int iJ = 0; iJ < GC.getPromotionLineInfo(ePromotionLine).getNumUnitCombatPrereqTypes(); iJ++)
+			const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iJ);
+			if (!isQualifiedUnitCombatType(iUnitCombat))
 			{
-				const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iJ);
-				if (!isQualifiedUnitCombatType(iUnitCombat))
-				{
-					m_aiQualifiedUnitCombatTypes.push_back(iUnitCombat);
-				}
+				m_aiQualifiedUnitCombatTypes.push_back(iUnitCombat);
 			}
 		}
 	}
