@@ -69,7 +69,7 @@ public:
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
