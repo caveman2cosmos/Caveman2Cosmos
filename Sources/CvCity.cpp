@@ -15518,33 +15518,37 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 
 		if (eReligion == eReligionX || eReligionReq == eReligionX)
 		{
-			if (isDisabledBuilding(eBuilding) && (player.getStateReligion() == eReligionX || !player.hasBannedNonStateReligions()))
+			const CvReligionInfo& religionInfo = GC.getReligionInfo(eReligionX);
+			if (isDisabledBuilding(eBuilding))
 			{
-				setDisabledBuilding(eBuilding, false);
+				if (player.getStateReligion() == eReligionX || !player.hasBannedNonStateReligions())
+				{
+					setDisabledBuilding(eBuilding, false);
 
-				MEMORY_TRACK_EXEMPT();
-				const CvWString szBuffer =
-				(
-					gDLL->getText
+					MEMORY_TRACK_EXEMPT();
+					const CvWString szBuffer =
 					(
-						"TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS",
-						getNameKey(), GC.getReligionInfo(eReligionX).getDescription(), building.getDescription()
-					)
-				);
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, building.getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+						gDLL->getText
+						(
+							"TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS",
+							getNameKey(), religionInfo.getDescription(), building.getDescription()
+						)
+					);
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, building.getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+				}
 			}
-			if (!isDisabledBuilding(eBuilding))
+			else
 			{
 				if (player.getStateReligion() != eReligionX && player.hasBannedNonStateReligions())
 				{
-					setDisabledBuilding((BuildingTypes)iI, true);
+					setDisabledBuilding(eBuilding, true);
 
 					MEMORY_TRACK_EXEMPT();
 					const CvWString szBuffer =
 					(
 						gDLL->getText(
 							"TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS",
-							getNameKey(), GC.getReligionInfo(eReligionX).getDescription(), building.getDescription()
+							getNameKey(), religionInfo.getDescription(), building.getDescription()
 						)
 					);
 					AddDLLMessage(
@@ -15557,12 +15561,12 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 				{
 					if (player.hasAllReligionsActive() || player.getStateReligion() == eReligionX)
 					{
-						setReligiouslyDisabledBuilding((BuildingTypes)iI, false);
+						setReligiouslyDisabledBuilding(eBuilding, religionInfo, false);
 					}
 				}
 				else if (!player.hasAllReligionsActive() && player.getStateReligion() != eReligionX)
 				{
-					setReligiouslyDisabledBuilding(eBuilding, true);
+					setReligiouslyDisabledBuilding(eBuilding, religionInfo, true);
 				}
 			}
 		}
@@ -21991,8 +21995,6 @@ bool CvCity::isDisabledBuilding(BuildingTypes eIndex) const
 
 void CvCity::setDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
 {
-	//bool bOldValue = isDisabledBuilding(eIndex);
-
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
 	if (isDisabledBuilding(eIndex) != bNewValue)
@@ -22003,7 +22005,6 @@ void CvCity::setDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
 	}
 }
 
-//Team Project (5)
 bool CvCity::isReligiouslyDisabledBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
@@ -22014,42 +22015,28 @@ bool CvCity::isReligiouslyDisabledBuilding(BuildingTypes eIndex) const
 	return m_pabReligiouslyDisabledBuilding[eIndex];
 }
 
-void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
+void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, const CvReligionInfo& religionInfo, bool bNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
-	const bool bOldValue = isReligiouslyDisabledBuilding(eIndex);
-	ReligionTypes eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getReligionType();
-	if (eReligion == NO_RELIGION)
-	{
-		eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getPrereqReligion();
-	}
-
-	FAssert(eReligion != NO_RELIGION);
-
-	if (bOldValue != bNewValue)
+	if (isReligiouslyDisabledBuilding(eIndex) != bNewValue)
 	{
 		m_pabReligiouslyDisabledBuilding[eIndex] = bNewValue;
 
 		processBuilding(eIndex, bNewValue ? -1 : 1, false, false, true);
 
-		if (!bNewValue)
+		if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) &&*/ GET_PLAYER(getOwner()).isHuman())
 		{
-			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) &&*/ GET_PLAYER(getOwner()).isHuman())
+			if (!bNewValue)
 			{
 				MEMORY_TRACK_EXEMPT();
-
-				CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS", getNameKey(), religionInfo.getDescription(), GC.getBuildingInfo(eIndex).getDescription());
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 			}
-		}
-		else
-		{
-			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHuman())
+			else
 			{
 				MEMORY_TRACK_EXEMPT();
-
-				CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), religionInfo.getDescription(), GC.getBuildingInfo(eIndex).getDescription());
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 			}
 		}

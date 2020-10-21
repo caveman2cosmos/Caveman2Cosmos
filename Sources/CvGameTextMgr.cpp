@@ -21378,7 +21378,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	if (pCity != NULL)
 	{
 		ePlayer = pCity->getOwner();
-		bRelDisabled = GET_PLAYER(ePlayer).isBuildingtoDisplayReligiouslyDisabled(eBuilding);
+		bRelDisabled = GET_PLAYER(ePlayer).isBuildingReligiouslyDisabled(kBuilding);
 	}
 	else
 	{

@@ -11858,14 +11858,8 @@ void CvPlayer::changeStateReligionCount(int iChange, bool bLimited)
 {
 	if (iChange != 0)
 	{
-		// religion visibility now part of espionage
-		//GC.getGame().updateCitySight(false, true);
-
 		m_iStateReligionCount += iChange;
 		FAssert(getStateReligionCount() >= 0);
-
-		// religion visibility now part of espionage
-		//GC.getGame().updateCitySight(true, true);
 
 		if (!bLimited)
 		{
@@ -32033,7 +32027,6 @@ void CvPlayer::changeExtraGoodyCount(int iChange)
 	m_iExtraGoodyCount += iChange;
 }
 
-	//Team Project (5)
 bool CvPlayer::hasBannedNonStateReligions() const
 {
 	return (m_iAllReligionsActiveCount < 0);
@@ -32047,11 +32040,6 @@ bool CvPlayer::hasAllReligionsActive() const
 int CvPlayer::getAllReligionsActiveCount() const
 {
 	return m_iAllReligionsActiveCount;
-}
-
-void CvPlayer::setAllReligionsActiveCount(int iValue)
-{
-	m_iAllReligionsActiveCount = iValue;
 }
 
 void CvPlayer::changeAllReligionsActiveCount(int iChange)
@@ -32159,41 +32147,32 @@ void CvPlayer::updateTechHappinessandHealth()
 {
 	PROFILE_FUNC()
 
-	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
+	algo::for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
 }
 
 void CvPlayer::checkReligiousDisablingAllBuildings()
 {
 	PROFILE_FUNC()
 
-	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
+	algo::for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }
 
-bool CvPlayer::isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const
+bool CvPlayer::isBuildingReligiouslyDisabled(const CvBuildingInfo& building) const
 {
-	if (GC.getBuildingInfo(eBuilding).getReligionType() == NO_RELIGION && GC.getBuildingInfo(eBuilding).getPrereqReligion() == NO_RELIGION)
-	{
+	if (hasBannedNonStateReligions() || hasAllReligionsActive())
 		return false;
-	}
 
-	if (hasBannedNonStateReligions())
-	{
-		return false;
-	}
+	const ReligionTypes buildingReligion = (ReligionTypes)building.getReligionType();
+	const ReligionTypes buildingPrereqReligion = (ReligionTypes)building.getPrereqReligion();
 
-	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	if (buildingReligion != NO_RELIGION || buildingPrereqReligion != NO_RELIGION)
 	{
-		const ReligionTypes eReligion = ((ReligionTypes)iI);
-		if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION || GC.getBuildingInfo(eBuilding).getPrereqReligion() != NO_RELIGION)
-		{
-			if (GC.getBuildingInfo(eBuilding).getReligionType() == eReligion || GC.getBuildingInfo(eBuilding).getPrereqReligion() == eReligion)
-			{
-				if (!hasBannedNonStateReligions() && !hasAllReligionsActive() && getStateReligion() != eReligion)
-				{
-					return true;
-				}
-			}
-		}
+		const ReligionTypes stateReligion = getStateReligion();
+		if (stateReligion == NO_RELIGION)
+			return true;
+
+		if (buildingReligion != stateReligion && buildingPrereqReligion != stateReligion)
+			return true;
 	}
 	return false;
 }

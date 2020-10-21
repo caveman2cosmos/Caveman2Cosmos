@@ -1507,8 +1507,7 @@ public:
 	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isDisabledBuilding(BuildingTypes eIndex) const;
 
-//Team Project (5)
-	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
+	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, const CvReligionInfo& religionInfo, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
 
 	bool isZoneOfControl() const;

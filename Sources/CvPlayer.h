@@ -2248,7 +2248,6 @@ public:
 	bool hasBannedNonStateReligions() const;
 	bool hasAllReligionsActive() const;
 	int getAllReligionsActiveCount() const;
-	void setAllReligionsActiveCount(int iValue);
 	void changeAllReligionsActiveCount(int iChange);
 
 	int getExtraNationalCaptureProbabilityModifier() const;
@@ -2269,7 +2268,7 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
+	bool isBuildingReligiouslyDisabled(const CvBuildingInfo& building) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
