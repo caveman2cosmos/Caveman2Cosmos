@@ -29738,20 +29738,23 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iValue += 15;
 		}
 
-		for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+		if (pUnit == NULL)
 		{
-			if (pUnit == NULL)
+			foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 			{
-				if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+				if (!kUnit.hasUnitCombat(subCombat))
 				{
-					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+					iValue += AI_unitCombatValue(subCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
-			else
+		}
+		else
+		{
+			foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 			{
-				if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+				if (!pUnit->isHasUnitCombat(subCombat))
 				{
-					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+					iValue += AI_unitCombatValue(subCombat, eUnit, pUnit, eUnitAI);
 				}
 			}
 		}
@@ -34971,20 +34974,23 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += 250;
 	}
 
-	for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+	if (pUnit == NULL)
 	{
-		if (pUnit == NULL)
+		foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 		{
-			if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+			if (!kUnit.hasUnitCombat(subCombat))
 			{
-				iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+				iValue += AI_unitCombatValue(subCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
-		else
+	}
+	else
+	{
+		foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 		{
-			if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+			if (!pUnit->isHasUnitCombat(subCombat))
 			{
-				iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+				iValue += AI_unitCombatValue(subCombat, eUnit, pUnit, eUnitAI);
 			}
 		}
 	}

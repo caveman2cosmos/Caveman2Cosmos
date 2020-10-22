@@ -21752,15 +21752,12 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	if (kPromotion.getNumSubCombatChangeTypes() > 0)
+	foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 	{
-		for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+		//If we have the unitcombat the promotion will give us already
+		if (isHasUnitCombat(subCombat))
 		{
-			//If we have the unitcombat the promotion will give us already
-			if (isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -23627,9 +23624,9 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTrapTriggerUnitCombatType(((UnitCombatTypes)iI), (kPromotion.getTrapTriggerUnitCombatType(iI) * iChange));
 	}
 
-	for (iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
+	foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
 	{
-		setHasUnitCombat(((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)), bAdding, true);
+		setHasUnitCombat(subCombat, bAdding, true);
 	}
 
 	for (iI = 0; iI < kPromotion.getNumRemovesUnitCombatTypes(); iI++)
@@ -25424,11 +25421,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 		//Step 4: Check and apply any additional unitcombats from promos
 		for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			if (isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).getNumSubCombatChangeTypes() > 0)
+			if (isHasPromotion((PromotionTypes)iI))
 			{
-				for (iJ = 0; iJ < GC.getPromotionInfo((PromotionTypes)iI).getNumSubCombatChangeTypes(); iJ++)
+				foreach_(UnitCombatTypes subCombat, GC.getPromotionInfo((PromotionTypes)iI).getSubCombatChanges())
 				{
-					UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)GC.getPromotionInfo((PromotionTypes)iI).getSubCombatChangeType(iJ));
+					UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(subCombat);
 
 					info->m_bHasUnitCombat = true;
 				}

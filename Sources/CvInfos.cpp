@@ -4230,27 +4230,6 @@ bool CvPromotionInfo::isQuick() const
 	return m_bQuick;
 }
 
-// bool vectors without delayed resolution
-int CvPromotionInfo::getSubCombatChangeType(int i) const
-{
-	return m_aiSubCombatChangeTypes[i];
-}
-
-int CvPromotionInfo::getNumSubCombatChangeTypes() const
-{
-	return (int)m_aiSubCombatChangeTypes.size();
-}
-
-bool CvPromotionInfo::isSubCombatChangeType(int i) const
-{
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
-	if (find(m_aiSubCombatChangeTypes.begin(), m_aiSubCombatChangeTypes.end(), i) == m_aiSubCombatChangeTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvPromotionInfo::getRemovesUnitCombatType(int i) const
 {
 	return m_aiRemovesUnitCombatTypes[i];
@@ -5829,11 +5808,8 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bRemoveAfterSet, L"bRemoveAfterSet");
 	pXML->GetOptionalChildXmlValByName(&m_bQuick, L"bQuick");
 
-	//Arrays
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
-	// bool vector without delayed resolution
-	CvString* pszTemp = NULL;
-	pXML->SetOptionalIntVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
+	pXML->SetOptionalVector<UnitCombatTypes>(&m_aeSubCombatChangeTypes, L"SubCombatChangeTypes");
 	pXML->SetOptionalIntVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
 	pXML->SetOptionalIntVector(&m_aiOnGameOptions, L"OnGameOptions");
 	pXML->SetOptionalIntVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
@@ -6680,14 +6656,10 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (isPlotPrereqsKeepAfter() == bDefault) m_bPlotPrereqsKeepAfter = pClassInfo->isPlotPrereqsKeepAfter();
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
-	// bool vectors without delayed resolution
-	if (getNumSubCombatChangeTypes() == 0)
+
+	if (m_aeSubCombatChangeTypes.size() == 0)
 	{
-		m_aiSubCombatChangeTypes.clear();
-		for ( int i = 0; i < pClassInfo->getNumSubCombatChangeTypes(); i++)
-		{
-			m_aiSubCombatChangeTypes.push_back(pClassInfo->getSubCombatChangeType(i));
-		}
+		algo::vector::CopyVector<UnitCombatTypes>(m_aeSubCombatChangeTypes, pClassInfo->m_aeSubCombatChangeTypes);
 	}
 
 	if (getNumRemovesUnitCombatTypes() == 0)
@@ -7504,7 +7476,7 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	//Arrays
 	//CheckSum(iSum, m_piAIWeightbyUnitCombatTypes, GC.getNumUnitCombatInfos());
 	// bool vectors without delayed resolution
-	CheckSumC(iSum, m_aiSubCombatChangeTypes);
+	CheckSumC(iSum, m_aeSubCombatChangeTypes);
 	CheckSumC(iSum, m_aiRemovesUnitCombatTypes);
 	CheckSumC(iSum, m_aiOnGameOptions);
 	CheckSumC(iSum, m_aiNotOnGameOptions);

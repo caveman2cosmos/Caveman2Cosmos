@@ -921,10 +921,7 @@ public:
 	//int getAIWeightbyUnitCombatType(int i) const;
 	//bool isAnyAIWeightbyUnitCombatType() const;
 
-	// bool vector without delayed resolution
-	int getSubCombatChangeType(int i) const;
-	int getNumSubCombatChangeTypes() const;
-	bool isSubCombatChangeType(int i) const;
+	const std::vector<UnitCombatTypes> getSubCombatChanges() const { return m_aeSubCombatChangeTypes; }
 
 	int getRemovesUnitCombatType(int i) const;
 	int getNumRemovesUnitCombatTypes() const;
@@ -1442,10 +1439,9 @@ protected:
 	bool m_bRemoveAfterSet;
 	bool m_bQuick;
 	//bool m_bAnyAIWeightbyUnitCombat;
-	//Arrays
+
 	//int* m_piAIWeightbyUnitCombatTypes;
-	// bool vectors without delayed resolution
-	std::vector<int> m_aiSubCombatChangeTypes;
+	std::vector<UnitCombatTypes> m_aeSubCombatChangeTypes;
 	std::vector<int> m_aiRemovesUnitCombatTypes;
 	std::vector<int> m_aiOnGameOptions;
 	std::vector<int> m_aiNotOnGameOptions;

@@ -14808,23 +14808,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 	}
 
-	std::vector<UnitCombatTypes> aUnitCombats;
-
-	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
-	{
-		for (iI = 0; iI < GC.getPromotionInfo(ePromotion).getNumSubCombatChangeTypes(); ++iI)
-		{
-			aUnitCombats.push_back((UnitCombatTypes)GC.getPromotionInfo(ePromotion).getSubCombatChangeType(iI));
-		}
-	}
-
-	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
+	foreach_(UnitCombatTypes subCombat, GC.getPromotionInfo(ePromotion).getSubCombatChanges())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SUB_COMBAT_TEXT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SUB_COMBAT_TEXT", GC.getUnitCombatInfo(subCombat).getDescription()));
 	}
 
-	aUnitCombats.clear();
+	std::vector<UnitCombatTypes> aUnitCombats;
 
 	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 	{

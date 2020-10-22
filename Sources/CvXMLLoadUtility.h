@@ -670,15 +670,24 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
+		foreach_(T it, source)
 		{
-			if ((*it) > -1 && find(target.begin(), target.end(), *it) == target.end())
+			if (it > -1 && find(target.begin(), target.end(), it) == target.end())
 			{
-				target.push_back(*it);
+				target.push_back(it);
 			}
 		}
 
 		std::sort(target.begin(), target.end());
+	}
+
+	template<class T>
+	static void CopyVector(std::vector<T>& target, const std::vector<T>& source)
+	{
+		foreach_(T it, source)
+		{
+			target.push_back(it);
+		}
 	}
 
 	template<class T>
