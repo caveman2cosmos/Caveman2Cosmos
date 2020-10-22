@@ -337,11 +337,9 @@ class PediaBuilding:
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
-		for i in xrange(CvTheBuildingInfo.getNumPrereqOrBonuses()):
-			iCheck = CvTheBuildingInfo.getPrereqOrBonuses(i)
-			if iCheck > -1:
-				aList1.append(iCheck)
-				nOr += 1
+		for iCheck in CvTheBuildingInfo.getPrereqOrBonuses():
+			aList1.append(iCheck)
+			nOr += 1
 		if bPlus:
 			if iType != -1 or nOr:
 				screen.attachLabel(panelName, "", szAnd)

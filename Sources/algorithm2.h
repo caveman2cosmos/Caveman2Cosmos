@@ -3,6 +3,7 @@
 #ifndef algorithm2_h__
 #define algorithm2_h__
 
+#include "CvGameCoreDLL.h"
 #include "flatten_range.h"
 
 // We wrap some existing range algorithms here to make them easier to use without auto keyword.
@@ -449,6 +450,28 @@ namespace algo {
 		size_t size = 0;
 		for (; _First != _Last; ++_First, ++size) {}
 		return size;
+	}
+}
+
+//#include <boost/python/list.hpp>
+//using namespace boost::python;
+
+namespace ranges {
+
+	template <typename ValueType, class Container>
+	bool find(ValueType value, const Container container) {
+		foreach_(ValueType element, container)
+			if (element == value)
+				return true;
+		return false;
+	}
+
+	template <class Container>
+	const python::list makeList(const Container source) {
+		python::list list = python::list();
+		for (Container::const_iterator it = source.begin(); it != source.end(); it++)
+			list.append((int)*it);
+		return list;
 	}
 }
 

@@ -4,6 +4,8 @@
 #define CV_BUILDING_INFO_H
 
 #include "CvInfos.h"
+#include "algorithm2.h"
+//using namespace ranges;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -306,7 +308,7 @@ public:
 	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 
 	int getUnitProductionModifier(int i) const;
-	int getPrereqOrVicinityBonuses(int i) const;
+	const std::vector<BonusTypes> getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
 	int getPrereqOrRawVicinityBonuses(int i) const;
 
 	bool isPrereqOrBuilding(int i) const;
@@ -590,7 +592,7 @@ protected:
 	bool m_bZoneOfControl;
 	bool m_bProtectedCulture;
 
-	int* m_piPrereqOrVicinityBonuses;
+	std::vector<BonusTypes> m_aePrereqOrVicinityBonuses;
 	int* m_piPrereqOrRawVicinityBonuses;
 	int* m_piUnitProductionModifier;
 	bool* m_pbPrereqOrCivics;
@@ -632,9 +634,11 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+
 	//Alberts2 PrereqBonuses
-	int getNumPrereqOrBonuses() const; // Exposed to Python
-	BonusTypes getPrereqOrBonuses(int i) const; // Exposed to Python
+	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
+	bool isPrereqOrBonus(int iBonus) const { return ranges::find((BonusTypes)iBonus, m_aePrereqOrBonuses); }
 
 protected:
 	int m_iVictoryPrereq;
@@ -895,7 +899,7 @@ protected:
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 	//Alberts2 PrereqBonuses
-	std::vector<int> m_aePrereqOrBonuses;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
 public:
 	bool m_bAnyLocalSpecialistYieldChanges;
 	bool m_bAnyLocalSpecialistCommerceChanges;

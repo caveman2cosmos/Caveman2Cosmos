@@ -254,6 +254,8 @@ void CyInfoPythonInterface1()
 		.def("getPrereqOrBuilding", &CvUnitInfo::getPrereqOrBuilding, "int (int)")
 		.def("getPrereqAndTech", &CvUnitInfo::getPrereqAndTech, "int ()")
 		.def("getPrereqAndBonus", &CvUnitInfo::getPrereqAndBonus, "int ()")
+		.def("getPrereqOrBonuses", &CvUnitInfo::cyGetPrereqOrBonuses)
+		.def("isPrereqOrBonus", &CvUnitInfo::isPrereqOrBonus)
 		.def("getNumUnitNames", &CvUnitInfo::getNumUnitNames, "int ()")
 		.def("getCommandType", &CvUnitInfo::getCommandType, "int ()")
 
@@ -269,9 +271,7 @@ void CyInfoPythonInterface1()
 		.def("isNukeImmune", &CvUnitInfo::isNukeImmune, "bool ()")
 		.def("isHiddenNationality", &CvUnitInfo::isHiddenNationality, "bool ()")
 
-		// Arrays
 		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
-		.def("getPrereqOrBonuses", &CvUnitInfo::getPrereqOrBonuses, "int (int i)")
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 
@@ -279,7 +279,6 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqAndBuilding", &CvUnitInfo::getPrereqAndBuilding, "int (int i)")
 		.def("getNumPrereqAndBuildings", &CvUnitInfo::getNumPrereqAndBuildings, "int ()")
-
 
 		.def("getUnitUpgrade", &CvUnitInfo::getUnitUpgrade, "int (int i)")
 		.def("getNumUnitUpgrades", &CvUnitInfo::getNumUnitUpgrades, "int ()")
@@ -486,8 +485,8 @@ void CyInfoPythonInterface1()
 		.def("getDomainFreeExperience", &CvBuildingInfo::getDomainFreeExperience, "int (int i)")
 		.def("getDomainProductionModifier", &CvBuildingInfo::getDomainProductionModifier, "int (int i)")
 		.def("getPrereqAndTechs", &CvBuildingInfo::getPrereqAndTechs, "int (int i)")
-		.def("getPrereqOrBonuses", &CvBuildingInfo::getPrereqOrBonuses, "int (int i)")
-		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
+		.def("getPrereqOrBonuses", &CvBuildingInfo::cyGetPrereqOrBonuses)
+		.def("isPrereqOrBonus", &CvBuildingInfo::isPrereqOrBonus)
 		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
@@ -505,8 +504,7 @@ void CyInfoPythonInterface1()
 		
 		.def("isPrereqOrImprovement", &CvBuildingInfo::isPrereqOrImprovement, "bool (int i)")
 		.def("isPrereqOrFeature", &CvBuildingInfo::isPrereqOrFeature, "bool (int i)")
-		
-		
+
 		.def("isReplaceBuilding", &CvBuildingInfo::isReplaceBuilding, "bool (int i)")
 		
 		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
@@ -521,13 +519,6 @@ void CyInfoPythonInterface1()
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")
 
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
-
-		//TB Combat Mods (Buildings) begin
-		//integers
-		//boolean vectors without delayed resolution
-		//.def("getFreePromoType", &CvBuildingInfo::getFreePromoType, "int (int i)")
-		//integer vectors with pairing method without delayed resolution
-		//TB Combat Mods (Buildings) end
 		;
 
 	python::class_<CvSpecialBuildingInfo, python::bases<CvInfoBase> >("CvSpecialBuildingInfo")

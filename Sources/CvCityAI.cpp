@@ -5732,22 +5732,17 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								bool bFreeBonusIsORBonus = false;
 								int	iFreeExtraBonusCount = 0;
 
-								for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
+								foreach_(BonusTypes bonus, kUnit.getPrereqOrBonuses())
 								{
-									BonusTypes eXtraFreeBonus = (BonusTypes)kUnit.getPrereqOrBonuses(iK);
+									iFreeExtraBonusCount++;
 
-									if (eXtraFreeBonus != NO_BONUS)
+									if (hasBonus(bonus))
 									{
-										iFreeExtraBonusCount++;
-
-										if (hasBonus(eXtraFreeBonus))
-										{
-											bHasORBonusAlready = true;
-										}
-										else if (isFreeBonusOfBuilding(kBuilding, eXtraFreeBonus))
-										{
-											bFreeBonusIsORBonus = true;
-										}
+										bHasORBonusAlready = true;
+									}
+									else if (isFreeBonusOfBuilding(kBuilding, bonus))
+									{
+										bFreeBonusIsORBonus = true;
 									}
 								}
 
@@ -16411,22 +16406,17 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										bool	bFreeBonusIsORBonus = false;
 										int		iFreeExtraBonusCount = 0;
 
-										for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
+										foreach_(BonusTypes bonus, kUnit.getPrereqOrBonuses())
 										{
-											BonusTypes eXtraFreeBonus = (BonusTypes)kUnit.getPrereqOrBonuses(iK);
+											iFreeExtraBonusCount++;
 
-											if ( eXtraFreeBonus != NO_BONUS )
+											if (hasBonus(bonus))
 											{
-												iFreeExtraBonusCount++;
-
-												if ( hasBonus(eXtraFreeBonus) )
-												{
-													bHasORBonusAlready = true;
-												}
-												else if ( isFreeBonusOfBuilding(kBuilding, eXtraFreeBonus) )
-												{
-													bFreeBonusIsORBonus = true;
-												}
+												bHasORBonusAlready = true;
+											}
+											else if (isFreeBonusOfBuilding(kBuilding, bonus))
+											{
+												bFreeBonusIsORBonus = true;
 											}
 										}
 

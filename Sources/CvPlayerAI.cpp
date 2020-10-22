@@ -10141,18 +10141,15 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						int iBonusORVal	= 0;
 						int	iHasOther = 0;
 
-						for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+						foreach_(BonusTypes orBonusReq, kLoopUnit.getPrereqOrBonuses())
 						{
-							if ( kLoopUnit.getPrereqOrBonuses(iJ) != NO_BONUS )
+							if (orBonusReq == eBonus)
 							{
-								if (kLoopUnit.getPrereqOrBonuses(iJ) == eBonus)
-								{
-									iBonusORVal = 40;
-								}
-								else if ( getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ)) > 0 )
-								{
-									iHasOther += getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ));
-								}
+								iBonusORVal = 40;
+							}
+							else if (getNumAvailableBonuses(orBonusReq) > 0)
+							{
+								iHasOther += getNumAvailableBonuses(orBonusReq);
 							}
 						}
 
@@ -10323,17 +10320,17 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 							bool bGetsOR = false;
 							bool bRequiresOR = false;
 
-							for (iJ = 0; iJ < kLoopBuilding.getNumPrereqOrBonuses(); iJ++)
+							foreach_(BonusTypes bonus, kLoopBuilding.getPrereqOrBonuses())
 							{
-								if (kLoopBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
+								if (bonus != NO_BONUS)
 								{
 									bRequiresOR = true;
 
-									if ( kLoopBuilding.getPrereqOrBonuses(iJ) == eBonus )
+									if (bonus == eBonus)
 									{
 										bGetsOR = true;
 									}
-									else if ( hasBonus((BonusTypes)kLoopBuilding.getPrereqOrBonuses(iJ)) )
+									else if (hasBonus(bonus))
 									{
 										bHasOR = true;
 										break;
@@ -10739,7 +10736,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	AttitudeTypes eAttitude;
 	bool bStrategic;
-	int iI, iJ;
+	int iI;
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
@@ -10806,17 +10803,10 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /************************************************************************************************/
 /* Fuyu						  END															*/
 /************************************************************************************************/
-		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus)
+		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
+		|| ranges::find(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
-		}
-
-		for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-		{
-			if (GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(iJ) == eBonus)
-			{
-				bStrategic = true;
-			}
 		}
 	}
 
@@ -10843,17 +10833,10 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /************************************************************************************************/
 /* Fuyu						  END															*/
 /************************************************************************************************/
-		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus)
+		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
+		|| ranges::find(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
-		}
-
-		for (iJ = 0; iJ < GC.getBuildingInfo((BuildingTypes)iI).getNumPrereqOrBonuses(); iJ++)
-		{
-			if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqOrBonuses(iJ) == eBonus)
-			{
-				bStrategic = true;
-			}
 		}
 	}
 
@@ -29593,13 +29576,13 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 			int iHasOrBonusCount = 0;
 			bool bFound = false;
 
-			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
+			foreach_(BonusTypes orBonusReq, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
 			{
-				if (GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK) == eBonus)
+				if (orBonusReq == eBonus)
 				{
 					bFound = true;
 				}
-				else if (hasBonus((BonusTypes)GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK)))
+				else if (hasBonus(orBonusReq))
 				{
 					iHasOrBonusCount++;
 				}

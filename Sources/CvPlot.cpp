@@ -12760,25 +12760,22 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 
 		bool bValid = true;
-		for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
+		foreach_(BonusTypes orBonusReq, kUnit.getPrereqOrBonuses())
 		{
-			if (kUnit.getPrereqOrBonuses(iI) != NO_BONUS)
-			{
-				bValid = false;
+			bValid = false;
 
-				if (NULL == pCity)
-				{
-					if (isPlotGroupConnectedBonus(getOwner(), (BonusTypes)kUnit.getPrereqOrBonuses(iI)))
-					{
-						bValid = true;
-						break;
-					}
-				}
-				else if (pCity->hasBonus((BonusTypes)kUnit.getPrereqOrBonuses(iI)))
+			if (NULL == pCity)
+			{
+				if (isPlotGroupConnectedBonus(getOwner(), orBonusReq))
 				{
 					bValid = true;
 					break;
 				}
+			}
+			else if (pCity->hasBonus(orBonusReq))
+			{
+				bValid = true;
+				break;
 			}
 		}
 		if (!bValid)

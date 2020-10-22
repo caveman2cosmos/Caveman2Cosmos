@@ -244,9 +244,8 @@ class CityDemolish:
 					iBonus = CvUnitInfo.getPrereqAndBonus()
 					if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
 						continue
-					for i in range(NUM_UNIT_PREREQ_OR_BONUSES):
-						iBonus = CvUnitInfo.getPrereqOrBonuses(i)
-						if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
+					for iBonus in CvUnitInfo.getPrereqOrBonuses():
+						if not CyCity.getNumBonuses(iBonus):
 							bContinue = True
 							break
 					if bContinue: continue

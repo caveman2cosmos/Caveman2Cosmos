@@ -109,8 +109,8 @@ class PediaBonus:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
 					aNeededByBuildings.append(iBuilding)
 				else:
-					for i in range(CvBuildingInfo.getNumPrereqOrBonuses()):
-						if CvBuildingInfo.getPrereqOrBonuses(i) == iTheBonus:
+					for orBonus in CvBuildingInfo.getPrereqOrBonuses():
+						if orBonus == iTheBonus:
 							aNeededByBuildings.append(iBuilding)
 							break
 		# Loop through all units and find those connected to the bonus.
@@ -123,9 +123,8 @@ class PediaBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
 			else:
-				for i in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-					if CvUnitInfo.getPrereqOrBonuses(i) == iTheBonus:
-						aNeededByUnits.append(iUnit)
+				if CvUnitInfo.isPrereqOrBonus(iTheBonus):
+					aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
 				if iBonusProductionModifier:

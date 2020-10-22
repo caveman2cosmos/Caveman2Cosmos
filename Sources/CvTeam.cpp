@@ -2198,18 +2198,15 @@ bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorl
 		}
 	}
 	bool bMet = true;
-	for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
+	foreach_(BonusTypes orBonusReq, unit.getPrereqOrBonuses())
 	{
-		if (NO_BONUS != unit.getPrereqOrBonuses(iI))
+		if (isHasTech((TechTypes)GC.getBonusInfo(orBonusReq).getTechCityTrade())
+		&& (!bNoWorldBonuses || GC.getBonusInfo(orBonusReq).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
 		{
-			if (isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade())
-			&& (!bNoWorldBonuses || GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
-			{
-				bMet = true;
-				break;
-			}
-			bMet = false;
+			bMet = true;
+			break;
 		}
+		bMet = false;
 	}
 	return bMet;
 }

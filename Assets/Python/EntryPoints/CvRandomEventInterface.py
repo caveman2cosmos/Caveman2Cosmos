@@ -3183,10 +3183,9 @@ def getGreedUnit(CyPlayer, CyPlot):
 			if CvUnitInfo.getPrereqAndBonus() == iBonus:
 				iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
 			else:
-				for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-					if CvUnitInfo.getPrereqOrBonuses(j) == iBonus:
-						iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
-						break
+				if CvUnitInfo.isPrereqOrBonus(iBonus):
+					iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
+					break
 			if iValue > iBestValue:
 				iBestValue = iValue
 				iBestUnit = iUnit

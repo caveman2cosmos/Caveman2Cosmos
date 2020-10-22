@@ -1893,7 +1893,7 @@ public:
 	bool isForceUpgrade() const;
 	bool isGreatGeneral() const;
 	bool isSlave() const;
-	int getPrereqOrVicinityBonuses(int i) const;
+	const std::vector<BonusTypes> getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
 	bool getPassableRouteNeeded(int i) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
@@ -2245,7 +2245,7 @@ protected:
 	bool m_bUnlimitedException;
 	int m_iInstanceCostModifier;
 	bool* m_pbPassableRouteNeeded;
-	int* m_piPrereqOrVicinityBonuses;
+	std::vector<BonusTypes> m_aePrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
 	bool m_bMilitaryTrade;
 	bool m_bForceUpgrade;
@@ -2290,7 +2290,9 @@ public:
 
 	// Arrays
 	int getPrereqAndTechs(int i) const; // Exposed to Python
-	int getPrereqOrBonuses(int i) const; // Exposed to Python
+	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
+	bool isPrereqOrBonus(int iBonus) const { return ranges::find((BonusTypes)iBonus, m_aePrereqOrBonuses); }
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python
@@ -2546,7 +2548,7 @@ protected:
 	// Arrays
 
 	int* m_piPrereqAndTechs;
-	int* m_piPrereqOrBonuses;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
 	int* m_piFlavorValue;
 	int* m_piTerrainAttackModifier;
 	int* m_piTerrainDefenseModifier;

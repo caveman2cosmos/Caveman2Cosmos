@@ -6657,10 +6657,7 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
 
-	if (m_aeSubCombatChangeTypes.size() == 0)
-	{
-		algo::vector::CopyVector<UnitCombatTypes>(m_aeSubCombatChangeTypes, pClassInfo->m_aeSubCombatChangeTypes);
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeSubCombatChangeTypes, pClassInfo->getSubCombatChanges());
 
 	if (getNumRemovesUnitCombatTypes() == 0)
 	{
