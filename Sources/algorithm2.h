@@ -453,18 +453,17 @@ namespace algo {
 	}
 }
 
-//#include <boost/python/list.hpp>
-//using namespace boost::python;
-
 namespace ranges {
 
-	template <typename ValueType, class Container>
+	template <class Container, typename ValueType>
 	bool find(ValueType value, const Container container) {
 		foreach_(ValueType element, container)
 			if (element == value)
 				return true;
 		return false;
 	}
+
+//#include <boost/python/list.hpp>
 
 	template <class Container>
 	const python::list makeList(const Container source) {

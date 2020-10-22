@@ -123,8 +123,9 @@ class PediaBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
 			else:
-				if CvUnitInfo.isPrereqOrBonus(iTheBonus):
-					aNeededByUnits.append(iUnit)
+				for orBonusReq in CvUnitInfo.getPrereqOrBonuses():
+					if orBonusReq == iTheBonus:
+						aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
 				if iBonusProductionModifier:

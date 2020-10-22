@@ -31,6 +31,8 @@
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 #pragma warning( disable: 4127 )
 
+//#include <boost/python/list.hpp>
+//using namespace boost::python;
 
 extern bool shouldHaveType;
 
@@ -2288,11 +2290,9 @@ public:
 
 	bool canAcquireExperience() const; // Exposed to Python
 
-	// Arrays
 	int getPrereqAndTechs(int i) const; // Exposed to Python
 	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
-	bool isPrereqOrBonus(int iBonus) const { return ranges::find((BonusTypes)iBonus, m_aePrereqOrBonuses); }
+	const boost::python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python

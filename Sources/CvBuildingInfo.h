@@ -638,7 +638,6 @@ public:
 	//Alberts2 PrereqBonuses
 	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
 	const python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
-	bool isPrereqOrBonus(int iBonus) const { return ranges::find((BonusTypes)iBonus, m_aePrereqOrBonuses); }
 
 protected:
 	int m_iVictoryPrereq;
