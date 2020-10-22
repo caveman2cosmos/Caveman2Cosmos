@@ -267,7 +267,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piTechHealthChanges(NULL)
 ,m_piUnitProductionModifier(NULL)
 ,m_piPrereqOrVicinityBonuses(NULL)
-,m_piPrereqOrRawVicinityBonuses(NULL)
 ,m_piBonusDefenseChanges(NULL)
 ,m_piUnitCombatExtraStrength(NULL)
 ,m_piCommerceAttacks(NULL)
@@ -421,7 +420,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrGameSpeed);
 	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
-	SAFE_DELETE_ARRAY(m_piPrereqOrRawVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
@@ -1159,12 +1157,6 @@ int CvBuildingInfo::getPrereqOrVicinityBonuses(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), i)
 	return m_piPrereqOrVicinityBonuses ? m_piPrereqOrVicinityBonuses[i] : -1;
-}
-
-int CvBuildingInfo::getPrereqOrRawVicinityBonuses(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), i)
-	return m_piPrereqOrRawVicinityBonuses ? m_piPrereqOrRawVicinityBonuses[i] : -1;
 }
 
 int CvBuildingInfo::getBonusDefenseChanges(int i) const
@@ -2402,7 +2394,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
-	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrRawVicinityBonuses);
+	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
@@ -3662,38 +3654,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	}
 
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqRawVicinityBonuses"))
-	{
-		const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-		if (0 < iNumChildren)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrRawVicinityBonuses, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumChildren <= GC.getNUM_BUILDING_PREREQ_OR_BONUSES()),"For loop iterator is greater than array size");
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					m_piPrereqOrRawVicinityBonuses[j] = pXML->GetInfoClass(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrRawVicinityBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piPrereqOrRawVicinityBonuses);
-	}
+	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChanges"))
 	{
@@ -5283,17 +5244,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
-	for ( int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); i++)
-	{
-		if ( getPrereqOrRawVicinityBonuses(i) == NO_BONUS && pClassInfo->getPrereqOrRawVicinityBonuses(i) != NO_BONUS)
-		{
-			if ( NULL == m_piPrereqOrRawVicinityBonuses )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqOrRawVicinityBonuses,GC.getNUM_UNIT_PREREQ_OR_BONUSES(),(int)NO_BONUS);
-			}
-			m_piPrereqOrRawVicinityBonuses[i] = pClassInfo->getPrereqOrRawVicinityBonuses(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrRawVicinityBonuses, pClassInfo->getPrereqOrRawVicinityBonuses());
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
 	{
