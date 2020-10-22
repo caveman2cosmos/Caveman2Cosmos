@@ -3004,17 +3004,14 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			) return false;
 
 			bool bFoundValid = true;
-			for (int i = 0; i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); ++i)
+			foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonus())
 			{
-				if (NO_BONUS != GC.getRouteInfo(eRoute).getPrereqOrBonus(i))
+				if (isAdjacentPlotGroupConnectedBonus(ePlayer, bonus))
 				{
-					if (isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))
-					{
-						bFoundValid = true;
-						break;
-					}
-					else bFoundValid = false;
+					bFoundValid = true;
+					break;
 				}
+				else bFoundValid = false;
 			}
 			if (!bFoundValid)
 			{

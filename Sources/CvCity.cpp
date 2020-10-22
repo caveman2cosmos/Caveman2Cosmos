@@ -3373,16 +3373,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 		bool bHasAnyRawVicinityBonus = false;
 		bool bRequiresAnyRawVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iI++)
+		foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrRawVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyRawVicinityBonus = true;
+			if (hasRawVicinityBonus(bonus))
 			{
-				bRequiresAnyRawVicinityBonus = true;
-				if (hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iI)))
-				{
-					bHasAnyRawVicinityBonus = true;
-					break;
-				}
+				bHasAnyRawVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyRawVicinityBonus && !bHasAnyRawVicinityBonus)
@@ -21206,16 +21203,13 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					bool bHasORRawVicinityBonus = false;
 					bool bNeedsORRawVicinityBonus = false;
 
-					for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+					foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 					{
-						if (kBuilding.getPrereqOrRawVicinityBonuses(iJ) != NO_BONUS)
+						bNeedsORRawVicinityBonus = true;
+						if (hasRawVicinityBonus(bonus))
 						{
-							bNeedsORRawVicinityBonus = true;
-							if (hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iJ)))
-							{
-								bHasORRawVicinityBonus = true;
-								break;
-							}
+							bHasORRawVicinityBonus = true;
+							break;
 						}
 					}
 
