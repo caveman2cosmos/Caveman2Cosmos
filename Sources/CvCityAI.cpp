@@ -819,12 +819,12 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	int iExperience = (GC.getSpecialistInfo(eSpecialist).getExperience() * 2);
 	for (int iI = 0; iI < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iI++)
 	{
-		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat != NO_UNITCOMBAT)
+		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat != NO_UNITCOMBAT)
 		{
-			iExperience += (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).iModifier);
-			if (isProductionUnit() && isProductionUnitCombat((int)GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat))
+			iExperience += (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier);
+			if (isProductionUnit() && isProductionUnitCombat((int)GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat))
 			{
-				iExperience += (2 * (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).iModifier));
+				iExperience += (2 * (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier));
 			}
 		}
 	}

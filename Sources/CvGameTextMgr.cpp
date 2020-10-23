@@ -12466,9 +12466,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 			for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 			{
-				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 				{
-					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 				}
 			}
 			if (iUnitCombatExperience > 0)
@@ -12732,9 +12732,9 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 				{
-					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 					{
-						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 					}
 				}
 				if (iUnitCombatExperience > 0)
