@@ -1750,7 +1750,7 @@ void CvCity::doAutobuild()
 				if (canConstruct((BuildingTypes)iI, false, false, true))
 				{
 					setNumRealBuilding((BuildingTypes)iI, 1);
-					CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
 					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
 				}
 			}
@@ -1763,8 +1763,9 @@ void CvCity::doAutobuild()
 					&& GET_PLAYER(getOwner()).getBuildingCount((BuildingTypes)iJ) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, (BuildingTypes)iJ, 0))
 					{
 						setNumRealBuilding((BuildingTypes)iI, 0);
-						CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
 						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
+						break;
 					}
 				}
 			}
