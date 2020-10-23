@@ -10589,9 +10589,12 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						if (algo::range::contains(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
+						for (iJ = 0; iJ < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iJ++)
 						{
-							iTempValue += 40;
+							if (GC.getRouteInfo(eRoute).getPrereqOrBonus(iJ) == eBonus)
+							{
+								iTempValue += 40;
+							}
 						}
 						if ((eBestRoute != NO_ROUTE) && (GC.getRouteInfo(getBestRoute()).getValue() > GC.getRouteInfo(eRoute).getValue()))
 						{
