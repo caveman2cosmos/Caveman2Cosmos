@@ -1737,6 +1737,7 @@ void CvCity::doTurn()
 	// XXX
 }
 
+/*
 void CvCity::doAutobuild()
 {
 	//	Auto-build any auto-build buildings we can
@@ -1768,6 +1769,57 @@ void CvCity::doAutobuild()
 						break;
 					}
 				}
+			}
+		}
+	}
+}
+*/
+
+namespace {
+	// Special rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
+	bool evaluateRemoveAutoBuilding(BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, const CvPlayer& owner)
+	{
+		if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0)
+		{
+			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			{
+				if (kBuilding.getPrereqNumOfBuilding((BuildingTypes)iJ) > 0
+				&& owner.getBuildingCount((BuildingTypes)iJ) < owner.getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iJ, 0))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+}
+
+void CvCity::doAutobuild()
+{
+	//	Auto-build any auto-build buildings we can
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+		if (kBuilding.isAutoBuild())
+		{
+			if (getNumBuilding((BuildingTypes)iI) <= 0)
+			{
+				if (canConstruct((BuildingTypes)iI, false, false, true))
+				{
+					FAssert(!evaluateRemoveAutoBuilding((BuildingTypes)iI, kBuilding, GET_PLAYER(getOwner())));
+
+					setNumRealBuilding((BuildingTypes)iI, 1);
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
+					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
+				}
+			}
+			else if (evaluateRemoveAutoBuilding((BuildingTypes)iI, kBuilding, GET_PLAYER(getOwner())))
+			{
+				FAssert(!canConstruct((BuildingTypes)iI, false, false, true));
+
+				setNumRealBuilding((BuildingTypes)iI, 0);
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
+				AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
 			}
 		}
 	}
