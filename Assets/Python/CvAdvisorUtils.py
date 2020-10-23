@@ -48,10 +48,8 @@ def resetNoLiberateCities():
 			iTech = CvBuildingInfo.getPrereqAndTech()
 			if iTech > -1:
 				techs.append(iTech)
-			for iPrereq in xrange(GC.getDefineINT("NUM_BUILDING_AND_TECH_PREREQS")):
-				iTech = CvBuildingInfo.getPrereqAndTechs(iPrereq)
-				if iTech > -1:
-					techs.append(iTech)
+			for iPrereq in CvBuildingInfo.getPrereqAndTechs():
+				techs.append(iPrereq)
 
 			lCorporations.append([eCorporation, techs, iUnit, bonuses])
 

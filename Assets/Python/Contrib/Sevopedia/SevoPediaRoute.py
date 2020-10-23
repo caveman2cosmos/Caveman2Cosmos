@@ -165,14 +165,12 @@ class SevoPediaRoute:
 		if len(szLeftDelimeter) > 0:
 			screen.attachLabel(panelName, "", szLeftDelimeter)
 		bFirst = True
-		for j in range(gc.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			eBonus = RouteInfo.getPrereqOrBonus(j)
-			if (eBonus > -1):
-				if (not bFirst):
-					screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
-				else:
-					bFirst = False
-				screen.attachImageButton(panelName, "", gc.getBonusInfo(eBonus).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, eBonus, -1, False)
+		for eBonus in RouteInfo.getPrereqOrBonuses():
+			if (not bFirst):
+				screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
+			else:
+				bFirst = False
+			screen.attachImageButton(panelName, "", gc.getBonusInfo(eBonus).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, eBonus, -1, False)
 		if len(szRightDelimeter) > 0:
 			screen.attachLabel(panelName, "", szRightDelimeter)
 

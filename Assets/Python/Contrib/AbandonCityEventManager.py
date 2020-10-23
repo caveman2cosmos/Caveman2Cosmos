@@ -213,7 +213,6 @@ class CityDemolish:
 			CyTeam = GC.getTeam(CyPlayer.getTeam())
 			# Settler
 			if iOwnCulturePop > 0 or iForeignPop > 2:
-				NUM_UNIT_PREREQ_OR_BONUSES = GC.getNUM_UNIT_PREREQ_OR_BONUSES()
 				aSettlerList = [
 					GC.getInfoTypeForString("UNIT_AIRSETTLER"),
 					GC.getInfoTypeForString("UNIT_PIONEER"),
