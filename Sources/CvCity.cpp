@@ -5941,9 +5941,9 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	for (int iI = 0; iI < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iI++)
 	{
-		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat != NO_UNITCOMBAT)
+		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat != NO_UNITCOMBAT)
 		{
-			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).iModifier * iChange);
+			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier * iChange);
 		}
 	}
 
