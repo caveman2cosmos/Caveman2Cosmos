@@ -495,26 +495,6 @@ bool CvBuildingInfo::hasExtraFreeBonus(BonusTypes eBonus) const
 	return false;
 }
 
-int CvBuildingInfo::getAssetValue(bool bForLoad) const
-{
-	if (!bForLoad)
-	{
-		return m_iAssetValue * 100;
-	}
-	return m_iAssetValue;
-}
-
-int CvBuildingInfo::getPowerValue(bool bForLoad) const
-{
-	if (!bForLoad)
-	{
-		return m_iPowerValue * 100;
-	}
-	return m_iPowerValue;
-}
-
-// Arrays
-
 int CvBuildingInfo::getYieldChange(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
@@ -1044,19 +1024,12 @@ const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 const TCHAR* CvBuildingInfo::getMovie() const
 {
 	const CvArtInfoMovie* pArt = getMovieInfo();
-	if (pArt != NULL)
-	{
-		return pArt->getPath();
-	}
-	else
-	{
-		return NULL;
-	}
+	return pArt ? pArt->getPath() : NULL;
 }
 
-int CvBuildingInfo::getNoEntryDefenseLevel(bool bForLoad) const
+int CvBuildingInfo::getNoEntryDefenseLevel() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1542,18 +1515,18 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 	return m_iRiverDefensePenalty;
 }
 
-int CvBuildingInfo::getLocalRepel(bool bForLoad) const
+int CvBuildingInfo::getLocalRepel() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
 	return m_iLocalRepel;
 }
 
-int CvBuildingInfo::getMinDefense(bool bForLoad) const
+int CvBuildingInfo::getMinDefense() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1580,18 +1553,18 @@ int CvBuildingInfo::getDamageToAttacker() const
 	return m_iDamageToAttacker;
 }
 
-int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
+int CvBuildingInfo::getMaxPopulationAllowed() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
 	return m_iMaxPopulationAllowed;
 }
 
-int CvBuildingInfo::getMaxPopulationChange(bool bForLoad) const
+int CvBuildingInfo::getMaxPopulationChange() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -4529,8 +4502,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getBombardDefenseModifier() == iDefault) m_iBombardDefenseModifier = pClassInfo->getBombardDefenseModifier();
 	if (getAllCityDefenseModifier() == iDefault) m_iAllCityDefenseModifier = pClassInfo->getAllCityDefenseModifier();
 	if (getEspionageDefenseModifier() == iDefault) m_iEspionageDefenseModifier = pClassInfo->getEspionageDefenseModifier();
-	if (getAssetValue(true) == iDefault) m_iAssetValue = pClassInfo->getAssetValue(true);
-	if (getPowerValue(true) == iDefault) m_iPowerValue = pClassInfo->getPowerValue(true);
+	if (m_iAssetValue == iDefault) m_iAssetValue = pClassInfo->m_iAssetValue;
+	if (m_iPowerValue == iDefault) m_iPowerValue = pClassInfo->m_iPowerValue;
 
 	if (getUnitUpgradePriceModifier() == iDefault) m_iUnitUpgradePriceModifier = pClassInfo->getUnitUpgradePriceModifier();
 	if (getRevIdxLocal() == iDefault) m_iRevIdxLocal = pClassInfo->getRevIdxLocal();
@@ -4973,7 +4946,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getPrereqCultureLevel() == NO_CULTURELEVEL) m_iPrereqCultureLevel = pClassInfo->getPrereqCultureLevel();
 	if (getWorkableRadius() == iDefault) m_iWorkableRadius = pClassInfo->getWorkableRadius();
 	if (getOccupationTimeModifier() == iDefault) m_iOccupationTimeModifier = pClassInfo->getOccupationTimeModifier();
-	if (getNoEntryDefenseLevel(true) == iDefault) m_iNoEntryDefenseLevel = pClassInfo->getNoEntryDefenseLevel(true);
+	if (m_iNoEntryDefenseLevel == iDefault) m_iNoEntryDefenseLevel = pClassInfo->m_iNoEntryDefenseLevel;
 	if (getNumUnitFullHeal() == iDefault) m_iNumUnitFullHeal = pClassInfo->getNumUnitFullHeal();
 	if (getNumPopulationEmployed() == iDefault) m_iNumPopulationEmployed = pClassInfo->getNumPopulationEmployed();
 	if (getHealthPercentPerPopulation() == iDefault) m_iHealthPercentPerPopulation = pClassInfo->getHealthPercentPerPopulation();
@@ -5519,14 +5492,14 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getLocalCaptureResistanceModifier() == iDefault) m_iLocalCaptureResistanceModifier = pClassInfo->getLocalCaptureResistanceModifier();
 	if (getLocalDynamicDefense() == iDefault) m_iLocalDynamicDefense = pClassInfo->getLocalDynamicDefense();
 	if (getRiverDefensePenalty() == iDefault) m_iRiverDefensePenalty = pClassInfo->getRiverDefensePenalty();
-	if (getLocalRepel(true) == iDefault) m_iLocalRepel = pClassInfo->getLocalRepel(true);
-	if (getMinDefense(true) == iDefault) m_iMinDefense = pClassInfo->getMinDefense(true);
+	if (m_iLocalRepel == iDefault) m_iLocalRepel = pClassInfo->m_iLocalRepel;
+	if (m_iMinDefense == iDefault) m_iMinDefense = pClassInfo->m_iMinDefense;
 	if (getBuildingDefenseRecoverySpeedModifier() == iDefault) m_iBuildingDefenseRecoverySpeedModifier = pClassInfo->getBuildingDefenseRecoverySpeedModifier();
 	if (getCityDefenseRecoverySpeedModifier() == iDefault) m_iCityDefenseRecoverySpeedModifier = pClassInfo->getCityDefenseRecoverySpeedModifier();
 	if (getDamageAttackerChance() == iDefault) m_iDamageAttackerChance = pClassInfo->getDamageAttackerChance();
 	if (getDamageToAttacker() == iDefault) m_iDamageToAttacker = pClassInfo->getDamageToAttacker();
-	if (getMaxPopulationAllowed(true) == -1) m_iMaxPopulationAllowed = pClassInfo->getMaxPopulationAllowed(true);
-	if (getMaxPopulationChange(true) == iDefault) m_iMaxPopulationChange = pClassInfo->getMaxPopulationChange(true);
+	if (m_iMaxPopulationAllowed == -1) m_iMaxPopulationAllowed = pClassInfo->m_iMaxPopulationAllowed;
+	if (m_iMaxPopulationChange == iDefault) m_iMaxPopulationChange = pClassInfo->m_iMaxPopulationChange;
 	if (getInsidiousness() == iDefault) m_iInsidiousness = pClassInfo->getInsidiousness();
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 	if (getPopulationChange() == iDefault) m_iPopulationChange = pClassInfo->getPopulationChange();

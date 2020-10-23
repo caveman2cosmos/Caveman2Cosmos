@@ -4,6 +4,9 @@
 #include "CySelectionGroup.h"
 #include "CyUnit.h"
 
+//
+// published python interface for CyPlayer
+//
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {
@@ -56,9 +59,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
-
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")
-
 
 		.def("getOverflowResearch", &CyPlayer::getOverflowResearch, "int ()")
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
