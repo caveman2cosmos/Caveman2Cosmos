@@ -10583,7 +10583,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						if (algo::range::contains(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
+						if (vector::contains(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
 						{
 							iTempValue += 40;
 						}
@@ -10798,7 +10798,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
-		|| algo::range::contains(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
+		|| vector::contains(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}
@@ -10828,7 +10828,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
-		|| algo::range::contains(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
+		|| vector::contains(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}

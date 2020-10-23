@@ -2293,7 +2293,7 @@ public:
 
 	int getPrereqAndTechs(int i) const; // Exposed to Python
 	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return algo::range::makePythonList(m_aePrereqOrBonuses); }
+	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python

@@ -28581,8 +28581,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
 			|| kBuilding.getPrereqVicinityBonus() == eBonus
-			|| algo::range::contains(eBonus, kBuilding.getPrereqOrBonuses())
-			|| algo::range::contains(eBonus, kBuilding.getPrereqOrVicinityBonuses()))
+			|| vector::contains(eBonus, kBuilding.getPrereqOrBonuses())
+			|| vector::contains(eBonus, kBuilding.getPrereqOrVicinityBonuses()))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}
@@ -28598,8 +28598,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kUnit.getPrereqAndBonus() == eBonus
 			|| kUnit.getPrereqVicinityBonus() == eBonus
-			|| algo::range::contains(eBonus, kUnit.getPrereqOrBonuses())
-			|| algo::range::contains(eBonus, kUnit.getPrereqOrVicinityBonuses()))
+			|| vector::contains(eBonus, kUnit.getPrereqOrBonuses())
+			|| vector::contains(eBonus, kUnit.getPrereqOrVicinityBonuses()))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}

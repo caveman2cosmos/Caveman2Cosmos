@@ -451,25 +451,6 @@ namespace algo {
 		for (; _First != _Last; ++_First, ++size) {}
 		return size;
 	}
-
-	namespace range
-	{
-		template <class Container, typename ValueType>
-		bool contains(ValueType value, const Container container) {
-			foreach_(ValueType element, container)
-				if (element == value)
-					return true;
-			return false;
-		}
-
-		template <class Container>
-		const python::list makePythonList(const Container source) {
-			python::list list = python::list();
-			for (Container::const_iterator it = source.begin(); it != source.end(); it++)
-				list.append((int)*it);
-			return list;
-		}
-	}
 }
 
 //namespace std {

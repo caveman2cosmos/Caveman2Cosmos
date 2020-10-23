@@ -3,44 +3,9 @@
 #ifndef VectorUtils_H
 #define VectorUtils_H
 
-#include "algorithm2.h"
-
 class CvXMLLoadUtility;
-//class FDataStreamBase;
 
-namespace vector
-{
-	using namespace algo::range;
-/*
-	void read(FDataStreamBase* pStream)
-	{
-		unsigned int iSize = 0;
-		pStream->Read(&iSize);
-		m_map.resize(iSize);
-		for (unsigned int i = 0; i < iSize; i++)
-		{
-			pStream->Read(&(m_map[i].first));
-		}
-	}
-
-	void write(FDataStreamBase* pStream)
-	{
-		pStream->Write(m_map.size());
-		for (unsigned int i = 0; i < m_map.size(); i++)
-		{
-			pStream->Write(m_map[i].first);
-		}
-	}
-*/
-	template <class T>
-	static void copyNonDefaults(std::vector<T>& target, const std::vector<T> source)
-	{
-		foreach_(T it, source)
-			if (it > -1 && !contains(it, target))
-				target.push_back(it);
-
-		std::sort(target.begin(), target.end());
-	}
+namespace vector {
 
 	template <class T>
 	void read(CvXMLLoadUtility& pXML, std::vector<T>& aInfos, const wchar_t* szRootTagName)
@@ -73,13 +38,39 @@ namespace vector
 		}
 	}
 
+	template <class T>
+	static void copyNonDefaults(std::vector<T>& target, const std::vector<T> source)
+	{
+		foreach_(T it, source)
+			if (it > -1 && !contains(it, target))
+				target.push_back(it);
+
+		std::sort(target.begin(), target.end());
+	}
+
 	template <class Cont>
 	inline void getCheckSum(uint32_t& iSum, const Cont kCont)
 	{
 		for (Cont::const_iterator it = kCont.begin(); it != kCont.end(); ++it)
-		{
 			CheckSum(iSum, (uint32_t)*it);
-		}
+	}
+
+	template <class Container, typename ValueType>
+	bool contains(ValueType value, const Container container)
+	{
+		foreach_(ValueType element, container)
+			if (element == value)
+				return true;
+		return false;
+	}
+
+	template <class Container>
+	const python::list makePythonList(const Container source)
+	{
+		python::list list = python::list();
+		for (Container::const_iterator it = source.begin(); it != source.end(); it++)
+			list.append((int)*it);
+		return list;
 	}
 }
 
