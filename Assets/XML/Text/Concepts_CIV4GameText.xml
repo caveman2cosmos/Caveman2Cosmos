@@ -200,20 +200,6 @@
 		<Spanish>Modificadores (%D1%%)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BATTLE_EFFECTS_PEDIA</Tag>
-		<English>Battle Effects are effects that occur on the map due to combat. When combat occurs on a plot, a Battle Effect will begin. This effect will be retained for a few turns and affects how much gold and food a plot can produce. The Battle Effect disipates after a couple of turns, but subsequent combats will increase the time before the effects disappear.</English>
-		<German>Kampfeffekte sind Effekte, die auf der Karte aufgrund von Gefechten entstehen. Sobald ein Kampf abläuft, beginnen die Kampfeffekte. Der Effekt hält einige wenige Runden an verändert die Menge Gold und Nahrung die ein Geländefeld produziert. Der Effekt läßt nach ein paar Runden nach, aber weitere Kämpfe verlängern im folgenden die Erholung der Geländefelder.</German>
-		<Italian>Gli effetti della battaglia sono quelli che interessano la mappa a seguito del combattimento. Quando un combattimento si svolge su una casella, su questa si applica un 'effetto': questo resterà per alcuni turni e modificherà la produzione di cibo e oro della casella. Gli "Effetti della Battaglia" scompaiono in un paio di turni, ma ulteriori combattimenti ne aumenteranno la durata.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BATTLE_EFFECTS_TEXT</Tag>
-		<English>Battle Effects</English>
-		<French>Effets de Bataille</French>
-		<German>Kampfeffekte</German>
-		<Italian>Effetti della battaglia</Italian>
-		<Spanish>Efectos de batalla</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BONUS_GOLD_MODIFIERS</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>

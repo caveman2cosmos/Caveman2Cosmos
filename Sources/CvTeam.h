@@ -343,6 +343,7 @@ public:
 	void setHasMet(TeamTypes eIndex, bool bNewValue);
 	void makeHasMet(TeamTypes eIndex, bool bNewDiplo);
 
+	bool isAtWar(const bool bCountMinors = false) const;
 	DllExport bool isAtWar(TeamTypes eIndex) const; // Exposed to Python
 	void setAtWar(TeamTypes eIndex, bool bNewValue);
 

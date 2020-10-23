@@ -5503,11 +5503,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					int iWarWearinessModifer = kBuilding.getWarWearinessModifier();
 					if (iWarWearinessModifer != 0)
 					{
-						if ( kTeam.getAtWarCount(true) == 0 )
+						if (!kTeam.isAtWar())
 						{
 							iWarWearinessModifer /= 2;
 						}
-						iValue += (-iWarWearinessModifer * iHappyModifier) / 16;
+						iValue -= iWarWearinessModifer * iHappyModifier / 16;
 					}
 
 					iValue += (kBuilding.getAreaHappiness() * (iNumCitiesInArea - 1) * 8);
@@ -12166,8 +12166,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		{
 			bValid = true;
 		}
-		//	Don't count forts - they have their own separate decision criteria
-		else if (!GC.getImprovementInfo(eImprovement).isActsAsCity())
+		//	Don't count forts or towers - they have their own separate decision criteria
+		else if (!(GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getVisibilityChange() != 0))
 		{
 			if (eForcedBuild != NO_BUILD)
 			{
@@ -16147,12 +16147,12 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							int iWarWearinessModifer = kBuilding.getWarWearinessModifier();
 							if (iWarWearinessModifer != 0)
 							{
-								if ( GET_TEAM(getTeam()).getAtWarCount(true) == 0 )
+								if (!GET_TEAM(getTeam()).isAtWar())
 								{
 									iWarWearinessModifer /= 2;
 								}
 
-								iValue += (-iWarWearinessModifer * iHappyModifier) / 16;
+								iValue -= iWarWearinessModifer * iHappyModifier / 16;
 							}
 
 							iValue += (kBuilding.getAreaHappiness() * (iNumCitiesInArea - 1) * 8);

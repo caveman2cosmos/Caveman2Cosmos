@@ -1790,12 +1790,7 @@ void CvPlayerAI::AI_doCentralizedProduction()
 {
 	PROFILE_FUNC();
 
-	if( isHuman() )
-	{
-		return;
-	}
-
-	if( isNPC() )
+	if (isHuman() || isNPC())
 	{
 		return;
 	}
@@ -1813,14 +1808,14 @@ void CvPlayerAI::AI_doCentralizedProduction()
 	// Determine number of cities player can use building wonders currently
 	int iMaxNumWonderCities = 1 + getNumCities()/5;
 	bool bIndustrious = (getMaxPlayerBuildingProductionModifier() > 0);
-	bool bAtWar = (GET_TEAM(getTeam()).getAtWarCount(true) > 0);
+	bool bAtWar = GET_TEAM(getTeam()).isAtWar();
 
 	if( bIndustrious )
 	{
 		iMaxNumWonderCities += 1;
 	}
 
-	// Dagger?
+	// Danger?
 	// Power?
 	// Research?
 
@@ -9176,17 +9171,14 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 	{
 		if (GET_TEAM(getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && CvDeal::isVassalTributeDeal(pOurList))
 		{
-			if (AI_getAttitude(ePlayer, false) <= GC.getLeaderHeadInfo(getPersonalityType()).getVassalRefuseAttitudeThreshold()
-				&& GET_TEAM(getTeam()).getAtWarCount(true) == 0
-				&& GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getDefensivePactCount() == 0)
-			{
-				iOurValue *= (GET_TEAM(getTeam()).getPower(false) + 10);
-				iOurValue /= (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) + 10);
-			}
-			else
+			if (AI_getAttitude(ePlayer, false) > GC.getLeaderHeadInfo(getPersonalityType()).getVassalRefuseAttitudeThreshold()
+			|| GET_TEAM(getTeam()).isAtWar()
+			|| GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getDefensivePactCount() != 0)
 			{
 				return true;
 			}
+			iOurValue *= (GET_TEAM(getTeam()).getPower(false) + 10);
+			iOurValue /= (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) + 10);
 		}
 		else
 		{
@@ -16930,7 +16922,7 @@ int CvPlayerAI::AI_RevCalcCivicRelEffect(CivicTypes eCivic) const
 			int iRelBadEffect = (int)floor((fCityNonStateReligion * (1+fRelBadMod)) + .5);
 			int iRelGoodEffect = (int)floor((fCityStateReligion * (1+fRelGoodMod)) + .5);
 
-			if (GET_TEAM(getTeam()).getAtWarCount(true) > 0 )
+			if (GET_TEAM(getTeam()).isAtWar())
 			{
 				iRelGoodEffect = (int)floor((iRelGoodEffect * 1.5) + .5);
 			}
@@ -24898,17 +24890,14 @@ int CvPlayerAI::AI_getStrategyHash() const
 	}
 
 	// Turtle strategy
-	if( GET_TEAM(getTeam()).getAtWarCount(true) > 0 && getNumCities() > 0 )
+	if (GET_TEAM(getTeam()).isAtWar() && getNumCities() > 0)
 	{
 		int iMaxWarCounter = 0;
-		for( int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++ )
+		for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 		{
-			if( iTeam != getTeam() )
+			if (iTeam != getTeam() && GET_TEAM((TeamTypes)iTeam).isAlive() && !GET_TEAM((TeamTypes)iTeam).isMinorCiv())
 			{
-				if( GET_TEAM((TeamTypes)iTeam).isAlive() && !GET_TEAM((TeamTypes)iTeam).isMinorCiv() )
-				{
-					iMaxWarCounter = std::max( iMaxWarCounter, GET_TEAM(getTeam()).AI_getAtWarCounter((TeamTypes)iTeam) );
-				}
+				iMaxWarCounter = std::max(iMaxWarCounter, GET_TEAM(getTeam()).AI_getAtWarCounter((TeamTypes)iTeam));
 			}
 		}
 
@@ -24942,13 +24931,13 @@ int CvPlayerAI::AI_getStrategyHash() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if( GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv())
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam()) && GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()) )
+			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam() && GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 			{
 				if (!GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAVassal() && !GET_TEAM(getTeam()).isVassal(GET_PLAYER((PlayerTypes)iI).getTeam()))
 				{
-					if( GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN )
+					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN)
 					{
 						iCloseTargets++;
 					}
@@ -24957,10 +24946,12 @@ int CvPlayerAI::AI_getStrategyHash() const
 						// Are they a threat?
 						int iTempParanoia = 0;
 
-						int iTheirPower = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getPower(true);
-						if( 4*iTheirPower > 3*iOurDefensivePower )
+						const int iTheirPower = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getPower(true);
+
+						if (4*iTheirPower > 3*iOurDefensivePower)
 						{
-							if( GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getAtWarCount(true) == 0 || GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_getEnemyPowerPercent(false) < 140 )
+							if (!GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar()
+							|| GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_getEnemyPowerPercent(false) < 140)
 							{
 								// Memory of them declaring on us and our friends
 								int iWarMemory = AI_getMemoryCount((PlayerTypes)iI, MEMORY_DECLARED_WAR);
@@ -39455,11 +39446,9 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 
 	//invalidate cache
 	m_iMilitaryProductionCityCount = -1;
-
-	algo::for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
-
 	m_iNavalMilitaryProductionCityCount = -1;
 
+	algo::for_each(cities(), CvCity::fn::AI_setMilitaryProductionCity(false));
 	algo::for_each(cities(), CvCity::fn::AI_setNavalMilitaryProductionCity(false));
 
 	if (getNumCities() < 4)
@@ -39468,20 +39457,16 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	}
 
 	int iNumMilitaryProdCitiesNeeded = getNumCities() / 4;
-	bool bPlanningWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 && GET_TEAM(getTeam()).getAtWarCount(true, false) == 0;
-	bool bAtWar = GET_TEAM(getTeam()).getAtWarCount(true, false) > 0;
-	bool bFinancialTrouble = AI_isFinancialTrouble();
-	FAssertMsg(!(bAtWar && bPlanningWar), "Should either be planning war, or at war, but not both at the same time");
 
-	if (bPlanningWar)
-	{
-		iNumMilitaryProdCitiesNeeded += getNumCities() / 8;
-	}
-	if (bAtWar)
+	if (GET_TEAM(getTeam()).isAtWar())
 	{
 		iNumMilitaryProdCitiesNeeded += getNumCities() / 4;
 	}
-	if (bFinancialTrouble)
+	else if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+	{
+		iNumMilitaryProdCitiesNeeded += getNumCities() / 8;
+	}
+	if (AI_isFinancialTrouble())
 	{
 		iNumMilitaryProdCitiesNeeded = std::max(1, iNumMilitaryProdCitiesNeeded / 2);
 	}

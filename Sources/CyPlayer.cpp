@@ -2253,6 +2253,16 @@ std::wstring CyPlayer::getCityName(int iIndex)
 	return m_pPlayer ? m_pPlayer->getCityName(iIndex) : std::wstring();
 }
 
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
+}
+
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev)
 {

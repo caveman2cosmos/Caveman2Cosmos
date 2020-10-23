@@ -2364,7 +2364,6 @@
 			<fUpdateRate>1.0</fUpdateRate>
 			<Path>Art/Effects/smoke_chimney_02/fx_chimneysmoke_01.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
-			<bBattleEffect>1</bBattleEffect>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_CHIMNEY_SMOKE_02</Type>
@@ -2373,7 +2372,6 @@
 			<fUpdateRate>1.0</fUpdateRate>
 			<Path>Art/Effects/smoke_chimney_02/fx_chimneysmoke_02.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
-			<bBattleEffect>1</bBattleEffect>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_CHIMNEY_SMOKE_03</Type>
@@ -2382,7 +2380,6 @@
 			<fUpdateRate>1.0</fUpdateRate>
 			<Path>Art/Effects/smoke_chimney_02/fx_chimneysmoke_03.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
-			<bBattleEffect>1</bBattleEffect>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_CITY_SMOKING_01</Type>
