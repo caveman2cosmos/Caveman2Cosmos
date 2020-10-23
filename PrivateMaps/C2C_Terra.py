@@ -179,7 +179,7 @@ class TerraMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			(archGrain, contGrain, gaeaGrain, eurasiaGrain) = sizevalues[sizekey]
 
 		# Sea Level adjustment (from user input), limited to value of 5%.
-		sea = self.gc.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+		sea = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
 		sea = min(sea, 5)
 		sea = max(sea, -5)
 

@@ -7,30 +7,6 @@
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<!-- DCM features -->
 	<Define>
-		<DefineName>DCM_BATTLE_EFFECTS</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_FOOD</DefineName>
-		<iDefineIntVal>-1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_PRODUCTION</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECT_LESS_COMMERCE</DefineName>
-		<iDefineIntVal>-1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_BATTLE_TURNS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>DCM_AIR_BOMBING</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

@@ -148,23 +148,6 @@ public:
 	friend bool operator==(const CvPlot& lhs, const CvPlot& rhs) { return &lhs == &rhs; }
 	friend bool operator!=(const CvPlot& lhs, const CvPlot& rhs) { return &lhs != &rhs; }
 
-protected:
-	CvGameObjectPlot m_GameObject;
-
-public:
-	// Dale - Battle Effect
-	void changeBattleCountdown(int iValue);
-	void setBattleCountdown(int iValue);
-	int getBattleCountdown() const;
-	bool isBattle() const;
-	bool canHaveBattleEffect(const CvUnit* pAttacker = NULL, const CvUnit* pDefender = NULL) const;
-	EffectTypes getBattleEffect();
-	void setBattleEffect();
-protected:
-	int m_iBattleCountdown;
-	EffectTypes m_eBattleEffect;
-	// ! Dale
-public:
 	void init(int iX, int iY);
 	void uninit();
 	void reset(int iX = 0, int iY = 0, bool bConstructorCall=false);
@@ -404,6 +387,8 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
+	CvGameObjectPlot m_GameObject;
+
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();

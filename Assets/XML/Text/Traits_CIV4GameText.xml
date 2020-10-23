@@ -2274,7 +2274,7 @@
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training %s2_CombatClass Units.</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de Production en entraînant des unités de type: %s2_CombatClass.</French>
-		<German>[ICON_BULLET]%D1%% schnellere Ausbildung von %s2:3_CombatClass</German>
+		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von %s2:3_CombatClass</German>
 		<Italian>[ICON_BULLET]%D1%% alla velocità di addestramento di %s2_CombatClass Units.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Szybkości Produkcji przy szkoleniu jednostek: %s2_CombatClass.</Polish>
 	</TEXT>
@@ -2292,7 +2292,7 @@
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
-		<German>[ICON_BULLET]%D1%% schnellere Ausbildung von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
+		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WONDER_PRODUCTION_MODIFIER_C2C</Tag>

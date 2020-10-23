@@ -113,14 +113,12 @@ class WBCityEditScreen:
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 1 and iPlayerX != iPlayer: continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != pCity.getTeam(): continue
-			city, i = pPlayerX.firstCity(False)
-			while city:
+			for city in pPlayerX.cities():
 				if iPlotType == 2 or (iPlotType == 1 and city.plot().getArea() == pCity.plot().getArea()):
 					sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 					if city.getID() == pCity.getID() and iPlayerX == iPlayer:
 						sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 					self.lCities.append([city, iPlayerX, sColor])
-				city, i = pPlayerX.nextCity(i, False)
 		self.placeCityTable()
 
 	def placeCityTable(self):

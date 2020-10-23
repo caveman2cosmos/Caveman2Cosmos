@@ -141,9 +141,8 @@ def generateTerrainTypes():
 
 class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def __init__(self, forest_grain=6, fracXExp=-1, fracYExp=-1):
-		self.gc = CyGlobalContext()
 		self.map = CyMap()
-		self.mapRand = self.gc.getGame().getMapRand()
+		self.mapRand = self.GC.getGame().getMapRand()
 		self.forests = CyFractal()
 		
 		self.iFlags = 0  # Disallow FRAC_POLAR flag, to prevent "zero row" problems.
@@ -151,7 +150,7 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 		self.iGridW = self.map.getGridWidth()
 		self.iGridH = self.map.getGridHeight()
 		
-		self.forest_grain = forest_grain + self.gc.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
+		self.forest_grain = forest_grain + self.GC.getWorldInfo(self.map.getWorldSize()).getFeatureGrainChange()
 
 		self.fracXExp = fracXExp
 		self.fracYExp = fracYExp
@@ -167,8 +166,8 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 		self.iForestStart = self.forests.getHeightFromPercent(29)
 	
 	def __initFeatureTypes(self):
-		self.featureJungle = self.gc.getInfoTypeForString("FEATURE_JUNGLE")
-		self.featureForest = self.gc.getInfoTypeForString("FEATURE_FOREST")
+		self.featureJungle = self.GC.getInfoTypeForString("FEATURE_JUNGLE")
+		self.featureForest = self.GC.getInfoTypeForString("FEATURE_FOREST")
 	
 	def getLatitudeAtPlot(self, iX, iY):
 		return 50
@@ -179,11 +178,11 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 		lat = iY/float(self.iGridH)
 		pPlot = self.map.sPlot(iX, iY)
 
-		for iI in range(self.gc.getNumFeatureInfos()):
-#			print self.gc.getFeatureInfo(iI).getDescription()
+		for iI in range(self.GC.getNumFeatureInfos()):
+#			print self.GC.getFeatureInfo(iI).getDescription()
 			if pPlot.canHaveFeature(iI):
-#				print "Can have feature with probability: %d" % self.gc.getFeatureInfo(iI).getAppearanceProbability()
-				if self.mapRand.get(10000, "Add Feature PYTHON") < self.gc.getFeatureInfo(iI).getAppearanceProbability():
+#				print "Can have feature with probability: %d" % self.GC.getFeatureInfo(iI).getAppearanceProbability()
+				if self.mapRand.get(10000, "Add Feature PYTHON") < self.GC.getFeatureInfo(iI).getAppearanceProbability():
 #					print "Setting feature"
 					pPlot.setFeatureType(iI, -1)
 

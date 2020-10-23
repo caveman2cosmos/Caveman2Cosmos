@@ -1443,8 +1443,8 @@ def generatePlotTypes():
 #Rivers map second try...
 class riversMap:
 	def __init__(self):
-		self.gc = CyGlobalContext()
-		self.dice = self.gc.getGame().getMapRand()
+		self.GC = CyGlobalContext()
+		self.dice = self.GC.getGame().getMapRand()
 		self.map = CyMap()
 		self.mapWidth = self.map.getGridWidth()
 		self.mapHeight = self.map.getGridHeight()
@@ -1543,7 +1543,7 @@ class riversMap:
 					if self.dice.get(1000,"Start river in flatland") < probability + self.heightMap[x + y*self.mapWidth]:
 						seeds.append( plot )
 		for plot in seeds:
-			riverID = self.gc.getMap().getNextRiverID()
+			riverID = self.GC.getMap().getNextRiverID()
 			self.startRiver(riverID, plot)
 		self.file.close()
 
@@ -1683,8 +1683,8 @@ class riversMap:
 # of the surrounding squares. This would simplify this a lot but I'm too lazy for now to rewrite all.
 class riversFromSea:
 	def __init__(self):
-		self.gc = CyGlobalContext()
-		self.dice = self.gc.getGame().getMapRand()
+		self.GC = CyGlobalContext()
+		self.dice = self.GC.getGame().getMapRand()
 		self.map = CyMap()
 		self.width = self.map.getGridWidth()
 		self.height = self.map.getGridHeight()
@@ -1722,7 +1722,7 @@ class riversFromSea:
 				tries = tries + 1
 				(x,y,flow) = self.generateRiver(i,coastShare)
 			if flow != CardinalDirectionTypes.NO_CARDINALDIRECTION:
-				riverID = self.gc.getMap().getNextRiverID()
+				riverID = self.GC.getMap().getNextRiverID()
 				self.riverLength[riverID] = 0
 				self.riverTurns[riverID] = 0
 				self.addRiverFrom(x,y,flow,riverID)

@@ -69,7 +69,7 @@ public:
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
@@ -499,18 +499,23 @@ public:
 	bool pushResearch(int /*TechTypes*/ iIndex, bool bClear);
 	void popResearch(int /*TechTypes*/ eTech);
 	int getLengthResearchQueue();
+
 	void addCityName(std::wstring szName);
 	int getNumCityNames();
 	std::wstring getCityName(int iIndex);
+
+	python::list cities() const;
 	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
 	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
+
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
+
 	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();

@@ -193,9 +193,6 @@ class RevolutionInit:
 		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_DCM_OPTIONS",())
 		anyOption = False
 
-		if RevDCMOpt.isDCM_BATTLE_EFFECTS():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS",())
-			anyOption = True
 		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT",())
 			anyOption = True

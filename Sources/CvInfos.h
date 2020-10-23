@@ -4501,8 +4501,8 @@ public:
 	bool isFeatureChangeType(int i) const;
 
 	//Post Load Functions
-	void setHighestCost();
-	int getHighestCost() const;
+	//void setHighestCost();
+	//int getHighestCost() const;
 
 protected:
 	bool m_bPeakMakesValid;
@@ -4606,7 +4606,7 @@ protected:
 	std::vector<int> m_aiFeatureChangeTypes;
 
 	//Post Load Functions
-	int m_iHighestCost;
+	//int m_iHighestCost;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8025,8 +8025,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool isBattleEffect() const;
-
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
 
@@ -8037,8 +8035,6 @@ private:
 	bool m_bSticky;
 	float m_fProjectileSpeed;
 	float m_fProjectileArc;
-
-	bool m_bBattleEffect;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

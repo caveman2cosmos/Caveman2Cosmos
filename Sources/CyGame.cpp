@@ -1088,11 +1088,6 @@ void CyGame::addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerType
 	m_pGame.addReplayMessage((ReplayMessageTypes)eType, (PlayerTypes)ePlayer, pszText, iPlotX, iPlotY, (ColorTypes)eColor);
 }
 
-void CyGame::drawBattleEffects()
-{
-	m_pGame.drawBattleEffects();
-}
-
 int CyGame::getCultureThreshold(int eLevel) const
 {
 	return m_pGame.getCultureThreshold((CultureLevelTypes) eLevel);
