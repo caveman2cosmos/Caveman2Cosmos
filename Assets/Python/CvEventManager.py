@@ -947,7 +947,7 @@ class CvEventManager:
 						break
 			else:
 				CyCity = CyPlayerL.getCapitalCity()
-				if not CyCity.isNone():
+				if CyCity:
 					iX = CyCity.getX()
 					iY = CyCity.getY()
 			if iX == -1:
@@ -2359,7 +2359,7 @@ class CvEventManager:
 			Y = -1
 			CyCity = CyPlayer.getCapitalCity() # This returns a city object even if the capital does not exist.
 			# if CyPlayer.getCapitalCity(): # Always True
-			if not CyCity.isNone():
+			if CyCity:
 				X = CyCity.getX(); Y = CyCity.getY()
 			else:
 				CyUnit, i = CyPlayer.firstUnit(False)
