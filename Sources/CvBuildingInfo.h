@@ -5,7 +5,6 @@
 
 #include "CvInfos.h"
 #include "algorithm2.h"
-//using namespace ranges;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -233,7 +232,8 @@ public:
 	bool isAnyUnitCombatFreeExperience() const;
 	bool isAnyDomainFreeExperience() const;
 	int getDomainProductionModifier(int i) const; // Exposed to Python
-	int getPrereqAndTechs(int i) const; // Exposed to Python
+	const std::vector<TechTypes> getPrereqAndTechs() const { return m_aePrereqAndTechs; }
+	const python::list cyGetPrereqAndTechs() const { return vector::makePythonList(m_aePrereqAndTechs); }
 	int getBuildingHappinessChanges(int i) const; // Exposed to Python
 	int getPrereqNumOfBuilding(int i) const; // Exposed to Python
 
@@ -637,7 +637,7 @@ public:
 
 	//Alberts2 PrereqBonuses
 	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
+	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
 
 protected:
 	int m_iVictoryPrereq;
@@ -787,7 +787,7 @@ protected:
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_aePrereqAndTechs;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;

@@ -7200,14 +7200,11 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 			return false;
 		}
 
-		for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+		foreach_(TechTypes tech, kBuilding.getPrereqAndTechs())
 		{
-			if (kBuilding.getPrereqAndTechs(iI) != NO_TECH)
+			if (eIgnoreTechReq != tech && !currentTeam.isHasTech(tech))
 			{
-				if (eIgnoreTechReq != kBuilding.getPrereqAndTechs(iI) && !(currentTeam.isHasTech((TechTypes)(kBuilding.getPrereqAndTechs(iI)))))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 
@@ -19302,21 +19299,14 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			// All Buildings
 			for (int iBuildingLoop = 0; iBuildingLoop < GC.getNumBuildingInfos(); iBuildingLoop++)
 			{
-				BuildingTypes eBuilding = (BuildingTypes) iBuildingLoop;
+				const BuildingTypes eBuilding = (BuildingTypes) iBuildingLoop;
 
 				if (pLoopCity->getNumRealBuilding(eBuilding) > 0)
 				{
-					if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == eTech)
+					if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == eTech
+					|| vector::contains(eTech, GC.getBuildingInfo(eBuilding).getPrereqAndTechs()))
 					{
 						return -1;
-					}
-
-					for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
-					{
-						if (GC.getBuildingInfo(eBuilding).getPrereqAndTechs(iI) == eTech)
-						{
-							return -1;
-						}
 					}
 				}
 			}
@@ -28591,8 +28581,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
 			|| kBuilding.getPrereqVicinityBonus() == eBonus
-			|| ranges::find(eBonus, kBuilding.getPrereqOrBonuses())
-			|| ranges::find(eBonus, kBuilding.getPrereqOrVicinityBonuses()))
+			|| algo::range::contains(eBonus, kBuilding.getPrereqOrBonuses())
+			|| algo::range::contains(eBonus, kBuilding.getPrereqOrVicinityBonuses()))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}
@@ -28608,8 +28598,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kUnit.getPrereqAndBonus() == eBonus
 			|| kUnit.getPrereqVicinityBonus() == eBonus
-			|| ranges::find(eBonus, kUnit.getPrereqOrBonuses())
-			|| ranges::find(eBonus, kUnit.getPrereqOrVicinityBonuses()))
+			|| algo::range::contains(eBonus, kUnit.getPrereqOrBonuses())
+			|| algo::range::contains(eBonus, kUnit.getPrereqOrVicinityBonuses()))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}

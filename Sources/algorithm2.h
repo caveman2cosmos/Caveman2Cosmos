@@ -451,26 +451,24 @@ namespace algo {
 		for (; _First != _Last; ++_First, ++size) {}
 		return size;
 	}
-}
 
-namespace ranges {
+	namespace range
+	{
+		template <class Container, typename ValueType>
+		bool contains(ValueType value, const Container container) {
+			foreach_(ValueType element, container)
+				if (element == value)
+					return true;
+			return false;
+		}
 
-	template <class Container, typename ValueType>
-	bool find(ValueType value, const Container container) {
-		foreach_(ValueType element, container)
-			if (element == value)
-				return true;
-		return false;
-	}
-
-//#include <boost/python/list.hpp>
-
-	template <class Container>
-	const python::list makeList(const Container source) {
-		python::list list = python::list();
-		for (Container::const_iterator it = source.begin(); it != source.end(); it++)
-			list.append((int)*it);
-		return list;
+		template <class Container>
+		const python::list makePythonList(const Container source) {
+			python::list list = python::list();
+			for (Container::const_iterator it = source.begin(); it != source.end(); it++)
+				list.append((int)*it);
+			return list;
+		}
 	}
 }
 

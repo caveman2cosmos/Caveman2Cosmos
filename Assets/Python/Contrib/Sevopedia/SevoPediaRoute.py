@@ -152,8 +152,7 @@ class SevoPediaRoute:
 			bFirst = False
 			screen.attachImageButton(panelName, "", gc.getBonusInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iPrereq, -1, False)
 		nOr = 0
-		for j in range(gc.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			if (RouteInfo.getPrereqOrBonus(j) > -1):
+		for j in RouteInfo.getPrereqOrBonuses():
 				nOr += 1
 		szLeftDelimeter = ""
 		szRightDelimeter = ""

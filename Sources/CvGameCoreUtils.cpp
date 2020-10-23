@@ -524,12 +524,9 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+	if (vector::contains(eTech, info.getPrereqAndTechs()))
 	{
-		if (info.getPrereqAndTechs(iI) == eTech)
-		{
-			return true;
-		}
+		return true;
 	}
 
 	const SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();

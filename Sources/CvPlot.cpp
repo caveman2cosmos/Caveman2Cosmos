@@ -3004,7 +3004,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			) return false;
 
 			bool bFoundValid = true;
-			foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonus())
+			foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 			{
 				if (isAdjacentPlotGroupConnectedBonus(ePlayer, bonus))
 				{

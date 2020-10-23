@@ -27,6 +27,7 @@
 #include "IntExpr.h"
 #include "IDValueMap.h"
 #include "CheckSum.h"
+#include "VectorUtils.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 #pragma warning( disable: 4127 )
@@ -2292,7 +2293,7 @@ public:
 
 	int getPrereqAndTechs(int i) const; // Exposed to Python
 	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const boost::python::list cyGetPrereqOrBonuses() const { return ranges::makeList(m_aePrereqOrBonuses); }
+	const python::list cyGetPrereqOrBonuses() const { return algo::range::makePythonList(m_aePrereqOrBonuses); }
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python
@@ -4286,7 +4287,8 @@ public:
 	int getYieldChange(int i) const; // Exposed to Python
 	int* getYieldChangeArray() const;
 	int getTechMovementChange(int i) const; // Exposed to Python
-	int getPrereqOrBonus(int i) const; // Exposed to Python
+	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
 	bool isAnyPrereqOrBonus() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -4322,7 +4324,7 @@ protected:
 	// Arrays
 	int* m_piYieldChange;
 	int* m_piTechMovementChange;
-	int* m_piPrereqOrBonuses;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

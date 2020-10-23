@@ -10322,19 +10322,16 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 							foreach_(BonusTypes bonus, kLoopBuilding.getPrereqOrBonuses())
 							{
-								if (bonus != NO_BONUS)
-								{
-									bRequiresOR = true;
+								bRequiresOR = true;
 
-									if (bonus == eBonus)
-									{
-										bGetsOR = true;
-									}
-									else if (hasBonus(bonus))
-									{
-										bHasOR = true;
-										break;
-									}
+								if (bonus == eBonus)
+								{
+									bGetsOR = true;
+								}
+								else if (hasBonus(bonus))
+								{
+									bHasOR = true;
+									break;
 								}
 							}
 
@@ -10396,21 +10393,21 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 							{
 								// determine whether we have the tech for this building
 								bool bHasTechForBuilding = true;
-								if (!(kTeam.isHasTech((TechTypes)(kLoopBuilding.getPrereqAndTech()))))
+								if (!kTeam.isHasTech((TechTypes)kLoopBuilding.getPrereqAndTech()))
 								{
 									bHasTechForBuilding = false;
 								}
-								for (int iPrereqIndex = 0; bHasTechForBuilding && iPrereqIndex < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iPrereqIndex++)
+								else
 								{
-									if (kLoopBuilding.getPrereqAndTechs(iPrereqIndex) != NO_TECH)
+									foreach_(TechTypes tech, kLoopBuilding.getPrereqAndTechs())
 									{
-										if (!(kTeam.isHasTech((TechTypes)(kLoopBuilding.getPrereqAndTechs(iPrereqIndex)))))
+										if (!kTeam.isHasTech(tech))
 										{
 											bHasTechForBuilding = false;
+											break;
 										}
 									}
 								}
-
 								bool bIsStateReligion = (((ReligionTypes) kLoopBuilding.getStateReligion()) != NO_RELIGION);
 
 								// bCanNeverBuild when true is accurate, it may be false in some cases where we will never be able to build
@@ -10577,7 +10574,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 				RouteTypes eBestRoute = getBestRoute();
 				for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 				{
-					RouteTypes eRoute = (RouteTypes)(GC.getBuildInfo((BuildTypes)iI).getRoute());
+					const RouteTypes eRoute = (RouteTypes)GC.getBuildInfo((BuildTypes)iI).getRoute();
 
 					if (eRoute != NO_ROUTE)
 					{
@@ -10801,7 +10798,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
-		|| ranges::find(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
+		|| algo::range::contains(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}
@@ -10831,7 +10828,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
-		|| ranges::find(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
+		|| algo::range::contains(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}

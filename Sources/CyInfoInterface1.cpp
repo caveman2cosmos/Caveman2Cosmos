@@ -133,39 +133,11 @@ void CyInfoPythonInterface1()
 		.def("getRevoltProtection", &CvPromotionInfo::getRevoltProtection, "int ()")
 		.def("getPillageChange", &CvPromotionInfo::getPillageChange, "int ()")
 		.def("getUpgradeDiscount", &CvPromotionInfo::getUpgradeDiscount, "int ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Expose New Promotions to Python                                                  **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 
 		.def("isLeader", &CvPromotionInfo::isLeader, "bool ()")
 		.def("isRiver", &CvPromotionInfo::isRiver, "bool ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Expose New Promotions to Python                                                  **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-		
-/************************************************************************************************/
-/* Afforess Promotion Changes                             12/5/09                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.def("getObsoleteTech", &CvPromotionInfo::getObsoleteTech, "int ()")
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/			
 
 		.def("getSound", &CvPromotionInfo::getSound, "string ()")
 
@@ -181,11 +153,7 @@ void CyInfoPythonInterface1()
 		//booleans
 		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
 		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
-		//boolean vectors
-		// int vector utilizing pairing without delayed resolution
-		// int vector utilizing struct with delayed resolution
-		//.def("getAfflictionFortitudeModifier", &CvPromotionInfo::getAfflictionFortitudeModifier, "int (int iAffliction)")
-		//TB Combat Mods End
+
 		//PediaHelp
 		.def("isQualifiedUnitCombatType", &CvPromotionInfo::isQualifiedUnitCombatType, "bool (int i)")
 		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
@@ -463,9 +431,6 @@ void CyInfoPythonInterface1()
 		.def("getArtDefineTag", &CvBuildingInfo::getArtDefineTag, "string ()")
 		.def("getMovie", &CvBuildingInfo::getMovie, "string ()")
 
-
-		// Arrays
-
 		.def("getYieldChange", &CvBuildingInfo::getYieldChange, "int (int i)")
 		.def("getYieldPerPopChange", &CvBuildingInfo::getYieldPerPopChange, "int (int i)")
 		.def("getYieldModifier", &CvBuildingInfo::getYieldModifier, "int (int i)")
@@ -483,17 +448,12 @@ void CyInfoPythonInterface1()
 		.def("getBonusProductionModifier", &CvBuildingInfo::getBonusProductionModifier, "int (int i)")
 		.def("getDomainFreeExperience", &CvBuildingInfo::getDomainFreeExperience, "int (int i)")
 		.def("getDomainProductionModifier", &CvBuildingInfo::getDomainProductionModifier, "int (int i)")
-		.def("getPrereqAndTechs", &CvBuildingInfo::getPrereqAndTechs, "int (int i)")
+		.def("getPrereqAndTechs", &CvBuildingInfo::cyGetPrereqAndTechs)
 		.def("getPrereqOrBonuses", &CvBuildingInfo::cyGetPrereqOrBonuses)
 		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 		
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("isPrereqOrCivics", &CvBuildingInfo::isPrereqOrCivics, "bool (int i)")
 		.def("isPrereqAndCivics", &CvBuildingInfo::isPrereqAndCivics, "bool (int i)")
 		
@@ -508,9 +468,7 @@ void CyInfoPythonInterface1()
 		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
 		
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 

@@ -17700,19 +17700,12 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 							setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 							bFirst = false;
 						}
-						else
+						else if (vector::contains(eTech, GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs()))
 						{
-							for (int iJ = 0; iJ < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iJ++)
-							{
-								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs(iJ) == eTech)
-								{
-									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CONSTRUCT").c_str());
-									szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-									setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-									bFirst = false;
-									break;
-								}
-							}
+							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CONSTRUCT").c_str());
+							szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+							setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+							bFirst = false;
 						}
 					}
 				}
@@ -24802,16 +24795,13 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			for (iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); ++iI)
+			foreach_(TechTypes tech, kBuilding.getPrereqAndTechs())
 			{
-				if (kBuilding.getPrereqAndTechs(iI) != NO_TECH)
+				if (bTechChooserText || ePlayer == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech(tech))
 				{
-					if (bTechChooserText || ePlayer == NO_PLAYER || !(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)(kBuilding.getPrereqAndTechs(iI)))))
-					{
-						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-						setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(((TechTypes)(kBuilding.getPrereqAndTechs(iI)))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
-						bFirst = false;
-					}
+					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
+					setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(tech).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+					bFirst = false;
 				}
 			}
 
@@ -31907,7 +31897,6 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 {
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
-	int iI;
 
 	if (NO_ROUTE == eRoute)
 	{
@@ -31957,12 +31946,8 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 	{
 		bool bQualified = true;
 
-		for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
+		foreach_(BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
 		{
-			BonusTypes eBonusOrPrereq = (BonusTypes)info.getPrereqOrBonus((BonusTypes)iI);
-			if (eBonusOrPrereq == NO_BONUS)
-				continue;
-
 			if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 			{
 				bQualified = false;
@@ -31974,12 +31959,8 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 			szBuffer.append(NEWLINE);
 			szBuffer.append(BULLET_CHAR);
 
-			for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
+			foreach_(BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
 			{
-				BonusTypes eBonusOrPrereq = (BonusTypes)info.getPrereqOrBonus((BonusTypes)iI);
-				if (eBonusOrPrereq == NO_BONUS)
-					continue;
-
 				if (GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 				{
 					szBuffer.append(gDLL->getText("TXT_KEY_ROUTE_REQUIRES_BONUS_OR", GC.getBonusInfo(eBonusOrPrereq).getTextKeyWide()));

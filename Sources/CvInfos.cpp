@@ -15284,7 +15284,6 @@ m_iPrereqBonus(NO_BONUS),
 m_bAnyPrereqOrBonus(false),
 m_piYieldChange(NULL),
 m_piTechMovementChange(NULL),
-m_piPrereqOrBonuses(NULL),
 m_PropertyManipulators()
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
@@ -15301,7 +15300,6 @@ CvRouteInfo::~CvRouteInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piTechMovementChange);
-	SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
 }
 
 int CvRouteInfo::getAdvancedStartCost() const
@@ -15369,11 +15367,6 @@ int CvRouteInfo::getTechMovementChange(int i) const
 	return m_piTechMovementChange ? m_piTechMovementChange[i] : 0;
 }
 
-int CvRouteInfo::getPrereqOrBonus(int i) const
-{
-	return m_piPrereqOrBonuses ? m_piPrereqOrBonuses[i] : -1;
-}
-
 bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -15425,45 +15418,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piTechMovementChange, L"TechMovementChanges", GC.getNumTechInfos());
 
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqOrBonuses"))
-	{
-		//int iNumChildren = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_ROUTE_PREREQ_OR_BONUSES()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-		FAssertMsg((pXML->GetXmlChildrenNumber() <= GC.getNUM_ROUTE_PREREQ_OR_BONUSES()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-
-		if (0 < pXML->GetXmlChildrenNumber())
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrBonuses, GC.getNUM_ROUTE_PREREQ_OR_BONUSES(), -1);
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				int j = 0;
-				do
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						OutputDebugString(szTextVal.c_str());
-						m_piPrereqOrBonuses[j] = pXML->GetInfoClass(szTextVal);
-						m_bAnyPrereqOrBonus = true;
-						++j;
-						pXML->MoveToXmlParent();
-					}
-				}
-				while (pXML->TryMoveToXmlNextSibling());
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
-	}
+	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqOrBonuses");
 
 	m_PropertyManipulators.read(pXML);
 
@@ -15523,17 +15478,7 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	for ( int i = 0;  i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); i++)
-	{
-		if (getPrereqOrBonus(i) == iDefault)
-		{
-			m_piPrereqOrBonuses[i] = pClassInfo->getPrereqOrBonus(i);
-		}
-		if (m_piPrereqOrBonuses[i] != iDefault)
-		{
-			m_bAnyPrereqOrBonus = true;
-		}
-	}
+	vector::copyNonDefaults(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
@@ -15555,7 +15500,7 @@ void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_piYieldChange, NUM_YIELD_TYPES);
 	CheckSum(iSum, m_piTechMovementChange, GC.getNumTechInfos());
-	CheckSum(iSum, m_piPrereqOrBonuses, GC.getNUM_ROUTE_PREREQ_OR_BONUSES());
+	vector::getCheckSum(iSum, m_aePrereqOrBonuses);
 
 	m_PropertyManipulators.getCheckSum(iSum);
 }

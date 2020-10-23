@@ -3094,18 +3094,15 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 						bool bFoundValid = true;
 						std::vector<BonusTypes> aeOrBonuses;
-						for (int i = 0; i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); ++i)
+						foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 						{
-							if (NO_BONUS != GC.getRouteInfo(eRoute).getPrereqOrBonus(i))
-							{
-								aeOrBonuses.push_back((BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i));
-								bFoundValid = false;
+							aeOrBonuses.push_back(bonus);
+							bFoundValid = false;
 
-								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
-								{
-									bFoundValid = true;
-									break;
-								}
+							if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), bonus))
+							{
+								bFoundValid = true;
+								break;
 							}
 						}
 

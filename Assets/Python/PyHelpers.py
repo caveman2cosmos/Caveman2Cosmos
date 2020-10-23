@@ -992,40 +992,6 @@ class PyInfo:
 			if pBonus >= 0 and pBonus <= gc.getNumBonusInfos():
 				return pBonus
 
-		def getPrereqBonusIcon(self):
-			"str - prerequisite bonus"
-			pBonus = self.info.getPrereqAndBonus()
-			if pBonus >= 0 and pBonus < gc.getNumBonusInfos():
-				return "%c" %(BonusInfo(pBonus).getSymbol())
-			return ""
-
-		def getPrereqBonusIDList(self):
-			"intList - ID list of multiple bonus requirements"
-			preqBonusIDList = []
-			for i in range(gc.getNUM_UNIT_PREREQ_OR_BONUSES()):
-				iResult = self.info.getPrereqOrBonuses(i)
-				if iResult >=0:
-					preqBonusIDList.append(iResult)
-			return preqBonusIDList
-
-		def getPrereqBonusInfoList(self):
-			"objList - Info list of multiple bonus requirements"
-			bInfos = []
-			pBonuses = self.getPrereqBonusIDList()
-			for item in pBonuses:
-				bInfos.append(UnitInfo(item))
-			return bInfos
-
-		def getPrereqBonusIcons(self):
-			"str - string with all required bonuses"
-			bonusIcons = ""
-			pBonuses = self.getPrereqBonusIDList()
-			for i in range(len(pBonuses)):
-				loopID = pBonuses[i]
-				loopIcon = BonusInfo(loopID).getSymbol()
-				bonusIcons+= loopIcon
-			return bonusIcons
-
 
 	class TechnologyInfo:
 		"Technology Info class for easier manipulation of this object"
