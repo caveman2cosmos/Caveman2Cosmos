@@ -71,7 +71,7 @@ void CyInfoPythonInterface3()
 		.def("getButton", &CvLeaderHeadInfo::getButton, "string ()")
 	;
 
-	// CvProcessInfos
+
 	python::class_<CvProcessInfo, python::bases<CvInfoBase> >("CvProcessInfo")
 
 		.def("getTechPrereq", &CvProcessInfo::getTechPrereq, "int ()")
@@ -159,7 +159,7 @@ void CyInfoPythonInterface3()
 /************************************************************************************************/
 
 		// Arrays
-		.def("getPrereqBonus", &CvCorporationInfo::getPrereqBonus, "int (int i)")
+		.def("getPrereqBonuses", &CvCorporationInfo::cyGetPrereqBonuses)
 		.def("getCommerceProduced", &CvCorporationInfo::getCommerceProduced, "int (int i)")
 		.def("getYieldProduced", &CvCorporationInfo::getYieldProduced, "int (int i)")
 	;

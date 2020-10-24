@@ -1961,7 +1961,7 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus
-				|| vector::contains(eFreeBonus, GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses()))
+				|| vector::hasValue(eFreeBonus, GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses()))
 				{
 					m_bEnablesOtherBuildingsValue = true;
 					return true;
@@ -2587,7 +2587,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
 	//Alberts2 PrereqBonuses
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrBonuses, L"PrereqBonuses");
+	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
 	m_iNoBonus = pXML->GetInfoClass(szTextVal);
@@ -3530,9 +3530,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
-
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
+	vector::read(*pXML, m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	vector::read(*pXML, m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChanges"))
 	{

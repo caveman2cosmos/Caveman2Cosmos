@@ -20,6 +20,7 @@
 #include "CvPropertyInteraction.h"
 #include "CvPropertyPropagator.h"
 #include "CvPropertyManipulators.h"
+#include "CvPython.h"
 #include "CvOutcomeList.h"
 #include "CvOutcomeMission.h"
 #include "CvDate.h"
@@ -924,7 +925,7 @@ public:
 	//int getAIWeightbyUnitCombatType(int i) const;
 	//bool isAnyAIWeightbyUnitCombatType() const;
 
-	const std::vector<UnitCombatTypes> getSubCombatChanges() const { return m_aeSubCombatChangeTypes; }
+	const std::vector<UnitCombatTypes>& getSubCombatChanges() const { return m_aeSubCombatChangeTypes; }
 
 	int getRemovesUnitCombatType(int i) const;
 	int getNumRemovesUnitCombatTypes() const;
@@ -1896,7 +1897,7 @@ public:
 	bool isForceUpgrade() const;
 	bool isGreatGeneral() const;
 	bool isSlave() const;
-	const std::vector<BonusTypes> getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
 	bool getPassableRouteNeeded(int i) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
@@ -2292,8 +2293,8 @@ public:
 	bool canAcquireExperience() const; // Exposed to Python
 
 	int getPrereqAndTechs(int i) const; // Exposed to Python
-	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python
@@ -4287,8 +4288,8 @@ public:
 	int getYieldChange(int i) const; // Exposed to Python
 	int* getYieldChangeArray() const;
 	int getTechMovementChange(int i) const; // Exposed to Python
-	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
 	bool isAnyPrereqOrBonus() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -6024,9 +6025,8 @@ public:
 	const TCHAR* getMovieSound() const; // Exposed to Python
 	const TCHAR* getSound() const; // Exposed to Python
 
-	// Arrays
-
-	int getPrereqBonus(int i) const; // Exposed to Python
+	const std::vector<BonusTypes>& getPrereqBonuses() const { return m_aePrereqBonuses; }
+	const python::list cyGetPrereqBonuses() const { return Cy::makeList(m_aePrereqBonuses); }
 	int getHeadquarterCommerce(int i) const; // Exposed to Python
 	int* getHeadquarterCommerceArray() const;
 	int getCommerceProduced(int i) const; // Exposed to Python
@@ -6111,7 +6111,7 @@ protected:
 
 	// Arrays
 
-	int* m_paiPrereqBonuses;
+	std::vector<BonusTypes> m_aePrereqBonuses;
 	int* m_paiHeadquarterCommerce;
 	int* m_paiCommerceProduced;
 	int* m_paiYieldProduced;

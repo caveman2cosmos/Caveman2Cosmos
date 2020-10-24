@@ -358,6 +358,15 @@ namespace Cy
 		return false;
 	}
 
+	template <class Container>
+	const python::list makeList(const Container source)
+	{
+		python::list list = python::list();
+		for (Container::const_iterator it = source.begin(); it != source.end(); it++)
+			list.append((int)*it);
+		return list;
+	}
+
 	struct StackFrame
 	{
 		CvString filename;

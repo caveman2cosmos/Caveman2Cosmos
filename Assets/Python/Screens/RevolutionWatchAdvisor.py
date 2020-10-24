@@ -550,28 +550,26 @@ class RevolutionWatchAdvisor:
 		self.bonusCorpCommerces = {}
 		for eCorp in range(gc.getNumCorporationInfos()):
 			info = gc.getCorporationInfo(eCorp)
-			for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
-				eBonus = info.getPrereqBonus(i)
-				if (eBonus >= 0):
-					for eYield in range(YieldTypes.NUM_YIELD_TYPES):
-						iYieldValue = info.getYieldProduced(eYield)
-						if (iYieldValue != 0):
-							if (not self.bonusCorpYields.has_key(eBonus)):
-								self.bonusCorpYields[eBonus] = {}
-							if (not self.bonusCorpYields[eBonus].has_key(eYield)):
-								self.bonusCorpYields[eBonus][eYield] = {}
-							if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
-								self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+			for eBonus in info.getPrereqBonuses():
+				for eYield in range(YieldTypes.NUM_YIELD_TYPES):
+					iYieldValue = info.getYieldProduced(eYield)
+					if (iYieldValue != 0):
+						if (not self.bonusCorpYields.has_key(eBonus)):
+							self.bonusCorpYields[eBonus] = {}
+						if (not self.bonusCorpYields[eBonus].has_key(eYield)):
+							self.bonusCorpYields[eBonus][eYield] = {}
+						if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
+							self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
 
-					for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
-						iCommerceValue = info.getCommerceProduced(eCommerce)
-						if (iCommerceValue != 0):
-							if (not self.bonusCorpCommerces.has_key(eBonus)):
-								self.bonusCorpCommerces[eBonus] = {}
-							if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
-								self.bonusCorpCommerces[eBonus][eCommerce] = {}
-							if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
-								self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
+				for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
+					iCommerceValue = info.getCommerceProduced(eCommerce)
+					if (iCommerceValue != 0):
+						if (not self.bonusCorpCommerces.has_key(eBonus)):
+							self.bonusCorpCommerces[eBonus] = {}
+						if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
+							self.bonusCorpCommerces[eBonus][eCommerce] = {}
+						if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
+							self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
 
 		self.loadPages()
 

@@ -524,7 +524,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	if (vector::contains(eTech, info.getPrereqAndTechs()))
+	if (vector::hasValue(eTech, info.getPrereqAndTechs()))
 	{
 		return true;
 	}

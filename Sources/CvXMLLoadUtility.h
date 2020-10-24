@@ -682,15 +682,6 @@ public:
 	}
 
 	template<class T>
-	static void CopyVector(std::vector<T>& target, const std::vector<T>& source)
-	{
-		foreach_(T it, source)
-		{
-			target.push_back(it);
-		}
-	}
-
-	template<class T>
 	void SetOptionalVector(std::vector<T>* aInfos, const wchar_t* szRootTagName)
 	{
 		if (TryMoveToXmlFirstChild(szRootTagName))

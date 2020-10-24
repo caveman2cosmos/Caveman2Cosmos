@@ -4455,7 +4455,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusType");
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrBonuses, L"PrereqBonuses");
+	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 
@@ -4674,7 +4674,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	vector::read(*pXML, m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
 
 	m_PropertyManipulators.read(pXML);
 

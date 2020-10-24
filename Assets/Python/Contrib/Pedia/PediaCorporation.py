@@ -81,13 +81,8 @@ class PediaCorporation:
 				aList2.append((CvUnitInfo.getButton(), iUnit))
 		# Requires
 		iTech = CvTheCorporationInfo.getTechPrereq()
-		aReqBonusListLength = 0
-		while True:
-			iBonus = CvTheCorporationInfo.getPrereqBonus(aReqBonusListLength)
-			if iBonus == -1:
-				break
+		for iBonus in CvTheCorporationInfo.getPrereqBonuses():
 			aConsumesList.append((GC.getBonusInfo(iBonus).getButton(), iBonus))
-			aReqBonusListLength += 1
 		if aReqBuildList or aConsumesList or iTech != -1:
 			enumBS = GenericButtonSizes.BUTTON_SIZE_CUSTOM
 			X_MAIN_CONT = self.X_MAIN_CONT

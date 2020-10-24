@@ -361,13 +361,7 @@ def initCorporationBonuses():
 	Map corporation ID to the set of bonus IDs it uses.
 	'''
 	for eCorp in range(GC.getNumCorporationInfos()):
-		corp = GC.getCorporationInfo(eCorp)
-		bonuses = set()
-		for i in range(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
-			eBonus = corp.getPrereqBonus(i)
-			if eBonus != -1:
-				bonuses.add(eBonus)
-		CORP_BONUSES[eCorp] = bonuses
+		CORP_BONUSES[eCorp] = GC.getCorporationInfo(eCorp).getPrereqBonuses()
 
 def getSurplusBonuses(playerOrID, minimum=1):
 	"""

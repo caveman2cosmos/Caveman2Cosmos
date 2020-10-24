@@ -10583,7 +10583,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						if (vector::contains(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
+						if (vector::hasValue(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
 						{
 							iTempValue += 40;
 						}
@@ -10666,9 +10666,9 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 			int iNumCorpBonuses = 0;
 			iCorpCount += getNumCities() / 6 + 1;
 			const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(BonusTypes prereqBonus, kCorp.getPrereqBonuses())
 			{
-				if (eBonus == kCorp.getPrereqBonus(i))
+				if (eBonus == prereqBonus)
 				{
 					iValue += (50 * kCorp.getYieldProduced(YIELD_FOOD) * iCorpCount) / iCityCount;
 					iValue += (50 * kCorp.getYieldProduced(YIELD_PRODUCTION) * iCorpCount) / iCityCount;
@@ -10798,7 +10798,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
-		|| vector::contains(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
+		|| vector::hasValue(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}
@@ -10828,7 +10828,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /* Fuyu						  END															*/
 /************************************************************************************************/
 		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
-		|| vector::contains(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
+		|| vector::hasValue(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
 		{
 			bStrategic = true;
 		}
@@ -13846,9 +13846,9 @@ int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity*
 		const int iBonusCount = pCity->getNumBonuses(eBonus);
 		if (iBonusCount > 0)
 		{
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(BonusTypes prereqBonus, kCorp.getPrereqBonuses())
 			{
-				if (eBonus == kCorp.getPrereqBonus(i))
+				if (eBonus == prereqBonus)
 				{
 					//	These are all in hundredths, so the multipliers here accoutn for the division
 					//	by 100 at the very end and are 100 times smaller than the multipliers for the

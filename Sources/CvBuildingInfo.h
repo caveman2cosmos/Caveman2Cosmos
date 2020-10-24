@@ -232,8 +232,8 @@ public:
 	bool isAnyUnitCombatFreeExperience() const;
 	bool isAnyDomainFreeExperience() const;
 	int getDomainProductionModifier(int i) const; // Exposed to Python
-	const std::vector<TechTypes> getPrereqAndTechs() const { return m_aePrereqAndTechs; }
-	const python::list cyGetPrereqAndTechs() const { return vector::makePythonList(m_aePrereqAndTechs); }
+	const std::vector<TechTypes>& getPrereqAndTechs() const { return m_aePrereqAndTechs; }
+	const python::list cyGetPrereqAndTechs() const { return Cy::makeList(m_aePrereqAndTechs); }
 	int getBuildingHappinessChanges(int i) const; // Exposed to Python
 	int getPrereqNumOfBuilding(int i) const; // Exposed to Python
 
@@ -308,8 +308,8 @@ public:
 	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 
 	int getUnitProductionModifier(int i) const;
-	const std::vector<BonusTypes> getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
-	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_aePrereqOrVicinityBonuses; }
+	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
 	bool isPrereqOrBuilding(int i) const;
 
@@ -636,8 +636,8 @@ public:
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	//Alberts2 PrereqBonuses
-	const std::vector<BonusTypes> getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return vector::makePythonList(m_aePrereqOrBonuses); }
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
 
 protected:
 	int m_iVictoryPrereq;
