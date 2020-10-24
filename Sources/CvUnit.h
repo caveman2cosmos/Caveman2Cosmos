@@ -2090,7 +2090,6 @@ protected:
 	int m_iExtraMaxHP;
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
-	int m_iExtraCostModifier;
 
 	int m_iExtraUpkeep100;
 	int m_iUpkeepModifier;
