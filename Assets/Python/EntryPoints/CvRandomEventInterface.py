@@ -6242,9 +6242,7 @@ def applyEarthquake1(argsList):
 
 
 def canDoAssassinDiscovered3(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getCapitalCity().isNone():
-		return False
-	return True
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doAssassinDiscovered3(argsList):
 	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
@@ -8041,7 +8039,7 @@ def ApplyNativegood2(argsList):
 	CyPlayer.setNativeRelationship(iRelationship)
 
 	CyCity = CyPlayer.getCapitalCity()
-	if CyCity.isNone:
+	if CyCity is None:
 		return
 	aList = (UnitAITypes.UNITAI_ATTACK, UnitAITypes.UNITAI_CITY_DEFENSE)
 	iHighest = 0
