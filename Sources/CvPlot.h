@@ -148,23 +148,6 @@ public:
 	friend bool operator==(const CvPlot& lhs, const CvPlot& rhs) { return &lhs == &rhs; }
 	friend bool operator!=(const CvPlot& lhs, const CvPlot& rhs) { return &lhs != &rhs; }
 
-protected:
-	CvGameObjectPlot m_GameObject;
-
-public:
-	// Dale - Battle Effect
-	void changeBattleCountdown(int iValue);
-	void setBattleCountdown(int iValue);
-	int getBattleCountdown() const;
-	bool isBattle() const;
-	bool canHaveBattleEffect(const CvUnit* pAttacker = NULL, const CvUnit* pDefender = NULL) const;
-	EffectTypes getBattleEffect();
-	void setBattleEffect();
-protected:
-	int m_iBattleCountdown;
-	EffectTypes m_eBattleEffect;
-	// ! Dale
-public:
 	void init(int iX, int iY);
 	void uninit();
 	void reset(int iX = 0, int iY = 0, bool bConstructorCall=false);
@@ -236,7 +219,8 @@ public:
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater() const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python
+	bool isWaterAndIsFresh() const;
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
@@ -403,6 +387,8 @@ public:
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
 protected:
+	CvGameObjectPlot m_GameObject;
+
 	char /*PlayerTypes*/ m_eClaimingOwner;
 	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
@@ -1217,6 +1203,7 @@ public:
 
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, LandmarkTypes, getLandmarkType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, ImprovementTypes, getImprovementType);
+		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TerrainTypes, getTerrainType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, FeatureTypes, getFeatureType);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, PlayerTypes, getOwner);

@@ -5700,20 +5700,6 @@
 		<Spanish>Apoyo al ataque</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_HOVER</Tag>
-		<English>Causes "Battlefield Terrain", which significantly reduces productivity and mobility on plots where a battle is fought</English>
-		<French>Transforme les cases qui sont le théâtre d'un combat en "Champs de Bataille", réduisant de manière significative leur productivité et la mobilité des unités y accédant.</French>
-		<German>Wenn eine Schlacht stattfindet, wird auf der Karte ein "Schlachtfeld" erzeugt, dass die Produktivität senkt und die Bewegung von Einheiten verringert</German>
-		<Spanish>Causa el efecto "Campo de batalla" en las casillas donde se libra una batalla, el cual reduce significativamente la producción y la movilidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_TEXT</Tag>
-		<English>Battle Effects</English>
-		<French>Effets de Batailles</French>
-		<German>Kampfeffekte</German>
-		<Spanish>Efectos de batalla</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_HOVER</Tag>
 		<English>Enables fighters to actively target and engage enemy aircraft</English>
 		<French>Permet aux Avions de Chasse d'engager le Combat en sélectionnant une cible aérienne.</French>

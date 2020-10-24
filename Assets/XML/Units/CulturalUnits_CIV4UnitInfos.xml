@@ -27104,6 +27104,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -36703,6 +36707,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -46049,6 +46057,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -47319,6 +47331,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -51674,6 +51690,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>

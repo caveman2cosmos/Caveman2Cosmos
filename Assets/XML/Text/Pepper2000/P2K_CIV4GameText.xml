@@ -2533,8 +2533,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon</English>
-		<French>[ICON_BULLET]Peut construire les Villes sur la Lune</French>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>

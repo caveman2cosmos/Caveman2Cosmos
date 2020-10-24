@@ -779,7 +779,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Tag>
-		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (lakeshore, coast, or sea).</English>
+		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (coast or sea).</English>
 		<German>[COLOR_BUILDING_TEXT]Unerforschte Inseln[COLOR_REVERT] sind das Meeresäquivalent zum Eingeborenendorf. Sie können nur in küstennahen Gewässern entdeckt werden und haben die gleichen Auswirkungen.</German>
 		<Spanish>Las Islas inexploradas son el equivalente marino a la Aldea tribal. Sólo se pueden encontrar en aguas costeras.</Spanish>
 	</TEXT>
@@ -2033,11 +2033,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_END</Tag>
 		<English>Improvements</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>		
 		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
 	</TEXT>

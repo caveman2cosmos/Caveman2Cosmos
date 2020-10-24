@@ -286,32 +286,14 @@ public:
 	// Globals Defines
 	//////////////////////
 
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
 	bool getDefineBOOL( const char * szName ) const { return GC.getDefineBOOL( szName ); }
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   END                                                  */
-/************************************************************************************************/
 	int getDefineINT( const char * szName ) const { return GC.getDefineINT( szName ); }
 	float getDefineFLOAT( const char * szName ) const { return GC.getDefineFLOAT( szName ); }
 	const char * getDefineSTRING( const char * szName ) const { return GC.getDefineSTRING( szName ); }
+
 	void setDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue ); }
 	void setDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue ); }
 	void setDefineSTRING( const char * szName, const char * szValue ) { return GC.setDefineSTRING( szName, szValue ); }
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS() const { return GC.isDCM_BATTLE_EFFECTS(); }
-	int getBATTLE_EFFECT_LESS_FOOD() const { return GC.getBATTLE_EFFECT_LESS_FOOD(); }
-	int getBATTLE_EFFECT_LESS_PRODUCTION() const { return GC.getBATTLE_EFFECT_LESS_PRODUCTION(); }
-	int getBATTLE_EFFECT_LESS_COMMERCE() const { return GC.getBATTLE_EFFECT_LESS_COMMERCE(); }
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const { return GC.getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(); }
-	int getMAX_BATTLE_TURNS() const { return GC.getMAX_BATTLE_TURNS(); }
 
 	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
 	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
@@ -333,9 +315,6 @@ public:
 	bool isSS_ENABLED() const { return GC.isSS_ENABLED(); }
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
 
 	int getMOVE_DENOMINATOR() const { return GC.getMOVE_DENOMINATOR(); }
 	int getNUM_UNIT_PREREQ_OR_BONUSES() const { return GC.getNUM_UNIT_PREREQ_OR_BONUSES(); }

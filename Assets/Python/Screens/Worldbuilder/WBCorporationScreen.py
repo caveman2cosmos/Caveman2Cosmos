@@ -73,10 +73,8 @@ class WBCorporationScreen:
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 1 and iPlayerX != iSelectedPlayer: continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != iSelectedTeam: continue
-			(loopCity, iter) = pPlayerX.firstCity(False)
-			while(loopCity):
+			for loopCity in pPlayerX.cities():
 				lCities.append([loopCity, iPlayerX])
-				(loopCity, iter) = pPlayerX.nextCity(iter, False)
 		self.placeCityTable()
 
 	def placeCityTable(self):
@@ -140,7 +138,7 @@ class WBCorporationScreen:
 			iRow = screen.appendTableRow("WBHeadquarter")
 			screen.setTableText("WBHeadquarter", 0, iRow, "", GC.getCorporationInfo(i).getButton(), WidgetTypes.WIDGET_PYTHON, 8201, i, 1<<0)
 			pHeadquarter = CyGame().getHeadquarters(i)
-			if not pHeadquarter.isNone():
+			if pHeadquarter:
 				iPlayerX = pHeadquarter.getOwner()
 				pPlayerX = GC.getPlayer(iPlayerX)
 				sColor = u"<color=%d,%d,%d,%d>" %(pPlayerX.getPlayerTextColorR(), pPlayerX.getPlayerTextColorG(), pPlayerX.getPlayerTextColorB(), pPlayerX.getPlayerTextColorA())

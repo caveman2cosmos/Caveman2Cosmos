@@ -31,6 +31,14 @@
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
+		<English>Fresh Water</English>
+		<French>Eau douce</French>
+		<German>Süßwasser</German>
+		<Italian>Acqua dolce</Italian>
+		<Spanish>Agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
 		<French>Désert Calcaire</French>
@@ -201,6 +209,18 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Dünen[COLOR_REVERT] sind Sandhügel und -berge, die in vegetationslosen Gebieten mit Vorhandensein von Sand unter dem Einfluss des Windes entstehen. Der Wind erodiert den Sand, transportiert ihn und lagert ihn wieder ab, wodurch die Sanddünen einem beständigen Wandel unterworfen sind. Besonders gut sichtbar ist dies bei freien, sogenannten Wanderdünen.</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_COAST</Tag>
+		<English>Freshwater Coast</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_OCEAN</Tag>
+		<English>Freshwater Ocean</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
+		<English>Freshwater Sea</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
 		<English>Grassland</English>
 		<French>
@@ -304,22 +324,6 @@
 		<English>Jagged</English>
 		<French>Terrain escarpé</French>
 		<German>Gletscher</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LAKE</Tag>
-		<English>Lake</English>
-		<French>Lac</French>
-		<German>See</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LAKE_SHORE</Tag>
-		<English>Lake Shore</English>
-		<French>
-			<Text>Rive du lac</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seeufer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME</Tag>

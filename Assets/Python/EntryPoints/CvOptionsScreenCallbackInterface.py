@@ -400,11 +400,9 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 	iPlayer = CyGame().getActivePlayer()
 	CyPlayer = GC.getPlayer(iPlayer)
 
-	CyCity, i = CyPlayer.firstCity(False)
-	if CyCity:
-		import CvUtil
-		iNumBuildInfos = GC.getNumBuildInfos()
-	while CyCity:
+	import CvUtil
+	iNumBuildInfos = GC.getNumBuildInfos()
+	for CyCity in CyPlayer.cities():
 		if szName.rfind(CvUtil.remove_diacriticals(CyCity.getName())) > -1:
 			iCityID = CyCity.getID()
 			for k in range(iNumBuildInfos):
@@ -412,7 +410,6 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 					import AutomatedSettings
 					CyMessageControl().sendModNetMessage(AutomatedSettings.getCanAutoBuildEventID(), iPlayer, iCityID, k, int(bValue))
 					return 1
-		CyCity, i = CyPlayer.nextCity(i, False)
 	return 0
 
 def handleNationalAutomatedBuildCheckboxClicked(argsList):

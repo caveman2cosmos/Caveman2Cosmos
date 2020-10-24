@@ -71,7 +71,6 @@ class MapConstants:
 		self.fLakesPerPlot = 0.009
 
 		# This value controls the number of deep ocean threnches per ocean map square.
-		# It will become a lake if enough water flows into the depression.
 		self.fThrenchesPerPlot = 0.006
 
 		# iLakeSizeMinPercent sets the minimum percentage a lake is shrunk to when fLakeSizeFactorChance roll true.
@@ -2171,7 +2170,7 @@ class LakeMap:
 					avrRainMap[i] = total / count
 		shuffle(lakePitList)
 		lakeAreaMap	= AreaMap()
-		self.isLakeData = array('b', [0] * iArea)
+		self.lakeData = array('b', [0] * iArea)
 		iMaxLakeSize = mc.iMaxLakeSize
 		iLakeSizeMinPercent = mc.iLakeSizeMinPercent
 		fLakeSizeModChance = mc.fLakeSizeFactorChance
@@ -2183,7 +2182,7 @@ class LakeMap:
 		print "	Available lake pits: %d" % len(lakePitList)
 		for n in xrange(len(lakePitList)):
 			x, y, i = lakePitList.pop()
-			if self.isLakeData[i] == 0 and iLakesLeft > 0:
+			if self.lakeData[i] == 0 and iLakesLeft > 0:
 				HERE = tData[i]
 				if HERE == DESERT or HERE == DUNES or HERE == SALT_FLATS:
 					fTerrainMod = fHeatMod
@@ -2234,13 +2233,12 @@ class LakeMap:
 			xx, yy = GetNeighbor(x, y, dir)
 			ii = GetIndex(xx, yy)
 			if ii >= 0 and plotData[ii] == WATER:
-				if self.isLakeData[ii] == 1:
+				# Don't make lake here if immediately merges
+				if self.lakeData[ii] == 1:
 					if dir < 5: # N, S, E & W
-						iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
-						if iMaxLakeSize > iOtherLakeSize + iMergeSize:
-							iMergeSize += iOtherLakeSize
-						else:
-							return 0
+						print "Skipping pit at (%d, %d): Immediate lake merge" % (x, y)
+						return 0
+				# Or if would be adjacent to ocean at all
 				else:
 					return 0
 		# Create the lake.
@@ -2250,13 +2248,12 @@ class LakeMap:
 		checkedPlots = []
 		thePlot = LakePlot(x, y, i, relAltMap[i], iMergeSize)
 		highestAvrRainfall = self.avrRainfallMap2x2[i]
-		originalLakeSize = iLakeSize
 		while iLakeSize > 0:
 			iLakeSize -= 1 + thePlot.iMergeSize
 			i = thePlot.i
 			plotData[i] = WATER
 			thisLake.append(i)
-			self.isLakeData[i] = 1
+			self.lakeData[i] = 1
 			# Lake expansion - Add valid neighbors to lakeNeighbors.
 			for dir in xrange(1, 5):
 				iMergeSize = 0
@@ -2274,15 +2271,15 @@ class LakeMap:
 						if ii < 0 or ii in thisLake:
 							continue
 						if plotData[ii] == WATER:
-							if self.isLakeData[ii] == 0:
+							if self.lakeData[ii] == 0:
 								# This lake just turned into ocean as an harbor, mark it as such.
 								for index in thisLake:
-									self.isLakeData[index] = -1
+									self.lakeData[index] = -1
 								# Make Harbour.
 								x, y = thePlot.x, thePlot.y
-								self.makeHarbour(x, y, WATER, self.isLakeData, plotData)
+								self.makeHarbour(x, y, WATER, self.lakeData, plotData)
 								return 0
-							if self.isLakeData[ii] == 1:
+							if self.lakeData[ii] == 1:
 								# Check if this lake can merge with the neighbouring lake.
 								iOtherLakeSize = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[ii]).size
 								if iMaxLakeSize > (len(thisLake) + iOtherLakeSize + iMergeSize):
@@ -2333,144 +2330,105 @@ class LakeMap:
 
 	# It looks bad to have a lake sitting right next to the coast.
 	# This function tries to minimize that occurance by replacing it with a natural harbour, which looks much better.
-	def makeHarbour(self, x, y, WATER, isLakeData, plotData):
+	def makeHarbour(self, x, y, WATER, lakeData, plotData):
 		candidateList = []
 		#N
 		i = GetIndex(x, y + 2)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				ii = GetIndex(x, y + 1)
-				candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			ii = GetIndex(x, y + 1)
+			candidateList.append(ii)
 		#S
 		i = GetIndex(x, y - 2)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				ii = GetIndex(x, y - 1)
-				candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			ii = GetIndex(x, y - 1)
+			candidateList.append(ii)
 		#E
 		i = GetIndex(x + 2, y)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				ii = GetIndex(x + 1, y)
-				candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			ii = GetIndex(x + 1, y)
+			candidateList.append(ii)
 		#W
 		i = GetIndex(x - 2, y)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				ii = GetIndex(x - 1, y)
-				candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			ii = GetIndex(x - 1, y)
+			candidateList.append(ii)
 		#NW
 		i = GetIndex(x - 1, y + 1)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				if random() <= 0.5:
-					ii = GetIndex(x - 1, y)
-					candidateList.append(ii)
-				else:
-					ii = GetIndex(x, y + 1)
-					candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			if random() <= 0.5:
+				ii = GetIndex(x - 1, y)
+			else:
+				ii = GetIndex(x, y + 1)
+			candidateList.append(ii)
 		#SE
 		i = GetIndex(x + 1, y - 1)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				if random() <= 0.5:
-					ii = GetIndex(x + 1, y)
-					candidateList.append(ii)
-				else:
-					ii = GetIndex(x, y - 1)
-					candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			if random() <= 0.5:
+				ii = GetIndex(x + 1, y)
+			else:
+				ii = GetIndex(x, y - 1)
+			candidateList.append(ii)
 		#NE
 		i = GetIndex(x + 1, y + 1)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				if random() <= 0.5:
-					ii = GetIndex(x, y + 1)
-					candidateList.append(ii)
-				else:
-					ii = GetIndex(x + 1, y)
-					candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			if random() <= 0.5:
+				ii = GetIndex(x, y + 1)
+			else:
+				ii = GetIndex(x + 1, y)
+			candidateList.append(ii)
 		#SW
 		i = GetIndex(x - 1, y - 1)
-		if i >= 0 and plotData[i] == WATER:
-			if isLakeData[i] == 0:
-				if random() <= 0.5:
-					ii = GetIndex(x, y - 1)
-					candidateList.append(ii)
-				else:
-					ii = GetIndex(x - 1, y)
-					candidateList.append(ii)
+		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
+			if random() <= 0.5:
+				ii = GetIndex(x, y - 1)
+			else:
+				ii = GetIndex(x - 1, y)
+			candidateList.append(ii)
+
 		shuffle(candidateList)
 		i = candidateList[0]
 		plotData[i] = WATER
 		print "	Made an harbour"
-		return
 
 
 	def avoidWaterGlitch(self, iWidth, iHeight, WATER, iMaxLakeSize, lakeAreaMap):
-		LAND	= mc.LAND
-		PLAINS	= mc.PLAINS
 		plotData = tm.plotData
-		xWestEdgeID = 0
-		for y in xrange(iHeight):
-			xEastEdgeID = xWestEdgeID + iWidth - 1
-			if not plotData[xEastEdgeID] and plotData[xWestEdgeID]:
-				if self.isLakeData[xEastEdgeID] != 1:
-					plotData[xWestEdgeID] = WATER
-				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size:
-					plotData[xWestEdgeID] = WATER
-					self.isLakeData[xWestEdgeID] = 1
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size += 1
-				else:
-					plotData[xEastEdgeID] = LAND
-					tm.terrData[xEastEdgeID] = PLAINS
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xEastEdgeID]).size -= 1
+		terrData = tm.terrData
 
-			elif plotData[xEastEdgeID] and not plotData[xWestEdgeID]:
-				if self.isLakeData[xWestEdgeID] != 1:
-					plotData[xEastEdgeID] = WATER
-				elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size:
-					plotData[xEastEdgeID] = WATER
-					self.isLakeData[xEastEdgeID] = 1
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size += 1
+		for y in xrange(iHeight):
+			xWestEdgeID = y * iWidth
+			xEastEdgeID = xWestEdgeID + iWidth - 1
+			if (
+				WATER in (plotData[xEastEdgeID], plotData[xWestEdgeID])
+				and
+				plotData[xEastEdgeID] != plotData[xWestEdgeID]
+			):
+				if plotData[xEastEdgeID]:
+					plotData[xWestEdgeID] = plotData[xEastEdgeID]
+					terrData[xWestEdgeID] = terrData[xEastEdgeID]
 				else:
-					plotData[xWestEdgeID] = LAND
-					tm.terrData[xWestEdgeID] = PLAINS
-					lakeAreaMap.getAreaByID(lakeAreaMap.areaID[xWestEdgeID]).size -= 1
-			xWestEdgeID += iWidth
+					plotData[xEastEdgeID] = plotData[xWestEdgeID]
+					terrData[xEastEdgeID] = terrData[xWestEdgeID]
+
 		if mc.bWrapY:
 			ICE = mc.ICE
 			for southEdgeID in xrange(iWidth):
 				northEdgeID = southEdgeID + (iHeight - 1) * iWidth
-				if plotData[southEdgeID] and not plotData[northEdgeID]:
-					if self.isLakeData[northEdgeID] != 1:
-						plotData[southEdgeID] = WATER
-					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size:
-						plotData[southEdgeID] = WATER
-						self.isLakeData[southEdgeID] = 1
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size += 1
+				if (
+					WATER in (plotData[southEdgeID], plotData[northEdgeID])
+					and
+					plotData[southEdgeID] != plotData[northEdgeID]
+				):
+					if plotData[southEdgeID]:
+						plotData[northEdgeID] = plotData[southEdgeID]
+						terrData[northEdgeID] = terrData[southEdgeID]
 					else:
-						plotData[northEdgeID] = LAND
-						tm.terrData[northEdgeID] = ICE
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[northEdgeID]).size -= 1
-
-				elif not plotData[southEdgeID] and plotData[northEdgeID]:
-					if self.isLakeData[southEdgeID] != 1:
-						plotData[northEdgeID] = WATER
-					elif iMaxLakeSize > lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size:
-						plotData[northEdgeID] = WATER
-						self.isLakeData[northEdgeID] = 1
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size += 1
-					else:
-						plotData[southEdgeID] = LAND
-						tm.terrData[southEdgeID] = ICE
-						lakeAreaMap.getAreaByID(lakeAreaMap.areaID[southEdgeID]).size -= 1
+						plotData[southEdgeID] = plotData[northEdgeID]
+						terrData[southEdgeID] = terrData[northEdgeID]
 
 
 	def isLake(self, x, y):
-		i = GetIndex(x, y)
-		if self.isLakeData[i] == 1:
-			return True
-		return False
+		return self.lakeData[GetIndex(x, y)] == 1
 
 
 	def defineWaterTerrain(self, iWidth, iHeight, iArea, fLandHeight, WATER):
@@ -2493,7 +2451,7 @@ class LakeMap:
 				climate = 0
 			climateList = climateList + [climate] * iWidth
 		bDefined = array('H', [0] * iArea)
-		isLake = self.isLakeData
+		lakeData = self.lakeData
 		# First define coast and shore.
 		COAST		= mc.COAST
 		COAST_POL	= mc.COAST_POL
@@ -2508,7 +2466,7 @@ class LakeMap:
 						xx, yy = GetNeighbor(x, y, dir)
 						ii = GetIndex(xx, yy)
 						if ii >= 0 and plotData[ii]:
-							if isLake[i] != 1:
+							if lakeData[i] != 1:
 								bDefined[i] = COAST
 								if not climateList[i]:
 									terrData[i] = COAST
@@ -2540,7 +2498,7 @@ class LakeMap:
 			for x in xrange(iWidth):
 				i += 1
 				if not (plotData[i] or bDefined[i]):
-					if isLake[i] == 1:
+					if lakeData[i] == 1:
 						bDefined[i] = LAKE
 						if not climateList[i]:
 							terrData[i] = LAKE
@@ -3917,18 +3875,12 @@ class StartPlot:
 		self.owner = None
 		self.avgDistance = 0
 
-
 	def isCoast(self):
-		plot = CyMap().plot(self.x, self.y)
-		waterArea = plot.waterArea()
-		if waterArea.isNone() or waterArea.isLake(): 
-			return False
-		return True
-
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return not waterArea.isNone() and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()
-
 
 	def plot(self):
 		return CyMap().plot(self.x, self.y)
@@ -3940,16 +3892,17 @@ class StartPlot:
 class MapOptions:
 	def __init__(self):
 		self.bfirstRun = True
-		self.optionList = [ # Title, Default, Random, Choices)
-							["Hills:",			2,	True, 5],
-							["Peaks:",			2,	True, 5],
-							["Landform:",		2,	True, 5],
-							["World Wrap:",		0, False, 3],
-							["Start:",			1, False, 2],
-							["Rivers:",			4,	True, 9],
-							["Resources:",		3,	True, 7],
-							["Pangea Breaker:",	0, False, 2]
-						] # When dding/removing options: Update the return of getNumCustomMapOptions().
+		self.optionList = \
+		[	# Title, Default, Random, Choices
+			["Hills:",			2,	True, 5],
+			["Peaks:",			2,	True, 5],
+			["Landform:",		2,	True, 5],
+			["World Wrap:",		0, False, 3],
+			["Start:",			1, False, 2],
+			["Rivers:",			4,	True, 9],
+			["Resources:",		3,	True, 7],
+			["Pangea Breaker:",	0, False, 2]
+		] # When adding/removing options: Update the return of getNumCustomMapOptions().
 
 	def loadMapOptionDefaults(self):
 		self.bfirstRun = False
@@ -4467,7 +4420,7 @@ def generateTerrainTypes():
 			terrTypes[i] = terrPermaFrost
 		elif terrData[i] == mc.ICE:
 			terrTypes[i] = terrIce
-	timer.log()			
+	timer.log()
 	return terrTypes
 
 
@@ -4662,7 +4615,6 @@ def addBonuses():
 def afterGeneration():
 	#CvMapGeneratorUtil.placeC2CBonuses()
 	NaturalWonders.NaturalWonders().placeNaturalWonders()
-	return
 
 
 def assignStartingPlots():

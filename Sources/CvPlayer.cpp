@@ -7211,24 +7211,22 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 
 	if (!hasValidCivics(eBuilding))
 	{
-		if ( probabilityEverConstructable != NULL )
+		if (probabilityEverConstructable != NULL)
 		{
 			*probabilityEverConstructable = 20;
 		}
 		return false;
 	}
 
-	if (kBuilding.isPrereqWar() && !bExposed)
+	if (kBuilding.isPrereqWar() && !bExposed && !currentTeam.isAtWar())
 	{
-		if (currentTeam.getAtWarCount(true, false) == 0)
+		if (probabilityEverConstructable != NULL)
 		{
-			if ( probabilityEverConstructable != NULL )
-			{
-				*probabilityEverConstructable = 10;
-			}
-			return false;
+			*probabilityEverConstructable = 10;
 		}
+		return false;
 	}
+
 	if (!GC.getGame().canEverConstruct(eBuilding))
 	{
 		return false;
@@ -12791,7 +12789,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					}
 				}
 
-				if (GET_TEAM(getTeam()).getAtWarCount(false) > 0)
+				if (GET_TEAM(getTeam()).isAtWar(true))
 				{
 					szBuffer.append(CvWString::format(L";  at war with: "));
 
@@ -16880,7 +16878,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 			return false;
 		}
 	}
-	if (kMission.getWarWearinessCounter() > 0 && GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getAtWarCount(true) == 0)
+	if (kMission.getWarWearinessCounter() > 0 && !GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).isAtWar())
 	{
 		return false;
 	}
@@ -27725,7 +27723,7 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 	}
 
 	if (GET_PLAYER(ePlayer).AI_isFinancialTrouble() && getUnitUpkeepMilitaryNet() > 0
-	&& GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getAtWarCount(true) == 0)
+	&& !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar())
 	{
 		return DENIAL_NO_GAIN;
 	}

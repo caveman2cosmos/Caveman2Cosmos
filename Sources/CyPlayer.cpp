@@ -1,3 +1,4 @@
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
@@ -274,19 +275,10 @@ std::wstring CyPlayer::getCivilizationDescription(int iForm)
 	return m_pPlayer ? m_pPlayer->getCivilizationDescription((uint)iForm) : std::wstring();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-void CyPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)
+void CyPlayer::setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj)
 {
-	if( m_pPlayer )
-		m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
+	m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 std::wstring CyPlayer::getCivilizationDescriptionKey()
 {
@@ -1593,9 +1585,11 @@ int CyPlayer::getStateReligionFreeExperience()
 	return m_pPlayer ? m_pPlayer->getStateReligionFreeExperience() : -1;
 }
 
-CyCity* CyPlayer::getCapitalCity()
+CyCity* CyPlayer::getCapitalCity() const
 {
-	return m_pPlayer ? new CyCity(m_pPlayer->getCapitalCity()) : NULL;
+	FAssert(m_pPlayer);
+	CvCity* city = m_pPlayer->getCapitalCity();
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlayer::getCitiesLost()
@@ -2248,6 +2242,16 @@ int CyPlayer::getNumCityNames()
 std::wstring CyPlayer::getCityName(int iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getCityName(iIndex) : std::wstring();
+}
+
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
 }
 
 // returns tuple of (CyCity, iterOut)

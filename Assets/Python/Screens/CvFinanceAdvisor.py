@@ -137,8 +137,7 @@ class CvFinanceAdvisor:
 		############
 		iCommerce = iTiles = iYield0 = iYield1 = iYield2 = iYield3 = iYield4 = 0
 		iTeam = CyPlayer.getTeam()
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				# Work plots
 				for j in range(GC.getNUM_CITY_PLOTS()):
@@ -149,7 +148,7 @@ class CvFinanceAdvisor:
 				# Trade
 				for j in range(CyCity.getTradeRoutes()):
 					CyCityX = CyCity.getTradeCity(j)
-					if not CyCityX or CyCityX.isNone(): continue
+					if not CyCityX: continue
 
 					trade = CyCity.calculateTradeYield(YieldTypes.YIELD_COMMERCE, CyCity.calculateTradeProfitTimes100(CyCityX))
 					if CyCityX.getTeam() == iTeam:
@@ -161,7 +160,6 @@ class CvFinanceAdvisor:
 				# specialists
 				for iType in range(GC.getNumSpecialistInfos()):
 					iYield4 += CyPlayer.specialistYield(iType, YieldTypes.YIELD_COMMERCE) * (CyCity.getSpecialistCount(iType) + CyCity.getFreeSpecialistCount(iType))
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		Pnl = "FinAdv_Scroll_1"
 		screen.addScrollPanel(Pnl, "", x0, y0 + 32, dx, dy - 64, ePanelHudHelp)
@@ -434,8 +432,7 @@ class CvFinanceAdvisor:
 		iWealthCount = 0
 		fWealth = 0.0
 		eWealth = GC.getInfoTypeForString("PROCESS_WEALTH")
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				fCityTaxes = CyCity.getYieldRate(YieldTypes.YIELD_COMMERCE) * iTaxRate / 100.0
 				fTaxes += fCityTaxes
@@ -496,7 +493,6 @@ class CvFinanceAdvisor:
 					if iCount > 0:
 						entry[3] += iCount
 						entry[4] += iCount * fCityTotal * iMultiplier / 100.0
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + int(fCorporations) + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
 		for entry in multipliers:
