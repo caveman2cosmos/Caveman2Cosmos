@@ -1572,7 +1572,8 @@ bool CyCity::isActiveCorporation(int /*CorporationTypes*/ eCorporation) const
 
 CyCity* CyCity::getTradeCity(int iIndex) const
 {
-	return new CyCity(m_pCity->getTradeCity(iIndex));
+	const CvCity* city = m_pCity->getTradeCity(iIndex);
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyCity::getTradeRoutes() const
