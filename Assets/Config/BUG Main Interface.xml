@@ -27,6 +27,9 @@
 			<!-- Invert shift semantics for build queueing -->
 			<option id="InverseShiftForQueueing" key="InverseShiftForQueueing" type="boolean" default="False" get="isInverseShiftForQueueing" dirtyBit="MiscButtons"/>
 
+			<!-- Discord RP -->
+			<option id="EnableRP" key="EnableRP" type="boolean" default="False" get="EnableRP" dirtyBit="MiscButtons"/>
+
 			<!-- Enable graphical paging -->
 			<option id="EnableGraphicalPaging" key="EnableGraphicalPaging" type="boolean" default="True" get="isEnableGraphicalPaging" dirtyBit="MiscButtons"/>
 
