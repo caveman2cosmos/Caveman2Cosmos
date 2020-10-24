@@ -1977,7 +1977,6 @@ protected:
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 	//TB Combat Mod (Buildings) begin
-	int m_iAidRate;
 	int m_iTotalFrontSupportPercentModifier;
 	int m_iTotalShortRangeSupportPercentModifier;
 	int m_iTotalMediumRangeSupportPercentModifier;
@@ -2044,7 +2043,7 @@ protected:
 	mutable bool* m_abCommerceRateDirty;
 	int* m_aiProductionToCommerceModifier;
 	int* m_aiBuildingCommerce;
-	int* m_aiSpecialistCommerce;
+	int* m_aiSpecialistCommerce100;
 	int* m_aiReligionCommerce;
 	int* m_aiCorporationCommerce;
 	int* m_aiCommerceRateModifier;
