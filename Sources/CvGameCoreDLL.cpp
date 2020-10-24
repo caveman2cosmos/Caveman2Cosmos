@@ -2,12 +2,6 @@
 
 #include <psapi.h>
 
-//
-// Discord RPC
-//
-#include "discord.h"
-C_DiscordRPCCommunication* pDiscord = nullptr;
-
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
@@ -92,9 +86,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-
-		pDiscord = new C_DiscordRPCCommunication(dllDir);
-		discordWorkDirectory = dllDir;
 		}
 		break;
 	case DLL_THREAD_ATTACH:
