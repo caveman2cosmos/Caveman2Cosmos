@@ -6242,7 +6242,7 @@ def applyEarthquake1(argsList):
 
 
 def canDoAssassinDiscovered3(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None:
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doAssassinDiscovered3(argsList):
 	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
