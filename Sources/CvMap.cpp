@@ -357,10 +357,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	foreach_(CvPlot* plot, plots())
-	{
-		plot->doTurn();
-	}
+	algo::for_each(plots(), CvPlot::fn::doTurn());
 }
 
 
@@ -454,13 +451,6 @@ void CvMap::updateWorkingCity()
 void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 {
 	PROFILE_FUNC();
-
-	FAssert((int)m_pMapPlots.size() == numPlots());
-	for (int i = 0; i < numPlots(); i++)
-		FAssert(plotByIndex(i));
-
-	foreach_(CvPlot* pLoopPlot, plots())
-		FAssert(pLoopPlot);
 
 	algo::for_each(plots() | filtered(CvPlot::fn::area() == pArea),
 		CvPlot::fn::setMinOriginalStartDist(-1)

@@ -1203,6 +1203,7 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setFeatureType, FeatureTypes);
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setBonusType, BonusTypes);
 		DECLARE_MAP_FUNCTOR_1(CvPlot, void, setCountedPlot, bool);
+		DECLARE_MAP_FUNCTOR_1(CvPlot, void, clearFoundValue, PlayerTypes);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateCulture, bool, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, void, updateRouteSymbol, bool, bool);
