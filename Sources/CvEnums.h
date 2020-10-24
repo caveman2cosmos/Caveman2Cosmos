@@ -497,6 +497,7 @@ enum WidgetTypes					// Exposed to Python
 	WIDGET_HELP_FOUND_RELIGION,
 	WIDGET_HELP_FOUND_CORPORATION,
 	WIDGET_HELP_FINANCE_NUM_UNITS,
+	WIDGET_UNUSED_50, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_FINANCE_AWAY_SUPPLY,
 	WIDGET_HELP_FINANCE_CITY_MAINT,
 	WIDGET_HELP_FINANCE_CIVIC_UPKEEP,
