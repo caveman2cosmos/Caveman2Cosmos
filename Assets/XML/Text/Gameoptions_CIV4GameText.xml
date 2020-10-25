@@ -1234,19 +1234,6 @@ Only affects SmartMap if terrain options is:
 		<Polish>Jednostki sa modyfikowane przez ich Wielkość, Rozmiar i Waleczność (Informacja: AI w trakcie implementacji)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Tag>
-		<English>Size Matters Uncut</English>
-		<French>Mode de Combat C2C - La Taille Compte! (version 'Uncut')</French>
-		<German>Größe ist wichtig (ungeschnittene Version)</German>
-		<Polish>Rozmiar ma znaczenie - wersja rozszerzona</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Tag>
-		<English>MUST ALSO PLAY WITH Size Matters option ON! Forces all units start with their normal base strength and HP values. Normal Size Matters alone will introduce some strength adjustments to units that differ from the core. This enforces adherence to the core unit strengths.</English>
-		<French>DOIT ETRE SELECTIONNE avec le mod C2C : La Taille Compte! Actif ! .Force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option La Taille Compte! ajuste les valeurs des unités. Cela renforce l'adhésion aux forces des l'unités.</French>
-		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"! Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>
 		<English>Start as minor civs</English>
 		<French>Civs mineures au départ</French>
