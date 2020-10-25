@@ -16,8 +16,6 @@ void CyGamePythonInterface()
 
 	python::class_<CyGame>("CyGame")
 
-		//.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
-
 		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
