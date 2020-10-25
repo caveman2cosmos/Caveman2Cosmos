@@ -11490,7 +11490,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
 	if (cCount > 0)
 	{
-		m_paiBuildProgress = new short[cCount];
+		m_paiBuildProgress = new int[GC.getNumBuildInfos()];
 		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_paiBuildProgress);
 	}
 
