@@ -185,7 +185,7 @@ void CvInitCore::setDefaults()
 			m_abMPOptions[i] = GC.getMPOptionInfo((MultiplayerOptionTypes)i).getDefault();
 		}
 	}
-}	
+}
 
 
 bool CvInitCore::getHuman(PlayerTypes eID) const
@@ -787,7 +787,7 @@ void CvInitCore::resetPlayer(PlayerTypes eID, CvInitCore * pSource, bool bClear,
 
 
 CvWString CvInitCore::getMapScriptName() const
-{ 
+{
 	if (gDLL->getTransferredMap())
 	{
 		if (!getWBMapScript())
@@ -796,8 +796,8 @@ CvWString CvInitCore::getMapScriptName() const
 			return ( m_szMapScriptName + CvWString(MAP_TRANSFER_EXT) );
 		}
 	}
-	return m_szMapScriptName; 
-}	
+	return m_szMapScriptName;
+}
 
 void CvInitCore::setMapScriptName(const CvWString & szMapScriptName)
 {
@@ -1003,13 +1003,13 @@ void CvInitCore::refreshCustomMapOptions()
 		{
 			Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumHiddenCustomMapOptions", m_iNumHiddenCustomMapOptions);
 			int iNumOptions = 0;
-			if (Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", iNumOptions) 
+			if (Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", iNumOptions)
 				&& iNumOptions > 0)
 			{
 				// Got number of custom map options - now get the option defaults
 				std::vector<CustomMapOptionTypes> aeMapOptions(iNumOptions, NO_CUSTOM_MAPOPTION);
 				for (int i = 0; i < iNumOptions; ++i)
-				{	
+				{
 					if (!Cy::call_optional(CvString(getMapScriptName()).GetCString(), "getCustomMapOptionDefault", Cy::Args() << i, aeMapOptions[i]))
 					{
 						FErrorMsg(CvString::format("Python function getCustomMapOptionDefault in mapscript %s failed to return correctly for option index %d", getMapScriptName(), i).c_str());
@@ -1634,13 +1634,13 @@ void CvInitCore::resetAdvancedStartPoints()
 	{
 		iPoints += GC.getEraInfo(getEra()).getAdvancedStartPoints();
 	}
-	
+
 	if (NO_WORLDSIZE != getWorldSize())
 	{
 		iPoints *= GC.getWorldInfo(getWorldSize()).getAdvancedStartPointsMod();
 		iPoints /= 100;
 	}
-	
+
 	if (NO_GAMESPEED != getGameSpeed())
 	{
 		iPoints *= GC.getGameSpeedInfo(getGameSpeed()).getGrowthPercent();
@@ -1680,11 +1680,11 @@ void CvInitCore::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	//	SAVE_FORMAT_VERSION of the build that did the save
-	int saveVersion = 0;	//	If save doesn't have the info
+	// SAVE_FORMAT_VERSION of the build that did the save
+	int saveVersion;
 	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &saveVersion, "SAVE_FORMAT_VERSION")
 	// AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
-	if(saveVersion != SAVE_FORMAT_VERSION)
+	if (saveVersion != SAVE_FORMAT_VERSION)
 	{
 		const char* reason = CvString::format("Save format version is not compatible, version=(%d) expected version=(%d)!", saveVersion, SAVE_FORMAT_VERSION).c_str();
 
@@ -1693,12 +1693,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	}
 
 	m_bRecalcRequestProcessed = false;
-	int m_svnRev = -1;
-	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &m_svnRev, "m_svnRev");
-	if (m_svnRev == -1)
-	{
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvInitCore", m_gitSHA, SAVE_VALUE_ANY);
-	}
 
 	//	Asset checksum of the build that did the save
 	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
@@ -1782,17 +1776,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 /*                                                                                              */
 /* Savegame compatibility                                                                       */
 /************************************************************************************************/
-/*
-	if (uiSaveFlag > 0)
-	{
-		WRAPPER_READ(wrapper, "CvInitCore", NUM_GAMEOPTION_TYPES, m_abOptions);
-	}
-	else
-	{
-		WRAPPER_READ(wrapper, "CvInitCore", NUM_GAMEOPTION_TYPES-1, m_abOptions);
-		m_abOptions[NUM_GAMEOPTION_TYPES-1] = false;
-	}
-*/
 	// Set options to default values to handle cases of loading games that pre-dated an added otpion
 	setDefaults();
 
@@ -1826,7 +1809,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_CIVILIZATIONS, MAX_PLAYERS, (int*)m_aeCiv);
 	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_LEADERHEADS, MAX_PLAYERS, (int*)m_aeLeader);
-			
+
 	WRAPPER_READ_ARRAY(wrapper, "CvInitCore", MAX_PLAYERS, (int*)m_aeTeam);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvInitCore", MAX_PLAYERS, (int*)m_aeHandicap);
@@ -1838,7 +1821,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvInitCore", MAX_PLAYERS, m_abPlayableCiv);
 	WRAPPER_READ_ARRAY(wrapper, "CvInitCore", MAX_PLAYERS, m_abMinorNationCiv);
-	
+
 	//	Special case for LEADERHEADS - if one that is in use is no longer defined we just warn
 	//	and use another one from the same Civ
 	//	Similarly if no Civ yet the slot status implies there should be assign a new one
@@ -1972,7 +1955,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	uint uiSaveFlag=1;
 	*/
 	uint uiSaveFlag=0;
-	
+
 // BUG - Save Format - start
 	// If any optional mod alters the number of game options or save format in any way,
 	// set the BUG save format bit and write out the number of game options later.
@@ -2146,7 +2129,7 @@ void CvInitCore::setPathNames()
 	TCHAR pathBuffer[4096];
 	DWORD result;
 	TCHAR* pos;
-	
+
 	result = GetModuleFileName(NULL, pathBuffer, sizeof(pathBuffer));
 	pos = strchr(pathBuffer, '\\');
 	while (pos != NULL && *pos != NULL)
@@ -2228,7 +2211,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 			GET_PLAYER(eNewID).setOption((PlayerOptionTypes)iI,GET_PLAYER(eOldID).isOption((PlayerOptionTypes)iI));
 			GET_PLAYER(eOldID).setOption((PlayerOptionTypes)iI,false);
 		}
-		
+
 		for (int iI = 0; iI < NUM_MODDEROPTION_TYPES; iI++)
 		{
 			GET_PLAYER(eNewID).setModderOption((ModderOptionTypes)iI,GET_PLAYER(eOldID).getModderOption((ModderOptionTypes)iI));
@@ -2259,7 +2242,7 @@ void CvInitCore::checkInitialCivics()
 {
 	int iI, iJ, iK;
 	bool bFound;
-	
+
 	for (iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
 	{
 		for (iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
