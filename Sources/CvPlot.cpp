@@ -11485,7 +11485,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_STRING(wrapper, "CvPlot", &m_szScriptData);
 
-	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_paiBuildProgress);
+	SAFE_DELETE_ARRAY(m_paiBuildProgress);
+	cCount = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
+	if (cCount > 0)
+	{
+		m_paiBuildProgress = new short[cCount];
+		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_paiBuildProgress);
+	}
 
 	if (NULL != m_apaiCultureRangeCities)
 	{
@@ -11754,7 +11761,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 		{
 			buffer[m_aiCulture[iI].first] = m_aiCulture[iI].second;
 		}
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvPlot", MAX_PLAYERS, buffer, "m_aiCulture");
 	}
 
@@ -11764,7 +11771,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cFoundValuesPresent");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cFoundValuesPresent");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_aiFoundValue);
 	}
 
@@ -11774,7 +11781,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_aiPlayerCityRadiusCount);
 	}
 
@@ -11784,7 +11791,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_aiPlotGroup);
 	}
 
@@ -11794,7 +11801,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiVisibilityCount);
 	}
 
@@ -11804,7 +11811,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditionalML");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditionalML");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiMountainLeaderCount);
 	}
 
@@ -11814,7 +11821,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiStolenVisibilityCount);
 	}
 
@@ -11824,7 +11831,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cLastSeenCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cLastSeenCount");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiLastSeenTurn);
 	}
 
@@ -11834,7 +11841,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiBlockadedCount);
 	}
 
@@ -11844,7 +11851,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_aiRevealedOwner);
 	}
 
@@ -11854,7 +11861,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)NUM_DIRECTION_TYPES, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_DIRECTION_TYPES, m_abRiverCrossing);
 	}
 
@@ -11864,7 +11871,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_TEAMS, m_abRevealed);
 	}
 
@@ -11874,7 +11881,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_IMPROVEMENTS, MAX_TEAMS, m_aeRevealedImprovementType);
 	}
 
@@ -11884,7 +11891,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, MAX_TEAMS, m_aeRevealedRouteType);
 	}
 
@@ -11892,12 +11899,12 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	if (NULL != m_paiBuildProgress)
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)GC.getNumBuildInfos(), "iConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_paiBuildProgress);
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)0, "iConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
 	}
 
 	if (NULL == m_apaiCultureRangeCities)
@@ -11906,7 +11913,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		for (iI=0; iI < MAX_PLAYERS; ++iI)
 		{
 			if (NULL == m_apaiCultureRangeCities[iI])
@@ -11915,7 +11922,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			}
 			else
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)GC.getNumCultureLevelInfos(), "CultureLevelCount");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", GC.getNumCultureLevelInfos(), "CultureLevelCount");
 				WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", GC.getNumCultureLevelInfos(), m_apaiCultureRangeCities[iI]);
 			}
 		}
@@ -11949,7 +11956,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	else
 	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)1, "cConditional");
 		for (iI=0; iI < MAX_TEAMS; ++iI)
 		{
 			if (NULL == m_apaiInvisibleVisibilityCount[iI])
