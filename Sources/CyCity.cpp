@@ -15,7 +15,7 @@ CyCity::CyCity() : m_pCity(NULL)
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-	FAssert(m_pCity);
+	FAssert(m_pCity != NULL, "CyCity constructor requires a valid CvCity");
 }
 
 void CyCity::kill()
