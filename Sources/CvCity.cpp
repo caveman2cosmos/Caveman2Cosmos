@@ -17486,9 +17486,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	// Init data before load
 	reset();
 
-	uint uiFlag = 0;
-	WRAPPER_READ(wrapper, "CvCity", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvCity", &m_iID);
 	WRAPPER_READ(wrapper, "CvCity", &m_iX);
 	WRAPPER_READ(wrapper, "CvCity", &m_iY);
@@ -18014,15 +18011,11 @@ void CvCity::read(FDataStreamBase* pStream)
 
 void CvCity::write(FDataStreamBase* pStream)
 {
-	uint uiFlag = 0;
-
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE(wrapper, "CvCity", uiFlag);		// flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvCity", m_iID);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iX);

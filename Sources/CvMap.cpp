@@ -1210,9 +1210,6 @@ void CvMap::read(FDataStreamBase* pStream)
 	// Init data before load
 	reset(&defaultMapData);
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvMap", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvMap", &m_iGridWidth);
 	WRAPPER_READ(wrapper, "CvMap", &m_iGridHeight);
 
@@ -1261,9 +1258,6 @@ void CvMap::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvMap" ,uiFlag);		// flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridWidth);
 	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridHeight);

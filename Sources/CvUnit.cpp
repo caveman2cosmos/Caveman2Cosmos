@@ -23996,9 +23996,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvUnit", &uiFlag);	// flags for expansion
-
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */
 /************************************************************************************************/
@@ -24035,11 +24032,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackPlotY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatTimer);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatFirstStrikes);
-	if (uiFlag < 2)
-	{
-		int iCombatDamage;
-		WRAPPER_READ(wrapper, "CvUnit", &iCombatDamage);
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFortifyTurns);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBlitzCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAmphibCount);
@@ -24064,12 +24056,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
-
-	if (uiFlag > 2)
-	{
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
-	}
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
 
 	// Read compressed data format
 	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
@@ -24153,10 +24141,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCombatFocus);
 	// m_bInfoBarDirty not saved...
 	WRAPPER_READ(wrapper, "CvUnit", &m_bBlockading);
-	if (uiFlag > 0)
-	{
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAirCombat);
-	}
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAirCombat);
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingPlayer);
@@ -25724,9 +25709,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=3;
-	WRAPPER_WRITE(wrapper, "CvUnit", uiFlag);		// flag for expansion
 
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */

@@ -667,9 +667,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlotGroup", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_iID);
 
 	WRAPPER_READ(wrapper, "CvPlotGroup", (int*)&m_eOwner);
@@ -721,8 +718,6 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag = 0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 

@@ -4214,7 +4214,6 @@ int CvTeamAI::AI_teamCloseness(TeamTypes eIndex, int iMaxDistance) const
 
 void CvTeamAI::read(FDataStreamBase* pStream)
 {
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -4222,9 +4221,6 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_START(wrapper);
 
 	CvTeam::read(pStream);
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvTeamAI", &uiFlag);	// flags for expansion
 
 	WRAPPER_READ_ARRAY(wrapper, "CvTeamAI", MAX_TEAMS, m_aiWarPlanStateCounter);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeamAI", MAX_TEAMS, m_aiAtWarCounter);
@@ -4293,10 +4289,6 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
 	CvTeam::write(pStream);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvTeamAI", uiFlag);
-	/*pStream->Write(uiFlag);*/		// flag for expansion
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeamAI", MAX_TEAMS, m_aiWarPlanStateCounter);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeamAI", MAX_TEAMS, m_aiAtWarCounter);
