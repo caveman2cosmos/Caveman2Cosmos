@@ -379,37 +379,13 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
+	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS-1; iI++)
 	{
 		PlayerTypes ePlayer = (PlayerTypes)iI;
 
 		FAssertMsg(!GET_PLAYER(ePlayer).isAlive(), "NPC is not expected to be alive at this point of the game initialization.");
 
-		if (ePlayer == BARBARIAN_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == NEANDERTHAL_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == BEAST_PLAYER)
+		if (ePlayer == BEAST_PLAYER)
 		{
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
@@ -457,10 +433,9 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		/*
 		else if (ePlayer == NPC4_PLAYER)
 		{
-			break; // Remove me the day I'm added, shift it one "else" down per NPC added.
-			// I will only be initialized when starting a new game, old saves won't ever see me.
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION"), false
@@ -519,6 +494,33 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		*/
+		else if (ePlayer == NEANDERTHAL_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		/* Toffer - No point, the exe does this slightly after this code anyway.
+		else if (ePlayer == BARBARIAN_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		*/
 	}
 	AI_init();
 
