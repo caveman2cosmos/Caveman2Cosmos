@@ -10,12 +10,12 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-	FErrorMsg("error");
+	FErrorMsg("CyCity constructor should not be called with a no parameter");
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-	FAssert(m_pCity != NULL, "CyCity constructor requires a valid CvCity");
+	FAssertMsg(m_pCity != NULL, "CyCity constructor should not be called with a NULL parameter");
 }
 
 void CyCity::kill()
@@ -1572,7 +1572,7 @@ bool CyCity::isActiveCorporation(int /*CorporationTypes*/ eCorporation) const
 
 CyCity* CyCity::getTradeCity(int iIndex) const
 {
-	const CvCity* city = m_pCity->getTradeCity(iIndex);
+	CvCity* city = m_pCity->getTradeCity(iIndex);
 	return city ? new CyCity(city) : NULL;
 }
 
