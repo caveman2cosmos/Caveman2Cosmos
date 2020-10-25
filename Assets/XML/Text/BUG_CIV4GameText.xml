@@ -4609,6 +4609,18 @@
 		<Spanish>Invertir Shift en colas</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLERP_HOVER</Tag>
+		<English>Enables information about your current game to be shown to others on discord in a nice fashion</English>
+		<French>Enables information about your current game to be shown to others on discord in a nice fashion</French>
+		<Spanish>Enables information about your current game to be shown to others on discord in a nice fashion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLERP_TEXT</Tag>
+		<English>Enable Discord Rich Presence</English>
+		<French>Enable Discord Rich Presence</French>
+		<Spanish>Enable Discord Rich Presence</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__MINIMIZEAITURNSLICES_HOVER</Tag>
 		<English>When checked, runs the AI turns in the minimal number of turn slices. This will speed the turn processing up at the expense of animation and general graphical responsiveness while the AI is processing its turns</English>
 		<French>Lorsque activé, réduit le temps nécessaire à l'IA, et donnant une priorité aux calculs de l'IA au détriment de l'affichage et des animations.</French>

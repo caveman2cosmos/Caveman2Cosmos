@@ -20,6 +20,8 @@
 #include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 
+#include "discord.h"
+
 int shortenID(int iId)
 {
 	return iId;
@@ -307,6 +309,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 void CvGameTextMgr::setTimeStr(CvWString& szString, int iGameTurn, bool bSave)
 {
 	setDateStr(szString, iGameTurn, bSave, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
+
+	// Discord RPC. Date is standard ASCII so this should work.
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.date = std::string(szString.begin(), szString.end());
+	pDiscord->sendNewRpcDetails(rpc);
 }
 
 
