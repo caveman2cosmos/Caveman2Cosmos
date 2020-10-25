@@ -11446,6 +11446,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_STRING(wrapper, "CvPlot", &m_szScriptData);
 
+	// @SAVEBREAK EVALUATE
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
 
 	//	Old format just saved these as a short array
@@ -11522,6 +11523,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 			SAFE_DELETE_ARRAY(m_paiBuildProgress);
 		}
 	}
+	// SAVEBREAK@
 
 	if (NULL != m_apaiCultureRangeCities)
 	{
