@@ -92,6 +92,7 @@ void CyInfoPythonInterface1()
 		.def("getDomainExtraMoves", &CvTechInfo::getDomainExtraMoves, "int (int i)")
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
 		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, "int (int i)")
+		//.def("getPrereqAndTechs", &CvTechInfo::cyGetPrereqAndTechs)
 		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, "int (int i)")
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
@@ -238,7 +239,7 @@ void CyInfoPythonInterface1()
 		.def("isNukeImmune", &CvUnitInfo::isNukeImmune, "bool ()")
 		.def("isHiddenNationality", &CvUnitInfo::isHiddenNationality, "bool ()")
 
-		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
+		.def("getPrereqAndTechs", &CvUnitInfo::cyGetPrereqAndTechs)
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 

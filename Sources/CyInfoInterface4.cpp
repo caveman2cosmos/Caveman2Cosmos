@@ -68,6 +68,7 @@ void CyInfoPythonInterface4()
 
 		.def("getBuildingRequired", &CvEventTriggerInfo::getBuildingRequired, "int (int)")
 		.def("getPrereqOrTechs", &CvEventTriggerInfo::getPrereqOrTechs, "int (int)")
+		//.def("getPrereqAndTechs", &CvEventTriggerInfo::cyGetPrereqAndTechs)
 		.def("getPrereqAndTechs", &CvEventTriggerInfo::getPrereqAndTechs, "int (int)")
 		.def("getObsoleteTech", &CvEventTriggerInfo::getObsoleteTech, "int (int)")
 		.def("getEvent", &CvEventTriggerInfo::getEvent, "int (int)")

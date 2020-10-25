@@ -3004,7 +3004,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			) return false;
 
 			bool bFoundValid = true;
-			foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
+			foreach_(const BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 			{
 				if (isAdjacentPlotGroupConnectedBonus(ePlayer, bonus))
 				{
@@ -12757,7 +12757,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 
 		bool bValid = true;
-		foreach_(BonusTypes orBonusReq, kUnit.getPrereqOrBonuses())
+		foreach_(const BonusTypes orBonusReq, kUnit.getPrereqOrBonuses())
 		{
 			bValid = false;
 

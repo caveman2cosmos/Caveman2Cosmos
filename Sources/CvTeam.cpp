@@ -2198,7 +2198,7 @@ bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorl
 		}
 	}
 	bool bMet = true;
-	foreach_(BonusTypes orBonusReq, unit.getPrereqOrBonuses())
+	foreach_(const BonusTypes orBonusReq, unit.getPrereqOrBonuses())
 	{
 		if (isHasTech((TechTypes)GC.getBonusInfo(orBonusReq).getTechCityTrade())
 		&& (!bNoWorldBonuses || GC.getBonusInfo(orBonusReq).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))

@@ -499,32 +499,14 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 {
 	const CvUnitInfo& info = GC.getUnitInfo(eUnit);
 
-	if (info.getPrereqAndTech() == eTech)
-	{
-		return true;
-	}
-
-	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
-	{
-		if (info.getPrereqAndTechs(iI) == eTech)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return info.getPrereqAndTech() == eTech || std::contains(info.getPrereqAndTechs(), eTech);
 }
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
-	if (info.getPrereqAndTech() == eTech)
-	{
-		return true;
-	}
-
-	if (vector::hasValue(eTech, info.getPrereqAndTechs()))
+	if (info.getPrereqAndTech() == eTech || std::contains(info.getPrereqAndTechs(), eTech))
 	{
 		return true;
 	}

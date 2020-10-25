@@ -14234,7 +14234,7 @@ bool CvCity::isCorporationBonus(BonusTypes eBonus) const
 	{
 		if (GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp)
 		&& isHasCorporation((CorporationTypes)iCorp)
-		&& vector::hasValue(eBonus, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses()))
+		&& std::contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 		{
 			return true;
 		}
@@ -21223,7 +21223,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					bool bHasORBonus = false;
 					bool bNeedsORBonus = false;
 
-					foreach_(BonusTypes bonus, kBuilding.getPrereqOrBonuses())
+					foreach_(const BonusTypes bonus, kBuilding.getPrereqOrBonuses())
 					{
 						bNeedsORBonus = true;
 						if (hasBonus(bonus))

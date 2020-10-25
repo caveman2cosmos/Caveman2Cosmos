@@ -4,7 +4,6 @@
 #define CV_BUILDING_INFO_H
 
 #include "CvInfos.h"
-#include "algorithm2.h"
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

@@ -15260,15 +15260,7 @@ m_iAdvancedStartCostIncrease(0),
 m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 m_bSeaTunnel(false),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 m_iPrereqBonus(NO_BONUS),
 m_bAnyPrereqOrBonus(false),
 m_piYieldChange(NULL),
@@ -15399,10 +15391,9 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piTechMovementChange, L"TechMovementChanges", GC.getNumTechInfos());
 
-	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqOrBonuses");
+	//pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqOrBonuses");
 
 	m_PropertyManipulators.read(pXML);
-
 
 	return true;
 }
@@ -15424,15 +15415,7 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getValue() == iDefault) m_iValue = pClassInfo->getValue();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
 	if (getFlatMovementCost() == iDefault) m_iFlatMovementCost = pClassInfo->getFlatMovementCost();
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (!isSeaTunnel()) m_bSeaTunnel = pClassInfo->isSeaTunnel();
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 	if (getPrereqBonus() == iTextDefault) m_iPrereqBonus = pClassInfo->getPrereqBonus();
 
 	for ( int i = 0;  i < NUM_YIELD_TYPES; i++)
@@ -15459,7 +15442,7 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	vector::copyNonDefaults(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
@@ -15481,7 +15464,7 @@ void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_piYieldChange, NUM_YIELD_TYPES);
 	CheckSum(iSum, m_piTechMovementChange, GC.getNumTechInfos());
-	vector::getCheckSum(iSum, m_aePrereqOrBonuses);
+	CheckSumC(iSum, m_aePrereqOrBonuses);
 
 	m_PropertyManipulators.getCheckSum(iSum);
 }
@@ -22937,7 +22920,7 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_paiYieldProduced);
 	}
 
-	vector::read(*pXML, m_aePrereqBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_aePrereqBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusProduced");
 	m_iBonusProduced = pXML->GetInfoClass(szTextVal);
@@ -23096,7 +23079,7 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 		}
 	}
 
-	vector::copyNonDefaults(m_aePrereqBonuses, pClassInfo->getPrereqBonuses());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqBonuses, pClassInfo->getPrereqBonuses());
 
 	if (getBonusProduced() == iTextDefault) m_iBonusProduced = pClassInfo->getBonusProduced();
 
@@ -23173,7 +23156,7 @@ void CvCorporationInfo::getCheckSum(unsigned int& iSum) const
 
 	// Arrays
 
-	vector::getCheckSum(iSum, m_aePrereqBonuses);
+	CheckSumC(iSum, m_aePrereqBonuses);
 	CheckSum(iSum, m_paiHeadquarterCommerce, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiCommerceProduced, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiYieldProduced, NUM_YIELD_TYPES);

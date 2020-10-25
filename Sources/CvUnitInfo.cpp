@@ -178,7 +178,6 @@ m_piFeaturePassableTech(NULL),
 m_pbGreatPeoples(NULL),
 //m_pbTerrainImpassable(NULL),
 //m_pbFeatureImpassable(NULL),
-m_piPrereqAndTechs(NULL),
 m_piFlavorValue(NULL),
 m_piTerrainAttackModifier(NULL),
 m_piTerrainDefenseModifier(NULL),
@@ -343,7 +342,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_pbGreatPeoples);
 	//SAFE_DELETE_ARRAY(m_pbTerrainImpassable);
 	//SAFE_DELETE_ARRAY(m_pbFeatureImpassable);
-	SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piTerrainAttackModifier);
 	SAFE_DELETE_ARRAY(m_piTerrainDefenseModifier);
@@ -1366,12 +1364,6 @@ void CvUnitInfo::addUnitToUpgradeChain(int i)
 }
 
 
-int CvUnitInfo::getPrereqAndTechs(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNUM_UNIT_AND_TECH_PREREQS(), i)
-	return m_piPrereqAndTechs ? m_piPrereqAndTechs[i] : -1;
-}
-
 int CvUnitInfo::getFlavorValue(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
@@ -1998,44 +1990,33 @@ void CvUnitInfo::setCultureSubCombat()
 		}
 	}
 }
-int CvUnitInfo::getEraInfo() const
+
+EraTypes CvUnitInfo::getEraInfo() const
 {
 	if (getPrereqAndTech() != NO_TECH)
 	{
-		return GC.getTechInfo((TechTypes)getPrereqAndTech()).getEra();
+		return (EraTypes)GC.getTechInfo((TechTypes)getPrereqAndTech()).getEra();
 	}
-	else
+
+	EraTypes eHighestEra = NO_ERA;
+	foreach_(const TechTypes tech, getPrereqAndTechs())
 	{
-		TechTypes eHighestTech = NO_TECH;
-		for ( int i = 0; i < GC.getNUM_UNIT_AND_TECH_PREREQS(); i++)
+		const EraTypes prereqTechEra = (EraTypes)GC.getTechInfo(tech).getEra();
+		if (prereqTechEra > eHighestEra)
 		{
-			if ( getPrereqAndTechs(i) != NO_TECH )
-			{
-				if (eHighestTech == NO_TECH)
-				{
-					eHighestTech = (TechTypes)getPrereqAndTechs(i);
-				}
-				else if ((int)GC.getTechInfo((TechTypes)getPrereqAndTechs(i)).getEra() > (int)GC.getTechInfo(eHighestTech).getEra())
-				{
-					eHighestTech = (TechTypes)getPrereqAndTechs(i);
-				}
-			}
-		}
-		if (eHighestTech != NO_TECH)
-		{
-			return GC.getTechInfo(eHighestTech).getEra();
+			eHighestEra = prereqTechEra;
 		}
 	}
-	return NO_ERA;
+	return eHighestEra;
 }
+
 void CvUnitInfo::setEraSubCombat()
 {
 	if (getEraInfo() == NO_ERA)
 	{
 		return;
 	}
-	int iI;
-	for (iI=0; iI < getNumSubCombatTypes(); iI++)
+	for (int iI=0; iI < getNumSubCombatTypes(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)getSubCombatType(iI)).getEra() != NO_ERA)
 		{
@@ -3890,11 +3871,10 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 
 	CheckSum(iSum, m_bNoNonOwnedEntry);
 
-
 	//CheckSum(iSum, m_fUnitMaxSpeed);
 	//CheckSum(iSum, m_fUnitPadTime);
 
-	CheckSumI(iSum, GC.getNUM_UNIT_AND_TECH_PREREQS(), m_piPrereqAndTechs);
+	CheckSumC(iSum, m_aePrereqAndTechs);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainAttackModifier);
@@ -4417,45 +4397,12 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
 
-	if (pXML->TryMoveToXmlFirstChild(L"TechTypes"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_UNIT_AND_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqAndTechs, GC.getNUM_UNIT_AND_TECH_PREREQS(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_UNIT_AND_TECH_PREREQS()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-				for (j=0;j<iNumSibs;j++)
-				{
-					m_piPrereqAndTechs[j] = pXML->GetInfoClass(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
-	}
+	pXML->SetOptionalVector(&m_aePrereqAndTechs, L"TechTypes");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusType");
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
-	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 
@@ -4674,7 +4621,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	vector::read(*pXML, m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
 
 	m_PropertyManipulators.read(pXML);
 
@@ -5613,18 +5560,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNUM_UNIT_AND_TECH_PREREQS(); i++)
-	{
-		if ( getPrereqAndTechs(i) == NO_TECH && pClassInfo->getPrereqAndTechs(i) != NO_TECH)
-		{
-			if ( NULL == m_piPrereqAndTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqAndTechs,GC.getNUM_UNIT_AND_TECH_PREREQS(),(int)NO_TECH);
-			}
-			m_piPrereqAndTechs[i] = pClassInfo->getPrereqAndTechs(i);
-		}
-	}
-
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
 
 	if ( m_iDCMBombRange == iDefault ) m_iDCMBombRange = pClassInfo->getDCMBombRange();

@@ -12,7 +12,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvXMLLoadUtility.h"
-#include "VectorUtils.h"
+#include "CheckSum.h"
 
 //======================================================================================================
 //					CvBuildingInfo
@@ -1961,7 +1961,7 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus
-				|| vector::hasValue(eFreeBonus, GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses()))
+				|| std::contains(GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(), eFreeBonus))
 				{
 					m_bEnablesOtherBuildingsValue = true;
 					return true;
@@ -2202,7 +2202,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bStateReligion);
 	CheckSum(iSum, m_bAllowsNukes);
 
-	vector::getCheckSum(iSum, m_aePrereqAndTechs);
+	CheckSumC(iSum, m_aePrereqAndTechs);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piSeaPlotYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piRiverPlotYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piGlobalSeaPlotYieldChange);
@@ -2581,13 +2581,13 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
 
-	vector::read(*pXML, m_aePrereqAndTechs, L"TechTypes");
+	pXML->SetOptionalVector(&m_aePrereqAndTechs, L"TechTypes");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Bonus");
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
 	//Alberts2 PrereqBonuses
-	vector::read(*pXML, m_aePrereqOrBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
 	m_iNoBonus = pXML->GetInfoClass(szTextVal);
@@ -3530,8 +3530,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	vector::read(*pXML, m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
-	vector::read(*pXML, m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChanges"))
 	{
@@ -4249,7 +4249,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getPrereqVicinityBonus() == iTextDefault) m_iPrereqVicinityBonus = pClassInfo->getPrereqVicinityBonus();
 	if (getPrereqRawVicinityBonus() == iTextDefault) m_iPrereqRawVicinityBonus = pClassInfo->getPrereqRawVicinityBonus();
 
-	vector::copyNonDefaults(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
 
 	if (getPrereqAndBonus() == NO_BONUS) m_iPrereqAndBonus = pClassInfo->getPrereqAndBonus();
 
@@ -5552,7 +5552,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	//TB Combat Mods (Buildings) end
 
 	//Alberts2 PrereqBonuses
-	vector::copyNonDefaults(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
 
 	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();

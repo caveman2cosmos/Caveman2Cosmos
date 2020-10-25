@@ -28,7 +28,6 @@
 #include "IntExpr.h"
 #include "IDValueMap.h"
 #include "CheckSum.h"
-#include "VectorUtils.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 #pragma warning( disable: 4127 )
@@ -1920,7 +1919,7 @@ public:
 	//Functions
 	void setReligionSubCombat();
 	void setCultureSubCombat();
-	int getEraInfo() const;
+	EraTypes getEraInfo() const;
 	void setEraSubCombat();
 	//integers
 	int getAttackCombatModifier() const;
@@ -2292,9 +2291,12 @@ public:
 
 	bool canAcquireExperience() const; // Exposed to Python
 
-	int getPrereqAndTechs(int i) const; // Exposed to Python
+	const std::vector<TechTypes>& getPrereqAndTechs() const { return m_aePrereqAndTechs; }
+	const python::list cyGetPrereqAndTechs() const { return Cy::makeList(m_aePrereqAndTechs); }
+
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
 	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
+
 	int getFlavorValue(int i) const; // Exposed to Python
 	int getTerrainAttackModifier(int i) const; // Exposed to Python
 	int getTerrainDefenseModifier(int i) const; // Exposed to Python
@@ -2547,9 +2549,7 @@ protected:
 	float m_fUnitMaxSpeed;
 	float m_fUnitPadTime;
 
-	// Arrays
-
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_aePrereqAndTechs;
 	std::vector<BonusTypes> m_aePrereqOrBonuses;
 	int* m_piFlavorValue;
 	int* m_piTerrainAttackModifier;

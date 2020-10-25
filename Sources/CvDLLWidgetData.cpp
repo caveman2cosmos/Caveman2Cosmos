@@ -3090,7 +3090,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 						bool bFoundValid = true;
 						std::vector<BonusTypes> aeOrBonuses;
-						foreach_(BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
+						foreach_(const BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 						{
 							aeOrBonuses.push_back(bonus);
 							bFoundValid = false;

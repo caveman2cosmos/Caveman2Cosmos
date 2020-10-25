@@ -9843,7 +9843,7 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 
 	foreach_(const BonusTypes bonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
 	{
-		if (vector::hasValue(bonus, GC.getCorporationInfo(eCorporation2).getPrereqBonuses()))
+		if (std::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), bonus))
 		{
 			return true;
 		}

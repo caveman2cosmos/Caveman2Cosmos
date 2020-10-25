@@ -10141,7 +10141,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						int iBonusORVal	= 0;
 						int	iHasOther = 0;
 
-						foreach_(BonusTypes orBonusReq, kLoopUnit.getPrereqOrBonuses())
+						foreach_(const BonusTypes orBonusReq, kLoopUnit.getPrereqOrBonuses())
 						{
 							if (orBonusReq == eBonus)
 							{
@@ -10320,7 +10320,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 							bool bGetsOR = false;
 							bool bRequiresOR = false;
 
-							foreach_(BonusTypes bonus, kLoopBuilding.getPrereqOrBonuses())
+							foreach_(const BonusTypes bonus, kLoopBuilding.getPrereqOrBonuses())
 							{
 								bRequiresOR = true;
 
@@ -10399,7 +10399,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								}
 								else
 								{
-									foreach_(TechTypes tech, kLoopBuilding.getPrereqAndTechs())
+									foreach_(const TechTypes tech, kLoopBuilding.getPrereqAndTechs())
 									{
 										if (!kTeam.isHasTech(tech))
 										{
@@ -10583,7 +10583,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						if (vector::hasValue(eBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses()))
+						if (std::contains(GC.getRouteInfo(eRoute).getPrereqOrBonuses(), eBonus))
 						{
 							iTempValue += 40;
 						}
@@ -10776,12 +10776,6 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	bStrategic = false;
 
-/************************************************************************************************/
-/* Fuyu & Afforess				   Start		 6/22/10										*/
-/*																							  */
-/*  Better AI: Strategic For Current Era														*/
-/************************************************************************************************/
-//disregard obsolete units
 	const CvCity* pCapitalCity = getCapitalCity();
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
@@ -10794,11 +10788,9 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 		{
 			continue;
 		}
-/************************************************************************************************/
-/* Fuyu						  END															*/
-/************************************************************************************************/
+
 		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
-		|| vector::hasValue(eBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses()))
+		|| std::contains(GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(), eBonus))
 		{
 			bStrategic = true;
 		}
@@ -10806,12 +10798,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-/************************************************************************************************/
-/* Fuyu & Afforess				  Start		 6/22/10										*/
-/*																							  */
-/*  Better AI: Strategic For Current Era														*/
-/************************************************************************************************/
-//disregard obsolete buildings
+		// Fuyu & Afforess - disregard obsolete buildings
 		if ((TechTypes)GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() != NO_TECH)
 		{
 			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech())))
@@ -10824,11 +10811,8 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 				continue;
 			}
 		}
-/************************************************************************************************/
-/* Fuyu						  END															*/
-/************************************************************************************************/
 		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
-		|| vector::hasValue(eBonus, GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses()))
+		|| std::contains(GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses(), eBonus))
 		{
 			bStrategic = true;
 		}
@@ -29570,7 +29554,7 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 			int iHasOrBonusCount = 0;
 			bool bFound = false;
 
-			foreach_(BonusTypes orBonusReq, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
+			foreach_(const BonusTypes orBonusReq, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
 			{
 				if (orBonusReq == eBonus)
 				{

@@ -7027,7 +7027,12 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech()))
+	//foreach_ (const CvUnit* unit, pPlot->units() | filtered(bst::bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
+
+	const CvTeam& team = GET_TEAM(getTeam());
+
+	if (!team.isHasTech((TechTypes)kUnit.getPrereqAndTech()))
+	//|| !algo::all_of(kUnit.getPrereqAndTechs(), team.isHasTech(_1)))
 	{
 		return false;
 	}
@@ -7042,9 +7047,9 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	foreach_(const TechTypes tech, kUnit.getPrereqAndTechs())
 	{
-		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTechs(iI)))
+		if (!GET_TEAM(getTeam()).isHasTech(tech))
 		{
 			return false;
 		}
@@ -7200,7 +7205,7 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 			return false;
 		}
 
-		foreach_(TechTypes tech, kBuilding.getPrereqAndTechs())
+		foreach_(const TechTypes tech, kBuilding.getPrereqAndTechs())
 		{
 			if (eIgnoreTechReq != tech && !currentTeam.isHasTech(tech))
 			{
@@ -19247,7 +19252,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		// Search through all techs to see if any of the currently owned ones requires this tech
 		for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
 		{
-			TechTypes eTechLoop = (TechTypes) iTechLoop;
+			const TechTypes eTechLoop = (TechTypes) iTechLoop;
 
 			if (GET_TEAM(getTeam()).isHasTech(eTechLoop))
 			{
@@ -19276,17 +19281,10 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		// If player has placed anything on the map which uses this tech then you cannot remove it
 		foreach_(const CvUnit* pLoopUnit, units())
 		{
-			if (pLoopUnit->getUnitInfo().getPrereqAndTech() == eTech)
+			const CvUnitInfo& info = pLoopUnit->getUnitInfo();
+			if (info.getPrereqAndTech() == eTech || std::contains(info.getPrereqAndTechs(), eTech))
 			{
 				return -1;
-			}
-
-			for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
-			{
-				if (pLoopUnit->getUnitInfo().getPrereqAndTechs(iI) == eTech)
-				{
-					return -1;
-				}
 			}
 		}
 
@@ -19301,7 +19299,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 				if (pLoopCity->getNumRealBuilding(eBuilding) > 0)
 				{
 					if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == eTech
-					|| vector::hasValue(eTech, GC.getBuildingInfo(eBuilding).getPrereqAndTechs()))
+					|| std::contains(GC.getBuildingInfo(eBuilding).getPrereqAndTechs(), eTech))
 					{
 						return -1;
 					}
@@ -28562,8 +28560,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
 			|| kBuilding.getPrereqVicinityBonus() == eBonus
-			|| vector::hasValue(eBonus, kBuilding.getPrereqOrBonuses())
-			|| vector::hasValue(eBonus, kBuilding.getPrereqOrVicinityBonuses()))
+			|| std::contains(kBuilding.getPrereqOrBonuses(), eBonus)
+			|| std::contains(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}
@@ -28579,8 +28577,8 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kUnit.getPrereqAndBonus() == eBonus
 			|| kUnit.getPrereqVicinityBonus() == eBonus
-			|| vector::hasValue(eBonus, kUnit.getPrereqOrBonuses())
-			|| vector::hasValue(eBonus, kUnit.getPrereqOrVicinityBonuses()))
+			|| std::contains(kUnit.getPrereqOrBonuses(), eBonus)
+			|| std::contains(kUnit.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}

@@ -17668,16 +17668,12 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					bFirst = false;
 					continue;
 				}
-				for (int iJ = 0; iJ < GC.getNUM_UNIT_AND_TECH_PREREQS(); iJ++)
+				if (std::contains(kUnit.getPrereqAndTechs(), eTech))
 				{
-					if (kUnit.getPrereqAndTechs(iJ) == eTech)
-					{
-						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_TRAIN").c_str());
-						szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), kUnit.getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-						bFirst = false;
-						break;
-					}
+					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_TRAIN").c_str());
+					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), kUnit.getDescription());
+					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+					bFirst = false;
 				}
 			}
 		}
@@ -17700,7 +17696,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 							setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 							bFirst = false;
 						}
-						else if (vector::hasValue(eTech, GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs()))
+						else if (std::contains(GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs(), eTech))
 						{
 							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CONSTRUCT").c_str());
 							szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
@@ -20907,16 +20903,13 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				bFirst = true;
 
-				for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); ++iI)
+				foreach_(const TechTypes tech, GC.getUnitInfo(eUnit).getPrereqAndTechs())
 				{
-					if (GC.getUnitInfo(eUnit).getPrereqAndTechs(iI) != NO_TECH)
+					if (bTechChooserText || GC.getGame().getActivePlayer() == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech(tech))
 					{
-						if (bTechChooserText || GC.getGame().getActivePlayer() == NO_PLAYER || !(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)(GC.getUnitInfo(eUnit).getPrereqAndTechs(iI)))))
-						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-							setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(((TechTypes)(GC.getUnitInfo(eUnit).getPrereqAndTechs(iI)))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
-							bFirst = false;
-						}
+						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
+						setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(tech).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+						bFirst = false;
 					}
 				}
 
@@ -20936,7 +20929,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				bFirst = true;
 
-				foreach_(BonusTypes orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
+				foreach_(const BonusTypes orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
 				{
 					if (pCity == NULL || !pCity->hasBonus(orBonusReq))
 					{
@@ -24795,7 +24788,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			foreach_(TechTypes tech, kBuilding.getPrereqAndTechs())
+			foreach_(const TechTypes tech, kBuilding.getPrereqAndTechs())
 			{
 				if (bTechChooserText || ePlayer == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech(tech))
 				{
@@ -24822,7 +24815,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			foreach_(BonusTypes bonus, kBuilding.getPrereqOrBonuses())
+			foreach_(const BonusTypes bonus, kBuilding.getPrereqOrBonuses())
 			{
 				if (pCity == NULL || !pCity->hasBonus(bonus))
 				{
@@ -26740,7 +26733,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			{
 				if (kActivePlayer.isActiveCorporation((CorporationTypes)iCorp) || (bTradingPlayer && GET_PLAYER(eTradingPlayer).isActiveCorporation((CorporationTypes)iCorp)))
 				{
-					if (vector::hasValue(eBonus, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses()))
+					if (std::contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 					{
 						if (algo::any_of(kActivePlayer.cities(), CvCity::fn::isHasCorporation((CorporationTypes)iCorp))
 						|| (bTradingPlayer && algo::any_of(GET_PLAYER(eTradingPlayer).cities(), CvCity::fn::isHasCorporation((CorporationTypes)iCorp))))
@@ -31866,7 +31859,7 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 	{
 		bool bQualified = true;
 
-		foreach_(BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
+		foreach_(const BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
 		{
 			if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 			{
