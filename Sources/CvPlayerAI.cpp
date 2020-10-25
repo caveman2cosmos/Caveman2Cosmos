@@ -10583,9 +10583,12 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						if (std::contains(GC.getRouteInfo(eRoute).getPrereqOrBonuses(), eBonus))
+						foreach_(const BonusTypes prereqBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 						{
-							iTempValue += 40;
+							if (prereqBonus == eBonus)
+							{
+								iTempValue += 40;
+							}
 						}
 						if ((eBestRoute != NO_ROUTE) && (GC.getRouteInfo(getBestRoute()).getValue() > GC.getRouteInfo(eRoute).getValue()))
 						{
