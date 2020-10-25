@@ -21392,7 +21392,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapScoreHistory.begin(); it != m_mapScoreHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21404,7 +21403,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapEconomyHistory.begin(); it != m_mapEconomyHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21416,7 +21414,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapIndustryHistory.begin(); it != m_mapIndustryHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21428,7 +21425,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapAgricultureHistory.begin(); it != m_mapAgricultureHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21440,7 +21436,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapPowerHistory.begin(); it != m_mapPowerHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21452,7 +21447,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapCultureHistory.begin(); it != m_mapCultureHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21464,7 +21458,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapEspionageHistory.begin(); it != m_mapEspionageHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
@@ -21477,7 +21470,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			for (it = m_mapRevolutionStabilityHistory.begin(); it != m_mapRevolutionStabilityHistory.end(); ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iTurn");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", 0, "iScore");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<double>(it->second), "fScore");
 			}
 		}
