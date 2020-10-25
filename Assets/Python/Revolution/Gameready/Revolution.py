@@ -368,7 +368,7 @@ class Revolution:
 			cityByRevList = []
 			for [i,city] in enumerate(cityList) :
 				pCity = city.GetCy()
-				if( not pCity.isNone() ) :
+				if pCity:
 					cityByRevList.append( (pCity.getRevolutionIndex(),pCity.getName(), pCity.getID() ) )
 
 			cityByRevList.sort()
@@ -1030,7 +1030,7 @@ class Revolution:
 
 		# Gather some data on the civ that will effect every city
 		capital = pPlayer.getCapitalCity()
-		if( capital == None or capital.isNone() ) :
+		if capital == None:
 			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - WARNING!  %s have cities but no capital on turn %d"%(pPlayer.getCivilizationDescription(0),iGameTurn))
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
@@ -1344,7 +1344,7 @@ class Revolution:
 					if( not hasLiberalism and stateRel >= 0 ) :
 						if( pCity.isHasReligion(stateRel) ) :
 							stateHolyCity = GAME.getHolyCity( stateRel )
-							if( not stateHolyCity.isNone() ) :
+							if stateHolyCity:
 								holyCityOwnerID = stateHolyCity.getOwner()
 								if( (not holyCityGood == 0) and (holyCityOwnerID == iPlayer) ) :
 									#phungus Rev Trait Effects
@@ -5852,7 +5852,7 @@ class Revolution:
 		cityList = []
 		for iCity in revData.cityList :
 			pCity = pPlayer.getCity( iCity )
-			if( pCity.isNone() ) :
+			if pCity is None:
 				# City no longer owned by the former owner
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s no longer owned by former owner")
 			else :
@@ -6082,7 +6082,7 @@ class Revolution:
 		# Check which cities are still up for revolt
 		newCityList = []
 		for pCity in cityList:
-			if pCity == None or pCity.isNone():
+			if pCity == None:
 				print "[WARN] A rebelling city is dead and gone"
 			elif not pCity.getOwner() == pPlayer.getID():
 				if self.LOG_DEBUG:

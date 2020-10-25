@@ -565,7 +565,7 @@ def canTriggerHurricaneCity(argsList):
 	iCity = argsList[2]
 	CyCity = GC.getPlayer(iPlayer).getCity(iCity)
 
-	if CyCity.isNone():
+	if CyCity is None:
 		return False
 
 	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -634,7 +634,7 @@ def canTriggerCycloneCity(argsList):
 	iCity = argsList[2]
 	CyCity = GC.getPlayer(iPlayer).getCity(iCity)
 
-	if CyCity.isNone():
+	if CyCity is None:
 		return False
 
 	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -656,7 +656,7 @@ def canTriggerTsunamiCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -731,7 +731,7 @@ def canTriggerMonsoonCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -2965,7 +2965,7 @@ def getHelpPartisans1(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
     szUnit = GC.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -2998,7 +2998,7 @@ def applyPartisans1(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
 
     listPlots = []
@@ -3021,7 +3021,7 @@ def getHelpPartisans2(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
     szUnit = GC.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -3044,7 +3044,7 @@ def applyPartisans2(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
     for i in xrange(iNumUnits):
       player.initUnit(capital.getConscriptUnit(), capital.getX(), capital.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
@@ -3550,7 +3550,7 @@ def canTriggerCorporateExpansion(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = GAME.getHeadquarters(kTriggeredData.eCorporation)
-  if None == city or city.isNone():
+  if None == city:
     return False
 
   # Hack to remember the number of cities you already have with the Corporation
@@ -3578,7 +3578,7 @@ def expireCorporateExpansion1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None == city or city.isNone():
+  if None == city:
     return True
 
   return False
@@ -3628,7 +3628,7 @@ def applyCorporateExpansionDone1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None != city and not city.isNone():
+  if None != city:
     city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 50)
 
 ######## HOSTILE TAKEOVER ###########
@@ -3641,7 +3641,7 @@ def canTriggerHostileTakeover(argsList):
     return False
 
   city = GAME.getHeadquarters(kTriggeredData.eCorporation)
-  if None == city or city.isNone():
+  if None == city:
     return False
 
   # Hack to remember the number of cities you already have with the Corporation
@@ -3672,7 +3672,7 @@ def expireHostileTakeover1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None == city or city.isNone():
+  if None == city:
     return True
 
   return False
@@ -3746,7 +3746,7 @@ def applyHostileTakeoverDone1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None != city and not city.isNone():
+  if None != city:
     city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 100)
 
 
@@ -3787,7 +3787,7 @@ def canTriggerImmigrantCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if ((city.happyLevel() - city.unhappyLevel(0) < 1) or (city.goodHealth() - city.badHealth(True) < 1)):
@@ -3799,28 +3799,17 @@ def canTriggerImmigrantCity(argsList):
 ####### Controversial Philosopher ######
 
 def canTriggerControversialPhilosopherCity(argsList):
-  ePlayer = argsList[1]
-  iCity = argsList[2]
 
-  player = GC.getPlayer(ePlayer)
-  city = player.getCity(iCity)
+	city = GC.getPlayer(argsList[1]).getCity(argsList[2])
 
-  if city.isNone():
-    return False
-  if (not city.isCapital()):
-    return False
-  if (city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) < 3500):
-    return False
+	return city and city.isCapital() and city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) >= 3500
 
-  return True
 
 ####### Spy Discovered #######
 
 
 def canDoSpyDiscovered3(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getCapitalCity().isNone():
-		return False
-	return True
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doSpyDiscovered3(argsList):
 	kTriggeredData = argsList[1]
@@ -3842,13 +3831,8 @@ def getHelpSpyDiscovered3(argsList):
 ####### Nuclear Protest #######
 
 def canTriggerNuclearProtest(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  if player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")) < 10:
-    return False
-
-  return True
+	player = GC.getPlayer(argsList[0].ePlayer)
+	return 10 <= player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE"))
 
 def doNuclearProtest1(argsList):
   kTriggeredData = argsList[1]
@@ -5887,7 +5871,7 @@ def canTriggerSailingFounded(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -5910,7 +5894,7 @@ def canTriggerChariotryFounded(argsList):
 
   iHorse = GC.getInfoTypeForString("BONUS_HORSE")
 
-  if city.isNone():
+  if city is None:
     return False
 
   if (city.plot().getLatitude() <= 0):
@@ -6256,9 +6240,7 @@ def applyEarthquake1(argsList):
 
 
 def canDoAssassinDiscovered3(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getCapitalCity().isNone():
-		return False
-	return True
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doAssassinDiscovered3(argsList):
 	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
@@ -6398,7 +6380,7 @@ def canTriggerMeasles(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   # city health is positive, no epidemic
@@ -8055,7 +8037,7 @@ def ApplyNativegood2(argsList):
 	CyPlayer.setNativeRelationship(iRelationship)
 
 	CyCity = CyPlayer.getCapitalCity()
-	if CyCity.isNone:
+	if CyCity is None:
 		return
 	aList = (UnitAITypes.UNITAI_ATTACK, UnitAITypes.UNITAI_CITY_DEFENSE)
 	iHighest = 0
@@ -8341,7 +8323,7 @@ def doRemoveWVCannibalism(argsList):
 		iPlayer = CyUnit.getOwner()
 		CyPlayer = GC.getPlayer(iPlayer)
 		CyCity = CyPlayer.getCapitalCity()
-		if CyCity.isNone():
+		if CyCity is None:
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
 			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
