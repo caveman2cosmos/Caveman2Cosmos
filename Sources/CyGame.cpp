@@ -1236,11 +1236,6 @@ void CyGame::changeYResolution(int iNewValue)
 	m_pGame.changeYResolution(iNewValue);
 }
 
-void CyGame::setFutureEras()
-{
-	m_pGame.setFutureEras();
-}
-
 bool CyGame::canEverResearch(int iTech) const
 {
 	return m_pGame.canEverResearch((TechTypes)iTech);
