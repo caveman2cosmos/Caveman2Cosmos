@@ -357,7 +357,10 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	algo::for_each(plots(), CvPlot::fn::doTurn());
+	foreach_(CvPlot* plot, plots())
+	{
+		plot->doTurn();
+	}
 }
 
 

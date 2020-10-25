@@ -26323,7 +26323,7 @@ bool CvUnitAI::AI_airOffensiveCity()
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* plotX, GC.getMap().plots())
+	foreach_(CvPlot* plotX, GC.getMap().plots())
 	{
 		// Limit to cities and forts, true for any city but only this team's forts
 		if (plotX->isCity(true, getTeam())

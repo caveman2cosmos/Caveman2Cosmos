@@ -1217,7 +1217,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isCoastalLand);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isInViewport);
-		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isBattle);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, bool, isAdjacentToLand);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvPlot, const CvArea*, area);
