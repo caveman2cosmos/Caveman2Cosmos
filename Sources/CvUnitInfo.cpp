@@ -11,6 +11,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 //======================================================================================================
 //					CvUnitInfo

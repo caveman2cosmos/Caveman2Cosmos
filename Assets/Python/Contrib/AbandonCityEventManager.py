@@ -209,7 +209,6 @@ class CityDemolish:
 						CyMessageControl().sendModNetMessage(902, iPlayer, CyUnit.getID(), 0, 0)
 						break
 
-			NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 			CyTeam = GC.getTeam(CyPlayer.getTeam())
 			# Settler
 			if iOwnCulturePop > 0 or iForeignPop > 2:
@@ -229,9 +228,8 @@ class CityDemolish:
 					iTech = CvUnitInfo.getPrereqAndTech()
 					if iTech > -1 and not CyTeam.isHasTech(iTech):
 						continue
-					for i in range(NUM_UNIT_AND_TECH_PREREQS):
-						iTech = CvUnitInfo.getPrereqAndTechs(i)
-						if iTech > -1 and not CyTeam.isHasTech(iTech):
+					for iTech in CvUnitInfo.getPrereqAndTechs():
+						if not CyTeam.isHasTech(iTech):
 							bContinue = True
 							break
 					if bContinue: continue
@@ -292,9 +290,8 @@ class CityDemolish:
 				iTech = CvUnitInfo.getPrereqAndTech()
 				if iTech > -1 and not CyTeam.isHasTech(iTech):
 					continue
-				for i in range(NUM_UNIT_AND_TECH_PREREQS):
-					iTech = CvUnitInfo.getPrereqAndTechs(i)
-					if iTech > -1 and not CyTeam.isHasTech(iTech):
+				for iTech in CvUnitInfo.getPrereqAndTechs():
+					if not CyTeam.isHasTech(iTech):
 						bContinue = True
 						break
 				if bContinue: continue
@@ -320,9 +317,8 @@ class CityDemolish:
 				iTech = CvUnitInfo.getPrereqAndTech()
 				if iTech > -1 and not CyTeam.isHasTech(iTech):
 					continue
-				for i in range(NUM_UNIT_AND_TECH_PREREQS):
-					iTech = CvUnitInfo.getPrereqAndTechs(i)
-					if iTech > -1 and not CyTeam.isHasTech(iTech):
+				for iTech in CvUnitInfo.getPrereqAndTechs():
+					if not CyTeam.isHasTech(iTech):
 						bContinue = True
 						break
 				if bContinue: continue

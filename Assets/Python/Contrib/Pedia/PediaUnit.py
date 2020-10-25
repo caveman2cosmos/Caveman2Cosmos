@@ -189,10 +189,7 @@ class PediaUnit:
 		if iType != -1:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
-		for j in xrange(GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")):
-			iType = CvTheUnitInfo.getPrereqAndTechs(j)
-			if iType == -1:
-				break
+		for iType in CvTheUnitInfo.getPrereqAndTechs():
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
 		# Bonus Req
