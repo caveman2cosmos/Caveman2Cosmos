@@ -241,25 +241,11 @@ void CvCityAI::AI_doTurn()
 		AI_stealPlots();
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
-/*                                                                                              */
-/* City AI, Worker AI                                                                           */
-/************************************************************************************************/
-/* original bts code
-	AI_updateWorkersNeededHere();
-
-	AI_updateBestBuild();
-*/
 	AI_updateBestBuild();
 
 	AI_updateWorkersNeededHere();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-	//AI_updateRouteToCity();
-	m_routeToCityUpdated = false;	//	Update on demand
+	m_routeToCityUpdated = false; // Update on demand
 
 	if (isHuman())
 	{
@@ -7822,13 +7808,12 @@ void CvCityAI::AI_setChooseProductionDirty(bool bNewValue)
 
 CvCity* CvCityAI::AI_getRouteToCity() const
 {
-	if ( !m_routeToCityUpdated )
+	if (!m_routeToCityUpdated)
 	{
 		AI_updateRouteToCity();
 
 		m_routeToCityUpdated = true;
 	}
-
 	return getCity(m_routeToCity);
 }
 
@@ -12851,17 +12836,11 @@ int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry) const
 int CvCityAI::AI_getHappyFromHurry(int iHurryPopulation) const
 {
 	const int iHappyDiff = iHurryPopulation - GC.getHURRY_POP_ANGER();
-	if (iHappyDiff > 0)
-	{
-		if (getHurryAngerTimer() <= 1)
-		{
-			if (2 * angryPopulation(1) - healthRate(false, 1) > 1)
-			{
-				return iHappyDiff;
-			}
-		}
-	}
 
+	if (iHappyDiff > 0 && getHurryAngerTimer() <= 1 && 2 * angryPopulation(1) - healthRate(false, 1) > 1)
+	{
+		return iHappyDiff;
+	}
 	return 0;
 }
 
@@ -12903,11 +12882,14 @@ bool CvCityAI::AI_doPanic()
 
 	if (bLandWar)
 	{
-		int iOurDefense = GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false);
-		int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
 		//TBRUSHFIX
-		//iEnemyOffense was not keeping units that could not attack the city out of account.
-		int iRatio = (100 * iEnemyOffense) / (std::max(1, iOurDefense));
+		//AI_getEnemyPlotStrength was not keeping units that could not attack the city out of account.
+		const int iRatio =
+		(
+			100 * GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false)
+			/
+			std::max(1, GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false))
+		);
 
 		//TBRUSHFIX
 		//Playtesting has shown this needs to be a bit less sensitive.
@@ -12923,21 +12905,20 @@ bool CvCityAI::AI_doPanic()
 					AI_doHurry(true);
 					return true;
 				}
+				return false;
 			}
-			else
+
+			if (GC.getGame().getSorenRandNum(2, "AI choose panic unit") == 0 && AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER))
 			{
-				if ((GC.getGame().getSorenRandNum(2, "AI choose panic unit") == 0) && AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER))
-				{
-					AI_doHurry((iRatio > 250/*140*/));
-				}
-				else if (AI_chooseUnitImmediate("panic defense", UNITAI_CITY_DEFENSE))
-				{
-					AI_doHurry((iRatio > 250/*140*/));
-				}
-				else if (AI_chooseUnitImmediate("panic defense", UNITAI_ATTACK))
-				{
-					AI_doHurry((iRatio > 250/*140*/));
-				}
+				AI_doHurry(iRatio > 250/*140*/);
+			}
+			else if (AI_chooseUnitImmediate("panic defense", UNITAI_CITY_DEFENSE))
+			{
+				AI_doHurry(iRatio > 250/*140*/);
+			}
+			else if (AI_chooseUnitImmediate("panic defense", UNITAI_ATTACK))
+			{
+				AI_doHurry(iRatio > 250/*140*/);
 			}
 		}
 	}
