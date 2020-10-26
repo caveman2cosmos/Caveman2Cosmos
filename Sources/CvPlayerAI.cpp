@@ -4745,9 +4745,9 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
 {;
 	PROFILE_FUNC();
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
-	int iValue
+	int iValue;
 
 	TechTypesValueMap::const_iterator techValueItr = m_cachedTechValues.find(eTech);
 	if (techValueItr == m_cachedTechValues.end())
