@@ -77,11 +77,7 @@ void CvTeamAI::AI_init()
 	// Init other game data
 }
 
-
-void CvTeamAI::AI_uninit()
-{
-}
-
+void CvTeamAI::AI_uninit() {}
 
 void CvTeamAI::AI_reset(bool bConstructor)
 {
@@ -122,11 +118,7 @@ void CvTeamAI::AI_reset(bool bConstructor)
 			kLoopTeam.m_aeWarPlan[getID()] = NO_WARPLAN;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_iNoTechTradeThreshold = 0;
 	m_iTechTradeKnownPercent = 0;
 	m_iMaxWarRand = 0;
@@ -137,107 +129,77 @@ void CvTeamAI::AI_reset(bool bConstructor)
 	m_iLimitedWarPowerRatio = 0;
 	m_iDogpileWarRand = 0;
 	m_iMakePeaceRand = 0;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 }
 
 
 void CvTeamAI::AI_doTurnPre()
 {
-	for(int iI = 0; iI < MAX_TEAMS; iI++ )
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		m_endWarValueCache[iI] = - 1;
+		m_endWarValueCache[iI] = -1;
 	}
-
 	AI_doCounter();
-
-	if (isHuman())
-	{
-		return;
-	}
-
-	if (isNPC())
-	{
-		return;
-	}
-
-	if (isMinorCiv())
-	{
-		return;
-	}
 }
 
 
 void CvTeamAI::AI_doTurnPost()
 {
 	AI_updateWorstEnemy();
-
 	AI_updateAreaStragies(false);
 
-	if (isHuman())
+	if (isHuman() || isNPC() || isMinorCiv())
 	{
 		return;
 	}
-
-	if (isNPC())
-	{
-		return;
-	}
-
-	if (isMinorCiv())
-	{
-		return;
-	}
-
 	AI_doWar();
 }
 
 
 void CvTeamAI::AI_makeAssignWorkDirty()
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	if (isNPC())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		FAssertMsg(GET_PLAYER(getLeaderID()).isAlive(), "Should be alive");
+		// NPC is always a team of one.
+		GET_PLAYER(getLeaderID()).AI_makeAssignWorkDirty();
+		return;
+	}
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive() && player.getTeam() == getID())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
-			}
+			player.AI_makeAssignWorkDirty();
 		}
 	}
 }
 
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						10/6/08				jdog5000	*/
-/* 																			*/
-/* 	General AI																*/
-/********************************************************************************/
+
 // Find plot strength of teammates and potentially vassals
 int CvTeamAI::AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const bool bDefensiveBonuses, const bool bTestMoves, const bool bIncludeVassals) const
 {
-	int iI;
+	if (isNPC())
+	{
+		FAssertMsg(GET_PLAYER(getLeaderID()).isAlive(), "Should be alive");
+		// NPC is always a team of one.
+		return GET_PLAYER(getLeaderID()).AI_getOurPlotStrength(pPlot, iRange, bDefensiveBonuses, bTestMoves);
+	}
 	int iPlotStrength = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive()
+		&& (player.getTeam() == getID() || bIncludeVassals && GET_TEAM(player.getTeam()).isVassal(getID())))
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || (bIncludeVassals && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isVassal(getID())) )
-			{
-				iPlotStrength += GET_PLAYER((PlayerTypes)iI).AI_getOurPlotStrength(pPlot,iRange,bDefensiveBonuses,bTestMoves);
-			}
+			iPlotStrength += player.AI_getOurPlotStrength(pPlot, iRange, bDefensiveBonuses, bTestMoves);
 		}
 	}
-
 	return iPlotStrength;
 }
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
+
 
 
 void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
@@ -257,115 +219,89 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 		AI_updateAreaTargets();
 	}
 
-	// Afforess	- 03/15/10
 	AI_updateCache();
 }
 
 
 void CvTeamAI::AI_updateAreaTargets()
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	if (isNPC())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		FAssertMsg(GET_PLAYER(getLeaderID()).isAlive(), "Should be alive");
+		// NPC is always a team of one.
+		GET_PLAYER(getLeaderID()).AI_updateAreaTargets();
+		return;
+	}
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive() && player.getTeam() == getID())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				GET_PLAYER((PlayerTypes)iI).AI_updateAreaTargets();
-			}
+			player.AI_updateAreaTargets();
 		}
 	}
-}
-
-
-int CvTeamAI::AI_countFinancialTrouble() const
-{
-	int iCount;
-	int iI;
-
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
-				{
-					iCount++;
-				}
-			}
-		}
-	}
-
-	return iCount;
 }
 
 
 int CvTeamAI::AI_countMilitaryWeight(const CvArea* pArea) const
 {
-	int iCount;
-	int iI;
-
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	if (isNPC())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		FAssertMsg(GET_PLAYER(getLeaderID()).isAlive(), "Should be alive");
+		// NPC is always a team of one.
+		return GET_PLAYER(getLeaderID()).AI_militaryWeight(pArea);
+	}
+	int iCount = 0;
+
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		const CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive() && player.getTeam() == getID())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				iCount += GET_PLAYER((PlayerTypes)iI).AI_militaryWeight(pArea);
-			}
+			iCount += player.AI_militaryWeight(pArea);
 		}
 	}
-
 	return iCount;
 }
 
 
 bool CvTeamAI::AI_isAnyCapitalAreaAlone() const
 {
-	int iI;
+	FAssertMsg(!isNPC(), "NPC doesn't have a capital area!");
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive() && player.getTeam() == getID() && player.AI_isCapitalAreaAlone())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).AI_isCapitalAreaAlone())
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
 
 bool CvTeamAI::AI_isPrimaryArea(const CvArea* pArea) const
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	if (isNPC())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).AI_isPrimaryArea(pArea))
-				{
-					return true;
-				}
-			}
-		}
+		FAssertMsg(GET_PLAYER(getLeaderID()).isAlive(), "Should be alive");
+		// NPC is always a team of one.
+		return GET_PLAYER(getLeaderID()).AI_isPrimaryArea(pArea);
 	}
 
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		const CvPlayerAI& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive() && player.getTeam() == getID() && player.AI_isPrimaryArea(pArea))
+		{
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -381,7 +317,6 @@ bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -390,278 +325,226 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 {
 	PROFILE_FUNC();
 
-	bool bRecentAttack;
-	bool bTargets;
-	bool bChosenTargets;
-	bool bDeclaredTargets;
-	int iOffensiveThreshold;
-	int iAreaCities;
-	int iI;
-
-	if (!(pArea->isWater()))
+	if (pArea->isWater())
 	{
-		if (isNPC())
-		{
-			if ((pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER)) == 0)
-			{
-				return AREAAI_ASSAULT;
-			}
-			if ((countNumAIUnitsByArea(pArea, UNITAI_ATTACK) + countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) + countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) + countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)) > (((AI_countMilitaryWeight(pArea) * 20) / 100) + 1))
-			{
-				return AREAAI_OFFENSIVE; // XXX does this ever happen?
-			}
+		return AREAAI_NEUTRAL;
+	}
 
-			return AREAAI_MASSING;
+	if (isNPC())
+	{
+		if (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) == 0)
+		{
+			return AREAAI_ASSAULT;
 		}
-
-		bRecentAttack = false;
-		bTargets = false;
-		bChosenTargets = false;
-		bDeclaredTargets = false;
-
-		bool bAssault = false;
-		bool bPreparingAssault = false;
-
-		if (bPreparingTotal)
+		if (
+		(
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK) +
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) +
+			countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) +
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)
+		)
+		> 1 + AI_countMilitaryWeight(pArea) * 20 / 100)
 		{
-			iOffensiveThreshold = 25;
+			return AREAAI_OFFENSIVE; // XXX does this ever happen?
 		}
-		else
-		{
-			iOffensiveThreshold = 20;
-		}
+		return AREAAI_MASSING;
+	}
 
-		iAreaCities = countNumCitiesByArea(pArea);
+	bool bRecentAttack = false;
+	bool bTargets = false;
+	bool bChosenTargets = false;
+	bool bDeclaredTargets = false;
+	bool bAssault = false;
+	bool bPreparingAssault = false;
 
-		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			// Minor civs will declare war on all, but won't get has met set so that they don't show in score board
+			if (AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN && isHasMet((TeamTypes)iI))
 			{
-/********************************************************************************/
-/**		REVOLUTION_MOD							6/23/08				jdog5000	*/
-/**																				*/
-/**		Revolution AI, minor civs												*/
-/********************************************************************************/
-				// Minor civs will declare war on all, but won't get has met set so that they don't show in score board
-				//if (AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
-				if (AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN && isHasMet((TeamTypes)iI))
+				FAssert(((TeamTypes)iI) != getID());
+				FAssert(isHasMet((TeamTypes)iI));
+
+				if (AI_getWarPlan((TeamTypes)iI) == WARPLAN_ATTACKED_RECENT)
 				{
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
-					FAssert(((TeamTypes)iI) != getID());
-					FAssert(isHasMet((TeamTypes)iI));
+					FAssert(isAtWar((TeamTypes)iI));
+					bRecentAttack = true;
+				}
 
-					if (AI_getWarPlan((TeamTypes)iI) == WARPLAN_ATTACKED_RECENT)
+				if (GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea) > 0 || GET_TEAM((TeamTypes)iI).countNumUnitsByArea(pArea) > 4)
+				{
+					bTargets = true;
+
+					if (AI_isChosenWar((TeamTypes)iI))
 					{
-						FAssert(isAtWar((TeamTypes)iI));
-						bRecentAttack = true;
-					}
+						bChosenTargets = true;
 
-					if ((GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea) > 0) || (GET_TEAM((TeamTypes)iI).countNumUnitsByArea(pArea) > 4))
-					{
-						bTargets = true;
-
-						if (AI_isChosenWar((TeamTypes)iI))
+						if (isAtWar((TeamTypes)iI) ? AI_getAtWarCounter((TeamTypes)iI) < 10 : AI_isSneakAttackReady((TeamTypes)iI))
 						{
-							bChosenTargets = true;
-
-							if ((isAtWar((TeamTypes)iI)) ? (AI_getAtWarCounter((TeamTypes)iI) < 10) : AI_isSneakAttackReady((TeamTypes)iI))
-							{
-								bDeclaredTargets = true;
-							}
+							bDeclaredTargets = true;
 						}
 					}
-					else
+				}
+				else
+				{
+					bAssault = true;
+					if (AI_isSneakAttackPreparing((TeamTypes)iI))
 					{
-						bAssault = true;
-						if (AI_isSneakAttackPreparing((TeamTypes)iI))
-						{
-							bPreparingAssault = true;
-						}
+						bPreparingAssault = true;
 					}
 				}
 			}
 		}
+	}
+	const int iAreaCities = countNumCitiesByArea(pArea);
 
-		if (bTargets && iAreaCities > 0 && isAtWar())
+	if (bTargets && iAreaCities > 0 && isAtWar())
+	{
+		if (AI_isPrimaryArea(pArea) && AI_getWarSuccessCapitulationRatio() < -50)
 		{
-			if (AI_isPrimaryArea(pArea) && AI_getWarSuccessCapitulationRatio() < -50)
-			{
-				// Use defensive stance if enemy has strong presence, we've been losing badly
-				if (countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
-				{
-					return AREAAI_DEFENSIVE;
-				}
-			}
-			// Use defensive area AI right after invasions, to force vulnerable captured cities to be better defended
-			else if (2*countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
+			// Use defensive stance if enemy has strong presence, we've been losing badly
+			if (countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
 			{
 				return AREAAI_DEFENSIVE;
 			}
 		}
+		// Use defensive area AI right after invasions, to force vulnerable captured cities to be better defended
+		else if (2*countPowerByArea(pArea) < countEnemyPowerByArea(pArea))
+		{
+			return AREAAI_DEFENSIVE;
+		}
+	}
 
-		if (bDeclaredTargets)
+	if (bDeclaredTargets)
+	{
+		return AREAAI_OFFENSIVE;
+	}
+
+	if (bTargets)
+	{
+		// AI_countMilitaryWeight is based on this team's pop and cities;
+		// if this team is the biggest, it will over estimate needed units.
+		int iMilitaryWeight = AI_countMilitaryWeight(pArea);
+		int iCount = 1;
+
+		for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
+		{
+			if (GET_TEAM((TeamTypes)iJ).isAlive() && iJ != getID()
+			&& !GET_TEAM((TeamTypes)iJ).isMinorCiv()
+			&& AI_getWarPlan((TeamTypes)iJ) != NO_WARPLAN)
+			{
+				iMilitaryWeight += GET_TEAM((TeamTypes)iJ).AI_countMilitaryWeight(pArea);
+				iCount++;
+
+				if (GET_TEAM((TeamTypes)iJ).isAVassal())
+				{
+					for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
+					{
+						if (GET_TEAM((TeamTypes)iK).isAlive() && iK != getID()
+						&& GET_TEAM((TeamTypes)iJ).isVassal((TeamTypes)iK))
+						{
+							iMilitaryWeight += GET_TEAM((TeamTypes)iK).AI_countMilitaryWeight(pArea);
+						}
+					}
+				}
+			}
+		}
+
+		iMilitaryWeight /= iCount;
+		if (
+		(
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK) +
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) +
+			countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) +
+			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)
+		)
+		> 1 + iMilitaryWeight * (bPreparingTotal ? 25 : 20) / 100)
 		{
 			return AREAAI_OFFENSIVE;
 		}
+	}
 
-		if (bTargets)
+	if (bTargets)
+	{
+		for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 		{
-			// AI_countMilitaryWeight is based on this team's pop and cities ... if this team is the biggest, it will over estimate needed units
-			int iMilitaryWeight = AI_countMilitaryWeight(pArea);
-			int iCount = 1;
+			CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iPlayer);
 
-			for( int iJ = 0; iJ < MAX_PC_TEAMS; iJ++ )
+			if (playerX.isAlive() && playerX.getTeam() == getID()
+			&& (playerX.AI_isDoStrategy(AI_STRATEGY_DAGGER) || playerX.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+			&& pArea->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0)
 			{
-				if( iJ != getID() && GET_TEAM((TeamTypes)iJ).isAlive() )
-				{
-					if( !(GET_TEAM((TeamTypes)iJ).isNPC() || GET_TEAM((TeamTypes)iJ).isMinorCiv()) )
-					{
-						if( AI_getWarPlan((TeamTypes)iJ) != NO_WARPLAN )
-						{
-							iMilitaryWeight += GET_TEAM((TeamTypes)iJ).AI_countMilitaryWeight(pArea);
-							iCount++;
-
-							if( GET_TEAM((TeamTypes)iJ).isAVassal() )
-							{
-								for( int iK = 0; iK < MAX_PC_TEAMS; iK++ )
-								{
-									if( iK != getID() && GET_TEAM((TeamTypes)iK).isAlive() )
-									{
-										if( GET_TEAM((TeamTypes)iJ).isVassal((TeamTypes)iK) )
-										{
-											iMilitaryWeight += GET_TEAM((TeamTypes)iK).AI_countMilitaryWeight(pArea);
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			iMilitaryWeight /= iCount;
-
-			if ((countNumAIUnitsByArea(pArea, UNITAI_ATTACK) + countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) + countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) + countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)) > (((iMilitaryWeight * iOffensiveThreshold) / 100) + 1))
-			{
-				return AREAAI_OFFENSIVE;
+				return AREAAI_MASSING;
 			}
 		}
-
-		if (bTargets)
+		if (bRecentAttack)
 		{
-			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
+			if (countPowerByArea(pArea) > countEnemyPowerByArea(pArea))
 			{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       09/17/09                      cephalo & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original BTS code
-				CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iI);
-*/
-				CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
-				if (kPlayer.isAlive())
-				{
-					if (kPlayer.getTeam() == getID())
-					{
-						if (kPlayer.AI_isDoStrategy(AI_STRATEGY_DAGGER) || kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
-						{
-							if (pArea->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0)
-							{
-								return AREAAI_MASSING;
-							}
-						}
-					}
-				}
-			}
-			if (bRecentAttack)
-			{
-				int iPower = countPowerByArea(pArea);
-				int iEnemyPower = countEnemyPowerByArea(pArea);
-				if (iPower > iEnemyPower)
-				{
-					return AREAAI_MASSING;
-				}
-				return AREAAI_DEFENSIVE;
-			}
-		}
-
-		if (iAreaCities > 0)
-		{
-			if (countEnemyDangerByArea(pArea) > iAreaCities)
-			{
-				return AREAAI_DEFENSIVE;
-			}
-		}
-
-		if (bChosenTargets)
-		{
-			return AREAAI_MASSING;
-		}
-
-		if (bTargets)
-		{
-			if (iAreaCities > (getNumMembers() * 3))
-			{
-				if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) || (countPowerByArea(pArea) > ((countEnemyPowerByArea(pArea) * 3) / 2)))
-				{
-					return AREAAI_MASSING;
-				}
+				return AREAAI_MASSING;
 			}
 			return AREAAI_DEFENSIVE;
 		}
-		else
-		{
-			if (bAssault)
-			{
-				if (AI_isPrimaryArea(pArea))
-				{
-					if (bPreparingAssault)
-					{
-						return AREAAI_ASSAULT_MASSING;
-					}
-				}
-				else if (countNumCitiesByArea(pArea) > 0)
-				{
-					return AREAAI_ASSAULT_ASSIST;
-				}
+	}
 
-				return AREAAI_ASSAULT;
+	if (iAreaCities > 0 && countEnemyDangerByArea(pArea) > iAreaCities)
+	{
+		return AREAAI_DEFENSIVE;
+	}
+
+	if (bChosenTargets)
+	{
+		return AREAAI_MASSING;
+	}
+
+	if (bTargets)
+	{
+		if (iAreaCities > (getNumMembers() * 3))
+		{
+			if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) || (countPowerByArea(pArea) > ((countEnemyPowerByArea(pArea) * 3) / 2)))
+			{
+				return AREAAI_MASSING;
 			}
 		}
+		return AREAAI_DEFENSIVE;
+	}
+	else if (bAssault)
+	{
+		if (AI_isPrimaryArea(pArea))
+		{
+			if (bPreparingAssault)
+			{
+				return AREAAI_ASSAULT_MASSING;
+			}
+		}
+		else if (countNumCitiesByArea(pArea) > 0)
+		{
+			return AREAAI_ASSAULT_ASSIST;
+		}
+		return AREAAI_ASSAULT;
 	}
 
 	return AREAAI_NEUTRAL;
 }
 
-int CvTeamAI::AI_calculateAdjacentLandPlots(TeamTypes eTeam) const
+int CvTeamAI::AI_calculateAdjacentLandPlots(const TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	iCount = 0;
+	const CvMap& map = GC.getMap();
+	int iCount = 0;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < map.numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		const CvPlot* plot = map.plotByIndex(iI);
 
-		if (!(pLoopPlot->isWater()))
+		if (!plot->isWater() && plot->getTeam() == eTeam && plot->isAdjacentTeam(getID(), true))
 		{
-			if ((pLoopPlot->getTeam() == eTeam) && pLoopPlot->isAdjacentTeam(getID(), true))
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -669,36 +552,25 @@ int CvTeamAI::AI_calculateAdjacentLandPlots(TeamTypes eTeam) const
 }
 
 
-int CvTeamAI::AI_calculatePlotWarValue(TeamTypes eTeam) const
+int CvTeamAI::AI_calculatePlotWarValue(const TeamTypes eTeam) const
 {
 	FAssert(eTeam != getID());
 
+	const CvMap& map = GC.getMap();
 	int iValue = 0;
 
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < map.numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* plot = map.plotByIndex(iI);
 
-		if (pLoopPlot->getTeam() == eTeam)
+		if (plot->getTeam() == eTeam)
 		{
-			if (!pLoopPlot->isWater() && pLoopPlot->isAdjacentTeam(getID(), true))
+			if (!plot->isWater() && plot->isAdjacentTeam(getID(), true))
 			{
 				iValue += 4;
 			}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/17/08                                jdog5000      */
-/*                                                                                              */
-/* Notes                                                                                        */
-/************************************************************************************************/
-			// This section of code does nothing without XML modding as AIObjective is 0 for all bonuses
-			// Left alone for mods to use
-			// Resource driven war in BBAI is done with CvTeamAI::AI_calculateBonusWarValue
-			// without using the XML variable AIObjective
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-			BonusTypes eBonus = pLoopPlot->getBonusType(getID());
+			const BonusTypes eBonus = plot->getBonusType(getID());
 			if (NO_BONUS != eBonus)
 			{
 				iValue += 40 * GC.getBonusInfo(eBonus).getAIObjective();
@@ -1285,18 +1157,16 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	int iValue;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(isAtWar(eTeam), "Current AI Team instance is expected to be at war with eTeam");
 
-	//	Just evaluate once per turn and cache for the rest of that turn
-	if ( m_endWarValueCache[eTeam] != -1 )
+	// Just evaluate once per turn and cache for the rest of that turn
+	if (m_endWarValueCache[eTeam] != -1)
 	{
 		return m_endWarValueCache[eTeam];
 	}
 
-	iValue = 100;
+	int iValue = 100;
 
 	iValue += (getNumCities() * 3);
 	iValue += (GET_TEAM(eTeam).getNumCities() * 3);
