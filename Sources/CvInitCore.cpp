@@ -111,15 +111,6 @@ CvInitCore::~CvInitCore()
 	SAFE_DELETE_ARRAY(m_abReady);
 	SAFE_DELETE_ARRAY(m_aszPythonCheck);
 	SAFE_DELETE_ARRAY(m_aszXMLCheck);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	m_aszSaveGameVector.clear();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 }
 
 void CvInitCore::init(GameMode eMode)
@@ -1699,26 +1690,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvInitCore", &m_uiSavegameAssetCheckSum);
 	OutputDebugString(CvString::format("Asset CheckSum of save is %d\n", m_uiSavegameAssetCheckSum).c_str());
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	int iNumSaveGameVector;
-	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumSaveGameVector, "numModControlVectors");
-
-	// Empty the Vector
-	m_aszSaveGameVector.erase(m_aszSaveGameVector.begin(), m_aszSaveGameVector.end());
-
-	CvString szSaveGameVector;
-	for (int uiIndex = 0; uiIndex < iNumSaveGameVector; ++uiIndex)
-	{
-		WRAPPER_READ_STRING_DECORATED(wrapper, "CvInitCore", szSaveGameVector, "ModControlVector");
-		m_aszSaveGameVector.push_back(szSaveGameVector);
-	}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	// GAME DATA
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eType);
 	WRAPPER_READ_STRING(wrapper, "CvInitCore", m_szGameName);
@@ -1984,21 +1955,6 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	const int iNumModLoadControlVector = GC.getModLoadControlVectorSize();
-	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", iNumModLoadControlVector, "numModControlVectors");
-
-	for (int uiIndex = 0; uiIndex < iNumModLoadControlVector; ++uiIndex)
-	{
-		WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", GC.getModLoadControlVector(uiIndex), "ModControlVector");
-	}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	// GAME DATA
 	WRAPPER_WRITE(wrapper, "CvInitCore", m_eType);
 	WRAPPER_WRITE_STRING(wrapper, "CvInitCore", m_szGameName);
@@ -2068,24 +2024,6 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-int CvInitCore::getNumSaveGameVector()
-{
-	return m_aszSaveGameVector.size();
-}
-
-CvString CvInitCore::getSaveGameVector(int i)
-{
-	FASSERT_BOUNDS(0, getNumSaveGameVector(), i)
-	return m_aszSaveGameVector[i];
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 // BUG - EXE/DLL Paths - start
 CvString CvInitCore::getDLLPath() const
