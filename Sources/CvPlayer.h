@@ -1046,11 +1046,9 @@ public:
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
 
-#ifdef PARALLEL_MAPS
-	void updateMembers();
-	void addMembers();
-	void initMembers(int iIndex);
-#endif
+	void addContainersForEachMap();
+	void initContainersForMap(MapTypes mapIndex);
+
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
 	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
@@ -1979,19 +1977,11 @@ protected:
 
 	CLinkList<CvWString> m_cityNames;
 
-#ifdef PARALLEL_MAPS
 	std::vector<CLinkList<int>*>						  m_groupCycles;
 	std::vector<FFreeListTrashArray<CvPlotGroup>*>		  m_plotGroups;
 	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
 	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
 	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
-#else
-	CLinkList<int> m_groupCycle;
-	FFreeListTrashArray<CvPlotGroup> m_plotGroups;
-	FFreeListTrashArray<CvCityAI> m_cities;
-	FFreeListTrashArray<CvUnitAI> m_units;
-	FFreeListTrashArray<CvSelectionGroupAI> m_selectionGroups;
-#endif
 
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;
