@@ -716,11 +716,13 @@ bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 
 	if (!bNeighborsOnly)
 	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).getNumCities() > 0)
+			const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+
+			if (player.getTeam() == getID() && player.getNumCities() > 0)
 			{
-				CvCity* pCapital = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+				const CvCity* pCapital = player.getCapitalCity();
 
 				if (pCapital != NULL && GET_TEAM(eTeam).AI_isPrimaryArea(pCapital->area()))
 				{
@@ -736,41 +738,24 @@ bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 // this determines if eTeam or any of its allies are land targets of us
 bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 {
-	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
-	{
-		if (iTeam != getID())
-		{
-			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-			if (iTeam == eTeam || kLoopTeam.isVassal(eTeam) || GET_TEAM(eTeam).isVassal((TeamTypes)iTeam) || kLoopTeam.isDefensivePact(eTeam))
-			{
-				if (AI_isLandTarget((TeamTypes)iTeam))
-				{
-					return true;
-				}
-			}
-		}
-	}
+	const TeamTypes eMyTeam = getID();
 
-	return false;
-}
+	FAssertMsg(eTeam != eMyTeam, "shouldn't call this function on ourselves");
 
+	const CvTeam& team = GET_TEAM(eTeam);
 
-bool CvTeamAI::AI_shareWar(TeamTypes eTeam) const
-{
-	// No dealing with minor civs
-	if (isMinorCiv() || GET_TEAM(eTeam).isMinorCiv())
+	for (int iTeamX = 0; iTeamX < MAX_PC_TEAMS; iTeamX++)
 	{
-		return false;
-	}
-	// Only accumulate if someone actually declared war, not a left over from StartAsMinors
-	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	{
-		if (iI != getID() && iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv()
-		&& isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI)
-		&& (AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
-			|| GET_TEAM(eTeam).AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
-			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()) != WARPLAN_LIMITED
-			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(eTeam) != WARPLAN_LIMITED))
+		const TeamTypes eTeamX = (TeamTypes)iTeamX;
+		if (eTeamX != eMyTeam
+		&&
+		(
+			eTeamX == eTeam
+			|| team.isDefensivePact(eTeamX)
+			|| team.isVassal(eTeamX)
+			|| GET_TEAM(eTeamX).isVassal(eTeam)
+		)
+		&& AI_isLandTarget(eTeamX))
 		{
 			return true;
 		}
@@ -779,99 +764,78 @@ bool CvTeamAI::AI_shareWar(TeamTypes eTeam) const
 }
 
 
-AttitudeTypes CvTeamAI::AI_getAttitude(TeamTypes eTeam, bool bForced) const
+bool CvTeamAI::AI_shareWar(TeamTypes eTeam) const
 {
-	int iAttitude;
-	int iCount;
-	int iI, iJ;
-
-//	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
-//Ai Autoplay calls this
-	iAttitude = 0;
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
+	// No dealing with minor civs
+	if (isMinorCiv())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		return false;
+	}
+	const CvTeam& team = GET_TEAM(eTeam);
+
+	if (team.isMinorCiv())
+	{
+		return false;
+	}
+
+	// Only accumulate if someone actually declared war, not a left over from StartAsMinors
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		if (iI != getID() && iI != eTeam && isAtWar((TeamTypes)iI) && team.isAtWar((TeamTypes)iI))
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			const CvTeam& teamX = GET_TEAM((TeamTypes)iI);
+
+			if (teamX.isAlive() && !teamX.isMinorCiv()
+			&& (
+				AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
+				|| team.AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
+				|| teamX.AI_getWarPlan(getID()) != WARPLAN_LIMITED
+				|| teamX.AI_getWarPlan(eTeam) != WARPLAN_LIMITED))
 			{
-				for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && iI != iJ)
-					{
-						// BBAI TODO: Attitude averaging ... what to do?
-						TeamTypes eTeamLoop = GET_PLAYER((PlayerTypes)iJ).getTeam();
-						if (eTeamLoop == eTeam || GET_TEAM(eTeamLoop).isVassal(eTeam) || GET_TEAM(eTeam).isVassal(eTeamLoop))
-						{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/25/09                                jdog5000      */
-/*                                                                                              */
-/* Diplomacy AI                                                                                 */
-/************************************************************************************************/
-/*
-							iAttitude += GET_PLAYER((PlayerTypes)iI).AI_getAttitude((PlayerTypes)iJ, bForced);
-*/
-							iAttitude += GET_PLAYER((PlayerTypes)iI).AI_getAttitudeVal((PlayerTypes)iJ, bForced);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-							iCount++;
-						}
-					}
-				}
+				return true;
 			}
 		}
 	}
+	return false;
+}
 
-	if (iCount > 0)
-	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/25/09                                jdog5000      */
-/*                                                                                              */
-/* Diplomacy AI                                                                                 */
-/************************************************************************************************/
-/*
-		return ((AttitudeTypes)(iAttitude / iCount));
-*/
-		// This function is the same for all players, regardless of leader or whatever
-		// so it's fine to use it for the team's attitude
-		return GET_PLAYER(getLeaderID()).AI_getAttitudeFromValue(iAttitude/iCount);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-	}
 
-	return ATTITUDE_CAUTIOUS;
+AttitudeTypes CvTeamAI::AI_getAttitude(TeamTypes eTeam, bool bForced) const
+{
+	// This function is the same for all players, regardless of leader or whatever
+	// so it's fine to use it for the team's attitude
+	return GET_PLAYER(getLeaderID()).AI_getAttitudeFromValue(AI_getAttitudeVal(eTeam, bForced));
 }
 
 
 int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 {
-	int iAttitudeVal;
-	int iCount;
-	int iI, iJ;
-
+	const CvTeam& team = GET_TEAM(eTeam);
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
+	FAssertMsg(!isNPC(), "NPC doesn't have attitude!");
+	FAssertMsg(!team.isNPC(), "Attitude towards NPC is meaningless!");
 
-	iAttitudeVal = 0;
-	iCount = 0;
+	int iAttitude = 0;
+	int iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iA = 0; iA < MAX_PC_PLAYERS; iA++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const CvPlayerAI& playerA = GET_PLAYER((PlayerTypes)iA);
+
+		if (playerA.isAlive() && playerA.getTeam() == getID())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			for (int iB = 0; iB < MAX_PC_PLAYERS; iB++)
 			{
-				for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+				if (GET_PLAYER((PlayerTypes)iB).isAlive() && iA != iB)
 				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+					// BBAI TODO: Attitude averaging ... what to do?
+					const TeamTypes eTeamB = GET_PLAYER((PlayerTypes)iB).getTeam();
+
+					if (eTeamB == eTeam || GET_TEAM(eTeamB).isVassal(eTeam) || team.isVassal(eTeamB))
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
-						{
-							iAttitudeVal += GET_PLAYER((PlayerTypes)iI).AI_getAttitudeVal((PlayerTypes)iJ, bForced);
-							iCount++;
-						}
+						iAttitude += playerA.AI_getAttitudeVal((PlayerTypes)iB, bForced);
+						iCount++;
 					}
 				}
 			}
@@ -880,9 +844,8 @@ int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 
 	if (iCount > 0)
 	{
-		return (iAttitudeVal / iCount);
+		return iAttitude / iCount;
 	}
-
 	return 0;
 }
 
