@@ -2702,111 +2702,83 @@ def canApplySportsLeagueDone3(argsList):
 ######## CRUSADE ###########
 
 def canTriggerCrusade(argsList):
-  kTriggeredData = argsList[0]
-  trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	kTriggeredData = argsList[0]
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
-    return False
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+		return False
 
-  if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
-    return False
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	if not holyCity or holyCity.getOwner() != kTriggeredData.eOtherPlayer:
+		return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-  kActualTriggeredDataObject.iOtherPlayerCityId = holyCity.getID()
-
-  return True
+	kActualTriggeredDataObject = GC.getPlayer(kTriggeredData.ePlayer).getEventTriggered(kTriggeredData.iId)
+	kActualTriggeredDataObject.iOtherPlayerCityId = holyCity.getID()
+	return True
 
 def getHelpCrusade1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(), ))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (GAME.getHolyCity(argsList[1].eReligion).getNameKey(), ))
 
 def expireCrusade1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	kTriggeredData = argsList[1]
 
-  if holyCity.getOwner() == kTriggeredData.ePlayer:
-    return False
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	if holyCity is None or holyCity.getOwner() != kTriggeredData.eOtherPlayer:
+		return True
 
-  if player.getStateReligion() != kTriggeredData.eReligion:
-    return True
+	if holyCity.getOwner() == kTriggeredData.ePlayer:
+		return False
 
-  if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
-    return True
+	player = GC.getPlayer(kTriggeredData.ePlayer)
+	if player.getStateReligion() != kTriggeredData.eReligion:
+		return True
 
-  if not GC.getTeam(player.getTeam()).isAtWar(otherPlayer.getTeam()):
-    return True
+	if not GC.getTeam(player.getTeam()).isAtWar(GC.getPlayer(kTriggeredData.eOtherPlayer).getTeam()):
+		return True
 
-  return False
+	return False
 
 def canTriggerCrusadeDone(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
+	kTriggeredData = argsList[0]
+	player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
-  holyCity = GAME.getHolyCity(kOrigTriggeredData.eReligion)
+	kOrigTriggeredData = player.getEventOccured(GC.getEventTriggerInfo(kTriggeredData.eTrigger).getPrereqEvent(0))
+	holyCity = GAME.getHolyCity(kOrigTriggeredData.eReligion)
 
-  if holyCity.getOwner() != kTriggeredData.ePlayer:
-    return False
+	if holyCity.getOwner() != kTriggeredData.ePlayer:
+		return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-  kActualTriggeredDataObject.iCityId = holyCity.getID()
-  kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
-  kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
+	kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
+	kActualTriggeredDataObject.iCityId = holyCity.getID()
+	kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
+	kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 
-  for iBuilding in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(iBuilding).getHolyCity() == kOrigTriggeredData.eReligion:
-      kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
-      break
-
-  return True
+	for iBuilding in xrange(GC.getNumBuildingInfos()):
+		if GC.getBuildingInfo(iBuilding).getHolyCity() == kOrigTriggeredData.eReligion:
+			kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
+			break
+	return True
 
 def getHelpCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	holyCity = GAME.getHolyCity(argsList[1].eReligion)
+	szUnit = GC.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
+	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  szUnit = GC.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
-  iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))
 
 def canApplyCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  if -1 == holyCity.getConscriptUnit():
-    return False
-
-  return True
+	if -1 == GAME.getHolyCity(argsList[1].eReligion).getConscriptUnit():
+		return False
+	return True
 
 def applyCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	kTriggeredData = argsList[1]
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	iUnitType = holyCity.getConscriptUnit()
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  iUnitType = holyCity.getConscriptUnit()
-  iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-
-  if iUnitType != -1:
-    for i in xrange(iNumUnits):
-      player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
+	if iUnitType != -1:
+		player = GC.getPlayer(kTriggeredData.ePlayer)
+		for i in xrange(GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1):
+			player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
 
 def getHelpCrusadeDone2(argsList):
   iEvent = argsList[0]
