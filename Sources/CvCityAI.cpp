@@ -13734,26 +13734,12 @@ int CvCityAI::AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtr
 int CvCityAI::AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance)
 {
 	FAssert(GET_PLAYER(eIndex).isAlive());
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/16/10                              jdog5000        */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
-/* original bts code
-	FAssert(eIndex != getID());
-*/
-	// No point checking player type against city ID ... Firaxis copy and paste error from
-	// CvPlayerAI version of this function
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-	if ((m_iCachePlayerClosenessTurn != GC.getGame().getGameTurn())
-		|| (m_iCachePlayerClosenessDistance != iMaxDistance))
+	if (m_iCachePlayerClosenessTurn != GC.getGame().getGameTurn()
+	||  m_iCachePlayerClosenessDistance != iMaxDistance)
 	{
 		AI_cachePlayerCloseness(iMaxDistance);
 	}
-
 	return m_aiPlayerCloseness[eIndex];
 }
 

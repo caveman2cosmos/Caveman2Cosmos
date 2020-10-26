@@ -581,11 +581,7 @@ int CvTeamAI::AI_calculatePlotWarValue(const TeamTypes eTeam) const
 	return iValue;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/21/08                                jdog5000      */
-/*                                                                                              */
-/* War Strategy AI                                                                              */
-/************************************************************************************************/
+// How much do we desire the land of another team based on bonuses available there
 int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 {
 	FAssert(eTeam != getID());
@@ -598,13 +594,13 @@ int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 
 		if (pLoopPlot->getTeam() == eTeam)
 		{
-			BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getID());
+			const BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getID());
 			if (NO_BONUS != eNonObsoleteBonus)
 			{
 				int iThisValue = 0;
-				for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
+				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
-					if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
+					if (getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive())
 					{
 						// 10 seems like a typical value for a health/happiness resource the AI doesn't have
 						// Values for strategic resources can be 60 or higher
@@ -615,90 +611,83 @@ int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 
 				if (!pLoopPlot->isWater())
 				{
-					if( pLoopPlot->isAdjacentTeam(getID(), true))
-					{
-						iThisValue *= 3;
-					}
-					else
+					if (!pLoopPlot->isAdjacentTeam(getID(), true))
 					{
 						CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
-						if( pWorkingCity != NULL )
+						if (pWorkingCity != NULL)
 						{
-							for( int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++ )
+							for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 							{
-								if( getID() == GET_PLAYER((PlayerTypes)iJ).getTeam() && GET_PLAYER((PlayerTypes)iJ).isAlive() )
+								if (getID() == GET_PLAYER((PlayerTypes)iJ).getTeam()
+								&& GET_PLAYER((PlayerTypes)iJ).isAlive()
+								&& pWorkingCity->AI_playerCloseness((PlayerTypes)iJ) > 0)
 								{
-									if( pWorkingCity->AI_playerCloseness((PlayerTypes)iJ ) > 0 )
-									{
-										iThisValue *= 2;
-										break;
-									}
+									iThisValue *= 2;
+									break;
 								}
 							}
 						}
 					}
+					else iThisValue *= 3;
 				}
 
-				iThisValue = std::max(0, iThisValue - 4);
-				iThisValue /= 5;
-
-				iValue += iThisValue;
+				iValue += std::max(0, iThisValue - 4) / 5;
 			}
 		}
 	}
 
 	return iValue;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
-int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
+// Higher value means relatively closer proximity, value is relative to third party civs.
+// If eOtherTeam is our closest neighbour, then this will return GC.getMap().maxPlotDistance().
+int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eOtherTeam) const
 {
-	CvCity* pOurCapitalCity;
-	CvCity* pTheirCapitalCity;
-	int iTotalDistance;
-	int iCount;
-	int iI, iJ;
+	const TeamTypes eTeam = getID();
+	FAssertMsg(eTeam != eOtherTeam, "shouldn't call this function on ourselves");
+	FAssertMsg(!isNPC(), "NPC has no capital!");
 
-	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
-
-	iTotalDistance = 0;
-	iCount = 0;
+	int iTotalDistance = 0;
+	int iCount = 0;
 
 	int iMinDistance = MAX_INT;
 	int iMaxDistance = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iPlayerX = 0; iPlayerX < MAX_PC_PLAYERS; iPlayerX++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iPlayerX);
+
+		if (playerX.getTeam() == eTeam && playerX.isAlive())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			const CvCity* pOurCapitalCity = playerX.getCapitalCity();
+
+			if (pOurCapitalCity != NULL)
 			{
-				pOurCapitalCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
-
-				if (pOurCapitalCity != NULL)
+				for (int iPlayerY = 0; iPlayerY < MAX_PC_PLAYERS; iPlayerY++)
 				{
-					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
-					{
-						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).getTeam() != getID())
-							{
-								pTheirCapitalCity = GET_PLAYER((PlayerTypes)iJ).getCapitalCity();
+					const CvPlayer& playerY = GET_PLAYER((PlayerTypes)iPlayerY);
 
-								if (pTheirCapitalCity != NULL)
-								{
-									int iDistance = (plotDistance(pOurCapitalCity->getX(), pOurCapitalCity->getY(), pTheirCapitalCity->getX(), pTheirCapitalCity->getY()) * (pOurCapitalCity->area() != pTheirCapitalCity->area() ? 3 : 2));
-									if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
-									{
-										iTotalDistance += iDistance;
-										iCount++;
-									}
-									iMinDistance = std::min(iDistance, iMinDistance);
-									iMaxDistance = std::max(iDistance, iMaxDistance);
-								}
+					if (playerY.isAlive() && playerY.getTeam() != eTeam)
+					{
+						const CvCity* pTheirCapitalCity = playerY.getCapitalCity();
+
+						if (pTheirCapitalCity != NULL)
+						{
+							const int iDistance =
+							(
+								plotDistance(
+									pOurCapitalCity->getX(), pOurCapitalCity->getY(),
+									pTheirCapitalCity->getX(), pTheirCapitalCity->getY()
+								)
+								* (pOurCapitalCity->area() != pTheirCapitalCity->area() ? 3 : 2)
+							);
+							if (playerY.getTeam() == eOtherTeam)
+							{
+								iTotalDistance += iDistance;
+								iCount++;
 							}
+							iMinDistance = std::min(iDistance, iMinDistance);
+							iMaxDistance = std::max(iDistance, iMaxDistance);
 						}
 					}
 				}
@@ -709,9 +698,8 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 	if (iCount > 0)
 	{
 		FAssert(iMaxDistance > 0);
-		return ((GC.getMap().maxPlotDistance() * (iMaxDistance - ((iTotalDistance / iCount) - iMinDistance))) / iMaxDistance);
+		return GC.getMap().maxPlotDistance() * (iMaxDistance - (iTotalDistance / iCount - iMinDistance)) / iMaxDistance;
 	}
-
 	return 0;
 }
 
@@ -721,7 +709,7 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 //	If its content is correct: remove this function and call isAtWar(true) instead of it wherever it's called.
 bool CvTeamAI::AI_isWarPossible() const
 {
-	return isAtWar(true);
+	return true;
 }
 
 
