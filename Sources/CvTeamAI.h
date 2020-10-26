@@ -103,7 +103,7 @@ public:
 /********************************************************************************/
 
 	int AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const;
-	DenialTypes AI_techTrade(TechTypes eTech, TeamTypes eTeam) const;
+	DenialTypes AI_techTrade(const TechTypes eTech, const TeamTypes eTeam) const;
 
 	int AI_mapTradeVal(TeamTypes eTeam) const;
 	DenialTypes AI_mapTrade(TeamTypes eTeam) const;

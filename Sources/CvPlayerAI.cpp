@@ -4743,15 +4743,14 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 }
 
 int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
-{
-	int iValue;
-
+{;
 	PROFILE_FUNC();
-
 	MEMORY_TRACK()
 
+	int iValue
+
 	TechTypesValueMap::const_iterator techValueItr = m_cachedTechValues.find(eTech);
-	if ( techValueItr == m_cachedTechValues.end() )
+	if (techValueItr == m_cachedTechValues.end())
 	{
 		PROFILE("CvPlayerAI::AI_TechValueCached.CacheMiss");
 
@@ -4776,28 +4775,28 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 		iValue = m_cachedTechValues[eTech];
 	}
 
-	if ( considerFollowOns )
+	if (considerFollowOns)
 	{
 		int iTotalWeight = 100;
 
-		//	What does it (immediately) lead to?
-		for(int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+		// What does it (immediately) lead to?
+		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
 			bool bIsORPreReq = false;
 			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
 			{
-				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
+				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
 				if (ePrereq != NO_TECH)
 				{
-					//	If we've already got an OR pre-req another makes no difference
-					if ( GET_TEAM(getTeam()).isHasTech(ePrereq) )
-					{
-						bIsORPreReq = false;
-						break;
-					}
-					else if (ePrereq == eTech)
+					if (ePrereq == eTech)
 					{
 						bIsORPreReq = true;
+					}
+					else if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+					{
+						// Already got an OR pre-req, another makes no difference
+						bIsORPreReq = false;
+						break;
 					}
 				}
 			}
@@ -4806,7 +4805,7 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 			int iANDPrereqs = 0;
 			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
 			{
-				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
+				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
 				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
 					iANDPrereqs++;
@@ -4817,31 +4816,30 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 				}
 			}
 
-			if ( bIsORPreReq || bIsANDPreReq )
+			if (bIsORPreReq || bIsANDPreReq)
 			{
-				//	Consider all the AND pre-reqs as worth 33% of the follow on,
-				//	and any OR one as 25%
+				// Consider all the AND pre-reqs as worth 33% of the follow on, and significant OR as 25%
 				int	iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
 				int	iORPercentage = (bIsORPreReq ? 25 : 0);
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 
-				iValue += ((iANDPercentage + iORPercentage)*AI_TechValueCached((TechTypes)iJ, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave))/100;
+				iValue += (iANDPercentage + iORPercentage)*AI_TechValueCached((TechTypes)iJ, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave)/100;
 			}
 		}
 
 		//	Normalize to an average to make it comparable with a tech evaluated without follow-ons
-		while(iValue > MAX_INT/100)
+		while (iValue > MAX_INT/100)
 		{
 			iValue /= 2;
 			iTotalWeight /= 2;
 
-			if ( iTotalWeight == 0 )
+			if (iTotalWeight == 0)
 			{
 				iTotalWeight = 1;
 			}
 		}
-		iValue = (iValue*100)/iTotalWeight;
+		iValue = iValue*100/iTotalWeight;
 	}
 
 	return iValue;

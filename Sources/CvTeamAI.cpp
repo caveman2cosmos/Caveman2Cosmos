@@ -1460,143 +1460,129 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	return iValue;
 }
 
-/********************************************************************************/
-/**		REVOLUTION_MOD							6/9/08				jdog5000	*/
-/**																				*/
-/**		Revolution AI															*/
-/********************************************************************************/
+
 int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 {
-	int iValue = 0;
-
-	if( (isMinorCiv() && !isRebel()) || getAnyWarPlanCount(true) == 0 )
+	if (getAnyWarPlanCount(true) > 0
+	&& (!isMinorCiv() || isRebel())
+	|| !AI_hasCitiesInPrimaryArea(eTeam)
+	|| AI_teamCloseness(eTeam) <= 0)
 	{
-		if( AI_hasCitiesInPrimaryArea(eTeam) )
+		return 0;
+	}
+
+	bool bIsGetBetterUnits = false;
+	bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+
+	for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+	{
+		if (GET_PLAYER((PlayerTypes)iJ).getTeam() == getID())
 		{
-			bool bIsGetBetterUnits = false;
-			bool bFinancialTrouble = false;
-			bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
-			int iDaggerCount = 0;
-			for( int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+			if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
 			{
-				if (GET_PLAYER((PlayerTypes)iJ).getTeam() == getID())
-				{
-					if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
-					{
-						bIsGetBetterUnits = true;
-					}
-					if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_DAGGER))
-					{
-						iDaggerCount++;
-						bAggressive = true;
-					}
-					if (GET_PLAYER((PlayerTypes)iJ).AI_isFinancialTrouble())
-					{
-						bFinancialTrouble = true;
-						break;
-					}
-				}
+				bIsGetBetterUnits = true;
 			}
-
-			if( !bFinancialTrouble )
+			if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_DAGGER))
 			{
-				int iPower = getPower(true);
-				if( bAggressive && !bIsGetBetterUnits )
-				{
-					iPower *= 4;
-					iPower /= 3;
-				}
-
-				if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING() || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
-				{
-					if (GET_TEAM(eTeam).getDefensivePower() < ((iPower * AI_maxWarNearbyPowerRatio()) / 100))
-					{
-						int iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
-						iNoWarRoll += (bAggressive ? 10 : 0);
-						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0);
-						iNoWarRoll -= (bIsGetBetterUnits ? 15 : 0);
-						iNoWarRoll = range(iNoWarRoll, 0, 99);
-
-						if( iNoWarRoll >= AI_noWarAttitudeProb(AI_getAttitude(eTeam)) )
-						{
-							if( AI_teamCloseness(eTeam) > 0 )
-							{
-								iValue = AI_startWarVal(eTeam);
-							}
-						}
-					}
-				}
+				bAggressive = true;
+			}
+			if (GET_PLAYER((PlayerTypes)iJ).AI_isFinancialTrouble())
+			{
+				return 0;
 			}
 		}
 	}
 
-	return iValue;
+	if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING()
+	|| GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
+	{
+		const int iPower =
+		(
+			(bAggressive && !bIsGetBetterUnits)
+			?
+			getPower(true)*4/3
+			:
+			getPower(true)
+		);
+		if (GET_TEAM(eTeam).getDefensivePower() < iPower * AI_maxWarNearbyPowerRatio() / 100)
+		{
+			const int iNoWarRoll =
+			(
+				GC.getGame().getSorenRandNum(100, "AI No War") - 20
+				+ (bAggressive ? 10 : 0)
+				+ ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0)
+				- (bIsGetBetterUnits ? 15 : 0)
+			);
+			if (range(iNoWarRoll, 0, 99) >= AI_noWarAttitudeProb(AI_getAttitude(eTeam)))
+			{
+				return AI_startWarVal(eTeam);
+			}
+		}
+	}
+	return 0;
 }
 
 int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 {
-	int iValue = 0;
-
-	if( GET_TEAM(eTeam).isAlive() && !GET_TEAM(eTeam).isMinorCiv() && !GET_TEAM(eTeam).isNPC() )
+	if (!GET_TEAM(eTeam).isAlive()
+	|| GET_TEAM(eTeam).isMinorCiv()
+	|| GET_TEAM(eTeam).isNPC()
+	|| !AI_hasCitiesInPrimaryArea(eTeam))
 	{
-		if( AI_hasCitiesInPrimaryArea(eTeam) )
-		{
-			int iClosenessValue = AI_teamCloseness(eTeam, iMaxDistance);
-			if (iClosenessValue <= 0)
-			{
-				return 0;
-			}
-			iValue += iClosenessValue;
+		return 0;
+	}
+	const int iClosenessValue = AI_teamCloseness(eTeam, iMaxDistance);
+	if (iClosenessValue <= 0)
+	{
+		return 0;
+	}
+	int iValue = iClosenessValue;
 
-			iValue += AI_calculatePlotWarValue(eTeam)/2;
+	iValue += AI_calculatePlotWarValue(eTeam)/2;
 
-			iValue += (3 * AI_calculateCapitalProximity(eTeam)) / 2;
+	iValue += (3 * AI_calculateCapitalProximity(eTeam)) / 2;
 
-			iValue += 3*AI_getWarSuccess(eTeam);
+	iValue += 3*AI_getWarSuccess(eTeam);
 
-			if( GET_TEAM(eTeam).getDefensivePower() > ((3*getPower(true))/2*AI_maxWarNearbyPowerRatio())/100 )
-			{
-				iValue /= 2;
-			}
-			else if( GET_TEAM(eTeam).getDefensivePower() < (getPower(true)*AI_maxWarNearbyPowerRatio())/100 )
-			{
-				iValue *= 2;
-			}
-
-			switch (AI_getAttitude(eTeam))
-			{
-			case ATTITUDE_FURIOUS:
-				iValue *= 16;
-				break;
-
-			case ATTITUDE_ANNOYED:
-				iValue *= 8;
-				break;
-
-			case ATTITUDE_CAUTIOUS:
-				iValue *= 4;
-				break;
-
-			case ATTITUDE_PLEASED:
-				iValue *= 1;
-				break;
-
-			case ATTITUDE_FRIENDLY:
-				iValue *= 0;
-				break;
-
-			default:
-				FAssert(false);
-				break;
-			}
-		}
+	if (GET_TEAM(eTeam).getDefensivePower() > (3*getPower(true)/2*AI_maxWarNearbyPowerRatio())/100)
+	{
+		iValue /= 2;
+	}
+	else if (GET_TEAM(eTeam).getDefensivePower() < getPower(true)*AI_maxWarNearbyPowerRatio()/100)
+	{
+		iValue *= 2;
 	}
 
+	switch (AI_getAttitude(eTeam))
+	{
+		case ATTITUDE_FURIOUS:
+		{
+			return 16*iValue;
+		}
+		case ATTITUDE_ANNOYED:
+		{
+			return 8*iValue;
+		}
+		case ATTITUDE_CAUTIOUS:
+		{
+			return 4*iValue;
+		}
+		case ATTITUDE_PLEASED:
+		{
+			return iValue;
+		}
+		case ATTITUDE_FRIENDLY:
+		{
+			return 0;
+		}
+		default:
+		{
+			FAssert(false);
+			break;
+		}
+	}
 	return iValue;
 }
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
 
 
 int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
@@ -1604,56 +1590,39 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 	PROFILE_FUNC();
 
 	FAssert(eTeam != getID());
-	int iKnownCount;
-	int iPossibleKnownCount;
-	int iCost;
-	int iValue;
-	int iI;
-	bool bAsync = (GET_PLAYER(getLeaderID()).isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
-	const CvTeamAI* pDoesNotHaveTeam;
+	FAssertMsg(!isHasTech(eTech), "Buying a tech one already own has no value");
 
-	if ( isHasTech(eTech) )
-	{
-		iCost = std::max(1, getResearchCost(eTech));
-
-		pDoesNotHaveTeam = &GET_TEAM(eTeam);
-	}
-	else
-	{
-		iCost = std::max(1, (getResearchCost(eTech) - getResearchProgress(eTech)));
-
-		pDoesNotHaveTeam = this;
-	}
-
-	if ( m_tradeTechValuesCachedTurn != GC.getGame().getGameTurn() )
+	if (m_tradeTechValuesCachedTurn != GC.getGame().getGameTurn())
 	{
 		m_tradeTechValueCache.clear();
 		m_tradeTechValuesCachedTurn = GC.getGame().getGameTurn();
-		//logBBAI("Flush trade value cache for team %d",
-		//		getID());
+		//logBBAI("Flush trade value cache for team %d", getID());
 	}
 
-	int iCacheIndex = (eTech*MAX_TEAMS + pDoesNotHaveTeam->getID());
+	int iCacheIndex = eTech * MAX_TEAMS + getID();
 
 	stdext::hash_map<int,int>::const_iterator itr = m_tradeTechValueCache.find(iCacheIndex);
-	if ( itr != m_tradeTechValueCache.end() )
+	if (itr != m_tradeTechValueCache.end())
 	{
-		//logBBAI("Found cached trade value for tech %S by team %d for team %d",
-		//		GC.getTechInfo(eTech).getDescription(),
-		//		getID(),
-		////		pDoesNotHaveTeam->getID());
+		/*
+		logBBAI(
+			"Found cached trade value for tech %S by team %d for team %d",
+			GC.getTechInfo(eTech).getDescription(), (int)eTeam, getID()
+		);
+		*/
 		return itr->second;
 	}
 
+	int iValue;
 	{
 		PROFILE("CvTeamAI::AI_techTradeVal.CacheMiss");
 
-		if ( gPlayerLogLevel > 2 )
+		if (gPlayerLogLevel > 2)
 		{
-			logBBAI("Calculate trade value for tech %S by team %d for team %d",
-					GC.getTechInfo(eTech).getDescription(),
-					getID(),
-					pDoesNotHaveTeam->getID());
+			logBBAI(
+				"Calculate trade value for tech %S by team %d for team %d",
+				GC.getTechInfo(eTech).getDescription(), (int)eTeam, getID()
+			);
 			logBBAI("Currently have cached values for:");
 			for( itr = m_tradeTechValueCache.begin(); itr != m_tradeTechValueCache.end(); ++itr)
 			{
@@ -1663,48 +1632,43 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 				logBBAI("\t%d (%S) for team %d", iTech, GC.getTechInfo((TechTypes)iTech).getDescription(), iTeam);
 			}
 		}
-
 		int* paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
 		int* paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
 		int* paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
 
-		for (iI = 0; iI < GC.getNumBonusClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBonusClassInfos(); iI++)
 		{
 			paiBonusClassRevealed[iI] = 0;
 			paiBonusClassUnrevealed[iI] = 0;
 			paiBonusClassHave[iI] = 0;
 		}
 
-		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
+
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
-			BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
+			const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
 			if (eRevealTech != NO_TECH)
 			{
-				if ((pDoesNotHaveTeam->isHasTech(eRevealTech)))
+				const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
+				if (isHasTech(eRevealTech))
 				{
 					paiBonusClassRevealed[eBonusClass]++;
 				}
-				else
-				{
-					paiBonusClassUnrevealed[eBonusClass]++;
-				}
+				else paiBonusClassUnrevealed[eBonusClass]++;
 
-				if (GET_PLAYER(pDoesNotHaveTeam->getLeaderID()).getNumAvailableBonuses((BonusTypes)iI) > 0)
-				{
-					paiBonusClassHave[eBonusClass]++;
-				}
-				else if (GET_PLAYER(pDoesNotHaveTeam->getLeaderID()).countOwnedBonuses((BonusTypes)iI) > 0)
+				if (teamLeader.getNumAvailableBonuses((BonusTypes)iI) > 0
+				||  teamLeader.countOwnedBonuses((BonusTypes)iI) > 0)
 				{
 					paiBonusClassHave[eBonusClass]++;
 				}
 			}
 		}
 
-		int	iAverageTechValue;
-		int iOurActualTechValue = GET_PLAYER(getLeaderID()).AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
+		const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
 
-		iAverageTechValue = GET_PLAYER(getLeaderID()).AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iOurActualTechValue = teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
+		const int iAverageTechValue = teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
 		SAFE_DELETE_ARRAY(paiBonusClassRevealed);
 		SAFE_DELETE_ARRAY(paiBonusClassUnrevealed);
@@ -1712,48 +1676,41 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 
 		//	Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one
 		//	from what we can currently research
-		float boost = ((float)iOurActualTechValue-(float)iAverageTechValue)/((float)iOurActualTechValue+(float)iAverageTechValue);
-		float sigma = 1.0f/(1.0f+exp(-boost));
+		const float boost = ((float)iOurActualTechValue-(float)iAverageTechValue)/((float)iOurActualTechValue+(float)iAverageTechValue);
+		const float sigma = 1.0f/(1.0f+exp(-boost));
 
+		int iCost = std::max(1, (getResearchCost(eTech) - getResearchProgress(eTech)));
 		iCost = (int)((float)iCost*(sigma*sigma*3 + 0.25f));
 
-		iValue = ((iCost * 3) / 2);
+		iValue = iCost * 3/2;
 
-		iKnownCount = 0;
-		iPossibleKnownCount = 0;
+		int iKnownCount = 0;
+		int iPossibleKnownCount = 0;
 
-		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI))
 			{
-				if (iI != getID())
+				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
 				{
-					if (isHasMet((TeamTypes)iI))
-					{
-						if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-						{
-							iKnownCount++;
-						}
-
-						iPossibleKnownCount++;
-					}
+					iKnownCount++;
 				}
+				iPossibleKnownCount++;
 			}
 		}
 
-		iValue += (((iCost / 2) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount);
+		iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
 
-		iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
+		iValue *= std::max(0, 100 + GC.getTechInfo(eTech).getAITradeModifier());
 		iValue /= 100;
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
 	}
-
 	return iValue;
 }
 
 
-DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
+DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
