@@ -302,7 +302,7 @@ public:
 	const TechModifier& getTechHealthType(int iTech) const;
 
 	int getNumUnitCombatExperienceTypes() const;
-	const UnitCombatModifier& getUnitCombatExperienceType(int iUnitCombat, bool bForLoad = true) const;
+	const UnitCombatModifier& getUnitCombatExperienceType(int iUnitCombat) const;
 
 	//TB Specialist Tags end
 
@@ -397,8 +397,8 @@ public:
 	int getHealth() const; // Exposed to Python
 	int getHappiness() const; // Exposed to Python
 	int getFirstFreeTechs() const; // Exposed to Python
-	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
-	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
+	int getAssetValue() const; // Exposed to Python
+	int getPowerValue() const; // Exposed to Python
 
 	int getGridX() const; // Exposed to Python
 	int getGridY() const; // Exposed to Python
@@ -778,33 +778,33 @@ public:
 	int getAttackCombatModifierChange() const;
 	int getDefenseCombatModifierChange() const;
 	// Fight or Flight
-	int getPursuitChange(bool bForLoad = false) const;
-	int getEarlyWithdrawChange(bool bForLoad = false) const;
+	int getPursuitChange() const;
+	int getEarlyWithdrawChange() const;
 	int getTauntChange() const;
 	//
 	int getVSBarbsChange() const;
 	int getArmorChange() const;
 	int getPunctureChange() const;
 	// Heart of War
-	int getOverrunChange(bool bForLoad = false) const;
-	int getRepelChange(bool bForLoad = false) const;
-	int getFortRepelChange(bool bForLoad = false) const;
-	int getRepelRetriesChange(bool bForLoad = false) const;
-	int getUnyieldingChange(bool bForLoad = false) const;
-	int getKnockbackChange(bool bForLoad = false) const;
-	int getKnockbackRetriesChange(bool bForLoad = false) const;
+	int getOverrunChange() const;
+	int getRepelChange() const;
+	int getFortRepelChange() const;
+	int getRepelRetriesChange() const;
+	int getUnyieldingChange() const;
+	int getKnockbackChange() const;
+	int getKnockbackRetriesChange() const;
 	//
 	// Battleworn
-	int getStrAdjperRndChange(bool bForLoad = false) const;
-	int getStrAdjperAttChange(bool bForLoad = false) const;
-	int getStrAdjperDefChange(bool bForLoad = false) const;
-	int getWithdrawAdjperAttChange(bool bForLoad = false) const;
+	int getStrAdjperRndChange() const;
+	int getStrAdjperAttChange() const;
+	int getStrAdjperDefChange() const;
+	int getWithdrawAdjperAttChange() const;
 	//
 	// S&D Extended
-	int getUnnerveChange(bool bForLoad = false) const;
-	int getEncloseChange(bool bForLoad = false) const;
-	int getLungeChange(bool bForLoad = false) const;
-	int getDynamicDefenseChange(bool bForLoad = false) const;
+	int getUnnerveChange() const;
+	int getEncloseChange() const;
+	int getLungeChange() const;
+	int getDynamicDefenseChange() const;
 	//
 	int getStrengthChange() const;
 	int getLinePriority() const;
@@ -813,11 +813,11 @@ public:
 	int getStrAdjperTurn() const;
 	int getWeakenperTurn() const;
 	// Strength in Numbers
-	int getFrontSupportPercentChange(bool bForLoad = false) const;
-	int getShortRangeSupportPercentChange(bool bForLoad = false) const;
-	int getMediumRangeSupportPercentChange(bool bForLoad = false) const;
-	int getLongRangeSupportPercentChange(bool bForLoad = false) const;
-	int getFlankSupportPercentChange(bool bForLoad = false) const;
+	int getFrontSupportPercentChange() const;
+	int getShortRangeSupportPercentChange() const;
+	int getMediumRangeSupportPercentChange() const;
+	int getLongRangeSupportPercentChange() const;
+	int getFlankSupportPercentChange() const;
 	//
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
@@ -855,10 +855,10 @@ public:
 	int getRBombardDamageMaxUnitsChange() const;
 	int getDCMBombRangeChange() const;
 	int getDCMBombAccuracyChange() const;
-	int getCombatModifierPerSizeMoreChange(bool bForLoad = false) const;
-	int getCombatModifierPerSizeLessChange(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeMoreChange(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeLessChange(bool bForLoad = false) const;
+	int getCombatModifierPerSizeMoreChange() const;
+	int getCombatModifierPerSizeLessChange() const;
+	int getCombatModifierPerVolumeMoreChange() const;
+	int getCombatModifierPerVolumeLessChange() const;
 	int getSelfHealModifier() const;
 	int getNumHealSupport() const;
 	int getExcileChange() const;
@@ -870,9 +870,9 @@ public:
 	int getInsidiousnessChange() const;
 	int getInvestigationChange() const;
 	int getAssassinChange() const;
-	int getStealthStrikesChange(bool bForLoad = false) const;
-	int getStealthCombatModifierChange(bool bForLoad = false) const;
-	int getStealthDefenseChange(bool bForLoad = false) const;
+	int getStealthStrikesChange() const;
+	int getStealthCombatModifierChange() const;
+	int getStealthDefenseChange() const;
 	int getDefenseOnlyChange() const;
 	int getNoInvisibilityChange() const;
 	int getTrapDamageMax() const;
@@ -1788,7 +1788,7 @@ public:
 	//int getNukeInterceptionProbability() const;
 	//int getNukeInterceptionRange() const;
 	int getEvasionProbability() const; // Exposed to Python
-	int getWithdrawalProbability(bool bForLoad = false) const; // Exposed to Python
+	int getWithdrawalProbability() const; // Exposed to Python
 	int getCollateralDamage() const; // Exposed to Python
 	int getCollateralDamageLimit() const; // Exposed to Python
 	int getCollateralDamageMaxUnits() const; // Exposed to Python
@@ -1799,7 +1799,7 @@ public:
 	int getHillsDefenseModifier() const; // Exposed to Python
 	int getBombRate() const; // Exposed to Python
 	int getBombardRate() const; // Exposed to Python
-	int getSpecialCargo(bool bForLoad = false) const; // Exposed to Python
+	int getSpecialCargo() const; // Exposed to Python
 	int getSMSpecialCargo() const;
 	int getSMNotSpecialCargo() const;
 	int getDomainCargo() const; // Exposed to Python
@@ -1809,8 +1809,8 @@ public:
 	int getConscriptionValue() const; // Exposed to Python
 	int getCultureGarrisonValue() const; // Exposed to Python
 	int getBaseUpkeep() const; // Exposed to Python
-	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
-	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
+	int getAssetValue() const; // Exposed to Python
+	int getPowerValue() const; // Exposed to Python
 	int getSpecialUnitType() const; // Exposed to Python
 	int getUnitCaptureType() const; // Exposed to Python
 	int getUnitCombatType() const; // Exposed to Python
@@ -1925,32 +1925,32 @@ public:
 	//integers
 	int getAttackCombatModifier() const;
 	int getDefenseCombatModifier() const;
-	int getPursuit(bool bForLoad = false) const;
-	int getEarlyWithdraw(bool bForLoad = false) const;
+	int getPursuit() const;
+	int getEarlyWithdraw() const;
 	int getVSBarbs() const;
 	int getArmor() const;
 	int getPuncture() const;
-	int getOverrun(bool bForLoad = false) const;
-	int getRepel(bool bForLoad = false) const;
-	int getFortRepel(bool bForLoad = false) const;
-	int getRepelRetries(bool bForLoad = false) const;
-	int getUnyielding(bool bForLoad = false) const;
-	int getKnockback(bool bForLoad = false) const;
-	int getKnockbackRetries(bool bForLoad = false) const;
-	int getStrAdjperRnd(bool bForLoad = false) const;
-	int getStrAdjperAtt(bool bForLoad = false) const;
-	int getStrAdjperDef(bool bForLoad = false) const;
-	int getWithdrawAdjperAtt(bool bForLoad = false) const;
-	int getUnnerve(bool bForLoad = false) const;
-	int getEnclose(bool bForLoad = false) const;
-	int getLunge(bool bForLoad = false) const;
-	int getDynamicDefense(bool bForLoad = false) const;
-	int getFortitude(bool bForLoad = false) const;
-	int getFrontSupportPercent(bool bForLoad = false) const;
-	int getShortRangeSupportPercent(bool bForLoad = false) const;
-	int getMediumRangeSupportPercent(bool bForLoad = false) const;
-	int getLongRangeSupportPercent(bool bForLoad = false) const;
-	int getFlankSupportPercent(bool bForLoad = false) const;
+	int getOverrun() const;
+	int getRepel() const;
+	int getFortRepel() const;
+	int getRepelRetries() const;
+	int getUnyielding() const;
+	int getKnockback() const;
+	int getKnockbackRetries() const;
+	int getStrAdjperRnd() const;
+	int getStrAdjperAtt() const;
+	int getStrAdjperDef() const;
+	int getWithdrawAdjperAtt() const;
+	int getUnnerve() const;
+	int getEnclose() const;
+	int getLunge() const;
+	int getDynamicDefense() const;
+	int getFortitude() const;
+	int getFrontSupportPercent() const;
+	int getShortRangeSupportPercent() const;
+	int getMediumRangeSupportPercent() const;
+	int getLongRangeSupportPercent() const;
+	int getFlankSupportPercent() const;
 	int getDodgeModifier() const;
 	int getPrecisionModifier() const;
 	int getPowerShots() const;
@@ -1972,22 +1972,22 @@ public:
 
 	int getBreakdownChance() const;
 	int getBreakdownDamage() const;
-	int getTaunt(bool bForLoad = false) const;
+	int getTaunt() const;
 	int getMaxHP(bool bForLoad = false) const;
 	int getDamageModifier() const;
 	int getRBombardDamage() const;
 	int getRBombardDamageLimit() const;
 	int getRBombardDamageMaxUnits() const;
-	int getCombatModifierPerSizeMore(bool bForLoad = false) const;
-	int getCombatModifierPerSizeLess(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeMore(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeLess(bool bForLoad = false) const;
+	int getCombatModifierPerSizeMore() const;
+	int getCombatModifierPerSizeLess() const;
+	int getCombatModifierPerVolumeMore() const;
+	int getCombatModifierPerVolumeLess() const;
 	int getSelfHealModifier() const;
 	int getNumHealSupport() const;
 	int getInsidiousness() const;
 	int getInvestigation() const;
-	int getStealthStrikes(bool bForLoad = false) const;
-	int getStealthCombatModifier(bool bForLoad = false) const;
+	int getStealthStrikes() const;
+	int getStealthCombatModifier() const;
 	int getTrapDamageMax() const;
 	int getTrapDamageMin() const;
 	int getTrapComplexity() const;
@@ -2013,7 +2013,7 @@ public:
 	bool isBlendIntoCity() const;
 	bool isUpgradeAnywhere() const;
 	bool isAssassin() const;
-	bool isStealthDefense(bool bForLoad = false) const;
+	bool isStealthDefense() const;
 	bool isNoInvisibility() const;
 	bool isTriggerBeforeAttack() const;
 	bool isAnimal() const;
@@ -2952,7 +2952,7 @@ public:
 
 	int getCombatPercent() const;
 	int getWithdrawalChange() const;
-	int getPursuitChange(bool bForLoad = false) const;
+	int getPursuitChange() const;
 
 	// serialization
 	void read(FDataStreamBase* pStream) {}
@@ -9441,33 +9441,33 @@ public:
 	int getVictoryStackHeal() const;
 	int getAttackCombatModifierChange() const;
 	int getDefenseCombatModifierChange() const;
-	int getPursuitChange(bool bForLoad = false) const;
-	int getEarlyWithdrawChange(bool bForLoad = false) const;
+	int getPursuitChange() const;
+	int getEarlyWithdrawChange() const;
 	int getVSBarbsChange() const;
 	int getArmorChange() const;
 	int getPunctureChange() const;
-	int getOverrunChange(bool bForLoad = false) const;
-	int getRepelChange(bool bForLoad = false) const;
-	int getFortRepelChange(bool bForLoad = false) const;
-	int getRepelRetriesChange(bool bForLoad = false) const;
-	int getUnyieldingChange(bool bForLoad = false) const;
-	int getKnockbackChange(bool bForLoad = false) const;
-	int getKnockbackRetriesChange(bool bForLoad = false) const;
-	int getStrAdjperAttChange(bool bForLoad = false) const;
-	int getStrAdjperDefChange(bool bForLoad = false) const;
-	int getWithdrawAdjperAttChange(bool bForLoad = false) const;
-	int getUnnerveChange(bool bForLoad = false) const;
-	int getEncloseChange(bool bForLoad = false) const;
-	int getLungeChange(bool bForLoad = false) const;
-	int getDynamicDefenseChange(bool bForLoad = false) const;
+	int getOverrunChange() const;
+	int getRepelChange() const;
+	int getFortRepelChange() const;
+	int getRepelRetriesChange() const;
+	int getUnyieldingChange() const;
+	int getKnockbackChange() const;
+	int getKnockbackRetriesChange() const;
+	int getStrAdjperAttChange() const;
+	int getStrAdjperDefChange() const;
+	int getWithdrawAdjperAttChange() const;
+	int getUnnerveChange() const;
+	int getEncloseChange() const;
+	int getLungeChange() const;
+	int getDynamicDefenseChange() const;
 	int getStrengthChange() const;
 	int getFortitudeChange() const;
 
-	int getFrontSupportPercentChange(bool bForLoad = false) const;
-	int getShortRangeSupportPercentChange(bool bForLoad = false) const;
-	int getMediumRangeSupportPercentChange(bool bForLoad = false) const;
-	int getLongRangeSupportPercentChange(bool bForLoad = false) const;
-	int getFlankSupportPercentChange(bool bForLoad = false) const;
+	int getFrontSupportPercentChange() const;
+	int getShortRangeSupportPercentChange() const;
+	int getMediumRangeSupportPercentChange() const;
+	int getLongRangeSupportPercentChange() const;
+	int getFlankSupportPercentChange() const;
 
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
@@ -9487,7 +9487,7 @@ public:
 	int getBreakdownChanceChange() const;
 	int getBreakdownDamageChange() const;
 	int getTauntChange() const;
-	int getMaxHPChange(bool bForLoad = false) const;
+	int getMaxHPChange() const;
 	int getStrengthModifier() const;
 	int getQualityBase() const;
 	int getGroupBase() const;
@@ -9500,10 +9500,10 @@ public:
 	int getRBombardDamageMaxUnitsBase() const;
 	int getDCMBombRangeBase() const;
 	int getDCMBombAccuracyBase() const;
-	int getCombatModifierPerSizeMoreChange(bool bForLoad = false) const;
-	int getCombatModifierPerSizeLessChange(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeMoreChange(bool bForLoad = false) const;
-	int getCombatModifierPerVolumeLessChange(bool bForLoad = false) const;
+	int getCombatModifierPerSizeMoreChange() const;
+	int getCombatModifierPerSizeLessChange() const;
+	int getCombatModifierPerVolumeMoreChange() const;
+	int getCombatModifierPerVolumeLessChange() const;
 	int getSelfHealModifier() const;
 	int getNumHealSupport() const;
 	int getExcileChange() const;
@@ -9513,9 +9513,9 @@ public:
 	int getBlendIntoCityChange() const;
 	int getInsidiousnessChange() const;
 	int getInvestigationChange() const;
-	int getStealthStrikesChange(bool bForLoad = false) const;
-	int getStealthCombatModifierChange(bool bForLoad = false) const;
-	int getStealthDefenseChange(bool bForLoad = false) const;
+	int getStealthStrikesChange() const;
+	int getStealthCombatModifierChange() const;
+	int getStealthDefenseChange() const;
 	int getDefenseOnlyChange() const;
 	int getNoInvisibilityChange() const;
 	int getNoCaptureChange() const;

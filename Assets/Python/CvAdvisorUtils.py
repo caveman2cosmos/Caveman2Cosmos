@@ -156,7 +156,7 @@ def endTurnFeats(iPlayer):
 
 	CyPlayer = GC.getPlayer(iPlayer)
 	CyCity0 = CyPlayer.getCapitalCity()
-	if CyCity0.isNone(): return
+	if CyCity0 is None: return
 
 	# Population feat
 	lRealPopulation = CyPlayer.getRealPopulation()

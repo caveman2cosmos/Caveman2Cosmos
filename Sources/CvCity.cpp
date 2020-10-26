@@ -5941,9 +5941,9 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	for (int iI = 0; iI < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iI++)
 	{
-		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat != NO_UNITCOMBAT)
+		if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat != NO_UNITCOMBAT)
 		{
-			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI, false).iModifier * iChange);
+			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier * iChange);
 		}
 	}
 
@@ -15505,7 +15505,8 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 	// If building is not of a religious nature
 	if (eReligion == NO_RELIGION && eReligionReq == NO_RELIGION
 	// or if city doesn't have the building's religion(s)
-	|| !isHasReligion(eReligion) && !isHasReligion(eReligionReq)
+	|| (eReligion == NO_RELIGION || !isHasReligion(eReligion))
+	&& (eReligionReq == NO_RELIGION || !isHasReligion(eReligionReq))
 	// or the city doesn't have the building
 	|| getNumBuilding(eBuilding) < 1)
 	{
