@@ -53,8 +53,6 @@ public:
 	int AI_calculatePlotWarValue(const TeamTypes eTeam) const;
 	int AI_calculateBonusWarValue(TeamTypes eTeam) const;
 
-	bool AI_isWarPossible() const;
-
 	bool AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly = false) const;
 	bool AI_isAllyLandTarget(TeamTypes eTeam) const;
 	bool AI_shareWar(TeamTypes eTeam) const;

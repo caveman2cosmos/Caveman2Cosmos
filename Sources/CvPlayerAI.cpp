@@ -1766,11 +1766,9 @@ void CvPlayerAI::AI_makeAssignWorkDirty()
 
 void CvPlayerAI::AI_assignWorkingPlots()
 {
-	// Afforess 6/22/11 - Who cares, plots return no yields anyway?
-	// Also fixes assert in cities, when they shuffle specialists with angry citizens from the anarchy
 	if (isAnarchy())
 	{
-		return;
+		return; // No point
 	}
 	algo::for_each(cities(), CvCity::fn::AI_assignWorkingPlots());
 }

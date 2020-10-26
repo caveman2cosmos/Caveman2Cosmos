@@ -704,15 +704,6 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eOtherTeam) const
 }
 
 
-// Toffer - ToDo
-//	Investigate whether this function does what it should, its name and content doesn't seem to match.
-//	If its content is correct: remove this function and call isAtWar(true) instead of it wherever it's called.
-bool CvTeamAI::AI_isWarPossible() const
-{
-	return true;
-}
-
-
 bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam, bool bNeighborsOnly) const
 {
 	if (!AI_hasCitiesInPrimaryArea(eTeam))
