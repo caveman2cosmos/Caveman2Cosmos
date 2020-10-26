@@ -1757,61 +1757,11 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	AttitudeTypes eAttitude;
-	int iNoTechTradeThreshold;
-	int iTechTradeKnownPercent;
-	int iKnownCount;
-	int iPossibleKnownCount;
-	int iI, iJ;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
+	FAssertMsg(!isNPC(), "NPC doesn't trade away tech!");
+	FAssertMsg(!GET_TEAM(eTeam).isNPC(), "Impossible to trade away tech to NPC!");
 
-
-	TechTypes eCurrentResearch = GET_PLAYER(getLeaderID()).getCurrentResearch();
-	TeamTypes eStrongestTeam = (TeamTypes)getID();
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-		{
-			if (GET_TEAM((GET_PLAYER((PlayerTypes)iI)).getTeam()).getPower(true) > GET_TEAM(eStrongestTeam).getPower(true))
-			{
-				eCurrentResearch = GET_PLAYER((PlayerTypes)iI).getCurrentResearch();
-				eStrongestTeam = GET_PLAYER((PlayerTypes)iI).getTeam();
-			}
-		}
-	}
-
-
-	if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-	{
-		CvTeam& kTeam = GET_TEAM(eTeam);
-
-		if (!kTeam.isHasTech(eTech))
-		{
-			if (!kTeam.isHuman())
-			{
-				if ((eTech == eCurrentResearch) || (!GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION)))
-				{
-					if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
-					{
-						return DENIAL_NO_GAIN;
-					}
-				}
-			}
-		}
-	}
-
-	if (isHuman())
-	{
-		return NO_DENIAL;
-	}
-
-	if (isVassal(eTeam))
-	{
-		return NO_DENIAL;
-	}
-
-	if (isAtWar(eTeam))
+	if (isHuman() || isVassal(eTeam) || isAtWar(eTeam))
 	{
 		return NO_DENIAL;
 	}
@@ -1821,111 +1771,80 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		return DENIAL_WORST_ENEMY;
 	}
 
-	eAttitude = AI_getAttitude(eTeam);
+	const AttitudeTypes eAttitude = AI_getAttitude(eTeam);
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// If any player in the team wonn't trade tech due to its attitude treshold, then no player on the team will.
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID()
+		&& eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getTechRefuseAttitudeThreshold())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getTechRefuseAttitudeThreshold())
-				{
-/************************************************************************************************/
-/* Afforess	                  Start		 02/19/10                                               */
-/*                                                                                              */
-/* Ruthless AI: Attitude is irrelevant                                                          */
-/************************************************************************************************/
-					if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
-					{
-						if (eAttitude > ATTITUDE_FURIOUS)
-							continue;
-					}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-					return DENIAL_ATTITUDE;
-				}
-			}
+			return DENIAL_ATTITUDE;
 		}
 	}
+	const CvGame& game = GC.getGame();
+	const bool bTechBrokering = !game.isOption(GAMEOPTION_NO_TECH_BROKERING);
 
-/************************************************************************************************/
-/* Afforess	                  Start		 03/19/10                                               */
-/*                                                                                              */
-/* Ruthless AI: Don't Sell Our Military Secrets                                                 */
-/************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+	// Afforess - Don't Sell Military Secrets when gearing for war 
+	if (getAnyWarPlanCount(true) > 0 && GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3
+	// Only worry about the receiving team if there is no tech brokering.
+	&& (bTechBrokering || AI_getWarPlan(eTeam) != NO_WARPLAN))
 	{
-		if (GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3)
-		{
-			//We don't want to spread military techs when we are gearing for war
-			//If there is tech brokering, selling the tech to anyone could get it in the hands of our enemy. If there is no brokering, just worry about the current team.
-			if (getAnyWarPlanCount(true) > 0 && (!GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) || AI_getWarPlan(eTeam) != NO_WARPLAN))
-			{
-				return DENIAL_NO_GAIN;
-			}
-		}
+		return DENIAL_NO_GAIN;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	// ! Afforess
+
 	if (eAttitude < ATTITUDE_FRIENDLY)
 	{
-		if ((GC.getGame().getTeamRank(getID()) < (GC.getGame().countCivTeamsEverAlive() / 2)) ||
-			  (GC.getGame().getTeamRank(eTeam) < (GC.getGame().countCivTeamsEverAlive() / 2)))
+		if (bTechBrokering)
 		{
-			iNoTechTradeThreshold = AI_noTechTradeThreshold();
-
-			iNoTechTradeThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
-			iNoTechTradeThreshold /= 100;
-
-			iNoTechTradeThreshold *= std::max(0, (GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getNoTechTradeModifier() + 100));
-			iNoTechTradeThreshold /= 100;
-
-			if (AI_getMemoryCount(eTeam, MEMORY_RECEIVED_TECH_FROM_ANY) > iNoTechTradeThreshold)
+			const int iOtherTeamRank = game.getTeamRank(eTeam);
+			if (game.getTeamRank(getID()) < iOtherTeamRank || iOtherTeamRank > game.countCivTeamsAlive()/2)
 			{
-				return DENIAL_TECH_WHORE;
-			}
-		}
+				int iNoTechTradeThreshold = AI_noTechTradeThreshold();
 
-		iKnownCount = 0;
-		iPossibleKnownCount = 0;
+				iNoTechTradeThreshold *= GC.getGameSpeedInfo(game.getGameSpeedType()).getResearchPercent();
+				iNoTechTradeThreshold /= 100;
 
-		for (iI = 0; iI < MAX_PC_TEAMS; iI++)
-		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				if ((iI != getID()) && (iI != eTeam))
+				iNoTechTradeThreshold *= std::max(0, 100 + GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getNoTechTradeModifier());
+				iNoTechTradeThreshold /= 100;
+
+				if (AI_getMemoryCount(eTeam, MEMORY_RECEIVED_TECH_FROM_ANY) > iNoTechTradeThreshold)
 				{
-					if (isHasMet((TeamTypes)iI))
-					{
-						if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-						{
-							iKnownCount++;
-						}
-
-						iPossibleKnownCount++;
-					}
+					return DENIAL_TECH_WHORE;
 				}
 			}
 		}
 
-		iTechTradeKnownPercent = AI_techTradeKnownPercent();
+		int iKnownCount = 0;
+		int iPossibleKnownCount = 0;
 
-		iTechTradeKnownPercent *= std::max(0, (GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getTechTradeKnownModifier() + 100));
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		{
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && iI != eTeam && isHasMet((TeamTypes)iI))
+			{
+				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+				{
+					iKnownCount++;
+				}
+				iPossibleKnownCount++;
+			}
+		}
+		int iTechTradeKnownPercent = AI_techTradeKnownPercent();
+
+		iTechTradeKnownPercent *= std::max(0, 100 + GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getTechTradeKnownModifier());
 		iTechTradeKnownPercent /= 100;
 
 		iTechTradeKnownPercent *= AI_getTechMonopolyValue(eTech, eTeam);
 		iTechTradeKnownPercent /= 100;
 
-		if ((iPossibleKnownCount > 0) ? (((iKnownCount * 100) / iPossibleKnownCount) < iTechTradeKnownPercent) : (iTechTradeKnownPercent > 0))
+		if ((iPossibleKnownCount > 0) ? iKnownCount * 100 / iPossibleKnownCount < iTechTradeKnownPercent : iTechTradeKnownPercent > 0)
 		{
 			return DENIAL_TECH_MONOPOLY;
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		if (isWorldUnit((UnitTypes)iI) && getUnitMaking((UnitTypes)iI) > 0
 		&& isTechRequiredForUnit(eTech, (UnitTypes)iI))
@@ -1934,40 +1853,29 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI))
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI)
+		&& isWorldWonder((BuildingTypes)iI) && getBuildingMaking((BuildingTypes)iI) > 0)
 		{
-			if (isWorldWonder((BuildingTypes)iI))
-			{
-				if (getBuildingMaking((BuildingTypes)iI) > 0)
-				{
-					return DENIAL_MYSTERY;
-				}
-			}
+			return DENIAL_MYSTERY;
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
 	{
 		if (GC.getProjectInfo((ProjectTypes)iI).getTechPrereq() == eTech)
 		{
-			if (isWorldProject((ProjectTypes)iI))
+			if (isWorldProject((ProjectTypes)iI) && getProjectMaking((ProjectTypes)iI) > 0)
 			{
-				if (getProjectMaking((ProjectTypes)iI) > 0)
-				{
-					return DENIAL_MYSTERY;
-				}
+				return DENIAL_MYSTERY;
 			}
 
-			for (iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
+			for (int iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
 			{
-				if (GC.getGame().isVictoryValid((VictoryTypes)iJ))
+				if (game.isVictoryValid((VictoryTypes)iJ) && GC.getProjectInfo((ProjectTypes)iI).getVictoryThreshold((VictoryTypes)iJ))
 				{
-					if (GC.getProjectInfo((ProjectTypes)iI).getVictoryThreshold((VictoryTypes)iJ))
-					{
-						return DENIAL_VICTORY;
-					}
+					return DENIAL_VICTORY;
 				}
 			}
 		}

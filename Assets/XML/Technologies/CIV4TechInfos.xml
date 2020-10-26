@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- -->
-<!-- Tech Infos -->
 <!--
-	If modifying READ THIS
-	Not all techs appear in this file some of them appear in a module.
-	This is true of the RELIGION and CULTURE techs.
-	See also modders documentation.
+	Techs are to be sorted by grid position; first x, then y.
+
+	FLAVOR_MILITARY higher than 3 makes the AI refuse to trade away the tech if it is gearing for war,
+	no tech brokering option limits this refusal only to teams it is specifically planning war against.
+
 Current techs which are not in this file:-
 	Modules\Custom_Religions
 	(   X,  Y ) TECH_Z
@@ -34,7 +33,10 @@ Current techs which are not in this file:-
 	( 080, 13 ) TECH_ATOMPUNK
 	( 102, 11 ) TECH_NANOPUNK
 	( 103, 11 ) TECH_BIOPUNK
-	( 113, 07 ) TECH_CYBERPUNK	
+	( 113, 07 ) TECH_CYBERPUNK
+
+
+
 -->
 <Civ4TechInfos xmlns="x-schema:../Schema/C2C_CIV4TechnologiesSchema.xml">
 	<TechInfos>
