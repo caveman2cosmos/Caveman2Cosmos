@@ -11372,28 +11372,25 @@ void CvUnitAI::AI_InfiltratorMove()
 	}
 
 	AI_upgrade();
-	if ( isDelayedDeath() )
+	if (isDelayedDeath())
 	{
 		//	Upgrade of original unit was successful
 		return;
 	}
 
 	// if the unit is solo, and not wanted, it may be good for joining with a group
-	if (getGroup()->getNumUnits() == 1 && !isWanted())
+	if (getGroup()->getNumUnits() == 1 && !isWanted() && processContracts())
 	{
-		if ( processContracts() )
-		{
-			return;
-		}
+		return;
 	}
 
 	CvArea* pArea = area();
-	int iExisting = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pArea, UNITAI_INFILTRATOR);
-	int iBirthmark = AI_getBirthmark();
-	int iTargetGroupSize = std::max(1, (iBirthmark / 10));
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !isNPC() &&
-		iExisting <= 10)
+	const int iExisting = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pArea, UNITAI_INFILTRATOR);
+	int iTargetGroupSize;
+
+	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !isNPC() && iExisting <= 10)
 	{
+		iTargetGroupSize = std::max(1, AI_getBirthmark() / 10);
 		while (iTargetGroupSize > 9)
 		{
 			iTargetGroupSize = std::max(1, (iTargetGroupSize / 10));
@@ -11477,61 +11474,58 @@ void CvUnitAI::AI_InfiltratorMove()
 		}
 	}
 
-	bool bAdversaryPlot = false;
-	TeamTypes ePlotTeam = plot()->getTeam();
-	if (ePlotTeam != NO_TEAM)
+	// Am I in rival land?
+	const TeamTypes ePlotTeam = plot()->getTeam();
+	if (ePlotTeam != NO_TEAM && ePlotTeam != getTeam() && GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0)
 	{
-		bAdversaryPlot = GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0;
-	}
-
-	if (ePlotTeam != NO_TEAM
-		&& getGroup()->isInvisible(ePlotTeam)
-		&& ePlotTeam != getTeam()
-		&& bAdversaryPlot)
-	{
-		if ((!plot()->isCity(false)
-			&& plot()->getImprovementType() != NO_IMPROVEMENT
-			&& AI_pillage())
-			|| AI_pillageRange(1, 20))
+		if (plot()->isCity(false))
 		{
-			return;
-		}
-	}
-
-	if (plot()->isCity(false) && bAdversaryPlot)
-	{
-		//if inside a city, check to see if there's VERY good cause to sabotage production or steal plans.
-		//Apparently the AI never steals plans soooo... leave that one alone.
-		int iProduction = plot()->getPlotCity()->getProduction();
-		int iProductionNeeded = plot()->getPlotCity()->getProductionNeeded();
-		if (iProduction > 0)
-		{
-			int iEstTurns = iProductionNeeded/iProduction;
-			//only enact when it is a long build that has been heavily invested into already
-			if (iEstTurns >= 5)
+			// Toffer - Added gamespeed scaling to sabotage and pillage here.
+			if (getGroup()->isInvisible(ePlotTeam)
+			&& (
+				GC.getGame().getSorenRandNum(
+					5 +
+					7 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent() / 100,
+					"Leave city to pillage"
+				) == 0
+			) && AI_pillageRange(1, 20))
 			{
-				if (plot()->getPlotCity()->getProductionTurnsLeft() < 2)
+				return;
+			}
+			//if inside a city, check to see if there's VERY good cause to sabotage production or steal plans.
+			//Apparently the AI never steals plans soooo... leave that one alone.
+			const int iProduction = plot()->getPlotCity()->getProduction();
+			if (iProduction > 0 && plot()->getPlotCity()->getProductionTurnsLeft() < 3)
+			{
+				// Only enact when it is a long build that has been heavily invested into already
+				const int iEstTurns = plot()->getPlotCity()->getProductionNeeded() / iProduction;
+				const int iLongBuild = 1 + 6 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100;
+
+				if (iEstTurns >= iLongBuild)
 				{
-					joinGroup(NULL);
+					joinGroup(NULL); // do it alone
 					if (getGroup()->pushMissionInternal(MISSION_SABOTAGE))
 					{
-						//do it alone
 						return;
 					}
 				}
 			}
-		}
 
-		//Otherwise sit there and cause crime rot.  Simple for now.
-		getGroup()->pushMission(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INFILTRATOR_MAINTAIN, plot());
-		return;
+			//Otherwise sit there and cause crime rot.  Simple for now.
+			getGroup()->pushMission(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INFILTRATOR_MAINTAIN, plot());
+			return;
+		}
+		else if (getGroup()->isInvisible(ePlotTeam)
+		&& (plot()->getImprovementType() != NO_IMPROVEMENT && AI_pillage() || AI_pillageRange(2, 20)))
+		{
+			return;
+		}
 	}
 
 	if (AI_moveIntoCity(0, true))
 	{
 		return;
 	}
-
 	//if all this has failed, go more complicated and work like a pillage AI.
 	AI_pillageMove();
 }
@@ -21964,7 +21958,7 @@ bool CvUnitAI::AI_pillageRange(int iRange, int iBonusValueThreshold)
 	FAssert(iNewAlgorithmBestValue == iBestValue || getDomainType() != DOMAIN_SEA);
 #endif
 
-	if ((pBestPlot != NULL) && (pBestPillagePlot != NULL))
+	if (pBestPlot != NULL && pBestPillagePlot != NULL)
 	{
 		if (atPlot(pBestPillagePlot) && !isEnemy(pBestPillagePlot->getTeam()))
 		{
@@ -21973,21 +21967,17 @@ bool CvUnitAI::AI_pillageRange(int iRange, int iBonusValueThreshold)
 			return false;
 		}
 
-		if (atPlot(pBestPillagePlot))
-		{
-			if (isEnemy(pBestPillagePlot->getTeam()))
-			{
-				return getGroup()->pushMissionInternal(MISSION_PILLAGE, pBestPillagePlot->getX(), pBestPillagePlot->getY(), 0, false, false, MISSIONAI_PILLAGE, pBestPillagePlot);
-				//return true;
-			}
-		}
-		else
+		if (!atPlot(pBestPillagePlot))
 		{
 			FAssert(!atPlot(pBestPlot));
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_PILLAGE, pBestPillagePlot);
 		}
-	}
 
+		if (isEnemy(pBestPillagePlot->getTeam()))
+		{
+			return getGroup()->pushMissionInternal(MISSION_PILLAGE, pBestPillagePlot->getX(), pBestPillagePlot->getY(), 0, false, false, MISSIONAI_PILLAGE, pBestPillagePlot);
+		}
+	}
 	return false;
 }
 
