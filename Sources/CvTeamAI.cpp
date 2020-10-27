@@ -3410,52 +3410,40 @@ TeamTypes CvTeamAI::AI_getWorstEnemy() const
 	return m_eWorstEnemy;
 }
 
-
 void CvTeamAI::AI_updateWorstEnemy()
 {
+	if (isNPC())
+	{
+		return;
+	}
 	PROFILE_FUNC();
 
-	TeamTypes eBestTeam = NO_TEAM;
 	int iBestValue = MAX_INT;
+	TeamTypes eBestTeam = NO_TEAM;
+	const bool bRuthless = GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI);
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		TeamTypes eLoopTeam = (TeamTypes) iI;
-		CvTeam& kLoopTeam = GET_TEAM(eLoopTeam);
-		if (kLoopTeam.isAlive())
+		const TeamTypes eTeamX = (TeamTypes) iI;
+		const CvTeam& teamX = GET_TEAM(eTeamX);
+
+		if (teamX.isAlive() && iI != getID() && !teamX.isVassal(getID()) && isHasMet(eTeamX)
+		&& AI_getAttitude(eTeamX) < (bRuthless ? ATTITUDE_FRIENDLY : ATTITUDE_CAUTIOUS))
 		{
-			if (iI != getID() && !kLoopTeam.isVassal(getID()))
+			const int iValue = 
+			(
+				AI_getAttitudeVal(eTeamX) +
+				// Our Worst enemy isn't just the person we hate the most,
+				// but the person we hate and is winning! (Ruthless)
+				(bRuthless ? GC.getGame().getPlayerRank(teamX.getLeaderID())/2 : 0)
+			);
+			if (iValue < iBestValue && (int)eTeamX != getID())
 			{
-				if (isHasMet(eLoopTeam))
-				{
-					if (AI_getAttitude(eLoopTeam) < ATTITUDE_CAUTIOUS)
-					{
-						int iValue = AI_getAttitudeVal(eLoopTeam);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/19/10                                               */
-/*                                                                                              */
-/* Ruthless AI                                                                                  */
-/************************************************************************************************/
-//Our Worst enemy isn't just the person we hate the most, but the person we hate and is winning!
-						if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
-						{
-							iValue += GC.getGame().getPlayerRank(kLoopTeam.getLeaderID()) / 2;
-							iValue -= GC.getGame().countCivPlayersAlive() / 2;
-						}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-						if (iValue < iBestValue && (int)eLoopTeam != getID())
-						{
-							iBestValue = iValue;
-							eBestTeam = eLoopTeam;
-						}
-					}
-				}
+				iBestValue = iValue;
+				eBestTeam = eTeamX;
 			}
 		}
 	}
-
 	m_eWorstEnemy = eBestTeam;
 }
 
@@ -5629,28 +5617,12 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 	return false;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 03/8/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 DenialTypes CvTeamAI::AI_embassyTrade(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	AttitudeTypes eAttitude;
-
-	if (isHuman())
-	{
-		return NO_DENIAL;
-	}
-
-	if (isVassal(eTeam))
-	{
-		return NO_DENIAL;
-	}
-
-	if (AI_shareWar(eTeam))
+	if (isHuman() || isVassal(eTeam) || AI_shareWar(eTeam))
 	{
 		return NO_DENIAL;
 	}
@@ -5665,21 +5637,18 @@ DenialTypes CvTeamAI::AI_embassyTrade(TeamTypes eTeam) const
 		return DENIAL_WORST_ENEMY;
 	}
 
-	eAttitude = AI_getAttitude(eTeam);
+	const AttitudeTypes eAttitude = AI_getAttitude(eTeam);
 
-	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
 
-		if (kLoopPlayer.isAlive() && GET_TEAM(kLoopPlayer.getTeam()).getID() == getID())
+		if (player.isAlive() && player.getTeam() == getID()
+		&& eAttitude <= GC.getLeaderHeadInfo(player.getPersonalityType()).getOpenBordersRefuseAttitudeThreshold())
 		{
-			if (eAttitude <= GC.getLeaderHeadInfo(kLoopPlayer.getPersonalityType()).getOpenBordersRefuseAttitudeThreshold())
-			{
-				return DENIAL_ATTITUDE;
-			}
+			return DENIAL_ATTITUDE;
 		}
 	}
-
 	return NO_DENIAL;
 }
 
@@ -5973,8 +5942,3 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 
 	return false;
 }
-
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
