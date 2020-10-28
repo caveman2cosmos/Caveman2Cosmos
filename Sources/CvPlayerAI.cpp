@@ -24306,16 +24306,10 @@ int CvPlayerAI::AI_getStrategyRand(int iShift) const
 
 bool CvPlayerAI::AI_isDoStrategy(int iStrategy) const
 {
-	if (isHuman())
+	if (isHuman() || isNPC() || isMinorCiv() || !isAlive())
 	{
 		return false;
 	}
-
-	if( isNPC() || isMinorCiv() || !isAlive() )
-	{
-		return false;
-	}
-
 	return (iStrategy & AI_getStrategyHash());
 }
 
