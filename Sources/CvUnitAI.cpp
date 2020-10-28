@@ -6785,66 +6785,66 @@ void CvUnitAI::AI_subduedAnimalMove()
 {
 	PROFILE_FUNC();
 
-	if ( getDamage() > 0 )
+	//	Don't bother healing subdued animals in our own territory at least until after we test if they can construct
+	if (plot()->getOwner() != getOwner())
 	{
-		OutputDebugString(CvString::format("%S (%d) damaged (%d) at (%d,%d)...\n",getDescription().c_str(),m_iID,getDamage(),m_iX,m_iY).c_str());
-		//	Don't bother healing subdued animals in our own territory at least until after we test if they can construct
-		if ( plot()->getOwner() != getOwner() )
+		// If they can get to our territory prefer that to healing
+		if (AI_moveToOurTerritory(1))
 		{
-			//	If they can get to our territory prefer that to healing
-			if ( AI_moveToOurTerritory(1) )
-			{
-				return;
-			}
+			return;
+		}
 
-			//	Try to move to a nearby hunter unit if one is available to group with it
-			if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
-			{
-				return;
-			}
+		// Try to move to a nearby hunter unit if one is available to group with it
+		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
+		{
+			return;
+		}
 
-			//	Try to move to a nearby hunter escort unit if one is available to group with it
-			if (AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true))
-			{
-				return;
-			}
+		//	Try to move to a nearby hunter escort unit if one is available to group with it
+		if (AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true))
+		{
+			return;
+		}
 
-			//	If there is an adjacent enemy seek safety before we heal
-			if ( exposedToDanger(plot(), 80) )
-			{
-				OutputDebugString("	...plot is dangerous - seeking safety\n");
-
-				if ( AI_safety() )
-				{
-					return;
-				}
-			}
-
-			//	Failing that are there other animals nearby - safety in numbers
-			if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 1, false, true, true))
-			{
-				return;
-			}
-
-			if ( AI_heal() )
-			{
-				OutputDebugString("	...healing\n");
-				return;
-			}
+		//	If there is an adjacent enemy seek safety before we heal
+		if (exposedToDanger(plot(), 80))
+		{
+			OutputDebugString("	...plot is dangerous - seeking safety\n");
 
 			if ( AI_safety() )
 			{
 				return;
 			}
 		}
-		else if ( getGroup()->getNumUnits() > 1 )
-		{
-			//	Separate groups of subdued animals once they reach owned territory
-			getGroup()->AI_separate();
 
-			//	Will have changed group so the previous one no longer exists to deal with
+		//	Failing that are there other animals nearby - safety in numbers
+		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 1, false, true, true))
+		{
 			return;
 		}
+
+		if (getDamage() > 0)
+		{
+			OutputDebugString(CvString::format("%S (%d) damaged (%d) at (%d,%d)...\n",getDescription().c_str(),m_iID,getDamage(),m_iX,m_iY).c_str());
+			if (AI_heal())
+			{
+				OutputDebugString("	...healing\n");
+				return;
+			}
+		}
+
+		if (AI_safety())
+		{
+			return;
+		}
+	}
+	else if (getGroup()->getNumUnits() > 1)
+	{
+		//	Separate groups of subdued animals once they reach owned territory
+		getGroup()->AI_separate();
+
+		//	Will have changed group so the previous one no longer exists to deal with
+		return;
 	}
 
 	if (AI_construct(MAX_INT, MAX_INT, 0, false, true))
