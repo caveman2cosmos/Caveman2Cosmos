@@ -5774,7 +5774,7 @@ int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeamBuyer) c
 
 	if (iMetCount > 0)
 	{
-		switch (iAttitude/iMetCount)
+		switch (CvPlayerAI::AI_getAttitudeFromValue(iAttitude/iMetCount))
 		{
 		case ATTITUDE_FURIOUS:
 			iValue *= 5;
@@ -5796,7 +5796,7 @@ int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeamBuyer) c
 			iValue /= 3;
 			break;
 		default:
-			FErrorMsg("faulty attitude calculation, or missing attitude case in switch");
+			FErrorMsg("Missing attitude case in switch.");
 			break;
 		}
 
