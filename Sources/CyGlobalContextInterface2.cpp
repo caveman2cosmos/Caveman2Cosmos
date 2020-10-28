@@ -11,8 +11,6 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface2\n");
 	x
 		// global defines.xml
-		.def("isDCM_BATTLE_EFFECTS", &CyGlobalContext::isDCM_BATTLE_EFFECTS, "bool ()")
-
 		.def("isDCM_AIR_BOMBING", &CyGlobalContext::isDCM_AIR_BOMBING, "bool ()")
 		.def("isDCM_RANGE_BOMBARD", &CyGlobalContext::isDCM_RANGE_BOMBARD, "bool ()")
 		.def("isDCM_ATTACK_SUPPORT", &CyGlobalContext::isDCM_ATTACK_SUPPORT, "bool ()")

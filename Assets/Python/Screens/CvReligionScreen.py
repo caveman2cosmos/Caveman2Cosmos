@@ -264,7 +264,7 @@ class CvReligionScreen:
 		for iRel in self.RELIGIONS:
 			if GAME.getReligionGameTurnFounded(iRel) >= 0:
 				pHolyCity = GAME.getHolyCity(iRel)
-				if pHolyCity.isNone():
+				if pHolyCity is None:
 					szFounded = localText.getText("TXT_KEY_NONE", ())
 					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				elif not pHolyCity.isRevealed(GC.getPlayer(self.iActivePlayer).getTeam(), False):

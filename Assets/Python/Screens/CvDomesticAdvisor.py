@@ -436,12 +436,10 @@ class CvDomesticAdvisor:
 			bCanLiberate = True
 		else:
 			bCanLiberate = False
-			CyCity, i = CyPlayer.firstCity(False)
-			while CyCity:
+			for CyCity in CyPlayer.cities():
 				if CyCity.getLiberationPlayer(False) != -1:
 					bCanLiberate = True
 					break
-				CyCity, i = CyPlayer.nextCity(i, False)
 
 		if bCanLiberate:
 			screen.setImageButton("DomesticSplit", "", 8, 2, iSize, iSize, WidgetTypes.WIDGET_ACTION, GC.getControlInfo(ControlTypes.CONTROL_FREE_COLONY).getActionInfoIndex(), -1)
@@ -981,11 +979,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getBaseYieldRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getBaseYieldRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -994,11 +989,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getYieldRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getYieldRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1007,11 +999,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getCommerceRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getCommerceRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1210,10 +1199,8 @@ class CvDomesticAdvisor:
 
 		self.cityList = cityList = []
 		CyPlayer = self.CyPlayer
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			cityList.append(CyCity)
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		# Hide building icons
 		for i in xrange(GC.getNumBuildingInfos()):

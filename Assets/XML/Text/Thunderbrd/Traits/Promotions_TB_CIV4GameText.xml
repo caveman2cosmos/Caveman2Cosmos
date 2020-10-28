@@ -59,12 +59,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couardise</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY_PROMOTION</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couard</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
@@ -412,6 +414,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMONGER</Tag>
 		<English>Warmonger Promotion Line</English>
 		<French>Spécialisation Chef de guerre</French>
+		<German>Kriegstreiber</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ZEALOUS</Tag>
@@ -510,21 +513,25 @@
 		<Tag>TXT_KEY_PROMOTION_COWARDLY</Tag>
 		<English>Cowardly</English>
 		<French>Couard</French>
+		<German>Feige</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY1</Tag>
 		<English>Cowardly I</English>
 		<French>Couard I</French>
+		<German>Feige I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY2</Tag>
 		<English>Cowardly II</English>
 		<French>Couard II</French>
+		<German>Feige II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY3</Tag>
 		<English>Cowardly III</English>
 		<French>Couard III</French>
+		<German>Feige III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CROOKED</Tag>

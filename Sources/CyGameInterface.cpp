@@ -16,8 +16,6 @@ void CyGamePythonInterface()
 
 	python::class_<CyGame>("CyGame")
 
-		//.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
-
 		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
@@ -287,8 +285,6 @@ void CyGamePythonInterface()
 		.def("addReplayMessage", &CyGame::addReplayMessage, "void (int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)" )
 		.def("log", &CyGame::log, "void log(str)")
 		.def("logw", &CyGame::logw, "void log(wstring str)")
-
-		.def("drawBattleEffects", &CyGame::drawBattleEffects, "void ()")
 
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
 

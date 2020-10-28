@@ -171,11 +171,9 @@ public:
 	CvCity* AI_getRouteToCity() const;
 	void AI_updateRouteToCity() const;
 
-	int AI_getEmphasizeYieldCount(YieldTypes eIndex) const;
-	bool AI_isEmphasizeYield(YieldTypes eIndex) const;
-
-	int AI_getEmphasizeCommerceCount(CommerceTypes eIndex) const;
-	bool AI_isEmphasizeCommerce(CommerceTypes eIndex) const;
+	bool AI_isEmphasizeYield(const YieldTypes eIndex) const;
+	bool AI_isEmphasizeCommerce(const CommerceTypes eIndex) const;
+	bool AI_isAnyCommerceOrYieldEmphasis() const;
 
 	bool AI_isEmphasize(EmphasizeTypes eIndex) const;
 	void AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue);
@@ -307,6 +305,7 @@ protected:
 	bool AI_chooseDefender(const char* reason);
 	bool AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds = -1);
 	bool AI_chooseBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, int iOdds = -1, bool bMaximizePerTurnValue = false, PropertyTypes eProperty = NO_PROPERTY);
+	bool AI_chooseExperienceBuilding(const UnitAITypes eUnitAI, const int iUnitProductionLossesFactor);
 	bool AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY);
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();

@@ -21,7 +21,6 @@ public:
 	CyGame();
 	explicit CyGame(CvGame& pGame);			// Call from C++
 	explicit CyGame(CvGameAI& pGame);		// Call from C++;
-	//bool isNone() const { return m_pGame == NULL; }
 
 	int getCurrentMap() const;
 
@@ -298,8 +297,6 @@ public:
 	void addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor);
 	void log(TCHAR* str);
 	void logw(std::wstring str);
-
-	void drawBattleEffects();
 
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel) const;
 
