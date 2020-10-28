@@ -7841,8 +7841,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ALPHABET</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_CRYPTOGRAPHY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_CRYPTOGRAPHY</Sound>
+			<SoundMP>AS2D_TECH_CRYPTOGRAPHY</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Cryptography.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8342,8 +8342,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DIPLOMACY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_DIPLOMACY</Sound>
+			<SoundMP>AS2D_TECH_DIPLOMACY</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Diplomacy.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8905,8 +8905,8 @@ Current techs which are not in this file:-
 				</PrereqBuilding>
 			</PrereqBuildings>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_WATERPROOF_CONCRETE</Sound>
+			<SoundMP>AS2D_TECH_WATERPROOF_CONCRETE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Concrete.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -9554,8 +9554,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GEOCENTRISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_GEOCENTRISM</Sound>
+			<SoundMP>AS2D_TECH_GEOCENTRISM</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Geocentrism.dds</Button>
 		</TechInfo>
 		<TechInfo>
