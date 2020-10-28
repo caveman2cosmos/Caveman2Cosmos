@@ -29159,45 +29159,54 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 }
 
 
-TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
+TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer)
 {
+	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
+	const TeamTypes eOtherTeam = playerOther.getTeam();
+	const CvTeamAI& teamOther = GET_TEAM(eOtherTeam);
+	const TeamTypes eTeam = getTeam();
+	const CvTeamAI& team = GET_TEAM(eTeam);
+
 	int iBestValue = 0;
 	TeamTypes eWarTeam = NO_TEAM;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const TeamTypes eTeamX = GET_PLAYER((PlayerTypes)iI).getTeam();
+
+		if (eTeam != eTeamX && team.isHasMet(eTeamX)
+		&& !teamOther.isDefensivePact(eTeamX) && teamOther.canDeclareWar(eTeamX)
+		&& // If we are at war, or they have backstabbed a friend, or they are a mutual enemy
+			(
+				atWar(eTeamX, eTeam)
+				||
+				AI_getMemoryCount((PlayerTypes)iI, MEMORY_BACKSTAB_FRIEND) > 0
+				||
+				playerOther.AI_getAttitude((PlayerTypes)iI) < ATTITUDE_CAUTIOUS
+				&&
+				AI_getAttitude((PlayerTypes)iI) < ATTITUDE_CAUTIOUS
+			)
+		&&
+			(
+				playerOther.isHuman()
+				||
+				playerOther.AI_getAttitude(getID()) > GC.getLeaderHeadInfo(playerOther.getPersonalityType()).getDeclareWarRefuseAttitudeThreshold()
+				&&
+				playerOther.AI_getAttitude((PlayerTypes)iI) < ATTITUDE_PLEASED
+			)
+		)
 		{
-			//if we are at war, or they have backstabbed a friend, or they are a mutual enemy
-			if (atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()) || (AI_getMemoryCount(ePlayer, MEMORY_BACKSTAB_FRIEND) > 0) || (GET_PLAYER(ePlayer).AI_getAttitude((PlayerTypes)iI) < ATTITUDE_CAUTIOUS && AI_getAttitude((PlayerTypes)iI) < ATTITUDE_CAUTIOUS))
+			int iValue = team.AI_declareWarTradeVal(eTeamX, eOtherTeam);
+			// Favor teams we are already at war with
+			if (!atWar(eTeamX, eTeam))
 			{
-				if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
-				{
-					if (!GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && !GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isDefensivePact(GET_PLAYER(ePlayer).getTeam()))
-					{
-						if (GET_PLAYER(ePlayer).isHuman() ||
-							(GET_PLAYER(ePlayer).AI_getAttitude(getID()) > GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getDeclareWarRefuseAttitudeThreshold()))
-						{
-							if (GET_PLAYER(ePlayer).isHuman() || (GET_PLAYER(ePlayer).AI_getAttitude((PlayerTypes)iI) < ATTITUDE_CAUTIOUS))
-							{
-								if (GET_PLAYER((PlayerTypes)iI).getTeam() != GET_PLAYER(ePlayer).getTeam())
-								{
-									int iValue = GET_TEAM(getTeam()).AI_declareWarTradeVal(GET_PLAYER((PlayerTypes)iI).getTeam(), GET_PLAYER(ePlayer).getTeam());
-									//Favor teams we are already at war with
-									if (!atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam())) {
-										iValue *= 2;
-										iValue /= 3;
-									}
-									if (iBestValue < iValue)
-									{
-										iBestValue = iValue;
-										eWarTeam = GET_PLAYER((PlayerTypes)iI).getTeam();
-									}
-								}
-							}
-						}
-					}
-				}
+				iValue *= 2;
+				iValue /= 3;
+			}
+			if (iBestValue < iValue)
+			{
+				iBestValue = iValue;
+				eWarTeam = eTeamX;
 			}
 		}
 	}
@@ -29250,54 +29259,39 @@ TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
 	return eBestTeam;
 }
 
-TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes ePlayer)
+TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer)
 {
-	int iBestValue = 0;
-	TeamTypes eBestTeam = NO_TEAM;
+	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
+	const TeamTypes eOtherTeam = playerOther.getTeam();
+	const CvTeamAI& teamOther = GET_TEAM(eOtherTeam);
+	const TeamTypes eTeam = getTeam();
+	const CvTeamAI& team = GET_TEAM(eTeam);
+	const TeamTypes eWorstEnemy = team.AI_getWorstEnemy();
 
-	const TeamTypes eWorstEnemy = GET_TEAM(getTeam()).AI_getWorstEnemy();
+	int iBestValue = MAX_INT;
+	TeamTypes eBestTeam = NO_TEAM;
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		const TeamTypes eTeam = ((TeamTypes)iI);
-		const bool bAtWar = atWar(eTeam, getTeam());
-		if ((getTeam() != eTeam) && (eTeam != GET_PLAYER(ePlayer).getTeam()))
+		const TeamTypes eTeamX = (TeamTypes)iI;
+
+		if (GET_TEAM(eTeamX).isAlive() && eTeam != eTeamX && eOtherTeam != eTeamX
+		&& team.isHasMet(eTeamX) && teamOther.isHasMet(eTeamX) && !atWar(eOtherTeam, eTeamX)
+		&&
+			(
+				eWorstEnemy == eTeamX
+				|| atWar(eTeamX, eTeam)
+				|| team.AI_getAttitude(eTeamX) < ATTITUDE_CAUTIOUS
+				|| AI_getMemoryCount(eOtherPlayer, MEMORY_BACKSTAB_FRIEND) > 0
+			)
+		&& playerOther.canStopTradingWithTeam(eTeamX)
+		&& playerOther.AI_stopTradingTrade(eTeamX, getID()) == NO_DENIAL)
 		{
-			if ((eWorstEnemy == eTeam) || bAtWar ||
-				((GET_TEAM(getTeam()).AI_getAttitude(eTeam) == ATTITUDE_FURIOUS) || (GET_TEAM(getTeam()).AI_getAttitude(eTeam) == ATTITUDE_ANNOYED)
-				|| (AI_getMemoryCount(ePlayer, MEMORY_BACKSTAB_FRIEND) > 0)))
+			const int iValue = AI_stopTradingTradeVal(eTeamX, eOtherPlayer);
+			if (iValue < iBestValue)
 			{
-				if (GET_PLAYER(ePlayer).getTeam() != eTeam)
-				{
-					if (GET_TEAM(eTeam).isAlive())
-					{
-						if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasMet(eTeam))
-						{
-							if (!atWar(GET_PLAYER(ePlayer).getTeam(), eTeam))
-							{
-								if (GET_TEAM(eTeam).isVassal(GET_PLAYER(ePlayer).getTeam()))
-								{
-									if (GET_PLAYER(ePlayer).canStopTradingWithTeam(eTeam))
-									{
-										if (GET_PLAYER(ePlayer).AI_stopTradingTrade(eTeam, getID()) == NO_DENIAL)
-										{
-											if ((bAtWar && GET_PLAYER(ePlayer).isTradingMilitaryBonus(GET_TEAM(eTeam).getLeaderID()))
-												|| (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTeam) != ATTITUDE_FRIENDLY))
-											{
-												const int iValue = AI_stopTradingTradeVal(eTeam, ePlayer);
-												if ((iBestValue == 0) || (iValue < iBestValue))
-												{
-													iBestValue = iValue;
-													eBestTeam = eTeam;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
+				iBestValue = iValue;
+				eBestTeam = eTeamX;
 			}
 		}
 	}

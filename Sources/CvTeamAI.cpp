@@ -812,7 +812,9 @@ int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 	const CvTeam& team = GET_TEAM(eTeam);
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
-	FAssertMsg(isHasMet(eTeam) && team.isAlive() && isAlive(), "Waste of time to call this function without checking these conditions first.");
+	FAssertMsg(team.isAlive(), "Waste of time to call this function without checking this condition first.");
+	FAssertMsg(isAlive(), "Waste of time to call this function without checking this condition first.");
+	FAssertMsg(isHasMet(eTeam), "Waste of time to call this function without checking this condition first.");
 	FAssertMsg(!team.isNPC(), "Attitude towards NPC is meaningless!");
 	FAssertMsg(!isNPC(), "NPC doesn't have attitude!");
 
@@ -5735,103 +5737,92 @@ int CvTeamAI::AI_LimitedBordersTradeVal(TeamTypes eTeam) const
 }
 
 
-int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeam) const
+int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeamBuyer) const
 {
+	const CvTeam& teamBuyer = GET_TEAM(eTeamBuyer);
 	int iValue = 5;
 	int iAttitude = 0;
 	int iMetCount = 0;
 	int iPower = 0;
-	int iCountTeams = 0;
+	int iCountTeams = 1; // Pre-counting eContactTeam
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != eTeamBuyer && iI != eContactTeam)
 		{
-			if ((iI != eTeam) && (iI != eContactTeam))
+			iCountTeams++;
+			if (teamBuyer.isHasMet((TeamTypes)iI))
 			{
-				iCountTeams++;
-				if (GET_TEAM(eTeam).isHasMet((TeamTypes)iI))
+				iAttitude += GET_TEAM((TeamTypes)iI).AI_getAttitudeVal(eTeamBuyer);
+				iPower += GET_TEAM((TeamTypes)iI).getPower(true);
+				iMetCount++;
+				if (!GET_TEAM((TeamTypes)iI).isHasMet(eContactTeam))
 				{
-					iAttitude += GET_TEAM((TeamTypes)iI).AI_getAttitudeVal(eTeam);
-					iPower += GET_TEAM((TeamTypes)iI).getPower(true);
-					iMetCount++;
-					if (!GET_TEAM((TeamTypes)iI).isHasMet(eContactTeam))
-					{
-						iValue += 10;
-					}
+					iValue += 10;
 				}
 			}
 		}
 	}
 
-	iMetCount = std::max(1, iMetCount);
-
-	switch (iAttitude/iMetCount)
+	if (iMetCount > 0)
 	{
-	case ATTITUDE_FURIOUS:
-		iValue *= 5;
-		iValue /= 2;
-		break;
+		switch (iAttitude/iMetCount)
+		{
+		case ATTITUDE_FURIOUS:
+			iValue *= 5;
+			iValue /= 2;
+			break;
+		case ATTITUDE_ANNOYED:
+			iValue *= 2;
+			break;
+		case ATTITUDE_CAUTIOUS:
+			iValue *= 3;
+			iValue /= 2;
+			break;
+		case ATTITUDE_PLEASED:
+			iValue *= 4;
+			iValue /= 5;
+			break;
+		case ATTITUDE_FRIENDLY:
+			iValue *= 2;
+			iValue /= 3;
+			break;
+		default:
+			FErrorMsg("faulty attitude calculation, or missing attitude case in switch");
+			break;
+		}
 
-	case ATTITUDE_ANNOYED:
-		iValue *= 2;
-		break;
-
-	case ATTITUDE_CAUTIOUS:
-		iValue *= 3;
-		iValue /= 2;
-		break;
-
-	case ATTITUDE_PLEASED:
-		iValue *= 4;
-		iValue /= 5;
-		break;
-
-	case ATTITUDE_FRIENDLY:
-		iValue *= 2;
-		iValue /= 3;
-		break;
-
-	default:
-		//FAssert(false);
-		break;
+		if (teamBuyer.getPower(true) > iPower/iMetCount)
+		{
+			iValue *= 4;
+			iValue /= 5;
+		}
 	}
 
-	if (GET_TEAM(eTeam).getPower(true) > (iPower/iMetCount))
-	{
-		iValue *= 4;
-		iValue /= 5;
-	}
-
-	if (GET_TEAM(eTeam).isTechTrading())
+	if (teamBuyer.isTechTrading())
 	{
 		iValue *= 3;
 		iValue /= 2;
 	}
 
-	if (GET_TEAM(eTeam).isGoldTrading())
+	if (teamBuyer.isGoldTrading())
 	{
 		iValue *= 3;
 		iValue /= 2;
 	}
 
-	if (GET_TEAM(eTeam).isOpenBordersTrading())
+	if (teamBuyer.isOpenBordersTrading())
 	{
 		iValue *= 4;
 		iValue /= 3;
 	}
 
-	if (GET_TEAM(eTeam).isMapTrading())
+	if (teamBuyer.isMapTrading())
 	{
 		iValue *= 6;
 		iValue /= 5;
 	}
-
-	iValue *= 100;
-	iValue /= iCountTeams;
-	iValue /= 5;
-
-	return iValue;
+	return iValue * 100 / (5*iCountTeams);
 }
 
 void CvTeamAI::AI_updateCache()
