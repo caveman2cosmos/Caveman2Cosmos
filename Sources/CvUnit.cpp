@@ -11309,40 +11309,17 @@ int CvUnit::getHurryProduction(const CvPlot* pPlot) const
 
 bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (isDelayedDeath())
-	{
-		return false;
-	}
-
-	if (getHurryProduction(pPlot) == 0)
+	if (isDelayedDeath() || getHurryProduction(pPlot) == 0)
 	{
 		return false;
 	}
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
+	if (pCity == NULL || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
-
-	//if (pCity->getProductionTurnsLeft() == 1)
-	//{
-	//	return false;
-	//}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 04/23/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (getTeam() != pCity->getTeam())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!bTestVisible)
 	{
@@ -11358,14 +11335,12 @@ bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::hurry()
 {
-	CvCity* pCity;
-
 	if (!canHurry(plot()))
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
