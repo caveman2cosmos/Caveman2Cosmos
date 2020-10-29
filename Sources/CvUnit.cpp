@@ -7026,6 +7026,26 @@ bool CvUnit::canScrap() const
 }
 
 
+int CvUnit::calculateScrapValue() const
+{
+	float fCost = float(getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100);
+	fCost += fCost * float(getUpgradeDiscount() / 100);
+	logBBAI(" fCost is %f", fCost);
+
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
+		logBBAI(" iGroupDiff is %i", iGroupDiff);
+		double dSizeMod = std::pow(3, iGroupDiff);
+		logBBAI(" dSizeMod is %f", dSizeMod);
+		fCost *= float(dSizeMod);
+		logBBAI(" fCost is now %f", fCost);
+	}
+
+	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
+	return std::max(1, int(fCost));
+}
+
 void CvUnit::scrap()
 {
 	if (!canScrap())
@@ -7042,15 +7062,7 @@ void CvUnit::scrap()
 
 	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
 	{
-		int iCost = (getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
-		iCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
-		iCost += (iCost * getUpgradeDiscount())/100;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-		}
-		iCost = std::max(1, iCost);
-		GET_PLAYER(getOwner()).changeGold(iCost);
+		GET_PLAYER(getOwner()).changeGold(calculateScrapValue());
 	}
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
