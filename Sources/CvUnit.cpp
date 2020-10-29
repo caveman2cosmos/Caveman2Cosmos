@@ -7028,22 +7028,14 @@ bool CvUnit::canScrap() const
 
 int CvUnit::calculateScrapValue() const
 {
-	float fCost = float(getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100);
-	fCost += fCost * float(getUpgradeDiscount() / 100);
+	float fCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100.0f;
+	fCost += fCost * getUpgradeDiscount() / 100.0f;
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
-		// Workaround because pow() seems to return 0 when having a negative exponent, for some reason??
-		// Otherwise just "fCost *= float(std::pow(3, iGroupDiff));" would work by itself
-		if (iGroupDiff >= 0)
-		{
-			fCost *= float(std::pow(3, iGroupDiff));
-		}
-		else
-		{
-			fCost *= float(1 / std::pow(3, -iGroupDiff));
-		}
+		// pow(int, int) returns int, not double...
+		fCost *= std::pow(3.0f, iGroupDiff);
 	}
 
 	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
