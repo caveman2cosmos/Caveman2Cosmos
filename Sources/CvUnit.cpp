@@ -7030,16 +7030,20 @@ int CvUnit::calculateScrapValue() const
 {
 	float fCost = float(getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100);
 	fCost += fCost * float(getUpgradeDiscount() / 100);
-	logBBAI(" fCost is %f", fCost);
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
-		logBBAI(" iGroupDiff is %i", iGroupDiff);
-		double dSizeMod = std::pow(3, iGroupDiff);
-		logBBAI(" dSizeMod is %f", dSizeMod);
-		fCost *= float(dSizeMod);
-		logBBAI(" fCost is now %f", fCost);
+		// Workaround because pow() seems to return 0 when having a negative exponent, for some reason??
+		// Otherwise just "fCost *= float(std::pow(3, iGroupDiff));" would work by itself
+		if (iGroupDiff >= 0)
+		{
+			fCost *= float(std::pow(3, iGroupDiff));
+		}
+		else
+		{
+			fCost *= float(1 / std::pow(3, -iGroupDiff));
+		}
 	}
 
 	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
