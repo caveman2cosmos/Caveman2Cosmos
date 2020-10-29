@@ -66044,6 +66044,7 @@ Base XP gained when defending
 			<iBaseTrade>60</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>3</iCombat>
+			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
