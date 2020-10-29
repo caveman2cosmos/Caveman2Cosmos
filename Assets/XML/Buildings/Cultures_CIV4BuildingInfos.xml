@@ -668,7 +668,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>100</iCost>
+			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
