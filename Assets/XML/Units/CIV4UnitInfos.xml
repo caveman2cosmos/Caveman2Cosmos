@@ -65506,7 +65506,7 @@ Base XP gained when defending
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseFoodChange>33</iBaseFoodChange>

@@ -416,6 +416,14 @@
 		<Polish>Ten rozkaz zwiększy zaopatrzenie miasta w żywność. Jest to zużywane przez jednostki.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION_HELP</Tag>
+		<English>This order will hurry production on the city's current effort. It consumes the unit.</English>
+		<French>Acc&#233;l&#233;rer la production en cours de la ville, ce qui d&#233;truit le personnage illustre.</French>
+		<German>Opfern Sie die Gro&#223;e Pers&#246;nlichkeit, um die aktuelle Produktion der Stadt zu beschleunigen.</German>
+		<Italian>Con questo ordine, la produzione attuale di una citt&#224; viene accelerata. L'unit&#224; viene sacrificata nel procedimento.</Italian>
+		<Spanish>El gran personaje acelera la producci&#243;n que la ciudad est&#233; llevando a cabo, consumi&#233;ndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_INCREASE_UNIT_SUPPORT_HELP</Tag>
 		<English>The [COLOR_UNIT_TEXT]Barbarian Leader[COLOR_REVERT] will increase your unit support limit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Chef Barbare[COLOR_REVERT] va augmenter votre limite d'entretien militaire gratuit.</French>
