@@ -65834,7 +65834,6 @@ Base XP gained when defending
 			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iBaseHurry>30</iBaseHurry>
 			<iBaseTrade>15</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>2</iCombat>
@@ -65851,6 +65850,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>30</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRADE_CARAVAN</Type>
@@ -65920,7 +65939,6 @@ Base XP gained when defending
 			<iCost>90</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseHurry>72</iBaseHurry>
 			<iBaseTrade>30</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>2</iCombat>
@@ -65938,6 +65956,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>72</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUPPLY_TRAIN</Type>
@@ -66004,7 +66042,6 @@ Base XP gained when defending
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseHurry>204</iBaseHurry>
 			<iBaseTrade>60</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>3</iCombat>
@@ -66022,6 +66059,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>204</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FREIGHT</Type>
@@ -66087,7 +66144,6 @@ Base XP gained when defending
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iBaseTrade>120</iBaseTrade>
-			<iBaseHurry>594</iBaseHurry>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>5</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
@@ -66104,6 +66160,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>594</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_CHASER</Type>
