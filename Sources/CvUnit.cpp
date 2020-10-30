@@ -7029,7 +7029,7 @@ bool CvUnit::canScrap() const
 int CvUnit::calculateScrapValue() const
 {
 	int iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-	iCost += iCost * getUpgradeDiscount();
+	iCost += iCost * getUpgradeDiscount(); // So it won't be potentially profitable to upgrade the unit before disbanding it.
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
