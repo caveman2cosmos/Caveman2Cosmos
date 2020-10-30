@@ -729,7 +729,7 @@ def playerCityLost(CyPlayer, CyCity, bConquest = True):
 
 	CyCityX, i = CyPlayer.firstCity(False)
 	while CyCityX:
-		if not CyCityX.isNone() and CyCityX.getOwner() == iPlayer:
+		if CyCityX.getOwner() == iPlayer:
 			CyCityX.changeRevolutionIndex(revIdxChange)
 			revIdxHist = RevData.getCityVal(CyCityX,'RevIdxHistory')
 			revIdxHist['Events'][0] += revIdxChange
@@ -881,7 +881,7 @@ def checkForAssimilation():
 
 		CyTeamX = GC.getTeam(CyPlayerX.getTeam())
 		CyCity0 = CyPlayerX.getCapitalCity()
-		if CyCity0.isNone(): continue # getCapitalCity() returns a city-object even for civs without a capital.
+		if CyCity0 is None: continue
 		iTurnAcquiredCity0 = CyCity0.getGameTurnAcquired()
 		CyPlot0 = None
 		szCiv = CyPlayerX.getCivilizationDescription(0)

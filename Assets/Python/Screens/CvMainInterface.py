@@ -2648,7 +2648,7 @@ class CvMainInterface:
 			aList = []
 			for iRoute in xrange(self.iMaxTradeRoutes):
 				CyCityX = CyCity.getTradeCity(iRoute)
-				if not CyCityX or CyCityX.isNone(): continue
+				if not CyCityX: continue
 				iPlayerX = CyCityX.getOwner()
 				if iPlayerX > -1:
 					if bYieldView:
@@ -4564,9 +4564,11 @@ class CvMainInterface:
 									else:
 										iCount = 0
 										for CyCity in CyPlayer.cities():
-											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
+											if CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
-										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):
+										# (capital==None and iCount > 0) wouldn't think it possible, but it happened...
+										capital = CyPlayer.getCapitalCity()
+										if iCount and capital and not capital.isRevealed(iTeamAct, False):
 											iCount += 1
 										szTxt = u"<color=0,255,255>%d" %iCount
 									scores.setNumCities(szTxt)

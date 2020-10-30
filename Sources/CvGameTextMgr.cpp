@@ -20,6 +20,8 @@
 #include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 
+#include "discord.h"
+
 int shortenID(int iId)
 {
 	return iId;
@@ -307,6 +309,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 void CvGameTextMgr::setTimeStr(CvWString& szString, int iGameTurn, bool bSave)
 {
 	setDateStr(szString, iGameTurn, bSave, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
+
+	// Discord RPC. Date is standard ASCII so this should work.
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.date = std::string(szString.begin(), szString.end());
+	pDiscord->sendNewRpcDetails(rpc);
 }
 
 
@@ -12466,9 +12474,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 			for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 			{
-				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 				{
-					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 				}
 			}
 			if (iUnitCombatExperience > 0)
@@ -12732,9 +12740,9 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 				{
-					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 					{
-						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 					}
 				}
 				if (iUnitCombatExperience > 0)

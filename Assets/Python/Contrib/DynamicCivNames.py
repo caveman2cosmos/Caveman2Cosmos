@@ -126,7 +126,6 @@ class DynamicCivNames:
     owner = gc.getPlayer(city.getOwner())
     
     if owner.isAlive() and not owner.isBarbarian() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-      if owner.getCapitalCity().getGameTurnAcquired() + 5 < game.getGameTurn():
         self.setNewNameByCivics(owner.getID())
   
   def onCityBuilt(self, argsList):
@@ -134,7 +133,6 @@ class DynamicCivNames:
     owner = gc.getPlayer(city.getOwner())
 
     if owner.isAlive() and not owner.isBarbarian() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-      if owner.getCapitalCity().getGameTurnAcquired() + 5 < game.getGameTurn():
         self.setNewNameByCivics(owner.getID())
   
   def onVassalState(self, argsList):
@@ -348,7 +346,7 @@ class DynamicCivNames:
     pTeam = gc.getTeam(pPlayer.getTeam())
     
     cityString = None
-    if not capital == None and not capital.isNone():
+    if capital:
       try :
         # Silly game to force ascii encoding now
         cityString =  pPlayer.getCivilizationDescription(0)

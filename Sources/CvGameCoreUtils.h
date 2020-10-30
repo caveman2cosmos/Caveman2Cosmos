@@ -38,14 +38,11 @@ inline int range(int iNum, int iLow, int iHigh)
 	{
 		return iLow;
 	}
-	else if (iNum > iHigh)
+	if (iNum > iHigh)
 	{
 		return iHigh;
 	}
-	else
-	{
-		return iNum;
-	}
+	return iNum;
 }
 
 inline float range(float fNum, float fLow, float fHigh)
@@ -56,23 +53,19 @@ inline float range(float fNum, float fLow, float fHigh)
 	{
 		return fLow;
 	}
-	else if (fNum > fHigh)
+	if (fNum > fHigh)
 	{
 		return fHigh;
 	}
-	else
-	{
-		return fNum;
-	}
+	return fNum;
 }
 
 inline int coordDistance(int iFrom, int iTo, int iRange, bool bWrap)
 {
-	if (bWrap && (abs(iFrom - iTo) > (iRange / 2)))
+	if (bWrap && abs(iFrom - iTo) > iRange/2)
 	{
-		return (iRange - abs(iFrom - iTo));
+		return iRange - abs(iFrom - iTo);
 	}
-
 	return abs(iFrom - iTo);
 }
 
@@ -80,16 +73,15 @@ inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap)
 {
 	if (bWrap)
 	{
-		if (iDiff > (iRange / 2))
+		if (iDiff > iRange/2)
 		{
-			return (iDiff - iRange);
+			return iDiff - iRange;
 		}
-		else if (iDiff < -(iRange / 2))
+		if (iDiff < -iRange/2)
 		{
-			return (iDiff + iRange);
+			return iDiff + iRange;
 		}
 	}
-
 	return iDiff;
 }
 
@@ -133,7 +125,7 @@ inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Expos
 	const int iDX = xDistance(iX1, iX2);
 	const int iDY = yDistance(iY1, iY2);
 
-	return (std::max(iDX, iDY) + (std::min(iDX, iDY) / 2));
+	return std::max(iDX, iDY) + std::min(iDX, iDY) / 2;
 }
 
 // 3 | 3 | 3 | 3 | 3 | 3 | 3
@@ -158,14 +150,11 @@ inline int stepDistance(int iX1, int iY1, int iX2, int iY2)													// Expos
 
 inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							// Exposed to Python
 {
-	if(eDirection == NO_DIRECTION)
+	if (eDirection == NO_DIRECTION)
 	{
 		return GC.getMap().plot(iX, iY);
 	}
-	else
-	{
-		return GC.getMap().plot((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
-	}
+	return GC.getMap().plot(iX + GC.getPlotDirectionX()[eDirection], iY + GC.getPlotDirectionY()[eDirection]);
 }
 
 inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
@@ -175,24 +164,21 @@ inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 
 inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
 {
-	return GC.getMap().plot((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
+	return GC.getMap().plot(iX + GC.getPlotCardinalDirectionX()[eCardinalDirection], iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]);
 }
 
 inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
 {
-	return GC.getMap().plot((iX + iDX), (iY + iDY));
+	return GC.getMap().plot(iX + iDX, iY + iDY);
 }
 
 inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
 {
-	if ((abs(iDX) > DIRECTION_RADIUS) || (abs(iDY) > DIRECTION_RADIUS))
+	if (abs(iDX) > DIRECTION_RADIUS || abs(iDY) > DIRECTION_RADIUS)
 	{
 		return NO_DIRECTION;
 	}
-	else
-	{
-		return GC.getXYDirection((iDX + DIRECTION_RADIUS), (iDY + DIRECTION_RADIUS));
-	}
+	return GC.getXYDirection((iDX + DIRECTION_RADIUS), (iDY + DIRECTION_RADIUS));
 }
 
 inline DirectionTypes reverseDirection(DirectionTypes iDirection)																		// Exposed to Python
@@ -207,9 +193,7 @@ inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot
 
 inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bClockwise)
 {
-	int iDir = (int)eDirection;
-	 iDir += bClockwise ? 1 : -1;
-	return (DirectionTypes)((iDir + NUM_DIRECTION_TYPES) % NUM_DIRECTION_TYPES);
+	return (DirectionTypes)(((int)eDirection + (bClockwise ? 1 : -1) + NUM_DIRECTION_TYPES) % NUM_DIRECTION_TYPES);
 }
 
 CvPlot* plotCity(int iX, int iY, int iIndex);																			// Exposed to Python
@@ -268,15 +252,8 @@ bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
 
 int64_t getBinomialCoefficient(int iN, int iK);
 int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
-/////////////////////////////////////////////////////////////////
-// ADVANCED COMABT ODDS                         PieceOfMind    //
-// BEGIN                                                       //
-/////////////////////////////////////////////////////////////////
+
 float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
-/////////////////////////////////////////////////////////////////
-// ADVANCED COMABT ODDS                         PieceOfMind    //
-// END                                                         //
-/////////////////////////////////////////////////////////////////
 
 int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam);							// Exposed to Python
 
@@ -369,15 +346,7 @@ int stepHeuristic(int iFromX, int iFromY, int iToX, int iToY);
 int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 int stepCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD					11/30/08				jdog5000	*/
-/* 																			*/
-/* 																			*/
-/********************************************************************************/
 int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 int borderValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
 int areaValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);
@@ -388,7 +357,7 @@ int countRegion(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 
 bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pToPlot, int iFlags);
 
-//	Koashling - new pathing generator callback functions
+//	Koshling - new pathing generator callback functions
 int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
 int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
 bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus);

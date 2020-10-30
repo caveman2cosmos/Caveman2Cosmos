@@ -93,8 +93,8 @@ public:
 	int getGlobalTradeRoutes() const				{ return m_iGlobalTradeRoutes; } // Exposed to Python
 	int getTradeRouteModifier() const				{ return m_iTradeRouteModifier; } // Exposed to Python
 	int getForeignTradeRouteModifier() const		{ return m_iForeignTradeRouteModifier; } // Exposed to Python
-	int getAssetValue(bool bForLoad = false) const; // Exposed to Python
-	int getPowerValue(bool bForLoad = false) const; // Exposed to Python
+	int getAssetValue() const						{ return m_iAssetValue * 100; } // Exposed to Python
+	int getPowerValue() const						{ return m_iPowerValue * 100; } // Exposed to Python
 	int getSpecialBuildingType() const				{ return m_iSpecialBuildingType; } // Exposed to Python
 	int getAdvisorType() const						{ return m_iAdvisorType; } // Exposed to Python
 
@@ -299,7 +299,7 @@ public:
 	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
 	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
 	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
-	int getNoEntryDefenseLevel(bool bForLoad = false) const;
+	int getNoEntryDefenseLevel() const;
 	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
 	int getNumPopulationEmployed() const			{ return m_iNumPopulationEmployed; }
 	int getHappinessPercentPerPopulation() const	{ return m_iHappinessPercentPerPopulation; }
@@ -415,14 +415,14 @@ public:
 	int getLocalCaptureResistanceModifier() const;
 	int getLocalDynamicDefense() const;
 	int getRiverDefensePenalty() const;
-	int getLocalRepel(bool bForLoad = false) const;
-	int getMinDefense(bool bForLoad = false) const;
+	int getLocalRepel() const;
+	int getMinDefense() const;
 	int getBuildingDefenseRecoverySpeedModifier() const;
 	int getCityDefenseRecoverySpeedModifier() const;
 	int getDamageAttackerChance() const;
 	int getDamageToAttacker() const;
-	int getMaxPopulationAllowed(bool bForLoad = false) const;
-	int getMaxPopulationChange(bool bForLoad = false) const;
+	int getMaxPopulationAllowed() const;
+	int getMaxPopulationChange() const;
 	int getInsidiousness() const;
 	int getInvestigation() const;
 	int getPopulationChange() const;

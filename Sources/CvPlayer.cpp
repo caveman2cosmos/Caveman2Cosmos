@@ -5316,217 +5316,231 @@ void CvPlayer::contact(PlayerTypes ePlayer)
 
 void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer, int iData1, int iData2)
 {
-	CivicTypes* paeNewCivics;
-	CvCity* pCity;
-	int iI;
-
 	//OutputDebugString(CvString::format("UI interaction - diplo event for player %d (with player %d)\n", m_eID, ePlayer).c_str());
 	setTurnHadUIInteraction(true);
 
 	switch (eDiploEvent)
 	{
-	case DIPLOEVENT_CONTACT:
-		AI_setFirstContact(ePlayer, true);
-		GET_PLAYER(ePlayer).AI_setFirstContact(getID(), true);
-		break;
-
-	case DIPLOEVENT_AI_CONTACT:
-		break;
-
-	case DIPLOEVENT_FAILED_CONTACT:
-		AI_setFirstContact(ePlayer, true);
-		GET_PLAYER(ePlayer).AI_setFirstContact(getID(), true);
-		break;
-
-	case DIPLOEVENT_GIVE_HELP:
-		AI_changeMemoryCount(ePlayer, MEMORY_GIVE_HELP, 1);
-		forcePeace(ePlayer);
-		break;
-
-	case DIPLOEVENT_REFUSED_HELP:
-		AI_changeMemoryCount(ePlayer, MEMORY_REFUSED_HELP, 1);
-		break;
-
-	case DIPLOEVENT_ACCEPT_DEMAND:
-		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPT_DEMAND, 1);
-		forcePeace(ePlayer);
-		break;
-
-	case DIPLOEVENT_REJECTED_DEMAND:
-		FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on our own team");
-
-		AI_changeMemoryCount(ePlayer, MEMORY_REJECTED_DEMAND, 1);
-
-		if (AI_demandRebukedSneak(ePlayer))
+		case DIPLOEVENT_CONTACT:
 		{
-			GET_TEAM(getTeam()).AI_setWarPlan(GET_PLAYER(ePlayer).getTeam(), WARPLAN_PREPARING_LIMITED);
+			AI_setFirstContact(ePlayer, true);
+			GET_PLAYER(ePlayer).AI_setFirstContact(getID(), true);
+			break;
 		}
-		break;
-
-	case DIPLOEVENT_DEMAND_WAR:
-		FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on our own team");
-
-		if (gTeamLogLevel >= 2)
+		case DIPLOEVENT_AI_CONTACT:
 		{
-			logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
+			break;
 		}
-		GET_TEAM(getTeam()).declareWar(GET_PLAYER(ePlayer).getTeam(), false, WARPLAN_LIMITED);
-		break;
-
-	case DIPLOEVENT_CONVERT:
-		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_RELIGION, 1);
-		GET_PLAYER(ePlayer).convert(getStateReligion());
-		break;
-
-	case DIPLOEVENT_NO_CONVERT:
-		AI_changeMemoryCount(ePlayer, MEMORY_DENIED_RELIGION, 1);
-		break;
-
-	case DIPLOEVENT_REVOLUTION:
-		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_CIVIC, 1);
-
-		paeNewCivics = new CivicTypes[GC.getNumCivicOptionInfos()];
-
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		case DIPLOEVENT_FAILED_CONTACT:
 		{
-			paeNewCivics[iI] = GET_PLAYER(ePlayer).getCivics((CivicOptionTypes)iI);
+			AI_setFirstContact(ePlayer, true);
+			GET_PLAYER(ePlayer).AI_setFirstContact(getID(), true);
+			break;
 		}
-
-		FAssertMsg(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic() != NO_CIVIC, "getFavoriteCivic() must be valid");
-
-		paeNewCivics[GC.getCivicInfo((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType())).getFavoriteCivic()).getCivicOptionType()] = ((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic()));
-
-		GET_PLAYER(ePlayer).revolution(paeNewCivics, true);
-
-		SAFE_DELETE_ARRAY(paeNewCivics);
-		break;
-
-	case DIPLOEVENT_NO_REVOLUTION:
-		AI_changeMemoryCount(ePlayer, MEMORY_DENIED_CIVIC, 1);
-		break;
-
-	case DIPLOEVENT_JOIN_WAR:
-		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_JOIN_WAR, 1);
-
-		if( gTeamLogLevel >= 2 )
+		case DIPLOEVENT_GIVE_HELP:
 		{
-			logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
+			AI_changeMemoryCount(ePlayer, MEMORY_GIVE_HELP, 1);
+			forcePeace(ePlayer);
+			break;
 		}
-
-		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).declareWar(((TeamTypes)iData1), false, WARPLAN_DOGPILE);
-
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
+		case DIPLOEVENT_REFUSED_HELP:
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			AI_changeMemoryCount(ePlayer, MEMORY_REFUSED_HELP, 1);
+			break;
+		}
+		case DIPLOEVENT_ACCEPT_DEMAND:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPT_DEMAND, 1);
+			forcePeace(ePlayer);
+			break;
+		}
+		case DIPLOEVENT_REJECTED_DEMAND:
+		{
+			FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on our own team");
+
+			AI_changeMemoryCount(ePlayer, MEMORY_REJECTED_DEMAND, 1);
+
+			if (AI_demandRebukedSneak(ePlayer))
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == ((TeamTypes)iData1))
+				GET_TEAM(getTeam()).AI_setWarPlan(GET_PLAYER(ePlayer).getTeam(), WARPLAN_PREPARING_LIMITED);
+			}
+			break;
+		}
+		case DIPLOEVENT_DEMAND_WAR:
+		{
+			FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on our own team");
+
+			if (gTeamLogLevel >= 2)
+			{
+				logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
+			}
+			GET_TEAM(getTeam()).declareWar(GET_PLAYER(ePlayer).getTeam(), false, WARPLAN_LIMITED);
+			break;
+		}
+		case DIPLOEVENT_CONVERT:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_RELIGION, 1);
+			GET_PLAYER(ePlayer).convert(getStateReligion());
+			break;
+		}
+		case DIPLOEVENT_NO_CONVERT:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_DENIED_RELIGION, 1);
+			break;
+		}
+		case DIPLOEVENT_REVOLUTION:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_CIVIC, 1);
+
+			CivicTypes* paeNewCivics = new CivicTypes[GC.getNumCivicOptionInfos()];
+
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+			{
+				paeNewCivics[iI] = GET_PLAYER(ePlayer).getCivics((CivicOptionTypes)iI);
+			}
+
+			FAssertMsg(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic() != NO_CIVIC, "getFavoriteCivic() must be valid");
+
+			paeNewCivics[GC.getCivicInfo((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType())).getFavoriteCivic()).getCivicOptionType()] = ((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic()));
+
+			GET_PLAYER(ePlayer).revolution(paeNewCivics, true);
+
+			SAFE_DELETE_ARRAY(paeNewCivics);
+			break;
+		}
+		case DIPLOEVENT_NO_REVOLUTION:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_DENIED_CIVIC, 1);
+			break;
+		}
+		case DIPLOEVENT_JOIN_WAR:
+		{
+			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_JOIN_WAR, 1);
+
+			if (gTeamLogLevel >= 2)
+			{
+				logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
+			}
+			GET_TEAM(GET_PLAYER(ePlayer).getTeam()).declareWar((TeamTypes)iData1, false, WARPLAN_DOGPILE);
+
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			{
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == (TeamTypes)iData1)
 				{
 					GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(getID(), MEMORY_HIRED_WAR_ALLY, 1);
 				}
 			}
+			break;
 		}
-		break;
-
-	case DIPLOEVENT_NO_JOIN_WAR:
-		AI_changeMemoryCount(ePlayer, MEMORY_DENIED_JOIN_WAR, 1);
-
-		if (m_eDemandWarAgainstTeam != NO_TEAM)
+		case DIPLOEVENT_NO_JOIN_WAR:
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			AI_changeMemoryCount(ePlayer, MEMORY_DENIED_JOIN_WAR, 1);
+
+			if (m_eDemandWarAgainstTeam != NO_TEAM)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_eDemandWarAgainstTeam)
+					CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iI);
+
+					if (playerX.isAlive() && playerX.getTeam() == m_eDemandWarAgainstTeam
+
+					&& playerX.AI_getMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US) < 3)
 					{
-						if (GET_PLAYER((PlayerTypes)iI).AI_getMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US) < 3)
-						{
-							GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US, 1);
-						}
+						playerX.AI_changeMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US, 1);
 					}
 				}
+				m_eDemandWarAgainstTeam = NO_TEAM;
 			}
-			m_eDemandWarAgainstTeam = NO_TEAM;
+			break;
 		}
-		break;
-
-	case DIPLOEVENT_STOP_TRADING:
-		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_STOP_TRADING, 1);
-		GET_PLAYER(ePlayer).stopTradingWithTeam((TeamTypes)iData1);
-
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
+		case DIPLOEVENT_STOP_TRADING:
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_STOP_TRADING, 1);
+			GET_PLAYER(ePlayer).stopTradingWithTeam((TeamTypes)iData1);
+
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == ((TeamTypes)iData1))
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == (TeamTypes)iData1)
 				{
 					GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(getID(), MEMORY_HIRED_TRADE_EMBARGO, 1);
 				}
 			}
+			break;
 		}
-		break;
-
-	case DIPLOEVENT_NO_STOP_TRADING:
-		AI_changeMemoryCount(ePlayer, MEMORY_DENIED_STOP_TRADING, 1);
-		break;
-
-	case DIPLOEVENT_ASK_HELP:
-		AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT, 1);
-		break;
-
-	case DIPLOEVENT_MADE_DEMAND:
-		if (AI_getMemoryCount(ePlayer, MEMORY_MADE_DEMAND) < 10)
+		case DIPLOEVENT_NO_STOP_TRADING:
 		{
-			AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND, 1);
+			AI_changeMemoryCount(ePlayer, MEMORY_DENIED_STOP_TRADING, 1);
+			break;
 		}
-		AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT, 1);
-		break;
-
-	case DIPLOEVENT_MADE_DEMAND_VASSAL:
-		break;
-
-	case DIPLOEVENT_RESEARCH_TECH:
-		pushResearch(((TechTypes)iData1), true);
-		break;
-
-	case DIPLOEVENT_TARGET_CITY:
-		pCity = GET_PLAYER((PlayerTypes)iData1).getCity(iData2);
-		if (pCity != NULL)
+		case DIPLOEVENT_ASK_HELP:
 		{
-			pCity->area()->setTargetCity(getID(), pCity);
+			AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT, 1);
+			break;
 		}
-		break;
-
-   case DIPLOEVENT_MAKE_PEACE_WITH:
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar((TeamTypes)iData1))
+		case DIPLOEVENT_MADE_DEMAND:
 		{
-			if (AI_getMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US) < 3)
+			if (AI_getMemoryCount(ePlayer, MEMORY_MADE_DEMAND) < 10)
 			{
-				AI_changeMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US, 1);
+				AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND, 1);
 			}
-			GET_TEAM(GET_PLAYER(ePlayer).getTeam()).makePeace((TeamTypes)iData1);
+			AI_changeMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT, 1);
+			break;
 		}
-		break;
-	case DIPLOEVENT_NO_MAKE_PEACE_WITH:
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar((TeamTypes)iData1))
+		case DIPLOEVENT_MADE_DEMAND_VASSAL:
 		{
-			if (AI_getMemoryCount(ePlayer, MEMORY_REFUSED_HELP) < 3)
+			break;
+		}
+		case DIPLOEVENT_RESEARCH_TECH:
+		{
+			pushResearch(((TechTypes)iData1), true);
+			break;
+		}
+		case DIPLOEVENT_TARGET_CITY:
+		{
+			const CvCity* pCity = GET_PLAYER((PlayerTypes)iData1).getCity(iData2);
+			if (pCity != NULL)
+			{
+				pCity->area()->setTargetCity(getID(), pCity);
+			}
+			break;
+		}
+		case DIPLOEVENT_MAKE_PEACE_WITH:
+		{
+			if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar((TeamTypes)iData1))
+			{
+				if (AI_getMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US) < 3)
+				{
+					AI_changeMemoryCount(ePlayer, MEMORY_EVENT_GOOD_TO_US, 1);
+				}
+				GET_TEAM(GET_PLAYER(ePlayer).getTeam()).makePeace((TeamTypes)iData1);
+			}
+			break;
+		}
+		case DIPLOEVENT_NO_MAKE_PEACE_WITH:
+		{
+			if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAtWar((TeamTypes)iData1)
+
+			&& AI_getMemoryCount(ePlayer, MEMORY_REFUSED_HELP) < 3)
 			{
 				AI_changeMemoryCount(ePlayer, MEMORY_REFUSED_HELP, 1);
 			}
+			break;
 		}
-		break;
-
-	case DIPLOEVENT_DO_NOT_BOTHER:
-		if (!isHuman())	setDoNotBotherStatus((PlayerTypes)iData1);
-		break;
-
-	case DIPLOEVENT_RESUME_BOTHER:
-		setDoNotBotherStatus(NO_PLAYER);
-		break;
-
-	default:
-		FAssert(false);
-		break;
+		case DIPLOEVENT_DO_NOT_BOTHER:
+		{
+			if (!isHuman())	setDoNotBotherStatus((PlayerTypes)iData1);
+			break;
+		}
+		case DIPLOEVENT_RESUME_BOTHER:
+		{
+			setDoNotBotherStatus(NO_PLAYER);
+			break;
+		}
+		default:
+		{
+			FAssert(false);
+			break;
+		}
 	}
 }
 
@@ -31476,7 +31490,7 @@ void CvPlayer::doPromoteLeader()
 	if (!GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
 	{
 		int iLL = getLeaderHeadLevel();
-		if (iLL == 2 || iLL == 4 || iLL == 6 || iLL == 8 || iLL == 10 || iLL == 12 || iLL == 14 || iLL == 16 || iLL == 18 || iLL == 20 || iLL == 22 || iLL == 24 || iLL == 26 || iLL == 28 || iLL == 30)
+		if (iLL > 1 && iLL%2 == 0)
 		{
 			if (isHuman())
 			{
