@@ -65509,7 +65509,7 @@ Base XP gained when defending
 			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iBaseFoodChange>33</iBaseFoodChange>
+			<iBaseFoodChange>30</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65595,7 +65595,7 @@ Base XP gained when defending
 			<iCost>90</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>69</iBaseFoodChange>
+			<iBaseFoodChange>72</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65676,7 +65676,7 @@ Base XP gained when defending
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>144</iBaseFoodChange>
+			<iBaseFoodChange>204</iBaseFoodChange>
 			<iCombat>3</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65756,7 +65756,7 @@ Base XP gained when defending
 			<iCost>660</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>396</iBaseFoodChange>
+			<iBaseFoodChange>594</iBaseFoodChange>
 			<iCombat>5</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
