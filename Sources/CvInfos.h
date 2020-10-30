@@ -451,14 +451,6 @@ public:
 
 	bool readPass3();
 
-	void setPrereqOrTech(int i, int iTech);
-	void setPrereqAndTech(int i, int iTech);
-	void setGridX(int i);
-
-	void setOriginalPrereqOrTech(int i, int iTech);
-	void setOriginalPrereqAndTech(int i, int iTech);
-	int getOriginalPrereqOrTechs(int i) const;
-	int getOriginalPrereqAndTechs(int i) const;
 	int getUnitStrengthChange(int iUnit, bool bForLoad = false) const;
 	//TB Tech Tags
 	bool isGlobal() const;
@@ -589,9 +581,6 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iPrereqGameOption;
 	int* m_piFreeSpecialistCount;
-
-	int* m_piOriginalPrereqOrTechs;
-	int* m_piOriginalPrereqAndTechs;
 
 	int* m_piUnitStrengthChange;
 
