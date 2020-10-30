@@ -8619,109 +8619,87 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 		return iModifier;
 	}
 
-	int iKnownCount = 0;
-	int iPossibleKnownCount = 0;
-
-	double knownExp = 0.0;
-	double knownExpSmall = 0.5;
-	double knownExpLarge = 1.5;
+	// Defined here for easier value adjustment
+	int iKnownExpSmall = 5;
+	int iKnownExpLarge = 15;
 
 	int iTeams = 0;
-	int iMetTeams = 0;
-	int iTeamsHaveTech = 0;
+	int iTeamExp = 0;
+	int iTotalExp = 0;
+
+	int iOurTechScore = getTechScore();
+	// int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
+	int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			iTeams++;
-			if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
+			if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isHasTech(eTech))
 			{
-				iMetTeams++;
-				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+				iTeamExp = iKnownExpSmall;
+
+				if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
 				{
-					iTeamsHaveTech++;
-
-					knownExp += knownExpSmall;
-
-					if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
-					{
-						knownExp += knownExpLarge;
-					}
-					else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
-					{
-						knownExp += knownExpSmall;
-					}
-
-					// Many new weights can get added here! If trade routes, if have printingpress tech, espionage ratio, etc etc
-
+					iTeamExp += iKnownExpLarge;
 				}
+				else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
+				{
+					iTeamExp += iKnownExpSmall;
+				}
+
+				// TODO: Many new weights can get added here! If trade routes, if have printingpress tech, espionage ratio, etc etc.
+				// Be sure to update iMaxPossibleXP to account for new expected/guesstimated value.
+				
+				// Psuedocode examples:
+
+				// iTeamExp += ExpLarge if friendly, +small if positive, -small if angry, -large if furious (tho be careful with negatives, ensure is >0)
+				// iTeamExp *= espionage ratio bound in range [0.75, 2] // Is anti-sandball; leader gains less benefit than player behind loses?
+				// iTeamExp *= percent of owned trade routes going to that civ bound in range [0.5, 2.0] // Maybe?
+
+
+				// Reworked Tech Welfare: Modify EXP based on relative tech score of that team to us.
+				// If they're above us, increase weight of exp from them by how far they are.
+				// This may allow total XP > expected max XP, but function still allows that and follows curve of diminishing return.
+				// If they're below us, (/TODO strongly) reduce exp gained from them; penalizes tech leader gaining benefits from hard work of lower tech civs!
+				
+				// One of the two following syntax is right
+				// int iTheirTechScore = GET_TEAM(getTeam()).getBestTechScore();
+				int iTheirTechScore = GET_TEAM((TeamTypes)iI).getBestTechScore();
+
+				int iTechScorePercent = (100 * iTheirTechScore) / std::max(1, iOurTechScore);
+				GC.getGame().logMsg("iTechScorePercent for %S is %d", getCivilizationDescription(), iTechScorePercent);
+
+				int iWelfareExpModifier = std::min(0, 100 + iWelfareMod * (iTechScorePercent - 100));
+				GC.getGame().logMsg("Corresponding iWelfareExpModifier is %d", iWelfareExpModifier);
+
+				iTotalExp += iTeamExp * iWelfareExpModifier;
+				GC.getGame().logMsg("Corresponding final iTeamExp is %d", iTeamExp*iWelfareExpModifier);
 			}
 		}
-	}
-
-	// Maximum percent exp multiplier given for meeting all civs that also have all tech; 200=doubling, 300=tripling, etc.
-	int iGeneralSharing = 200;
-
-	if (knownExp > 0.0)
-	{
-		// Scale UP exp by percentage of civs met that owns tech of civs in entire world
-		// Sharing is [doubled] if all players in world have tech, linearly increasing from zero as f(met players w/tech)
-		knownExp *= (1 + (iGeneralSharing-100)/100.0 * (iTeamsHaveTech / iTeams));
 	}
 
 	int techDiffMod = GC.getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
-	if (knownExp > 0.0)
+	// For boundedPowerRate, 1 is linear, with smaller values (but > 0) having increased weight toward first few EXP sources.
+	// Really just look up Y = X ^ (boundedPowerRate) to get a sense of how TD behaves as a function of boundedPowerRate
+	double boundedPowerRate = 0.5;
+
+	if (iTotalExp > 0)
 	{
-		// Max possible knownExp is having open borders with every civ in game who all have the tech.
+		// Max possible iTotalExp is having open borders with every civ in game who all have the tech, ignoring Welfare effects.
 		// Bonus normalized to this, to account for num players. Smaller worlds therefore have higher bonuses faster.
-		// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape bound set in GlobalDefines
-		int iMaxPossibleXP = (int)(iTeams * iGeneralSharing/100.0 * (knownExpSmall + knownExpLarge));
+		// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape desired bound set in GlobalDefines.
+		int iMaxPossibleXP = iTeams * (iKnownExpSmall + iKnownExpLarge);
+		int iExpPercent = 100 * iTotalExp / iMaxPossibleXP;
+		GC.getGame().logMsg("For %S: iTotalExp %d and iExpPercent %d", getCivilizationDescription(), iTotalExp, iExpPercent);
 
-		//ensure tech diffusion can not hurt research, only help. Old max value was in [0,5]. Compare vs WFL!
-		// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. pow 1 is linear
-		int iTechDiffusion = std::max(0, (int)(techDiffMod * pow(knownExp/iMaxPossibleXP, 0.5)));
+		// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. Will possibly be a global func at some point?
+		int iTechDiffusion = std::max(0, (int)(techDiffMod * pow((iExpPercent / 100.0), boundedPowerRate) + 0.5));
 		iModifier += iTechDiffusion;
-		GC.getGame().logMsg("Tech ONLY diffusion percentage bonus for %S: %d", getCivilizationDescription(), iTechDiffusion);
+		GC.getGame().logMsg("Tech diffusion percentage bonus for %S: %d", getCivilizationDescription(), iTechDiffusion);
 	}
 
-	// Tech flows downhill to those who are far behind
-	// iTechScorePercent -> of era; prehistoric vs ancient (if met) is 50! Later eras, less impact; Atomic/Information -> 87.
-	int iTechScorePercent = GET_TEAM(getTeam()).getBestKnownTechScorePercent();
-	int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
-	if( iTechScorePercent < iWelfareThreshold )
-	{
-		// Shortcut for 'met civs with tech you don't have'
-		if( knownExp > 0.0 )
-		{
-			int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
-			//ensure tech diffusion can not hurt research, only help
-			// iWelfareTechDiffusion returns 27 (with default threshold 90, mod 50) if prehistoric/ancient diff, returns 2 if atomic/information.
-			int iWelfareTechDiffusion = std::max(0, (iWelfareMod - (int)(iWelfareMod * pow(0.98, iWelfareThreshold - iTechScorePercent) + 0.5)));
-			int iBestScore = 0;
-			int iOurScore = calculateScore(false);
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
-			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID())
-				{
-					int iScore = GET_PLAYER((PlayerTypes)iI).calculateScore(false);
-					if (iScore > iBestScore)
-					{
-						iBestScore = iScore;
-					}
-				}
-			}
-			//If iOurScore > iBestScore we are the best team in the game
-			if (iOurScore < iBestScore)
-			{
-				float fRatio = iBestScore / ((float)iOurScore);
-				// Multiply the welfare value [0, 27] by score ratio; potentially massive impacts exiting prehistoric, but far less later.
-				GC.getGame().logMsg("Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
-				iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fRatio);
-				iModifier += iWelfareTechDiffusion;
-			}
-		}
-	}
 	return std::max(100, iModifier);
 }
 

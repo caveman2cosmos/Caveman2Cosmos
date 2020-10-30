@@ -11,20 +11,21 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Power of research rate increase based on number of teams you know who already know the tech you're researching. -->
-		<!-- This is a additive percent value; 100 means doubling tech at maximum magnitude, 25 means adding 25%, etc. -->
-		<!-- "Maximum magnitude" means you've met every single civ, have open borders with all, and they all have the tech. -->
+		<!-- Tech Diffusion: Power of research rate increase based on number of teams you know who already know the tech you're researching.
+			 This is a additive percent value; 100 means doubling tech at maximum magnitude, 25 means adding 25%, etc.
+			 Maximum magnitude" means you've met every single civ, have open borders with all, and they all have the tech. -->
 		<DefineName>TECH_DIFFUSION_KNOWN_TEAM_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Threshold percentage of top known tech score at which extra tech welfare help begins. -->
+		<!-- Tech Diffusion: Currently unused, wondering how it could be applied. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_THRESHOLD</DefineName>
 		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Power of tech welfare assitance.  BBAI default: 30, for plain BTS: 0 -->
+		<!-- Tech Diffusion: Multiplier of tech welfare assitance applying onto tech diffusion, ideally >= 1 (if =1, no impact from excess advances).
+			 Larger values may more easily allow escaping bounds set in TD Known Team Modifier, particularly when a player/team is very far behind. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 </Civ4Defines>
