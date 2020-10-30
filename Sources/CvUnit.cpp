@@ -41,31 +41,24 @@ int*	CvUnit::g_paiTempAfflictOnAttackTypeMeleeCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeDistanceCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeAttemptedCount = NULL;
 int*	CvUnit::g_paiTempDistanceAttackCommunicability = NULL;
-int*	CvUnit::g_paiTempTerrainDoubleMoveCount = NULL;
 int*	CvUnit::g_paiTempFeatureDoubleMoveCount = NULL;
-int*	CvUnit::g_paiTempExtraTerrainAttackPercent = NULL;
-int*	CvUnit::g_paiTempExtraTerrainDefensePercent = NULL;
 bool*	CvUnit::g_pabTempValidBuildUp = NULL;
 //Team Project (4)
 //WorkRateMod
 //ls612: Terrain Work Modifiers
 int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
-int*	CvUnit::g_paiTempTerrainWorkPercent = NULL;
 int*	CvUnit::g_paiTempFeatureWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraTerrainWorkPercent = NULL;
 int*	CvUnit::g_paiTempExtraFeatureWorkPercent = NULL;
 int*	CvUnit::g_paiTempExtraFeatureAttackPercent = NULL;
 int*	CvUnit::g_paiTempExtraFeatureDefensePercent = NULL;
 int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
 bool*	CvUnit::g_pabTempHasPromotion = NULL;
 bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
-int*	CvUnit::g_paiTempTerrainProtected = NULL;
 int*	CvUnit::g_paiTempSubCombatTypeCount = NULL;
 int*	CvUnit::g_paiTempOngoingTrainingCount = NULL;
 int*	CvUnit::g_paiTempRemovesUnitCombatTypeCount = NULL;
 int*	CvUnit::g_paiTempExtraFlankingStrengthbyUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraWithdrawVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawOnTerrainType = NULL;
 int*	CvUnit::g_paiTempExtraWithdrawOnFeatureType = NULL;
 int*	CvUnit::g_paiTempExtraPursuitVSUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraRepelVSUnitCombatType = NULL;
@@ -177,30 +170,23 @@ m_Properties(this)
 		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
 		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempTerrainDoubleMoveCount = new int[GC.getNumTerrainInfos()];
 		g_paiTempFeatureDoubleMoveCount = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainAttackPercent = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraTerrainDefensePercent = new int[GC.getNumTerrainInfos()];
 		g_paiTempExtraFeatureAttackPercent = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraFeatureDefensePercent = new int[GC.getNumFeatureInfos()];
 	//Team Project (4)
 	//WorkRateMod
 		//ls612: Terrain Work Modifiers
 		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempTerrainWorkPercent = new int [GC.getNumTerrainInfos()];
 		g_paiTempFeatureWorkPercent = new int [GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainWorkPercent = new int[GC.getNumTerrainInfos()];
 		g_paiTempExtraFeatureWorkPercent = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempTerrainProtected = new int[GC.getNumTerrainInfos()];
 		g_paiTempSubCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawOnTerrainType = new int[GC.getNumTerrainInfos()];
 		g_paiTempExtraWithdrawOnFeatureType = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
@@ -24058,37 +24044,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempTerrainProtected[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainProtection");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
-
-			if ( iNewIndex != NO_TERRAIN )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainProtected[iNewIndex], "value");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if (g_paiTempTerrainProtected[iI] != 0)
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			info->m_iTerrainProtected = g_paiTempTerrainProtected[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_shadowUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_shadowUnit.iID);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eDesiredDiscoveryTech);
@@ -24199,70 +24154,28 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempTerrainDoubleMoveCount[iI] = 0;
-		g_paiTempExtraTerrainAttackPercent[iI] = 0;
-		g_paiTempExtraTerrainDefensePercent[iI] = 0;
-		g_paiTempTerrainWorkPercent[iI] = 0;
-		g_paiTempExtraTerrainWorkPercent[iI] = 0;
-	}
 	do
 	{
-		iI= -1;
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
 
-			if ( iNewIndex != NO_TERRAIN )
+			if (iNewIndex != NO_TERRAIN)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainDoubleMoveCount[iNewIndex], "doubleMove");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainAttackPercent[iNewIndex], "extraAttackPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainDefensePercent[iNewIndex], "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainWorkPercent[iNewIndex], "terrainWorkPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainWorkPercent[iNewIndex], "terrainExtraWorkPercent");
+				TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainProtected, "value");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainWorkPercent, "terrainWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 			}
 		}
 	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if (
-		   0 != g_paiTempTerrainDoubleMoveCount[iI]
-		|| 0 != g_paiTempExtraTerrainAttackPercent[iI]
-		|| 0 != g_paiTempExtraTerrainDefensePercent[iI]
-		|| 0 != g_paiTempTerrainWorkPercent[iI]
-		|| 0 != g_paiTempExtraTerrainWorkPercent[iI])
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			if ( g_paiTempTerrainDoubleMoveCount[iI] != 0 )
-			{
-				info->m_iTerrainDoubleMoveCount = g_paiTempTerrainDoubleMoveCount[iI];
-			}
-
-			if ( g_paiTempExtraTerrainAttackPercent[iI] != 0 )
-			{
-				info->m_iExtraTerrainAttackPercent = g_paiTempExtraTerrainAttackPercent[iI];
-			}
-
-			if ( g_paiTempExtraTerrainDefensePercent[iI] != 0 )
-			{
-				info->m_iExtraTerrainDefensePercent = g_paiTempExtraTerrainDefensePercent[iI];
-			}
-
-			if ( g_paiTempTerrainWorkPercent[iI] != 0)
-			{
-				info->m_iTerrainWorkPercent = g_paiTempTerrainWorkPercent[iI];
-			}
-
-			if ( g_paiTempExtraTerrainWorkPercent[iI] != 0)
-			{
-				info->m_iExtraTerrainWorkPercent = g_paiTempExtraTerrainWorkPercent[iI];
-			}
-		}
-	}
 
 	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
@@ -25236,36 +25149,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawOnTerrainType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
-
-			if ( iNewIndex != NO_TERRAIN )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawOnTerrainType[iNewIndex], "extraWithdrawOnTerrainType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawOnTerrainType[iI] != 0 )
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			info->m_iExtraWithdrawOnTerrainType = g_paiTempExtraWithdrawOnTerrainType[iI];
-		}
-	}
-
-	// Read compressed data format
 	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
 		g_paiTempExtraWithdrawOnFeatureType[iI] = 0;
@@ -25774,16 +25657,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
 
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( getTerrainProtectedCount((TerrainTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainProtection");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainProtectedCount((TerrainTypes)iI), "value");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.iID);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, m_eDesiredDiscoveryTech);
@@ -25859,25 +25732,19 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (std::map<TerrainTypes, TerrainKeyedInfo>::iterator it = m_terrainKeyedInfo.begin(), itEnd = m_terrainKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getTerrainDoubleMoveCount((TerrainTypes)iI) != 0 ||
-			 getExtraTerrainAttackPercent((TerrainTypes)iI) != 0 ||
-			 getExtraTerrainDefensePercent((TerrainTypes)iI) != 0 ||
-			 getTerrainWorkPercent((TerrainTypes)iI) != 0 ||
-//Team Project (4)
-	//WorkRateMod
-			 getExtraTerrainWorkPercent((TerrainTypes)iI) != 0)
+		const TerrainKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainDoubleMoveCount((TerrainTypes)iI), "doubleMove");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainAttackPercent((TerrainTypes)iI), "extraAttackPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainDefensePercent((TerrainTypes)iI), "extraDefensePercent");
-//Team Project (4)
-	//WorkRateMod
-			//ls612: Terrain Work Modifiers
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainWorkPercent((TerrainTypes)iI), "terrainWorkPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainWorkPercent((TerrainTypes)iI), "terrainExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasTerrainInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainProtected, "value");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainAttackPercent, "extraAttackPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainDefensePercent, "extraDefensePercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainWorkPercent, "terrainWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 		}
 	}
 	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -26276,14 +26143,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo15");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI), "extraPursuitVSUnitCombatType");
-		}
-	}
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( getExtraWithdrawOnTerrainType((TerrainTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnTerrainType((TerrainTypes)iI), "extraWithdrawOnTerrainType");
 		}
 	}
 	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
