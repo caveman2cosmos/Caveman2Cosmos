@@ -26,6 +26,6 @@
 		<!-- Tech Diffusion: Multiplier of tech welfare assitance applying onto tech diffusion, ideally >= 1 (if =1, no impact from excess advances).
 			 Larger values may more easily allow escaping bounds set in TD Known Team Modifier, particularly when a player/team is very far behind. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 </Civ4Defines>

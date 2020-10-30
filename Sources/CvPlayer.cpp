@@ -8612,6 +8612,7 @@ int CvPlayer::calculateWFLResearchModifier(TechTypes eTech) const
 
 int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 {
+	// WIP: TODO: Int overflow protection
 	int iModifier = 100;
 
 	if (NO_TECH == eTech)
@@ -8649,6 +8650,8 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 					iTeamExp += iKnownExpSmall;
 				}
 
+				GC.getGame().logMsg("For %S, iTeamExp is %d", getCivilizationDescription(), iTeamExp);
+
 				// TODO: Many new weights can get added here! If trade routes, if have printingpress tech, espionage ratio, etc etc.
 				// Be sure to update iMaxPossibleXP to account for new expected/guesstimated value.
 				
@@ -8669,13 +8672,13 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 				int iTheirTechScore = GET_TEAM((TeamTypes)iI).getBestTechScore();
 
 				int iTechScorePercent = (100 * iTheirTechScore) / std::max(1, iOurTechScore);
-				GC.getGame().logMsg("iTechScorePercent for %S is %d", getCivilizationDescription(), iTechScorePercent);
+				GC.getGame().logMsg("Corresponding iTheirTechScore is %d, iOurTechScore is %d, and iTechScorePercent is %d", iTheirTechScore, iOurTechScore, iTechScorePercent);
 
-				int iWelfareExpModifier = std::min(0, 100 + iWelfareMod * (iTechScorePercent - 100));
-				GC.getGame().logMsg("Corresponding iWelfareExpModifier is %d", iWelfareExpModifier);
+				int iWelfareExpPercentModifier = std::max(0, 100 + iWelfareMod * (iTechScorePercent - 100));
+				GC.getGame().logMsg("Corresponding iWelfareExpModifier is %d", iWelfareExpPercentModifier);
 
-				iTotalExp += iTeamExp * iWelfareExpModifier;
-				GC.getGame().logMsg("Corresponding final iTeamExp is %d", iTeamExp*iWelfareExpModifier);
+				iTotalExp += iTeamExp * iWelfareExpPercentModifier / 100;
+				GC.getGame().logMsg("Corresponding iTeamExp is %d", iTeamExp * iWelfareExpPercentModifier);
 			}
 		}
 	}
@@ -8692,12 +8695,12 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 		// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape desired bound set in GlobalDefines.
 		int iMaxPossibleXP = iTeams * (iKnownExpSmall + iKnownExpLarge);
 		int iExpPercent = 100 * iTotalExp / iMaxPossibleXP;
-		GC.getGame().logMsg("For %S: iTotalExp %d and iExpPercent %d", getCivilizationDescription(), iTotalExp, iExpPercent);
+		GC.getGame().logMsg("For %S, iTotalExp is %d and iExpPercent is %d", getCivilizationDescription(), iTotalExp, iExpPercent);
 
 		// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. Will possibly be a global func at some point?
 		int iTechDiffusion = std::max(0, (int)(techDiffMod * pow((iExpPercent / 100.0), boundedPowerRate) + 0.5));
 		iModifier += iTechDiffusion;
-		GC.getGame().logMsg("Tech diffusion percentage bonus for %S: %d", getCivilizationDescription(), iTechDiffusion);
+		GC.getGame().logMsg("Corresponding TD percentage bonus is %d", iTechDiffusion);
 	}
 
 	return std::max(100, iModifier);
