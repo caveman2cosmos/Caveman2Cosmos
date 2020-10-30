@@ -2357,8 +2357,8 @@ class CvEventManager:
 		if iTech == self.TECH_GATHERING:
 			X = -1
 			Y = -1
-			CyCity = CyPlayer.getCapitalCity() # This returns a city object even if the capital does not exist.
-			# if CyPlayer.getCapitalCity(): # Always True
+			CyCity = CyPlayer.getCapitalCity()
+
 			if CyCity:
 				X = CyCity.getX(); Y = CyCity.getY()
 			else:
@@ -2465,8 +2465,11 @@ class CvEventManager:
 			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 				if iPlayerX == iPlayer: continue
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
-					CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
+				if not CyPlayerX.isAlive() or iReligion != GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
+					continue
+				capital = CyPlayerX.getCapitalCity()
+				if capital:
+					capital.setHasReligion(iReligion, True, True, True)
 					if CyPlayerX.isHuman():
 						strReligionName = GC.getReligionInfo(iReligion).getText()
 						popup = PyPopup.PyPopup(-1)

@@ -15505,7 +15505,8 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 	// If building is not of a religious nature
 	if (eReligion == NO_RELIGION && eReligionReq == NO_RELIGION
 	// or if city doesn't have the building's religion(s)
-	|| !isHasReligion(eReligion) && !isHasReligion(eReligionReq)
+	|| (eReligion == NO_RELIGION || !isHasReligion(eReligion))
+	&& (eReligionReq == NO_RELIGION || !isHasReligion(eReligionReq))
 	// or the city doesn't have the building
 	|| getNumBuilding(eBuilding) < 1)
 	{
