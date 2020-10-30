@@ -41,16 +41,11 @@ int*	CvUnit::g_paiTempAfflictOnAttackTypeMeleeCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeDistanceCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeAttemptedCount = NULL;
 int*	CvUnit::g_paiTempDistanceAttackCommunicability = NULL;
-int*	CvUnit::g_paiTempFeatureDoubleMoveCount = NULL;
 bool*	CvUnit::g_pabTempValidBuildUp = NULL;
 //Team Project (4)
 //WorkRateMod
 //ls612: Terrain Work Modifiers
 int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
-int*	CvUnit::g_paiTempFeatureWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureAttackPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureDefensePercent = NULL;
 int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
 bool*	CvUnit::g_pabTempHasPromotion = NULL;
 bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
@@ -59,7 +54,6 @@ int*	CvUnit::g_paiTempOngoingTrainingCount = NULL;
 int*	CvUnit::g_paiTempRemovesUnitCombatTypeCount = NULL;
 int*	CvUnit::g_paiTempExtraFlankingStrengthbyUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraWithdrawVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawOnFeatureType = NULL;
 int*	CvUnit::g_paiTempExtraPursuitVSUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraRepelVSUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraKnockbackVSUnitCombatType = NULL;
@@ -170,15 +164,10 @@ m_Properties(this)
 		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
 		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempFeatureDoubleMoveCount = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraFeatureAttackPercent = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraFeatureDefensePercent = new int[GC.getNumFeatureInfos()];
 	//Team Project (4)
 	//WorkRateMod
 		//ls612: Terrain Work Modifiers
 		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempFeatureWorkPercent = new int [GC.getNumFeatureInfos()];
-		g_paiTempExtraFeatureWorkPercent = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
@@ -187,7 +176,6 @@ m_Properties(this)
 		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawOnFeatureType = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraKnockbackVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
@@ -24177,70 +24165,27 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		g_paiTempFeatureDoubleMoveCount[iI] = 0;
-		g_paiTempExtraFeatureAttackPercent[iI] = 0;
-		g_paiTempExtraFeatureDefensePercent[iI] = 0;
-		g_paiTempFeatureWorkPercent[iI] = 0;
-		g_paiTempExtraFeatureWorkPercent[iI] = 0;
-	}
 	do
 	{
-		iI= -1;
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFeatureInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
 
-			if ( iNewIndex != NO_TERRAIN )
+			if (iNewIndex != NO_FEATURE)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFeatureDoubleMoveCount[iNewIndex], "doubleMove");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureAttackPercent[iNewIndex], "extraAttackPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureDefensePercent[iNewIndex], "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFeatureWorkPercent[iNewIndex], "featureWorkPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureWorkPercent[iNewIndex], "featureExtraWorkPercent");
+				FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 			}
 		}
 	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if (
-		   0 != g_paiTempFeatureDoubleMoveCount[iI]
-		|| 0 != g_paiTempExtraFeatureAttackPercent[iI]
-		|| 0 != g_paiTempExtraFeatureDefensePercent[iI]
-		|| 0 != g_paiTempFeatureWorkPercent[iI]
-		|| 0 != g_paiTempExtraFeatureWorkPercent[iI])
-		{
-			FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iI);
-
-			if ( g_paiTempFeatureDoubleMoveCount[iI] != 0 )
-			{
-				info->m_iFeatureDoubleMoveCount = g_paiTempFeatureDoubleMoveCount[iI];
-			}
-
-			if ( g_paiTempExtraFeatureAttackPercent[iI] != 0 )
-			{
-				info->m_iExtraFeatureAttackPercent = g_paiTempExtraFeatureAttackPercent[iI];
-			}
-
-			if ( g_paiTempExtraFeatureDefensePercent[iI] != 0 )
-			{
-				info->m_iExtraFeatureDefensePercent = g_paiTempExtraFeatureDefensePercent[iI];
-			}
-
-			if ( g_paiTempFeatureWorkPercent[iI] != 0)
-			{
-				info->m_iFeatureWorkPercent = g_paiTempFeatureWorkPercent[iI];
-			}
-
-			if ( g_paiTempExtraFeatureWorkPercent[iI] != 0)
-			{
-				info->m_iExtraFeatureWorkPercent = g_paiTempExtraFeatureWorkPercent[iI];
-			}
-		}
-	}
 
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
@@ -25148,35 +25093,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawOnFeatureType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFeatureInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
-
-			if ( iNewIndex != NO_FEATURE )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawOnFeatureType[iNewIndex], "extraWithdrawOnFeatureType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawOnFeatureType[iI] != 0 )
-		{
-			FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iI);
-
-			info->m_iExtraWithdrawOnFeatureType = g_paiTempExtraWithdrawOnFeatureType[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFliesToMoveCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iQualityBaseTotal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupBaseTotal);
@@ -25731,7 +25647,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 		}
 	}
 
-	//	Use condensed format now - only save non-default array elements
 	for (std::map<TerrainTypes, TerrainKeyedInfo>::iterator it = m_terrainKeyedInfo.begin(), itEnd = m_terrainKeyedInfo.end(); it != itEnd; ++it)
 	{
 		const TerrainKeyedInfo& info = it->second;
@@ -25747,26 +25662,18 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 		}
 	}
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+	for (std::map<FeatureTypes, FeatureKeyedInfo>::iterator it = m_featureKeyedInfo.begin(), itEnd = m_featureKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getFeatureDoubleMoveCount((FeatureTypes)iI) != 0 ||
-			 getExtraFeatureAttackPercent((FeatureTypes)iI) != 0 ||
-			 getExtraFeatureDefensePercent((FeatureTypes)iI) != 0 ||
-			 getFeatureWorkPercent((FeatureTypes)iI) != 0 ||
-//Team Project (4)
-	//WorkRateMod
-			 getExtraFeatureWorkPercent((FeatureTypes)iI) != 0)
+		const FeatureKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFeatureInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getFeatureDoubleMoveCount((FeatureTypes)iI), "doubleMove");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureAttackPercent((FeatureTypes)iI), "extraAttackPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureDefensePercent((FeatureTypes)iI), "extraDefensePercent");
-			//ls612: Terrain Work Modifiers
-
-//Team Project (4)
-	//WorkRateMod
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getFeatureWorkPercent((FeatureTypes)iI), "featureWorkPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureWorkPercent((FeatureTypes)iI), "featureExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasFeatureInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureAttackPercent, "extraAttackPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureDefensePercent, "extraDefensePercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureWorkPercent, "featureWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 		}
 	}
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -26143,14 +26050,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo15");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI), "extraPursuitVSUnitCombatType");
-		}
-	}
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if ( getExtraWithdrawOnFeatureType((FeatureTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFeatureInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnFeatureType((FeatureTypes)iI), "extraWithdrawOnFeatureType");
 		}
 	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iFliesToMoveCount);
