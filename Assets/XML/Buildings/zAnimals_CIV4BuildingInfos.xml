@@ -23753,7 +23753,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_EAGLE_BALD_STORY</Description>
@@ -23764,7 +23765,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -23802,7 +23804,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_EAGLE_BALD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORY</BuildingType>
@@ -23838,7 +23841,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -23865,7 +23869,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CAPUCHIN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -23910,7 +23915,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CAPUCHIN_STORY</Description>
@@ -23921,7 +23927,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -23959,7 +23966,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_CAPUCHIN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORY</BuildingType>
@@ -23995,7 +24003,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24022,7 +24031,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CAPYBARA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -24067,7 +24077,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CAPYBARA_STORY</Description>
@@ -24078,7 +24089,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24116,7 +24128,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_CAPYBARA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORY</BuildingType>
@@ -24152,7 +24165,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24179,7 +24193,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CHEETAH_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -24224,7 +24239,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CHEETAH_STORY</Description>
@@ -24235,7 +24251,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24273,7 +24290,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_CHEETAH_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORY</BuildingType>
@@ -24309,7 +24327,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24336,7 +24355,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CHIMPANZEE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -24381,7 +24401,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CHIMPANZEE_STORY</Description>
@@ -24392,7 +24413,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24430,7 +24452,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_CHIMPANZEE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORY</BuildingType>
@@ -24466,7 +24489,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24493,7 +24517,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_DESERT_TORTOISE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -24538,7 +24563,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_DESERT_TORTOISE_STORY</Description>
@@ -24549,7 +24575,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24587,7 +24614,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORY</BuildingType>
@@ -24623,7 +24651,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24650,7 +24679,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_ZEBRA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -24695,7 +24725,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORY</Type>
 			<Description>TXT_KEY_BUILDING_ZEBRA_STORY</Description>
@@ -24706,7 +24737,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -24744,7 +24776,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_ZEBRA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORY</BuildingType>
@@ -24780,7 +24813,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -25060,6 +25094,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_BELUGA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -25083,6 +25118,22 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_BELUGA_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BELUGA_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_BELUGA_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BELUGA_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<ArtDefineTag>ART_DEF_BUILDING_BELUGA_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEVIATHAN_MYTH</Type>
@@ -31792,7 +31843,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_WALLAROO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -31837,7 +31889,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORY</Type>
 			<Description>TXT_KEY_BUILDING_WALLAROO_STORY</Description>
@@ -31848,7 +31901,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -31886,7 +31940,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_WALLAROO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORY</BuildingType>
@@ -31922,7 +31977,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -31949,7 +32005,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BUFFALO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -31994,7 +32051,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORY</Type>
 			<Description>TXT_KEY_BUILDING_BUFFALO_STORY</Description>
@@ -32005,7 +32063,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -32043,7 +32102,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_BUFFALO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
@@ -32079,7 +32139,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -32106,7 +32167,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_WILDEBEEST_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -32151,7 +32213,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORY</Type>
 			<Description>TXT_KEY_BUILDING_WILDEBEEST_STORY</Description>
@@ -32162,7 +32225,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -32200,7 +32264,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_WILDEBEEST_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
@@ -32236,7 +32301,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -32263,7 +32329,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
@@ -32308,7 +32375,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>		</BuildingInfo>
+			</MapCategoryTypes>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORY</Description>
@@ -32319,7 +32387,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -32357,7 +32426,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>1</iAsset>
+			</MapCategoryTypes>
+			<iAsset>1</iAsset>
 			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORY</BuildingType>
@@ -32393,7 +32463,8 @@
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>			<iAsset>2</iAsset>
+			</MapCategoryTypes>
+			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>

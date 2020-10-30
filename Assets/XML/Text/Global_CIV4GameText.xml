@@ -18779,27 +18779,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Défense furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN</Tag>
-		<English>Supply Train</English>
-		<French>
-			<Text>Convoi d'approvisionnement</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Versorgungszug</German>
-		<Italian>
-			<Text>Carovana di supporto:Carovane di supporto</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Caravana de suministros:Caravanas de suministros</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Wozy Zaopatrzeniowe</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_UPKEEP</Tag>
 		<English>Unit Upkeep</English>
 	</TEXT>

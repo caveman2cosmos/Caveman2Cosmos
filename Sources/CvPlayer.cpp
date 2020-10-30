@@ -7633,7 +7633,8 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	// Trade units aren't impacted by SM production reduction due to ROI oddities. They can't merge anyway, so...
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
 	{
 		iModifier = GC.getUNIT_PRODUCTION_PERCENT_SM();
 		iProductionNeeded *= iModifier;
