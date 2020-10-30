@@ -1339,8 +1339,6 @@ m_piCommerceModifier(NULL)
 ,m_iCorporationMaintenanceModifier(0)
 ,m_iPrereqGameOption(NO_GAMEOPTION)
 ,m_piFreeSpecialistCount(NULL)
-,m_piOriginalPrereqOrTechs(NULL)
-,m_piOriginalPrereqAndTechs(NULL)
 ,m_piUnitStrengthChange(NULL)
 
 //TB Tech Tags
@@ -1365,8 +1363,6 @@ CvTechInfo::~CvTechInfo()
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-	SAFE_DELETE_ARRAY(m_piOriginalPrereqOrTechs);
-	SAFE_DELETE_ARRAY(m_piOriginalPrereqAndTechs);
 	SAFE_DELETE_ARRAY(m_piUnitStrengthChange);
 
 	for (int i=0; i<(int)m_aPrereqBuilding.size(); i++)
@@ -1748,7 +1744,7 @@ int CvTechInfo::getFreeSpecialistCount(int i) const
 
 int CvTechInfo::getNumPrereqBuildings() const
 {
-	return (int)m_aPrereqBuilding.size();
+	return m_aPrereqBuilding.size();
 }
 
 const PrereqBuilding& CvTechInfo::getPrereqBuilding(int iIndex) const
@@ -1763,12 +1759,12 @@ int CvTechInfo::getPrereqBuildingType(int iIndex) const
 
 int CvTechInfo::getPrereqBuildingMinimumRequired(int iIndex) const
 {
-	return (int)m_aPrereqBuilding[iIndex].iMinimumRequired;
+	return m_aPrereqBuilding[iIndex].iMinimumRequired;
 }
 
 int CvTechInfo::getNumPrereqOrBuildings() const
 {
-	return (int)m_aPrereqOrBuilding.size();
+	return m_aPrereqOrBuilding.size();
 }
 
 const PrereqBuilding& CvTechInfo::getPrereqOrBuilding(int iIndex) const
@@ -1783,71 +1779,7 @@ int CvTechInfo::getPrereqOrBuildingType(int iIndex) const
 
 int CvTechInfo::getPrereqOrBuildingMinimumRequired(int iIndex) const
 {
-	return (int)m_aPrereqOrBuilding[iIndex].iMinimumRequired;
-}
-
-void CvTechInfo::setPrereqOrTech(int i, int iTech)
-{
-	if ( getPrereqOrTechs(i) != iTech )
-	{
-		if ( NULL == m_piPrereqOrTechs )
-		{
-			CvXMLLoadUtility::InitList(&m_piPrereqOrTechs,GC.getNUM_OR_TECH_PREREQS(),-1);
-		}
-		m_piPrereqOrTechs[i] = iTech;
-	}
-}
-
-void CvTechInfo::setPrereqAndTech(int i, int iTech)
-{
-	if ( getPrereqAndTechs(i) != iTech )
-	{
-		if ( NULL == m_piPrereqAndTechs )
-		{
-			CvXMLLoadUtility::InitList(&m_piPrereqAndTechs,GC.getNUM_AND_TECH_PREREQS(),-1);
-		}
-		m_piPrereqAndTechs[i] = iTech;
-	}
-}
-
-void CvTechInfo::setGridX(int i)
-{
-	m_iGridX = i;
-}
-
-
-int CvTechInfo::getOriginalPrereqOrTechs(int i) const
-{
-	return m_piOriginalPrereqOrTechs ? m_piOriginalPrereqOrTechs[i] : -1;
-}
-
-void CvTechInfo::setOriginalPrereqOrTech(int i, int iTech)
-{
-	if ( getOriginalPrereqOrTechs(i) != iTech )
-	{
-		if ( NULL == m_piOriginalPrereqOrTechs )
-		{
-			CvXMLLoadUtility::InitList(&m_piOriginalPrereqOrTechs,GC.getNUM_OR_TECH_PREREQS(),-1);
-		}
-		m_piOriginalPrereqOrTechs[i] = iTech;
-	}
-}
-
-void CvTechInfo::setOriginalPrereqAndTech(int i, int iTech)
-{
-	if ( getOriginalPrereqAndTechs(i) != iTech )
-	{
-		if ( NULL == m_piOriginalPrereqAndTechs )
-		{
-			CvXMLLoadUtility::InitList(&m_piOriginalPrereqAndTechs,GC.getNUM_AND_TECH_PREREQS(),-1);
-		}
-		m_piOriginalPrereqAndTechs[i] = iTech;
-	}
-}
-
-int CvTechInfo::getOriginalPrereqAndTechs(int i) const
-{
-	return m_piOriginalPrereqAndTechs ? m_piOriginalPrereqAndTechs[i] : -1;
+	return m_aPrereqOrBuilding[iIndex].iMinimumRequired;
 }
 
 int CvTechInfo::getUnitStrengthChange(int iUnit, bool bForLoad) const
@@ -1956,21 +1888,11 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_piCommerceModifier);
 	}
 
-	OutputDebugString("I'm here #1");
-
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 
 	pXML->GetOptionalChildXmlValByName(m_szQuoteKey, L"Quote");
 	pXML->GetOptionalChildXmlValByName(m_szSound, L"Sound");
 	pXML->GetOptionalChildXmlValByName(m_szSoundMP, L"SoundMP");
-
-/************************************************************************************************/
-/* XMLCOPY								 10/13/07								MRGENIE	  */
-/*																							  */
-/* Need to create these arrays here for the CopyNonDefaults Comparison						  */
-/************************************************************************************************/
-	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
-	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS(), -1);
 
 	pXML->GetOptionalChildXmlValByName(&m_bEmbassyTrading, L"bEmbassyTrading");
 	pXML->GetOptionalChildXmlValByName(&m_bCanPassPeaks, L"bCanPassPeaks");
@@ -1988,10 +1910,6 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenanceModifier, L"iCorporationMaintenanceModifier");
 
 	pXML->SetVariableListTagPair(&m_piUnitStrengthChange, L"UnitStrengthChanges", GC.getNumUnitInfos());
-
-
-	//pXML->CvXMLLoadUtility::InitList(&m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
-	//pXML->CvXMLLoadUtility::InitList(&m_piOriginalPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS(), -1);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);
@@ -2054,11 +1972,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
-/************************************************************************************************/
-/* XMLCOPY								 10/13/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	CvString szDebugBuffer;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -2069,11 +1983,6 @@ bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
 		const int iNumSibs = pXML->GetXmlChildrenNumber();
 		FAssertMsg((0 < GC.getNUM_OR_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
 
-/************************************************************************************************/
-/* XMLCOPY								 10/13/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 		if (GC.isXMLLogging())
 		{
 			szDebugBuffer.Format("OrPrereqs for tech %s: %i entries", getType(), iNumSibs);
@@ -2110,11 +2019,7 @@ bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
 	{
 		const int iNumSibs = pXML->GetXmlChildrenNumber();
 		FAssertMsg((0 < GC.getNUM_AND_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-/************************************************************************************************/
-/* XMLCOPY								 10/13/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 		if (GC.isXMLLogging())
 		{
 			szDebugBuffer.Format("AndPrereqs for tech %s: %i entries", getType(), iNumSibs);
@@ -2149,11 +2054,7 @@ bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY								 10/14/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
@@ -2501,8 +2402,6 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iPrereqGameOption);
 
 	CheckSum(iSum, m_piFreeSpecialistCount, GC.getNumSpecialistInfos());
-	CheckSum(iSum, m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
-	CheckSum(iSum, m_piOriginalPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
 	CheckSum(iSum, m_piUnitStrengthChange, GC.getNumUnitInfos());
 
 	const int iNumElements = m_aPrereqBuilding.size();
@@ -2514,7 +2413,6 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 	//TB Tech Tags
 	CheckSum(iSum, m_bGlobal);
 	//TB Tech Tags end
-
 }
 
 //======================================================================================================
