@@ -7029,7 +7029,6 @@ bool CvUnit::canScrap() const
 int CvUnit::calculateScrapValue() const
 {
 	int iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-	iCost += iCost * getUpgradeDiscount();
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
