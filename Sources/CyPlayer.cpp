@@ -1904,18 +1904,7 @@ bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)
 
 void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	if(eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	else if (m_pPlayer)
+	if (m_pPlayer)
 	{
 		m_pPlayer->setFeatAccomplished((FeatTypes)eIndex, bNewValue);
 	}
