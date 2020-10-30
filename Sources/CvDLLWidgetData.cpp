@@ -3671,19 +3671,21 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 				CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
-				if (pSelectedUnit->plot()->getOwner() == pSelectedUnit->getOwner())	//units have to be inside cultural borders
+				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE)
+				//units have to be inside cultural borders
+				&& pSelectedUnit->plot()->getOwner() == pSelectedUnit->getOwner())
 				{
-					if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
-					{
-						int iGold = 0;
+					int iGold = 0;
 
-						for (;
-							pSelectedUnitNode != NULL;
-							pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
-						{
-							pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-							iGold += pSelectedUnit->calculateScrapValue();
-						}
+					for (;
+						pSelectedUnitNode != NULL;
+						pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
+					{
+						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+						iGold += pSelectedUnit->calculateScrapValue();
+					}
+					if (iGold != 0)
+					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOLD_FOR_DISBANDING", iGold));
 					}

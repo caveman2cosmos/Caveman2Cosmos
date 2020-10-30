@@ -7026,20 +7026,31 @@ bool CvUnit::canScrap() const
 }
 
 
+// No need to let return value exceed MAX_INT, shouldn't really happen unless one of the most expensive units is merged many times.
 int CvUnit::calculateScrapValue() const
 {
-	float fCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100.0f;
-	fCost += fCost * getUpgradeDiscount() / 100.0f;
+	int64_t iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
-		// pow(int, int) returns int, not double...
-		fCost *= std::pow(3.0f, iGroupDiff);
+		const int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
+		if (iGroupDiff != 0)
+		{
+			if (iGroupDiff > 0)
+			{
+				iCost *= std::pow(3, iGroupDiff);
+			}
+			else iCost /= std::pow(3, -iGroupDiff);
+		}
 	}
+	iCost /= 100*GC.getUNIT_GOLD_DISBAND_DIVISOR();
 
-	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
-	return std::max(1, int(fCost));
+	if (iCost > MAX_INT) return MAX_INT;
+	// A minimum return of 1 will cause oddities in early game where a unit that can split only gives 1 gold,
+	//	giving the player a reason to split before disbanding to earn a couple extra gold coins.
+	if (iCost < 1) return 0;
+
+	return static_cast<int>(iCost);
 }
 
 void CvUnit::scrap()
@@ -7049,7 +7060,7 @@ void CvUnit::scrap()
 		return;
 	}
 
-	if( gUnitLogLevel > 2 )
+	if (gUnitLogLevel > 2)
 	{
 		CvWString szString;
 		getUnitAIString(szString, AI_getUnitAIType());
