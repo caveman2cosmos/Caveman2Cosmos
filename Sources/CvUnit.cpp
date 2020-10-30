@@ -7028,18 +7028,25 @@ bool CvUnit::canScrap() const
 
 int CvUnit::calculateScrapValue() const
 {
-	float fCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100.0f;
-	fCost += fCost * getUpgradeDiscount() / 100.0f;
+	int iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+	iCost += iCost * getUpgradeDiscount();
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
+		const int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
 		// pow(int, int) returns int, not double...
-		fCost *= std::pow(3.0f, iGroupDiff);
+		if (iGroupDiff != 0)
+		{
+			if (iGroupDiff > 0)
+			{
+				iCost *= std::pow(3, iGroupDiff);
+			}
+			else iCost /= std::pow(3, -iGroupDiff);
+		}
 	}
+	iCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
 
-	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
-	return std::max(1, int(fCost));
+	return std::max(1, iCost/100);
 }
 
 void CvUnit::scrap()
