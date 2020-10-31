@@ -6950,7 +6950,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Tag>
-		<English>Early Food Merchant</English>
+		<English>Food Merchant</English>
 		<French>Marchand primitif de nourriture</French>
 		<Polish>Wczesny Handlarz Żywnością</Polish>
 	</TEXT>
@@ -7040,7 +7040,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLY_MERCHANT_C2C</Tag>
-		<English>Early Merchant</English>
+		<English>Supply Merchant</English>
 		<French>Marchand primitif</French>
 		<Italian>Mercante primitivo</Italian>
 		<Spanish>
@@ -8652,9 +8652,30 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOOD_SUPPLY_TRAIN</Tag>
-		<English>Food Supply Train</English>
+		<English>Food Train</English>
 		<French>Convoi de nourriture</French>
 		<Polish>Wozy z żywnością</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN</Tag>
+		<English>Supply Train</English>
+		<French>
+			<Text>Convoi d'approvisionnement</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Versorgungszug</German>
+		<Italian>
+			<Text>Carovana di supporto:Carovane di supporto</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caravana de suministros:Caravanas de suministros</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wozy Zaopatrzeniowe</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOREST_GUARDIANS</Tag>
@@ -8830,7 +8851,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREIGHT</Tag>
-		<English>Freight</English>
+		<English>Supply Freight</English>
 		<French>Fret</French>
 		<German>
 			<Text>Fracht</Text>
@@ -26591,7 +26612,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRADE_CARAVAN</Tag>
-		<English>Trade Caravan</English>
+		<English>Supply Caravan</English>
 		<French>
 			<Text>Caravane Commerciale</Text>
 			<Gender>Female</Gender>

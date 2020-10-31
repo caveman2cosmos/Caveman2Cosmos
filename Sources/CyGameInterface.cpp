@@ -311,14 +311,16 @@ void CyGamePythonInterface()
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
 		.def("cheatCodesEnabled", &CyGame::cheatCodesEnabled)
 		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
+
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
 		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
-		.def("setFutureEras", &CyGame::setFutureEras, "void ()")
+
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")
 		.def("canEverTrain", &CyGame::canEverTrain, "bool (int iUnit)")
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
+
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 	;
 
