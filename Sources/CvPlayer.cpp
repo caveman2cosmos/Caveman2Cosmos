@@ -10933,7 +10933,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 {
 	if (iChange != 0)
 	{
-		FAssertMsg(iChange >= 0 || bMilitary && -iChange <= m_iUnitUpkeepMilitary100 || !bMilitary && -iChange <= m_iUnitUpkeepMilitary100, "These should always be positive!");
+		FAssertMsg(iChange > 0 || bMilitary && -iChange <= m_iUnitUpkeepMilitary100 || !bMilitary && -iChange <= m_iUnitUpkeepCivilian100, "These should always be positive!");
 
 		if (bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
