@@ -24012,7 +24012,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			if (iNewIndex != NO_PROMOTION)
 			{
-				PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
+				PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iNewIndex);
 
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasPromotion, "hasPromotion");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackCount, "afflictOnAttack");
