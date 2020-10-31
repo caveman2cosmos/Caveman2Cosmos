@@ -3140,21 +3140,6 @@ public:
 
 private:
 	//	static buffers allocated once and used during read and write only
-	static int*	g_paiTempCureAfflictionTypeCount;
-	static int*	g_paiTempAfflictionLineCount;
-	static int*	g_paiTempAfflictionTurnCount;
-	static int*	g_paiTempAfflictionTurnTypeCount;
-	static int*	g_paiTempAfflictionHitCount;
-	static int*	g_paiTempAfflictionTypeTolerance;
-	static int*	g_paiTempFortitudeModifierAmount;
-	static bool*	g_pabTempValidBuildUp;
-	static int* g_paiTempAfflictOnAttackTypeProbability;
-	static int* g_paiTempAfflictOnAttackTypeCount;
-	static int* g_paiTempAfflictOnAttackTypeImmediateCount;
-	static int* g_paiTempAfflictOnAttackTypeAttemptedCount;
-	static int* g_paiTempDistanceAttackCommunicability;
-	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
-	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
 //Team Project (4)
 	//WorkRateMod
 	//ls612: Terrain Work Modifiers
