@@ -8621,19 +8621,21 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 	}
 
 	// Defined here for easier value adjustment
-	int iKnownExpSmall = 5;
-	int iKnownExpLarge = 15;
+	int iKnownExpSmall = 50;
+	int iKnownExpLarge = 150;
+	int iBaselineTechScore = 10; // To reduce wild swings in first few techs
 
 	int iTeams = 0;
 	int iTeamExp = 0;
 	int iTotalExp = 0;
 
-	int iOurTechScore = getTechScore();
-	// int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
+	int iOurTechScore = getTechScore() + iBaselineTechScore;
+	int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
 	int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
+		// This triggers for Barbarian State and Neanderthals! Make not somehow...
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			iTeams++;
@@ -8650,35 +8652,37 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 					iTeamExp += iKnownExpSmall;
 				}
 
-				GC.getGame().logMsg("For %S, iTeamExp is %d", getCivilizationDescription(), iTeamExp);
-
 				// TODO: Many new weights can get added here! If trade routes, if have printingpress tech, espionage ratio, etc etc.
 				// Be sure to update iMaxPossibleXP to account for new expected/guesstimated value.
-				
 				// Psuedocode examples:
-
-				// iTeamExp += ExpLarge if friendly, +small if positive, -small if angry, -large if furious (tho be careful with negatives, ensure is >0)
+				// iTeamExp += ExpLarge * (number of communication techs, i.e. writing, printing press, internet, etc)
+				// iTeamExp += ExpSmall * (num joint diplomacy effects; embassy, pacts, etc that aren't covered by open borders/vassal)
+				// iTeamExp += ExpSmall * (sum of traits of that civ leader; foreigner vs isolationist, etc)
+				// iTeamExp += ExpLarge if friendly, +small if positive, -small if angry, -large if furious (tho be careful with negatives, ensure result is >0)
 				// iTeamExp *= espionage ratio bound in range [0.75, 2] // Is anti-sandball; leader gains less benefit than player behind loses?
 				// iTeamExp *= percent of owned trade routes going to that civ bound in range [0.5, 2.0] // Maybe?
+				// Civic modifiers?
 
 
 				// Reworked Tech Welfare: Modify EXP based on relative tech score of that team to us.
-				// If they're above us, increase weight of exp from them by how far they are.
-				// This may allow total XP > expected max XP, but function still allows that and follows curve of diminishing return.
-				// If they're below us, (/TODO strongly) reduce exp gained from them; penalizes tech leader gaining benefits from hard work of lower tech civs!
-				
-				// One of the two following syntax is right
-				// int iTheirTechScore = GET_TEAM(getTeam()).getBestTechScore();
-				int iTheirTechScore = GET_TEAM((TeamTypes)iI).getBestTechScore();
+				int iTheirTechScore = GET_TEAM((TeamTypes)iI).getBestTechScore() + iBaselineTechScore;
+				int iTechScorePercent = 100 * iTheirTechScore / iOurTechScore;
 
-				int iTechScorePercent = (100 * iTheirTechScore) / std::max(1, iOurTechScore);
-				GC.getGame().logMsg("Corresponding iTheirTechScore is %d, iOurTechScore is %d, and iTechScorePercent is %d", iTheirTechScore, iOurTechScore, iTechScorePercent);
+				int iWelfareExpPercentModifier = 0;
+				int iTechScorePercentModifier = 100 - iTechScorePercent;
 
-				int iWelfareExpPercentModifier = std::max(0, 100 + iWelfareMod * (iTechScorePercent - 100));
-				GC.getGame().logMsg("Corresponding iWelfareExpModifier is %d", iWelfareExpPercentModifier);
+				// Positive welfare modifier starts at 0, linear scales to max effect (welfareMod) at welfareThreshold
+				if (iTechScorePercentModifier > 0 && iTechScorePercentModifier < iWelfareThreshold)
+				{
+					iWelfareExpPercentModifier = 100 + iTechScorePercentModifier * iWelfareMod * iTechScorePercentModifier / iWelfareThreshold;
+				}
+				// Apply negative welfare modifier immediately though (or full magnitude if at or above threshold)
+				else
+				{
+					iWelfareExpPercentModifier = std::max(0, 100 + iTechScorePercentModifier * iWelfareMod);
+				}
 
 				iTotalExp += iTeamExp * iWelfareExpPercentModifier / 100;
-				GC.getGame().logMsg("Corresponding iTeamExp is %d", iTeamExp * iWelfareExpPercentModifier);
 			}
 		}
 	}
@@ -8693,14 +8697,16 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 		// Max possible iTotalExp is having open borders with every civ in game who all have the tech, ignoring Welfare effects.
 		// Bonus normalized to this, to account for num players. Smaller worlds therefore have higher bonuses faster.
 		// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape desired bound set in GlobalDefines.
+		// This will naturally make TD larger at later eras as more comms techs, etc get introduced... I guess that's desireable?
 		int iMaxPossibleXP = iTeams * (iKnownExpSmall + iKnownExpLarge);
-		int iExpPercent = 100 * iTotalExp / iMaxPossibleXP;
-		GC.getGame().logMsg("For %S, iTotalExp is %d and iExpPercent is %d", getCivilizationDescription(), iTotalExp, iExpPercent);
+		int iExpPercent = (100 * iTotalExp) / iMaxPossibleXP;
 
 		// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. Will possibly be a global func at some point?
+		// Doublecheck floating point math?
 		int iTechDiffusion = std::max(0, (int)(techDiffMod * pow((iExpPercent / 100.0), boundedPowerRate) + 0.5));
 		iModifier += iTechDiffusion;
-		GC.getGame().logMsg("Corresponding TD percentage bonus is %d", iTechDiffusion);
+		
+		GC.getGame().logMsg("For %S: iTotalExp=%d, iExpPercent=%d, iTechDiffusion (final % bonus) = %d", getCivilizationDescription(), iTotalExp, iExpPercent, iTechDiffusion);
 	}
 
 	return std::max(100, iModifier);

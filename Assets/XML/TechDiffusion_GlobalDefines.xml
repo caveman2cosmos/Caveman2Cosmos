@@ -18,12 +18,17 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Currently unused, wondering how it could be applied. -->
+		<!-- Tech Diffusion: Welfare threshold determines how far above a players tech the diffuser has to be, before the maximum welfare modifier
+			 applies to modifiy their tech diffusion value.
+			 Ex: If my most expensive tech is 10 beakers, their most expensive is 11, and TDWelfareThresh is 20, that means they're only 10% better
+			 than us instead of 20%, so the WelfareModifier is halved; we only get 2.5x more TD *from them* instead of 5x (for a 5 TD Welfare Modifer).
+			 In essence, this and Welfare Modifier control how hard TD pushes when a player is close to the leader(s) vs when far from them.
+			 Note that negative percents apply immediately, however! If you're above someone - say 10 to their 9 - you get the full 5x reduction. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_THRESHOLD</DefineName>
-		<iDefineIntVal>90</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Multiplier of tech welfare assitance applying onto tech diffusion, ideally >= 1 (if =1, no impact from excess advances).
+		<!-- Tech Diffusion: Multiplier of tech welfare assitance/penalty applying onto tech diffusion, ideally > 1 (if =0, no impact from excess advances).
 			 Larger values may more easily allow escaping bounds set in TD Known Team Modifier, particularly when a player/team is very far behind. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
