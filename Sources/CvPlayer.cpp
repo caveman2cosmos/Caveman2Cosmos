@@ -8669,7 +8669,7 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 				int iTechScorePercent = 100 * iTheirTechScore / iOurTechScore;
 
 				int iWelfareExpPercentModifier = 0;
-				int iTechScorePercentModifier = 100 - iTechScorePercent;
+				int iTechScorePercentModifier = iTechScorePercent - 100;
 
 				// Positive welfare modifier starts at 0, linear scales to max effect (welfareMod) at welfareThreshold
 				if (iTechScorePercentModifier > 0 && iTechScorePercentModifier < iWelfareThreshold)
@@ -8682,6 +8682,9 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 					iWelfareExpPercentModifier = std::max(0, 100 + iTechScorePercentModifier * iWelfareMod);
 				}
 
+				// GC.getGame().logMsg("For %S: iTheirTechScore=%d, iOurTechScore=%d, iTechScorePercent=%d, iWelfareExpPercentModifier=%d", getCivilizationDescription(), iTheirTechScore, iOurTechScore, iTechScorePercent, iWelfareExpPercentModifier);
+				// GC.getGame().logMsg(" Con't: iTechScorePercentModifier=%d, iWelfareMod=%d, iWelfareThreshold=%d", iTechScorePercentModifier, iWelfareMod, iWelfareThreshold);
+
 				iTotalExp += iTeamExp * iWelfareExpPercentModifier / 100;
 			}
 		}
@@ -8690,7 +8693,7 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 	int techDiffMod = GC.getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
 	// For boundedPowerRate, 1 is linear, with smaller values (but > 0) having increased weight toward first few EXP sources.
 	// Really just look up Y = X ^ (boundedPowerRate) to get a sense of how TD behaves as a function of boundedPowerRate
-	double boundedPowerRate = 0.5;
+	float boundedPowerRate = 0.5;
 
 	if (iTotalExp > 0)
 	{
@@ -8699,14 +8702,14 @@ int CvPlayer::calculateTDResearchModifier(TechTypes eTech) const
 		// This will have to be adjusted if more weights are added, otherwise iTechDiffusion can escape desired bound set in GlobalDefines.
 		// This will naturally make TD larger at later eras as more comms techs, etc get introduced... I guess that's desireable?
 		int iMaxPossibleXP = iTeams * (iKnownExpSmall + iKnownExpLarge);
-		int iExpPercent = (100 * iTotalExp) / iMaxPossibleXP;
+		int iExpPercent = 100 * iTotalExp / iMaxPossibleXP;
 
 		// Inverse exponential growth; greatest impact at low exp ratio, diminishing returns. Will possibly be a global func at some point?
-		// Doublecheck floating point math?
-		int iTechDiffusion = std::max(0, (int)(techDiffMod * pow((iExpPercent / 100.0), boundedPowerRate) + 0.5));
+		double dUnsafeTechDiffusion = techDiffMod * std::pow(iExpPercent / 100.f, boundedPowerRate) + 0.5;
+		int iTechDiffusion = std::max(0, (int)(1000 * dUnsafeTechDiffusion + 0.5) / 1000);
 		iModifier += iTechDiffusion;
 		
-		GC.getGame().logMsg("For %S: iTotalExp=%d, iExpPercent=%d, iTechDiffusion (final % bonus) = %d", getCivilizationDescription(), iTotalExp, iExpPercent, iTechDiffusion);
+		GC.getGame().logMsg("For %S: TD percent boost = %d (XP percent: %d)", getCivilizationDescription(), iTechDiffusion, iExpPercent);
 	}
 
 	return std::max(100, iModifier);
