@@ -102,15 +102,6 @@ m_Properties(this)
 	m_aiExtraVisibilityIntensityRange = new int[GC.getNumInvisibleInfos()];
 	m_aiExtraVisibilityIntensitySameTile = new int[GC.getNumInvisibleInfos()];
 	m_aiNegatesInvisibleCount = new int[GC.getNumInvisibleInfos()];
-	m_aExtraInvisibleTerrains.clear();
-	m_aExtraInvisibleFeatures.clear();
-	m_aExtraInvisibleImprovements.clear();
-	m_aExtraVisibleTerrains.clear();
-	m_aExtraVisibleFeatures.clear();
-	m_aExtraVisibleImprovements.clear();
-	m_aExtraVisibleTerrainRanges.clear();
-	m_aExtraVisibleFeatureRanges.clear();
-	m_aExtraVisibleImprovementRanges.clear();
 
 	m_iMaxMoveCacheTurn = -1;
 
