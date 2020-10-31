@@ -24025,6 +24025,19 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTrapSetWithPromotionCount, "trapSetWithPromotionType");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iPromotionFromTraitCount, "promotionFromTraitCount");
 			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasPromotion, SAVE_VALUE_TYPE_BOOL);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttack, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", cureAffliction, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTurn, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionHit, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTolerance, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", fortitudeModifierType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", value, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", trapSetWithPromotionType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", promotionFromTraitCount, SAVE_VALUE_TYPE_INT);
+			}
 		}
 	} while(iI != -1);
 
@@ -24054,6 +24067,22 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeMeleeCount, "afflictOnAttackTypeMeleeCount");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeDistanceCount, "afflictOnAttackTypeDistanceCount");
 			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeProb, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeImmediateCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeAttemptedCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", cureAfflictionType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTurnType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasAfflictionLine, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionToleranceType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", fortitudeModifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", validBuildUp, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", distanceAttackCommunicability, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeMeleeCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeDistanceCount, SAVE_VALUE_TYPE_INT);
+			}
 		}
 	} while(iI != -1);
 
@@ -24077,6 +24106,16 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", value, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", doubleMove, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraAttackPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDefensePercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainExtraWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawOnTerrainType, SAVE_VALUE_TYPE_INT);
+			}
 		}
 	} while(iI != -1);
 
@@ -24098,6 +24137,15 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", doubleMove, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraAttackPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDefensePercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureExtraWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawOnFeatureType, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
@@ -24139,6 +24187,34 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraRoundStunVSUnitCombatType, "extraRoundStunVSUnitCombatType");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPursuitVSUnitCombatType, "extraPursuitVSUnitCombatType");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealAsDamage, "healAsDamage");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasUnitCombat, SAVE_VALUE_TYPE_BOOL);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", modifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", modifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", subCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", ongoingTrainingCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healUnitCombatTypeVolume, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healUnitCombatTypeAdjacentVolume, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", trapImmunityUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", targetUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapDisableUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapAvoidanceUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapTriggerUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", removesUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraFlankingStrengthbyUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraRepelVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraKnockbackVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPunctureVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraArmorVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDodgeVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPrecisionVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraCriticalVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraRoundStunVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPursuitVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healAsDamage, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
