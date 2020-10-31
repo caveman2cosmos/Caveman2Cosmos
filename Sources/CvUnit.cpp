@@ -24,11 +24,6 @@ int*	CvUnit::g_paiTempAfflictionTurnCount = NULL;
 int*	CvUnit::g_paiTempAfflictionTurnTypeCount = NULL;
 int*	CvUnit::g_paiTempAfflictionHitCount = NULL;
 int*	CvUnit::g_paiTempAfflictionTolerance = NULL;
-int*	CvUnit::g_paiTempTrapImmunityUnitCombatCount = NULL;
-int*	CvUnit::g_paiTempTargetUnitCombatCount = NULL;
-int*	CvUnit::g_paiTempExtraTrapDisableUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraTrapAvoidanceUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraTrapTriggerUnitCombatType = NULL;
 int*	CvUnit::g_paiTempAfflictionTypeTolerance = NULL;
 int*	CvUnit::g_paiTempFortitudeModifierTypeAmount = NULL;
 int*	CvUnit::g_paiTempFortitudeModifierAmount = NULL;
@@ -46,26 +41,7 @@ bool*	CvUnit::g_pabTempValidBuildUp = NULL;
 //WorkRateMod
 //ls612: Terrain Work Modifiers
 int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
 bool*	CvUnit::g_pabTempHasPromotion = NULL;
-bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
-int*	CvUnit::g_paiTempSubCombatTypeCount = NULL;
-int*	CvUnit::g_paiTempOngoingTrainingCount = NULL;
-int*	CvUnit::g_paiTempRemovesUnitCombatTypeCount = NULL;
-int*	CvUnit::g_paiTempExtraFlankingStrengthbyUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraPursuitVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraRepelVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraKnockbackVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraPunctureVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraArmorVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraDodgeVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraPrecisionVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraCriticalVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraRoundStunVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempHealUnitCombatTypeVolume = NULL;
-int*	CvUnit::g_paiTempHealUnitCombatTypeAdjacentVolume = NULL;
-int*	CvUnit::g_paiTempHealAsDamage = NULL;
 bool	CvUnit::m_staticsInitialized = false;
 
 bool CvUnit::isDummyEntity(const CvEntity* entity)
@@ -146,11 +122,6 @@ m_Properties(this)
 		g_paiTempAfflictionTurnTypeCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempAfflictionHitCount = new int[GC.getNumPromotionInfos()];
 		g_paiTempAfflictionTolerance = new int[GC.getNumPromotionInfos()];
-		g_paiTempTrapImmunityUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempTargetUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapDisableUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapAvoidanceUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapTriggerUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempAfflictionTypeTolerance = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempFortitudeModifierTypeAmount = new int[GC.getNumPromotionInfos()];
 		g_paiTempFortitudeModifierAmount = new int[GC.getNumPromotionLineInfos()];
@@ -168,26 +139,7 @@ m_Properties(this)
 	//WorkRateMod
 		//ls612: Terrain Work Modifiers
 		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
-		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempSubCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraKnockbackVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPunctureVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraArmorVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraDodgeVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPrecisionVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraCriticalVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRoundStunVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeAdjacentVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealAsDamage = new int[GC.getNumUnitCombatInfos()];
 
 		m_staticsInitialized = true;
 	}
@@ -24121,7 +24073,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szScriptData);
 
-
 	// Read compressed data format
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
@@ -24187,34 +24138,46 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraUnitCombatModifier[iI] = 0;
-	}
 	do
 	{
-		iI= -1;
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
 
-			if ( iNewIndex != NO_UNITCOMBAT )
+			if (iNewIndex != NO_UNITCOMBAT)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraUnitCombatModifier[iNewIndex], "modifier");
+				UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasUnitCombat, "hasUnitCombat");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iSubCombatTypeCount, "subCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iOngoingTrainingCount, "ongoingTrainingCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealUnitCombatTypeVolume, "healUnitCombatTypeVolume");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealUnitCombatTypeAdjacentVolume, "healUnitCombatTypeAdjacentVolume");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTrapImmunityUnitCombatCount, "trapImmunityUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTargetUnitCombatCount, "targetUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapDisableUnitCombatType, "extraTrapDisableUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapAvoidanceUnitCombatType, "extraTrapAvoidanceUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapTriggerUnitCombatType, "extraTrapTriggerUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iRemovesUnitCombatTypeCount, "removesUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFlankingStrengthbyUnitCombatType, "extraFlankingStrengthbyUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawVSUnitCombatType, "extraWithdrawVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraRepelVSUnitCombatType, "extraRepelVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraKnockbackVSUnitCombatType, "extraKnockbackVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPunctureVSUnitCombatType, "extraPunctureVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraArmorVSUnitCombatType, "extraArmorVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraDodgeVSUnitCombatType, "extraDodgeVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPrecisionVSUnitCombatType, "extraPrecisionVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraCriticalVSUnitCombatType, "extraCriticalVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraRoundStunVSUnitCombatType, "extraRoundStunVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPursuitVSUnitCombatType, "extraPursuitVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealAsDamage, "healAsDamage");
 			}
 		}
 	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraUnitCombatModifier[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraUnitCombatModifier = g_paiTempExtraUnitCombatModifier[iI];
-		}
-	}
 
 	m_Properties.readWrapper(pStream);
 
@@ -24244,36 +24207,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAnimalIgnoresBordersCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOnslaughtCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFortitude);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempSubCombatTypeCount[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo2");
-		if (iI != -1)
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if (iNewIndex != NO_UNITCOMBAT)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempSubCombatTypeCount[iNewIndex], "subCombatCount");
-			}
-		}
-	} while(iI != -1);
-
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (g_paiTempSubCombatTypeCount[iI] != 0)
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iSubCombatTypeCount = g_paiTempSubCombatTypeCount[iI];
-		}
-	}
 
 	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
@@ -24438,64 +24371,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
 #endif // STRENGTH_IN_NUMBERS
 
-	// Read compressed data format
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempOngoingTrainingCount[iI] = 0;
-		g_paiTempHealUnitCombatTypeVolume[iI] = 0;
-		g_paiTempHealUnitCombatTypeAdjacentVolume[iI] = 0;
-		g_paiTempTrapImmunityUnitCombatCount[iI] = 0;
-		g_paiTempTargetUnitCombatCount[iI] = 0;
-		g_paiTempExtraTrapDisableUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapAvoidanceUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapTriggerUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo3");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iNewIndex], "ongoingTrainingCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeVolume[iNewIndex], "healUnitCombatTypeVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeAdjacentVolume[iNewIndex], "healUnitCombatTypeAdjacentVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapImmunityUnitCombatCount[iNewIndex], "trapImmunityUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTargetUnitCombatCount[iNewIndex], "targetUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapDisableUnitCombatType[iNewIndex], "extraTrapDisableUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapAvoidanceUnitCombatType[iNewIndex], "extraTrapAvoidanceUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapTriggerUnitCombatType[iNewIndex], "extraTrapTriggerUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempOngoingTrainingCount[iI] != 0
-			|| g_paiTempHealUnitCombatTypeVolume[iI] != 0
-			|| g_paiTempHealUnitCombatTypeAdjacentVolume[iI] != 0
-			|| g_paiTempTrapImmunityUnitCombatCount[iI] != 0
-			|| g_paiTempTargetUnitCombatCount[iI] != 0
-			|| g_paiTempExtraTrapDisableUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapAvoidanceUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapTriggerUnitCombatType[iI] != 0)
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iOngoingTrainingCount = g_paiTempOngoingTrainingCount[iI];
-			info->m_iHealUnitCombatTypeVolume = g_paiTempHealUnitCombatTypeVolume[iI];
-			info->m_iHealUnitCombatTypeAdjacentVolume = g_paiTempHealUnitCombatTypeAdjacentVolume[iI];
-			info->m_iTrapImmunityUnitCombatCount = g_paiTempTrapImmunityUnitCombatCount[iI];
-			info->m_iTargetUnitCombatCount = g_paiTempTargetUnitCombatCount[iI];
-			info->m_iExtraTrapDisableUnitCombatType = g_paiTempExtraTrapDisableUnitCombatType[iI];
-			info->m_iExtraTrapAvoidanceUnitCombatType = g_paiTempExtraTrapAvoidanceUnitCombatType[iI];
-			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDodgeModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPrecisionModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerShots);
@@ -24541,336 +24416,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempRemovesUnitCombatTypeCount[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo4");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempRemovesUnitCombatTypeCount[iNewIndex], "removesUnitCombatCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempRemovesUnitCombatTypeCount[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iRemovesUnitCombatTypeCount = g_paiTempRemovesUnitCombatTypeCount[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo5");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFlankingStrengthbyUnitCombatType[iNewIndex], "extraFlankingStrengthbyUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraFlankingStrengthbyUnitCombatType = g_paiTempExtraFlankingStrengthbyUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo6");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawVSUnitCombatType[iNewIndex], "extraWithdrawVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraWithdrawVSUnitCombatType = g_paiTempExtraWithdrawVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraRepelVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo7");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraRepelVSUnitCombatType[iNewIndex], "extraRepelVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraRepelVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraRepelVSUnitCombatType = g_paiTempExtraRepelVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraKnockbackVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo8");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraKnockbackVSUnitCombatType[iNewIndex], "extraKnockbackVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraKnockbackVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraKnockbackVSUnitCombatType = g_paiTempExtraKnockbackVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPunctureVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo9");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPunctureVSUnitCombatType[iNewIndex], "extraPunctureVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPunctureVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPunctureVSUnitCombatType = g_paiTempExtraPunctureVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraArmorVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo10");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraArmorVSUnitCombatType[iNewIndex], "extraArmorVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraArmorVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraArmorVSUnitCombatType = g_paiTempExtraArmorVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraDodgeVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo11");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraDodgeVSUnitCombatType[iNewIndex], "extraDodgeVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraDodgeVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraDodgeVSUnitCombatType = g_paiTempExtraDodgeVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPrecisionVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo12");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPrecisionVSUnitCombatType[iNewIndex], "extraPrecisionVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPrecisionVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPrecisionVSUnitCombatType = g_paiTempExtraPrecisionVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraCriticalVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo13");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraCriticalVSUnitCombatType[iNewIndex], "extraCriticalVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraCriticalVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraCriticalVSUnitCombatType = g_paiTempExtraCriticalVSUnitCombatType[iI];
-		}
-	}
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraRoundStunVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo14");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraRoundStunVSUnitCombatType[iNewIndex], "extraRoundStunVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraRoundStunVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraRoundStunVSUnitCombatType = g_paiTempExtraRoundStunVSUnitCombatType[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraRoundStunProb);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatStuns);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPoisonProbabilityModifier);
@@ -25026,73 +24571,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_pabTempHasUnitCombat[iI] = false;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombat");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				g_pabTempHasUnitCombat[iNewIndex] = true;
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (g_pabTempHasUnitCombat[iI])
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_bHasUnitCombat = true;
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackOnlyCitiesCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreNoEntryLevelCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreZoneofControlCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraTaunt);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMaxHP);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPursuitVSUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo15");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPursuitVSUnitCombatType[iNewIndex], "extraPursuitVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPursuitVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPursuitVSUnitCombatType = g_paiTempExtraPursuitVSUnitCombatType[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFliesToMoveCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iQualityBaseTotal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupBaseTotal);
@@ -25100,7 +24583,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCannotMergeSplitCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
-
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -25144,37 +24626,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHealUnitCombatCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraSelfHealModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iNoSelfHealCount);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempHealAsDamage[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "healAsDamageInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealAsDamage[iNewIndex], "healAsDamage");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempHealAsDamage[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iHealAsDamage = g_paiTempHealAsDamage[iI];//g_paiTempSubCombatTypeCount[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraNumHealSupport);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHealSupportUsed);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, (int*)&m_eSleepType);
@@ -25467,7 +24918,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
 
-
 	m_aiExtraBuildTypes.clear();
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
@@ -25676,12 +25126,36 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 		}
 	}
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::iterator it = m_unitCombatKeyedInfo.begin(), itEnd = m_unitCombatKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0 )
+		const UnitCombatKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "modifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasUnitCombatInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_bHasUnitCombat, "hasUnitCombat");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraUnitCombatModifier, "modifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iSubCombatTypeCount, "subCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iOngoingTrainingCount, "ongoingTrainingCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iRemovesUnitCombatTypeCount, "removesUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFlankingStrengthbyUnitCombatType, "extraFlankingStrengthbyUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawVSUnitCombatType, "extraWithdrawVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPursuitVSUnitCombatType, "extraPursuitVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraRepelVSUnitCombatType, "extraRepelVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraKnockbackVSUnitCombatType, "extraKnockbackVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPunctureVSUnitCombatType, "extraPunctureVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraArmorVSUnitCombatType, "extraArmorVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraDodgeVSUnitCombatType, "extraDodgeVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPrecisionVSUnitCombatType, "extraPrecisionVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraCriticalVSUnitCombatType, "extraCriticalVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraRoundStunVSUnitCombatType, "extraRoundStunVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealUnitCombatTypeVolume, "healUnitCombatTypeTotal");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealUnitCombatTypeAdjacentVolume, "healUnitCombatTypeAdjacentTotal");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealAsDamage, "healAsDamage");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTrapImmunityUnitCombatCount, "trapImmunityUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTargetUnitCombatCount, "targetUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapDisableUnitCombatType, "extraTrapDisableUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapAvoidanceUnitCombatType, "extraTrapAvoidanceUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapTriggerUnitCombatType, "extraTrapTriggerUnitCombatType");
 		}
 	}
 
@@ -25713,17 +25187,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAnimalIgnoresBordersCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iOnslaughtCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFortitude);
-	//TB SubCombat Mods Begin
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getSubCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo2");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getSubCombatTypeCount((UnitCombatTypes)iI), "subCombatCount");
-		}
-	}
-	//TB SubCombat Mods End
 
 	//	Use condensed format now - only save non-default array elements
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -25793,19 +25256,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
 #endif // STRENGTH_IN_NUMBERS
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getSubCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo3");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getOngoingTrainingCount((UnitCombatTypes)iI), "ongoingTrainingCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal((UnitCombatTypes)iI), "healUnitCombatTypeTotal");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI), "healUnitCombatTypeAdjacentTotal");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDodgeModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPrecisionModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPowerShots);
@@ -25832,123 +25282,11 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatKnockbacks);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatRepels);
-
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getRemovesUnitCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo4");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getRemovesUnitCombatTypeCount((UnitCombatTypes)iI), "removesUnitCombatCount");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo5");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI), "extraFlankingStrengthbyUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo6");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI), "extraWithdrawVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraRepelVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo7");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraRepelVSUnitCombatType((UnitCombatTypes)iI), "extraRepelVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraKnockbackVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo8");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraKnockbackVSUnitCombatType((UnitCombatTypes)iI), "extraKnockbackVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPunctureVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo9");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPunctureVSUnitCombatType((UnitCombatTypes)iI), "extraPunctureVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraArmorVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo10");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraArmorVSUnitCombatType((UnitCombatTypes)iI), "extraArmorVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraDodgeVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo11");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraDodgeVSUnitCombatType((UnitCombatTypes)iI), "extraDodgeVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPrecisionVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo12");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPrecisionVSUnitCombatType((UnitCombatTypes)iI), "extraPrecisionVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraCriticalVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo13");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraCriticalVSUnitCombatType((UnitCombatTypes)iI), "extraCriticalVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraRoundStunVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo14");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraRoundStunVSUnitCombatType((UnitCombatTypes)iI), "extraRoundStunVSUnitCombatType");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraRoundStunProb);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatStuns);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPoisonProbabilityModifier);
 
 	//	Use condensed format now - only save non-default array elements
-	int itest = GC.getNumPromotionLineInfos();
 	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		if ( getAfflictOnAttackTypeProbability((PromotionLineTypes)iI) != 0 ||
@@ -26024,34 +25362,13 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPeaksWorkPercent);
-	//
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( isHasUnitCombat((UnitCombatTypes)iI) )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombat");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackOnlyCitiesCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreNoEntryLevelCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreZoneofControlCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraTaunt);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMaxHP);
-
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo15");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI), "extraPursuitVSUnitCombatType");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iFliesToMoveCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iQualityBaseTotal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupBaseTotal);
@@ -26102,15 +25419,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHealUnitCombatCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraSelfHealModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoSelfHealCount);
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getHealAsDamage((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "healAsDamageInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealAsDamage((UnitCombatTypes)iI), "healAsDamage");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraNumHealSupport);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHealSupportUsed);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, m_eSleepType);
