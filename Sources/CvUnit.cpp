@@ -14,6 +14,13 @@ static int		 g_numEntities = 0;
 static int		 g_dummyUsage = 0;
 static bool		 g_bUseDummyEntities = false;
 
+//	static buffers allocated once and used during read and write only
+//Team Project (4)
+//WorkRateMod
+//ls612: Terrain Work Modifiers
+int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
+bool	CvUnit::m_staticsInitialized = false;
+
 bool CvUnit::isDummyEntity(const CvEntity* entity)
 {
 	return (entity == g_dummyEntity);
@@ -79,6 +86,17 @@ m_Properties(this)
 	bGraphicsSetup = false;
 
 	reset(0, NO_UNIT, NO_PLAYER, true);
+
+	if (!m_staticsInitialized)
+	{
+		//	Allocate static buffers to be used during read and write
+	//Team Project (4)
+	//WorkRateMod
+		//ls612: Terrain Work Modifiers
+		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
+
+		m_staticsInitialized = true;
+	}
 }
 
 
@@ -21137,7 +21155,14 @@ int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	std::map<short, short>::const_iterator itr = m_extraBuildWorkPercent.find((short)eIndex);
-	return itr != m_extraBuildWorkPercent.end() ? itr->second : 0;
+	if ( itr == m_extraBuildWorkPercent.end() )
+	{
+		return 0;
+	}
+	else
+	{
+		return (itr->second);
+	}
 }
 
 void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
@@ -24137,25 +24162,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	do
-	{
-		iI = -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasBuildInfo");
-		if (iI != -1)
-		{
-			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDS, iI, true);
-
-			if (iNewIndex != NO_BUILD)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &m_extraBuildWorkPercent[iNewIndex], "extraBuildWorkPercent");
-			}
-			else
-			{
-				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraBuildWorkPercent, SAVE_VALUE_TYPE_SHORT);
-			}
-		}
-	} while(iI != -1);
-
 	m_Properties.readWrapper(pStream);
 
 	//TB Combat Mods Begin  TB SubCombat Mods Begin
@@ -24340,9 +24346,40 @@ void CvUnit::read(FDataStreamBase* pStream)
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureProbabilityModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureResistanceModifier);
+
+	// Read compressed data format
+	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	{
+		g_paiTempExtraBuildWorkPercent[iI] = 0;
+	}
+	do
+	{
+		iI= -1;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasBuildInfo");
+		if ( iI != -1 )
+		{
+			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDS, iI, true);
+
+			if ( iNewIndex != NO_BUILD )
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraBuildWorkPercent[iNewIndex], "extraBuildWorkPercent");
+			}
+		}
+	} while(iI != -1);
+
+	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	{
+		if ( g_paiTempExtraBuildWorkPercent[iI] != 0 )
+		{
+			m_extraBuildWorkPercent[iI] = (short)g_paiTempExtraBuildWorkPercent[iI];
+		}
+	}
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPeaksWorkPercent);
+	//
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackOnlyCitiesCount);
@@ -24962,15 +24999,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapTriggerUnitCombatType, "extraTrapTriggerUnitCombatType");
 		}
 	}
-	for (std::map<int16_t, int16_t>::const_iterator it = m_extraBuildWorkPercent.begin(), itEnd = m_extraBuildWorkPercent.end(); it != itEnd; ++it)
-	{
-		const int16_t val = it->second;
-		if (val != 0)
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasBuildInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", val, "extraBuildWorkPercent");
-		}
-	}
 
 	m_Properties.writeWrapper(pStream);
 
@@ -25106,8 +25134,21 @@ void CvUnit::write(FDataStreamBase* pStream)
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
+//Team Project (3)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureProbabilityModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureResistanceModifier);
+//Team Project (4)
+	//WorkRateMod
+	//	Use condensed format now - only save non-default array elements
+	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	{
+		if ( getExtraBuildWorkPercent((BuildTypes)iI) != 0 )
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasBuildInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraBuildWorkPercent((BuildTypes)iI), "extraBuildWorkPercent");
+		}
+	}
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPeaksWorkPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
