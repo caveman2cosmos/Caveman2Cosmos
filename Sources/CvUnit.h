@@ -3139,14 +3139,6 @@ public:
 	ReligionTypes getReligion() const;
 
 private:
-	//	static buffers allocated once and used during read and write only
-//Team Project (4)
-	//WorkRateMod
-	//ls612: Terrain Work Modifiers
-	static int* g_paiTempExtraBuildWorkPercent;
-
-	static	bool			m_staticsInitialized;
-
 	std::vector<InvisibleTerrainChanges> m_aExtraInvisibleTerrains;
 	std::vector<InvisibleFeatureChanges> m_aExtraInvisibleFeatures;
 	std::vector<InvisibleImprovementChanges> m_aExtraInvisibleImprovements;
