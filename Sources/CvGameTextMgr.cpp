@@ -12303,7 +12303,9 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 				{
 					if (bDawnOfMan)
 						szHelpString.append(L", ");
-					else szHelpString.append(L"\n\n");
+					else if (bCivilopediaText)
+						szHelpString.append(L"\n\n");
+					else szHelpString.append(L"\n");
 				}
 				else bFirst = false;
 
