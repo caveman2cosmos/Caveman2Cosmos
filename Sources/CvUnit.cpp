@@ -15,20 +15,13 @@ static int		 g_dummyUsage = 0;
 static bool		 g_bUseDummyEntities = false;
 
 //	static buffers allocated once and used during read and write only
-int*	CvUnit::g_paiTempPromotionFreeCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackCount = NULL;
-int*	CvUnit::g_paiTempCureAfflictionCount = NULL;
 int*	CvUnit::g_paiTempCureAfflictionTypeCount = NULL;
 int*	CvUnit::g_paiTempAfflictionLineCount = NULL;
 int*	CvUnit::g_paiTempAfflictionTurnCount = NULL;
 int*	CvUnit::g_paiTempAfflictionTurnTypeCount = NULL;
 int*	CvUnit::g_paiTempAfflictionHitCount = NULL;
-int*	CvUnit::g_paiTempAfflictionTolerance = NULL;
 int*	CvUnit::g_paiTempAfflictionTypeTolerance = NULL;
-int*	CvUnit::g_paiTempFortitudeModifierTypeAmount = NULL;
 int*	CvUnit::g_paiTempFortitudeModifierAmount = NULL;
-int*	CvUnit::g_paiTempTrapSetWithPromotionCount = NULL;
-int*	CvUnit::g_paiTempPromotionFromTraitCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeProbability = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeImmediateCount = NULL;
@@ -41,7 +34,6 @@ bool*	CvUnit::g_pabTempValidBuildUp = NULL;
 //WorkRateMod
 //ls612: Terrain Work Modifiers
 int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
-bool*	CvUnit::g_pabTempHasPromotion = NULL;
 bool	CvUnit::m_staticsInitialized = false;
 
 bool CvUnit::isDummyEntity(const CvEntity* entity)
@@ -113,20 +105,11 @@ m_Properties(this)
 	if (!m_staticsInitialized)
 	{
 		//	Allocate static buffers to be used during read and write
-		g_paiTempPromotionFreeCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictOnAttackCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempCureAfflictionCount = new int[GC.getNumPromotionInfos()];
 		g_paiTempCureAfflictionTypeCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempAfflictionLineCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionTurnCount = new int[GC.getNumPromotionInfos()];
 		g_paiTempAfflictionTurnTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionHitCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictionTolerance = new int[GC.getNumPromotionInfos()];
 		g_paiTempAfflictionTypeTolerance = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempFortitudeModifierTypeAmount = new int[GC.getNumPromotionInfos()];
 		g_paiTempFortitudeModifierAmount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempTrapSetWithPromotionCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempPromotionFromTraitCount = new int [GC.getNumPromotionInfos()];
 		g_paiTempAfflictOnAttackTypeProbability = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempAfflictOnAttackTypeCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempAfflictOnAttackTypeImmediateCount = new int[GC.getNumPromotionLineInfos()];
@@ -24073,22 +24056,28 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szScriptData);
 
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_pabTempHasPromotion[iI] = false;
-	}
 	do
 	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotion");
-		if ( iI != -1 )
+		iI = -1;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotionInfo");
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
 
-			if ( iNewIndex != NO_PROMOTION )
+			if (iNewIndex != NO_PROMOTION)
 			{
-				g_pabTempHasPromotion[iNewIndex] = true;
+				PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasPromotion, "hasPromotion");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackCount, "afflictOnAttack");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iCureAfflictionCount, "cureAffliction");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTurnCount, "afflictionTurn");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionHitCount, "afflictionHit");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTolerance, "afflictionTolerance");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFortitudeModifierTypeAmount, "fortitudeModifierType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iPromotionFreeCount, "value");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTrapSetWithPromotionCount, "trapSetWithPromotionType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iPromotionFromTraitCount, "promotionFromTraitCount");
 			}
 		}
 	} while(iI != -1);
@@ -24207,69 +24196,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAnimalIgnoresBordersCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOnslaughtCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFortitude);
-
-	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_paiTempAfflictOnAttackCount[iI] = 0;
-		g_paiTempCureAfflictionCount[iI] = 0;
-		g_paiTempAfflictionTurnCount[iI] = 0;
-		g_paiTempAfflictionHitCount[iI] = 0;
-		g_paiTempAfflictionTolerance[iI] = 0;
-		g_paiTempFortitudeModifierTypeAmount[iI] = 0;
-		g_paiTempTrapSetWithPromotionCount[iI] = 0;
-		g_paiTempPromotionFromTraitCount[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasAfflicationInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
-
-			if ( iNewIndex != NO_PROMOTION )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackCount[iNewIndex], "afflictOnAttack");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempCureAfflictionCount[iNewIndex], "cureAffliction");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTurnCount[iNewIndex], "afflictionTurn");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionHitCount[iNewIndex], "afflictionHit");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTolerance[iNewIndex], "afflictionTolerance");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFortitudeModifierTypeAmount[iNewIndex], "fortitudeModifierType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapSetWithPromotionCount[iNewIndex], "trapSetWithPromotionType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFromTraitCount[iNewIndex], "promotionFromTraitCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if (
-		   0 != g_paiTempAfflictOnAttackCount[iI]
-		|| 0 != g_paiTempCureAfflictionCount[iI]
-		|| 0 != g_paiTempAfflictionTurnCount[iI]
-		|| 0 != g_paiTempAfflictionHitCount[iI]
-		|| 0 != g_paiTempAfflictionTolerance[iI]
-		|| 0 != g_paiTempFortitudeModifierTypeAmount[iI]
-		|| 0 != g_paiTempTrapSetWithPromotionCount[iI]
-		|| 0 != g_paiTempPromotionFromTraitCount[iI])
-		{
-			PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
-
-			info->m_iAfflictOnAttackCount = g_paiTempAfflictOnAttackCount[iI];
-			info->m_iCureAfflictionCount = g_paiTempCureAfflictionCount[iI];
-			info->m_iAfflictionTurnCount = g_paiTempAfflictionTurnCount[iI];
-			info->m_iAfflictionHitCount = g_paiTempAfflictionHitCount[iI];
-			info->m_iAfflictionTolerance = g_paiTempAfflictionTolerance[iI];
-			info->m_iFortitudeModifierTypeAmount = g_paiTempFortitudeModifierTypeAmount[iI];
-			info->m_iTrapSetWithPromotionCount = g_paiTempTrapSetWithPromotionCount[iI];
-			info->m_iPromotionFromTraitCount = g_paiTempPromotionFromTraitCount[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRoundCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDefenseCount);
-
 #ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFrontSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent);
@@ -24370,7 +24299,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
 #endif // STRENGTH_IN_NUMBERS
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDodgeModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPrecisionModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerShots);
@@ -24384,36 +24312,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDealColdDamageCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iColdImmuneCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatPowerShots);
-
-	// Read compressed data format
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_paiTempPromotionFreeCount[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFreePromotionCount");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
-
-			if ( iNewIndex != NO_PROMOTION )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFreeCount[iNewIndex], "value");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( g_paiTempPromotionFreeCount[iI] != 0 )
-		{
-			PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
-
-			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraRoundStunProb);
@@ -25088,15 +24986,24 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szScriptData);
 
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (std::map<TerrainTypes, PromotionKeyedInfo>::iterator it = m_promotionKeyedInfo.begin(), itEnd = m_promotionKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( isHasPromotion((PromotionTypes)iI) )
+		const PromotionKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasPromotion");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasPromotionInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_bHasPromotion, "hasPromotion");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackCount, "afflictOnAttack");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iCureAfflictionCount, "cureAffliction");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTurnCount, "afflictionTurn");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionHitCount, "afflictionHit");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTolerance, "afflictionTolerance");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFortitudeModifierTypeAmount, "fortitudeModifierType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iPromotionFreeCount, "value");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTrapSetWithPromotionCount, "trapSetWithPromotionCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iPromotionFromTraitCount, "promotionFromTraitCount");
 		}
 	}
-
 	for (std::map<TerrainTypes, TerrainKeyedInfo>::iterator it = m_terrainKeyedInfo.begin(), itEnd = m_terrainKeyedInfo.end(); it != itEnd; ++it)
 	{
 		const TerrainKeyedInfo& info = it->second;
@@ -25187,22 +25094,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAnimalIgnoresBordersCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iOnslaughtCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFortitude);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( getAfflictionHitCount((PromotionTypes)iI) != 0)
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasAfflicationInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictOnAttack");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "cureAffliction");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionTurn");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionHit");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionTolerance");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "fortitudeModifierType");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRoundCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefenseCount);
@@ -25269,17 +25160,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDealColdDamageCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iColdImmuneCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatPowerShots);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( getPromotionFreeCount((PromotionTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFreePromotionCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getPromotionFreeCount((PromotionTypes)iI), "value");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatKnockbacks);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatRepels);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraRoundStunProb);
