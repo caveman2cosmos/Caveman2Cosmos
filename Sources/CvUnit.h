@@ -3143,7 +3143,7 @@ private:
 	static int*	g_paiTempAfflictionTurnCount;
 	static int*	g_paiTempAfflictionTurnTypeCount;
 	static int*	g_paiTempAfflictionHitCount;
-	static int*	g_paiTempAfflictionTypeTolerance;
+	static int*	g_paiTempAfflictionTolerance;
 	static int*	g_paiTempFortitudeModifierAmount;
 	static bool*	g_pabTempValidBuildUp;
 	static int* g_paiTempAfflictOnAttackTypeProbability;

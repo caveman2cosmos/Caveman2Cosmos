@@ -122,6 +122,7 @@ m_Properties(this)
 	//WorkRateMod
 		//ls612: Terrain Work Modifiers
 		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
+		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 
 		m_staticsInitialized = true;
 	}
@@ -24979,7 +24980,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szScriptData);
 
-	for (std::map<PromotionTypes, PromotionKeyedInfo>::iterator it = m_promotionKeyedInfo.begin(), itEnd = m_promotionKeyedInfo.end(); it != itEnd; ++it)
+	for (std::map<TerrainTypes, PromotionKeyedInfo>::iterator it = m_promotionKeyedInfo.begin(), itEnd = m_promotionKeyedInfo.end(); it != itEnd; ++it)
 	{
 		const PromotionKeyedInfo& info = it->second;
 		if (!info.Empty())
