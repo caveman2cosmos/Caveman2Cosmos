@@ -153,13 +153,10 @@ def onEndPlayerTurn(argsList):
 
 	iMax = GC.getMAX_PC_PLAYERS()
 	iBarb = GC.getBARBARIAN_PLAYER()
-	if iPlayer >= iMax:
-		if iPlayer == iBarb:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer
-	elif iPlayer + 1 == iMax:
-		iNextPlayer = iBarb
+	if iPlayer == iBarb:
+		iNextPlayer = 0
+	elif iPlayer + 1 >= iMax:
+		return
 	else:
 		iNextPlayer = iPlayer + 1
 
@@ -169,15 +166,11 @@ def onEndPlayerTurn(argsList):
 			recordCivics(CyPlayer)
 			if bSmallRevolts:
 				doSmallRevolts(iNextPlayer, CyPlayer)
-			break
+			return
 		iNextPlayer += 1
 		if iNextPlayer == iMax:
-			# iPlayer 40-44 does not exist in C2C currently
-			# Therefore we check the last NPC, rather than the first, next.
-			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
-			iNextPlayer = iBarb
-		elif iNextPlayer > iMax:
-			iGameTurn += 1
+			if iPlayer == iBarb:
+				return
 			iNextPlayer = 0
 
 
