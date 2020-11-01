@@ -169,7 +169,7 @@ class WBPlayerUnits:
 		pCity = pPlayer.getCity(iCityID)
 		if iCityOwner > -1:
 			pCity = GC.getPlayer(iCityOwner).getCity(iCityID)
-		if pCity.isNone():
+		if pCity is None:
 			cityX, i = pPlayer.firstCity(False)
 			if cityX:
 				pCity = cityX
@@ -182,8 +182,7 @@ class WBPlayerUnits:
 			playerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
 				continue
-			cityX, i = playerX.firstCity(False)
-			while cityX:
+			for cityX in playerX.cities():
 				bCopy = True
 				if iPlotType == 0:
 					if cityX.getX() != pCity.getX() or cityX.getY() != pCity.getY():
@@ -193,7 +192,6 @@ class WBPlayerUnits:
 						bCopy = False
 				if bCopy:
 					lCities.append([cityX.getOwner(), cityX.getID()])
-				cityX, i = playerX.nextCity(i, False)
 		lCities.sort()
 		self.placeCurrentCity()
 
@@ -261,7 +259,7 @@ class WBPlayerUnits:
 		for i in lCities:
 			pPlayerX = GC.getPlayer(i[0])
 			loopCity = pPlayerX.getCity(i[1])
-			if loopCity.isNone(): continue
+			if loopCity is None: continue
 			iRow = screen.appendTableRow("WBCityList")
 			sColor = CyTranslator().getText("[COLOR_NEGATIVE_TEXT]", ())
 			if iCityID == loopCity.getID() and iCityOwner == loopCity.getOwner():
@@ -284,7 +282,7 @@ class WBPlayerUnits:
 		pCityOwner = GC.getPlayer(iCityOwner)
 		if not pCityOwner: return
 		pCity = pCityOwner.getCity(iCityID)
-		if pCity.isNone(): return
+		if pCity is None: return
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + pCity.getName() + "</color></font>"
 		screen.setText("GoToCity", "Background", sText, 1<<2, screen.getXResolution()/4, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		iXMap = screen.getXResolution()/4 - 10
@@ -412,7 +410,7 @@ class WBPlayerUnits:
 		pCityOwner = GC.getPlayer(iCityOwner)
 		if pCityOwner:
 			pCity = pCityOwner.getCity(iCityID)
-			if not pCity.isNone():
+			if pCity:
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 9, 9, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 10, 10, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 14, 14, False)

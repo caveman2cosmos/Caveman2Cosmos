@@ -59,12 +59,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couardise</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY_PROMOTION</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couard</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
@@ -95,12 +97,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE</Tag>
 		<English>Defensive Promotion Line</English>
 		<French>Spécialisation Défensif</French>
+		<German>Defensiv</German>
 		<Italian>Linea di promozione "Difensivo"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE_PROMOTION</Tag>
 		<English>Defensive Promotion Line</English>
 		<French>Spécialisation Défensif</French>
+		<German>Defensiv</German>
 		<Italian>Linea di promozione "Difensivo"</Italian>
 	</TEXT>
 	<TEXT>
@@ -373,11 +377,13 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_TIMID</Tag>
 		<English>Timid Promotion Line</English>
 		<French>Spécialisation Timide</French>
+		<German>Schüchtern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TIMID_PROMOTION</Tag>
 		<English>Timid Promotion Line</English>
 		<French>Spécialisation Timid</French>
+		<German>Schüchtern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TRADITIONAL</Tag>
@@ -408,6 +414,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMONGER</Tag>
 		<English>Warmonger Promotion Line</English>
 		<French>Spécialisation Chef de guerre</French>
+		<German>Kriegstreiber</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ZEALOUS</Tag>
@@ -506,21 +513,25 @@
 		<Tag>TXT_KEY_PROMOTION_COWARDLY</Tag>
 		<English>Cowardly</English>
 		<French>Couard</French>
+		<German>Feige</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY1</Tag>
 		<English>Cowardly I</English>
 		<French>Couard I</French>
+		<German>Feige I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY2</Tag>
 		<English>Cowardly II</English>
 		<French>Couard II</French>
+		<German>Feige II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY3</Tag>
 		<English>Cowardly III</English>
 		<French>Couard III</French>
+		<German>Feige III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CROOKED</Tag>
@@ -581,21 +592,25 @@
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE</Tag>
 		<English>Defensive</English>
 		<French>Défensif</French>
+		<German>Defensiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE1</Tag>
 		<English>Defensive I</English>
 		<French>Défensif I</French>
+		<German>Defensiv I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE2</Tag>
 		<English>Defensive II</English>
 		<French>Défensif II</French>
+		<German>Defensiv II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE3</Tag>
 		<English>Defensive III</English>
 		<French>Défensif III</French>
+		<German>Defensiv III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION</Tag>
@@ -880,24 +895,28 @@
 		<Tag>TXT_KEY_PROMOTION_TIMID</Tag>
 		<English>Timid</English>
 		<French>Timide</French>
+		<German>Schüchtern</German>
 		<Italian>Timido</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TIMID1</Tag>
 		<English>Timid I</English>
 		<French>Timide I</French>
+		<German>Schüchtern I</German>
 		<Italian>Timido I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TIMID2</Tag>
 		<English>Timid II</English>
 		<French>Timide II</French>
+		<German>Schüchtern II</German>
 		<Italian>Timido II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TIMID3</Tag>
 		<English>Timid III</English>
 		<French>Timide III</French>
+		<German>Schüchtern III</German>
 		<Italian>Timido III</Italian>
 	</TEXT>
 	<TEXT>

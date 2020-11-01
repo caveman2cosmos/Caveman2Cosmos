@@ -9,6 +9,7 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvXMLLoadUtility.h"
 
@@ -474,61 +475,6 @@ int CvBuildingInfo::getVictoryThreshold(int i) const
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
 }
 
-bool CvBuildingInfo::isNoLimit() const
-{
-	return m_bNoLimit;
-}
-
-int CvBuildingInfo::getVictoryPrereq() const
-{
-	return m_iVictoryPrereq;
-}
-
-int CvBuildingInfo::getFreeStartEra() const
-{
-	return m_iFreeStartEra;
-}
-
-int CvBuildingInfo::getMaxStartEra() const
-{
-	return m_iMaxStartEra;
-}
-
-int CvBuildingInfo::getObsoleteTech() const
-{
-	return m_iObsoleteTech;
-}
-
-int CvBuildingInfo::getPrereqAndTech() const
-{
-	return m_iPrereqAndTech;
-}
-
-int CvBuildingInfo::getNoBonus() const
-{
-	return m_iNoBonus;
-}
-
-int CvBuildingInfo::getPowerBonus() const
-{
-	return m_iPowerBonus;
-}
-
-int CvBuildingInfo::getFreeBonus() const
-{
-	return m_iFreeBonus;
-}
-
-int CvBuildingInfo::getNumFreeBonuses() const
-{
-	return m_iNumFreeBonuses;
-}
-
-int CvBuildingInfo::getNumExtraFreeBonuses() const
-{
-	return m_aExtraFreeBonuses.size();
-}
-
 BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
 {
 	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i)
@@ -548,690 +494,6 @@ bool CvBuildingInfo::hasExtraFreeBonus(BonusTypes eBonus) const
 			return true;
 	return false;
 }
-
-int CvBuildingInfo::getFreeBuilding() const
-{
-	return m_iFreeBuilding;
-}
-
-int CvBuildingInfo::getFreeAreaBuilding() const
-{
-	return m_iFreeAreaBuilding;
-}
-
-int CvBuildingInfo::getFreePromotion() const
-{
-	return m_iFreePromotion;
-}
-
-int CvBuildingInfo::getCivicOption() const
-{
-	return m_iCivicOption;
-}
-
-int CvBuildingInfo::getAIWeight() const
-{
-	return m_iAIWeight;
-}
-
-int CvBuildingInfo::getProductionCost() const
-{
-	return m_iProductionCost;
-}
-
-int CvBuildingInfo::getHurryCostModifier() const
-{
-	return m_iHurryCostModifier;
-}
-
-int CvBuildingInfo::getHurryAngerModifier() const
-{
-	return m_iHurryAngerModifier;
-}
-
-int CvBuildingInfo::getAdvancedStartCost() const
-{
-	return m_iAdvancedStartCost;
-}
-
-int CvBuildingInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
-}
-
-int CvBuildingInfo::getMinAreaSize() const
-{
-	return m_iMinAreaSize;
-}
-
-int CvBuildingInfo::getNumCitiesPrereq() const
-{
-	return m_iNumCitiesPrereq;
-}
-
-int CvBuildingInfo::getNumTeamsPrereq() const
-{
-	return m_iNumTeamsPrereq;
-}
-
-int CvBuildingInfo::getUnitLevelPrereq() const
-{
-	return m_iUnitLevelPrereq;
-}
-
-int CvBuildingInfo::getMinLatitude() const
-{
-	return m_iMinLatitude;
-}
-
-int CvBuildingInfo::getMaxLatitude() const
-{
-	return m_iMaxLatitude;
-}
-
-int CvBuildingInfo::getGreatPeopleRateModifier() const
-{
-	return m_iGreatPeopleRateModifier;
-}
-
-int CvBuildingInfo::getGreatGeneralRateModifier() const
-{
-	return m_iGreatGeneralRateModifier;
-}
-
-int CvBuildingInfo::getDomesticGreatGeneralRateModifier() const
-{
-	return m_iDomesticGreatGeneralRateModifier;
-}
-
-int CvBuildingInfo::getGlobalGreatPeopleRateModifier() const
-{
-	return m_iGlobalGreatPeopleRateModifier;
-}
-
-int CvBuildingInfo::getAnarchyModifier() const
-{
-	return m_iAnarchyModifier;
-}
-
-int CvBuildingInfo::getGoldenAgeModifier() const
-{
-	return m_iGoldenAgeModifier;
-}
-
-int CvBuildingInfo::getGlobalHurryModifier() const
-{
-	return m_iGlobalHurryModifier;
-}
-
-int CvBuildingInfo::getFreeExperience() const
-{
-	return m_iFreeExperience;
-}
-
-int CvBuildingInfo::getGlobalFreeExperience() const
-{
-	return m_iGlobalFreeExperience;
-}
-
-int CvBuildingInfo::getFoodKept() const
-{
-	return m_iFoodKept;
-}
-
-int CvBuildingInfo::getAirlift() const
-{
-	return m_iAirlift;
-}
-
-int CvBuildingInfo::getAirModifier() const
-{
-	return m_iAirModifier;
-}
-
-int CvBuildingInfo::getAirUnitCapacity() const
-{
-	return m_iAirUnitCapacity;
-}
-
-int CvBuildingInfo::getNukeModifier() const
-{
-	return m_iNukeModifier;
-}
-
-int CvBuildingInfo::getNukeExplosionRand() const
-{
-	return m_iNukeExplosionRand;
-}
-
-int CvBuildingInfo::getFreeSpecialist() const
-{
-	return m_iFreeSpecialist;
-}
-
-int CvBuildingInfo::getAreaFreeSpecialist() const
-{
-	return m_iAreaFreeSpecialist;
-}
-
-int CvBuildingInfo::getGlobalFreeSpecialist() const
-{
-	return m_iGlobalFreeSpecialist;
-}
-
-int CvBuildingInfo::getHappiness() const
-{
-	return m_iHappiness;
-}
-
-int CvBuildingInfo::getAreaHappiness() const
-{
-	return m_iAreaHappiness;
-}
-
-int CvBuildingInfo::getGlobalHappiness() const
-{
-	return m_iGlobalHappiness;
-}
-
-int CvBuildingInfo::getStateReligionHappiness() const
-{
-	return m_iStateReligionHappiness;
-}
-
-int CvBuildingInfo::getWorkerSpeedModifier() const
-{
-	return m_iWorkerSpeedModifier;
-}
-
-int CvBuildingInfo::getMilitaryProductionModifier() const
-{
-	return m_iMilitaryProductionModifier;
-}
-
-int CvBuildingInfo::getSpaceProductionModifier() const
-{
-	return m_iSpaceProductionModifier;
-}
-
-int CvBuildingInfo::getGlobalSpaceProductionModifier() const
-{
-	return m_iGlobalSpaceProductionModifier;
-}
-
-int CvBuildingInfo::getTradeRoutes() const
-{
-	return m_iTradeRoutes;
-}
-
-int CvBuildingInfo::getCoastalTradeRoutes() const
-{
-	return m_iCoastalTradeRoutes;
-}
-
-int CvBuildingInfo::getGlobalTradeRoutes() const
-{
-	return m_iGlobalTradeRoutes;
-}
-
-int CvBuildingInfo::getTradeRouteModifier() const
-{
-	return m_iTradeRouteModifier;
-}
-
-int CvBuildingInfo::getForeignTradeRouteModifier() const
-{
-	return m_iForeignTradeRouteModifier;
-}
-
-int CvBuildingInfo::getAssetValue(bool bForLoad) const
-{
-	if (!bForLoad)
-	{
-		return m_iAssetValue * 100;
-	}
-	return m_iAssetValue;
-}
-
-int CvBuildingInfo::getPowerValue(bool bForLoad) const
-{
-	if (!bForLoad)
-	{
-		return m_iPowerValue * 100;
-	}
-	return m_iPowerValue;
-}
-
-int CvBuildingInfo::getSpecialBuildingType() const
-{
-	return m_iSpecialBuildingType;
-}
-
-int CvBuildingInfo::getAdvisorType() const
-{
-	return m_iAdvisorType;
-}
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanConstruct															*/
-/********************************************************************************/
-int CvBuildingInfo::getPrereqGameOption() const
-{
-	return m_iPrereqGameOption;
-}
-
-int CvBuildingInfo::getNotGameOption() const
-{
-	return m_iNotGameOption;
-}
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
-int CvBuildingInfo::getHolyCity() const
-{
-	return m_iHolyCity;
-}
-
-int CvBuildingInfo::getReligionType() const
-{
-	return m_iReligionType;
-}
-
-int CvBuildingInfo::getStateReligion() const
-{
-	return m_iStateReligion;
-}
-
-int CvBuildingInfo::getPrereqReligion() const
-{
-	return m_iPrereqReligion;
-}
-
-int CvBuildingInfo::getPrereqCorporation() const
-{
-	return m_iPrereqCorporation;
-}
-
-int CvBuildingInfo::getFoundsCorporation() const
-{
-	return m_iFoundsCorporation;
-}
-
-int CvBuildingInfo::getGlobalReligionCommerce() const
-{
-	return m_iGlobalReligionCommerce;
-}
-
-int CvBuildingInfo::getGlobalCorporationCommerce() const
-{
-	return m_iGlobalCorporationCommerce;
-}
-
-int CvBuildingInfo::getPrereqAndBonus() const
-{
-	return m_iPrereqAndBonus;
-}
-
-int CvBuildingInfo::getGreatPeopleUnitType() const
-{
-	return m_iGreatPeopleUnitType;
-}
-
-int CvBuildingInfo::getGreatPeopleRateChange() const
-{
-	return m_iGreatPeopleRateChange;
-}
-
-int CvBuildingInfo::getConquestProbability() const
-{
-	return m_iConquestProbability;
-}
-
-int CvBuildingInfo::getMaintenanceModifier() const
-{
-	return m_iMaintenanceModifier;
-}
-
-//DPII < Maintenance Modifier >
-int CvBuildingInfo::getGlobalMaintenanceModifier() const
-{
-    return m_iGlobalMaintenanceModifier;
-}
-
-int CvBuildingInfo::getAreaMaintenanceModifier() const
-{
-    return m_iAreaMaintenanceModifier;
-}
-
-int CvBuildingInfo::getOtherAreaMaintenanceModifier() const
-{
-    return m_iOtherAreaMaintenanceModifier;
-}
-
-int CvBuildingInfo::getDistanceMaintenanceModifier() const
-{
-    return m_iDistanceMaintenanceModifier;
-}
-
-int CvBuildingInfo::getNumCitiesMaintenanceModifier() const
-{
-    return m_iNumCitiesMaintenanceModifier;
-}
-
-int CvBuildingInfo::getCoastalDistanceMaintenanceModifier() const
-{
-    return m_iCoastalDistanceMaintenanceModifier;
-}
-
-int CvBuildingInfo::getConnectedCityMaintenanceModifier() const
-{
-    return m_iConnectedCityMaintenanceModifier;
-}
-//DPII < Maintenance Modifier >
-
-int CvBuildingInfo::getWarWearinessModifier() const
-{
-	return m_iWarWearinessModifier;
-}
-
-int CvBuildingInfo::getGlobalWarWearinessModifier() const
-{
-	return m_iGlobalWarWearinessModifier;
-}
-
-int CvBuildingInfo::getEnemyWarWearinessModifier() const
-{
-	return m_iEnemyWarWearinessModifier;
-}
-
-int CvBuildingInfo::getHealRateChange() const
-{
-	return m_iHealRateChange;
-}
-
-int CvBuildingInfo::getHealth() const
-{
-	return m_iHealth;
-}
-
-int CvBuildingInfo::getAreaHealth() const
-{
-	return m_iAreaHealth;
-}
-
-int CvBuildingInfo::getGlobalHealth() const
-{
-	return m_iGlobalHealth;
-}
-
-int CvBuildingInfo::getGlobalPopulationChange() const
-{
-	return m_iGlobalPopulationChange;
-}
-
-int CvBuildingInfo::getFreeTechs() const
-{
-	return m_iFreeTechs;
-}
-
-TechTypes CvBuildingInfo::getFreeSpecialTech() const
-{
-	return m_eFreeSpecialTech;
-}
-
-int CvBuildingInfo::getDefenseModifier() const
-{
-	return m_iDefenseModifier;
-}
-
-int CvBuildingInfo::getBombardDefenseModifier() const
-{
-	return m_iBombardDefenseModifier;
-}
-
-int CvBuildingInfo::getAllCityDefenseModifier() const
-{
-	return m_iAllCityDefenseModifier;
-}
-
-int CvBuildingInfo::getEspionageDefenseModifier() const
-{
-	return m_iEspionageDefenseModifier;
-}
-
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
-int CvBuildingInfo::getUnitUpgradePriceModifier() const
-{
-	return m_iUnitUpgradePriceModifier;
-}
-
-int CvBuildingInfo::getRevIdxLocal() const
-{
-	return m_iRevIdxLocal;
-}
-
-int CvBuildingInfo::getRevIdxNational() const
-{
-	return m_iRevIdxNational;
-}
-
-int CvBuildingInfo::getRevIdxDistanceModifier() const
-{
-	return m_iRevIdxDistanceModifier;
-}
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
-int CvBuildingInfo::getMissionType() const
-{
-	return m_iMissionType;
-}
-
-void CvBuildingInfo::setMissionType(int iNewType)
-{
-	m_iMissionType = iNewType;
-}
-
-int CvBuildingInfo::getVoteSourceType() const
-{
-	return m_iVoteSourceType;
-}
-
-float CvBuildingInfo::getVisibilityPriority() const
-{
-	return m_fVisibilityPriority;
-}
-
-bool CvBuildingInfo::isTeamShare() const
-{
-	return m_bTeamShare;
-}
-
-bool CvBuildingInfo::isAutoBuild() const
-{
-	return m_bAutoBuild;
-}
-
-bool CvBuildingInfo::isWater() const
-{
-	return m_bWater;
-}
-
-bool CvBuildingInfo::isRiver() const
-{
-	return m_bRiver;
-}
-
-bool CvBuildingInfo::isFreshWater() const
-{
-	return m_bFreshWater;
-}
-
-bool CvBuildingInfo::isPower() const
-{
-	return m_bPower;
-}
-
-bool CvBuildingInfo::isDirtyPower() const
-{
-	return m_bDirtyPower;
-}
-
-bool CvBuildingInfo::isAreaCleanPower() const
-{
-	return m_bAreaCleanPower;
-}
-
-bool CvBuildingInfo::isOrbital() const
-{
-	return m_bOrbital;
-}
-
-bool CvBuildingInfo::isOrbitalInfrastructure() const
-{
-	return m_bOrbitalInfrastructure;
-}
-
-bool CvBuildingInfo::isNoHolyCity() const
-{
-	return m_bNoHolyCity;
-}
-
-bool CvBuildingInfo::isAreaBorderObstacle() const
-{
-	return m_bAreaBorderObstacle;
-}
-
-bool CvBuildingInfo::isForceTeamVoteEligible() const
-{
-	return m_bForceTeamVoteEligible;
-}
-
-bool CvBuildingInfo::isCapital() const
-{
-	return m_bCapital;
-}
-
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-int CvBuildingInfo::getDCMAirbombMission() const
-{
-	return m_iDCMAirbombMission;
-}
-
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-bool CvBuildingInfo::isGovernmentCenter() const
-{
-	return m_bGovernmentCenter;
-}
-
-bool CvBuildingInfo::isGoldenAge() const
-{
-	return m_bGoldenAge;
-}
-
-bool CvBuildingInfo::isMapCentering() const
-{
-	return m_bMapCentering;
-}
-
-bool CvBuildingInfo::isNoUnhappiness() const
-{
-	return m_bNoUnhappiness;
-}
-
-bool CvBuildingInfo::isNoUnhealthyPopulation() const
-{
-	return m_bNoUnhealthyPopulation;
-}
-
-bool CvBuildingInfo::isBuildingOnlyHealthy() const
-{
-	return m_bBuildingOnlyHealthy;
-}
-
-bool CvBuildingInfo::isNeverCapture() const
-{
-	return m_bNeverCapture;
-}
-
-bool CvBuildingInfo::isNukeImmune() const
-{
-	return m_bNukeImmune;
-}
-
-bool CvBuildingInfo::isCenterInCity() const
-{
-	return m_bCenterInCity;
-}
-
-bool CvBuildingInfo::isStateReligion() const
-{
-	return m_bStateReligion;
-}
-
-bool CvBuildingInfo::isAllowsNukes() const
-{
-	return m_bAllowsNukes;
-}
-
-const TCHAR* CvBuildingInfo::getConstructSound() const
-{
-	return m_szConstructSound;
-}
-
-const TCHAR* CvBuildingInfo::getArtDefineTag() const
-{
-	return m_szArtDefineTag;
-}
-
-const TCHAR* CvBuildingInfo::getMovieDefineTag() const
-{
-	return m_szMovieDefineTag;
-}
-
-const CvProperties* CvBuildingInfo::getProperties() const
-{
-	return &m_Properties;
-}
-
-const CvProperties* CvBuildingInfo::getPropertiesAllCities() const
-{
-	return &m_PropertiesAllCities;
-}
-
-const CvProperties* CvBuildingInfo::getPrereqMinProperties() const
-{
-	return &m_PrereqMinProperties;
-}
-
-const CvProperties* CvBuildingInfo::getPrereqMaxProperties() const
-{
-	return &m_PrereqMaxProperties;
-}
-
-const CvProperties* CvBuildingInfo::getPrereqPlayerMinProperties() const
-{
-	return &m_PrereqPlayerMinProperties;
-}
-
-const CvProperties* CvBuildingInfo::getPrereqPlayerMaxProperties() const
-{
-	return &m_PrereqPlayerMaxProperties;
-}
-
-// Arrays
 
 int CvBuildingInfo::getYieldChange(int i) const
 {
@@ -1762,193 +1024,16 @@ const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 const TCHAR* CvBuildingInfo::getMovie() const
 {
 	const CvArtInfoMovie* pArt = getMovieInfo();
-	if (pArt != NULL)
-	{
-		return pArt->getPath();
-	}
-	else
-	{
-		return NULL;
-	}
+	return pArt ? pArt->getPath() : NULL;
 }
 
-
-int CvBuildingInfo::getGlobalPopulationgrowthratepercentage() const
+int CvBuildingInfo::getNoEntryDefenseLevel() const
 {
-	return m_iGlobalPopulationgrowthratepercentage;
-}
-int CvBuildingInfo::getPopulationgrowthratepercentage() const
-{
-	return m_iPopulationgrowthratepercentage;
-}
-
-int CvBuildingInfo::getPrereqVicinityBonus() const
-{
-	return m_iPrereqVicinityBonus;
-}
-
-int CvBuildingInfo::getPrereqRawVicinityBonus() const
-{
-	return m_iPrereqRawVicinityBonus;
-}
-
-int CvBuildingInfo::getLineOfSight() const
-{
-	return m_iLineOfSight;
-}
-
-int CvBuildingInfo::getInflationModifier() const
-{
-	return m_iInflationModifier;
-}
-
-int CvBuildingInfo::getFreePromotion_2() const
-{
-	return m_iFreePromotion_2;
-}
-
-int CvBuildingInfo::getFreePromotion_3() const
-{
-	return m_iFreePromotion_3;
-}
-
-int CvBuildingInfo::getInvasionChance() const
-{
-	return m_iInvasionChance;
-}
-
-int CvBuildingInfo::getAdjacentDamagePercent() const
-{
-	return m_iAdjacentDamagePercent;
-}
-
-int CvBuildingInfo::getProductionContinueBuilding() const
-{
-	return m_iProductionContinueBuilding;
-}
-
-int CvBuildingInfo::getPrereqPopulation() const
-{
-	return m_iPrereqPopulation;
-}
-
-int CvBuildingInfo::getPrereqCultureLevel() const
-{
-	return m_iPrereqCultureLevel;
-}
-
-int CvBuildingInfo::getWorkableRadius() const
-{
-	return m_iWorkableRadius;
-}
-
-int CvBuildingInfo::getPrereqAnyoneBuilding() const
-{
-	return m_iPrereqAnyoneBuilding;
-}
-
-int CvBuildingInfo::getExtendsBuilding() const
-{
-	return m_iExtendsBuilding;
-}
-
-int CvBuildingInfo::getOccupationTimeModifier() const
-{
-	return m_iOccupationTimeModifier;
-}
-
-int CvBuildingInfo::getNoEntryDefenseLevel(bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
 	return m_iNoEntryDefenseLevel;
-}
-
-int CvBuildingInfo::getNumUnitFullHeal() const
-{
-	return m_iNumUnitFullHeal;
-}
-
-int CvBuildingInfo::getPillageGoldModifier() const
-{
-	return m_iPillageGoldModifier;
-}
-
-int CvBuildingInfo::getWorldTradeRoutes() const
-{
-	return m_iWorldTradeRoutes;
-}
-
-int CvBuildingInfo::getNumPopulationEmployed() const
-{
-	return m_iNumPopulationEmployed;
-}
-
-int CvBuildingInfo::getHealthPercentPerPopulation() const
-{
-	return m_iHealthPercentPerPopulation;
-}
-
-int CvBuildingInfo::getHappinessPercentPerPopulation() const
-{
-	return m_iHappinessPercentPerPopulation;
-}
-
-bool CvBuildingInfo::isProtectedCulture() const
-{
-	return m_bProtectedCulture;
-}
-
-bool CvBuildingInfo::isApplyFreePromotionOnMove() const
-{
-	return m_bApplyFreePromotionOnMove;
-}
-
-bool CvBuildingInfo::isBuildOnlyOnPeaks() const
-{
-	return m_bBuildOnlyOnPeaks;
-}
-
-bool CvBuildingInfo::isPrereqPower() const
-{
-	return m_bPrereqPower;
-}
-
-bool CvBuildingInfo::isNoEnemyPillagingIncome() const
-{
-	return m_bNoEnemyPillagingIncome;
-}
-
-bool CvBuildingInfo::isProvidesFreshWater() const
-{
-	return m_bProvidesFreshWater;
-}
-
-bool CvBuildingInfo::isForceAllTradeRoutes() const
-{
-	return m_bForceAllTradeRoutes;
-}
-
-bool CvBuildingInfo::isForceNoPrereqScaling() const
-{
-	return m_bForceNoPrereqScaling;
-}
-
-bool CvBuildingInfo::isPrereqWar() const
-{
-	return m_bPrereqWar;
-}
-
-bool CvBuildingInfo::isRequiresActiveCivics() const
-{
-	return m_bRequiresActiveCivics;
-}
-
-bool CvBuildingInfo::isZoneOfControl() const
-{
-	return m_bZoneOfControl;
 }
 
 bool CvBuildingInfo::isPrereqOrBuilding(int i) const
@@ -1984,12 +1069,12 @@ bool CvBuildingInfo::isPrereqAndCivics(int i) const
 }
 
 //This is for the readpass3
-int CvBuildingInfo::isPrereqOrCivicsVectorSize() const					{return m_aszPrereqOrCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqOrCivicsNamesVectorElement(const int i) const	{return m_aszPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqOrCivicsValuesVectorElement(const int i) const		{return m_abPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsVectorSize() const					{return m_aszPrereqAndCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqAndCivicsNamesVectorElement(const int i) const	{return m_aszPrereqAndCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(const int i) const		{return m_abPrereqAndCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqOrCivicsVectorSize() const						{return m_aszPrereqOrCivicsforPass3.size();}
+CvString CvBuildingInfo::isPrereqOrCivicsNamesVectorElement(int i) const	{return m_aszPrereqOrCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqOrCivicsValuesVectorElement(int i) const		{return m_abPrereqOrCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqAndCivicsVectorSize() const						{return m_aszPrereqAndCivicsforPass3.size();}
+CvString CvBuildingInfo::isPrereqAndCivicsNamesVectorElement(int i) const	{return m_aszPrereqAndCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(int i) const		{return m_abPrereqAndCivicsforPass3[i];}
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
@@ -2430,18 +1515,18 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 	return m_iRiverDefensePenalty;
 }
 
-int CvBuildingInfo::getLocalRepel(bool bForLoad) const
+int CvBuildingInfo::getLocalRepel() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
 	return m_iLocalRepel;
 }
 
-int CvBuildingInfo::getMinDefense(bool bForLoad) const
+int CvBuildingInfo::getMinDefense() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -2468,18 +1553,18 @@ int CvBuildingInfo::getDamageToAttacker() const
 	return m_iDamageToAttacker;
 }
 
-int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
+int CvBuildingInfo::getMaxPopulationAllowed() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
 	return m_iMaxPopulationAllowed;
 }
 
-int CvBuildingInfo::getMaxPopulationChange(bool bForLoad) const
+int CvBuildingInfo::getMaxPopulationChange() const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -5417,8 +4502,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getBombardDefenseModifier() == iDefault) m_iBombardDefenseModifier = pClassInfo->getBombardDefenseModifier();
 	if (getAllCityDefenseModifier() == iDefault) m_iAllCityDefenseModifier = pClassInfo->getAllCityDefenseModifier();
 	if (getEspionageDefenseModifier() == iDefault) m_iEspionageDefenseModifier = pClassInfo->getEspionageDefenseModifier();
-	if (getAssetValue(true) == iDefault) m_iAssetValue = pClassInfo->getAssetValue(true);
-	if (getPowerValue(true) == iDefault) m_iPowerValue = pClassInfo->getPowerValue(true);
+	if (m_iAssetValue == iDefault) m_iAssetValue = pClassInfo->m_iAssetValue;
+	if (m_iPowerValue == iDefault) m_iPowerValue = pClassInfo->m_iPowerValue;
 
 	if (getUnitUpgradePriceModifier() == iDefault) m_iUnitUpgradePriceModifier = pClassInfo->getUnitUpgradePriceModifier();
 	if (getRevIdxLocal() == iDefault) m_iRevIdxLocal = pClassInfo->getRevIdxLocal();
@@ -5861,7 +4946,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getPrereqCultureLevel() == NO_CULTURELEVEL) m_iPrereqCultureLevel = pClassInfo->getPrereqCultureLevel();
 	if (getWorkableRadius() == iDefault) m_iWorkableRadius = pClassInfo->getWorkableRadius();
 	if (getOccupationTimeModifier() == iDefault) m_iOccupationTimeModifier = pClassInfo->getOccupationTimeModifier();
-	if (getNoEntryDefenseLevel(true) == iDefault) m_iNoEntryDefenseLevel = pClassInfo->getNoEntryDefenseLevel(true);
+	if (m_iNoEntryDefenseLevel == iDefault) m_iNoEntryDefenseLevel = pClassInfo->m_iNoEntryDefenseLevel;
 	if (getNumUnitFullHeal() == iDefault) m_iNumUnitFullHeal = pClassInfo->getNumUnitFullHeal();
 	if (getNumPopulationEmployed() == iDefault) m_iNumPopulationEmployed = pClassInfo->getNumPopulationEmployed();
 	if (getHealthPercentPerPopulation() == iDefault) m_iHealthPercentPerPopulation = pClassInfo->getHealthPercentPerPopulation();
@@ -6407,14 +5492,14 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getLocalCaptureResistanceModifier() == iDefault) m_iLocalCaptureResistanceModifier = pClassInfo->getLocalCaptureResistanceModifier();
 	if (getLocalDynamicDefense() == iDefault) m_iLocalDynamicDefense = pClassInfo->getLocalDynamicDefense();
 	if (getRiverDefensePenalty() == iDefault) m_iRiverDefensePenalty = pClassInfo->getRiverDefensePenalty();
-	if (getLocalRepel(true) == iDefault) m_iLocalRepel = pClassInfo->getLocalRepel(true);
-	if (getMinDefense(true) == iDefault) m_iMinDefense = pClassInfo->getMinDefense(true);
+	if (m_iLocalRepel == iDefault) m_iLocalRepel = pClassInfo->m_iLocalRepel;
+	if (m_iMinDefense == iDefault) m_iMinDefense = pClassInfo->m_iMinDefense;
 	if (getBuildingDefenseRecoverySpeedModifier() == iDefault) m_iBuildingDefenseRecoverySpeedModifier = pClassInfo->getBuildingDefenseRecoverySpeedModifier();
 	if (getCityDefenseRecoverySpeedModifier() == iDefault) m_iCityDefenseRecoverySpeedModifier = pClassInfo->getCityDefenseRecoverySpeedModifier();
 	if (getDamageAttackerChance() == iDefault) m_iDamageAttackerChance = pClassInfo->getDamageAttackerChance();
 	if (getDamageToAttacker() == iDefault) m_iDamageToAttacker = pClassInfo->getDamageToAttacker();
-	if (getMaxPopulationAllowed(true) == -1) m_iMaxPopulationAllowed = pClassInfo->getMaxPopulationAllowed(true);
-	if (getMaxPopulationChange(true) == iDefault) m_iMaxPopulationChange = pClassInfo->getMaxPopulationChange(true);
+	if (m_iMaxPopulationAllowed == -1) m_iMaxPopulationAllowed = pClassInfo->m_iMaxPopulationAllowed;
+	if (m_iMaxPopulationChange == iDefault) m_iMaxPopulationChange = pClassInfo->m_iMaxPopulationChange;
 	if (getInsidiousness() == iDefault) m_iInsidiousness = pClassInfo->getInsidiousness();
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 	if (getPopulationChange() == iDefault) m_iPopulationChange = pClassInfo->getPopulationChange();

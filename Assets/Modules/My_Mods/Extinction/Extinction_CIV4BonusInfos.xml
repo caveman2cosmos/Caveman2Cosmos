@@ -31,7 +31,7 @@
 			</Rands>
 			<iPlayer>100</iPlayer>
 			<iTilesPer>256</iTilesPer>
-			<iUnique>6</iUnique>
+			<iUniqueRange>6</iUniqueRange>
 			<bArea>0</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>

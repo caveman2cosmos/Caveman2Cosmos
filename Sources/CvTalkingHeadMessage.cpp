@@ -66,7 +66,7 @@ void CvTalkingHeadMessage::write(FDataStreamBase& stream) const
 	stream.Write(m_bShown);
 }
 
-const wchar* CvTalkingHeadMessage::getDescription() const
+const wchar_t* CvTalkingHeadMessage::getDescription() const
 {
 	return (m_szDescription);
 }

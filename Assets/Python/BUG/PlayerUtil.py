@@ -28,9 +28,6 @@
 ##   getPlayerUnits(playerOrID, testFunc), getPlayerCities(playerOrID, testFunc)
 ##     Returns a list of a player's units or cities.
 ##
-##   isSaltWaterPort(city, eAskingTeam)
-##     Returns True if (asking team knows) the CyCity has an adjacent saltwater plot.
-##
 ##   getStateReligion(playerOrID)
 ##   getFavoriteCivic(playerOrID)
 ##   getWorstEnemy(playerOrID, askingPlayerOrID)
@@ -542,7 +539,7 @@ def playerCities(playerOrID, testFunc=None):
 	player = getPlayer(playerOrID)
 	city, iter = player.firstCity(False)
 	while city:
-		if not city.isNone() and (testFunc is None or testFunc(city)):
+		if testFunc is None or testFunc(city):
 			yield city
 		city, iter = player.nextCity(iter, False)
 
@@ -553,24 +550,6 @@ def getPlayerCities(playerOrID, testFunc=None):
 	If testFunc is given, only cities for which it returns True are returned.
 	"""
 	return [city for city in playerCities(playerOrID, testFunc)]
-
-def isSaltWaterPort(city, askingTeamOrID=None):
-	"""
-	Returns True if the asking team can tell that the CyCity is on the coast
-	of the sea.
-
-	If askingTeamOrID is None, the result is as if the owner of the city is asking.
-	"""
-	if city:
-		eAskingTeam = getTeamID(askingTeamOrID)
-		map = CyMap()
-		for eDirection in range(DirectionTypes.NUM_DIRECTION_TYPES):
-			plot = plotDirection(city.getX(), city.getY(), DirectionTypes(eDirection))
-			if eAskingTeam != -1 and not plot.isRevealed(eAskingTeam, False):
-				continue
-			if plot.isWater() and not plot.isLake():
-				return True
-	return False
 
 
 ## Units

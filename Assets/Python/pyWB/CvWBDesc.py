@@ -1048,7 +1048,7 @@ class CvCityDesc:
 	# write out city data
 	def write(self, f, plot):
 		city = plot.getPlotCity()
-		if city.isNone():
+		if city is None:
 			print "CvCityDesc.write - null city?"
 
 		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n\t\tCityPopulation=%d\n\t\tStoredFood=%d\n"
@@ -1976,7 +1976,7 @@ Randomize Resources=0\nEndMap\n"
 				team.signDefensivePact(item)
 
 			for item in pWBTeam.bVassalOfTeamList:
-				GC.getTeam(item[0]).assignVassal(iTeamLoop, item[1])
+				GC.getTeam(item[0]).assignVassal(pWBTeam.iTeam, item[1])
 			if pWBTeam.iVassalPower > 0:
 				team.setVassalPower(pWBTeam.iVassalPower)
 			if pWBTeam.iMasterPower > 0:

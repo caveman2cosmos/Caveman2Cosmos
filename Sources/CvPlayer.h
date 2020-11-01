@@ -81,7 +81,6 @@ protected:
 
 public:
 
-
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
@@ -105,7 +104,8 @@ public:
 	void setStabilityIndexAverage(int iNewValue);
 	void updateStabilityIndexAverage();
 
-	//protected:
+	bool haveSettlerUnit() const;
+
 	void uninit();
 
 public:
@@ -154,25 +154,25 @@ public:
 	bool isAnimal() const;
 	bool isInvasionCapablePlayer() const;
 
-	DllExport const wchar* getName(uint uiForm = 0) const; // Exposed to Python
+	DllExport const wchar_t* getName(uint uiForm = 0) const; // Exposed to Python
 
 	void setName(std::wstring szNewValue); // Exposed to Python
 	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj); // Exposed to Python
 
-	DllExport const wchar* getNameKey() const; // Exposed to Python
-	DllExport const wchar* getCivilizationDescription(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationDescriptionKey() const; // Exposed to Python
-	const wchar* getCivilizationShortDescription(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationShortDescriptionKey() const; // Exposed to Python
-	const wchar* getCivilizationAdjective(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getCivilizationAdjectiveKey() const; // Exposed to Python
+	DllExport const wchar_t* getNameKey() const; // Exposed to Python
+	DllExport const wchar_t* getCivilizationDescription(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationDescriptionKey() const; // Exposed to Python
+	const wchar_t* getCivilizationShortDescription(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationShortDescriptionKey() const; // Exposed to Python
+	const wchar_t* getCivilizationAdjective(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getCivilizationAdjectiveKey() const; // Exposed to Python
 	DllExport CvWString getFlagDecal() const; // Exposed to Python
 	DllExport bool isWhiteFlag() const; // Exposed to Python
-	const wchar* getStateReligionName(uint uiForm = 0) const; // Exposed to Python
-	const wchar* getStateReligionKey() const; // Exposed to Python
+	const wchar_t* getStateReligionName(uint uiForm = 0) const; // Exposed to Python
+	const wchar_t* getStateReligionKey() const; // Exposed to Python
 	const CvWString getBestAttackUnitName(uint uiForm = 0) const; // Exposed to Python
 	const CvWString getWorstEnemyName() const; // Exposed to Python
-	const wchar* getBestAttackUnitKey() const; // Exposed to Python
+	const wchar_t* getBestAttackUnitKey() const; // Exposed to Python
 	DllExport ArtStyleTypes getArtStyleType() const; // Exposed to Python
 	const TCHAR* getUnitButton(UnitTypes eUnit) const; // Exposed to Python
 
@@ -304,7 +304,7 @@ public:
 
 	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const; // Exposed to Python
 
-	int getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const; // Exposed to Python
+	int getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const; // Exposed to Python
 
 	int calculateTotalYield(YieldTypes eYield) const; // Exposed to Python
 	int calculateTotalExports(YieldTypes eYield) const; // Exposed to Python
@@ -1230,7 +1230,7 @@ public:
 
 	void launch(VictoryTypes victoryType);
 
-	bool hasShrine(ReligionTypes eReligion);
+	bool hasShrine(ReligionTypes eReligion) const;
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const; // Exposed to Python
 	void processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive);
 	bool canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const;
@@ -2269,7 +2269,7 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding);
+	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end

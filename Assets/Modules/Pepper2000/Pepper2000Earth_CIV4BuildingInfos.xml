@@ -5092,6 +5092,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<FreeBonus>BONUS_SEASONING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>

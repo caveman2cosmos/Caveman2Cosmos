@@ -1452,7 +1452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Supply Ship into a Bulldozer to connect resources to your city on the moon.</English>
+		<English>Transforms the Lunar Supply Ship into a Bulldozer to connect resources to your city on the moon.</English>
 		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
 	</TEXT>
 	<TEXT>
@@ -1847,12 +1847,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Will transform the Supply Ship into a Bulldozer.</English>
+		<English>Will transform the Lunar Supply Ship into a Bulldozer.</English>
 		<French>Va Transformer le Vaisseau Spatial en Bulldozer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Tag>
-		<English>Your Supply Ship was transformed into a Bulldozer.</English>
+		<English>Your Lunar Supply Ship was transformed into a Bulldozer.</English>
 		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
 	</TEXT>
 	<TEXT>
@@ -2533,8 +2533,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon</English>
-		<French>[ICON_BULLET]Peut construire les Villes sur la Lune</French>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
@@ -2547,7 +2546,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Tag>
-		<English>Build this unit to extract resources on Moon. Supply Ship can be turned to Lunar Bulldozer at Lunar Bases on claimed tile.</English>
+		<English>Build this unit to extract resources on Moon. Lunar Supply Ships can be turned into a Lunar Bulldozer at owned Lunar Bases.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
@@ -2989,7 +2988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
-		<English>Supply Ship</English>
+		<English>Lunar Supply Ship</English>
 		<French>Vaisseau de ravitaillement</French>
 	</TEXT>
 	<TEXT>

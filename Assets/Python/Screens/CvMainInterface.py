@@ -86,7 +86,6 @@ class CvMainInterface:
 		self.szPlotHelp = ""
 
 		self.iField_View_Prev = -1
-		self.iBattleTimer = 0
 		self.iWaitingCounter = 0
 		self.bShowTimeTextAlt = False
 		self.iTimeTextCounter = 0
@@ -149,8 +148,8 @@ class CvMainInterface:
 			FONT_CENTER_JUSTIFY	= 1<<2
 			FONT_RIGHT_JUSTIFY	= 1<<1
 			FONT_LEFT_JUSTIFY	= 1<<0
-			// Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
-			//			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
+			# Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
+			#			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
 			'''
 			# Cache Icons
 			self.iconStrength			= u'%c' % GAME.getSymbolID(FontSymbols.STRENGTH_CHAR)
@@ -1175,12 +1174,6 @@ class CvMainInterface:
 
 	# Will update the screen (every 250 ms)
 	def updateScreen(self):
-		# Battle Effects
-		self.iBattleTimer += 1
-		if self.iBattleTimer > 22:
-			GAME.drawBattleEffects()
-			self.iBattleTimer = 0
-
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 		IFT = self.iInterfaceType
 
@@ -2635,7 +2628,7 @@ class CvMainInterface:
 			aList = []
 			for iRoute in xrange(self.iMaxTradeRoutes):
 				CyCityX = CyCity.getTradeCity(iRoute)
-				if not CyCityX or CyCityX.isNone(): continue
+				if not CyCityX: continue
 				iPlayerX = CyCityX.getOwner()
 				if iPlayerX > -1:
 					if bYieldView:
@@ -3569,6 +3562,9 @@ class CvMainInterface:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		InCity = self.InCity
 		CyCity = InCity.CyCity
+		if InCity.WorkQueue and not CyCity.getProduction():
+			self.bFreshQueue = False
+		else: self.bFreshQueue = True
 		iPlayer = InCity.iPlayer
 		iPlayerAct = self.iPlayer
 		iSize = MainOpt.getBuildIconSize()
@@ -4550,12 +4546,12 @@ class CvMainInterface:
 										szTxt = str(CyPlayer.getNumCities())
 									else:
 										iCount = 0
-										CyCity, n = CyPlayer.firstCity(False)
-										while CyCity:
-											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
+										for CyCity in CyPlayer.cities():
+											if CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
-											CyCity, n = CyPlayer.nextCity(n, False)
-										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):
+										# (capital==None and iCount > 0) wouldn't think it possible, but it happened...
+										capital = CyPlayer.getCapitalCity()
+										if iCount and capital and not capital.isRevealed(iTeamAct, False):
 											iCount += 1
 										szTxt = u"<color=0,255,255>%d" %iCount
 									scores.setNumCities(szTxt)
@@ -5508,7 +5504,9 @@ class CvMainInterface:
 							self.InCity.WorkQueue.append([szName, iType, szRow])
 						else: # Replace current
 							if InCity.WorkQueue:
-								screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))
+								if self.bFreshQueue:
+									screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))
+								else: self.bUpdateCityTab = True
 								screen.deleteWidget(ROW + InCity.WorkQueue[0][2])
 								self.InCity.WorkQueue[0] = [szName, iType, szRow]
 							else:

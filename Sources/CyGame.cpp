@@ -2,6 +2,7 @@
 // Python wrapper class for CvGame
 //
 
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvInitCore.h"
@@ -880,7 +881,8 @@ bool CyGame::isInAdvancedStart() const
 
 CyCity* CyGame::getHolyCity(int /*ReligionTypes*/ eIndex) const
 {
-	return new CyCity(m_pGame.getHolyCity((ReligionTypes) eIndex));
+	CvCity* city = m_pGame.getHolyCity((ReligionTypes)eIndex);
+	return city ? new CyCity(city) : NULL;
 }
 
 void CyGame::setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
@@ -895,7 +897,8 @@ void CyGame::clearHolyCity(int /*ReligionTypes*/ eIndex)
 
 CyCity* CyGame::getHeadquarters(int /*CorporationTypes*/ eIndex) const
 {
-	return new CyCity(m_pGame.getHeadquarters((CorporationTypes) eIndex));
+	CvCity* city = m_pGame.getHeadquarters((CorporationTypes)eIndex);
+	return city ? new CyCity(city) : NULL;
 }
 
 void CyGame::setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
@@ -1088,11 +1091,6 @@ void CyGame::addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerType
 	m_pGame.addReplayMessage((ReplayMessageTypes)eType, (PlayerTypes)ePlayer, pszText, iPlotX, iPlotY, (ColorTypes)eColor);
 }
 
-void CyGame::drawBattleEffects()
-{
-	m_pGame.drawBattleEffects();
-}
-
 int CyGame::getCultureThreshold(int eLevel) const
 {
 	return m_pGame.getCultureThreshold((CultureLevelTypes) eLevel);
@@ -1236,11 +1234,6 @@ void CyGame::setYResolution(int iNewValue)
 void CyGame::changeYResolution(int iNewValue)
 {
 	m_pGame.changeYResolution(iNewValue);
-}
-
-void CyGame::setFutureEras()
-{
-	m_pGame.setFutureEras();
 }
 
 bool CyGame::canEverResearch(int iTech) const

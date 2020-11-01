@@ -75,8 +75,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
-		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
-		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
+		<English>While the citizens of a city may identify with a variety of existing cultures, those cultures may or may not be recognized at a local level.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Tag>
+		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture, obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</English>
+		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation. It is obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
@@ -125,7 +129,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
-		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
+		<English>Through military might, societial pressure, or economic power, when sufficient peoples integrate into an existing nation, the values of that nation inevitably end up incorporating the newly introduced cultures and experiences of those peoples. After all, is it really "their" culture if so many of our own citizens identify with it?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Tag>
+		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign "Local Culture" that differs from your native culture, you will get that foreign culture as an "Adopted Culture".</English>
 		<French>Cult. Adopt. = Culture adoptée :[NEWLINE]En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
 	</TEXT>
 	<TEXT>
@@ -175,8 +183,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
-		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
-		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE]Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
+		<English>There is more to the culture and essence of a city than the values of its rulers; cities may be conquered and captured and taken and retaken and rebel and convert, but so long as people remain, they will retain their own local cultural values.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
@@ -240,6 +247,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Tag>
+		<English>At the very roughest of scales, human cultures can claim ancestry with one of several continental histories they associate more closely with than any other.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Tag>
 		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
 		<French>Cult. Orig. = Culture d'Origine[NEWLINE]Chaque civilisation a une culture native explicite.</French>
 	</TEXT>
@@ -4518,6 +4529,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Tag>
 		<English>Gives access to unique buildings and units.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_STRATEGY</Tag>
+		<English>Gives access to unique buildings and units.[PARAGRAPH:1][COLOR_HIGHLIGHT_TEXT]IMPORTANT NOTE:[COLOR_REVERT] Neanderthal units require the corresponding [LINK=BUILDING_CULTURE_LOCAL_NEANDERTHAL]Neanderthal Local Culture[\LINK] to be constructed in the city (unlocked by this Culture), which [COLOR_RED]will remove your ability to construct Prehistoric non-Neanderthal units[COLOR_REVERT] in cities that have that Local Culture![PARAGRAPH:1]In practice, this means your units early in the game will be stronger, but cost more to produce as well as preventing you from training certain stealth or throwing units such as the [LINK=UNIT_AMBUSHER]Ambusher[\LINK] and [LINK=UNIT_ATLATL]Atlatlist[\LINK].</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Tag>
+		<English>A regional Local Culture (C.L.) determines what specific World Cultures may be completed in that city. Obtaining a C.L. in your city comes in one of four ways:[NEWLINE]1) Your first city gains a C.L. based on your civ's Native Culture.[NEWLINE]2) A settler-type unit will carry all C.L.s present from the city that trained it to a city it founds.[NEWLINE]3) A captured city will maintain its C.L.(s), and you may manually construct your own native or adopted C.L.s (if not already present).[NEWLINE]4) Adopting a culture into your empire (having 3 (+mapsize variant) of the same C.L.s across all your cities) will result all your cities being able to construct that C.L.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL_STRATEGY</Tag>
+		<English>[COLOR_RED]NOTE: Constructing this in a city will prevent training of certain Prehistoric unit types[COLOR_REVERT] such as the [LINK=UNIT_AMBUSHER]Ambusher[\LINK] and [LINK=UNIT_ATLATL]Atlatlist[\LINK], though will allow Neanderthal (read: stronger) variants of other units.[PARAGRAPH:1]A regional Local Culture (C.L.) determines what specific World Cultures may be completed in that city. Obtaining a C.L. in your city comes in one of four ways:[NEWLINE]1) Your first city gains a C.L. based on your civ's Native Culture.[NEWLINE]2) A settler-type unit will carry all C.L.s present from the city that trained it to a city it founds.[NEWLINE]3) A captured city will maintain its C.L.(s), and you may manually construct your own native or adopted C.L.s (if not already present).[NEWLINE]4) Adopting a culture into your empire (having 3 (+mapsize variant) of the same C.L.s across all your cities) will result all your cities being able to construct that C.L.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUDANESE</Tag>

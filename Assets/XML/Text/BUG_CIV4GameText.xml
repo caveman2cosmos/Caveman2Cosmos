@@ -4609,6 +4609,18 @@
 		<Spanish>Invertir Shift en colas</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLERP_HOVER</Tag>
+		<English>Enables information about your current game to be shown to others on discord in a nice fashion</English>
+		<French>Enables information about your current game to be shown to others on discord in a nice fashion</French>
+		<Spanish>Enables information about your current game to be shown to others on discord in a nice fashion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLERP_TEXT</Tag>
+		<English>Enable Discord Rich Presence</English>
+		<French>Enable Discord Rich Presence</French>
+		<Spanish>Enable Discord Rich Presence</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__MINIMIZEAITURNSLICES_HOVER</Tag>
 		<English>When checked, runs the AI turns in the minimal number of turn slices. This will speed the turn processing up at the expense of animation and general graphical responsiveness while the AI is processing its turns</English>
 		<French>Lorsque activé, réduit le temps nécessaire à l'IA, et donnant une priorité aux calculs de l'IA au détriment de l'affichage et des animations.</French>
@@ -5698,20 +5710,6 @@
 		<French>Support d'Attaques</French>
 		<German>Angriffsunterstützung</German>
 		<Spanish>Apoyo al ataque</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_HOVER</Tag>
-		<English>Causes "Battlefield Terrain", which significantly reduces productivity and mobility on plots where a battle is fought</English>
-		<French>Transforme les cases qui sont le théâtre d'un combat en "Champs de Bataille", réduisant de manière significative leur productivité et la mobilité des unités y accédant.</French>
-		<German>Wenn eine Schlacht stattfindet, wird auf der Karte ein "Schlachtfeld" erzeugt, dass die Produktivität senkt und die Bewegung von Einheiten verringert</German>
-		<Spanish>Causa el efecto "Campo de batalla" en las casillas donde se libra una batalla, el cual reduce significativamente la producción y la movilidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_TEXT</Tag>
-		<English>Battle Effects</English>
-		<French>Effets de Batailles</French>
-		<German>Kampfeffekte</German>
-		<Spanish>Efectos de batalla</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_HOVER</Tag>

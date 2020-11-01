@@ -21,7 +21,6 @@ public:
 	CyGame();
 	explicit CyGame(CvGame& pGame);			// Call from C++
 	explicit CyGame(CvGameAI& pGame);		// Call from C++;
-	//bool isNone() const { return m_pGame == NULL; }
 
 	int getCurrentMap() const;
 
@@ -299,8 +298,6 @@ public:
 	void log(TCHAR* str);
 	void logw(std::wstring str);
 
-	void drawBattleEffects();
-
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel) const;
 
 	void setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield);
@@ -324,10 +321,11 @@ public:
 	int getHighToLowCounter() const;
 	bool cheatCodesEnabled() const;
 	void setVictoryValid(int iVictory, bool bNewVal);
+
 	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex) const;
 	int getModderGameOption(int /*ModderGameOptionTypes*/ eIndex) const;
 	void setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewValue);
-	void setFutureEras();
+
 	bool canEverResearch(int iTech) const;
 	bool canEverConstruct(int iBuilding) const;
 	bool canEverTrain(int iUnit) const;

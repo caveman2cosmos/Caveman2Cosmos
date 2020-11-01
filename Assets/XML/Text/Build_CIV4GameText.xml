@@ -656,7 +656,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NOMADIC_HERD</Tag>
-		<English>Bulid [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>
@@ -1210,6 +1210,7 @@
 		<Tag>TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Modifier%% alla velocità dei lavoratori per costruire %s2_Build</Italian>
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator szybkości Robotnika przy budowie %s2_Build</Polish>
 	</TEXT>

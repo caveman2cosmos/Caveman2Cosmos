@@ -134,8 +134,10 @@ public:
 	int getRBombardDamageMaxUnits() const;
 
 	int getBombardTurns(const CvCity* pCity ) const;
-	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
-	bool isHasPathToAreaEnemyCity(int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
+	// Not const - Can generate a move-to mission if bGo is true
+	bool isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, const int iFlags=0, const bool bGo=false);
+	bool isHasPathToAreaEnemyCity(const int iFlags=0, const bool bGo=false);
+	// ! Not const
 	bool isStranded();
 	void invalidateIsStrandedCache();
 	bool calculateIsStranded();
@@ -224,8 +226,8 @@ public:
 	static CvPathGenerator* getPathGenerator();
 	//TB OOS Fix
 	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;	// Exposed to Python
-	void resetPath();	
-	
+	void resetPath();
+
 	bool canPathDirectlyToInternal(const CvPlot* pFromPlot, const CvPlot* pToPlot, int movesRemaining) const;
 	bool canPathDirectlyTo(const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
 
@@ -456,13 +458,19 @@ public:
 	// fn::find_if(groups(), CvSelectionGroup::fn::getHeadUnitAI() != UNITAI_SETTLER)
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, readyToAuto);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, isAutomated);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, const CvUnit*, getHeadUnit);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, resetHealing);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, doDelayedDeath);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, updateTimers);
+
+		DECLARE_MAP_FUNCTOR_2(CvSelectionGroup, bool, readyToMove, bool, bool);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, readyToAuto);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, isAutomated);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, const CvUnit*, getHeadUnit);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, PlayerTypes, getHeadOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, TeamTypes, getHeadTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, AutomateTypes, getAutomateType);
 	};
 };
 

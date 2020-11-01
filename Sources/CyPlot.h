@@ -97,7 +97,7 @@ public:
 	void changeImprovementDuration(int iChange);
 
 	int getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer) const;
-	void changeUpgradeProgress(int iChange);
+	void changeImprovementUpgradeProgress(int iChange);
 
 	bool isStartingPlot() const;
 	void setStartingPlot(bool bNewValue);
