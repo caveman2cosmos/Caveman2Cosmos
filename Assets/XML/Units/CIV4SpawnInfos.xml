@@ -312,7 +312,6 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>

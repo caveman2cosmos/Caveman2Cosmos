@@ -590,6 +590,7 @@
 			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</MovieDefineTag>
 			<!-- RevolutionDCM End  -->
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
@@ -793,6 +794,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENTURE_INDUSTRIES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENTURE_INDUSTRIES</MovieDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
