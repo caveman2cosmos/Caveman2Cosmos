@@ -2007,21 +2007,19 @@ void CvUnitAI::AI_settleMove()
 			}
 		}
 
-		if ((iAreaBestFoundValue == 0) && (iOtherBestFoundValue == 0))
+		if (iAreaBestFoundValue == 0 && iOtherBestFoundValue == 0
+		&& GC.getGame().getGameTurn() - getGameTurnCreated() > intSqrt(GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()))
 		{
-			if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > std::pow((float)GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(), 0.6f))
+			if (NULL != getTransportUnit())
 			{
-				if (NULL != getTransportUnit())
-				{
-					getTransportUnit()->unloadAll();
-				}
+				getTransportUnit()->unloadAll();
+			}
 
-				if (NULL == getTransportUnit()
-				&& GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(getGroup()->getHeadUnit(), MISSIONAI_PICKUP) == 0)
-				{
-					scrap(); //may seem wasteful, but settlers confuse the AI.
-					return;
-				}
+			if (NULL == getTransportUnit()
+			&& GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(getGroup()->getHeadUnit(), MISSIONAI_PICKUP) == 0)
+			{
+				scrap(); //may seem wasteful, but settlers confuse the AI.
+				return;
 			}
 		}
 

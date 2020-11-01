@@ -7038,9 +7038,9 @@ int CvUnit::calculateScrapValue() const
 		{
 			if (iGroupDiff > 0)
 			{
-				iCost *= std::pow(3, iGroupDiff);
+				iCost *= intPow64(3, iGroupDiff);
 			}
-			else iCost /= std::pow(3, -iGroupDiff);
+			else iCost /= intPow64(3, -iGroupDiff);
 		}
 	}
 	iCost /= 100*GC.getUNIT_GOLD_DISBAND_DIVISOR();
