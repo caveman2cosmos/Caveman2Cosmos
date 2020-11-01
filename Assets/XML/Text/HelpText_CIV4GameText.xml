@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
@@ -41,5 +42,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
 		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
+		<German>[ICON_BULLET]Laufende Kosten (Grundwert): %d1%% </German>
 	</TEXT>
 </Civ4GameText>
