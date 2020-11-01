@@ -36119,15 +36119,15 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 		}
 		else if (0 != kEvent.getTechPercent())
 		{
-			CvTeam& kTeam = GET_TEAM(GET_PLAYER(eActivePlayer).getTeam());
-			int iBeakers = (kTeam.getResearchCost(eTech) * kEvent.getTechPercent()) / 100;
+			const CvTeam& kTeam = GET_TEAM(GET_PLAYER(eActivePlayer).getTeam());
+			int64_t iBeakers = (kTeam.getResearchCost(eTech) * kEvent.getTechPercent()) / 100;
 			if (kEvent.getTechPercent() > 0)
 			{
-				iBeakers = std::min(kTeam.getResearchLeft(eTech), iBeakers);
+				iBeakers = std::min<int64_t>(kTeam.getResearchLeft(eTech), iBeakers);
 			}
 			else if (kEvent.getTechPercent() < 0)
 			{
-				iBeakers = std::max(kTeam.getResearchLeft(eTech) - kTeam.getResearchCost(eTech), iBeakers);
+				iBeakers = std::max<int64_t>(kTeam.getResearchLeft(eTech) - kTeam.getResearchCost(eTech), iBeakers);
 			}
 
 			if (NO_PLAYER != eOtherPlayer)

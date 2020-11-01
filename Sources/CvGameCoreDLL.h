@@ -75,6 +75,7 @@
 //
 typedef unsigned int        uint;
 
+typedef short               int16_t;
 typedef long long           int64_t;
 
 typedef unsigned char       uint8_t;
@@ -97,6 +98,8 @@ typedef unsigned long long  uint64_t;
 #define MIN_UNSIGNED_SHORT                  (0x0000)
 #define MAX_UNSIGNED_INT                    (0xffffffff)
 #define MIN_UNSIGNED_INT                    (0x00000000)
+
+#define MAX_INT64                           9223372036854775807
 
 #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }

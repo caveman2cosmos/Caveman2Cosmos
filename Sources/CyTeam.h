@@ -76,8 +76,7 @@ public:
 	int countNumAIUnitsByArea(CyArea* pArea, int /*UnitAITypes*/ eUnitAI);
 	int countEnemyDangerByArea(CyArea* pArea);
 
-	int getResearchCost(int /*TechTypes*/ eTech);
-	int getResearchLeft(int /*TechTypes*/ eTech);
+	uint64_t getResearchCost(int /*TechTypes*/ eTech) const;
 
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion);
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation);
@@ -208,9 +207,9 @@ public:
 	int getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex);
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex);
 
-	int getResearchProgress(int /*TechTypes*/ eIndex);
-	void setResearchProgress(int /*TechTypes*/ eIndex, int iNewValue, int /*PlayerTypes*/ ePlayer);
-	void changeResearchProgress(int /*TechTypes*/ eIndex, int iChange, int /*PlayerTypes*/ ePlayer);
+	int64_t getResearchProgress(int /*TechTypes*/ eIndex) const;
+	void setResearchProgress(int /*TechTypes*/ eIndex, int64_t iNewValue, int /*PlayerTypes*/ ePlayer);
+	void changeResearchProgress(int /*TechTypes*/ eIndex, int64_t iChange, int /*PlayerTypes*/ ePlayer);
 	int getTechCount(int /*TechTypes*/ eIndex);
 
 	bool isTerrainTrade(int /*TerrainTypes*/ eIndex);

@@ -1368,7 +1368,7 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 		//logBBAI("Flush trade value cache for team %d", getID());
 	}
 
-	int iCacheIndex = eTech * MAX_TEAMS + getID();
+	const int iCacheIndex = eTech * MAX_TEAMS + getID();
 
 	stdext::hash_map<int,int>::const_iterator itr = m_tradeTechValueCache.find(iCacheIndex);
 	if (itr != m_tradeTechValueCache.end())

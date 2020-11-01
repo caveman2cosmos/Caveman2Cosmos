@@ -4700,7 +4700,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 	const size_t MAX_SAMPLE_SIZE = 4;
 	const CvTeamAI& team = GET_TEAM(getTeam());
 
-	int iCost = team.getResearchCost(eRelativeTo);
+	int64_t iCost = team.getResearchCost(eRelativeTo);
 
 	//	Determine the sample to use - we use the researchable techs closest in base cost to the one we are seeking to compare with the average
 	std::vector<TechResearchDist> researchCosts;
@@ -19312,7 +19312,7 @@ void CvPlayerAI::AI_doDiplo()
 	int iCount;
 	int iPossibleCount;
 	int iValue;
-	int iBestValue;
+	uint64_t iBestValue;
 	int iOurValue;
 	int iTheirValue;
 	int iPass;
@@ -21945,7 +21945,7 @@ void CvPlayerAI::AI_doDiplo()
 
 													if (canTradeItem(((PlayerTypes)iI), item, true))
 													{
-														iValue = (1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"));
+														uint64_t iValue = (1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"));
 
 														iValue *= GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getResearchLeft((TechTypes)iJ);
 
@@ -21982,7 +21982,7 @@ void CvPlayerAI::AI_doDiplo()
 
 															if (canTradeItem(((PlayerTypes)iI), item, true))
 															{
-																iValue = (1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"));
+																uint64_t iValue = (1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"));
 
 																iValue *= GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getResearchLeft((TechTypes)iJ);
 

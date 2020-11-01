@@ -331,7 +331,7 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		}
 
 		FAssertMsg(m_paiResearchProgress==NULL, "about to leak memory, CvPlayer::m_paiResearchProgress");
-		m_paiResearchProgress = new int [GC.getNumTechInfos()];
+		m_paiResearchProgress = new uint64_t[GC.getNumTechInfos()];
 		FAssertMsg(m_paiTechCount==NULL, "about to leak memory, CvPlayer::m_paiTechCount");
 		m_paiTechCount = new int [GC.getNumTechInfos()];
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -1084,7 +1084,7 @@ void CvTeam::doTurn()
 				{
 					FAssertMsg(iPossibleCount > 0, "iPossibleCount is expected to be greater than 0");
 
-					changeResearchProgress((TechTypes)iI, std::max((getResearchCost((TechTypes)iI) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount) / (100 * iPossibleCount), 1), getLeaderID());
+					changeResearchProgress((TechTypes)iI, std::max<uint64_t>((getResearchCost((TechTypes)iI) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount) / (100 * iPossibleCount), 1), getLeaderID());
 				}
 			}
 		}
@@ -2774,8 +2774,7 @@ int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) c
 }
 
 
-// This function needs to be converted to return an uint64_t.
-int CvTeam::getResearchCost(TechTypes eTech) const
+uint64_t CvTeam::getResearchCost(TechTypes eTech) const
 {
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
@@ -2851,13 +2850,13 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	iCost /= 100;
 
-	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
+	return std::max<uint64_t>(1, iCost);
 }
 
 
-int CvTeam::getResearchLeft(TechTypes eTech) const
+uint64_t CvTeam::getResearchLeft(TechTypes eTech) const
 {
-	return std::max(0, (getResearchCost(eTech) - getResearchProgress(eTech)));
+	return std::max<uint64_t>(0, (getResearchCost(eTech) - getResearchProgress(eTech)));
 }
 
 
@@ -5070,17 +5069,13 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 }
 
 
-int CvTeam::getResearchProgress(TechTypes eIndex) const
+uint64_t CvTeam::getResearchProgress(TechTypes eIndex) const
 {
-	if (eIndex != NO_TECH)
-	{
-		return m_paiResearchProgress[eIndex];
-	}
-	return 0;
+	return eIndex != NO_TECH ? m_paiResearchProgress[eIndex] : 0;
 }
 
 
-void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes ePlayer)
+void CvTeam::setResearchProgress(TechTypes eIndex, uint64_t iNewValue, PlayerTypes ePlayer)
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
@@ -5095,10 +5090,11 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
-
-		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
+		uint64_t researchCost = getResearchCost(eIndex);
+		uint64_t researchProgress = getResearchProgress(eIndex);
+		if (researchProgress >= researchCost)
 		{
-			int iOverflow = (100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
+			uint64_t iOverflow = (100 * (researchProgress - researchCost)) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
 
 			// Multiple Research
 			setHasTech(eIndex, true, ePlayer, true, true);
@@ -5109,26 +5105,26 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 }
 
 
-void CvTeam::changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer)
+void CvTeam::changeResearchProgress(TechTypes eIndex, uint64_t iChange, PlayerTypes ePlayer)
 {
-	int iNewResearch = std::max(0, getResearchProgress(eIndex) + iChange);
+	uint64_t iNewResearch = std::max<uint64_t>(0, getResearchProgress(eIndex) + iChange);
 
 	setResearchProgress(eIndex, iNewResearch, ePlayer);
 }
 
-int CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)
+uint64_t CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)
 {
-	int iBeakers = 0;
+	uint64_t iBeakers = 0;
 
 	if (0 != iPercent && !isHasTech(eIndex))
 	{
 		if (iPercent > 0)
 		{
-			iBeakers = std::min(getResearchLeft(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
+			iBeakers = std::min<uint64_t>(getResearchLeft(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
 		}
 		else
 		{
-			iBeakers = std::max(getResearchLeft(eIndex) - getResearchCost(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
+			iBeakers = std::max<uint64_t>(getResearchLeft(eIndex) - getResearchCost(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
 		}
 		changeResearchProgress(eIndex, iBeakers, ePlayer);
 	}

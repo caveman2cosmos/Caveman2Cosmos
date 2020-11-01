@@ -6599,14 +6599,13 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 	int iResearch = GC.getGoodyInfo(eGoody).getResearch();
 	if (iResearch != 0)
 	{
-		int iTotalResearch = 0;
 		const TechTypes eTech = getCurrentResearch();
 
 		if (eTech != NO_TECH)
 		{
 			iResearch += GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand1(), "Goody Gold 1") + GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand2(), "Goody Gold 2");
 
-			iTotalResearch = ((GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch)/100);
+			const uint64_t iTotalResearch = ((GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch)/100);
 			GET_TEAM(getTeam()).changeResearchProgress(eTech, iTotalResearch, getID());
 
 			szBuffer += gDLL->getText("TXT_KEY_MISC_RECEIVED_RESEARCH", iTotalResearch, GC.getTechInfo(eTech).getTextKeyWide());
@@ -8948,16 +8947,10 @@ int CvPlayer::getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const
 
 int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) const
 {
-	int iResearchRate;
-	int iOverflow;
-	int iResearchLeft;
-	int iTurnsLeft;
-	int iI;
+	int iResearchRate = 0;
+	uint64_t iOverflow = 0;
 
-	iResearchRate = 0;
-	iOverflow = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -8973,7 +8966,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	}
 
 	// Mainly just so debug display shows sensible value
-	iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
+	uint64_t iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
 
 	if (bOverflow)
 	{
@@ -8991,10 +8984,10 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 
 	if (iResearchRate == 0)
 	{
-		return iResearchLeft;
+		return static_cast<int>(iResearchLeft);
 	}
 
-	iTurnsLeft = iResearchLeft / iResearchRate;
+	uint64_t iTurnsLeft = iResearchLeft / iResearchRate;
 
 	if (iTurnsLeft * iResearchRate < iResearchLeft)
 	{
@@ -9007,7 +9000,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	}
 	else iTurnsLeft = MAX_INT;
 
-	return std::max(1, iTurnsLeft);
+	return std::max(1, (int)iTurnsLeft);
 }
 
 
@@ -11182,20 +11175,20 @@ void CvPlayer::changeConscriptCount(int iChange)
 }
 
 
-int CvPlayer::getOverflowResearch() const
+uint64_t CvPlayer::getOverflowResearch() const
 {
 	return m_iOverflowResearch;
 }
 
 
-void CvPlayer::setOverflowResearch(int iNewValue)
+void CvPlayer::setOverflowResearch(uint64_t iNewValue)
 {
 	m_iOverflowResearch = iNewValue;
 	FAssert(getOverflowResearch() >= 0);
 }
 
 
-void CvPlayer::changeOverflowResearch(int iChange)
+void CvPlayer::changeOverflowResearch(uint64_t iChange)
 {
 	setOverflowResearch(getOverflowResearch() + iChange);
 }
@@ -17034,7 +17027,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	{
 		// Buy (Steal) Tech
 		TechTypes eTech = (TechTypes)iExtraData;
-		int iProdCost = MAX_INT;
+		int64_t iProdCost = MAX_INT64;
 
 		if (NO_TECH == eTech)
 		{
@@ -17042,7 +17035,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 			{
 				if (canStealTech(eTargetPlayer, (TechTypes)iTech))
 				{
-					int iCost = GET_TEAM(getTeam()).getResearchCost((TechTypes)iTech);
+					int64_t iCost = GET_TEAM(getTeam()).getResearchCost((TechTypes)iTech);
 					if (iCost < iProdCost)
 					{
 						iProdCost = iCost;
@@ -22928,7 +22921,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			if (eBestTech != NO_TECH)
 			{
-				int iBeakers  = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
+				uint64_t iBeakers  = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
 
 				if (iBeakers > 0)
 				{
@@ -22940,7 +22933,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 							{
 								MEMORY_TRACK_EXEMPT();
 
-								CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PROGRESS_TOWARDS_TECH", iBeakers, GC.getTechInfo(eBestTech).getTextKeyWide());
+								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PROGRESS_TOWARDS_TECH", iBeakers, GC.getTechInfo(eBestTech).getTextKeyWide());
 
 								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_TECH_TEXT"));
 							}
@@ -28227,7 +28220,7 @@ void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2
 	}
 }
 
-int CvPlayer::doMultipleResearch(int iOverflow)
+uint64_t CvPlayer::doMultipleResearch(uint64_t iOverflow)
 {
 	TechTypes eCurrentTech = getCurrentResearch();
 
@@ -28267,7 +28260,7 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 		eCurrentTech = getCurrentResearch();
 	}
 
-	return std::max(0, iOverflow);
+	return std::max<uint64_t>(0, iOverflow);
 }
 
 int CvPlayer::getCivilizationHealth() const

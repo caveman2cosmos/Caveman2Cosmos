@@ -95,15 +95,14 @@ public:
 	int countTotalPopulationByArea(const CvArea* pArea) const; // Exposed to Python
 	int countPowerByArea(const CvArea* pArea) const; // Exposed to Python
 	int countEnemyPowerByArea(const CvArea* pArea) const; // Exposed to Python
-
 	int countEnemyPopulationByArea(const CvArea* pArea) const;
 	int countNumAIUnitsByArea(const CvArea* pArea, UnitAITypes eUnitAI) const; // Exposed to Python
 	int countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam = NO_TEAM) const; // Exposed to Python
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
-	int getResearchCost(TechTypes eTech) const; // Exposed to Python
-	int getResearchLeft(TechTypes eTech) const; // Exposed to Python
+	uint64_t getResearchCost(TechTypes eTech) const; // Exposed to Python
+	uint64_t getResearchLeft(TechTypes eTech) const; // Exposed to Python
 
 	bool hasHolyCity(ReligionTypes eReligion) const; // Exposed to Python
 	bool hasHeadquarters(CorporationTypes eCorporation) const; // Exposed to Python
@@ -397,10 +396,10 @@ public:
 	bool isObsoleteBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	void changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange);
 
-	int getResearchProgress(TechTypes eIndex) const; // Exposed to Python
-	void setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes ePlayer); // Exposed to Python
-	void changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer); // Exposed to Python
-	int changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
+	uint64_t getResearchProgress(TechTypes eIndex) const; // Exposed to Python
+	void setResearchProgress(TechTypes eIndex, uint64_t iNewValue, PlayerTypes ePlayer); // Exposed to Python
+	void changeResearchProgress(TechTypes eIndex, uint64_t iChange, PlayerTypes ePlayer); // Exposed to Python
+	uint64_t changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
 
 	int getTechCount(TechTypes eIndex) const; // Exposed to Python
 	int getBestKnownTechScorePercent() const;
@@ -591,7 +590,7 @@ protected:
 	int* m_paiBuildingCount;
 	int* m_paiUnitCount;
 	int* m_paiObsoleteBuildingCount;
-	int* m_paiResearchProgress;
+	uint64_t* m_paiResearchProgress;
 	int* m_paiTechCount;
 	int* m_paiTerrainTradeCount;
 	int* m_aiVictoryCountdown;

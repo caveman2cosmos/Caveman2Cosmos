@@ -620,9 +620,9 @@ public:
 	int getMaxConscript() const; // Exposed to Python
 	void changeMaxConscript(int iChange);
 
-	int getOverflowResearch() const; // Exposed to Python
-	void setOverflowResearch(int iNewValue); // Exposed to Python
-	void changeOverflowResearch(int iChange); // Exposed to Python
+	uint64_t getOverflowResearch() const; // Exposed to Python
+	void setOverflowResearch(uint64_t iNewValue); // Exposed to Python
+	void changeOverflowResearch(uint64_t iChange); // Exposed to Python
 
 	int getNoUnhealthyPopulationCount() const;
 	bool isNoUnhealthyPopulation() const; // Exposed to Python
@@ -1376,7 +1376,7 @@ public:
 	int getEnslavementChance() const;
 	void changeEnslavementChance(int iChange);
 
-	int doMultipleResearch(int iOverflow);
+	uint64_t doMultipleResearch(uint64_t iOverflow);
 
 	void acquireFort(CvPlot* pPlot);
 
@@ -1804,7 +1804,7 @@ protected:
 	int m_iConscriptCount;
 	int m_iMaxConscript;
 	int m_iHighestUnitLevel;
-	int m_iOverflowResearch;
+	uint64_t m_iOverflowResearch;
 	int m_iNoUnhealthyPopulationCount;
 	int m_iExpInBorderModifier;
 	int m_iBuildingOnlyHealthyCount;

@@ -47,7 +47,7 @@ void CyTeamPythonInterface()
 
 		.def("countNumCitiesByArea", &CyTeam::countNumCitiesByArea, "int (CyArea* pArea)")
 
-		.def("getResearchCost", &CyTeam::getResearchCost, "int (TechID) - total cost of Tech")
+		.def("getResearchCost", &CyTeam::getResearchCost, "uint64_t (TechID) - total cost of Tech")
 
 		.def("hasHolyCity", &CyTeam::hasHolyCity, "bool (int (ReligionTypes) eReligion) - does this team have eReligion's holy city?")
 		.def("hasHeadquarters", &CyTeam::hasHeadquarters, "bool (int (CorporationTypes) eCorporation) - does this team have eCorporation's headquarters?")

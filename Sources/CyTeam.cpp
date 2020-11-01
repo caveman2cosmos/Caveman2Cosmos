@@ -243,15 +243,11 @@ int CyTeam::countEnemyDangerByArea(CyArea* pArea)
 	return m_pTeam ? m_pTeam->countEnemyDangerByArea(pArea->getArea()) : -1;
 }
 
-int CyTeam::getResearchCost(int /*TechTypes*/ eTech)
+uint64_t CyTeam::getResearchCost(int /*TechTypes*/ eTech) const
 {
 	return m_pTeam ? m_pTeam->getResearchCost((TechTypes)eTech) : -1;
 }
 
-int CyTeam::getResearchLeft(int /*TechTypes*/ eTech)
-{
-	return m_pTeam ? m_pTeam->getResearchLeft((TechTypes)eTech) : -1;
-}
 bool CyTeam::hasHolyCity(int /*ReligionTypes*/ eReligion)
 {
 	return m_pTeam ? m_pTeam->hasHolyCity((ReligionTypes)eReligion) : false;
@@ -880,18 +876,18 @@ bool CyTeam::isObsoleteBuilding(int /*BuildingTypes*/ eIndex)
 	return m_pTeam ? m_pTeam->isObsoleteBuilding((BuildingTypes)eIndex) : false;
 }
 
-int CyTeam::getResearchProgress(int /*TechTypes*/ eIndex)
+int64_t CyTeam::getResearchProgress(int /*TechTypes*/ eIndex) const
 {
 	return m_pTeam ? m_pTeam->getResearchProgress((TechTypes)eIndex) : -1;
 }
 
-void CyTeam::setResearchProgress(int /*TechTypes*/ eIndex, int iNewValue, int /*PlayerTypes*/ ePlayer)
+void CyTeam::setResearchProgress(int /*TechTypes*/ eIndex, int64_t iNewValue, int /*PlayerTypes*/ ePlayer)
 {
 	if (m_pTeam && eIndex != NO_TECH)
 		m_pTeam->setResearchProgress((TechTypes)eIndex, iNewValue, (PlayerTypes)ePlayer);
 }
 
-void CyTeam::changeResearchProgress(int /*TechTypes*/ eIndex, int iChange, int /*PlayerTypes*/ ePlayer)
+void CyTeam::changeResearchProgress(int /*TechTypes*/ eIndex, int64_t iChange, int /*PlayerTypes*/ ePlayer)
 {
 	if (m_pTeam && eIndex != NO_TECH)
 		m_pTeam->changeResearchProgress((TechTypes)eIndex, iChange, (PlayerTypes)ePlayer);

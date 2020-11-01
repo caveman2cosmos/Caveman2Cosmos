@@ -2703,11 +2703,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					pSelectedUnitNode != NULL;
 					pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
 				{
-					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+					const CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
 					if (pSelectedUnit->canDiscover())
 					{
-						TechTypes eTech = pSelectedUnit->getDiscoveryTech();
+						const TechTypes eTech = pSelectedUnit->getDiscoveryTech();
 	
 						if (pSelectedUnit->getDiscoverResearch(eTech) >= GET_TEAM(pSelectedUnit->getTeam()).getResearchLeft(eTech))
 						{
