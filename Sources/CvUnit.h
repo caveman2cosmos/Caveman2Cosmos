@@ -558,6 +558,7 @@ public:
 	void automate(AutomateTypes eAutomate);
 
 	bool canScrap() const; // Exposed to Python
+	int calculateScrapValue() const;
 	void scrap();
 
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
