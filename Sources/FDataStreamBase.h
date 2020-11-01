@@ -58,12 +58,15 @@ public:
 	virtual void		Read(uint8_t*) = 0;
 	virtual void		Read(int count, char values[]) = 0;
 	virtual void		Read(int count, uint8_t values[]) = 0;
+
 	virtual void		Read(bool *) = 0;
 	virtual void		Read(int count, bool values[]) = 0;
+
 	virtual void		Read(short	*s) = 0;
 	virtual void		Read(uint16_t* s)  = 0;
 	virtual void		Read(int count, short values[]) = 0;
 	virtual void		Read(int count, uint16_t values[]) = 0;
+
 	virtual void		Read(int* i) = 0;
 	virtual void		Read(unsigned int* i) = 0;
 	virtual void 		Read(int count, int values[]) = 0;
@@ -73,6 +76,11 @@ public:
 	virtual void		Read(unsigned long* l)  = 0;
 	virtual void 		Read(int count, long values[]) = 0;
 	virtual void 		Read(int count, unsigned long values[])  = 0;
+
+	virtual void		Read(int64_t* ll) = 0;
+	virtual void		Read(uint64_t* ll)  = 0;
+	virtual void 		Read(int count, int64_t values[]) = 0;
+	virtual void 		Read(int count, uint64_t values[])  = 0;
 
 	virtual void		Read(float* value) = 0;
 	virtual void		Read(int count, float values[]) = 0;
@@ -102,6 +110,11 @@ public:
 	virtual void		Write(unsigned long  value)  = 0;
 	virtual void 		Write(int count, const long values[]) = 0;
 	virtual void		Write(int count, const unsigned long values[])  = 0;
+
+	virtual void		Write(int64_t value) = 0;
+	virtual void		Write(uint64_t value)  = 0;
+	virtual void 		Write(int count, const int64_t values[]) = 0;
+	virtual void		Write(int count, const uint64_t values[])  = 0;
 
 	virtual void		Write(float value) = 0;
 	virtual void		Write(int count, const float values[]) = 0;
