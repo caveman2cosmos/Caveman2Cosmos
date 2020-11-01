@@ -7028,90 +7028,87 @@ int CvCityAI::AI_neededDefenders()
 		);
 	}
 
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
 	int iDefenders = 1;
 
 	if (!GC.getGame().isEarlyGame() && (hasActiveWorldWonder() || isCapital() || isHolyCity()))
 	{
 		iDefenders++;
 
-		if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT1) || GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
+		if (player.AI_isDoStrategy(AI_STRATEGY_ALERT1))
 		{
 			iDefenders++;
 		}
+		if (player.AI_isDoStrategy(AI_STRATEGY_TURTLE))
+		{
+			iDefenders += 2;
+		}
 	}
 
-	if (!GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_CRUSH))
+	if (!player.AI_isDoStrategy(AI_STRATEGY_CRUSH))
 	{
 		iDefenders += AI_neededFloatingDefenders();
 	}
-	else
-	{
-		iDefenders += (AI_neededFloatingDefenders() + 2) / 4;
-	}
+	else iDefenders += (AI_neededFloatingDefenders() + 2) / 4;
 
-	bool bDefenseWar = ((area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE));
-	if (bDefenseWar || GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT2))
+	const bool bDefenseWar = area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
+
+	if ((bDefenseWar || player.AI_isDoStrategy(AI_STRATEGY_ALERT2)) && !plot()->isHills())
 	{
-		if (!(plot()->isHills()))
-		{
-			iDefenders++;
-		}
+		iDefenders++;
 	}
 
 	if (!GC.getGame().isEarlyGame() && (GC.getGame().getGameTurn() - getGameTurnAcquired()) < 10)
 	{
 		iDefenders = std::max(2, iDefenders);
 
-		bool bOffenseWar = ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
-		if (bOffenseWar && getTotalDefense(true) > 0)
+		// When on the offensive, halve defenders.
+		if ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
+		&& !hasActiveWorldWonder() && !isHolyCity())
 		{
-			if (!hasActiveWorldWonder() && !isHolyCity())
-			{
-				iDefenders /= 2;
-			}
+			iDefenders /= 2;
 		}
 
 		if (AI_isDanger())
 		{
 			iDefenders++;
 		}
+
 		if (bDefenseWar)
 		{
 			iDefenders++;
 		}
 	}
 
-	if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
+	if (player.AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
 	{
 		iDefenders += 20;
 	}
 
-	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if (player.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
+	&& findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGame().culturalVictoryNumCultureCities())
 	{
-		if( findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGame().culturalVictoryNumCultureCities() )
-		{
-			iDefenders += 4;
+		iDefenders += 4;
 
-			if( bDefenseWar )
-			{
-				iDefenders += 2;
-			}
+		if (bDefenseWar)
+		{
+			iDefenders += 2;
 		}
 	}
 
-	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
+	if (player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE3))
 	{
-		if( isCapital() || isProductionProject())
+		if (isCapital() || isProductionProject())
 		{
 			iDefenders += 4;
 
-			if( bDefenseWar )
+			if (bDefenseWar)
 			{
 				iDefenders += 3;
 			}
 		}
 
-		if( isCapital() && GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
+		if (isCapital() && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 		{
 			iDefenders += 6;
 		}
@@ -7119,29 +7116,23 @@ int CvCityAI::AI_neededDefenders()
 
 	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
-		int iExtraRevDefenders = std::max(0, ((int)(std::pow((float)getRevolutionIndex(), 0.35f) - 6.5f)));
-		iDefenders += iExtraRevDefenders;
-		logBBAI("      City %S extra revolution defenders needed: %d", getName().GetCString(), iExtraRevDefenders);
+		const int iExtraRevDefenders = intSqrt(getRevolutionIndex()) - 10;
+		if (iExtraRevDefenders > 0)
+		{
+			iDefenders += iExtraRevDefenders;
+		}
+		logBBAI("      City %S extra revolution defenders needed: %d\n\tP.S. negative value is ignored", getName().GetCString(), iExtraRevDefenders);
 	}
 
-	int iTempDefenders = 0;
-	int iHappiness = happyLevel() - unhappyLevel(0);
-	if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() > 0)
+	const int iHappyPerUnit = player.getHappyPerMilitaryUnit();
+	if (iHappyPerUnit != 0)
 	{
+		const int iHappiness = happyLevel() - unhappyLevel(0);
 		if (iHappiness < 0)
 		{
-			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
+			iDefenders -= iHappyPerUnit * iHappiness / (1 + GET_TEAM(getTeam()).getAtWarCount(true));
 		}
 	}
-	else if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() < 0)
-	{
-		if (iHappiness < 0)
-		{
-			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
-		}
-	}
-	iTempDefenders /= (1 + GET_TEAM(getTeam()).getAtWarCount(true));
-	iDefenders += iTempDefenders;
 
 	iDefenders = std::max(iDefenders, AI_minDefenders());
 
@@ -7149,9 +7140,7 @@ int CvCityAI::AI_neededDefenders()
 
 	return iDefenders;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 int CvCityAI::AI_neededHappinessDefenders() const
 {

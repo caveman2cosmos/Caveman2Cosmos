@@ -6891,6 +6891,33 @@ bool CvUnit::canScrap() const
 }
 
 
+// No need to let return value exceed MAX_INT, shouldn't really happen unless one of the most expensive units is merged many times.
+int CvUnit::calculateScrapValue() const
+{
+	int64_t iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		const int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
+		if (iGroupDiff != 0)
+		{
+			if (iGroupDiff > 0)
+			{
+				iCost *= intPow64(3, iGroupDiff);
+			}
+			else iCost /= intPow64(3, -iGroupDiff);
+		}
+	}
+	iCost /= 100*GC.getUNIT_GOLD_DISBAND_DIVISOR();
+
+	if (iCost > MAX_INT) return MAX_INT;
+	// A minimum return of 1 will cause oddities in early game where a unit that can split only gives 1 gold,
+	//	giving the player a reason to split before disbanding to earn a couple extra gold coins.
+	if (iCost < 1) return 0;
+
+	return static_cast<int>(iCost);
+}
+
 void CvUnit::scrap()
 {
 	if (!canScrap())
@@ -6898,7 +6925,7 @@ void CvUnit::scrap()
 		return;
 	}
 
-	if( gUnitLogLevel > 2 )
+	if (gUnitLogLevel > 2)
 	{
 		CvWString szString;
 		getUnitAIString(szString, AI_getUnitAIType());
@@ -6907,15 +6934,7 @@ void CvUnit::scrap()
 
 	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
 	{
-		int iCost = (getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
-		iCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
-		iCost += (iCost * getUpgradeDiscount())/100;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-		}
-		iCost = std::max(1, iCost);
-		GET_PLAYER(getOwner()).changeGold(iCost);
+		GET_PLAYER(getOwner()).changeGold(calculateScrapValue());
 	}
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
@@ -11158,40 +11177,17 @@ int CvUnit::getHurryProduction(const CvPlot* pPlot) const
 
 bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (isDelayedDeath())
-	{
-		return false;
-	}
-
-	if (getHurryProduction(pPlot) == 0)
+	if (isDelayedDeath() || getHurryProduction(pPlot) == 0)
 	{
 		return false;
 	}
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
+	if (pCity == NULL || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
-
-	//if (pCity->getProductionTurnsLeft() == 1)
-	//{
-	//	return false;
-	//}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 04/23/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (getTeam() != pCity->getTeam())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!bTestVisible)
 	{
@@ -11207,14 +11203,12 @@ bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::hurry()
 {
-	CvCity* pCity;
-
 	if (!canHurry(plot()))
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -37080,11 +37074,6 @@ void CvUnit::setQualityBaseTotal(int iNewValue)
 	m_iQualityBaseTotal = iNewValue;
 }
 
-void CvUnit::changeQualityBaseTotal(int iChange)
-{
-	setQualityBaseTotal(getQualityBaseTotal() + iChange);
-}
-
 int CvUnit::getGroupBaseTotal() const
 {
 	return m_iGroupBaseTotal;
@@ -37095,11 +37084,6 @@ void CvUnit::setGroupBaseTotal(int iNewValue)
 	m_iGroupBaseTotal = iNewValue;
 }
 
-void CvUnit::changeGroupBaseTotal(int iChange)
-{
-	setGroupBaseTotal(getGroupBaseTotal() + iChange);
-}
-
 int CvUnit::getSizeBaseTotal() const
 {
 	return m_iSizeBaseTotal;
@@ -37108,11 +37092,6 @@ int CvUnit::getSizeBaseTotal() const
 void CvUnit::setSizeBaseTotal(int iNewValue)
 {
 	m_iSizeBaseTotal = iNewValue;
-}
-
-void CvUnit::changeSizeBaseTotal(int iChange)
-{
-	setSizeBaseTotal(getSizeBaseTotal() + iChange);
 }
 
 int CvUnit::getExtraQuality() const
