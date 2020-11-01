@@ -44,12 +44,15 @@ public:
 	virtual void		Read(uint8_t*);
 	virtual void		Read(int count, char values[]);
 	virtual void		Read(int count, uint8_t values[]);
+
 	virtual void		Read(bool *);
 	virtual void		Read(int count, bool values[]);
+
 	virtual void		Read(short* s);
 	virtual void		Read(uint16_t* s);
 	virtual void		Read(int count, short values[]);
 	virtual void		Read(int count, uint16_t values[]);
+
 	virtual void		Read(int* i);
 	virtual void		Read(unsigned int* i);
 	virtual void 		Read(int count, int values[]);
@@ -59,6 +62,11 @@ public:
 	virtual void		Read(unsigned long* l);
 	virtual void 		Read(int count, long values[]);
 	virtual void 		Read(int count, unsigned long values[]);
+
+	virtual void		Read(int64_t* ll);
+	virtual void		Read(uint64_t* ll);
+	virtual void 		Read(int count, int64_t values[]);
+	virtual void 		Read(int count, uint64_t values[]);
 
 	virtual void		Read(float* value);
 	virtual void		Read(int count, float values[]);
@@ -91,6 +99,11 @@ public:
 	virtual void		Write(unsigned long  value);
 	virtual void 		Write(int count, const long values[]);
 	virtual void		Write(int count, const unsigned long values[]);
+
+	virtual void		Write(int64_t value);
+	virtual void		Write(uint64_t value);
+	virtual void 		Write(int count, const int64_t values[]);
+	virtual void		Write(int count, const uint64_t values[]);
 
 	virtual void		Write(float value);
 	virtual void		Write(int count, const float values[]);
