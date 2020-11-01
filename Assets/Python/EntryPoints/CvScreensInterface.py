@@ -569,7 +569,7 @@ def cityWarningOnClickedCallback(argsList):
 	bOption1 = argsList[6]
 	bOption2 = argsList[7]
 	city = CyGlobalContext().getPlayer(CyGlobalContext().getGame().getActivePlayer()).getCity(iData1)
-	if not city.isNone():
+	if city:
 		if (iButtonId == 0):
 			if (city.isProductionProcess()):
 				CyMessageControl().sendPushOrder(iData1, iData2, iData3, False, False, False)
@@ -593,7 +593,7 @@ def liberateOnClickedCallback(argsList):
 	bOption1 = argsList[6]
 	bOption2 = argsList[7]
 	city = CyGlobalContext().getPlayer(CyGlobalContext().getGame().getActivePlayer()).getCity(iData1)
-	if not city.isNone():
+	if city:
 		if iButtonId == 0:
 			CyMessageControl().sendDoTask(iData1, TaskTypes.TASK_LIBERATE, 0, -1, False, False, False, False)
 		elif iButtonId == 2:
@@ -609,7 +609,7 @@ def colonyOnClickedCallback(argsList):
 	bOption1 = argsList[6]
 	bOption2 = argsList[7]
 	city = CyGlobalContext().getPlayer(CyGlobalContext().getGame().getActivePlayer()).getCity(iData1)
-	if not city.isNone():
+	if city:
 		if iButtonId == 0:
 			CyMessageControl().sendEmpireSplit(CyGlobalContext().getGame().getActivePlayer(), city.area().getID())
 		elif iButtonId == 2:

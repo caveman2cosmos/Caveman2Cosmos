@@ -5506,9 +5506,9 @@ def addFeatures():
 
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in range(gc.getNumFeatureInfos()):
-		#			print self.gc.getFeatureInfo(iI).getDescription()
+		#			print gc.getFeatureInfo(iI).getDescription()
 					if plot.canHaveFeature(iI):
-		#				print "Can have feature with probability: %d" % self.gc.getFeatureInfo(iI).getAppearanceProbability()
+		#				print "Can have feature with probability: %d" % gc.getFeatureInfo(iI).getAppearanceProbability()
 						if PRand.random() * 10000 < gc.getFeatureInfo(iI).getAppearanceProbability():
 		#					print "Setting feature"
 							plot.setFeatureType(iI, -1)

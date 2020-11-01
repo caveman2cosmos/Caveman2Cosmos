@@ -10,6 +10,9 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
+// Discord RPC
+#include "discord.h"
+
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -332,8 +335,6 @@ void CvGame::init(HandicapTypes eHandicap)
 			}
 		}
 	}
-
-	setFutureEras();
 
 	if (isOption(GAMEOPTION_UNITED_NATIONS))
 	{
@@ -3247,6 +3248,14 @@ int CvGame::countCivPlayersAlive() const
 		}
 	}
 
+	// Discord RPC
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.playersAlive = iCount;
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
+
 	return iCount;
 }
 
@@ -3263,6 +3272,14 @@ int CvGame::countCivPlayersEverAlive() const
 			iCount++;
 		}
 	}
+
+	// Discord RPC
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.playersTotal = iCount;
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
 
 	return iCount;
 }
@@ -3695,7 +3712,16 @@ int CvGame::getNumHumanPlayers()
 
 int CvGame::getGameTurn()
 {
-	return GC.getInitCore().getGameTurn();
+	// Discord RPC Update
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.turn = GC.getInitCore().getGameTurn();
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
+
+	return rpc.turn;
+	//return GC.getInitCore().getGameTurn();
 }
 
 
@@ -9318,7 +9344,6 @@ void CvGame::read(FDataStreamBase* pStream)
 
 	m_Properties.readWrapper(pStream);
 
-	setFutureEras();
 	int iCurrentHandicap = range(getHandicapType(), 0, GC.getNumHandicapInfos() - 1);
 	setHandicapType((HandicapTypes)iCurrentHandicap);
 
@@ -12180,126 +12205,6 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 	return true;
 }
 
-
-void CvGame::setFutureEras()
-{
-	TechTypes eFutureTech =  NO_TECH;
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		if (GC.getTechInfo((TechTypes)iI).isRepeat())
-		{
-			eFutureTech = (TechTypes)iI;
-			break;
-		}
-	}
-	if (eFutureTech != NO_TECH)
-	{
-		bool bSet = false;
-		for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-		{
-			if (GC.getTechInfo(eFutureTech).getOriginalPrereqOrTechs(iI) != NO_TECH)
-			{
-				bSet = true;
-				break;
-			}
-
-		}
-		if (!bSet)
-		{
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-				{
-					GC.getTechInfo((TechTypes)iJ).setOriginalPrereqOrTech(iI, GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iI));
-					GC.getTechInfo((TechTypes)iJ).setOriginalPrereqAndTech(iI, GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iI));
-				}
-			}
-		}
-		else
-		{
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-				{
-					GC.getTechInfo((TechTypes)iJ).setPrereqOrTech(iI, GC.getTechInfo((TechTypes)iJ).getOriginalPrereqOrTechs(iI));
-					GC.getTechInfo((TechTypes)iJ).setPrereqAndTech(iI, GC.getTechInfo((TechTypes)iJ).getOriginalPrereqAndTechs(iI));
-				}
-			}
-			int iBestX = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (GC.getTechInfo((TechTypes)iJ).getGridX() > iBestX)
-				{
-					iBestX = GC.getTechInfo((TechTypes)iJ).getGridX();
-				}
-			}
-			GC.getTechInfo(eFutureTech).setGridX(iBestX + 1);
-		}
-	}
-	if (isOption(GAMEOPTION_NO_FUTURE))
-	{
-		if (eFutureTech != NO_TECH)
-		{
-			//Remove existing techs prereqs
-			for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-			{
-				GC.getTechInfo(eFutureTech).setPrereqOrTech(iI, NO_TECH);
-				GC.getTechInfo(eFutureTech).setPrereqAndTech(iI, NO_TECH);
-			}
-			//Find the next best tech to require the future tech
-			int iBestX = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (canEverResearch((TechTypes)iJ) && !GC.getTechInfo((TechTypes)iJ).isRepeat())
-				{
-					if (GC.getTechInfo((TechTypes)iJ).getGridX() > iBestX)
-					{
-						iBestX = GC.getTechInfo((TechTypes)iJ).getGridX();
-					}
-				}
-			}
-			int iCount = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (GC.getTechInfo((TechTypes)iJ).getGridX() == iBestX)
-				{
-					if (canEverResearch((TechTypes)iJ))
-					{
-						if (iCount > GC.getNUM_OR_TECH_PREREQS())
-						{
-							break;
-						}
-						GC.getTechInfo(eFutureTech).setPrereqOrTech(iCount, iJ);
-						iCount++;
-					}
-				}
-			}
-			GC.getTechInfo(eFutureTech).setGridX(iBestX + 1);
-		}
-	}
-
-	//Remove Prerequisite Techs for which can never be researched
-	//for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	//{
-	//	if (!canEverResearch((TechTypes)iI))
-	//	{
-	//		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-	//		{
-	//			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
-	//			{
-	//				if (GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK) == iI)
-	//				{
-	//					GC.getTechInfo((TechTypes)iJ).setPrereqOrTech(iK, NO_TECH);
-	//				}
-	//				if (GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK) == iI)
-	//				{
-	//					GC.getTechInfo((TechTypes)iJ).setPrereqAndTech(iK, NO_TECH);
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
-}
 
 int CvGame::getFlexibleDifficultyTimer(PlayerTypes eIndex) const
 {

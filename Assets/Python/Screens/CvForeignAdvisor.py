@@ -217,9 +217,9 @@ class CvForeignAdvisor:
 			if liCity:
 				tuCity.append([CyCity, liCity])
 
+		self.techsToGive = techsToGive = []
+		self.techsToTake = techsToTake = []
 		if not self.bNoTechTrade:
-			self.techsToGive = techsToGive = []
-			self.techsToTake = techsToTake = []
 			for iTech in range(GC.getNumTechInfos()):
 				if GC.getTechInfo(iTech).isGlobal():
 					continue
@@ -1483,6 +1483,6 @@ class CvForeignAdvisor:
 		del self.xRes, self.yRes, self.xMid, self.yMid, self.H_EDGE_PANEL, self.HILITE_SQUARE
 		del self.aFontList, self.aBonusTuple, self.selectedLeaders, self.hasMet, self.tuCity
 		del self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.aColMap, self.aSmileyList, self.aDealMap, self.aRelationList
+		del self.aColMap, self.aSmileyList, self.aDealMap, self.aRelationList, self.bRandomPers
 		del self.charWar, self.charPeace, self.charCommerce, self.charGold, self.charTrade, self.charFaith, self.charCross
-		del self.techsToGive, self.techsToTake
+		del self.bNoTechTrade, self.techsToGive, self.techsToTake

@@ -20,6 +20,8 @@
 #include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 
+#include "discord.h"
+
 int shortenID(int iId)
 {
 	return iId;
@@ -307,6 +309,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 void CvGameTextMgr::setTimeStr(CvWString& szString, int iGameTurn, bool bSave)
 {
 	setDateStr(szString, iGameTurn, bSave, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
+
+	// Discord RPC. Date is standard ASCII so this should work.
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.date = std::string(szString.begin(), szString.end());
+	pDiscord->sendNewRpcDetails(rpc);
 }
 
 
@@ -12268,53 +12276,50 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 }
 
 
-//
-// parseLeaderTraits - SimpleCivPicker							// LOCALIZATION READY
-//
+
 void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadTypes eLeader, CivilizationTypes eCivilization, bool bDawnOfMan, bool bCivilopediaText)
 {
 	PROFILE_FUNC();
 
-
-	//	Build help string
+	// Build help string
 	if (eLeader != NO_LEADER)
 	{
+		bool bFirst = true;
 		if (!bDawnOfMan && !bCivilopediaText)
 		{
-			CvWString szTempBuffer;
-			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getLeaderHeadInfo(eLeader).getDescription());
-			szHelpString.append(szTempBuffer);
+			szHelpString.append(CvWString::format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getLeaderHeadInfo(eLeader).getDescription()));
+			bFirst = false;
 		}
-
-		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText");
-
-		bool bFirst = true;
+		FAssertMsg(
+			GC.getNumTraitInfos() > 0,
+			"GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText"
+		);
 
 		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
-			if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isValidTrait(true))
+			if (GC.getLeaderHeadInfo(eLeader).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
 			{
-				if (bDawnOfMan)
+				if (!bFirst)
 				{
-					if (!bFirst) szHelpString.append(L", ");
-					else bFirst = false;
+					if (bDawnOfMan)
+						szHelpString.append(L", ");
+					else if (bCivilopediaText)
+						szHelpString.append(L"\n\n");
+					else szHelpString.append(L"\n");
 				}
-				parseTraits(szHelpString, ((TraitTypes)iI), eCivilization, bDawnOfMan);
+				else bFirst = false;
+
+				parseTraits(szHelpString, (TraitTypes)iI, eCivilization, bDawnOfMan);
 			}
 		}
 	}
 	else //	Random leader
 	{
-		CvWString szTempBuffer;
-		szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN").c_str());
-		szHelpString.append(szTempBuffer);
+		szHelpString.append(CvWString::format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN").c_str()));
 	}
 }
 
-//
-// parseLeaderTraits - SimpleCivPicker							// LOCALIZATION READY
-//
+
 void CvGameTextMgr::parseLeaderShortTraits(CvWStringBuffer &szHelpString, LeaderHeadTypes eLeader)
 {
 	PROFILE_FUNC();
@@ -12466,9 +12471,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 			for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 			{
-				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+				if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 				{
-					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+					iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 				}
 			}
 			if (iUnitCombatExperience > 0)
@@ -12732,9 +12737,9 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 				{
-					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).eUnitCombat == eUnitCombat)
+					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
 					{
-						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ, false).iModifier;
+						iUnitCombatExperience += GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).iModifier;
 					}
 				}
 				if (iUnitCombatExperience > 0)

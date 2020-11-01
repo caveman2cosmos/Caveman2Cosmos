@@ -61,11 +61,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Afforess: Disbanding units earn gold -->
-		<DefineName>DISBANDING_EARNS_GOLD</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: The divisor (or denominator) for the disbanded units gold. 1 will yield the full production cost. Has no effect if the above setting is disabled. -->
 		<DefineName>UNIT_GOLD_DISBAND_DIVISOR</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
