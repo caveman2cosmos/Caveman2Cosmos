@@ -107,6 +107,7 @@ typedef enum
 	SAVE_VALUE_TYPE_CLASS_ENUM,
 	SAVE_VALUE_TYPE_CLASS_INT_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY,
+	SAVE_VALUE_TYPE_CLASS_UNSIGNED_LONG_LONG_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY,
 } SaveValueType;
 
@@ -216,6 +217,7 @@ public:
 	//	The following are for arrays whose index is a class enum value
 	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false, bool allowRawArray = false);
 	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, bool values[], bool allowMissing = false, bool allowRawArray = false);
+	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, uint64_t values[], bool allowMissing = false, bool allowRawArray = false);
 	//	Array whose values are class enum entities
 	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, short values[], bool allowMissing = false);
 	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false);

@@ -458,6 +458,16 @@ typedef struct value_entry_class_bool_array
 } value_entry_class_bool_array;
 #define VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(numBools)	((int)sizeof(value_entry_class_bool_array)+((int)sizeof(bool))*(numBools-VAR))
 
+//	Value entry for type unsigned long long class array (indexes are class enums)
+typedef struct value_entry_class_unsigned_long_long_array
+{
+	int					id;
+	RemappedClassType	classType;
+	int					numLongLongs;
+	uint64_t			value[VAR];
+} value_entry_class_unsigned_long_long_array;
+#define VALUE_ENTRY_CLASS_UNSIGNED_LONG_LONG_ARRAY_SIZE_FROM_NUM(numLongLongs)	((int)sizeof(value_entry_class_unsigned_long_long_array)+((int)sizeof(uint64_t))*(numLongLongs-VAR))
+
 //	Value entry for type bool class array (indexes are class enums)
 typedef struct value_entry_class_class_array
 {
@@ -3491,6 +3501,83 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
 
 			for (int i = 0; i < entry.numBools; i++)
+			{
+				EnumInfo& info = mapVector[i];
+
+				if (info.m_id == -1 && !info.m_lookedUp)
+				{
+					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
+
+					//	If some obehjcts are mising be tolerant provided their value was false (assumed default
+					//	for most bool array entries).  Need to do something like this because these arrays generally
+					//	represent values about every possible member of an entity type, so even if they are not
+					//	actually instantiated they will be present (but are ignorable if we are right about the 0
+					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
+					//	not-referenced default)
+					if (info.m_id == -1 && arrayBuffer[i] && !allowMissing)
+					{
+						//	Instantiated object uses class no longer defined - game is not save compatible
+						HandleIncompatibleSave(CvString::format("Save format is not compatible due to missing class %s", info.m_szType.c_str()).c_str());
+					}
+
+					info.m_lookedUp = true;
+				}
+
+				if (info.m_id != -1)
+				{
+					FAssert(info.m_id < count);
+
+					values[info.m_id] = arrayBuffer[i];
+				}
+			}
+		}
+		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY) )
+		{
+			int num;
+
+			m_stream->Read(&num);
+
+			if ( num > count )
+			{
+				//	Incompatible save
+				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+			}
+			m_stream->Read(num, values);
+		}
+	}
+	else
+	{
+		m_stream->Read(count, values);
+	}
+}
+
+void
+CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, uint64_t values[], bool allowMissing, bool allowRawArray)
+{
+	PROFILE_FUNC();
+
+	FAssert(m_stream != NULL);
+
+	if ( m_useTaggedFormat )
+	{
+		DEBUG_TRACE4("Read class array, name %s, classType=%d, count=%d\n", name, classType, count)
+
+		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_UNSIGNED_LONG_LONG_ARRAY) )
+		{
+			value_entry_class_unsigned_long_long_array entry;
+
+			m_stream->Read(sizeof(RemappedClassType), (uint8_t*)& entry.classType);
+			m_stream->Read(&entry.numLongLongs);
+
+			FAssert (classType == entry.classType);
+
+			bst::scoped_array<uint64_t> arrayBuffer(new uint64_t[entry.numLongLongs]);
+
+			m_stream->Read(entry.numLongLongs, arrayBuffer.get());
+
+			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
+
+			for (int i = 0; i < entry.numLongLongs; i++)
 			{
 				EnumInfo& info = mapVector[i];
 

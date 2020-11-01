@@ -6903,9 +6903,9 @@ int CvUnit::calculateScrapValue() const
 		{
 			if (iGroupDiff > 0)
 			{
-				iCost *= std::pow(3, iGroupDiff);
+				iCost *= intPow64(3, iGroupDiff);
 			}
-			else iCost /= std::pow(3, -iGroupDiff);
+			else iCost /= intPow64(3, -iGroupDiff);
 		}
 	}
 	iCost /= 100*GC.getUNIT_GOLD_DISBAND_DIVISOR();
@@ -37074,11 +37074,6 @@ void CvUnit::setQualityBaseTotal(int iNewValue)
 	m_iQualityBaseTotal = iNewValue;
 }
 
-void CvUnit::changeQualityBaseTotal(int iChange)
-{
-	setQualityBaseTotal(getQualityBaseTotal() + iChange);
-}
-
 int CvUnit::getGroupBaseTotal() const
 {
 	return m_iGroupBaseTotal;
@@ -37089,11 +37084,6 @@ void CvUnit::setGroupBaseTotal(int iNewValue)
 	m_iGroupBaseTotal = iNewValue;
 }
 
-void CvUnit::changeGroupBaseTotal(int iChange)
-{
-	setGroupBaseTotal(getGroupBaseTotal() + iChange);
-}
-
 int CvUnit::getSizeBaseTotal() const
 {
 	return m_iSizeBaseTotal;
@@ -37102,11 +37092,6 @@ int CvUnit::getSizeBaseTotal() const
 void CvUnit::setSizeBaseTotal(int iNewValue)
 {
 	m_iSizeBaseTotal = iNewValue;
-}
-
-void CvUnit::changeSizeBaseTotal(int iChange)
-{
-	setSizeBaseTotal(getSizeBaseTotal() + iChange);
 }
 
 int CvUnit::getExtraQuality() const

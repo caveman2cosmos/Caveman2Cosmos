@@ -2682,15 +2682,12 @@ public:
 
 	int getQualityBaseTotal() const;
 	void setQualityBaseTotal(int iNewValue);
-	void changeQualityBaseTotal(int iChange);
 
 	int getGroupBaseTotal() const;
 	void setGroupBaseTotal(int iNewValue);
-	void changeGroupBaseTotal(int iChange);
 
 	int getSizeBaseTotal() const;
 	void setSizeBaseTotal(int iNewValue);
-	void changeSizeBaseTotal(int iChange);
 
 	int getExtraQuality() const;
 	void setExtraQuality(int iNewValue);
