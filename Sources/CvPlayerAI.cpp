@@ -7390,12 +7390,12 @@ AttitudeTypes CvPlayerAI::AI_getAttitude(PlayerTypes ePlayer, bool bForced) cons
 	PROFILE_FUNC();
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
+
 	if (GET_PLAYER(ePlayer).isAlive())
 	{
 		return AI_getAttitudeFromValue(AI_getAttitudeVal(ePlayer, bForced));
 	}
-	throw new std::exception();
-
+	FErrorMsg("ePlayer should ideally be alive");
 	return NO_ATTITUDE;
 }
 
