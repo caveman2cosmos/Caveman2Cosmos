@@ -21,8 +21,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
-            <Bonus>BONUS_CAT</Bonus>
-			<iCost>624</iCost>
+			<iCost>588</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -51,55 +50,43 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LION_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_LION_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SPOTTED_CAT_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BENGALTIGER_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_TIGER_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TIGER_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_SABRETOOTH_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_JAGUAR_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SABRETOOTH_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_LYNX_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CAVE_LION_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_PANTHER_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_SNOW_LEOPARD_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_CHEETAH_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -129,10 +116,7 @@
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -182,9 +166,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

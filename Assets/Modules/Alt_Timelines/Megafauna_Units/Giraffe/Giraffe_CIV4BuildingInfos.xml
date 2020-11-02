@@ -50,7 +50,7 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_GIRAFFE_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

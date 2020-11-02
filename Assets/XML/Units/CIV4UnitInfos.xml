@@ -65053,10 +65053,15 @@ Base XP gained when defending
 			</UnitAIs>
 			<bRivalTerritory>1</bRivalTerritory>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+			</PrereqOrBuildings>
+			<ForceObsoleteTech>TECH_HERALDRY</ForceObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_BARD</UnitType>
 			</UnitUpgrades>
-			<iCost>12</iCost>
+			<iCost>13</iCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -65068,6 +65073,19 @@ Base XP gained when defending
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+				<BuildingType>BUILDING_CREATION_MYTH</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
+				<BuildingType>BUILDING_METAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+				<BuildingType>BUILDING_REEF_MYTH</BuildingType>
+				<BuildingType>BUILDING_CORAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_VOLCANO_MYTH</BuildingType>
+				<BuildingType>BUILDING_OUTCROP_MYTH</BuildingType>
+				<BuildingType>BUILDING_FALL_MYTH</BuildingType>
+				<BuildingType>BUILDING_OASIS_MYTH</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -65173,6 +65191,13 @@ Base XP gained when defending
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
+				<BuildingType>BUILDING_METAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+				<BuildingType>BUILDING_OLD_MAN_MYTH</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<iCost>120</iCost>

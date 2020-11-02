@@ -58,16 +58,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_CARCASS</FreeBonus>
+			<FreeBonus>BONUS_IVORY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
-            <Bonus>BONUS_MAMMOTH</Bonus>
-			<iCost>624</iCost>
+			<iCost>588</iCost>
 			<iMinLatitude>40</iMinLatitude>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -119,10 +112,6 @@
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>

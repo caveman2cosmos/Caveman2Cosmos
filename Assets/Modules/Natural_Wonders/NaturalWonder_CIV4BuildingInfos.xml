@@ -1919,55 +1919,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_GEOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_OASIS_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1987,69 +1950,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_FALL_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2137,69 +2049,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_OUTCROP_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2219,69 +2080,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_VOLCANOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_VOLCANO_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2309,69 +2119,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_CORAL_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2399,69 +2158,18 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<ExtendsBuilding>BUILDING_ORAL_TRADITION</ExtendsBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_REEF_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>

@@ -24,7 +24,6 @@
 										<Constant>2</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -44,7 +43,6 @@
 										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -64,7 +62,6 @@
 										<Constant>4</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -83,8 +80,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>6</Constant>
 									</Adapt>
-									</iCommerce>
-								<iCommerce>0</iCommerce>
+								</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -104,7 +100,6 @@
 										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -124,7 +119,6 @@
 										<Constant>2</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 					</ActionOutcomes>
@@ -155,7 +149,6 @@
 										<Constant>2</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -175,7 +168,6 @@
 										<Constant>10</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -195,7 +187,6 @@
 										<Constant>10</Constant>
 									</Adapt>
 									</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -215,7 +206,6 @@
 										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 						<Outcome>
@@ -235,7 +225,6 @@
 										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
 					</ActionOutcomes>
@@ -266,7 +255,6 @@
 										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
@@ -287,18 +275,12 @@
 										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
 								<iCommerce>
 									<Adapt>
@@ -313,7 +295,6 @@
 										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
@@ -330,48 +311,30 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
 								<iCommerce>1</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>5</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
 								<iCommerce>2</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>5</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
 								<iCommerce>4</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>5</iCommerce>
-								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
 						</Outcome>
@@ -393,90 +356,6 @@
 			<Type>UNITCOMBAT_WHALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WHALE</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/whales.dds</Button>
-<!--
-			<Actions>
-				<Action>
-					<MissionType>MISSION_ANIMAL_STUDY</MissionType>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_PETS</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>1</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_MENAGERIE</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>5</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_AQUARIUM</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>7</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_MARINE_INST</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>10</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_WHALE</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>15</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-			</Actions>
--->
 		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>

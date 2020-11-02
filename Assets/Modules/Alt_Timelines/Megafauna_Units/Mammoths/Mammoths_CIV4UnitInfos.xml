@@ -72,7 +72,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<iCost>94</iCost>
+			<iCost>105</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -191,7 +191,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -201,6 +201,7 @@
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>140</iCost>
@@ -303,10 +304,13 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
-			<iCost>190</iCost>
+			<iCost>120</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -1038,6 +1042,7 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>

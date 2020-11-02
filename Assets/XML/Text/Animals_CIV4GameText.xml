@@ -6,19 +6,9 @@
 		<French>Mythe de l'Oryctérope du Cap</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AARDVARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Aardvark</English>
-		<French>Effet (Mythe de l'Oryctérope du Cap)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_STORIES</Tag>
 		<English>Stories - Aardvark</English>
 		<French>Histoires de l'Oryctérope du Cap</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AARDVARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Aardvark</English>
-		<French>Effet (Histoires de l'Oryctérope du Cap)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_STORY</Tag>
@@ -31,19 +21,9 @@
 		<French>Mythe de l'Eléphant d'Afrique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Elephant, African</English>
-		<French>Effet (Mythe de l'Eléphant d'Afrique)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORIES</Tag>
 		<English>Stories - Elephant, African</English>
 		<French>Histoires de l'Eléphant d'Afrique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Elephant, African</English>
-		<French>Effet (Histoires de l'Eléphant d'Afrique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORY</Tag>
@@ -61,12 +41,6 @@
 		<English>In game building that is auto built. This is to make the updating of Myths and Story buildings easier when new buildings are added or existing ones modified.</English>
 		<French>Ce bâtiment est construit automatiquement. Il permet de faciliter l'amélioration des bâtiments Mythe et Histoire.</French>
 		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-		<English>Free building provided as the effect of another.</English>
-		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
-		<Polish>Darmowy budynek dostarczany jako efekt innego budynku.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
@@ -102,19 +76,9 @@
 		<French>Mythe du Renard arctique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Arctic Fox</English>
-		<French>Effet (Mythe du Renard arctique)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORIES</Tag>
 		<English>Stories - Arctic Fox</English>
 		<French>Histoires du Renard arctique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Arctic Fox</English>
-		<French>Effet (Histoires du Renard arctique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORY</Tag>
@@ -127,19 +91,9 @@
 		<French>Mythe du Tatou</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARMADILLO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Armadillo</English>
-		<French>Effet (Mythe du Tatou)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORIES</Tag>
 		<English>Stories - Armadillo</English>
 		<French>Histoires du Tatou</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Armadillo</English>
-		<French>Effet (Histoires du Tatou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORY</Tag>
@@ -152,19 +106,9 @@
 		<French>Mythe de l'Eléphant d'Asie</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Elephant, Asian</English>
-		<French>Effet (Mythe de l'Eléphant d'Asie)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORIES</Tag>
 		<English>Stories - Elephant, Asian</English>
 		<French>Histoires de l'Eléphant d'Asie</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Elephant, Asian</English>
-		<French>Effet (Histoires de l'Eléphant d'Asie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORY</Tag>
@@ -177,19 +121,9 @@
 		<French>Mythe du babiroussas</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BABIRUSA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Babirusa</English>
-		<French>Effet (Mythe du babiroussas)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORIES</Tag>
 		<English>Stories - Babirusa</English>
 		<French>Histoires du babiroussas</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Babirusa</English>
-		<French>Effet (Histoires du babiroussas)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORY</Tag>
@@ -203,22 +137,10 @@
 		<Polish>Mit - Tapir Panamski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tapir, Baird's</English>
-		<French>Effet (Mythe du Tapir de Baird</French>
-		<Polish>Efekt Mitu - Tapir Panamski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES</Tag>
 		<English>Stories - Baird's Tapir</English>
 		<French>Histoires des Tapirs de Baird</French>
 		<Polish>Historie - Tapir Panamski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Baird's Tapir)</English>
-		<French>Effet (Histoires des Tapirs de Baird)</French>
-		<Polish>Efekt Historii - Tapir Panamski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORY</Tag>
@@ -233,22 +155,10 @@
 		<Polish>Mit - Nosorożec Czarny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rhinoceros, Black</English>
-		<French>Effet (Mythe du Rhinocéros noir)</French>
-		<Polish>Efekt Mitu - Nosorożec Czarny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Black</English>
 		<French>Histoires du Rhinocéros noir</French>
 		<Polish>Historie - Nosorożec Czarny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Rhinoceros, Black</English>
-		<French>Effet (Histoires du Rhinocéros noir)</French>
-		<Polish>Efekt Historii - Nosorożec Czarny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORY</Tag>
@@ -263,22 +173,10 @@
 		<Polish>Mit - Tapir</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tapir, Brazilian</English>
-		<French>Effet (Mythe du Tapir du Brésil)</French>
-		<Polish>Efekt Mitu - Tapir Brazylijski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir, Brazilian</English>
 		<French>Histoires des Tapirs du Brésil</French>
 		<Polish>Historie - Tapir Brazylijski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Brazilian Tapir)</English>
-		<French>Effet (Histoires des Tapirs du Brésil)</French>
-		<Polish>Efekt Historii - Tapir Brazylijski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORY</Tag>
@@ -297,16 +195,6 @@
 		<Polish>Mit - Kajman</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAIMAN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Caiman</English>
-		<French>
-			<Text>Effet (Mythe du Caïman)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Kajman</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_STORIES</Tag>
 		<English>Stories - Caiman</English>
 		<French>
@@ -315,16 +203,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Kajman</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAIMAN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Caiman</English>
-		<French>
-			<Text>Effet (Histoires des Caïmans)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Kajman</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_STORY</Tag>
@@ -338,19 +216,9 @@
 		<French>Mythe du Caribou</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Caribou</English>
-		<French>Effet (Mythe du Caribou)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES</Tag>
 		<English>Stories - Caribou</English>
 		<French>Histoires du Caribou</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Caribou</English>
-		<French>Effet (Histoires du Caribou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORY</Tag>
@@ -363,11 +231,6 @@
 		<French>Mythe du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Cavelion</English>
-		<French>Effet (Mythe du Lion des cavernes)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
 		<English>Remains - Cavelion</English>
 		<French>Restes de Lion des cavernes</French>
@@ -376,11 +239,6 @@
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES</Tag>
 		<English>Stories - Cavelion</English>
 		<French>Histoires du Lion des cavernes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Cavelion</English>
-		<French>Effet (Histoires du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORY</Tag>
@@ -403,16 +261,6 @@
 		<Polish>Mit - Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROCODILE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Crocodile</English>
-		<French>
-			<Text>Effet (Mythe du Crocodile)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Krokodyl</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_STORIES</Tag>
 		<English>Stories - Crocodile</English>
 		<French>
@@ -421,16 +269,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROCODILE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Crocodile</English>
-		<French>
-			<Text>Effet (Histoires du Crocodile)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_STORY</Tag>
@@ -448,19 +286,9 @@
 		<French>Mythe du Couscous</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CUSCUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Cuscus</English>
-		<French>Effet (Mythe du Couscous)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_STORIES</Tag>
 		<English>Stories - Cuscus</English>
 		<French>Histoires du Couscous</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CUSCUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Cuscus</English>
-		<French>Effet (Histoire du Couscous)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_STORY</Tag>
@@ -473,19 +301,9 @@
 		<French>Mythe de la Grenouille venimeuse</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DART_FROG_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dart Frog</English>
-		<French>Effet (Mythe de la Grenouille venimeuse)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORIES</Tag>
 		<English>Stories - Dart Frog</English>
 		<French>Histoires de la Grenouille venimeuse</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DART_FROG_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dart Frog</English>
-		<French>Effet (Histoires de la Grenouille venimeuse)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORY</Tag>
@@ -498,19 +316,9 @@
 		<French>Mythe du Cuon d'Asie</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DHOLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dhole</English>
-		<French>Effet (Mythe du Cuon d'Asie)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_STORIES</Tag>
 		<English>Stories - Dhole</English>
 		<French>Histoires du Cuon d'Asie</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DHOLE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dhole</English>
-		<French>Effet (Histoires du Cuon d'Asie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_STORY</Tag>
@@ -523,19 +331,9 @@
 		<French>Mythe du Dingo</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DINGO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dingo</English>
-		<French>Effet (Mythe du Dingo)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_STORIES</Tag>
 		<English>Stories - Dingo</English>
 		<French>Histoires du Dingo</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DINGO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dingo</English>
-		<French>Effet (Histoires du Dingo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_STORY</Tag>
@@ -543,19 +341,9 @@
 		<French>Histoire du Dingo</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DOLPHIN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dolphin</English>
-		<French>Effet (Mythe du Dauphin)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES</Tag>
 		<English>Stories - Dolphin</English>
 		<French>Histoires du Dauphin</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dolphin</English>
-		<French>Effet (Histoires du Dauphin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORY</Tag>
@@ -569,19 +357,9 @@
 		<French>Mythe du Canard</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Duck</English>
-		<French>Effet (Mythe du Canard)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORIES</Tag>
 		<English>Stories - Duck</English>
 		<French>Histoires du Canard</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Duck</English>
-		<French>Effet (Histoires du Canard)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORY</Tag>
@@ -589,19 +367,9 @@
 		<French>Histoire du Canard</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dugong</English>
-		<French>Effet (Mythe du Lamantin)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES</Tag>
 		<English>Stories - Dugong</English>
 		<French>Histoires du Lamantin</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dugong</English>
-		<French>Effet (Histoires du Lamantin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORY</Tag>
@@ -616,12 +384,6 @@
 		<Polish>Mit - Elasmoterium</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Elasmotherium</English>
-		<French>Effet (Mythe de Elasmotherium)</French>
-		<Polish>Efekt Mitu - Elasmoterium</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
 		<English>Remains - Elasmotherium</English>
 		<French>Restes d'Elasmotherium</French>
@@ -634,21 +396,10 @@
 		<Polish>Historie - Elasmoterium</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Elasmotherium</English>
-		<French>Effet (Histoires de l'Elasmotherium)</French>
-		<Polish>Efekt Historii - Elasmoterium</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_STORY</Tag>
 		<English>Story - Elasmotherium</English>
 		<French>Histoire de l'Elasmotherium</French>
 		<Polish>Opowieść - Elasmoterium</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Tag>
-		<English>Free building provided by the same Myth. Make the Myth building a pseudo National Wonder as you only need one.</English>
-		<French>Des Bâtiments gratuits sont construits par le Mythe éponyme. Ils font du Mythe une pseudo-merveille nationale vu qu'il n'y en a besoin que d'une.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
@@ -663,10 +414,10 @@
 		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Elephant</English>
-		<French>Effet (Mythe de l'Eléphant)</French>
-		<Polish>Efekt Mitu - Słoń</Polish>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_STORY</Tag>
+		<English>Story - Elephant</English>
+		<French>Histoire de l'Eléphant</French>
+		<Polish>Opowieść o Słoniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_MYTH</Tag>
@@ -674,19 +425,9 @@
 		<French>Mythe du Manchot Empereur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Emperor Penguin</English>
-		<French>Effet (Mythe du Manchot Empereur)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORIES</Tag>
 		<English>Stories - Emperor Penguin</English>
 		<French>Histoires des Manchots Empereurs</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Emperor Penguin</English>
-		<French>Effet (Histoires des Manchots Empereurs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORY</Tag>
@@ -699,19 +440,9 @@
 		<French>Mythe du Loup Ethiopien</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoire du Loup Ethiopien)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES</Tag>
 		<English>Stories - Ethiopian Wolf</English>
 		<French>Histoires du Loup Ethiopien</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoires du Loup Ethiopien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORY</Tag>
@@ -724,19 +455,9 @@
 		<French>Mythe du Fennec</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Fennec Fox</English>
-		<French>Effet (Mythe du Fennec)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORIES</Tag>
 		<English>Stories - Fennec Fox</English>
 		<French>Histoires du Fennec</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Fennec Fox</English>
-		<French>Effet (Histoires du Fennec)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORY</Tag>
@@ -750,30 +471,14 @@
 		<Polish>Mit - Ogień</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Fire</English>
-		<French>Effet (Mythe du Feu)</French>
-		<Polish>Efekt Mitu - Ogień</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH</Tag>
 		<English>Myth - Flamingo</English>
 		<French>Mythe du Flamant rose</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Flamingo</English>
-		<French>Effet (Mythe du Flamant rose)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES</Tag>
 		<English>Stories - Flamingo</English>
 		<French>Histoires du Flamingo</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Flamingo</English>
-		<French>Effet (Histoires de Flamants roses)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORY</Tag>
@@ -791,16 +496,6 @@
 		<Polish>Mit - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Chinese Alligator</English>
-		<French>
-			<Text>Effet (Mythe de l'Alligator de Chine)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Aligator Chiński</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORIES</Tag>
 		<English>Stories - Chinese Alligator</English>
 		<French>
@@ -809,16 +504,6 @@
 			<Plural>1</Plural>
 		</French>
 		<Polish>Historie - Aligator Chiński</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Chinese Alligator</English>
-		<French>
-			<Text>Effet (Histoires des Alligators de Chine)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORY</Tag>
@@ -841,16 +526,6 @@
 		<Polish>Mit - Aligator Amerykański</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GATOR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Americian Alligator</English>
-		<French>
-			<Text>Effet (Mythe de l'Alligator d'Amérique)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Aligator Amerykański</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES</Tag>
 		<English>Stories - Americian Alligator</English>
 		<French>
@@ -859,16 +534,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Aligator Amerykański</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GATOR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Americian Alligator</English>
-		<French>
-			<Text>Effet (Histoires du Alligator d'Amérique)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Aligator Amerykański</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORY</Tag>
@@ -891,16 +556,6 @@
 		<Polish>Mit - Gawial</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GHARIAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gharial</English>
-		<French>
-			<Text>Effet (Mythe du Gavial du Gange)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Gawial</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_STORIES</Tag>
 		<English>Stories - Gharial</English>
 		<French>
@@ -909,16 +564,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Gawial</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GHARIAL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gharial</English>
-		<French>
-			<Text>Effet (Histoires du Gavial du Gange)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Gawial</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_STORY</Tag>
@@ -945,19 +590,9 @@
 		</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Giraffe</English>
-		<French>Effet (Mythe de la Girafe)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORIES</Tag>
 		<English>Stories - Giraffe</English>
 		<French>Histoires de la Girafe</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Giraffe</English>
-		<French>Effet (Histoires de la Girafe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORY</Tag>
@@ -970,11 +605,6 @@
 		<French>Mythe du Glyptodon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GLYPTO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Paleolithic Glyptodon</English>
-		<French>Effet (Mythe du Glyptodon)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
 		<English>Remains - Glyptodon</English>
 		<French>Restes de Glyptodon</French>
@@ -985,29 +615,14 @@
 		<French>Histoires de Glyptodons</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GLYPTO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Paleolithic Glyptodon</English>
-		<French>Effet (Histoires du Glyptodon)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_STORY</Tag>
 		<English>Story - Paleolithic Glyptodon</English>
 		<French>Histoire du Glyptodon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Greatwhite shark</English>
-		<French>Effet (Mythe du Grand requin blanc)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
 		<English>Stories - Greatwhite shark</English>
 		<French>Histoires du Grand requin blanc</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Greatwhite shark</English>
-		<French>Effet (Histoires de Grands Requins blancs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORY</Tag>
@@ -1021,19 +636,9 @@
 		<French>Mythe du Loup gris</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREY_WOLF_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Wolf, Grey</English>
-		<French>Effet (Mythe du Loup gris)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORIES</Tag>
 		<English>Stories - Wolf, Grey</English>
 		<French>Histoires du Loup gris</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Wolf, Grey</English>
-		<French>Effet (Histoires du Loup gris)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORY</Tag>
@@ -1041,19 +646,9 @@
 		<French>Histoire du Loup gris</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hammerhead shark</English>
-		<French>Effet (Mythe du Requin-marteau</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES</Tag>
 		<English>Stories - Hammerhead shark</English>
 		<French>Histoires du Requin-marteau</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hammerhead shark</English>
-		<French>Effet (Histoires de Requins-marteau)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORY</Tag>
@@ -1067,19 +662,9 @@
 		<French>Mythe de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hippopatamus</English>
-		<French>Effet (Mythe de l'Hippopotames)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES</Tag>
 		<English>Stories - Hippopatamus</English>
 		<French>Histoires de l'Hippopotame</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hippopatamus</English>
-		<French>Effet (Histoire de l'Hippopotame)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORY</Tag>
@@ -1092,19 +677,9 @@
 		<French>Mythe de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPOS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hippos</English>
-		<French>Effet (Mythe de l'Hippopotame)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_STORIES</Tag>
 		<English>Stories - Hippos</English>
 		<French>Histoires de l'Hippopotame</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPOS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hippos</English>
-		<French>Effet (Histoires de l'Hippopotame)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_STORY</Tag>
@@ -1117,19 +692,9 @@
 		<French>Mythe du Hibou grand duc</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORNED_OWL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Great Horned Owl</English>
-		<French>Effet (Mythe du Hibou grand duc)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES</Tag>
 		<English>Stories - Great Horned Owl</English>
 		<French>Histoires du Hibou grand duc</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Great Horned Owl</English>
-		<French>Effet (Histoires du Hibou grand duc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORY</Tag>
@@ -1137,19 +702,9 @@
 		<French>Histoire du Hibou grand duc</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMPBACK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Humpback Whale</English>
-		<French>Effet (Mythe de la Baleine à bosse</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES</Tag>
 		<English>Stories - Humpback Whale</English>
 		<French>Histoires de la Baleine à bosse</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Humpback Whale</English>
-		<French>Effet (Histoires de la Baleine à bosse)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORY</Tag>
@@ -1163,19 +718,9 @@
 		<French>Mythe du Bouquetin</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Ibex</English>
-		<French>Effet (Mythe du Bouquetin)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORIES</Tag>
 		<English>Stories - Ibex</English>
 		<French>Histoires du Bouquetin</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Ibex</English>
-		<French>Effet (Histoires du Bouquetin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORY</Tag>
@@ -1189,22 +734,10 @@
 		<Polish>Mit - Nosorożec Indyjski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rhinoceros, Indian</English>
-		<French>Effet (Mythe du Rhinocéros indien)</French>
-		<Polish>Efekt Mitu - Nosorożec Indyjski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Indian</English>
 		<French>Histoires du Rhinocéros indien</French>
 		<Polish>Historie - Nosorożec Indyjski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Rhinoceros, Indian</English>
-		<French>Effet (Histoires du Rhinocéros indien)</French>
-		<Polish>Efekt Historii - Nosorożec Indyjski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORY</Tag>
@@ -1219,22 +752,10 @@
 		<Polish>Mit - Nosorożec Jawajski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rhinoceros, Java</English>
-		<French>Effet (Mythe du Rhinocéros de Java)</French>
-		<Polish>Efekt Mitu - Nosorożec Jawajski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Java</English>
 		<French>Histoires du Rhinocéros de Java</French>
 		<Polish>Historie - Nosorożec Jawajski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Rhinoceros, Java</English>
-		<French>Effet (Histoires du Rhinocéros de Java)</French>
-		<Polish>Efekt Historii - Nosorożec Jawajski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORY</Tag>
@@ -1243,19 +764,9 @@
 		<Polish>Opowieść - Nosorożec Jawajski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Kraken</English>
-		<French>Effet (Mythe du Kraken)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES</Tag>
 		<English>Stories - Kraken</English>
 		<French>Histoires du Kraken</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Kraken</English>
-		<French>Effet (Histoires du Kraken)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORY</Tag>
@@ -1275,11 +786,6 @@
 		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Leviathan</English>
-		<French>Effet (Mythe du Léviathan)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
 		<English>Story - Lion</English>
 		<French>Histoire du Lion</French>
@@ -1292,22 +798,10 @@
 		<Polish>Mit - Jaszczurka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LIZARD_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Lizard</English>
-		<French>Effet (Mythe du lézard)</French>
-		<Polish>Efekt Mitu - Jaszczurka</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_STORIES</Tag>
 		<English>Stories - Lizard</English>
 		<French>Histoires des lézards</French>
 		<Polish>Historie - Jaszczurka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LIZARD_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Lizard</English>
-		<French>Effet (Histoires du lézard)</French>
-		<Polish>Efekt Historii - Jaszczurka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_STORY</Tag>
@@ -1327,19 +821,9 @@
 		<French>Mythe du Plongeon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Loon</English>
-		<French>Effet (Mythe du Plongeon</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORIES</Tag>
 		<English>Stories - Loon</English>
 		<French>Histoires du Plongeon</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Loon</English>
-		<French>Effet (Histoires de Plongeons)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORY</Tag>
@@ -1352,19 +836,9 @@
 		<French>Mythe du Lynx</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LYNX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Lynx</English>
-		<French>Effet (Mythe du Lynx)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORIES</Tag>
 		<English>Stories - Lynx</English>
 		<French>Histoires du Lynx</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LYNX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Lynx</English>
-		<French>Effet (Histoires du Lynx)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORY</Tag>
@@ -1378,22 +852,10 @@
 		<Polish>Mit - Tapir Malajski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tapir, Malayan</English>
-		<French>Effet (Mythe du Tapir Malais)</French>
-		<Polish>Efekt Mitu - Tapir Malajski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES</Tag>
 		<English>Stories - Malayan Tapir</English>
 		<French>Histoires des Tapirs Malais</French>
 		<Polish>Historie - Tapir Malajski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Malayan Tapir)</English>
-		<French>Effet (Histoires des Tapirs Malais)</French>
-		<Polish>Efekt Historii - Tapir Malajski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORY</Tag>
@@ -1407,19 +869,9 @@
 		<French>Mythe du Loup à crinière</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANEDWOLF_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Maned Wolf</English>
-		<French>Effet (Mythe du Loup à crinière)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORIES</Tag>
 		<English>Stories - Maned Wolf</English>
 		<French>Histoires du Loup à crinière</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Maned Wolf</English>
-		<French>Effet (Histoires du Loup à crinière</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORY</Tag>
@@ -1433,25 +885,9 @@
 		<Polish>Mit - Metal</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Metal</English>
-		<French>Effet (Mythe du Métal)</French>
-		<Polish>Efekt Mitu - Metal</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Minke Whale</English>
-		<French>Effet (Mythe du Petit rorqual)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES</Tag>
 		<English>Stories - Minke Whale</English>
 		<French>Histoires du Petit rorqual</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Minke Whale</English>
-		<French>Effet (Histoires du Petit rorqual)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORY</Tag>
@@ -1465,19 +901,9 @@
 		<French>Mythe de l'Échidné</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MONOTREMES_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Monotremes</English>
-		<French>Effet (Mythe de l'Échidné)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORIES</Tag>
 		<English>Stories - Monotremes</English>
 		<French>Histoires de l'Échidné</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Monotremes</English>
-		<French>Effet (Histoires de l'Echidné)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORY</Tag>
@@ -1490,19 +916,9 @@
 		<French>Mythe de l'Elan</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOOSE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Moose</English>
-		<French>Effet (Mythe de l'Elan)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES</Tag>
 		<English>Stories - Moose</English>
 		<French>Histoires de l'Elan</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Moose</English>
-		<French>Effet (Histoires de l'Elan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORY</Tag>
@@ -1516,22 +932,10 @@
 		<Polish>Mit - Tapir Górski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tapir, Mountain</English>
-		<French>Effet (Mythe du Tapir des Montagnes</French>
-		<Polish>Efekt Mitu - Tapir Górski</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir, Mountain</English>
 		<French>Histoires des Tapirs des Montagnes</French>
 		<Polish>Historie - Tapir Górski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Mountain Tapir)</English>
-		<French>Effet (Histoires des Tapirs des Montagnes)</French>
-		<Polish>Efekt Historii - Tapir Górski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORY</Tag>
@@ -1545,29 +949,14 @@
 		<French>Mythe du Boeuf musqué</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Muskox</English>
-		<French>Effet (Mythe du Boeuf musqué)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES</Tag>
 		<English>Stories - Muskox</English>
 		<French>Histoires du Boeuf musqué</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Muskox</English>
-		<French>Effet (Histoires du Boeuf musqué)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORY</Tag>
 		<English>Story - Muskox</English>
 		<French>Histoire du Boeuf musqué</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Narwhal</English>
-		<French>Effet (Mythe du Narval)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_MYTH</Tag>
@@ -1580,16 +969,6 @@
 		<Polish>Mit - Krokodyl Nilowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILECROC_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Nile Crocodile</English>
-		<French>
-			<Text>Effet (Mythe du Crocodile du Nil)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Krokodyl Nilowy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORIES</Tag>
 		<English>Stories - Nile Crocodile</English>
 		<French>
@@ -1598,16 +977,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Nilowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILECROC_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Nile Crocodile</English>
-		<French>
-			<Text>Effet (Histoires du Crocodile du Nil)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Krokodyl Nilowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORY</Tag>
@@ -1625,19 +994,9 @@
 		<French>Mythe du Numbat</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NUMBAT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Numbat</English>
-		<French>Effet (Mythe du Numbat)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORIES</Tag>
 		<English>Stories - Numbat</English>
 		<French>Histoires du Numbat</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NUMBAT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Numbat</English>
-		<French>Effet (Histoires du Numbat)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORY</Tag>
@@ -1650,19 +1009,9 @@
 		<French>Mythe de l'Opossum</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OPOSSUM_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Opossum</English>
-		<French>Effet (Mythe de l'Opossum)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORIES</Tag>
 		<English>Stories - Opossum</English>
 		<French>Histoires de l'Opossum</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Opossum</English>
-		<French>Effet (Histoires de l'Opossum)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORY</Tag>
@@ -1670,19 +1019,9 @@
 		<French>Histoire du Opossum</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORCA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Orca</English>
-		<French>Effet (Mythe de l'Orque)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORIES</Tag>
 		<English>Stories - Orca</English>
 		<French>Histoires de l'Orque</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORCA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Orca</English>
-		<French>Effet (Histoires de l'Orque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORY</Tag>
@@ -1697,22 +1036,10 @@
 		<Polish>Mit - Ptaki Kopalne</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Paleolithic Birds</English>
-		<French>Effet (Mythe des oiseaux du Paléolithique)</French>
-		<Polish>Efekt Mitu - Ptaki Kopalne</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES</Tag>
 		<English>Stories - Paleolithic Birds</English>
 		<French>Histoires des Oiseaux du paléolithique</French>
 		<Polish>Historie o Ptakach Kopalnych</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Paleolithic Birds</English>
-		<French>Effet (Histoires des oiseaux du paléolithique)</French>
-		<Polish>Efekt - Historie o Ptakach Kopalnych</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORY</Tag>
@@ -1727,12 +1054,6 @@
 		<Polish>Historie o Kotach Kopalnych</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Paleolithic Cats</English>
-		<French>Effet (Histoires des félins du paléolithique)</French>
-		<Polish>Efekt - Historie o Kotach Kopalnych</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORY</Tag>
 		<English>Story - Paleolithic Cats</English>
 		<French>Histoire des chats du paléolithique</French>
@@ -1742,11 +1063,6 @@
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_MYTH</Tag>
 		<English>Myth - Dire Wolf</English>
 		<French>Mythe du Loup sinistre</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Dire Wolf</English>
-		<French>Effet (Mythe du Loup sinistre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
@@ -1759,11 +1075,6 @@
 		<French>Histoires du Loup sinistre</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Dire Wolf</English>
-		<French>Effet (Histoires du Loup sinistre)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORY</Tag>
 		<English>Story - Dire Wolf</English>
 		<French>Histoire du Loup sinistre</French>
@@ -1774,11 +1085,6 @@
 		<French>Mythe du Xénarthre</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Paleolithic Ground Sloth</English>
-		<French>Effet (Mythe du Xénarthre)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
 		<English>Remains - Ground Sloth</English>
 		<French>Restes de Xénarthre</French>
@@ -1787,11 +1093,6 @@
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</Tag>
 		<English>Stories - Paleolithic Ground Sloth</English>
 		<French>Histoires des Xénarthres</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Paleolithic Ground Sloth</English>
-		<French>Effet (Histoires des Xénarthres)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</Tag>
@@ -1805,12 +1106,6 @@
 		<Polish>Historie o Kopalnych Torbaczach</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Paleolithic Marsupials</English>
-		<French>Effet (Histoires des Marsupiaux du Paléolithique)</French>
-		<Polish>Efekt - Historie o Kopalnych Torbaczach</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Tag>
 		<English>Story - Paleolithic Marsupials</English>
 		<French>Histoire des Marsupiaux du Paléolithique</French>
@@ -1822,19 +1117,9 @@
 		<French>Mythe de la Panthère</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PANTHER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Panther</English>
-		<French>Effet (Mythe de la Panthère)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES</Tag>
 		<English>Stories - Panther</English>
 		<French>Histoires de la Panthère</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Panther</English>
-		<French>Effet (Histoires de la Panthère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORY</Tag>
@@ -1847,19 +1132,9 @@
 		<French>Mythe du Faisan</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PHEASANT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Pheasant</English>
-		<French>Effet (Mythe du Faisan)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES</Tag>
 		<English>Stories - Pheasant</English>
 		<French>Histoires du Faisan</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Pheasant</English>
-		<French>Effet (Histoires du Faisan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORY</Tag>
@@ -1872,19 +1147,9 @@
 		<French>Mythe du Pigeon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIGEON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Pigeon</English>
-		<French>Effet (Mythe du Pigeon)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES</Tag>
 		<English>Stories - Pigeon</English>
 		<French>Histoires du Pigeon</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Pigeon</English>
-		<French>Effet (Histoires du Pigeon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORY</Tag>
@@ -1897,19 +1162,9 @@
 		<French>Mythe de l'Ornithorynque</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PLATYPUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Platypus</English>
-		<French>Effet (Mythe de l'Ornithorynque)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORIES</Tag>
 		<English>Stories - Platypus</English>
 		<French>Histoires de l'Ornithorynque</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Platypus</English>
-		<French>Effet (Histoires de l'Ornithorynque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORY</Tag>
@@ -1922,19 +1177,9 @@
 		<French>Mythe du Phalanger commun</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POSSUM_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Possum</English>
-		<French>Effet (Mythe du Phalanger commun)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_STORIES</Tag>
 		<English>Stories - Possum</English>
 		<French>Histoires du Phalanger commun</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POSSUM_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Possum</English>
-		<French>Effet (Histoires du Phalanger commun)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_STORY</Tag>
@@ -1947,19 +1192,9 @@
 		<French>Mythe de l'Hippopotame nain</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Pygmy Hippopotamus</English>
-		<French>Effet (Mythe de l'Hippopotame nain)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORIES</Tag>
 		<English>Stories - Pygmy Hippopotamus</English>
 		<French>Histoires de l'Hippopotame nain</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Pygmy Hippopotamus</English>
-		<French>Effet (Histoires de l'Hippopotame nain)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORY</Tag>
@@ -1972,19 +1207,9 @@
 		<French>Mythe du Raton-Laveur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RACCOON_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Raccoon</English>
-		<French>Effet (Mythe du Raton-Laveur)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES</Tag>
 		<English>Stories - Raccoon</English>
 		<French>Histoires du Raton-Laveur</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Raccoon</English>
-		<French>Effet (Histoires du Raton-Laveur)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORY</Tag>
@@ -1992,19 +1217,9 @@
 		<French>Histoire du Raton-Laveur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Ray</English>
-		<French>Effet (Mythe de la Raie)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
 		<English>Myth - Redfox</English>
 		<French>Mythe du Renard Roux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Redfox</English>
-		<French>Effet (Mythe du Renard Roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES</Tag>
@@ -2012,29 +1227,14 @@
 		<French>Histoires du Renard Roux</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Redfox</English>
-		<French>Effet (Histoires du Renard Roux)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORY</Tag>
 		<English>Story - Redfox</English>
 		<French>Histoire du Renard Roux</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Reef shark</English>
-		<French>Effet (Mythe du Requin des récifs)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES</Tag>
 		<English>Stories - Reef shark</English>
 		<French>Histoires du Requin des récifs</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Reef shark</English>
-		<French>Effet (Histoires de Requins des récifs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORY</Tag>
@@ -2049,12 +1249,6 @@
 		<Polish>Mit - Rhinoceroses</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rhinoceroses</English>
-		<French>Effet (Mythe du Rhinocéros)</French>
-		<Polish>Efekt Mitu - Rhinoceroses</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_MYTH</Tag>
 		<English>Myth - River Crocodile</English>
 		<French>
@@ -2065,16 +1259,6 @@
 		<Polish>Mit - Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RIVER_CROC_MYTH_EFFECT</Tag>
-		<English>Myth Effect - River Crocodile</English>
-		<French>
-			<Text>Effet (Mythe du Crocodile de rivière)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Krokodyl Błotny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORIES</Tag>
 		<English>Stories - River Crocodile</English>
 		<French>
@@ -2083,16 +1267,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Błotny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORIES_EFFECT</Tag>
-		<English>Stories Effect - River Crocodile</English>
-		<French>
-			<Text>Effet (Histoires du Crocodile de rivière)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORY</Tag>
@@ -2110,19 +1284,9 @@
 		<French>Mythe du Gorfou sauteur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rockhopper Penguin</English>
-		<French>Effet (Mythe du Gorfou sauteur)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORIES</Tag>
 		<English>Stories - Rockhopper Penguin</English>
 		<French>Histoire des Gorfous sauteurs</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Rockhopper Penguin</English>
-		<French>Effet (Histoires des Gorfous sauteurs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORY</Tag>
@@ -2134,11 +1298,6 @@
 		<English>Myth - Sabretooth</English>
 		<French>Mythe du Tigre à dents de sabre</French>
 		<Polish>Mit - Tygrys Szablozębny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABRETOOTH_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Sabretooth</English>
-		<French>Effet (Mythe du Tigre à dents de sabre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
@@ -2153,12 +1312,6 @@
 		<Polish>Historie - Tygrys Szablozębny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABRETOOTH_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Sabretooth</English>
-		<French>Effet (Histoires du Tigre à dents de sabre)</French>
-		<Polish>Efekt Historii - Tygrys Szablozębny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_STORY</Tag>
 		<English>Story - Sabretooth</English>
 		<French>Histoire du Tigre à dents de sabre</French>
@@ -2170,19 +1323,9 @@
 		<French>Mythe de l'Antilope Saiga</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SAIGA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Saiga</English>
-		<French>Effet (Mythe de l'Antilope Saiga)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES</Tag>
 		<English>Stories - Saiga</English>
 		<French>Histoires de l'Antilope Saiga</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Saiga</English>
-		<French>Effet (Histoires de l'Antilope Saiga)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORY</Tag>
@@ -2200,16 +1343,6 @@
 		<Polish>Mit - Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Saltwater Crocodile</English>
-		<French>
-			<Text>Effet (Mythe du Crocodile de mer)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Mitu - Krokodyl Różańcowy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORIES</Tag>
 		<English>Stories - Saltwater Crocodile</English>
 		<French>
@@ -2218,16 +1351,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Różańcowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Saltwater Crocodile</English>
-		<French>
-			<Text>Effet (Histoires du Crocodile de mer)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Efekt Historii - Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORY</Tag>
@@ -2245,19 +1368,9 @@
 		<French>Mythe du Lion des mers</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEALION_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Sea Lion</English>
-		<French>Effet (Mythe du Lion des mers)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORIES</Tag>
 		<English>Stories - Sea Lion</English>
 		<French>Histoires du Lion des mers</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEALION_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Sea Lion</English>
-		<French>Effet (Histoires de Lions des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORY</Tag>
@@ -2268,11 +1381,6 @@
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES</Tag>
 		<English>Stories - Seaturtle</English>
 		<French>Histoires de la Tortue des mers</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Seaturtle</English>
-		<French>Effet (Histoires de la Tortue des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORY</Tag>
@@ -2286,19 +1394,9 @@
 		<French>Mythe de la Loutre de mer</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEA_OTTER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Sea Otter</English>
-		<French>Effet (Mythe de la Loutre de mer)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES</Tag>
 		<English>Stories - Sea Otter</English>
 		<French>Histoires de Loutres de mer</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Sea Otter</English>
-		<French>Effet (Histoires de la Loutre de mer)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORY</Tag>
@@ -2306,19 +1404,9 @@
 		<French>Histoire de la Loutre de mer</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Shark</English>
-		<French>Effet (Mythe du Requin)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORIES</Tag>
 		<English>Stories - Shark</English>
 		<French>Histoires de Requins</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Shark</English>
-		<French>Effet (Histoires du Requin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORY</Tag>
@@ -2331,19 +1419,9 @@
 		<French>Mythe du Tigre de Sibérie</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Siberian Tiger</English>
-		<French>Effet (Mythe du Tigre de Sibérie)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES</Tag>
 		<English>Stories - Siberian Tiger</English>
 		<French>Histoires du Tigre de Sibérie</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Siberian Tiger</English>
-		<French>Effet (Histoires du Tigre de Sibérie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORY</Tag>
@@ -2356,19 +1434,9 @@
 		<French>Mythe de la Moufette</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SKUNK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Skunk</English>
-		<French>Effet (Mythe de la Moufette)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES</Tag>
 		<English>Stories - Skunk</English>
 		<French>Histoires de la Moufette</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Skunk</English>
-		<French>Effet (Histoires de la Moufette)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORY</Tag>
@@ -2381,19 +1449,9 @@
 		<French>Mythe du Léopard des neiges</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Snow Leopard</English>
-		<French>Effet (Mythe du Léopard des neiges)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES</Tag>
 		<English>Stories - Snow Leopard</English>
 		<French>Histoires du Léopard des neiges</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Snow Leopard</English>
-		<French>Effet (Histoires du Léopard des neiges)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORY</Tag>
@@ -2407,33 +1465,16 @@
 		<Polish>Mit - Kamień</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Stone</English>
-		<French>Effet (Mythe de la pierre)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir</English>
 		<French>Mythe du Tapir</French>
 		<Polish>Mit - Tapir</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TAPIR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tapir</English>
-		<French>Effet (Mythe du Tapir)</French>
-		<Polish>Efekt Mitu - Tapir</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir</English>
 		<French>Histoires des Tapirs</French>
 		<Polish>Historie - Tapir</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories effect - Tapir</English>
-		<French>Effet (Histoires des Tapirs)</French>
-		<Polish>Efekt Historie - Tapir</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORY</Tag>
@@ -2447,19 +1488,9 @@
 		<French>Mythe de la Tarentule</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TARANTULA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tarantula</English>
-		<French>Effet (Mythe de la Tarentule)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_STORIES</Tag>
 		<English>Stories - Tarantula</English>
 		<French>Histoires de la Tarentule</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TARANTULA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Tarantula</English>
-		<French>Effet (Histoires de la Tarentule)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_STORY</Tag>
@@ -2472,19 +1503,9 @@
 		<French>Mythe du Sterne Arctique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Arctic Tern</English>
-		<French>Effet (Mythe du Sterne Arctique)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORIES</Tag>
 		<English>Stories - Arctic Tern</English>
 		<French>Histoires du Sterne Arctique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Arctic Tern</English>
-		<French>Effet (Histoires du Sterne Arctique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORY</Tag>
@@ -2497,11 +1518,6 @@
 		<French>Mythe du Thylacine</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_THYLACINE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Thylacine</English>
-		<French>Effet (Mythe du Thylacine)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
 		<English>Remains - Thylacine</English>
 		<French>Restes de Thylacine</French>
@@ -2510,11 +1526,6 @@
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORIES</Tag>
 		<English>Stories - Thylacine</English>
 		<French>Histoires du Thylacine</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_THYLACINE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Thylacine</English>
-		<French>Effet (Histoires du Thylacine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORY</Tag>
@@ -2527,19 +1538,9 @@
 		<French>Mythe du Toucan</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Toucan</English>
-		<French>Effet (Mythe du Toucan)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES</Tag>
 		<English>Stories - Toucan</English>
 		<French>Histoires du Toucan</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Toucan</English>
-		<French>Effet (Histoires du Toucan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORY</Tag>
@@ -2552,19 +1553,9 @@
 		<French>Mythe du paresseux</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TREESLOTH_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Tree Sloth</English>
-		<French>Effet (Mythe du paresseux)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORIES</Tag>
 		<English>Stories - Tree Sloth</English>
 		<French>Histoires du paresseux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Tree Sloth</English>
-		<French>Effet (Histoires du paresseux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORY</Tag>
@@ -2583,19 +1574,9 @@
 		<French>Mythe de la Dinde</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Turkey</English>
-		<French>Effet (Mythe de la Dinde)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES</Tag>
 		<English>Stories - Turkey</English>
 		<French>Histoires de la Dinde</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Turkey</English>
-		<French>Effet (Histoires de la Dinde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORY</Tag>
@@ -2608,19 +1589,9 @@
 		<French>Mythe du Vautour</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VULTURE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Vulture</English>
-		<French>Effet (Mythe du Vautour)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES</Tag>
 		<English>Stories - Vulture</English>
 		<French>Histoires du Vautour</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Vulture</English>
-		<French>Effet (Histoires du Vautour)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORY</Tag>
@@ -2628,19 +1599,9 @@
 		<French>Histoire du Vautour</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Walrus</English>
-		<French>Effet (Mythe du Morse)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES</Tag>
 		<English>Stories - Walrus</English>
 		<French>Histoires de Morses</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Walrus</English>
-		<French>Effet (Histoires de Morses)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORY</Tag>
@@ -2648,19 +1609,9 @@
 		<French>Histoire du Morse</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Whaleshark</English>
-		<French>Effet (Mythe du Requin baleine)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
 		<English>Stories - Whaleshark</English>
 		<French>Histoires de Requins baleine</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Whaleshark</English>
-		<French>Effet (Histoires du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORY</Tag>
@@ -2675,22 +1626,10 @@
 		<Polish>Mit - Nosorożec Biały</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Rhinoceros, White</English>
-		<French>Effet (Mythe du Rhinocéros blanc)</French>
-		<Polish>Efekt Mitu - Nosorożec Biały</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, White</English>
 		<French>Histoires du Rhinocéros blanc</French>
 		<Polish>Historie - Nosorożec Biały</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Rhinoceros, White</English>
-		<French>Effet (Histoires du Rhinocéros blanc)</French>
-		<Polish>Efekt Historii - Nosorożec Biały</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORY</Tag>
@@ -2704,19 +1643,9 @@
 		<French>Mythe du Carcajou</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOLVERINE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Wolverine</English>
-		<French>Effet (Mythe du Carcajou)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES</Tag>
 		<English>Stories - Wolverine</English>
 		<French>Histoires du Carcajou</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Wolverine</English>
-		<French>Effet (Histoires du Carcajou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORY</Tag>
@@ -2729,19 +1658,9 @@
 		<French>Mythe du Wombat</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOMBAT_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Wombat</English>
-		<French>Effet (Mythe du Wombat)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_STORIES</Tag>
 		<English>Stories - Wombat</English>
 		<French>Histoires du Wombat</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOMBAT_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Wombat</English>
-		<French>Effet (Histoire du Wombat)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_STORY</Tag>
@@ -2754,19 +1673,9 @@
 		<French>Mythe du Zèbre</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Zebra</English>
-		<French>Effet (Mythe du Zèbre)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES</Tag>
 		<English>Stories - Zebra</English>
 		<French>Histoires de Zèbres</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Zebra</English>
-		<French>Effet (Histoires du Zèbre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORY</Tag>

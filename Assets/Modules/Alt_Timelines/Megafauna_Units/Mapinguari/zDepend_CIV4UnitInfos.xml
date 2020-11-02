@@ -6,6 +6,71 @@
 			<Buildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
 			</Buildings>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_UPGRADE_MAPINGUARI_WOODEN</MissionType>
+					<iCost>
+						<Adapt>
+							<ID>ADAPT_DEFAULT</ID>
+							<Constant>80</Constant>
+						</Adapt>
+					</iCost>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_MAPINGUARI_WOODEN</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_MAPINGUARI_WOODEN</UnitType>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_UPGRADE_MAPINGUARI_STONE</MissionType>
+					<iCost>
+						<Adapt>
+							<ID>ADAPT_DEFAULT</ID>
+							<Constant>100</Constant>
+						</Adapt>
+					</iCost>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_MAPINGUARI_STONE</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_UPGRADE_MAPINGUARI_OBSIDIAN</MissionType>
+					<iCost>
+						<Adapt>
+							<ID>ADAPT_DEFAULT</ID>
+							<Constant>120</Constant>
+						</Adapt>
+					</iCost>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_MAPINGUARI_OBSIDIAN</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

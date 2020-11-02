@@ -4635,11 +4635,11 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLAGUE_HOSPITAL</Type>
-			<LSystem/>
+			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
+			<fScale>1</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/infirmary.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/plague_hospital.dds</Button>
 		</BuildingArtInfo>
@@ -27157,7 +27157,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_fish.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WEASEL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_MUSTELA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27328,16 +27328,6 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_bison.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BULL_MYTH_EFFECT</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_bison.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAMEL_MYTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -27348,7 +27338,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_camel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEER_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_CERVIDAE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27358,7 +27348,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_deer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ELEPHANT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_ELEPHANTIDAE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27388,6 +27378,16 @@
 			<Button>Art/Interface/Buttons/Units/gorilla.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RHINO_MYTH</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/totem_hippo.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SCAVENGER_MYTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -27398,7 +27398,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_hyena.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_FELID</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27428,7 +27428,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cage_bird.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANTELOPE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_ANTELOPE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27448,27 +27448,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_earth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_earth.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FIRE_MYTH</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_fire.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27508,17 +27488,17 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_goat.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_IBEX_COMPOUND</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_metal.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/herd_ibex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAL_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_METAL_MYTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27548,27 +27528,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SKY_MYTH_EFFECT</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STONE_MYTH</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_stone.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STONE_MYTH_EFFECT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27619,16 +27579,6 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEA_MYTH</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_sea.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEA_MYTH_EFFECT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27888,7 +27838,7 @@
 			<Button>Art/Interface/Buttons/Buildings/boxingkangaroo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARSUPIAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_TAXA_MARSUPIAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

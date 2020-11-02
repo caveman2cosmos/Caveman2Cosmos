@@ -451,7 +451,7 @@
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_BULL_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -3965,6 +3965,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_EPIC</MovieDefineTag>
 		</BuildingInfo>
+		<!--↓ National Breeders ↓-->
 		<BuildingInfo>
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3980,7 +3981,11 @@
 			</PrereqBonuses>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingMustNotHave>
+					<BuildingMustNotHave>BUILDING_CAMEL_FARM</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_CAMEL_HERD</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
@@ -4022,7 +4027,11 @@
 			</PrereqBonuses>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingMustNotHave>
+					<BuildingMustNotHave>BUILDING_ELEPHANT_FARM</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_ELEPHANT_HERD</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
@@ -4069,7 +4078,11 @@
 			</PrereqBonuses>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingMustNotHave>
+					<BuildingMustNotHave>BUILDING_HORSE_FARM</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HORSE_HERD</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
@@ -4100,6 +4113,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
+		<!--↑ National Breeders ↑-->
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>

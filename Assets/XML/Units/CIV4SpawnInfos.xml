@@ -310,6 +310,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMaxLatitude>25</iMaxLatitude>
 			<iMaxLongitude>100</iMaxLongitude>
 			<TerrainTypes>
+				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 			</TerrainTypes>
@@ -2082,9 +2083,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<iMinLongitude>-35</iMinLongitude>
+			<iMaxLongitude>35</iMaxLongitude>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>

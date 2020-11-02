@@ -13,7 +13,7 @@
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_HERD</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -47,7 +47,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>624</iCost>
+			<iCost>588</iCost>
 			<iMaxLatitude>45</iMaxLatitude>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
@@ -81,7 +81,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_ZEBRA_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -96,7 +96,7 @@
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -160,7 +160,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>

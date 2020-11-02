@@ -51,11 +51,11 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_BULL_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_BISON_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

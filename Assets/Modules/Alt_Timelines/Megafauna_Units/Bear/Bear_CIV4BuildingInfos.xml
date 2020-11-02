@@ -15,7 +15,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>624</iCost>
+			<iCost>588</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -53,50 +53,6 @@
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -176,9 +132,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>

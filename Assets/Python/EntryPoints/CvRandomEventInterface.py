@@ -984,6 +984,9 @@ def canTriggerChampionUnit(argsList):
   if unit.isNone():
     return False
 
+  if unit.getUnitCombatType() == GC.getInfoTypeForString("UNITCOMBAT_CIVILIAN"):
+    return False
+
   if unit.getDamage() > 0:
     return False
 

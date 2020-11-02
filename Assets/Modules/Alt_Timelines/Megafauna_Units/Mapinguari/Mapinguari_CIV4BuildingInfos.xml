@@ -9,7 +9,7 @@
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_STRATEGY</Strategy>
-			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
@@ -38,10 +38,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_GUARD_STRATEGY</Strategy>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
-			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>

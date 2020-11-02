@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Tag>
-		<English>The Myth Effect buildings are not real buildings. They are used to allow a building to be unique within a nation without being a national wonder.</English>
-		<French>Les bâtiments de Chants ne sont pas de réels bâtiments, mais sont des pré-requis pour un bâtiment unique d'une nation, sans que ce soit une merveille nationale.</French>
-		<Italian>I canti non sono veri e propri edifici; servono a fare in modo che un edificio possa essere costruito una sola volta in tutta la nazione, senza che quest'edificio sia considerato una meraviglia nazionale.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Tag>
 		<English>Animal Myth buildings represent the oral tradition and knowledge about animals. They provide culture and science. The science boost eventually goes obsolete. The boost to other buildings never goes obsolete. Myth buildings are needed to build their story buildings which provide [COLOR_UNIT_TEXT]Education[COLOR_REVERT].</English>
 		<French>Les bâtiments de Mythes d'Animaux représentent la tradition orale, ainsi que les connaissances recueillies sur ces animaux. Ils procurent culture et science. Le bonus de science peut devenir obsolète. Les bâtiments de Mythe sont requis pour pouvoir construire les bâtiments d'Histoire correspondants, qui eux procurent de l'[COLOR_UNIT_TEXT]Education[COLOR_REVERT].</French>

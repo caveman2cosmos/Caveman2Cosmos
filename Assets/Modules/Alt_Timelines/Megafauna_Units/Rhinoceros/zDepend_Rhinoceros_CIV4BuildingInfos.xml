@@ -5,23 +5,23 @@
 			<Type>BUILDING_RHINO_TRAINER</Type>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_RHINO_TAXONOMY_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_BLACK_RHINO_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_INDIAN_RHINO_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_JAVA_RHINO_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_WHITE_RHINO_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

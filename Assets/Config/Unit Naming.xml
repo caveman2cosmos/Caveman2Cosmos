@@ -581,6 +581,7 @@
 			<option id="Combat_ROBOT" key="CombatROBOT" type="string" default="DEFAULT"/>
 			<option id="Combat_ROCKET_LAUNCHER" key="CombatROCKET_LAUNCHER" type="string" default="DEFAULT"/>
 			<option id="Combat_RUFFIAN" key="CombatRUFFIAN" type="string" default="DEFAULT"/>
+			<option id="Combat_SEA_ANIMAL_TALE" key="CombatSEA_ANIMAL_TALE" type="string" default="DEFAULT"/>
 			<option id="Combat_SEA_WORKER" key="CombatSEAWORKER" type="string" default="DEFAULT"/>
 			<option id="Combat_SETTLER" key="CombatSETTLER" type="string" default="DEFAULT"/>
 			<option id="Combat_SHIELD_ATTOMETER" key="CombatSHIELD_ATTOMETER" type="string" default="DEFAULT"/>

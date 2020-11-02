@@ -11,9 +11,9 @@
 			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
+			<Type>BUILDING_TAXA_FELID</Type>
 			<AndDependencyTypes>
-				<DependencyType>BUILDING_SPOTTED_CAT_MYTH</DependencyType>
+				<DependencyType>BUILDING_TAXA_FELID</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>

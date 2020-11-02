@@ -291,6 +291,7 @@
 			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>75</iBuildModifier>
 			<iCultureDistance>3</iCultureDistance>
+			<iHealthPercent>-10</iHealthPercent>
 			<iMovement>2</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\feature_peak.dds</Button>
 			<FootstepSounds>

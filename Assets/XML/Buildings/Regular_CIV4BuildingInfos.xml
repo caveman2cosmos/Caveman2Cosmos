@@ -24251,37 +24251,27 @@
 			<Description>TXT_KEY_BUILDING_CREATION_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CREATION_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CREATION_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_ORAL_TRADITION</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
-			<iCost>20</iCost>
-			<CommerceChanges>
+			<ReplaceBuildings>
+				<ReplaceBuilding>
+					<BuildingType>BUILDING_EQ_MINUS1</BuildingType>
+					<bReplace>1</bReplace>
+				</ReplaceBuilding>
+			</ReplaceBuildings>
+			<iHappiness>1</iHappiness>
+			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iHurryCostModifier>100</iHurryCostModifier>
+				<iCommerce>0</iCommerce>
+				<iCommerce>20</iCommerce>
+			</CommerceModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</Type>
@@ -79341,7 +79331,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -93989,211 +93979,93 @@
 			<Description>TXT_KEY_BUILDING_FIRE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			</TechTypes>
-			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_FIRE_MYTH_EFFECT</FreeBuilding>
-			<iCost>20</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+			</PrereqInCityBuildings>
+			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<FreeBuilding>BUILDING_FIRE_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FIRE_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_METAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_MINING</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_METAL_MYTH_EFFECT</FreeBuilding>
-			<iCost>132</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
+				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
+			</PrereqInCityBuildings>
+			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<FreeBuilding>BUILDING_METAL_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_WRITING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_METAL_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_WRITING</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STONE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_STONE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			</TechTypes>
-			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_STONE_MYTH_EFFECT</FreeBuilding>
-			<iCost>20</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
+			<PrereqTech>TECH_SMASHING</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+			</PrereqInCityBuildings>
+			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<FreeBuilding>BUILDING_STONE_MYTH</FreeBuilding>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_STONE_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEGOTIATOR_HUT</Type>
@@ -95219,7 +95091,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>

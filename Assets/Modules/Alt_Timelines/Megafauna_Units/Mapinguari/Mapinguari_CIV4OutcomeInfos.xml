@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Upkeep -->
+<Civ4OutcomeInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
+	<OutcomeInfos>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_MAPINGUARI_WOODEN</Type>
+			<Description>TXT_KEY_MISSION_UPGRADE_MAPINGUARI_WOODEN</Description>
+			<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CAPTURED_FIRE</BuildingType>
+			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_MAPINGUARI_STONE</Type>
+			<Description>TXT_KEY_MISSION_UPGRADE_MAPINGUARI_STONE</Description>
+			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HAFTER</BuildingType>
+			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_UPGRADE_MAPINGUARI_OBSIDIAN</Type>
+			<Description>TXT_KEY_MISSION_UPGRADE_MAPINGUARI_OBSIDIAN</Description>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HAFTER</BuildingType>
+			</PrereqBuildings>
+		</OutcomeInfo>
+	</OutcomeInfos>
+</Civ4OutcomeInfos>

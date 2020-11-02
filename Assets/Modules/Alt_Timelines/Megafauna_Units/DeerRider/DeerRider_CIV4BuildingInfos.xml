@@ -15,8 +15,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <Bonus>BONUS_DEER</Bonus>
-			<iCost>624</iCost>
+			<iCost>588</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
 			<iTradeRoutes>1</iTradeRoutes>
@@ -51,7 +50,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DEER_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_TAXA_CERVIDAE</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -140,7 +139,7 @@
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

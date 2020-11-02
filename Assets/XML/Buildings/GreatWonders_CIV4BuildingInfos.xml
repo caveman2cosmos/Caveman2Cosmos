@@ -3479,7 +3479,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -3690,7 +3690,8 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TORCHES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -3942,7 +3943,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -4152,7 +4153,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -5911,7 +5912,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+					<BuildingType>BUILDING_BULL_MYTH</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -10467,6 +10468,9 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MASONRY</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
@@ -16388,8 +16392,8 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndTerrain>
 				<PrereqTerrain>

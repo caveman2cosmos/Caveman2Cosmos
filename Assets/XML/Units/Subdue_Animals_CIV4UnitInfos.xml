@@ -201,20 +201,10 @@
 				<BuildingType>BUILDING_PENGUIN_MYTH</BuildingType>
 				<BuildingType>BUILDING_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_PENGUIN_STORIES</BuildingType>
-				<BuildingType>BUILDING_BIRD_MYTH</BuildingType>
-				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_BIRD_MYTH</BuildingType>
-				<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_FLIGHTLESS_BIRD_MYTH</BuildingType>
 				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
-				<BuildingType>BUILDING_FISH_MYTH</BuildingType>
-				<BuildingType>BUILDING_FISH_STORY</BuildingType>
-				<BuildingType>BUILDING_FISH_STORIES</BuildingType>
-				<BuildingType>BUILDING_LOCAL_FISH_MYTH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -566,7 +556,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_BADGER_MYTH</BuildingType>
@@ -1455,7 +1445,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -2059,7 +2049,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_DEER_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_CERVIDAE</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_MYTH</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_STORY</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_STORIES</BuildingType>
@@ -2445,7 +2435,7 @@
 				<BuildingType>BUILDING_CHEETAH_MYTH</BuildingType>
 				<BuildingType>BUILDING_CHEETAH_STORY</BuildingType>
 				<BuildingType>BUILDING_CHEETAH_STORIES</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -2970,7 +2960,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_CUSCUS_MYTH</BuildingType>
 				<BuildingType>BUILDING_CUSCUS_STORY</BuildingType>
 				<BuildingType>BUILDING_CUSCUS_STORIES</BuildingType>
@@ -3756,7 +3746,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ELEPHANT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ELEPHANTIDAE</BuildingType>
 				<BuildingType>BUILDING_AFRICANELEPHANT_MYTH</BuildingType>
 				<BuildingType>BUILDING_AFRICANELEPHANT_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICANELEPHANT_STORIES</BuildingType>
@@ -3854,7 +3844,7 @@
 				<BuildingType>BUILDING_ASIANELEPHANT_MYTH</BuildingType>
 				<BuildingType>BUILDING_ASIANELEPHANT_STORY</BuildingType>
 				<BuildingType>BUILDING_ASIANELEPHANT_STORIES</BuildingType>
-				<BuildingType>BUILDING_ELEPHANT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ELEPHANTIDAE</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -4142,6 +4132,8 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_MYTH</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
@@ -4667,7 +4659,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -4760,7 +4752,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -6760,7 +6752,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -6853,7 +6845,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_JAGUAR_MYTH</BuildingType>
@@ -6944,7 +6936,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
@@ -7039,7 +7031,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
@@ -7133,7 +7125,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -7613,7 +7605,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 				<BuildingType>BUILDING_LYNX_MYTH</BuildingType>
 				<BuildingType>BUILDING_LYNX_STORY</BuildingType>
 				<BuildingType>BUILDING_LYNX_STORIES</BuildingType>
@@ -7821,7 +7813,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_BOAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ELEPHANT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ELEPHANTIDAE</BuildingType>
 				<BuildingType>BUILDING_TAPIR_MYTH</BuildingType>
 				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
@@ -7880,11 +7872,12 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
+			       <BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
+			      <BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</BuildingType>
-				<BuildingType>BUILDING_ELEPHANT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ELEPHANTIDAE</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -8447,7 +8440,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_DEER_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_CERVIDAE</BuildingType>
 				<BuildingType>BUILDING_MOOSE_MYTH</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORY</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
@@ -8987,7 +8980,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_NUMBAT_MYTH</BuildingType>
 				<BuildingType>BUILDING_NUMBAT_STORY</BuildingType>
 				<BuildingType>BUILDING_NUMBAT_STORIES</BuildingType>
@@ -9134,7 +9127,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_OPOSSUM_MYTH</BuildingType>
 				<BuildingType>BUILDING_OPOSSUM_STORY</BuildingType>
 				<BuildingType>BUILDING_OPOSSUM_STORIES</BuildingType>
@@ -9497,7 +9490,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 				<BuildingType>BUILDING_PANTHER_MYTH</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -9966,7 +9959,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_POSSUM_MYTH</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
@@ -10037,7 +10030,6 @@
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -10178,7 +10170,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -10234,7 +10226,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_RACCOON_MYTH</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
@@ -10291,7 +10283,7 @@
 				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_RATEL_MYTH</BuildingType>
@@ -11675,7 +11667,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_SAIGA_MYTH</BuildingType>
 				<BuildingType>BUILDING_SAIGA_STORY</BuildingType>
 				<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
@@ -12143,7 +12135,7 @@
 				<BuildingType>BUILDING_SEA_OTTER_MYTH</BuildingType>
 				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_OTTER_CAMP</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -12404,7 +12396,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_SKUNK_MYTH</BuildingType>
 				<BuildingType>BUILDING_SKUNK_STORY</BuildingType>
 				<BuildingType>BUILDING_SKUNK_STORIES</BuildingType>
@@ -12553,7 +12545,7 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_FELID</BuildingType>
 				<BuildingType>BUILDING_SNOW_LEOPARD_MYTH</BuildingType>
 				<BuildingType>BUILDING_SNOW_LEOPARD_STORY</BuildingType>
 				<BuildingType>BUILDING_SNOW_LEOPARD_STORIES</BuildingType>
@@ -12740,7 +12732,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_DEER_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_CERVIDAE</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -12980,6 +12972,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>
 				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
@@ -13036,6 +13029,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>
 				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
@@ -13094,14 +13088,13 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -13224,7 +13217,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_MYTH</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORY</BuildingType>
@@ -13643,7 +13636,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
@@ -13697,7 +13690,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ROO_HERD</BuildingType>
@@ -13873,7 +13866,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_BULL_MYTH</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -13967,7 +13960,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_RODENT_CAGE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MUSTELA</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_MYTH</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORY</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
@@ -14058,7 +14051,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_MYTH</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_STORY</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>
@@ -15089,12 +15082,14 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_MYTH</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_STORY</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_STORIES</BuildingType>
 				<BuildingType>BUILDING_HORSE_MYTH</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>

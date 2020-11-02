@@ -12,7 +12,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
-				<BuildingType>BUILDING_DONKEY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_DONKEY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -20,7 +20,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>132</iCost>
+			<iCost>60</iCost>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<iAsset>4</iAsset>
@@ -49,7 +49,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_HORSE_MYTH</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -57,7 +57,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>132</iCost>
+			<iCost>60</iCost>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<iAsset>4</iAsset>

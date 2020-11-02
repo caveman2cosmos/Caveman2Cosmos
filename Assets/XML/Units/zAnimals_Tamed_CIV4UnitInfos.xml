@@ -361,7 +361,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_CAMEL_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -669,7 +669,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_HORSE_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -677,7 +677,6 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>175</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -1174,8 +1173,8 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_AARDVARK_STORY</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_AARDVARK_MYTH_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -1271,8 +1270,8 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_PIG_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_PIG</BonusType>
@@ -1448,7 +1447,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ASIANBEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1525,7 +1524,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1601,7 +1600,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1678,7 +1677,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_CAVE_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1755,7 +1754,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GRIZZLY_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1827,7 +1826,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1903,7 +1902,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -1976,7 +1975,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -2054,7 +2053,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SLOTH_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2130,7 +2129,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2208,7 +2207,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2305,7 +2304,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_TAXA_ELEPHANTIDAE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -2419,7 +2418,7 @@
 			<iCityDefense>-80</iCityDefense>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_STORY</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 			</PrereqAndBuildings>
 			<UnitMeshGroups>
@@ -2506,7 +2505,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_HIPPOS_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_HIPPOS_STORY</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2607,16 +2606,13 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ARCTICFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GREY_WOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DHOLE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DINGO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_EWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FENNECFOX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MANEDWOLF_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_REDFOX_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_GREY_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
+				<BuildingType>BUILDING_DHOLE_STORY</BuildingType>
+				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
+				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_MANEDWOLF_STORY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
@@ -2714,7 +2710,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2814,7 +2810,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_INDIAN_RHINO_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2914,7 +2910,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -3014,7 +3010,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -3113,7 +3109,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -3211,7 +3207,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -3309,7 +3305,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MALAYAN_TAPIR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -3407,7 +3403,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
@@ -3436,7 +3432,9 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LIZARD</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3485,8 +3483,8 @@
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_NILE_MONITOR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH</BuildingType>
+				<BuildingType>BUILDING_NILE_MONITOR_MYTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
