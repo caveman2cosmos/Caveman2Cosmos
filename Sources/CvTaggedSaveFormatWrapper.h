@@ -90,10 +90,6 @@ typedef enum
 	SAVE_VALUE_TYPE_UNSIGNED_LONG,
 	SAVE_VALUE_TYPE_LONG_ARRAY,
 	SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY,
-	SAVE_VALUE_TYPE_LONG_LONG,
-	SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG,
-	SAVE_VALUE_TYPE_LONG_LONG_ARRAY,
-	SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY,
 	SAVE_VALUE_TYPE_FLOAT,
 	SAVE_VALUE_TYPE_FLOAT_ARRAY,
 	SAVE_VALUE_TYPE_DOUBLE,
@@ -107,7 +103,6 @@ typedef enum
 	SAVE_VALUE_TYPE_CLASS_ENUM,
 	SAVE_VALUE_TYPE_CLASS_INT_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY,
-	SAVE_VALUE_TYPE_CLASS_UNSIGNED_LONG_LONG_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY,
 } SaveValueType;
 
@@ -178,22 +173,17 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, short value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint16_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const short values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned int value);
+	void		Write(const char* name, int& idHint, int& idSeq, unsigned int value) ;
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, long value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned long value);
+	void		Write(const char* name, int& idHint, int& idSeq, unsigned long  value) ;
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const long values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]);
-
-	void		Write(const char* name, int& idHint, int& idSeq, int64_t value);
-	void		Write(const char* name, int& idHint, int& idSeq, uint64_t value);
-	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, float value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const float values[]);
@@ -217,7 +207,6 @@ public:
 	//	The following are for arrays whose index is a class enum value
 	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false, bool allowRawArray = false);
 	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, bool values[], bool allowMissing = false, bool allowRawArray = false);
-	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, uint64_t values[], bool allowMissing = false, bool allowRawArray = false);
 	//	Array whose values are class enum entities
 	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, short values[], bool allowMissing = false);
 	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false);
@@ -237,29 +226,21 @@ public:
 	void		Read(const char* name, int& idHint, int& idSeq, uint8_t *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, char values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[]);
-
 	void		Read(const char* name, int& idHint, int& idSeq, bool *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, bool values[], bool bAllowTruncation = false);
-
 	void		Read(const char* name, int& idHint, int& idSeq, short* s);
-	void		Read(const char* name, int& idHint, int& idSeq, uint16_t* s);
+	void		Read(const char* name, int& idHint, int& idSeq, uint16_t* s) ;
 	void		Read(const char* name, int& idHint, int& idSeq, int count, short values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[]);
-
 	void		Read(const char* name, int& idHint, int& idSeq, int* i);
 	void		Read(const char* name, int& idHint, int& idSeq, unsigned int* i);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned int values[]);
 
 	void		Read(const char* name, int& idHint, int& idSeq, long* l);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l);
+	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l) ;
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, long values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned long values[]);
-
-	void		Read(const char* name, int& idHint, int& idSeq, int64_t* ll);
-	void		Read(const char* name, int& idHint, int& idSeq, uint64_t* ll);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, int64_t values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, uint64_t values[]);
+	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned long values[]) ;
 
 	void		Read(const char* name, int& idHint, int& idSeq, float* value);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, float values[]);
