@@ -117,7 +117,7 @@ void CvRandom::read(FDataStreamBase* pStream)
 
 	reset();
 
-	WRAPPER_READ(wrapper, "CvRandom", &m_ulRandomSeed);
+	WRAPPER_READ(wrapper, "CvRandom", (int*)&m_ulRandomSeed);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
@@ -131,7 +131,7 @@ void CvRandom::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE(wrapper, "CvRandom", m_ulRandomSeed);
+	WRAPPER_WRITE(wrapper, "CvRandom", (int)m_ulRandomSeed);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

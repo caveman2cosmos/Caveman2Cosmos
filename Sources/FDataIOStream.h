@@ -58,11 +58,6 @@ public:
 	virtual void 		Read(int count, int values[]);
 	virtual void 		Read(int count, unsigned int values[]);
 
-	virtual void		Read(long* l);
-	virtual void		Read(unsigned long* l);
-	virtual void 		Read(int count, long values[]);
-	virtual void 		Read(int count, unsigned long values[]);
-
 	virtual void		Read(int64_t* ll);
 	virtual void		Read(uint64_t* ll);
 	virtual void 		Read(int count, int64_t values[]);
@@ -94,11 +89,6 @@ public:
 	virtual void		Write(unsigned int value);
 	virtual void 		Write(int count, const int values[]);
 	virtual void		Write(int count, const unsigned int values[]);
-
-	virtual void		Write(long value);
-	virtual void		Write(unsigned long  value);
-	virtual void 		Write(int count, const long values[]);
-	virtual void		Write(int count, const unsigned long values[]);
 
 	virtual void		Write(int64_t value);
 	virtual void		Write(uint64_t value);

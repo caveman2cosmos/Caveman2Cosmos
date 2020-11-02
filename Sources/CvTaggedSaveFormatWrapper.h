@@ -185,11 +185,6 @@ public:
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int values[]);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[]);
 
-	void		Write(const char* name, int& idHint, int& idSeq, long value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned long value);
-	void 		Write(const char* name, int& idHint, int& idSeq, int count, const long values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]);
-
 	void		Write(const char* name, int& idHint, int& idSeq, int64_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint64_t value);
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[]);
@@ -250,11 +245,6 @@ public:
 	void		Read(const char* name, int& idHint, int& idSeq, unsigned int* i);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned int values[]);
-
-	void		Read(const char* name, int& idHint, int& idSeq, long* l);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, long values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned long values[]);
 
 	void		Read(const char* name, int& idHint, int& idSeq, int64_t* ll);
 	void		Read(const char* name, int& idHint, int& idSeq, uint64_t* ll);
