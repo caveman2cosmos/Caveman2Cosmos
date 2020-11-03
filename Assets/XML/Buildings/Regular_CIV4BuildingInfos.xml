@@ -94041,7 +94041,7 @@
 			<Description>TXT_KEY_BUILDING_STONE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<PrereqTech>TECH_SMASHING</PrereqTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
 				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>

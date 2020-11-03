@@ -4604,7 +4604,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -10014,7 +10014,7 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
-				<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+				<BuildingType>BUILDING_TAXA_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>

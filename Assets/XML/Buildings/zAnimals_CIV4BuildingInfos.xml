@@ -13178,7 +13178,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRADITION_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iAsset>1</iAsset>

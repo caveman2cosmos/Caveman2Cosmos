@@ -15380,6 +15380,9 @@
 					<iHeal>-6</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_BLACK_HAT_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVIC_IRRELIGION</Type>

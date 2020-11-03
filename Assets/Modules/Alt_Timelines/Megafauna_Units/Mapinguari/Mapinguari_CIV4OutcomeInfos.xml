@@ -25,7 +25,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HAFTER</BuildingType>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -36,7 +36,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HAFTER</BuildingType>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 	</OutcomeInfos>

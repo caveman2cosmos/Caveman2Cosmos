@@ -10756,7 +10756,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
 		</BuildInfo>
-		<!--BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_STONE_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -10811,7 +10811,7 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
-		</BuildInfo-->
+		</BuildInfo>
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<BuildInfo>
 			<Type>BUILD_VACTRAIN</Type>
