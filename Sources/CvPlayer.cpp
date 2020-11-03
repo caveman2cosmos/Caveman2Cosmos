@@ -169,7 +169,6 @@ m_cachedBonusCount(NULL)
 	m_paiFeatureHappiness = NULL;
 	m_paiBuildingCount = NULL;
 	m_paiBuildingMaking = NULL;
-	m_paiUnitCount = NULL;
 	m_paiUnitMaking = NULL;
 	m_paiBuildingGroupCount = NULL;
 	m_paiBuildingGroupMaking = NULL;
@@ -694,7 +693,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingMaking);
-	SAFE_DELETE_ARRAY(m_paiUnitCount);
 	SAFE_DELETE_ARRAY(m_paiUnitMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupMaking);
@@ -1217,13 +1215,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiFeatureHappiness[iI] = 0;
 		}
 
-		FAssertMsg(m_paiUnitCount==NULL, "about to leak memory, CvPlayer::m_paiUnitCount");
-		m_paiUnitCount = new int [GC.getNumUnitInfos()];
+		m_unitCount.clear();
+
 		FAssertMsg(m_paiUnitMaking==NULL, "about to leak memory, CvPlayer::m_paiUnitMaking");
 		m_paiUnitMaking = new int [GC.getNumUnitInfos()];
 		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			m_paiUnitCount[iI] = 0;
 			m_paiUnitMaking[iI] = 0;
 		}
 
@@ -3986,22 +3983,6 @@ const TCHAR* CvPlayer::getUnitButton(UnitTypes eUnit) const
 	const CvArtInfoUnit * pUnitArtInfo = GC.getUnitInfo(eUnit).getArtInfo(0, getCurrentEra(), (UnitArtStyleTypes) GC.getCivilizationInfo(getCivilizationType()).getUnitArtStyleType());
 
 	return pUnitArtInfo ? pUnitArtInfo->getButton() : GC.getUnitInfo(eUnit).getArtInfo(0, getCurrentEra(), NO_UNIT_ARTSTYLE)->getButton();
-}
-
-void CvPlayer::recalculateUnitCounts()
-{
-	PROFILE_FUNC();
-
-	for(int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		m_paiUnitCount[iI] = 0;
-	}
-
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		m_paiUnitCount[pLoopUnit->getUnitType()]++;
-		pLoopUnit->recalculateUnitUpkeep();
-	}
 }
 
 void CvPlayer::doTurn()
@@ -14481,13 +14462,6 @@ void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLi
 /********************************************************************************/
 
 
-int CvPlayer::getUnitCount(UnitTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiUnitCount[eIndex];
-}
-
-
 bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
@@ -14513,11 +14487,49 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 }
 
 
-void CvPlayer::changeUnitCount(UnitTypes eIndex, int iChange)
+void CvPlayer::recalculateUnitCounts()
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	m_paiUnitCount[eIndex] += iChange;
-	FAssert(getUnitCount(eIndex) >= 0);
+	PROFILE_FUNC();
+
+	foreach_(CvUnit* unit, units())
+	{
+		m_unitCount[(short)unit->getUnitType()]++;
+		unit->recalculateUnitUpkeep();
+	}
+}
+
+void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
+{
+	std::map<short, unsigned int>::const_iterator itr = m_unitCount.find((short)eUnit);
+
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
+
+	if (itr == m_unitCount.end())
+	{
+		// New vector element
+		if (iChange > 0)
+		{
+			m_unitCount.insert(std::make_pair((short)eUnit, iChange));
+		}
+		else FErrorMsg("Expected positive iChange for first unit of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Clear vector element
+		m_unitCount.erase(itr->first);
+	}
+	else // change unit count
+	{
+		m_unitCount[itr->first] += iChange;
+	}
+}
+
+int CvPlayer::getUnitCount(const UnitTypes eUnit) const
+{
+	std::map<short, unsigned int>::const_iterator itr = m_unitCount.find((short)eUnit);
+	return itr != m_unitCount.end() ? itr->second : 0;
 }
 
 
@@ -20081,7 +20093,24 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
+
+		int iUnitCountSize = 0;
+		WRAPPER_READ(wrapper, "CvPlayer", &iUnitCountSize);
+		while (iUnitCountSize-- > 0)
+		{
+			short iUnitID;
+			unsigned int iCount;
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
+			iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
+
+			if (iUnitID > -1)
+			{
+				m_unitCount.insert(std::make_pair(iUnitID, iCount));
+			}
+		}
+
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
@@ -21184,7 +21213,15 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
+
+		const int iUnitCountSize = m_unitCount.size();
+		WRAPPER_WRITE(wrapper, "CvPlayer", iUnitCountSize);
+		for (std::map<short, unsigned int>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+		}
+
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
