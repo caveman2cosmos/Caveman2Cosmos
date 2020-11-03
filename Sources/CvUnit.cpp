@@ -14,73 +14,6 @@ static int		 g_numEntities = 0;
 static int		 g_dummyUsage = 0;
 static bool		 g_bUseDummyEntities = false;
 
-//	static buffers allocated once and used during read and write only
-int*	CvUnit::g_paiTempPromotionFreeCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackCount = NULL;
-int*	CvUnit::g_paiTempCureAfflictionCount = NULL;
-int*	CvUnit::g_paiTempCureAfflictionTypeCount = NULL;
-int*	CvUnit::g_paiTempAfflictionLineCount = NULL;
-int*	CvUnit::g_paiTempAfflictionTurnCount = NULL;
-int*	CvUnit::g_paiTempAfflictionTurnTypeCount = NULL;
-int*	CvUnit::g_paiTempAfflictionHitCount = NULL;
-int*	CvUnit::g_paiTempAfflictionTolerance = NULL;
-int*	CvUnit::g_paiTempTrapImmunityUnitCombatCount = NULL;
-int*	CvUnit::g_paiTempTargetUnitCombatCount = NULL;
-int*	CvUnit::g_paiTempExtraTrapDisableUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraTrapAvoidanceUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraTrapTriggerUnitCombatType = NULL;
-int*	CvUnit::g_paiTempAfflictionTypeTolerance = NULL;
-int*	CvUnit::g_paiTempFortitudeModifierTypeAmount = NULL;
-int*	CvUnit::g_paiTempFortitudeModifierAmount = NULL;
-int*	CvUnit::g_paiTempTrapSetWithPromotionCount = NULL;
-int*	CvUnit::g_paiTempPromotionFromTraitCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeProbability = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeImmediateCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeMeleeCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeDistanceCount = NULL;
-int*	CvUnit::g_paiTempAfflictOnAttackTypeAttemptedCount = NULL;
-int*	CvUnit::g_paiTempDistanceAttackCommunicability = NULL;
-int*	CvUnit::g_paiTempTerrainDoubleMoveCount = NULL;
-int*	CvUnit::g_paiTempFeatureDoubleMoveCount = NULL;
-int*	CvUnit::g_paiTempExtraTerrainAttackPercent = NULL;
-int*	CvUnit::g_paiTempExtraTerrainDefensePercent = NULL;
-bool*	CvUnit::g_pabTempValidBuildUp = NULL;
-//Team Project (4)
-//WorkRateMod
-//ls612: Terrain Work Modifiers
-int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
-int*	CvUnit::g_paiTempTerrainWorkPercent = NULL;
-int*	CvUnit::g_paiTempFeatureWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraTerrainWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureWorkPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureAttackPercent = NULL;
-int*	CvUnit::g_paiTempExtraFeatureDefensePercent = NULL;
-int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
-bool*	CvUnit::g_pabTempHasPromotion = NULL;
-bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
-int*	CvUnit::g_paiTempTerrainProtected = NULL;
-int*	CvUnit::g_paiTempSubCombatTypeCount = NULL;
-int*	CvUnit::g_paiTempOngoingTrainingCount = NULL;
-int*	CvUnit::g_paiTempRemovesUnitCombatTypeCount = NULL;
-int*	CvUnit::g_paiTempExtraFlankingStrengthbyUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawOnTerrainType = NULL;
-int*	CvUnit::g_paiTempExtraWithdrawOnFeatureType = NULL;
-int*	CvUnit::g_paiTempExtraPursuitVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraRepelVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraKnockbackVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraPunctureVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraArmorVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraDodgeVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraPrecisionVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraCriticalVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempExtraRoundStunVSUnitCombatType = NULL;
-int*	CvUnit::g_paiTempHealUnitCombatTypeVolume = NULL;
-int*	CvUnit::g_paiTempHealUnitCombatTypeAdjacentVolume = NULL;
-int*	CvUnit::g_paiTempHealAsDamage = NULL;
-bool	CvUnit::m_staticsInitialized = false;
-
 bool CvUnit::isDummyEntity(const CvEntity* entity)
 {
 	return (entity == g_dummyEntity);
@@ -146,77 +79,6 @@ m_Properties(this)
 	bGraphicsSetup = false;
 
 	reset(0, NO_UNIT, NO_PLAYER, true);
-
-	if (!m_staticsInitialized)
-	{
-		//	Allocate static buffers to be used during read and write
-		g_paiTempPromotionFreeCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictOnAttackCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempCureAfflictionCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempCureAfflictionTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionLineCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionTurnCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictionTurnTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionHitCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictionTolerance = new int[GC.getNumPromotionInfos()];
-		g_paiTempTrapImmunityUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempTargetUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapDisableUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapAvoidanceUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapTriggerUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempAfflictionTypeTolerance = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempFortitudeModifierTypeAmount = new int[GC.getNumPromotionInfos()];
-		g_paiTempFortitudeModifierAmount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempTrapSetWithPromotionCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempPromotionFromTraitCount = new int [GC.getNumPromotionInfos()];
-		g_paiTempAfflictOnAttackTypeProbability = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeImmediateCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeMeleeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeDistanceCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
-		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempTerrainDoubleMoveCount = new int[GC.getNumTerrainInfos()];
-		g_paiTempFeatureDoubleMoveCount = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainAttackPercent = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraTerrainDefensePercent = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraFeatureAttackPercent = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraFeatureDefensePercent = new int[GC.getNumFeatureInfos()];
-	//Team Project (4)
-	//WorkRateMod
-		//ls612: Terrain Work Modifiers
-		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempTerrainWorkPercent = new int [GC.getNumTerrainInfos()];
-		g_paiTempFeatureWorkPercent = new int [GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainWorkPercent = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraFeatureWorkPercent = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
-		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
-		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempTerrainProtected = new int[GC.getNumTerrainInfos()];
-		g_paiTempSubCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawOnTerrainType = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraWithdrawOnFeatureType = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraKnockbackVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPunctureVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraArmorVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraDodgeVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPrecisionVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraCriticalVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRoundStunVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeAdjacentVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealAsDamage = new int[GC.getNumUnitCombatInfos()];
-
-		m_staticsInitialized = true;
-	}
 }
 
 
@@ -737,9 +599,12 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eFacingDirection = DIRECTION_SOUTH;
 	m_iImmobileTimer = 0;
 
-	m_bCanRespawn = false;
-	m_bSurvivor = false;
+	m_bCanRespawn = false; // Koshling - intentionally not saved - m_bCanrespawn should never persist in saves
+	// as it is used only within a combat round and set upon unit death IF the unit has outstanding oneUpCount.
+	// In some circumstances an autosave can save a state where the unit has just been respawned,
+	// but m_bCanRespawn has not yet been reset at the start of the next turn, which leaves it bugged in the next turn's combat.
 
+	m_bSurvivor = false;
 	m_bMadeAttack = false;
 	//TB Combat Mods (Att&DefCounters)
 	m_iRoundCount = 0;
@@ -21272,14 +21137,7 @@ int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	std::map<short, short>::const_iterator itr = m_extraBuildWorkPercent.find((short)eIndex);
-	if ( itr == m_extraBuildWorkPercent.end() )
-	{
-		return 0;
-	}
-	else
-	{
-		return (itr->second);
-	}
+	return itr != m_extraBuildWorkPercent.end() ? itr->second : 0;
 }
 
 void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
@@ -23976,7 +23834,7 @@ bool CvUnit::potentialWarAction(const CvPlot* pPlot) const
 
 void CvUnit::read(FDataStreamBase* pStream)
 {
-	int iI, iJ;
+	int iI;
 
 	// Init data before load
 	reset();
@@ -23986,9 +23844,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvUnit", &uiFlag);	// flags for expansion
 
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */
@@ -24026,11 +23881,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackPlotY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatTimer);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatFirstStrikes);
-	if (uiFlag < 2)
-	{
-		int iCombatDamage;
-		WRAPPER_READ(wrapper, "CvUnit", &iCombatDamage);
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFortifyTurns);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBlitzCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAmphibCount);
@@ -24055,46 +23905,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
-
-	if (uiFlag > 2)
-	{
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempTerrainProtected[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempTerrainProtected, "m_paiTerrainProtected");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainProtection");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
-
-			if ( iNewIndex != NO_TERRAIN )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainProtected[iNewIndex], "value");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( g_paiTempTerrainProtected[iI] != 0 )
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			info->m_iTerrainProtected = g_paiTempTerrainProtected[iI];
-		}
-	}
-
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_shadowUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_shadowUnit.iID);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eDesiredDiscoveryTech);
@@ -24147,10 +23959,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCombatFocus);
 	// m_bInfoBarDirty not saved...
 	WRAPPER_READ(wrapper, "CvUnit", &m_bBlockading);
-	if (uiFlag > 0)
-	{
-		WRAPPER_READ(wrapper, "CvUnit", &m_bAirCombat);
-	}
+	WRAPPER_READ(wrapper, "CvUnit", &m_bAirCombat);
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingPlayer);
@@ -24187,244 +23996,241 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_READ_STRING(wrapper, "CvUnit", m_szScriptData);
 
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_pabTempHasPromotion[iI] = false;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_pabTempHasPromotion, "m_pabHasPromotion");
-
-	//	Read new format compressed data if present
 	do
 	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotion");
-		if ( iI != -1 )
+		iI = -1;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotionInfo");
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
 
-			if ( iNewIndex != NO_PROMOTION )
+			if (iNewIndex != NO_PROMOTION)
 			{
-				g_pabTempHasPromotion[iNewIndex] = true;
+				PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasPromotion, "hasPromotion");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackCount, "afflictOnAttack");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iCureAfflictionCount, "cureAffliction");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTurnCount, "afflictionTurn");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionHitCount, "afflictionHit");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTolerance, "afflictionTolerance");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFortitudeModifierTypeAmount, "fortitudeModifierType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iPromotionFreeCount, "value");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTrapSetWithPromotionCount, "trapSetWithPromotionType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iPromotionFromTraitCount, "promotionFromTraitCount");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasPromotion, SAVE_VALUE_TYPE_BOOL);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttack, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", cureAffliction, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTurn, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionHit, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTolerance, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", fortitudeModifierType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", value, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", trapSetWithPromotionType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", promotionFromTraitCount, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
 
-	//	To cope with backward compatibility we must enforce he condition that if the unit has promotion N
-	//	from a line, it also has 1 to N-1 from the same line.  Some previous versions did not have these flags set in
-	//	the m_pabHasPromotion array, but the current version records the all directly
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( g_pabTempHasPromotion[iI] )
-		{
-			if (!GC.getPromotionInfo((PromotionTypes)iI).isRemoveAfterSet())
-			{
-				findOrCreatePromotionKeyedInfo((PromotionTypes)iI)->m_bHasPromotion = true;
-			}
-			if ( GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() != NO_PROMOTIONLINE &&
-				!GC.getPromotionInfo((PromotionTypes)iI).isEquipment() &&
-				!GC.getPromotionInfo((PromotionTypes)iI).isAffliction()&&
-				!GC.getPromotionInfo((PromotionTypes)iI).isStatus())
-			{
-				//	All lesser priority promotions on the same line are implied - make sure they are set
-				for(iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
-				{
-					if ( GC.getPromotionInfo((PromotionTypes)iJ).getPromotionLine() == GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() &&
-						 GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() > GC.getPromotionInfo((PromotionTypes)iJ).getLinePriority() )
-					{
-						//	Set the map directly not via a call to setHasPromotion because the older versions
-						//	would have the effect of the promotion already even though the flag was not set
-						findOrCreatePromotionKeyedInfo((PromotionTypes)iI)->m_bHasPromotion = true;
-					}
-				}
-			}
-		}
-	}
-
-	// This set of 3 types takes place in a group to help maintain older save game compatabilities
-	// Step 1: Clear
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempTerrainDoubleMoveCount[iI] = 0;
-		g_paiTempExtraTerrainAttackPercent[iI] = 0;
-		g_paiTempExtraTerrainDefensePercent[iI] = 0;
-		g_paiTempTerrainWorkPercent[iI] = 0;
-		g_paiTempExtraTerrainWorkPercent[iI] = 0;
-	}
-
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		g_paiTempFeatureDoubleMoveCount[iI] = 0;
-		g_paiTempExtraFeatureAttackPercent[iI] = 0;
-		g_paiTempExtraFeatureDefensePercent[iI] = 0;
-		g_paiTempFeatureWorkPercent[iI] = 0;
-		g_paiTempExtraFeatureWorkPercent[iI] = 0;
-	}
-
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraUnitCombatModifier[iI] = 0;
-	}
-
-	//Step 2: Maintain Older Compat formats (Note: No need to extend these for new tags!)
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempTerrainDoubleMoveCount, "m_paiTerrainDoubleMoveCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempFeatureDoubleMoveCount, "m_paiFeatureDoubleMoveCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraTerrainAttackPercent, "m_paiExtraTerrainAttackPercent");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraTerrainDefensePercent, "m_paiExtraTerrainDefensePercent");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempExtraFeatureAttackPercent, "m_paiExtraFeatureAttackPercent");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempExtraFeatureDefensePercent, "m_paiExtraFeatureDefensePercent");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraUnitCombatModifier, "m_paiExtraUnitCombatModifier");
-
-	//Step 3: Read the new Formats
-
-	//	Read new format compressed data if present
 	do
 	{
-		iI= -1;
+		iI = -1;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotionLineInfo");
+		if (iI != -1)
+		{
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONLINES, iI, true);
+
+			if (iNewIndex != NO_PROMOTIONLINE)
+			{
+				PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo((PromotionLineTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeProbability, "afflictOnAttackTypeProb");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeCount, "afflictOnAttackTypeCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeImmediateCount, "afflictOnAttackTypeImmediateCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeAttemptedCount, "afflictOnAttackTypeAttemptedCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iCureAfflictionTypeCount, "cureAfflictionType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTurnTypeCount, "afflictionTurnType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionLineCount, "hasAfflictionLine");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictionTypeTolerance, "afflictionToleranceType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFortitudeModifierAmount, "fortitudeModifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bValidBuildUp, "validBuildUp");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iDistanceAttackCommunicability, "distanceAttackCommunicability");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeMeleeCount, "afflictOnAttackTypeMeleeCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iAfflictOnAttackTypeDistanceCount, "afflictOnAttackTypeDistanceCount");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeProb, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeImmediateCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeAttemptedCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", cureAfflictionType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionTurnType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasAfflictionLine, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictionToleranceType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", fortitudeModifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", validBuildUp, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", distanceAttackCommunicability, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeMeleeCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afflictOnAttackTypeDistanceCount, SAVE_VALUE_TYPE_INT);
+			}
+		}
+	} while(iI != -1);
+
+	do
+	{
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
 
-			if ( iNewIndex != NO_TERRAIN )
+			if (iNewIndex != NO_TERRAIN)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainDoubleMoveCount[iNewIndex], "doubleMove");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainAttackPercent[iNewIndex], "extraAttackPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainDefensePercent[iNewIndex], "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTerrainWorkPercent[iNewIndex], "terrainWorkPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTerrainWorkPercent[iNewIndex], "terrainExtraWorkPercent");
+				TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainProtected, "value");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainWorkPercent, "terrainWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", value, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", doubleMove, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraAttackPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDefensePercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainExtraWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawOnTerrainType, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		bool	bNonDefaultValue =
-					(g_paiTempTerrainDoubleMoveCount[iI] != 0 ||
-					 g_paiTempExtraTerrainAttackPercent[iI] != 0 ||
-					 g_paiTempExtraTerrainDefensePercent[iI] != 0 ||
-					 g_paiTempTerrainWorkPercent[iI] != 0 ||
-					 g_paiTempExtraTerrainWorkPercent[iI] != 0);
-
-		if ( bNonDefaultValue )
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			if ( g_paiTempTerrainDoubleMoveCount[iI] != 0 )
-			{
-				info->m_iTerrainDoubleMoveCount = g_paiTempTerrainDoubleMoveCount[iI];
-			}
-
-			if ( g_paiTempExtraTerrainAttackPercent[iI] != 0 )
-			{
-				info->m_iExtraTerrainAttackPercent = g_paiTempExtraTerrainAttackPercent[iI];
-			}
-
-			if ( g_paiTempExtraTerrainDefensePercent[iI] != 0 )
-			{
-				info->m_iExtraTerrainDefensePercent = g_paiTempExtraTerrainDefensePercent[iI];
-			}
-
-			if ( g_paiTempTerrainWorkPercent[iI] != 0)
-			{
-				info->m_iTerrainWorkPercent = g_paiTempTerrainWorkPercent[iI];
-			}
-
-			if ( g_paiTempExtraTerrainWorkPercent[iI] != 0)
-			{
-				info->m_iExtraTerrainWorkPercent = g_paiTempExtraTerrainWorkPercent[iI];
-			}
-		}
-	}
-
-
 	do
 	{
-		iI= -1;
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFeatureInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
 
-			if ( iNewIndex != NO_TERRAIN )
+			if (iNewIndex != NO_FEATURE)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFeatureDoubleMoveCount[iNewIndex], "doubleMove");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureAttackPercent[iNewIndex], "extraAttackPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureDefensePercent[iNewIndex], "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFeatureWorkPercent[iNewIndex], "featureWorkPercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFeatureWorkPercent[iNewIndex], "featureExtraWorkPercent");
+				FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", doubleMove, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraAttackPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDefensePercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureExtraWorkPercent, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawOnFeatureType, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		bool	bNonDefaultValue =
-					(g_paiTempFeatureDoubleMoveCount[iI] != 0 ||
-					 g_paiTempExtraFeatureAttackPercent[iI] != 0 ||
-					 g_paiTempExtraFeatureDefensePercent[iI] != 0 ||
-					 g_paiTempFeatureWorkPercent[iI] != 0 ||
-					 g_paiTempExtraFeatureWorkPercent[iI] != 0);
-
-		if ( bNonDefaultValue )
-		{
-			FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iI);
-
-			if ( g_paiTempFeatureDoubleMoveCount[iI] != 0 )
-			{
-				info->m_iFeatureDoubleMoveCount = g_paiTempFeatureDoubleMoveCount[iI];
-			}
-
-			if ( g_paiTempExtraFeatureAttackPercent[iI] != 0 )
-			{
-				info->m_iExtraFeatureAttackPercent = g_paiTempExtraFeatureAttackPercent[iI];
-			}
-
-			if ( g_paiTempExtraFeatureDefensePercent[iI] != 0 )
-			{
-				info->m_iExtraFeatureDefensePercent = g_paiTempExtraFeatureDefensePercent[iI];
-			}
-
-			if ( g_paiTempFeatureWorkPercent[iI] != 0)
-			{
-				info->m_iFeatureWorkPercent = g_paiTempFeatureWorkPercent[iI];
-			}
-
-			if ( g_paiTempExtraFeatureWorkPercent[iI] != 0)
-			{
-				info->m_iExtraFeatureWorkPercent = g_paiTempExtraFeatureWorkPercent[iI];
-			}
-		}
-	}
-
 
 	do
 	{
-		iI= -1;
+		iI = -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
 
-			if ( iNewIndex != NO_UNITCOMBAT )
+			if (iNewIndex != NO_UNITCOMBAT)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraUnitCombatModifier[iNewIndex], "modifier");
+				UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iNewIndex);
+
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasUnitCombat, "hasUnitCombat");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iSubCombatTypeCount, "subCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iOngoingTrainingCount, "ongoingTrainingCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealUnitCombatTypeVolume, "healUnitCombatTypeVolume");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealUnitCombatTypeAdjacentVolume, "healUnitCombatTypeAdjacentVolume");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTrapImmunityUnitCombatCount, "trapImmunityUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTargetUnitCombatCount, "targetUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapDisableUnitCombatType, "extraTrapDisableUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapAvoidanceUnitCombatType, "extraTrapAvoidanceUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTrapTriggerUnitCombatType, "extraTrapTriggerUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iRemovesUnitCombatTypeCount, "removesUnitCombatCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFlankingStrengthbyUnitCombatType, "extraFlankingStrengthbyUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawVSUnitCombatType, "extraWithdrawVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraRepelVSUnitCombatType, "extraRepelVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraKnockbackVSUnitCombatType, "extraKnockbackVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPunctureVSUnitCombatType, "extraPunctureVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraArmorVSUnitCombatType, "extraArmorVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraDodgeVSUnitCombatType, "extraDodgeVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPrecisionVSUnitCombatType, "extraPrecisionVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraCriticalVSUnitCombatType, "extraCriticalVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraRoundStunVSUnitCombatType, "extraRoundStunVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraPursuitVSUnitCombatType, "extraPursuitVSUnitCombatType");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealAsDamage, "healAsDamage");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", hasUnitCombat, SAVE_VALUE_TYPE_BOOL);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", modifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", modifier, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", subCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", ongoingTrainingCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healUnitCombatTypeVolume, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healUnitCombatTypeAdjacentVolume, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", trapImmunityUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", targetUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapDisableUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapAvoidanceUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraTrapTriggerUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", removesUnitCombatCount, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraFlankingStrengthbyUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraWithdrawVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraRepelVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraKnockbackVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPunctureVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraArmorVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraDodgeVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPrecisionVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraCriticalVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraRoundStunVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraPursuitVSUnitCombatType, SAVE_VALUE_TYPE_INT);
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", healAsDamage, SAVE_VALUE_TYPE_INT);
 			}
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	do
 	{
-		if ( g_paiTempExtraUnitCombatModifier[iI] != 0 )
+		iI = -1;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasBuildInfo");
+		if (iI != -1)
 		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDS, iI, true);
 
-			info->m_iExtraUnitCombatModifier = g_paiTempExtraUnitCombatModifier[iI];
+			if (iNewIndex != NO_BUILD)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &m_extraBuildWorkPercent[iNewIndex], "extraBuildWorkPercent");
+			}
+			else
+			{
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", extraBuildWorkPercent, SAVE_VALUE_TYPE_SHORT);
+			}
 		}
-	}
+	} while(iI != -1);
 
 	m_Properties.readWrapper(pStream);
 
@@ -24454,119 +24260,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAnimalIgnoresBordersCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOnslaughtCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFortitude);
-
-	// @SAVEBREAK DELETE Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraAid, SAVE_VALUE_ANY)
-	// SAVEBREAK@
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempSubCombatTypeCount[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempSubCombatTypeCount, "m_paiSubCombatTypeCount");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo2");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempSubCombatTypeCount[iNewIndex], "subCombatCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempSubCombatTypeCount[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iSubCombatTypeCount = g_paiTempSubCombatTypeCount[iI];
-		}
-	}
-
-		//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_paiTempAfflictOnAttackCount[iI] = 0;
-		g_paiTempCureAfflictionCount[iI] = 0;
-		g_paiTempAfflictionTurnCount[iI] = 0;
-		g_paiTempAfflictionHitCount[iI] = 0;
-		g_paiTempAfflictionTolerance[iI] = 0;
-		g_paiTempFortitudeModifierTypeAmount[iI] = 0;
-		g_paiTempTrapSetWithPromotionCount[iI] = 0;
-		g_paiTempPromotionFromTraitCount[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempAfflictOnAttackCount, "m_paiAfflictOnAttackCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempCureAfflictionCount, "m_paiCureAfflictionCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempAfflictionTurnCount, "m_paiAfflictionTurnCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempAfflictionHitCount, "m_paiAfflictionHitCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempAfflictionTolerance, "m_paiAfflictionTolerance");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempFortitudeModifierTypeAmount, "m_paiFortitudeModifierTypeAmount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempTrapSetWithPromotionCount, "g_paiTrapSetWithPromotionCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempPromotionFromTraitCount, "g_paiPromotionFromTraitCount");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasAfflicationInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
-
-			if ( iNewIndex != NO_PROMOTION )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackCount[iNewIndex], "afflictOnAttack");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempCureAfflictionCount[iNewIndex], "cureAffliction");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTurnCount[iNewIndex], "afflictionTurn");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionHitCount[iNewIndex], "afflictionHit");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTolerance[iNewIndex], "afflictionTolerance");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFortitudeModifierTypeAmount[iNewIndex], "fortitudeModifierType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapSetWithPromotionCount[iNewIndex], "trapSetWithPromotionType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFromTraitCount[iNewIndex], "promotionFromTraitCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		bool	bNonDefaultValue =
-					(g_paiTempAfflictOnAttackCount[iI] != 0 ||
-					 g_paiTempCureAfflictionCount[iI] != 0 ||
-					 g_paiTempAfflictionTurnCount[iI] != 0 ||
-					 g_paiTempAfflictionHitCount[iI] != 0 ||
-					 g_paiTempAfflictionTolerance[iI] != 0 ||
-					 g_paiTempFortitudeModifierTypeAmount[iI] != 0 ||
-					 g_paiTempTrapSetWithPromotionCount[iI] != 0 ||
-					 g_paiTempPromotionFromTraitCount[iI] != 0);
-
-		if ( bNonDefaultValue )
-		{
-			PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
-
-			info->m_iAfflictOnAttackCount = g_paiTempAfflictOnAttackCount[iI];
-			info->m_iCureAfflictionCount = g_paiTempCureAfflictionCount[iI];
-			info->m_iAfflictionTurnCount = g_paiTempAfflictionTurnCount[iI];
-			info->m_iAfflictionHitCount = g_paiTempAfflictionHitCount[iI];
-			info->m_iAfflictionTolerance = g_paiTempAfflictionTolerance[iI];
-			info->m_iFortitudeModifierTypeAmount = g_paiTempFortitudeModifierTypeAmount[iI];
-			info->m_iTrapSetWithPromotionCount = g_paiTempTrapSetWithPromotionCount[iI];
-			info->m_iPromotionFromTraitCount = g_paiTempPromotionFromTraitCount[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRoundCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDefenseCount);
-
 #ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFrontSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent);
@@ -24667,75 +24363,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
 #endif // STRENGTH_IN_NUMBERS
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempOngoingTrainingCount[iI] = 0;
-		g_paiTempHealUnitCombatTypeVolume[iI] = 0;
-		g_paiTempHealUnitCombatTypeAdjacentVolume[iI] = 0;
-		g_paiTempTrapImmunityUnitCombatCount[iI] = 0;
-		g_paiTempTargetUnitCombatCount[iI] = 0;
-		g_paiTempExtraTrapDisableUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapAvoidanceUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapTriggerUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempOngoingTrainingCount, "m_paiOngoingTrainingCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempHealUnitCombatTypeVolume, "m_paiHealUnitCombatVolume");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempHealUnitCombatTypeAdjacentVolume, "m_paiHealUnitCombatAdjacentVolume");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempTrapImmunityUnitCombatCount, "g_paiTrapImmunityUnitCombatCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempTargetUnitCombatCount, "g_paiTargetUnitCombatCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraTrapDisableUnitCombatType, "g_paiExtraTrapDisableUnitCombatType");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraTrapAvoidanceUnitCombatType, "g_paiExtraTrapAvoidanceUnitCombatType");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraTrapTriggerUnitCombatType, "g_paiExtraTrapTriggerUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo3");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iNewIndex], "ongoingTrainingCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeVolume[iNewIndex], "healUnitCombatTypeVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeAdjacentVolume[iNewIndex], "healUnitCombatTypeAdjacentVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapImmunityUnitCombatCount[iNewIndex], "trapImmunityUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTargetUnitCombatCount[iNewIndex], "targetUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapDisableUnitCombatType[iNewIndex], "extraTrapDisableUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapAvoidanceUnitCombatType[iNewIndex], "extraTrapAvoidanceUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapTriggerUnitCombatType[iNewIndex], "extraTrapTriggerUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempOngoingTrainingCount[iI] != 0
-			|| g_paiTempHealUnitCombatTypeVolume[iI] != 0
-			|| g_paiTempHealUnitCombatTypeAdjacentVolume[iI] != 0
-			|| g_paiTempTrapImmunityUnitCombatCount[iI] != 0
-			|| g_paiTempTargetUnitCombatCount[iI] != 0
-			|| g_paiTempExtraTrapDisableUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapAvoidanceUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapTriggerUnitCombatType[iI] != 0)
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iOngoingTrainingCount = g_paiTempOngoingTrainingCount[iI];
-			info->m_iHealUnitCombatTypeVolume = g_paiTempHealUnitCombatTypeVolume[iI];
-			info->m_iHealUnitCombatTypeAdjacentVolume = g_paiTempHealUnitCombatTypeAdjacentVolume[iI];
-			info->m_iTrapImmunityUnitCombatCount = g_paiTempTrapImmunityUnitCombatCount[iI];
-			info->m_iTargetUnitCombatCount = g_paiTempTargetUnitCombatCount[iI];
-			info->m_iExtraTrapDisableUnitCombatType = g_paiTempExtraTrapDisableUnitCombatType[iI];
-			info->m_iExtraTrapAvoidanceUnitCombatType = g_paiTempExtraTrapAvoidanceUnitCombatType[iI];
-			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDodgeModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPrecisionModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerShots);
@@ -24749,503 +24376,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDealColdDamageCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iColdImmuneCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatPowerShots);
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		g_paiTempPromotionFreeCount[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), g_paiTempPromotionFreeCount, "m_paiPromotionFreeCount");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFreePromotionCount");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
-
-			if ( iNewIndex != NO_PROMOTION )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFreeCount[iNewIndex], "value");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( g_paiTempPromotionFreeCount[iI] != 0 )
-		{
-			PromotionKeyedInfo* info = findOrCreatePromotionKeyedInfo((PromotionTypes)iI);
-
-			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempRemovesUnitCombatTypeCount[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempRemovesUnitCombatTypeCount, "m_paiRemovesUnitCombatTypeCount");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo4");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempRemovesUnitCombatTypeCount[iNewIndex], "removesUnitCombatCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempRemovesUnitCombatTypeCount[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iRemovesUnitCombatTypeCount = g_paiTempRemovesUnitCombatTypeCount[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraFlankingStrengthbyUnitCombatType, "m_paiTempExtraFlankingStrengthbyUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo5");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraFlankingStrengthbyUnitCombatType[iNewIndex], "extraFlankingStrengthbyUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraFlankingStrengthbyUnitCombatType = g_paiTempExtraFlankingStrengthbyUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraWithdrawVSUnitCombatType, "m_paiTempExtraWithdrawVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo6");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawVSUnitCombatType[iNewIndex], "extraWithdrawVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraWithdrawVSUnitCombatType = g_paiTempExtraWithdrawVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraRepelVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraRepelVSUnitCombatType, "m_paiTempExtraRepelVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo7");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraRepelVSUnitCombatType[iNewIndex], "extraRepelVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraRepelVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraRepelVSUnitCombatType = g_paiTempExtraRepelVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraKnockbackVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraKnockbackVSUnitCombatType, "m_paiTempExtraKnockbackVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo8");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraKnockbackVSUnitCombatType[iNewIndex], "extraKnockbackVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraKnockbackVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraKnockbackVSUnitCombatType = g_paiTempExtraKnockbackVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPunctureVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraPunctureVSUnitCombatType, "m_paiTempExtraPunctureVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo9");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPunctureVSUnitCombatType[iNewIndex], "extraPunctureVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPunctureVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPunctureVSUnitCombatType = g_paiTempExtraPunctureVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraArmorVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraArmorVSUnitCombatType, "m_paiTempExtraArmorVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo10");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraArmorVSUnitCombatType[iNewIndex], "extraArmorVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraArmorVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraArmorVSUnitCombatType = g_paiTempExtraArmorVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraDodgeVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraDodgeVSUnitCombatType, "m_paiTempExtraDodgeVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo11");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraDodgeVSUnitCombatType[iNewIndex], "extraDodgeVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraDodgeVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraDodgeVSUnitCombatType = g_paiTempExtraDodgeVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPrecisionVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraPrecisionVSUnitCombatType, "m_paiTempExtraPrecisionVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo12");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPrecisionVSUnitCombatType[iNewIndex], "extraPrecisionVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPrecisionVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPrecisionVSUnitCombatType = g_paiTempExtraPrecisionVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraCriticalVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraCriticalVSUnitCombatType, "m_paiTempExtraCriticalVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo13");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraCriticalVSUnitCombatType[iNewIndex], "extraCriticalVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraCriticalVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraCriticalVSUnitCombatType = g_paiTempExtraCriticalVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraRoundStunVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraRoundStunVSUnitCombatType, "m_paiTempExtraRoundStunVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo14");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraRoundStunVSUnitCombatType[iNewIndex], "extraRoundStunVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraRoundStunVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraRoundStunVSUnitCombatType = g_paiTempExtraRoundStunVSUnitCombatType[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraRoundStunProb);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatStuns);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPoisonProbabilityModifier);
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-	{
-		g_paiTempAfflictOnAttackTypeProbability[iI] = 0;
-		g_paiTempAfflictOnAttackTypeCount[iI] = 0;
-		g_paiTempAfflictOnAttackTypeImmediateCount[iI] = 0;
-		g_paiTempAfflictOnAttackTypeAttemptedCount[iI] = 0;
-		g_paiTempCureAfflictionTypeCount[iI] = 0;
-		g_paiTempAfflictionTurnTypeCount[iI] = 0;
-		g_paiTempAfflictionLineCount[iI] = 0;
-		g_paiTempAfflictionTypeTolerance[iI] = 0;
-		g_paiTempFortitudeModifierAmount[iI] = 0;
-		g_pabTempValidBuildUp[iI] = false;
-		g_paiTempDistanceAttackCommunicability[iI] = 0;
-		g_paiTempAfflictOnAttackTypeMeleeCount[iI] = 0;
-		g_paiTempAfflictOnAttackTypeDistanceCount[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeProbability, "m_paiAfflictOnAttackTypeProbability");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeCount, "m_paiAfflictOnAttackTypeCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeImmediateCount, "m_paiAfflictOnAttackTypeImmediateCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeAttemptedCount, "m_paiAfflictOnAttackTypeAttemptedCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempCureAfflictionTypeCount, "m_paiCureAfflictionTypeCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictionTurnTypeCount, "m_paiAfflictionTurnTypeCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictionLineCount, "m_paiAfflictionLineCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictionTypeTolerance, "m_paiAfflictionTypeTolerance");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempFortitudeModifierAmount, "m_paiFortitudeModifierAmount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_pabTempValidBuildUp, "m_pabValidBuildUp");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempDistanceAttackCommunicability, "m_paiTempDistanceAttackCommunicability");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeMeleeCount, "m_paiAfflictOnAttackTypeMeleeCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), g_paiTempAfflictOnAttackTypeDistanceCount, "m_paiAfflictOnAttackTypeDistanceCount");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasAfflictOnAttackInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONLINES, iI, true);
-
-			if ( iNewIndex != NO_PROMOTIONLINE )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeProbability[iNewIndex], "afflictOnAttackTypeProb");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeCount[iNewIndex], "afflictOnAttackTypeCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeImmediateCount[iNewIndex], "afflictOnAttackTypeImmediateCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeAttemptedCount[iNewIndex], "afflictOnAttackTypeAttemptedCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempCureAfflictionTypeCount[iNewIndex], "cureAfflictionType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTurnTypeCount[iNewIndex], "afflictionTurnType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionLineCount[iNewIndex], "hasAfflictionLine");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictionTypeTolerance[iNewIndex], "afflictionToleranceType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempFortitudeModifierAmount[iNewIndex], "fortitudeModifier");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_pabTempValidBuildUp[iNewIndex], "validBuildUp");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempDistanceAttackCommunicability[iNewIndex], "distanceAttackCommunicability");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeMeleeCount[iNewIndex], "afflictOnAttackTypeMeleeCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempAfflictOnAttackTypeDistanceCount[iNewIndex], "afflictOnAttackTypeDistanceCount");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-	{
-		bool	bNonDefaultValue =
-					( g_paiTempAfflictOnAttackTypeProbability[iI] != 0 ||
-					  g_paiTempAfflictOnAttackTypeCount[iI] != 0 ||
-					  g_paiTempAfflictOnAttackTypeImmediateCount[iI] != 0 ||
-					  g_paiTempAfflictOnAttackTypeAttemptedCount[iI] != 0 ||
-					  g_paiTempCureAfflictionTypeCount[iI] != 0 ||
-					  g_paiTempAfflictionTurnTypeCount[iI] != 0 ||
-					  g_paiTempAfflictionLineCount[iI] != 0 ||
-					  g_paiTempAfflictionTypeTolerance[iI] != 0 ||
-					  g_paiTempFortitudeModifierAmount[iI] != 0 ||
-					  (g_pabTempValidBuildUp[iI]) ||
-					  g_paiTempDistanceAttackCommunicability[iI] != 0 ||
-					  g_paiTempAfflictOnAttackTypeMeleeCount[iI] != 0 ||
-					  g_paiTempAfflictOnAttackTypeDistanceCount[iI] != 0);
-
-		if ( bNonDefaultValue )
-		{
-			PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo((PromotionLineTypes)iI);
-
-			info->m_iAfflictOnAttackTypeProbability = g_paiTempAfflictOnAttackTypeProbability[iI];
-			info->m_iAfflictOnAttackTypeCount = g_paiTempAfflictOnAttackTypeCount[iI];
-			info->m_iAfflictOnAttackTypeImmediateCount = g_paiTempAfflictOnAttackTypeImmediateCount[iI];
-			info->m_iAfflictOnAttackTypeAttemptedCount = g_paiTempAfflictOnAttackTypeAttemptedCount[iI];
-			info->m_iCureAfflictionTypeCount = g_paiTempCureAfflictionTypeCount[iI];
-			info->m_iAfflictionTurnTypeCount = g_paiTempAfflictionTurnTypeCount[iI];
-			info->m_iAfflictionLineCount = g_paiTempAfflictionLineCount[iI];
-			info->m_iAfflictionTypeTolerance = g_paiTempAfflictionTypeTolerance[iI];
-			info->m_iFortitudeModifierAmount = g_paiTempFortitudeModifierAmount[iI];
-			info->m_bValidBuildUp = g_pabTempValidBuildUp[iI];
-			info->m_iDistanceAttackCommunicability = g_paiTempDistanceAttackCommunicability[iI];
-			info->m_iAfflictOnAttackTypeMeleeCount = g_paiTempAfflictOnAttackTypeMeleeCount[iI];
-			info->m_iAfflictOnAttackTypeDistanceCount = g_paiTempAfflictOnAttackTypeDistanceCount[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraAttackCombatModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDefenseCombatModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRetrainsAvailable);
@@ -25273,282 +24408,24 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatLimitChange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDropRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryHeal);
-//Team Project (2)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOneUpCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSurvivorChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryAdjacentHeal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryStackHeal);
-	WRAPPER_READ(wrapper, "CvUnit", &m_bCanRespawn);
-	//	Koshling - m_bCanrespawn should not have ever been persisted in saves
-	//	it is used only within a combat round and set upon unit death IF the unit
-	//	has outstanding oneUpCount.  In some circumstances an autosave can save a
-	//	state where the unit has just been respawned, but m_bCanRespawn has not yet
-	//	been reset at the astrart of th next turn, which leaves it bugged in the
-	//	next turn's combat.  Ignore any saved value (and always save 'false' on new saves so we
-	//	are backward compatible)
-	m_bCanRespawn = false;
 	WRAPPER_READ(wrapper, "CvUnit", &m_bSurvivor);
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
-//Team Project (3)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureProbabilityModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureResistanceModifier);
-//Team Project (4)
-	//WorkRateMod
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		g_paiTempExtraBuildWorkPercent[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), g_paiTempExtraBuildWorkPercent, "g_paiExtraBuildWorkPercent");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasBuildInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDS, iI, true);
-
-			if ( iNewIndex != NO_BUILD )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraBuildWorkPercent[iNewIndex], "extraBuildWorkPercent");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if ( g_paiTempExtraBuildWorkPercent[iI] != 0 )
-		{
-			m_extraBuildWorkPercent[iI] = (short)g_paiTempExtraBuildWorkPercent[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPeaksWorkPercent);
-	//
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
-
-	// Processing CCs new method
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_pabTempHasUnitCombat[iI] = false;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_pabTempHasUnitCombat, "m_pabHasUnitCombat");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombat");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				g_pabTempHasUnitCombat[iNewIndex] = true;
-			}
-		}
-	} while(iI != -1);
-
-	//	To cope with backward compatibility we must enforce that if a unit has a unit combat by definition and does not have it established as
-	//  a processed-in Combat Class, then we must ask it to update the whole unit as this is a solid indicator that the game has not been
-	//  updated to the new method.  This must be done then in conjunction with a unit recalculation mechanism that can update units with new CC and promo
-	//  tag values.  So here, we're going to set the combat class and process it into the unit.  But later, recalculating units is going to be
-	//  far more critical than ever so that's a 'next step'.
-	// TBPROBLEMSPOT
-	//bool bUpdated = false;
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		UnitCombatTypes eCombatType = ((UnitCombatTypes)iI);/*
-		if ( (getUnitCombatType() == eCombatType) && !g_pabTempHasUnitCombat[iI] && !hasRemovesUnitCombatType(eCombatType))
-		{
-			for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
-			{
-				UnitCombatTypes eCombatAssign = ((UnitCombatTypes)iJ);
-				if (hasCombatType(eCombatAssign))
-				{
-					setHasUnitCombat(eCombatAssign, true);
-					bUpdated = true;
-				}
-			}
-		}
-
-		else */
-		//Strange case here.  With there being a set of base unitcombats on the underlying unit and the addons and subtractions being recorded already, hasUnitCombat is actually all that should be necessary to ask for here.
-		//All modifiers from unitcombats should be recorded on the unit now and have little to do with what unitcombats the unit has but if the unit doesn't gain all unitcombats it should here, which seems to not be firing correctly somehow,
-		//then there is a problem.  g_pabTempHasUnitCombat
-		if (g_pabTempHasUnitCombat[iI])
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eCombatType);
-
-			info->m_bHasUnitCombat = true;
-		}
-	}
-
-	//Begin Bug compatibility
-	bool bClear = false;
-		//Step 1: Check to see if there are any unitcombats defined after the above brings in properly saved games under the debugged save wrapper
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (isHasUnitCombat((UnitCombatTypes)iI))
-		{
-			bClear = true;
-			break;
-		}
-	}
-		//Step 2: If there are no unitcombats defined then this is an old and thus bugged game
-	if (!bClear)
-	{
-		//Step 3: Check and apply the base unitcombats as assigned by the unit
-		for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (m_pUnitInfo->hasUnitCombat((UnitCombatTypes)iI))
-			{
-				UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-				info->m_bHasUnitCombat = true;
-			}
-		}
-		//Step 4: Check and apply any additional unitcombats from promos
-		for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-		{
-			if (isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).getNumSubCombatChangeTypes() > 0)
-			{
-				for (iJ = 0; iJ < GC.getPromotionInfo((PromotionTypes)iI).getNumSubCombatChangeTypes(); iJ++)
-				{
-					UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)GC.getPromotionInfo((PromotionTypes)iI).getSubCombatChangeType(iJ));
-
-					info->m_bHasUnitCombat = true;
-				}
-			}
-		}
-		//Step 5: Check and apply any removed unitcombats from promos
-		for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-		{
-			if (isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).getNumRemovesUnitCombatTypes() > 0)
-			{
-				for (iJ = 0; iJ < GC.getPromotionInfo((PromotionTypes)iI).getNumRemovesUnitCombatTypes(); iJ++)
-				{
-					UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)GC.getPromotionInfo((PromotionTypes)iI).getRemovesUnitCombatType(iJ));
-
-					info->m_bHasUnitCombat = false;
-				}
-			}
-		}
-	}
-	//End Bug Compatibility
-	//Notes: There will still be some things that this bugfix doesn't heal until a unit recalculation is completed.
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackOnlyCitiesCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreNoEntryLevelCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreZoneofControlCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraTaunt);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMaxHP);
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempExtraPursuitVSUnitCombatType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraPursuitVSUnitCombatType, "m_paiTempExtraPursuitVSUnitCombatType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo15");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraPursuitVSUnitCombatType[iNewIndex], "extraPursuitVSUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempExtraPursuitVSUnitCombatType[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iExtraPursuitVSUnitCombatType = g_paiTempExtraPursuitVSUnitCombatType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawOnTerrainType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraWithdrawOnTerrainType, "m_paiTempExtraWithdrawOnTerrainType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasTerrainInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iI, true);
-
-			if ( iNewIndex != NO_TERRAIN )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawOnTerrainType[iNewIndex], "extraWithdrawOnTerrainType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawOnTerrainType[iI] != 0 )
-		{
-			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
-
-			info->m_iExtraWithdrawOnTerrainType = g_paiTempExtraWithdrawOnTerrainType[iI];
-		}
-	}
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		g_paiTempExtraWithdrawOnFeatureType[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempExtraWithdrawOnFeatureType, "m_paiTempExtraWithdrawOnFeatureType");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasFeatureInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_FEATURES, iI, true);
-
-			if ( iNewIndex != NO_FEATURE )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraWithdrawOnFeatureType[iNewIndex], "extraWithdrawOnFeatureType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if ( g_paiTempExtraWithdrawOnFeatureType[iI] != 0 )
-		{
-			FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iI);
-
-			info->m_iExtraWithdrawOnFeatureType = g_paiTempExtraWithdrawOnFeatureType[iI];
-		}
-	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFliesToMoveCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iQualityBaseTotal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupBaseTotal);
@@ -25556,11 +24433,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCannotMergeSplitCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraStrengthModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDamageModifier);
-
-	// @SAVEBREAK DELETE Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraCostModifier, SAVE_VALUE_ANY)
-	// SAVEBREAK@
-
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eGGExperienceEarnedTowardsType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoCapacity);
@@ -25604,40 +24476,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHealUnitCombatCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraSelfHealModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iNoSelfHealCount);
-
-	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempHealAsDamage[iI] = 0;
-	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempHealAsDamage, "m_paiHealAsDamage");
-
-	//	Read new format compressed data if present
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "healAsDamageInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealAsDamage[iNewIndex], "healAsDamage");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempHealAsDamage[iI] != 0 )
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iHealAsDamage = g_paiTempHealAsDamage[iI];//g_paiTempSubCombatTypeCount[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraNumHealSupport);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHealSupportUsed);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, (int*)&m_eSleepType);
@@ -25658,7 +24496,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBlendIntoCityCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpgradeAnywhereCount);
 
-	//	Backward compatibility - read array format if present
+	// Read compressed data format
 	for(iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 	{
 		m_aiExtraVisibilityIntensity[iI] = 0;
@@ -25667,13 +24505,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		m_aiNegatesInvisibleCount[iI] = 0;
 		m_aiExtraVisibilityIntensitySameTile[iI] = 0;
 	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_INVISIBLES, GC.getNumInvisibleInfos(), m_aiExtraVisibilityIntensity, "m_aiExtraVisibilityIntensity");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_INVISIBLES, GC.getNumInvisibleInfos(), m_aiExtraInvisibilityIntensity, "m_aiExtraInvisibilityIntensity");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_INVISIBLES, GC.getNumInvisibleInfos(), m_aiExtraVisibilityIntensityRange, "m_aiExtraVisibilityIntensityRange");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_INVISIBLES, GC.getNumInvisibleInfos(), m_aiNegatesInvisibleCount, "m_aiNegatesInvisibleCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_INVISIBLES, GC.getNumInvisibleInfos(), m_aiExtraVisibilityIntensitySameTile, "m_aiExtraVisibilityIntensitySameTile");
-
-	//	Read new format compressed data if present
 	do
 	{
 		iI= -1;
@@ -25937,7 +24768,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
 
-
 	m_aiExtraBuildTypes.clear();
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
@@ -25978,9 +24808,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=3;
-	WRAPPER_WRITE(wrapper, "CvUnit", uiFlag);		// flag for expansion
 
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */
@@ -26045,16 +24872,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( getTerrainProtectedCount((TerrainTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainProtection");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainProtectedCount((TerrainTypes)iI), "value");
-		}
-	}
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.iID);
@@ -26121,65 +24938,113 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szName);
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szScriptData);
 
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (std::map<PromotionTypes, PromotionKeyedInfo>::const_iterator it = m_promotionKeyedInfo.begin(), itEnd = m_promotionKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( isHasPromotion((PromotionTypes)iI) )
+		const PromotionKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasPromotion");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasPromotionInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_bHasPromotion, "hasPromotion");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackCount, "afflictOnAttack");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iCureAfflictionCount, "cureAffliction");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTurnCount, "afflictionTurn");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionHitCount, "afflictionHit");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTolerance, "afflictionTolerance");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFortitudeModifierTypeAmount, "fortitudeModifierType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iPromotionFreeCount, "value");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTrapSetWithPromotionCount, "trapSetWithPromotionCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iPromotionFromTraitCount, "promotionFromTraitCount");
 		}
 	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (std::map<PromotionLineTypes, PromotionLineKeyedInfo>::const_iterator it = m_promotionLineKeyedInfo.begin(), itEnd = m_promotionLineKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getTerrainDoubleMoveCount((TerrainTypes)iI) != 0 ||
-			 getExtraTerrainAttackPercent((TerrainTypes)iI) != 0 ||
-			 getExtraTerrainDefensePercent((TerrainTypes)iI) != 0 ||
-			 getTerrainWorkPercent((TerrainTypes)iI) != 0 ||
-//Team Project (4)
-	//WorkRateMod
-			 getExtraTerrainWorkPercent((TerrainTypes)iI) != 0)
+		const PromotionLineKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainDoubleMoveCount((TerrainTypes)iI), "doubleMove");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainAttackPercent((TerrainTypes)iI), "extraAttackPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainDefensePercent((TerrainTypes)iI), "extraDefensePercent");
-//Team Project (4)
-	//WorkRateMod
-			//ls612: Terrain Work Modifiers
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainWorkPercent((TerrainTypes)iI), "terrainWorkPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTerrainWorkPercent((TerrainTypes)iI), "terrainExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasPromotionLineInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackTypeProbability, "afflictOnAttackTypeProb");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTurnTypeCount, "afflictOnAttackTypeCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackTypeImmediateCount, "afflictOnAttackTypeImmediateCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackTypeAttemptedCount, "afflictOnAttackTypeAttemptedCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iCureAfflictionTypeCount, "cureAfflictionType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTurnTypeCount, "afflictionTurnType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionLineCount, "hasAfflictionLine");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictionTypeTolerance, "afflictionToleranceType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFortitudeModifierAmount, "fortitudeModifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_bValidBuildUp, "validBuildUp");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iDistanceAttackCommunicability, "distanceAttackCommunicability");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackTypeMeleeCount, "afflictOnAttackTypeMeleeCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iAfflictOnAttackTypeDistanceCount, "afflictOnAttackTypeDistanceCount");
 		}
 	}
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+	for (std::map<TerrainTypes, TerrainKeyedInfo>::const_iterator it = m_terrainKeyedInfo.begin(), itEnd = m_terrainKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getFeatureDoubleMoveCount((FeatureTypes)iI) != 0 ||
-			 getExtraFeatureAttackPercent((FeatureTypes)iI) != 0 ||
-			 getExtraFeatureDefensePercent((FeatureTypes)iI) != 0 ||
-			 getFeatureWorkPercent((FeatureTypes)iI) != 0 ||
-//Team Project (4)
-	//WorkRateMod
-			 getExtraFeatureWorkPercent((FeatureTypes)iI) != 0)
+		const TerrainKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFeatureInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getFeatureDoubleMoveCount((FeatureTypes)iI), "doubleMove");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureAttackPercent((FeatureTypes)iI), "extraAttackPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureDefensePercent((FeatureTypes)iI), "extraDefensePercent");
-			//ls612: Terrain Work Modifiers
-
-//Team Project (4)
-	//WorkRateMod
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getFeatureWorkPercent((FeatureTypes)iI), "featureWorkPercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFeatureWorkPercent((FeatureTypes)iI), "featureExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasTerrainInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainProtected, "value");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainAttackPercent, "extraAttackPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainDefensePercent, "extraDefensePercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainWorkPercent, "terrainWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 		}
 	}
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (std::map<FeatureTypes, FeatureKeyedInfo>::const_iterator it = m_featureKeyedInfo.begin(), itEnd = m_featureKeyedInfo.end(); it != itEnd; ++it)
 	{
-		if ( getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0 )
+		const FeatureKeyedInfo& info = it->second;
+		if (!info.Empty())
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "modifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasFeatureInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureAttackPercent, "extraAttackPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureDefensePercent, "extraDefensePercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureWorkPercent, "featureWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
+		}
+	}
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), itEnd = m_unitCombatKeyedInfo.end(); it != itEnd; ++it)
+	{
+		const UnitCombatKeyedInfo& info = it->second;
+		if (!info.Empty())
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasUnitCombatInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_bHasUnitCombat, "hasUnitCombat");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraUnitCombatModifier, "modifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iSubCombatTypeCount, "subCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iOngoingTrainingCount, "ongoingTrainingCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iRemovesUnitCombatTypeCount, "removesUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFlankingStrengthbyUnitCombatType, "extraFlankingStrengthbyUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawVSUnitCombatType, "extraWithdrawVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPursuitVSUnitCombatType, "extraPursuitVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraRepelVSUnitCombatType, "extraRepelVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraKnockbackVSUnitCombatType, "extraKnockbackVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPunctureVSUnitCombatType, "extraPunctureVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraArmorVSUnitCombatType, "extraArmorVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraDodgeVSUnitCombatType, "extraDodgeVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraPrecisionVSUnitCombatType, "extraPrecisionVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraCriticalVSUnitCombatType, "extraCriticalVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraRoundStunVSUnitCombatType, "extraRoundStunVSUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealUnitCombatTypeVolume, "healUnitCombatTypeTotal");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealUnitCombatTypeAdjacentVolume, "healUnitCombatTypeAdjacentTotal");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iHealAsDamage, "healAsDamage");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTrapImmunityUnitCombatCount, "trapImmunityUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTargetUnitCombatCount, "targetUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapDisableUnitCombatType, "extraTrapDisableUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapAvoidanceUnitCombatType, "extraTrapAvoidanceUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTrapTriggerUnitCombatType, "extraTrapTriggerUnitCombatType");
+		}
+	}
+	for (std::map<int16_t, int16_t>::const_iterator it = m_extraBuildWorkPercent.begin(), itEnd = m_extraBuildWorkPercent.end(); it != itEnd; ++it)
+	{
+		const int16_t val = it->second;
+		if (val != 0)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasBuildInfo");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", val, "extraBuildWorkPercent");
 		}
 	}
 
@@ -26211,33 +25076,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAnimalIgnoresBordersCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iOnslaughtCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFortitude);
-	//TB SubCombat Mods Begin
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getSubCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo2");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getSubCombatTypeCount((UnitCombatTypes)iI), "subCombatCount");
-		}
-	}
-	//TB SubCombat Mods End
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( getAfflictionHitCount((PromotionTypes)iI) != 0)
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasAfflicationInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictOnAttack");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "cureAffliction");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionTurn");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionHit");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionTolerance");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "fortitudeModifierType");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRoundCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefenseCount);
@@ -26291,19 +25129,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
 #endif // STRENGTH_IN_NUMBERS
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getSubCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo3");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getOngoingTrainingCount((UnitCombatTypes)iI), "ongoingTrainingCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal((UnitCombatTypes)iI), "healUnitCombatTypeTotal");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI), "healUnitCombatTypeAdjacentTotal");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDodgeModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPrecisionModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPowerShots);
@@ -26317,160 +25142,11 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDealColdDamageCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iColdImmuneCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatPowerShots);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if ( getPromotionFreeCount((PromotionTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFreePromotionCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getPromotionFreeCount((PromotionTypes)iI), "value");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatKnockbacks);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatRepels);
-
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getRemovesUnitCombatTypeCount((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo4");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getRemovesUnitCombatTypeCount((UnitCombatTypes)iI), "removesUnitCombatCount");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo5");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI), "extraFlankingStrengthbyUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo6");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI), "extraWithdrawVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraRepelVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo7");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraRepelVSUnitCombatType((UnitCombatTypes)iI), "extraRepelVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraKnockbackVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo8");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraKnockbackVSUnitCombatType((UnitCombatTypes)iI), "extraKnockbackVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPunctureVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo9");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPunctureVSUnitCombatType((UnitCombatTypes)iI), "extraPunctureVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraArmorVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo10");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraArmorVSUnitCombatType((UnitCombatTypes)iI), "extraArmorVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraDodgeVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo11");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraDodgeVSUnitCombatType((UnitCombatTypes)iI), "extraDodgeVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPrecisionVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo12");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPrecisionVSUnitCombatType((UnitCombatTypes)iI), "extraPrecisionVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraCriticalVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo13");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraCriticalVSUnitCombatType((UnitCombatTypes)iI), "extraCriticalVSUnitCombatType");
-		}
-	}
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraRoundStunVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo14");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraRoundStunVSUnitCombatType((UnitCombatTypes)iI), "extraRoundStunVSUnitCombatType");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraRoundStunProb);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatStuns);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPoisonProbabilityModifier);
-
-	//	Use condensed format now - only save non-default array elements
-	int itest = GC.getNumPromotionLineInfos();
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-	{
-		if ( getAfflictOnAttackTypeProbability((PromotionLineTypes)iI) != 0 ||
-			 getAfflictOnAttackTypeCount((PromotionLineTypes)iI) != 0 ||
-			 getAfflictOnAttackTypeImmediateCount((PromotionLineTypes)iI) != 0 ||
-			 getAfflictOnAttackTypeAttemptedCount((PromotionLineTypes)iI) != 0 ||
-			 getCureAfflictionCount((PromotionLineTypes)iI) != 0 ||
-			 getAfflictionTurnCount((PromotionLineTypes)iI) != 0 ||
-			 getAfflictionLineCount((PromotionLineTypes)iI) != 0 ||
-			 getUnitAfflictionTolerance((PromotionLineTypes)iI) != 0 ||
-			 getFortitudeModifierTypeAmount((PromotionLineTypes)iI) != 0)
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasAfflictOnAttackInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictOnAttackTypeProbability((PromotionLineTypes)iI), "afflictOnAttackTypeProb");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictOnAttackTypeCount((PromotionLineTypes)iI), "afflictOnAttackTypeCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictOnAttackTypeImmediateCount((PromotionLineTypes)iI), "afflictOnAttackTypeImmediateCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictOnAttackTypeAttemptedCount((PromotionLineTypes)iI), "afflictOnAttackTypeAttemptedCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getCureAfflictionCount((PromotionLineTypes)iI), "cureAfflictionType");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionTurnCount((PromotionLineTypes)iI), "afflictionTurnType");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionLineCount((PromotionLineTypes)iI), "hasAfflictionLine");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getUnitAfflictionTolerance((PromotionLineTypes)iI), "afflictionToleranceType");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getFortitudeModifierTypeAmount((PromotionLineTypes)iI), "fortitudeModifier");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraAttackCombatModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDefenseCombatModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRetrainsAvailable);
@@ -26498,78 +25174,24 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatLimitChange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDropRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryHeal);
-//Team Project (2)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iOneUpCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSurvivorChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryAdjacentHeal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryStackHeal);
-	//	Koshling - see comment in read() realting to m_bCanRespawn
-	m_bCanRespawn = false;
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bCanRespawn);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bSurvivor);
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
-//Team Project (3)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureProbabilityModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureResistanceModifier);
-//Team Project (4)
-	//WorkRateMod
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if ( getExtraBuildWorkPercent((BuildTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasBuildInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraBuildWorkPercent((BuildTypes)iI), "extraBuildWorkPercent");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPeaksWorkPercent);
-	//
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( isHasUnitCombat((UnitCombatTypes)iI) )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombat");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackOnlyCitiesCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreNoEntryLevelCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreZoneofControlCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraTaunt);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMaxHP);
-
-
-	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo15");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI), "extraPursuitVSUnitCombatType");
-		}
-	}
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-	{
-		if ( getExtraWithdrawOnTerrainType((TerrainTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnTerrainType((TerrainTypes)iI), "extraWithdrawOnTerrainType");
-		}
-	}
-	for(iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if ( getExtraWithdrawOnFeatureType((FeatureTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFeatureInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnFeatureType((FeatureTypes)iI), "extraWithdrawOnFeatureType");
-		}
-	}
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iFliesToMoveCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iQualityBaseTotal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupBaseTotal);
@@ -26620,15 +25242,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHealUnitCombatCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraSelfHealModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoSelfHealCount);
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( getHealAsDamage((UnitCombatTypes)iI) != 0 )
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "healAsDamageInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealAsDamage((UnitCombatTypes)iI), "healAsDamage");
-		}
-	}
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraNumHealSupport);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHealSupportUsed);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, m_eSleepType);

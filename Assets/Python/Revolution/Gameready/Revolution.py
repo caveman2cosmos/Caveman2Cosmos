@@ -528,16 +528,14 @@ class Revolution:
 		iPlayer = argsList[1]
 
 		if iPlayer > GC.getMAX_PC_PLAYERS():
-			iPrevPlayer = -1
-		else:
-			iPrevPlayer = iPlayer - 1
+			return
 
-		while iPrevPlayer > -1:
-			if GC.getPlayer(iPrevPlayer).isAlive():
-				self.checkForRevReinforcement(iPrevPlayer)
-				self.checkCivics(iPrevPlayer)
+		while iPlayer > -1:
+			iPlayer -= 1
+			if GC.getPlayer(iPlayer).isAlive():
+				self.checkForRevReinforcement(iPlayer)
+				self.checkCivics(iPlayer)
 				break
-			iPrevPlayer -= 1
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -546,13 +544,14 @@ class Revolution:
 		iMax = GC.getMAX_PC_PLAYERS()
 
 		if iPlayer > iMax:
-			iNextPlayer = iPlayer
-		elif iPlayer + 1 >= iMax:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer + 1
+			return
+		# Do the check when iPlayer = iMax (Beast NPC) to cover the case where there's only one civ alive.
+		iNextPlayer = iPlayer + 1
 
 		while iNextPlayer != iPlayer:
+			if iNextPlayer >= iMax:
+				iGameTurn += 1
+				iNextPlayer = 0
 			CyPlayer = GC.getPlayer(iNextPlayer)
 
 			if RevData.revObjectExists(CyPlayer) and RevData.revObjectGetVal(CyPlayer, 'SpawnList'):
@@ -566,9 +565,6 @@ class Revolution:
 				break
 
 			iNextPlayer += 1
-			if iNextPlayer == iMax and iPlayer != iMax:
-				iGameTurn += 1
-				iNextPlayer = 0
 
 
 	def onCityAcquired( self, argsList):

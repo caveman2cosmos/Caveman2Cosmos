@@ -29640,9 +29640,6 @@ void CvUnitAI::read(FDataStreamBase* pStream)
 {
 	CvUnit::read(pStream);
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read(&m_iBirthmark);
 
 	pStream->Read((int*)&m_eUnitAIType);
@@ -29699,9 +29696,6 @@ void CvUnitAI::read(FDataStreamBase* pStream)
 void CvUnitAI::write(FDataStreamBase* pStream)
 {
 	CvUnit::write(pStream);
-
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
 
 	pStream->Write(m_iBirthmark);
 

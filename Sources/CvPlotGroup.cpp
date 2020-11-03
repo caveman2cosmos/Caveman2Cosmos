@@ -667,9 +667,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlotGroup", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_iID);
 
 	WRAPPER_READ(wrapper, "CvPlotGroup", (int*)&m_eOwner);
@@ -688,21 +685,7 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	{
 		SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	}
-
-	m_numPlots = -1;
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_numPlots);
-
-	//	To maintain backwrd compatibility read the plot list from the old format
-	//	that didn't record m_numPlots
-	if ( m_numPlots == -1 )
-	{
-		CLinkList<XYCoords> dummyPlots;
-		dummyPlots.Read(pStream);
-
-		m_numPlots = dummyPlots.getLength();
-
-		FAssert(m_numPlots > 0);
-	}
 
 	if ( m_paiNumBonuses != NULL )
 	{
@@ -735,8 +718,6 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag = 0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 
