@@ -31,18 +31,6 @@
 		<French>Histoire de l'Eléphant d'Afrique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Tag>
-		<English>Animal Myth Requirement</English>
-		<French>Pré-requis pour Mythe Animal</French>
-		<German>Grundlage für Tiermythen</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Tag>
-		<English>In game building that is auto built. This is to make the updating of Myths and Story buildings easier when new buildings are added or existing ones modified.</English>
-		<French>Ce bâtiment est construit automatiquement. Il permet de faciliter l'amélioration des bâtiments Mythe et Histoire.</French>
-		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK]- needs [LINK=BUILDING_LIBRARY]Library[\LINK]</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK]- nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
@@ -403,13 +391,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
-		<English>The six elements make up everything. They are Earth, Air(Sky), Water(Sea), Stone, Metal and Fire. They loose all benefit with Chemestry.</English>
+		<English>The six elements make up everything. They are Earth, Air(Sky), Water(Sea), Stone, Metal and Fire. They lose all benefit with Chemestry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of sciencs and education. They are required for many other buildings.</English>
+		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
 		<French>Les Mythes des Eléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la constrution d'autres bâtiments.</French>
 		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
 	</TEXT>

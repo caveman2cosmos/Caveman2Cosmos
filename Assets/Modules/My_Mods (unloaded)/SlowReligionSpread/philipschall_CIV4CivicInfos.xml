@@ -8,7 +8,7 @@
 	<CivicInfos>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_IRRELIGION</Type>
+			<Type>CIVIC_SUPERSTITION</Type>
 			<bNoNonStateReligionSpread>1</bNoNonStateReligionSpread>
 		</CivicInfo>
 		<CivicInfo>

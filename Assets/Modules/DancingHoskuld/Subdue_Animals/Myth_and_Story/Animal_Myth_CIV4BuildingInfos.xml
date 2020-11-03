@@ -37,9 +37,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -60,9 +60,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -141,9 +141,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -164,9 +164,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -216,9 +216,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -239,9 +239,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -291,9 +291,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>

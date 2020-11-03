@@ -15385,12 +15385,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BLACK_HAT_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVIC_IRRELIGION</Type>
-			<Description>TXT_KEY_BUILDING_CIVIC_IRRELIGION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVIC_IRRELIGION_PEDIA</Civilopedia>
+			<Type>BUILDING_CIVIC_SUPERSTITION</Type>
+			<Description>TXT_KEY_BUILDING_SUPERSTITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SUPERSTITION_PEDIA</Civilopedia>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_IRRELIGION</CivicOption>
+					<CivicOption>CIVIC_SUPERSTITION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -15403,12 +15403,12 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DUMMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_SUPERSTITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORAL_TRADITION</Type>
-			<Description>TXT_KEY_TECH_ORAL_TRADITION</Description>
-			<Civilopedia>TXT_KEY_TECH_ORAL_TRADITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORAL_TRADITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORAL_TRADITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_ORAL_TRADITION_STRATEGY</Strategy>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
@@ -15425,7 +15425,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DUMMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORAL_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
@@ -16013,9 +16013,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -16044,9 +16044,9 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -16075,9 +16075,9 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -16110,7 +16110,7 @@
 				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
 				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16150,7 +16150,7 @@
 				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16190,7 +16190,7 @@
 				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
 				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16228,7 +16228,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>

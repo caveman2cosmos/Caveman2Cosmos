@@ -31860,14 +31860,24 @@
 			<Button>art/fastbreederreactor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUMMY</Type>
+			<Type>ART_DEF_BUILDING_CIVIC_SUPERSTITION</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<Button>art/Interface/buttons/civics/sparth/religion_superstition.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ORAL_TRADITION</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/TechTree/Button_OralTradition.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

@@ -4,7 +4,7 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Upkeep -->
-<Civ4OutcomeInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
+<Civ4OutcomeInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<OutcomeInfos>
 		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_MAPINGUARI_WOODEN</Type>

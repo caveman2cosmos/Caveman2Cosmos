@@ -389,7 +389,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<bWater>1</bWater>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>

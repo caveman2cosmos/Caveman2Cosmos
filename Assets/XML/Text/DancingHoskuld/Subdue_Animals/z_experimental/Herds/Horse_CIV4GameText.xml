@@ -16,19 +16,9 @@
 		<Polish>Mit Koni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Horse</English>
-		<French>Effet (Mythe du Cheval)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORIES</Tag>
 		<English>Stories - Horse</English>
 		<French>Histoires des Chevaux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Horse</English>
-		<French>Effet (Histoires des Chevaux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORY</Tag>

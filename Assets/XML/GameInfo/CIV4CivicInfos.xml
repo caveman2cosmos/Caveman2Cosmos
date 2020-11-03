@@ -6793,11 +6793,11 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_IRRELIGION</Type>
-			<Description>TXT_KEY_CIVIC_IRRELIGION</Description>
-			<Civilopedia>TXT_KEY_CIVIC_IRRELIGION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_IRRELIGION_STRATEGY</Strategy>
-			<Button>art/Interface/buttons/civics/sparth/religion_irreligion.dds</Button>
+			<Type>CIVIC_SUPERSTITION</Type>
+			<Description>TXT_KEY_CIVIC_SUPERSTITION</Description>
+			<Civilopedia>TXT_KEY_CIVIC_SUPERSTITION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_SUPERSTITION_STRATEGY</Strategy>
+			<Button>art/Interface/buttons/civics/sparth/religion_superstition.dds</Button>
 			<TechPrereq>NONE</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>NONE</Upkeep>

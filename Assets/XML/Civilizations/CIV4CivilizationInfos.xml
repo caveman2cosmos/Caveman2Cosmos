@@ -86,7 +86,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -191,7 +191,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -285,7 +285,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -376,7 +376,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -469,7 +469,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -562,7 +562,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -660,7 +660,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -765,7 +765,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -860,7 +860,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -963,7 +963,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1062,7 +1062,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1161,7 +1161,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1260,7 +1260,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1367,7 +1367,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1475,7 +1475,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1604,7 +1604,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1695,7 +1695,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1796,7 +1796,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -1935,7 +1935,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2033,7 +2033,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2124,7 +2124,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2214,7 +2214,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2310,7 +2310,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2400,7 +2400,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2495,7 +2495,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2608,7 +2608,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2703,7 +2703,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2796,7 +2796,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -2905,7 +2905,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3004,7 +3004,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3113,7 +3113,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3208,7 +3208,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3311,7 +3311,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3405,7 +3405,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3498,7 +3498,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3596,7 +3596,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3690,7 +3690,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3780,7 +3780,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3875,7 +3875,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -3987,7 +3987,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4031,7 +4031,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4068,7 +4068,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4105,7 +4105,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4222,7 +4222,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4258,7 +4258,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4385,7 +4385,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
@@ -4486,7 +4486,7 @@
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SUPERSTITION</CivicType>
 				<CivicType>CIVIC_PRIMITIVE</CivicType>
 				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>

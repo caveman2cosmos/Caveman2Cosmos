@@ -93982,9 +93982,9 @@
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -94015,7 +94015,7 @@
 				<BuildingType>BUILDING_FIRE_MYTH</BuildingType>
 				<BuildingType>BUILDING_STONE_MYTH</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -94044,9 +94044,9 @@
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORAL_TRADITION</BuildingType>
-				<BuildingType>BUILDING_CIVIC_IRRELIGION</BuildingType>
+				<BuildingType>BUILDING_CIVIC_SUPERSTITION</BuildingType>
 			</PrereqInCityBuildings>
-			<ExtendsBuilding>BUILDING_CIVIC_IRRELIGION</ExtendsBuilding>
+			<ExtendsBuilding>BUILDING_CIVIC_SUPERSTITION</ExtendsBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
