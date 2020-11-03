@@ -169,7 +169,6 @@ m_cachedBonusCount(NULL)
 	m_paiFeatureHappiness = NULL;
 	m_paiBuildingCount = NULL;
 	m_paiBuildingMaking = NULL;
-	m_paiUnitMaking = NULL;
 	m_paiBuildingGroupCount = NULL;
 	m_paiBuildingGroupMaking = NULL;
 	m_paiHurryCount = NULL;
@@ -693,7 +692,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingMaking);
-	SAFE_DELETE_ARRAY(m_paiUnitMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupMaking);
 	SAFE_DELETE_ARRAY(m_paiHurryCount);
@@ -722,9 +720,6 @@ void CvPlayer::uninit()
 
 	SAFE_DELETE(m_pBuildLists);
 
-	m_triggersFired.clear();
-	m_mapScoreHistory.clear();
-
 	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
@@ -751,8 +746,12 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos());
 
-	m_researchQueue.clear();
 
+	m_triggersFired.clear();
+	m_mapScoreHistory.clear();
+	m_unitCount.clear();
+	m_unitMaking.clear();
+	m_researchQueue.clear();
 	m_cityNames.clear();
 
 	m_contractBroker.reset();
@@ -1003,6 +1002,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_Properties.clear();
 	m_canHaveBuilder.clear();
+	m_unitCount.clear();
+	m_unitMaking.clear();
 
 	setTurnHadUIInteraction(false);
 
@@ -1213,15 +1214,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
 			m_paiFeatureHappiness[iI] = 0;
-		}
-
-		m_unitCount.clear();
-
-		FAssertMsg(m_paiUnitMaking==NULL, "about to leak memory, CvPlayer::m_paiUnitMaking");
-		m_paiUnitMaking = new int [GC.getNumUnitInfos()];
-		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
-		{
-			m_paiUnitMaking[iI] = 0;
 		}
 
 		FAssertMsg(m_paiBuildingCount==NULL, "about to leak memory, CvPlayer::m_paiBuildingCount");
@@ -14493,8 +14485,12 @@ void CvPlayer::recalculateUnitCounts()
 
 	foreach_(CvUnit* unit, units())
 	{
-		m_unitCount[(short)unit->getUnitType()]++;
-		unit->recalculateUnitUpkeep();
+		//m_unitCount[(short)unit->getUnitType()]++; // This is probably unnecessary,
+		//	as units can only cease to exist when loading a save if it doesn't exist in xml anymore,
+		//	and when that happens it won't be added to the m_unitCount map to begin with.
+		//	Reordering of the unit ID's are handled by the enum remapping that goes on in save read code.
+		//	There's for example no way a unit on the map to change owner due to some xml change.
+		unit->recalculateUnitUpkeep(); // This is necessary as unit upkeep changes in xml isn't handled otherwise.
 	}
 }
 
@@ -14508,7 +14504,7 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 
 	if (itr == m_unitCount.end())
 	{
-		// New vector element
+		// New map entry
 		if (iChange > 0)
 		{
 			m_unitCount.insert(std::make_pair((short)eUnit, iChange));
@@ -14517,7 +14513,7 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Clear vector element
+		// Remove map entry
 		m_unitCount.erase(itr->first);
 	}
 	else // change unit count
@@ -14528,38 +14524,56 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 
 int CvPlayer::getUnitCount(const UnitTypes eUnit) const
 {
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	std::map<short, unsigned int>::const_iterator itr = m_unitCount.find((short)eUnit);
 	return itr != m_unitCount.end() ? itr->second : 0;
 }
 
 
-int CvPlayer::getUnitMaking(UnitTypes eIndex) const
+void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiUnitMaking[eIndex];
-}
+	std::map<short, unsigned int>::const_iterator itr = m_unitMaking.find((short)eUnit);
 
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
 
-void CvPlayer::changeUnitMaking(UnitTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-
-	if (iChange != 0)
+	if (itr == m_unitMaking.end())
 	{
-		m_paiUnitMaking[eIndex] += iChange;
-		FAssert(getUnitMaking(eIndex) >= 0);
-
-		if (getID() == GC.getGame().getActivePlayer())
+		// New map entry
+		if (iChange > 0)
 		{
-			gDLL->getInterfaceIFace()->setDirty(Help_DIRTY_BIT, true);
+			m_unitMaking.insert(std::make_pair((short)eUnit, iChange));
 		}
+		else FErrorMsg("Expected positive iChange for first unit of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Remove map entry
+		m_unitMaking.erase(itr->first);
+	}
+	else // change unit count
+	{
+		m_unitMaking[itr->first] += iChange;
+	}
+
+	if (getID() == GC.getGame().getActivePlayer())
+	{
+		gDLL->getInterfaceIFace()->setDirty(Help_DIRTY_BIT, true);
 	}
 }
 
-
-int CvPlayer::getUnitCountPlusMaking(UnitTypes eIndex) const
+int CvPlayer::getUnitMaking(const UnitTypes eUnit) const
 {
-	return (getUnitCount(eIndex) + getUnitMaking(eIndex));
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	std::map<short, unsigned int>::const_iterator itr = m_unitMaking.find((short)eUnit);
+	return itr != m_unitMaking.end() ? itr->second : 0;
+}
+
+
+int CvPlayer::getUnitCountPlusMaking(const UnitTypes eIndex) const
+{
+	return getUnitCount(eIndex) + getUnitMaking(eIndex);
 }
 
 
@@ -20094,24 +20108,38 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
 
-		int iUnitCountSize = 0;
-		WRAPPER_READ(wrapper, "CvPlayer", &iUnitCountSize);
-		while (iUnitCountSize-- > 0)
+		// Read unit count maps - Can't imagine a need for recalculation for these two.
 		{
 			short iUnitID;
 			unsigned int iCount;
-
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
-			iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
-
-			if (iUnitID > -1)
+			int iUnitCountSize = 0;
+			WRAPPER_READ(wrapper, "CvPlayer", &iUnitCountSize);
+			while (iUnitCountSize-- > 0)
 			{
-				m_unitCount.insert(std::make_pair(iUnitID, iCount));
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
+				iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
+
+				if (iUnitID > -1)
+				{
+					m_unitCount.insert(std::make_pair(iUnitID, iCount));
+				}
+			}
+			int iUnitMakingSize = 0;
+			WRAPPER_READ(wrapper, "CvPlayer", &iUnitMakingSize);
+			while (iUnitMakingSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
+				iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
+
+				if (iUnitID > -1)
+				{
+					m_unitMaking.insert(std::make_pair(iUnitID, iCount));
+				}
 			}
 		}
 
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVIC_OPTIONS, GC.getNumCivicOptionInfos(), m_paiHasCivicOptionCount);
@@ -21214,15 +21242,24 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
 
-		const int iUnitCountSize = m_unitCount.size();
-		WRAPPER_WRITE(wrapper, "CvPlayer", iUnitCountSize);
-		for (std::map<short, unsigned int>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
+		// Write unit count maps
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+			const int iUnitCountSize = m_unitCount.size();
+			WRAPPER_WRITE(wrapper, "CvPlayer", iUnitCountSize);
+			for (std::map<short, unsigned int>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+			}
+			const int iUnitMakingSize = m_unitMaking.size();
+			WRAPPER_WRITE(wrapper, "CvPlayer", iUnitMakingSize);
+			for (std::map<short, unsigned int>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+			}
 		}
 
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVIC_OPTIONS, GC.getNumCivicOptionInfos(), m_paiHasCivicOptionCount);

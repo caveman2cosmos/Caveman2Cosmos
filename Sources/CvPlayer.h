@@ -951,9 +951,9 @@ public:
 	int getUnitCount(const UnitTypes eUnit) const; // Exposed to Python
 	void changeUnitCount(const UnitTypes eUnit, const int iChange);
 	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0) const; // Exposed to Python
-	int getUnitMaking(UnitTypes eUnit) const; // Exposed to Python
-	void changeUnitMaking(UnitTypes eUnit, int iChange);
-	int getUnitCountPlusMaking(UnitTypes eUnit) const; // Exposed to Python
+	int getUnitMaking(const UnitTypes eUnit) const; // Exposed to Python
+	void changeUnitMaking(const UnitTypes eUnit, int iChange);
+	int getUnitCountPlusMaking(const UnitTypes eUnit) const; // Exposed to Python
 
 	int getBuildingCount(BuildingTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const; // Exposed to Python
@@ -1950,7 +1950,6 @@ protected:
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
 	int* m_paiBuildingCount;
-	int* m_paiUnitMaking;
 	int* m_paiBuildingGroupCount;
 	int* m_paiBuildingMaking;
 	int* m_paiBuildingGroupMaking;
@@ -2355,6 +2354,7 @@ private:
 	int m_iNumAnimalsSubdued;
 	std::map<BuildingTypes, int> m_unitConstructionCounts;
 	std::map<short, unsigned int> m_unitCount;
+	std::map<short, unsigned int> m_unitMaking;
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;
 	int m_iNumCivicsSwitched;
