@@ -961,10 +961,13 @@ public:
 	bool isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
 	void changeBuildingCount(BuildingTypes eIndex, int iChange); // Exposed to Python
 	void changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange);
-	int getBuildingMaking(BuildingTypes eIndex) const;
+
+	int getBuildingMaking(const BuildingTypes eIndex) const;
+	void changeBuildingMaking(const BuildingTypes eIndex, int iChange); // Exposed to Python
+
 	int getBuildingGroupMaking(SpecialBuildingTypes eIndex) const; // Exposed to Python
-	void changeBuildingMaking(BuildingTypes eIndex, int iChange); // Exposed to Python
 	void changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChange);
+
 	int getBuildingCountPlusMaking(BuildingTypes eIndex) const;
 	int getBuildingGroupCountPlusMaking(SpecialBuildingTypes eIndex) const; // Exposed to Python
 
@@ -1951,7 +1954,6 @@ protected:
 	int* m_paiFeatureHappiness;
 	int* m_paiBuildingCount;
 	int* m_paiBuildingGroupCount;
-	int* m_paiBuildingMaking;
 	int* m_paiBuildingGroupMaking;
 	int* m_paiHurryCount;
 	int* m_paiSpecialBuildingNotRequiredCount;
@@ -2355,6 +2357,8 @@ private:
 	std::map<BuildingTypes, int> m_unitConstructionCounts;
 	std::map<short, unsigned int> m_unitCount;
 	std::map<short, unsigned int> m_unitMaking;
+	std::map<short, unsigned int> m_buildingMaking;
+
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;
 	int m_iNumCivicsSwitched;

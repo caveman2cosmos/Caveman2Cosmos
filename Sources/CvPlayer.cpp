@@ -168,7 +168,6 @@ m_cachedBonusCount(NULL)
 	m_paiExtraBuildingHealth = NULL;
 	m_paiFeatureHappiness = NULL;
 	m_paiBuildingCount = NULL;
-	m_paiBuildingMaking = NULL;
 	m_paiBuildingGroupCount = NULL;
 	m_paiBuildingGroupMaking = NULL;
 	m_paiHurryCount = NULL;
@@ -691,7 +690,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiBuildingCount);
-	SAFE_DELETE_ARRAY(m_paiBuildingMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupMaking);
 	SAFE_DELETE_ARRAY(m_paiHurryCount);
@@ -751,6 +749,7 @@ void CvPlayer::uninit()
 	m_mapScoreHistory.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
+	m_buildingMaking.clear();
 	m_researchQueue.clear();
 	m_cityNames.clear();
 
@@ -1004,6 +1003,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_canHaveBuilder.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
+	m_buildingMaking.clear();
 
 	setTurnHadUIInteraction(false);
 
@@ -1218,12 +1218,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 		FAssertMsg(m_paiBuildingCount==NULL, "about to leak memory, CvPlayer::m_paiBuildingCount");
 		m_paiBuildingCount = new int [GC.getNumBuildingInfos()];
-		FAssertMsg(m_paiBuildingMaking==NULL, "about to leak memory, CvPlayer::m_paiBuildingMaking");
-		m_paiBuildingMaking = new int [GC.getNumBuildingInfos()];
 		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			m_paiBuildingCount[iI] = 0;
-			m_paiBuildingMaking[iI] = 0;
 		}
 
 		FAssertMsg(m_paiBuildingGroupCount==NULL, "about to leak memory, CvPlayer::m_paiBuildingGroupCount");
@@ -14556,11 +14553,6 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 	{
 		m_unitMaking[itr->first] += iChange;
 	}
-
-	if (getID() == GC.getGame().getActivePlayer())
-	{
-		gDLL->getInterfaceIFace()->setDirty(Help_DIRTY_BIT, true);
-	}
 }
 
 int CvPlayer::getUnitMaking(const UnitTypes eUnit) const
@@ -14577,6 +14569,15 @@ int CvPlayer::getUnitCountPlusMaking(const UnitTypes eIndex) const
 }
 
 
+void CvPlayer::changeBuildingCount(BuildingTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	m_paiBuildingCount[eIndex] += iChange;
+	FAssert(getBuildingCount(eIndex) >= 0);
+
+	clearCanConstructCache(eIndex, true);
+}
+
 int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
@@ -14585,6 +14586,59 @@ int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 		return 0;
 
 	return m_paiBuildingCount[eIndex];
+}
+
+
+void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChange)
+{
+	std::map<short, unsigned int>::const_iterator itr = m_buildingMaking.find((short)eIndex);
+
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
+
+	if (itr == m_buildingMaking.end())
+	{
+		// New map entry
+		if (iChange > 0)
+		{
+			m_buildingMaking.insert(std::make_pair((short)eIndex, iChange));
+		}
+		else FErrorMsg("Expected positive iChange for first building of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Remove map entry
+		m_buildingMaking.erase(itr->first);
+	}
+	else // change building count
+	{
+		m_buildingMaking[itr->first] += iChange;
+	}
+	clearCanConstructCache(eIndex, true);
+}
+
+int CvPlayer::getBuildingMaking(const BuildingTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	std::map<short, unsigned int>::const_iterator itr = m_buildingMaking.find((short)eIndex);
+	return itr != m_buildingMaking.end() ? itr->second : 0;
+}
+
+
+int CvPlayer::getBuildingCountPlusMaking(BuildingTypes eIndex) const
+{
+	return (getBuildingCount(eIndex) + getBuildingMaking(eIndex));
+}
+
+
+void CvPlayer::changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	m_paiBuildingGroupCount[eIndex] += iChange;
+	FAssert(getBuildingGroupCount(eIndex) >= 0);
+
+	clearCanConstructCacheForGroup(eIndex, true);
 }
 
 int CvPlayer::getBuildingGroupCount(SpecialBuildingTypes eIndex) const
@@ -14637,56 +14691,6 @@ bool CvPlayer::isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra) 
 	return ((getBuildingGroupCount(eIndex) + iExtra) >= iLimit);
 }
 
-
-void CvPlayer::changeBuildingCount(BuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	m_paiBuildingCount[eIndex] += iChange;
-	FAssert(getBuildingCount(eIndex) >= 0);
-
-	clearCanConstructCache(eIndex, true);
-}
-
-void CvPlayer::changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
-	m_paiBuildingGroupCount[eIndex] += iChange;
-	FAssert(getBuildingGroupCount(eIndex) >= 0);
-
-	clearCanConstructCacheForGroup(eIndex, true);
-}
-
-
-int CvPlayer::getBuildingMaking(BuildingTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return m_paiBuildingMaking[eIndex];
-}
-
-int CvPlayer::getBuildingGroupMaking(SpecialBuildingTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
-	return m_paiBuildingGroupMaking[eIndex];
-}
-
-
-void CvPlayer::changeBuildingMaking(BuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	if (iChange != 0)
-	{
-		m_paiBuildingMaking[eIndex] += iChange;
-		FAssert(getBuildingMaking(eIndex) >= 0);
-
-		if (getID() == GC.getGame().getActivePlayer())
-		{
-			gDLL->getInterfaceIFace()->setDirty(Help_DIRTY_BIT, true);
-		}
-
-		clearCanConstructCache(eIndex, true);
-	}
-}
 void CvPlayer::changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
@@ -14705,12 +14709,11 @@ void CvPlayer::changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChang
 	}
 }
 
-
-int CvPlayer::getBuildingCountPlusMaking(BuildingTypes eIndex) const
+int CvPlayer::getBuildingGroupMaking(SpecialBuildingTypes eIndex) const
 {
-	return (getBuildingCount(eIndex) + getBuildingMaking(eIndex));
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
+	return m_paiBuildingGroupMaking[eIndex];
 }
-
 
 int CvPlayer::getBuildingGroupCountPlusMaking(SpecialBuildingTypes eIndex) const
 {
@@ -20106,36 +20109,48 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
 
-		// Read unit count maps - Can't imagine a need for recalculation for these two.
+		// Toffer - Read maps
 		{
-			short iUnitID;
+			short iSize;
+			short iType;
 			unsigned int iCount;
-			int iUnitCountSize = 0;
-			WRAPPER_READ(wrapper, "CvPlayer", &iUnitCountSize);
-			while (iUnitCountSize-- > 0)
+			// building counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
+			while (iSize-- > 0)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
-				iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingMakingType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingMakingCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
 
-				if (iUnitID > -1)
+				if (iType > -1)
 				{
-					m_unitCount.insert(std::make_pair(iUnitID, iCount));
+					m_buildingMaking.insert(std::make_pair(iType, iCount));
 				}
 			}
-			int iUnitMakingSize = 0;
-			WRAPPER_READ(wrapper, "CvPlayer", &iUnitMakingSize);
-			while (iUnitMakingSize-- > 0)
+			// unit counters - Can't imagine a need for recalculation for these two.
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
+			while (iSize-- > 0)
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iUnitID, "iUnitID");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iCount");
-				iUnitID = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iUnitID, true));
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
 
-				if (iUnitID > -1)
+				if (iType > -1)
 				{
-					m_unitMaking.insert(std::make_pair(iUnitID, iCount));
+					m_unitCount.insert(std::make_pair(iType, iCount));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitMakingSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitMakingType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitMakingCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitMaking.insert(std::make_pair(iType, iCount));
 				}
 			}
 		}
@@ -20198,15 +20213,15 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		while(iNumBuildingTypes-- > 0)
 		{
 			int	eBuilding;
-			int iCount;
+			int iConstructionCount;
 
 			WRAPPER_READ(wrapper, "CvPlayer", &eBuilding);
-			WRAPPER_READ(wrapper, "CvPlayer", &iCount);
+			WRAPPER_READ(wrapper, "CvPlayer", &iConstructionCount);
 			eBuilding = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding, true);
 
 			if (eBuilding > -1)
 			{
-				m_unitConstructionCounts.insert(std::make_pair((BuildingTypes)eBuilding, iCount));
+				m_unitConstructionCounts.insert(std::make_pair((BuildingTypes)eBuilding, iConstructionCount));
 			}
 		}
 
@@ -21240,23 +21255,26 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingMaking);
 
-		// Write unit count maps
+		// Toffer - Write maps
 		{
-			const int iUnitCountSize = m_unitCount.size();
-			WRAPPER_WRITE(wrapper, "CvPlayer", iUnitCountSize);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
+			for (std::map<short, unsigned int>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingMakingType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCount.size(), "iUnitCountSize");
 			for (std::map<short, unsigned int>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCountCount");
 			}
-			const int iUnitMakingSize = m_unitMaking.size();
-			WRAPPER_WRITE(wrapper, "CvPlayer", iUnitMakingSize);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitMaking.size(), "iUnitMakingSize");
 			for (std::map<short, unsigned int>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitID");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iCount");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitMakingType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitMakingCount");
 			}
 		}
 
@@ -21314,8 +21332,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", iNumBuildingTypes);
 		for(std::map<BuildingTypes,int>::const_iterator itr = m_unitConstructionCounts.begin(); itr != m_unitConstructionCounts.end(); ++itr)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (itr->first), "eBuilding");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (itr->second), "iCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", itr->first, "eBuilding");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", itr->second, "iConstructionCount");
 		}
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
