@@ -24158,7 +24158,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_bHasUnitCombat, "hasUnitCombat");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraUnitCombatModifier, "modifier");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iSubCombatTypeCount, "subCombatCount");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iOngoingTrainingCount, "ongoingTrainingCount");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iHealUnitCombatTypeVolume, "healUnitCombatTypeVolume");
