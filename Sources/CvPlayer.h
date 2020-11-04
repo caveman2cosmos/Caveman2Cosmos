@@ -198,8 +198,6 @@ public:
 	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
 	void updatePowerHealth();
 
-	void updateExtraBuildingHappiness(bool bLimited = false);
-	void updateExtraBuildingHealth(bool bLimited = false);
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
 
@@ -939,11 +937,10 @@ public:
 	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
 	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
-	int getExtraBuildingHappiness(BuildingTypes eIndex) const; // Exposed to Python
-	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited = false);
-
-	int getExtraBuildingHealth(BuildingTypes eIndex) const; // Exposed to Python
-	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited = false);
+	int getExtraBuildingHappiness(const BuildingTypes eIndex) const; // Exposed to Python
+	void changeExtraBuildingHappiness(const BuildingTypes eIndex, const int iChange, const bool bLimited = false);
+	int getExtraBuildingHealth(const BuildingTypes eIndex) const; // Exposed to Python
+	void changeExtraBuildingHealth(const BuildingTypes eIndex, const int iChange, const bool bLimited = false);
 
 	int getFeatureHappiness(FeatureTypes eIndex) const; // Exposed to Python
 	void changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited = false);
@@ -1947,8 +1944,6 @@ protected:
 	int* m_paiBonusImport;
 	int* m_paiImprovementCount;
 	int* m_paiFreeBuildingCount;
-	int* m_paiExtraBuildingHappiness;
-	int* m_paiExtraBuildingHealth;
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
@@ -2358,6 +2353,8 @@ private:
 	std::map<short, unsigned int> m_unitCount;
 	std::map<short, unsigned int> m_unitMaking;
 	std::map<short, unsigned int> m_buildingMaking;
+	std::map<short, int> m_extraBuildingHappiness;
+	std::map<short, int> m_extraBuildingHealth;
 
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;
