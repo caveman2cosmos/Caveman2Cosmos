@@ -1560,7 +1560,6 @@ protected:
 	int m_iNationalEspionageDefense;
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
-	int* m_paiNationalGreatPeopleUnitRate;
 	int m_iMaxTradeRoutesAdjustment;
 	int m_iNationalHurryAngerModifier;
 	int m_iNationalEnemyWarWearinessModifier;
@@ -2117,12 +2116,9 @@ public:
 	int getInquisitionCount() const;
 	void changeInquisitionCount(int iChange);
 
-	int getNationalGreatPeopleUnitRate(UnitTypes eIndex) const;
-	void changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange);
-
 	int getNationalGreatPeopleRate() const;
-	void setNationalGreatPeopleRate(int iNewValue);
-	void changeNationalGreatPeopleRate(int iChange);
+	int getNationalGreatPeopleUnitRate(const UnitTypes eIndex) const;
+	void changeNationalGreatPeopleUnitRate(const UnitTypes eIndex, const int iChange);
 
 	int getMaxTradeRoutesAdjustment() const;
 	void setMaxTradeRoutesAdjustment(int iNewValue);
@@ -2347,8 +2343,9 @@ private:
 	std::map<short, int> m_buildingCostMod;
 	std::map<short, int> m_unitProductionMod;
 	std::map<short, int> m_unitCombatProductionMod;
-	std::map<short, short> m_unitCombatFreeXP;
+	std::map<short, int> m_greatPeopleRateforUnit;
 	std::map<short, char> m_goldenAgeOnBirthOfGreatPersonCount;
+	std::map<short, short> m_unitCombatFreeXP;
 
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;

@@ -205,7 +205,6 @@ m_cachedBonusCount(NULL)
 	m_aiFreeCityYield = new int[NUM_YIELD_TYPES];
 	m_pabHasTrait = NULL;
 	m_aiLessYieldThreshold = new int[NUM_YIELD_TYPES];
-	m_paiNationalGreatPeopleUnitRate = NULL;
 
 	m_paiNationalDomainFreeExperience = NULL;
 	m_paiNationalDomainProductionModifier = NULL;
@@ -707,7 +706,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiImprovementUpgradeRateModifierSpecific);
 	SAFE_DELETE_ARRAY(m_paiBuildWorkerSpeedModifierSpecific);
 	SAFE_DELETE_ARRAY(m_pabHasTrait);
-	SAFE_DELETE_ARRAY(m_paiNationalGreatPeopleUnitRate);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
@@ -728,6 +726,7 @@ void CvPlayer::uninit()
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
+	m_greatPeopleRateforUnit.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -994,6 +993,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
+	m_greatPeopleRateforUnit.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -1381,13 +1381,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_paiBonusMintedPercent[iI] = 0;
-		}
-
-		FAssertMsg((0 < GC.getNumUnitInfos()),  "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		m_paiNationalGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
-		for (iI = 0;iI < GC.getNumUnitInfos();iI++)
-		{
-			m_paiNationalGreatPeopleUnitRate[iI] = 0;
 		}
 
 		FAssertMsg((0 < NUM_DOMAIN_TYPES),  "NUM_DOMAIN_TYPES is not greater than zero but an array is being allocated in CvCity::reset");
@@ -20232,6 +20225,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair(iType, cCount));
 				}
 			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatPeopleRateforUnitSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatPeopleRateforUnitType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iGreatPeopleRateforUnitCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_greatPeopleRateforUnit.insert(std::make_pair(iType, iCount));
+				}
+			}
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitProductionModSize");
 			while (iSize-- > 0)
 			{
@@ -21047,7 +21052,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iInquisitionCount);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCompatCheckCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiNationalGreatPeopleUnitRate);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalHurryAngerModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalEnemyWarWearinessModifier);
@@ -21434,6 +21438,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGoldenAgeOnBirthOfGreatPersonCountType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGoldenAgeOnBirthOfGreatPersonCountCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatPeopleRateforUnit.size(), "iGreatPeopleRateforUnitSize");
+			for (std::map<short, int>::const_iterator it = m_greatPeopleRateforUnit.begin(), itEnd = m_greatPeopleRateforUnit.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatPeopleRateforUnitType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatPeopleRateforUnitCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitProductionMod.size(), "iUnitProductionModSize");
 			for (std::map<short, int>::const_iterator it = m_unitProductionMod.begin(), itEnd = m_unitProductionMod.end(); it != itEnd; ++it)
@@ -21862,7 +21872,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInquisitionCount);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCompatCheckCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiNationalGreatPeopleUnitRate);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalHurryAngerModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalEnemyWarWearinessModifier);
@@ -29952,6 +29961,7 @@ void CvPlayer::clearModifierTotals()
 	m_unitCombatProductionMod.clear();
 	m_unitCombatFreeXP.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
+	m_greatPeopleRateforUnit.clear();
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
@@ -30056,11 +30066,6 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		m_paiBuildWorkerSpeedModifierSpecific[iI] = 0;
-	}
-
-	for (iI = 0;iI < GC.getNumUnitInfos();iI++)
-	{
-		m_paiNationalGreatPeopleUnitRate[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -31735,24 +31740,45 @@ void CvPlayer::changeInquisitionCount(int iChange)
 	m_iInquisitionCount += iChange;
 }
 
-int CvPlayer::getNationalGreatPeopleUnitRate(UnitTypes eIndex) const
+void CvPlayer::changeNationalGreatPeopleUnitRate(const UnitTypes eUnit, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiNationalGreatPeopleUnitRate[eIndex];
-}
+	FASSERT_BOUNDS(-1, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(iChange != 0, "This is not a change!")
 
-void CvPlayer::changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
+	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eUnit).getEspionagePoints() > 0)
 	{
 		return;
 	}
-	changeNationalGreatPeopleRate(iChange);
-	if (eIndex != NO_UNIT)
+	m_iNationalGreatPeopleRate += iChange;
+
+	if (eUnit == NO_UNIT)
 	{
-		m_paiNationalGreatPeopleUnitRate[eIndex] += iChange;
+		return;
 	}
+	std::map<short, int>::const_iterator itr = m_greatPeopleRateforUnit.find((short)eUnit);
+
+	if (itr == m_greatPeopleRateforUnit.end())
+	{
+		if (iChange != 0)
+		{
+			m_greatPeopleRateforUnit.insert(std::make_pair((short)eUnit, iChange));
+		}
+	}
+	else if (itr->second == -iChange)
+	{
+		m_greatPeopleRateforUnit.erase(itr->first);
+	}
+	else // change unit count
+	{
+		m_greatPeopleRateforUnit[itr->first] += iChange;
+	}
+}
+
+int CvPlayer::getNationalGreatPeopleUnitRate(const UnitTypes eUnit) const
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	std::map<short, int>::const_iterator itr = m_greatPeopleRateforUnit.find((short)eUnit);
+	return itr != m_greatPeopleRateforUnit.end() ? itr->second : 0;
 }
 
 int CvPlayer::getNationalGreatPeopleRate() const
@@ -31760,15 +31786,6 @@ int CvPlayer::getNationalGreatPeopleRate() const
 	return std::max(0, m_iNationalGreatPeopleRate);
 }
 
-void CvPlayer::setNationalGreatPeopleRate(int iValue)
-{
-	m_iNationalGreatPeopleRate = iValue;
-}
-
-void CvPlayer::changeNationalGreatPeopleRate(int iChange)
-{
-	setNationalGreatPeopleRate(m_iNationalGreatPeopleRate + iChange);
-}
 
 int CvPlayer::getMaxTradeRoutesAdjustment() const
 {
