@@ -215,7 +215,6 @@ m_cachedBonusCount(NULL)
 
 	m_paiEraAdvanceFreeSpecialistCount = NULL;
 	m_paiGoldenAgeOnBirthOfGreatPersonCount = NULL;
-	m_paiGreatGeneralPointsForType = NULL;
 
 	m_aiGoldenAgeYield = new int[NUM_YIELD_TYPES];
 	m_aiGoldenAgeCommerce = new int[NUM_COMMERCE_TYPES];
@@ -301,7 +300,6 @@ CvPlayer::~CvPlayer()
 		//Team Project (6)
 	SAFE_DELETE_ARRAY(m_paiEraAdvanceFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_paiGoldenAgeOnBirthOfGreatPersonCount);
-	SAFE_DELETE_ARRAY(m_paiGreatGeneralPointsForType);
 	//Team Project (7)
 	SAFE_DELETE_ARRAY(m_aiGoldenAgeYield);
 	SAFE_DELETE_ARRAY(m_aiGoldenAgeCommerce);
@@ -737,6 +735,7 @@ void CvPlayer::uninit()
 	m_bonusImport.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
+	m_greatGeneralPointsType.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -998,6 +997,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_bonusImport.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
+	m_greatGeneralPointsType.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -1407,12 +1407,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_paiNationalGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
 
 		m_paiGoldenAgeOnBirthOfGreatPersonCount = new int[GC.getNumUnitInfos()];
-		m_paiGreatGeneralPointsForType = new int[GC.getNumUnitInfos()];
 		for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 		{
 			m_paiNationalGreatPeopleUnitRate[iI] = 0;
 			m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
-			m_paiGreatGeneralPointsForType[iI] = 0;
 		}
 
 		FAssertMsg((0 < NUM_DOMAIN_TYPES),  "NUM_DOMAIN_TYPES is not greater than zero but an array is being allocated in CvCity::reset");
@@ -12273,7 +12271,8 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 		return;
 	}
 
-	if (iExperience > m_iCombatExperience)
+	if (m_iCombatExperience > 0 && iExperience > m_iCombatExperience
+	||  m_iCombatExperience < 0 && iExperience > -m_iCombatExperience)
 	{
 		changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperience - m_iCombatExperience);
 	}
@@ -20230,6 +20229,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_unitMaking.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatGeneralPointsTypeSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatGeneralPointsTypeType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iGreatGeneralPointsTypeCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_greatGeneralPointsType.insert(std::make_pair(iType, iCountU));
+				}
+			}
 		}
 
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -21059,8 +21070,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromBuildings);
 
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
-
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_eGreatGeneralTypetoAssign);
 
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
@@ -21390,6 +21399,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitMakingType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitMakingCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatGeneralPointsType.size(), "iGreatGeneralPointsTypeSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_greatGeneralPointsType.begin(), itEnd = m_greatGeneralPointsType.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatGeneralPointsTypeType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatGeneralPointsTypeCount");
 			}
 		}
 
@@ -21848,7 +21863,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromEvents);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiCommerceRateModifierfromBuildings);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatGeneralPointsForType);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_eGreatGeneralTypetoAssign);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_abCommerceDirty);
 
@@ -32349,42 +32363,63 @@ void CvPlayer::setAmbushingUnit(int iNewValue, bool bAssassinate)
 	m_bAssassinate = bAssassinate;
 }
 
-int CvPlayer::getGreatGeneralPointsForType(UnitTypes eIndex) const
+
+void CvPlayer::setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiGreatGeneralPointsForType[eIndex];
-}
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+	FAssertMsg(iValue > -1, "Expected positive value! Code copes with it though");
 
-void CvPlayer::setGreatGeneralPointsForType(UnitTypes eIndex, int iValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
+	std::map<short, uint32_t>::const_iterator itr = m_greatGeneralPointsType.find((short)eUnit);
 
-	m_paiGreatGeneralPointsForType[eIndex] = iValue;
-	setGreatGeneralTypetoAssign();
-}
-
-void CvPlayer::changeGreatGeneralPointsForType(UnitTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-
-	setGreatGeneralPointsForType(eIndex, (m_paiGreatGeneralPointsForType[eIndex] + iChange));
-}
-
-void CvPlayer::setGreatGeneralTypetoAssign()
-{
-	if (m_eGreatGeneralTypetoAssign == NO_UNIT)
+	if (itr == m_greatGeneralPointsType.end())
 	{
-		m_eGreatGeneralTypetoAssign = GC.getUNIT_GREAT_GENERAL();
-	}
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		if (getGreatGeneralPointsForType((UnitTypes)iI) > getGreatGeneralPointsForType(m_eGreatGeneralTypetoAssign))
+		if (iValue > 0)
 		{
-			m_eGreatGeneralTypetoAssign = ((UnitTypes)iI);
+			m_greatGeneralPointsType.insert(std::make_pair((short)eUnit, iValue));
+		}
+		else
+		{
+			FErrorMsg("Meaningless to store this data");
+			return;
+		}
+	}
+	else if (iValue < 1)
+	{
+		m_greatGeneralPointsType.erase(itr->first);
+	}
+	else // change GG count
+	{
+		m_greatGeneralPointsType[itr->first] = iValue;
+	}
+
+	// Evaluate what GG is now first in line
+	m_eGreatGeneralTypetoAssign = getGreatGeneralTypetoAssign();
+	uint32_t iBest = getGreatGeneralPointsForType(m_eGreatGeneralTypetoAssign);
+
+	for (std::map<short, uint32_t>::const_iterator itr = m_greatGeneralPointsType.begin(); itr != m_greatGeneralPointsType.end(); ++itr)
+	{
+		if (itr->second > iBest)
+		{
+			iBest = itr->second;
+			m_eGreatGeneralTypetoAssign = (UnitTypes)itr->first;
 		}
 	}
 }
 
+void CvPlayer::changeGreatGeneralPointsForType(const UnitTypes eUnit, const int iChange)
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+	FAssertMsg(iChange != 0, "This is not a change!");
+
+	setGreatGeneralPointsForType(eUnit, getGreatGeneralPointsForType(eUnit) + iChange);
+}
+
+int CvPlayer::getGreatGeneralPointsForType(const UnitTypes eUnit) const
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+	std::map<short, uint32_t>::const_iterator itr = m_greatGeneralPointsType.find((short)eUnit);
+	return itr != m_greatGeneralPointsType.end() ? itr->second : 0;
+}
 
 UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 {
@@ -32394,6 +32429,7 @@ UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 	}
 	return m_eGreatGeneralTypetoAssign;
 }
+
 
 void CvPlayer::setSMValues()
 {

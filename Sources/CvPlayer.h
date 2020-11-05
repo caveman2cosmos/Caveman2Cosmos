@@ -1576,7 +1576,6 @@ protected:
 
 	int* m_paiEraAdvanceFreeSpecialistCount;
 	int* m_paiGoldenAgeOnBirthOfGreatPersonCount;
-	int* m_paiGreatGeneralPointsForType;
 	int m_iNationalCityStartCulture;
 	int m_iNationalAirUnitCapacity;
 	int m_iCapitalXPModifier;
@@ -2291,11 +2290,10 @@ public:
 	bool isAssassinate() const;
 	void setAmbushingUnit(int iNewValue, bool bAssassinate = false);
 
-	int getGreatGeneralPointsForType(UnitTypes eIndex) const;
-	void setGreatGeneralPointsForType(UnitTypes eIndex, int iValue);
-	void changeGreatGeneralPointsForType(UnitTypes eIndex, int iChange);
+	int getGreatGeneralPointsForType(const UnitTypes eUnit) const;
+	void setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue);
+	void changeGreatGeneralPointsForType(const UnitTypes eUnit, const int iChange);
 
-	void setGreatGeneralTypetoAssign();
 	UnitTypes getGreatGeneralTypetoAssign() const;
 	void setSMValues();
 
@@ -2350,6 +2348,7 @@ private:
 	std::map<short, unsigned int> m_freeBuildingCount;
 	std::map<short, unsigned int> m_bonusExport;
 	std::map<short, unsigned int> m_bonusImport;
+	std::map<short, unsigned int> m_greatGeneralPointsType;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;
 	std::map<short, int> m_buildingProductionMod;
