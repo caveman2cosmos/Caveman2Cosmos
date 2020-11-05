@@ -1357,8 +1357,8 @@ public:
 	int getBuildingCostModifier(const BuildingTypes eIndex) const;
 	void changeBuildingCostModifier(const BuildingTypes eIndex, const int iChange);
 
-	int getUnitProductionModifier(UnitTypes eIndex) const;
-	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
+	int getUnitProductionModifier(const UnitTypes eIndex) const;
+	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
@@ -1517,7 +1517,6 @@ protected:
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
@@ -2351,6 +2350,7 @@ private:
 	std::map<short, int> m_extraBuildingHealth;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_buildingCostMod;
+	std::map<short, int> m_unitProductionMod;
 	std::map<short, char> m_goldenAgeOnBirthOfGreatPersonCount;
 
 	int m_iNumAnarchyTurns;
