@@ -4960,7 +4960,18 @@ void CvTeam::changeProjectMaking(ProjectTypes eIndex, int iChange)
 int CvTeam::getUnitCount(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiUnitCount[eIndex];
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		return m_paiUnitCount[eIndex];
+	}
+	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves.
+	// Integer math, so net fractional units aren't counted toward limits; a unit that splits into "thirds"
+	// and then one dies won't contribute to the limit, but three "thirds" will count as a whole unit, etc.
+	else
+	{
+		int iBaseGroupUnitCount = intPow(3, GC.getUnitInfo(eIndex).getBaseGroupRank() - 1);
+		return m_paiUnitCount[eIndex] / iBaseGroupUnitCount;
+	}
 }
 
 
@@ -4987,6 +4998,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and then removed as part of us
 }
 
 
+// Passed arg iChange should be increased correspondingly for Size Matters option; pow(3, rank-1) per unit.
 void CvTeam::changeUnitCount(UnitTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)

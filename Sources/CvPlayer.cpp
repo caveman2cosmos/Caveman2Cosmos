@@ -3996,11 +3996,23 @@ void CvPlayer::recalculateUnitCounts()
 	{
 		m_paiUnitCount[iI] = 0;
 	}
-
-	foreach_(CvUnit* pLoopUnit, units())
+	
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		m_paiUnitCount[pLoopUnit->getUnitType()]++;
-		pLoopUnit->recalculateUnitUpkeep();
+		foreach_(CvUnit* pLoopUnit, units())
+		{
+			m_paiUnitCount[pLoopUnit->getUnitType()]++;
+			pLoopUnit->recalculateUnitUpkeep();
+		}
+	}
+	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves, after resetting the count.
+	else
+	{
+		foreach_(CvUnit* pLoopUnit, units())
+		{
+			m_paiUnitCount[pLoopUnit->getUnitType()] += intPow(3, pLoopUnit->groupRank() - 1);
+			pLoopUnit->recalculateUnitUpkeep();
+		}
 	}
 }
 
@@ -14484,7 +14496,19 @@ void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLi
 int CvPlayer::getUnitCount(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiUnitCount[eIndex];
+	
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		return m_paiUnitCount[eIndex];
+	}
+	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves.
+	// Integer math, so net fractional units aren't counted toward limits; a unit that splits into "thirds"
+	// and then one dies won't contribute to the limit, but three "thirds" will count as a whole unit, etc.
+	else
+	{
+		int iBaseGroupUnitCount = intPow(3, GC.getUnitInfo(eIndex).getBaseGroupRank() - 1);
+		return m_paiUnitCount[eIndex] / iBaseGroupUnitCount;
+	}
 }
 
 
@@ -14502,10 +14526,10 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
+	/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
 	Special assert exception rule for the initial settler unit that is never trainable.
-	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation.
-*/	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
+	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation. */
+	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
 		CvString::format("getUnitCount=%d is expected not to be greater than MaxPlayerInstances=%d for %s",
 		getUnitCount(eIndex), GC.getUnitInfo(eIndex).getMaxPlayerInstances(), GC.getUnitInfo(eIndex).getType()).c_str());
 
@@ -14513,6 +14537,7 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 }
 
 
+// Passed arg iChange should be increased correspondingly for Size Matters option; pow(3, rank-1) per unit.
 void CvPlayer::changeUnitCount(UnitTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)

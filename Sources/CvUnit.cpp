@@ -415,8 +415,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		calcUpkeep100(); // This updates total upkeep on the player level too
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
-		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
-		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
@@ -439,10 +437,14 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		doSetDefaultStatuses();
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
+			GET_TEAM(getTeam()).changeUnitCount(eUnit, intPow(3, groupRank()-1));
+			GET_PLAYER(getOwner()).changeUnitCount(eUnit, intPow(3, groupRank()-1));
 			setSMValues();
 		}
 		else
 		{
+			GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
+			GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
 			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
 		}
@@ -1264,7 +1266,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
-/* This is interrupting other messages and not coming up when it should be anyhow.
+		/* This is interrupting other messages and not coming up when it should be anyhow.
 		if (!bMessaged)
 		{
 			MEMORY_TRACK_EXEMPT();
@@ -1274,7 +1276,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			m_combatResult.bDeathMessaged = false;
 			bMessaged = true;
 		}
-*/
+		*/
 		if (bDelay)
 		{
 			startDelayedDeath();
@@ -1351,7 +1353,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		setReconPlot(NULL);
 		setBlockading(false);
-/*
+		/*
 		if (isZoneOfControl())
 		{
 			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
@@ -1359,15 +1361,15 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				pAdjacentPlot->clearZoneOfControlCache();
 			}
 		}
-*/
+		*/
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
 
 	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
 
-	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
-	owner.changeUnitCount(m_eUnitType, -1);
+	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -intPow(3, groupRank()-1));
+	owner.changeUnitCount(m_eUnitType, -intPow(3, groupRank()-1));
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
@@ -24157,8 +24159,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eUnitType);
 	if( NO_UNIT == m_eUnitType)
 	{
-		//	Assets must have removed this type (which will have been flagged in a queued error messae).  Just
-		//	give it a valid type temporarily and mark it to be killed
+		//	Assets must have removed this type (which will have been flagged in a queued error message). Just
+		//	give it a valid type temporarily and mark it to be killed.
 		int tempUnitType = 0;
 
 		//	Pick an arbitrary military unit
@@ -24168,8 +24170,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
 
 		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, 1);
-		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
+		// Do we need to be updating unit counts here??
+		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, intPow(3, groupRank()-1));
+		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, intPow(3, groupRank()-1));
 		m_bDeathDelay = true;
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
