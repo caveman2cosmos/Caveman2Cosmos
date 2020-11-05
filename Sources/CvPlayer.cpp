@@ -215,8 +215,6 @@ m_cachedBonusCount(NULL)
 
 	m_aiGoldenAgeYield = new int[NUM_YIELD_TYPES];
 	m_aiGoldenAgeCommerce = new int[NUM_COMMERCE_TYPES];
-
-	m_paiUnitCombatFreeExperience = NULL;
 	//TB Traits end
 
 	m_bDisableHuman = false;
@@ -713,7 +711,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiNationalDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatFreeExperience);
 	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraCommerce, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiTerrainYieldChange, GC.getNumTerrainInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
@@ -739,6 +736,7 @@ void CvPlayer::uninit()
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
 	m_unitCombatProductionMod.clear();
+	m_unitCombatFreeXP.clear();
 	m_researchQueue.clear();
 	m_cityNames.clear();
 
@@ -1004,6 +1002,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
 	m_unitCombatProductionMod.clear();
+	m_unitCombatFreeXP.clear();
 	m_civicSwitchHistory.clear();
 
 	setTurnHadUIInteraction(false);
@@ -1374,13 +1373,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits begin
 			m_paiImprovementUpgradeRateModifierSpecific[iI] = 0;
 			//TB Traits end
-		}
-
-		FAssertMsg(m_paiUnitCombatFreeExperience==NULL, "about to leak memory, CvPlayer::m_paiUnitCombatFreeExperience");
-		m_paiUnitCombatFreeExperience = new int [GC.getNumUnitCombatInfos()];
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			m_paiUnitCombatFreeExperience[iI] = 0;
 		}
 
 		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
@@ -20091,6 +20083,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			short iType;
 			char cCount;
 			int iCount;
+			short sCount;
 			uint32_t iCountU;
 			// Bonus counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
@@ -20262,6 +20255,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				if (iType > -1)
 				{
 					m_unitCombatProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatFreeXPSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatFreeXPType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCount, "iUnitCombatFreeXPCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCombatFreeXP.insert(std::make_pair(iType, sCount));
 				}
 			}
 		}
@@ -20972,7 +20977,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-		//	Handle dead units that somehow get into saves!
+		// Handle dead units that somehow get into saves!
 		foreach_(CvUnit* pLoopUnit, units())
 		{
 			if (pLoopUnit->plot() == NULL)
@@ -21011,7 +21016,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		//TB Combat Mod begin
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiPlayerWideAfflictionCount);
-		//TB Combat Mod end
 		//TB Traits begin
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicAnarchyModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iReligiousAnarchyModifier);
@@ -21052,12 +21056,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_DOMAIN_TYPES, m_paiNationalDomainProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiNationalTechResearchModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFixedBordersCount);
-		//Team Project (3)
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraNationalCaptureProbabilityModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraNationalCaptureResistanceModifier);
-		//Team Project (5)
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iAllReligionsActiveCount);
-		//Team Project (6)
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraStateReligionSpreadModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraNonStateReligionSpreadModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiEraAdvanceFreeSpecialistCount);
@@ -21077,11 +21081,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeSpecialistperNationalWonderCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeSpecialistperTeamProjectCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraGoodyCount);
-		//Team Project (7)
+
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiGoldenAgeYield);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiGoldenAgeCommerce);
-		//Team Project (8)
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseMergeSelection);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFirstMergeSelection);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSecondMergeSelection);
@@ -21444,6 +21447,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatProductionModType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatProductionModCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatFreeXP.size(), "iUnitCombatFreeXPSize");
+			for (std::map<short, short>::const_iterator it = m_unitCombatFreeXP.begin(), itEnd = m_unitCombatFreeXP.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatFreeXPType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatFreeXPCount");
 			}
 		}
 
@@ -21891,7 +21900,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiGoldenAgeYield);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_aiGoldenAgeCommerce);
 
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFirstMergeSelection);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSecondMergeSelection);
@@ -27978,17 +27986,34 @@ void CvPlayer::changeBonusMintedPercent(BonusTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getUnitCombatFreeExperience(UnitCombatTypes eIndex) const
+void CvPlayer::changeUnitCombatFreeExperience(const UnitCombatTypes eIndex, const int iChange)
 {
-	return m_paiUnitCombatFreeExperience[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	if (iChange == 0)
+	{
+		return;
+	}
+	std::map<short, short>::const_iterator itr = m_unitCombatFreeXP.find((short)eIndex);
+
+	if (itr == m_unitCombatFreeXP.end())
+	{
+		m_unitCombatFreeXP.insert(std::make_pair((short)eIndex, iChange));
+	}
+	else if (itr->second == -iChange)
+	{
+		m_unitCombatFreeXP.erase(itr->first);
+	}
+	else // change mod
+	{
+		m_unitCombatFreeXP[itr->first] += iChange;
+	}
 }
 
-void CvPlayer::changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange)
+int CvPlayer::getUnitCombatFreeExperience(const UnitCombatTypes eIndex) const
 {
-	if (iChange != 0)
-	{
-		m_paiUnitCombatFreeExperience[eIndex] = (m_paiUnitCombatFreeExperience[eIndex] + iChange);
-	}
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	std::map<short, short>::const_iterator itr = m_unitCombatFreeXP.find((short)eIndex);
+	return itr != m_unitCombatFreeXP.end() ? itr->second : 0;
 }
 
 
@@ -29925,6 +29950,7 @@ void CvPlayer::clearModifierTotals()
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
 	m_unitCombatProductionMod.clear();
+	m_unitCombatFreeXP.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -29981,11 +30007,6 @@ void CvPlayer::clearModifierTotals()
 			m_ppaaiImprovementYieldChange[iI][iJ] = 0;
 		}
 		m_paiImprovementUpgradeRateModifierSpecific[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		m_paiUnitCombatFreeExperience[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)

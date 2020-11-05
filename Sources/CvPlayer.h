@@ -1347,8 +1347,8 @@ public:
 	TeamTypes getPledgedSecretaryGeneralVote() const;
 	void setPledgedSecretaryGeneralVote(TeamTypes eIndex);
 
-	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
-	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
+	int getUnitCombatFreeExperience(const UnitCombatTypes eIndex) const;
+	void changeUnitCombatFreeExperience(const UnitCombatTypes eIndex, const int iChange);
 
 	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
@@ -1591,8 +1591,6 @@ protected:
 	int m_iExtraGoodyCount;
 
 	int m_iAllReligionsActiveCount;
-
-	int* m_paiUnitCombatFreeExperience;
 
 	int m_iExtraNationalCaptureProbabilityModifier;
 	int m_iExtraNationalCaptureResistanceModifier;
@@ -2349,6 +2347,7 @@ private:
 	std::map<short, int> m_buildingCostMod;
 	std::map<short, int> m_unitProductionMod;
 	std::map<short, int> m_unitCombatProductionMod;
+	std::map<short, short> m_unitCombatFreeXP;
 	std::map<short, char> m_goldenAgeOnBirthOfGreatPersonCount;
 
 	int m_iNumAnarchyTurns;
