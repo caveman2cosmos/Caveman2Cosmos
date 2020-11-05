@@ -11398,7 +11398,8 @@ void CvUnitAI::AI_InfiltratorMove()
 
 	// Am I in rival land?
 	const TeamTypes ePlotTeam = plot()->getTeam();
-	if (ePlotTeam != NO_TEAM && ePlotTeam != getTeam() && GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0)
+	if (ePlotTeam != NO_TEAM && ePlotTeam < MAX_PC_PLAYERS && ePlotTeam != getTeam()
+	&& GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0)
 	{
 		if (plot()->isCity(false))
 		{

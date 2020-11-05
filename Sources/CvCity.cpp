@@ -14860,12 +14860,10 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 	m_paiImprovementFreeSpecialists[eIndex] += iChange;
 }
 
-int CvCity::getReligionInfluence(ReligionTypes eIndex) const
+uint32_t CvCity::getReligionInfluence(ReligionTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
-	//TB Debug
-	//Somehow we are getting under 0 values here and that could cause problems down the road
-	//This method enforces minimum of 0 without changing the actual value of m_paiReligionInfluence[eIndex] as the integrity of that value should be maintained.
+	// Less than zero is meaningless for this value.
 	return std::max(0, m_paiReligionInfluence[eIndex]);
 }
 
@@ -14874,7 +14872,6 @@ void CvCity::changeReligionInfluence(ReligionTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	m_paiReligionInfluence[eIndex] += iChange;
-	FAssert(m_paiReligionInfluence[eIndex] >= 0);
 }
 
 
@@ -17344,12 +17341,12 @@ void CvCity::doReligion()
 									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
 										iDecay *= 9;
-										iDecay /= (10 + std::max(0, pLoopCity->getReligionInfluence((ReligionTypes)iI)));
+										iDecay /= 10 + pLoopCity->getReligionInfluence((ReligionTypes)iI);
 									}
 								}
 							}
 
-							iDecay /= std::max(1, 1 + getReligionInfluence((ReligionTypes)iI));
+							iDecay /= 1 + getReligionInfluence((ReligionTypes)iI);
 							if (pHolyCity != NULL)
 							{
 								if (pHolyCity->getOwner() == getOwner())

@@ -9545,12 +9545,12 @@ Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass
 
 Primäre Nachteile:
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
-	[ICON_BULLET]Anstieg der Kriegsmüdigkeit (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
 	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
 	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist I
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist I
 
 Vorteile:
 	[ICON_BULLET]verbesserte Beziehungen zu anderen Staatsoberhäuptern (Sie mögen Schwächlinge, die sie nicht fürchten müssen.)
@@ -9596,13 +9596,13 @@ Benefits:
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primäre Nachteile:
-	[ICON_BULLET]Anstieg der Kriegsmüdigkeit (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
 	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
 	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist II
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist II
 
 Weitere Nachteile:
 	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
@@ -9652,13 +9652,13 @@ Benefits:
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primäre Nachteile:
-	[ICON_BULLET]Anstieg der Kriegsmüdigkeit (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
 	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
 	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist III
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist III
 
 Weitere Nachteile:
 	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
@@ -9702,13 +9702,13 @@ Benefits:
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primäre Nachteile:
-	[ICON_BULLET]Anstieg der Kriegsmüdigkeit (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
 	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
 	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist
 
 Weitere Nachteile:
 	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
@@ -11012,7 +11012,7 @@ Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen 
 Primäre Nachteile::
 	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
 	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
-	[ICON_BULELT]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
 
 Einschränkungen für Einheiten:
 	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern II
@@ -11080,7 +11080,7 @@ Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen 
 Primäre Nachteile::
 	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
 	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
-	[ICON_BULELT]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
 
 Einschränkungen für Einheiten:
 	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern III
@@ -11843,6 +11843,30 @@ Penalties:
 	[ICON_BULLET]Increased Upkeep from the costs of providing the programs your nation needs to obtain these benefits.
 	[ICON_BULLET]Moderate Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang I - Leutnant
+	[ICON_BULLET]alle Städte nutzen [ICON_FOOD] als [ICON_PRODUCTION], wenn Einheiten ausgebildet werden (beschleunigte Einheitenproduktion zum Preis eines stark verlangsamten Stadtwachstums)
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+		
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2</Tag>
@@ -11876,6 +11900,30 @@ Penalties:
 	[ICON_BULLET]Moderate Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang II - Oberleutnant
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3</Tag>
@@ -11909,6 +11957,30 @@ Penalties:
 	[ICON_BULLET]Strong Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang III - Hauptmann
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_PEDIA</Tag>
@@ -11937,11 +12009,37 @@ Penalties:
 	[ICON_BULLET]Strong Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang I - Leutnant
+	[ICON_BULLET]alle Städte nutzen [ICON_FOOD] als [ICON_PRODUCTION], wenn Einheiten ausgebildet werden (beschleunigte Einheitenproduktion zum Preis eines stark verlangsamten Stadtwachstums)
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Tag>
 		<English>Military concept with a balanced strategy focused on high volume forces with improved training.</English>
 		<French>Concept militaire avec une stratégie équilibrée axée sur des forces à fort volume avec un entraînement amélioré.</French>
+		<German>Kriegstreiber legen ihr Hauptaugenmerk auf ein starkes, gut ausgebildetes Militär. Jeder Überschuss an Gold wird in die Entwicklung und den Bau neuer Kriegsmaschinen und das Training neuer Einheiten investiert.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS</Tag>
