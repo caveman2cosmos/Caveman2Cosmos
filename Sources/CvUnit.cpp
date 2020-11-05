@@ -23964,22 +23964,13 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - RB: Field Bombard START
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombAccuracy);
-	// Dale - RB: Field Bombard END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-	// < M.A.D. Nukes Start >
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_bMADEnabled);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotX);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotY);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_pMADTargetPlotOwner);
-	// < M.A.D. Nukes End   >
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
@@ -24007,14 +23998,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iEnemyRouteCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAlwaysHealCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHillsDoubleMoveCount);
-/************************************************************************************************/
-/* Afforess  Mountaineering Promotion                              10/13/09                     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCanMovePeaksCount);
-	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
-	//	mountains, and ability to lead a stack through mountains
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
@@ -24022,16 +24007,16 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCommandRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iControlPointsLeft);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
+
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
+
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_shadowUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_shadowUnit.iID);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eDesiredDiscoveryTech);
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iImmuneToFirstStrikesCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraVisibilityRange);
@@ -24125,11 +24110,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	{
 		iI= -1;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasPromotion");
-		if ( iI != -1 )
+		if (iI != -1)
 		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
+			const int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROMOTIONS, iI, true);
 
-			if ( iNewIndex != NO_PROMOTION )
+			if (iNewIndex != NO_PROMOTION)
 			{
 				g_pabTempHasPromotion[iNewIndex] = true;
 			}
@@ -24178,8 +24163,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 			{
 				TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iNewIndex);
 
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainProtected, "value");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainProtected, "TerrainProtected");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainWorkPercent, "terrainWorkPercent");
@@ -24201,7 +24186,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 			{
 				FeatureKeyedInfo* info = findOrCreateFeatureKeyedInfo((FeatureTypes)iNewIndex);
 
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "doubleMove");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
@@ -24225,7 +24210,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			if ( iNewIndex != NO_UNITCOMBAT )
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraUnitCombatModifier[iNewIndex], "modifier");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraUnitCombatModifier[iNewIndex], "ExtraUnitCombatMod");
 			}
 		}
 	} while(iI != -1);
@@ -24549,7 +24534,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			if ( iNewIndex != NO_PROMOTION )
 			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFreeCount[iNewIndex], "value");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempPromotionFreeCount[iNewIndex], "FreePromoCount");
 			}
 		}
 	} while(iI != -1);
@@ -25533,22 +25518,13 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - RB: Field Bombard START
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombAccuracy);
-	// Dale - RB: Field Bombard END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-	// < M.A.D. Nukes Start >
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bMADEnabled);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotX);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_pMADTargetPlotOwner);
-	// < M.A.D. Nukes End   >
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupID);
@@ -25576,15 +25552,10 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iEnemyRouteCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAlwaysHealCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHillsDoubleMoveCount);
-/************************************************************************************************/
-/* Afforess  Mountaineering Promotion                              10/13/09                     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanMovePeaksCount);
-	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
-	//	mountains, and ability to lead a stack through mountains
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraControlPoints);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCommandRange);
@@ -25600,9 +25571,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.iID);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, m_eDesiredDiscoveryTech);
-/************************************************************************************************/
-/* Afforess	                         END                                                     */
-/************************************************************************************************/
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iImmuneToFirstStrikesCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraVisibilityRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMoves);
@@ -25677,8 +25646,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 		if (!info.Empty())
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasTerrainInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainProtected, "value");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainProtected, "TerrainProtected");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainDefensePercent, "extraDefensePercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainWorkPercent, "terrainWorkPercent");
@@ -25692,7 +25661,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 		if (!info.Empty())
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->first, "hasFeatureInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "doubleMove");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureDefensePercent, "extraDefensePercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureWorkPercent, "featureWorkPercent");
@@ -25705,7 +25674,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 		if ( getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0 )
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "modifier");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "ExtraUnitCombatMod");
 		}
 	}
 
@@ -25761,12 +25730,15 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionHit");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "afflictionTolerance");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "fortitudeModifierType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTrapSetWithPromotionCount((PromotionTypes)iI), "trapSetWithPromotionType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getAfflictionHitCount((PromotionTypes)iI), "promotionFromTraitCount");
 		}
 	}
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRoundCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefenseCount);
+
 #ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFrontSupportPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraShortRangeSupportPercent);
@@ -25819,14 +25791,19 @@ void CvUnit::write(FDataStreamBase* pStream)
 #endif // STRENGTH_IN_NUMBERS
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if ( getSubCombatTypeCount((UnitCombatTypes)iI) != 0 )
+		if (getSubCombatTypeCount((UnitCombatTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo3");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getOngoingTrainingCount((UnitCombatTypes)iI), "ongoingTrainingCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal((UnitCombatTypes)iI), "healUnitCombatTypeTotal");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI), "healUnitCombatTypeAdjacentTotal");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal((UnitCombatTypes)iI), "healUnitCombatTypeVolume");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI), "healUnitCombatTypeAdjacentVolume");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTrapImmunityUnitCombatCount((UnitCombatTypes)iI), "trapImmunityUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTargetUnitCombatCount((UnitCombatTypes)iI), "targetUnitCombatCount");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapDisableUnitCombatType((UnitCombatTypes)iI), "extraTrapDisableUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapAvoidanceUnitCombatType((UnitCombatTypes)iI), "extraTrapAvoidanceUnitCombatType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapTriggerUnitCombatType((UnitCombatTypes)iI), "extraTrapTriggerUnitCombatType");
 		}
 	}
 
@@ -25850,7 +25827,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 		if ( getPromotionFreeCount((PromotionTypes)iI) != 0 )
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasFreePromotionCount");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getPromotionFreeCount((PromotionTypes)iI), "value");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getPromotionFreeCount((PromotionTypes)iI), "FreePromoCount");
 		}
 	}
 
