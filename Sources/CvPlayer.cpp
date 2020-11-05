@@ -163,7 +163,6 @@ m_cachedBonusCount(NULL)
 	m_paiBonusExport = NULL;
 	m_paiBonusImport = NULL;
 	m_paiImprovementCount = NULL;
-	m_paiFreeBuildingCount = NULL;
 	m_paiFeatureHappiness = NULL;
 	m_paiBuildingCount = NULL;
 	m_paiBuildingGroupCount = NULL;
@@ -683,7 +682,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiBonusExport);
 	SAFE_DELETE_ARRAY(m_paiBonusImport);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
-	SAFE_DELETE_ARRAY(m_paiFreeBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupCount);
@@ -746,6 +744,7 @@ void CvPlayer::uninit()
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_buildingMaking.clear();
+	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
 	m_researchQueue.clear();
@@ -1002,12 +1001,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_buildingMaking.clear();
+	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
+	m_civicSwitchHistory.clear();
 
 	setTurnHadUIInteraction(false);
-
-	m_civicSwitchHistory.clear();
 
 	// Free Tech Popup Fix
 	m_bChoosingFreeTech = false;
@@ -1194,13 +1193,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 		{
 			m_paiImprovementCount[iI] = 0;
-		}
-
-		FAssertMsg(m_paiFreeBuildingCount==NULL, "about to leak memory, CvPlayer::m_paiFreeBuildingCount");
-		m_paiFreeBuildingCount = new int [GC.getNumBuildingInfos()];
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_paiFreeBuildingCount[iI] = 0;
 		}
 
 		FAssertMsg(m_paiFeatureHappiness==NULL, "about to leak memory, CvPlayer::m_paiFeatureHappiness");
@@ -14273,64 +14265,43 @@ void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getFreeBuildingCount(BuildingTypes eIndex) const
+void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return m_paiFreeBuildingCount[eIndex];
-}
+	std::map<short, unsigned int>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 
-int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
-{
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 
-	foreach_(const CvCity* pLoopCity, cities())
+	if (itr == m_freeBuildingCount.end())
 	{
-		if ( pLoopCity->area() == area )
+		// New map entry
+		if (iChange > 0)
 		{
-			//	During city initialisation this can be self-referential so the first city
-			//	queried could be the one asking.  Hence take the first non-0 value seen
-			if ( pLoopCity->getNumFreeAreaBuilding(eIndex) > 0 )
-			{
-				return pLoopCity->getNumFreeAreaBuilding(eIndex);
-			}
-		}
-	}
-
-	return 0;
-}
-
-
-bool CvPlayer::isBuildingFree(BuildingTypes eIndex, const CvArea* area) const
-{
-	return (getFreeBuildingCount(eIndex) > 0 || (area != NULL && getFreeAreaBuildingCount(eIndex, area) > 0));
-}
-
-
-void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	const int iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
-	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset chnages
-	if ( (iChange > 0 || iOldFreeBuildingCount != 0) && iChange != 0)
-	{
-		m_paiFreeBuildingCount[eIndex] += iChange;
-		FAssert(getFreeBuildingCount(eIndex) >= 0);
-
-		if (iOldFreeBuildingCount == 0)
-		{
-			FAssertMsg(getFreeBuildingCount(eIndex) > 0, "getFreeBuildingCount(eIndex) is expected to be greater than 0");
-
+			m_freeBuildingCount.insert(std::make_pair((short)eIndex, iChange));
 			algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 1));
 		}
-		else if (getFreeBuildingCount(eIndex) == 0)
-		{
-			FAssertMsg(iOldFreeBuildingCount > 0, "iOldFreeBuildingCount is expected to be greater than 0");
-
-			algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
-		}
+		else FErrorMsg("Expected positive iChange for first building of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Remove map entry
+		m_freeBuildingCount.erase(itr->first);
+		algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
+	}
+	else // change building count
+	{
+		m_freeBuildingCount[itr->first] += iChange;
 	}
 }
+
+int CvPlayer::getFreeBuildingCount(const BuildingTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	std::map<short, unsigned int>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
+	return itr != m_freeBuildingCount.end() ? itr->second : 0;
+}
+
 
 void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange)
 {
@@ -14358,6 +14329,32 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* a
 			);
 		}
 	}
+}
+
+int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+
+	foreach_(const CvCity* pLoopCity, cities())
+	{
+		if ( pLoopCity->area() == area )
+		{
+			//	During city initialisation this can be self-referential so the first city
+			//	queried could be the one asking.  Hence take the first non-0 value seen
+			if ( pLoopCity->getNumFreeAreaBuilding(eIndex) > 0 )
+			{
+				return pLoopCity->getNumFreeAreaBuilding(eIndex);
+			}
+		}
+	}
+
+	return 0;
+}
+
+
+bool CvPlayer::isBuildingFree(BuildingTypes eIndex, const CvArea* area) const
+{
+	return (getFreeBuildingCount(eIndex) > 0 || (area != NULL && getFreeAreaBuildingCount(eIndex, area) > 0));
 }
 
 
@@ -20105,7 +20102,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusExport);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusImport);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 
@@ -20126,6 +20122,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				if (iType > -1)
 				{
 					m_buildingMaking.insert(std::make_pair(iType, iCountU));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iFreeBuildingCountSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iFreeBuildingCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iFreeBuildingCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_freeBuildingCount.insert(std::make_pair(iType, iCountU));
 				}
 			}
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHappinessSize");
@@ -20152,7 +20160,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
 				}
 			}
-			// unit counters - Can't imagine a need for recalculation for these two.
+			// unit counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
 			while (iSize-- > 0)
 			{
@@ -21274,7 +21282,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusExport);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusImport);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 
@@ -21286,6 +21293,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingMakingType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_freeBuildingCount.size(), "iFreeBuildingCountSize");
+			for (std::map<short, unsigned int>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iFreeBuildingCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iFreeBuildingCountCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_extraBuildingHappiness.size(), "iExtraBuildingHappinessSize");
 			for (std::map<short, int>::const_iterator it = m_extraBuildingHappiness.begin(), itEnd = m_extraBuildingHappiness.end(); it != itEnd; ++it)
@@ -29718,13 +29731,9 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
+	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
-
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
-		m_paiFreeBuildingCount[iI] = 0;
-	}
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{

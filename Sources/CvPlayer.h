@@ -931,10 +931,10 @@ public:
 	int getImprovementCount(ImprovementTypes eIndex) const; // Exposed to Python
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
-	int getFreeBuildingCount(BuildingTypes eIndex) const;
+	int getFreeBuildingCount(const BuildingTypes eIndex) const;
 	int getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const;
 	bool isBuildingFree(BuildingTypes eIndex, const CvArea* area = NULL) const; // Exposed to Python
-	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
+	void changeFreeBuildingCount(const BuildingTypes eIndex, const int iChange);
 	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(const BuildingTypes eIndex) const; // Exposed to Python
@@ -1943,7 +1943,6 @@ protected:
 	int* m_paiBonusExport;
 	int* m_paiBonusImport;
 	int* m_paiImprovementCount;
-	int* m_paiFreeBuildingCount;
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
@@ -2353,6 +2352,7 @@ private:
 	std::map<short, unsigned int> m_unitCount;
 	std::map<short, unsigned int> m_unitMaking;
 	std::map<short, unsigned int> m_buildingMaking;
+	std::map<short, unsigned int> m_freeBuildingCount;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;
 
