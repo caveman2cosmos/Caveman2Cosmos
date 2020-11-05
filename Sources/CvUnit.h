@@ -3137,6 +3137,61 @@ public:
 	ReligionTypes getReligion() const;
 
 private:
+	//	static buffers allocated once and used during read and write only
+	static int*	g_paiTempPromotionFreeCount;
+	static int*	g_paiTempAfflictOnAttackCount;
+	static int*	g_paiTempCureAfflictionCount;
+	static int*	g_paiTempCureAfflictionTypeCount;
+	static int*	g_paiTempAfflictionLineCount;
+	static int*	g_paiTempAfflictionTurnCount;
+	static int*	g_paiTempAfflictionTurnTypeCount;
+	static int*	g_paiTempAfflictionHitCount;
+	static int*	g_paiTempAfflictionTolerance;
+	static int*	g_paiTempTrapImmunityUnitCombatCount;
+	static int*	g_paiTempTargetUnitCombatCount;
+	static int*	g_paiTempExtraTrapDisableUnitCombatType;
+	static int*	g_paiTempExtraTrapAvoidanceUnitCombatType;
+	static int*	g_paiTempExtraTrapTriggerUnitCombatType;
+	static int*	g_paiTempAfflictionTypeTolerance;
+	static int*	g_paiTempFortitudeModifierTypeAmount;
+	static int*	g_paiTempFortitudeModifierAmount;
+	static int*	g_paiTempTrapSetWithPromotionCount;
+	static int* g_paiTempPromotionFromTraitCount;
+	static bool*	g_pabTempValidBuildUp;
+	static int* g_paiTempAfflictOnAttackTypeProbability;
+	static int* g_paiTempAfflictOnAttackTypeCount;
+	static int* g_paiTempAfflictOnAttackTypeImmediateCount;
+	static int* g_paiTempAfflictOnAttackTypeAttemptedCount;
+	static int* g_paiTempDistanceAttackCommunicability;
+	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
+	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
+//Team Project (4)
+	//WorkRateMod
+	//ls612: Terrain Work Modifiers
+	static int* g_paiTempExtraBuildWorkPercent;
+	static int*	g_paiTempExtraUnitCombatModifier;
+	static bool*	g_pabTempHasPromotion;
+	static bool*	g_pabTempHasUnitCombat;
+	static int* g_paiTempSubCombatTypeCount;
+	static int* g_paiTempOngoingTrainingCount;
+	static int* g_paiTempRemovesUnitCombatTypeCount;
+	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
+	static int* g_paiTempExtraWithdrawVSUnitCombatType;
+	static int* g_paiTempExtraPursuitVSUnitCombatType;
+	static int* g_paiTempExtraRepelVSUnitCombatType;
+	static int* g_paiTempExtraKnockbackVSUnitCombatType;
+	static int* g_paiTempExtraPunctureVSUnitCombatType;
+	static int* g_paiTempExtraArmorVSUnitCombatType;
+	static int* g_paiTempExtraDodgeVSUnitCombatType;
+	static int* g_paiTempExtraPrecisionVSUnitCombatType;
+	static int* g_paiTempExtraCriticalVSUnitCombatType;
+	static int* g_paiTempExtraRoundStunVSUnitCombatType;
+	static int*	g_paiTempHealUnitCombatTypeVolume;
+	static int*	g_paiTempHealUnitCombatTypeAdjacentVolume;
+	static int* g_paiTempHealAsDamage;
+
+	static	bool			m_staticsInitialized;
+
 	std::vector<InvisibleTerrainChanges> m_aExtraInvisibleTerrains;
 	std::vector<InvisibleFeatureChanges> m_aExtraInvisibleFeatures;
 	std::vector<InvisibleImprovementChanges> m_aExtraInvisibleImprovements;
