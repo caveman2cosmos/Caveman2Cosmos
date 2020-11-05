@@ -14860,7 +14860,7 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 	m_paiImprovementFreeSpecialists[eIndex] += iChange;
 }
 
-int CvCity::getReligionInfluence(ReligionTypes eIndex) const
+uint32_t CvCity::getReligionInfluence(ReligionTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	// Less than zero is meaningless for this value.

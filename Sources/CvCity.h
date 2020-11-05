@@ -1279,7 +1279,7 @@ public:
 	int getImprovementFreeSpecialists(ImprovementTypes eIndex) const; // Exposed to Python
 	void changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange); // Exposed to Python
 
-	int getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
+	uint32_t getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
 	void changeReligionInfluence(ReligionTypes eIndex, int iChange); // Exposed to Python
 
 	int getCurrentStateReligionHappiness() const; // Exposed to Python
