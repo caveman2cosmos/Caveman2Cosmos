@@ -24136,6 +24136,36 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
+
+	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	{
+		if (g_pabTempHasPromotion[iI])
+		{
+			if (!GC.getPromotionInfo((PromotionTypes)iI).isRemoveAfterSet())
+			{
+				findOrCreatePromotionKeyedInfo((PromotionTypes)iI)->m_bHasPromotion = true;
+			}
+
+			if (GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine() != NO_PROMOTIONLINE
+			&& !GC.getPromotionInfo((PromotionTypes)iI).isEquipment()
+			&& !GC.getPromotionInfo((PromotionTypes)iI).isAffliction()
+			&& !GC.getPromotionInfo((PromotionTypes)iI).isStatus())
+			{
+				//	All lesser priority promotions on the same line are implied - make sure they are set
+				for (int iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+				{
+					if (GC.getPromotionInfo((PromotionTypes)iJ).getPromotionLine() == GC.getPromotionInfo((PromotionTypes)iI).getPromotionLine()
+					&& GC.getPromotionInfo((PromotionTypes)iI).getLinePriority() > GC.getPromotionInfo((PromotionTypes)iJ).getLinePriority())
+					{
+						//	Set the map directly not via a call to setHasPromotion because the older versions
+						//	would have the effect of the promotion already even though the flag was not set
+						findOrCreatePromotionKeyedInfo((PromotionTypes)iI)->m_bHasPromotion = true;
+					}
+				}
+			}
+		}
+	}
+
 	do
 	{
 		iI = -1;
