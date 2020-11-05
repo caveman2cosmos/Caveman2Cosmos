@@ -1352,10 +1352,10 @@ public:
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
-	int getBuildingProductionModifier(BuildingTypes eIndex) const;
-	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
-	int getBuildingCostModifier(BuildingTypes eIndex) const;
-	void changeBuildingCostModifier(BuildingTypes eIndex, int iChange);
+	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
+	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
+	int getBuildingCostModifier(const BuildingTypes eIndex) const;
+	void changeBuildingCostModifier(const BuildingTypes eIndex, const int iChange);
 
 	int getUnitProductionModifier(UnitTypes eIndex) const;
 	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
@@ -1517,8 +1517,6 @@ protected:
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiBuildingProductionModifier;
-	int* m_paiBuildingCostModifier;
 	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
@@ -2354,6 +2352,8 @@ private:
 	std::map<short, unsigned int> m_bonusImport;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;
+	std::map<short, int> m_buildingProductionMod;
+	std::map<short, int> m_buildingCostMod;
 
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;

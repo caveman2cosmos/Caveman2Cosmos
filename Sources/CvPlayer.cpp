@@ -187,8 +187,6 @@ m_cachedBonusCount(NULL)
 	m_paiUnitCombatProductionModifier = NULL;
 	m_paiBonusMintedPercent = NULL;
 	m_pabAutomatedCanBuild = NULL;
-	m_paiBuildingProductionModifier = NULL;
-	m_paiBuildingCostModifier = NULL;
 	m_paiUnitProductionModifier = NULL;
 	m_ppaaiTerrainYieldChange = NULL;
 	m_paiResourceConsumption = NULL;
@@ -712,8 +710,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
-	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifier);
-	SAFE_DELETE_ARRAY(m_paiBuildingCostModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
@@ -745,6 +741,8 @@ void CvPlayer::uninit()
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
+	m_buildingProductionMod.clear();
+	m_buildingCostMod.clear();
 	m_researchQueue.clear();
 	m_cityNames.clear();
 
@@ -1004,6 +1002,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
+	m_buildingProductionMod.clear();
+	m_buildingCostMod.clear();
 	m_civicSwitchHistory.clear();
 
 	setTurnHadUIInteraction(false);
@@ -1394,17 +1394,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_paiBonusMintedPercent[iI] = 0;
-		}
-
-		FAssertMsg(m_paiBuildingProductionModifier == NULL, "about to leak memory, CvPlayer::m_paiBuildingProductionModifier");
-		FAssertMsg(m_paiBuildingCostModifier == NULL, "about to leak memory, CvPlayer::m_paiBuildingCostModifier");
-		m_paiBuildingProductionModifier = new int [GC.getNumBuildingInfos()];
-		m_paiBuildingCostModifier = new int [GC.getNumBuildingInfos()];
-
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_paiBuildingProductionModifier[iI] = 0;
-			m_paiBuildingCostModifier[iI] = 0;
 		}
 
 		FAssertMsg(m_paiUnitProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitProductionModifier");
@@ -14185,7 +14174,7 @@ void CvPlayer::setPlayable(bool bNewValue)
 
 void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_bonusExport.find((short)eBonus);
+	std::map<short, uint32_t>::const_iterator itr = m_bonusExport.find((short)eBonus);
 
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14193,7 +14182,6 @@ void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 
 	if (itr == m_bonusExport.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_bonusExport.insert(std::make_pair((short)eBonus, iChange));
@@ -14202,7 +14190,6 @@ void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_bonusExport.erase(itr->first);
 	}
 	else // change bonus count
@@ -14222,7 +14209,7 @@ void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 
 void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_bonusImport.find((short)eBonus);
+	std::map<short, uint32_t>::const_iterator itr = m_bonusImport.find((short)eBonus);
 
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14230,7 +14217,6 @@ void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 
 	if (itr == m_bonusImport.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_bonusImport.insert(std::make_pair((short)eBonus, iChange));
@@ -14239,7 +14225,6 @@ void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_bonusImport.erase(itr->first);
 	}
 	else // change bonus count
@@ -14260,14 +14245,14 @@ void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 int CvPlayer::getBonusExport(const BonusTypes eBonus) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
-	std::map<short, unsigned int>::const_iterator itr = m_bonusExport.find((short)eBonus);
+	std::map<short, uint32_t>::const_iterator itr = m_bonusExport.find((short)eBonus);
 	return itr != m_bonusExport.end() ? itr->second : 0;
 }
 
 int CvPlayer::getBonusImport(const BonusTypes eBonus) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
-	std::map<short, unsigned int>::const_iterator itr = m_bonusImport.find((short)eBonus);
+	std::map<short, uint32_t>::const_iterator itr = m_bonusImport.find((short)eBonus);
 	return itr != m_bonusImport.end() ? itr->second : 0;
 }
 
@@ -14289,7 +14274,7 @@ void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 
 void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
+	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14297,7 +14282,6 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 
 	if (itr == m_freeBuildingCount.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_freeBuildingCount.insert(std::make_pair((short)eIndex, iChange));
@@ -14307,7 +14291,6 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_freeBuildingCount.erase(itr->first);
 		algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
 	}
@@ -14320,7 +14303,7 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 int CvPlayer::getFreeBuildingCount(const BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	std::map<short, unsigned int>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
+	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 	return itr != m_freeBuildingCount.end() ? itr->second : 0;
 }
 
@@ -14513,7 +14496,7 @@ void CvPlayer::recalculateUnitCounts()
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_unitCount.find((short)eUnit);
+	std::map<short, uint32_t>::const_iterator itr = m_unitCount.find((short)eUnit);
 
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14521,7 +14504,6 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 
 	if (itr == m_unitCount.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_unitCount.insert(std::make_pair((short)eUnit, iChange));
@@ -14530,7 +14512,6 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_unitCount.erase(itr->first);
 	}
 	else // change unit count
@@ -14542,14 +14523,14 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 int CvPlayer::getUnitCount(const UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
-	std::map<short, unsigned int>::const_iterator itr = m_unitCount.find((short)eUnit);
+	std::map<short, uint32_t>::const_iterator itr = m_unitCount.find((short)eUnit);
 	return itr != m_unitCount.end() ? itr->second : 0;
 }
 
 
 void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_unitMaking.find((short)eUnit);
+	std::map<short, uint32_t>::const_iterator itr = m_unitMaking.find((short)eUnit);
 
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14557,7 +14538,6 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 
 	if (itr == m_unitMaking.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_unitMaking.insert(std::make_pair((short)eUnit, iChange));
@@ -14566,7 +14546,6 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_unitMaking.erase(itr->first);
 	}
 	else // change unit count
@@ -14578,7 +14557,7 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 int CvPlayer::getUnitMaking(const UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
-	std::map<short, unsigned int>::const_iterator itr = m_unitMaking.find((short)eUnit);
+	std::map<short, uint32_t>::const_iterator itr = m_unitMaking.find((short)eUnit);
 	return itr != m_unitMaking.end() ? itr->second : 0;
 }
 
@@ -14611,7 +14590,7 @@ int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 
 void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChange)
 {
-	std::map<short, unsigned int>::const_iterator itr = m_buildingMaking.find((short)eIndex);
+	std::map<short, uint32_t>::const_iterator itr = m_buildingMaking.find((short)eIndex);
 
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	FAssertMsg(iChange != 0, "This is not a change!")
@@ -14619,7 +14598,6 @@ void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChang
 
 	if (itr == m_buildingMaking.end())
 	{
-		// New map entry
 		if (iChange > 0)
 		{
 			m_buildingMaking.insert(std::make_pair((short)eIndex, iChange));
@@ -14628,7 +14606,6 @@ void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChang
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
-		// Remove map entry
 		m_buildingMaking.erase(itr->first);
 	}
 	else // change building count
@@ -14641,7 +14618,7 @@ void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChang
 int CvPlayer::getBuildingMaking(const BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	std::map<short, unsigned int>::const_iterator itr = m_buildingMaking.find((short)eIndex);
+	std::map<short, uint32_t>::const_iterator itr = m_buildingMaking.find((short)eIndex);
 	return itr != m_buildingMaking.end() ? itr->second : 0;
 }
 
@@ -20129,7 +20106,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			short iSize;
 			short iType;
 			int iCount;
-			unsigned int iCountU;
+			uint32_t iCountU;
 			// Bonus counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
 			while (iSize-- > 0)
@@ -20202,6 +20179,30 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				if (iType > -1)
 				{
 					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingProductionModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingProductionModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingProductionModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_buildingProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingCostModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingCostModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingCostModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_buildingCostMod.insert(std::make_pair(iType, iCount));
 				}
 			}
 			// Unit counters
@@ -20306,8 +20307,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
@@ -21331,26 +21330,26 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			// Bonus counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusExport.size(), "iBonusExportSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_bonusExport.begin(), itEnd = m_bonusExport.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_bonusExport.begin(), itEnd = m_bonusExport.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusExportType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusExportCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusImport.size(), "iBonusImportSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_bonusImport.begin(), itEnd = m_bonusImport.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_bonusImport.begin(), itEnd = m_bonusImport.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusImportType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusImportCount");
 			}
 			// Building counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingMakingType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_freeBuildingCount.size(), "iFreeBuildingCountSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iFreeBuildingCountType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iFreeBuildingCountCount");
@@ -21367,15 +21366,27 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iExtraBuildingHealthType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iExtraBuildingHealthCount");
 			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingProductionMod.size(), "iBuildingProductionModSize");
+			for (std::map<short, int>::const_iterator it = m_buildingProductionMod.begin(), itEnd = m_buildingProductionMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingProductionModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingProductionModCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingCostMod.size(), "iBuildingCostModSize");
+			for (std::map<short, int>::const_iterator it = m_buildingCostMod.begin(), itEnd = m_buildingCostMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingCostModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingCostModCount");
+			}
 			// Unit counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCount.size(), "iUnitCountSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCountType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCountCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitMaking.size(), "iUnitMakingSize");
-			for (std::map<short, unsigned int>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
+			for (std::map<short, uint32_t>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitMakingType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitMakingCount");
@@ -21445,8 +21456,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
@@ -27946,31 +27955,68 @@ void CvPlayer::changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChang
 	}
 }
 
-int CvPlayer::getBuildingProductionModifier(BuildingTypes eIndex) const
-{
-	return m_paiBuildingProductionModifier[eIndex];
-}
 
-void CvPlayer::changeBuildingProductionModifier(BuildingTypes eIndex, int iChange)
+void CvPlayer::changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange)
 {
-	if (iChange != 0)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	if (iChange == 0)
 	{
-		m_paiBuildingProductionModifier[eIndex] += iChange;
+		return;
+	}
+	std::map<short, int>::const_iterator itr = m_buildingProductionMod.find((short)eIndex);
+
+	if (itr == m_buildingProductionMod.end())
+	{
+		m_buildingProductionMod.insert(std::make_pair((short)eIndex, iChange));
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		m_buildingProductionMod.erase(itr->first);
+	}
+	else // change building mod
+	{
+		m_buildingProductionMod[itr->first] += iChange;
 	}
 }
 
-int CvPlayer::getBuildingCostModifier(BuildingTypes eIndex) const
+int CvPlayer::getBuildingProductionModifier(const BuildingTypes eIndex) const
 {
-	return m_paiBuildingCostModifier[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	std::map<short, int>::const_iterator itr = m_buildingProductionMod.find((short)eIndex);
+	return itr != m_buildingProductionMod.end() ? itr->second : 0;
 }
 
-void CvPlayer::changeBuildingCostModifier(BuildingTypes eIndex, int iChange)
+
+void CvPlayer::changeBuildingCostModifier(const BuildingTypes eIndex, const int iChange)
 {
-	if (iChange != 0)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	if (iChange == 0)
 	{
-		m_paiBuildingCostModifier[eIndex] += iChange;
+		return;
+	}
+	std::map<short, int>::const_iterator itr = m_buildingCostMod.find((short)eIndex);
+
+	if (itr == m_buildingCostMod.end())
+	{
+		m_buildingCostMod.insert(std::make_pair((short)eIndex, iChange));
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		m_buildingCostMod.erase(itr->first);
+	}
+	else // change building mod
+	{
+		m_buildingCostMod[itr->first] += iChange;
 	}
 }
+
+int CvPlayer::getBuildingCostModifier(const BuildingTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	std::map<short, int>::const_iterator itr = m_buildingCostMod.find((short)eIndex);
+	return itr != m_buildingCostMod.end() ? itr->second : 0;
+}
+
 
 int CvPlayer::getUnitProductionModifier(UnitTypes eIndex) const
 {
@@ -29790,6 +29836,8 @@ void CvPlayer::clearModifierTotals()
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
+	m_buildingProductionMod.clear();
+	m_buildingCostMod.clear();
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
@@ -29862,12 +29910,6 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		m_paiBonusMintedPercent[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
-		m_paiBuildingProductionModifier[iI] = 0;
-		m_paiBuildingCostModifier[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
