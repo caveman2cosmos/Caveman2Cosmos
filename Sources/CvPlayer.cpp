@@ -214,7 +214,6 @@ m_cachedBonusCount(NULL)
 	m_paiNationalTechResearchModifier = NULL;
 
 	m_paiEraAdvanceFreeSpecialistCount = NULL;
-	m_paiGoldenAgeOnBirthOfGreatPersonCount = NULL;
 
 	m_aiGoldenAgeYield = new int[NUM_YIELD_TYPES];
 	m_aiGoldenAgeCommerce = new int[NUM_COMMERCE_TYPES];
@@ -299,7 +298,6 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiLessYieldThreshold);
 		//Team Project (6)
 	SAFE_DELETE_ARRAY(m_paiEraAdvanceFreeSpecialistCount);
-	SAFE_DELETE_ARRAY(m_paiGoldenAgeOnBirthOfGreatPersonCount);
 	//Team Project (7)
 	SAFE_DELETE_ARRAY(m_aiGoldenAgeYield);
 	SAFE_DELETE_ARRAY(m_aiGoldenAgeCommerce);
@@ -736,6 +734,7 @@ void CvPlayer::uninit()
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
+	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -998,6 +997,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
+	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 	m_buildingMaking.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -1405,12 +1405,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 		FAssertMsg((0 < GC.getNumUnitInfos()),  "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNationalGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
-
-		m_paiGoldenAgeOnBirthOfGreatPersonCount = new int[GC.getNumUnitInfos()];
 		for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 		{
 			m_paiNationalGreatPeopleUnitRate[iI] = 0;
-			m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 		}
 
 		FAssertMsg((0 < NUM_DOMAIN_TYPES),  "NUM_DOMAIN_TYPES is not greater than zero but an array is being allocated in CvCity::reset");
@@ -14173,11 +14170,10 @@ void CvPlayer::setPlayable(bool bNewValue)
 
 void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_bonusExport.find((short)eBonus);
-
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_bonusExport.find((short)eBonus);
 
 	if (itr == m_bonusExport.end())
 	{
@@ -14189,6 +14185,7 @@ void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_bonusExport.erase(itr->first);
 	}
 	else // change bonus count
@@ -14208,11 +14205,10 @@ void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 
 void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_bonusImport.find((short)eBonus);
-
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_bonusImport.find((short)eBonus);
 
 	if (itr == m_bonusImport.end())
 	{
@@ -14224,6 +14220,7 @@ void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_bonusImport.erase(itr->first);
 	}
 	else // change bonus count
@@ -14273,11 +14270,10 @@ void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 
 void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
-
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 
 	if (itr == m_freeBuildingCount.end())
 	{
@@ -14290,6 +14286,7 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_freeBuildingCount.erase(itr->first);
 		algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
 	}
@@ -14495,11 +14492,10 @@ void CvPlayer::recalculateUnitCounts()
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_unitCount.find((short)eUnit);
-
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_unitCount.find((short)eUnit);
 
 	if (itr == m_unitCount.end())
 	{
@@ -14511,6 +14507,7 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_unitCount.erase(itr->first);
 	}
 	else // change unit count
@@ -14529,11 +14526,10 @@ int CvPlayer::getUnitCount(const UnitTypes eUnit) const
 
 void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_unitMaking.find((short)eUnit);
-
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_unitMaking.find((short)eUnit);
 
 	if (itr == m_unitMaking.end())
 	{
@@ -14545,6 +14541,7 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_unitMaking.erase(itr->first);
 	}
 	else // change unit count
@@ -14589,11 +14586,10 @@ int CvPlayer::getBuildingCount(BuildingTypes eIndex) const
 
 void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChange)
 {
-	std::map<short, uint32_t>::const_iterator itr = m_buildingMaking.find((short)eIndex);
-
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	FAssertMsg(iChange != 0, "This is not a change!")
-	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
+
+	std::map<short, uint32_t>::const_iterator itr = m_buildingMaking.find((short)eIndex);
 
 	if (itr == m_buildingMaking.end())
 	{
@@ -14605,6 +14601,7 @@ void CvPlayer::changeBuildingMaking(const BuildingTypes eIndex, const int iChang
 	}
 	else if (iChange < 0 && (int)(itr->second) <= -iChange)
 	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_buildingMaking.erase(itr->first);
 	}
 	else // change building count
@@ -20104,6 +20101,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			short iSize;
 			short iType;
+			char cCount;
 			int iCount;
 			uint32_t iCountU;
 			// Bonus counters
@@ -20239,6 +20237,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				if (iType > -1)
 				{
 					m_greatGeneralPointsType.insert(std::make_pair(iType, iCountU));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGoldenAgeOnBirthOfGreatPersonCountSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGoldenAgeOnBirthOfGreatPersonCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &cCount, "iGoldenAgeOnBirthOfGreatPersonCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair(iType, cCount));
 				}
 			}
 		}
@@ -21040,7 +21050,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraStateReligionSpreadModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraNonStateReligionSpreadModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiEraAdvanceFreeSpecialistCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGoldenAgeOnBirthOfGreatPersonCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalCityStartCulture);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalAirUnitCapacity);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCapitalXPModifier);
@@ -21405,6 +21414,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatGeneralPointsTypeType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatGeneralPointsTypeCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_goldenAgeOnBirthOfGreatPersonCount.size(), "iGoldenAgeOnBirthOfGreatPersonCountSize");
+			for (std::map<short, char>::const_iterator it = m_goldenAgeOnBirthOfGreatPersonCount.begin(), itEnd = m_goldenAgeOnBirthOfGreatPersonCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGoldenAgeOnBirthOfGreatPersonCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGoldenAgeOnBirthOfGreatPersonCountCount");
 			}
 		}
 
@@ -21834,7 +21849,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraStateReligionSpreadModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraNonStateReligionSpreadModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiEraAdvanceFreeSpecialistCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGoldenAgeOnBirthOfGreatPersonCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalCityStartCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalAirUnitCapacity);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCapitalXPModifier);
@@ -27983,7 +27997,7 @@ void CvPlayer::changeBuildingProductionModifier(const BuildingTypes eIndex, cons
 	{
 		m_buildingProductionMod.insert(std::make_pair((short)eIndex, iChange));
 	}
-	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	else if (iChange < 0 && itr->second <= -iChange)
 	{
 		m_buildingProductionMod.erase(itr->first);
 	}
@@ -28014,7 +28028,7 @@ void CvPlayer::changeBuildingCostModifier(const BuildingTypes eIndex, const int 
 	{
 		m_buildingCostMod.insert(std::make_pair((short)eIndex, iChange));
 	}
-	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	else if (iChange < 0 && itr->second <= -iChange)
 	{
 		m_buildingCostMod.erase(itr->first);
 	}
@@ -29852,6 +29866,7 @@ void CvPlayer::clearModifierTotals()
 	m_extraBuildingHealth.clear();
 	m_buildingProductionMod.clear();
 	m_buildingCostMod.clear();
+	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
@@ -29973,7 +29988,6 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0;iI < GC.getNumUnitInfos();iI++)
 	{
 		m_paiNationalGreatPeopleUnitRate[iI] = 0;
-		m_paiGoldenAgeOnBirthOfGreatPersonCount[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -31854,22 +31868,35 @@ void CvPlayer::changeEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int i
 	setEraAdvanceFreeSpecialistCount(eIndex, (getEraAdvanceFreeSpecialistCount(eIndex) + iChange));
 }
 
-int CvPlayer::getGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex) const
+void CvPlayer::changeGoldenAgeOnBirthOfGreatPersonCount(const UnitTypes eUnit, const char iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return m_paiGoldenAgeOnBirthOfGreatPersonCount[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(iChange != 0, "This is not a change!")
+
+	std::map<short, char>::const_iterator itr = m_goldenAgeOnBirthOfGreatPersonCount.find((short)eUnit);
+
+	if (itr == m_goldenAgeOnBirthOfGreatPersonCount.end())
+	{
+		if (iChange != 0)
+		{
+			m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair((short)eUnit, iChange));
+		}
+	}
+	else if (itr->second == -iChange)
+	{
+		m_goldenAgeOnBirthOfGreatPersonCount.erase(itr->first);
+	}
+	else // change unit count
+	{
+		m_goldenAgeOnBirthOfGreatPersonCount[itr->first] += iChange;
+	}
 }
 
-void CvPlayer::setGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex, int iValue)
+int CvPlayer::getGoldenAgeOnBirthOfGreatPersonCount(const UnitTypes eUnit) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-
-	m_paiGoldenAgeOnBirthOfGreatPersonCount[eIndex] = iValue;
-}
-
-void CvPlayer::changeGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex, int iChange)
-{
-	setGoldenAgeOnBirthOfGreatPersonCount(eIndex, (getGoldenAgeOnBirthOfGreatPersonCount(eIndex) + iChange));
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	std::map<short, char>::const_iterator itr = m_goldenAgeOnBirthOfGreatPersonCount.find((short)eUnit);
+	return itr != m_goldenAgeOnBirthOfGreatPersonCount.end() ? itr->second : 0;
 }
 
 int CvPlayer::getNationalCityStartCulture() const

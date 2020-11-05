@@ -1575,7 +1575,6 @@ protected:
 	int m_iExtraFreedomFighters;
 
 	int* m_paiEraAdvanceFreeSpecialistCount;
-	int* m_paiGoldenAgeOnBirthOfGreatPersonCount;
 	int m_iNationalCityStartCulture;
 	int m_iNationalAirUnitCapacity;
 	int m_iCapitalXPModifier;
@@ -2165,9 +2164,8 @@ public:
 	void setEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iValue);
 	void changeEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iChange);
 
-	int getGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex) const;
-	void setGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex, int iValue);
-	void changeGoldenAgeOnBirthOfGreatPersonCount(UnitTypes eIndex, int iChange);
+	int getGoldenAgeOnBirthOfGreatPersonCount(const UnitTypes eIndex) const;
+	void changeGoldenAgeOnBirthOfGreatPersonCount(const UnitTypes eIndex, const char iChange);
 
 	int getNationalCityStartCulture() const;
 	void setNationalCityStartCulture(int iValue);
@@ -2353,6 +2351,7 @@ private:
 	std::map<short, int> m_extraBuildingHealth;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_buildingCostMod;
+	std::map<short, char> m_goldenAgeOnBirthOfGreatPersonCount;
 
 	int m_iNumAnarchyTurns;
 	int m_iNumCivicSwitches;
