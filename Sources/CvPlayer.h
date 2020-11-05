@@ -1346,8 +1346,6 @@ public:
 	void setPledgedVote(PlayerVoteTypes eIndex);
 	TeamTypes getPledgedSecretaryGeneralVote() const;
 	void setPledgedSecretaryGeneralVote(TeamTypes eIndex);
-	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
-	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
 
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
@@ -1357,8 +1355,10 @@ public:
 	int getBuildingCostModifier(const BuildingTypes eIndex) const;
 	void changeBuildingCostModifier(const BuildingTypes eIndex, const int iChange);
 
-	int getUnitProductionModifier(const UnitTypes eIndex) const;
-	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
+	int getUnitProductionModifier(const UnitTypes eUnit) const;
+	void changeUnitProductionModifier(const UnitTypes eUnit, const int iChange);
+	int getUnitCombatProductionModifier(const UnitCombatTypes eIndex) const;
+	void changeUnitCombatProductionModifier(const UnitCombatTypes eIndex, const int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
@@ -1516,7 +1516,6 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
-	int* m_paiUnitCombatProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
@@ -2118,11 +2117,9 @@ public:
 	void changeNationalEspionageDefense(int iChange);
 
 	int getInquisitionCount() const;
-	void setInquisitionCount(int iNewValue);
 	void changeInquisitionCount(int iChange);
 
 	int getNationalGreatPeopleUnitRate(UnitTypes eIndex) const;
-	void setNationalGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue);
 	void changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange);
 
 	int getNationalGreatPeopleRate() const;
@@ -2351,6 +2348,7 @@ private:
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_buildingCostMod;
 	std::map<short, int> m_unitProductionMod;
+	std::map<short, int> m_unitCombatProductionMod;
 	std::map<short, char> m_goldenAgeOnBirthOfGreatPersonCount;
 
 	int m_iNumAnarchyTurns;

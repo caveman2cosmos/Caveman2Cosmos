@@ -184,7 +184,6 @@ m_cachedBonusCount(NULL)
 	m_paeCivics = NULL;
 	m_ppaaiSpecialistExtraYield = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
-	m_paiUnitCombatProductionModifier = NULL;
 	m_paiBonusMintedPercent = NULL;
 	m_pabAutomatedCanBuild = NULL;
 	m_ppaaiTerrainYieldChange = NULL;
@@ -703,7 +702,6 @@ void CvPlayer::uninit()
 
 	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
-	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
@@ -740,6 +738,7 @@ void CvPlayer::uninit()
 	m_buildingProductionMod.clear();
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
+	m_unitCombatProductionMod.clear();
 	m_researchQueue.clear();
 	m_cityNames.clear();
 
@@ -1004,6 +1003,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_buildingProductionMod.clear();
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
+	m_unitCombatProductionMod.clear();
 	m_civicSwitchHistory.clear();
 
 	setTurnHadUIInteraction(false);
@@ -1376,15 +1376,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits end
 		}
 
-		FAssertMsg(m_paiUnitCombatProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitCombatProductionModifier");
-		m_paiUnitCombatProductionModifier = new int [GC.getNumUnitCombatInfos()];
-	//Team Project (8)
 		FAssertMsg(m_paiUnitCombatFreeExperience==NULL, "about to leak memory, CvPlayer::m_paiUnitCombatFreeExperience");
 		m_paiUnitCombatFreeExperience = new int [GC.getNumUnitCombatInfos()];
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
-			m_paiUnitCombatProductionModifier[iI] = 0;
-	//Team Project (8)
 			m_paiUnitCombatFreeExperience[iI] = 0;
 		}
 
@@ -20256,6 +20251,19 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_unitProductionMod.insert(std::make_pair(iType, iCount));
 				}
 			}
+			// Unit-Combat counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatProductionModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatProductionModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitCombatProductionModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCombatProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
 		}
 
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -20332,7 +20340,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -21431,6 +21438,13 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitProductionModType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitProductionModCount");
 			}
+			// Unit-Combat counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatProductionMod.size(), "iUnitCombatProductionModSize");
+			for (std::map<short, int>::const_iterator it = m_unitCombatProductionMod.begin(), itEnd = m_unitCombatProductionMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatProductionModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatProductionModCount");
+			}
 		}
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -21495,7 +21509,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -27962,23 +27975,9 @@ void CvPlayer::changeBonusMintedPercent(BonusTypes eIndex, int iChange)
 			pLoopCity->setInfoDirty(true);
 		}
 	}
-
 }
 
-int CvPlayer::getUnitCombatProductionModifier(UnitCombatTypes eIndex) const
-{
-	return m_paiUnitCombatProductionModifier[eIndex];
-}
 
-void CvPlayer::changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange)
-{
-	if (iChange != 0)
-	{
-		m_paiUnitCombatProductionModifier[eIndex] = (m_paiUnitCombatProductionModifier[eIndex] + iChange);
-	}
-}
-
-	//Team Project (8)
 int CvPlayer::getUnitCombatFreeExperience(UnitCombatTypes eIndex) const
 {
 	return m_paiUnitCombatFreeExperience[eIndex];
@@ -28083,6 +28082,37 @@ int CvPlayer::getUnitProductionModifier(const UnitTypes eUnit) const
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	std::map<short, int>::const_iterator itr = m_unitProductionMod.find((short)eUnit);
 	return itr != m_unitProductionMod.end() ? itr->second : 0;
+}
+
+
+void CvPlayer::changeUnitCombatProductionModifier(const UnitCombatTypes eIndex, const int iChange)
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	if (iChange == 0)
+	{
+		return;
+	}
+	std::map<short, int>::const_iterator itr = m_unitCombatProductionMod.find((short)eIndex);
+
+	if (itr == m_unitCombatProductionMod.end())
+	{
+		m_unitCombatProductionMod.insert(std::make_pair((short)eIndex, iChange));
+	}
+	else if (itr->second == -iChange)
+	{
+		m_unitCombatProductionMod.erase(itr->first);
+	}
+	else // change mod
+	{
+		m_unitCombatProductionMod[itr->first] += iChange;
+	}
+}
+
+int CvPlayer::getUnitCombatProductionModifier(const UnitCombatTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
+	std::map<short, int>::const_iterator itr = m_unitCombatProductionMod.find((short)eIndex);
+	return itr != m_unitCombatProductionMod.end() ? itr->second : 0;
 }
 
 
@@ -29894,6 +29924,7 @@ void CvPlayer::clearModifierTotals()
 	m_buildingProductionMod.clear();
 	m_buildingCostMod.clear();
 	m_unitProductionMod.clear();
+	m_unitCombatProductionMod.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -29954,8 +29985,6 @@ void CvPlayer::clearModifierTotals()
 
 	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		m_paiUnitCombatProductionModifier[iI] = 0;
-	//Team Project (8)
 		m_paiUnitCombatFreeExperience[iI] = 0;
 	}
 
@@ -31680,14 +31709,9 @@ int CvPlayer::getInquisitionCount() const
 	return m_iInquisitionCount;
 }
 
-void CvPlayer::setInquisitionCount(int iValue)
-{
-	m_iInquisitionCount = iValue;
-}
-
 void CvPlayer::changeInquisitionCount(int iChange)
 {
-	setInquisitionCount(getInquisitionCount() + iChange);
+	m_iInquisitionCount += iChange;
 }
 
 int CvPlayer::getNationalGreatPeopleUnitRate(UnitTypes eIndex) const
@@ -31696,19 +31720,9 @@ int CvPlayer::getNationalGreatPeopleUnitRate(UnitTypes eIndex) const
 	return m_paiNationalGreatPeopleUnitRate[eIndex];
 }
 
-void CvPlayer::setNationalGreatPeopleUnitRate(UnitTypes eIndex, int iValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
-	{
-		return;
-	}
-
-	m_paiNationalGreatPeopleUnitRate[eIndex] = iValue;
-}
-
 void CvPlayer::changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
 {
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
 	{
 		return;
@@ -31716,7 +31730,7 @@ void CvPlayer::changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
 	changeNationalGreatPeopleRate(iChange);
 	if (eIndex != NO_UNIT)
 	{
-		setNationalGreatPeopleUnitRate(eIndex, (m_paiNationalGreatPeopleUnitRate[eIndex] + iChange));
+		m_paiNationalGreatPeopleUnitRate[eIndex] += iChange;
 	}
 }
 
