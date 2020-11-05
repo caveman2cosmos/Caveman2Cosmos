@@ -922,11 +922,10 @@ public:
 	bool isPlayable() const;
 	void setPlayable(bool bNewValue);
 
-	int getBonusExport(BonusTypes eIndex) const; // Exposed to Python
-	void changeBonusExport(BonusTypes eIndex, int iChange);
-
-	int getBonusImport(BonusTypes eIndex) const; // Exposed to Python
-	void changeBonusImport(BonusTypes eIndex, int iChange);
+	int getBonusExport(const BonusTypes eBonus) const; // Exposed to Python
+	int getBonusImport(const BonusTypes eBonus) const; // Exposed to Python
+	void changeBonusExport(const BonusTypes eBonus, const int iChange);
+	void changeBonusImport(const BonusTypes eBonus, const int iChange);
 
 	int getImprovementCount(ImprovementTypes eIndex) const; // Exposed to Python
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
@@ -1940,8 +1939,6 @@ protected:
 
 	CvString m_szScriptData;
 
-	int* m_paiBonusExport;
-	int* m_paiBonusImport;
 	int* m_paiImprovementCount;
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
@@ -2353,6 +2350,8 @@ private:
 	std::map<short, unsigned int> m_unitMaking;
 	std::map<short, unsigned int> m_buildingMaking;
 	std::map<short, unsigned int> m_freeBuildingCount;
+	std::map<short, unsigned int> m_bonusExport;
+	std::map<short, unsigned int> m_bonusImport;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;
 

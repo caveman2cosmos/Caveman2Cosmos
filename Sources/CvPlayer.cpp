@@ -160,8 +160,6 @@ m_cachedBonusCount(NULL)
 	m_abFeatAccomplished = new bool[NUM_FEAT_TYPES];
 	m_abOptions = new bool[NUM_PLAYEROPTION_TYPES];
 
-	m_paiBonusExport = NULL;
-	m_paiBonusImport = NULL;
 	m_paiImprovementCount = NULL;
 	m_paiFeatureHappiness = NULL;
 	m_paiBuildingCount = NULL;
@@ -679,8 +677,6 @@ void CvPlayer::resetPlotAndCityData( )
 
 void CvPlayer::uninit()
 {
-	SAFE_DELETE_ARRAY(m_paiBonusExport);
-	SAFE_DELETE_ARRAY(m_paiBonusImport);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiBuildingCount);
@@ -741,6 +737,8 @@ void CvPlayer::uninit()
 
 	m_triggersFired.clear();
 	m_mapScoreHistory.clear();
+	m_bonusExport.clear();
+	m_bonusImport.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_buildingMaking.clear();
@@ -998,6 +996,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_Properties.clear();
 	m_canHaveBuilder.clear();
+	m_bonusExport.clear();
+	m_bonusImport.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_buildingMaking.clear();
@@ -1176,17 +1176,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	if (!bConstructorCall)
 	{
-		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
-		FAssertMsg(m_paiBonusExport==NULL, "about to leak memory, CvPlayer::m_paiBonusExport");
-		m_paiBonusExport = new int [GC.getNumBonusInfos()];
-		FAssertMsg(m_paiBonusImport==NULL, "about to leak memory, CvPlayer::m_paiBonusImport");
-		m_paiBonusImport = new int [GC.getNumBonusInfos()];
-		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			m_paiBonusExport[iI] = 0;
-			m_paiBonusImport[iI] = 0;
-		}
-
 		FAssertMsg(0 < GC.getNumImprovementInfos(), "GC.getNumImprovementInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiImprovementCount==NULL, "about to leak memory, CvPlayer::m_paiImprovementCount");
 		m_paiImprovementCount = new int [GC.getNumImprovementInfos()];
@@ -1202,6 +1191,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiFeatureHappiness[iI] = 0;
 		}
 
+		FAssertMsg(0 < GC.getNumBuildingInfos(), "GC.getNumBuildingInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiBuildingCount==NULL, "about to leak memory, CvPlayer::m_paiBuildingCount");
 		m_paiBuildingCount = new int [GC.getNumBuildingInfos()];
 		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -1398,6 +1388,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiUnitCombatFreeExperience[iI] = 0;
 		}
 
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiBonusMintedPercent==NULL, "about to leak memory, CvPlayer::m_paiBonusMintedPercent");
 		m_paiBonusMintedPercent = new int [GC.getNumBonusInfos()];
 		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
@@ -14192,61 +14183,92 @@ void CvPlayer::setPlayable(bool bNewValue)
 }
 
 
-int CvPlayer::getBonusExport(BonusTypes eIndex) const
+void CvPlayer::changeBonusExport(const BonusTypes eBonus, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-	return m_paiBonusExport[eIndex];
-}
+	std::map<short, unsigned int>::const_iterator itr = m_bonusExport.find((short)eBonus);
 
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
 
-void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-
-	if (iChange != 0)
+	if (itr == m_bonusExport.end())
 	{
-		m_paiBonusExport[eIndex] += iChange;
-		FAssert(getBonusExport(eIndex) >= 0);
-
-		const CvCity* pCapitalCity = getCapitalCity();
-		if (pCapitalCity != NULL)
+		// New map entry
+		if (iChange > 0)
 		{
-			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
-			if (ownerPlotGroup != NULL)
-			{
-				ownerPlotGroup->changeNumBonuses(eIndex, -iChange);
-			}
+			m_bonusExport.insert(std::make_pair((short)eBonus, iChange));
+		}
+		else FErrorMsg("Expected positive iChange for first unit of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Remove map entry
+		m_bonusExport.erase(itr->first);
+	}
+	else // change bonus count
+	{
+		m_bonusExport[itr->first] += iChange;
+	}
+	const CvCity* pCapitalCity = getCapitalCity();
+	if (pCapitalCity != NULL)
+	{
+		CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
+		if (ownerPlotGroup != NULL)
+		{
+			ownerPlotGroup->changeNumBonuses(eBonus, -iChange);
 		}
 	}
 }
 
-
-int CvPlayer::getBonusImport(BonusTypes eIndex) const
+void CvPlayer::changeBonusImport(const BonusTypes eBonus, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-	return m_paiBonusImport[eIndex];
-}
+	std::map<short, unsigned int>::const_iterator itr = m_bonusImport.find((short)eBonus);
 
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FAssertMsg(iChange != 0, "This is not a change!")
+	FAssertMsg(iChange >= 0 || (int)(itr->second) >= -iChange, "This change would bring unit count to negative value! Code copes with it though")
 
-void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-
-	if (iChange != 0)
+	if (itr == m_bonusImport.end())
 	{
-		m_paiBonusImport[eIndex] += iChange;
-		FAssert(getBonusImport(eIndex) >= 0);
-
-		const CvCity* pCapitalCity = getCapitalCity();
-		if (pCapitalCity != NULL)
+		// New map entry
+		if (iChange > 0)
 		{
-			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
-			if (ownerPlotGroup != NULL)
-			{
-				ownerPlotGroup->changeNumBonuses(eIndex, iChange);
-			}
+			m_bonusImport.insert(std::make_pair((short)eBonus, iChange));
+		}
+		else FErrorMsg("Expected positive iChange for first unit of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		// Remove map entry
+		m_bonusImport.erase(itr->first);
+	}
+	else // change bonus count
+	{
+		m_bonusImport[itr->first] += iChange;
+	}
+	const CvCity* pCapitalCity = getCapitalCity();
+	if (pCapitalCity != NULL)
+	{
+		CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
+		if (ownerPlotGroup != NULL)
+		{
+			ownerPlotGroup->changeNumBonuses(eBonus, iChange);
 		}
 	}
+}
+
+int CvPlayer::getBonusExport(const BonusTypes eBonus) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	std::map<short, unsigned int>::const_iterator itr = m_bonusExport.find((short)eBonus);
+	return itr != m_bonusExport.end() ? itr->second : 0;
+}
+
+int CvPlayer::getBonusImport(const BonusTypes eBonus) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	std::map<short, unsigned int>::const_iterator itr = m_bonusImport.find((short)eBonus);
+	return itr != m_bonusImport.end() ? itr->second : 0;
 }
 
 
@@ -20098,9 +20120,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		WRAPPER_READ_STRING(wrapper, "CvPlayer", m_szScriptData);
 
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusExport);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusImport);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
@@ -20111,7 +20130,32 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			short iType;
 			int iCount;
 			unsigned int iCountU;
-			// building counters
+			// Bonus counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusExportType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusExportCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusExport.insert(std::make_pair(iType, iCountU));
+				}
+			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusImportSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusImportType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusImportCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusImport.insert(std::make_pair(iType, iCountU));
+				}
+			}
+			// Building counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
 			while (iSize-- > 0)
 			{
@@ -20160,7 +20204,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
 				}
 			}
-			// unit counters
+			// Unit counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
 			while (iSize-- > 0)
 			{
@@ -20259,6 +20303,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
+		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
@@ -21278,15 +21323,25 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE_STRING(wrapper, "CvPlayer", m_szScriptData);
 
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusExport);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusImport);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 
 		// Toffer - Write maps
 		{
+			// Bonus counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusExport.size(), "iBonusExportSize");
+			for (std::map<short, unsigned int>::const_iterator it = m_bonusExport.begin(), itEnd = m_bonusExport.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusExportType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusExportCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusImport.size(), "iBonusImportSize");
+			for (std::map<short, unsigned int>::const_iterator it = m_bonusImport.begin(), itEnd = m_bonusImport.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusImportType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusImportCount");
+			}
 			// Building counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
 			for (std::map<short, unsigned int>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
@@ -21387,6 +21442,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
+		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
