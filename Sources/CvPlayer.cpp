@@ -14480,6 +14480,7 @@ void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
 	{
 		m_unitCount[itr->first] += iChange;
 	}
+	GET_TEAM(getTeam()).changeUnitCount(eUnit, iChange);
 }
 
 int CvPlayer::getUnitCount(const UnitTypes eUnit) const

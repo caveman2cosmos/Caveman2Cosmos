@@ -389,7 +389,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		calcUpkeep100(); // This updates total upkeep on the player level too
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
-		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
 		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 
 		if (m_pUnitInfo->getNukeRange() != -1)
@@ -1343,7 +1342,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
 
-	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
 	owner.changeUnitCount(m_eUnitType, -1);
 
 	if (m_pUnitInfo->getNukeRange() != -1)
@@ -24081,7 +24079,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
 
 		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, 1);
 		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
 		m_bDeathDelay = true;
 	}
