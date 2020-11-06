@@ -4174,36 +4174,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 	}
 }
 
-void CvXMLLoadUtility::SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName)
-{
-	if (TryMoveToXmlFirstChild(szRootTagName))
-	{
-		aInfos.clear();
-		int iNumSibs = GetXmlChildrenNumber();
-		aInfos.resize(iNumSibs);
-		CvString szTextVal;
-
-		if (0 < iNumSibs)
-		{
-			if (GetChildXmlVal(szTextVal))
-			{
-				for (int j = 0; j < iNumSibs; j++)
-				{
-					GC.addDelayedResolution((int*)&(aInfos[j]), szTextVal);
-					if (!GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				MoveToXmlParent();
-			}
-		}
-
-		MoveToXmlParent();
-	}
-}
-
 DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 {
 /************************************************************************************************/

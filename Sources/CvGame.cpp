@@ -183,29 +183,23 @@ void CvGame::init(HandicapTypes eHandicap)
 	//TB GameOption compatibility enforcement project
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+		const GameOptionTypes eGameOption = static_cast<GameOptionTypes>(iI);
 		if (isOption(eGameOption))
 		{
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
+			const CvGameOptionInfo& info = GC.getGameOptionInfo(eGameOption);
+
+			foreach_(const GameOptionTypes& eGameOptionMustOn, info.getEnforcesGameOptionOnTypes())
 			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
+				if (!isOption(eGameOptionMustOn))
 				{
-					GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-					{
-						setOption(eGameOptionMustOn, true);
-					}
+					setOption(eGameOptionMustOn, true);
 				}
 			}
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
+			foreach_(const GameOptionTypes& eGameOptionMustOff, info.getEnforcesGameOptionOffTypes())
 			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
+				if (isOption(eGameOptionMustOff))
 				{
-					GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-					{
-						setOption(eGameOptionMustOff, false);
-					}
+					setOption(eGameOptionMustOff, false);
 				}
 			}
 		}
@@ -2418,31 +2412,25 @@ void CvGame::update()
 		}
 		GC.getMap().updateSight(true, false);
 
-		for (int iI= 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 		{
-			GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+			const GameOptionTypes eGameOption = static_cast<GameOptionTypes>(iI);
 			if (isOption(eGameOption))
 			{
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
+				const CvGameOptionInfo& info = GC.getGameOptionInfo(eGameOption);
+
+				foreach_(const GameOptionTypes& eGameOptionMustOn, info.getEnforcesGameOptionOnTypes())
 				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
+					if (!isOption(eGameOptionMustOn))
 					{
-						GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-						{
-							setOption(eGameOptionMustOn, true);
-						}
+						setOption(eGameOptionMustOn, true);
 					}
 				}
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
+				foreach_(const GameOptionTypes& eGameOptionMustOff, info.getEnforcesGameOptionOffTypes())
 				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
+					if (isOption(eGameOptionMustOff))
 					{
-						GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-						{
-							setOption(eGameOptionMustOff, false);
-						}
+						setOption(eGameOptionMustOff, false);
 					}
 				}
 			}
