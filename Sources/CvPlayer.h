@@ -2329,13 +2329,13 @@ public:
 private:
 	int m_iNumAnimalsSubdued;
 	std::map<BuildingTypes, int> m_unitConstructionCounts;
-	std::map<short, unsigned int> m_unitCount;
-	std::map<short, unsigned int> m_unitMaking;
-	std::map<short, unsigned int> m_buildingMaking;
-	std::map<short, unsigned int> m_freeBuildingCount;
-	std::map<short, unsigned int> m_bonusExport;
-	std::map<short, unsigned int> m_bonusImport;
-	std::map<short, unsigned int> m_greatGeneralPointsType;
+	std::map<short, uint32_t> m_unitCount;
+	std::map<short, uint32_t> m_unitMaking;
+	std::map<short, uint32_t> m_buildingMaking;
+	std::map<short, uint32_t> m_freeBuildingCount;
+	std::map<short, uint32_t> m_bonusExport;
+	std::map<short, uint32_t> m_bonusImport;
+	std::map<short, uint32_t> m_greatGeneralPointsType;
 	std::map<short, int> m_bonusMintedPercent;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;

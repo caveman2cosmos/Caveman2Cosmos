@@ -382,9 +382,10 @@ public:
 	int getProjectMaking(ProjectTypes eIndex) const; // Exposed to Python
 	void changeProjectMaking(ProjectTypes eIndex, int iChange);
 
-	int getUnitCount(UnitTypes eIndex) const; // Exposed to Python
-	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeUnitCount(UnitTypes eIndex, int iChange);
+	int getUnitCount(const UnitTypes eIndex) const; // Exposed to Python
+	void changeUnitCount(const UnitTypes eIndex, const int iChange);
+
+	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const; // Exposed to Python
 
 	int getBuildingCount(BuildingTypes eIndex) const; // Exposed to Python
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
@@ -584,7 +585,6 @@ protected:
 	int* m_paiProjectDefaultArtTypes;
 	int* m_paiProjectMaking;
 	int* m_paiBuildingCount;
-	int* m_paiUnitCount;
 	int* m_paiObsoleteBuildingCount;
 	int* m_paiResearchProgress;
 	int* m_paiTechCount;
@@ -599,6 +599,8 @@ protected:
 	std::vector<int> *m_pavProjectArtTypes;
 	std::vector<short> m_vNoTradeTech;
 	std::vector<BonusTypes> m_aeRevealedBonuses;
+
+	std::map<short, uint32_t> m_unitCount;
 
 	void doWarWeariness();
 	void updateTechShare(TechTypes eTech);
