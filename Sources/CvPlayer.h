@@ -1395,14 +1395,14 @@ public:
 
 	void setCityCommerceModifierDirty(CommerceTypes eCommerce);
 
-	int getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
+	int getBuildingCommerceModifier(BuildingTypes eBonus, CommerceTypes eIndex) const;
+	void changeBuildingCommerceModifier(BuildingTypes eBonus, CommerceTypes eIndex, int iChange);
 
 	int getBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType) const;
 	void changeBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType, int iChange);
 
-	int getBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2) const; //Exposed to Python
-	void changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2, int iChange);
+	int getBonusCommerceModifier(BonusTypes eBonus, CommerceTypes eIndex) const; //Exposed to Python
+	void changeBonusCommerceModifier(BonusTypes eBonus, CommerceTypes eIndex, int iChange);
 
 	int getLandmarkYield(YieldTypes eIndex) const;
 	void changeLandmarkYield(YieldTypes eIndex, int iChange);
@@ -1465,8 +1465,8 @@ public:
 	void clearTileCulture();
 	void clearCityCulture();
 
-	int getBonusMintedPercent(BonusTypes eIndex) const;
-	void changeBonusMintedPercent(BonusTypes eIndex, int iChange);
+	int getBonusMintedPercent(const BonusTypes eBonus) const;
+	void changeBonusMintedPercent(const BonusTypes eBonus, const int iChange);
 
 	//	Moved from unit to player to allow for caching
 	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const;
@@ -1516,7 +1516,6 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
-	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
 	int* m_paiResourceConsumption;
@@ -2337,6 +2336,7 @@ private:
 	std::map<short, unsigned int> m_bonusExport;
 	std::map<short, unsigned int> m_bonusImport;
 	std::map<short, unsigned int> m_greatGeneralPointsType;
+	std::map<short, int> m_bonusMintedPercent;
 	std::map<short, int> m_extraBuildingHappiness;
 	std::map<short, int> m_extraBuildingHealth;
 	std::map<short, int> m_buildingProductionMod;

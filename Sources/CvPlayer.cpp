@@ -184,7 +184,6 @@ m_cachedBonusCount(NULL)
 	m_paeCivics = NULL;
 	m_ppaaiSpecialistExtraYield = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
-	m_paiBonusMintedPercent = NULL;
 	m_pabAutomatedCanBuild = NULL;
 	m_ppaaiTerrainYieldChange = NULL;
 	m_paiResourceConsumption = NULL;
@@ -699,7 +698,6 @@ void CvPlayer::uninit()
 
 	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
-	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
@@ -722,6 +720,7 @@ void CvPlayer::uninit()
 	m_mapScoreHistory.clear();
 	m_bonusExport.clear();
 	m_bonusImport.clear();
+	m_bonusMintedPercent.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
@@ -989,6 +988,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_canHaveBuilder.clear();
 	m_bonusExport.clear();
 	m_bonusImport.clear();
+	m_bonusMintedPercent.clear();
 	m_unitCount.clear();
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
@@ -1375,14 +1375,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits end
 		}
 
-		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
-		FAssertMsg(m_paiBonusMintedPercent==NULL, "about to leak memory, CvPlayer::m_paiBonusMintedPercent");
-		m_paiBonusMintedPercent = new int [GC.getNumBonusInfos()];
-		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			m_paiBonusMintedPercent[iI] = 0;
-		}
-
 		FAssertMsg((0 < NUM_DOMAIN_TYPES),  "NUM_DOMAIN_TYPES is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNationalDomainFreeExperience = new int[NUM_DOMAIN_TYPES];
 		m_paiNationalDomainProductionModifier = new int[NUM_DOMAIN_TYPES];
@@ -1413,6 +1405,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits end
 		}
 
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiResourceConsumption==NULL, "about to leak memory, CvPlayer::m_paiResourceConsumption");
 		m_paiResourceConsumption = new int [GC.getNumBonusInfos()];
 		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
@@ -20103,6 +20096,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					m_bonusImport.insert(std::make_pair(iType, iCountU));
 				}
 			}
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusMintedPercentSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusMintedPercentType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBonusMintedPercentCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusMintedPercent.insert(std::make_pair(iType, iCount));
+				}
+			}
 			// Building counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
 			while (iSize-- > 0)
@@ -20349,7 +20354,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -21377,6 +21381,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusImportType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusImportCount");
 			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusMintedPercent.size(), "iBonusMintedPercentSize");
+			for (std::map<short, int>::const_iterator it = m_bonusMintedPercent.begin(), itEnd = m_bonusMintedPercent.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusMintedPercentType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusMintedPercentCount");
+			}
 			// Building counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
 			for (std::map<short, uint32_t>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
@@ -21527,7 +21537,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -27959,39 +27968,55 @@ bool CvPlayer::hasValidCivics(BuildingTypes eBuilding) const
 	return true;
 }
 
-int CvPlayer::getBonusMintedPercent(BonusTypes eIndex) const
-{
-	return m_paiBonusMintedPercent[eIndex];
-}
 
-void CvPlayer::changeBonusMintedPercent(BonusTypes eIndex, int iChange)
+void CvPlayer::changeBonusMintedPercent(const BonusTypes eBonus, const int iChange)
 {
-	if (iChange != 0)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+
+	if (iChange == 0)
 	{
-		foreach_(CvCity* pLoopCity, cities())
+		return;
+	}
+	// Process bonus out of cities before change
+	foreach_(CvCity* city, cities())
+	{
+		if (city->getNumBonuses(eBonus) > 0)
 		{
-			if (pLoopCity->getNumBonuses(eIndex) > 0)
-			{
-				pLoopCity->processBonus(eIndex, -1);
-			}
-		}
-
-		m_paiBonusMintedPercent[eIndex] += iChange;
-
-		foreach_(CvCity* pLoopCity, cities())
-		{
-			if (pLoopCity->getNumBonuses(eIndex) > 0)
-			{
-				pLoopCity->processBonus(eIndex, 1);
-			}
-
-			pLoopCity->updateCorporation();
-
-			pLoopCity->AI_setAssignWorkDirty(true);
-
-			pLoopCity->setInfoDirty(true);
+			city->processBonus(eBonus, -1);
 		}
 	}
+	std::map<short, int>::const_iterator itr = m_bonusMintedPercent.find((short)eBonus);
+
+	if (itr == m_bonusMintedPercent.end())
+	{
+		m_bonusMintedPercent.insert(std::make_pair((short)eBonus, iChange));
+	}
+	else if (itr->second == -iChange)
+	{
+		m_bonusMintedPercent.erase(itr->first);
+	}
+	else // change minted percent
+	{
+		m_bonusMintedPercent[itr->first] += iChange;
+	}
+	// Process bonus back into cities after change
+	foreach_(CvCity* city, cities())
+	{
+		if (city->getNumBonuses(eBonus) > 0)
+		{
+			city->processBonus(eBonus, 1);
+		}
+		city->updateCorporation();
+		city->AI_setAssignWorkDirty(true);
+		city->setInfoDirty(true);
+	}
+}
+
+int CvPlayer::getBonusMintedPercent(const BonusTypes eBonus) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	std::map<short, int>::const_iterator itr = m_bonusMintedPercent.find((short)eBonus);
+	return itr != m_bonusMintedPercent.end() ? itr->second : 0;
 }
 
 
@@ -29952,6 +29977,7 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
+	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
 	m_extraBuildingHealth.clear();
@@ -30017,11 +30043,6 @@ void CvPlayer::clearModifierTotals()
 			m_ppaaiImprovementYieldChange[iI][iJ] = 0;
 		}
 		m_paiImprovementUpgradeRateModifierSpecific[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		m_paiBonusMintedPercent[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
