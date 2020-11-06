@@ -49,7 +49,6 @@ m_Properties(this)
 	m_aiForceTeamVoteEligibilityCount = NULL;
 
 	m_pabHasTech = NULL;
-	m_pabNoTradeTech = NULL;
 
 	m_ppaaiImprovementYieldChange = NULL;
 
@@ -144,6 +143,8 @@ void CvTeam::init(TeamTypes eID)
 
 void CvTeam::uninit()
 {
+	m_vNoTradeTech.clear();
+
 	SAFE_DELETE_ARRAY(m_abCanLaunch);
 	SAFE_DELETE_ARRAY(m_paiRouteChange);
 	SAFE_DELETE_ARRAY(m_paiProjectCount);
@@ -159,7 +160,6 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_aiVictoryCountdown);
 	SAFE_DELETE_ARRAY(m_aiForceTeamVoteEligibilityCount);
 	SAFE_DELETE_ARRAY(m_pabHasTech);
-	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
@@ -370,12 +370,9 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 
 		FAssertMsg(m_pabHasTech==NULL, "about to leak memory, CvTeam::m_pabHasTech");
 		m_pabHasTech = new bool[GC.getNumTechInfos()];
-		FAssertMsg(m_pabNoTradeTech==NULL, "about to leak memory, CvTeam::m_pabNoTradeTech");
-		m_pabNoTradeTech = new bool[GC.getNumTechInfos()];
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
 			m_pabHasTech[iI] = false;
-			m_pabNoTradeTech[iI] = false;
 		}
 
 		FAssertMsg(m_ppaaiImprovementYieldChange==NULL, "about to leak memory, CvTeam::m_ppaaiImprovementYieldChange");
@@ -5852,17 +5849,31 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 }
 
 
-bool CvTeam::isNoTradeTech(TechTypes eIndex) const
+bool CvTeam::isNoTradeTech(const TechTypes eTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
-	return m_pabNoTradeTech[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	return find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), eTech) != m_vNoTradeTech.end();
 }
 
 
-void CvTeam::setNoTradeTech(TechTypes eIndex, bool bNewValue)
+void CvTeam::setNoTradeTech(const TechTypes eTech, const bool bNewValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex)
-	m_pabNoTradeTech[eIndex] = bNewValue;
+	std::vector<short>::iterator itr = find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), eTech);
+
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FAssertMsg(bNewValue != (itr != m_vNoTradeTech.end()), "This is no change!")
+
+	if (bNewValue)
+	{
+		if (itr == m_vNoTradeTech.end())
+		{
+			m_vNoTradeTech.push_back(eTech);
+		}
+	}
+	else if (itr != m_vNoTradeTech.end())
+	{
+		m_vNoTradeTech.erase(itr);
+	}
 }
 
 
@@ -6552,7 +6563,7 @@ void CvTeam::verifySpyUnitsValidPlot()
 		}
 	}
 
-	for (uint i = 0; i < aUnits.size(); i++)
+	for (uint32_t i = 0; i < aUnits.size(); i++)
 	{
 		aUnits[i]->jumpToNearestValidPlot();
 	}
@@ -6795,7 +6806,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabHasTech);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabNoTradeTech);
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_IMPROVEMENTS); ++i)
 	{
@@ -6812,10 +6822,26 @@ void CvTeam::read(FDataStreamBase* pStream)
 		}
 	}
 
-	uint iSize = 0;
+	// Toffer - Read vectors
+	{
+		short iSize;
+		short iType;
+		WRAPPER_READ_DECORATED(wrapper, "CvTeam", &iSize, "NoTradeTechSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvTeam", &iType, "NoTradeTechIndex");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
+
+			if (iType > -1)
+			{
+				m_vNoTradeTech.push_back(iType);
+			}
+		}
+	}
+	uint32_t iSize = 0;
 	m_aeRevealedBonuses.clear();
 	WRAPPER_READ(wrapper, "CvTeam", &iSize);
-	for (uint i = 0; i < iSize; ++i)
+	for (uint32_t i = 0; i < iSize; ++i)
 	{
 		BonusTypes eBonus;
 		WRAPPER_READ_CLASS_ENUM(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BONUSES, (int*)&eBonus);
@@ -6964,13 +6990,21 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabHasTech);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabNoTradeTech);
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
 	{
 		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
 	}
 
+	// Toffer - Write vectors
+	{
+		// Tech
+		WRAPPER_WRITE_DECORATED(wrapper, "CvTeam", (short)m_vNoTradeTech.size(), "NoTradeTechSize");
+		for (std::vector<short>::const_iterator it = m_vNoTradeTech.begin(); it != m_vNoTradeTech.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvTeam", *it, "NoTradeTechIndex");
+		}
+	}
 	WRAPPER_WRITE_DECORATED(wrapper, "CvTeam", m_aeRevealedBonuses.size(), "iSize" );
 	for (std::vector<BonusTypes>::iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
 	{

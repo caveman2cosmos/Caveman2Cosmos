@@ -567,7 +567,6 @@ protected:
 	bool* m_abCanLaunch;
 	bool* m_abIsRebelAgainst;
 	bool* m_pabHasTech;
-	bool* m_pabNoTradeTech;
 
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBuildingYieldChange;
@@ -602,7 +601,7 @@ protected:
 	int* m_aiCounterespionageModAgainstTeam;
 
 	std::vector<int> *m_pavProjectArtTypes;
-
+	std::vector<short> m_vNoTradeTech;
 	std::vector<BonusTypes> m_aeRevealedBonuses;
 
 	void doWarWeariness();
