@@ -933,7 +933,7 @@ void CvCityAI::AI_chooseProduction()
 			// if building a combat unit, and we have nearly no defenders, keep building it
 			const UnitTypes eProductionUnit = getProductionUnit();
 			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(getOwner()) < 2
-			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				return;
 			}
@@ -9402,7 +9402,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 
 			if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
-			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				iMinTurns = std::min(iMinTurns, 3);
 				bEssential = true;
@@ -12519,8 +12519,7 @@ bool CvCityAI::AI_doPanic()
 
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (getProduction() > 0
-				&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+				if (getProduction() > 0 && GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 				{
 					AI_doHurry(true);
 					return true;

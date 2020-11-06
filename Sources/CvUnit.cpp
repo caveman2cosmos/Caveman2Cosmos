@@ -13871,23 +13871,19 @@ int CvUnit::airBaseCombatStr() const
 
 int CvUnit::baseCombatStrPreCheck() const
 {
-	int iStr = (m_iBaseCombat);
-	if (!isNPC())
+	int iStr = m_iBaseCombat + getExtraStrength();
+
+	if (iStr < 0)
 	{
-		iStr += GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType());
+		return 0;
 	}
-	iStr += getExtraStrength();
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-	if (iStr < 0)
-	{
-		iStr = 0;
-	}
 	if (getExtraStrengthModifier() != 0)
 	{
-		iStr *= (100 + getExtraStrengthModifier());
+		iStr *= 100 + getExtraStrengthModifier();
 		iStr /= 100;
 	}
 	return iStr;
@@ -13895,19 +13891,19 @@ int CvUnit::baseCombatStrPreCheck() const
 
 int CvUnit::baseAirCombatStrPreCheck() const
 {
-	int iStr = (m_pUnitInfo->getAirCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType()));
-	iStr += getExtraStrength();
+	int iStr = m_pUnitInfo->getAirCombat() + getExtraStrength();
+
+	if (iStr < 0)
+	{
+		return 0;
+	}
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-	if (iStr < 0)
-	{
-		iStr = 0;
-	}
 	if (getExtraStrengthModifier() != 0)
 	{
-		iStr *= (100 + getExtraStrengthModifier());
+		iStr *= 100 + getExtraStrengthModifier();
 		iStr /= 100;
 	}
 	return iStr;

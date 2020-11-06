@@ -63,7 +63,6 @@ m_Properties(this)
 	m_abLimitedBorders = new bool[MAX_TEAMS];
 	m_abFreeTrade = new bool[MAX_TEAMS];
 	m_paiFreeSpecialistCount = NULL;
-	m_paiUnitStrengthChange = NULL;
 
 	reset((TeamTypes)0, true);
 }
@@ -164,7 +163,6 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
-	SAFE_DELETE_ARRAY(m_paiUnitStrengthChange);
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingSpecialistChange, GC.getNumBuildingInfos());
@@ -454,12 +452,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 			{
 				m_ppiBuildingYieldModifier[iI][iJ] = 0;
 			}
-		}
-		FAssertMsg(m_paiUnitStrengthChange==NULL, "about to leak memory, CvTeam::m_paiUnitStrengthChange");
-		m_paiUnitStrengthChange = new int[GC.getNumUnitInfos()];
-		for (iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
-		{
-			m_paiUnitStrengthChange[iJ] = 0;
 		}
 
 		AI_reset(false);
@@ -6304,10 +6296,6 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		changeTechExtraBuildingHappiness((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHappinessChanges(eTech) * iChange);
 		changeTechExtraBuildingHealth((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHealthChanges(eTech) * iChange);
 	}
-	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		changeUnitStrengthChange((UnitTypes)iI, kTech.getUnitStrengthChange(iI) * iChange);
-	}
 
 	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -6868,7 +6856,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHealth);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitStrengthChange);
+
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_BUILDINGS); ++i)
 	{
 		int	newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, i, true);
@@ -7033,7 +7021,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHealth);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitStrengthChange);
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -8052,32 +8039,14 @@ void CvTeam::changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange)
 	setFreeSpecialistCount(eIndex, (getFreeSpecialistCount(eIndex) + iChange));
 }
 
-int CvTeam::getUnitStrengthChange(UnitTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		return m_paiUnitStrengthChange[eIndex] * 100;
-	}
-	return m_paiUnitStrengthChange[eIndex];
-}
-
-void CvTeam::changeUnitStrengthChange(UnitTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	m_paiUnitStrengthChange[eIndex] += iChange;
-}
 
 bool CvTeam::isAnyVassal() const
 {
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
+		if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive() && isVassal((TeamTypes)iI))
 		{
-			if (isVassal((TeamTypes)iI))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;
@@ -8260,11 +8229,6 @@ void CvTeam::recalculateModifiers()
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		m_paiFreeSpecialistCount[iI] = 0;
-	}
-
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		m_paiUnitStrengthChange[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)

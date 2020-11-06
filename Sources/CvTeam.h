@@ -256,9 +256,6 @@ public:
 
 	void AI_updateBonusValue(BonusTypes eBonus);
 
-	int getUnitStrengthChange(UnitTypes eUnit) const;
-	void changeUnitStrengthChange(UnitTypes eUnit, int iChange);
-
 	void AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTypes eBuilding);
 
 	int getTechTradingCount() const; // Exposed to Python
@@ -576,7 +573,6 @@ protected:
 	int** m_ppaaiImprovementYieldChange;
 
 	int* m_paiFreeSpecialistCount;
-	int* m_paiUnitStrengthChange;
 	int* m_aiStolenVisibilityTimer;
 	int* m_aiWarWearinessTimes100;
 	int* m_aiTechShareCount;

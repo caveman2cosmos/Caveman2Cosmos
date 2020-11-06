@@ -7042,17 +7042,6 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 				iValue += iUnitValue;
 			}
 		}
-		if (GC.getTechInfo(eTech).getUnitStrengthChange(eLoopUnit) != 0)
-		{
-			int iUnitValue = 50 + GC.getTechInfo(eTech).getUnitStrengthChange(eLoopUnit) * getUnitCountPlusMaking(eLoopUnit) * 20;
-
-			if (bWarPlan)
-			{
-				iUnitValue *= 3;
-				iUnitValue /= 2;
-			}
-			iValue += iUnitValue;
-		}
 	}
 	return iValue;
 }
@@ -24375,45 +24364,43 @@ int CvPlayerAI::AI_getStrategyHash() const
 	{
 		if (getCapitalCity() != NULL && getCapitalCity()->canTrain((UnitTypes)iI))
 		{
-			const CvUnitInfo& kLoopUnit = GC.getUnitInfo((UnitTypes)iI);
-			const int iMoves = kLoopUnit.getMoves();
+			const CvUnitInfo& unit = GC.getUnitInfo((UnitTypes)iI);
+			const int iMoves = unit.getMoves();
 
-			if(kLoopUnit.getUnitAIType(UNITAI_RESERVE)
-			|| kLoopUnit.getUnitAIType(UNITAI_ATTACK_CITY)
-			|| kLoopUnit.getUnitAIType(UNITAI_COUNTER)
-			|| kLoopUnit.getUnitAIType(UNITAI_PILLAGE))
+			if(unit.getUnitAIType(UNITAI_RESERVE)
+			|| unit.getUnitAIType(UNITAI_ATTACK_CITY)
+			|| unit.getUnitAIType(UNITAI_COUNTER)
+			|| unit.getUnitAIType(UNITAI_PILLAGE))
 			{
 				iAttackUnitCount++;
 
-				int iCombat = (kLoopUnit.getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)iI));
-
 				if (iMoves == 1)
 				{
-					iBestSlowUnitCombat = std::max(iBestSlowUnitCombat, iCombat);
+					iBestSlowUnitCombat = std::max(iBestSlowUnitCombat, unit.getCombat());
 				}
 				else if (iMoves > 1)
 				{
-					iBestFastUnitCombat = std::max(iBestFastUnitCombat, iCombat);
+					iBestFastUnitCombat = std::max(iBestFastUnitCombat, unit.getCombat());
 				}
 			}
 			// Mobile anti-air and artillery flags only meant for land units
-			if (kLoopUnit.getDomainType() == DOMAIN_LAND && iMoves > 1)
+			if (unit.getDomainType() == DOMAIN_LAND && iMoves > 1)
 			{
-				if (kLoopUnit.getInterceptionProbability() > 25)
+				if (unit.getInterceptionProbability() > 25)
 				{
 					bHasMobileAntiair = true;
 				}
-				if (kLoopUnit.getBombardRate() > 10)
+				if (unit.getBombardRate() > 10)
 				{
 					bHasMobileArtillery = true;
 				}
 			}
-			if (kLoopUnit.getAirRange() > 1 && !kLoopUnit.isSuicide()
-			&& kLoopUnit.getBombRate() > 10 && kLoopUnit.getAirCombat() > 0)
+			if (unit.getAirRange() > 1 && !unit.isSuicide() 
+			&& unit.getBombRate() > 10 && unit.getAirCombat() > 0)
 			{
 				bHasBomber = true;
 			}
-			if (kLoopUnit.getNukeRange() > 0)
+			if (unit.getNukeRange() > 0)
 			{
 				iNukeCount++;
 			}
@@ -28774,27 +28761,26 @@ int CvPlayerAI::strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAITyp
 	noGrowthCriteria.m_bIgnoreGrowth = true;
 	const UnitTypes eBestUnit = bestBuildableUnitForAIType(eDomain, eUnitAIType, &noGrowthCriteria);
 
-	if (eBestUnit == NO_UNIT)
+	if (eBestUnit != NO_UNIT)
 	{
-		//	We cannot build any!  Take the average of any we already have
-		int iTotal = 0;
-		int iCount = 0;
-
-		foreach_(const CvUnit* pLoopUnit, units())
-		{
-			if (eUnitAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == eUnitAIType)
-			{
-				iCount++;
-				iTotal += pLoopUnit->getUnitInfo().getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)pLoopUnit->getUnitType());
-			}
-		}
-		if (iCount > 0)
-		{
-			iTotal /= iCount;
-		}
-		return std::max(1, iTotal);
+		return GC.getUnitInfo(eBestUnit).getCombat();
 	}
-	return GC.getUnitInfo(eBestUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eBestUnit);
+	// We cannot build any! Take the average of any we already have.
+	int iTotal = 0;
+	int iCount = 0;
+	foreach_(const CvUnit* pLoopUnit, units())
+	{
+		if (eUnitAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == eUnitAIType)
+		{
+			iCount++;
+			iTotal += pLoopUnit->getUnitInfo().getCombat();
+		}
+	}
+	if (iCount > 0)
+	{
+		iTotal /= iCount;
+	}
+	return std::max(1, iTotal);
 }
 
 UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, const CvUnitSelectionCriteria* criteria) const

@@ -17538,15 +17538,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		szBuffer.append(gDLL->getText("TXT_KEY_TECH_GLOBAL"));
 	}
 
-	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		if (kTech.getUnitStrengthChange((UnitTypes) iI) != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_UNIT_STRENGTH_CHANGE", kTech.getUnitStrengthChange((UnitTypes) iI), ((CvWString)GC.getUnitInfo((UnitTypes) iI).getDescription()).c_str()));
-		}
-	}
-
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{
 		if (kTech.getFreeSpecialistCount(iI) > 0)
@@ -18045,11 +18036,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		else
 		{
-			float fCombat = (float)kUnit.getTotalModifiedCombatStrength100();
-			int iModifier = kUnit.getCombatStrengthModifier();
-			int iAdditional = game.getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : game.getActiveTeam()).getUnitStrengthChange(eUnit));
-			fCombat += (iModifier * iAdditional);
-			fCombat /= 100;
+			const float fCombat = kUnit.getTotalModifiedCombatStrength100() / 100.0f;
 
 			if (fCombat > 0)
 			{
