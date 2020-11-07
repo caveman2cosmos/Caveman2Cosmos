@@ -24534,21 +24534,18 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		CvWStringBuffer szRawBonusList;
 		bFirst = true;
 
-		for (iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); ++iI)
+		foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrRawVicinityBonuses(iI) != NO_BONUS)
+			if (pCity == NULL || !pCity->hasRawVicinityBonus(bonus))
 			{
-				if (pCity == NULL || !pCity->hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iI)))
-				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY").c_str());
-					setListHelp(szRawBonusList, szTempBuffer, GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-					bFirst = false;
-				}
-				else if (NULL != pCity)
-				{
-					bFirst = true;
-					break;
-				}
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY").c_str());
+				setListHelp(szRawBonusList, szTempBuffer, GC.getBonusInfo(bonus).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				bFirst = false;
+			}
+			else if (NULL != pCity)
+			{
+				bFirst = true;
+				break;
 			}
 		}
 
@@ -25324,13 +25321,6 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 	if (city.badHealth() > 0)
 	{
-		iHealth = -(city.getFreshWaterBadHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_FROM_FRESH_WATER", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
 		iHealth = -(city.getFeatureBadHealth());
 		if (iHealth > 0)
 		{

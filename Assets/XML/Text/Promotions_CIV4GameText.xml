@@ -27,13 +27,13 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht %s3_TypeName.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht %s3_TypeName</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod à la portée de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite %s3_TypeName.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite %s3_TypeName</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE</Tag>
@@ -57,7 +57,7 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
 		<French>[ICON_BULLET]%D1_Mod %F2_Icon Invisibilité sur %s3_Type.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ACCURACY</Tag>
@@ -594,6 +594,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUSHIDO</Tag>
 		<English>Bushido Promotion Line</English>
 		<French>Spécialisation Bushido</French>
+		<German>Bushido</German>
 		<Italian>Bushido</Italian>
 		<Polish>Linia Promocji: Honor</Polish>
 	</TEXT>
