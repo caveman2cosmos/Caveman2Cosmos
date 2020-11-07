@@ -4813,21 +4813,16 @@ bool CvPlayer::hasBusyUnit() const
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pLoopSelectionGroup;
-	int iLoop;
-
-	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups()
+	| filtered(CvSelectionGroup::fn::isBusy()))
 	{
-		if (pLoopSelectionGroup->isBusy())
+		if (pLoopSelectionGroup->getNumUnits() == 0)
 		{
-			if (pLoopSelectionGroup->getNumUnits() == 0)
-			{
-				pLoopSelectionGroup->kill();
-				return false;
-			}
-
-			return true;
+			pLoopSelectionGroup->kill();
+			return false;
 		}
+
+		return true;
 	}
 
 	return false;

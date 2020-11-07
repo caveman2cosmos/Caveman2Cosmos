@@ -80,9 +80,9 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Arcologie Ruinen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Arkologieruinen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</German>
 		<Italian>Rovine arcologiche</Italian>
 		<Spanish>
@@ -158,6 +158,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_CITY</Tag>
 		<English>City</English>
 		<French>Ville</French>
+		<German>
+			<Text>Großstadt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Tag>
@@ -1774,6 +1779,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Tag>
 		<English>Steel Watchtower</English>
 		<French>Tour d'observation en acier</French>
+		<German>
+			<Text>Stahlwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in acciaio</Italian>
 		<Spanish>
 			<Text>Torre de vigilancia de acero</Text>
@@ -1818,6 +1828,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Tag>
 		<English>Stone Watchtower</English>
 		<French>Tour d'observation en pierres</French>
+		<German>
+			<Text>Steinwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in pietra</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de piedra</Text>
@@ -2292,6 +2307,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Tag>
 		<English>Wooden Watchtower</English>
 		<French>Tour d'observation en bois</French>
+		<German>
+			<Text>Holzwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in legno</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de madera</Text>

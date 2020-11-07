@@ -458,12 +458,14 @@ public:
 	// fn::find_if(groups(), CvSelectionGroup::fn::getHeadUnitAI() != UNITAI_SETTLER)
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, autoMission);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, resetHealing);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, doDelayedDeath);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, updateTimers);
 
 		DECLARE_MAP_FUNCTOR_2(CvSelectionGroup, bool, readyToMove, bool, bool);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, isBusy);
 		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, readyToAuto);
 		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, isAutomated);
 		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, const CvUnit*, getHeadUnit);

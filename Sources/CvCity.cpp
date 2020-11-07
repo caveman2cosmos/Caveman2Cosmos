@@ -503,7 +503,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iEspionageHealthCounter = 0;
 	m_iEspionageHappinessCounter = 0;
 	m_iFreshWaterGoodHealth = 0;
-	m_iFreshWaterBadHealth = 0;
 	m_iFeatureGoodHealth = 0;
 	m_iFeatureBadHealth = 0;
 	m_iBuildingGoodHealth = 0;
@@ -3382,16 +3381,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 		bool bHasAnyRawVicinityBonus = false;
 		bool bRequiresAnyRawVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iI++)
+		foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrRawVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyRawVicinityBonus = true;
+			if (hasRawVicinityBonus(bonus))
 			{
-				bRequiresAnyRawVicinityBonus = true;
-				if (hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iI)))
-				{
-					bHasAnyRawVicinityBonus = true;
-					break;
-				}
+				bHasAnyRawVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyRawVicinityBonus && !bHasAnyRawVicinityBonus)
@@ -6593,7 +6589,6 @@ int CvCity::badHealth(bool bNoAngry, int iExtra) const
 	int iTotalHealth = 0;
 
 	iTotalHealth -= std::max<int>(0, getEspionageHealthCounter());
-	iTotalHealth += std::min<int>(0, getFreshWaterBadHealth());
 	iTotalHealth += std::min<int>(0, getFeatureBadHealth());
 	iTotalHealth += std::min<int>(0, getPowerBadHealth());
 	iTotalHealth += std::min<int>(0, getBonusBadHealth());
@@ -8787,34 +8782,14 @@ int CvCity::getFreshWaterGoodHealth() const
 }
 
 
-int CvCity::getFreshWaterBadHealth() const
-{
-	return m_iFreshWaterBadHealth;
-}
-
 void CvCity::updateFreshWaterHealth()
 {
-	int iNewGoodHealth = 0;
-	int iNewBadHealth = 0;
+	const int iNewGoodHealth = plot()->isFreshWater() ? GC.getFRESH_WATER_HEALTH_CHANGE() : 0;
 
-	if (plot()->isFreshWater())
-	{
-		if (GC.getFRESH_WATER_HEALTH_CHANGE() > 0)
-		{
-			iNewGoodHealth += GC.getFRESH_WATER_HEALTH_CHANGE();
-		}
-		else
-		{
-			iNewBadHealth += GC.getFRESH_WATER_HEALTH_CHANGE();
-		}
-	}
-
-	if ((getFreshWaterGoodHealth() != iNewGoodHealth) || (getFreshWaterBadHealth() != iNewBadHealth))
+	if (getFreshWaterGoodHealth() != iNewGoodHealth)
 	{
 		m_iFreshWaterGoodHealth = iNewGoodHealth;
-		m_iFreshWaterBadHealth = iNewBadHealth;
 		FAssert(getFreshWaterGoodHealth() >= 0);
-		FAssert(getFreshWaterBadHealth() <= 0);
 
 		AI_setAssignWorkDirty(true);
 
@@ -14860,12 +14835,10 @@ void CvCity::changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChan
 	m_paiImprovementFreeSpecialists[eIndex] += iChange;
 }
 
-int CvCity::getReligionInfluence(ReligionTypes eIndex) const
+uint32_t CvCity::getReligionInfluence(ReligionTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
-	//TB Debug
-	//Somehow we are getting under 0 values here and that could cause problems down the road
-	//This method enforces minimum of 0 without changing the actual value of m_paiReligionInfluence[eIndex] as the integrity of that value should be maintained.
+	// Less than zero is meaningless for this value.
 	return std::max(0, m_paiReligionInfluence[eIndex]);
 }
 
@@ -14874,7 +14847,6 @@ void CvCity::changeReligionInfluence(ReligionTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	m_paiReligionInfluence[eIndex] += iChange;
-	FAssert(m_paiReligionInfluence[eIndex] >= 0);
 }
 
 
@@ -17344,12 +17316,12 @@ void CvCity::doReligion()
 									if (pLoopCity->isHasReligion((ReligionTypes)iI))
 									{
 										iDecay *= 9;
-										iDecay /= (10 + std::max(0, pLoopCity->getReligionInfluence((ReligionTypes)iI)));
+										iDecay /= 10 + pLoopCity->getReligionInfluence((ReligionTypes)iI);
 									}
 								}
 							}
 
-							iDecay /= std::max(1, 1 + getReligionInfluence((ReligionTypes)iI));
+							iDecay /= 1 + getReligionInfluence((ReligionTypes)iI);
 							if (pHolyCity != NULL)
 							{
 								if (pHolyCity->getOwner() == getOwner())
@@ -17520,7 +17492,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHealthCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHappinessCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWaterGoodHealth);
-	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWaterBadHealth);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iFreshWaterBadHealth, SAVE_VALUE_ANY);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingGoodHealth);
@@ -18091,7 +18063,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iEspionageHealthCounter);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iEspionageHappinessCounter);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFreshWaterGoodHealth);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iFreshWaterBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFeatureGoodHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFeatureBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBuildingGoodHealth);
@@ -21219,16 +21190,13 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					bool bHasORRawVicinityBonus = false;
 					bool bNeedsORRawVicinityBonus = false;
 
-					for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+					foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 					{
-						if (kBuilding.getPrereqOrRawVicinityBonuses(iJ) != NO_BONUS)
+						bNeedsORRawVicinityBonus = true;
+						if (hasRawVicinityBonus(bonus))
 						{
-							bNeedsORRawVicinityBonus = true;
-							if (hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqOrRawVicinityBonuses(iJ)))
-							{
-								bHasORRawVicinityBonus = true;
-								break;
-							}
+							bHasORRawVicinityBonus = true;
+							break;
 						}
 					}
 

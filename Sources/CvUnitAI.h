@@ -459,7 +459,7 @@ protected:
 
 
 	bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
-	CvUnitAI* AI_cityConstructionTargeted(CvCity* pCity, BuildingTypes eBuilding, CvSelectionGroup* omitGroup) const;
+	CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
