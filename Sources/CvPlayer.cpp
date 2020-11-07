@@ -31765,8 +31765,12 @@ void CvPlayer::changeInquisitionCount(int iChange)
 void CvPlayer::changeNationalGreatPeopleUnitRate(const UnitTypes eUnit, const int iChange)
 {
 	FASSERT_BOUNDS(-1, GC.getNumUnitInfos(), eUnit)
-	FAssertMsg(iChange != 0, "This is not a change!")
 
+	if (iChange == 0)
+	{
+		FErrorMsg("This is not a change!");
+		return;
+	}
 	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eUnit).getEspionagePoints() > 0)
 	{
 		return;
@@ -31781,10 +31785,7 @@ void CvPlayer::changeNationalGreatPeopleUnitRate(const UnitTypes eUnit, const in
 
 	if (itr == m_greatPeopleRateforUnit.end())
 	{
-		if (iChange != 0)
-		{
-			m_greatPeopleRateforUnit.insert(std::make_pair((short)eUnit, iChange));
-		}
+		m_greatPeopleRateforUnit.insert(std::make_pair((short)eUnit, iChange));
 	}
 	else if (itr->second == -iChange)
 	{
@@ -31968,16 +31969,17 @@ void CvPlayer::changeEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int i
 void CvPlayer::changeGoldenAgeOnBirthOfGreatPersonCount(const UnitTypes eUnit, const char iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
-	FAssertMsg(iChange != 0, "This is not a change!")
 
+	if (iChange == 0)
+	{
+		FErrorMsg("This is not a change!");
+		return;
+	}
 	std::map<short, char>::const_iterator itr = m_goldenAgeOnBirthOfGreatPersonCount.find((short)eUnit);
 
 	if (itr == m_goldenAgeOnBirthOfGreatPersonCount.end())
 	{
-		if (iChange != 0)
-		{
-			m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair((short)eUnit, iChange));
-		}
+		m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair((short)eUnit, iChange));
 	}
 	else if (itr->second == -iChange)
 	{

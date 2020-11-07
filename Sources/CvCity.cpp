@@ -85,7 +85,6 @@ CvCity::CvCity()
 	m_aiBonusCommercePercentChanges = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceAttacks = new int[NUM_COMMERCE_TYPES];
 	m_aiMaxCommerceAttacks = new int[NUM_COMMERCE_TYPES];
-	m_paiBonusDefenseChanges = NULL;
 	m_cachedPropertyNeeds = NULL;
 	m_pabHadVicinityBonus = NULL;
 	m_pabHasVicinityBonus = NULL;
@@ -404,7 +403,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumFreeBuilding);
 	SAFE_DELETE_ARRAY(m_paiNumFreeAreaBuilding);
 	SAFE_DELETE_ARRAY(m_paiBuildingReplaced);
-	SAFE_DELETE_ARRAY(m_paiBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_cachedPropertyNeeds);
 	SAFE_DELETE_ARRAY(m_pabHadVicinityBonus);
 	SAFE_DELETE_ARRAY(m_pabHasVicinityBonus);
@@ -457,6 +455,7 @@ void CvCity::uninit()
 	m_aBuildingHealthChange.clear();
 	m_buildingProductionMod.clear();
 	m_unitProductionMod.clear();
+	m_bonusDefenseChanges.clear();
 }
 
 // FUNCTION: reset()
@@ -988,12 +987,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		FAssertMsg((0 < iMaxTradeRoutes), "Max Trade Routes is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paTradeCities = std::vector<IDInfo>(iMaxTradeRoutes);
 
-		m_paiBonusDefenseChanges = new int[GC.getNumBonusInfos()];
 		m_pabHadVicinityBonus = new bool[GC.getNumBonusInfos()];
 		m_pabHadRawVicinityBonus = new bool[GC.getNumBonusInfos()];
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			m_paiBonusDefenseChanges[iI] = 0;
 			m_pabHadVicinityBonus[iI] = false;
 			m_pabHadRawVicinityBonus[iI] = false;
 		}
@@ -5791,12 +5788,9 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 				for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 				{
-					if (hasBonus((BonusTypes)iI))
+					if (kBuilding.getBonusDefenseChanges(iI) != 0)
 					{
-						if (kBuilding.getBonusDefenseChanges(iI) != 0)
-						{
-							changeBonusDefenseChanges((BonusTypes)iI, kBuilding.getBonusDefenseChanges(iI) * iChange);
-						}
+						changeBonusDefenseChanges((BonusTypes)iI, kBuilding.getBonusDefenseChanges(iI) * iChange);
 					}
 				}
 			}
@@ -17654,7 +17648,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 
@@ -17833,6 +17826,19 @@ void CvCity::read(FDataStreamBase* pStream)
 		short iSize;
 		short iType;
 		int iCount;
+		// Bonus
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BonusDefenseChangesSize");
+		while (iSize-- > 0)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "BonusDefenseChangesType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCount, "BonusDefenseChanges");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+			if (iType > -1)
+			{
+				m_bonusDefenseChanges.insert(std::make_pair(iType, iCount));
+			}
+		}
 		// Building
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingProductionModSize");
 		while (iSize-- > 0)
@@ -18200,7 +18206,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraYieldTurns);
@@ -18298,6 +18303,13 @@ void CvCity::write(FDataStreamBase* pStream)
 
 	// Toffer - Write Maps
 	{
+		// Bonus
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_bonusDefenseChanges.size(), "BonusDefenseChangesSize");
+		for (std::map<short, int>::const_iterator it = m_bonusDefenseChanges.begin(), itEnd = m_bonusDefenseChanges.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "BonusDefenseChangesType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "BonusDefenseChanges");
+		}
 		// Building
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingProductionMod.size(), "BuildingProductionModSize");
 		for (std::map<short, int>::const_iterator it = m_buildingProductionMod.begin(), itEnd = m_buildingProductionMod.end(); it != itEnd; ++it)
@@ -20751,17 +20763,52 @@ int CvCity::getBuildingProductionModifier(const BuildingTypes eIndex) const
 }
 
 
-int CvCity::getBonusDefenseChanges(BonusTypes eIndex) const
+void CvCity::changeBonusDefenseChanges(const BonusTypes eBonus, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-	return m_paiBonusDefenseChanges[eIndex];
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+
+	if (iChange == 0)
+	{
+		FErrorMsg("This is not a change!");
+		return;
+	}
+	std::map<short, int>::const_iterator itr = m_bonusDefenseChanges.find((short)eBonus);
+
+	if (itr == m_bonusDefenseChanges.end())
+	{
+		m_bonusDefenseChanges.insert(std::make_pair((short)eBonus, iChange));
+	}
+	else if (itr->second == -iChange)
+	{
+		m_bonusDefenseChanges.erase(itr->first);
+	}
+	else // change defense
+	{
+		m_bonusDefenseChanges[itr->first] += iChange;
+	}
 }
 
-void CvCity::changeBonusDefenseChanges(BonusTypes eIndex, int iChange)
+int CvCity::getBonusDefenseChanges(const BonusTypes eBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
-	m_paiBonusDefenseChanges[eIndex] += iChange;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	std::map<short, int>::const_iterator itr = m_bonusDefenseChanges.find((short)eBonus);
+	return itr != m_bonusDefenseChanges.end() ? itr->second : 0;
 }
+
+int CvCity::calculateBonusDefense() const
+{
+	int iBonusDefense = 0;
+
+	for (std::map<short, int>::const_iterator itr = m_bonusDefenseChanges.begin(); itr != m_bonusDefenseChanges.end(); ++itr)
+	{
+		if (hasBonus((BonusTypes)itr->first))
+		{
+			iBonusDefense += itr->second;
+		}
+	}
+	return iBonusDefense;
+}
+
 
 bool CvCity::hadVicinityBonus(BonusTypes eIndex) const
 {
@@ -21066,20 +21113,6 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 		}
 	}
 	return false;
-}
-
-
-int CvCity::calculateBonusDefense() const
-{
-	int iBonusDefense = 0;
-	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-	{
-		if (hasBonus((BonusTypes)iI))
-		{
-			iBonusDefense += getBonusDefenseChanges((BonusTypes)iI);
-		}
-	}
-	return iBonusDefense;
 }
 
 void CvCity::setCivilizationType(int iCiv)
@@ -23182,11 +23215,7 @@ void CvCity::clearModifierTotals()
 	m_aBuildingHealthChange.clear();
 	m_buildingProductionMod.clear();
 	m_unitProductionMod.clear();
-
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		m_paiBonusDefenseChanges[iI] = 0;
-	}
+	m_bonusDefenseChanges.clear();
 
 	m_aBuildingCommerceModifier.clear();
 	m_aBuildingYieldModifier.clear();

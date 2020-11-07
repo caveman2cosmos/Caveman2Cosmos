@@ -1425,8 +1425,10 @@ public:
 
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
-	int getBonusDefenseChanges(BonusTypes eIndex) const;
-	void changeBonusDefenseChanges(BonusTypes eIndex, int iChange);
+
+	int getBonusDefenseChanges(const BonusTypes eIndex) const;
+	void changeBonusDefenseChanges(const BonusTypes eIndex, const int iChange);
+
 	int getBonusCommerceRateModifier(CommerceTypes eIndex) const;
 	void changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange);
 	bool isBuiltFoodProducedUnit() const;
@@ -1866,7 +1868,6 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
@@ -1887,6 +1888,7 @@ protected:
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
+	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
 
