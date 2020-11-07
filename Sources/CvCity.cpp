@@ -11434,21 +11434,25 @@ int CvCity::getCultureThreshold(CultureLevelTypes eLevel) const
 	{
 		return 1;
 	}
+	const CvGameAI& GAME = GC.getGame();
+	const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
+	const int iCulture = getCultureTimes100(getOwner()) / 100;
+	int iThreshold = 0;
 
-	CultureLevelTypes eCultureLevel;
-	eCultureLevel = ((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1));
 	for (int iI = 0; iI < GC.getNumCultureLevelInfos(); iI++)
 	{
-		if (GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption() == NO_GAMEOPTION || GC.getGame().isOption((GameOptionTypes)GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption()))
+		const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
+
+		if (info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
 		{
-			if (getCultureTimes100(getOwner()) / 100 < GC.getGame().getCultureThreshold((CultureLevelTypes)iI))
+			iThreshold = info.getSpeedThreshold(eSpeed);
+			if (iCulture < iThreshold)
 			{
-				eCultureLevel = ((CultureLevelTypes)iI);
 				break;
 			}
 		}
 	}
-	return std::max(1, GC.getGame().getCultureThreshold(eCultureLevel));
+	return std::max(1, iThreshold);
 }
 
 
@@ -11596,15 +11600,23 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		return;
 	}
-	const int iMaxOccupationTimer = GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation() * GC.getOCCUPATION_TURNS_POPULATION_PERCENT() / 100;
+	CvGameAI& GAME = GC.getGame();
 
-	if (!isOccupation() || GC.getGame().isOption(GAMEOPTION_REVOLUTION) && GC.getGame().getGameTurn() - getGameTurnAcquired() > iMaxOccupationTimer)
+	if (!isOccupation()
+	|| GAME.isOption(GAMEOPTION_REVOLUTION)
+	&& GAME.getGameTurn() - getGameTurnAcquired()
+		// Duration bigger than Max Occupation Timer
+		> GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation()*GC.getOCCUPATION_TURNS_POPULATION_PERCENT()/100)
 	{
+		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
+		const int iCulture = getCultureTimes100(getOwner()) / 100;
+
 		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
 		{
-			if ((GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption() == NO_GAMEOPTION
-				|| GC.getGame().isOption((GameOptionTypes)GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption()))
-			&& getCultureTimes100(getOwner()) / 100 >= GC.getGame().getCultureThreshold((CultureLevelTypes)iI))
+			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
+
+			if ((info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
+			&& iCulture >= info.getSpeedThreshold(eSpeed))
 			{
 				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
 				return;
@@ -12515,28 +12527,13 @@ int CvCity::getCommerceRate(CommerceTypes eIndex) const
 int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 {
 	PROFILE_FUNC();
-
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
 	if (m_abCommerceRateDirty[eIndex])
 	{
 		updateCommerce(eIndex);
 	}
-
-	int iRate = m_aiCommerceRate[eIndex];
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		if (eIndex == COMMERCE_CULTURE)
-		{
-			iRate += m_aiCommerceRate[COMMERCE_ESPIONAGE];
-		}
-		else if (eIndex == COMMERCE_ESPIONAGE)
-		{
-			iRate = 0;
-		}
-	}
-
-	return iRate;
+	return m_aiCommerceRate[eIndex];
 }
 
 
@@ -12957,26 +12954,7 @@ int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, Buildi
  * Returns the additional base commerce rate constructing the given building will provide.
  *
  * Doesn't check if the building can be constructed in this city.
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
-int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
-{
-	bool bNoEspionage = GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE);
-
-	if (bNoEspionage && eIndex == COMMERCE_ESPIONAGE)
-	{
-		return 0;
-	}
-
-	int iExtraRate = getAdditionalBaseCommerceRateByBuildingImpl(eIndex, eBuilding);
-	if (bNoEspionage && eIndex == COMMERCE_CULTURE)
-	{
-		iExtraRate += getAdditionalBaseCommerceRateByBuildingImpl(COMMERCE_ESPIONAGE, eBuilding);
-	}
-	return iExtraRate;
-}
-
-
 int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
 	int iExtraRateTimes100 = 100 * getAdditionalBaseCommerceRateByBuilding(eIndex, eBuilding);
@@ -12993,13 +12971,7 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 	return iExtraRateTimes100;
 }
 
-
-/*
- * Returns the additional base commerce rate constructing the given building will provide.
- *
- * Doesn't check if the building can be constructed in this city.
- */
-int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
@@ -13038,7 +13010,7 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, Bu
 		{
 			if (kBuilding.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
 			{
-				iExtraRate += getAdditionalBaseCommerceRateBySpecialistImpl(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
+				iExtraRate += getAdditionalBaseCommerceRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
 			}
 		}
 
@@ -13091,48 +13063,22 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, Bu
 	return iExtraRate;
 }
 
+
 /*
  * Returns the additional commerce rate modifier constructing the given building will provide.
  *
  * Doesn't check if the building can be constructed in this city.
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
 int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	const bool bNoEspionage = GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE);
-
-	if (bNoEspionage && eIndex == COMMERCE_ESPIONAGE)
-	{
-		return 0;
-	}
-
-	int iExtraModifier = getAdditionalCommerceRateModifierByBuildingImpl(eIndex, eBuilding);
-	if (bNoEspionage && eIndex == COMMERCE_CULTURE)
-	{
-		iExtraModifier += getAdditionalCommerceRateModifierByBuildingImpl(COMMERCE_ESPIONAGE, eBuilding);
-	}
-	return iExtraModifier;
-}
-
-/*
- * Returns the additional commerce rate modifier constructing the given building will provide.
- *
- * Doesn't check if the building can be constructed in this city.
- */
-int CvCity::getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding)
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
-
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraModifier = 0;
 
-	if (!bObsolete && !isReligiouslyDisabledBuilding(eBuilding))
+	if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding) && !isReligiouslyDisabledBuilding(eBuilding))
 	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 		iExtraModifier += kBuilding.getCommerceModifier(eIndex);
 		iExtraModifier += kBuilding.getGlobalCommerceModifier(eIndex);
 
@@ -13140,18 +13086,17 @@ int CvCity::getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex
 		{
 			if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 			{
-				iExtraModifier += (kBuilding.getTechCommerceModifier(iI, eIndex));
+				iExtraModifier += kBuilding.getTechCommerceModifier(iI, eIndex);
 			}
 		}
 		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 		{
 			if (hasBonus((BonusTypes)iI))
 			{
-				iExtraModifier += (kBuilding.getBonusCommerceModifier(iI, eIndex));
+				iExtraModifier += kBuilding.getBonusCommerceModifier(iI, eIndex);
 			}
 		}
 	}
-
 	return iExtraModifier;
 }
 // BUG - Building Additional Commerce - end
@@ -13250,32 +13195,11 @@ int CvCity::getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, Spec
 	return iExtraTimes100;
 }
 
+
 /*
  * Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
- *
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
 int CvCity::getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
-{
-	bool bNoEspionage = GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE);
-
-	if (bNoEspionage && eIndex == COMMERCE_ESPIONAGE)
-	{
-		return 0;
-	}
-
-	int iExtraRate = getAdditionalBaseCommerceRateBySpecialistImpl(eIndex, eSpecialist, iChange);
-	if (bNoEspionage && eIndex == COMMERCE_CULTURE)
-	{
-		iExtraRate += getAdditionalBaseCommerceRateBySpecialistImpl(COMMERCE_ESPIONAGE, eSpecialist, iChange);
-	}
-	return iExtraRate;
-}
-
-/*
- * Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
- */
-int CvCity::getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
@@ -14526,11 +14450,6 @@ int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 void CvCity::setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eIndex).getEspionagePoints() > 0)
-	{
-		return;
-	}
-
 	m_paiGreatPeopleUnitRate[eIndex] = iNewValue;
 }
 
@@ -16865,46 +16784,40 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	}
 	FAssert(NO_PLAYER != ePlayer);
 
+	const int iCulture = getCultureTimes100(ePlayer);
 	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
-	if (getOwner() == ePlayer)
+
+	if (getOwner() != ePlayer)
 	{
-		eCultureLevel = getCultureLevel();
-	}
-	else
-	{
+		const GameSpeedTypes eSpeed = GC.getGame().getGameSpeedType();
 		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
 		{
-			if (getCultureTimes100(ePlayer) >= 100 * GC.getGame().getCultureThreshold((CultureLevelTypes)iI))
+			if (iCulture >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)iI).getSpeedThreshold(eSpeed))
 			{
 				eCultureLevel = (CultureLevelTypes)iI;
 				break;
 			}
 		}
 	}
+	else eCultureLevel = getCultureLevel();
 
 	const int iFreeCultureRate = GC.getCITY_FREE_CULTURE_GROWTH_FACTOR();
-	if (getCultureTimes100(ePlayer) > 0)
+	if (iCulture > 0 && eCultureLevel != NO_CULTURELEVEL)
 	{
-		if (eCultureLevel != NO_CULTURELEVEL)
+		clearCultureDistanceCache();
+		for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
 		{
-			clearCultureDistanceCache();
-			for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
+			for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
 			{
-				for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
+				const int iCultureRange = cultureDistance(iDX, iDY);
+
+				if (iCultureRange <= eCultureLevel)
 				{
-					const int iCultureRange = cultureDistance(iDX, iDY);
+					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-					if (iCultureRange <= eCultureLevel)
+					if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
 					{
-						CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL)
-						{
-							if (pLoopPlot->isPotentialCityWorkForArea(area()))
-							{
-								pLoopPlot->changeCulture(ePlayer, (((eCultureLevel - iCultureRange) * iFreeCultureRate) + iCultureRate + 1), (bUpdate || !(pLoopPlot->isOwned())));
-							}
-						}
+						pLoopPlot->changeCulture(ePlayer, (((eCultureLevel - iCultureRange) * iFreeCultureRate) + iCultureRate + 1), (bUpdate || !(pLoopPlot->isOwned())));
 					}
 				}
 			}

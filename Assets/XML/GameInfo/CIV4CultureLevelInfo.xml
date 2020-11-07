@@ -641,7 +641,6 @@
 			<iMaxNationalWonders>25</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>25</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Alberts2 high iThreshold can lead to integer overflows
 		<CultureLevelInfo>
 			<Type>CULTURELEVEL_MONUMENTAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MONUMENTAL</Description>
@@ -649,7 +648,7 @@
 			<SpeedThresholds>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
-					<iThreshold>8000000</iThreshold>
+					<iThreshold>10000000</iThreshold>
 				</SpeedThreshold>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
@@ -677,6 +676,6 @@
 			<iMaxTeamWonders>16</iMaxTeamWonders>
 			<iMaxNationalWonders>31</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>31</iMaxNationalWondersOCC>
-		</CultureLevelInfo>-->
+		</CultureLevelInfo>
 	</CultureLevelInfos>
 </Civ4CultureLevelInfo>

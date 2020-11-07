@@ -1117,9 +1117,8 @@ public:
 	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
+	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
 // BUG - Building Additional Commerce - end
 	void updateBuildingCommerce();
 
@@ -1129,7 +1128,6 @@ public:
 	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-	int getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 // BUG - Specialist Additional Commerce - end
 
 
@@ -1575,8 +1573,6 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BonusTypes eBonus) const;
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
-
-	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python

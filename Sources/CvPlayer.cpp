@@ -3984,7 +3984,7 @@ void CvPlayer::doTurn()
 
 	AI_assignWorkingPlots();
 
-	if (0 == GET_TEAM(getTeam()).getHasMetCivCount(true) || GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (0 == GET_TEAM(getTeam()).getHasMetCivCount(true))
 	{
 		setCommercePercent(COMMERCE_ESPIONAGE, 0);
 	}
@@ -6918,12 +6918,6 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (!bIgnoreCost && kUnit.getProductionCost() == -1)
-	{
-		return false;
-	}
-
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE)
-	&& (kUnit.isSpy() || kUnit.getEspionagePoints() > 0))
 	{
 		return false;
 	}
@@ -13826,25 +13820,11 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
-	if ( !m_bUpdatesDeferred && m_abCommerceDirty[eIndex] )
+	if (!m_bUpdatesDeferred && m_abCommerceDirty[eIndex])
 	{
 		updateCommerce(eIndex, false);
 	}
-
-	int iRate = m_aiCommerceRate[eIndex];
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		if (eIndex == COMMERCE_CULTURE)
-		{
-			iRate += m_aiCommerceRate[COMMERCE_ESPIONAGE];
-		}
-		else if (eIndex == COMMERCE_ESPIONAGE)
-		{
-			iRate = 0;
-		}
-	}
-
-	return iRate / 100;
+	return m_aiCommerceRate[eIndex] / 100;
 }
 
 int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
@@ -14027,20 +14007,11 @@ bool CvPlayer::isCommerceFlexible(CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
-	if (!isFoundedFirstCity())
+	if (!isFoundedFirstCity() || eIndex == COMMERCE_ESPIONAGE && 0 == GET_TEAM(getTeam()).getHasMetCivCount(true))
 	{
 		return false;
 	}
-
-	if (eIndex == COMMERCE_ESPIONAGE)
-	{
-		if (0 == GET_TEAM(getTeam()).getHasMetCivCount(true) || GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			return false;
-		}
-	}
-
-	return (GC.getCommerceInfo(eIndex).isFlexiblePercent() || (getCommerceFlexibleCount(eIndex) > 0) || GET_TEAM(getTeam()).isCommerceFlexible(eIndex));
+	return GC.getCommerceInfo(eIndex).isFlexiblePercent() || getCommerceFlexibleCount(eIndex) > 0 || GET_TEAM(getTeam()).isCommerceFlexible(eIndex);
 }
 
 
@@ -22876,11 +22847,6 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		}
 	}
 
-	if (kEvent.getEspionagePoints() > 0 && GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return false;
-	}
-
 	if (NO_PLAYER != kTriggeredData.m_eOtherPlayer)
 	{
 		if (kEvent.getEspionagePoints() + GET_TEAM(getTeam()).getEspionagePointsAgainstTeam(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()) < 0)
@@ -26106,16 +26072,6 @@ int CvPlayer::getGrowthThreshold(int iPopulation) const
 void CvPlayer::verifyUnitStacksValid()
 {
 	algo::for_each(units(), CvUnit::fn::verifyStackValid());
-}
-
-UnitTypes CvPlayer::getTechFreeUnit(TechTypes eTech) const
-{
-	const UnitTypes eUnit = (UnitTypes) GC.getTechInfo(eTech).getFirstFreeUnit();
-	if (eUnit != NO_UNIT && GC.getUnitInfo(eUnit).getEspionagePoints() > 0 && GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return NO_UNIT;
-	}
-	return eUnit;
 }
 
 //TB Prophet Mod begin
@@ -31769,10 +31725,6 @@ void CvPlayer::changeNationalGreatPeopleUnitRate(const UnitTypes eUnit, const in
 	if (iChange == 0)
 	{
 		FErrorMsg("This is not a change!");
-		return;
-	}
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && GC.getUnitInfo(eUnit).getEspionagePoints() > 0)
-	{
 		return;
 	}
 	m_iNationalGreatPeopleRate += iChange;

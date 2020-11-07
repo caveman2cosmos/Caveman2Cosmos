@@ -1111,11 +1111,9 @@ void CvCityAI::AI_chooseProduction()
 		iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
 		iEconomyFlagBits++;
 	}
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
-		iEconomyFlagBits++;
-	}
+	iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
+	iEconomyFlagBits++;
+
 	//	Normalize threholds using this against the number of bits we are including
 	const int iEcononmyFlagsThreasholdWeighting = (100*iEconomyFlagBits)/8;
 
@@ -6482,7 +6480,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5;
 					}
 
-					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE || (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && (iFocusFlags & BUILDINGFOCUS_CULTURE)))
+					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE)
 					{
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
 					}
@@ -12737,10 +12735,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	iEconomyFlags |= BUILDINGFOCUS_HAPPY;
 	iEconomyFlags |= BUILDINGFOCUS_HEALTHY;
 	iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
-	}
+	iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
 
 	//20 means 5g or ~2 happiness...
 	if (AI_chooseBuilding(iEconomyFlags, 20, 20 / iMinValueDivisor))
@@ -13964,11 +13959,7 @@ BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)
 	}
 	if (iPass >= 5)
 	{
-		iFocusFlags |= (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_MAINTENANCE);
-		if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			iFocusFlags |= BUILDINGFOCUS_ESPIONAGE;
-		}
+		iFocusFlags |= (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_MAINTENANCE | BUILDINGFOCUS_ESPIONAGE);
 	}
 	return AI_bestBuildingThreshold(iFocusFlags, 0, std::max(0, 25 - iPass * 5));
 }
@@ -17092,14 +17083,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_BIGCULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5,true);
 
-							if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-							{
-								valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_CULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
-							}
-							else
-							{
-								valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_ESPIONAGE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
-							}
+							valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_ESPIONAGE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
 						}
 
 						//if ((iThreshold > 0) && (iPass == 0))

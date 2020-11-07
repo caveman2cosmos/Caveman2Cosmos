@@ -1628,7 +1628,6 @@ protected:
 
 public:
 	void verifyUnitStacksValid();
-	UnitTypes getTechFreeUnit(TechTypes eTech) const;
 	UnitTypes getTechFreeProphet(TechTypes eTech) const;
 
 	// BUG - Trade Totals - start

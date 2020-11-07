@@ -1768,10 +1768,6 @@
 		<iDefineIntVal>150</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>

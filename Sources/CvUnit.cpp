@@ -11625,11 +11625,6 @@ bool CvUnit::canInfiltrate(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return false;
-	}
-
 	if (getEspionagePoints(NULL) == 0)
 	{
 		return false;
@@ -11716,17 +11711,7 @@ bool CvUnit::infiltrate()
 
 bool CvUnit::canEspionage(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (isDelayedDeath())
-	{
-		return false;
-	}
-
-	if (!isSpy())
-	{
-		return false;
-	}
-
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (isDelayedDeath() || !isSpy())
 	{
 		return false;
 	}

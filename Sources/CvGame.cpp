@@ -10147,15 +10147,6 @@ CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
-	if (isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return
-		(
-			GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType())
-			*
-			(100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER")) / 100
-		);
-	}
 	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 

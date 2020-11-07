@@ -5659,7 +5659,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			if (bFirst && GC.getGame().countKnownTechNumTeams(eIndex) == 1)
 			{
-				const UnitTypes eFreeUnit = GET_PLAYER(ePlayer).getTechFreeUnit(eIndex);
+				const UnitTypes eFreeUnit = (UnitTypes)GC.getTechInfo(eIndex).getFirstFreeUnit();
 				if (eFreeUnit != NO_UNIT)
 				{
 					bClearResearchQueueAI = true;

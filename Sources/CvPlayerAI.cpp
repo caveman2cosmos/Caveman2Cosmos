@@ -5975,7 +5975,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 			int iFreeStuffValue = 0;
 
-			if (getTechFreeUnit(eTech) != NO_UNIT)
+			if ((UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
 			{
 				int iGreatPeopleRandom = ((bAsync) ? GC.getASyncRand().get(3200, "AI Research Great People ASYNC") : GC.getGame().getSorenRandNum(3200, "AI Research Great People"));
 				iFreeStuffValue += iGreatPeopleRandom;
@@ -6314,26 +6314,24 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 #endif
 				//	Now recalculate the new way
 				int iBuildingValue = 0;
-				int iEconomyFlags = (BUILDINGFOCUS_PRODUCTION |
-									 BUILDINGFOCUS_FOOD |
-									 BUILDINGFOCUS_GOLD |
-									 BUILDINGFOCUS_RESEARCH |
-									 BUILDINGFOCUS_MAINTENANCE |
-									 BUILDINGFOCUS_HAPPY |
-									 BUILDINGFOCUS_HEALTHY |
-									 BUILDINGFOCUS_CULTURE |
-									 BUILDINGFOCUS_SPECIALIST |
-									 BUILDINGFOCUS_DEFENSE |
-									 BUILDINGFOCUS_EXPERIENCE |
-									 BUILDINGFOCUS_MAINTENANCE |
-									 BUILDINGFOCUS_WORLDWONDER |
-									 BUILDINGFOCUS_DOMAINSEA);
-
-				if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-				{
-					iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
-				}
-
+				int iEconomyFlags =
+				(
+					BUILDINGFOCUS_PRODUCTION |
+					BUILDINGFOCUS_FOOD |
+					BUILDINGFOCUS_GOLD |
+					BUILDINGFOCUS_RESEARCH |
+					BUILDINGFOCUS_MAINTENANCE |
+					BUILDINGFOCUS_HAPPY |
+					BUILDINGFOCUS_HEALTHY |
+					BUILDINGFOCUS_CULTURE |
+					BUILDINGFOCUS_SPECIALIST |
+					BUILDINGFOCUS_DEFENSE |
+					BUILDINGFOCUS_EXPERIENCE |
+					BUILDINGFOCUS_MAINTENANCE |
+					BUILDINGFOCUS_WORLDWONDER |
+					BUILDINGFOCUS_DOMAINSEA |
+					BUILDINGFOCUS_ESPIONAGE
+				);
 				CvCity*	pRepresentativeCity = NULL;
 				int	iBestValue = 0;
 				int iTotalValue = 0;
@@ -17648,10 +17646,6 @@ void CvPlayerAI::AI_setPeaceWeight(int iNewValue)
 
 int CvPlayerAI::AI_getEspionageWeight() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return 0;
-	}
 	return m_iEspionageWeight;
 }
 
@@ -24567,34 +24561,24 @@ int CvPlayerAI::AI_getStrategyHash() const
 	}
 
 	// Espionage
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
+	int iTempValue = 0;
+	if (getCommercePercent(COMMERCE_ESPIONAGE) == 0)
 	{
-		int iTempValue = 0;
-		if (getCommercePercent(COMMERCE_ESPIONAGE) == 0)
-		{
-			iTempValue += 4;
-		}
+		iTempValue += 4;
+	}
 
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
-		{
-			if( GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85 )
-			{
-				iTempValue += 5;
-			}
-			else
-			{
-				iTempValue += 3;
-			}
-		}
+	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
+	{
+		iTempValue += (GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85) ? 5 : 3;
+	}
 
-		iTempValue += (100 - AI_getEspionageWeight()) / 10;
+	iTempValue += (100 - AI_getEspionageWeight()) / 10;
 
-		iTempValue += AI_getStrategyRand(10) % 12; // K-mod
+	iTempValue += AI_getStrategyRand(10) % 12; // K-mod
 
-		if (iTempValue > 10)
-		{
-			m_iStrategyHash |= AI_STRATEGY_BIG_ESPIONAGE;
-		}
+	if (iTempValue > 10)
+	{
+		m_iStrategyHash |= AI_STRATEGY_BIG_ESPIONAGE;
 	}
 
 	// Turtle strategy
@@ -28105,40 +28089,18 @@ bool CvPlayerAI::AI_isFirstTech(TechTypes eTech) const
 {
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
-		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
-		{
-/************************************************************************************************/
-/* RevDCM					  Start		09/08/10												*/
-/*																							  */
-/* OC_LIMITED_RELIGIONS																		 */
-/************************************************************************************************/
-			if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iI)))
-			{
-/************************************************************************************************/
-/* RevDCM					  Start		09/08/10												*/
-/*																							  */
-/* OC_LIMITED_RELIGIONS																		 */
-/************************************************************************************************/
-				if(canFoundReligion())
-				{
-					return true;
-				}
-/************************************************************************************************/
-/* REVDCM								  END												  */
-/************************************************************************************************/
-			}
-		}
-	}
-
-	if (GC.getGame().countKnownTechNumTeams(eTech) == 0)
-	{
-		if ((getTechFreeUnit(eTech) != NO_UNIT) ||
-			(GC.getTechInfo(eTech).getFirstFreeTechs() > 0))
+		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech
+		&& !GC.getGame().isReligionSlotTaken((ReligionTypes)iI)
+		&& canFoundReligion())
 		{
 			return true;
 		}
 	}
-
+	if (GC.getGame().countKnownTechNumTeams(eTech) == 0
+	&& ((UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT || GC.getTechInfo(eTech).getFirstFreeTechs() > 0))
+	{
+		return true;
+	}
 	return false;
 }
 
