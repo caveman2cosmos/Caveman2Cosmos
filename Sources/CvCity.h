@@ -1405,11 +1405,6 @@ public:
 
 	DllExport void getBuildQueue(std::vector<std::string>& astrQueue) const;
 
-/************************************************************************************************/
-/* Afforess  New Functions                             12/7/09                                 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getCivicHappiness() const;
 	int getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const;
 	int getNumCityPlots() const;
@@ -1425,8 +1420,8 @@ public:
 	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
 
-	int getUnitProductionModifier(UnitTypes eIndex) const; //Exposed to Python
-	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
+	int getUnitProductionModifier(const UnitTypes eIndex) const; //Exposed to Python
+	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
 
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
@@ -1510,7 +1505,6 @@ public:
 	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isDisabledBuilding(BuildingTypes eIndex) const;
 
-//Team Project (5)
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
 
@@ -1602,10 +1596,6 @@ public:
 	int getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
-
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1876,7 +1866,6 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiUnitProductionModifier;
 	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
@@ -1899,6 +1888,7 @@ protected:
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
 	std::map<short, int> m_buildingProductionMod;
+	std::map<short, int> m_unitProductionMod;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 
