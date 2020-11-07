@@ -1421,10 +1421,13 @@ public:
 	bool hasFreshWater() const;
 
 	bool canUpgradeUnit(UnitTypes eUnit) const;
-	int getBuildingProductionModifier(BuildingTypes eIndex) const;
-	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
+
+	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
+	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
+
 	int getUnitProductionModifier(UnitTypes eIndex) const; //Exposed to Python
 	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
+
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
 	int getBonusDefenseChanges(BonusTypes eIndex) const;
@@ -1834,11 +1837,7 @@ protected:
 #define INVALID_STORED_FOOD_PERCENT_LOG (-1000000)	//	Used as a reserved value to trigger calculation on upgrade of save format
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
-/************************************************************************************************/
-/* Afforess	New Variables	    	 12/7/09                                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
@@ -1877,7 +1876,6 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiBuildingProductionModifier;
 	int* m_paiUnitProductionModifier;
 	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
@@ -1888,7 +1886,7 @@ protected:
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
 	bool* m_pabDisabledBuilding;
-//Team Project (5)
+
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	int* m_aiCommerceAttacks;
@@ -1900,10 +1898,10 @@ protected:
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
+	std::map<short, int> m_buildingProductionMod;
+
 	CultureLevelTypes m_eOccupationCultureLevel;
-/************************************************************************************************/
-/* Afforess	                          END                                                       */
-/************************************************************************************************/
+
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
