@@ -128,10 +128,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN</Tag>
 		<English>Guardian spirit</English>
+		<German>Schutzgeist</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VENGEANCE</Tag>
 		<English>Vengeance</English>
+		<German>Rache</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NGAIISM</Tag>

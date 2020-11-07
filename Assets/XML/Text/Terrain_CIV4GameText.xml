@@ -467,7 +467,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Sumpf</German>
+		<German>Feuchtgebiet</German>
 		<Italian>
 			<Text>Palude</Text>
 			<Gender>Female</Gender>
@@ -483,8 +483,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARSH_PEDIA</Tag>
 		<English>In geography, a marsh, or morass, is a type of wetland that is subject to frequent or continuous flood. Typically the water is shallow and features grasses, rushes, reeds, typhas, sedges, other herbaceous plants, and moss.</English>
+		<German>Ein [COLOR_HIGHLIGHT_TEXT]Feuchtgebiet[COLOR_REVERT] oder Feuchtbiotop ist ein Geländetypus, der im Übergangsbereich von Gewässern zu Landlebensräumen liegt. Zu Feuchtgebieten zählen Lebensräume, die an einen Überschuss von Wasser angepasst sind, wie z.B. Auen, Bruchwald, Feuchtwiesen, Ried, Moore, Sümpfe und Marschland.[NEWLINE]Feuchtgebiete sind von großer ökologischer Bedeutung, da sie als Grundwasserfilter, Wasserspeicher und Überschwemmungsschutz dienen.</German>
 		<Italian>In geografia, una palude è un tipo di terreno acquitrinoso soggetto a frequenti e continue inondazioni. In genere l'acqua è bassa e contiene erbe, giunchi, canne, carici, piante erbacee e muschio.</Italian>
-		<German>[COLOR_HIGHLIGHT_TEXT]Sümpfe[COLOR_REVERT] sind natürliche Feuchtgebiete an Flüssen und Seen. Sie sind gekennzeichnet durch schlammige Böden mit stehendem Wasser, im Gegensatz zum häufig synonym verwendeten Moor wird in Sümpfen aber kein Torf gebildet. Da Sümpfe kaum kulturell nutzbar sind, werden solche Lebensräume häufig über Entwässerung nutzbar gemacht und dadurch zerstört.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_BARREN</Tag>

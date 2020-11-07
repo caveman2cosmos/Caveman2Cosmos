@@ -2699,7 +2699,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_BAND_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Band[COLOR_REVERT] settles your first city.</English>
 		<French>Ce [COLOR_UNIT_TEXT]Groupe[COLOR_REVERT] d'humains va établir votre première ville.</French>
-		<German>Die [COLOR_UNIT_TEXT]Urzeithorde[COLOR_REVERT] gründet die erste Stadt Eurer Zivilisation und sollte vorher gut vor Angriffen geschützt werden.</German>
+		<German>Die [COLOR_UNIT_TEXT]Urmenschenhorde[COLOR_REVERT] gründet die erste Stadt Eurer Zivilisation und sollte vorher gut vor Angriffen geschützt werden.</German>
 		<Spanish>Este [COLOR_UNIT_TEXT]Grupo de Homo sapiens[COLOR_REVERT] establecerá tu primera ciudad.</Spanish>
 		<Polish>Zakłada pierwsze miasto.</Polish>
 	</TEXT>

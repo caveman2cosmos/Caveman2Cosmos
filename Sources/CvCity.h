@@ -741,7 +741,6 @@ public:
 	void changeEspionageHappinessCounter(int iChange); // Exposed to Python
 
 	int getFreshWaterGoodHealth() const; // Exposed to Python
-	int getFreshWaterBadHealth() const; // Exposed to Python
 	void updateFreshWaterHealth();
 
 	int getFeatureGoodHealth() const; // Exposed to Python
@@ -1277,7 +1276,7 @@ public:
 	int getImprovementFreeSpecialists(ImprovementTypes eIndex) const; // Exposed to Python
 	void changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange); // Exposed to Python
 
-	int getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
+	uint32_t getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
 	void changeReligionInfluence(ReligionTypes eIndex, int iChange); // Exposed to Python
 
 	int getCurrentStateReligionHappiness() const; // Exposed to Python
@@ -1786,7 +1785,6 @@ protected:
 	int m_iEspionageHealthCounter;
 	int m_iEspionageHappinessCounter;
 	int m_iFreshWaterGoodHealth;
-	int m_iFreshWaterBadHealth;
 	int m_iFeatureGoodHealth;
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;

@@ -253,7 +253,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Marschland</German>
+		<German>Schwemmland</German>
 		<Italian>
 			<Text>Terreno allagato:Terreni allagati</Text>
 			<Gender>Male</Gender>
@@ -270,7 +270,7 @@
 		<Tag>TXT_KEY_FEATURE_FLOOD_PLAINS_PEDIA</Tag>
 		<English>A floodplain, or flood plain, is a flat or nearly flat land adjacent to a stream or river that stretches from the banks of its channel to the base of the enclosing valley walls and experiences flooding during periods of high discharge. It includes the floodway, which consists of the stream channel and adjacent areas that carry flood flows, and the flood fringe, which are areas covered by the flood, but which do not experience a strong current.</English>
 		<French>Une plaine inondable, ou plaine inondable, est un terrain plat ou presque plat adjacent à un ruisseau ou une rivière qui s'étend des rives de son canal à la base des parois de la vallée qui l'entoure et subit des inondations pendant les périodes de fort débit. Il comprend le canal de dérivation, qui se compose du canal du ruisseau et des zones adjacentes qui véhiculent les flux de crue, et la frange de crue, qui sont des zones couvertes par la crue, mais qui ne subissent pas de fort courant.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Marsch- oder Schwemmland[COLOR_REVERT] werden Landstriche ohne höhere Erhebungen genannt, die unter dem Einfluss der Gezeiten durch Ablagerung von angeschwemmten Sedimenten im Küsten- und Flussmündungsbereich entstehen. Wenn Sturm- und Springfluten die Salzwiesen an den Küsten überfluten, lagert sich das mitgeführte Material am Ende der Brandungszone ab, weil die Kraft der Wellen abnimmt. Dadurch entsteht eine leicht erhöhte Zone direkt an der Küste bzw. am Flussufer, das aus mineralischen Sedimenten besteht. Auf dieses Hochland folgt wieder ein flacherer Landstrich, in dem eine unbewohnbare Moorlandschaft entsteht. Zur Besiedlung muss Marschland deshalb über ein Entwässerungssystem ständig trocken gehalten werden.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Schwemmland[COLOR_REVERT] werden Landstriche ohne höhere Erhebungen (Tiefebenen) genannt, die durch Ablagerung von angeschwemmten Sedimenten in der Umgebung von Flüssen entstehen. Im Gegensatz zum nahezu permanent mit Wasser gefüllten Flussbett wird das Schwemmland nur mehrmals über einen begrenzten Zeitraum geflutet, wenn der Fluss zu viel Wasser führt (z.B. nach der Schneeschmelze im Frühjahr). Die zurückgelassenen fruchtbaren Sedimentböden eignen sich hervorragend zum Anbau diverser Feldfrüchte. Menschen nutzen sie schon seit tausenden von Jahren und nahezu alle frühen Hochkulturen entstanden in Schwemmgebieten.[NEWLINE]Heutzutage ist das Schwemmland der Flüsse weitestgehend kultiviert und oft auch dicht besiedelt. Meist werden die Flüsse auch noch eingedeicht oder in neue künstliche Flussbetten gezwungen. Die regelmäßigen Überflutungen sind dadurch eher zu einer Gefahr geworden, die Jahr für Jahr Menschenleben kostet oder zumindest Schäden in Millionenhöhe verursacht.</German>
 		<Polish>Obszar zalewowy, równina zalewowa - naturalny płaski i szeroki teren, położony bezpośrednio wzdłuż rzeki, stanowiący część doliny rzecznej, zalewany w okresach wezbrań i powodzi, gdy ilość wody prowadzonej przez rzekę przekracza pojemność koryta.</Polish>
 	</TEXT>
 	<TEXT>
@@ -459,6 +459,7 @@
 		<Tag>TXT_KEY_FEATURE_MANGROVE</Tag>
 		<English>Mangrove</English>
 		<French>Mangrove</French>
+		<German>Mangroven</German>
 		<Spanish>
 			<Text>Manglar:Manglares</Text>
 			<Gender>Male</Gender>
@@ -551,6 +552,7 @@
 		<Tag>TXT_KEY_FEATURE_PEAT_BOG</Tag>
 		<English>Peat Bog</English>
 		<French>Tourbière</French>
+		<German>Torfmoor</German>
 		<Italian>Torbiera</Italian>
 		<Spanish>
 			<Text>Turbera:Turberas</Text>
@@ -740,11 +742,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Torfmoor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sumpf</German>
 		<Italian>
 			<Text>Acquitrino</Text>
 			<Gender>Female</Gender>
@@ -761,6 +759,7 @@
 		<Tag>TXT_KEY_FEATURE_SWAMP_PEDIA</Tag>
 		<English>A swamp is a wetland that is forested. Many swamps occur along large rivers where they are critically dependent upon natural water level fluctuations. Other swamps occur on the shores of large lakes. Some swamps have hammocks, or dry-land protrusions, covered by aquatic vegetation, or vegetation that tolerates periodic inundation. The two main types of swamp are "true" or swamp forests and "transitional" or shrub swamps. In the boreal regions of Canada, the word swamp is colloquially used for what is more correctly termed a bog or muskeg. The water of a swamp may be fresh water, brackish water or seawater. Some of the world's largest swamps are found along major rivers such as the Amazon, the Mississippi, and the Congo.</English>
 		<French>Un marécage est une zone humide boisée. De nombreux marécages se trouvent le long de grandes rivières où ils dépendent de façon critique des fluctuations naturelles du niveau de l'eau. D'autres marécages se trouvent sur les rives de grands lacs. Certains marécages ont des hamacs, ou des saillies de terres arides, couvertes de végétation aquatique, ou une végétation qui tolère les inondations périodiques. Les deux principaux types de marais sont les forêts «vraies» ou marécageuses et les marécages «transitoires» ou arbustifs. Dans les régions boréales du Canada, le mot marécage est couramment utilisé pour désigner ce qui est plus correctement appelé une tourbière ou un muskeg. L'eau d'un marais peut être de l'eau douce, de l'eau saumâtre ou de l'eau de mer. Certains des plus grands marais du monde se trouvent le long des principaux fleuves tels que l'Amazonie, le Mississippi et le Congo.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Sümpfe[COLOR_REVERT] sind natürliche Feuchtgebiete an Flüssen und Seen. Sie sind gekennzeichnet durch schlammige Böden mit stehendem Wasser, im Gegensatz zum häufig synonym verwendeten Moor wird in Sümpfen aber kein Torf gebildet. Da Sümpfe kaum kulturell nutzbar sind, werden solche Lebensräume häufig über Entwässerung nutzbar gemacht und dadurch zerstört.</German>
 		<Polish>Mokradło (teren podmokły, bagno, błoto, moczary, trzęsawisko, bajoro, grzęzawisko, topiel, topielisko) - tereny okresowo lub stale zabagnione, podtopione lub pokryte warstwą wody, siedlisko hydrogeniczne, obszar o płytkim poziomie wody gruntowej (powyżej 1 m), teren silnie uwilgotniony, zalany wodą lub okresowo zabagniony, o glebach mineralnych lub organicznych.</Polish>
 	</TEXT>
 	<TEXT>
