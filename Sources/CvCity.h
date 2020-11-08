@@ -1502,8 +1502,8 @@ public:
 
 	void doInvasion();
 
-	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
-	bool isDisabledBuilding(BuildingTypes eIndex) const;
+	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isDisabledBuilding(const short iIndex) const;
 
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
@@ -1870,7 +1870,6 @@ protected:
 	mutable bool* m_pabHasRawVicinityBonusCached;
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
-	bool* m_pabDisabledBuilding;
 
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
@@ -1884,6 +1883,7 @@ protected:
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
 	std::vector<short> m_vFreeBuildings;
+	std::vector<short> m_vDisabledBuildings;
 	std::map<short, uint16_t> m_freeAreaBuildingCount;
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;

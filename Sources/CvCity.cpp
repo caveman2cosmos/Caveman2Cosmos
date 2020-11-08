@@ -90,7 +90,6 @@ CvCity::CvCity()
 	m_pabHasRawVicinityBonus = NULL;
 	m_pabHasVicinityBonusCached = NULL;
 	m_pabHasRawVicinityBonusCached = NULL;
-	m_pabDisabledBuilding = NULL;
 	m_paiUnitCombatExtraStrength = NULL;
 	m_pabAutomatedCanBuild = NULL;
 
@@ -409,7 +408,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_pabHasRawVicinityBonus);
 	SAFE_DELETE_ARRAY(m_pabHasVicinityBonusCached);
 	SAFE_DELETE_ARRAY(m_pabHasRawVicinityBonusCached);
-	SAFE_DELETE_ARRAY(m_pabDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatExtraStrength);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_pabWorkingPlot);
@@ -445,6 +443,7 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
 
+	m_vDisabledBuildings.clear();
 	m_vFreeBuildings.clear();
 	m_freeAreaBuildingCount.clear();
 	m_paTradeCities.clear();
@@ -828,7 +827,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiBuildingOriginalOwner = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
 		m_paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
-		m_pabDisabledBuilding = new bool[GC.getNumBuildingInfos()];
 		//Team Project (5)
 		m_pabReligiouslyDisabledBuilding = new bool[GC.getNumBuildingInfos()];
 		m_paiBuildingCostPopulationCount = new int[GC.getNumBuildingInfos()];
@@ -840,7 +838,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiBuildingOriginalOwner[iI] = -1;
 			m_paiBuildingOriginalTime[iI] = MIN_INT;
 			m_paiNumRealBuilding[iI] = 0;
-			m_pabDisabledBuilding[iI] = false;
 			//Team Project (5)
 			m_pabReligiouslyDisabledBuilding[iI] = false;
 			m_paiBuildingCostPopulationCount[iI] = 0;
@@ -17576,7 +17573,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iDisabledPowerTimer);
 	WRAPPER_READ(wrapper, "CvCity", &m_iWarWearinessTimer);
 
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_pabDisabledBuilding);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatExtraStrength);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
 
@@ -17746,6 +17742,17 @@ void CvCity::read(FDataStreamBase* pStream)
 			if (iType > -1)
 			{
 				m_vFreeBuildings.push_back(iType);
+			}
+		}
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DisabledBuildingsSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "DisabledBuildingsIndex");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+			if (iType > -1)
+			{
+				m_vDisabledBuildings.push_back(iType);
 			}
 		}
 	}
@@ -18159,7 +18166,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iNumUnitFullHeal);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iDisabledPowerTimer);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iWarWearinessTimer);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_pabDisabledBuilding);
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatExtraStrength);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_pabAutomatedCanBuild);
@@ -18246,6 +18252,11 @@ void CvCity::write(FDataStreamBase* pStream)
 		for (std::vector<short>::const_iterator it = m_vFreeBuildings.begin(); it != m_vFreeBuildings.end(); ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", *it, "FreeBuildingsIndex");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_vDisabledBuildings.size(), "DisabledBuildingsSize");
+		for (std::vector<short>::const_iterator it = m_vDisabledBuildings.begin(); it != m_vDisabledBuildings.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", *it, "DisabledBuildingsIndex");
 		}
 	}
 	// Toffer - Write Maps
@@ -21964,24 +21975,31 @@ void CvCity::doVicinityBonus()
 	}
 }
 
-bool CvCity::isDisabledBuilding(BuildingTypes eIndex) const
+void CvCity::setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return m_pabDisabledBuilding[eIndex];
+
+	std::vector<short>::iterator itr = find(m_vDisabledBuildings.begin(), m_vDisabledBuildings.end(), (short)eIndex);
+
+	if (bNewValue)
+	{
+		if (itr == m_vDisabledBuildings.end())
+		{
+			m_vDisabledBuildings.push_back(eIndex);
+			processBuilding(eIndex, -1);
+		}
+	}
+	else if (itr != m_vDisabledBuildings.end())
+	{
+		m_vDisabledBuildings.erase(itr);
+		processBuilding(eIndex, 1);
+	}
 }
 
-void CvCity::setDisabledBuilding(BuildingTypes eIndex, bool bNewValue)
+bool CvCity::isDisabledBuilding(const short iIndex) const
 {
-	//bool bOldValue = isDisabledBuilding(eIndex);
-
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	if (isDisabledBuilding(eIndex) != bNewValue)
-	{
-		m_pabDisabledBuilding[eIndex] = bNewValue;
-
-		processBuilding(eIndex, bNewValue ? -1 : 1);
-	}
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex)
+	return find(m_vDisabledBuildings.begin(), m_vDisabledBuildings.end(), iIndex) != m_vDisabledBuildings.end();
 }
 
 //Team Project (5)
@@ -23053,7 +23071,6 @@ void CvCity::clearModifierTotals()
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		m_pabDisabledBuilding[iI] = false;
 		if (m_paiBuildingReplaced != NULL)
 		{
 			m_paiBuildingReplaced[iI] = 0;
@@ -23158,6 +23175,7 @@ void CvCity::clearModifierTotals()
 		m_aiDomainProductionModifier[iI] = 0;
 	}
 
+	m_vDisabledBuildings.clear();
 	m_vFreeBuildings.clear();
 	m_freeAreaBuildingCount.clear();
 	m_aBuildingYieldChange.clear();
