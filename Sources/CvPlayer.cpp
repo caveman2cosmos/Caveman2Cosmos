@@ -14195,7 +14195,6 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	{
 		if (iChange > 0)
 		{
-			FErrorMsg("YESYES");
 			m_freeBuildingCount.insert(std::make_pair((short)eIndex, iChange));
 			algo::for_each(cities(), CvCity::fn::setFreeBuilding(eIndex, true));
 		}

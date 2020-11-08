@@ -15298,7 +15298,6 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 
 	if (bNewValue)
 	{
-		FErrorMsg("CHECK_1");
 		if (itr == m_vFreeBuildings.end()
 		&& isValidBuildingLocation(eIndex)
 		&& !GET_TEAM(getTeam()).isObsoleteBuilding(eIndex)
@@ -15307,7 +15306,6 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 		// therefore we won't count it as a free building just yet.
 		&& getNumBuilding(eIndex) < 1)
 		{
-			FErrorMsg("CHECK_2");
 			m_vFreeBuildings.push_back(eIndex);
 			setNumRealBuilding(eIndex, 1);
 		}
