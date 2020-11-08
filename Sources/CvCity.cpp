@@ -1701,21 +1701,22 @@ void CvCity::doAutobuild()
 				if (canConstruct((BuildingTypes)iI, false, false, true))
 				{
 					setNumRealBuilding((BuildingTypes)iI, 1);
-					CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
 					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
 				}
 			}
 			else if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0)
 			{
-				// Speciasl rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
+				// Special rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
 					if (kBuilding.getPrereqNumOfBuilding((BuildingTypes)iJ) > 0
 					&& GET_PLAYER(getOwner()).getBuildingCount((BuildingTypes)iJ) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, (BuildingTypes)iJ, 0))
 					{
 						setNumRealBuilding((BuildingTypes)iI, 0);
-						CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
 						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
+						break;
 					}
 				}
 			}
@@ -15410,7 +15411,7 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 			{
 				if (player.getStateReligion() != eReligionX && player.hasBannedNonStateReligions())
 				{
-					setDisabledBuilding((BuildingTypes)iI, true);
+					setDisabledBuilding(eBuilding, true);
 
 					MEMORY_TRACK_EXEMPT();
 					const CvWString szBuffer =
@@ -15430,7 +15431,7 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 				{
 					if (player.hasAllReligionsActive() || player.getStateReligion() == eReligionX)
 					{
-						setReligiouslyDisabledBuilding((BuildingTypes)iI, false);
+						setReligiouslyDisabledBuilding(eBuilding, false);
 					}
 				}
 				else if (!player.hasAllReligionsActive() && player.getStateReligion() != eReligionX)
