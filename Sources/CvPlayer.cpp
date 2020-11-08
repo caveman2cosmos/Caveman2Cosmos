@@ -21279,13 +21279,13 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-		for (int iI = 0, numMaps = GC.getNumMapInfos(); iI < numMaps; iI++)
+		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 		{
-			m_groupCycles[iI]->Write(pStream);
-			WriteStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);
-			WriteStreamableFFreeListTrashArray(*m_cities[iI], pStream);
-			WriteStreamableFFreeListTrashArray(*m_units[iI], pStream);
-			WriteStreamableFFreeListTrashArray(*m_selectionGroups[iI], pStream);
+			m_groupCycles[i]->Write(pStream);
+			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
+			WriteStreamableFFreeListTrashArray(*m_cities[i], pStream);
+			WriteStreamableFFreeListTrashArray(*m_units[i], pStream);
+			WriteStreamableFFreeListTrashArray(*m_selectionGroups[i], pStream);
 		}
 
 		WriteStreamableFFreeListTrashArray(m_eventsTriggered, pStream);
