@@ -59,11 +59,7 @@ CvPlot::CvPlot()
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
 	m_aiPlotGroup = NULL;
-#ifdef PARALLEL_MAPS
 	m_aiVisibilityCount = new short[MAX_TEAMS];
-#else
-	m_aiVisibilityCount = NULL;
-#endif
 	m_aiLastSeenTurn = NULL;
 	m_aiDangerCount = NULL;
 	m_aiStolenVisibilityCount = NULL;
@@ -292,13 +288,11 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_Properties.clear();
 
 	m_bPlotGroupsDirty = false;
-#ifdef PARALLEL_MAPS
 	m_aiVisibilityCount = new short[MAX_TEAMS];
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-#endif
 }
 
 
@@ -8973,12 +8967,6 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
-#ifndef PARALLEL_MAPS
-	if (NULL == m_aiVisibilityCount)
-	{
-		return 0;
-	}
-#endif
 	return m_aiVisibilityCount[eTeam];
 }
 
@@ -9036,14 +9024,10 @@ void CvPlot::setLastVisibleTurn(TeamTypes eTeam, short turn)
 
 void CvPlot::clearVisibilityCounts()
 {
-#ifdef PARALLEL_MAPS
 	for (int iI = 0; iI < MAX_TEAMS; ++iI)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-#else
-	SAFE_DELETE(m_aiVisibilityCount);
-#endif
 	SAFE_DELETE(m_aiStolenVisibilityCount);
 	if (NULL != m_apaiInvisibleVisibilityCount)
 	{
@@ -9096,16 +9080,6 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 
 	if (iChange != 0)
 	{
-#ifndef PARALLEL_MAPS
-		if (NULL == m_aiVisibilityCount)
-		{
-			m_aiVisibilityCount = new short[MAX_TEAMS];
-			for (int iI = 0; iI < MAX_TEAMS; ++iI)
-			{
-				m_aiVisibilityCount[iI] = 0;
-			}
-		}
-#endif
 		const bool bOldVisible = isVisible(eTeam, false);
 		if (eSeeInvisible == NO_INVISIBLE || !GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
