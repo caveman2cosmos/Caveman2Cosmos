@@ -14212,7 +14212,7 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 		if (iChange > 0)
 		{
 			m_freeBuildingCount.insert(std::make_pair((short)eIndex, iChange));
-			algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 1));
+			algo::for_each(cities(), CvCity::fn::setNumFreeBuilding(eIndex, 1));
 		}
 		else FErrorMsg("Expected positive iChange for first building of a kind");
 	}
@@ -14220,7 +14220,7 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	{
 		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_freeBuildingCount.erase(itr->first);
-		algo::for_each(cities(), CvCity::fn::setNumFreeAreaBuilding(eIndex, 0));
+		algo::for_each(cities(), CvCity::fn::setNumFreeBuilding(eIndex, 0));
 	}
 	else // change building count
 	{
