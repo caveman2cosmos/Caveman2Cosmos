@@ -149,8 +149,8 @@ class CvMainInterface:
 			FONT_CENTER_JUSTIFY	= 1<<2
 			FONT_RIGHT_JUSTIFY	= 1<<1
 			FONT_LEFT_JUSTIFY	= 1<<0
-			// Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
-			//			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
+			# Toffer note: setTextAt(..., 1<<1, ...) doesn't work, it will always be left justified.
+			#			Use setText() instead, if interaction is not needed then setLabel() and setLabelAt() handle text justification.
 			'''
 			# Cache Icons
 			self.iconStrength			= u'%c' % GAME.getSymbolID(FontSymbols.STRENGTH_CHAR)
@@ -3582,6 +3582,9 @@ class CvMainInterface:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		InCity = self.InCity
 		CyCity = InCity.CyCity
+		if InCity.WorkQueue and not CyCity.getProduction():
+			self.bFreshQueue = False
+		else: self.bFreshQueue = True
 		iPlayer = InCity.iPlayer
 		iPlayerAct = self.iPlayer
 		iSize = MainOpt.getBuildIconSize()
@@ -5521,7 +5524,9 @@ class CvMainInterface:
 							self.InCity.WorkQueue.append([szName, iType, szRow])
 						else: # Replace current
 							if InCity.WorkQueue:
-								screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))
+								if self.bFreshQueue:
+									screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))
+								else: self.bUpdateCityTab = True
 								screen.deleteWidget(ROW + InCity.WorkQueue[0][2])
 								self.InCity.WorkQueue[0] = [szName, iType, szRow]
 							else:

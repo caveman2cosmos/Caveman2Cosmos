@@ -2007,21 +2007,19 @@ void CvUnitAI::AI_settleMove()
 			}
 		}
 
-		if ((iAreaBestFoundValue == 0) && (iOtherBestFoundValue == 0))
+		if (iAreaBestFoundValue == 0 && iOtherBestFoundValue == 0
+		&& GC.getGame().getGameTurn() - getGameTurnCreated() > intSqrt(GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()))
 		{
-			if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > std::pow((float)GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(), 0.6f))
+			if (NULL != getTransportUnit())
 			{
-				if (NULL != getTransportUnit())
-				{
-					getTransportUnit()->unloadAll();
-				}
+				getTransportUnit()->unloadAll();
+			}
 
-				if (NULL == getTransportUnit()
-				&& GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(getGroup()->getHeadUnit(), MISSIONAI_PICKUP) == 0)
-				{
-					scrap(); //may seem wasteful, but settlers confuse the AI.
-					return;
-				}
+			if (NULL == getTransportUnit()
+			&& GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(getGroup()->getHeadUnit(), MISSIONAI_PICKUP) == 0)
+			{
+				scrap(); //may seem wasteful, but settlers confuse the AI.
+				return;
 			}
 		}
 
@@ -11400,7 +11398,8 @@ void CvUnitAI::AI_InfiltratorMove()
 
 	// Am I in rival land?
 	const TeamTypes ePlotTeam = plot()->getTeam();
-	if (ePlotTeam != NO_TEAM && ePlotTeam != getTeam() && GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0)
+	if (ePlotTeam != NO_TEAM && ePlotTeam < MAX_PC_PLAYERS && ePlotTeam != getTeam()
+	&& GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0)
 	{
 		if (plot()->isCity(false))
 		{
@@ -16501,12 +16500,11 @@ bool CvUnitAI::AI_join(int iMaxCount)
 	return false;
 }
 
-CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(CvCity* pCity, BuildingTypes eBuilding, CvSelectionGroup* omitGroup) const
+CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const
 {
 	PROFILE_FUNC();
 
-	int iLoop;
-	for(CvSelectionGroup* pLoopSelectionGroup = GET_PLAYER(getOwner()).firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = GET_PLAYER(getOwner()).nextSelectionGroup(&iLoop))
+	foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(getOwner()).groups())
 	{
 		if ( pLoopSelectionGroup != omitGroup &&
 			 pLoopSelectionGroup->AI_getMissionAIPlot() == pCity->plot() &&
@@ -22375,17 +22373,15 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 /* War tactics AI																			   */
 /************************************************************************************************/
 		// Cancel missions of all those coming to join departing transport
-		CvSelectionGroup* pLoopGroup = NULL;
-		int iLoop = 0;
-		CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
-		for(pLoopGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopGroup != NULL; pLoopGroup = kPlayer.nextSelectionGroup(&iLoop))
+		foreach_(CvSelectionGroup* pLoopGroup, kPlayer.groups())
 		{
 			if( pLoopGroup != getGroup() )
 			{
 				if( pLoopGroup->AI_getMissionAIType() == MISSIONAI_GROUP && pLoopGroup->getHeadUnitAI() == AI_getUnitAIType() )
 				{
-					CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
+					const CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
 
 					if( pMissionUnit != NULL && pMissionUnit->getGroup() == getGroup() )
 					{
@@ -22541,8 +22537,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		{
 			PROFILE("AI_assaultSeaReinforce.Sync");
 
-			int iLoop;
-			for(CvSelectionGroup* pLoopSelectionGroup = GET_PLAYER(getOwner()).firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = GET_PLAYER(getOwner()).nextSelectionGroup(&iLoop))
+			foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(getOwner()).groups())
 			{
 				if (pLoopSelectionGroup != getGroup())
 				{
@@ -22800,17 +22795,15 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		FAssert(!(pBestPlot->isImpassable(getTeam())));
 
 		// Cancel missions of all those coming to join departing transport
-		CvSelectionGroup* pLoopGroup = NULL;
-		int iLoop = 0;
-		CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
-		for(pLoopGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopGroup != NULL; pLoopGroup = kPlayer.nextSelectionGroup(&iLoop))
+		foreach_(CvSelectionGroup* pLoopGroup, kPlayer.groups())
 		{
 			if( pLoopGroup != getGroup() )
 			{
 				if( pLoopGroup->AI_getMissionAIType() == MISSIONAI_GROUP && pLoopGroup->getHeadUnitAI() == AI_getUnitAIType() )
 				{
-					CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
+					const CvUnit* pMissionUnit = pLoopGroup->AI_getMissionAIUnit();
 
 					if( pMissionUnit != NULL && pMissionUnit->getGroup() == getGroup() )
 					{

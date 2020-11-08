@@ -202,6 +202,7 @@
 			<Strategy>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_SHOW</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DESIGNED_ANIMAL_SHOW</MovieDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
