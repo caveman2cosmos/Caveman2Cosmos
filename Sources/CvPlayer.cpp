@@ -322,7 +322,7 @@ CvPlayer::~CvPlayer()
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
 
-	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 	{
 		SAFE_DELETE(m_groupCycles[i]);
 		SAFE_DELETE(m_plotGroups[i]);
@@ -468,11 +468,11 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	//--------------------------------
 	// Init containers
-	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 	{
 		if (GC.mapInitialized((MapTypes)i))
 		{
-			initContainersForMap(i);
+			initContainersForMap((MapTypes)i);
 		}
 	}
 	m_eventsTriggered.init();
@@ -747,7 +747,7 @@ void CvPlayer::uninit()
 
 	m_contractBroker.reset();
 
-	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 	{
 		m_groupCycles[i]->clear();
 		m_plotGroups[i]->uninit();
@@ -1555,12 +1555,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
 	}
-	for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 	{
-		m_plotGroups[iI]->removeAll();
-		m_cities[iI]->removeAll();
-		m_units[iI]->removeAll();
-		m_selectionGroups[iI]->removeAll();
+		m_plotGroups[i]->removeAll();
+		m_cities[i]->removeAll();
+		m_units[i]->removeAll();
+		m_selectionGroups[i]->removeAll();
 	}
 	m_pTempUnit = NULL;
 
@@ -20186,9 +20186,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_ppaaiImprovementYieldChange[iI], SAVE_VALUE_TYPE_INT_ARRAY);
 			}
 		}
-#ifndef PARALLEL_MAPS
-		m_groupCycle.Read(pStream);
-#endif
 		m_researchQueue.Read(pStream);
 
 		//	The research queue itself is not a streamable type so is serialized in raw
@@ -20228,7 +20225,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
-		for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+
+		for (int iI = 0, numMaps = GC.getNumMapInfos(); iI < numMaps; iI++)
 		{
 			m_groupCycles[iI]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);
@@ -21267,9 +21265,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
 		}
-#ifndef PARALLEL_MAPS
-		m_groupCycle.Write(pStream);
-#endif
 		m_researchQueue.Write(pStream);
 
 		{
@@ -21283,7 +21278,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				pNode = m_cityNames.next(pNode);
 			}
 		}
-		for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+
+		for (int iI = 0, numMaps = GC.getNumMapInfos(); iI < numMaps; iI++)
 		{
 			m_groupCycles[iI]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);

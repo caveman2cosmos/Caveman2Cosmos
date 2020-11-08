@@ -3255,7 +3255,8 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FAssert(eMap > NO_MAP && eMap < GC.getNumMapInfos());
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
@@ -3269,7 +3270,7 @@ CvViewport* cvInternalGlobals::getCurrentViewport() const
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP) : m_maps[CURRENT_MAP]->getGridWidth();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
