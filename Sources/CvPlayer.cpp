@@ -20226,13 +20226,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-		for (int iI = 0, numMaps = GC.getNumMapInfos(); iI < numMaps; iI++)
+		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
 		{
-			m_groupCycles[iI]->Read(pStream);
-			ReadStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);
-			ReadStreamableFFreeListTrashArray(*m_cities[iI], pStream);
-			ReadStreamableFFreeListTrashArray(*m_units[iI], pStream);
-			ReadStreamableFFreeListTrashArray(*m_selectionGroups[iI], pStream);
+			m_groupCycles[i]->Read(pStream);
+			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
+			ReadStreamableFFreeListTrashArray(*m_cities[i], pStream);
+			ReadStreamableFFreeListTrashArray(*m_units[i], pStream);
+			ReadStreamableFFreeListTrashArray(*m_selectionGroups[i], pStream);
 		}
 		//Must be loaded AFTER units.
 		Commanders.clear();
