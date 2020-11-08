@@ -144,8 +144,9 @@ public:
 	int flatHurryAngerLength() const;
 
 	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
-	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const;		// This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
+	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const; // This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
+	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
 	int getX() const;
 	int getY() const;

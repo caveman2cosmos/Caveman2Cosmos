@@ -5848,25 +5848,25 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 }
 
 
-bool CvTeam::isNoTradeTech(const TechTypes eTech) const
+bool CvTeam::isNoTradeTech(const short iTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
-	return find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), eTech) != m_vNoTradeTech.end();
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), iTech)
+	return find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), iTech) != m_vNoTradeTech.end();
 }
 
 
-void CvTeam::setNoTradeTech(const TechTypes eTech, const bool bNewValue)
+void CvTeam::setNoTradeTech(const short iTech, const bool bNewValue)
 {
-	std::vector<short>::iterator itr = find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), eTech);
+	std::vector<short>::iterator itr = find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), iTech);
 
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), iTech)
 	FAssertMsg(bNewValue != (itr != m_vNoTradeTech.end()), "This is no change!")
 
 	if (bNewValue)
 	{
 		if (itr == m_vNoTradeTech.end())
 		{
-			m_vNoTradeTech.push_back(eTech);
+			m_vNoTradeTech.push_back(iTech);
 		}
 	}
 	else if (itr != m_vNoTradeTech.end())

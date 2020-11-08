@@ -984,25 +984,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
 
+	m_contractBroker.reset();
 	m_Properties.clear();
 	m_canHaveBuilder.clear();
-	m_bonusExport.clear();
-	m_bonusImport.clear();
-	m_bonusMintedPercent.clear();
-	m_unitCount.clear();
-	m_unitMaking.clear();
-	m_greatGeneralPointsType.clear();
-	m_goldenAgeOnBirthOfGreatPersonCount.clear();
-	m_greatPeopleRateforUnit.clear();
-	m_buildingMaking.clear();
-	m_freeBuildingCount.clear();
-	m_extraBuildingHappiness.clear();
-	m_extraBuildingHealth.clear();
-	m_buildingProductionMod.clear();
-	m_buildingCostMod.clear();
-	m_unitProductionMod.clear();
-	m_unitCombatProductionMod.clear();
-	m_unitCombatFreeXP.clear();
 	m_civicSwitchHistory.clear();
 
 	setTurnHadUIInteraction(false);
@@ -7863,7 +7847,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 		const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(GC.getBuildingInfo(eBuilding).getFreeAreaBuilding());
 		if (eFreeAreaBuilding != NO_BUILDING)
 		{
-			changeFreeAreaBuildingCount(eFreeAreaBuilding, pArea, iChange);
+			algo::for_each(cities() | filtered(CvCity::fn::area() == pArea), CvCity::fn::changeFreeAreaBuildingCount(eFreeAreaBuilding, iChange));
 		}
 
 		if (GC.getBuildingInfo(eBuilding).getCivicOption() != NO_CIVICOPTION)
@@ -14205,14 +14189,15 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	FAssertMsg(iChange != 0, "This is not a change!")
 
-	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
+	std::map<short, uint16_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 
 	if (itr == m_freeBuildingCount.end())
 	{
 		if (iChange > 0)
 		{
+			FErrorMsg("YESYES");
 			m_freeBuildingCount.insert(std::make_pair((short)eIndex, iChange));
-			algo::for_each(cities(), CvCity::fn::setNumFreeBuilding(eIndex, 1));
+			algo::for_each(cities(), CvCity::fn::setFreeBuilding(eIndex, true));
 		}
 		else FErrorMsg("Expected positive iChange for first building of a kind");
 	}
@@ -14220,7 +14205,7 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	{
 		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_freeBuildingCount.erase(itr->first);
-		algo::for_each(cities(), CvCity::fn::setNumFreeBuilding(eIndex, 0));
+		algo::for_each(cities(), CvCity::fn::setFreeBuilding(eIndex, false));
 	}
 	else // change building count
 	{
@@ -14228,66 +14213,43 @@ void CvPlayer::changeFreeBuildingCount(const BuildingTypes eIndex, const int iCh
 	}
 }
 
-int CvPlayer::getFreeBuildingCount(const BuildingTypes eIndex) const
+uint16_t CvPlayer::getFreeBuildingCount(const BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	std::map<short, uint32_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
+	std::map<short, uint16_t>::const_iterator itr = m_freeBuildingCount.find((short)eIndex);
 	return itr != m_freeBuildingCount.end() ? itr->second : 0;
 }
 
-
-void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange)
+void CvPlayer::checkFreeBuildings(CvCity* city)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	const int iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
-	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset changes
-	if (iChange != 0 && (iChange > 0 || iOldFreeAreaBuildingCount != 0))
+	for (std::map<short, uint16_t>::const_iterator itr = m_freeBuildingCount.begin(); itr != m_freeBuildingCount.end(); ++itr)
 	{
-		const int iNewFreeBuildingCount = iOldFreeAreaBuildingCount + iChange;
-		FAssert(iNewFreeBuildingCount >= 0);
-
-		if (iOldFreeAreaBuildingCount == 0)
+		if (!city->isFreeBuilding((BuildingTypes)itr->first))
 		{
-			algo::for_each(cities() | filtered(CvCity::fn::area() == area),
-				CvCity::fn::setNumFreeAreaBuilding(eIndex, 1)
-			);
-		}
-		else if (iNewFreeBuildingCount == 0)
-		{
-			FAssertMsg(iOldFreeAreaBuildingCount > 0, "iOldFreeAreaBuildingCount is expected to be greater than 0");
-
-			algo::for_each(cities() | filtered(CvCity::fn::area() == area),
-				CvCity::fn::setNumFreeAreaBuilding(eIndex, 0)
-			);
+			// This one will not register the free building if it is still not valid or if it was manually built.
+			city->setFreeBuilding((BuildingTypes)itr->first, true);
 		}
 	}
 }
 
-int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
+// Used by newly settled cities to propagate the count in the area
+uint16_t CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
-	foreach_(const CvCity* pLoopCity, cities())
+	foreach_(const CvCity* city, cities())
 	{
-		if ( pLoopCity->area() == area )
+		if (city->area() == area && city->getFreeAreaBuildingCount(eIndex) > 0)
 		{
-			//	During city initialisation this can be self-referential so the first city
-			//	queried could be the one asking.  Hence take the first non-0 value seen
-			if ( pLoopCity->getNumFreeAreaBuilding(eIndex) > 0 )
-			{
-				return pLoopCity->getNumFreeAreaBuilding(eIndex);
-			}
+			return city->getFreeAreaBuildingCount(eIndex);
 		}
 	}
-
 	return 0;
 }
 
-
 bool CvPlayer::isBuildingFree(BuildingTypes eIndex, const CvArea* area) const
 {
-	return (getFreeBuildingCount(eIndex) > 0 || (area != NULL && getFreeAreaBuildingCount(eIndex, area) > 0));
+	return getFreeBuildingCount(eIndex) > 0 || area != NULL && getFreeAreaBuildingCount(eIndex, area) > 0;
 }
 
 
@@ -20037,6 +19999,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			char cCount;
 			int iCount;
 			short sCount;
+			uint16_t sCountU;
 			uint32_t iCountU;
 			// Bonus counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
@@ -20092,12 +20055,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			while (iSize-- > 0)
 			{
 				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iFreeBuildingCountType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iFreeBuildingCountCount");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCountU, "iFreeBuildingCountCount");
 				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
 
 				if (iType > -1)
 				{
-					m_freeBuildingCount.insert(std::make_pair(iType, iCountU));
+					m_freeBuildingCount.insert(std::make_pair(iType, sCountU));
 				}
 			}
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHappinessSize");
@@ -21362,7 +21325,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
 			}
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_freeBuildingCount.size(), "iFreeBuildingCountSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
+			for (std::map<short, uint16_t>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iFreeBuildingCountType");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iFreeBuildingCountCount");
@@ -30761,34 +30724,29 @@ void CvPlayer::processNewRoutes()
 
 bool CvPlayer::canHaveBuilder(BuildTypes eBuild) const
 {
-	std::map<int,bool>::const_iterator itr = m_canHaveBuilder.find(eBuild);
+	std::map<int, bool>::const_iterator itr = m_canHaveBuilder.find((int)eBuild);
 
-	if ( itr == m_canHaveBuilder.end() )
-	{
-		bool hasSuitableUnit = algo::any_of(units(), CvUnit::fn::hasBuild(eBuild));
-
-		if ( !hasSuitableUnit )
-		{
-			//	Could we build one?
-			for(int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-			{
-				if ( GC.getUnitInfo((UnitTypes)iI).getBuilds(eBuild) && canTrain((UnitTypes)iI) )
-				{
-					hasSuitableUnit = true;
-				}
-			}
-
-			MEMORY_TRACK_EXEMPT();
-
-			m_canHaveBuilder[eBuild] = hasSuitableUnit;
-		}
-
-		return hasSuitableUnit;
-	}
-	else
+	if (itr != m_canHaveBuilder.end())
 	{
 		return itr->second;
 	}
+	bool hasSuitableUnit = algo::any_of(units(), CvUnit::fn::hasBuild(eBuild));
+
+	if (!hasSuitableUnit)
+	{
+		// Could we build one?
+		for(int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		{
+			if ( GC.getUnitInfo((UnitTypes)iI).getBuilds(eBuild) && canTrain((UnitTypes)iI) )
+			{
+				hasSuitableUnit = true;
+			}
+		}
+		MEMORY_TRACK_EXEMPT();
+
+		m_canHaveBuilder[eBuild] = hasSuitableUnit;
+	}
+	return hasSuitableUnit;
 }
 
 

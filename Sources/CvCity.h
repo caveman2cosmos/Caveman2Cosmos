@@ -1309,10 +1309,11 @@ public:
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
-	int getNumFreeBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	int getNumFreeAreaBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	void setNumFreeBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue);
+	uint16_t getFreeAreaBuildingCount(const short iIndex) const;
+	void changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange);
+	void setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isFreeBuilding(short iIndex) const;
+	void checkFreeBuildings();
 
 	bool isHasReligion(ReligionTypes eIndex) const;
 	void setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
@@ -1882,6 +1883,8 @@ protected:
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
+	std::vector<short> m_vFreeBuildings;
+	std::map<short, uint16_t> m_freeAreaBuildingCount;
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
@@ -2069,8 +2072,6 @@ protected:
 	int* m_paiUnitCombatFreeExperience;
 	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
-	int* m_paiNumFreeBuilding;
-	int* m_paiNumFreeAreaBuilding;
 	mutable int* m_paiBuildingReplaced;
 	mutable bool m_bHasCalculatedBuildingReplacement;
 
@@ -2392,8 +2393,8 @@ public:
 
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, setBuildingListFilterActive, BuildingFilterTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, updateCommerce, CommerceTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeBuilding, BuildingTypes, int);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeAreaBuilding, BuildingTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setFreeBuilding, BuildingTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);

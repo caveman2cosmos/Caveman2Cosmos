@@ -414,8 +414,8 @@ public:
 	bool isHasTech(TechTypes eIndex) const; // Exposed to Python
 	void setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, bool bFirst, bool bAnnounce); // Exposed to Python
 
-	bool isNoTradeTech(TechTypes eIndex) const; // Exposed to Python
-	void setNoTradeTech(TechTypes eIndex, bool bNewValue); // Exposed to Python
+	bool isNoTradeTech(short iTech) const; // Exposed to Python
+	void setNoTradeTech(short iTech, bool bNewValue); // Exposed to Python
 
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange); // Exposed to Python

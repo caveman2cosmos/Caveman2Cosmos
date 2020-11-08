@@ -71,8 +71,6 @@ CvCity::CvCity()
 	m_paiUnitCombatFreeExperience = NULL;
 	m_paiFreePromotionCount = NULL;
 	m_paiNumRealBuilding = NULL;
-	m_paiNumFreeBuilding = NULL;
-	m_paiNumFreeAreaBuilding = NULL;
 	m_paiBuildingReplaced = NULL;
 	m_bHasCalculatedBuildingReplacement = false;
 	m_bPropertyControlBuildingQueued = false;
@@ -228,8 +226,9 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	//--------------------------------
 	// Init other game data
+	CvPlayer& player = GET_PLAYER(getOwner());
 	bool bFound = false;
-	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP) && GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_USE_LANDMARK_NAMES))
+	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP) && player.isModderOption(MODDEROPTION_USE_LANDMARK_NAMES))
 	{
 		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
@@ -246,7 +245,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 			}
 		}
 	}
-	if (!bFound) setName(GET_PLAYER(getOwner()).getNewCityName());
+	if (!bFound) setName(player.getNewCityName());
 
 	setEverOwned(getOwner(), true);
 
@@ -306,20 +305,22 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		changeCommerceHappinessPer(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialHappiness());
 	}
 
+	CvArea* pArea = area();
 	//TBFREEBUILD
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (GET_PLAYER(getOwner()).isBuildingFree((BuildingTypes)iI))
+		const uint16_t iFreeAreaBuildingCount = player.getFreeAreaBuildingCount((BuildingTypes)iI, pArea); 
+		if (iFreeAreaBuildingCount > 0)
 		{
-			setNumFreeBuilding(((BuildingTypes)iI), 1);
+			changeFreeAreaBuildingCount((BuildingTypes)iI, iFreeAreaBuildingCount);
 		}
-		else if (GET_PLAYER(getOwner()).isBuildingFree((BuildingTypes)iI, area()))
+		else if (player.getFreeBuildingCount((BuildingTypes)iI) > 0)
 		{
-			setNumFreeAreaBuilding(((BuildingTypes)iI), 1);
+			setFreeBuilding(((BuildingTypes)iI), true);
 		}
 	}
 
-	area()->changeCitiesPerPlayer(getOwner(), 1);
+	pArea->changeCitiesPerPlayer(getOwner(), 1);
 
 	GET_TEAM(getTeam()).changeNumCities(1);
 
@@ -338,15 +339,15 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	updateFeatureHappiness();
 	updatePowerHealth();
 
-	GET_PLAYER(getOwner()).setMaintenanceDirty(true);
+	player.setMaintenanceDirty(true);
 
 	GC.getMap().updateWorkingCity();
 
 	GC.getGame().AI_makeAssignWorkDirty();
 
-	GET_PLAYER(getOwner()).setFoundedFirstCity(true);
+	player.setFoundedFirstCity(true);
 
-	if (isNPC() || GET_PLAYER(getOwner()).getNumCities() == 1)
+	if (isNPC() || player.getNumCities() == 1)
 	{
 		for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 		{
@@ -366,7 +367,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	// Koshliong  - do this unconditionally - it dopesn; nmatter if assimilation is off because in
 	// that case we're setting the value it would have anyway and on any change of ownership
 	// acquireCity() is called which initializes a new CvCity instance anyway
-	setCivilizationType(GET_PLAYER(getOwner()).getCivilizationType());
+	setCivilizationType(player.getCivilizationType());
 
 	m_UnitList.init();
 
@@ -400,8 +401,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiFreePromotionCount);
 	SAFE_DELETE_ARRAY(m_paiNumRealBuilding);
-	SAFE_DELETE_ARRAY(m_paiNumFreeBuilding);
-	SAFE_DELETE_ARRAY(m_paiNumFreeAreaBuilding);
 	SAFE_DELETE_ARRAY(m_paiBuildingReplaced);
 	SAFE_DELETE_ARRAY(m_cachedPropertyNeeds);
 	SAFE_DELETE_ARRAY(m_pabHadVicinityBonus);
@@ -446,6 +445,8 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
 
+	m_vFreeBuildings.clear();
+	m_freeAreaBuildingCount.clear();
 	m_paTradeCities.clear();
 	m_orderQueue.clear();
 	m_aEventsOccured.clear();
@@ -827,8 +828,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiBuildingOriginalOwner = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
 		m_paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
-		m_paiNumFreeBuilding = new int[GC.getNumBuildingInfos()];
-		m_paiNumFreeAreaBuilding = new int[GC.getNumBuildingInfos()];
 		m_pabDisabledBuilding = new bool[GC.getNumBuildingInfos()];
 		//Team Project (5)
 		m_pabReligiouslyDisabledBuilding = new bool[GC.getNumBuildingInfos()];
@@ -841,8 +840,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiBuildingOriginalOwner[iI] = -1;
 			m_paiBuildingOriginalTime[iI] = MIN_INT;
 			m_paiNumRealBuilding[iI] = 0;
-			m_paiNumFreeBuilding[iI] = 0;
-			m_paiNumFreeAreaBuilding[iI] = 0;
 			m_pabDisabledBuilding[iI] = false;
 			//Team Project (5)
 			m_pabReligiouslyDisabledBuilding[iI] = false;
@@ -1219,7 +1216,6 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		setNumRealBuilding(((BuildingTypes)iI), 0);
-		setNumFreeBuilding(((BuildingTypes)iI), 0);
 	}
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -1443,6 +1439,7 @@ void CvCity::doTurn()
 	doVicinityBonus();
 	//Checks conditions of buildings, may disable or enable some
 	checkBuildings(true, false, true, true, false);
+	checkFreeBuildings();
 	//Extra Hammer from settling on Forest
 	if (getExtraYieldTurns() > 0)
 	{
@@ -7260,7 +7257,7 @@ int CvCity::getNumBuilding(BuildingTypes eIndex) const
 	{
 		return 0;
 	}
-	return std::min(GC.getCITY_MAX_NUM_BUILDINGS(), getNumRealBuilding(eIndex) + getNumFreeBuilding(eIndex) + getNumFreeAreaBuilding(eIndex));
+	return std::min(GC.getCITY_MAX_NUM_BUILDINGS(), getNumRealBuilding(eIndex));
 }
 
 
@@ -15256,70 +15253,102 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 	return false;
 }
 
-int CvCity::getNumFreeBuilding(BuildingTypes eIndex) const
+
+void CvCity::changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return m_paiNumFreeBuilding[eIndex];
-}
+	FAssertMsg(iChange != 0, "This is not a change!")
 
-int CvCity::getNumFreeAreaBuilding(BuildingTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return m_paiNumFreeAreaBuilding[eIndex];
-}
+	std::map<short, uint16_t>::const_iterator itr = m_freeAreaBuildingCount.find((short)eIndex);
 
-void CvCity::setNumFreeBuilding(BuildingTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	if (iNewValue != 0 && !isValidBuildingLocation(eIndex))
+	if (itr == m_freeAreaBuildingCount.end())
 	{
-		iNewValue = 0;
-	}
-
-	if (getNumFreeBuilding(eIndex) != iNewValue)
-	{
-		const int iOldNumBuilding = getNumBuilding(eIndex);
-
-		m_paiNumFreeBuilding[eIndex] = iNewValue;
-		// cppcheck-suppress knownConditionTrueFalse
-		if (iOldNumBuilding != getNumBuilding(eIndex))
+		if (iChange > 0)
 		{
-			processBuilding(eIndex, iNewValue - iOldNumBuilding);
+			m_freeAreaBuildingCount.insert(std::make_pair((short)eIndex, iChange));
+			algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, true));
+		}
+		else FErrorMsg("Expected positive iChange for first building of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
+		m_freeAreaBuildingCount.erase(itr->first);
+		algo::for_each(GET_PLAYER(getOwner()).cities(), CvCity::fn::setFreeBuilding(eIndex, false));
+	}
+	else // change building count
+	{
+		m_freeAreaBuildingCount[itr->first] += iChange;
+	}
+}
+
+uint16_t CvCity::getFreeAreaBuildingCount(const short iIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex)
+	std::map<short, uint16_t>::const_iterator itr = m_freeAreaBuildingCount.find(iIndex);
+	return itr != m_freeAreaBuildingCount.end() ? itr->second : 0;
+}
+
+void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+
+	std::vector<short>::iterator itr = find(m_vFreeBuildings.begin(), m_vFreeBuildings.end(), (short)eIndex);
+
+	if (bNewValue)
+	{
+		FErrorMsg("CHECK_1");
+		if (itr == m_vFreeBuildings.end()
+		&& isValidBuildingLocation(eIndex)
+		&& !GET_TEAM(getTeam()).isObsoleteBuilding(eIndex)
+		&& !isDisabledBuilding(eIndex)
+		// Buildings built manually shouldn't disappear when the free building effect ends,
+		// therefore we won't count it as a free building just yet.
+		&& getNumBuilding(eIndex) < 1)
+		{
+			FErrorMsg("CHECK_2");
+			m_vFreeBuildings.push_back(eIndex);
+			setNumRealBuilding(eIndex, 1);
+		}
+	}
+	else if (itr != m_vFreeBuildings.end() && getFreeAreaBuildingCount(eIndex) != 0
+	&& GET_PLAYER(getOwner()).getFreeBuildingCount(eIndex) != 0)
+	{
+		m_vFreeBuildings.erase(itr);
+		if (getNumBuilding(eIndex) > 0)
+		{
+			setNumRealBuilding(eIndex, 0);
+		}
+		else FErrorMsg("This shouldn't really happen...");
+	}
+}
+
+bool CvCity::isFreeBuilding(const short iIndex) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex)
+	return find(m_vFreeBuildings.begin(), m_vFreeBuildings.end(), iIndex) != m_vFreeBuildings.end();
+}
+
+void CvCity::checkFreeBuildings()
+{
+	GET_PLAYER(getOwner()).checkFreeBuildings(this);
+
+	for (std::map<short, uint16_t>::const_iterator itr = m_freeAreaBuildingCount.begin(); itr != m_freeAreaBuildingCount.end(); ++itr)
+	{
+		if (!isFreeBuilding((BuildingTypes)itr->first))
+		{
+			// This one will not register the free building if it is still not valid or if it was manually built.
+			setFreeBuilding((BuildingTypes)itr->first, true);
 		}
 	}
 }
 
-void CvCity::setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	if (iNewValue != 0 && !isValidBuildingLocation(eIndex))
-	{
-		iNewValue = 0;
-	}
-
-	if (getNumFreeAreaBuilding(eIndex) != iNewValue)
-	{
-		const bool bHad = getNumBuilding(eIndex) > 0;
-
-		m_paiNumFreeAreaBuilding[eIndex] = iNewValue;
-
-		const bool bHas = getNumBuilding(eIndex) > 0;
-		// cppcheck-suppress knownConditionTrueFalse
-		if (bHas != bHad)
-		{
-			processBuilding(eIndex, bHas ? 1 : -1);
-		}
-	}
-}
 
 bool CvCity::isHasReligion(ReligionTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 	return m_pabHasReligion[eIndex];
 }
-
 
 void CvCity::checkReligiousDisablingAllBuildings()
 {
@@ -17507,8 +17536,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), m_paiFreePromotionCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumRealBuilding);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeBuilding);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
 
 	WRAPPER_READ(wrapper, "CvCity", &m_bHasCalculatedBuildingReplacement);
 
@@ -17706,11 +17733,29 @@ void CvCity::read(FDataStreamBase* pStream)
 	// clear the culture distance cache (note that it is not saved in the .sav file)
 	clearCultureDistanceCache();
 
+	// Toffer - Read vectors
+	{
+		short iSize;
+		short iType;
+		// Building
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeBuildingsSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "FreeBuildingsIndex");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+			if (iType > -1)
+			{
+				m_vFreeBuildings.push_back(iType);
+			}
+		}
+	}
 	// Toffer - Read maps
 	{
 		short iSize;
 		short iType;
 		int iCount;
+		uint16_t sCountU;
 		// Bonus
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BonusDefenseChangesSize");
 		while (iSize-- > 0)
@@ -17735,6 +17780,18 @@ void CvCity::read(FDataStreamBase* pStream)
 			if (iType > -1)
 			{
 				m_buildingProductionMod.insert(std::make_pair(iType, iCount));
+			}
+		}
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeAreaBuildingCountSize");
+		while (iSize-- > 0)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "FreeAreaBuildingCountType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &sCountU, "FreeAreaBuildingCount");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+			if (iType > -1)
+			{
+				m_freeAreaBuildingCount.insert(std::make_pair(iType, sCountU));
 			}
 		}
 		// Unit
@@ -18069,8 +18126,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), m_paiFreePromotionCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumRealBuilding);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeBuilding);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
 
 	WRAPPER_WRITE(wrapper, "CvCity", m_bHasCalculatedBuildingReplacement);
 
@@ -18185,6 +18240,15 @@ void CvCity::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "iChange");
 	}
 
+	// Toffer - Write vectors
+	{
+		// Building
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_vFreeBuildings.size(), "FreeBuildingsSize");
+		for (std::vector<short>::const_iterator it = m_vFreeBuildings.begin(); it != m_vFreeBuildings.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", *it, "FreeBuildingsIndex");
+		}
+	}
 	// Toffer - Write Maps
 	{
 		// Bonus
@@ -18200,6 +18264,12 @@ void CvCity::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "BuildingProductionModType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "BuildingProductionMod");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_freeAreaBuildingCount.size(), "FreeAreaBuildingCountSize");
+		for (std::map<short, uint16_t>::const_iterator it = m_freeAreaBuildingCount.begin(), itEnd = m_freeAreaBuildingCount.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "FreeAreaBuildingCountType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "FreeAreaBuildingCount");
 		}
 		// Unit
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_unitProductionMod.size(), "UnitProductionModSize");
@@ -21058,6 +21128,7 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 	return iExtraRate + (iNewEffectiveBuildingRate - iOldEffectiveBuildingRate);
 }
 
+
 void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, bool bPopulation, bool bAlertOwner)
 {
 	PROFILE_FUNC();
@@ -22983,8 +23054,6 @@ void CvCity::clearModifierTotals()
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		m_paiNumFreeBuilding[iI] = 0;
-		m_paiNumFreeAreaBuilding[iI] = 0;
 		m_pabDisabledBuilding[iI] = false;
 		if (m_paiBuildingReplaced != NULL)
 		{
@@ -23090,6 +23159,8 @@ void CvCity::clearModifierTotals()
 		m_aiDomainProductionModifier[iI] = 0;
 	}
 
+	m_vFreeBuildings.clear();
+	m_freeAreaBuildingCount.clear();
 	m_aBuildingYieldChange.clear();
 	m_aBuildingCommerceChange.clear();
 	m_aBuildingHappyChange.clear();
