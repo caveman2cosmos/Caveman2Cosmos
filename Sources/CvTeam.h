@@ -404,6 +404,7 @@ public:
 
 	int getTechCount(TechTypes eIndex) const; // Exposed to Python
 	int getBestKnownTechScorePercent() const;
+	int getBestTechScore() const;
 
 	int getTerrainTradeCount(TerrainTypes eIndex) const;
 	bool isTerrainTrade(TerrainTypes eIndex) const; // Exposed to Python

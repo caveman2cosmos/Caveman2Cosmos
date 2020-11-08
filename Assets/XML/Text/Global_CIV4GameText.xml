@@ -4298,12 +4298,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with a Hunter!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un cacciatore!</Italian>
-		<Spanish>Los aldeanos os han dado un Cazador.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
+		<English>The villagers have provided you with their most skilled huntsman!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
@@ -8611,12 +8606,24 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[ICON_GOLD]: %d1_Gold</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
-		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn %D2 TD/WFL)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 Diff.Tech)[COLOR_REVERT]</French>
-		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1/Runde %D2 TD/WFL)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turno %D2 TD/WFL)[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno %D2 TD/WFL)[COLOR_REVERT]</Spanish>
+		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH</Tag>
+		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn[COLOR_REVERT]</English>
+		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour[COLOR_REVERT]</French>
+		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1/Runde[COLOR_REVERT]</German>
+		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turno[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_TD</Tag>
+		<English>[COLOR_POSITIVE_TEXT], %D1 TD[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_WFL</Tag>
+		<English>[COLOR_POSITIVE_TEXT], %D1 WFL[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TECH_END</Tag>
+		<English>[COLOR_POSITIVE_TEXT])[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN</Tag>

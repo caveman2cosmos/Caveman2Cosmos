@@ -168,6 +168,9 @@ public:
 	int calculateGoldRate();
 	int calculateTotalCommerce();
 	int calculateResearchRate(int /*TechTypes*/ eTech);
+	int calculateWFLResearchModifier(int /*TechTypes*/ eTech);
+	int calculateTDResearchModifier(int /*TechTypes*/ eTech);
+	int getNationalTechResearchModifier(int /*TechTypes*/ eIndex);
 	int calculateResearchModifier(int /*TechTypes*/ eTech);
 	int calculateBaseNetResearch();
 	bool isResearch();

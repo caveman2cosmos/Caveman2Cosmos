@@ -5146,7 +5146,7 @@ int CvTeam::getTechCount(TechTypes eIndex) const
 int CvTeam::getBestKnownTechScorePercent() const
 {
 	int iOurTechScore = 0;
-	int iBestKnownTechScore = 0;
+	int iBestKnownTechScore = 1;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -5154,18 +5154,31 @@ int CvTeam::getBestKnownTechScorePercent() const
 		{
 			if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
-				iOurTechScore = std::max( iOurTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore() );
+				iOurTechScore = std::max(iOurTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore());
 			}
 			else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 			{
-				iBestKnownTechScore = std::max( iBestKnownTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore() );
+				iBestKnownTechScore = std::max(iBestKnownTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore());
 			}
 		}
 	}
 
-	iBestKnownTechScore = std::max( iBestKnownTechScore, iOurTechScore );
+	iBestKnownTechScore = std::max(iBestKnownTechScore, iOurTechScore);
 
-	return ((100*iOurTechScore)/std::max(iBestKnownTechScore, 1));
+	return ((100*iOurTechScore) / iBestKnownTechScore);
+}
+
+
+int CvTeam::getBestTechScore() const
+{
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+		{
+			return GET_PLAYER((PlayerTypes)iI).getTechScore();
+		}
+	}
+	return 0;
 }
 
 

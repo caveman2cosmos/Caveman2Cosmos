@@ -487,10 +487,10 @@
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_HUNTER</Type>
+			<Type>GOODY_TRACKER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_HUNTER</FreeUnit>
+			<FreeUnit>UNIT_TRACKER</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>

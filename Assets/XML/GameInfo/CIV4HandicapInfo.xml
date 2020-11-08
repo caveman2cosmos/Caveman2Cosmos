@@ -196,13 +196,13 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
 				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
 				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -496,7 +496,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -783,7 +783,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -1088,7 +1088,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -1412,7 +1412,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -1741,7 +1741,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -2088,7 +2088,7 @@
 				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -2444,7 +2444,7 @@
 				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
 				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
@@ -2813,7 +2813,7 @@
 				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
 				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
-				<GoodyType>GOODY_HUNTER</GoodyType>
+				<GoodyType>GOODY_TRACKER</GoodyType>
 				<GoodyType>GOODY_RANGER</GoodyType>
 				<GoodyType>GOODY_WARDEN</GoodyType>
 				<GoodyType>GOODY_WARDEN2</GoodyType>
