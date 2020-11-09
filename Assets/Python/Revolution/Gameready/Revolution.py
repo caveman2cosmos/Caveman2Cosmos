@@ -529,13 +529,14 @@ class Revolution:
 
 		if iPlayer > GC.getMAX_PC_PLAYERS():
 			return
+		iPlayer -= 1
 
 		while iPlayer > -1:
-			iPlayer -= 1
 			if GC.getPlayer(iPlayer).isAlive():
 				self.checkForRevReinforcement(iPlayer)
 				self.checkCivics(iPlayer)
 				break
+			iPlayer -= 1
 
 
 	def onEndPlayerTurn(self, argsList):
